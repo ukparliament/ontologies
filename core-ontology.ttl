@@ -1,0 +1,92 @@
+@prefix pc: <http://parliament.uk/ontologies/core/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/core/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Core ontology"@en ;
+    dcterms:created "05/10/2016"^^xsd:date ;
+    dcterms:description "Core ontology for UK Parliament"@en .
+
+
+#######  Classes ##### 	
+
+
+pc:Thing rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+
+pc:Identifier rdf:type owl:Class ;
+	rdfs:label "Identifier"@en ;
+	rdfs:comment "An identifier"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:IdentifierSource rdf:type owl:Class ;
+	rdfs:label "IdentifierSource"@en ;
+	rdfs:comment "An identifier source"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+
+
+#######  Object properties ##### 
+
+pc:hasIdentifier rdf:type owl:ObjectProperty ;
+	rdfs:label "hasIdentifier"@en ;
+	rdfs:comment "Relates a thing to an identifier."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range pc:Identifier ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+
+pc:hasIdentifierSource rdf:type owl:ObjectProperty ;
+	rdfs:label "hasIdentifierSource"@en ;
+	rdfs:comment "Relates an identifier to its source."@en ;
+	rdfs:domain pc:Identifier ;
+	rdfs:range pc:IdentifierSource ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+		
+
+#######  Data properties ##### 
+
+
+pc:startDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "startDate"@en ;
+	rdfs:comment "Thing has a startDate."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+pc:endDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "endDate"@en ;
+	rdfs:comment "Thing has an endDate."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+
+pc:value rdf:type owl:DatatypeProperty ;
+	rdfs:label "value"@en ;
+	rdfs:comment "Identifier has a value."@en ;
+	rdfs:domain pc:Identifier ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:preferredLabel rdf:type owl:DatatypeProperty ;
+	rdfs:label "preferredLabel"@en ;
+	rdfs:comment "preferred label."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+	
+pc:sortLabel rdf:type owl:DatatypeProperty ;
+	rdfs:label "sortLabel"@en ;
+	rdfs:comment "sort label."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+
+

@@ -1,0 +1,261 @@
+@prefix pa: <http://parliament.uk/ontologies/agency/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/agency/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Agency ontology"@en ;
+    dcterms:created "05/10/2016"^^xsd:date ;
+    dcterms:description "Agency ontology for UK Parliament"@en .
+
+
+#######  Classes ##### 	
+
+
+pa:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+
+pa:Person rdf:type owl:Class ;
+	rdfs:subClassOf pa:Agent ;
+	rdfs:label "Person"@en ;
+	rdfs:comment "A person"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:Group rdf:type owl:Class ;
+	rdfs:subClassOf pa:Agent ;
+	rdfs:label "Group"@en ;
+	rdfs:comment "A group"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:Role rdf:type owl:Class ;
+	rdfs:label "Role"@en ;
+	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secerety between two dates"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:Position rdf:type owl:Class ;
+	rdfs:label "Position"@en ;
+	rdfs:comment "A position in a group that perists over time where different people may occupy via a role. e.g. Foreign Secretary"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:Membership rdf:type owl:Class ;
+	rdfs:label "Membership"@en ;
+	rdfs:comment "A membership of a person in a group between between two dates."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:Address rdf:type owl:Class ;
+	rdfs:label "Address"@en ;
+	rdfs:comment "An address."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:Link rdf:type owl:Class ;
+	rdfs:label "Link"@en ;
+	rdfs:comment "A web link url."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:GenderIndentity rdf:type owl:Class ;
+	rdfs:label "Gender"@en ;
+	rdfs:comment "A indentified gender."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .								
+
+pa:Gender rdf:type owl:Class ;
+	rdfs:label "Gender"@en ;
+	rdfs:comment "A gender."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:Place rdf:type owl:Class ;
+	rdfs:label "Place"@en ;
+	rdfs:comment "A place."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:PositionType rdf:type owl:Class ;
+	rdfs:label "PositionType"@en ;
+	rdfs:comment "A position type."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:LinkType rdf:type owl:Class ;
+	rdfs:label "LinkType"@en ;
+	rdfs:comment "A link type."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:ContactDetails rdf:type owl:Class ;
+	rdfs:label "ContactDetails"@en ;
+	rdfs:comment "A set of contact details."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:ContactDetailsType rdf:type owl:Class ;
+	rdfs:label "ContactDetailsType"@en ;
+	rdfs:comment "An contact detail type"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .				
+
+#######  Object properties ##### 
+
+pa:hasGenderIdentity rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGenderIdentity"@en ;
+	rdfs:comment "Relates a person to their gender identity."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range pa:GenderIdentity ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+
+pa:hasGender rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGender"@en ;
+	rdfs:comment "The gender as identified at that time."@en ;
+	rdfs:domain pa:GenderIdentity ;
+	rdfs:range pa:Gender ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+
+pa:hasContactDetails rdf:type owl:ObjectProperty ;
+	rdfs:label "hasContactDetails"@en ;
+	rdfs:comment "Relates an agent to contact details."@en ;
+# position has contact details?
+	rdfs:domain pa:Agent ;
+	rdfs:range pa:ContactDetails ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+
+pa:hasAddress rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAddress"@en ;
+	rdfs:comment "Relates an address to an agent."@en ;
+	rdfs:domain pa:ContactDetails ;
+	rdfs:range pa:Address ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasContactDetailsType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasContactDetailsType"@en ;
+	rdfs:comment "Relates contact details to its type."@en ;
+	rdfs:domain pa:ContactDetails ;
+	rdfs:range pa:ContactDetailsType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .	
+
+pa:hasMembership rdf:type owl:ObjectProperty ;
+	rdfs:label "hasMembership"@en ;
+	rdfs:comment "Relates an agent to membership. e.g. Person is member of of committee or sub-committee is member of a committee."@en ;
+	rdfs:domain pa:Agent ;
+	rdfs:range pa:Membership ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasRole rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRole"@en ;
+	rdfs:comment "Relates a person to a role."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range pa:Role ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasPosition rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPosition"@en ;
+	rdfs:comment "Relates a role to a position."@en ;
+	rdfs:domain pa:Role ;
+	rdfs:range pa:Position ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasPositionType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPositionType"@en ;
+	rdfs:comment "Relates a position to a position type."@en ;
+	rdfs:domain pa:Position ;
+	rdfs:range pa:PositionType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:positionIn rdf:type owl:ObjectProperty ;
+	rdfs:label "positionIn"@en ;
+	rdfs:comment "Relates a position to a group. e.g. Chancellor to the Tresury."@en ;
+	rdfs:domain pa:Postion ;
+	rdfs:range pa:Group ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .				
+		
+pa:memberIn rdf:type owl:ObjectProperty ;
+	rdfs:label "memberIn"@en ;
+	rdfs:comment "Relates a membership to a group. e.g. Member to a committee between some dates."@en ;
+	rdfs:domain pa:Membership ;
+	rdfs:range pa:Group ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:hasLink rdf:type owl:ObjectProperty ;
+	rdfs:label "hasLink"@en ;
+	rdfs:comment "Relates a agent to a link. e.g. Member to a twitter account."@en ;
+	rdfs:domain pa:Agent ;
+	rdfs:range pa:Link ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasAddress rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAddress"@en ;
+	rdfs:comment "Relates a agent to an address. e.g. ."@en ;
+### other domains that address might apply to like position?
+	rdfs:domain pa:Agent ;
+	rdfs:range pa:Address ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:placeOfBirth rdf:type owl:ObjectProperty ;
+	rdfs:label "placeOfBirth"@en ;
+	rdfs:comment "Relates a person to place of birth."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range pa:Place ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:hasLinkType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasLinkType"@en ;
+	rdfs:comment "Relates a link to a link type."@en ;
+	rdfs:domain pa:Link ;
+	rdfs:range pa:LinkType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .					
+
+#######  Data properties ##### 
+
+pa:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "title"@en ;
+	rdfs:comment "Person has a title."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+
+pa:givenName rdf:type owl:DatatypeProperty ;
+	rdfs:label "givenName"@en ;
+	rdfs:comment "Person has a given name."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:otherName rdf:type owl:DatatypeProperty ;
+	rdfs:label "otherName"@en ;
+	rdfs:comment "Person has a other name."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:familyName rdf:type owl:DatatypeProperty ;
+	rdfs:label "familyName"@en ;
+	rdfs:comment "Person has a family name."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:url rdf:type owl:DatatypeProperty ;
+	rdfs:label "url"@en ;
+	rdfs:comment "Link has a url."@en ;
+	rdfs:domain pa:Link ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:phoneNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "phoneNumber"@en ;
+	rdfs:comment "Address has phone number."@en ;
+	rdfs:domain pa:ContactDetails ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pa:faxNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "faxNumber"@en ;
+	rdfs:comment "Address has fax number."@en ;
+	rdfs:domain pa:ContactDetails ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pa:email rdf:type owl:DatatypeProperty ;
+	rdfs:label "email"@en ;
+	rdfs:comment "Address has email."@en ;
+	rdfs:domain pa:ContactDetails ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .					
+				
