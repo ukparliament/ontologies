@@ -25,12 +25,19 @@ pe:ElectionType rdf:type owl:Class ;
 	rdfs:comment "An election to elect an individual or general election to elect a group."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
+pe:Group rdf:type owl:Class ;
+	rdfs:label "Group"@en ;
+	rdfs:comment "A group of people."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
 pe:Electorate rdf:type owl:Class ;
+	rdfs:subClassOf pe:Group ;
 	rdfs:label "Electorate"@en ;
 	rdfs:comment "A group of people at the time of the election elligible to vote in an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Constituents rdf:type owl:Class ;
+	rdfs:subClassOf pe:Group ;
 	rdfs:label "Constituents"@en ;
 	rdfs:comment "A group of people to be represented by the by the winner of an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -69,7 +76,11 @@ pe:ElectoralIncumbency rdf:type owl:Class ;
 	rdfs:label "ElectoralIncumbency"@en ;
 	rdfs:comment "An electoral incumbency."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
-			
+
+pe:GainOrHold  rdf:type owl:Class ;
+	rdfs:label "GainOrHold"@en ;
+	rdfs:comment "Whether a post was gained or held."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .		
 			
 
 #######  Object properties ##### 
@@ -172,34 +183,33 @@ pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The vote count."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:votePercentageChange rdf:type owl:DatatypeProperty ;
 	rdfs:label "votePercentageChange"@en ;
 	rdfs:comment "The vote percentage change."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:label "voteShare"@en ;
 	rdfs:comment "The vote share."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "resultPosition"@en ;
 	rdfs:comment "Result position."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:populationSize rdf:type owl:DatatypeProperty ;
 	rdfs:label "populationSize"@en ;
 	rdfs:comment "A population size."@en ;
-# constituents as well?	
-	rdfs:domain pe:Electorate ;
+	rdfs:domain pe:Group ;
 	rdfs:range xsd:integer ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
