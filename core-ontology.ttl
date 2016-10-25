@@ -28,9 +28,18 @@ pc:Identifier rdf:type owl:Class ;
 pc:IdentifierSource rdf:type owl:Class ;
 	rdfs:label "IdentifierSource"@en ;
 	rdfs:comment "An identifier source"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+
+pc:WebLink rdf:type owl:Class ;
+	rdfs:label "WebLink"@en ;
+	rdfs:comment "A web link url."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .			
+	
+pc:WebLinkSource rdf:type owl:Class ;
+	rdfs:label "WebLinkSource"@en ;
+	rdfs:comment "A link source."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 	
-
 
 #######  Object properties ##### 
 
@@ -47,6 +56,20 @@ pc:hasIdentifierSource rdf:type owl:ObjectProperty ;
 	rdfs:domain pc:Identifier ;
 	rdfs:range pc:IdentifierSource ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:hasWebLink rdf:type owl:ObjectProperty ;
+	rdfs:label "hasWebLink"@en ;
+	rdfs:comment "Relates a agent to a link. e.g. Member to a twitter account."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range pc:WebLink ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:hasWebLinkSource rdf:type owl:ObjectProperty ;
+	rdfs:label "hasWebLinkScource"@en ;
+	rdfs:comment "Relates a link to a link source."@en ;
+	rdfs:domain pc:WebLink ;
+	rdfs:range pc:WebLinkType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .				
 		
 
 #######  Data properties ##### 
@@ -65,9 +88,23 @@ pc:endDate rdf:type owl:DatatypeProperty ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+pc:createdAtDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "createdAtDate"@en ;
+	rdfs:comment "Thing has an created date."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 
-pc:value rdf:type owl:DatatypeProperty ;
-	rdfs:label "value"@en ;
+pc:updatedAtDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "updatedAtDate"@en ;
+	rdfs:comment "Thing has an updated at date."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+
+pc:indentifierValue rdf:type owl:DatatypeProperty ;
+	rdfs:label "indentifierValue"@en ;
 	rdfs:comment "Identifier has a value."@en ;
 	rdfs:domain pc:Identifier ;
 	rdfs:range rdfs:Literal ;
@@ -79,8 +116,7 @@ pc:preferredLabel rdf:type owl:DatatypeProperty ;
 	rdfs:domain pc:Thing ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
-	
-	
+		
 pc:sortLabel rdf:type owl:DatatypeProperty ;
 	rdfs:label "sortLabel"@en ;
 	rdfs:comment "sort label."@en ;
@@ -88,5 +124,10 @@ pc:sortLabel rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 	
-
+pc:url rdf:type owl:DatatypeProperty ;
+	rdfs:label "url"@en ;
+	rdfs:comment "a url."@en ;
+	rdfs:domain pc:WebLink ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
 
