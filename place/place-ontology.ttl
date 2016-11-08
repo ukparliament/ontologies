@@ -1,0 +1,36 @@
+@prefix pp: <http://parliament.uk/ontologies/place/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/place/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Place ontology"@en ;
+    dcterms:created "08/11/2016"^^xsd:date ;
+    dcterms:description "Place ontology for UK Parliament"@en .
+	
+##### classes ####
+
+pp:Geometry rdf:type owl:Class ;
+	rdfs:label "A geographic extent expressed as a point, box or polygon."@en ;
+	rdfs:comment "A geometry."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
+	
+pp:Place rdf:type owl:Class ;
+	rdfs:label "Place"@en ;
+	rdfs:comment "A place."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
+	
+#### object property ####
+
+pp:hasGeometry rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGeometry"@en ;
+	rdfs:comment "Relates a place geometric representation."@en ;
+	rdfs:domain pp:Place ;
+	rdfs:range pp:Geometry ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .		
+
+	
+	
