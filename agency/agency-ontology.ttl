@@ -14,6 +14,10 @@
 
 #######  Classes ##### 	
 
+pa:Address rdf:type owl:Class ;
+	rdfs:label "Address"@en ;
+	rdfs:comment "An address"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
 pa:Agent rdf:type owl:Class ;
 	rdfs:subClassOf pa:ContactableThing ;
@@ -254,3 +258,49 @@ pa:dateOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:domain pa:Person ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+		
+
+pa:addressLine1 rdf:type owl:DatatypeProperty ;
+	rdfs:label "line1"@en ;
+	rdfs:comment "Address has line 1."@en ;
+	rdfs:domain pa:Address ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:addressLine2 rdf:type owl:DatatypeProperty ;
+	rdfs:label "addressLine2"@en ;
+	rdfs:comment "Address has line 2."@en ;
+	rdfs:domain pa:Address ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:addressLine3 rdf:type owl:DatatypeProperty ;
+	rdfs:label "addressLine3"@en ;
+	rdfs:comment "Address has line 3."@en ;
+	rdfs:domain pa:Address ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .			
+
+pa:addressLine4 rdf:type owl:DatatypeProperty ;
+	rdfs:label "addressLine4"@en ;
+	rdfs:comment "Address has line 4."@en ;
+	rdfs:domain pa:Address ;
+	rdfs:range rdf:langString ;	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:addressLine5 rdf:type owl:DatatypeProperty ;
+	rdfs:label "addressLine5"@en ;
+	rdfs:comment "Address has line 5."@en ;
+	rdfs:domain pa:Address ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/>.
+	
+pa:postcode rdf:type owl:DatatypeProperty ;
+	rdfs:label "postcode"@en ;
+	rdfs:comment "Address has postcode."@en ;
+	rdfs:domain pa:Address ;
+	rdfs:range rdfs:Literal ;	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+			
+	
