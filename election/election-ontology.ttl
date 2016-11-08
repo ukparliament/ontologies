@@ -36,9 +36,9 @@ pe:Electorate rdf:type owl:Class ;
 	rdfs:comment "A group of people at the time of the election eligible to vote in an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
-pe:Constituents rdf:type owl:Class ;
+pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:subClassOf pe:Group ;
-	rdfs:label "Constituents"@en ;
+	rdfs:label "ConstituencyGroup"@en ;
 	rdfs:comment "A group of people to be represented by the by the winner of an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
@@ -106,17 +106,17 @@ pe:hasElectorate rdf:type owl:ObjectProperty ;
 	rdfs:range pe:Electorate  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .				
 
-pe:isPartOfConstituents rdf:type owl:ObjectProperty ;
-	rdfs:label "isPartOfConstituents"@en ;
-	rdfs:comment "Relates an electorate to its constituents."@en ;
+pe:isPartOfConstituencyGroup rdf:type owl:ObjectProperty ;
+	rdfs:label "isPartOfConstituencyGroup"@en ;
+	rdfs:comment "Relates an electorate to its constituency group."@en ;
 	rdfs:domain pe:Electorate ;
-	rdfs:range pe:Constituents  ;
+	rdfs:range pe:ConstituencyGroup  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasConstituencyArea rdf:type owl:ObjectProperty ;
 	rdfs:label "hasConstituencyArea"@en ;
 	rdfs:comment "Relates an electorate to a geographic area."@en ;
-	rdfs:domain pe:Constituents ;
+	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:ConstituencyArea  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
