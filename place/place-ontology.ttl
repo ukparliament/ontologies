@@ -23,6 +23,12 @@ pp:Place rdf:type owl:Class ;
 	rdfs:comment "A place."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
 	
+pp:PlaceType rdf:type owl:Class ;
+	rdfs:label "PlaceType"@en ;
+	rdfs:comment "A place type."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .	
+	
+	
 #### object property ####
 
 pp:hasGeometry rdf:type owl:ObjectProperty ;
@@ -30,7 +36,21 @@ pp:hasGeometry rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a place geometric representation."@en ;
 	rdfs:domain pp:Place ;
 	rdfs:range pp:Geometry ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .		
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
+	
+pp:hasPlaceType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPlaceType"@en ;
+	rdfs:comment "Relates a place to a place type."@en ;
+	rdfs:domain pp:Place ;
+	rdfs:range pp:PlaceType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .	
+
+pp:containedByPlace rdf:type owl:ObjectProperty ;
+	rdfs:label "containedByPlace"@en ;
+	rdfs:comment "Relates a place to a place it is contained by."@en ;
+	rdfs:domain pp:Place ;
+	rdfs:range pp:Place ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .					
 
 	
 	

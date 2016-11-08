@@ -41,6 +41,12 @@ pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:label "ConstituencyGroup"@en ;
 	rdfs:comment "A group of people to be represented by the by the winner of an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:ConstituencyAreaType rdf:type owl:Class ;
+	rdfs:subClassOf pe:Group ;
+	rdfs:label "ConstituencyAreaType"@en ;
+	rdfs:comment "A the type of constituency area."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
 pe:ConstituencyArea rdf:type owl:Class ;
 	rdfs:label "ConstituencyArea"@en ;
@@ -84,6 +90,20 @@ pe:GainOrHold  rdf:type owl:Class ;
 			
 
 #######  Object properties ##### 
+
+pe:formedFromPartOfConstituencyArea rdf:type owl:ObjectProperty ;
+	rdfs:label "formedFromPartOfConstituencyArea"@en ;
+	rdfs:comment "Relates a constituency area to a constituency area part of which partly formed it."@en ;
+	rdfs:domain pe:ConstituencyArea ;
+	rdfs:range pe:ConstituencyArea ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:hasConstituencyAreaType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasConstituencyAreaType"@en ;
+	rdfs:comment "Relates a constituency area to a constituency area type."@en ;
+	rdfs:domain pe:ConstituencyArea ;
+	rdfs:range pe:ConstituencyAreaType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:isPartOfElection rdf:type owl:ObjectProperty ;
 	rdfs:label "isPartOfElection"@en ;
@@ -213,3 +233,16 @@ pe:populationSize rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
+pe:majority rdf:type owl:DatatypeProperty ;
+	rdfs:label "majority"@en ;
+	rdfs:comment "The majority gained in an election."@en ;
+	rdfs:domain pe:ElectionResult ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:turnout rdf:type owl:DatatypeProperty ;
+	rdfs:label "turnout"@en ;
+	rdfs:comment "The turnout for an election."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
