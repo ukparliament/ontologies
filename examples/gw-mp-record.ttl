@@ -19,10 +19,14 @@
 	pa:givenName "George" ;
 	pa:familyName "Galloway" ;
 	pa:title "Mr" ;
+	pa:hasMembership <http://data.parliament.uk/memberships/id-membership> ;
 	###	country?
 	pa:placeOfBirth <http://data.parliament.uk/places/id-dundee> ;
-	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details> .
-	
+	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-website> ;
+	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-address> ;
+	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-email> ; 
+	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-phone-number> ;
+	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-twitter> . 	 
 	
 
 <http://data.parliament.uk/houses/commons> rdf:type phm:House ;
@@ -74,10 +78,18 @@
 	pa:addressLine2 "London" ;
 	pa:postcode "SW1A 0AA" .
 		
-<http://data.parliament.uk/contact-details/id-contact-details-website> rdf:type pa:ContactDetails ;
+<http://data.parliament.uk/contact-details/id-contact-details-twitter> rdf:type pa:ContactDetails ;
 	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/personal> ;
 	# something about the source? is from twitter?
-	pa:url "https://twitter.com/georgegalloway" .		
+	pa:url "https://twitter.com/georgegalloway" .
+	
+<http://data.parliament.uk/memberships/id-membership> rdf:type pa:Membership ;
+	pa:memberIn <http://data.parliament.uk/party/id-party-15> ;
+	pc:startDate "1987-06-11"^^xsd:startDate ;
+	pc:endDate "2003-10-24"^^xsd:endDate .
+#### sits in opposition? 		<SitsOppositeSideToParty>False</SitsOppositeSideToParty>
+
+			
 		
 		
 	
