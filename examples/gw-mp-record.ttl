@@ -50,6 +50,37 @@
 	pc:preferredLabel "29-Mar-2012 By-election"@en ;
 	pe:hasElectionType <http://data.parliament.uk/election-types/by-election> ;
 	pc:startDate "2012-03-29"^^xsd:date .
+
+#### is contact details type for the type of contact details or whether it is personal or personal versus parliamentary
+	
+<http://data.parliament.uk/contact-details/id-contact-details-website> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/personal> ;
+	pa:url "http://www.georgegalloway.com/" .
+
+<http://data.parliament.uk/contact-details/id-contact-details-phone-number> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/parliamentary> ;
+	pa:phoneNumber "020 7219 6940" .
+	
+<http://data.parliament.uk/contact-details/id-contact-details-email> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/parliamentary> ;
+	pa:email "george.galloway.mp@parliament.uk" .
+
+<http://data.parliament.uk/contact-details/id-contact-details-address> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/parliamentary> ;		
+	pa:hasAddress <http://data.parliament.uk/addresses/id-address> .
+	
+<http://data.parliament.uk/addresses/id-address> rdf:type pa:Address ;
+	pa:addressLine1 "House of Commons" ;
+	pa:addressLine2 "London" ;
+	pa:postcode "SW1A 0AA" .
+		
+<http://data.parliament.uk/contact-details/id-contact-details-website> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/personal> ;
+	# something about the source? is from twitter?
+	pa:url "https://twitter.com/georgegalloway" .		
+		
+		
+	
 	
 	
 	
