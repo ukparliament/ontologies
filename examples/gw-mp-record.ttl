@@ -39,8 +39,19 @@
 	phm:representsConstituencyGroup <http://data.parliament.uk/constituency-groups/3355> .
 	
 <http://data.parliament.uk/constituency-groups/3355> rdf:type phm:ConstituencyGroup ;
-	pc:preferredLabel "Bradford West"@en .	 
+	pc:preferredLabel "Bradford West"@en ;
+	pp:hasGeometry <http://data.parliament.uk/geometries/geometry-id>  .
 
+<http://data.parliament.uk/geometries/geometry-id> rdf:type pp:Polygon ;
+	pp:hasPoint <http://data.parliament.uk/geometries/pointid-1> ;
+	pp:hasPoint <http://data.parliament.uk/geometries/pointid-2> ;
+	pp:hasPoint <http://data.parliament.uk/geometries/pointid-3> ;
+	pp:hasPoint <http://data.parliament.uk/geometries/pointid-4> .
+
+<http://data.parliament.uk/geometries/pointid-1> pp:Point ;
+	pp:long "-1.791381"^^xsd:float ;
+	pp:lat  "51.745866"^^xsd:float . 
+	
 <http://data.parliament.uk/seat-incumbencies/id> rdf:type phm:SeatIncumbency ;	
 	phm:hasIncumbent <http://data.parliament.uk/people/609> ;
 	pc:startDate "2012-03-30"^^xsd:date ;
