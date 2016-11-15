@@ -1,0 +1,51 @@
+@prefix pc: <http://parliament.uk/ontologies/core/> .
+@prefix pa: <http://parliament.uk/ontologies/agency/> . 
+@prefix pp: <http://parliament.uk/ontologies/place/> . 
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> . 
+@prefix pe: <http://parliament.uk/ontologies/election/> .  
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<http://data.parliament.uk/people/609>  rdf:type  phm:Member ;
+	pc:preferredLabel "Mr George Galloway"@en ;
+	pc:sortLabel "Galloway, Mr George"@en ;
+	### Mr George Galloway full title##
+	pa:dateOfBirth "1954-08-16"^^xsd:date ;
+	pa:hasGenderIdentity <http://data.parliament.uk/gender-identities/id> ;
+	pa:givenName "George" ;
+	pa:familyName "Galloway" ;
+	pa:title "Mr" ;
+	pa:placeOfBirth <http://data.parliament.uk/places/id-dundee> ;
+	
+	
+###	country?
+
+<http://data.parliament.uk/houses/commons> rdf:type phm:House ;
+	pc:preferredLabel "Commons" ;
+	phm:hasHouseSeat <http://data.parliament.uk/seats/id> .
+
+	
+<http://data.parliament.uk/seats/id> rdf:type phm:HouseSeat ;
+	phm:hasSeatType <http://data.parliament.uk/seat-types/...?> ;
+	phm:hasSeatIncumbency <http://data.parliament.uk/seat-incumbencies/id> ;
+	phm:representsConstituencyGroup <http://data.parliament.uk/constituency-groups/3355> .
+	
+<http://data.parliament.uk/constituency-groups/3355> rdf:type phm:ConstituencyGroup ;
+	pc:preferredLabel "Bradford West"@en .
+		 
+
+<http://data.parliament.uk/seat-incumbencies/id> rdf:type phm:SeatIncumbency ;	
+	phm:hasIncumbent <http://data.parliament.uk/people/609> ;
+	pc:startDate "2012-03-30"^^xsd:date ;
+	pc:endDate "2015-03-30"^^xsd:date ;
+	phm:hasEndReason <http://data.parliament.uk/end-reasons/general-election> .	
+
+<http://data.parliament.uk/gender-identities/id> rdf:type pa:GenderIdentity ;
+	pa:hasGender <http://data.parliament.uk/genders/male> .
+	
+	
+	
