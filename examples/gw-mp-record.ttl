@@ -26,9 +26,12 @@
 	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-address> ;
 	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-email> ; 
 	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-phone-number> ;
-	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-twitter> . 	 
+	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-twitter> . 
 	
-
+<http://parliament.uk/gender-identities/id> rdf:type pa:GenderIdentity ;
+	pa:hasGender <http://parliament.uk/genders/male> ;
+	pc:startDate "1954-08-16"^^xsd:date  .		 
+	
 <http://parliament.uk/houses/commons> rdf:type phm:House ;
 	pc:preferredLabel "Commons" ;
 	phm:hasHouseSeat <http://parliament.uk/seats/id> .
@@ -42,7 +45,13 @@
 	phm:hasIncumbent <http://parliament.uk/people/609> ;
 	pc:startDate "2012-03-30"^^xsd:date ;
 	pc:endDate "2015-03-30"^^xsd:date ;
-	phm:hasEndReason <http://parliament.uk/end-reasons/general-election> .		
+	phm:hasSeatIncumbencyInterruption <http://parliament.uk/seat-incumbencies-interuptions/id> .
+	phm:hasEndReason <http://parliament.uk/end-reasons/general-election> .	
+	
+<http://parliament.uk/seat-incumbencies-interuptions/id> rdf:type phm:Suspension ;
+	pc:startDate "2007-10-08"^^xsd:date ;
+	pc:endDate "2007-10-31"^^xsd:date .
+			
 
 	#### do we want an entry type? first entry, continutation etc..		
 
@@ -69,6 +78,7 @@
 	pe:hasConstituencyArea <http://parliament.uk/place/place-id> .
 
 <http://parliament.uk/place/place-id> rdf:type pp:Place ;	
+	pe:hasConstituencyAreaType <http://parliament.uk/constituency-area-types/parliamentary-constituency> ;
 	pp:hasGeometry <http://parliament.uk/geometries/geometry-id>  .
 	
 <http://parliament.uk/geometries/geometry-id> rdf:type pp:Polygon ;
@@ -85,9 +95,6 @@
 	pp:long "-3.886136"^^xsd:float ;
 	pp:lat  "51.613912"^^xsd:float . 
 	
-
-<http://parliament.uk/gender-identities/id> rdf:type pa:GenderIdentity ;
-	pa:hasGender <http://parliament.uk/genders/male> .
 
 
 #### is contact details type for the type of contact details or whether it is personal or personal versus parliamentary
