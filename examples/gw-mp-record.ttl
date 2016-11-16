@@ -50,18 +50,25 @@
 	pc:preferredLabel "29-Mar-2012 By-election"@en ;
 	pe:hasElectionType <http://parliament.uk/election-types/by-election> ;
 	pc:startDate "2012-03-29"^^xsd:date ;
+	pe:hasElectorate <http://parliament.uk/electorate/electorate-id> ;
 	pe:hasCandidacy <http://parliament.uk/candidacies/candidacies-id> .
+	
+<http://parliament.uk/electorate/electorate-id> rdf:type pe:Electorate ;
+	pe:isPartOfConstituencyGroup <http://parliament.uk/constituency-groups/3355> .
 
 <http://parliament.uk/candidacies/candidacies-id> rdf:type pe:Candidacy ;
+	pe:hasCandidate <http://parliament.uk/people/609> ;
 	pe:hasParty <http://parliament.uk/party/id-party-15> ;
 	pe:hasCandidacyResult <http://parliament.uk/candidacy-results/candidacy-result-id> .
 
 <http://parliament.uk/candidacy-results/candidacy-result-id> rdf:type pe:CandidacyResult ;
 	pe:establishesIncumbency <http://parliament.uk/seat-incumbencies/id>  .
 
-	
 <http://parliament.uk/constituency-groups/3355> rdf:type phm:ConstituencyGroup ;
 	pc:preferredLabel "Bradford West"@en ;
+	pe:hasConstituencyArea <http://parliament.uk/place/place-id> .
+
+<http://parliament.uk/place/place-id> rdf:type pp:Place ;	
 	pp:hasGeometry <http://parliament.uk/geometries/geometry-id>  .
 	
 <http://parliament.uk/geometries/geometry-id> rdf:type pp:Polygon ;
@@ -81,7 +88,6 @@
 
 <http://parliament.uk/gender-identities/id> rdf:type pa:GenderIdentity ;
 	pa:hasGender <http://parliament.uk/genders/male> .
-	
 
 
 #### is contact details type for the type of contact details or whether it is personal or personal versus parliamentary
