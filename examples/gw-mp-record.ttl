@@ -10,95 +10,112 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
 
-<http://data.parliament.uk/people/609>  rdf:type  phm:Member ;
+<http://parliament.uk/people/609>  rdf:type  phm:Member ;
 	pc:preferredLabel "Mr George Galloway"@en ;
 	pc:sortLabel "Galloway, Mr George"@en ;
 	### Mr George Galloway full title##
 	pa:dateOfBirth "1954-08-16"^^xsd:date ;
-	pa:hasGenderIdentity <http://data.parliament.uk/gender-identities/id-for-this-gender-identity> ;
+	pa:hasGenderIdentity <http://parliament.uk/gender-identities/id-for-this-gender-identity> ;
 	pa:givenName "George" ;
 	pa:familyName "Galloway" ;
 	pa:title "Mr" ;
-	pa:hasMembership <http://data.parliament.uk/memberships/id-for-membership> ;
+	pa:hasMembership <http://parliament.uk/memberships/id-for-membership> ;
 	###	country?
-	pa:placeOfBirth <http://data.parliament.uk/places/id-for-dundee> ;
-	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-website> ;
-	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-address> ;
-	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-email> ; 
-	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-phone-number> ;
-	pa:hasContactDetails <http://data.parliament.uk/contact-details/id-contact-details-twitter> . 	 
+	pa:placeOfBirth <http://parliament.uk/places/id-for-dundee> ;
+	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-website> ;
+	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-address> ;
+	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-email> ; 
+	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-phone-number> ;
+	pa:hasContactDetails <http://parliament.uk/contact-details/id-contact-details-twitter> . 	 
 	
 
-<http://data.parliament.uk/houses/commons> rdf:type phm:House ;
+<http://parliament.uk/houses/commons> rdf:type phm:House ;
 	pc:preferredLabel "Commons" ;
-	phm:hasHouseSeat <http://data.parliament.uk/seats/id> .
+	phm:hasHouseSeat <http://parliament.uk/seats/id> .
 	
-<http://data.parliament.uk/seats/id> rdf:type phm:HouseSeat ;
-	phm:hasSeatType <http://data.parliament.uk/seat-types/...?> ;
-	phm:hasSeatIncumbency <http://data.parliament.uk/seat-incumbencies/id> ;
-	phm:representsConstituencyGroup <http://data.parliament.uk/constituency-groups/3355> .
+<http://parliament.uk/seats/id> rdf:type phm:HouseSeat ;
+	phm:hasSeatType <http://parliament.uk/seat-types/...?> ;
+	phm:hasSeatIncumbency <http://parliament.uk/seat-incumbencies/id> ;
+	phm:representsConstituencyGroup <http://parliament.uk/constituency-groups/3355> .
 	
-<http://data.parliament.uk/constituency-groups/3355> rdf:type phm:ConstituencyGroup ;
-	pc:preferredLabel "Bradford West"@en ;
-	pp:hasGeometry <http://data.parliament.uk/geometries/geometry-id>  .
-
-<http://data.parliament.uk/geometries/geometry-id> rdf:type pp:Polygon ;
-	pp:hasPoint <http://data.parliament.uk/geometries/pointid-1> ;
-	pp:hasPoint <http://data.parliament.uk/geometries/pointid-2> ;
-	pp:hasPoint <http://data.parliament.uk/geometries/pointid-3> ;
-	pp:hasPoint <http://data.parliament.uk/geometries/pointid-4> .
-
-<http://data.parliament.uk/geometries/pointid-1> pp:Point ;
-	pp:long "-1.791381"^^xsd:float ;
-	pp:lat  "51.745866"^^xsd:float . 
-	
-<http://data.parliament.uk/seat-incumbencies/id> rdf:type phm:SeatIncumbency ;	
-	phm:hasIncumbent <http://data.parliament.uk/people/609> ;
+<http://parliament.uk/seat-incumbencies/id> rdf:type phm:SeatIncumbency ;	
+	phm:hasIncumbent <http://parliament.uk/people/609> ;
 	pc:startDate "2012-03-30"^^xsd:date ;
 	pc:endDate "2015-03-30"^^xsd:date ;
-	phm:hasEndReason <http://data.parliament.uk/end-reasons/general-election> .	
+	phm:hasEndReason <http://parliament.uk/end-reasons/general-election> .		
 
-<http://data.parliament.uk/gender-identities/id> rdf:type pa:GenderIdentity ;
-	pa:hasGender <http://data.parliament.uk/genders/male> .
-	
-<http://data.parliament.uk/elections/357> rdf:type pe:Election	;
+	#### do we want an entry type? first entry, continutation etc..		
+
+<http://parliament.uk/elections/357> rdf:type pe:Election	;
 	pc:preferredLabel "29-Mar-2012 By-election"@en ;
-	pe:hasElectionType <http://data.parliament.uk/election-types/by-election> ;
-	pc:startDate "2012-03-29"^^xsd:date .
+	pe:hasElectionType <http://parliament.uk/election-types/by-election> ;
+	pc:startDate "2012-03-29"^^xsd:date ;
+	pe:hasCandidacy <http://parliament.uk/candidacies/candidacies-id> .
+
+<http://parliament.uk/candidacies/candidacies-id> rdf:type pe:Candidacy ;
+	pe:hasParty <http://parliament.uk/party/id-party-15> ;
+	pe:hasCandidacyResult <http://parliament.uk/candidacy-results/candidacy-result-id> .
+
+<http://parliament.uk/candidacy-results/candidacy-result-id> rdf:type pe:CandidacyResult ;
+	pe:establishesIncumbency <http://parliament.uk/seat-incumbencies/id>  .
+
+	
+<http://parliament.uk/constituency-groups/3355> rdf:type phm:ConstituencyGroup ;
+	pc:preferredLabel "Bradford West"@en ;
+	pp:hasGeometry <http://parliament.uk/geometries/geometry-id>  .
+	
+<http://parliament.uk/geometries/geometry-id> rdf:type pp:Polygon ;
+	pp:hasPoint <http://parliament.uk/geometries/pointid-1> ;
+	pp:hasPoint <http://parliament.uk/geometries/pointid-2> ;
+	pp:hasPoint <http://parliament.uk/geometries/pointid-3> ;
+	pp:hasPoint <http://parliament.uk/geometries/pointid-4> .
+
+<http://parliament.uk/geometries/pointid-1> pp:Point ;
+	pp:long "-3.791381"^^xsd:float ;
+	pp:lat  "51.745866"^^xsd:float . 
+
+<http://parliament.uk/geometries/pointid-2> pp:Point ;
+	pp:long "-3.886136"^^xsd:float ;
+	pp:lat  "51.613912"^^xsd:float . 
+	
+
+<http://parliament.uk/gender-identities/id> rdf:type pa:GenderIdentity ;
+	pa:hasGender <http://parliament.uk/genders/male> .
+	
+
 
 #### is contact details type for the type of contact details or whether it is personal or personal versus parliamentary
 	
-<http://data.parliament.uk/contact-details/id-contact-details-website> rdf:type pa:ContactDetails ;
-	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/personal> ;
+<http://parliament.uk/contact-details/id-contact-details-website> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://parliament.uk/contact-details-type/personal> ;
 	pa:url "http://www.georgegalloway.com/" .
 
-<http://data.parliament.uk/contact-details/id-contact-details-phone-number> rdf:type pa:ContactDetails ;
-	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/parliamentary> ;
+<http://parliament.uk/contact-details/id-contact-details-phone-number> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://parliament.uk/contact-details-type/parliamentary> ;
 	pa:phoneNumber "020 7219 6940" .
 	
-<http://data.parliament.uk/contact-details/id-contact-details-email> rdf:type pa:ContactDetails ;
-	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/parliamentary> ;
+<http://parliament.uk/contact-details/id-contact-details-email> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://parliament.uk/contact-details-type/parliamentary> ;
 	pa:email "george.galloway.mp@parliament.uk" .
 
-<http://data.parliament.uk/contact-details/id-contact-details-address> rdf:type pa:ContactDetails ;
-	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/parliamentary> ;		
-	pa:hasAddress <http://data.parliament.uk/addresses/id-address> .
+<http://parliament.uk/contact-details/id-contact-details-address> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://parliament.uk/contact-details-type/parliamentary> ;		
+	pa:hasAddress <http://parliament.uk/addresses/id-address> .
 	
-<http://data.parliament.uk/addresses/id-address> rdf:type pa:Address ;
+<http://parliament.uk/addresses/id-address> rdf:type pa:Address ;
 	pa:addressLine1 "House of Commons" ;
 	pa:addressLine2 "London" ;
 	pa:postcode "SW1A 0AA" .
 		
-<http://data.parliament.uk/contact-details/id-contact-details-twitter> rdf:type pa:ContactDetails ;
-	pa:hasContactDetailsType <http://data.parliament.uk/contact-details-type/personal> ;
+<http://parliament.uk/contact-details/id-contact-details-twitter> rdf:type pa:ContactDetails ;
+	pa:hasContactDetailsType <http://parliament.uk/contact-details-type/personal> ;
 	# something about the source? is from twitter?
 	pa:url "https://twitter.com/georgegalloway" .
 	
-<http://data.parliament.uk/memberships/id-membership> rdf:type pa:Membership ;
-	pa:memberIn <http://data.parliament.uk/party/id-party-15> ;
+<http://parliament.uk/memberships/id-membership> rdf:type pa:Membership ;
+	pa:memberIn <http://parliament.uk/party/id-party-15> ;
 	pc:startDate "1987-06-11"^^xsd:startDate ;
 	pc:endDate "2003-10-24"^^xsd:endDate .
-#### sits in opposition? 		<SitsOppositeSideToParty>False</SitsOppositeSideToParty>
 
 			
 		
