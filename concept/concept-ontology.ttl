@@ -1,0 +1,79 @@
+@prefix pco: <http://parliament.uk/ontologies/election/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/concept/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Concept ontology"@en ;
+    dcterms:created "22/10/2016"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Concept ontology for UK Parliament"@en .
+
+
+#######  Classes ##### 	
+
+pco:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment "A concept."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:ConceptScheme rdf:type owl:Class ;
+	rdfs:label "ConceptScheme"@en ;
+	rdfs:comment "A concept scheme."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:Thing rdf:type owl:Class ;
+	rdfs:label "Thing"@en ;
+	rdfs:comment "A thing."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+
+#######  data properties ##### 	
+
+pco:alternativeLabel rdf:type owl:DatatypeProperty ;
+	rdfs:label "alternativeLabel"@en ;
+	rdfs:comment "An alternative label."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:hasHistoryNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "hasHistoryNote"@en ;
+	rdfs:comment "A history note."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:hasScopeNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "hasScopeNote"@en ;
+	rdfs:comment "A scope note."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+
+#######  object properties ##### 	
+
+pco:hasBroaderConcept rdf:type owl:ObjectProperty ;
+	rdfs:label "hasBroaderConcept"@en ;
+	rdfs:comment "Relates a concept to a broader concept."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range pco:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	
+pco:inConceptScheme rdf:type owl:ObjectProperty ;
+	rdfs:label "inConceptScheme"@en ;
+	rdfs:comment "Relates a concept to a concept scheme."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range pco:ConceptScheme ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	
+pco:hasFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "hasFocus"@en ;
+	rdfs:comment "Relates a concept to a thing that is its focus."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range pco:Thing ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
