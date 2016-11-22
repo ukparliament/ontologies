@@ -37,6 +37,11 @@ pa:Group rdf:type owl:Class ;
 	rdfs:label "Group"@en ;
 	rdfs:comment "A group"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:GroupType rdf:type owl:Class ;
+	rdfs:label "GroupType"@en ;
+	rdfs:comment "A group type"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 	
 pa:ContactableThing rdf:type owl:Class ;
 	rdfs:label "ContactableThing"@en ;
@@ -91,8 +96,15 @@ pa:ContactDetails rdf:type owl:Class ;
 	
 pa:ContactDetailsType rdf:type owl:Class ;
 	rdfs:label "ContactDetailsType"@en ;
-	rdfs:comment "An contact detail type"@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .				
+	rdfs:comment "An contact detail type."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
+	
+pa:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment "A concept."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+				
 
 #######  Object properties ##### 
 
@@ -102,6 +114,20 @@ pa:hasGenderIdentity rdf:type owl:ObjectProperty ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:GenderIdentity ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasPolicyInterest rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPolicyInterest"@en ;
+	rdfs:comment "Relates a person to ta concept."@en ;
+	rdfs:domain pa:Agent ;
+	rdfs:range pa:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:hasExperties rdf:type owl:ObjectProperty ;
+	rdfs:label "hasExperties"@en ;
+	rdfs:comment "Relates a member to an experties."@en ;
+	rdfs:domain pa:Member ;
+	rdfs:range pa:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:hasGender rdf:type owl:ObjectProperty ;
 	rdfs:label "hasGender"@en ;
@@ -130,6 +156,20 @@ pa:hasContactDetailsType rdf:type owl:ObjectProperty ;
 	rdfs:domain pa:ContactDetails ;
 	rdfs:range pa:ContactDetailsType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:hasGroupType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGroupType"@en ;
+	rdfs:comment "Relates group to its type."@en ;
+	rdfs:domain pa:Group ;
+	rdfs:range pa:GroupType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:hasParentGroupType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasParentGroupType"@en ;
+	rdfs:comment "Relates group type to its parent grouptype."@en ;
+	rdfs:domain pa:GroupType ;
+	rdfs:range pa:GroupType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 
 pa:hasMembership rdf:type owl:ObjectProperty ;
 	rdfs:label "hasMembership"@en ;
@@ -293,6 +333,13 @@ pa:addressLine5 rdf:type owl:DatatypeProperty ;
 	rdfs:label "addressLine5"@en ;
 	rdfs:comment "Address has line 5."@en ;
 	rdfs:domain pa:Address ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/>.
+	
+pa:purpose rdf:type owl:DatatypeProperty ;
+	rdfs:label "purpose"@en ;
+	rdfs:comment "Purpose of a group."@en ;
+	rdfs:domain pa:Group ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/>.
 	
