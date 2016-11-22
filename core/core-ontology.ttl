@@ -41,6 +41,10 @@ pc:WebLinkSource rdf:type owl:Class ;
 	rdfs:comment "A link source."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 	
+pc:WebLinkType rdf:type owl:Class ;
+	rdfs:label "WebLinkType"@en ;
+	rdfs:comment "A link type."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 
 #######  Object properties ##### 
 
@@ -68,6 +72,13 @@ pc:hasWebLink rdf:type owl:ObjectProperty ;
 pc:hasWebLinkSource rdf:type owl:ObjectProperty ;
 	rdfs:label "hasWebLinkScource"@en ;
 	rdfs:comment "Relates a link to a link source."@en ;
+	rdfs:domain pc:WebLink ;
+	rdfs:range pc:WebLinkSource ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+pc:hasWebLinkType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasWebLinkType"@en ;
+	rdfs:comment "Relates a link to a weblink type."@en ;
 	rdfs:domain pc:WebLink ;
 	rdfs:range pc:WebLinkType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .				

@@ -76,4 +76,11 @@ pco:hasFocus rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a concept to a thing that is its focus."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Thing ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .	
+	
+pco:hasRelatedConcept rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRelatedConcept"@en ;
+	rdfs:comment "Relates a concept to a related concept."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range pco:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
