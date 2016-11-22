@@ -67,6 +67,10 @@ phm:SeatIncumbencyInterruption rdf:type owl:Class ;
 	rdfs:comment "A seat incumbency interruption."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 
+phm:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment "A concept."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 ##### Object properties ####
 
@@ -139,7 +143,21 @@ phm:hasEndReason rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a seat incumbency to an end reason."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:EndReason ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	
+phm:hasInterest rdf:type owl:ObjectProperty ;
+	rdfs:label "hasInterest"@en ;
+	rdfs:comment "Relates a member to an interest."@en ;
+	rdfs:domain phm:Member ;
+	rdfs:range phm:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+		
+phm:hasExperties rdf:type owl:ObjectProperty ;
+	rdfs:label "hasExperties"@en ;
+	rdfs:comment "Relates a member to an experties."@en ;
+	rdfs:domain phm:Member ;
+	rdfs:range phm:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
 	
 ##### Data properties ####	
 			
