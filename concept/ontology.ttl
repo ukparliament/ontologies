@@ -17,17 +17,17 @@
 
 pco:Concept rdf:type owl:Class ;
 	rdfs:label "Concept"@en ;
-	rdfs:comment "A concept."@en ;
+	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:ConceptScheme rdf:type owl:Class ;
 	rdfs:label "ConceptScheme"@en ;
-	rdfs:comment "A concept scheme."@en ;
+	rdfs:comment "A concept scheme. Provides an arbitrary way to group concepts e.g. Commons Library to Lords Library."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:Thing rdf:type owl:Class ;
 	rdfs:label "Thing"@en ;
-	rdfs:comment "A thing."@en ;
+	rdfs:comment "A thing. Anything at all."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 
@@ -42,14 +42,14 @@ pco:alternativeLabel rdf:type owl:DatatypeProperty ;
 
 pco:hasHistoryNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "hasHistoryNote"@en ;
-	rdfs:comment "A history note."@en ;
+	rdfs:comment "A history note. Textual description of editorial changes to a concept over time."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:hasScopeNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "hasScopeNote"@en ;
-	rdfs:comment "A scope note."@en ;
+	rdfs:comment "A scope note. Textual description of the intended usage of a concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
@@ -73,14 +73,14 @@ pco:inConceptScheme rdf:type owl:ObjectProperty ;
 	
 pco:hasFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "hasFocus"@en ;
-	rdfs:comment "Relates a concept to a thing that is its focus."@en ;
+	rdfs:comment "Relates a concept to a real world thing that is its focus e.g. The concept / library subject term Winston Churchill to the person Winston Churchill."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Thing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .	
 	
 pco:hasRelatedConcept rdf:type owl:ObjectProperty ;
 	rdfs:label "hasRelatedConcept"@en ;
-	rdfs:comment "Relates a concept to a related concept."@en ;
+	rdfs:comment "Relates a concept to another concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
