@@ -15,53 +15,48 @@
 
 #######  Classes ##### 	
 
-pa:Address rdf:type owl:Class ;
-	rdfs:label "Address"@en ;
-	rdfs:comment "An address"@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
-
 pa:Agent rdf:type owl:Class ;
 	rdfs:subClassOf pa:ContactableThing ;
 	rdfs:label "Agent"@en ;
-	rdfs:comment "An agent"@en ;
+	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
 pa:Person rdf:type owl:Class ;
 	rdfs:subClassOf pa:Agent ;
 	rdfs:label "Person"@en ;
-	rdfs:comment "A person"@en ;
+	rdfs:comment "A person."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:Group rdf:type owl:Class ;
 	rdfs:subClassOf pa:Agent ;
 	rdfs:label "Group"@en ;
-	rdfs:comment "A group"@en ;
+	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:GroupType rdf:type owl:Class ;
 	rdfs:label "GroupType"@en ;
-	rdfs:comment "A group type"@en ;
+	rdfs:comment "A group type."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 	
 pa:ContactableThing rdf:type owl:Class ;
 	rdfs:label "ContactableThing"@en ;
-	rdfs:comment "A thing with an address or contact details"@en ;
+	rdfs:comment "A thing with a postal address or contact details."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 
 pa:Role rdf:type owl:Class ;
 	rdfs:label "Role"@en ;
-	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secerety between two dates"@en ;
+	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secerety between two dates."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:Position rdf:type owl:Class ;
 	rdfs:subClassOf pa:ContactableThing ;
 	rdfs:label "Position"@en ;
-	rdfs:comment "A position in a group that perists over time where different people may occupy via a role. e.g. Foreign Secretary"@en ;
+	rdfs:comment "A position in a group that persists over time which can be occupied by different people at different times e.g. many people have been Foreign Secretary."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
 pa:Membership rdf:type owl:Class ;
 	rdfs:label "Membership"@en ;
-	rdfs:comment "A membership of a person in a group between between two dates."@en ;
+	rdfs:comment "A person or group's membership of a group between between two dates."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:PostalAddress rdf:type owl:Class ;
@@ -69,9 +64,9 @@ pa:PostalAddress rdf:type owl:Class ;
 	rdfs:comment "A postal address."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
-pa:GenderIndentity rdf:type owl:Class ;
-	rdfs:label "Gender"@en ;
-	rdfs:comment "A indentified gender."@en ;
+pa:GenderIdentity rdf:type owl:Class ;
+	rdfs:label "GenderIdentity"@en ;
+	rdfs:comment "The gender a person identifies as. May change over time."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .								
 
 pa:Gender rdf:type owl:Class ;
@@ -81,7 +76,7 @@ pa:Gender rdf:type owl:Class ;
 	
 pa:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
-	rdfs:comment "A place."@en ;
+	rdfs:comment "A geographic place."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
 pa:PositionType rdf:type owl:Class ;
@@ -96,7 +91,7 @@ pa:ContactDetails rdf:type owl:Class ;
 	
 pa:ContactDetailsType rdf:type owl:Class ;
 	rdfs:label "ContactDetailsType"@en ;
-	rdfs:comment "An contact detail type."@en ;
+	rdfs:comment "A contact detail type such as a Parliamentary address or constituency address."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 	
 pa:Concept rdf:type owl:Class ;
@@ -117,14 +112,14 @@ pa:hasGenderIdentity rdf:type owl:ObjectProperty ;
 	
 pa:hasPolicyInterest rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPolicyInterest"@en ;
-	rdfs:comment "Relates a person to ta concept."@en ;
+	rdfs:comment "Relates an agent (person or group) to a concept as a policy interest."@en ;
 	rdfs:domain pa:Agent ;
 	rdfs:range pa:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
-pa:hasExperties rdf:type owl:ObjectProperty ;
-	rdfs:label "hasExperties"@en ;
-	rdfs:comment "Relates a member to an experties."@en ;
+pa:hasExpertise rdf:type owl:ObjectProperty ;
+	rdfs:label "hasExpertise"@en ;
+	rdfs:comment "Relates an agent (person or group) to a concept as an area of expertise."@en ;
 	rdfs:domain pa:Member ;
 	rdfs:range pa:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
@@ -138,42 +133,42 @@ pa:hasGender rdf:type owl:ObjectProperty ;
 
 pa:hasContactDetails rdf:type owl:ObjectProperty ;
 	rdfs:label "hasContactDetails"@en ;
-	rdfs:comment "Relates an agent to contact details."@en ;
+	rdfs:comment "Relates a contactable thing (a person, group or position) to contact details."@en ;
 	rdfs:domain pa:ContactableThing ;
 	rdfs:range pa:ContactDetails ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
-pa:hasAddress rdf:type owl:ObjectProperty ;
-	rdfs:label "hasAddress"@en ;
-	rdfs:comment "Relates an address to an agent."@en ;
+pa:hasPostalAddress rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPostalAddress"@en ;
+	rdfs:comment "Relates a postal address to contact details."@en ;
 	rdfs:domain pa:ContactDetails ;
-	rdfs:range pa:Address ;
+	rdfs:range pa:PostalAddress ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasContactDetailsType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasContactDetailsType"@en ;
-	rdfs:comment "Relates contact details to its type."@en ;
+	rdfs:comment "Relates contact details to its type (e.g. Parliamentary, Constituency etc)."@en ;
 	rdfs:domain pa:ContactDetails ;
 	rdfs:range pa:ContactDetailsType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:hasGroupType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasGroupType"@en ;
-	rdfs:comment "Relates group to its type."@en ;
+	rdfs:comment "Relates a group to its type."@en ;
 	rdfs:domain pa:Group ;
 	rdfs:range pa:GroupType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
 pa:hasParentGroupType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasParentGroupType"@en ;
-	rdfs:comment "Relates group type to its parent grouptype."@en ;
+	rdfs:comment "Relates group type to its parent group type."@en ;
 	rdfs:domain pa:GroupType ;
 	rdfs:range pa:GroupType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 
 pa:hasMembership rdf:type owl:ObjectProperty ;
 	rdfs:label "hasMembership"@en ;
-	rdfs:comment "Relates an agent to membership. e.g. Person is member of of committee or sub-committee is member of a committee."@en ;
+	rdfs:comment "Relates an agent (person or group) to a membership e.g. person is member of a committee, or a sub-committee is a member of a committee."@en ;
 	rdfs:domain pa:Agent ;
 	rdfs:range pa:Membership ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
@@ -201,28 +196,21 @@ pa:hasPositionType rdf:type owl:ObjectProperty ;
 	
 pa:positionIn rdf:type owl:ObjectProperty ;
 	rdfs:label "positionIn"@en ;
-	rdfs:comment "Relates a position to a group. e.g. Chancellor to the Tresury."@en ;
+	rdfs:comment "Relates a position to a group e.g. Chancellor to the Treasury."@en ;
 	rdfs:domain pa:Postion ;
 	rdfs:range pa:Group ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .				
 		
 pa:memberIn rdf:type owl:ObjectProperty ;
 	rdfs:label "memberIn"@en ;
-	rdfs:comment "Relates a membership to a group. e.g. Member to a committee between some dates."@en ;
+	rdfs:comment "Relates a membership to a group e.g. membership of a committee between two dates."@en ;
 	rdfs:domain pa:Membership ;
 	rdfs:range pa:Group ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
-pa:hasAddress rdf:type owl:ObjectProperty ;
-	rdfs:label "hasAddress"@en ;
-	rdfs:comment "Relates a agent to an address. e.g. ."@en ;
-	rdfs:domain pa:ContactableThing ;
-	rdfs:range pa:Address ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
 pa:placeOfBirth rdf:type owl:ObjectProperty ;
 	rdfs:label "placeOfBirth"@en ;
-	rdfs:comment "Relates a person to place of birth."@en ;
+	rdfs:comment "Relates a person to their place of birth."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:Place ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
@@ -246,7 +234,7 @@ pa:givenName rdf:type owl:DatatypeProperty ;
 	
 pa:otherName rdf:type owl:DatatypeProperty ;
 	rdfs:label "otherName"@en ;
-	rdfs:comment "Person has a other name."@en ;
+	rdfs:comment "Person has another name."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
@@ -258,30 +246,23 @@ pa:familyName rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
-pa:url rdf:type owl:DatatypeProperty ;
-	rdfs:label "url"@en ;
-	rdfs:comment "Link has a url."@en ;
-	rdfs:domain pa:Link ;
-	rdfs:range rdfs:Literal ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
 pa:phoneNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "phoneNumber"@en ;
-	rdfs:comment "Address has phone number."@en ;
+	rdfs:comment "Contact details has a phone number."@en ;
 	rdfs:domain pa:ContactDetails ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:faxNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "faxNumber"@en ;
-	rdfs:comment "Address has fax number."@en ;
+	rdfs:comment "Contact details has a fax number."@en ;
 	rdfs:domain pa:ContactDetails ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:email rdf:type owl:DatatypeProperty ;
 	rdfs:label "email"@en ;
-	rdfs:comment "Address has email."@en ;
+	rdfs:comment "Contact details has an email address."@en ;
 	rdfs:domain pa:ContactDetails ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .					
@@ -302,64 +283,64 @@ pa:dateOfDeath rdf:type owl:DatatypeProperty ;
 		
 
 pa:addressLine1 rdf:type owl:DatatypeProperty ;
-	rdfs:label "line1"@en ;
-	rdfs:comment "Address has line 1."@en ;
+	rdfs:label "addressLine1"@en ;
+	rdfs:comment "The first line of a postal address."@en ;
 	rdfs:domain pa:Address ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:addressLine2 rdf:type owl:DatatypeProperty ;
 	rdfs:label "addressLine2"@en ;
-	rdfs:comment "Address has line 2."@en ;
+	rdfs:comment "The second line of a postal address."@en ;
 	rdfs:domain pa:Address ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:addressLine3 rdf:type owl:DatatypeProperty ;
 	rdfs:label "addressLine3"@en ;
-	rdfs:comment "Address has line 3."@en ;
+	rdfs:comment "The third line of a postal address."@en ;
 	rdfs:domain pa:Address ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .			
 
 pa:addressLine4 rdf:type owl:DatatypeProperty ;
 	rdfs:label "addressLine4"@en ;
-	rdfs:comment "Address has line 4."@en ;
+	rdfs:comment "The fourth line of a postal address."@en ;
 	rdfs:domain pa:Address ;
 	rdfs:range rdf:langString ;	
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:addressLine5 rdf:type owl:DatatypeProperty ;
 	rdfs:label "addressLine5"@en ;
-	rdfs:comment "Address has line 5."@en ;
+	rdfs:comment "The fifth line of a postal address."@en ;
 	rdfs:domain pa:Address ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/>.
 	
 pa:purpose rdf:type owl:DatatypeProperty ;
 	rdfs:label "purpose"@en ;
-	rdfs:comment "Purpose of a group."@en ;
+	rdfs:comment "A text summary of the purpose of a group."@en ;
 	rdfs:domain pa:Group ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/>.
 	
 pa:postcode rdf:type owl:DatatypeProperty ;
 	rdfs:label "postcode"@en ;
-	rdfs:comment "Address has postcode."@en ;
-	rdfs:domain pa:Address ;
+	rdfs:comment "Contact details has a postcode."@en ;
+	rdfs:domain pa:ContactDetails ;
 	rdfs:range rdfs:Literal ;	
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:endNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "endNote"@en ;
-	rdfs:comment "Membership has end note."@en ;
+	rdfs:comment "Membership has an end note."@en ;
 	rdfs:domain pa:Membership ;
 	rdfs:range rdf:langString ;	
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
 pa:contactForm rdf:type owl:DatatypeProperty ;
 	rdfs:label "contactForm"@en ;
-	rdfs:comment "Contact form for contacting a contactable thing. Instead of an email address. e.g. possibly the MOD"@en ;
+	rdfs:comment "Contact form for contacting a contactable thing. Instead of an email address e.g. some departments publish a contact form rather than exposing email addresses."@en ;
 	rdfs:domain pa:ContactDetails ;
 	rdfs:range rdfs:Literal ;	
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
