@@ -22,7 +22,7 @@ pe:Election rdf:type owl:Class ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:ElectionType rdf:type owl:Class ;
-	rdfs:label "Election"@en ;
+	rdfs:label "ElectionType"@en ;
 	rdfs:comment "An election to elect an individual or general election to elect a group."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
@@ -36,15 +36,14 @@ pe:Electorate rdf:type owl:Class ;
 	rdfs:label "Electorate"@en ;
 	rdfs:comment "A group of people at the time of the election eligible to vote in an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:subClassOf pe:Group ;
 	rdfs:label "ConstituencyGroup"@en ;
-	rdfs:comment "A group of people to be represented by the by the winner of an election."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	rdfs:comment "A group of people to be represented ."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 	
 pe:ConstituencyAreaType rdf:type owl:Class ;
-	rdfs:subClassOf pe:Group ;
 	rdfs:label "ConstituencyAreaType"@en ;
 	rdfs:comment "A the type of constituency area."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
@@ -70,7 +69,7 @@ pe:ElectionResult rdf:type owl:Class ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Party rdf:type owl:Class ;
-	rdfs:label "Candidate"@en ;
+	rdfs:label "Party"@en ;
 	rdfs:comment "An organised political group."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
@@ -143,7 +142,7 @@ pe:hasConstituencyArea rdf:type owl:ObjectProperty ;
 	
 pe:hasCandidacy rdf:type owl:ObjectProperty ;
 	rdfs:label "hasCandidacy"@en ;
-	rdfs:comment "Relates a person to a candidacy."@en ;
+	rdfs:comment "Relates an election to a candidacy."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:Candidacy  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
@@ -185,7 +184,7 @@ pe:winningParty rdf:type owl:ObjectProperty ;
 
 pe:gainOrHold rdf:type owl:ObjectProperty ;
 	rdfs:label "gainOrHold"@en ;
-	rdfs:comment "Relates an election result to whether it was a gained or held by previously incumbant party."@en ;
+	rdfs:comment "Relates an election result to whether it was a gained or held by previously incumbent party."@en ;
 	rdfs:domain pe:ElectionResult ;
 	rdfs:range pe:GainOrHold  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
