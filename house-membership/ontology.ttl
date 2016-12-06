@@ -42,7 +42,7 @@ phm:SeatIncumbency rdf:type owl:Class ;
 	
 phm:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:label "ConstituencyGroup"@en ;
-	rdfs:comment "A group of people to be represented by the by the winner of an election."@en ;
+	rdfs:comment "A group of people to be represented by the winner of an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 		
 phm:Suspension rdf:type owl:Class ;
@@ -78,27 +78,6 @@ phm:hasSeatIncumbencyInterruption rdf:type owl:ObjectProperty ;
 	rdfs:range phm:SeatIncumbencyInterruption ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
-phm:hasDisqualificationType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasDisqualificationType"@en ;
-	rdfs:comment "Relates a disqualification to a disqualification type."@en ;
-	rdfs:domain phm:Disqualification ;
-	rdfs:range phm:DisqualificationType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
-
-phm:hasSuspension rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSuspension"@en ;
-	rdfs:comment "Relates a seat incumbency to a suspension."@en ;
-	rdfs:domain phm:SeatIncumbency ;
-	rdfs:range phm:Suspension ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
-	
-phm:hasLeaveOfAbsence rdf:type owl:ObjectProperty ;
-	rdfs:label "hasLeaveOfAbsence"@en ;
-	rdfs:comment "Relates a seat incumbency to a leave of absence."@en ;
-	rdfs:domain phm:SeatIncumbency ;
-	rdfs:range phm:LeaveOfAbsence ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
-
 phm:hasHouseSeat rdf:type owl:ObjectProperty ;
 	rdfs:label "hasHouseSeat"@en ;
 	rdfs:comment "Relates a house to its seats."@en ;
@@ -114,14 +93,14 @@ phm:hasSeatIncumbency rdf:type owl:ObjectProperty ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:hasIncumbent rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSeatIncumbency"@en ;
-	rdfs:comment "Relates a house seat to a incumbency."@en ;
+	rdfs:label "hasIncumbent"@en ;
+	rdfs:comment "Relates a seat incumbency to a member."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:Member ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
-phm:hasSeatType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSeatType"@en ;
+phm:hasHouseSeatType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasHouseSeatType"@en ;
 	rdfs:comment "Relates a house seat to a house seat type."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:HouseSeatType ;
