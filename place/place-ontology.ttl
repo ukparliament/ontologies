@@ -15,18 +15,18 @@
 ##### classes ####
 
 pp:Geometry rdf:type owl:Class ;
-	rdfs:label "A geographic extent expressed as a point, box or polygon."@en ;
-	rdfs:comment "A geometry."@en ;
+	rdfs:label "Geometry."@en ;
+	rdfs:comment "A geographic extent expressed as a point, box or polygon."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
 	
 pp:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
-	rdfs:comment "A place."@en ;
+	rdfs:comment "A geographic place."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
 	
 pp:PlaceType rdf:type owl:Class ;
 	rdfs:label "PlaceType"@en ;
-	rdfs:comment "A place type."@en ;
+	rdfs:comment "A place type e.g. town, constituency, county, country."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .	
 	
 	
@@ -34,7 +34,7 @@ pp:PlaceType rdf:type owl:Class ;
 
 pp:hasGeometry rdf:type owl:ObjectProperty ;
 	rdfs:label "hasGeometry"@en ;
-	rdfs:comment "Relates a place geometric representation."@en ;
+	rdfs:comment "Relates a place to its geometric representation."@en ;
 	rdfs:domain pp:Place ;
 	rdfs:range pp:Geometry ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
@@ -48,7 +48,7 @@ pp:hasPlaceType rdf:type owl:ObjectProperty ;
 
 pp:containedByPlace rdf:type owl:ObjectProperty ;
 	rdfs:label "containedByPlace"@en ;
-	rdfs:comment "Relates a place to a place it is contained by."@en ;
+	rdfs:comment "Relates a place to a place it is contained by e.g. town in constituency in county in country."@en ;
 	rdfs:domain pp:Place ;
 	rdfs:range pp:Place ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .					
