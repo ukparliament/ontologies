@@ -18,44 +18,44 @@
 
 pe:Election rdf:type owl:Class ;
 	rdfs:label "Election"@en ;
-	rdfs:comment "An election to elect an individual or general election to elect a group."@en ;
+	rdfs:comment "An election to elect an individual to a seat or role; or a general election to elect a party to government."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:ElectionType rdf:type owl:Class ;
 	rdfs:label "ElectionType"@en ;
-	rdfs:comment "An election to elect an individual or general election to elect a group."@en ;
+	rdfs:comment "A type of election e.g. constituency election or general election etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Group rdf:type owl:Class ;
 	rdfs:label "Group"@en ;
-	rdfs:comment "A group of people."@en ;
+	rdfs:comment "A group of people e.g. a committee or party or government department or All Party Parliamentary Group etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Electorate rdf:type owl:Class ;
 	rdfs:subClassOf pe:Group ;
 	rdfs:label "Electorate"@en ;
-	rdfs:comment "A group of people at the time of the election eligible to vote in an election."@en ;
+	rdfs:comment "A group of people who at the time of an election are eligible to vote e.g. a constituency electorate or members of the Commons voting for the Speaker of the Commons. "@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:subClassOf pe:Group ;
 	rdfs:label "ConstituencyGroup"@en ;
-	rdfs:comment "A group of people to be represented ."@en ;
+	rdfs:comment "A group of people represented by the winner of an election. Includes people other than those eligible to vote (e.g. children, prisoners)"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 	
 pe:ConstituencyAreaType rdf:type owl:Class ;
 	rdfs:label "ConstituencyAreaType"@en ;
-	rdfs:comment "A the type of constituency area."@en ;
+	rdfs:comment "The type of constituency area (borough or county)."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
 pe:ConstituencyArea rdf:type owl:Class ;
 	rdfs:label "ConstituencyArea"@en ;
-	rdfs:comment "A geographic bounding a set of constituents."@en ;
+	rdfs:comment "A geographic bounding of a constituency group."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:Candidacy rdf:type owl:Class ;
 	rdfs:label "Candidacy"@en ;
-	rdfs:comment "A person standing possibly for a party in an election."@en ;
+	rdfs:comment "A person standing (possibly for a party) in an election e.g. Phillip Hammond standing for the Conservative Party in Runnymede and Weybridge at the 2015 General Election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:CandidacyResult rdf:type owl:Class ;
@@ -65,7 +65,7 @@ pe:CandidacyResult rdf:type owl:Class ;
 
 pe:ElectionResult rdf:type owl:Class ;
 	rdfs:label "ElectionResult"@en ;
-	rdfs:comment "The result of a election."@en ;
+	rdfs:comment "The result of an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Party rdf:type owl:Class ;
@@ -80,12 +80,12 @@ pe:Person rdf:type owl:Class ;
 
 pe:ElectoralIncumbency rdf:type owl:Class ;
 	rdfs:label "ElectoralIncumbency"@en ;
-	rdfs:comment "An electoral incumbency."@en ;
+	rdfs:comment "An incumbency resulting from an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
 pe:GainOrHold  rdf:type owl:Class ;
 	rdfs:label "GainOrHold"@en ;
-	rdfs:comment "Whether a post was gained or held."@en ;
+	rdfs:comment "Whether a post was gained or held e.g. whether a new candidate defeated an existing incumbent (gained) or whether an existing incumbent successfully defended their incumbency (held)."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .		
 			
 
@@ -93,7 +93,7 @@ pe:GainOrHold  rdf:type owl:Class ;
 
 pe:formedFromPartOfConstituencyArea rdf:type owl:ObjectProperty ;
 	rdfs:label "formedFromPartOfConstituencyArea"@en ;
-	rdfs:comment "Relates a constituency area to a constituency area part of which partly formed it."@en ;
+	rdfs:comment "Where a constituency area is formed from parts of a former constituency area, relates those parts to each other e.g. following boundary changes."@en ;
 	rdfs:domain pe:ConstituencyArea ;
 	rdfs:range pe:ConstituencyArea ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -107,21 +107,21 @@ pe:hasConstituencyAreaType rdf:type owl:ObjectProperty ;
 
 pe:isPartOfElection rdf:type owl:ObjectProperty ;
 	rdfs:label "isPartOfElection"@en ;
-	rdfs:comment "Relates an election to a larger election."@en ;
+	rdfs:comment "Relates an election to a larger election e.g. constituency election to a general election it's part of."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:Election ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasElectionType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasElectionType"@en ;
-	rdfs:comment "Relates an election to an election type."@en ;
+	rdfs:comment "Relates an election to an election type e.g. constituency election or general election."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:ElectionType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasElectorate rdf:type owl:ObjectProperty ;
 	rdfs:label "hasElectorate"@en ;
-	rdfs:comment "Relates an election to its elligible voters."@en ;
+	rdfs:comment "Relates an election to its eligible voters."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:Electorate  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .				
@@ -135,7 +135,7 @@ pe:isPartOfConstituencyGroup rdf:type owl:ObjectProperty ;
 	
 pe:hasConstituencyArea rdf:type owl:ObjectProperty ;
 	rdfs:label "hasConstituencyArea"@en ;
-	rdfs:comment "Relates an electorate to a geographic area."@en ;
+	rdfs:comment "Relates an constituency group to a geographic area."@en ;
 	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:ConstituencyArea  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -163,14 +163,14 @@ pe:hasCandidate rdf:type owl:ObjectProperty ;
 	
 pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
 	rdfs:label "hasCandidacyResult"@en ;
-	rdfs:comment "Relates an candidacy to a result."@en ;
+	rdfs:comment "Relates a candidacy to a result."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:CandidacyResult  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:hasElectionResult rdf:type owl:ObjectProperty ;
 	rdfs:label "hasElectionResult"@en ;
-	rdfs:comment "Relates an election to a result.Either of an individual election or the outcome of a group of elections like a general election."@en ;
+	rdfs:comment "Relates an election to a result. Either of an individual election or the outcome of a group of elections e.g. a general election."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:ElectionResult  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -184,14 +184,14 @@ pe:winningParty rdf:type owl:ObjectProperty ;
 
 pe:gainOrHold rdf:type owl:ObjectProperty ;
 	rdfs:label "gainOrHold"@en ;
-	rdfs:comment "Relates an election result to whether it was a gained or held by previously incumbent party."@en ;
+	rdfs:comment "Relates an election result to whether it was a gained or held by the previously incumbent party."@en ;
 	rdfs:domain pe:ElectionResult ;
 	rdfs:range pe:GainOrHold  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:establishesIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "establishesIncumbency"@en ;
-	rdfs:comment "Relates an candidate result to an incumbency."@en ;
+	rdfs:comment "Relates a candidate result to an electoral incumbency."@en ;
 	rdfs:domain pe:CandidacyResult  ;
 	rdfs:range pe:ElectoralIncumbency  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .					
@@ -200,28 +200,28 @@ pe:establishesIncumbency rdf:type owl:ObjectProperty ;
 
 pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "voteCount"@en ;
-	rdfs:comment "The vote count."@en ;
+	rdfs:comment "Total number of votes cast."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:votePercentageChange rdf:type owl:DatatypeProperty ;
 	rdfs:label "votePercentageChange"@en ;
-	rdfs:comment "The vote percentage change."@en ;
+	rdfs:comment "The percentage change of a party's share of the vote."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:label "voteShare"@en ;
-	rdfs:comment "The vote share."@en ;
+	rdfs:comment "The share of the vote won by a candidacy."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "resultPosition"@en ;
-	rdfs:comment "Result position."@en ;
+	rdfs:comment "The relative position (ordinality) of the candidacy in the election."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -235,14 +235,14 @@ pe:populationSize rdf:type owl:DatatypeProperty ;
 
 pe:majority rdf:type owl:DatatypeProperty ;
 	rdfs:label "majority"@en ;
-	rdfs:comment "The majority gained in an election."@en ;
+	rdfs:comment "The majority of votes obtained in an election."@en ;
 	rdfs:domain pe:ElectionResult ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:turnout rdf:type owl:DatatypeProperty ;
 	rdfs:label "turnout"@en ;
-	rdfs:comment "The turnout for an election."@en ;
+	rdfs:comment "The turnout for an election. The number of people who voted."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
