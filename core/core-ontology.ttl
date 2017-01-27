@@ -155,5 +155,12 @@ pc:sortOrder rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a thing to a sort order."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:sameAs rdf:type owl:DatatypeProperty ;
+	rdfs:label "sameAs"@en ;
+	rdfs:comment "Relates a thing to a the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 
