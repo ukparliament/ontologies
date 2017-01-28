@@ -91,13 +91,6 @@ pe:GainOrHold  rdf:type owl:Class ;
 
 #######  Object properties ##### 
 
-pe:formedFromPartOfConstituencyArea rdf:type owl:ObjectProperty ;
-	rdfs:label "formedFromPartOfConstituencyArea"@en ;
-	rdfs:comment "Where a constituency area is formed from parts of a former constituency area, relates those parts to each other e.g. following boundary changes."@en ;
-	rdfs:domain pe:ConstituencyArea ;
-	rdfs:range pe:ConstituencyArea ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
 pe:hasConstituencyAreaType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasConstituencyAreaType"@en ;
 	rdfs:comment "Relates a constituency area to a constituency area type."@en ;
@@ -191,7 +184,7 @@ pe:gainOrHold rdf:type owl:ObjectProperty ;
 	
 pe:establishesIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "establishesIncumbency"@en ;
-	rdfs:comment "Relates a candidate result to an electoral incumbency."@en ;
+	rdfs:comment "Relates a candidacy result to an electoral incumbency."@en ;
 	rdfs:domain pe:CandidacyResult  ;
 	rdfs:range pe:ElectoralIncumbency  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .					
