@@ -9,7 +9,7 @@ Authors: [Silver Oliver](https://twitter.com/silveroliver), [Michael Smethurst](
 
 twitter: [@UKParliData](https://twitter.com/ukparlidata)
 
-github: [ukpds](https://github.com/ukparliament)
+github: [ukparliament](https://github.com/ukparliament)
 
 
 
