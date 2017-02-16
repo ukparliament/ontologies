@@ -26,19 +26,19 @@ pe:ElectionType rdf:type owl:Class ;
 	rdfs:comment "A type of election e.g. constituency election or general election etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
-pe:Group rdf:type owl:Class ;
-	rdfs:label "Group"@en ;
-	rdfs:comment "A group of people e.g. a committee or party or government department or All Party Parliamentary Group etc."@en ;
+pe:Population rdf:type owl:Class ;
+	rdfs:label "Population"@en ;
+	rdfs:comment "A set of people."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Electorate rdf:type owl:Class ;
-	rdfs:subClassOf pe:Group ;
+	rdfs:subClassOf pe:Population ;
 	rdfs:label "Electorate"@en ;
 	rdfs:comment "A group of people who at the time of an election are eligible to vote e.g. a constituency electorate or members of the Commons voting for the Speaker of the Commons. "@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:ConstituencyGroup rdf:type owl:Class ;
-	rdfs:subClassOf pe:Group ;
+	rdfs:subClassOf pe:Population ;
 	rdfs:label "ConstituencyGroup"@en ;
 	rdfs:comment "A group of people represented by the winner of an election. Includes people other than those eligible to vote (e.g. children, prisoners)"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
@@ -222,7 +222,7 @@ pe:resultPosition rdf:type owl:DatatypeProperty ;
 pe:populationSize rdf:type owl:DatatypeProperty ;
 	rdfs:label "populationSize"@en ;
 	rdfs:comment "A population size."@en ;
-	rdfs:domain pe:Group ;
+	rdfs:domain pe:Population ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
