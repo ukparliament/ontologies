@@ -28,11 +28,6 @@ pcp:ContactPoint rdf:type owl:Class ;
 pcp:PostalAddress rdf:type owl:Class ;
 	rdfs:label "PostalAddress"@en ;
 	rdfs:comment "A postal address."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .	
-	
-pcp:ContactPointType rdf:type owl:Class ;
-	rdfs:label "ContactPointType"@en ;
-	rdfs:comment "A contact point type such as a Parliamentary address or constituency address."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
 				
@@ -52,13 +47,6 @@ pcp:hasPostalAddress rdf:type owl:ObjectProperty ;
 	rdfs:domain pcp:ContactPoint ;
 	rdfs:range pcp:PostalAddress ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
-	
-pcp:hasContactPointType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasContactPointType"@en ;
-	rdfs:comment "Relates a contact point to its type (e.g. Parliamentary, Constituency etc)."@en ;
-	rdfs:domain pcp:ContactPoint ;
-	rdfs:range pcp:ContactPointType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .	
 				
 
 #######  Data properties ##### 
