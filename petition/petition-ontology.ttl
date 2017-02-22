@@ -1,0 +1,191 @@
+@prefix ppt: <http://parliament.uk/ontologies/petition/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/petition/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Petition ontology"@en ;
+    dcterms:created "22/02/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Petition ontology for UK Parliament. Covers the public surface area of petitions."@en .
+
+
+#######  Classes ##### 	
+
+ppt:Petition rdf:type owl:Class ;
+	rdfs:label "Petition"@en ;
+	rdfs:comment "An online Parliamentary petition."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:ThresholdStage rdf:type owl:Class ;
+	rdfs:label "ThresholdStage"@en ;
+	rdfs:comment "The threshold stages a petition passes through from moderation threshold to government response threshold to debate threshold."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:ThresholdStageType rdf:type owl:Class ;
+	rdfs:label "ThresholdStageType"@en ;
+	rdfs:comment "The type of a threshold stage. Might be moderation threshold met, government response threshold met or debate threshold met."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+
+ppt:Person rdf:type owl:Class ;
+	rdfs:label "Person"@en ;
+	rdfs:comment "A person."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:ModerationState rdf:type owl:Class ;
+	rdfs:label "ModerationState"@en ;
+	rdfs:comment "The current moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:Debate rdf:type owl:Class ;
+	rdfs:label "Debate"@en ;
+	rdfs:comment "A Parliamentary debate."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:GovernmentResponse rdf:type owl:Class ;
+	rdfs:label "GovernmentResponse"@en ;
+	rdfs:comment "A response from the Government."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:SignatureCount rdf:type owl:Class ;
+	rdfs:label "SignatureCount"@en ;
+	rdfs:comment "The number of signatures on a petition from a given place."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:Place rdf:type owl:Class ;
+	rdfs:label "Place"@en ;
+	rdfs:comment "A place. Any kind of place."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .	
+	
+ppt:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .	
+	
+	
+#######  Object properties ##### 
+
+ppt:hasThresholdStage rdf:type owl:ObjectProperty ;
+	rdfs:label "hasThresholdStage"@en ;
+	rdfs:comment "Relates a petition to a threshold stage."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:ThresholdStage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasThresholdStageType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasThresholdStageType"@en ;
+	rdfs:comment "Relates a threshold stage to a threshold stage type."@en ;
+	rdfs:domain ppt:ThresholdStage ;
+	rdfs:range ppt:ThresholdStageType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasDebate rdf:type owl:ObjectProperty ;
+	rdfs:label "hasDebate"@en ;
+	rdfs:comment "Relates a petition to a debate."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:Debate ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasGovernmentResponse rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGovernmentResponse"@en ;
+	rdfs:comment "Relates a petition to a Government response."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:GovernmentResponse ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasCreator rdf:type owl:ObjectProperty ;
+	rdfs:label "hasCreator"@en ;
+	rdfs:comment "Relates a petition to the person who created it."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:Person ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasModerationState rdf:type owl:ObjectProperty ;
+	rdfs:label "hasModerationState"@en ;
+	rdfs:comment "Relates a petition to its moderation state."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:ModerationState ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasSignatureCount rdf:type owl:ObjectProperty ;
+	rdfs:label "hasSignatureCount"@en ;
+	rdfs:comment "Relates a petition to its signature count."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:SignatureCount ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:fromPlace rdf:type owl:ObjectProperty ;
+	rdfs:label "fromPlace"@en ;
+	rdfs:comment "Relates a signature count to the place the signatures came from."@en ;
+	rdfs:domain ppt:SignatureCount ;
+	rdfs:range ppt:Place ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasSubject rdf:type owl:ObjectProperty ;
+	rdfs:label "hasSubject"@en ;
+	rdfs:comment "Relates a petition to a concept."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range ppt:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+				
+
+#######  Data properties ##### 
+
+ppt:thresholdMetAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "thresholdMetAt"@en ;
+	rdfs:comment "Date time at which a threshold is met."@en ;
+	rdfs:domain ppt:ThresholdStage ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:action rdf:type owl:DatatypeProperty ;
+	rdfs:label "action"@en ;
+	rdfs:comment "The action text (title) of the petition entered by the petition creator."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:background rdf:type owl:DatatypeProperty ;
+	rdfs:label "background"@en ;
+	rdfs:comment "A background explanation of why the petition was created entered by the petition creator."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:additionDetails rdf:type owl:DatatypeProperty ;
+	rdfs:label "additionDetails"@en ;
+	rdfs:comment "Additional text to justify the petition entered by the petition creator."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:openedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "openedAt"@en ;
+	rdfs:comment "Date time at which the petition was opened for signatures."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:rejectedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "rejectedAt"@en ;
+	rdfs:comment "Date time at which the petition was rejected."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:closedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "closedAt"@en ;
+	rdfs:comment "Date time at which the petition was closed."@en ;
+	rdfs:domain ppt:Petition ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:signatureCount rdf:type owl:DatatypeProperty ;
+	rdfs:label "signatureCount"@en ;
+	rdfs:comment "Number of signatures on a signature count."@en ;
+	rdfs:domain ppt:SignatureCount ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
