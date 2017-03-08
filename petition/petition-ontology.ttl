@@ -60,11 +60,6 @@ ppt:Place rdf:type owl:Class ;
 	rdfs:comment "A place. Any kind of place."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .	
 	
-ppt:Concept rdf:type owl:Class ;
-	rdfs:label "Concept"@en ;
-	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .	
-	
 	
 #######  Object properties ##### 
 
@@ -122,13 +117,6 @@ ppt:fromPlace rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a signature count to the place the signatures came from."@en ;
 	rdfs:domain ppt:SignatureCount ;
 	rdfs:range ppt:Place ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
-	
-ppt:hasSubject rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSubject"@en ;
-	rdfs:comment "Relates a petition to a concept."@en ;
-	rdfs:domain ppt:Petition ;
-	rdfs:range ppt:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 				
 
