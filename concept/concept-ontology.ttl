@@ -29,6 +29,21 @@ pco:Thing rdf:type owl:Class ;
 	rdfs:label "Thing"@en ;
 	rdfs:comment "A thing. Anything at all."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	
+pco:AnnotatableThing rdf:type owl:Class ;
+	rdfs:label "AnnotatableThing"@en ;
+	rdfs:comment "A thing which can be annotated with a concept or free text tag. e.g. a debate or petition or answer."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	
+pco:Annotation rdf:type owl:Class ;
+	rdfs:label "Annotation"@en ;
+	rdfs:comment "A relationship between an annotatable thing and a concept or free-text tag. e.g. an act of subject indexing."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	
+pco:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "A person or group. In this context a librarian or machine subject indexing annotatable things."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 
 #######  data properties ##### 	
@@ -51,6 +66,27 @@ pco:scopeNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "scopeNote"@en ;
 	rdfs:comment "A scope note. Textual description of the intended usage of a concept."@en ;
 	rdfs:domain pco:Concept ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:indexerNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "indexerNote"@en ;
+	rdfs:comment "A note for indexers. Provides additional guidance on use of the concept."@en ;
+	rdfs:domain pco:Concept ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:annotatedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "annotatedAt"@en ;
+	rdfs:comment "Date time an annotation was created."@en ;
+	rdfs:domain pco:Annotation ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+
+pco:uncontrolledTag rdf:type owl:DatatypeProperty ;
+	rdfs:label "uncontrolledTag"@en ;
+	rdfs:comment "To allow for annotations that reference free text tags rather than controlled concepts."@en ;
+	rdfs:domain pco:Annotation ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
@@ -83,4 +119,25 @@ pco:hasRelatedConcept rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a concept to another concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
+	
+pco:hasAnnotation rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAnnotation"@en ;
+	rdfs:comment "Relates an annotatable thing to an annotation."@en ;
+	rdfs:domain pco:AnnotatableThing ;
+	rdfs:range pco:Annotation ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .			
+	
+pco:hasConcept rdf:type owl:ObjectProperty ;
+	rdfs:label "hasConcept"@en ;
+	rdfs:comment "Relates an annotation to a concept."@en ;
+	rdfs:domain pco:Annotation ;
+	rdfs:range pco:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .				
+	
+pco:annotatedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "annotatedBy"@en ;
+	rdfs:comment "Relates an annotation to a agent."@en ;
+	rdfs:domain pco:Annotation ;
+	rdfs:range pco:Agent ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
