@@ -65,6 +65,16 @@ phm:EndReason rdf:type owl:Class ;
 phm:SeatIncumbencyInterruption rdf:type owl:Class ;
 	rdfs:label "SeatIncumbencyInterruption"@en ;
 	rdfs:comment "An interruption to a seat incumbency for a limited period of time for reasons such as suspension, leave of absence etc."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .				
+	
+phm:SeatIncumbencyInterruption rdf:type owl:Class ;
+	rdfs:label "SeatIncumbencyInterruption"@en ;
+	rdfs:comment "An interruption to a seat incumbency for a limited period of time for reasons such as suspension, leave of absence etc."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .				
+	
+phm:ParliamentPeriod rdf:type owl:Class ;
+	rdfs:label "ParliamentPeriod"@en ;
+	rdfs:comment "The period of Parliamentary time between the first state opening following a general election and dissolution."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 
 	
@@ -118,6 +128,13 @@ phm:hasEndReason rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a seat incumbency to an end reason."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:EndReason ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	
+phm:inParliamentPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "inParliamentPeriod"@en ;
+	rdfs:comment "Relates a seat incumbency to a Parliament period."@en ;
+	rdfs:domain phm:SeatIncumbency ;
+	rdfs:range phm:ParliamentPeriod ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 				
 	
