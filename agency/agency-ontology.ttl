@@ -47,9 +47,9 @@ pa:Position rdf:type owl:Class ;
 	rdfs:comment "A position in a group that persists over time which can be occupied by different people at different times e.g. many people have been Foreign Secretary."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
-pa:Membership rdf:type owl:Class ;
-	rdfs:label "Membership"@en ;
-	rdfs:comment "A person or group's membership of a group between between two dates."@en ;
+pa:Affiliation rdf:type owl:Class ;
+	rdfs:label "Affiliation"@en ;
+	rdfs:comment "A person or group's affiliation to a group between between two dates. Might be a membership of a committee or a whipping to a party."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:GenderIdentity rdf:type owl:Class ;
@@ -123,11 +123,11 @@ pa:hasParentGroupType rdf:type owl:ObjectProperty ;
 	rdfs:range pa:GroupType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
 
-pa:hasMembership rdf:type owl:ObjectProperty ;
-	rdfs:label "hasMembership"@en ;
-	rdfs:comment "Relates an agent (person or group) to a membership e.g. person is member of a committee, or a sub-committee is a member of a committee."@en ;
+pa:hasAffiliation rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAffiliation"@en ;
+	rdfs:comment "Relates an agent (person or group) to an affiliation e.g. person is member of a committee, or a sub-committee is a member of a committee."@en ;
 	rdfs:domain pa:Agent ;
-	rdfs:range pa:Membership ;
+	rdfs:range pa:Affiliation ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasRole rdf:type owl:ObjectProperty ;
@@ -158,10 +158,10 @@ pa:positionIn rdf:type owl:ObjectProperty ;
 	rdfs:range pa:Group ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .				
 		
-pa:memberIn rdf:type owl:ObjectProperty ;
-	rdfs:label "memberIn"@en ;
-	rdfs:comment "Relates a membership to a group e.g. membership of a committee between two dates."@en ;
-	rdfs:domain pa:Membership ;
+pa:affiliatedTo rdf:type owl:ObjectProperty ;
+	rdfs:label "affiliatedTo"@en ;
+	rdfs:comment "Relates an affiliation to a group e.g. membership of a committee between two dates."@en ;
+	rdfs:domain pa:Affiliation ;
 	rdfs:range pa:Group ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
@@ -222,14 +222,7 @@ pa:purpose rdf:type owl:DatatypeProperty ;
 	rdfs:comment "A text summary of the purpose of a group."@en ;
 	rdfs:domain pa:Group ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/>.
-	
-pa:endNote rdf:type owl:DatatypeProperty ;
-	rdfs:label "endNote"@en ;
-	rdfs:comment "Membership has an end note."@en ;
-	rdfs:domain pa:Membership ;
-	rdfs:range rdf:langString ;	
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 			
 	
