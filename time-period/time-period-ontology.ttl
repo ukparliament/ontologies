@@ -39,7 +39,7 @@ pt:GovernmentAdministrationPeriod rdf:type owl:Class ;
 pt:PremiershipPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PremiershipPeriod"@en ;
-	rdfs:comment "A period of government under a single prime minister not bounded by parliaments / general elections. e.g. Thatcher administration 1979-1990."@en ;
+	rdfs:comment "A grouping of periods of government under a single prime minister not bounded by parliaments / general elections. e.g. Thatcher administration 1979-1990."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Reign rdf:type owl:Class ;
@@ -51,37 +51,37 @@ pt:Reign rdf:type owl:Class ;
 pt:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "ParliamentPeriod"@en ;
-	rdfs:comment "The period of a single parliament between the state opening of the first session and dissolution. Defined as 5 years since the Fixed Term Parliament Act except in exceptional circumstances. Parliament periods are the same across both houses."@en ;
+	rdfs:comment "The period of a single parliament beginning with the state opening of the first session and ending with dissolution. Defined as 5 years since the Fixed Term Parliament Act except in exceptional circumstances. Parliament periods are the same across both houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:DissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "DissolutionPeriod"@en ;
-	rdfs:comment "The period between parliament periods during which Parliament is dissolved and does not exist. During this time there are no members, no committees etc. Dissolution periods are the same across both houses."@en ;
+	rdfs:comment "The period between parliament periods. Parliament is dissolved and does not exist. During this time there are no members, no committees etc. Dissolution periods are the same across both houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Session rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is active between any State Opening and prorogation or dissolution. A session typically lasts for one year though isn't bound by that. Any legislation introduced in a session must be passed in both houses during that session, unless it is carried over. Session periods are the same across both houses."@en ;
+	rdfs:comment "The period during which Parliament is active between any State Opening and prorogation or dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:PorogationPeriod rdf:type owl:Class ;
+pt:ProrogationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "PorogationPeriod"@en ;
+	rdfs:label "ProrogationPeriod"@en ;
 	rdfs:comment "The period during which Parliament is inactive between prorogation announcement and State Opening.  During this time there are still members but nearly all Parliamentary business stops. Prorogation periods are the same across both houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:Term rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Term"@en ;
-	rdfs:comment "The period during which Parliament is active and may be sitting between recess periods. Term periods are not necessarily the same across both houses."@en ;
+	rdfs:comment "The period between recess periods during which Parliament is active, and may be sitting. Term periods are not necessarily the same across both houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Recess rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Recess"@en ;
-	rdfs:comment "The period during which Parliament is inactive and does not sit between term periods. Recess periods are not necessarily the same across both houses."@en ;
+	rdfs:comment "The period between term periods during which Parliament is inactive and does not sit. Some business may continue. Recess periods are not necessarily the same across both houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:SittingDay rdf:type owl:Class ;
