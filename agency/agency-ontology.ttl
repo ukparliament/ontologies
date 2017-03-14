@@ -37,8 +37,8 @@ pa:GroupType rdf:type owl:Class ;
 	rdfs:comment "A group type."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .			
 
-pa:Role rdf:type owl:Class ;
-	rdfs:label "Role"@en ;
+pa:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
 	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secerety between two dates."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
@@ -130,17 +130,17 @@ pa:hasAffiliation rdf:type owl:ObjectProperty ;
 	rdfs:range pa:Affiliation ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
-pa:hasRole rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRole"@en ;
-	rdfs:comment "Relates a person to a role."@en ;
+pa:hasIncumbency rdf:type owl:ObjectProperty ;
+	rdfs:label "hasIncumbency"@en ;
+	rdfs:comment "Relates a person to an incumbency."@en ;
 	rdfs:domain pa:Person ;
-	rdfs:range pa:Role ;
+	rdfs:range pa:Incumbency ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasPosition rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPosition"@en ;
-	rdfs:comment "Relates a role to a position."@en ;
-	rdfs:domain pa:Role ;
+	rdfs:comment "Relates an incumbency to a position."@en ;
+	rdfs:domain pa:Incumbency ;
 	rdfs:range pa:Position ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
