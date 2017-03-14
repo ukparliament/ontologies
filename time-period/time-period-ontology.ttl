@@ -30,11 +30,6 @@ pt:TimePeriod rdf:type owl:Class ;
 	rdfs:comment "An identifiable and named period of time."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:Party rdf:type owl:Class ;
-	rdfs:label "Party"@en ;
-	rdfs:comment "An organised political group."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-
 pt:GovernmentAdministrationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "GovernmentAdministrationPeriod"@en ;
@@ -124,13 +119,6 @@ pt:containedIn rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an event to a time period it's contained in."@en ;
 	rdfs:domain pt:Event ;
 	rdfs:range pt:TimePeriod ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:governingParty rdf:type owl:ObjectProperty ;
-	rdfs:label "governingParty"@en ;
-	rdfs:comment "Relates a government administration period to the party or parties in power."@en ;
-	rdfs:domain pt:GovernmentAdministrationPeriod ;
-	rdfs:range pt:Party ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:partOfPremiershipPeriod rdf:type owl:ObjectProperty ;
