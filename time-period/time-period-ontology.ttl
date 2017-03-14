@@ -35,11 +35,6 @@ pt:Party rdf:type owl:Class ;
 	rdfs:comment "An organised political group."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:Monarch rdf:type owl:Class ;
-	rdfs:label "Monarch"@en ;
-	rdfs:comment "A king or queen during the period of their reign."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-
 pt:GovernmentAdministrationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "GovernmentAdministrationPeriod"@en ;
@@ -143,13 +138,6 @@ pt:partOfPremiershipPeriod rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a government administration period to a premiership period. e.g. allows for grouping of 3 Thatcher administrations into one 'premiership'."@en ;
 	rdfs:domain pt:GovernmentAdministrationPeriod ;
 	rdfs:range pt:PremiershipPeriod ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasReign rdf:type owl:ObjectProperty ;
-	rdfs:label "hasReign"@en ;
-	rdfs:comment "Relates a monarch to the period of their reign."@en ;
-	rdfs:domain pt:Monarch ;
-	rdfs:range pt:Reign ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:hasSession rdf:type owl:ObjectProperty ;
