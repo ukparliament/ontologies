@@ -1,0 +1,172 @@
+@prefix pfb: <http://parliament.uk/ontologies/agency/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/formal-body/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Formal body ontology"@en ;
+    dcterms:created "11/05/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Formal body ontology for UK Parliament (includes committees and less formally constituted committee-like things)"@en .
+
+
+#######  Classes ##### 	
+
+pfb:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary house e.g. the House of Lords."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:FormalBody rdf:type owl:Class ;
+	rdfs:label "FormalBody"@en ;
+	rdfs:comment "A formal body within Parliament. Includes committees and less formally constituted committee-like things."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:Remit rdf:type owl:Class ;
+	rdfs:label "Remit"@en ;
+	rdfs:comment "The conferred area of competence of a formal body."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .	
+
+pfb:TermsOfReference rdf:type owl:Class ;
+	rdfs:label "TermsOfReference"@en ;
+	rdfs:comment "The agreed scope of a work package (in practice a strict sub-set of the remit or remits of one or more formal bodies undertaking the work)."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:WorkPackage rdf:type owl:Class ;
+	rdfs:label "WorkPackage"@en ;
+	rdfs:comment "A grouping of activities undertaken by one or more formal bodies into a coherent theme."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:Inquiry rdf:type owl:Class ;
+	rdfs:subClassOf pfb:WorkPackage ;
+	rdfs:label "Inquiry"@en ;
+	rdfs:comment "A formally constituted work package with the objective of producing a report for the attention of bodies such as government departments and Parliament."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:Report rdf:type owl:Class ;
+	rdfs:label "Report"@en ;
+	rdfs:comment "A document summarising the research and recommendations coming out of a work package."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:Activity rdf:type owl:Class ;
+	rdfs:label "Activity"@en ;
+	rdfs:comment "A piece of work undertaken by one or more formal bodies which may or may not be part of one or more work packages."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:Event rdf:type owl:Class ;
+	rdfs:label "Event"@en ;
+	rdfs:comment "A thing happens at a time in a place."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:Meeting rdf:type owl:Class ;
+	rdfs:subClassOf pfb:Event ;
+	rdfs:label "Meeting"@en ;
+	rdfs:comment "An organised event scheduled by one or more formal bodies."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:Visit rdf:type owl:Class ;
+	rdfs:subClassOf pfb:Event ;
+	rdfs:label "Visit"@en ;
+	rdfs:comment "An event that takes place outside the Parliamentary estate."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+				
+
+#######  Object properties ##### 
+
+pfb:belongsToHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "belongsToHouse"@en ;
+	rdfs:comment "Relates a formal body to a House of Parliament."@en ;
+	rdfs:domain pfb:FormalBody ;
+	rdfs:range pfb:House ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasRemit rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRemit"@en ;
+	rdfs:comment "Relates a formal body to its remit."@en ;
+	rdfs:domain pfb:FormalBody ;
+	rdfs:range pfb:Remit ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasTermsOfReference rdf:type owl:ObjectProperty ;
+	rdfs:label "hasTermsOfReference"@en ;
+	rdfs:comment "Relates a work package to its terms of reference."@en ;
+	rdfs:domain pfb:WorkPackage ;
+	rdfs:range pfb:TermsOfReference ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:undertakesWorkPackage rdf:type owl:ObjectProperty ;
+	rdfs:label "undertakesWorkPackage"@en ;
+	rdfs:comment "Relates a formal body to a work package."@en ;
+	rdfs:domain pfb:FormalBody ;
+	rdfs:range pfb:WorkPackage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasParentWorkPackage rdf:type owl:ObjectProperty ;
+	rdfs:label "hasParentWorkPackage"@en ;
+	rdfs:comment "Relates a work package to its parent work package. Allows for sub-inquires."@en ;
+	rdfs:domain pfb:WorkPackage ;
+	rdfs:range pfb:WorkPackage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:precedesWorkPackage rdf:type owl:ObjectProperty ;
+	rdfs:label "precedesWorkPackage"@en ;
+	rdfs:comment "Relates a work package to a different work package that preceded it. Allows for work performed in one work package to be picked up in a later work package often by a different formal body or bodies."@en ;
+	rdfs:domain pfb:WorkPackage ;
+	rdfs:range pfb:WorkPackage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasReport rdf:type owl:ObjectProperty ;
+	rdfs:label "hasReport"@en ;
+	rdfs:comment "Relates a work package to the reports produced."@en ;
+	rdfs:domain pfb:WorkPackage ;
+	rdfs:range pfb:Report ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:partOfWorkPackage rdf:type owl:ObjectProperty ;
+	rdfs:label "partOfWorkPackage"@en ;
+	rdfs:comment "Relates an activity to one or more work packages."@en ;
+	rdfs:domain pfb:Activity ;
+	rdfs:range pfb:WorkPackage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:undertakesActivity rdf:type owl:ObjectProperty ;
+	rdfs:label "undertakesActivity"@en ;
+	rdfs:comment "Relates one or more formal bodies to activities."@en ;
+	rdfs:domain pfb:FormalBody ;
+	rdfs:range pfb:Activity ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:includesActivity rdf:type owl:ObjectProperty ;
+	rdfs:label "includesActivity"@en ;
+	rdfs:comment "Relates an event to an activity. Allows an event to be comprised of multiple agenda items as activities e.g. a meeting containing an oral evidence session."@en ;
+	rdfs:domain pfb:Event ;
+	rdfs:range pfb:Activity ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasAgent rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAgent"@en ;
+	rdfs:comment "Relates an event to one more formal bodies who organise it."@en ;
+	rdfs:domain pfb:Event ;
+	rdfs:range pfb:FormalBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasParentEvent rdf:type owl:ObjectProperty ;
+	rdfs:label "hasParentEvent"@en ;
+	rdfs:comment "Relates an event its parent. Allows a visit event to contain a meeting event."@en ;
+	rdfs:domain pfb:Event ;
+	rdfs:range pfb:Event ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+				
+
+#######  Data properties ##### 
+
+pfb:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "title"@en ;
+	rdfs:comment "Person has a title."@en ;
+	rdfs:domain pfb:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
