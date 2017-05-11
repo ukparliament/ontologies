@@ -88,17 +88,10 @@ pa:hasGenderIdentity rdf:type owl:ObjectProperty ;
 	rdfs:range pa:GenderIdentity ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
-pa:hasPolicyInterest rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPolicyInterest"@en ;
-	rdfs:comment "Relates an agent (person or group) to a concept as a policy interest."@en ;
+pa:hasInterest rdf:type owl:ObjectProperty ;
+	rdfs:label "hasInterest"@en ;
+	rdfs:comment "Relates an agent (person or group) to a concept as a (policy) interest."@en ;
 	rdfs:domain pa:Agent ;
-	rdfs:range pa:Concept ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
-pa:hasExpertise rdf:type owl:ObjectProperty ;
-	rdfs:label "hasExpertise"@en ;
-	rdfs:comment "Relates an agent (person or group) to a concept as an area of expertise."@en ;
-	rdfs:domain pa:Member ;
 	rdfs:range pa:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
@@ -170,6 +163,13 @@ pa:placeOfBirth rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a person to their place of birth."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:Place ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	
+pa:precedesGroup rdf:type owl:ObjectProperty ;
+	rdfs:label "precedesGroup"@en ;
+	rdfs:comment "Relates a group to another group that preceded it."@en ;
+	rdfs:domain pa:Group ;
+	rdfs:range pa:Group ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 				
 
