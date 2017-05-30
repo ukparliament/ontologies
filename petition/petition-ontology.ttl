@@ -20,14 +20,14 @@ ppt:Petition rdf:type owl:Class ;
 	rdfs:comment "An online Parliamentary petition."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:ThresholdStage rdf:type owl:Class ;
-	rdfs:label "ThresholdStage"@en ;
-	rdfs:comment "The threshold stages a petition passes through from moderation threshold to government response threshold to debate threshold."@en ;
+ppt:ThresholdAttainment rdf:type owl:Class ;
+	rdfs:label "ThresholdAttainment"@en ;
+	rdfs:comment "The threshold attainment levels a petition might pass through from moderation threshold to government response threshold to debate threshold."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:ThresholdStageType rdf:type owl:Class ;
-	rdfs:label "ThresholdStageType"@en ;
-	rdfs:comment "The type of a threshold stage. Might be moderation threshold met, government response threshold met or debate threshold met."@en ;
+ppt:Threshold rdf:type owl:Class ;
+	rdfs:label "Threshold"@en ;
+	rdfs:comment "A type of threshold. Might be moderation threshold, government response threshold or debate threshold."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 
 ppt:Person rdf:type owl:Class ;
@@ -40,6 +40,22 @@ ppt:ModerationState rdf:type owl:Class ;
 	rdfs:comment "The current moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
+ppt:ModerationOption rdf:type owl:Class ;
+	rdfs:label "ModerationOption"@en ;
+	rdfs:comment "The available moderation options for a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:Rejection rdf:type owl:Class ;
+	rdfs:subClassOf ppt:ModerationOption ;
+	rdfs:label "Rejection"@en ;
+	rdfs:comment "Explicit moderation option for when a petition is rejected."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:RejectionCode rdf:type owl:Class ;
+	rdfs:label "RejectionCode"@en ;
+	rdfs:comment "A code corresponding to a specific type of rejection."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
 ppt:Debate rdf:type owl:Class ;
 	rdfs:label "Debate"@en ;
 	rdfs:comment "A Parliamentary debate."@en ;
@@ -50,8 +66,8 @@ ppt:GovernmentResponse rdf:type owl:Class ;
 	rdfs:comment "A response from the Government."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:SignatureCount rdf:type owl:Class ;
-	rdfs:label "SignatureCount"@en ;
+ppt:LocatedSignatureCount rdf:type owl:Class ;
+	rdfs:label "LocatedSignatureCount"@en ;
 	rdfs:comment "The number of signatures on a petition from a given place."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
@@ -63,18 +79,18 @@ ppt:Place rdf:type owl:Class ;
 	
 #######  Object properties ##### 
 
-ppt:hasThresholdStage rdf:type owl:ObjectProperty ;
-	rdfs:label "hasThresholdStage"@en ;
-	rdfs:comment "Relates a petition to a threshold stage."@en ;
+ppt:hasThresholdAttainment rdf:type owl:ObjectProperty ;
+	rdfs:label "hasThresholdAttainment"@en ;
+	rdfs:comment "Relates a petition to a threshold attainment."@en ;
 	rdfs:domain ppt:Petition ;
-	rdfs:range ppt:ThresholdStage ;
+	rdfs:range ppt:ThresholdAttainment ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:hasThresholdStageType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasThresholdStageType"@en ;
-	rdfs:comment "Relates a threshold stage to a threshold stage type."@en ;
-	rdfs:domain ppt:ThresholdStage ;
-	rdfs:range ppt:ThresholdStageType ;
+ppt:hasThreshold rdf:type owl:ObjectProperty ;
+	rdfs:label "hasThreshold"@en ;
+	rdfs:comment "Relates a threshold attainment to a threshold."@en ;
+	rdfs:domain ppt:ThresholdAttainment ;
+	rdfs:range ppt:Threshold ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:hasDebate rdf:type owl:ObjectProperty ;
@@ -105,28 +121,49 @@ ppt:hasModerationState rdf:type owl:ObjectProperty ;
 	rdfs:range ppt:ModerationState ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:hasSignatureCount rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSignatureCount"@en ;
-	rdfs:comment "Relates a petition to its signature count."@en ;
+ppt:hasModerationOption rdf:type owl:ObjectProperty ;
+	rdfs:label "hasModerationOption"@en ;
+	rdfs:comment "Relates a moderation state to its moderation option."@en ;
+	rdfs:domain ppt:ModerationState ;
+	rdfs:range ppt:ModerationOption ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasRejectionCode rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRejectionCode"@en ;
+	rdfs:comment "Relates a rejection to its rejection code."@en ;
+	rdfs:domain ppt:Rejection ;
+	rdfs:range ppt:RejectionCode ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:hasLocatedSignatureCount rdf:type owl:ObjectProperty ;
+	rdfs:label "hasLocatedSignatureCount"@en ;
+	rdfs:comment "Relates a petition to a located signature count."@en ;
 	rdfs:domain ppt:Petition ;
-	rdfs:range ppt:SignatureCount ;
+	rdfs:range ppt:LocatedSignatureCount ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:fromPlace rdf:type owl:ObjectProperty ;
 	rdfs:label "fromPlace"@en ;
-	rdfs:comment "Relates a signature count to the place the signatures came from."@en ;
-	rdfs:domain ppt:SignatureCount ;
+	rdfs:comment "Relates a located signature count to the place the signatures came from."@en ;
+	rdfs:domain ppt:LocatedSignatureCount ;
 	rdfs:range ppt:Place ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 				
 
 #######  Data properties ##### 
 
-ppt:thresholdMetAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "thresholdMetAt"@en ;
+ppt:thresholdAttainmentAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "thresholdAttainmentAt"@en ;
 	rdfs:comment "Date time at which a threshold is met."@en ;
-	rdfs:domain ppt:ThresholdStage ;
+	rdfs:domain ppt:ThresholdAttainment ;
 	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:thresholdSignatureNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "thresholdSignatureNumber"@en ;
+	rdfs:comment "The number of signatures required to meet a threshold."@en ;
+	rdfs:domain ppt:Threshold ;
+	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:action rdf:type owl:DatatypeProperty ;
@@ -173,7 +210,28 @@ ppt:closedAt rdf:type owl:DatatypeProperty ;
 	
 ppt:signatureCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "signatureCount"@en ;
-	rdfs:comment "Number of signatures on a signature count."@en ;
-	rdfs:domain ppt:SignatureCount ;
+	rdfs:comment "Number of signatures on a located signature count."@en ;
+	rdfs:domain ppt:LocatedSignatureCount ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:signatureCountRetrievedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "signatureCountRetrievedAt"@en ;
+	rdfs:comment "Date time at which a located signature count was retrieved from the petitions API."@en ;
+	rdfs:domain ppt:LocatedSignatureCount ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:rejectionDetails rdf:type owl:DatatypeProperty ;
+	rdfs:label "rejectionDetails"@en ;
+	rdfs:comment "Written explanation of why a petition was rejected."@en ;
+	rdfs:domain ppt:Rejection ;
+	rdfs:range xsd:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
+	
+ppt:rejectionCodeId rdf:type owl:DatatypeProperty ;
+	rdfs:label "rejectionCodeId"@en ;
+	rdfs:comment "A number identifying a specific rejection code."@en ;
+	rdfs:domain ppt:RejectionCode ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
