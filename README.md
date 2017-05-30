@@ -5,7 +5,7 @@ Work in progress to design data models for UK Parliament
 
 Easier to read versions at: https://ukparliament.github.io/ontologies/
 
-Authors: [Silver Oliver](https://twitter.com/silveroliver), [Michael Smethurst](https://twitter.com/fantasticlife), [Anya Somerville](https://twitter.com/bitten_)
+Authors: [Christopher Alcock](https://twitter.com/chrisalcockdev), [Silver Oliver](https://twitter.com/silveroliver), [Michael Smethurst](https://twitter.com/fantasticlife), [Anya Somerville](https://twitter.com/bitten_)
 
 twitter: [@UKParliData](https://twitter.com/ukparlidata)
 
