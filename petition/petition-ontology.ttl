@@ -35,9 +35,9 @@ ppt:Person rdf:type owl:Class ;
 	rdfs:comment "A person."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:ModerationState rdf:type owl:Class ;
-	rdfs:label "ModerationState"@en ;
-	rdfs:comment "The current moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published."@en ;
+ppt:Moderation rdf:type owl:Class ;
+	rdfs:label "Moderation"@en ;
+	rdfs:comment "The moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:ModerationOption rdf:type owl:Class ;
@@ -51,9 +51,10 @@ ppt:Rejection rdf:type owl:Class ;
 	rdfs:comment "Explicit moderation option for when a petition is rejected."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:RejectionCode rdf:type owl:Class ;
-	rdfs:label "RejectionCode"@en ;
-	rdfs:comment "A code corresponding to a specific type of rejection."@en ;
+ppt:Approval rdf:type owl:Class ;
+	rdfs:subClassOf ppt:ModerationOption ;
+	rdfs:label "Approval"@en ;
+	rdfs:comment "Explicit moderation option for when a petition is approved."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:Debate rdf:type owl:Class ;
@@ -114,25 +115,18 @@ ppt:hasCreator rdf:type owl:ObjectProperty ;
 	rdfs:range ppt:Person ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:hasModerationState rdf:type owl:ObjectProperty ;
-	rdfs:label "hasModerationState"@en ;
-	rdfs:comment "Relates a petition to its moderation state."@en ;
+ppt:hasModeration rdf:type owl:ObjectProperty ;
+	rdfs:label "hasModeration"@en ;
+	rdfs:comment "Relates a petition to its moderation states."@en ;
 	rdfs:domain ppt:Petition ;
-	rdfs:range ppt:ModerationState ;
+	rdfs:range ppt:Moderation ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:hasModerationOption rdf:type owl:ObjectProperty ;
 	rdfs:label "hasModerationOption"@en ;
-	rdfs:comment "Relates a moderation state to its moderation option."@en ;
-	rdfs:domain ppt:ModerationState ;
+	rdfs:comment "Relates a moderation to its moderation option."@en ;
+	rdfs:domain ppt:Moderation ;
 	rdfs:range ppt:ModerationOption ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
-	
-ppt:hasRejectionCode rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRejectionCode"@en ;
-	rdfs:comment "Relates a rejection to its rejection code."@en ;
-	rdfs:domain ppt:Rejection ;
-	rdfs:range ppt:RejectionCode ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
 ppt:hasLocatedSignatureCount rdf:type owl:ObjectProperty ;
@@ -187,20 +181,6 @@ ppt:additionalDetails rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:openedAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "openedAt"@en ;
-	rdfs:comment "Date time at which the petition was opened for signatures."@en ;
-	rdfs:domain ppt:Petition ;
-	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
-	
-ppt:rejectedAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "rejectedAt"@en ;
-	rdfs:comment "Date time at which the petition was rejected."@en ;
-	rdfs:domain ppt:Petition ;
-	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
-	
 ppt:closedAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "closedAt"@en ;
 	rdfs:comment "Date time at which the petition was closed."@en ;
@@ -229,9 +209,9 @@ ppt:rejectionDetails rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
 	
-ppt:rejectionCodeId rdf:type owl:DatatypeProperty ;
-	rdfs:label "rejectionCodeId"@en ;
+ppt:rejectionCode rdf:type owl:DatatypeProperty ;
+	rdfs:label "rejectionCode"@en ;
 	rdfs:comment "A number identifying a specific rejection code."@en ;
-	rdfs:domain ppt:RejectionCode ;
+	rdfs:domain ppt:Rejection ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/petition/> .
