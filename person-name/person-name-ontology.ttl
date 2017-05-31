@@ -1,0 +1,140 @@
+@prefix ppn: <http://parliament.uk/ontologies/person-name/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/person-name/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Person name ontology"@en ;
+    dcterms:created "30/05/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Person name ontology for UK Parliament."@en .
+
+
+#######  Classes ##### 	
+	
+ppn:Role rdf:type owl:Class ;
+	rdfs:label "Role"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:PersonNaming rdf:type owl:Class ;
+	rdfs:label "PersonNaming"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:PeerageNaming rdf:type owl:Class ;
+	rdfs:subClassOf ppn:PersonNaming ;
+	rdfs:label "PeerageNaming"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:GivenNameBeforeFamilyNameNaming rdf:type owl:Class ;
+	rdfs:subClassOf ppn:PersonNaming ;
+	rdfs:label "GivenNameBeforeFamilyNameNaming"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:FamilyNameBeforeGivenNameNaming rdf:type owl:Class ;
+	rdfs:subClassOf ppn:PersonNaming ;
+	rdfs:label "FamilyNameBeforeGivenNameNaming"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PreferredNaming rdf:type owl:Class ;
+	rdfs:subClassOf ppn:PersonNaming ;
+	rdfs:label "PreferredNaming"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PeerageLevel rdf:type owl:Class ;
+	rdfs:label "PeerageLevel"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PeerageTerm rdf:type owl:Class ;
+	rdfs:label "PeerageTerm"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:RoleIdentity rdf:type owl:Class ;
+	rdfs:subClassOf ppn:PersonNaming ;
+	rdfs:label "RoleIdentity"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:RoleThatAffectsName rdf:type owl:Class ;
+	rdfs:subClassOf ppn:Role ;
+	rdfs:label "RoleThatAffectsName"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+	
+#######  Object properties ##### 
+
+ppn:hasPersonNaming rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPersonNaming"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Person ;
+	rdfs:range ppn:PersonNaming ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:hasRole rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRole"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Seat ;
+	rdfs:range ppn:Role ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:hasRoleIdentity rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRoleIdentity"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:RoleThatAffectsName ;
+	rdfs:range ppn:RoleIdentity ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:hasGender rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGender"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PeerageTerm ;
+	rdfs:range ppn:Gender ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:hasPeerageLevel rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageLevel"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PeerageTerm ;
+	rdfs:range ppn:PeerageLevel ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:hasPeerageTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageTerm"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PeerageNaming ;
+	rdfs:range ppn:PeerageTerm ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:hasPeerageLevel rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageLevel"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Person ;
+	rdfs:range ppn:PeerageLevel ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+				
+#######  Data properties ##### 
+
+ppn:givenName rdf:type owl:DatatypeProperty ;
+	rdfs:label "givenName"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range xsd:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:familyName rdf:type owl:DatatypeProperty ;
+	rdfs:label "familyName"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range xsd:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
