@@ -53,6 +53,11 @@ ppn:PeerageLevel rdf:type owl:Class ;
 	rdfs:label "PeerageLevel"@en ;
 	rdfs:comment "The peerage system is explicitly ranked, with a Baron being junior to an Earl.  This level number will allow clients to display the more senior peergae where a peer has more than one peerage per Lords convention "@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PeerageJurisdiction rdf:type owl:Class ;
+	rdfs:label "PeerageJurisdiction"@en ;
+	rdfs:comment "A jurisdiction that a peerage can be awarded in. e.g. an Scottish peerage or a UK peerage."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
 ppn:Peerage rdf:type owl:Class ;
 	rdfs:label "Peerage"@en ;
@@ -128,11 +133,18 @@ ppn:hasPeerage rdf:type owl:ObjectProperty ;
 	rdfs:range ppn:Peerage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:peerageHasPeerageLevel rdf:type owl:ObjectProperty ;
+ppn:hasPeerageLevel rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPeerageLevel"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:Peerage ;
 	rdfs:range ppn:PeerageLevel ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:hasPeerageJurisdiction rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageJurisdiction"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Peerage ;
+	rdfs:range ppn:PeerageJurisdiction ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 				
 #######  Data properties ##### 
