@@ -37,12 +37,6 @@ ppn:GivenNameBeforeFamilyNameNaming rdf:type owl:Class ;
 	rdfs:comment "In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This subclassing is a proposed way of allowing clients to understand that the naming in question is from a culture where the given name comes before the family name"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:FamilyNameBeforeGivenNameNaming rdf:type owl:Class ;
-	rdfs:subClassOf ppn:PersonNaming ;
-	rdfs:label "FamilyNameBeforeGivenNameNaming"@en ;
-	rdfs:comment "In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This subclassing is a proposed way of allowing clients to understand that the naming in question is from a culture where the family name comes before the given name"@en ;	
-	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
-	
 ppn:PreferredNaming rdf:type owl:Class ;
 	rdfs:subClassOf ppn:PersonNaming ;
 	rdfs:label "PreferredNaming"@en ;
@@ -81,8 +75,22 @@ ppn:RoleThatAffectsName rdf:type owl:Class ;
 	rdfs:comment "A type of Role that gives a RoleIdentity, eg the office of Archbishop or Member of Parliament"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
+ppn:NamingOrderConvention rdf:type owl:Class ;
+	rdfs:label "NamingOrderConvention"@en ;
+	rdfs:comment "In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This class is a proposed way of allowing clients to understand that the naming in question is eg. from a culture where the given name comes before the family name"@en ;	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
 	
 #######  Object properties ##### 
+
+
+ppn:hasNamingOrderConvention rdf:type owl:ObjectProperty ;
+	rdfs:label "hasNamingOrderConvention"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range ppn:NamingOrderConvention ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+
 
 ppn:hasPersonNaming rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPersonNaming"@en ;
