@@ -109,16 +109,16 @@ ppn:Peerage rdf:type owl:Class ;
 	rdfs:comment "This refers to the actual fact that a Person is awarded a Peerage.  This should probably be modelled differently but is here a placeholder as of 8-6-17"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 		
-ppn:IncumbencyIdentity rdf:type owl:Class ;
+ppn:IncumbencyPersonNaming rdf:type owl:Class ;
 	rdfs:subClassOf ppn:PersonNaming ;
-	rdfs:label "IncumbencyIdentity"@en ;
+	rdfs:label "IncumbencyPersonNaming"@en ;
 	rdfs:comment "This is a PersonNaming that comes directly from a person's Incumbency - eg The Archbishop Of Canterbury, or an MP taking the initials MP "@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
 ppn:IncumbencyThatAffectsName rdf:type owl:Class ;
 	rdfs:subClassOf ppn:Incumbency ;
 	rdfs:label "IncumbencyThatAffectsName"@en ;
-	rdfs:comment "A type of Incumbency that gives a IncumbencyIdentity, eg the office of Archbishop or Member of Parliament"@en ;
+	rdfs:comment "A type of Incumbency that gives a IncumbencyPersonNaming, eg the office of Archbishop or Member of Parliament"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
 ppn:CulturalOrdering rdf:type owl:Class ;
@@ -249,11 +249,11 @@ ppn:hasIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:range ppn:Incumbency ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
-ppn:hasIncumbencyIdentity rdf:type owl:ObjectProperty ;
-	rdfs:label "hasIncumbencyIdentity"@en ;
+ppn:hasIncumbencyPersonNaming rdf:type owl:ObjectProperty ;
+	rdfs:label "hasIncumbencyPersonNaming"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:IncumbencyThatAffectsName ;
-	rdfs:range ppn:IncumbencyIdentity ;
+	rdfs:range ppn:IncumbencyPersonNaming ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
 ppn:personNamingHasGender rdf:type owl:ObjectProperty ;
