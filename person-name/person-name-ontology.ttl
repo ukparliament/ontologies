@@ -15,11 +15,68 @@
 
 #######  Classes ##### 	
 	
-ppn:Role rdf:type owl:Class ;
-	rdfs:label "Role"@en ;
+ppn:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
 	rdfs:comment "Acts as essentially a join between a person and a position, eg a job, something that a person has been appointed to"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
+ppn:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A house in Parliament - i.e. the House of Lords or Commons"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+
+ppn:HouseSeat rdf:type owl:Class ;
+	rdfs:label "HouseSeat"@en ;
+	rdfs:comment "A seat in a House in Parliament"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:SeatIncumbency rdf:type owl:Class ;
+	rdfs:subClassOf ppn:Incumbency ;
+	rdfs:label "SeatIncumbency"@en ;
+	rdfs:comment "The time someone is in a HouseSeat"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:Member rdf:type owl:Class ;
+	rdfs:subClassOf ppn:Person ;
+	rdfs:label "Member"@en ;
+	rdfs:comment "A member of a House of Parliament"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:GenderIdentity rdf:type owl:Class ;
+	rdfs:label "GenderIdentity"@en ;
+	rdfs:comment "Links a person to the gender identity they publically displayed"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PeerageType rdf:type owl:Class ;
+	rdfs:label "PeerageType"@en ;
+	rdfs:comment "Type of peerage, eg Life or Hereditary"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:OfUsage rdf:type owl:Class ;
+	rdfs:label "OfUsage"@en ;
+	rdfs:comment "In a Peer's title, are they Baron Placename or Baron Of Placename"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:TheUsage rdf:type owl:Class ;
+	rdfs:label "TheUsage"@en ;
+	rdfs:comment "In a Peer's title, are they The Baron Of Placename or Baron Of Placename"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:NamingQualification rdf:type owl:Class ;
+	rdfs:label "NamingQualification"@en ;
+	rdfs:comment "A qualification or professional achievement which grants someone a pre-nominal or post-nominal decoration to their name, eg. attaining a doctorate allowing you to use the pre-nominal Dr or the post-nominal PhD"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PreNominal rdf:type owl:Class ;
+	rdfs:label "PreNominal"@en ;
+	rdfs:comment "A term or letters used before a person's name, eg. General"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:PostNominal rdf:type owl:Class ;
+	rdfs:label "PostNominal"@en ;
+	rdfs:comment "A term or letters used after a person's name, eg. FRCOG"@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
 ppn:PersonNaming rdf:type owl:Class ;
 	rdfs:label "PersonNaming"@en ;
 	rdfs:comment "Could also be called 'identity' if that wasn't so ambiguous.  ie People often have more than one naming over the course of their lives, from people changing their surnames at marriage to people being given appointments that have styles of address"@en ;
@@ -30,12 +87,6 @@ ppn:PeerageNaming rdf:type owl:Class ;
 	rdfs:label "PeerageNaming"@en ;
 	rdfs:comment "a type of PersonNaming that has been influenced by someone's peerage, whether that be through birth or through appointment to the House Of Lords"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
-
-ppn:GivenNameBeforeFamilyNameNaming rdf:type owl:Class ;
-	rdfs:subClassOf ppn:PersonNaming ;
-	rdfs:label "GivenNameBeforeFamilyNameNaming"@en ;
-	rdfs:comment "In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This subclassing is a proposed way of allowing clients to understand that the naming in question is from a culture where the given name comes before the family name"@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
 ppn:PreferredNaming rdf:type owl:Class ;
 	rdfs:subClassOf ppn:PersonNaming ;
@@ -43,54 +94,146 @@ ppn:PreferredNaming rdf:type owl:Class ;
 	rdfs:comment "This subclassing is here to provide a pointer to clients as to which naming to use when otherwise not explicitly dictated by context"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:PeerageLevel rdf:type owl:Class ;
-	rdfs:label "PeerageLevel"@en ;
+ppn:PeerageRank rdf:type owl:Class ;
+	rdfs:label "PeerageRank"@en ;
 	rdfs:comment "The peerage system is explicitly ranked, with a Baron being junior to an Earl.  This level number will allow clients to display the more senior peergae where a peer has more than one peerage per Lords convention "@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:PeerageJurisdiction rdf:type owl:Class ;
-	rdfs:label "PeerageJurisdiction"@en ;
-	rdfs:comment "A jurisdiction that a peerage can be awarded in. e.g. an Scottish peerage or a UK peerage."@en ;
+ppn:PeerageAuthority rdf:type owl:Class ;
+	rdfs:label "PeerageAuthority"@en ;
+	rdfs:comment "An authority that a peerage can be awarded in. e.g. an Scottish peerage or a UK peerage."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
 ppn:Peerage rdf:type owl:Class ;
 	rdfs:label "Peerage"@en ;
 	rdfs:comment "This refers to the actual fact that a Person is awarded a Peerage.  This should probably be modelled differently but is here a placeholder as of 8-6-17"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
-	
-ppn:PeerageTitle rdf:type owl:Class ;
-	rdfs:label "PeerageTitle"@en ;
-	rdfs:comment "eg Baron, Baronness, Earl, Viscountess.  It is informed by its level and gender"@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
-	
-ppn:RoleIdentity rdf:type owl:Class ;
+		
+ppn:IncumbencyPersonNaming rdf:type owl:Class ;
 	rdfs:subClassOf ppn:PersonNaming ;
-	rdfs:label "RoleIdentity"@en ;
-	rdfs:comment "This is a PersonNaming that comes directly from a person's Role - eg The Archbishop Of Canterbury, or an MP taking the initials MP "@en ;
+	rdfs:label "IncumbencyPersonNaming"@en ;
+	rdfs:comment "This is a PersonNaming that comes directly from a person's Incumbency - eg The Archbishop Of Canterbury, or an MP taking the initials MP "@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:RoleThatAffectsName rdf:type owl:Class ;
-	rdfs:subClassOf ppn:Role ;
-	rdfs:label "RoleThatAffectsName"@en ;
-	rdfs:comment "A type of Role that gives a RoleIdentity, eg the office of Archbishop or Member of Parliament"@en ;
+ppn:IncumbencyThatAffectsName rdf:type owl:Class ;
+	rdfs:subClassOf ppn:Incumbency ;
+	rdfs:label "IncumbencyThatAffectsName"@en ;
+	rdfs:comment "A type of Incumbency that gives a IncumbencyPersonNaming, eg the office of Archbishop or Member of Parliament"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:NamingOrderConvention rdf:type owl:Class ;
-	rdfs:label "NamingOrderConvention"@en ;
+ppn:CulturalOrdering rdf:type owl:Class ;
+	rdfs:label "CulturalOrdering"@en ;
 	rdfs:comment "In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This class is a proposed way of allowing clients to understand that the naming in question is eg. from a culture where the given name comes before the family name"@en ;	
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
 	
 #######  Object properties ##### 
 
-
-ppn:hasNamingOrderConvention rdf:type owl:ObjectProperty ;
-	rdfs:label "hasNamingOrderConvention"@en ;
+ppn:hasHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "hasHouse"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain ppn:PersonNaming ;
-	rdfs:range ppn:NamingOrderConvention ;
+	rdfs:domain ppn:HouseSeat ;
+	rdfs:range ppn:House ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:hasPeerageNaming rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageNaming"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Peerage ;
+	rdfs:range ppn:PeerageNaming ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:hasGenderIdentity rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGenderIdentity"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Person ;
+	rdfs:range ppn:GenderIdentity ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:genderIdentityHasGender rdf:type owl:ObjectProperty ;
+	rdfs:label "genderIdentityHasGender"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:GenderIdentity ;
+	rdfs:range ppn:Gender ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:houseHasHouseSeat rdf:type owl:ObjectProperty ;
+	rdfs:label "houseHasHouseSeat"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:SeatIncumbency ;
+	rdfs:range ppn:HouseSeat ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:peerageHasHouseSeat rdf:type owl:ObjectProperty ;
+	rdfs:label "peerageHasHouseSeat"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Peerage ;
+	rdfs:range ppn:HouseSeat ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:hasSeatIncumbency rdf:type owl:ObjectProperty ;
+	rdfs:label "hasSeatIncumbency"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Member ;
+	rdfs:range ppn:SeatIncumbency ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:hasPeerageType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageType"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:Peerage ;
+	rdfs:range ppn:PeerageType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
 
+ppn:personNamingHasPostNominal rdf:type owl:ObjectProperty ;
+	rdfs:label "personNamingHasPostNominal"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range ppn:PostNominal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:hasOfUsage rdf:type owl:ObjectProperty ;
+	rdfs:label "hasOfUsage"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PeerageNaming ;
+	rdfs:range ppn:OfUsage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:hasTheUsage rdf:type owl:ObjectProperty ;
+	rdfs:label "hasTheUsage"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PeerageNaming ;
+	rdfs:range ppn:TheUsage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:personNamingHasPreNominal rdf:type owl:ObjectProperty ;
+	rdfs:label "personNamingHasPreNominal"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range ppn:PreNominal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:namingQualificationHasPreNominal rdf:type owl:ObjectProperty ;
+	rdfs:label "namingQualificationHasPreNominal"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:NamingQualification ;
+	rdfs:range ppn:PreNominal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+ppn:namingQualificationHasPostNominal rdf:type owl:ObjectProperty ;
+	rdfs:label "namingQualificationHasPostNominal"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:NamingQualification ;
+	rdfs:range ppn:PostNominal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
+	
+
+ppn:hasCulturalOrdering rdf:type owl:ObjectProperty ;
+	rdfs:label "hasCulturalOrdering"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range ppn:CulturalOrdering ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
 
 ppn:hasPersonNaming rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPersonNaming"@en ;
@@ -99,60 +242,46 @@ ppn:hasPersonNaming rdf:type owl:ObjectProperty ;
 	rdfs:range ppn:PersonNaming ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
-ppn:hasRole rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRole"@en ;
+ppn:hasIncumbency rdf:type owl:ObjectProperty ;
+	rdfs:label "hasIncumbency"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:Person ;
-	rdfs:range ppn:Role ;
+	rdfs:range ppn:Incumbency ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
-ppn:hasRoleIdentity rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRoleIdentity"@en ;
+ppn:hasIncumbencyPersonNaming rdf:type owl:ObjectProperty ;
+	rdfs:label "hasIncumbencyPersonNaming"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain ppn:RoleThatAffectsName ;
-	rdfs:range ppn:RoleIdentity ;
+	rdfs:domain ppn:IncumbencyThatAffectsName ;
+	rdfs:range ppn:IncumbencyPersonNaming ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
-ppn:hasGender rdf:type owl:ObjectProperty ;
-	rdfs:label "hasGender"@en ;
+ppn:personNamingHasGender rdf:type owl:ObjectProperty ;
+	rdfs:label "personNamingHasGender"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain ppn:PeerageTitle ;
+	rdfs:domain ppn:PersonNaming ;
 	rdfs:range ppn:Gender ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
-ppn:hasPeerageLevel rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPeerageLevel"@en ;
+ppn:hasPeerageRank rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageRank"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain ppn:PeerageTitle ;
-	rdfs:range ppn:PeerageLevel ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
-
-ppn:hasPeerageTitle rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPeerageTitle"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain ppn:PeerageNaming ;
-	rdfs:range ppn:PeerageTitle ;
+	rdfs:domain ppn:Peerage ;
+	rdfs:range ppn:PeerageRank ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 
 ppn:hasPeerage rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPeerageLevel"@en ;
+	rdfs:label "hasPeerage"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:Person ;
 	rdfs:range ppn:Peerage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 	
-ppn:peerageHasPeerageLevel rdf:type owl:ObjectProperty ;
-	rdfs:label "peerageHasPeerageLevel"@en ;
+ppn:hasPeerageAuthority rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPeerageAuthority"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:Peerage ;
-	rdfs:range ppn:PeerageLevel ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
-	
-ppn:hasPeerageJurisdiction rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPeerageJurisdiction"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain ppn:Peerage ;
-	rdfs:range ppn:PeerageJurisdiction ;
+	rdfs:range ppn:PeerageAuthority ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
 				
 #######  Data properties ##### 
@@ -169,4 +298,32 @@ ppn:familyName rdf:type owl:DatatypeProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:PersonNaming ;
 	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:middleNames rdf:type owl:DatatypeProperty ;
+	rdfs:label "middleNames"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:patronymic rdf:type owl:DatatypeProperty ;
+	rdfs:label "patronymic"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppn:PersonNaming ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:postNominalOrdering rdf:type owl:DatatypeProperty ;
+	rdfs:label "postNominalOrdering"@en ;
+	rdfs:comment "States the position in which a PostNominal is listed"@en ;
+	rdfs:domain ppn:PostNominal ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+	
+ppn:preNominalOrdering rdf:type owl:DatatypeProperty ;
+	rdfs:label "preNominalOrdering"@en ;
+	rdfs:comment "States the position in which a PreNominal is listed"@en ;
+	rdfs:domain ppn:PreNominal ;
+	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
