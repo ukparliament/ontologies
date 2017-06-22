@@ -36,19 +36,19 @@ ppb:PoliticalBloc rdf:type owl:Class ;
 	rdfs:comment "A group of members. This might be a political party such as Labour or Conservative. Or might be a different type of grouping such as Bishops or Crossbenchers in the House of Lords."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 	
-ppb:PoliticalBlocAffiliation rdf:type owl:Class ;
-	rdfs:label "PoliticalBlocAffiliation"@en ;
+ppb:Affiliation rdf:type owl:Class ;
+	rdfs:label "Affiliation"@en ;
 	rdfs:comment "A person or group's affiliation to a political bloc between between two dates."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 	
 ppb:PartyMembership rdf:type owl:Class ;
-	rdfs:subClassOf ppb:PoliticalBlocAffiliation ;
+	rdfs:subClassOf ppb:Affiliation ;
 	rdfs:label "PartyMembership"@en ;
 	rdfs:comment "A person's membership of a political party between between two dates."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 	
 ppb:Whipping rdf:type owl:Class ;
-	rdfs:subClassOf ppb:PoliticalBlocAffiliation ;
+	rdfs:subClassOf ppb:Affiliation ;
 	rdfs:label "Whipping"@en ;
 	rdfs:comment "A member of a legislature being whipped to a political party between two dates. A member accepting a whip agrees to vote mainly in line with the party they're whipped to. The whip may be withdrawn by the party or rejected by the member."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
@@ -85,8 +85,8 @@ ppb:hasSistership rdf:type owl:ObjectProperty ;
 	
 ppb:affiliatedToPoliticalBloc rdf:type owl:ObjectProperty ;
 	rdfs:label "affiliatedToPoliticalBloc"@en ;
-	rdfs:comment "Relates a political bloc affiliation to a political bloc. e.g. covers the affiliation of a crossbencher to the crossbench bloc in the House of Lords. "@en ;
-	rdfs:domain ppb:PoliticalBlocAffiliation ;
+	rdfs:comment "Relates an affiliation to a political bloc. e.g. covers the affiliation of a crossbencher to the crossbench bloc in the House of Lords. "@en ;
+	rdfs:domain ppb:Affiliation ;
 	rdfs:range ppb:PoliticalBloc ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 	
