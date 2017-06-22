@@ -46,6 +46,11 @@ ppn:GenderIdentity rdf:type owl:Class ;
 	rdfs:label "GenderIdentity"@en ;
 	rdfs:comment "Links a person to the gender identity they publically displayed"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .
+									
+ppn:Gender rdf:type owl:Class ;
+	rdfs:label "Gender"@en ;
+	rdfs:comment "A gender."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/> .	
 	
 ppn:PeerageType rdf:type owl:Class ;
 	rdfs:label "PeerageType"@en ;
@@ -150,15 +155,15 @@ ppn:hasGenderIdentity rdf:type owl:ObjectProperty ;
 	rdfs:range ppn:GenderIdentity ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
 	
-ppn:genderIdentityHasGender rdf:type owl:ObjectProperty ;
-	rdfs:label "genderIdentityHasGender"@en ;
+ppn:hasGender rdf:type owl:ObjectProperty ;
+	rdfs:label "hasGender"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:GenderIdentity ;
 	rdfs:range ppn:Gender ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/person-name/>.
 	
-ppn:houseHasHouseSeat rdf:type owl:ObjectProperty ;
-	rdfs:label "houseHasHouseSeat"@en ;
+ppn:hasHouseSeat rdf:type owl:ObjectProperty ;
+	rdfs:label "hasHouseSeat"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppn:SeatIncumbency ;
 	rdfs:range ppn:HouseSeat ;
