@@ -38,24 +38,13 @@ ppb:PoliticalBloc rdf:type owl:Class ;
 	
 ppb:Affiliation rdf:type owl:Class ;
 	rdfs:label "Affiliation"@en ;
-	rdfs:comment "A person or group's affiliation to a political bloc between between two dates."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
-	
-ppb:Certification rdf:type owl:Class ;
-	rdfs:subClassOf ppb:Affiliation ;
-	rdfs:label "Certification"@en ;
-	rdfs:comment "A person's certification by a political party to stand in an election on behalf of that party. A person may be certified by more than one party. e.g. The Labour Party and The Co-operative Party."@en ;
+	rdfs:comment "A person or group's affiliation to a political bloc between between two dates. Could be used to describe affiliations to non-political party blocs. e.g. Crossbenchers and bishops in the House of Lords. Could also be used to describe members having an affiliation to the Co-operative Party whilst being whipped to Labour."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 	
 ppb:Whipping rdf:type owl:Class ;
 	rdfs:subClassOf ppb:Affiliation ;
 	rdfs:label "Whipping"@en ;
 	rdfs:comment "A member of a legislature being whipped to a political party between two dates. A member accepting a whip agrees to vote mainly in line with the party they're whipped to. The whip may be withdrawn by the party or rejected by the member."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
-	
-ppb:Person rdf:type owl:Class ;
-	rdfs:label "Person"@en ;
-	rdfs:comment "A person."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 	
 ppb:Member rdf:type owl:Class ;
@@ -102,20 +91,6 @@ ppb:hasWhipping rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a member to a whipping."@en ;
 	rdfs:domain ppb:Member ;
 	rdfs:range ppb:Whipping ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
-	
-ppb:hasCertification rdf:type owl:ObjectProperty ;
-	rdfs:label "hasCertification"@en ;
-	rdfs:comment "Relates a person to a certification."@en ;
-	rdfs:domain ppb:Person ;
-	rdfs:range ppb:Certification ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
-	
-ppb:certificationByParty rdf:type owl:ObjectProperty ;
-	rdfs:label "certificationByParty"@en ;
-	rdfs:comment "Relates a certification to a political party."@en ;
-	rdfs:domain ppb:Certification ;
-	rdfs:range ppb:Party ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/political-bloc/> .
 				
 	
