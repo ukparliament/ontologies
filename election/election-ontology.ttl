@@ -235,7 +235,7 @@ pe:partyGained rdf:type owl:DatatypeProperty ;
 	
 pe:validBallotsCast rdf:type owl:DatatypeProperty ;
 	rdfs:label "validBallotsCast"@en ;
-	rdfs:comment "The number of valid ballots cast by the electorate in the election."@en ;
+	rdfs:comment "The number of valid ballots cast by the electorate in the election. Note that turnout is derived as a percentage of ( people who voted / people registered to vote ) but is calculated differently by different organisations. Academics and the House of Commons Library use only the valid ballots, but Returning Officers tend to use all ballots cast, including invalid (spoilt) ballots."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
