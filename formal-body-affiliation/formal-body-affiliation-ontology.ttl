@@ -21,25 +21,25 @@ pfba:Affiliation rdf:type owl:Class ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:FormalBodyAffiliation rdf:type owl:Class ;
-	rdfs:subClassOf ppb:Affiliation ;
+	rdfs:subClassOf pfba:Affiliation ;
 	rdfs:label "FormalBodyAffiliation"@en ;
 	rdfs:comment "Specialises affiliations to formal bodies. In most cases this membership is drawn from the backbenches."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:CooptedMembership rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyAffiliation ;
+	rdfs:subClassOf pfba:FormalBodyAffiliation ;
 	rdfs:label "CooptedMembership"@en ;
 	rdfs:comment "A member of committee who might only be invited to join on occasion. e.g. the Executive Committee might occasionally co-opt the Director of the Parliamentary Digital Service and/or Parliamentary Security Director into its membership. Note that as MNIS only deals with members of house, co-opted membership is not present."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:AlternateMembership rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyAffiliation ;
+	rdfs:subClassOf pfba:FormalBodyAffiliation ;
 	rdfs:label "AlternateMembership"@en ;
 	rdfs:comment "Alternate Members act as substitutes when other members can't attend. The Lords Procedure Committee is supplemented by one alternate for each party group of backbench members and one for the Crossbenchers, plus an alternate for the Convenor. They receive papers, and are entitled to attend if any of the relevant members cannot, and if necessary to vote."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:ExOfficioMembership rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyAffiliation ;
+	rdfs:subClassOf pfba:FormalBodyAffiliation ;
 	rdfs:label "ExOfficioMembership"@en ;
 	rdfs:comment "Ex-oficio are members appointed by virtue of roles or positions, by convention. Some Ministers are appointed ex-officio members of committees. e.g. Government and Opposition Whips regularly serve on the Finance and Services and Administration Committees; specific government Ministers are members of, but by convention do not attend meetings of, the Committee of Public Accounts and the Environmental Audit Committee, and successive Leaders of the House chaired the Select Committee on Modernisation of the House of Commons between 1997 and 2010."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
@@ -50,31 +50,31 @@ pfba:Position rdf:type owl:Class ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:FormalBodyPosition rdf:type owl:Class ;
-	rdfs:subClassOf ppb:Position ;
+	rdfs:subClassOf pfba:Position ;
 	rdfs:label "FormalBodyPosition"@en ;
 	rdfs:comment "Specialises positions to formal bodies."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:Chair rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyPosition ;
+	rdfs:subClassOf pfba:FormalBodyPosition ;
 	rdfs:label "Chair"@en ;
 	rdfs:comment "Used to describe the chair of a formal body."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:CommitteeClerk rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyPosition ;
+	rdfs:subClassOf pfba:FormalBodyPosition ;
 	rdfs:label "CommitteeClerk"@en ;
 	rdfs:comment "Used to describe the clerk of a formal body."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:InternalExpert rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyPosition ;
+	rdfs:subClassOf pfba:FormalBodyPosition ;
 	rdfs:label "InternalExpert"@en ;
 	rdfs:comment "Formal bodies often appoint subject matter experts. The role is normally described as committee specialist within Parliament."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:ExternalExpert rdf:type owl:Class ;
-	rdfs:subClassOf ppb:FormalBodyPosition ;
+	rdfs:subClassOf pfba:FormalBodyPosition ;
 	rdfs:label "ExternalExpert"@en ;
 	rdfs:comment "Formal bodies can contract subject matter experts for the duration of an inquiry."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
