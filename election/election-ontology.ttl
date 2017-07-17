@@ -21,6 +21,11 @@ pe:Election rdf:type owl:Class ;
 	rdfs:comment "An election to elect an individual to a seat or role."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
+pe:ParliamentPeriod rdf:type owl:Class ;
+	rdfs:label "ParliamentPeriod"@en ;
+	rdfs:comment "The period of a single parliament beginning with the state opening of the first session and ending with dissolution. Defined as 5 years since the Fixed Term Parliament Act except in exceptional circumstances. Parliament periods are the same across both houses."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
 pe:GeneralElection rdf:type owl:Class ;
 	rdfs:label "GeneralElection"@en ;
 	rdfs:comment "A set of elections held at the same time."@en ;
@@ -69,6 +74,11 @@ pe:WinningCandidacyResult rdf:type owl:Class ;
 	rdfs:comment "The details of the winning candidacy in an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
+pe:Certification rdf:type owl:Class ;
+	rdfs:label "Certification"@en ;
+	rdfs:comment "A candidacy's certification by a political party to stand in an election on behalf of that party. A person may be certified by more than one party. e.g. The Labour Party and The Co-operative Party."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
 pe:Party rdf:type owl:Class ;
 	rdfs:label "Party"@en ;
 	rdfs:comment "An organised political group."@en ;
@@ -87,6 +97,13 @@ pe:ElectoralIncumbency rdf:type owl:Class ;
 			
 
 #######  Object properties ##### 
+
+pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "intoParliamentPeriod"@en ;
+	rdfs:comment "Relates an election to the Parliament period the election is for."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range pe:ParliamentPeriod ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:hasConstituencyAreaType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasConstituencyAreaType"@en ;
@@ -128,12 +145,26 @@ pe:hasCandidacy rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an election to a candidacy."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:Candidacy  ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:hasCertification rdf:type owl:ObjectProperty ;
+	rdfs:label "hasCertification"@en ;
+	rdfs:comment "Relates a candidacy to a certification."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range pe:Certification  ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:adjunctTo rdf:type owl:ObjectProperty ;
+	rdfs:label "adjunctTo"@en ;
+	rdfs:comment "Relates an adjunct certification to a certification. Used to relate a Co-operative Party certification to a Labour Party certification."@en ;
+	rdfs:domain pe:Certification ;
+	rdfs:range pe:Certification  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 	
-pe:hasParty rdf:type owl:ObjectProperty ;
-	rdfs:label "hasParty"@en ;
-	rdfs:comment "Relates a candidacy to a party."@en ;
-	rdfs:domain pe:Candidacy ;
+pe:toParty rdf:type owl:ObjectProperty ;
+	rdfs:label "toParty"@en ;
+	rdfs:comment "Relates a certification to the certifying party."@en ;
+	rdfs:domain pe:Certification ;
 	rdfs:range pe:Party  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
