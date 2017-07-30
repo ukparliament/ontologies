@@ -44,6 +44,11 @@ pc:WebLinkSource rdf:type owl:Class ;
 pc:WebLinkType rdf:type owl:Class ;
 	rdfs:label "WebLinkType"@en ;
 	rdfs:comment "A link type e.g. personal homepage, obituary."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:Label rdf:type owl:Class ;
+	rdfs:label "Label"@en ;
+	rdfs:comment "Allows a thing to have different labels at different time periods. e.g. a Government Department, Select Committee, Bill or inquiry might change its name during its lifetime. Reuses preferredLabel, abbreviationLabel, sortLabel, startDate and endDate from Thing."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 
 #######  Object properties ##### 
@@ -81,6 +86,20 @@ pc:hasWebLinkType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a link to a weblink type."@en ;
 	rdfs:domain pc:WebLink ;
 	rdfs:range pc:WebLinkType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .		
+	
+pc:hasLabel rdf:type owl:ObjectProperty ;
+	rdfs:label "hasLabel"@en ;
+	rdfs:comment "Relates a thing to a label during a time period."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range pc:Label ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .		
+	
+pc:precededBy rdf:type owl:ObjectProperty ;
+	rdfs:label "precededBy"@en ;
+	rdfs:comment "Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range pc:Thing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .				
 		
 
@@ -159,7 +178,7 @@ pc:sortOrder rdf:type owl:DatatypeProperty ;
 	
 pc:sameAs rdf:type owl:DatatypeProperty ;
 	rdfs:label "sameAs"@en ;
-	rdfs:comment "Relates a thing to a the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs."@en ;
+	rdfs:comment "Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
