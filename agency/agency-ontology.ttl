@@ -67,11 +67,6 @@ pa:Place rdf:type owl:Class ;
 	rdfs:comment "A geographic place."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
-pa:PositionType rdf:type owl:Class ;
-	rdfs:label "PositionType"@en ;
-	rdfs:comment "A position type. Used to differentiate between staff positions on committees (e.g. clerks and subject matter experts) and specialised member positions on committees e.g. Chair."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
 pa:Concept rdf:type owl:Class ;
 	rdfs:label "Concept"@en ;
 	rdfs:comment "A concept."@en ;
@@ -136,13 +131,6 @@ pa:hasPosition rdf:type owl:ObjectProperty ;
 	rdfs:domain pa:Incumbency ;
 	rdfs:range pa:Position ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
-	
-pa:hasPositionType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPositionType"@en ;
-	rdfs:comment "Relates a position to a position type."@en ;
-	rdfs:domain pa:Position ;
-	rdfs:range pa:PositionType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
 pa:positionIn rdf:type owl:ObjectProperty ;
 	rdfs:label "positionIn"@en ;
