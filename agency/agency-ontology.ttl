@@ -32,11 +32,6 @@ pa:Group rdf:type owl:Class ;
 	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
-pa:GroupType rdf:type owl:Class ;
-	rdfs:label "GroupType"@en ;
-	rdfs:comment "A group type."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .			
-
 pa:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
 	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secerety between two dates."@en ;
@@ -97,20 +92,6 @@ pa:hasGender rdf:type owl:ObjectProperty ;
 	rdfs:range pa:Gender ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
-pa:hasGroupType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasGroupType"@en ;
-	rdfs:comment "Relates a group to its type."@en ;
-	rdfs:domain pa:Group ;
-	rdfs:range pa:GroupType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
-pa:hasParentGroupType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasParentGroupType"@en ;
-	rdfs:comment "Relates group type to its parent group type."@en ;
-	rdfs:domain pa:GroupType ;
-	rdfs:range pa:GroupType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
-
 pa:hasAffiliation rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAffiliation"@en ;
 	rdfs:comment "Relates an agent (person or group) to an affiliation e.g. person is member of a committee, or a sub-committee is a member of a committee."@en ;
@@ -151,13 +132,6 @@ pa:placeOfBirth rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a person to their place of birth."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:Place ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
-pa:precedesGroup rdf:type owl:ObjectProperty ;
-	rdfs:label "precedesGroup"@en ;
-	rdfs:comment "Relates a group to another group that preceded it."@en ;
-	rdfs:domain pa:Group ;
-	rdfs:range pa:Group ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 				
 
