@@ -181,5 +181,12 @@ pc:sameAs rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+	
+pc:description rdf:type owl:DatatypeProperty ;
+	rdfs:label "description"@en ;
+	rdfs:comment "Relates a thing to its textual description."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 
