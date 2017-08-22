@@ -133,13 +133,6 @@ pc:updatedAt rdf:type owl:DatatypeProperty ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:dateTime ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
-
-pc:identifierValue rdf:type owl:DatatypeProperty ;
-	rdfs:label "identifierValue"@en ;
-	rdfs:comment "Relates an identifier to its value."@en ;
-	rdfs:domain pc:Identifier ;
-	rdfs:range rdfs:Literal ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
 	
 pc:preferredLabel rdf:type owl:DatatypeProperty ;
 	rdfs:label "preferredLabel"@en ;
@@ -174,19 +167,25 @@ pc:description rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a thing to its textual description."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .		
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
+
+pc:identifierValue rdf:type owl:DatatypeProperty ;
+	rdfs:label "identifierValue"@en ;
+	rdfs:comment "Relates an identifier to its value."@en ;
+	rdfs:domain pc:Identifier ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
 	
 pc:url rdf:type owl:DatatypeProperty ;
 	rdfs:label "url"@en ;
 	rdfs:comment "Relates a web link to a url."@en ;
 	rdfs:domain pc:WebLink ;
-	rdfs:range rdfs:literal ;
+	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
-
 
 pc:sameAs rdf:type owl:DatatypeProperty ;
 	rdfs:label "sameAs"@en ;
 	rdfs:comment "Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs."@en ;
 	rdfs:domain pc:Thing ;
-	rdfs:range rdfs:literal ;
+	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .
