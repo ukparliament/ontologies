@@ -136,3 +136,52 @@ pa:placeOfBirth rdf:type owl:ObjectProperty ;
 				
 
 #######  Data properties ##### 
+
+pa:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "title"@en ;
+	rdfs:comment "A person's title. e.g. Mr, Ms, Dr."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:givenName rdf:type owl:DatatypeProperty ;
+	rdfs:label "givenName"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:otherNames rdf:type owl:DatatypeProperty ;
+	rdfs:label "otherNames"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:familyName rdf:type owl:DatatypeProperty ;
+	rdfs:label "familyName"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:dateOfBirth rdf:type owl:DatatypeProperty ;
+	rdfs:label "dateOfBirth"@en ;
+	rdfs:comment "A person's date of birth."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+
+pa:dateOfDeath rdf:type owl:DatatypeProperty ;
+	rdfs:label "dateOfDeath"@en ;
+	rdfs:comment "A person's date of death."@en ;
+	rdfs:domain pa:Person ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
+
+pa:purpose rdf:type owl:DatatypeProperty ;
+	rdfs:label "purpose"@en ;
+	rdfs:comment "A statement on why a group exists and what its job is."@en ;
+	rdfs:domain pa:Group ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
