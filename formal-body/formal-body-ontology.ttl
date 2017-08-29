@@ -156,6 +156,13 @@ pfb:hasParentEvent rdf:type owl:ObjectProperty ;
 	rdfs:domain pfb:Event ;
 	rdfs:range pfb:Event ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	
+pfb:hasAgent rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAgent"@en ;
+	rdfs:comment "Associates an event with the formal bodies responsible for organising it."@en ;
+	rdfs:domain pfb:Event ;
+	rdfs:range pfb:FormalBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:publishes rdf:type owl:ObjectProperty ;
 	rdfs:label "publishes"@en ;
