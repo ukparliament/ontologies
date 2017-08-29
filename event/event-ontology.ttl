@@ -47,7 +47,7 @@ pev:Place rdf:type owl:Class ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
     
 pev:BusinessItem rdf:type owl:Class ;
-    rdfs:subClassOf pev:Event ;
+    rdfs:subClassOf pev:CalendarEvent ;
     rdfs:label "BusinessItem"@en ;
     rdfs:comment "A business item."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
@@ -58,7 +58,7 @@ pev:BusinessItemType rdf:type owl:Class ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
 
 pev:Meeting rdf:type owl:Class ;
-    rdfs:subClassOf pev:Event ;
+    rdfs:subClassOf pev:CalendarEvent ;
     rdfs:label "Meeting"@en ;
     rdfs:comment "A meeting."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
@@ -69,9 +69,14 @@ pev:MeetingType rdf:type owl:Class ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
     
 pev:Visit rdf:type owl:Class ;
-    rdfs:subClassOf pev:Event ;
+    rdfs:subClassOf pev:CalendarEvent ;
     rdfs:label "Visit"@en ;
     rdfs:comment "A visit."@en ;
+    rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
+    
+pev:VisitType rdf:type owl:Class ;
+    rdfs:label "VisitType"@en ;
+    rdfs:comment "A type of visit."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .        
     
 pev:EvidenceSession rdf:type owl:Class ;
@@ -83,11 +88,6 @@ pev:EvidenceSession rdf:type owl:Class ;
 pev:OralEvidence rdf:type owl:Class ;
     rdfs:label "OralEvidence"@en ;
     rdfs:comment "Oral evidence."@en ;
-    rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
-
-pev:Transcript rdf:type owl:Class ;
-    rdfs:label "Transcript"@en ;
-    rdfs:comment "A transcript."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
 
 pev:Document rdf:type owl:Class ;
@@ -139,8 +139,15 @@ pev:endsAt rdf:type owl:DatatypeProperty ;
 pev:cancelledAt rdf:type owl:DatatypeProperty ;
     rdfs:label "cancelledAt"@en ;
     rdfs:comment "A date an event was cancelled."@en ;
-    rdfs:domain pev:Event ;
+    rdfs:domain pev:CalendarEvent ;
     rdfs:range xsd:dateTime ;
+    rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .  
+    
+pev:isPublic rdf:type owl:DatatypeProperty ;
+    rdfs:label "isPublic"@en ;
+    rdfs:comment "Whether an event is attendable by members of the public."@en ;
+    rdfs:domain pev:CalendarEvent ;
+    rdfs:range xsd:boolean ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .    
 
 
@@ -212,14 +219,14 @@ pev:hasItinerary rdf:type owl:ObjectProperty ;
 pev:takesPlaceIn rdf:type owl:ObjectProperty ;
     rdfs:label "takesPlaceIn"@en ;
     rdfs:comment "Place an event occurs."@en ;
-    rdfs:domain pev:Event ;
+    rdfs:domain pev:CalendarEvent ;
     rdfs:range pev:Place ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
     
 pev:hasAttendee rdf:type owl:ObjectProperty ;
     rdfs:label "hasAttendee"@en ;
     rdfs:comment "An event attendee."@en ;
-    rdfs:domain pev:Event ;
+    rdfs:domain pev:CalendarEvent ;
     rdfs:range pev:Attendance ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
     
