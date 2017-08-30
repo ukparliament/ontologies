@@ -1,0 +1,199 @@
+@prefix ps: <http://parliament.uk/ontologies/submission/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/submission/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Submission ontology"@en ;
+    dcterms:created "29/08/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Ontology to describe calls from Parliament for submission of evidence and resulting submissions."@en .
+
+
+#######  Classes ##### 	
+
+ps:Event rdf:type owl:Class ;
+	rdfs:label "Event"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:CalendarEvent rdf:type owl:Class ;
+	rdfs:label "CalendarEvent"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:Call rdf:type owl:Class ;
+	rdfs:subClassOf ps:Event ;
+	rdfs:label "Call"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:CallForOralEvidence rdf:type owl:Class ;
+	rdfs:subClassOf ps:Call ;
+	rdfs:label "CallForOralEvidence"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Invited rdf:type owl:Class ;
+	rdfs:subClassOf ps:CallForOralEvidence ;
+	rdfs:label "Invited"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Compelled rdf:type owl:Class ;
+	rdfs:subClassOf ps:CallForOralEvidence ;
+	rdfs:label "Compelled"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:CallForPapers rdf:type owl:Class ;
+	rdfs:subClassOf ps:Call ;
+	rdfs:label "CallForPapers"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:CallForRecords rdf:type owl:Class ;
+	rdfs:subClassOf ps:Call ;
+	rdfs:label "CallForRecords"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:CallForEvidence rdf:type owl:Class ;
+	rdfs:subClassOf ps:Call ;
+	rdfs:label "CallForEvidence"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Contribution rdf:type owl:Class ;
+	rdfs:label "Contribution"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Person rdf:type owl:Class ;
+	rdfs:label "Person"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Document rdf:type owl:Class ;
+	rdfs:label "Document"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Focus rdf:type owl:Class ;
+	rdfs:label "Focus"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+
+ps:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+
+	
+
+	
+##### Object properties ####
+
+
+ps:compelledToAttend rdf:type owl:ObjectProperty ;
+	rdfs:label "compelledToAttend"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Compelled ;
+	rdfs:range ps:CalendarEvent ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:callForOralEvidence rdf:type owl:ObjectProperty ;
+	rdfs:label "callForOralEvidence"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:CallForOralEvidence ;
+	rdfs:range ps:Contribution ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:callForPapers rdf:type owl:ObjectProperty ;
+	rdfs:label "callForPapers"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:CallForPapers ;
+	rdfs:range ps:Contribution ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:callForRecords rdf:type owl:ObjectProperty ;
+	rdfs:label "callForRecords"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:CallForRecords ;
+	rdfs:range ps:Contribution ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:respondsToCall rdf:type owl:ObjectProperty ;
+	rdfs:label "respondsToCall"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Contribution ;
+	rdfs:range ps:Call ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:makesContribution rdf:type owl:ObjectProperty ;
+	rdfs:label "makesContribution"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Person ;
+	rdfs:range ps:Contribution ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:contributes rdf:type owl:ObjectProperty ;
+	rdfs:label "contributes"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Contribution ;
+	rdfs:range ps:Document ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:focusOfContribution rdf:type owl:ObjectProperty ;
+	rdfs:label "focusOfContribution"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Contribution ;
+	rdfs:range ps:Focus ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+ps:inCapacity rdf:type owl:ObjectProperty ;
+	rdfs:label "inCapacity"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Contribution ;
+	rdfs:range ps:Incumbency ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	
+
+				
+	
+##### Data properties ####	
+
+ps:callDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "callDescription"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Call ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+
+ps:calledAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "calledAt"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Call ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+
+ps:callEnds rdf:type owl:DatatypeProperty ;
+	rdfs:label "callEnds"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Call ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+
+ps:isIndividual rdf:type owl:DatatypeProperty ;
+	rdfs:label "isIndividual"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ps:Contribution ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+			
+
+						
