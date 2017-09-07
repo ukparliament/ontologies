@@ -17,77 +17,77 @@
 
 pfb:FormalBody rdf:type owl:Class ;
 	rdfs:label "FormalBody"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A group of people established by Parliament. Usually a committee like a select committee or a bill committee but may not fit the formal procedural definition of a committee. Formal bodies would not include groups formed outside of Parliamentary process such as All Party Parliamentary Groups."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A Parliamentary house e.g. the House of Lords."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A grouping of work performed by a formal body potentially including meetings, calls for evidence, evidence sessions, publications etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Inquiry rdf:type owl:Class ;
 	rdfs:subClassOf pfb:WorkPackage ;
 	rdfs:label "Inquiry"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A type of work package investigating a specific subject or policy area."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:TermsOfReference rdf:type owl:Class ;
 	rdfs:label "TermsOfReference"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The scope and constraints of an inquiry."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:WorkPackageType rdf:type owl:Class ;
 	rdfs:label "WorkPackageType"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Used for work packages that are not inquiries (which have a specific subclass). e.g. a collection of hearings before a person is appointed to a public body or a set of hearings where a government minister appears before a committee."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Event rdf:type owl:Class ;
 	rdfs:label "Event"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A thing happening over a time interval, sometimes in a place, sometimes involving people and agents."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Document rdf:type owl:Class ;
 	rdfs:label "Document"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence or that serves as an official record."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:FocussedOn rdf:type owl:Class ;
 	rdfs:label "FocussedOn"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A time bound period during which a formal body or work package is investigating a specific topic area."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A focus area for a formal body or work package."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:GovernmentDepartment rdf:type owl:Class ;
 	rdfs:subClassOf pfb:Focus ;
 	rdfs:label "GovernmentDepartment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The means by which the government exercises its executive authority."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Concept rdf:type owl:Class ;
 	rdfs:subClassOf pfb:Focus ;
 	rdfs:label "Concept"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:LegislationType rdf:type owl:Class ;
 	rdfs:subClassOf pfb:Focus ;
 	rdfs:label "LegislationType"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Used when the focus of a formal body is a type of legislation. e.g. a committee looking at legal drafting of secondary legislation."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:LegislationItem rdf:type owl:Class ;
 	rdfs:subClassOf pfb:Focus ;
 	rdfs:label "LegislationItem"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A specific piece of legislation. e.g. A bill or statutory instrument."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 	
@@ -102,7 +102,7 @@ pfb:belongsToHouse rdf:type owl:ObjectProperty ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:hasLeadHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "belongsToHouse"@en ;
+	rdfs:label "hasLeadHouse"@en ;
 	rdfs:comment "A joint committee will have a lead house responsible for its administration."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
@@ -117,7 +117,7 @@ pfb:hasParentFormalBody rdf:type owl:ObjectProperty ;
 	
 pfb:undertakesWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "undertakesWorkPackage"@en ;
-	rdfs:comment "Allows for committees to take on work packages like inquiries. A joint inquiry will have more than one formal body."@en ;
+	rdfs:comment "Allows for committees to take on work packages like inquiries. A joint inquiry will have more than associated one formal body."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
@@ -145,7 +145,7 @@ pfb:hasWorkPackageType rdf:type owl:ObjectProperty ;
 	
 pfb:partOfWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfWorkPackage"@en ;
-	rdfs:comment "Assigns an event to the work package it belongs in. An event may belong to more than one work package or none. e.g. A joint evidence session may belong to more than one work package where each work package is owned by a different committee."@en ;
+	rdfs:comment "Assigns an event to the work package it belongs in. An event may belong to more than one work package or none. e.g. a joint evidence session may belong to more than one work package where each work package is owned by a different committee."@en ;
 	rdfs:domain pfb:Event ;
 	rdfs:range pfb:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
@@ -166,7 +166,7 @@ pfb:publishes rdf:type owl:ObjectProperty ;
 
 pfb:inWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "inWorkPackage"@en ;
-	rdfs:comment "Assigns a document to the work package it forms part of."@en ;
+	rdfs:comment "Assigns a document to the work package of which it forms a part."@en ;
 	rdfs:domain pfb:Document ;
 	rdfs:range pfb:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
@@ -197,7 +197,7 @@ pfb:hasFocus rdf:type owl:ObjectProperty ;
 
 pfb:remit rdf:type owl:DatatypeProperty ;
 	rdfs:label "remit"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The task or area of activity officially assigned to a formal body."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
