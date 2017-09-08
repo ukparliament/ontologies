@@ -27,7 +27,7 @@ pfb:House rdf:type owl:Class ;
 	
 pfb:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
-	rdfs:comment "A grouping of work performed by a formal body potentially including meetings, calls for evidence, evidence sessions, publications etc."@en ;
+	rdfs:comment "A grouping of activities performed by a formal body potentially including meetings, calls for evidence, evidence sessions, publications etc. Work packages (including inquiries) are not a type of process. Formal bodies have roughly the same powers and undertake roughly the same activities but different committees work differently. Individual activities may or may not get done and there's no defined order for when they happen."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Inquiry rdf:type owl:Class ;
@@ -197,7 +197,7 @@ pfb:hasFocus rdf:type owl:ObjectProperty ;
 
 pfb:remit rdf:type owl:DatatypeProperty ;
 	rdfs:label "remit"@en ;
-	rdfs:comment "The task or area of activity officially assigned to a formal body."@en ;
+	rdfs:comment "The task or area of activity officially assigned to a formal body. This is a textual description as opposed to focus which points at entities to describe the areas to be examined."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
