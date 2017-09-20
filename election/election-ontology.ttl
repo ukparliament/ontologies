@@ -45,7 +45,7 @@ pe:Electorate rdf:type owl:Class ;
 pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
 	rdfs:label "ConstituencyGroup"@en ;
-	rdfs:comment "A group of people represented by the winner of an election. Includes people other than those eligible to vote (e.g. children, prisoners)"@en ;
+	rdfs:comment "A group of people represented by the winner of an election. Includes people other than those eligible to vote (e.g. children, prisoners)."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 	
 pe:ConstituencyAreaType rdf:type owl:Class ;
@@ -93,6 +93,11 @@ pe:ElectoralIncumbency rdf:type owl:Class ;
 	rdfs:label "ElectoralIncumbency"@en ;
 	rdfs:comment "An incumbency resulting from an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:BoundarySet rdf:type owl:Class ;
+	rdfs:label "BoundarySet"@en ;
+	rdfs:comment "The set of boundaries as they exist at the time of an election. As established by the Boundary Commission. Reviews of boundaries are conducted infrequently so the same boundary set may apply to more than one  election. i.e. general and by elections."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 		
 			
 
@@ -119,25 +124,25 @@ pe:isPartOfGeneralElection rdf:type owl:ObjectProperty ;
 	rdfs:range pe:GeneralElection ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:hasElectorate rdf:type owl:ObjectProperty ;
-	rdfs:label "hasElectorate"@en ;
-	rdfs:comment "Relates an election to its eligible voters."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range pe:Electorate  ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .				
-
-pe:isPartOfConstituencyGroup rdf:type owl:ObjectProperty ;
-	rdfs:label "isPartOfConstituencyGroup"@en ;
-	rdfs:comment "Relates an electorate to its constituency group."@en ;
+pe:votesIn rdf:type owl:ObjectProperty ;
+	rdfs:label "votesIn"@en ;
+	rdfs:comment "Relates a set of voters to the election they are eligible to vote in."@en ;
 	rdfs:domain pe:Electorate ;
-	rdfs:range pe:ConstituencyGroup  ;
+	rdfs:range pe:Election ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:hasConstituencyArea rdf:type owl:ObjectProperty ;
-	rdfs:label "hasConstituencyArea"@en ;
-	rdfs:comment "Relates a constituency group to a geographic area."@en ;
-	rdfs:domain pe:ConstituencyGroup ;
-	rdfs:range pe:ConstituencyArea  ;
+pe:hasElectorate rdf:type owl:ObjectProperty ;
+	rdfs:label "hasElectorate"@en ;
+	rdfs:comment "Relates a geographic constituency to the group of eligible voters."@en ;
+	rdfs:domain pe:ConstituencyArea ;
+	rdfs:range pe:Electorate  ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:hasConstituencyGroup rdf:type owl:ObjectProperty ;
+	rdfs:label "hasConstituencyGroup"@en ;
+	rdfs:comment "Relates a geographic constituency to its population."@en ;
+	rdfs:domain pe:ConstituencyArea ;
+	rdfs:range pe:ConstituencyGroup ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidacy rdf:type owl:ObjectProperty ;
@@ -187,6 +192,13 @@ pe:establishesIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a winning candidacy result to an electoral incumbency."@en ;
 	rdfs:domain pe:WinningCandidacyResult  ;
 	rdfs:range pe:ElectoralIncumbency  ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .		
+	
+pe:definedByBoundarySet rdf:type owl:ObjectProperty ;
+	rdfs:label "definedByBoundarySet"@en ;
+	rdfs:comment "Relates a geographic constituency to the boundary set that established its boundaries."@en ;
+	rdfs:domain pe:ConstituencyArea  ;
+	rdfs:range pe:BoundarySet  ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .					
 
 #######  Data properties ##### 
@@ -217,6 +229,13 @@ pe:populationSize rdf:type owl:DatatypeProperty ;
 	rdfs:comment "A population size."@en ;
 	rdfs:domain pe:Population ;
 	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:recordedDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "recordedDate"@en ;
+	rdfs:comment "The date at which population figures are recorded."@en ;
+	rdfs:domain pe:Population ;
+	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
 pe:majority rdf:type owl:DatatypeProperty ;
@@ -252,4 +271,18 @@ pe:round rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The number of the round in a multi-round election."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:isNotional rdf:type owl:DatatypeProperty ;
+	rdfs:label "isNotional"@en ;
+	rdfs:comment "Determines whether a general election in the database is a real general election or a notional general election. Notional general elections can be modelled with different constituency boundaries to experiment with potential outcomes."@en ;
+	rdfs:domain pe:GeneralElection ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:declarationTime rdf:type owl:DatatypeProperty ;
+	rdfs:label "declarationTime"@en ;
+	rdfs:comment "The time at which results were declared for a specific election. e.g. by the returning officer in a constituency election."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:dateTime ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
