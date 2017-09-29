@@ -1,0 +1,132 @@
+@prefix pgd: <http://parliament.uk/ontologies/government-department/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/government-department/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Government department ontology"@en ;
+    dcterms:created "29/09/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Government department ontology for UK Parliament"@en .
+
+
+#######  Classes ##### 	
+
+pgd:GovernmentDepartmentIncumbency rdf:type owl:Class ;
+	rdfs:subClassOf pgd:Incumbency ;
+	rdfs:label "GovernmentDepartmentIncumbency"@en ;
+	rdfs:comment ". "@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:GovernmentDepartmentPosition rdf:type owl:Class ;
+	rdfs:subClassOf pgd:Position ;
+	rdfs:label "GovernmentDepartmentPosition"@en ;
+	rdfs:comment ". "@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:AttendsCabinet rdf:type owl:Class ;
+	rdfs:label "AttendsCabinet"@en ;
+	rdfs:comment ". "@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:GovernmentRank rdf:type owl:Class ;
+	rdfs:label "GovernmentRank"@en ;
+	rdfs:comment ". "@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:GovernmentDepartment rdf:type owl:Class ;
+	rdfs:subClassOf pgd:Group ;
+	rdfs:label "GovernmentRank"@en ;
+	rdfs:comment ". "@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+	
+#######  Object properties ##### 
+
+pgd:attendsCabinet rdf:type owl:ObjectProperty ;
+	rdfs:label "attendsCabinet"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:range pgd:AttendsCabinet ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .	
+
+pgd:hasRank rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRank"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:range pgd:GovernmentRank ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .		
+
+#######  Data properties ##### 
+
+pgd:isPaid rdf:type owl:DatatypeProperty ;
+	rdfs:label "isPaid"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentDepartmentIncumbency ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:cabinetRank rdf:type owl:DatatypeProperty ;
+	rdfs:label "cabinetRank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:paidToAttendCabinet rdf:type owl:DatatypeProperty ;
+	rdfs:label "paidToAttendCabinet"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:isLayingPosition rdf:type owl:DatatypeProperty ;
+	rdfs:label "isLayingPosition"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:ministerialRank rdf:type owl:DatatypeProperty ;
+	rdfs:label "ministerialRank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentRank ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:statsRank rdf:type owl:DatatypeProperty ;
+	rdfs:label "statsRank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentRank ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:clerksRank rdf:type owl:DatatypeProperty ;
+	rdfs:label "clerksRank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentRank ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+
+pgd:orderRank rdf:type owl:DatatypeProperty ;
+	rdfs:label "orderRank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentRank ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+	
+pgd:governmentSortOrder rdf:type owl:DatatypeProperty ;
+	rdfs:label "governmentSortOrder"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentDepartment ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+	
+pgd:oppositionSortOrder rdf:type owl:DatatypeProperty ;
+	rdfs:label "oppositionSortOrder"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pgd:GovernmentDepartment ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
