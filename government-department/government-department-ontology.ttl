@@ -15,77 +15,92 @@
 
 #######  Classes ##### 	
 
-pgd:GovernmentDepartmentIncumbency rdf:type owl:Class ;
+pgd:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+	
+pgd:Position rdf:type owl:Class ;
+	rdfs:label "Position"@en ;
+	rdfs:comment "A position in a group that persists over time which can be occupied by different people at different times e.g. many people have been Foreign Secretary."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+	
+pgd:Group rdf:type owl:Class ;
+	rdfs:label "Group"@en ;
+	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
+	
+pgd:GovernmentIncumbency rdf:type owl:Class ;
 	rdfs:subClassOf pgd:Incumbency ;
-	rdfs:label "GovernmentDepartmentIncumbency"@en ;
-	rdfs:comment ". "@en ;
+	rdfs:label "GovernmentIncumbency"@en ;
+	rdfs:comment "An incumbency of a person in a government position. This is a specialisation of an incumbency from the agency ontology."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
-pgd:GovernmentDepartmentPosition rdf:type owl:Class ;
+pgd:GovernmentPosition rdf:type owl:Class ;
 	rdfs:subClassOf pgd:Position ;
-	rdfs:label "GovernmentDepartmentPosition"@en ;
-	rdfs:comment ". "@en ;
+	rdfs:label "GovernmentPosition"@en ;
+	rdfs:comment "A position (job) in a government department. Note that not all government department positions are in government departments. e.g. Minister without portfolio is a position outside any department. This is a specialisation of a position from the agency ontology."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
-
+	
 pgd:AttendsCabinet rdf:type owl:Class ;
 	rdfs:label "AttendsCabinet"@en ;
-	rdfs:comment ". "@en ;
+	rdfs:comment "Used to determine if the person incumbent in a government position is able to attend cabinet. Possible values are always, never and when required."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
 pgd:GovernmentRank rdf:type owl:Class ;
 	rdfs:label "GovernmentRank"@en ;
-	rdfs:comment ". "@en ;
+	rdfs:comment "A packaging of ways to describe the rank of a government position. Different bodies have different ways to describe these."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
 pgd:GovernmentDepartment rdf:type owl:Class ;
 	rdfs:subClassOf pgd:Group ;
 	rdfs:label "GovernmentRank"@en ;
-	rdfs:comment ". "@en ;
+	rdfs:comment "A government department or ministry manages a specific sector of public administration. Is a specialised type of group."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 	
 #######  Object properties ##### 
 
 pgd:attendsCabinet rdf:type owl:ObjectProperty ;
 	rdfs:label "attendsCabinet"@en ;
-	rdfs:comment "."@en ;
-	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:comment "Relates a government position to cabinet attendance."@en ;
+	rdfs:domain pgd:GovernmentPosition ;
 	rdfs:range pgd:AttendsCabinet ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .	
 
 pgd:hasRank rdf:type owl:ObjectProperty ;
 	rdfs:label "hasRank"@en ;
-	rdfs:comment "."@en ;
-	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:comment "Relates a government position to assorted ways of describing rank."@en ;
+	rdfs:domain pgd:GovernmentPosition ;
 	rdfs:range pgd:GovernmentRank ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .		
+	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
 #######  Data properties ##### 
 
 pgd:isPaid rdf:type owl:DatatypeProperty ;
 	rdfs:label "isPaid"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pgd:GovernmentDepartmentIncumbency ;
+	rdfs:comment "Used to describe whether an incumbency is paid or not."@en ;
+	rdfs:domain pgd:GovernmentIncumbency ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
 pgd:cabinetRank rdf:type owl:DatatypeProperty ;
 	rdfs:label "cabinetRank"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:comment "Used to capture how the government ranks assorted positions in the cabinet. e.g. whether the Foreign Secretary is ranked above or below the Health Secretary."@en ;
+	rdfs:domain pgd:GovernmentPosition ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
 pgd:paidToAttendCabinet rdf:type owl:DatatypeProperty ;
 	rdfs:label "paidToAttendCabinet"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:comment "Used to determine whether a government position is paid to attend cabinet or not."@en ;
+	rdfs:domain pgd:GovernmentPosition ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
 pgd:isLayingPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "isLayingPosition"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pgd:GovernmentDepartmentPosition ;
+	rdfs:comment "Used to determine if a government department position has the authority to lay papers into Parliament."@en ;
+	rdfs:domain pgd:GovernmentPosition ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 
@@ -119,14 +134,14 @@ pgd:orderRank rdf:type owl:DatatypeProperty ;
 	
 pgd:governmentSortOrder rdf:type owl:DatatypeProperty ;
 	rdfs:label "governmentSortOrder"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Used to determine how the government chooses to order departments. e.g. whether they choose to rank the Foreign Office higher than the Department of Health."@en ;
 	rdfs:domain pgd:GovernmentDepartment ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
 	
 pgd:oppositionSortOrder rdf:type owl:DatatypeProperty ;
 	rdfs:label "oppositionSortOrder"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Used to determine how the official opposition chooses to order departments. e.g. whether they choose to rank the Foreign Office higher than the Department of Health."@en ;
 	rdfs:domain pgd:GovernmentDepartment ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/government-department/> .
