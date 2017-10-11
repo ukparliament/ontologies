@@ -106,18 +106,32 @@ pc:precededBy rdf:type owl:ObjectProperty ;
 #######  Data properties ##### 
 
 
-pc:startDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "startDate"@en ;
+pc:startOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "startOn"@en ;
 	rdfs:comment "Relates a thing to a start date."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 	
-pc:endDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "endDate"@en ;
+pc:endOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "endOn"@en ;
 	rdfs:comment "Relates a thing to an end date."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+	
+pc:startAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "startAt"@en ;
+	rdfs:comment "Relates a thing to a start date time."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+
+pc:endAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "endAt"@en ;
+	rdfs:comment "Relates a thing to an end date time."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:dateTime ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 	
 pc:createdAt rdf:type owl:DatatypeProperty ;
