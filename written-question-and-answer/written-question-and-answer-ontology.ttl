@@ -228,16 +228,16 @@ pwqa:heading rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .	
 	
-pwqa:templateText rdf:type owl:DatatypeProperty ;
-	rdfs:label "templateText"@en ;
-	rdfs:comment "Relates a written question to the template text that prefaces it. This is usually of the form, 'To ask the minister for etc.' and varies depending on the answering body."@en ;
-	rdfs:domain pwqa:WrittenQuestion ;
-	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .	
-	
 pwqa:questionText rdf:type owl:DatatypeProperty ;
 	rdfs:label "questionText"@en ;
 	rdfs:comment "Relates a written question to the actual text of the question as asked by the member."@en ;
 	rdfs:domain pwqa:WrittenQuestion ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .	
+	
+pwqa:answerText rdf:type owl:DatatypeProperty ;
+	rdfs:label "answerText"@en ;
+	rdfs:comment "Relates a written answer to the actual text of the answer as supplied by the answering body."@en ;
+	rdfs:domain pwqa:WrittenAnswer ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .	
