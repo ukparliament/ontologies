@@ -28,17 +28,17 @@ pwqa:WrittenQuestion rdf:type owl:Class ;
 pwqa:WrittenAnswer rdf:type owl:Class ;
     rdfs:subClassOf pwqa:PursuableThing ;
 	rdfs:label "WrittenAnswer"@en ;
-	rdfs:comment "An answer to a written question provided by an answering body."@en ;
+	rdfs:comment "An answer to a written question, provided by an answering body."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:AnsweringBody rdf:type owl:Class ;
 	rdfs:label "AnsweringBody"@en ;
-	rdfs:comment "A formal body answerable to Parliament. May be a government department but sometimes a non-departmental body. e.g. House of Commons Commission."@en ;
+	rdfs:comment "A body to whom members can table written questions. May be a government department but sometimes other bodies either Parliamentary or external to Parliament. e.g. House of Commons Commission, Church Commissioners."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:AllocatedAnsweringBody rdf:type owl:Class ;
 	rdfs:label "AllocatedAnsweringBody"@en ;
-	rdfs:comment "The answering body allocated to a question by the Table Office or by an answering body transferring responsibility for a question. Note that the allocated answering body can change over time when one answering body transfers responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology."@en ;
+	rdfs:comment "The answering body allocated to a question, either at tabling or in the event of the question being transferred. Note that the allocated answering body can change over time when one answering body transfers responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:Transferral rdf:type owl:Class ;
@@ -48,7 +48,7 @@ pwqa:Transferral rdf:type owl:Class ;
 	
 pwqa:PursuableThing rdf:type owl:Class ;
 	rdfs:label "PursuableThing"@en ;
-	rdfs:comment "A piece of Parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing. e.g. a previous written written or oral answer, a ministerial statement."@en ;
+	rdfs:comment "A piece of Parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing. e.g. in pursuant to a written or oral answer, a ministerial statement."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:QuestionStatus rdf:type owl:Class ;
@@ -58,22 +58,22 @@ pwqa:QuestionStatus rdf:type owl:Class ;
 	
 pwqa:AnswerType rdf:type owl:Class ;
 	rdfs:label "AnswerType"@en ;
-	rdfs:comment "The type of a given answer. e.g. holding answer, current answer or corrected answer. If a question is asked toward the end of a session and Parliament is prorogued before it can be answered, an answer of type prorogued may also be provided pointing out that there was not time to answer the question before prorogation."@en ;
+	rdfs:comment "The type of a given answer e.g. holding answer, current answer or corrected answer. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:DelegatedAnswer rdf:type owl:Class ;
 	rdfs:label "DelegatedAnswer"@en ;
-	rdfs:comment "Part of a written answer provided by an arm's length body rather than an answering body. e.g. a government department might ask the UK Statistics Authority to provide part or all of an written answer."@en ;
+	rdfs:comment "Part of a written answer provided by an arm's length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of an written answer."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:ArmsLengthBody rdf:type owl:Class ;
 	rdfs:label "ArmsLengthBody"@en ;
-	rdfs:comment "An organisation operating at arm's length from the government. e.g. UK Statistics Authority."@en ;
+	rdfs:comment "An organisation operating at arm's length from the government e.g. UK Statistics Authority."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:LibraryDeposit rdf:type owl:Class ;
 	rdfs:label "LibraryDeposit"@en ;
-	rdfs:comment "A paper or set of papers placed in the library of either house. Usually deposits are made into both libraries but sometimes only one."@en ;
+	rdfs:comment "A paper or set of papers placed by a minister or the speaker in the library of either House. Usually deposits are made into both libraries but sometimes only one."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:Document rdf:type owl:Class ;
@@ -86,7 +86,7 @@ pwqa:Document rdf:type owl:Class ;
 
 pwqa:allocation rdf:type owl:ObjectProperty ;
 	rdfs:label "allocation"@en ;
-	rdfs:comment "Allows a question to be assigned by the Table Office to one or more answering bodies. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Note that this is a major change from existing data models where the same question, when asked of different answering bodies, are considered to be different questions."@en ;
+	rdfs:comment "Allows a question to be assigned to one or more answering bodies. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Note that this is a major change from existing data models where the same question, when asked of different answering bodies, have been considered to be different questions."@en ;
 	rdfs:domain pwqa:WrittenQuestion ;
 	rdfs:range pwqa:AllocatedAnsweringBody ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
@@ -114,17 +114,11 @@ pwqa:transferredTo rdf:type owl:ObjectProperty ;
 
 pwqa:answerTo rdf:type owl:ObjectProperty ;
 	rdfs:label "answerTo"@en ;
-	rdfs:comment "Allows a written answer to be associated with one or more written questions. This replicates in more detail the current functionality around grouped questions. In other words a group of questions in receipt of the same answer. There is some debate about whether the same textual answer to questions from multiple members can be considered as one answer. This also allows a single question to have many answers. Sometimes multiple answers from a single answering body (e.g. holding answer, current answer, correction). Sometimes different answers from different answering bodies to the same question. Note that this is a major change to current data models where a single question can have one and only one answer and a single answer can be to one and only one question."@en ;
+	rdfs:comment "Allows a written answer to be associated with one or more written questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes multiple answers from a single answering body (e.g. holding answer, current answer, correction). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question."@en ;
 	rdfs:domain pwqa:WrittenAnswer ;
 	rdfs:range pwqa:WrittenQuestion ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
-	
-	
-	
-	
-	
-##### commented to here #####
 pwqa:answeringBody rdf:type owl:ObjectProperty ;
 	rdfs:label "answeringBody"@en ;
 	rdfs:comment "Relates a written answer to the answering body that provided it. A single answer can only be provided by one answering body."@en ;
@@ -148,7 +142,7 @@ pwqa:tables rdf:type owl:ObjectProperty ;
 	
 pwqa:inPursuantTo rdf:type owl:ObjectProperty ;
 	rdfs:label "inPursuantTo"@en ;
-	rdfs:comment "Relates a written question to an item of Parliamentary business cited by the question."@en ;
+	rdfs:comment "Relates a written question to a piece of Parliamentary business cited by the question."@en ;
 	rdfs:domain pwqa:WrittenQuestion ;
 	rdfs:range pwqa:PursuableThing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
@@ -162,7 +156,7 @@ pwqa:answeringMember rdf:type owl:ObjectProperty ;
 	
 pwqa:hasAnswerType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAnswerType"@en ;
-	rdfs:comment "Relates a written answer to its type. e.g. a holding answer, current answer or correction."@en ;
+	rdfs:comment "Relates a written answer to its type i.e. a holding answer, current answer or correction."@en ;
 	rdfs:domain pwqa:WrittenAnswer ;
 	rdfs:range pwqa:AnswerType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
@@ -190,14 +184,14 @@ pwqa:delegatedTo rdf:type owl:ObjectProperty ;
 	
 pwqa:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
 	rdfs:label "refersToLibraryDeposit"@en ;
-	rdfs:comment "Relates a delegated answer a library deposit. e.g. the answer to a question may promise to deposit papers in the libraries."@en ;
+	rdfs:comment "Relates a delegated answer a library deposit i.e. the answer to a question may undertake to deposit papers in the libraries of either House."@en ;
 	rdfs:domain pwqa:WrittenAnswer ;
 	rdfs:range pwqa:LibraryDeposit ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
 	
 pwqa:refersToDocument rdf:type owl:ObjectProperty ;
 	rdfs:label "refersToLibraryDeposit"@en ;
-	rdfs:comment "Relates a written answer to a document. The document might form part or all of the answer."@en ;
+	rdfs:comment "Relates a written answer to a document provided as an attachment to the answer text. The document might form part or all of the answer."@en ;
 	rdfs:domain pwqa:WrittenQuestion ;
 	rdfs:range xsd:dateTime ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
@@ -222,7 +216,7 @@ pwqa:tabledAt rdf:type owl:DatatypeProperty ;
 	
 pwqa:namedDateForAnswer rdf:type owl:DatatypeProperty ;
 	rdfs:label "namedDateForAnswer"@en ;
-	rdfs:comment "Relates a written question to a named day. The answering body or bodies have this date as a deadline to answer the question. Not that named day questions only exist in the House of Commons. Most written questions are 'ordinary' meaning the answering body has a deadline of 10 working days to answer them."@en ;
+	rdfs:comment "Relates a written question to a named day. The member tabling the question has requested that it be answered by the named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are 'ordinary'. By convention a member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
 	rdfs:domain pwqa:WrittenQuestion ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .
@@ -236,7 +230,7 @@ pwqa:heading rdf:type owl:DatatypeProperty ;
 	
 pwqa:templateText rdf:type owl:DatatypeProperty ;
 	rdfs:label "templateText"@en ;
-	rdfs:comment "Relates a written question to the boilerplate text that heads it. This is usually of the form, 'May I ask the...' and varies depending on the answering body."@en ;
+	rdfs:comment "Relates a written question to the template text that prefaces it. This is usually of the form, 'To ask the minister for etc.' and varies depending on the answering body."@en ;
 	rdfs:domain pwqa:WrittenQuestion ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/written-question-and-answer/> .	
