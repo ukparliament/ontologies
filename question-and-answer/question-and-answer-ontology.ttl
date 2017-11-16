@@ -1,0 +1,286 @@
+@prefix pqa: <http://parliament.uk/ontologies/question-and-answer/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/question-and-answer/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Question and answer ontology"@en ;
+    dcterms:created "10/10/2016"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House."@en .
+
+
+#######  Classes ##### 	
+
+pqa:Member rdf:type owl:Class ;
+	rdfs:label "Member"@en ;
+	rdfs:comment "A current or former member of a house."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:ParliamentaryQuestion rdf:type owl:Class ;
+    rdfs:subClassOf pqa:Question ;
+	rdfs:label "ParliamentaryQuestion"@en ;
+	rdfs:comment "Parliamentary Questions (often referred to as PQs) allow members to ask for information on the work, policy and activities of answering bodies. Usually this is to a minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a member in the chamber). Unlike urgent and business questions, Parliamentary Questions must be tabled with the Table Office rather than raised with the Speaker."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:UrgentQuestion rdf:type owl:Class ;
+    rdfs:subClassOf pqa:Question ;
+	rdfs:label "UrgentQuestion"@en ;
+	rdfs:comment "Urgent Questions allow members of the House of Commons to ask a minister in a government department about matters which demand immediate action or attention. In the House of Lords questions with the same purpose are referred to as Private Notice Questions. Unlike Parliamentary Questions, the text of an Urgent Question or Private Notice Question will be read in the chamber. The answer will also always be oral. Urgent Questions and Private Notice Questions are not tabled with the Table Office but raised with the Speaker."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:BusinessQuestion rdf:type owl:Class ;
+    rdfs:subClassOf pqa:Question ;
+	rdfs:label "BusinessQuestion"@en ;
+	rdfs:comment "Business Questions allow members to ask the Leader of the House about upcoming business in the House. Unlike Parliamentary Questions, the text of a Business Question will be read in the chamber. The answer will also always be oral. Business Questions are not tabled with the Table Office but raised with the Speaker."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:Question rdf:type owl:Class ;
+	rdfs:label "Question"@en ;
+	rdfs:comment "Any type of question asked by a Member of a House of an answering body or bodies. These might be Parliamentary Questions (oral or written), urgent questions or business questions."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:AnswerExpectedAs rdf:type owl:Class ;
+	rdfs:label "AnswerExpectedAs"@en ;
+	rdfs:comment "A time-bound means of defining the type of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the chamber, but the member intending to ask the question will be unable to attend the chamber at that time. The question will then be removed from the schedule (referred to as unstarred) and instead become a question in expectation of a written answer. Such a question would have two Answer Expected As relationships: one for the initial period when the answer type expected is oral and one for the second period when the answer type expected is written."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:Answer rdf:type owl:Class ;
+    rdfs:subClassOf pqa:PursuableThing ;
+	rdfs:label "Answer"@en ;
+	rdfs:comment "An answer to a question, provided by a member on behalf of an answering body."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:AnsweringBody rdf:type owl:Class ;
+	rdfs:label "AnsweringBody"@en ;
+	rdfs:comment "A body to whom members can ask questions. It may be a Government Department but sometimes other bodies either Parliamentary or external to Parliament. e.g. House of Commons Commission, Church Commissioners."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:AllocatedAnsweringBody rdf:type owl:Class ;
+	rdfs:label "AllocatedAnsweringBody"@en ;
+	rdfs:comment "The answering body allocated to a question, either at tabling or when raised in the House, or in the event of the question being transferred between answering bodies. Note that the allocated answering body can change over time when one answering body transfers responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:Transferral rdf:type owl:Class ;
+	rdfs:label "Transferral"@en ;
+	rdfs:comment "The act of one answering body transferring responsibility for answering a question to another answering body."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:PursuableThing rdf:type owl:Class ;
+	rdfs:label "PursuableThing"@en ;
+	rdfs:comment "A piece of Parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing. e.g. in pursuant to a written or oral answer, a ministerial statement."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:QuestionStatus rdf:type owl:Class ;
+	rdfs:label "QuestionStatus"@en ;
+	rdfs:comment "The current status of a question. May be active, withdrawn or no longer expecting an answer. Active in this case covers questions awaiting an answer and questions that have already been answered."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:AnswerType rdf:type owl:Class ;
+	rdfs:label "AnswerType"@en ;
+	rdfs:comment "The type of a given answer e.g. holding answer, current answer or corrected answer. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:DelegatedAnswer rdf:type owl:Class ;
+	rdfs:label "DelegatedAnswer"@en ;
+	rdfs:comment "Part of a written answer provided by an arm's length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:ArmsLengthBody rdf:type owl:Class ;
+	rdfs:label "ArmsLengthBody"@en ;
+	rdfs:comment "An organisation operating at arm's length from the government e.g. UK Statistics Authority."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:LibraryDeposit rdf:type owl:Class ;
+	rdfs:label "LibraryDeposit"@en ;
+	rdfs:comment "A paper or set of papers placed by a minister or the Speaker in the library of either House. Usually deposits are made into both libraries but sometimes only one."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:Document rdf:type owl:Class ;
+	rdfs:label "Document"@en ;
+	rdfs:comment "A document."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+
+#######  Object properties ##### 
+
+pqa:allocation rdf:type owl:ObjectProperty ;
+	rdfs:label "allocation"@en ;
+	rdfs:comment "Allows a question to be assigned to one or more answering bodies. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Note that this is a major change from existing data models where the same question, when asked of different answering bodies, have been considered to be different questions."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:AllocatedAnsweringBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:allocatedTo rdf:type owl:ObjectProperty ;
+	rdfs:label "allocatedTo"@en ;
+	rdfs:comment "Allows an allocation at a point in time to an answering body."@en ;
+	rdfs:domain pqa:AllocatedAnsweringBody ;
+	rdfs:range pqa:AnsweringBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:transferredFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "transferredFrom"@en ;
+	rdfs:comment "Allows a transferral to specify the answering body to which the question was formerly allocated."@en ;
+	rdfs:domain pqa:Transferral ;
+	rdfs:range pqa:AllocatedAnsweringBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:transferredTo rdf:type owl:ObjectProperty ;
+	rdfs:label "transferredTo"@en ;
+	rdfs:comment "Allows a transferral to specify the answering body to which the question is subsequently allocated."@en ;
+	rdfs:domain pqa:Transferral ;
+	rdfs:range pqa:AllocatedAnsweringBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:answerTo rdf:type owl:ObjectProperty ;
+	rdfs:label "answerTo"@en ;
+	rdfs:comment "Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes multiple answers from a single Answering Body (e.g. holding answer, current answer, correction). Sometimes different answers from different Answering Bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:Question ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:answeringBody rdf:type owl:ObjectProperty ;
+	rdfs:label "answeringBody"@en ;
+	rdfs:comment "Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:AnsweringBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:hasQuestionStatus rdf:type owl:ObjectProperty ;
+	rdfs:label "hasQuestionStatus"@en ;
+	rdfs:comment "Relates a question to its current question status."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:QuestionStatus ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:asks rdf:type owl:ObjectProperty ;
+	rdfs:label "asks"@en ;
+	rdfs:comment "Relates a member to a question they have asked. Note that whilst Parliamentary questions have to be tabled with the Table Office, other types of questions can be raised with the Speaker."@en ;
+	rdfs:domain pqa:Member ;
+	rdfs:range pqa:Question ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:inPursuantTo rdf:type owl:ObjectProperty ;
+	rdfs:label "inPursuantTo"@en ;
+	rdfs:comment "Relates a question to a piece of Parliamentary business cited by the question."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:PursuableThing ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:answeringMember rdf:type owl:ObjectProperty ;
+	rdfs:label "answeringMember"@en ;
+	rdfs:comment "Relates an answer to the member who provided it. In practice this will be a minister in a government department or a person occupying a government position in a non-departmental answering body."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:Member ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:hasAnswerType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasAnswerType"@en ;
+	rdfs:comment "Relates an answer to its type i.e. a holding answer, current answer or correction."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:AnswerType ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:previousAnswer rdf:type owl:ObjectProperty ;
+	rdfs:label "previousAnswer"@en ;
+	rdfs:comment "Relates an answer to a previous answer that answers the question in whole or in part. e.g. I refer the honourable X to the answer given..."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:Answer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:delegatedAnswer rdf:type owl:ObjectProperty ;
+	rdfs:label "delegatedAnswer"@en ;
+	rdfs:comment "Relates an answer to a delegated answer provided by an arms length body. The delegated answer may provide part or all of the full answer."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:DelegatedAnswer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:delegatedTo rdf:type owl:ObjectProperty ;
+	rdfs:label "delegatedTo"@en ;
+	rdfs:comment "Relates a delegated answer to the arm's length body that provided it."@en ;
+	rdfs:domain pqa:DelegatedAnswer ;
+	rdfs:range pqa:ArmsLengthBody ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
+	rdfs:label "refersToLibraryDeposit"@en ;
+	rdfs:comment "Relates an answer to a library deposit i.e. the answer to a question may undertake to deposit papers in the libraries of either House."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:LibraryDeposit ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:refersToDocument rdf:type owl:ObjectProperty ;
+	rdfs:label "refersToDocument"@en ;
+	rdfs:comment "Relates an answer to a document provided. If the answer is written this may be provided as an attachment to the answer text. The document might form part or all of the answer."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:Document ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:answerExpectedAs rdf:type owl:ObjectProperty ;
+	rdfs:label "answerExpectedAs"@en ;
+	rdfs:comment "Relates a question to a time-bound means of capturing the format of the answer expected (either oral or written)."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:AnswerExpectedAs ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+		
+
+#######  Data properties ##### 
+
+pqa:isOralAnswerExpected rdf:type owl:DatatypeProperty ;
+	rdfs:label "isOralAnswerExpected"@en ;
+	rdfs:comment "True if the the answer expected (at a period in time) is oral. False if the answer expected (at a period of time) is written."@en ;
+	rdfs:domain pqa:AnswerExpectedAs ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:tabledAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "tabledAt"@en ;
+	rdfs:comment "Relates a question to the date time it was tabled at."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:namedDateForAnswer rdf:type owl:DatatypeProperty ;
+	rdfs:label "namedDateForAnswer"@en ;
+	rdfs:comment "Relates a Parliamentary Question to a named day. The member tabling the question has requested that it be answered by the named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are 'ordinary'. By convention a member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:heading rdf:type owl:DatatypeProperty ;
+	rdfs:label "heading"@en ;
+	rdfs:comment "Relates a question to its heading text. For a Parliamentary Question this is supplied by the Indexing and Data Management Section in the House of Commons Library."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	
+pqa:questionText rdf:type owl:DatatypeProperty ;
+	rdfs:label "questionText"@en ;
+	rdfs:comment "Relates a question to the actual text of the question as asked by the member."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	
+pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
+	rdfs:label "isQuestionSubstantive"@en ;
+	rdfs:comment "Determines if a question is substantive. If true the question text will be unique and meaningful and constitute the actual question that the member wished to ask. If false the question text will be some boilerplate asking about a Government Department or the Prime Minsiter's appointments. This will be answered in the chamber, after which the asking member will ask a supplemental question which is the question they intended to ask in the first place. This is done so the answering member does not have foresight of the actual question before the question and answer session. It only applies to Parliamentary Questions expecting an oral answer. Non-substantive questions are usually referred to as topical."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	
+pqa:answerText rdf:type owl:DatatypeProperty ;
+	rdfs:label "answerText"@en ;
+	rdfs:comment "Relates an answer to the actual text of the answer as supplied by the answering body."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	
+pqa:isAnswerOral rdf:type owl:DatatypeProperty ;
+	rdfs:label "isAnswerOral"@en ;
+	rdfs:comment "Determines if the answer is given orally in the chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to Parliamentary Questions. All other answers are always oral."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
