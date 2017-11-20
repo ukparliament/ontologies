@@ -238,16 +238,23 @@ pqa:isOralAnswerExpected rdf:type owl:DatatypeProperty ;
 	
 pqa:tabledAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "tabledAt"@en ;
-	rdfs:comment "Relates a question to the date time it was tabled at."@en ;
-	rdfs:domain pqa:Question ;
+	rdfs:comment "Relates a Parliamentary Question to the date time it was tabled at."@en ;
+	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:dateTime ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:namedDateForAnswer rdf:type owl:DatatypeProperty ;
-	rdfs:label "namedDateForAnswer"@en ;
-	rdfs:comment "Relates a Parliamentary Question to a named day. The member tabling the question has requested that it be answered by the named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are 'ordinary'. By convention a member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
-	rdfs:domain pqa:Question ;
+pqa:dateForAnswer rdf:type owl:DatatypeProperty ;
+	rdfs:label "dateForAnswer"@en ;
+	rdfs:comment "Relates a Parliamentary Question to a date for answer. For an 'ordinary' written question this is expected to be within 7 days of tabling. If the member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed."@en ;
+	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:isDateForAnswerNamed rdf:type owl:DatatypeProperty ;
+	rdfs:label "isDateForAnswerNamed"@en ;
+	rdfs:comment "Determines if the member tabling a written Parliamentary Question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are 'ordinary' and the value here is false. By convention a member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
+	rdfs:domain pqa:ParliamentaryQuestion ;
+	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:heading rdf:type owl:DatatypeProperty ;
@@ -267,7 +274,7 @@ pqa:questionText rdf:type owl:DatatypeProperty ;
 pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
 	rdfs:label "isQuestionSubstantive"@en ;
 	rdfs:comment "Determines if a question is substantive. If true the question text will be unique and meaningful and constitute the actual question that the member wished to ask. If false the question text will be some boilerplate asking about a Government Department or the Prime Minsiter's appointments. This will be answered in the chamber, after which the asking member will ask a supplemental question which is the question they intended to ask in the first place. This is done so the answering member does not have foresight of the actual question before the question and answer session. It only applies to Parliamentary Questions expecting an oral answer. Non-substantive questions are usually referred to as topical."@en ;
-	rdfs:domain pqa:Question ;
+	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
 	
