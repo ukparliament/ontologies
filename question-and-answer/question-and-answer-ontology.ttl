@@ -10,32 +10,32 @@
     dcterms:title "Question and answer ontology"@en ;
     dcterms:created "10/10/2016"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House."@en .
+    dcterms:description "Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House. Note that the handling of questions as calendar business events and any ministerial statements acting as corrections to answers will be dealt with elsewhere."@en .
 
 
 #######  Classes ##### 	
 
 pqa:Member rdf:type owl:Class ;
 	rdfs:label "Member"@en ;
-	rdfs:comment "A current or former member of a house."@en ;
+	rdfs:comment "A current or former Member of a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:ParliamentaryQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "ParliamentaryQuestion"@en ;
-	rdfs:comment "Parliamentary Questions (often referred to as PQs) allow members to ask for information on the work, policy and activities of answering bodies. Usually this is to a minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a member in the chamber). Unlike urgent and business questions, Parliamentary Questions must be tabled with the Table Office rather than raised with the Speaker."@en ;
+	rdfs:comment "Parliamentary Questions (often referred to as PQs) allow Members to ask for information on the work, policy and activities of answering bodies. Usually this is to a minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and business questions, Parliamentary Questions must be tabled with the Table Office rather than raised with the Speaker."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:UrgentQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "UrgentQuestion"@en ;
-	rdfs:comment "Urgent Questions allow members of the House of Commons to ask a minister in a government department about matters which demand immediate action or attention. In the House of Lords questions with the same purpose are referred to as Private Notice Questions. Unlike Parliamentary Questions, the text of an Urgent Question or Private Notice Question will be read in the chamber. The answer will also always be oral. Urgent Questions and Private Notice Questions are not tabled with the Table Office but raised with the Speaker."@en ;
+	rdfs:comment "Urgent Questions allow Members of the House of Commons to ask a minister in a government department about matters which demand immediate action or attention. In the House of Lords questions with the same purpose are referred to as Private Notice Questions. Unlike Parliamentary Questions, the text of an Urgent Question or Private Notice Question will be read in the Chamber. The answer will also always be oral. Urgent Questions and Private Notice Questions are not tabled with the Table Office but raised with the Speaker."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:BusinessQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "BusinessQuestion"@en ;
-	rdfs:comment "Business Questions allow members to ask the Leader of the House about upcoming business in the House. Unlike Parliamentary Questions, the text of a Business Question will be read in the chamber. The answer will also always be oral. Business Questions are not tabled with the Table Office but raised with the Speaker."@en ;
+	rdfs:comment "Business Questions allow Members to ask the Leader of the House about upcoming business in the House. Unlike tabled Parliamentary Questions, the text of a Business Question will be spoken in the Chamber. The answer will also always be oral. Business Questions are not tabled with the Table Office but raised with the Speaker."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Question rdf:type owl:Class ;
@@ -45,23 +45,23 @@ pqa:Question rdf:type owl:Class ;
 	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
 	rdfs:label "AnswerExpectedAs"@en ;
-	rdfs:comment "A time-bound means of defining the type of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the chamber, but the member intending to ask the question will be unable to attend the chamber at that time. The question will then be removed from the schedule (referred to as unstarred) and instead become a question in expectation of a written answer. Such a question would have two Answer Expected As relationships: one for the initial period when the answer type expected is oral and one for the second period when the answer type expected is written."@en ;
+	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the the question will receive a written answer. In other situations a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the answer type expected is oral and one for the second period when the answer type expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In Oral Question Time in the House of Lords, a Member may ask a question on behalf of another Member and a maximum of four questions may be asked."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Answer rdf:type owl:Class ;
     rdfs:subClassOf pqa:PursuableThing ;
 	rdfs:label "Answer"@en ;
-	rdfs:comment "An answer to a question, provided by a member on behalf of an answering body."@en ;
+	rdfs:comment "An answer to a question provided by a Member, usually a Minister, on behalf of an answering body."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnsweringBody rdf:type owl:Class ;
 	rdfs:label "AnsweringBody"@en ;
-	rdfs:comment "A body to whom members can ask questions. It may be a Government Department but sometimes other bodies either Parliamentary or external to Parliament. e.g. House of Commons Commission, Church Commissioners."@en ;
+	rdfs:comment "A body to whom Members can ask questions. It may be a Government Department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AllocatedAnsweringBody rdf:type owl:Class ;
 	rdfs:label "AllocatedAnsweringBody"@en ;
-	rdfs:comment "The answering body allocated to a question, either at tabling or when raised in the House, or in the event of the question being transferred between answering bodies. Note that the allocated answering body can change over time when one answering body transfers responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology."@en ;
+	rdfs:comment "The answering body to which a question is directed, either at tabling or when raised in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Transferral rdf:type owl:Class ;
@@ -81,7 +81,7 @@ pqa:QuestionStatus rdf:type owl:Class ;
 	
 pqa:AnswerType rdf:type owl:Class ;
 	rdfs:label "AnswerType"@en ;
-	rdfs:comment "The type of a given answer e.g. holding answer, current answer or corrected answer. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation."@en ;
+	rdfs:comment "The type of a given answer e.g. holding answer, substantive answer or substantive answer as corrected. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:DelegatedAnswer rdf:type owl:Class ;
@@ -158,9 +158,16 @@ pqa:hasQuestionStatus rdf:type owl:ObjectProperty ;
 	
 pqa:asks rdf:type owl:ObjectProperty ;
 	rdfs:label "asks"@en ;
-	rdfs:comment "Relates a member to a question they have asked. Note that whilst Parliamentary questions have to be tabled with the Table Office, other types of questions can be raised with the Speaker."@en ;
+	rdfs:comment "Relates a Member to a question they have asked. Note that whilst Parliamentary questions have to be tabled with the Table Office, other types of questions can be raised with the Speaker."@en ;
 	rdfs:domain pqa:Member ;
 	rdfs:range pqa:Question ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:tables rdf:type owl:ObjectProperty ;
+	rdfs:label "tables"@en ;
+	rdfs:comment "Relates a Member to a question they tabled. Note that in the House of Commons the Member who tabled a question for oral answer must be present in the Chamber when the question is answered. In the House of Lords the tabling Member can ask another Member to receive the answer."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:Member ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:inPursuantTo rdf:type owl:ObjectProperty ;
@@ -172,7 +179,7 @@ pqa:inPursuantTo rdf:type owl:ObjectProperty ;
 	
 pqa:answeringMember rdf:type owl:ObjectProperty ;
 	rdfs:label "answeringMember"@en ;
-	rdfs:comment "Relates an answer to the member who provided it. In practice this will be a minister in a government department or a person occupying a government position in a non-departmental answering body."@en ;
+	rdfs:comment "Relates an answer to the Member who provided it. In practice this will be a minister in a government department or a person occupying a government position in a non-departmental answering body."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Member ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -236,6 +243,20 @@ pqa:isOralAnswerExpected rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
+pqa:unstarredAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "unstarredAt"@en ;
+	rdfs:comment "The point in time at which a Member who has tabled a question for Oral Question Time declares they are unable to attend the Chamber and would like a written answer to their question. The question is removed from the schedule. The unstarred at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has been unstarred."@en ;
+	rdfs:domain pqa:AnswerExpectedAs ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:oralUnreachedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "oralUnreachedAt"@en ;
+	rdfs:comment "Not all questions scheduled for answer during Oral Question Time are reached during the allocated time. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given to the question. This property records the point in time at which this happens. The oral unreached at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has not been reached."@en ;
+	rdfs:domain pqa:AnswerExpectedAs ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
 pqa:tabledAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "tabledAt"@en ;
 	rdfs:comment "Relates a Parliamentary Question to the date time it was tabled at."@en ;
@@ -245,14 +266,14 @@ pqa:tabledAt rdf:type owl:DatatypeProperty ;
 	
 pqa:dateForAnswer rdf:type owl:DatatypeProperty ;
 	rdfs:label "dateForAnswer"@en ;
-	rdfs:comment "Relates a Parliamentary Question to a date for answer. For an 'ordinary' written question this is expected to be within 7 days of tabling. If the member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed."@en ;
+	rdfs:comment "Relates a Parliamentary Question to a date for answer. For an 'ordinary' written question this is expected to be within 7 days of tabling. If the Member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:isDateForAnswerNamed rdf:type owl:DatatypeProperty ;
 	rdfs:label "isDateForAnswerNamed"@en ;
-	rdfs:comment "Determines if the member tabling a written Parliamentary Question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are 'ordinary' and the value here is false. By convention a member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
+	rdfs:comment "Determines if the Member tabling a written Parliamentary Question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are 'ordinary' and the value here is false. By convention a Member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -266,14 +287,14 @@ pqa:heading rdf:type owl:DatatypeProperty ;
 	
 pqa:questionText rdf:type owl:DatatypeProperty ;
 	rdfs:label "questionText"@en ;
-	rdfs:comment "Relates a question to the actual text of the question as asked by the member."@en ;
+	rdfs:comment "Relates a question to the actual text of the question as asked by the Member."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
 	
 pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
 	rdfs:label "isQuestionSubstantive"@en ;
-	rdfs:comment "Determines if a question is substantive. If true the question text will be unique and meaningful and constitute the actual question that the member wished to ask. If false the question text will be some boilerplate asking about a Government Department or the Prime Minsiter's appointments. This will be answered in the chamber, after which the asking member will ask a supplemental question which is the question they intended to ask in the first place. This is done so the answering member does not have foresight of the actual question before the question and answer session. It only applies to Parliamentary Questions expecting an oral answer. Non-substantive questions are usually referred to as topical."@en ;
+	rdfs:comment "Determines if a question is substantive. If true the question text will be unique and meaningful and constitute the actual question that the Member wished to ask. If false the question text will be some boilerplate asking about a Government Department or the Prime Minsiter's appointments. This will be answered in the Chamber, after which the asking Member will ask a supplemental question which is the question they intended to ask in the first place. This is done so the answering Member does not have foresight of the actual question before the question and answer session. It only applies to Parliamentary Questions expecting an oral answer. Non-substantive questions are usually referred to as topical."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
@@ -287,7 +308,7 @@ pqa:answerText rdf:type owl:DatatypeProperty ;
 	
 pqa:isAnswerOral rdf:type owl:DatatypeProperty ;
 	rdfs:label "isAnswerOral"@en ;
-	rdfs:comment "Determines if the answer is given orally in the chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to Parliamentary Questions. All other answers are always oral."@en ;
+	rdfs:comment "Determines if the answer is given orally in the Chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to Parliamentary Questions. All other answers are always oral."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
