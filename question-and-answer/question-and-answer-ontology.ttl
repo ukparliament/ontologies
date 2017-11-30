@@ -23,13 +23,13 @@ pqa:Member rdf:type owl:Class ;
 pqa:ParliamentaryQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "ParliamentaryQuestion"@en ;
-	rdfs:comment "Parliamentary questions (often referred to as PQs) allow Members to seek information from an answering body or to press a Secretary of State to take a particular action. Usually this is to a Minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and private notice questions, which are applied for to the Speaker or Lord Speaker privately, parliamentary questions are tabled with the Table Office."@en ;
+	rdfs:comment "Parliamentary questions (often referred to as PQs) allow Members to seek information from an answering body or to press a Secretary of State to take a particular action. Usually this is to a Minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and private notice questions, which are applied for to the Speaker or Lord Speaker privately, parliamentary questions are tabled with the Lords or Commons Table Offices."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:UrgentQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "UrgentQuestion"@en ;
-	rdfs:comment "Urgent questions allow Members of the House of Commons to ask a Minister about matters of an urgent character and relating to matters of public importance. In the House of Lords, such questions are referred to as private notice questions. Unlike parliamentary questions, the text of an urgent question or a private notice question does not appear on the schedule; it will be read in the Chamber. The answer will also always be oral. Urgent questions and private notice questions are not tabled with the Table Office; they are applied for to the Speaker or the Lord Speaker privately."@en ;
+	rdfs:comment "Urgent questions allow Members of the House of Commons to ask a Minister about matters of an urgent character and relating to matters of public importance. In the House of Lords, such questions are referred to as private notice questions. Unlike parliamentary questions, the text of an urgent question or a private notice question does not appear on the schedule; it will be read in the Chamber. The answer will also always be oral. Urgent questions and private notice questions are not tabled with the Lords or Commons Table Offices; they are applied for to the Speaker or the Lord Speaker privately."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:BusinessQuestion rdf:type owl:Class ;
@@ -45,7 +45,7 @@ pqa:Question rdf:type owl:Class ;
 	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
 	rdfs:label "AnswerExpectedAs"@en ;
-	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the question will receive a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In Oral Question Time in the House of Lords, a Member may ask a question on behalf of another Member."@en ;
+	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the question will receive a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Answer rdf:type owl:Class ;
@@ -137,7 +137,7 @@ pqa:transferredTo rdf:type owl:ObjectProperty ;
 
 pqa:answerTo rdf:type owl:ObjectProperty ;
 	rdfs:label "answerTo"@en ;
-	rdfs:comment "Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question."@en ;
+	rdfs:comment "Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Question ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -158,7 +158,7 @@ pqa:hasQuestionStatus rdf:type owl:ObjectProperty ;
 	
 pqa:asks rdf:type owl:ObjectProperty ;
 	rdfs:label "asks"@en ;
-	rdfs:comment "Relates a Member to a question they have asked. Note that whilst parliamentary questions have to be tabled with the Table Office, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately."@en ;
+	rdfs:comment "Relates a Member to a question they have asked. Note that whilst parliamentary questions have to be tabled with the Lords or Commons Table Offices, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately."@en ;
 	rdfs:domain pqa:Member ;
 	rdfs:range pqa:Question ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -280,10 +280,10 @@ pqa:isDateForAnswerNamed rdf:type owl:DatatypeProperty ;
 	
 pqa:heading rdf:type owl:DatatypeProperty ;
 	rdfs:label "heading"@en ;
-	rdfs:comment "Relates a question to its heading text. For a parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library."@en ;
+	rdfs:comment "Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For oral parliamentary questions, the headings are supplied by Lords or Commons Hansard."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:questionText rdf:type owl:DatatypeProperty ;
 	rdfs:label "questionText"@en ;
