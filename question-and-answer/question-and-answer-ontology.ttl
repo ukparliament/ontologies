@@ -163,13 +163,6 @@ pqa:asks rdf:type owl:ObjectProperty ;
 	rdfs:range pqa:Question ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:tables rdf:type owl:ObjectProperty ;
-	rdfs:label "tables"@en ;
-	rdfs:comment "Relates a Member to a question they tabled. Note that in the House of Commons the Member who tabled a question for oral answer must be present in the Chamber when the question is answered. In the House of Lords the tabling Member can ask another Member to be present in the Chamber to receive the answer."@en ;
-	rdfs:domain pqa:Question ;
-	rdfs:range pqa:Member ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
 pqa:inPursuantTo rdf:type owl:ObjectProperty ;
 	rdfs:label "inPursuantTo"@en ;
 	rdfs:comment "Relates a question to a piece of parliamentary business cited by the question."@en ;
@@ -311,4 +304,4 @@ pqa:isAnswerOral rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Determines if the answer is given orally in the Chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to parliamentary questions. All other answers are always oral."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range xsd:boolean ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
