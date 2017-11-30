@@ -10,7 +10,7 @@
     dcterms:title "Question and answer ontology"@en ;
     dcterms:created "10/10/2016"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House. Note that the handling of questions as calendar business events and any ministerial statements acting as corrections to answers will be dealt with elsewhere."@en .
+    dcterms:description "Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House. Note that the handling of questions as calendar business events, any ministerial statements acting as corrections to answers and tabling events will be dealt with elsewhere."@en .
 
 
 #######  Classes ##### 	
@@ -158,7 +158,7 @@ pqa:hasQuestionStatus rdf:type owl:ObjectProperty ;
 	
 pqa:asks rdf:type owl:ObjectProperty ;
 	rdfs:label "asks"@en ;
-	rdfs:comment "Relates a Member to a question they have asked. Note that whilst parliamentary questions have to be tabled with the Lords or Commons Table Offices, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately."@en ;
+	rdfs:comment "Relates a Member to a question they have asked. Note that in the House of Lords the Member who tabled the question may on occasion delegate another Member to be present in the Chamber to receive the answer. Note also that whilst parliamentary questions have to be tabled with the Lords or Commons Table Offices, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately. "@en ;
 	rdfs:domain pqa:Member ;
 	rdfs:range pqa:Question ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
