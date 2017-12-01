@@ -1,0 +1,91 @@
+@prefix pt: <http://parliament.uk/ontologies/tabling/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/tabling/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Tabling ontology"@en ;
+    dcterms:created "01/12/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Ontology to describe the activity of members tabling parliamentary questions, motions, amendments and nominations."@en .
+
+
+#######  Classes ##### 	
+
+pt:Member rdf:type owl:Class ;
+	rdfs:label "Member"@en ;
+	rdfs:comment "A current or former member of a house."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
+pt:Tabling rdf:type owl:Class ;
+	rdfs:label "Tabling"@en ;
+	rdfs:comment "The act of tabling a written notice into either the House of Commons or House of Lords. Note that not all tabling goes through the Table Offices."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
+pt:WrittenNotice rdf:type owl:Class ;
+	rdfs:label "WrittenNotice"@en ;
+	rdfs:comment "A superclass to group the set of things that can be tabled."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+pt:Motion rdf:type owl:Class ;
+	rdfs:subClassOf pt:WrittenNotice ;
+	rdfs:label "Motion"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+pt:ParliamentaryQuestion rdf:type owl:Class ;
+	rdfs:subClassOf pt:WrittenNotice ;
+	rdfs:label "ParliamentaryQuestion"@en ;
+	rdfs:comment "Parliamentary questions (often referred to as PQs) allow Members to seek information from an answering body or to press a Secretary of State to take a particular action. Usually this is to a Minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and private notice questions, which are applied for to the Speaker or Lord Speaker privately, parliamentary questions are tabled with the Lords or Commons Table Offices."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
+pt:Amendment rdf:type owl:Class ;
+	rdfs:subClassOf pt:WrittenNotice ;
+	rdfs:label "Amendment"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
+pt:Nomination rdf:type owl:Class ;
+	rdfs:subClassOf pt:WrittenNotice ;
+	rdfs:label "Nomination"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
+	
+##### Object properties ####
+
+pt:givesNotice rdf:type owl:ObjectProperty ;
+	rdfs:label "givesNotice"@en ;
+	rdfs:comment "Relates a member to an act of tabling."@en ;
+	rdfs:domain pt:Member ;
+	rdfs:range pt:Tabling ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+pt:tables rdf:type owl:ObjectProperty ;
+	rdfs:label "tables"@en ;
+	rdfs:comment "Relates an act of tabling to a written notice (the thing that is tabled)."@en ;
+	rdfs:domain pt:Tabling ;
+	rdfs:range pt:WrittenNotice ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+
+				
+	
+##### Data properties ####	
+
+pt:tabledAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "tabledAt"@en ;
+	rdfs:comment "Relates an act of tabling to the date time at which it happened."@en ;
+	rdfs:domain pt:Tabling ;
+	rdfs:range xsd:dateTime ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+pt:isInterestDeclared rdf:type owl:DatatypeProperty ;
+	rdfs:label "isInterestDeclared"@en ;
+	rdfs:comment "Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest."@en ;
+	rdfs:domain pt:Tabling ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .	
