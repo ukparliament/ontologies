@@ -74,11 +74,6 @@ pqa:PursuableThing rdf:type owl:Class ;
 	rdfs:comment "A piece of parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing e.g. in pursuant to a written or oral answer, a ministerial statement."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:QuestionStatus rdf:type owl:Class ;
-	rdfs:label "QuestionStatus"@en ;
-	rdfs:comment "The current status of a question. May be active, withdrawn or no longer expecting an answer. Active in this case covers questions awaiting an answer and questions that have already been answered."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
 pqa:AnswerType rdf:type owl:Class ;
 	rdfs:label "AnswerType"@en ;
 	rdfs:comment "The type of a given answer e.g. holding answer, substantive answer or substantive answer as corrected. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation."@en ;
@@ -147,13 +142,6 @@ pqa:answeringBody rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:AnsweringBody ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
-pqa:hasQuestionStatus rdf:type owl:ObjectProperty ;
-	rdfs:label "hasQuestionStatus"@en ;
-	rdfs:comment "Relates a question to its current question status."@en ;
-	rdfs:domain pqa:Question ;
-	rdfs:range pqa:QuestionStatus ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:asks rdf:type owl:ObjectProperty ;
@@ -296,5 +284,12 @@ pqa:isAnswerOral rdf:type owl:DatatypeProperty ;
 	rdfs:label "isAnswerOral"@en ;
 	rdfs:comment "Determines if the answer is given orally in the Chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to parliamentary questions. All other answers are always oral."@en ;
 	rdfs:domain pqa:Answer ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:isWithdrawn rdf:type owl:DatatypeProperty ;
+	rdfs:label "isWithdrawn"@en ;
+	rdfs:comment "Determines if a parliamentary question has been withdrawn. Parliamentary questions may be withdrawn by the tabling Member. Also a convention exists whereby, when a Member is promoted to a government position, any parliamentary questions awaiting answer that that Member has tabled are withdrawn."@en ;
+	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
