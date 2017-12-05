@@ -25,6 +25,11 @@ pt:Tabling rdf:type owl:Class ;
 	rdfs:comment "The act of tabling a written notice into either the House of Commons or House of Lords. Note that not all tabling goes through the Table Offices."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
+pt:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary house e.g. the House of Lords."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
 pt:WrittenNotice rdf:type owl:Class ;
 	rdfs:label "WrittenNotice"@en ;
 	rdfs:comment "A superclass to group the set of things that can be tabled."@en ;
@@ -69,6 +74,13 @@ pt:tables rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an act of tabling to a written notice (the thing that is tabled)."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:WrittenNotice ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+pt:tabledIn rdf:type owl:ObjectProperty ;
+	rdfs:label "tabledIn"@en ;
+	rdfs:comment "Relates an act of tabling to the House where the tabling happens."@en ;
+	rdfs:domain pt:Tabling ;
+	rdfs:range pt:House ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 
