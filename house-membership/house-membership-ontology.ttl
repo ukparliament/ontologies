@@ -21,7 +21,6 @@ phm:House rdf:type owl:Class ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:HouseSeat rdf:type owl:Class ;
-	rdfs:subClassOf phm:Position ;
 	rdfs:label "HouseSeat"@en ;
 	rdfs:comment "A seat in a house. A place reserved for a member in a house. This does not equate to a constituency. A seat might be associated with a constituency (in the House of Commons) but might be allocated to a bishop or inherited by an hereditary peer."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
@@ -42,22 +41,6 @@ phm:SpiritualSeesHouseSeat rdf:type owl:Class ;
 	rdfs:subClassOf phm:SpiritualHouseSeat ;
 	rdfs:label "SpiritualSeesHouseSeat"@en ;
 	rdfs:comment "Seats in the House of Lords reserved for senior Church of England (arch)bishops: the Archbishop of Canterbury, the Archbishop of York, and the Bishops of London, Durham and Winchester."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-	
-phm:Position rdf:type owl:Class ;
-	rdfs:label "Position"@en ;
-	rdfs:comment "A position in a group that persists over time which can be occupied by different people at different times e.g. many people have served as the Archbishop of Canterbury."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-	
-phm:Bishopric rdf:type owl:Class ;
-	rdfs:subClassOf phm:Position ;
-	rdfs:label "Bishopric"@en ;
-	rdfs:comment "The office of a bishop. In this case a Church of England bishop."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-	
-phm:SeatConferment rdf:type owl:Class ;
-	rdfs:label "SeatConferment"@en ;
-	rdfs:comment "An agreement that confers the right to a seat in Parliament on a position external to Parliament. e.g. being incumbent in the position of Archbishop of Canterbury confers the right to a seat in the House of Lords. A seat conferment is time bound to allow for changes in these rules."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:HouseSeatType rdf:type owl:Class ;
@@ -129,21 +112,6 @@ phm:hasHouseSeat rdf:type owl:ObjectProperty ;
 	rdfs:domain phm:House ;
 	rdfs:range phm:HouseSeat ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-	
-phm:confersHouseSeat rdf:type owl:ObjectProperty ;
-	rdfs:label "confersHouseSeat"@en ;
-	rdfs:comment "Relates a seat conferment to a house seat."@en ;
-	rdfs:domain phm:SeatConferment ;
-	rdfs:range phm:HouseSeat ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-	
-phm:hasSeatConferment rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSeatConferment"@en ;
-	rdfs:comment "Relates a position to a seat conferment."@en ;
-	rdfs:domain phm:Position ;
-	rdfs:range phm:SeatConferment ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-
 	
 phm:hasSeatIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "hasSeatIncumbency"@en ;
