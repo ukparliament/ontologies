@@ -25,24 +25,6 @@ phm:HouseSeat rdf:type owl:Class ;
 	rdfs:comment "A seat in a house. A place reserved for a member in a house. This does not equate to a constituency. A seat might be associated with a constituency (in the House of Commons) but might be allocated to a bishop or inherited by an hereditary peer."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
-phm:LawLordHouseSeat rdf:type owl:Class ;
-	rdfs:subClassOf phm:HouseSeat ;
-	rdfs:label "LawLordHouseSeat"@en ;
-	rdfs:comment "Seats in the House of Lords reserved for Law Lords. Such seats no longer exist but are described here for historical purposes."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
-	
-phm:SpiritualHouseSeat rdf:type owl:Class ;
-	rdfs:subClassOf phm:HouseSeat ;
-	rdfs:label "SpiritualHouseSeat"@en ;
-	rdfs:comment "Seats in the House of Lords reserved for Church of England bishops."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-
-phm:SpiritualSeesHouseSeat rdf:type owl:Class ;
-	rdfs:subClassOf phm:SpiritualHouseSeat ;
-	rdfs:label "SpiritualSeesHouseSeat"@en ;
-	rdfs:comment "Seats in the House of Lords reserved for senior Church of England (arch)bishops: the Archbishop of Canterbury, the Archbishop of York, and the Bishops of London, Durham and Winchester."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
-	
 phm:HouseSeatType rdf:type owl:Class ;
 	rdfs:label "HouseSeatType"@en ;
 	rdfs:comment "A house seat type. This includes first past the post elected in the Commons. In the Lords this includes hereditary peers, life peers, excepted hereditary peers and Lords spiritual (made up of named diocesan and long serving English diocesan bishops)."@en ;
