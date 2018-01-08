@@ -40,7 +40,7 @@ pqa:BusinessQuestion rdf:type owl:Class ;
 	
 pqa:Question rdf:type owl:Class ;
 	rdfs:label "Question"@en ;
-	rdfs:comment "Any type of question asked by a Member of a House of an answering body or bodies. These might be parliamentary questions (oral or written), urgent questions or business questions."@en ;
+	rdfs:comment "Questions might be parliamentary questions (oral or written), urgent (or private notice) questions or business questions, asked by a Member of a House of an answering body or bodies. Note that the same question text adressed to multiple answering bodies, tabled by the same Member on the same day, count as one question."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
@@ -56,7 +56,7 @@ pqa:Answer rdf:type owl:Class ;
 	
 pqa:AnsweringBody rdf:type owl:Class ;
 	rdfs:label "AnsweringBody"@en ;
-	rdfs:comment "A body to whom Members can ask questions. It may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners."@en ;
+	rdfs:comment "A body of whom Members can ask questions. In the House of Commons this may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners. In the House of Lords, questions are addressed to Her Majesty's Government rather than to a specific department or body. For written and private notice questions in the House of Lords, data exists to map questions to specific answering bodies; for oral questions it doesn't."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AllocatedAnsweringBody rdf:type owl:Class ;
@@ -104,7 +104,7 @@ pqa:Document rdf:type owl:Class ;
 
 pqa:allocation rdf:type owl:ObjectProperty ;
 	rdfs:label "allocation"@en ;
-	rdfs:comment "Allows a question to be assigned to one or more answering bodies. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Note that this is a major change from existing data models where the same question, when asked of different answering bodies, has been considered to be different questions."@en ;
+	rdfs:comment "Allows a question to be assigned to one or more answering bodies. A question intended for multiple answering bodies is sometimes referred to as a round robin, or campaign, question. Note that this is a major change from existing data models where the same question, when asked of different answering bodies, has been considered to be different questions."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:AllocatedAnsweringBody ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -268,7 +268,7 @@ pqa:questionText rdf:type owl:DatatypeProperty ;
 	
 pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
 	rdfs:label "isQuestionSubstantive"@en ;
-	rdfs:comment "Determines if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister's appointments (respectively topical questions and Prime Minister's questions). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons."@en ;
+	rdfs:comment "Determines if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister's appointments (respectively topical questions and Prime Minister's questions in the House of Commons). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons. The process for topical questions in the House of Lords differs slightly from that in the House of Commons, in that all questions tabled are substantive. Here topical refers to the shorter notice period allowed when tabling a question."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
