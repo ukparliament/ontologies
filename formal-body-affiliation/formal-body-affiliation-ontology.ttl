@@ -10,7 +10,7 @@
     dcterms:title "Formal body affiliation ontology"@en ;
     dcterms:created "22/06/2017"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Formal body affiliation ontology for UK Parliament. Extends the agency model to specialise affiliations and positions."@en .
+    dcterms:description "Formal body affiliation ontology for UK Parliament. Extends the agency model to specialise affiliations and positions to committee-like groups."@en .
 
 
 #######  Classes ##### 	
@@ -23,25 +23,25 @@ pfba:Affiliation rdf:type owl:Class ;
 pfba:FormalBodyAffiliation rdf:type owl:Class ;
 	rdfs:subClassOf pfba:Affiliation ;
 	rdfs:label "FormalBodyAffiliation"@en ;
-	rdfs:comment "Specialises affiliations to formal bodies. In most cases this membership is drawn from the backbenches."@en ;
+	rdfs:comment "Specialises affiliations to formal bodies (committee-like groups). In most cases membership is drawn from the backbenches."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:CooptedMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyAffiliation ;
 	rdfs:label "CooptedMembership"@en ;
-	rdfs:comment "A member of committee who might only be invited to join on occasion. e.g. the Executive Committee might occasionally co-opt the Director of the Parliamentary Digital Service and/or Parliamentary Security Director into its membership. Note that as MNIS only deals with members of house, co-opted membership is not present."@en ;
+	rdfs:comment "A member of a committee who is invited to join on occasion. Unlike other types of formal body affiliations, co-opted members might be drawn from people who are not Members of either House. These are referred to as lay members e.g. the Executive Committee will occasionally co-opt the Director of the Parliamentary Digital Service and / or Parliamentary Security Director into its membership. Sometimes a co-opted member will be drawn from the membership of a House e.g. in the House of Lords a peer who is a subject matter expert might be co-opted onto a committee."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:AlternateMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyAffiliation ;
 	rdfs:label "AlternateMembership"@en ;
-	rdfs:comment "Alternate Members act as substitutes when other members can't attend. The Lords Procedure Committee is supplemented by one alternate for each party group of backbench members and one for the Crossbenchers, plus an alternate for the Convenor. They receive papers, and are entitled to attend if any of the relevant members cannot, and if necessary to vote."@en ;
+	rdfs:comment "Alternate members act as substitutes when other members can't attend e.g. the Lords Procedure Committee is supplemented by one alternate for each party group of backbench members and one for the Crossbenchers, plus an alternate for the Convenor. They receive papers and if any of the relevant members cannot attend, alternate members are entitled to attend and vote."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:ExOfficioMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyAffiliation ;
 	rdfs:label "ExOfficioMembership"@en ;
-	rdfs:comment "Ex-oficio are members appointed by virtue of roles or positions, by convention. Some Ministers are appointed ex-officio members of committees. e.g. Government and Opposition Whips regularly serve on the Finance and Services and Administration Committees; specific government Ministers are members of, but by convention do not attend meetings of, the Committee of Public Accounts and the Environmental Audit Committee, and successive Leaders of the House chaired the Select Committee on Modernisation of the House of Commons between 1997 and 2010."@en ;
+	rdfs:comment "Ex-officios are members appointed by virtue of roles or positions, by convention. Some Ministers are appointed ex-officio members of committees. Examples include Government and Opposition Whips regularly serving on the Administration Committee; specific government Ministers being members of (but by convention not attending meetings of) the Committee of Public Accounts and the Environmental Audit Committee; and successive Leaders of the House chairing the Select Committee on Modernisation of the House of Commons between 1997 and 2010."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:Position rdf:type owl:Class ;
@@ -64,7 +64,7 @@ pfba:Chair rdf:type owl:Class ;
 pfba:CommitteeClerk rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyPosition ;
 	rdfs:label "CommitteeClerk"@en ;
-	rdfs:comment "Used to describe the clerk of a formal body."@en ;
+	rdfs:comment "Used to describe the principal clerk of a formal body."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:InternalExpert rdf:type owl:Class ;
