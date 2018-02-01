@@ -25,6 +25,11 @@ pt:Tabling rdf:type owl:Class ;
 	rdfs:comment "The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a nomination. Members do this by submitting it to the procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are often tabled in the Public Bill Offices of each House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
+pt:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment "The period during which Parliament is active between the Queen's Speech and prorogation or dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both houses."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
 pt:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
@@ -57,11 +62,18 @@ pt:givesNotice rdf:type owl:ObjectProperty ;
 	rdfs:range pt:WrittenNotice ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
-pt:tabledIn rdf:type owl:ObjectProperty ;
-	rdfs:label "tabledIn"@en ;
+pt:tabledInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "tabledInHouse"@en ;
 	rdfs:comment "Relates an act of tabling to the House in which it happens."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:House ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
+pt:tabledInSession rdf:type owl:ObjectProperty ;
+	rdfs:label "tabledInSession"@en ;
+	rdfs:comment "Relates an act of tabling to the Session in which it happens."@en ;
+	rdfs:domain pt:Tabling ;
+	rdfs:range pt:Session ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:tables rdf:type owl:ObjectProperty ;
@@ -76,11 +88,11 @@ pt:tables rdf:type owl:ObjectProperty ;
 	
 ##### Data properties ####	
 
-pt:tabledAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "tabledAt"@en ;
-	rdfs:comment "Relates an act of tabling to the date time at which it happened."@en ;
+pt:tabledOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "tabledOn"@en ;
+	rdfs:comment "Relates an act of tabling to the date on which it happened."@en ;
 	rdfs:domain pt:Tabling ;
-	rdfs:range xsd:dateTime ;
+	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:isInterestDeclared rdf:type owl:DatatypeProperty ;
