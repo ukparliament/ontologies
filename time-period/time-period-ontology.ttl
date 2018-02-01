@@ -27,19 +27,19 @@ pt:Event rdf:type owl:Class ;
 
 pt:TimePeriod rdf:type owl:Class ;
 	rdfs:label "TimePeriod"@en ;
-	rdfs:comment "An identifiable and named period of time."@en ;
+	rdfs:comment "An identifiable and named period of time. An interval."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:GovernmentAdministrationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "GovernmentAdministrationPeriod"@en ;
-	rdfs:comment "A period of a single government under a single prime minister bounded by parliaments / general elections. e.g. Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990."@en ;
+	rdfs:comment "A period of a single government under a single Prime Minister bounded by parliaments / general elections. e.g. Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:PremiershipPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PremiershipPeriod"@en ;
-	rdfs:comment "A grouping of periods of government under a single prime minister not bounded by parliaments / general elections. e.g. Thatcher administration 1979-1990."@en ;
+	rdfs:comment "A grouping of periods of government under a single Prime Minister not bounded by parliaments / general elections. e.g. Thatcher administration 1979-1990."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Reign rdf:type owl:Class ;
@@ -51,67 +51,67 @@ pt:Reign rdf:type owl:Class ;
 pt:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "ParliamentPeriod"@en ;
-	rdfs:comment "The period of a single parliament beginning with the state opening of the first session and ending with dissolution. Defined as 5 years since the Fixed Term Parliament Act except in exceptional circumstances. Parliament periods are the same across both houses."@en ;
+	rdfs:comment "The period of a single parliament. A parliament period contains session and prorogation periods. These run contiguously within a parliament period. In other words, during a parliament period, Parliament is either in session or prorogued. A parliament begins on the date named in the preceding dissolution proclamation. The start date of a parliament may be changed by subsequent proclamations. A parliament ends at the next dissolution, the date of which is also given in the dissolution proclamation. The period of a parliament is defined as 5 years since the Fixed Term Parliament Act 2011 except in exceptional circumstances. Parliament periods are the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-
+	
 pt:DissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "DissolutionPeriod"@en ;
-	rdfs:comment "The period between parliament periods. Parliament is dissolved and does not exist. During this time there are no members, no committees etc. Dissolution periods are the same across both houses."@en ;
+	rdfs:comment "The period between parliament periods. Parliament is dissolved and does not exist. During this time no parliamentary business can take place. From the point of dissolution until the general election there are no Members of the House of Commons. Note that Members of the House of Commons are considered Members on election even though Parliament is dissolved. Members of the House of Lords retain their positions during dissolution. Dissolution periods are the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PreElectionDissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PreElectionDissolutionPeriod"@en ;
-	rdfs:comment "The period between the end of a parliament period and the results of all constituency elections being announced."@en ;
+	rdfs:comment "The period between the end of a parliament period and the results of all constituency elections being announced. During this time there are no Members of the House of Commons."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PostElectionDissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PostElectionDissolutionPeriod"@en ;
-	rdfs:comment "The period between the results of all constituency elections being announced and the next parliament period."@en ;
+	rdfs:comment "The period between the results of all constituency elections being announced and the next parliament period. During this period, successful candidates are considered to be Members even though Parliament is dissolved."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Session rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is active between any State Opening and prorogation or dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both houses."@en ;
+	rdfs:comment "The period during which Parliament is active. The first session of a parliament begins on the same day as the parliament. This date is named in the dissolution proclamation. It ends on the day named in the subsequent prorogation proclamation. Subsequent sessions begin and end on dates named in prorogation proclamations. The final session ends with a prorogation followed by a dissolution. Parliament may be prorogued a few days before dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:ProrogationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "ProrogationPeriod"@en ;
-	rdfs:comment "The period during which Parliament is inactive between prorogation announcement and State Opening.  During this time there are still members but nearly all Parliamentary business stops. Prorogation periods are the same across both houses."@en ;
+	rdfs:comment "The period during which Parliament is inactive between prorogation and the start of the subsequent session. During this time there are still Members but all parliamentary business stops. Prorogation periods are the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:Term rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Term"@en ;
-	rdfs:comment "The period between recess periods during which Parliament is active, and may be sitting. Term periods are not necessarily the same across both houses."@en ;
+	rdfs:comment "The period between recess periods during which Parliament is active, and may be sitting. Term periods are not necessarily the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Recess rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Recess"@en ;
-	rdfs:comment "The period between term periods during which Parliament is inactive and does not sit. Some business may continue. Recess periods are not necessarily the same across both houses."@en ;
+	rdfs:comment "The period between term periods during which Parliament is inactive and does not sit. Some business may continue. Recess periods are not necessarily the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:SittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "SittingDay"@en ;
-	rdfs:comment "A day on which a house is sitting. Sitting days are not the same across both houses."@en ;
+	rdfs:comment "A day on which a House is sitting. Sitting days are not the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:TablingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "TablingDay"@en ;
-	rdfs:comment "A day on which it is possible for a member of a house to table a question. In the House of Commons questions can only be tabled on Sitting Days. In the House of Lords questions can also be tabled on selected Recess Days."@en ;
+	rdfs:comment "A day on which it is possible for a Member of a House to table a question. In the House of Commons questions can only be tabled on sitting days. In the House of Lords questions can also be tabled on selected recess days."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:House rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "House"@en ;
-	rdfs:comment "A parliamentary house e.g. the House of Lords."@en ;
+	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 
@@ -176,14 +176,14 @@ pt:hasRecess rdf:type owl:ObjectProperty ;
 	
 pt:houseHasTerm rdf:type owl:ObjectProperty ;
 	rdfs:label "houseHasTerm"@en ;
-	rdfs:comment "Relates a house to a term. Allows for different term periods in different houses."@en ;
+	rdfs:comment "Relates a House to a term. Allows for different term periods in different Houses."@en ;
 	rdfs:domain pt:House ;
 	rdfs:range pt:Term ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:houseHasRecess rdf:type owl:ObjectProperty ;
 	rdfs:label "houseHasRecess"@en ;
-	rdfs:comment "Relates a house to a recess. Allows for different recess periods in different houses."@en ;
+	rdfs:comment "Relates a House to a recess. Allows for different recess periods in different Houses."@en ;
 	rdfs:domain pt:House ;
 	rdfs:range pt:Recess ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
@@ -240,12 +240,14 @@ pt:proposedStartDate rdf:type owl:DatatypeProperty ;
 	rdfs:domain pt:TimePeriod ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
 pt:proposedEndDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "proposedEndDate"@en ;
 	rdfs:comment "Time period has a proposed end date."@en ;
 	rdfs:domain pt:TimePeriod ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
 pt:parliamentNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "parliamentNumber"@en ;
 	rdfs:comment "Parliament period has an ordinal number. Numbered from the Act of Union 1800."@en ;
