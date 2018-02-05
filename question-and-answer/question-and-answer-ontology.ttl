@@ -107,6 +107,13 @@ pqa:Document rdf:type owl:Class ;
 
 #######  Object properties ##### 
 
+pqa:partOfRoundRobin rdf:type owl:ObjectProperty ;
+	rdfs:label "partOfRoundRobin"@en ;
+	rdfs:comment "Relates a question to the round robin grouping it is deemed to be part of."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:RoundRobin ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
 pqa:allocation rdf:type owl:ObjectProperty ;
 	rdfs:label "allocation"@en ;
 	rdfs:comment "Allows a question to be assigned to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. Note that this would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly (e.g. when referring to the gender of the answering member), treating a round robin as a single question is not yet possible."@en ;
