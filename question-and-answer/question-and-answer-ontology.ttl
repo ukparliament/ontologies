@@ -43,6 +43,11 @@ pqa:Question rdf:type owl:Class ;
 	rdfs:comment "Questions might be parliamentary questions (oral or written), urgent (or private notice) questions or business questions, asked by a Member of a House of an answering body or bodies. Note that the same question text adressed to multiple answering bodies, tabled by the same Member on the same day, count as one question."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
+pqa:RoundRobin rdf:type owl:Class ;
+	rdfs:label "RoundRobin"@en ;
+	rdfs:comment "The round robin class provides a way to group two or more very similar questions asked of multiple answering bodies by a single Member. Sometimes round robins are used as a way for a Member to intentionally ask the same question of multiple answering bodies. Occasionally they're used where departmental responsibility for a given policy area is not clearly defined. Note that the definition of a round robin is fuzzy; the question text might vary slightly. Identifying round robins is a judgement call."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
 	rdfs:label "AnswerExpectedAs"@en ;
 	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the question will receive a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member."@en ;
@@ -104,7 +109,7 @@ pqa:Document rdf:type owl:Class ;
 
 pqa:allocation rdf:type owl:ObjectProperty ;
 	rdfs:label "allocation"@en ;
-	rdfs:comment "Allows a question to be assigned to one or more answering bodies. A question intended for multiple answering bodies is sometimes referred to as a round robin, or campaign, question. Note that this is a major change from existing data models where the same question, when asked of different answering bodies, has been considered to be different questions."@en ;
+	rdfs:comment "Allows a question to be assigned to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. Note that this would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly (e.g. when referring to the gender of the answering member), treating a round robin as a single question is not yet possible."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:AllocatedAnsweringBody ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -172,8 +177,15 @@ pqa:hasAnswerType rdf:type owl:ObjectProperty ;
 	rdfs:range pqa:AnswerType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:previousAnswer rdf:type owl:ObjectProperty ;
-	rdfs:label "previousAnswer"@en ;
+pqa:replacesAnswer rdf:type owl:ObjectProperty ;
+	rdfs:label "replacesAnswer"@en ;
+	rdfs:comment "Relates an answer to a subsequent answer given to the same question e.g. a holding answer to a substantive answer, or a substantive answer to a corrected answer, a corrected answer to a further corrected answer. Substantive answers replace holding answers in whole, whereas corrected answers may replace a previous answer in whole or in part."@en ;
+	rdfs:domain pqa:Answer ;
+	rdfs:range pqa:Answer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:refersToPreviousAnswer rdf:type owl:ObjectProperty ;
+	rdfs:label "refersToPreviousAnswer"@en ;
 	rdfs:comment "Relates an answer to a previous answer that answers the question in whole or in part e.g. 'I refer the honourable X to the answer given...'"@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Answer ;
