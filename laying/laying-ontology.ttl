@@ -22,7 +22,7 @@ pl:House rdf:type owl:Class ;
 
 pl:LayingOrWithdrawal rdf:type owl:Class ;
 	rdfs:label "LayingOrWithdrawal"@en ;
-	rdfs:comment "The act of laying or withdrawing a paper into or out of a House."@en ;
+	rdfs:comment "The act of laying before or withdrawing from a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Session rdf:type owl:Class ;
@@ -32,13 +32,13 @@ pl:Session rdf:type owl:Class ;
 
 pl:LayingBody rdf:type owl:Class ;
 	rdfs:label "LayingBody"@en ;
-	rdfs:comment "A body granted the right to lay papers before a House."@en ;
+	rdfs:comment "A body with the authority to lay papers before a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:Laying rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of laying (submitting) a paper before a House."@en ;
+	rdfs:comment "The act of presenting a paper to a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Withdrawal rdf:type owl:Class ;
@@ -54,7 +54,7 @@ pl:Person rdf:type owl:Class ;
 
 pl:LayingAuthorityType rdf:type owl:Class ;
 	rdfs:label "LayingAuthorityType"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The procedural authority by which a paper is laid before a House. Many documents are required by law to be laid before the House. These are called Act papers and are referred to as being laid 'by Act'. Other papers are made available to the House by the Government. These are called Command papers and are referred to as being laid 'by Command'. A paper cannot be laid by both Act and Command, although in some cases papers are laid by Act in the Commons and by Command in the Lords."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:LayableThing rdf:type owl:Class ;
@@ -130,14 +130,14 @@ pl:replaces rdf:type owl:ObjectProperty ;
 
 pl:laidOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "laidOn"@en ;
-	rdfs:comment "Relates an act of laying to the date it happens on. Note that this might be outside a session."@en ;
+	rdfs:comment "Relates an act of laying to the date it happens on. Note that this can only happen during a parliamentary period (during a session or prorogation period), not during dissolution."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:withdrawnOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "withdrawnOn"@en ;
-	rdfs:comment "Relates an act of withdrawl to the date it happens on."@en ;
+	rdfs:comment "Relates an act of withdrawal to the date it happens on."@en ;
 	rdfs:domain pl:Withdrawal ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
