@@ -61,6 +61,11 @@ pl:LayableThing rdf:type owl:Class ;
 	rdfs:label "LayableThing"@en ;
 	rdfs:comment "Any type of paper which can be laid before a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	
+pl:Legislation rdf:type owl:Class ;
+	rdfs:label "Legislation"@en ;
+	rdfs:comment "Legislation is another term for statutory law, the laws passed by a Parliament or other legislative body. This can be primary legislation (Acts), or secondary legislation (e.g. statutory instruments)."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:WithdrawableThing rdf:type owl:Class ;
 	rdfs:label "WithdrawableThing"@en ;
@@ -123,6 +128,13 @@ pl:replaces rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a laid thing to the withdrawn thing it replaces."@en ;
 	rdfs:domain pl:LayableThing ;
 	rdfs:range pl:WithdrawableThing ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	
+pl:enabledBy rdf:type owl:ObjectProperty ;
+	rdfs:label "enabledBy"@en ;
+	rdfs:comment "Relates a layable thing to the legislation that enables it. Note that this might be either primary or secondary legislation. Where it's secondary legislation, that legislation must in turn be enabled by an Act, possibly via other pieces of secondary legislation. The enabling Act will set out what changes are permissable by secondary legislation. The Joint Committee on Statutory Instruments (or the Select Committee on Statutory Instruments for papers laid in the House of Commons only) will examine secondary legislation laid before Parliament, advising on whether or not it fits within the bounds specified by the enabling Act."@en ;
+	rdfs:domain pl:LayableThing ;
+	rdfs:range pl:Legislation ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 				
 
