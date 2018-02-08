@@ -47,7 +47,6 @@ pev:Place rdf:type owl:Class ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
     
 pev:BusinessItem rdf:type owl:Class ;
-    rdfs:subClassOf pev:CalendarEvent ;
     rdfs:label "BusinessItem"@en ;
     rdfs:comment "An item of parliamentary business. e.g. an evidence session taking place in a meeting."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
@@ -58,7 +57,6 @@ pev:BusinessItemType rdf:type owl:Class ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
 
 pev:Meeting rdf:type owl:Class ;
-    rdfs:subClassOf pev:CalendarEvent ;
     rdfs:label "Meeting"@en ;
     rdfs:comment "A meeting. e.g. of a select committee."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
@@ -69,7 +67,6 @@ pev:MeetingType rdf:type owl:Class ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
     
 pev:Visit rdf:type owl:Class ;
-    rdfs:subClassOf pev:CalendarEvent ;
     rdfs:label "Visit"@en ;
     rdfs:comment "A visit by a committee to a place outside the parliamentary estate. e.g. a visit to a factory or an overseas visit."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
@@ -115,26 +112,12 @@ pev:Transcript rdf:type owl:Class ;
 
 pev:Member rdf:type owl:Class ;
     rdfs:label "Member"@en ;
-    rdfs:comment "A current or former member of a house."@en ;
+    rdfs:comment "A current or former Member of a House."@en ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .        
 
 
 
 #######  data properties ##### 	
-
-pev:startsAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "startsAt"@en ;
-	rdfs:comment "The scheduled start time of an event."@en ;
-	rdfs:domain pev:Event ;
-	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
-
-pev:endsAt rdf:type owl:DatatypeProperty ;
-    rdfs:label "endsAt"@en ;
-    rdfs:comment "The scheduled end time of an event."@en ;
-    rdfs:domain pev:Event ;
-    rdfs:range xsd:dateTime ;
-    rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
     
 pev:cancelledAt rdf:type owl:DatatypeProperty ;
     rdfs:label "cancelledAt"@en ;
@@ -149,6 +132,13 @@ pev:isPublic rdf:type owl:DatatypeProperty ;
     rdfs:domain pev:CalendarEvent ;
     rdfs:range xsd:boolean ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .    
+    
+pev:ordinality rdf:type owl:DatatypeProperty ;
+    rdfs:label "ordinality"@en ;
+    rdfs:comment "The position of a child event in its parent event."@en ;
+    rdfs:domain pev:CalendarEvent ;
+    rdfs:range xsd:integer ;
+    rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .    
 
 
 #######  object properties ##### 	
@@ -159,10 +149,31 @@ pev:hasParentEvent rdf:type owl:ObjectProperty ;
 	rdfs:domain pev:Event ;
 	rdfs:range pev:Event ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
+	
+pev:visitScheduling rdf:type owl:ObjectProperty ;
+	rdfs:label "visitScheduling"@en ;
+	rdfs:comment "Relates a visit to a calendar event. This allows an event to be created and annotated in advance of being scheduled."@en ;
+	rdfs:domain pev:Visit ;
+	rdfs:range pev:CalendarEvent ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
+	
+pev:meetingScheduling rdf:type owl:ObjectProperty ;
+	rdfs:label "meetingScheduling"@en ;
+	rdfs:comment "Relates a meeting to a calendar event. This allows a meeting to be created and annotated in advance of being scheduled."@en ;
+	rdfs:domain pev:Meeting ;
+	rdfs:range pev:CalendarEvent ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
+
+pev:businessItemScheduling rdf:type owl:ObjectProperty ;
+	rdfs:label "businessItemScheduling"@en ;
+	rdfs:comment "Relates a business item to a calendar event. This allows a business item to be created and annotated in advance of being scheduled."@en ;
+	rdfs:domain pev:Meeting ;
+	rdfs:range pev:CalendarEvent ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .
     
 pev:chairedBy rdf:type owl:ObjectProperty ;
     rdfs:label "chairedBy"@en ;
-    rdfs:comment "Relates a calendar event to the member of Parliament chairing it."@en ;
+    rdfs:comment "Relates a calendar event to the Member of Parliament chairing it."@en ;
     rdfs:domain pev:CalendarEvent ;
     rdfs:range pev:Member ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> .  
@@ -232,7 +243,7 @@ pev:hasAttendee rdf:type owl:ObjectProperty ;
     
 pev:attendanceInCapacity rdf:type owl:ObjectProperty ;
     rdfs:label "attendanceInCapacity"@en ;
-    rdfs:comment "Relates an attendance to the capacity in which an person attends it."@en ;
+    rdfs:comment "Relates an attendance to the capacity in which a person attends is attending."@en ;
     rdfs:domain pev:Attendance ;
     rdfs:range pev:Incumbency ;
     rdf:isDefinedBy <http://parliament.uk/ontologies/event/> . 
