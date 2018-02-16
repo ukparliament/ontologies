@@ -107,6 +107,12 @@ pt:TablingDay rdf:type owl:Class ;
 	rdfs:label "TablingDay"@en ;
 	rdfs:comment "A day on which it is possible for a Member of a House to table a question. In the House of Commons questions can only be tabled on sitting days. In the House of Lords questions can also be tabled on selected recess days."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:PrayingDay rdf:type owl:Class ;
+	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:label "PrayingDay"@en ;
+	rdfs:comment "A day on which it is possible for a Member of a House to table a motion to 'pray against' a Statutory Instrument. Unlike sitting days and tabling days, praying days are identical across both Houses. In the House of Commons this can only ever be a motion to annul. In the House of Lords it might be a motion to annul, a motion to regret or a motion to take note."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:House rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
@@ -172,6 +178,13 @@ pt:hasRecess rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a session to a recess."@en ;
 	rdfs:domain pt:Session ;
 	rdfs:range pt:Recess ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:hasPrayingDay rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPrayingDay"@en ;
+	rdfs:comment "Relates a session to a praying day."@en ;
+	rdfs:domain pt:Session ;
+	rdfs:range pt:PrayingDay ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:houseHasTerm rdf:type owl:ObjectProperty ;
