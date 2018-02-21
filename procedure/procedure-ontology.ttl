@@ -76,6 +76,13 @@ ppr:undertakes rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:BusinessItem ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:calendarises rdf:type owl:ObjectProperty ;
+	rdfs:label "calendarises"@en ;
+	rdfs:comment "Relates a calender business item to a business item."@en ;
+	rdfs:domain ppr:CalendarBusinessItem ;
+	rdfs:range ppr:BusinessItem ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "subjectTo"@en ;
 	rdfs:comment "Relates a work package type to the procedure it is subject to."@en ;
