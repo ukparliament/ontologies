@@ -17,12 +17,12 @@
 
 ppr:Step rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
-	rdfs:comment "A step. May occur in one or many routes."@en ;
+	rdfs:comment "A step in a process. May occur in one or many routes."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "Ties a preceding step to a following step depending on applicable procedure, House and point in time."@en ;
+	rdfs:comment "Ties a preceding step to a following step depending on applicable procedure, point in time and conditional inputs from the preceding step."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:House rdf:type owl:Class ;
@@ -32,12 +32,7 @@ ppr:House rdf:type owl:Class ;
 	
 ppr:Procedure rdf:type owl:Class ;
 	rdfs:label "Procedure"@en ;
-	rdfs:comment "A parliamentary procedure. Examples might be the passage of an affirmative SI, the passage of a public bill etc."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:BusinessItem rdf:type owl:Class ;
-	rdfs:label "BusinessItem"@en ;
-	rdfs:comment "An item of parliamentary busines."@en ;
+	rdfs:comment "A parliamentary procedure in a particular House. Examples might be the passage of an affirmative SI in the House of Commons, the passage of a public bill in the House of Lords etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:BusinessItem rdf:type owl:Class ;
@@ -45,76 +40,111 @@ ppr:BusinessItem rdf:type owl:Class ;
 	rdfs:comment "An item of parliamentary business."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:LegislationItem rdf:type owl:Class ;
-	rdfs:label "LegislationItem"@en ;
-	rdfs:comment "An individual piece of legislation or the passage thereof. Might be a specific bill or a specific piece of secondary legislation"@en ;
+ppr:BusinessItem rdf:type owl:Class ;
+	rdfs:label "BusinessItem"@en ;
+	rdfs:comment "An item of parliamentary business."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:CalendarBusinessItem rdf:type owl:Class ;
+	rdfs:label "CalendarBusinessItem"@en ;
+	rdfs:comment "An item of parliamentary business which has been timetabled onto a calendar."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:WorkPackage rdf:type owl:Class ;
+	rdfs:label "WorkPackage"@en ;
+	rdfs:comment "A package of work involving many individual business items. Might be the passage of a specific statutory instrument or the passage of a specific public bill etc."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:WorkPackageType rdf:type owl:Class ;
+	rdfs:label "WorkPackageType"@en ;
+	rdfs:comment "A type of a work package. Might be the passage of affirmative statutory instruments or the passage of public bills etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 #######  Object properties ##### 
 
-ppr:causes rdf:type owl:ObjectProperty ;
-	rdfs:label "causes"@en ;
-	rdfs:comment "Relates a step to a route where completion of the step directly causes the next route to activate."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range ppr:Route ;
+ppr:hasWorkPackageType rdf:type owl:ObjectProperty ;
+	rdfs:label "hasWorkPackageType"@en ;
+	rdfs:comment "Relates a work package to the type of work being undertaken."@en ;
+	rdfs:domain ppr:WorkPackage ;
+	rdfs:range ppr:WorkPackageType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:thisCanHappenNext rdf:type owl:ObjectProperty ;
-	rdfs:label "thisCanHappenNext"@en ;
-	rdfs:comment "Relates a step to a route where completion of the step allows a future step to happen but does not cause it to happen."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range ppr:Route ;
+ppr:undertakes rdf:type owl:ObjectProperty ;
+	rdfs:label "undertakes"@en ;
+	rdfs:comment "Relates a work package to the individual business items that comprise it."@en ;
+	rdfs:domain ppr:WorkPackage ;
+	rdfs:range ppr:BusinessItem ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:mustBeSatisfied rdf:type owl:ObjectProperty ;
-	rdfs:label "mustBeSatisfied"@en ;
-	rdfs:comment "Relates a route to a preceding step where completion of the step must happen before the route can happen, but the completion of the step does not directly cause the route."@en ;
-	rdfs:domain ppr:Route ;
+ppr:subjectTo rdf:type owl:ObjectProperty ;
+	rdfs:label "subjectTo"@en ;
+	rdfs:comment "Relates a work package type to the procedure it is subject to."@en ;
+	rdfs:domain ppr:WorkPackageType ;
+	rdfs:range ppr:Procedure ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:actualises rdf:type owl:ObjectProperty ;
+	rdfs:label "actualises"@en ;
+	rdfs:comment "Relates a business item to a step in a procedure."@en ;
+	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
+
 ppr:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "leadsTo"@en ;
 	rdfs:comment "Relates a route to a following step."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:causalNext rdf:type owl:ObjectProperty ;
+	rdfs:label "causalNext"@en ;
+	rdfs:comment "Relates a preceding step to a route where completion of the step directly causes the route to trigger the next step."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:Route ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:occupies rdf:type owl:ObjectProperty ;
-	rdfs:label "occupies"@en ;
-	rdfs:comment "Relates a business item to the procedural step it occupies."@en ;
-	rdfs:domain ppr:BusinessItem ;
-	rdfs:range ppr:Step ;
+ppr:optionalNext rdf:type owl:ObjectProperty ;
+	rdfs:label "optionalNext"@en ;
+	rdfs:comment "Relates a preceding step to a route where completion of the step allows the next step to happen, but does not cause it to happen."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:Route ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:focus rdf:type owl:ObjectProperty ;
-	rdfs:label "focus"@en ;
-	rdfs:comment "Relates a business item to the legislation item it's concerned with."@en ;
-	rdfs:domain ppr:BusinessItem ;
-	rdfs:range ppr:LegislationItem ;
+	
+ppr:conditionalNext rdf:type owl:ObjectProperty ;
+	rdfs:label "conditionalNext"@en ;
+	rdfs:comment "Relates a preceding step to a route where completion of all steps marked conditional must happen before the route can trigger the next step."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:Route ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:subjectTo rdf:type owl:ObjectProperty ;
-	rdfs:label "subjectTo"@en ;
-	rdfs:comment "Relates a legislation item to the parliamentary procedure it's subject to."@en ;
-	rdfs:domain ppr:LegislationItem ;
-	rdfs:range ppr:Procedure ;
+	
+ppr:follows rdf:type owl:ObjectProperty ;
+	rdfs:label "follows"@en ;
+	rdfs:comment "Relates a procedure to a route."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:Route ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:routeThroughHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "routeThroughHouse"@en ;
-	rdfs:comment "Relates a route to a House. Allows different Houses to have different routes for the same type of procedure."@en ;
-	rdfs:domain ppr:Route ;
+	
+ppr:in rdf:type owl:ObjectProperty ;
+	rdfs:label "in"@en ;
+	rdfs:comment "Relates a procedure to a House."@en ;
+	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:House ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:routeThroughProcedure rdf:type owl:ObjectProperty ;
-	rdfs:label "routeThroughProcedure"@en ;
-	rdfs:comment "Relates a route to a procedure. Allows different procedures to have different routes in the same House."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range ppr:Procedure ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 				
 
 #######  Data properties ##### 
 
+ppr:startOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "startOn"@en ;
+	rdfs:comment "Relates a route to a start date. Allows routes to change over time to reflect changes to procedure. Borrowed from the core ontology."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
+
+ppr:endOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "endOn"@en ;
+	rdfs:comment "Relates a route to an end date. Allows routes to change over time to reflect changes to procedure. Borrowed from the core ontology."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
