@@ -40,9 +40,9 @@ pt:WrittenNotice rdf:type owl:Class ;
 	rdfs:comment "Official notice of an item of future business."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
-pt:TableableThing rdf:type owl:Class ;
-	rdfs:label "TableableThing"@en ;
-	rdfs:comment "Any item of business which can be tabled e.g. a motion, parliamentary question, amendment or nomination. Note that not all motions are tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list."@en ;
+pt:TabledThing rdf:type owl:Class ;
+	rdfs:label "TabledThing"@en ;
+	rdfs:comment "Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or nomination. Note that not all motions are tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 	
@@ -78,9 +78,9 @@ pt:tabledInSession rdf:type owl:ObjectProperty ;
 	
 pt:tables rdf:type owl:ObjectProperty ;
 	rdfs:label "tables"@en ;
-	rdfs:comment "Relates an act of tabling to the business item being tabled."@en ;
+	rdfs:comment "Relates an act of tabling to the business item which has been tabled."@en ;
 	rdfs:domain pt:Tabling ;
-	rdfs:range pt:TableableThing ;
+	rdfs:range pt:TabledThing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 
