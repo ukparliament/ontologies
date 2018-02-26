@@ -25,6 +25,11 @@ ppr:Route rdf:type owl:Class ;
 	rdfs:comment "Ties a preceding step to a following step depending on applicable procedure, point in time and conditional inputs from the preceding step."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:RouteLogic rdf:type owl:Class ;
+	rdfs:label "RouteLogic"@en ;
+	rdfs:comment "Works something like a logic gate. Route logic allows for the specification of the logic which determines a route's actions. Takes into account the completion of all preceding steps leading to the route and states whether all preceding steps must be completed (AND) or just some (OR)."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
@@ -99,30 +104,30 @@ ppr:actualises rdf:type owl:ObjectProperty ;
 
 ppr:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "leadsTo"@en ;
-	rdfs:comment "Relates a route to a following step."@en ;
+	rdfs:comment "Relates a step to a following route."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:Route ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:causes rdf:type owl:ObjectProperty ;
+	rdfs:label "causes"@en ;
+	rdfs:comment "Relates a route to a following step where completion of the preceding step(s) directly causes the route to trigger the next step."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:causalNext rdf:type owl:ObjectProperty ;
-	rdfs:label "causalNext"@en ;
-	rdfs:comment "Relates a preceding step to a route where completion of the step directly causes the route to trigger the next step."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range ppr:Route ;
+	
+ppr:allows rdf:type owl:ObjectProperty ;
+	rdfs:label "allows"@en ;
+	rdfs:comment "Relates a route to a following step where completion of the preceding step(s) allows the next step to happen, but does not cause it to happen."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:optionalNext rdf:type owl:ObjectProperty ;
-	rdfs:label "optionalNext"@en ;
-	rdfs:comment "Relates a preceding step to a route where completion of the step allows the next step to happen, but does not cause it to happen."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range ppr:Route ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:conditionalNext rdf:type owl:ObjectProperty ;
-	rdfs:label "conditionalNext"@en ;
-	rdfs:comment "Relates a preceding step to a route where completion of all steps marked conditional must happen before the route can trigger the next step."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range ppr:Route ;
+ppr:applies rdf:type owl:ObjectProperty ;
+	rdfs:label "applies"@en ;
+	rdfs:comment "Relates a route to the route logic applied."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:RouteLogic ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:follows rdf:type owl:ObjectProperty ;
@@ -141,6 +146,13 @@ ppr:in rdf:type owl:ObjectProperty ;
 				
 
 #######  Data properties ##### 
+
+ppr:canSpawnMultiple rdf:type owl:DatatypeProperty ;
+	rdfs:label "canSpawnMultiple"@en ;
+	rdfs:comment "Determines if multiple versions of the step can be spawned in parallel. Or just one."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range xsd:boolean ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
 
 ppr:startOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "startOn"@en ;
