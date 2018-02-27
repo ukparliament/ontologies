@@ -22,7 +22,7 @@ ppr:Step rdf:type owl:Class ;
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "Ties a preceding step to a following step depending on applicable procedure, point in time and conditional inputs from the preceding step."@en ;
+	rdfs:comment "Ties a preceding step to a following step depending on applicable procedure, point in time and conditional inputs from the preceding step. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology) allowing for routes to change over time and reflect changes to procedure."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:RouteLogic rdf:type owl:Class ;
@@ -152,18 +152,4 @@ ppr:canSpawnMultiple rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Determines if multiple versions of the step can be spawned in parallel. Or just one."@en ;
 	rdfs:domain ppr:Step ;
 	rdfs:range xsd:boolean ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
-
-ppr:startOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "startOn"@en ;
-	rdfs:comment "Relates a route to a start date. Allows routes to change over time to reflect changes to procedure. Borrowed from the core ontology."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
-
-ppr:endOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "endOn"@en ;
-	rdfs:comment "Relates a route to an end date. Allows routes to change over time to reflect changes to procedure. Borrowed from the core ontology."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
