@@ -93,11 +93,6 @@ pe:ElectoralIncumbency rdf:type owl:Class ;
 	rdfs:label "ElectoralIncumbency"@en ;
 	rdfs:comment "An incumbency resulting from an election."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
-pe:BoundarySet rdf:type owl:Class ;
-	rdfs:label "BoundarySet"@en ;
-	rdfs:comment "The set of boundaries as they exist at the time of an election. As established by the Boundary Commission. Reviews of boundaries are conducted infrequently so the same boundary set may apply to more than one  election. i.e. general and by elections."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .
 		
 			
 
@@ -192,14 +187,7 @@ pe:establishesIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a winning candidacy result to an electoral incumbency."@en ;
 	rdfs:domain pe:WinningCandidacyResult  ;
 	rdfs:range pe:ElectoralIncumbency  ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .		
-	
-pe:definedByBoundarySet rdf:type owl:ObjectProperty ;
-	rdfs:label "definedByBoundarySet"@en ;
-	rdfs:comment "Relates a geographic constituency to the boundary set that established its boundaries."@en ;
-	rdfs:domain pe:ConstituencyArea  ;
-	rdfs:range pe:BoundarySet  ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .					
+	rdf:isDefinedBy <http://parliament.uk/ontologies/election/> .				
 
 #######  Data properties ##### 
 
