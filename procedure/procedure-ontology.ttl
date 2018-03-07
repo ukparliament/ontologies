@@ -25,11 +25,6 @@ ppr:Route rdf:type owl:Class ;
 	rdfs:comment "Ties a preceding step to a following step depending on applicable procedure, point in time and conditional inputs from the preceding step. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology) allowing for routes to change over time and reflect changes to procedure."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:RouteLogic rdf:type owl:Class ;
-	rdfs:label "RouteLogic"@en ;
-	rdfs:comment "Works something like a logic gate. Route logic allows for the specification of the logic which determines a route's actions. Takes into account the completion of all preceding steps leading to the route and states whether all preceding steps must be completed (AND) or just some (OR)."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
@@ -121,13 +116,6 @@ ppr:allows rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a route to a following step where completion of the preceding step(s) allows the next step to happen, but does not cause it to happen."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:applies rdf:type owl:ObjectProperty ;
-	rdfs:label "applies"@en ;
-	rdfs:comment "Relates a route to the route logic applied."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range ppr:RouteLogic ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:follows rdf:type owl:ObjectProperty ;
