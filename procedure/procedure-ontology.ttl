@@ -117,6 +117,13 @@ ppr:allows rdf:type owl:ObjectProperty ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:precludes rdf:type owl:ObjectProperty ;
+	rdfs:label "precludes"@en ;
+	rdfs:comment "Relates a route to a following step where completion of the preceding step(s) precludes the subsequent step from happening."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:Step ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:follows rdf:type owl:ObjectProperty ;
 	rdfs:label "follows"@en ;
