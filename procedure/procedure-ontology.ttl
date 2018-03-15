@@ -27,7 +27,7 @@ ppr:Route rdf:type owl:Class ;
 	
 ppr:RouteType rdf:type owl:Class ;
 	rdfs:label "RouteType"@en ;
-	rdfs:comment "Ties a route to a route type. Route types are: causes, allows and precludes. A route of type causes relates the route to a following step where completion of the preceding step(s) directly causes the route to trigger the next step. A route of type allows relates the route to a following step where completion of the preceding step(s) allows the next step to happen, but does not cause it to happen. A route of type precludes relates a route to a step where completion of the preceding step(s) precludes that step from happening."@en ;
+	rdfs:comment "Route types are: causes, allows and precludes. A route of type 'causes' relates the route to a following step where completion of the preceding step(s) directly causes the route to trigger the next step i.e. the next step is inevitable. A route of type 'allows' relates the route to a following step where completion of the preceding step(s) allows the next step to happen, but does not cause it to happen i.e. the next step might happen but is not inevitable. A route of type 'precludes' relates a route to a step where completion of the preceding step(s) precludes that step from happening i.e. the next step can no longer happen."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:House rdf:type owl:Class ;
@@ -99,7 +99,7 @@ ppr:fromStep rdf:type owl:ObjectProperty ;
 	
 ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:label "toStep"@en ;
-	rdfs:comment "Relates a route to a following step."@en ;
+	rdfs:comment "Relates a route to a potential following step. Note that the next step might be precluded by the route type."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
