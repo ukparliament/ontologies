@@ -17,19 +17,19 @@
 
 psi:Legislation rdf:type owl:Class ;
 	rdfs:label "Legislation"@en ;
-	rdfs:comment "A piece of legislation. Either primary or secondary."@en ;
+	rdfs:comment "An item of legislation. Either primary or secondary."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
 	
 psi:SecondaryLegislation rdf:type owl:Class ;
 	rdfs:subClassOf psi:Legislation ;
 	rdfs:label "SecondaryLegislation"@en ;
-	rdfs:comment "A piece of secondary legislation. Secondary legislation is also referred to as delegated legislation. The terms are synonymous. The term delegated refers to the fact that the powers claimed by the legislation are delegated from a piece of primary legislation."@en ;
+	rdfs:comment "An item of secondary legislation. Secondary legislation is also referred to as delegated legislation. The terms are synonymous. The term delegated refers to the fact that the powers claimed by the legislation are delegated from another item of legislation."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
 
 psi:StatutoryInstrument rdf:type owl:Class ;
 	rdfs:subClassOf psi:SecondaryLegislation ;
 	rdfs:label "StatutoryInstrument"@en ;
-	rdfs:comment "A statutory instrument"@en ;
+	rdfs:comment "A statutory instrument. Statutory instruments are a type of delegated (or secondary) legislation. They can be used to make specific changes to the law under under authority contained in Acts of Parliament."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
 	
 
@@ -39,7 +39,7 @@ psi:StatutoryInstrument rdf:type owl:Class ;
 
 psi:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "enabledBy"@en ;
-	rdfs:comment "Relates a statutory instrument to the item of legislation or items of legislation which enable it. The enabling legislation delegates powers to the statutory instrument. Note that sometimes a statutory instrument will be enabled by another piece of secondary legislation. But that must in turn be enabled by an Act (a piece of primary legislation). IS THIS TRUE. Could it be SI > SI > SI > Act?"@en ;
+	rdfs:comment "Relates a statutory instrument to the item of legislation or items of legislation which enable it. The enabling legislation delegates legislative powers to the statutory instrument. Note that sometimes a statutory instrument will be enabled by another piece of secondary legislation. But that must in turn be enabled by an Act (a piece of primary legislation). IS THIS TRUE. Could it be SI > SI > SI > Act?"@en ;
 	rdfs:domain psi:StatutoryInstrument ;
 	rdfs:range psi:Legislation ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
@@ -49,21 +49,21 @@ psi:enabledBy rdf:type owl:ObjectProperty ;
 			
 psi:legislationURI rdf:type owl:DatatypeProperty ;
 	rdfs:label "legislationURI"@en ;
-	rdfs:comment "The URI of the legislation (on legislation.gov.uk)."@en ;
+	rdfs:comment "The URI of an item of legislation (on legislation.gov.uk). Note that the URI should take the form of the non-information resource (FRBR work) of the legislation e.g. http://www.legislation.gov.uk/id/ukpga/2018/2"@en ;
 	rdfs:domain psi:Legislation ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
 	
-psi:impactAssessmentURI rdf:type owl:DatatypeProperty ;
-	rdfs:label "impactAssessmentURI"@en ;
-	rdfs:comment "The URI of the impact assessment associated with the legislation (on legislation.gov.uk)."@en ;
+psi:impactAssessmentURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "impactAssessmentURL"@en ;
+	rdfs:comment "The URI of an impact assessment associated with an item of legislation (on legislation.gov.uk)."@en ;
 	rdfs:domain psi:Legislation ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
 	
-psi:explanatoryMemorandumURI rdf:type owl:DatatypeProperty ;
-	rdfs:label "explanatoryMemorandumURI"@en ;
-	rdfs:comment "The URI of the explanatory memorandum associated with the legislation (on legislation.gov.uk)."@en ;
+psi:explanatoryMemorandumURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "explanatoryMemorandumURL"@en ;
+	rdfs:comment "The URI of an explanatory memorandum associated with an item of legislation (on legislation.gov.uk)."@en ;
 	rdfs:domain psi:Legislation ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
