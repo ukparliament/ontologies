@@ -22,7 +22,7 @@ ppr:Step rdf:type owl:Class ;
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "Ties a procedural step to the subsequent step or steps according to the parliamentary procedure which applies. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology). This allows routes to change over time and adapt to changes in procedure. A route is activated once all the business items which actualise the preceding steps are completed. Note that a route can point from a step to the same step with a RouteType of 'precludes'. This has the effect of precluding any more instances of that step in the procedure e.g. in the made affirmative statutory instrument procedure the 'cleared by the Joint Committee on Statutory Instruments' step can only happen once. So that step being actualised by a business item precludes any other instance of that step."@en ;
+	rdfs:comment "Ties a procedural step or steps to the subsequent step, according to the RouteType. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology). This allows routes to change over time and adapt to changes in procedure. A route is activated once the business item(s) which actualise the preceding steps are completed. This can be taken to mean the step is 'completed'. Note that the RouteType 'precludes' can route a completed step to the same step. This has the effect of precluding any more instances of that step in the procedure e.g. in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' can happen only once. In other words, the actualisation of this step as a business item precludes any other instance of that step."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:RouteType rdf:type owl:Class ;
@@ -64,7 +64,7 @@ ppr:WorkPackage rdf:type owl:Class ;
 
 ppr:belongsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "belongsTo"@en ;
-	rdfs:comment "Relates an individual business item to the work package it is part of."@en ;
+	rdfs:comment "Relates an individual business item to the work package it is part of. Note that whilst a work package can contain many business items, a business item might relate to several work packages e.g. a meeting of the Joint Committee on Statutory Instruments might include business relating to many SI work packages with no distinct segmentation."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -78,14 +78,14 @@ ppr:calendarises rdf:type owl:ObjectProperty ;
 	
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "subjectTo"@en ;
-	rdfs:comment "Relates a work package to the procedure it is subject to."@en ;
+	rdfs:comment "Relates a work package to the procedure it is subject to. A work package can only be subject to one procedure."@en ;
 	rdfs:domain ppr:WorkPackage ;
 	rdfs:range ppr:Procedure ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "actualises"@en ;
-	rdfs:comment "Relates a business item to a step in a procedure e.g. relates the second reading of a specific public bill to the corresponding (conceptual) step in the procedure."@en ;
+	rdfs:comment "Relates a business item to a step in a procedure (via a route) e.g. relates the second reading of a specific public bill to the corresponding (conceptual) step in the procedure. Note that whilst a step might be actualised by several business items (in different work packages), a business item might actualise one or several steps e.g. there might be a calendarised business item on the order paper that includes a debate on a number of motions. This would actualise steps relating each of those motions."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -106,14 +106,14 @@ ppr:toStep rdf:type owl:ObjectProperty ;
 	
 ppr:hasRouteType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasRouteType"@en ;
-	rdfs:comment "Relates a route to a route type."@en ;
+	rdfs:comment "Relates a route to a route type. A route can have one only type."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:RouteType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:follows rdf:type owl:ObjectProperty ;
 	rdfs:label "follows"@en ;
-	rdfs:comment "Relates a procedure to a route."@en ;
+	rdfs:comment "Relates a procedure to a route. A route can belong to only one procedure."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:Route ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
