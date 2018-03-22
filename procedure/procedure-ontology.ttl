@@ -37,7 +37,7 @@ ppr:House rdf:type owl:Class ;
 	
 ppr:Procedure rdf:type owl:Class ;
 	rdfs:label "Procedure"@en ;
-	rdfs:comment "A parliamentary procedure in a particular House or Houses. An example might be the passage of an affirmative SI in both Houses. Note that some procedures are House specific, but can involve things like a joint committee that cuts across the two Houses. In this case we consider it to be a single procedure."@en ;
+	rdfs:comment "A parliamentary procedure in a particular House or Houses. An example might be the passage of a made affirmative statutory instrument in both Houses. Note that some procedures are House specific, but can involve things like a joint committee that cuts across the two Houses. In the latter case we consider it to be a single procedure."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:BusinessItem rdf:type owl:Class ;
@@ -57,7 +57,7 @@ ppr:CalendarBusinessItem rdf:type owl:Class ;
 	
 ppr:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
-	rdfs:comment "A package of work grouping together many individual business items e.g. the passage of a specific statutory instrument or the passage of a specific public bill etc. Whereas a procedure (and its accompanying routes and steps) describes the process, the work package handles the application of that process for a specific instance."@en ;
+	rdfs:comment "A package of work grouping together many individual business items e.g. the passage of a specific statutory instrument, or the passage of a specific public bill etc. Whereas a procedure (and its accompanying routes and steps) describes the process, the work package handles the application of that process for a specific instance."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 #######  Object properties ##### 
@@ -99,7 +99,7 @@ ppr:fromStep rdf:type owl:ObjectProperty ;
 	
 ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:label "toStep"@en ;
-	rdfs:comment "Relates a route to a potential following step. Note that the next step might be precluded by the route type."@en ;
+	rdfs:comment "Relates a route to a potential following step. Note that the 'next' step might be precluded by the route type."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
