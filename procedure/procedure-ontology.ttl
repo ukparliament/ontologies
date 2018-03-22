@@ -22,7 +22,7 @@ ppr:Step rdf:type owl:Class ;
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "Ties a procedural step to the subsequent step or steps according to the parliamentary procedure which applies. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology). This allows routes to change over time and adapt to changes in procedure."@en ;
+	rdfs:comment "Ties a procedural step to the subsequent step or steps according to the parliamentary procedure which applies. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology). This allows routes to change over time and adapt to changes in procedure. A route is activated once all the business items which actualise the preceding steps are completed. Note that a route can point from a step to the same step with a RouteType of 'precludes'. This has the effect of precluding any more instances of that step in the procedure e.g. in the made affirmative statutory instrument procedure the 'cleared by the Joint Committee on Statutory Instruments' step can only happen once. So that step being actualised by a business item precludes any other instance of that step."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:RouteType rdf:type owl:Class ;
@@ -124,13 +124,3 @@ ppr:in rdf:type owl:ObjectProperty ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:House ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-				
-
-#######  Data properties ##### 
-
-ppr:canSpawnMultiple rdf:type owl:DatatypeProperty ;
-	rdfs:label "canSpawnMultiple"@en ;
-	rdfs:comment "Determines if multiple instances of the step can be spawned in parallel e.g. the tabling of more than one non-fatal motion on a negative statutory instrument."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range xsd:boolean ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .	
