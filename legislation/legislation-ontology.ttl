@@ -1,0 +1,111 @@
+@prefix psi: <http://parliament.uk/ontologies/statutory-instrument/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/statutory-instrument/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Statutory Instrument ontology"@en ;
+    dcterms:created "21/03/2018"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Statutory Instrument ontology for UK Parliament. Needs to be read in association with the laying, tabling, procedure and core ontologies."@en .
+
+
+#######  Classes ##### 	
+
+psi:Legislation rdf:type owl:Class ;
+	rdfs:subClassOf psi:EnablingPower ;
+	rdfs:label "Legislation"@en ;
+	rdfs:comment "An item of legislation. Either primary or secondary."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:SecondaryLegislation rdf:type owl:Class ;
+	rdfs:subClassOf psi:Legislation ;
+	rdfs:label "SecondaryLegislation"@en ;
+	rdfs:comment "An item of secondary legislation. Secondary legislation is also referred to as delegated legislation. The terms are synonymous. The term delegated refers to the fact that the powers claimed by the legislation are delegated from another item of legislation."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+
+psi:StatutoryInstrument rdf:type owl:Class ;
+	rdfs:subClassOf psi:SecondaryLegislation ;
+	rdfs:label "StatutoryInstrument"@en ;
+	rdfs:comment "A statutory instrument. Statutory instruments are a type of delegated (or secondary) legislation. They can be used to make specific changes to the law under under authority contained in Acts of Parliament."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+
+psi:EnablingPower rdf:type owl:Class ;
+	rdfs:label "EnablingPower"@en ;
+	rdfs:comment "The power to enable a piece of secondary legislation."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+
+	
+##### Object properties ####
+
+
+psi:enabledBy rdf:type owl:ObjectProperty ;
+	rdfs:label "enabledBy"@en ;
+	rdfs:comment "Relates a piece of secondary legislation to an enabling power."@en ;
+	rdfs:domain psi:SecondaryLegislation ;
+	rdfs:range psi:EnablingPower ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+				
+	
+##### Data properties ####	
+			
+psi:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "title"@en ;
+	rdfs:comment "The title of a piece of legislation."@en ;
+	rdfs:domain psi:Legislation ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:legislationURI rdf:type owl:DatatypeProperty ;
+	rdfs:label "legislationURI"@en ;
+	rdfs:comment "The URI of an item of legislation (on legislation.gov.uk). Note that the URI should take the form of the non-information resource (FRBR work) of the legislation e.g. http://www.legislation.gov.uk/id/ukpga/2018/2"@en ;
+	rdfs:domain psi:Legislation ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:impactAssessmentURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "impactAssessmentURL"@en ;
+	rdfs:comment "The URL of an impact assessment associated with an item of legislation (on legislation.gov.uk)."@en ;
+	rdfs:domain psi:Legislation ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:explanatoryMemorandumURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "explanatoryMemorandumURL"@en ;
+	rdfs:comment "The URL of an explanatory memorandum associated with an item of legislation (on legislation.gov.uk)."@en ;
+	rdfs:domain psi:SecondaryLegislation ;
+	rdfs:range rdfs:Literal ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:siNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "siNumber"@en ;
+	rdfs:comment "The number of the SI."@en ;
+	rdfs:domain psi:StatutoryInstrument ;
+	rdfs:range xsd:integer ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:madeDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "madeDate"@en ;
+	rdfs:comment "The date on which the SI was or is going to be made. Note that making happens outside of Parliament by the minister responsible for the SI."@en ;
+	rdfs:domain psi:StatutoryInstrument ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:comingIntoForceDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "comingIntoForceDate"@en ;
+	rdfs:comment "The date on which the SI was or is going to come into force. Where given this will be the date on which the whole SI comes into force. Sometimes coming into force will be fuzzier than a given date. Sometimes different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
+	rdfs:domain psi:StatutoryInstrument ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+	
+psi:comingIntoForceNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "comingIntoForceNote"@en ;
+	rdfs:comment "A note to say when the SI was or is going to come into force. Sometimes coming into force will be fuzzier than a given date. Sometimes different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
+	rdfs:domain psi:StatutoryInstrument ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/statutory-instrument/> .
+						
