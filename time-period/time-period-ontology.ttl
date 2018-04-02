@@ -113,6 +113,12 @@ pt:PrayingDay rdf:type owl:Class ;
 	rdfs:label "PrayingDay"@en ;
 	rdfs:comment "On the day of laying of a negative statutory instrument, a forty day time period commences during which it is possible for Members to pray against the instrument. The forty day period is not comprised of consecutive days. It excludes any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Unlike sitting days and tabling days, praying days are identical across both Houses. In the House of Commons, the prayer can be a motion to annul or to revoke. In the House of Lords, praying against may take the form of a motion to annul, a motion to regret, or a motion to take note."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:PrintingDay rdf:type owl:Class ;
+	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:label "PrintingDay"@en ;
+	rdfs:comment "A day on which the current list of amendments to a public or hybrid bill is printed."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:House rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
@@ -227,6 +233,20 @@ pt:hasRecessTablingDay rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a recess to a tabling day. Allows for tabling days to happen in a recess period."@en ;
 	rdfs:domain pt:Recess ;
 	rdfs:range pt:TablingDay ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:hasPrintingDay rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPrintingDay"@en ;
+	rdfs:comment "Relates a term to a printing day."@en ;
+	rdfs:domain pt:Term ;
+	rdfs:range pt:PrintingDay ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
+pt:hasRecessPrintingDay rdf:type owl:ObjectProperty ;
+	rdfs:label "hasRecessPrintingDay"@en ;
+	rdfs:comment "Relates a recess to a printing day. Allows for printing days to happen in a recess period."@en ;
+	rdfs:domain pt:Recess ;
+	rdfs:range pt:PrintingDay ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:hasPreElectionDissolutionPeriod rdf:type owl:ObjectProperty ;
