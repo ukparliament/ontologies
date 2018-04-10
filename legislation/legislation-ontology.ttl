@@ -21,21 +21,22 @@ plg:Legislation rdf:type owl:Class ;
 	rdfs:comment "An item of legislation. Either primary or secondary."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
+plg:PrimaryLegislation rdf:type owl:Class ;
+	rdfs:subClassOf plg:Legislation ;
+	rdfs:label "PrimaryLegislation"@en ;
+	rdfs:comment "An item of primary legislation. Types of primary legislation include Acts of Parliament, Church of England Measures, and Orders in Council made under Royal Prerogative. Primary legislation sets out broad outlines and principles, and delegates specific authority to government to make more specific laws in the form of secondary legislation."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
 plg:SecondaryLegislation rdf:type owl:Class ;
 	rdfs:subClassOf plg:Legislation ;
 	rdfs:label "SecondaryLegislation"@en ;
-	rdfs:comment "An item of secondary legislation. Secondary legislation is also referred to as delegated legislation. The terms are synonymous. The term delegated refers to the fact that the powers claimed by the legislation are delegated from another item of legislation."@en ;
+	rdfs:comment "An item of secondary legislation. Secondary legislation is also referred to as delegated legislation. The terms are synonymous. 'Delegated' refers to the fact that the powers claimed by the legislation are delegated from an item of primary legislation, i.e. its parent or enabling Act, which proscribes its powers and procedures."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:StatutoryInstrument rdf:type owl:Class ;
 	rdfs:subClassOf plg:SecondaryLegislation ;
 	rdfs:label "StatutoryInstrument"@en ;
 	rdfs:comment "A statutory instrument. Statutory instruments are a type of delegated (or secondary) legislation. They can be used to make specific changes to the law under under authority contained in Acts of Parliament."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:EnablingPower rdf:type owl:Class ;
-	rdfs:label "EnablingPower"@en ;
-	rdfs:comment "The power to enable a piece of secondary legislation."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 
@@ -45,9 +46,9 @@ plg:EnablingPower rdf:type owl:Class ;
 
 plg:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "enabledBy"@en ;
-	rdfs:comment "Relates a piece of secondary legislation to an enabling power."@en ;
+	rdfs:comment "Relates a piece of secondary legislation to its parent or enabling Act. Secondary legislation can have one or more enabling Acts. Secondary legislation can delegate powers to make further subordinate legislation. This is known as a sub-delegation or tertiary law. Such law is not usually made by Statutory Instrument, and doesn’t come near Parliament."@en ;
 	rdfs:domain plg:SecondaryLegislation ;
-	rdfs:range plg:EnablingPower ;
+	rdfs:range plg:PrimaryLegislation ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 				
 	
@@ -76,35 +77,35 @@ plg:impactAssessmentURL rdf:type owl:DatatypeProperty ;
 	
 plg:explanatoryMemorandumURL rdf:type owl:DatatypeProperty ;
 	rdfs:label "explanatoryMemorandumURL"@en ;
-	rdfs:comment "The URL of an explanatory memorandum associated with an item of legislation (on legislation.gov.uk)."@en ;
+	rdfs:comment "The URL of an explanatory memorandum associated with an item of secondary legislation (on legislation.gov.uk)."@en ;
 	rdfs:domain plg:SecondaryLegislation ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:siNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "siNumber"@en ;
-	rdfs:comment "The number of the SI."@en ;
+	rdfs:comment "The number of the Statutory Instrument. The bibliographic citation for Statutory Instruments is concatenated from an abbreviation for the document type, year of laying and the SI number e.g. SI 2018/9999."@en ;
 	rdfs:domain plg:StatutoryInstrument ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "madeDate"@en ;
-	rdfs:comment "The date on which the SI was or is going to be made. Note that making happens outside of Parliament by the minister responsible for the SI."@en ;
+	rdfs:comment "The date on which the Statutory Instrument was, or is going to be, made. Note that the process of making happens outside Parliament, by the minister responsible for the Statutory Instrument."@en ;
 	rdfs:domain plg:StatutoryInstrument ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "comingIntoForceDate"@en ;
-	rdfs:comment "The date on which the SI was or is going to come into force. Where given this will be the date on which the whole SI comes into force. Sometimes coming into force will be fuzzier than a given date. Sometimes different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
+	rdfs:comment "The date on which the Statutory Instrument came, or is going to come, into force. Where given, this will be the date on which the whole Statutory Instrument comes into force. Sometimes coming into force will be fuzzier than a given date e.g. sometimes different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate; the coming into force details will be given as a comingIntoForceNote."@en ;
 	rdfs:domain plg:StatutoryInstrument ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "comingIntoForceNote"@en ;
-	rdfs:comment "A note to say when the SI was or is going to come into force. Sometimes coming into force will be fuzzier than a given date. Sometimes different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
+	rdfs:comment "A note to say when the Statutory Instrument came, or is going to come, into force. Sometimes coming into force will be fuzzier than a given date e.g. different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
 	rdfs:domain plg:StatutoryInstrument ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
