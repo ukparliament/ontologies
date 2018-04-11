@@ -39,16 +39,28 @@ plg:StatutoryInstrument rdf:type owl:Class ;
 	rdfs:comment "A statutory instrument. Statutory instruments are a type of delegated (or secondary) legislation. They can be used to make specific changes to the law under under authority contained in Acts of Parliament."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
+plg:ProposedStatutoryInstrument rdf:type owl:Class ;
+	rdfs:label "ProposedStatutoryInstrument"@en ;
+	rdfs:comment "All regulations proposed to be made under the powers in clauses 7, 8 or 9 of the European Union (Withdrawal) Bill, which Ministers consider need to be made under the negative procedure, will be laid before both Houses as proposed statutory instruments. Sifting committees in both Houses may recommend a change to the affirmative procedure. A proposed statutory instrument may lead to a statutory instrument being laid, or multiple, or none."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
 
 	
 ##### Object properties ####
 
 
-plg:enabledBy rdf:type owl:ObjectProperty ;
-	rdfs:label "enabledBy"@en ;
-	rdfs:comment "Relates a piece of secondary legislation to its parent or enabling Act. Secondary legislation can have one or more enabling Acts. Secondary legislation can delegate powers to make further subordinate legislation. This is known as a sub-delegation or tertiary law. Such law is not usually made by Statutory Instrument, and doesn’t come near Parliament."@en ;
+plg:enablingAct rdf:type owl:ObjectProperty ;
+	rdfs:label "enablingAct"@en ;
+	rdfs:comment "Relates a piece of secondary legislation to its parent or enabling Act. Secondary legislation can have one or more enabling Acts. Secondary legislation can delegate powers to make further subordinate legislation. This is known as a sub-delegation or tertiary law. Such law is not usually made by statutory instrument, and doesn’t come near Parliament."@en ;
 	rdfs:domain plg:SecondaryLegislation ;
 	rdfs:range plg:PrimaryLegislation ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:precededBy rdf:type owl:ObjectProperty ;
+	rdfs:label "precededBy"@en ;
+	rdfs:comment "Relates a statutory instrument to any proposed statutory instruments that preceded it."@en ;
+	rdfs:domain plg:StatutoryInstrument ;
+	rdfs:range plg:ProposedStatutoryInstrument ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 				
 	
