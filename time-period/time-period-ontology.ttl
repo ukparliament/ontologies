@@ -51,7 +51,7 @@ pt:Reign rdf:type owl:Class ;
 pt:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "ParliamentPeriod"@en ;
-	rdfs:comment "The period of a single parliament. A parliament period contains session and prorogation periods. These run contiguously within a parliament period. In other words, during a parliament period, Parliament is either in session or prorogued. A parliament begins on the date named in the preceding dissolution proclamation. The start date of a parliament may be changed by subsequent proclamations. A parliament ends at the next dissolution, the date of which is given in a subsequent dissolution proclamation. Except in exceptional circumstances, a parliamentary period lasts 5 years as set out in the Fixed Term Parliament Act 2011. Parliament periods are the same across both Houses."@en ;
+	rdfs:comment "The period of a single Parliament between its first assembly after a general election and its dissolution. A parliament period contains session and prorogation periods. These run contiguously within a parliament period. In other words, during a parliament period, Parliament is either in session or prorogued. A Parliament begins on the date named in the proclamation which is now issued after a dissolution (until 2015 the dissolution proclamation also named the date for Parliament to reassemble). The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution, the date of which is determined by the Fixed Term Parliament Act 2011 or is named in a proclamation after Parliament has voted for an early general election (before 2015 the date of dissolution was indeterminate and fixed by proclamation). Parliament periods are the same across both Houses. Parliaments are numbered in sequence from the first Parliament of the United Kingdom beginning with 1801. As of April 2018, the current Parliament is the 57th."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:DissolutionPeriod rdf:type owl:Class ;
@@ -93,13 +93,13 @@ pt:Term rdf:type owl:Class ;
 pt:Recess rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Recess"@en ;
-	rdfs:comment "The period between term periods during which Parliament is inactive and does not sit. Some business may continue. Recess periods are not necessarily the same across both Houses."@en ;
+	rdfs:comment "A period during a session when one or both Houses have adjourned to a day other than the next usual sitting day, which may be for between a few days and several weeks. Officially, a recess is the period when Parliament is prorogued, but it is now used to indicate what are officially known as periodic adjournments (which would normally be called holidays). A periodic adjournment may be ended by a prorogation or a dissolution."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:SittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "SittingDay"@en ;
-	rdfs:comment "A day on which a House is sitting. Sitting days are not the same across both Houses."@en ;
+	rdfs:comment "A day on which a House is sitting. Sitting days are not the same across both Houses. A sitting day may continue after midnight and therefore cross more than one calendar day, but it is known by the day on which it started."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:TablingDay rdf:type owl:Class ;
@@ -111,13 +111,13 @@ pt:TablingDay rdf:type owl:Class ;
 pt:PrayingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PrayingDay"@en ;
-	rdfs:comment "On the day of laying of a negative statutory instrument, a forty day time period commences during which it is possible for Members to pray against the instrument. The forty day period is not comprised of consecutive days. It excludes any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Unlike sitting days and tabling days, praying days are identical across both Houses. In the House of Commons, the prayer can be a motion to annul or to revoke. In the House of Lords, praying against may take the form of a motion to annul, a motion to regret, or a motion to take note."@en ;
+	rdfs:comment "On the day of laying of a negative statutory instrument, a forty day time period commences during which it is possible for Members to pray against the instrument. The forty day period is not comprised of consecutive days. It excludes any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Unlike sitting days and tabling days, praying days are identical across both Houses. In both Houses the effective motion during the praying time is a motion to annul. After the praying time expires an ineffective motion to annul or to revoke can be used. In the House of Lords, a non-fatal motion to regret, or a motion to take note may be used even during the praying time."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PrintingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PrintingDay"@en ;
-	rdfs:comment "A day on which the current list of amendments to a public or hybrid bill is printed."@en ;
+	rdfs:comment "A printing day is a non-sitting day during an adjournment (not including a non-sitting Friday) on which any parliamentary questions or amendments to Bills tabled since the last sitting day are published. The parliamentary questions so published are not officially tabled until the next sitting day, but under House of Commons Standing Order No. 64, amendments to Bills received before 4.30 on the last business day of the period are treated as if that day were a sitting day."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:House rdf:type owl:Class ;
