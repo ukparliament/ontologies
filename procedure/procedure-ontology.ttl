@@ -118,8 +118,15 @@ ppr:follows rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Route ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:in rdf:type owl:ObjectProperty ;
-	rdfs:label "in"@en ;
+ppr:stepInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "stepInHouse"@en ;
+	rdfs:comment "Relates a step to one or both Houses."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:House ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+		
+ppr:procedureInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "procedureInHouse"@en ;
 	rdfs:comment "Relates a procedure to one or both Houses."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:House ;
