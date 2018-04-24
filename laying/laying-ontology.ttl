@@ -1,11 +1,11 @@
-@prefix pl: <http://parliament.uk/ontologies/laying/> . 
+@prefix pl: <https://parliament.uk/ontologies/laying/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://parliament.uk/ontologies/laying/> 
+<https://parliament.uk/ontologies/laying/> 
     rdf:type owl:Ontology ;
     dcterms:title "Laying ontology"@en ;
     dcterms:created "06/02/2018"^^xsd:date ;
@@ -18,59 +18,59 @@
 pl:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:LayingOrWithdrawal rdf:type owl:Class ;
 	rdfs:label "LayingOrWithdrawal"@en ;
 	rdfs:comment "The act of laying before or withdrawing from a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
 	rdfs:comment "The period during which Parliament is active. The first session of a parliament begins on the same day as the parliament. This date is named in the dissolution proclamation. It ends on the day named in the subsequent prorogation proclamation. Subsequent sessions begin and end on dates named in prorogation proclamations. The final session ends with a prorogation followed by a dissolution. Parliament may be prorogued a few days before dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:LayingBody rdf:type owl:Class ;
 	rdfs:label "LayingBody"@en ;
 	rdfs:comment "A body with the authority to lay papers before a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:Laying rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Laying"@en ;
 	rdfs:comment "The act of presenting a paper to a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:Withdrawal rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Withdrawal"@en ;
 	rdfs:comment "The act of withdrawing a paper from a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:LayingAuthorityType rdf:type owl:Class ;
 	rdfs:label "LayingAuthorityType"@en ;
 	rdfs:comment "The procedural authority by which a paper is laid before a House. Many documents are required by law to be laid before the House. These are called Act papers and are referred to as being laid 'by Act'. Other papers are made available to the House by the Government. These are called Command papers and are referred to as being laid 'by Command'. A paper cannot be laid by both Act and Command, although in some cases papers are laid by Act in the Commons and by Command in the Lords."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:LayableThing rdf:type owl:Class ;
 	rdfs:label "LayableThing"@en ;
 	rdfs:comment "Any type of paper which can be laid before a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:Legislation rdf:type owl:Class ;
 	rdfs:label "Legislation"@en ;
 	rdfs:comment "Legislation is another term for statutory law, the laws passed by a Parliament or other legislative body. This can be primary legislation (Acts), or secondary legislation (e.g. statutory instruments)."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 
 pl:WithdrawableThing rdf:type owl:Class ;
 	rdfs:label "WithdrawableThing"@en ;
 	rdfs:comment "Any type of paper which can be withdrawn from a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 #######  Object properties ##### 
 
@@ -79,63 +79,63 @@ pl:hasHouse rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an act of laying or withdrawing to the House it happens in."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:House ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:inSession rdf:type owl:ObjectProperty ;
 	rdfs:label "inSession"@en ;
 	rdfs:comment "Relates an act of laying or withdrawing to the Session it happens in. Note that papers may be laid during a prorogation period for the attention of the House during the subsequent session. In this case this relationship would point to the subsequent session."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:Session ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:layingBody rdf:type owl:ObjectProperty ;
 	rdfs:label "layingBody"@en ;
 	rdfs:comment "Relates an act of laying or withdrawal to the laying body initiating it."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:LayingBody ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:layingPerson rdf:type owl:ObjectProperty ;
 	rdfs:label "layingPerson"@en ;
 	rdfs:comment "Relates an act of laying to the person initiating it."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:Person ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:layingAuthorityType rdf:type owl:ObjectProperty ;
 	rdfs:label "layingAuthorityType"@en ;
 	rdfs:comment "Relates an act of laying to a laying authority type."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:LayingAuthorityType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:lays rdf:type owl:ObjectProperty ;
 	rdfs:label "lays"@en ;
 	rdfs:comment "Relates an act of laying to a thing which is layable."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:LayableThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:withdraws rdf:type owl:ObjectProperty ;
 	rdfs:label "withdraws"@en ;
 	rdfs:comment "Relates an act of withdrawal to a thing which is withdrawable."@en ;
 	rdfs:domain pl:Withdrawal ;
 	rdfs:range pl:WithdrawableThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .	
 
 pl:replaces rdf:type owl:ObjectProperty ;
 	rdfs:label "replaces"@en ;
 	rdfs:comment "Relates a laid thing to the withdrawn thing it replaces."@en ;
 	rdfs:domain pl:LayableThing ;
 	rdfs:range pl:WithdrawableThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "enabledBy"@en ;
 	rdfs:comment "Relates a layable thing to the legislation that enables it. Note that this might be either primary or secondary legislation. Where it's secondary legislation, that legislation must in turn be enabled by an Act, possibly via other pieces of secondary legislation. The enabling Act will set out what changes are permissable by secondary legislation. The Joint Committee on Statutory Instruments (or the Select Committee on Statutory Instruments for papers laid in the House of Commons only) will examine secondary legislation laid before Parliament, advising on whether or not it fits within the bounds specified by the enabling Act."@en ;
 	rdfs:domain pl:LayableThing ;
 	rdfs:range pl:Legislation ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 				
 
 #######  Data properties ##### 
@@ -145,11 +145,11 @@ pl:laidOn rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates an act of laying to the date it happens on. Note that this can only happen during a parliamentary period (during a session or prorogation period), not during dissolution."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .
 	
 pl:withdrawnOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "withdrawnOn"@en ;
 	rdfs:comment "Relates an act of withdrawal to the date it happens on."@en ;
 	rdfs:domain pl:Withdrawal ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/laying/> .

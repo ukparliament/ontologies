@@ -1,11 +1,11 @@
-@prefix ps: <http://parliament.uk/ontologies/submission/> . 
+@prefix ps: <https://parliament.uk/ontologies/submission/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://parliament.uk/ontologies/submission/> 
+<https://parliament.uk/ontologies/submission/> 
     rdf:type owl:Ontology ;
     dcterms:title "Submission ontology"@en ;
     dcterms:created "29/08/2017"^^xsd:date ;
@@ -18,73 +18,73 @@
 ps:Event rdf:type owl:Class ;
 	rdfs:label "Event"@en ;
 	rdfs:comment "An event. A thing that happens over a time interval."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:CalendarEvent rdf:type owl:Class ;
 	rdfs:label "CalendarEvent"@en ;
 	rdfs:comment "A planned or arranged event in a place."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:Call rdf:type owl:Class ;
 	rdfs:subClassOf ps:Event ;
 	rdfs:label "Call"@en ;
 	rdfs:comment "A call by a committee or committees conducting an inquiry for written evidence, oral evidence, papers or records."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:CallForOralEvidence rdf:type owl:Class ;
 	rdfs:subClassOf ps:Call ;
 	rdfs:label "CallForOralEvidence"@en ;
 	rdfs:comment "A call by a committee or committees conducting an inquiry for a named witness to provide oral evidence."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:Compelled rdf:type owl:Class ;
 	rdfs:subClassOf ps:CallForOralEvidence ;
 	rdfs:label "Compelled"@en ;
 	rdfs:comment "A call by a committee or committees conducting an inquiry compelling a named witness to provide oral evidence."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:CallForPapers rdf:type owl:Class ;
 	rdfs:subClassOf ps:Call ;
 	rdfs:label "CallForPapers"@en ;
 	rdfs:comment "A call by a committee or committees conducting an inquiry for a named individual or organisation to provide papers. Papers are understood to be documents that the individual or organisation are unlikely to possess but would be able to compile."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:CallForRecords rdf:type owl:Class ;
 	rdfs:subClassOf ps:Call ;
 	rdfs:label "CallForRecords"@en ;
 	rdfs:comment "A call by a committee or committees conducting an inquiry for a named individual or organisation to provide records. Records are understood to be documents that the individual or organisation are known to possess."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:CallForEvidence rdf:type owl:Class ;
 	rdfs:subClassOf ps:Call ;
 	rdfs:label "CallForEvidence"@en ;
 	rdfs:comment "An open call by a committee or committees conducting an inquiry for members of the public or organisations to provide written evidence. Sometimes referred to as a call for written submissions."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:Contribution rdf:type owl:Class ;
 	rdfs:label "Contribution"@en ;
 	rdfs:comment "A contribution by an individual or organisation to a committee inquiry. This might be in the form of written evidence, oral evidence, papers or records."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:Document rdf:type owl:Class ;
 	rdfs:label "Document"@en ;
 	rdfs:comment "A document."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
 	rdfs:comment "A focus area for a contribution. Borrowed from the formal body ontology to identify the subject area or areas covered by a contribution."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 
 ps:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
 	rdfs:comment "A position held by a person for a period of time e.g. Philip Hammond occupying the position of Foreign Secretary between two dates."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 
 	
@@ -98,63 +98,63 @@ ps:compelledToAttend rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a compelled call for oral evidence to a calendar event where the witness is expected to be heard."@en ;
 	rdfs:domain ps:Compelled ;
 	rdfs:range ps:CalendarEvent ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:callForOralEvidence rdf:type owl:ObjectProperty ;
 	rdfs:label "callForOralEvidence"@en ;
 	rdfs:comment "Relates a call for oral evidence to a contribution made in response to that call."@en ;
 	rdfs:domain ps:CallForOralEvidence ;
 	rdfs:range ps:Contribution ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:callForPapers rdf:type owl:ObjectProperty ;
 	rdfs:label "callForPapers"@en ;
 	rdfs:comment "Relates a call for papers to a contribution made in response to that call."@en ;
 	rdfs:domain ps:CallForPapers ;
 	rdfs:range ps:Contribution ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:callForRecords rdf:type owl:ObjectProperty ;
 	rdfs:label "callForRecords"@en ;
 	rdfs:comment "Relates a call for records to a contribution made in response to that call."@en ;
 	rdfs:domain ps:CallForRecords ;
 	rdfs:range ps:Contribution ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:respondsToCall rdf:type owl:ObjectProperty ;
 	rdfs:label "respondsToCall"@en ;
 	rdfs:comment "Relates any type of contribution to the call it is submitted in response to."@en ;
 	rdfs:domain ps:Contribution ;
 	rdfs:range ps:Call ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:makesContribution rdf:type owl:ObjectProperty ;
 	rdfs:label "makesContribution"@en ;
 	rdfs:comment "Relates a person making a contribution to their contribution."@en ;
 	rdfs:domain ps:Person ;
 	rdfs:range ps:Contribution ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:contributes rdf:type owl:ObjectProperty ;
 	rdfs:label "contributes"@en ;
 	rdfs:comment "Relates a contribution to a document contributed."@en ;
 	rdfs:domain ps:Contribution ;
 	rdfs:range ps:Document ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:focusOfContribution rdf:type owl:ObjectProperty ;
 	rdfs:label "focusOfContribution"@en ;
 	rdfs:comment "Relates a contribution to its focus (subject) area(s)."@en ;
 	rdfs:domain ps:Contribution ;
 	rdfs:range ps:Focus ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 ps:inCapacity rdf:type owl:ObjectProperty ;
 	rdfs:label "inCapacity"@en ;
 	rdfs:comment "Relates a contribution to the incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation."@en ;
 	rdfs:domain ps:Contribution ;
 	rdfs:range ps:Incumbency ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .
 	
 
 				
@@ -166,19 +166,19 @@ ps:callDescription rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates any type of call to its descriptive text."@en ;
 	rdfs:domain ps:Call ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .	
 
 ps:calledAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "calledAt"@en ;
 	rdfs:comment "The date time at which a call is made."@en ;
 	rdfs:domain ps:Call ;
 	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .	
 
 ps:callEnds rdf:type owl:DatatypeProperty ;
 	rdfs:label "callEnds"@en ;
 	rdfs:comment "The date time at which a call ends."@en ;
 	rdfs:domain ps:Call ;
 	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/submission/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/submission/> .	
 						
