@@ -1,11 +1,11 @@
-@prefix pss: <http://parliament.uk/ontologies/stats-series/> . 
+@prefix pss: <https://parliament.uk/ontologies/stats-series/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://parliament.uk/ontologies/stats-series/> 
+<https://parliament.uk/ontologies/stats-series/> 
     rdf:type owl:Ontology ;
     dcterms:title "Stats series ontology"@en ;
     dcterms:created "08/03/2018"^^xsd:date ;
@@ -18,55 +18,55 @@
 pss:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .	
 
 pss:Population rdf:type owl:Class ;
 	rdfs:label "Population"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:People rdf:type owl:Class ;
 	rdfs:subClassOf pss:Population ;
 	rdfs:label "People"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:Residences rdf:type owl:Class ;
 	rdfs:subClassOf pss:Population ;
 	rdfs:label "Residences"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:Businesses rdf:type owl:Class ;
 	rdfs:subClassOf pss:Population ;
 	rdfs:label "Businesses"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:DataPoint rdf:type owl:Class ;
 	rdfs:label "DataPoint"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:TemporalCoverage rdf:type owl:Class ;
 	rdfs:label "TemporalCoverage"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:DataSet rdf:type owl:Class ;
 	rdfs:label "DataSet"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:Source rdf:type owl:Class ;
 	rdfs:label "Source"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 
 pss:Unit rdf:type owl:Class ;
 	rdfs:label "Unit"@en ;
 	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 	
 
 	
@@ -77,42 +77,42 @@ pss:boundBy rdf:type owl:ObjectProperty ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:Population ;
 	rdfs:range pss:Place ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 	
 pss:measure rdf:type owl:ObjectProperty ;
 	rdfs:label "measure"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataPoint ;
 	rdfs:range pss:Population ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 	
 pss:temporalCoverage rdf:type owl:ObjectProperty ;
 	rdfs:label "temporalCoverage"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataPoint ;
 	rdfs:range pss:TemporalCoverage ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 	
 pss:inDataSet rdf:type owl:ObjectProperty ;
 	rdfs:label "inDataSet"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataPoint ;
 	rdfs:range pss:DataSet ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 	
 pss:fromSource rdf:type owl:ObjectProperty ;
 	rdfs:label "fromSource"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range pss:Source ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 	
 pss:hasUnit rdf:type owl:ObjectProperty ;
 	rdfs:label "hasUnit"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range pss:Unit ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 				
 	
 ##### Data properties ####	
@@ -122,19 +122,19 @@ pss:value rdf:type owl:DatatypeProperty ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataPoint ;
 	rdfs:range xsd:integer ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 						
 pss:caveatText rdf:type owl:DatatypeProperty ;
 	rdfs:label "caveatText"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 						
 pss:updateFrequency rdf:type owl:DatatypeProperty ;
 	rdfs:label "updateFrequency"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/stats-series/> .
 					

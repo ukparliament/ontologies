@@ -1,11 +1,11 @@
-@prefix pa: <http://parliament.uk/ontologies/agency/> . 
+@prefix pa: <https://parliament.uk/ontologies/agency/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://parliament.uk/ontologies/agency/> 
+<https://parliament.uk/ontologies/agency/> 
     rdf:type owl:Ontology ;
     dcterms:title "Agency ontology"@en ;
     dcterms:created "05/10/2016"^^xsd:date ;
@@ -18,54 +18,54 @@
 pa:Agent rdf:type owl:Class ;
 	rdfs:label "Agent"@en ;
 	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 
 pa:Person rdf:type owl:Class ;
 	rdfs:subClassOf pa:Agent ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 	
 pa:Group rdf:type owl:Class ;
 	rdfs:subClassOf pa:Agent ;
 	rdfs:label "Group"@en ;
 	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
 	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:Position rdf:type owl:Class ;
 	rdfs:label "Position"@en ;
 	rdfs:comment "A position in a group that persists over time which can be occupied by different people at different times e.g. many people have been Foreign Secretary."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 	
 pa:Affiliation rdf:type owl:Class ;
 	rdfs:label "Affiliation"@en ;
 	rdfs:comment "A person or group's affiliation to a group between between two dates. Might be a membership of a committee or a whipping to a party."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 	
 pa:GenderIdentity rdf:type owl:Class ;
 	rdfs:label "GenderIdentity"@en ;
 	rdfs:comment "The gender a person identifies as. May change over time."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 									
 pa:Gender rdf:type owl:Class ;
 	rdfs:label "Gender"@en ;
 	rdfs:comment "A gender."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 	
 pa:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
 	rdfs:comment "A geographic place."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 	
 pa:Concept rdf:type owl:Class ;
 	rdfs:label "Concept"@en ;
 	rdfs:comment "A concept."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 	
 				
 
@@ -76,63 +76,63 @@ pa:hasGenderIdentity rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a person to their gender identity."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:GenderIdentity ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 	
 pa:hasInterest rdf:type owl:ObjectProperty ;
 	rdfs:label "hasInterest"@en ;
 	rdfs:comment "Relates an agent (person or group) to a concept as a (policy) interest."@en ;
 	rdfs:domain pa:Agent ;
 	rdfs:range pa:Concept ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:hasGender rdf:type owl:ObjectProperty ;
 	rdfs:label "hasGender"@en ;
 	rdfs:comment "The gender as identified at that time."@en ;
 	rdfs:domain pa:GenderIdentity ;
 	rdfs:range pa:Gender ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 
 pa:hasAffiliation rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAffiliation"@en ;
 	rdfs:comment "Relates an agent (person or group) to an affiliation e.g. person is member of a committee, or a sub-committee is a member of a committee."@en ;
 	rdfs:domain pa:Agent ;
 	rdfs:range pa:Affiliation ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 	
 pa:hasIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "hasIncumbency"@en ;
 	rdfs:comment "Relates a person to an incumbency."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:Incumbency ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 	
 pa:hasPosition rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPosition"@en ;
 	rdfs:comment "Relates an incumbency to a position."@en ;
 	rdfs:domain pa:Incumbency ;
 	rdfs:range pa:Position ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .
 	
 pa:positionIn rdf:type owl:ObjectProperty ;
 	rdfs:label "positionIn"@en ;
 	rdfs:comment "Relates a position to a group e.g. Chancellor to the Treasury."@en ;
 	rdfs:domain pa:Position ;
 	rdfs:range pa:Group ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .				
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .				
 		
 pa:affiliatedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "affiliatedTo"@en ;
 	rdfs:comment "Relates an affiliation to a group e.g. membership of a committee between two dates."@en ;
 	rdfs:domain pa:Affiliation ;
 	rdfs:range pa:Group ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 	
 pa:placeOfBirth rdf:type owl:ObjectProperty ;
 	rdfs:label "placeOfBirth"@en ;
 	rdfs:comment "Relates a person to their place of birth."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range pa:Place ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 				
 
 #######  Data properties ##### 
@@ -142,46 +142,46 @@ pa:title rdf:type owl:DatatypeProperty ;
 	rdfs:comment "A person's title. e.g. Mr, Ms, Dr."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:givenName rdf:type owl:DatatypeProperty ;
 	rdfs:label "givenName"@en ;
 	rdfs:comment "A person's personal name, commonly known in the west as first or forename."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:otherNames rdf:type owl:DatatypeProperty ;
 	rdfs:label "otherNames"@en ;
 	rdfs:comment "A person's additional given names."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:familyName rdf:type owl:DatatypeProperty ;
 	rdfs:label "familyName"@en ;
 	rdfs:comment "A person's inherited name, commonly known in the west as surname."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:dateOfBirth rdf:type owl:DatatypeProperty ;
 	rdfs:label "dateOfBirth"@en ;
 	rdfs:comment "A person's date of birth."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	
 
 pa:dateOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:label "dateOfDeath"@en ;
 	rdfs:comment "A person's date of death."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .		
 
 pa:purpose rdf:type owl:DatatypeProperty ;
 	rdfs:label "purpose"@en ;
 	rdfs:comment "A statement on why a group exists and what its job is."@en ;
 	rdfs:domain pa:Group ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/agency/> .	

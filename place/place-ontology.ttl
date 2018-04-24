@@ -1,11 +1,11 @@
-@prefix pp: <http://parliament.uk/ontologies/place/> . 
+@prefix pp: <https://parliament.uk/ontologies/place/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://parliament.uk/ontologies/place/> 
+<https://parliament.uk/ontologies/place/> 
     rdf:type owl:Ontology ;
     dcterms:title "Place ontology"@en ;
     dcterms:created "08/11/2016"^^xsd:date ;
@@ -17,17 +17,17 @@
 pp:Geometry rdf:type owl:Class ;
 	rdfs:label "Geometry."@en ;
 	rdfs:comment "A geographic extent expressed as a point, box or polygon."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/place/> .
 	
 pp:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
 	rdfs:comment "A geographic place."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/place/> .
 	
 pp:PlaceType rdf:type owl:Class ;
 	rdfs:label "PlaceType"@en ;
 	rdfs:comment "A place type e.g. town, constituency, county, country."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/place/> .	
 	
 	
 #### object property ####
@@ -37,21 +37,21 @@ pp:hasGeometry rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a place to its geometric representation."@en ;
 	rdfs:domain pp:Place ;
 	rdfs:range pp:Geometry ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/place/> .
 	
 pp:hasPlaceType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasPlaceType"@en ;
 	rdfs:comment "Relates a place to a place type."@en ;
 	rdfs:domain pp:Place ;
 	rdfs:range pp:PlaceType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/place/> .	
 
 pp:containedByPlace rdf:type owl:ObjectProperty ;
 	rdfs:label "containedByPlace"@en ;
 	rdfs:comment "Relates a place to a place it is contained by e.g. town in constituency in county in country."@en ;
 	rdfs:domain pp:Place ;
 	rdfs:range pp:Place ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/place/> .					
+	rdf:isDefinedBy <https://parliament.uk/ontologies/place/> .					
 
 	
 	

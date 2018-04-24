@@ -1,11 +1,11 @@
-@prefix pt: <http://parliament.uk/ontologies/tabling/> . 
+@prefix pt: <https://parliament.uk/ontologies/tabling/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://parliament.uk/ontologies/tabling/> 
+<https://parliament.uk/ontologies/tabling/> 
     rdf:type owl:Ontology ;
     dcterms:title "Tabling ontology"@en ;
     dcterms:created "01/12/2017"^^xsd:date ;
@@ -18,32 +18,32 @@
 pt:Member rdf:type owl:Class ;
 	rdfs:label "Member"@en ;
 	rdfs:comment "A current or former Member of a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 
 pt:Tabling rdf:type owl:Class ;
 	rdfs:label "Tabling"@en ;
 	rdfs:comment "The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 
 pt:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
 	rdfs:comment "The period during which Parliament is active between the Queen's Speech and prorogation or dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both houses."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 
 pt:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 
 pt:WrittenNotice rdf:type owl:Class ;
 	rdfs:label "WrittenNotice"@en ;
 	rdfs:comment "Official notice of an item of future business."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 
 pt:TabledThing rdf:type owl:Class ;
 	rdfs:label "TabledThing"@en ;
 	rdfs:comment "Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or nomination. Note that not all motions are tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 
 	
 ##### Object properties ####
@@ -53,35 +53,35 @@ pt:requests rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a member to an act of tabling."@en ;
 	rdfs:domain pt:Member ;
 	rdfs:range pt:Tabling ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 	
 pt:givesNotice rdf:type owl:ObjectProperty ;
 	rdfs:label "givesNotice"@en ;
 	rdfs:comment "Relates an act of tabling to a written notice."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:WrittenNotice ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 	
 pt:tabledInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "tabledInHouse"@en ;
 	rdfs:comment "Relates an act of tabling to the House in which it happens."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:House ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 	
 pt:tabledInSession rdf:type owl:ObjectProperty ;
 	rdfs:label "tabledInSession"@en ;
 	rdfs:comment "Relates an act of tabling to the Session in which it happens."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:Session ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 	
 pt:tables rdf:type owl:ObjectProperty ;
 	rdfs:label "tables"@en ;
 	rdfs:comment "Relates an act of tabling to the business item which has been tabled."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:TabledThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 	
 
 				
@@ -93,11 +93,11 @@ pt:tabledOn rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates an act of tabling to the date on which it happened."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .
 	
 pt:isInterestDeclared rdf:type owl:DatatypeProperty ;
 	rdfs:label "isInterestDeclared"@en ;
 	rdfs:comment "Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members' Financial Interests."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range xsd:boolean ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .	
+	rdf:isDefinedBy <https://parliament.uk/ontologies/tabling/> .	
