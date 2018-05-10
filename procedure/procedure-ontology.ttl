@@ -27,7 +27,7 @@ ppr:Route rdf:type owl:Class ;
 	
 ppr:RouteType rdf:type owl:Class ;
 	rdfs:label "RouteType"@en ;
-	rdfs:comment "Route types are: causes, allows and precludes. A route of type 'causes' relates the route to a following step where completion of the preceding step(s) directly causes the route to trigger the next step i.e. the next step is inevitable. A route of type 'allows' relates the route to a following step where completion of the preceding step(s) allows the next step to happen, but does not cause it to happen i.e. the next step might happen but is not inevitable. A route of type 'precludes' relates a route to a step where completion of the preceding step(s) precludes that step from happening i.e. the next step can no longer happen."@en ;
+	rdfs:comment "Route types are: causes, allows, precludes and requires. A route of type 'causes' relates the route to a following step where completion of the preceding step(s) directly causes the route to trigger the next step i.e. the next step is inevitable. A route of type 'allows' relates the route to a following step where completion of the preceding step(s) allows the next step to happen, but does not cause it to happen i.e. the next step might happen but is not inevitable. A route of type 'precludes' relates a route to a step where completion of the preceding step(s) precludes that step from happening i.e. the next step can no longer happen. A route of type 'requires' relates a route to a step where completion of the preceding step(s) is required before that step can happen i.e. the next step can't happen unless the preceding step has been completed."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:House rdf:type owl:Class ;
@@ -38,11 +38,6 @@ ppr:House rdf:type owl:Class ;
 ppr:Procedure rdf:type owl:Class ;
 	rdfs:label "Procedure"@en ;
 	rdfs:comment "A parliamentary procedure in a particular House or Houses. An example might be the passage of a made affirmative statutory instrument in both Houses. Note that some procedures are House specific, but can involve things like a joint committee that cuts across the two Houses. In the latter case we consider it to be a single procedure."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:BusinessItem rdf:type owl:Class ;
-	rdfs:label "BusinessItem"@en ;
-	rdfs:comment "An item of parliamentary business."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:BusinessItem rdf:type owl:Class ;
@@ -60,11 +55,16 @@ ppr:WorkPackage rdf:type owl:Class ;
 	rdfs:comment "A package of work grouping together many individual business items e.g. the passage of a specific statutory instrument, or the passage of a specific public bill etc. Whereas a procedure (and its accompanying routes and steps) describes the process, the work package handles the application of that process for a specific instance."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:Focus rdf:type owl:Class ;
+	rdfs:label "Focus"@en ;
+	rdfs:comment "A focus area for a formal body or work package."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 #######  Object properties ##### 
 
 ppr:belongsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "belongsTo"@en ;
-	rdfs:comment "Relates an individual business item to the work package it is part of. Note that whilst a work package can contain many business items, a business item might relate to several work packages e.g. a meeting of the Joint Committee on Statutory Instruments might include business relating to many SI work packages with no distinct segmentation."@en ;
+	rdfs:comment "Relates an individual business item to the work package it is part of. Note that whilst a work package can contain many business items, a business item might relate to several work packages e.g. a meeting of the Joint Committee on Statutory Instruments might include business relating to many SI work packages with no distinct segmentation. Note also that the ordering of business items in a work package cannot be determined by the (end) date alone. Many business items inside a work package may share the same (end) date. In this case ordinality can only be determined by spanning the procedure tree, taking into account actualised steps and the route types joining steps to determine the real-world order."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -130,4 +130,11 @@ ppr:procedureInHouse rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a procedure to one or both Houses."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:House ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+		
+ppr:workPackageFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "workPackageFocus"@en ;
+	rdfs:comment "Relates a work package to an area of focus."@en ;
+	rdfs:domain ppr:WorkPackage ;
+	rdfs:range ppr:Focus ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
