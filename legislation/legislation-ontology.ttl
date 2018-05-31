@@ -108,6 +108,13 @@ plg:proposedNegativeStatutoryInstrumentEnabledBy rdf:type owl:ObjectProperty ;
 	rdfs:range plg:EnablingPower ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
+plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
+	rdfs:label "precededByProposedNegativeStatutoryInstrument"@en ;
+	rdfs:comment "Relates a draft or made Statutory Instrument subject to parliamentary procedure to any preceding proposed negative Statutory Instrument."@en ;
+	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:range plg:ProposedNegativeStatutoryInstrument ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
 plg:embodiedAsDraftStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "embodiedAsDraftStatutoryInstrument"@en ;
 	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to the work level of any document published in draft form."@en ;
@@ -117,7 +124,7 @@ plg:embodiedAsDraftStatutoryInstrument rdf:type owl:ObjectProperty ;
 	
 plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "embodiedAsMadeStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to the work level of any document published in made form."@en ;
+	rdfs:comment "Relates a draft or made Statutory Instrument subject to parliamentary procedure to the work level of any document published in made form."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:MadeStatutoryInstrument ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
