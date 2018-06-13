@@ -17,22 +17,22 @@
 
 plg:ActOfParliament rdf:type owl:Class ;
 	rdfs:label "ActOfParliament"@en ;
-	rdfs:comment "An Act of Parliament creates a new law or changes an existing law. An Act is a Bill that has been approved by both the House of Commons and the House of Lords and been given Royal Assent by the Monarch. Taken together, Acts of Parliament make up what is known as Statute Law in the UK."@en ;
+	rdfs:comment "An Act of Parliament creates a new law or changes an existing law. Once a Bill has been approved by both the House of Commons and the House of Lords and been given Royal Assent by the Monarch it becomes an Act of Parliament. Taken together, Acts of Parliament make up what is known as Statute Law in the UK."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:StatutoryDayCount rdf:type owl:Class ;
 	rdfs:label "StatutoryDayCount"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Some Acts of Parliament define a day count during which Parliament may scrutinise an instrument. The days may either be sitting days or statutory days (see the time period ontology) e.g. the Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. Sometimes the enabling act (via enabling power) may define an exception to this default. Most commonly this will be 28, 60 or 120 days."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:StatutoryDayCountType rdf:type owl:Class ;
 	rdfs:label "StatutoryDayCountType"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Statutory day counts are calculated according to the day type specified in an Act. Sometimes only sitting days are counted. Sometimes statutory days are counted. See the time period ontology for definitions."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:EnablingPower rdf:type owl:Class ;
 	rdfs:label "EnablingPower"@en ;
-	rdfs:comment "A power delegated from an item of primary legislation, enabling a government minister to bring forward secondary legislation."@en ;
+	rdfs:comment "A power delegated from an item of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward, such as the procedure it will be subject to, any override of statutory day count and the scope of the secondary legislation, are specified by the enabling power."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:WorkPackage rdf:type owl:Class ;
@@ -42,7 +42,7 @@ plg:WorkPackage rdf:type owl:Class ;
 
 plg:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:label "WorkPackageableThing"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Any thing that can be the focus of a workpackage."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
@@ -54,24 +54,24 @@ plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
 	
 plg:StatutoryEnabledThing rdf:type owl:Class ;
 	rdfs:label "StatutoryEnabledThing"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Any parliamentary thing whose existence is enabled and / or governed by statute law."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
 	rdfs:subClassOf plg:WorkPackageableThing ;
 	rdfs:subClassOf plg:StatutoryEnabledThing ;
 	rdfs:label "DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure"@en ;
-	rdfs:comment "Both draft and made Statutory Instruments are subject to parliamentary procedure. See the procedure ontology for details. This is at a higher conceptual level than the FRBR work identified under legislation.gov.uk and provides a way to abstract away from their document based model to things that Parliament takes an interest in."@en ;
+	rdfs:comment "Both draft and made statutory instruments are subject to parliamentary procedure. See the procedure ontology for details. This is at a higher conceptual level than the FRBR work identified under legislation.gov.uk and provides a way to abstract away from their document based model to things that Parliament takes an interest in."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DraftStatutoryInstrument rdf:type owl:Class ;
 	rdfs:label "DraftStatutoryInstrument"@en ;
-	rdfs:comment "A draft statutory instrument. This can become an item of secondary legislation if and when a government minister 'makes' it. Despite not (yet) being legislation, draft statutory instruments are published on legislation.gov.uk. Equivalent to a FRBR work in a legislation.gov.uk sense."@en ;
+	rdfs:comment "A draft statutory instrument. Subject to parliamentary approval, this can become an item of secondary legislation if and when a government minister 'makes' it. Despite not (yet) being legislation, draft statutory instruments are published on legislation.gov.uk. Equivalent to a FRBR work in a legislation.gov.uk sense."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:MadeStatutoryInstrument rdf:type owl:Class ;
 	rdfs:label "MadeStatutoryInstrument"@en ;
-	rdfs:comment "A statutory instrument which has been made into law by a government minister. Statutory instruments are a type of secondary (or delegated) legislation. They can be used to make specific changes to the law under authority contained in Acts of Parliament."@en ;
+	rdfs:comment "A statutory instrument which has been made into law by a government minister. Statutory instruments are a type of secondary (or delegated) legislation. They can be used to make specific changes to the law under enabling powers delegated by Acts of Parliament."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 
@@ -79,21 +79,21 @@ plg:MadeStatutoryInstrument rdf:type owl:Class ;
 
 plg:delegates rdf:type owl:ObjectProperty ;
 	rdfs:label "delegates"@en ;
-	rdfs:comment "Relates an Act of Parliament to an enabling power which the Act delegates. Secondary legislation can also delegate powers to make further subordinate legislation. This is known as a sub-delegation or tertiary law. Such law is not usually made by statutory instrument, and doesn’t come near Parliament."@en ;
+	rdfs:comment "Relates an Act of Parliament to an enabling power delegated by that Act. Secondary legislation can also delegate powers to make further subordinate legislation. This is known as a sub-delegation or tertiary law. Such law is not usually made by statutory instrument, and doesn’t come near Parliament."@en ;
 	rdfs:domain plg:ActOfParliament ;
 	rdfs:range plg:EnablingPower ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:specifiesStatutoryDayCount rdf:type owl:ObjectProperty ;
 	rdfs:label "specifiesStatutoryDayCount"@en ;
-	rdfs:comment "Relates an Act of Parliament to a statutory day count."@en ;
+	rdfs:comment "Relates an Act of Parliament to a statutory day count. For statutory instruments the default statutory day count is 40 statutory days as defined by the Statutory Instruments Act 1946. Sometimes the enabling Act will override this value."@en ;
 	rdfs:domain plg:ActOfParliament ;
 	rdfs:range plg:StatutoryDayCount ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:dayType rdf:type owl:ObjectProperty ;
 	rdfs:label "dayType"@en ;
-	rdfs:comment "Relates a statutory day count to a statutory day count type."@en ;
+	rdfs:comment "Relates a statutory day count to a statutory day count type. Values might be sitting days or statutory days. See the time period ontology for definitions."@en ;
 	rdfs:domain plg:StatutoryDayCount ;
 	rdfs:range plg:StatutoryDayCountType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
@@ -114,28 +114,28 @@ plg:focus rdf:type owl:ObjectProperty ;
 	
 plg:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "enabledBy"@en ;
-	rdfs:comment "Relates a statutory enabled thing to the power that enables it. Statutory Instruments can have one or more enabling powers derived from one or more Acts of Parliament."@en ;
+	rdfs:comment "Relates a statutory enabled thing to the power that enables it. Statutory instruments can have one or more enabling powers derived from one or more Acts of Parliament."@en ;
 	rdfs:domain plg:StatutoryEnabledThing ;
 	rdfs:range plg:EnablingPower ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "precededByProposedNegativeStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made Statutory Instrument subject to parliamentary procedure to any preceding Proposed Negative Statutory Instrument."@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to any preceding proposed negative statutory instrument(s)."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:ProposedNegativeStatutoryInstrument ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:embodiedAsDraftStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "embodiedAsDraftStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to the work level of any document published in draft form."@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to the FRBR work level of any document published on legislation.gov.uk in draft form."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:DraftStatutoryInstrument ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "embodiedAsMadeStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made Statutory Instrument subject to parliamentary procedure to the work level of any document published in made form."@en ;
+	rdfs:comment "Relates a draft or made Statutory Instrument subject to parliamentary procedure to the FRBR work level of any document published on legislation.gov.uk in made form."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:MadeStatutoryInstrument ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
@@ -145,49 +145,49 @@ plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
 			
 plg:count rdf:type owl:DatatypeProperty ;
 	rdfs:label "count"@en ;
-	rdfs:comment "Specifies the number of days of a given type that a Statutory Instrument or Proposed Negative Statutory Instrument is subject to parliamentary scrutiny."@en ;
+	rdfs:comment "Specifies the total number of days of a given type. This is the period during which a statutory instrument or proposed negative statutory instrument is subject to parliamentary scrutiny."@en ;
 	rdfs:domain plg:StatutoryDayCount ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:siPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "siPrefix"@en ;
-	rdfs:comment "The prefix of a statutory instrument. Usually this will be SI but for regulations might be SR or SR (NI) etc. The prefix forms the first part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
+	rdfs:comment "The prefix of a statutory instrument. Usually this will be SI. Other prefixes, such as for regulations include SR (NI). The prefix forms the first part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range rdfs:Literal ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:siYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "siYear"@en ;
-	rdfs:comment "The year of a statutory instrument. Usually this will be the year it was laid before Parliament but might also be the year in which it was made. The use of laid year or made year is not predictable. The year forms the second part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
+	rdfs:comment "The year of a statutory instrument. Usually this will be the year it was laid before Parliament. Occasionally a statutory instrument laid in draft in one calendar year and made the following calendar year will have its SI year updated. The year forms the second part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:siNumberInYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "siNumberInYear"@en ;
-	rdfs:comment "Statutory instruments are given a number in sequence in a year (see siYear). The number forms the third part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
+	rdfs:comment "Statutory instruments are given a number in a year (see siYear). The number forms the third part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "madeDate"@en ;
-	rdfs:comment "The date on which the Statutory Instrument was, or is going to be, made. Note that the process of making happens outside Parliament, by the minister responsible for the Statutory Instrument."@en ;
+	rdfs:comment "The date on which the statutory instrument was made. Note that the process of making happens outside Parliament, by the minister responsible for the statutory instrument."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "comingIntoForceDate"@en ;
-	rdfs:comment "The date on which the Statutory Instrument came, or is going to come, into force. Where given, this will be the date on which the whole Statutory Instrument comes into force. Sometimes coming into force will be fuzzier than a given date e.g. sometimes different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate; the coming into force details will be given as a comingIntoForceNote."@en ;
+	rdfs:comment "The date on which the statutory instrument came, or is going to come, into force. Where given, this will be the date on which the whole statutory instrument comes into force. Sometimes coming into force will be fuzzier than a given date e.g. different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate; the coming into force details will be given as a comingIntoForceNote."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "comingIntoForceNote"@en ;
-	rdfs:comment "A note to say when the Statutory Instrument came, or is going to come, into force. Sometimes coming into force will be fuzzier than a given date e.g. different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
+	rdfs:comment "A note to say when the statutory instrument came, or is going to come, into force. Sometimes coming into force will be fuzzier than a given date e.g. different schedules within the SI will come into force at different times. In these cases there'll be no comingIntoForceDate but the coming into force details will be given as a comingIntoForceNote."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
