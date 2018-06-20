@@ -108,10 +108,10 @@ pt:TablingDay rdf:type owl:Class ;
 	rdfs:comment "A day on which it is possible for a Member of a House to table a question. In the House of Commons questions can only be tabled on sitting days. In the House of Lords questions can also be tabled on selected recess days."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:PrayingDay rdf:type owl:Class ;
+pt:StatutoryDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "PrayingDay"@en ;
-	rdfs:comment "On the day of laying of a negative statutory instrument, a forty day time period commences during which it is possible for Members to pray against the instrument. The forty day period is comprised of consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account. Unlike sitting days and tabling days, both the number of praying days and the end date of the Prayer period are identical across both Houses. In both Houses the effective motion during the praying time is a motion to annul. After the praying time expires an ineffective motion to annul or to revoke can be used. In the House of Lords, a non-fatal motion to regret, or a motion to take note may be used even during the praying time."@en ;
+	rdfs:label "StatutoryDay"@en ;
+	rdfs:comment "There is a defined period of time during which Members can object to negative and made affirmative statutory instruments. Only certain calendar days are included when calculating this period. The total number and nature of days on which a Member can object are defined by statute and differ across parliamentary procedure. Statutory days comprise consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account, unless the instrument is laid into the House of Commons only. In this case the calculation is based on Commons sitting days and short adjournments. On the day on which a negative statutory instrument is laid, a forty day time period commences during which it is possible for Members to 'pray' against (table a motion objecting to) the instrument. This 40 day period is defined by the Statutory Instruments Act 1946. Prayers can be effective (fatal) or ineffective (non-fatal). In both Houses, the effective motion during the praying time is a motion to annul. Ineffective or non-fatal motions may also be tabled; in the Commons as a motion to withdraw, and in the Lords as a motion to regret or take note. In the Commons, only effective motions can be tabled during praying time. In the House of Lords, non-fatal motions may be tabled during praying time. For made affirmative statutory instruments the time limit is set out in the enabling Act, rather than in the Statutory Instruments Act 1946. It is typically 28 or 40 days. The time period commences on the day the instrument is made, rather than laid. The enabling Act stipulates which days are counted towards the time limit, and typically follows the logic previously described."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PrintingDay rdf:type owl:Class ;
@@ -186,11 +186,18 @@ pt:hasRecess rdf:type owl:ObjectProperty ;
 	rdfs:range pt:Recess ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:hasPrayingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPrayingDay"@en ;
-	rdfs:comment "Relates a session to a praying day."@en ;
-	rdfs:domain pt:Session ;
-	rdfs:range pt:PrayingDay ;
+pt:hasStatutoryDay rdf:type owl:ObjectProperty ;
+	rdfs:label "hasStatutoryDay"@en ;
+	rdfs:comment "Relates a term to a statutory day."@en ;
+	rdfs:domain pt:Term ;
+	rdfs:range pt:StatutoryDay ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:recallStatutoryDay rdf:type owl:ObjectProperty ;
+	rdfs:label "recallStatutoryDay"@en ;
+	rdfs:comment "Relates a recess to a statutory day."@en ;
+	rdfs:domain pt:Recess ;
+	rdfs:range pt:StatutoryDay ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:houseHasTerm rdf:type owl:ObjectProperty ;
