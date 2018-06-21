@@ -32,7 +32,7 @@ plg:StatutoryDayCountType rdf:type owl:Class ;
 
 plg:EnablingPower rdf:type owl:Class ;
 	rdfs:label "EnablingPower"@en ;
-	rdfs:comment "A power delegated from an item of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward, such as the procedure it will be subject to, any override of statutory day count and the scope of the secondary legislation, are specified by the enabling power."@en ;
+	rdfs:comment "A power delegated by one or more items of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward, such as the procedure it will be subject to, any override of statutory day count, and the scope of the secondary legislation are specified by the enabling power."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:WorkPackage rdf:type owl:Class ;
@@ -114,7 +114,7 @@ plg:focus rdf:type owl:ObjectProperty ;
 	
 plg:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "enabledBy"@en ;
-	rdfs:comment "Relates a statutory enabled thing to the power that enables it. Statutory instruments can have one or more enabling powers derived from one or more Acts of Parliament."@en ;
+	rdfs:comment "Relates a statutory enabled thing to the power that enables it. Statutory instruments have an enabling power derived from one or more Acts of Parliament."@en ;
 	rdfs:domain plg:StatutoryEnabledThing ;
 	rdfs:range plg:EnablingPower ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
