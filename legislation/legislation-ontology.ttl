@@ -20,14 +20,14 @@ plg:ActOfParliament rdf:type owl:Class ;
 	rdfs:comment "An Act of Parliament creates a new law or changes an existing law. Once a Bill has been approved by both the House of Commons and the House of Lords and been given Royal Assent by the Monarch it becomes an Act of Parliament. Taken together, Acts of Parliament make up what is known as Statute Law in the UK."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:StatutoryDayCount rdf:type owl:Class ;
-	rdfs:label "StatutoryDayCount"@en ;
+plg:DayCount rdf:type owl:Class ;
+	rdfs:label "DayCount"@en ;
 	rdfs:comment "Some Acts of Parliament define a day count during which Parliament may scrutinise an instrument. The days may either be sitting days or statutory days (see the time period ontology) e.g. the Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. Sometimes the enabling act (via enabling power) may define an exception to this default. Most commonly this will be 28, 60 or 120 days."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:StatutoryDayCountType rdf:type owl:Class ;
-	rdfs:label "StatutoryDayCountType"@en ;
-	rdfs:comment "Statutory day counts are calculated according to the day type specified in an Act. Sometimes only sitting days are counted. Sometimes statutory days are counted. See the time period ontology for definitions."@en ;
+plg:DayCountType rdf:type owl:Class ;
+	rdfs:label "DayCountType"@en ;
+	rdfs:comment "Day counts are calculated according to the day type specified in an Act. Sometimes only sitting days are counted. Sometimes statutory days are counted. See the time period ontology for definitions."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:EnablingPower rdf:type owl:Class ;
@@ -84,25 +84,25 @@ plg:delegates rdf:type owl:ObjectProperty ;
 	rdfs:range plg:EnablingPower ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:specifiesStatutoryDayCount rdf:type owl:ObjectProperty ;
-	rdfs:label "specifiesStatutoryDayCount"@en ;
-	rdfs:comment "Relates an Act of Parliament to a statutory day count. For statutory instruments the default statutory day count is 40 statutory days as defined by the Statutory Instruments Act 1946. Sometimes the enabling Act will override this value."@en ;
+plg:specifiesDayCount rdf:type owl:ObjectProperty ;
+	rdfs:label "specifiesDayCount"@en ;
+	rdfs:comment "Relates an Act of Parliament to a day count. For statutory instruments the default statutory day count is 40 statutory days as defined by the Statutory Instruments Act 1946. Sometimes the enabling Act will override this value."@en ;
 	rdfs:domain plg:ActOfParliament ;
-	rdfs:range plg:StatutoryDayCount ;
+	rdfs:range plg:DayCount ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:dayType rdf:type owl:ObjectProperty ;
 	rdfs:label "dayType"@en ;
-	rdfs:comment "Relates a statutory day count to a statutory day count type. Values might be sitting days or statutory days. See the time period ontology for definitions."@en ;
-	rdfs:domain plg:StatutoryDayCount ;
-	rdfs:range plg:StatutoryDayCountType ;
+	rdfs:comment "Relates a day count to a day count type. Values might be sitting days or statutory days. See the time period ontology for definitions."@en ;
+	rdfs:domain plg:DayCount ;
+	rdfs:range plg:DayCountType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:dayCountDefinedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "dayCountDefinedBy"@en ;
-	rdfs:comment "Relates a work package to a statutory day count."@en ;
+	rdfs:comment "Relates a work package to a day count."@en ;
 	rdfs:domain plg:WorkPackage ;
-	rdfs:range plg:StatutoryDayCount ;
+	rdfs:range plg:DayCount ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:focus rdf:type owl:ObjectProperty ;
@@ -146,7 +146,7 @@ plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
 plg:count rdf:type owl:DatatypeProperty ;
 	rdfs:label "count"@en ;
 	rdfs:comment "Specifies the total number of days of a given type. This is the period during which a statutory instrument or proposed negative statutory instrument is subject to parliamentary scrutiny."@en ;
-	rdfs:domain plg:StatutoryDayCount ;
+	rdfs:domain plg:DayCount ;
 	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
