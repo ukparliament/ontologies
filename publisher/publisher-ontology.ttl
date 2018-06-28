@@ -1,0 +1,87 @@
+@prefix ppub: <http://parliament.uk/ontologies/publisher/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/publisher/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Publisher ontology"@en ;
+    dcterms:created "28/06/2018"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Publisher ontology for UK Parliament. Needs to be read in conjunction with the document, agent and core ontologies."@en .
+
+
+#######  Classes ##### 	
+
+ppub:Group rdf:type owl:Class ;
+	rdfs:label "Group"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Publisher rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Group ;
+	rdfs:label "Publisher"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Board rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Group ;
+	rdfs:label "Board"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:House rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Group ;
+	rdfs:label "House"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Library rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Publisher ;
+	rdfs:label "Library"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:LibrarySection rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Publisher ;
+	rdfs:label "LibrarySection"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+
+##### Object properties ####
+
+ppub:hasBoard rdf:type owl:ObjectProperty ;
+	rdfs:label "hasBoard"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppub:Publisher ;
+	rdfs:range ppub:Board ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:hasLibrary rdf:type owl:ObjectProperty ;
+	rdfs:label "hasLibrary"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppub:House ;
+	rdfs:range ppub:Library ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:hasSection rdf:type owl:ObjectProperty ;
+	rdfs:label "hasSection"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppub:Library ;
+	rdfs:range ppub:LibrarySection ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:coversPolicyArea rdf:type owl:ObjectProperty ;
+	rdfs:label "coversPolicyArea"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppub:LibrarySection ;
+	rdfs:range ppub:Concept ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
