@@ -97,11 +97,6 @@ pfb:Document rdf:type owl:Class ;
 	rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence or that serves as an official record."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
-pfb:FocussedOn rdf:type owl:Class ;
-	rdfs:label "FocussedOn"@en ;
-	rdfs:comment "A time bound period during which a Formal Body or work package is investigating a specific subject or policy area."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
 pfb:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
 	rdfs:comment "A focus area for a Formal Body or work package."@en ;
@@ -212,24 +207,17 @@ pfb:inWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:range pfb:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
-pfb:formalBodyFocussedOn rdf:type owl:ObjectProperty ;
-	rdfs:label "formalBodyFocussedOn"@en ;
-	rdfs:comment "Allows a Formal Body to focus on different areas and for this focus to change over time."@en ;
+pfb:formalBodyFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "formalBodyFocus"@en ;
+	rdfs:comment "Allows a Formal Body to focus on different areas."@en ;
 	rdfs:domain pfb:FormalBody ;
-	rdfs:range pfb:FocussedOn ;
+	rdfs:range pfb:Focus ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
-pfb:workPackageFocussedOn rdf:type owl:ObjectProperty ;
-	rdfs:label "workPackageFocussedOn"@en ;
-	rdfs:comment "Allows a work package to focus on different areas and for this focus to change over time."@en ;
+pfb:workPackageFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "workPackageFocus"@en ;
+	rdfs:comment "Allows a work package to focus on different areas."@en ;
 	rdfs:domain pfb:WorkPackage ;
-	rdfs:range pfb:FocussedOn ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:hasFocus rdf:type owl:ObjectProperty ;
-	rdfs:label "hasFocus"@en ;
-	rdfs:comment "Relates a time bound focus to a specific focus area."@en ;
-	rdfs:domain pfb:FocussedOn ;
 	rdfs:range pfb:Focus ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
