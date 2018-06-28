@@ -28,17 +28,17 @@ ppb:Sistership rdf:type owl:Class ;
 ppb:Party rdf:type owl:Class ;
 	rdfs:subClassOf ppb:ParliamentaryBloc ;
 	rdfs:label "Party"@en ;
-	rdfs:comment "An organised political group."@en ;
+	rdfs:comment "An organised political group registered with the Electoral Commission."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:ParliamentaryBloc rdf:type owl:Class ;
 	rdfs:label "ParliamentaryBloc"@en ;
-	rdfs:comment "A group of members. This might be a political party such as Labour or Conservative. Or might be a different type of grouping such as Bishops or Crossbenchers in the House of Lords."@en ;
+	rdfs:comment "A group of members. This includes a political party such as Labour or Conservative, and also includes different types of grouping such as Bishops or Crossbenchers in the House of Lords."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:Affiliation rdf:type owl:Class ;
 	rdfs:label "Affiliation"@en ;
-	rdfs:comment "A person or group's affiliation to a parliamentary bloc between between two dates. Could be used to describe affiliations to non-political party blocs. e.g. Crossbenchers and bishops in the House of Lords. Could also be used to describe members having an affiliation to the Co-operative Party whilst being whipped to Labour."@en ;
+	rdfs:comment "A person or group's affiliation to a parliamentary bloc between two dates. Could be used to describe affiliations to blocs which are not political parties e.g. Crossbenchers and bishops in the House of Lords. Could also be used to describe members having an affiliation to the Co-operative Party whilst being whipped to Labour."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:Whipping rdf:type owl:Class ;
@@ -74,7 +74,7 @@ ppb:hasSistership rdf:type owl:ObjectProperty ;
 	
 ppb:affiliatedToParliamentaryBloc rdf:type owl:ObjectProperty ;
 	rdfs:label "affiliatedToParliamentaryBloc"@en ;
-	rdfs:comment "Relates an affiliation to a parliamentary bloc. e.g. covers the affiliation of a crossbencher to the crossbench bloc in the House of Lords. "@en ;
+	rdfs:comment "Relates an affiliation to a parliamentary bloc. e.g. covers the affiliation of a Crossbencher to the Crossbench bloc in the House of Lords. "@en ;
 	rdfs:domain ppb:Affiliation ;
 	rdfs:range ppb:ParliamentaryBloc ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
