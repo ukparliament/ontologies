@@ -17,22 +17,22 @@
 
 pcon:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A person."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:Contribution rdf:type owl:Class ;
 	rdfs:label "Contribution"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A contribution made by an individual to a document or committee inquiry etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:ContributionRole rdf:type owl:Class ;
 	rdfs:label "ContributionRole"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The type of contribution made. Might be as an author or reviewer or inquiry witness etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates"@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 				
@@ -41,21 +41,21 @@ pcon:Incumbency rdf:type owl:Class ;
 
 pcon:makesContribution rdf:type owl:ObjectProperty ;
 	rdfs:label "makesContribution"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a person to a contribution they've made."@en ;
 	rdfs:domain pcon:Person ;
 	rdfs:range pcon:Contribution ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:hasContributionRole rdf:type owl:ObjectProperty ;
 	rdfs:label "hasContributionRole"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a contribution to the type of contribution made."@en ;
 	rdfs:domain pcon:Contribution ;
 	rdfs:range pcon:ContributionRole ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:inCapacity rdf:type owl:ObjectProperty ;
 	rdfs:label "inCapacity"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a contribution to an incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation."@en ;
 	rdfs:domain pcon:Contribution ;
 	rdfs:range pcon:Incumbency ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
