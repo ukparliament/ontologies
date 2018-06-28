@@ -23,13 +23,13 @@ ppub:Group rdf:type owl:Class ;
 ppub:Publisher rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Group ;
 	rdfs:label "Publisher"@en ;
-	rdfs:comment "A publisher of written materials."@en ;
+	rdfs:comment "A publisher of recorded material."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:Board rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Group ;
 	rdfs:label "Board"@en ;
-	rdfs:comment "A group of people who set the direction for a publisher."@en ;
+	rdfs:comment "A group of people who direct the publisher e.g. POST has a board made up of Members of Parliament who consider and approve research areas to be covered."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:House rdf:type owl:Class ;
@@ -47,7 +47,7 @@ ppub:Library rdf:type owl:Class ;
 ppub:LibrarySection rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Publisher ;
 	rdfs:label "LibrarySection"@en ;
-	rdfs:comment "The House of Commons Library is divided into research sections. e.g. the Parliament and Constitution Centre."@en ;
+	rdfs:comment "The House of Commons Library is divided into sections some of which are research sections and publishers. e.g. the Parliament and Constitution Centre."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:Concept rdf:type owl:Class ;
@@ -81,7 +81,7 @@ ppub:hasSection rdf:type owl:ObjectProperty ;
 	
 ppub:coversPolicyArea rdf:type owl:ObjectProperty ;
 	rdfs:label "coversPolicyArea"@en ;
-	rdfs:comment "Relates a library section to a policy area as a SKOS-like concept."@en ;
+	rdfs:comment "Relates a library section to a policy area or policy areas as a SKOS-like concept."@en ;
 	rdfs:domain ppub:LibrarySection ;
 	rdfs:range ppub:Concept ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
