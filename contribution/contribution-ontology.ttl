@@ -1,0 +1,61 @@
+@prefix pcon: <http://parliament.uk/ontologies/contribution/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/contribution/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "contribution ontology"@en ;
+    dcterms:created "28/06/2018"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "contribution ontology for UK Parliament"@en .
+
+
+#######  Classes #####
+
+pcon:Person rdf:type owl:Class ;
+	rdfs:label "Person"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:Contribution rdf:type owl:Class ;
+	rdfs:label "Contribution"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:ContributionRole rdf:type owl:Class ;
+	rdfs:label "ContributionRole"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment ""@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+				
+
+#######  Object properties ##### 
+
+pcon:makesContribution rdf:type owl:ObjectProperty ;
+	rdfs:label "makesContribution"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcon:Person ;
+	rdfs:range pcon:Contribution ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:hasContributionRole rdf:type owl:ObjectProperty ;
+	rdfs:label "hasContributionRole"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcon:Contribution ;
+	rdfs:range pcon:ContributionRole ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:inCapacity rdf:type owl:ObjectProperty ;
+	rdfs:label "inCapacity"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcon:Contribution ;
+	rdfs:range pcon:Incumbency ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
