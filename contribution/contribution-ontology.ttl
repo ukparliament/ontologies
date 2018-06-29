@@ -15,14 +15,14 @@
 
 #######  Classes #####
 
-pcon:Person rdf:type owl:Class ;
-	rdfs:label "Person"@en ;
-	rdfs:comment "A person."@en ;
+pcon:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:Contribution rdf:type owl:Class ;
 	rdfs:label "Contribution"@en ;
-	rdfs:comment "A contribution made by an individual to a document or committee inquiry etc."@en ;
+	rdfs:comment "A contribution by an individual or organisation to a document or committee inquiry etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 pcon:ContributionRole rdf:type owl:Class ;
@@ -41,8 +41,8 @@ pcon:Incumbency rdf:type owl:Class ;
 
 pcon:makesContribution rdf:type owl:ObjectProperty ;
 	rdfs:label "makesContribution"@en ;
-	rdfs:comment "Relates a person to a contribution they've made."@en ;
-	rdfs:domain pcon:Person ;
+	rdfs:comment "Relates a person or group to a contribution they've made."@en ;
+	rdfs:domain pcon:Agent ;
 	rdfs:range pcon:Contribution ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
