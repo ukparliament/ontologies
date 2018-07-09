@@ -155,9 +155,16 @@ pdoc:partOfVersion rdf:type owl:ObjectProperty ;
 	
 pdoc:partOfPart rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfPart"@en ;
-	rdfs:comment "Relates a part to its part part."@en ;
-	rdfs:domain pdoc:Part ;
+	rdfs:comment "Relates a section to its parent part."@en ;
+	rdfs:domain pdoc:Section ;
 	rdfs:range pdoc:Part ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	
+pdoc:partOfSection rdf:type owl:ObjectProperty ;
+	rdfs:label "partOfSection"@en ;
+	rdfs:comment "Relates a section to its parent section."@en ;
+	rdfs:domain pdoc:Section ;
+	rdfs:range pdoc:Section ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:editorialVersionHasFocus rdf:type owl:ObjectProperty ;
