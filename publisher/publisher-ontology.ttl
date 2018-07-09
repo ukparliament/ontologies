@@ -15,13 +15,19 @@
 
 #######  Classes ##### 	
 
+ppub:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
 ppub:Group rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Agent ;
 	rdfs:label "Group"@en ;
 	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:Publisher rdf:type owl:Class ;
-	rdfs:subClassOf ppub:Group ;
+	rdfs:subClassOf ppub:Agent ;
 	rdfs:label "Publisher"@en ;
 	rdfs:comment "A publisher of recorded material."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
