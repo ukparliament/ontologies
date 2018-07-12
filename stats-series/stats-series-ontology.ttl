@@ -15,57 +15,82 @@
 
 #######  Classes ##### 	
 
-pss:Place rdf:type owl:Class ;
-	rdfs:label "Place"@en ;
-	rdfs:comment "."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .	
-
 pss:Population rdf:type owl:Class ;
 	rdfs:label "Population"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "A set of things bounded by a geographical extent."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
 pss:People rdf:type owl:Class ;
 	rdfs:subClassOf pss:Population ;
 	rdfs:label "People"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "A population of people in a place. This might be all people resident or over 70s resident or people in receipt of Universal Credit etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
 pss:Residences rdf:type owl:Class ;
 	rdfs:subClassOf pss:Population ;
 	rdfs:label "Residences"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "A population of residences in a place. This might be all residences or local authority owned residences etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
 pss:Businesses rdf:type owl:Class ;
 	rdfs:subClassOf pss:Population ;
 	rdfs:label "Businesses"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "A population of businesses in a place. This might be all registered businesses or business in a certain industrial sector."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+
+pss:Place rdf:type owl:Class ;
+	rdfs:label "Place"@en ;
+	rdfs:comment "A place. Any geographical extent. In the case of parliamentary demographic statistics we'll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .	
 
 pss:DataPoint rdf:type owl:Class ;
 	rdfs:label "DataPoint"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "A specific data point in a statistics release version. A measure for a given population at a point in time or averaged over an interval."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
-
-pss:TemporalCoverage rdf:type owl:Class ;
-	rdfs:label "TemporalCoverage"@en ;
-	rdfs:comment "."@en ;
+	
+pss:DataSetReleaseVersion rdf:type owl:Class ;
+	rdfs:label "DataSetReleaseVersion"@en ;
+	rdfs:comment "A version of release of a data set. Different versions may be released over time to correct miscalculations etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
-
+	
+pss:DataSetRelease rdf:type owl:Class ;
+	rdfs:label "DataSetRelease"@en ;
+	rdfs:comment "A release on a date of a data set. Different versions may be published over time to correct mistakes."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
 pss:DataSet rdf:type owl:Class ;
 	rdfs:label "DataSet"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "A data set e.g. age profiles by constituency over time."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
+pss:TerritorialApplicability rdf:type owl:Class ;
+	rdfs:label "TerritorialApplicability"@en ;
+	rdfs:comment "The territorial applicability of a data set release. Allows us to say that a given release of a data set contains data from a given source (organisation) for a given place e.g. a constituency. Sources may change between releases."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
 pss:Source rdf:type owl:Class ;
 	rdfs:label "Source"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "The source organisation for a given subset of a data set release. Much of the data published by the House of Commons Library originates with the Office of National Statistics but often originates with other organisations for the devolved nations e.g. Northern Ireland Statistics and Research Agency for Northern Ireland. Other data sets originate in government departments."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:TemporalCoverage rdf:type owl:Class ;
+	rdfs:label "TemporalCoverage"@en ;
+	rdfs:comment "The period or point in time (date) covered by a statistics release e.g. quarter 1 of 2018 or April 2016. Allows period coverage to vary between releases."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:AverageType rdf:type owl:Class ;
+	rdfs:label "AverageType"@en ;
+	rdfs:comment "Used to say the method of averaging used for data set releases covering a time period rather than a point in time (date)."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
 pss:Unit rdf:type owl:Class ;
 	rdfs:label "Unit"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "The unit of measurement for all data points in a stats series e.g. GBP."@en ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:Period rdf:type owl:Class ;
+	rdfs:label "Period"@en ;
+	rdfs:comment "The period over which a measurement is counted e.g. wages per week."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 
@@ -74,44 +99,86 @@ pss:Unit rdf:type owl:Class ;
 
 pss:boundBy rdf:type owl:ObjectProperty ;
 	rdfs:label "boundBy"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a population (of people, residences, businesses etc) to a geographic area."@en ;
 	rdfs:domain pss:Population ;
 	rdfs:range pss:Place ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
-pss:measure rdf:type owl:ObjectProperty ;
-	rdfs:label "measure"@en ;
-	rdfs:comment "."@en ;
+pss:measureOf rdf:type owl:ObjectProperty ;
+	rdfs:label "measureOf"@en ;
+	rdfs:comment "Relates a data point to a given population."@en ;
 	rdfs:domain pss:DataPoint ;
 	rdfs:range pss:Population ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
-pss:temporalCoverage rdf:type owl:ObjectProperty ;
-	rdfs:label "temporalCoverage"@en ;
-	rdfs:comment "."@en ;
+pss:inDataSetReleaseVersion rdf:type owl:ObjectProperty ;
+	rdfs:label "inDataSetReleaseVersion"@en ;
+	rdfs:comment "Relates a data point to a data set release version it's part of."@en ;
 	rdfs:domain pss:DataPoint ;
-	rdfs:range pss:TemporalCoverage ;
+	rdfs:range pss:DataSetReleaseVersion ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
-pss:inDataSet rdf:type owl:ObjectProperty ;
-	rdfs:label "inDataSet"@en ;
-	rdfs:comment "."@en ;
-	rdfs:domain pss:DataPoint ;
+pss:releaseVersionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "releaseVersionOf"@en ;
+	rdfs:comment "Relates a data set release version to a data set release."@en ;
+	rdfs:domain pss:DataSetReleaseVersion ;
+	rdfs:range pss:DataSetRelease ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+
+pss:releaseOf rdf:type owl:ObjectProperty ;
+	rdfs:label "releaseOf"@en ;
+	rdfs:comment "Relates a data set release to a data set it contributes to."@en ;
+	rdfs:domain pss:DataSetRelease ;
 	rdfs:range pss:DataSet ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+
+pss:hasTerritorialApplicability rdf:type owl:ObjectProperty ;
+	rdfs:label "hasTerritorialApplicability"@en ;
+	rdfs:comment "Relates a data set release to it's territorial applicability."@en ;
+	rdfs:domain pss:DataSetRelease ;
+	rdfs:range pss:TerritorialApplicability ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:inPlace rdf:type owl:ObjectProperty ;
+	rdfs:label "inPlace"@en ;
+	rdfs:comment "Relates territorial applicability to a geographic area."@en ;
+	rdfs:domain pss:TerritorialApplicability ;
+	rdfs:range pss:Place ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 pss:fromSource rdf:type owl:ObjectProperty ;
 	rdfs:label "fromSource"@en ;
-	rdfs:comment "."@en ;
-	rdfs:domain pss:DataSet ;
+	rdfs:comment "Relates territorial applicability to a data source organisation."@en ;
+	rdfs:domain pss:TerritorialApplicability ;
 	rdfs:range pss:Source ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:temporalCoverage rdf:type owl:ObjectProperty ;
+	rdfs:label "temporalCoverage"@en ;
+	rdfs:comment "Relates a data set release to the time period or point in time the data was gathered."@en ;
+	rdfs:domain pss:DataSetRelease ;
+	rdfs:range pss:TemporalCoverage ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:averagedOverPeriodAs rdf:type owl:ObjectProperty ;
+	rdfs:label "averagedOverPeriodAs"@en ;
+	rdfs:comment "Relates a temporal coverage to any means of averaging employed on the data."@en ;
+	rdfs:domain pss:TemporalCoverage ;
+	rdfs:range pss:AverageType ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 pss:hasUnit rdf:type owl:ObjectProperty ;
 	rdfs:label "hasUnit"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a data set to the units in which the data is counted e.g. GBP."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range pss:Unit ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+
+pss:countPer rdf:type owl:ObjectProperty ;
+	rdfs:label "countPer"@en ;
+	rdfs:comment "Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week."@en ;
+	rdfs:domain pss:DataSet ;
+	rdfs:range pss:Period ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 				
 	
@@ -119,22 +186,64 @@ pss:hasUnit rdf:type owl:ObjectProperty ;
 			
 pss:value rdf:type owl:DatatypeProperty ;
 	rdfs:label "value"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a data point to it's value as a float."@en ;
 	rdfs:domain pss:DataPoint ;
-	rdfs:range xsd:integer ;
+	rdfs:range xsd:float ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
-						
+	
+pss:releasedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "releasedOn"@en ;
+	rdfs:comment "Relates a data set release version to the date on which it was released."@en ;
+	rdfs:domain pss:DataPoint ;
+	rdfs:range xsd:float ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:releaseVersionNotes rdf:type owl:DatatypeProperty ;
+	rdfs:label "releaseVersionNotes"@en ;
+	rdfs:comment "Relates a data set release version to explanatory notes."@en ;
+	rdfs:domain pss:DataSetReleaseVersion ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+
+pss:releaseNotes rdf:type owl:DatatypeProperty ;
+	rdfs:label "releaseNotes"@en ;
+	rdfs:comment "Relates a data set release to explanatory notes."@en ;
+	rdfs:domain pss:DataSetRelease ;
+	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
 pss:caveatText rdf:type owl:DatatypeProperty ;
 	rdfs:label "caveatText"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a data set to any caveat text accompanying it."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range rdf:langString ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 						
 pss:updateFrequency rdf:type owl:DatatypeProperty ;
 	rdfs:label "updateFrequency"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a data set to any textual account of its update frequency."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range rdf:langString ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:startOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "startOn"@en ;
+	rdfs:comment "Relates a temporal coverage of a period to the start date of that period."@en ;
+	rdfs:domain pss:TemporalCoverage ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:endOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "endOn"@en ;
+	rdfs:comment "Relates a temporal coverage of a period to the end date of that period."@en ;
+	rdfs:domain pss:TemporalCoverage ;
+	rdfs:range xsd:date ;
+	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
+	
+pss:onDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "onDate"@en ;
+	rdfs:comment "Relates a temporal coverage of a day to that date."@en ;
+	rdfs:domain pss:TemporalCoverage ;
+	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 					
