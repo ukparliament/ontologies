@@ -50,12 +50,12 @@ pss:DataPoint rdf:type owl:Class ;
 	
 pss:DataSetReleaseVersion rdf:type owl:Class ;
 	rdfs:label "DataSetReleaseVersion"@en ;
-	rdfs:comment "A version of release of a data set. Different versions may be released over time to correct miscalculations etc."@en ;
+	rdfs:comment "A version of a release of a data set. Different versions may be released over time to correct miscalculations etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 pss:DataSetRelease rdf:type owl:Class ;
 	rdfs:label "DataSetRelease"@en ;
-	rdfs:comment "A release on a date of a data set. Different versions may be published over time to correct mistakes."@en ;
+	rdfs:comment "A release of a data set. Different versions may be published over time to correct mistakes."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 pss:DataSet rdf:type owl:Class ;
@@ -80,7 +80,7 @@ pss:TemporalCoverage rdf:type owl:Class ;
 	
 pss:AverageType rdf:type owl:Class ;
 	rdfs:label "AverageType"@en ;
-	rdfs:comment "Used to say the method of averaging used for data set releases covering a time period rather than a point in time (date)."@en ;
+	rdfs:comment "Used to express the method of averaging used for data set releases covering a time period rather than a point in time (date)."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
 pss:Unit rdf:type owl:Class ;
@@ -113,7 +113,7 @@ pss:measureOf rdf:type owl:ObjectProperty ;
 	
 pss:inDataSetReleaseVersion rdf:type owl:ObjectProperty ;
 	rdfs:label "inDataSetReleaseVersion"@en ;
-	rdfs:comment "Relates a data point to a data set release version it's part of."@en ;
+	rdfs:comment "Relates a data point to the data set release version it forms part of."@en ;
 	rdfs:domain pss:DataPoint ;
 	rdfs:range pss:DataSetReleaseVersion ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
@@ -127,7 +127,7 @@ pss:releaseVersionOf rdf:type owl:ObjectProperty ;
 
 pss:releaseOf rdf:type owl:ObjectProperty ;
 	rdfs:label "releaseOf"@en ;
-	rdfs:comment "Relates a data set release to a data set it contributes to."@en ;
+	rdfs:comment "Relates a data set release to a data set it forms part of."@en ;
 	rdfs:domain pss:DataSetRelease ;
 	rdfs:range pss:DataSet ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
@@ -169,7 +169,7 @@ pss:averagedOverPeriodAs rdf:type owl:ObjectProperty ;
 	
 pss:hasUnit rdf:type owl:ObjectProperty ;
 	rdfs:label "hasUnit"@en ;
-	rdfs:comment "Relates a data set to the units in which the data is counted e.g. GBP."@en ;
+	rdfs:comment "Relates a data set to the unit in which the data is counted e.g. GBP."@en ;
 	rdfs:domain pss:DataSet ;
 	rdfs:range pss:Unit ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
@@ -195,7 +195,7 @@ pss:releasedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "releasedOn"@en ;
 	rdfs:comment "Relates a data set release version to the date on which it was released."@en ;
 	rdfs:domain pss:DataPoint ;
-	rdfs:range xsd:float ;
+	rdfs:range xsd:date ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 pss:releaseVersionNotes rdf:type owl:DatatypeProperty ;
