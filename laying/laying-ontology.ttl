@@ -57,14 +57,14 @@ pl:LayingAuthorityType rdf:type owl:Class ;
 	rdfs:comment "The procedural authority by which a paper is laid before a House. Many documents are required by law to be laid before the House. These are called Act papers and are referred to as being laid 'by Act'. Other papers are made available to the House by the Government. These are called Command papers and are referred to as being laid 'by Command'. A paper cannot be laid by both Act and Command, although in some cases papers are laid by Act in the Commons and by Command in the Lords."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
-pl:LayableThing rdf:type owl:Class ;
-	rdfs:label "LayableThing"@en ;
-	rdfs:comment "Any type of paper which can be laid before a House."@en ;
+pl:LaidThing rdf:type owl:Class ;
+	rdfs:label "LaidThing"@en ;
+	rdfs:comment "Any type of paper which has been laid before a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
-pl:WithdrawableThing rdf:type owl:Class ;
-	rdfs:label "WithdrawableThing"@en ;
-	rdfs:comment "Any type of paper which can be withdrawn from a House."@en ;
+pl:WithdrawnThing rdf:type owl:Class ;
+	rdfs:label "WithdrawnThing"@en ;
+	rdfs:comment "Any type of paper which has been withdrawn from a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 #######  Object properties ##### 
@@ -106,23 +106,23 @@ pl:layingAuthorityType rdf:type owl:ObjectProperty ;
 	
 pl:lays rdf:type owl:ObjectProperty ;
 	rdfs:label "lays"@en ;
-	rdfs:comment "Relates an act of laying to a thing which is layable."@en ;
+	rdfs:comment "Relates an act of laying to a laid thing."@en ;
 	rdfs:domain pl:Laying ;
-	rdfs:range pl:LayableThing ;
+	rdfs:range pl:LaidThing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:withdraws rdf:type owl:ObjectProperty ;
 	rdfs:label "withdraws"@en ;
-	rdfs:comment "Relates an act of withdrawal to a thing which is withdrawable."@en ;
+	rdfs:comment "Relates an act of withdrawal to a withdrawn thing."@en ;
 	rdfs:domain pl:Withdrawal ;
-	rdfs:range pl:WithdrawableThing ;
+	rdfs:range pl:WithdrawnThing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .	
 
 pl:replaces rdf:type owl:ObjectProperty ;
 	rdfs:label "replaces"@en ;
 	rdfs:comment "Relates a laid thing to the withdrawn thing it replaces."@en ;
-	rdfs:domain pl:LayableThing ;
-	rdfs:range pl:WithdrawableThing ;
+	rdfs:domain pl:LaidThing ;
+	rdfs:range pl:WithdrawnThing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 				
 
