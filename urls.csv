@@ -182,19 +182,34 @@
 ,/work-packages/:workpackage/business-items/upcoming,List of business items in the future in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
 ,,,
 ,/questions,All tabled parliamentary questions ever,Paginated list
+,/questions/withdrawn,All withdrawn tabled parliamentary questions ever,Paginated list
 ,/questions/answered,All (substantively) answered tabled parliamentary questions ever,Paginated list
-,/questions/unanswered,All tabled parliamentary questions awaiting a substantive answer,Paginated list
+,/questions/unanswered,All non-withdrawn tabled parliamentary questions awaiting a substantive answer (including those with only a holding answer),Paginated list
 ,/questions/written,All tabled written parliamentary questions ever,Paginated list
+,/questions/written/withdrawn,All withdrawn tabled written parliamentary questions ever,Paginated list
 ,/questions/written/answered,All (substantively) answered tabled written parliamentary questions ever,Paginated list
-,/questions/written/unanswered,All tabled written parliamentary questions awaiting a substantive answer,Paginated list
+,/questions/written/answered/answer-types,"A list of answer types for a question: holding, substantive, corrected, prorogration",Paginated list
+,/questions/written/answered/answer-types/:answer-type,"All answered tabled written parliamentary questions where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation",Paginated list
+,/questions/written/unanswered,All non-withdrawn tabled written parliamentary questions awaiting a substantive answer (including those with only a holding answer),Paginated list
 ,/questions/oral,All tabled oral parliamentary questions ever,Paginated list
-,/questions/oral/answered,All (substantively) answered tabled oral parliamentary questions ever,Paginated list
-,/questions/oral/unanswered,All tabled oral parliamentary questions awaiting a substantive answer,Paginated list
-,/questions/:question,A tabled parliamentary question,Thing page
-,/questions/:question/answers,"A list of all answers (holding, substantive, corrected) over time for a tabled parliamentary question",Paginated list
+,/questions/oral/question-types,A list of question types for tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/questions/oral/question-types/:question-type,All tabled oral parliamentary questions ever of type as specified,Paginated list
+,/questions/oral/withdrawn,All withdrawn tabled oral parliamentary questions ever,Paginated list
+,/questions/oral/answered,All answered tabled oral parliamentary questions ever,Paginated list
+,/questions/oral/answered/question-types,A list of question types for answered tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/questions/oral/answered/question-types/:question-type,All answered tabled oral parliamentary questions ever of type as specified,Paginated list
+,/questions/oral/unanswered,All non-withdrawn tabled oral parliamentary questions awaiting an answer,Paginated list
+✓,/questions/:question,A tabled parliamentary question,Thing page
+,/questions/:question/answers,"A list of all answers (holding, substantive, corrected, progoration) over time for a tabled parliamentary question",Paginated list
 ,,,
-,/answers,A list of all answers to tabled parliamentary questions ever,Paginated list
-,/answers/:answer,"An individual answer to a tabled parliamentary question. Might be a holding answer, a substantive answer, a corrected answer etc",Thing page
+,/answers,A list of all answers to tabled parliamentary questions ever regardless of type,Paginated list
+,/answers/:answer,"An individual answer to a tabled written parliamentary question. Might be a holding answer, a substantive answer, a corrected answer or a prorogation answer",Thing page
+
+
+
+
+
+
 ,,,
 ✓,/places,List of all places,Paginated list
 ✓,/places/regions,List of all NUTS level 1 regions,Paginated list
