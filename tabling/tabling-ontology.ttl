@@ -22,18 +22,18 @@ pt:House rdf:type owl:Class ;
 	
 pt:TablingOrWithdrawal rdf:type owl:Class ;
 	rdfs:label "TablingOrWithdrawal"@en ;
-	rdfs:comment "The act of tabling into or withdrawing a tabled thing from a House."@en ;
+	rdfs:comment "The act of tabling into, or withdrawing a tabled thing from, a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
  
 pt:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is active between the Queen's Speech and prorogation or dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
+	rdfs:comment "The period during which Parliament is active. The first session of a parliament begins on the same day as the parliament. This date is named in the dissolution proclamation. It ends on the day named in the subsequent prorogation proclamation. Subsequent sessions begin and end on dates named in prorogation proclamations. The final session ends with a prorogation followed by a dissolution. Parliament may be prorogued a few days before dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:Tabling rdf:type owl:Class ;
 	rdfs:subClassOf pt:TablingOrWithdrawal ;
 	rdfs:label "Tabling"@en ;
-	rdfs:comment "The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House."@en ;
+	rdfs:comment "The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:Withdrawal rdf:type owl:Class ;
@@ -54,7 +54,7 @@ pt:WrittenNotice rdf:type owl:Class ;
 	
 pt:TabledThing rdf:type owl:Class ;
 	rdfs:label "TabledThing"@en ;
-	rdfs:comment "Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or nomination. Note that not all motions are tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list."@en ;
+	rdfs:comment "Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:WithdrawnThing rdf:type owl:Class ;
@@ -75,7 +75,7 @@ pt:hasHouse rdf:type owl:ObjectProperty ;
 	
 pt:inSession rdf:type owl:ObjectProperty ;
 	rdfs:label "inSession"@en ;
-	rdfs:comment "Relates an act of tabling or withdrawal to the Session in which it happens."@en ;
+	rdfs:comment "Relates an act of tabling or withdrawal to the session in which it happens."@en ;
 	rdfs:domain pt:TablingOrWithdrawal ;
 	rdfs:range pt:Session ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
