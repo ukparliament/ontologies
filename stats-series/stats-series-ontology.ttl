@@ -17,7 +17,7 @@
 
 pss:Population rdf:type owl:Class ;
 	rdfs:label "Population"@en ;
-	rdfs:comment "A set of things bounded by a geographical extent."@en ;
+	rdfs:comment "A set of things bounded by a geographical extent. Might be a population of residents, a population of those eligible to vote, a population of small businesses, a population of static caravans, in a constituency etc."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 
 pss:People rdf:type owl:Class ;
@@ -186,9 +186,9 @@ pss:countPer rdf:type owl:ObjectProperty ;
 			
 pss:value rdf:type owl:DatatypeProperty ;
 	rdfs:label "value"@en ;
-	rdfs:comment "Relates a data point to it's value as a float."@en ;
+	rdfs:comment "Relates a data point to it's value as an integer."@en ;
 	rdfs:domain pss:DataPoint ;
-	rdfs:range xsd:float ;
+	rdfs:range xsd:integer ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/stats-series/> .
 	
 pss:releasedOn rdf:type owl:DatatypeProperty ;
