@@ -38,13 +38,13 @@ pl:LayingBody rdf:type owl:Class ;
 pl:Laying rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of presenting a paper to a House."@en ;
+	rdfs:comment "The act of presenting a paper (and supporting documents) into either the House of Commons or the House of Lords. In the majority of cases papers are laid in both Houses on the same day. Each House has a Journal Office where papers are laid."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Withdrawal rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Withdrawal"@en ;
-	rdfs:comment "The act of withdrawing a paper from a House."@en ;
+	rdfs:comment "The act of withdrawing a laid thing from a House."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Person rdf:type owl:Class ;
@@ -64,7 +64,7 @@ pl:LaidThing rdf:type owl:Class ;
 
 pl:WithdrawnThing rdf:type owl:Class ;
 	rdfs:label "WithdrawnThing"@en ;
-	rdfs:comment "Any type of paper which has been withdrawn from a House."@en ;
+	rdfs:comment "A laid thing which has subsequently been withdrawn. In practice withdrawal may mean withdrawal of the main paper and / or any supporting documents e.g. a statutory instrument and its associated explanatory memorandum and impact assessment may be withdrawn, or the explanatory memorandum only may be withdrawn."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 #######  Object properties ##### 
@@ -78,7 +78,7 @@ pl:hasHouse rdf:type owl:ObjectProperty ;
 	
 pl:inSession rdf:type owl:ObjectProperty ;
 	rdfs:label "inSession"@en ;
-	rdfs:comment "Relates an act of laying or withdrawing to the Session it happens in. Note that papers may be laid during a prorogation period for the attention of the House during the subsequent session. In this case this relationship would point to the subsequent session."@en ;
+	rdfs:comment "Relates an act of laying or withdrawing to the session it happens in. Note that papers may be laid during a prorogation period for the attention of the House during the subsequent session. In this case this relationship would point to the subsequent session."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:Session ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/laying/> .
