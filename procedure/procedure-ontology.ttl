@@ -45,19 +45,14 @@ ppr:BusinessItem rdf:type owl:Class ;
 	rdfs:comment "An item of parliamentary business. The business item might be scheduled for a time and place via a calendar business item (e.g. a second reading debate), or it might not yet be scheduled (e.g. an early day motion), or it might be an item of business that is never scheduled (e.g. a written question)."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:CalendarBusinessItem rdf:type owl:Class ;
-	rdfs:label "CalendarBusinessItem"@en ;
-	rdfs:comment "Handles the scheduling of a parliamentary business item once it has been timetabled into a calendar. The calendar business item only handles the timetabling of day, time and location and does not describe the nature of the business item."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
 	rdfs:comment "A package of work grouping together many individual business items e.g. the passage of a specific statutory instrument, or the passage of a specific public bill etc. Whereas a procedure (and its accompanying routes and steps) describes the process, the work package handles the application of that process for a specific instance."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:Focus rdf:type owl:Class ;
-	rdfs:label "Focus"@en ;
-	rdfs:comment "A focus area for a formal body or work package."@en ;
+ppr:WorkPackageableThing rdf:type owl:Class ;
+	rdfs:label "WorkPackageableThing"@en ;
+	rdfs:comment "Any thing that can be the focus of a workpackage."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 #######  Object properties ##### 
@@ -69,17 +64,10 @@ ppr:belongsTo rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:WorkPackage ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:calendarises rdf:type owl:ObjectProperty ;
-	rdfs:label "calendarises"@en ;
-	rdfs:comment "Relates a calendar business item to a business item. Note that an individual business item can be calendarised into multiple calendar business items e.g. a second reading of a Bill might take place over several days."@en ;
-	rdfs:domain ppr:CalendarBusinessItem ;
-	rdfs:range ppr:BusinessItem ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "subjectTo"@en ;
-	rdfs:comment "Relates a work package to the procedure it is subject to. A work package can only be subject to one procedure."@en ;
-	rdfs:domain ppr:WorkPackage ;
+	rdfs:comment "Relates a work packageable thing to the procedure it is subject to. A work packageable thing can only be subject to one procedure."@en ;
+	rdfs:domain ppr:WorkPackageableThing ;
 	rdfs:range ppr:Procedure ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
@@ -132,9 +120,9 @@ ppr:procedureInHouse rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:House ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 		
-ppr:workPackageFocus rdf:type owl:ObjectProperty ;
-	rdfs:label "workPackageFocus"@en ;
-	rdfs:comment "Relates a work package to an area of focus."@en ;
+ppr:focus rdf:type owl:ObjectProperty ;
+	rdfs:label "focus"@en ;
+	rdfs:comment "Relates a work package to a workpackageable thing."@en ;
 	rdfs:domain ppr:WorkPackage ;
-	rdfs:range ppr:Focus ;
+	rdfs:range ppr:WorkPackageableThing ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
