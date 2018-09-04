@@ -17,12 +17,12 @@
 
 ppr:Step rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
-	rdfs:comment "A step in a procedure e.g. consideration of a statutory instrument by the Joint Committee on Statutory Instruments. Steps may not be unique to a specific procedure e.g. the consideration described in the previous example happens in both the affirmative and negative statutory instrument procedure."@en ;
+	rdfs:comment "A step in a procedure e.g. consideration of a statutory instrument by the Joint Committee on Statutory Instruments. Steps may not be unique to a specific procedure e.g. the consideration described happens in both the affirmative and negative statutory instrument procedure."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "Ties a procedural step or steps to the subsequent step, according to the RouteType. Note that routes are time bound (borrowing startOn and endOn from the Core Ontology). This allows routes to change over time and adapt to changes in procedure. A route is activated once the business item(s) which actualise the preceding steps are completed. This can be taken to mean the step is 'completed'. Note that the RouteType 'precludes' can route a completed step to the same step. This has the effect of precluding any more instances of that step in the procedure e.g. in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' can happen only once. In other words, the actualisation of this step as a business item precludes any other instance of that step."@en ;
+	rdfs:comment "Links a procedural step or steps, according to the RouteType. Routes are time bound, using startOn and endOn from the Core Ontology. This allows routes to reflect changes in procedure. A route is activated once the preceding steps are actualised by a business item. Some steps only occur once in a work package: the RouteType with the name 'precludes' can route an actualised step to itself. This precludes any further instances of that step in the work package e.g. in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' can happen only once."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:RouteType rdf:type owl:Class ;
@@ -42,17 +42,17 @@ ppr:Procedure rdf:type owl:Class ;
 	
 ppr:BusinessItem rdf:type owl:Class ;
 	rdfs:label "BusinessItem"@en ;
-	rdfs:comment "An item of parliamentary business. The business item might be scheduled for a time and place via a calendar business item (e.g. a second reading debate), or it might not yet be scheduled (e.g. an early day motion), or it might be an item of business that is never scheduled (e.g. a written question)."@en ;
+	rdfs:comment "An item of parliamentary business e.g. a second reading debate, the tabling of an early day motion, a laying of a paper."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
-	rdfs:comment "A package of work grouping together many individual business items e.g. the passage of a specific statutory instrument, or the passage of a specific public bill etc. Whereas a procedure (and its accompanying routes and steps) describes the process, the work package handles the application of that process for a specific instance."@en ;
+	rdfs:comment "A package of work grouping together individual business items e.g. the passage of a specific statutory instrument, or the passage of a specific public bill. Whereas a procedure and its accompanying routes and steps describes the process, the work package and its business items handles the application of that process on a specific work packageable thing."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:label "WorkPackageableThing"@en ;
-	rdfs:comment "Any thing that can be the focus of a workpackage."@en ;
+	rdfs:comment "Any thing that can be the focus of a work package e.g. a statutory instrument, a public bill, a committee inquiry."@en ;
 	rdf:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 #######  Object properties ##### 
