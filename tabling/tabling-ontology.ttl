@@ -18,49 +18,49 @@
 pt:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:TablingOrWithdrawal rdf:type owl:Class ;
 	rdfs:label "TablingOrWithdrawal"@en ;
 	rdfs:comment "The act of tabling into, or withdrawing a tabled thing from, a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
  
 pt:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
 	rdfs:comment "The period during which Parliament is active. The first session of a parliament begins on the same day as the parliament. This date is named in the dissolution proclamation. It ends on the day named in the subsequent prorogation proclamation. Subsequent sessions begin and end on dates named in prorogation proclamations. The final session ends with a prorogation followed by a dissolution. Parliament may be prorogued a few days before dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:Tabling rdf:type owl:Class ;
 	rdfs:subClassOf pt:TablingOrWithdrawal ;
 	rdfs:label "Tabling"@en ;
 	rdfs:comment "The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:Withdrawal rdf:type owl:Class ;
 	rdfs:subClassOf pt:TablingOrWithdrawal ;
 	rdfs:label "Withdrawal"@en ;
 	rdfs:comment "The act of withdrawing a tabled thing from a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:Member rdf:type owl:Class ;
 	rdfs:label "Member"@en ;
 	rdfs:comment "A current or former Member of a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:WrittenNotice rdf:type owl:Class ;
 	rdfs:label "WrittenNotice"@en ;
 	rdfs:comment "Official notice of an item of future business."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:TabledThing rdf:type owl:Class ;
 	rdfs:label "TabledThing"@en ;
 	rdfs:comment "Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:WithdrawnThing rdf:type owl:Class ;
 	rdfs:label "WithdrawnThing"@en ;
 	rdfs:comment "A tabled thing which has subsequently been withdrawn."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 	
 	
@@ -71,49 +71,49 @@ pt:hasHouse rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an act of tabling or withdrawal to the House in which it happens."@en ;
 	rdfs:domain pt:TablingOrWithdrawal ;
 	rdfs:range pt:House ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:inSession rdf:type owl:ObjectProperty ;
 	rdfs:label "inSession"@en ;
 	rdfs:comment "Relates an act of tabling or withdrawal to the session in which it happens."@en ;
 	rdfs:domain pt:TablingOrWithdrawal ;
 	rdfs:range pt:Session ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:requests rdf:type owl:ObjectProperty ;
 	rdfs:label "requests"@en ;
 	rdfs:comment "Relates a Member to an act of tabling."@en ;
 	rdfs:domain pt:Member ;
 	rdfs:range pt:Tabling ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:givesNotice rdf:type owl:ObjectProperty ;
 	rdfs:label "givesNotice"@en ;
 	rdfs:comment "Relates an act of tabling to a written notice."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:WrittenNotice ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:tables rdf:type owl:ObjectProperty ;
 	rdfs:label "tables"@en ;
 	rdfs:comment "Relates an act of tabling to the business item which it tables."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range pt:TabledThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:withdraws rdf:type owl:ObjectProperty ;
 	rdfs:label "withdraws"@en ;
 	rdfs:comment "Relates an act of withdrawal to the business item which it withdraws."@en ;
 	rdfs:domain pt:Withdrawal ;
 	rdfs:range pt:WithdrawnThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 pt:replaces rdf:type owl:ObjectProperty ;
 	rdfs:label "replaces"@en ;
 	rdfs:comment "Relates a tabled thing to the withdrawn thing it replaces."@en ;
 	rdfs:domain pt:TabledThing ;
 	rdfs:range pt:WithdrawnThing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
 
 		
@@ -125,18 +125,18 @@ pt:tabledOn rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates an act of tabling to the date on which it happened."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:isInterestDeclared rdf:type owl:DatatypeProperty ;
 	rdfs:label "isInterestDeclared"@en ;
 	rdfs:comment "Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members' Financial Interests."@en ;
 	rdfs:domain pt:Tabling ;
 	rdfs:range xsd:boolean ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 pt:withdrawnOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "withdrawnOn"@en ;
 	rdfs:comment "Relates an act of withdrawal to the date on which it happened."@en ;
 	rdfs:domain pt:Withdrawal ;
 	rdfs:range xsd:date ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .

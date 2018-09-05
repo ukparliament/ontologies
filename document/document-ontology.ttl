@@ -18,73 +18,73 @@
 pdoc:Document rdf:type owl:Class ;
 	rdfs:label "Document"@en ;
 	rdfs:comment "A document. Equivalent to a FRBR work."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Publisher rdf:type owl:Class ;
 	rdfs:label "Publisher"@en ;
 	rdfs:comment "An agent responsible for the publishing of material."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
 	rdfs:comment "A place. For the purposes of this model this includes England, Scotland, Wales or Northern Ireland."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:EditorialForm rdf:type owl:Class ;
 	rdfs:label "EditorialForm"@en ;
 	rdfs:comment "The editorial form of a document e.g. a report, an article, a transcript, meeting minutes etc."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Collection rdf:type owl:Class ;
 	rdfs:label "Collection"@en ;
 	rdfs:comment "An editorial collection of documents e.g. POSTnotes, a section of the Guide to Procedure etc."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Series rdf:type owl:Class ;
 	rdfs:subClassOf pdoc:Collection ;
 	rdfs:label "Series"@en ;
 	rdfs:comment "A specialised form of collection allowing for documents to be given an editorial ordering."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:SeriesPosition rdf:type owl:Class ;
 	rdfs:label "SeriesPosition"@en ;
 	rdfs:comment "Allows a document to be editorially positioned within a series."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
 	rdfs:comment "A focus area for a document or collection of documents. Allows us to point at any modelled thing as a focus area e.g. a committee, a bill."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:EditorialVersion rdf:type owl:Class ;
 	rdfs:label "EditorialVersion"@en ;
 	rdfs:comment "An editorial version of a document. Allows for multiple versions of a document over time."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Part rdf:type owl:Class ;
 	rdfs:label "Part"@en ;
 	rdfs:comment "A part of an editorial version of a document e.g. abstract, main contents, appendices etc."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Section rdf:type owl:Class ;
 	rdfs:label "Section"@en ;
 	rdfs:comment "A section within a part within an editorial version of a document. Allows for chapter and sections and subsections."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:Contribution rdf:type owl:Class ;
 	rdfs:label "Contribution"@en ;
 	rdfs:comment "A contribution by an agent to a document version."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:EditorialVersionType rdf:type owl:Class ;
 	rdfs:label "EditorialVersionType"@en ;
 	rdfs:comment "The type of an editorial version. Allows us to distinguish between major and minor updates."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:File rdf:type owl:Class ;
 	rdfs:label "File"@en ;
 	rdfs:comment "A file associated with an editorial version. Usually a spreadsheet, occasionally a PDF or Word document."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 				
 
@@ -95,112 +95,112 @@ pdoc:hasPublisher rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a document to a publisher or publishers."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range pdoc:Publisher ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:hasTerritorialApplicability rdf:type owl:ObjectProperty ;
 	rdfs:label "hasTerritorialApplicability"@en ;
 	rdfs:comment "Relates a document to any territory its contents are applicable in."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range pdoc:Place ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:takesEditorialForm rdf:type owl:ObjectProperty ;
 	rdfs:label "takesEditorialForm"@en ;
 	rdfs:comment "Relates a document to its editorial form."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range pdoc:EditorialForm ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:partOfCollection rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfCollection"@en ;
 	rdfs:comment "Relates a document to a collection of which it is part."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range pdoc:Collection ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:collectionPartOfCollection rdf:type owl:ObjectProperty ;
 	rdfs:label "CollectionPartOfCollection"@en ;
 	rdfs:comment "Relates a collection to a wider collection it forms part of."@en ;
 	rdfs:domain pdoc:Collection ;
 	rdfs:range pdoc:Collection ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:inSeriesPosition rdf:type owl:ObjectProperty ;
 	rdfs:label "inSeriesPosition"@en ;
 	rdfs:comment "Relates a document to its position in an ordered series."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range pdoc:SeriesPosition ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 
 pdoc:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "inSeries"@en ;
 	rdfs:comment "Relates a series position to the series it's part of."@en ;
 	rdfs:domain pdoc:SeriesPosition ;
 	rdfs:range pdoc:Series ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:versionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "versionOf"@en ;
 	rdfs:comment "Relates an editorial version to its work level document."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range pdoc:Document ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:partOfVersion rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfVersion"@en ;
 	rdfs:comment "Relates a part to the editorial version its part of."@en ;
 	rdfs:domain pdoc:Part ;
 	rdfs:range pdoc:EditorialVersion ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:partOfPart rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfPart"@en ;
 	rdfs:comment "Relates a section to its parent part."@en ;
 	rdfs:domain pdoc:Section ;
 	rdfs:range pdoc:Part ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:partOfSection rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfSection"@en ;
 	rdfs:comment "Relates a section to its parent section."@en ;
 	rdfs:domain pdoc:Section ;
 	rdfs:range pdoc:Section ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:editorialVersionHasFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "editorialVersionHasFocus"@en ;
 	rdfs:comment "Relates an editorial version to its focus area."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range pdoc:Focus ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:collectionHasFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "collectionHasFocus"@en ;
 	rdfs:comment "Relates a collection to its focus area."@en ;
 	rdfs:domain pdoc:Collection ;
 	rdfs:range pdoc:Focus ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:hasContribution rdf:type owl:ObjectProperty ;
 	rdfs:label "hasContribution"@en ;
 	rdfs:comment "Relates an editorial version to a contribution."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range pdoc:Contribution ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:hasEditorialVersionType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasEditorialVersionType"@en ;
 	rdfs:comment "Relates an editorial version to its type."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range pdoc:EditorialVersionType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:hasAttachment rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAttachment"@en ;
 	rdfs:comment "Relates an editorial version to a file attachment."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range pdoc:File ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 
 				
@@ -212,32 +212,32 @@ pdoc:referenceNumber rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The reference number of a document."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range rdfs:Literal ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:scope rdf:type owl:DatatypeProperty ;
 	rdfs:label "scope"@en ;
 	rdfs:comment "The scope of a POST briefing. POST write and publish scope notes for research areas before writing the briefing."@en ;
 	rdfs:domain pdoc:Document ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:readingAge rdf:type owl:DatatypeProperty ;
 	rdfs:label "readingAge"@en ;
 	rdfs:comment "The minimum reading age for an editorial version of a document."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range xsd:integer ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:publishedAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "publishedAt"@en ;
 	rdfs:comment "The date time of publishing of an editorial version of a document."@en ;
 	rdfs:domain pdoc:EditorialVersion ;
 	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .
 	
 pdoc:mimeType rdf:type owl:DatatypeProperty ;
 	rdfs:label "mimeType"@en ;
 	rdfs:comment "The mime type of a file."@en ;
 	rdfs:domain pdoc:File ;
 	rdfs:range rdfs:Literal ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/document/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/document/> .

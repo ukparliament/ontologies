@@ -18,32 +18,32 @@
 pco:Concept rdf:type owl:Class ;
 	rdfs:label "Concept"@en ;
 	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:ConceptScheme rdf:type owl:Class ;
 	rdfs:label "ConceptScheme"@en ;
 	rdfs:comment "A concept scheme. Provides an arbitrary way to group concepts e.g. Commons Library to Lords Library."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:Thing rdf:type owl:Class ;
 	rdfs:label "Thing"@en ;
 	rdfs:comment "A thing. Anything at all."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 	
 pco:AnnotatableThing rdf:type owl:Class ;
 	rdfs:label "AnnotatableThing"@en ;
 	rdfs:comment "A thing which can be annotated with a concept or free text tag. e.g. a debate or petition or answer."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 	
 pco:Annotation rdf:type owl:Class ;
 	rdfs:label "Annotation"@en ;
 	rdfs:comment "A relationship between an annotatable thing and a concept or free-text tag. e.g. an act of subject indexing."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 	
 pco:Agent rdf:type owl:Class ;
 	rdfs:label "Agent"@en ;
 	rdfs:comment "A person or group. In this context a librarian or machine subject indexing annotatable things."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 
 #######  data properties ##### 	
@@ -53,42 +53,42 @@ pco:alternativeLabel rdf:type owl:DatatypeProperty ;
 	rdfs:comment "An alternative label."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:historyNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "historyNote"@en ;
 	rdfs:comment "A history note. Textual description of editorial changes to a concept over time."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:scopeNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "scopeNote"@en ;
 	rdfs:comment "A scope note. Textual description of the intended usage of a concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:indexerNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "indexerNote"@en ;
 	rdfs:comment "A note for indexers. Provides additional guidance on use of the concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:annotatedAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "annotatedAt"@en ;
 	rdfs:comment "Date time an annotation was created."@en ;
 	rdfs:domain pco:Annotation ;
 	rdfs:range xsd:dateTime ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 pco:uncontrolledTag rdf:type owl:DatatypeProperty ;
 	rdfs:label "uncontrolledTag"@en ;
 	rdfs:comment "To allow for annotations that reference free text tags rather than controlled concepts."@en ;
 	rdfs:domain pco:Annotation ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 
 
 #######  object properties ##### 	
@@ -98,46 +98,46 @@ pco:hasBroaderConcept rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a concept to a broader concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Concept ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 	
 pco:inConceptScheme rdf:type owl:ObjectProperty ;
 	rdfs:label "inConceptScheme"@en ;
 	rdfs:comment "Relates a concept to a concept scheme."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:ConceptScheme ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .
 	
 pco:hasFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "hasFocus"@en ;
 	rdfs:comment "Relates a concept to a real world thing that is its focus e.g. The concept / library subject term Winston Churchill to the person Winston Churchill."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Thing ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .	
 	
 pco:hasRelatedConcept rdf:type owl:ObjectProperty ;
 	rdfs:label "hasRelatedConcept"@en ;
 	rdfs:comment "Relates a concept to another concept."@en ;
 	rdfs:domain pco:Concept ;
 	rdfs:range pco:Concept ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
 	
 pco:hasAnnotation rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAnnotation"@en ;
 	rdfs:comment "Relates an annotatable thing to an annotation."@en ;
 	rdfs:domain pco:AnnotatableThing ;
 	rdfs:range pco:Annotation ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .			
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .			
 	
 pco:hasConcept rdf:type owl:ObjectProperty ;
 	rdfs:label "hasConcept"@en ;
 	rdfs:comment "Relates an annotation to a concept."@en ;
 	rdfs:domain pco:Annotation ;
 	rdfs:range pco:Concept ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .				
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .				
 	
 pco:annotatedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "annotatedBy"@en ;
 	rdfs:comment "Relates an annotation to a agent."@en ;
 	rdfs:domain pco:Annotation ;
 	rdfs:range pco:Agent ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/concept/> .		
