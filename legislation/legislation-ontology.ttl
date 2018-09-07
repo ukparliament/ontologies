@@ -4,58 +4,75 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/legislation/> 
     rdf:type owl:Ontology ;
     dcterms:title "Legislation ontology"@en ;
     dcterms:created "21/03/2018"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Legislation ontology for UK Parliament. Needs to be read in conjunction with the laying, tabling, procedure and core ontologies."@en .
+    dcterms:description "Legislation ontology for UK Parliament. Needs to be read in conjunction with the laying, tabling, procedure and core ontologies."@en ;
+	foaf:depiction <legislation.png> ;
+	foaf:maker
+		[ foaf:name "David Beamish" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Gordon Clarke" ],
+		[ foaf:name "Jack Dent" ],
+		[ foaf:name "Samu Lang" ],
+		[ foaf:name "Silver Oliver" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ],
+		[ foaf:name "James Vintner" ],
+		[ foaf:name "Jane White" ],
+		[ foaf:name "Ben Woodhams" ].
 
 
 #######  Classes ##### 	
 
 plg:ActOfParliament rdf:type owl:Class ;
 	rdfs:label "ActOfParliament"@en ;
-	rdfs:comment "An Act of Parliament creates a new law or changes an existing law. Once a Bill has been approved by Parliament and been given Royal Assent by the Monarch it becomes an Act of Parliament. Taken together, Acts of Parliament which are in force make up what is known as statute law (or the statute book) in the UK."@en ;
+	rdfs:comment "An Act of Parliament creates, updates or repeals legislation. An Act is a Bill which has been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law (or the statute book)."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:DayCount rdf:type owl:Class ;
 	rdfs:label "DayCount"@en ;
-	rdfs:comment "Some Acts of Parliament define a day count during which Parliament may scrutinise an instrument. The days may either be sitting days or statutory days (see the time period ontology) e.g. the Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. Sometimes the enabling act (via enabling power) may define an exception to this default. Most commonly this will be 28, 60 or 120 days. The European Union (Withdrawal) Act 2018 defines a default period of 10 sitting days of scrutiny for proposed negative statutory instruments."@en ;
+	rdfs:comment "Some Acts of Parliament define a day count during which Parliament may scrutinise a piece of secondary legislation. The days may be sitting days or statutory days (see the time period ontology) e.g. the Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. Sometimes the enabling Act may define an exception to this default. Most commonly this will be 28, 60 or 120 days. The European Union (Withdrawal) Act 2018 defines a default period of 10 sitting days of scrutiny for proposed negative statutory instruments."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DayCountType rdf:type owl:Class ;
 	rdfs:label "DayCountType"@en ;
-	rdfs:comment "Day counts are calculated according to the day type specified in an Act. Sometimes only sitting days are counted. Sometimes statutory days are counted. See the time period ontology for definitions."@en ;
+	rdfs:comment "Day count type can be sitting days or statutory days. See the time period ontology for definitions."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:EnablingPower rdf:type owl:Class ;
 	rdfs:label "EnablingPower"@en ;
-	rdfs:comment "A power delegated by one or more items of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward such as the procedure it will be subject to, any override of statutory day count, and the scope of the secondary legislation are specified by the enabling power."@en ;
+	rdfs:comment "A power delegated by one or more items of primary legislation, enabling a minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward - such as the procedure it will be subject to, any override of statutory day count, and its scope - are specified by an enabling power."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
-	rdfs:comment "A package of work grouping together individual business items e.g. the business items that make up the passage of a specific statutory instrument, or the passage of a specific public bill. Whereas a procedure describes the process, the work package handles the progress of that process for a specific instance. See also the procedure ontology."@en ;
+	rdfs:comment "A package of work grouping together business items e.g. the business items that occur during the passage of a statutory instrument, or during the passage of a public bill. A work package is comprised of business items used during the progress of a process. See also the procedure ontology."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:label "WorkPackageableThing"@en ;
-	rdfs:comment "Any thing that can be the focus of a workpackage."@en ;
+	rdfs:comment "A thing that is the focus of a work package."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
 	rdfs:subClassOf plg:WorkPackageableThing ;
 	rdfs:subClassOf plg:StatutoryEnabledThing ;
 	rdfs:label "ProposedNegativeStatutoryInstrument"@en ;
-	rdfs:comment "All regulations made under the powers in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 which Ministers consider need to be made under the negative procedure will be laid before both Houses as proposed negative statutory instruments. Sifting committees in both Houses may recommend that any subsequent statutory instrument(s) be instead laid under the affirmative procedure. A proposed statutory instrument may lead to a statutory instrument being laid, or multiple, or none."@en ;
+	rdfs:comment "A regulation made under the powers in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 which Ministers consider needs to be made under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument(s) be instead laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:StatutoryEnabledThing rdf:type owl:Class ;
 	rdfs:label "StatutoryEnabledThing"@en ;
-	rdfs:comment "Any parliamentary thing whose existence is enabled and / or described by statute law."@en ;
+	rdfs:comment "A parliamentary thing, the existence of which is enabled by statute law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+	
+	###### CHECKED TO HERE ######
 
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
 	rdfs:subClassOf plg:WorkPackageableThing ;
@@ -131,7 +148,7 @@ plg:enabledBy rdf:type owl:ObjectProperty ;
 	
 plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "precededByProposedNegativeStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to any preceding proposed negative statutory instrument(s). A draft or made statutory instrument subject to parliamentary procedure may be preceded by zero, one or many proposed negative statutory instruments, a proposed negative statutory instrument may be followed by zero, one or many draft or made statutory instrument subject to parliamentary procedure."@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to any preceding proposed negative statutory instrument(s). A draft or made statutory instrument subject to parliamentary procedure may be preceded by zero, one or many proposed negative statutory instruments, a proposed statutory instrument may lead to a statutory instrument being laid, or multiple, or none."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:ProposedNegativeStatutoryInstrument ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
