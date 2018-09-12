@@ -90,8 +90,11 @@ plg:MadeStatutoryInstrument rdf:type owl:Class ;
 	
 plg:StatutoryInstrumentSeriesItem rdf:type owl:Class ;
 	rdfs:label "StatutoryInstrumentSeriesItem"@en ;
-	rdfs:comment "Provides a way to link a draft or made statutory instrument subject to parliamentary procedure to all statutory instrument series of which it is part. Holds the identifier of the SI within a series. A statutory instrument can be an item in more than one series with the following restrictions: Northern Ireland series SIs can't be in any other series; National Assembly for Wales series SIs can also be commencement orders only; Scottish series SIs can also be commencement orders only; legal series SIs can't be part of any other series; and although commencement series documents can also be part of the Welsh or Scottish series they can't be part of both. Where a statutory instrument is an item in more than one series, the citation order is the commencement series and item identifier followed by any other series and item identifier, except where the SI is made by the Welsh Ministers, in which case the 'W. / Cy.' number will always immediately follow the SI number; for example '2005 No. 71 (W. 9) (C. 3)' See also: http://www.legislation.gov.uk/pdfs/StatutoryInstrumentPractice_5th_Edition.pdf#page=65."@en ;
+	rdfs:comment "A statutory instrument series item links a draft or made statutory instrument subject to parliamentary procedure to a statutory instrument series. A statutory instrument can be an item in more than one series excepting these cases: Northern Ireland series instruments do not form part of any other series; legal series instruments do not form part of any other series; National Assembly for Wales series SIs and Scottish series instruments can be included in the commencement order series but no other. Commencement series items may also form part of either the Welsh or Scottish series. Where a instrument is an item in more than one series, the citation order is formed by (1) the commencement series and item identifier followed by (2) any other series and item identifier. Where the instrument is made by the Welsh Ministers, the 'W. / Cy.' number follows the SI number."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+	
+	##### edited to here #####
 	
 plg:StatutoryInstrumentSeries rdf:type owl:Class ;
 	rdfs:label "StatutoryInstrumentSeries"@en ;
