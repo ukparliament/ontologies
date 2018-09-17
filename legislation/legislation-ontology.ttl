@@ -98,8 +98,23 @@ plg:StatutoryInstrumentSeries rdf:type owl:Class ;
 	rdfs:comment "Statutory instruments may form part of one or more series. Or may exist outside a series. Series include: Welsh Instruments, corresponding to Wales Statutory Instruments; Northern Ireland Orders in Council; Commencement Orders; Appointed Day Orders; Legal Statutory Instruments; and Scottish Statutory Instruments, being United Kingdom instruments that have particular application to Scotland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
+		#### edited to here
+		
+		
+		
 	
-	#### edited to here
+plg:Procedure rdf:type owl:Class ;
+	rdfs:label "Procedure"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:LayingDuty rdf:type owl:Class ;
+	rdfs:label "LayingDuty"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+	
+
 	
 
 ##### Object properties ####
@@ -111,10 +126,10 @@ plg:delegates rdf:type owl:ObjectProperty ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:specifiesDayCount rdf:type owl:ObjectProperty ;
-	rdfs:label "specifiesDayCount"@en ;
+plg:dayCountDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "dayCountDuty"@en ;
 	rdfs:comment "Relates an Act of Parliament to a day count. For statutory instruments the default statutory day count is 40 statutory days as defined by the Statutory Instruments Act 1946. Sometimes the enabling Act will override this value. A day count will only ever be derived from one Act of Parliament. It is not possible for a statutory instrument to be enabled by multiple Acts of Parliament where those Acts specify conflicting day counts. It's possible that a single Act of Parliament will specify different day counts in different sections."@en ;
-	rdfs:domain plg:ActOfParliament ;
+	rdfs:domain plg:EnablingPower ;
 	rdfs:range plg:DayCount ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
@@ -123,13 +138,6 @@ plg:dayType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a day count to a day count type. Values might be sitting days or statutory days. See the time period ontology for definitions. A day count will only ever reference a single day count type, a day count type might be used across many day counts."@en ;
 	rdfs:domain plg:DayCount ;
 	rdfs:range plg:DayCountType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:dayCountDefinedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "dayCountDefinedBy"@en ;
-	rdfs:comment "Relates a work package to a day count. A work package will only ever reference one day count, a day count might be referenced by multiple work packages."@en ;
-	rdfs:domain plg:WorkPackage ;
-	rdfs:range plg:DayCount ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:focus rdf:type owl:ObjectProperty ;
@@ -180,6 +188,20 @@ plg:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:domain plg:StatutoryInstrumentSeriesItem ;
 	rdfs:range plg:StatutoryInstrumentSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:procedureDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "procedureDuty"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:EnablingPower ;
+	rdfs:range plg:Procedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:layingDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "layingDuty"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:EnablingPower ;
+	rdfs:range plg:LayingDuty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 				
 	
 ##### Data properties ####	
@@ -194,28 +216,28 @@ plg:count rdf:type owl:DatatypeProperty ;
 plg:siPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "siPrefix"@en ;
 	rdfs:comment "The prefix of a statutory instrument. Usually this will be SI. Other prefixes, such as for regulations include SR (NI). The prefix forms the first part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:siYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "siYear"@en ;
 	rdfs:comment "The year of a statutory instrument. Usually this will be the year it was laid before Parliament. Occasionally a statutory instrument laid in draft in one calendar year and made the following calendar year will have its SI year updated. The year forms the second part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925. Modelled as a literal to add flexibility and because we don't intend to use it mathematically or for ordering."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:siIdentiferInYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "siIdentiferInYear"@en ;
 	rdfs:comment "Statutory instruments are given a number in a year (see siYear). The number forms the third part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925. Modelled as a literal to avoid the number being interpreted as an ordinal."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "madeDate"@en ;
 	rdfs:comment "The date on which the statutory instrument was made. Note that the process of making happens outside Parliament, by the government minister responsible for the statutory instrument."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
