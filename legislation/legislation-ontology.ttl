@@ -98,61 +98,61 @@ plg:StatutoryInstrumentSeries rdf:type owl:Class ;
 	rdfs:comment "Statutory instruments may form part of one or more series. Or may exist outside a series. Series include: Welsh Instruments, corresponding to Wales Statutory Instruments; Northern Ireland Orders in Council; Commencement Orders; Appointed Day Orders; Legal Statutory Instruments; and Scottish Statutory Instruments, being United Kingdom instruments that have particular application to Scotland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-		#### edited to here
-		
-		
-		
-	
 plg:Procedure rdf:type owl:Class ;
 	rdfs:label "Procedure"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A parliamentary procedure in a House or Houses. For example: the passage of a made affirmative statutory instrument through both Houses. Some procedures are specific to a particular House, but can include a joint committee, comprised of Members from both Houses. A procedure which crosses both Houses is considered as a single procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:LayingDuty rdf:type owl:Class ;
 	rdfs:label "LayingDuty"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The statutory duty of a body to lay papers before Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-	
-
 	
 
 ##### Object properties ####
 
 plg:delegates rdf:type owl:ObjectProperty ;
 	rdfs:label "delegates"@en ;
-	rdfs:comment "Relates an Act of Parliament to an enabling power delegated (at least in part) by that Act. An Act of Parliament might contribute to many enabling powers, an enabling power might be derived from many Acts of Parliament. Secondary legislation can also delegate powers to make further subordinate legislation. This is known as a sub-delegation or tertiary law. Such law is not usually made by statutory instrument, and doesn’t come near Parliament."@en ;
+	rdfs:comment "Relates an Act of Parliament to an enabling power delegated in whole or in part by that Act. An Act of Parliament may delegate many enabling powers and an enabling power may be delegated from more than one Act of Parliament. Secondary legislation may delegate powers to enable further legislation, known as sub-delegation or tertiary law. Such law is commonly made without statutory instrument, and is not itself subject to parliamentary procedure."@en ;
 	rdfs:domain plg:ActOfParliament ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:dayCountDuty rdf:type owl:ObjectProperty ;
 	rdfs:label "dayCountDuty"@en ;
-	rdfs:comment "Relates an Act of Parliament to a day count. For statutory instruments the default statutory day count is 40 statutory days as defined by the Statutory Instruments Act 1946. Sometimes the enabling Act will override this value. A day count will only ever be derived from one Act of Parliament. It is not possible for a statutory instrument to be enabled by multiple Acts of Parliament where those Acts specify conflicting day counts. It's possible that a single Act of Parliament will specify different day counts in different sections."@en ;
+	rdfs:comment "Relates an enabling power to a day count. For statutory instruments the default statutory day count is 40 statutory days, as set out by the Statutory Instruments Act 1946. An enabling Act may override this value. A day count is only set by a single Act of Parliament. A single Act of Parliament may specify differing day counts for different enabling powers. A statutory instrument is required to have a single day count when enabling powers are delegated from more than one Act of Parliament."@en ;
 	rdfs:domain plg:EnablingPower ;
 	rdfs:range plg:DayCount ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:dayType rdf:type owl:ObjectProperty ;
 	rdfs:label "dayType"@en ;
-	rdfs:comment "Relates a day count to a day count type. Values might be sitting days or statutory days. See the time period ontology for definitions. A day count will only ever reference a single day count type, a day count type might be used across many day counts."@en ;
+	rdfs:comment "Relates a day count to its type. Values may be sitting days or statutory days; these are defined in the time period ontology. A day count is specified by a single day count type and a day count type may apply to more than one day count."@en ;
 	rdfs:domain plg:DayCount ;
 	rdfs:range plg:DayCountType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:focus rdf:type owl:ObjectProperty ;
 	rdfs:label "focus"@en ;
-	rdfs:comment "Relates a work package to a work packageable thing. A work package might focus on one or more work packageable things, a work packageable thing might be the focus of one or more work packages."@en ;
+	rdfs:comment "Relates a work package to one or more work packageable things. A work packageable thing may be the focus of one or more work packages."@en ;
 	rdfs:domain plg:WorkPackage ;
 	rdfs:range plg:WorkPackageableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "enabledBy"@en ;
-	rdfs:comment "Relates a statutory enabled thing to the power that enables it. Statutory instruments have an enabling power derived from one or more Acts of Parliament. A statutory enabled thing will only ever be enabled by one enabling power, an enabling power might enable many statutory enabled things."@en ;
+	rdfs:comment "Relates a statutory enabled thing to its enabling power. Enabling powers are set out by one or more Acts of Parliament. A statutory enabled thing is enabled by an enabling power and an enabling power may enable more than one statutory enabled thing."@en ;
 	rdfs:domain plg:StatutoryEnabledThing ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+	
+	
+	
+	
+	
+	#### edited to here
 	
 plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "precededByProposedNegativeStatutoryInstrument"@en ;
