@@ -106,13 +106,6 @@ plg:delegates rdf:type owl:ObjectProperty ;
 	rdfs:domain plg:ActOfParliament ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:dayCountDuty rdf:type owl:ObjectProperty ;
-	rdfs:label "dayCountDuty"@en ;
-	rdfs:comment "Relates an enabling power to a day count. For statutory instruments the default statutory day count is 40 statutory days, as set out by the Statutory Instruments Act 1946. An enabling Act may override this value. A day count is only set by a single Act of Parliament. A single Act of Parliament may specify differing day counts for different enabling powers. A statutory instrument is required to have a single day count when enabling powers are delegated from more than one Act of Parliament."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range plg:DayCount ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:dayType rdf:type owl:ObjectProperty ;
 	rdfs:label "dayType"@en ;
@@ -128,61 +121,66 @@ plg:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-	
-	
-	
-	
-	
-	#### edited to here
-	
 plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "precededByProposedNegativeStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to any preceding proposed negative statutory instrument(s). A draft or made statutory instrument subject to parliamentary procedure may be preceded by zero, one or many proposed negative statutory instruments, a proposed statutory instrument may lead to a statutory instrument being laid, or multiple, or none."@en ;
+	rdfs:comment "Relates draft or made statutory instruments subject to parliamentary procedure to proposed negative statutory instruments which precede them. A draft or made statutory instrument subject to parliamentary procedure may be preceded by one or more proposed negative statutory instruments or by none. A proposed negative statutory instrument may precede the laying of one or more draft or made statutory instruments subject to parliamentary procedure, or none."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:ProposedNegativeStatutoryInstrument ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:embodiedAsDraftStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "embodiedAsDraftStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to the FRBR work level of any document published on legislation.gov.uk in draft form. A draft or made statutory instrument subject to parliamentary procedure will only be embodied as zero or one draft statutory instruments, a draft statutory instrument will only ever have zero or one draft or made statutory instruments subject to parliamentary procedure."@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to a document identified as a FRBR work published as draft legislation by the receiver at The National Archives. A draft or made statutory instrument subject to parliamentary procedure will be embodied as a single draft statutory instrument, or none. A draft statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or none."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:DraftStatutoryInstrument ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:label "embodiedAsMadeStatutoryInstrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to the FRBR work level of any document published on legislation.gov.uk in made form. A draft or made statutory instrument subject to parliamentary procedure will only be embodied as zero or one made statutory instruments, a made statutory instrument will only ever have one draft or made statutory instrument subject to parliamentary procedure."@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to a document identified as a FRBR work published as made legislation by the receiver at The National Archives. A draft or made statutory instrument subject to parliamentary procedure will be embodied as a single made statutory instrument, or none. A made statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or none."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:MadeStatutoryInstrument ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:isSeriesItem rdf:type owl:ObjectProperty ;
-	rdfs:label "isSeriesItem"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to a statutory instrument series item. Note that whilst a draft or made statutory instrument subject to parliamentary procedure can belong to many series through series item, a series item only ever has one draft or made statutory instrument subject to parliamentary procedure."@en ;
+plg:asSeriesItem rdf:type owl:ObjectProperty ;
+	rdfs:label "asSeriesItem"@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to a statutory instrument series item. Whilst a draft or made statutory instrument subject to parliamentary procedure may belong to more than one series by means of a series item. A series item is formed of a single draft or made statutory instrument subject to parliamentary procedure."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:StatutoryInstrumentSeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "inSeries"@en ;
-	rdfs:comment "Relates a statutory instrument series item to a series. Note that whilst a series can have many items, a series item can only ever be in one series."@en ;
+	rdfs:comment "Relates a statutory instrument series item to a series. A series has one or more items, or none. A series item appears in a single series."@en ;
 	rdfs:domain plg:StatutoryInstrumentSeriesItem ;
 	rdfs:range plg:StatutoryInstrumentSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:procedureDuty rdf:type owl:ObjectProperty ;
-	rdfs:label "procedureDuty"@en ;
-	rdfs:comment ""@en ;
+plg:imposesProcedureDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "imposesProcedureDuty"@en ;
+	rdfs:comment "A duty to follow a procedure is imposed by an enabling power. An Act that delegates an enabling power may impose a duty to follow a particular procedure, or none. A procedure may be imposed as a duty by one or more enabling powers, or none."@en ;
 	rdfs:domain plg:EnablingPower ;
 	rdfs:range plg:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:layingDuty rdf:type owl:ObjectProperty ;
-	rdfs:label "layingDuty"@en ;
-	rdfs:comment ""@en ;
+plg:imposesDayCountDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "imposesDayCountDuty"@en ;
+	rdfs:comment "Relates an enabling power to a day count. For statutory instruments the default statutory day count is 40 statutory days, as set out by the Statutory Instruments Act 1946. An enabling Act may override this value. A day count is only set by a single Act of Parliament. A single Act of Parliament may specify differing day counts for different enabling powers. A statutory instrument is required to have a single day count when enabling powers are delegated from more than one Act of Parliament."@en ;
+	rdfs:domain plg:EnablingPower ;
+	rdfs:range plg:DayCount ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:imposesLayingDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "imposesLayingDuty"@en ;
+	rdfs:comment "An enabling power may impose a duty to lay papers before Parliament. A laying duty is imposed by a single enabling power."@en ;
 	rdfs:domain plg:EnablingPower ;
 	rdfs:range plg:LayingDuty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+	
+	
+	
+	
 				
 	
 ##### Data properties ####	
