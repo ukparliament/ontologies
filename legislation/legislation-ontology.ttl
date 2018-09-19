@@ -187,31 +187,40 @@ plg:imposesLayingDuty rdf:type owl:ObjectProperty ;
 			
 plg:count rdf:type owl:DatatypeProperty ;
 	rdfs:label "count"@en ;
-	rdfs:comment "Specifies the total number of days of a given type. This is the period during which a statutory instrument or proposed negative statutory instrument is subject to parliamentary scrutiny."@en ;
+	rdfs:comment "Specifies the number of days of a particular type, being the period during which a statutory instrument or proposed negative statutory instrument may be subject to parliamentary scrutiny."@en ;
 	rdfs:domain plg:DayCount ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:siPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "siPrefix"@en ;
-	rdfs:comment "The prefix of a statutory instrument. Usually this will be SI. Other prefixes, such as for regulations include SR (NI). The prefix forms the first part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925."@en ;
+	rdfs:comment "The prefix part of a statutory instrument number, e.g. SI in 'SI 1986/925'."@en ;
 	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:siYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "siYear"@en ;
-	rdfs:comment "The year of a statutory instrument. Usually this will be the year it was laid before Parliament. Occasionally a statutory instrument laid in draft in one calendar year and made the following calendar year will have its SI year updated. The year forms the second part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925. Modelled as a literal to add flexibility and because we don't intend to use it mathematically or for ordering."@en ;
+	rdfs:comment "The year part of a statutory instrument number, e.g. 1986 in 'SI 1986/925'. The SI year is the year the instrument was laid before Parliament, except when laid in draft in one calendar year and made in a following year and in the case of having its SI year updated."@en ;
 	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
+	
+####### edited to here
+	
 plg:siIdentiferInYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "siIdentiferInYear"@en ;
-	rdfs:comment "Statutory instruments are given a number in a year (see siYear). The number forms the third part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925. Modelled as a literal to avoid the number being interpreted as an ordinal."@en ;
+	rdfs:comment "SIs are given a number in a year (see siYear). The number forms the third part of the standard citation 'number' for a statutory instrument e.g. SI 1986/925. Modelled as a literal to avoid the number being interpreted as an ordinal."@en ;
 	rdfs:domain plg:MadeStatutoryInstrument ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+	
+	
+	
+	
+	
 	
 plg:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "madeDate"@en ;
