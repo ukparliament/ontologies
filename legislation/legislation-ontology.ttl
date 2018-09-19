@@ -48,19 +48,8 @@ plg:EnablingPower rdf:type owl:Class ;
 	rdfs:label "EnablingPower"@en ;
 	rdfs:comment "A power delegated by one or more items of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward - such as the procedure it will be subject to, any override of statutory day count, and its scope - are specified by an enabling power."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:WorkPackage rdf:type owl:Class ;
-	rdfs:label "WorkPackage"@en ;
-	rdfs:comment "A package of work grouping together business items e.g. the business items that occur during the passage of a statutory instrument, or during the passage of a public bill. A work package is comprised of business items used during the progress of a process. See also the procedure ontology."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:WorkPackageableThing rdf:type owl:Class ;
-	rdfs:label "WorkPackageableThing"@en ;
-	rdfs:comment "A thing that is the focus of a work package."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
-	rdfs:subClassOf plg:WorkPackageableThing ;
 	rdfs:subClassOf plg:StatutoryEnabledThing ;
 	rdfs:label "ProposedNegativeStatutoryInstrument"@en ;
 	rdfs:comment "A regulation made under the powers in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 which government ministers consider needs to be made under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument(s) be instead laid under the affirmative procedure."@en ;
@@ -72,7 +61,6 @@ plg:StatutoryEnabledThing rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
-	rdfs:subClassOf plg:WorkPackageableThing ;
 	rdfs:subClassOf plg:StatutoryEnabledThing ;
 	rdfs:label "DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure"@en ;
 	rdfs:comment "Of made and draft statutory instruments, The National Archives classify made instruments as legislation. Parliament considers both made and drafts as part of the legislative process, which is modelled at a more abstract conceptual level than the FRBR work used by The National Archives. It groups both made and draft statutory instrument papers within Parliament."@en ;
@@ -131,13 +119,6 @@ plg:dayType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a day count to its type. Values may be sitting days or statutory days; these are defined in the time period ontology. A day count is specified by a single day count type and a day count type may apply to more than one day count."@en ;
 	rdfs:domain plg:DayCount ;
 	rdfs:range plg:DayCountType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:focus rdf:type owl:ObjectProperty ;
-	rdfs:label "focus"@en ;
-	rdfs:comment "Relates a work package to one or more work packageable things. A work packageable thing may be the focus of one or more work packages."@en ;
-	rdfs:domain plg:WorkPackage ;
-	rdfs:range plg:WorkPackageableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:enabledBy rdf:type owl:ObjectProperty ;
