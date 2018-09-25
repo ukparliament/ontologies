@@ -152,15 +152,15 @@ pfb:hasWorkPackageType rdf:type owl:ObjectProperty ;
 	
 pfb:partOfWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfWorkPackage"@en ;
-	rdfs:comment "Assigns an event to the work package it belongs in. An event may belong to more than one work package or none e.g. a joint evidence session may belong to more than one work package where each work package is owned by a different committee."@en ;
-	rdfs:domain pfb:Event ;
+	rdfs:comment "Assigns a business item to the work package it belongs in. A business item may belong to more than one work package or none e.g. a joint evidence session may belong to more than one work package where each work package is owned by a different committee."@en ;
+	rdfs:domain pfb:BusinessItem ;
 	rdfs:range pfb:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasAgent rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAgent"@en ;
-	rdfs:comment "Associates an event with the formal bodies responsible for organising it."@en ;
-	rdfs:domain pfb:Event ;
+	rdfs:comment "Associates a business item with the formal bodies responsible for organising it."@en ;
+	rdfs:domain pfb:BusinessItem ;
 	rdfs:range pfb:FormalBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
