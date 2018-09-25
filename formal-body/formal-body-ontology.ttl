@@ -87,43 +87,14 @@ pfb:WorkPackageType rdf:type owl:Class ;
 	rdfs:comment "Used to describe the type of a work package (a collection of activities). Note that inquiries have a specific Inquiry subclass; WorkPackageType is intended to describe non-inquiry work packages. e.g. a collection of hearings before a person is appointed to a public body or a set of hearings where a government minister appears before a committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
-pfb:Event rdf:type owl:Class ;
-	rdfs:label "Event"@en ;
-	rdfs:comment "A thing happening over a time interval, sometimes in a place, sometimes involving people and agents."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:Document rdf:type owl:Class ;
-	rdfs:label "Document"@en ;
-	rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence or that serves as an official record."@en ;
+pfb:BusinessItem rdf:type owl:Class ;
+	rdfs:label "BusinessItem"@en ;
+	rdfs:comment "An item of parliamentary business e.g. a second reading debate, the tabling of an early day motion, a laying of a paper."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment "A focus area for a Formal Body or work package."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:GovernmentDepartment rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "GovernmentDepartment"@en ;
-	rdfs:comment "The means by which the government exercises its executive authority."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:Concept rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "Concept"@en ;
-	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:LegislationType rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "LegislationType"@en ;
-	rdfs:comment "Used when the focus of a Formal Body is a type of legislation. e.g. a committee looking at legal drafting of secondary legislation."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:LegislationItem rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "LegislationItem"@en ;
-	rdfs:comment "A specific piece of legislation. e.g. A named bill or statutory instrument."@en ;
+	rdfs:comment "A focus area for a Formal Body or work package. This might be a specific government department, a specific type of legislation, an item of legislation or a SKOS type concept."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 	
@@ -192,20 +163,6 @@ pfb:hasAgent rdf:type owl:ObjectProperty ;
 	rdfs:domain pfb:Event ;
 	rdfs:range pfb:FormalBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:publishes rdf:type owl:ObjectProperty ;
-	rdfs:label "publishes"@en ;
-	rdfs:comment "Allows an event to be a document publication event and points at the resulting published document."@en ;
-	rdfs:domain pfb:Event ;
-	rdfs:range pfb:Document ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:inWorkPackage rdf:type owl:ObjectProperty ;
-	rdfs:label "inWorkPackage"@en ;
-	rdfs:comment "Assigns a document to the work package of which it forms a part."@en ;
-	rdfs:domain pfb:Document ;
-	rdfs:range pfb:WorkPackage ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:formalBodyFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "formalBodyFocus"@en ;
@@ -221,8 +178,8 @@ pfb:workPackageFocus rdf:type owl:ObjectProperty ;
 	rdfs:range pfb:Focus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
-pfb:setUpToFocusOn rdf:type owl:ObjectProperty ;
-	rdfs:label "setUpToFocusOn"@en ;
+pfb:hasFocusCategory rdf:type owl:ObjectProperty ;
+	rdfs:label "hasFocusCategory"@en ;
 	rdfs:comment "Relates a Formal Body to its Focus Category."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:FocusCategory ;
