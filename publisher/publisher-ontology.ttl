@@ -1,0 +1,93 @@
+@prefix ppub: <http://parliament.uk/ontologies/publisher/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/publisher/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Publisher ontology"@en ;
+    dcterms:created "28/06/2018"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Publisher ontology for UK Parliament. Needs to be read in conjunction with the document, agent and core ontologies."@en .
+
+
+#######  Classes ##### 	
+
+ppub:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Group rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Agent ;
+	rdfs:label "Group"@en ;
+	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Publisher rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Agent ;
+	rdfs:label "Publisher"@en ;
+	rdfs:comment "A publisher of recorded material."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Board rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Group ;
+	rdfs:label "Board"@en ;
+	rdfs:comment "A group of people who direct the publisher e.g. POST has a board made up of Members of Parliament who consider and approve research areas to be covered."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:House rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Group ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Library rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Publisher ;
+	rdfs:label "Library"@en ;
+	rdfs:comment "One of the two parliamentary libraries. Either the House of Commons Library or the House of Lords Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:LibrarySection rdf:type owl:Class ;
+	rdfs:subClassOf ppub:Publisher ;
+	rdfs:label "LibrarySection"@en ;
+	rdfs:comment "The House of Commons Library is divided into sections some of which are research sections and publishers. e.g. the Parliament and Constitution Centre."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+
+##### Object properties ####
+
+ppub:hasBoard rdf:type owl:ObjectProperty ;
+	rdfs:label "hasBoard"@en ;
+	rdfs:comment "Relates a publisher to its board."@en ;
+	rdfs:domain ppub:Publisher ;
+	rdfs:range ppub:Board ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:hasLibrary rdf:type owl:ObjectProperty ;
+	rdfs:label "hasLibrary"@en ;
+	rdfs:comment "Relates a House to its library."@en ;
+	rdfs:domain ppub:House ;
+	rdfs:range ppub:Library ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:hasSection rdf:type owl:ObjectProperty ;
+	rdfs:label "hasSection"@en ;
+	rdfs:comment "Relates a library to a section."@en ;
+	rdfs:domain ppub:Library ;
+	rdfs:range ppub:LibrarySection ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:coversPolicyArea rdf:type owl:ObjectProperty ;
+	rdfs:label "coversPolicyArea"@en ;
+	rdfs:comment "Relates a library section to a policy area or policy areas as a SKOS-like concept."@en ;
+	rdfs:domain ppub:LibrarySection ;
+	rdfs:range ppub:Concept ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .

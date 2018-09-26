@@ -36,6 +36,27 @@
 ,/people/:person/committees/chairs,All a person's current chairships of any committee. Grouped by committee,Paginated list
 ,/people/:person/government-positions, All the government organisation positions a person has occupied ever. Decorated with a organisation, Paginated list
 ,/people/:person/government-positions/current, All the government organisation positions a person is currently occupying. Decorated with an organisation, Paginated list
+,/people/:person/questions,All parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/withdrawn,All withdrawn parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/answered,All (substantively) answered parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/unanswered,All non-withdrawn parliamentary questions tabled by a Member awaiting a substantive answer (including those with only a holding answer),Paginated list
+✓,/people/:person/questions/written,All written parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/written/withdrawn,All withdrawn written parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/written/answered,All (substantively) answered written parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/written/answered/answer-types,"A list of answer types for a question applicable to a Member: holding, substantive, corrected, prorogation",Paginated list
+,/people/:person/questions/written/answered/answer-types/:answer-type,"All answered written parliamentary questions tabled by a Member where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation",Paginated list
+,/people/:person/questions/written/unanswered,All non-withdrawn written parliamentary questions tabled by a Member awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/people/:person/questions/oral,All oral parliamentary questions tabled by a Member ever,Paginated list
+,/people/:person/questions/oral/question-types,A list of question types applicable for a Member for tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/people/:person/questions/oral/question-types/:question-type,All oral parliamentary questions tabled by a Member of type as specified,Paginated list
+,/people/:person/questions/oral/withdrawn,All withdrawn oral parliamentary questions tabled by a Member,Paginated list
+,/people/:person/questions/oral/answered,All answered oral parliamentary questions tabled by a Member,Paginated list
+,/people/:person/questions/oral/answered/question-types,A list of question types for answered tabled oral questions applicable for a Member. Values are substantive or non-substantive,Paginated list
+,/people/:person/questions/oral/answered/question-types/:question-type,All answered oral parliamentary questions tabled by a Member of type as specified,Paginated list
+,/people/:person/questions/oral/unanswered,All non-withdrawn oral parliamentary questions tabled by a Member awaiting an answer,Paginated list
+,/people/:person/answers,All the tabled written questions which have been answered by a Member,Paginated list
+,/people/:person/answers/answer-types,All the answer types of tabled written questions applicable to the Member answering,Paginated list
+,/people/:person/answers/answer-types/:answer-type,All the tabled written questions which have been answered by a Member with the specified answer type,Paginated list
 ,,,
 ✓,/contact-points,Nothing to see here???,Namespace
 ,/contact-points/lookup?source=:source&id=:id,Provides a way to look up a contact point from a foreign identifier,Redirect
@@ -70,6 +91,28 @@
 ✓,/parties/:party/members/current,All current Parliamentary members of a party,Paginated list
 ✓,/parties/:party/members/current/a-z,Namespace for navigation of current Parliamentary members of a party,Namespace
 ✓,/parties/:party/members/current/a-z/:letters,List of current Parliamentary members of a party with name starting with / matching the letter pattern,Paginated list
+,/parties/:party/members/questions,All parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/withdrawn,All withdrawn parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+,//parties/:party/members/questions/answered,All (substantively) answered parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+,/people/:person/questions/unanswered,All non-withdrawn parliamentary questions tabled by members of a party ever awaiting a substantive answer (including those with only a holding answer). Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/written,All written parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+
+
+
+
+,/parties/:party/members/questions/written/withdrawn,All withdrawn written parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/written/answered,All (substantively) answered written parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/written/answered/answer-types,"A list of answer types for a question applicable to members of a party: holding, substantive, corrected, prorogation",Paginated list
+,/parties/:party/members/questions/written/answered/answer-types/:answer-type,"All answered written parliamentary questions tabled by members of a party where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation. Tabled at the time they were a member of that party",Paginated list
+,/parties/:party/members/questions/written/unanswered,All non-withdrawn written parliamentary questions tabled by members of a party awaiting a substantive answer (including those with only a holding answer). Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/oral,All oral parliamentary questions tabled by members of a party ever. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/oral/question-types,A list of question types applicable for members of a party for tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/parties/:party/members/questions/oral/question-types/:question-type,All oral parliamentary questions tabled by members of a party of type as specified. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/oral/withdrawn,All withdrawn oral parliamentary questions tabled by members of a party. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/oral/answered,All answered oral parliamentary questions tabled by members of a party. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/oral/answered/question-types,A list of question types for answered tabled oral questions applicable for members of a party. Values are substantive or non-substantive,Paginated list
+,/parties/:party/members/questions/oral/answered/question-types/:question-type,All answered oral parliamentary questions tabled by a member of a party of type as specified. Tabled at the time they were a member of that party,Paginated list
+,/parties/:party/members/questions/oral/unanswered,All non-withdrawn oral parliamentary questions tabled by members of a party awaiting an answer. Tabled at the time they were a member of that party,Paginated list
 ,,,
 ✓,/houses,List of all houses. Well 2,Paginated list
 ,/houses/lookup?source=:source&id=:id,Provides a way to look up a house from a foreign identifier eg /lookup?source=wikidata&id=Q11005,Redirect
@@ -96,6 +139,40 @@
 ✓,/houses/:house/committees/current,All currently active committees belonging to a house,Paginated list
 ✓,/houses/:house/committees/current/a-z,Namespace for navigation of currently active committees belong to a house,Namespace
 ✓,/houses/:house/committees/current/a-z/:letters,List of currently active committees belonging to a house with name starting with / matching the letter pattern,Paginated list
+,/houses/:house/members/questions,All parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/withdrawn,All withdrawn parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/answered,All (substantively) answered parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/unanswered,All non-withdrawn parliamentary questions tabled by members of a house ever awaiting a substantive answer (including those with only a holding answer). Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/written,All written parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/written/withdrawn,All withdrawn written parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/written/answered,All (substantively) answered written parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/written/answered/answer-types,"A list of answer types for a question applicable to members of a house: holding, substantive, corrected, prorogation",Paginated list
+,/houses/:house/members/questions/written/answered/answer-types/:answer-type,"All answered written parliamentary questions tabled by members of a house where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation. Tabled at the time they were a member of that house",Paginated list
+,/houses/:house/members/questions/written/unanswered,All non-withdrawn written parliamentary questions tabled by members of a house awaiting a substantive answer (including those with only a holding answer). Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/oral,All oral parliamentary questions tabled by members of a house ever. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/oral/question-types,A list of question types applicable for members of a house for tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/houses/:house/members/questions/oral/question-types/:question-type,All oral parliamentary questions tabled by members of a house of type as specified. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/oral/withdrawn,All withdrawn oral parliamentary questions tabled by members of a house. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/oral/answered,All answered oral parliamentary questions tabled by members of a house. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/oral/answered/question-types,A list of question types for answered tabled oral questions applicable for members of a house. Values are substantive or non-substantive,Paginated list
+,/houses/:house/members/questions/oral/answered/question-types/:question-type,All answered oral parliamentary questions tabled by a member of a house of type as specified. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/members/questions/oral/unanswered,All non-withdrawn oral parliamentary questions tabled by members of a house awaiting an answer. Tabled at the time they were a member of that house,Paginated list
+,/houses/:house/answering-bodies,A list of answering bodies which have been asked questions by Members of a House,Paginated list
+,/houses/:house/answering-bodies/:group/questions,All parliamentary questions asked of an answering body by members of a House,Paginated list
+,/houses/:house/answering-bodies/:group/questions/answered,All (substantively) answered parliamentary questions asked of an answering body by members of a House ever,Paginated list
+,/houses/:house/answering-bodies/:group/questions/unanswered,All non-withdrawn parliamentary questions asked of an answering body by members of a House awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/houses/:house/answering-bodies/:group/questions/written,All written parliamentary questions asked of an answering body by members of a House ever,Paginated list
+,/houses/:house/answering-bodies/:group/questions/written/answered,All (substantively) answered written parliamentary questions asked of an answering body by members of a House ever,Paginated list
+,/houses/:house/answering-bodies/:group/questions/written/answered/answer-types,"A list of answer types for questions applicable to an answering body: holding, substantive, corrected, prorogation",Paginated list
+,/houses/:house/answering-bodies/:group/questions/written/answered/answer-types/:answer-type,"All answered written parliamentary questions asked of an answering body by members of a House where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation",Paginated list
+,/houses/:house/answering-bodies/:group/questions/written/unanswered,All non-withdrawn written parliamentary questions asked of an answering body by members of a House awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral,All oral parliamentary questions asked of an answering body by members of a House ever. Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral/question-types,A list of question types applicable for an answering body for tabled oral questions. Values are substantive or non-substantive. Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral/question-types/:question-type,All oral parliamentary questions asked of an answering body by members of a House of type as specified. Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral/answered,All answered oral parliamentary questions asked of an answering body by members of a House Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral/answered/question-types,A list of question types for answered tabled oral questions applicable for an answering body. Values are substantive or non-substantive. Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral/answered/question-types/:question-type,All answered oral parliamentary questions asked of an answering body by members of a House of type as specified. Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
+,/houses/:house/answering-bodies/:group/questions/oral/unanswered,All non-withdrawn oral parliamentary questions asked of an answering body by members of a House awaiting an answer.  Note that oral questions in the House of Lords are addressed to the government and not to a specific answering body so will not appear here,Paginated list
 ,,,
 ✓,/parliaments,List of all parliaments (time periods) ideally from 1801 to date,Paginated list
 ✓,/parliaments/current,Redirect (302) to the current parliament time period or 40x during dissolution,Redirect
@@ -170,16 +247,61 @@
 ,/groups/:group/sub-committees,List of sub-committees belonging to a committee,Paginated list
 ,/groups/:group/sub-committees/current,List of currently active sub-committees belonging to a committee,Paginated list
 ,/groups/:group/parent-committee,For a sub-committee its parent committee,Paginated list
+,/groups/:group/questions,All parliamentary questions asked of an answering body,Paginated list
+,/groups/:group/questions/answered,All (substantively) answered parliamentary questions asked of an answering body ever,Paginated list
+,/groups/:group/questions/unanswered,All non-withdrawn parliamentary questions asked of an answering body awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/groups/:group/questions/written,All written parliamentary questions asked of an answering body ever,Paginated list
+,/groups/:group/questions/written/answered,All (substantively) answered written parliamentary questions asked of an answering body ever,Paginated list
+,/groups/:group/questions/written/answered/answer-types,"A list of answer types for questions applicable to an answering body: holding, substantive, corrected, prorogation",Paginated list
+,/groups/:group/questions/written/answered/answer-types/:answer-type,"All answered written parliamentary questions asked of an answering body where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation",Paginated list
+,/groups/:group/questions/written/unanswered,All non-withdrawn written parliamentary questions asked of an answering body awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/groups/:group/questions/oral,All oral parliamentary questions asked of an answering body ever,Paginated list
+,/groups/:group/questions/oral/question-types,A list of question types applicable for an answering body for tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/groups/:group/questions/oral/question-types/:question-type,All oral parliamentary questions asked of an answering body of type as specified,Paginated list
+,/groups/:group/questions/oral/answered,All answered oral parliamentary questions asked of an answering body,Paginated list
+,/groups/:group/questions/oral/answered/question-types,A list of question types for answered tabled oral questions applicable for an answering body. Values are substantive or non-substantive,Paginated list
+,/groups/:group/questions/oral/answered/question-types/:question-type,All answered oral parliamentary questions asked of an answering body of type as specified,Paginated list
+,/groups/:group/questions/oral/unanswered,All non-withdrawn oral parliamentary questions asked of an answering body awaiting an answer,Paginated list
 ,,,
 ,/procedures,List of all procedures ever. Ordered alphabetically. Just five for now,Paginated list
 ,/procedures/:procedure,A procedure page,Thing page
-,/procedures/:procedure/workpackages,"List of all workpackages subject to a procedure. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
+,/procedures/:procedure/work-packages,"List of all workpackages subject to a procedure. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
 ,,,
-,/workpackages,"List of all workpackages ever. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
-,workpackages/:workpackage,Workpackage page,Thing page
-,workpackages/:workpackage/business-items,List of business items in the past or future in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
-,workpackages/:workpackage/business-items/concluded,List of business items in the past in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
-,workpackages/:workpackage/business-items/upcoming,List of business items in the future in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
+✓,/work-packages,"List of all workpackages ever. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
+✓,/work-packages/:workpackage,Workpackage page,Thing page
+,/work-packages/:workpackage/business-items,List of business items in the past or future in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
+,/work-packages/:workpackage/business-items/concluded,List of business items in the past in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
+,/work-packages/:workpackage/business-items/upcoming,List of business items in the future in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
+,,,
+,/questions,All tabled parliamentary questions ever,Paginated list
+,/questions/withdrawn,All withdrawn tabled parliamentary questions ever,Paginated list
+,/questions/answered,All (substantively) answered tabled parliamentary questions ever,Paginated list
+,/questions/unanswered,All non-withdrawn tabled parliamentary questions awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/questions/written,All tabled written parliamentary questions ever,Paginated list
+,/questions/written/withdrawn,All withdrawn tabled written parliamentary questions ever,Paginated list
+,/questions/written/answered,All (substantively) answered tabled written parliamentary questions ever,Paginated list
+,/questions/written/answered/answer-types,"A list of answer types for a question: holding, substantive, corrected, prorogation",Paginated list
+,/questions/written/answered/answer-types/:answer-type,"All answered tabled written parliamentary questions where the latest answer is of type specified. Possible values of answer type are holding, substantive, corrective, prorogation",Paginated list
+,/questions/written/unanswered,All non-withdrawn tabled written parliamentary questions awaiting a substantive answer (including those with only a holding answer),Paginated list
+,/questions/oral,All tabled oral parliamentary questions ever,Paginated list
+,/questions/oral/question-types,A list of question types for tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/questions/oral/question-types/:question-type,All tabled oral parliamentary questions ever of type as specified,Paginated list
+,/questions/oral/withdrawn,All withdrawn tabled oral parliamentary questions ever,Paginated list
+,/questions/oral/answered,All answered tabled oral parliamentary questions ever,Paginated list
+,/questions/oral/answered/question-types,A list of question types for answered tabled oral questions. Values are substantive or non-substantive,Paginated list
+,/questions/oral/answered/question-types/:question-type,All answered tabled oral parliamentary questions ever of type as specified,Paginated list
+,/questions/oral/unanswered,All non-withdrawn tabled oral parliamentary questions awaiting an answer,Paginated list
+✓,/questions/:question,A tabled parliamentary question,Thing page
+,/questions/:question/answers,"A list of all answers (holding, substantive, corrected, progoration) over time for a tabled parliamentary question",Paginated list
+,,,
+,/answers,A list of all answers to tabled parliamentary questions ever regardless of type,Paginated list
+,/answers/:answer,"An individual answer to a tabled written parliamentary question. Might be a holding answer, a substantive answer, a corrected answer or a prorogation answer",Thing page
+
+
+
+
+
+
 ,,,
 ✓,/places,List of all places,Paginated list
 ✓,/places/regions,List of all NUTS level 1 regions,Paginated list

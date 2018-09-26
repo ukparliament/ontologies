@@ -18,70 +18,70 @@
 phm:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:HouseSeat rdf:type owl:Class ;
 	rdfs:label "HouseSeat"@en ;
 	rdfs:comment "A seat in a House. A place reserved for a Member in a House. This does not equate to a constituency. A seat might be associated with a constituency (in the House of Commons) but might be allocated to a bishop or inherited by an hereditary peer."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:HouseSeatType rdf:type owl:Class ;
 	rdfs:label "HouseSeatType"@en ;
 	rdfs:comment "A house seat type. This includes first past the post elected in the Commons. In the Lords it includes hereditary peers, life peers, excepted hereditary peers and Lords spiritual (made up of named diocesan and long serving English diocesan bishops)."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:Member rdf:type owl:Class ;
 	rdfs:label "Member"@en ;
 	rdfs:comment "A current or former Member of a House."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 phm:SeatIncumbency rdf:type owl:Class ;
 	rdfs:label "SeatIncumbency"@en ;
 	rdfs:comment "A person (Member) occupying a seat in a House for a period of time."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:label "ConstituencyGroup"@en ;
 	rdfs:comment "A group of people represented by the winner of an election. Includes people other than those eligible to vote (e.g. children, prisoners)."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 		
 phm:Suspension rdf:type owl:Class ;
 	rdfs:subClassOf phm:SeatIncumbencyInterruption ;
 	rdfs:label "Suspension"@en ;
 	rdfs:comment "A suspension. A period of exclusion of a Member during which the Member is not authorised to sit in a House. They remain a Member in all other senses."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:LeaveOfAbsence rdf:type owl:Class ;
 	rdfs:subClassOf  phm:SeatIncumbencyInterruption ;
 	rdfs:label "LeaveOfAbsence"@en ;
 	rdfs:comment "A leave of absence. A period during which a Member of the House of Lords is authorised not to attend sittings."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:Disqualification rdf:type owl:Class ;
 	rdfs:subClassOf  phm:SeatIncumbencyInterruption ;
 	rdfs:label "Disqualification"@en ;
 	rdfs:comment "In the House of Lords a Member can be disqualified on the grounds of holding judicial office, being a Member of the European Parliament, or being bankrupt."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 
 phm:DisqualificationType rdf:type owl:Class ;
 	rdfs:label "DisqualificationType"@en ;
 	rdfs:comment "Captures the reason for which a Member has been disqualified from the House of Lords. Possible reasons are holding judicial office, being a Member of the European Parliament, or being bankrupt."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:EndReason rdf:type owl:Class ;
 	rdfs:label "EndReason"@en ;
 	rdfs:comment "A reason for the ending of a seat incumbency. For example, a Member may leave a House following an election loss, by standing down, by retirement, or death."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .			
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .			
 	
 phm:SeatIncumbencyInterruption rdf:type owl:Class ;
 	rdfs:label "SeatIncumbencyInterruption"@en ;
 	rdfs:comment "An interruption to a seat incumbency for a limited period of time for reasons such as suspension, leave of absence, disqualification etc."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .				
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .				
 	
 phm:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:label "ParliamentPeriod"@en ;
 	rdfs:comment "The period of Parliamentary time between the first sitting of Parliament following a general election and dissolution."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 
 	
 ##### Object properties ####
@@ -92,63 +92,63 @@ phm:hasSeatIncumbencyInterruption rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a seat incumbency to an interruption."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:SeatIncumbencyInterruption ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 phm:hasHouseSeat rdf:type owl:ObjectProperty ;
 	rdfs:label "hasHouseSeat"@en ;
 	rdfs:comment "Relates a House to its seats."@en ;
 	rdfs:domain phm:House ;
 	rdfs:range phm:HouseSeat ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:hasSeatIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "hasSeatIncumbency"@en ;
 	rdfs:comment "Relates a house seat to a seat incumbency."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:SeatIncumbency ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:hasIncumbent rdf:type owl:ObjectProperty ;
 	rdfs:label "hasIncumbent"@en ;
 	rdfs:comment "Relates a seat incumbency to a Member."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:Member ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:hasHouseSeatType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasHouseSeatType"@en ;
 	rdfs:comment "Relates a house seat to a house seat type."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:HouseSeatType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
 
 phm:representsConstituencyGroup rdf:type owl:ObjectProperty ;
 	rdfs:label "representsConstituencyGroup"@en ;
 	rdfs:comment "Relates a house seat to a constituency group."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:ConstituencyGroup ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:hasEndReason rdf:type owl:ObjectProperty ;
 	rdfs:label "hasEndReason"@en ;
 	rdfs:comment "Relates a seat incumbency to an end reason."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:EndReason ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:inParliamentPeriod rdf:type owl:ObjectProperty ;
 	rdfs:label "inParliamentPeriod"@en ;
 	rdfs:comment "Relates a seat incumbency to a Parliament period."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:ParliamentPeriod ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:hasDisqualificationType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasDisqualificationType"@en ;
 	rdfs:comment "Relates a disqualification to a disqualification type."@en ;
 	rdfs:domain phm:Disqualification ;
 	rdfs:range phm:DisqualificationType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 				
 	
 ##### Data properties ####	
@@ -158,12 +158,12 @@ phm:swearingInOrder rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The order in which Members take the oath (religious) or affirmation (secular) at the beginning of a new Parliament or following a by-election. Swearing in order can be used to determine who is the longest serving member of a House. The longest serving Member of a House is known as the Father or Mother of the House."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range xsd:integer ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:isStandingDown rdf:type owl:DatatypeProperty ;
 	rdfs:label "isStandingDown"@en ;
 	rdfs:comment "Denotes that a Commons member intends to stand down at the next election."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range xsd:boolean ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 						
