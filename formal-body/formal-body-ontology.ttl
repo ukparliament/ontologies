@@ -18,118 +18,84 @@
 pfb:FormalBody rdf:type owl:Class ;
 	rdfs:label "FormalBody"@en ;
 	rdfs:comment "A group of people with a specific remit engaging in the formal business of Parliament. Usually these are committees or committee-like bodies established by Parliament. Sometimes formally constituted by Parliamentary procedure (e.g. via Standing Orders), sometimes constituted on a less formal basis (e.g. the Lord Speaker's Advisory Panel on Works of Art). Some formal bodies are established outside Parliament but still have a formal link to Parliament (e.g. the Intelligence and Security Committee of Parliament). Some formal bodies are established under statute. Formal bodies usually consist of a subset of Members of Parliament from the House of Commons, or peers from the House of Lords, or a mix of both appointed to deal with particular areas or issues. Occasionally a House meets as a Committee of the Whole House allowing all members of the House to attend and participate. Formal body membership generally reflects the political makeup of the House. All Party Parliamentary Groups are informal groupings of members with no formal place in the legislature so do not fit within this category."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:ParliamentaryCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:FormalBody ;
 	rdfs:label "ParliamentaryCommittee"@en ;
 	rdfs:comment "Parliamentary Committees are formed and appointed by one or both Houses (e.g. via a motion or standing order)."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:SelectCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:ParliamentaryCommittee ;
 	rdfs:label "SelectCommittee"@en ;
 	rdfs:comment "Select Committees work in both Houses. They check and report on areas ranging from the work of government departments to economic affairs. The results of these inquiries are public and many require a response from the government. House of Commons Select Committees are largely concerned with examining the work of government departments. Select Committees in the House of Lords concentrate on broader themes rather than individual departments."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:GeneralCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:ParliamentaryCommittee ;
 	rdfs:label "GeneralCommittee"@en ;
 	rdfs:comment "The main role of General Committees is to consider proposed legislation in detail. This committee system allows faster processing of bills and is unique to the House of Commons; the Lords meet as a whole House in this function. There are various types of General Committee: Committees on Bills, Grand Committees looking at matters specific to the devolved nations of the UK, and General Committees on delegated legislation and European documents."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:NonSelectCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:ParliamentaryCommittee ;
 	rdfs:label "NonSelectCommittee"@en ;
 	rdfs:comment "The House of Lords does not have General Committees but does have non-Select Committees. At a Select Committee of the House of Lords, Peers are not excluded from attending and speaking but they must not attend any meeting while the Committee deliberate, unless invited by the Committee to do so, and they must not vote. At a non-Select Committee, any Peer can attend, speak and vote."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:StatutoryCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:FormalBody ;
 	rdfs:label "StatutoryCommittee"@en ;
 	rdfs:comment "Statutory Committees are formed as a result of legislation (e.g. the Ecclesiastical Committee)."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:InformallyConstitutedCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:FormalBody ;
 	rdfs:label "InformallyConstitutedCommittee"@en ;
 	rdfs:comment "An InformallyConstitutedCommittee is a committee-like body that is not established under Parliamentary procedure or by statute."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:FocusCategory rdf:type owl:Class ;
 	rdfs:label "FocusCategory"@en ;
-	rdfs:comment "FocusCategory provides a way to aggregate formal bodies by the type of thing they concentrate on or scrutinise. In theory this could be derived from the FocussedOn and Focus relationships, but in some cases the thing these classes point at are not well not enough defined to determine their type. For example, the Scottish Grand Committee would point at a library subject heading / concept of Scotland. This concept is only typed as a geographic entity, and not identified as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the FocussedOn and Focus relationships alone. Therefore, we have introduced FocusCategory to give a higher level means to group formal bodies by interest areas. To give another example, Focus might point to a named item of legislation, and the Focus Category would say that this Formal Body was constituted to scrutinise a specific item of legislation but not identify which one. Options for FocusCategory are: a specific item of legislation, a type of legislation, one or more government departments, matters specific to devolved nations etc."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:comment "FocusCategory provides a way to aggregate formal bodies by the type of thing they concentrate on or scrutinise. In theory this could be derived from any Focus relationships, but in some cases the thing these classes point at are not well enough defined to determine their type. For example, the Scottish Grand Committee would point at a library subject heading / concept of Scotland. This concept is only typed as a geographic entity, and not identified as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the Focus relationships alone. Therefore, we have introduced FocusCategory to give a higher level means to group formal bodies by interest areas. To give another example, Focus might point to a named item of legislation, and the Focus Category would say that this Formal Body was constituted to scrutinise a specific item of legislation but not identify which one. Options for FocusCategory are: a specific item of legislation, a type of legislation, one or more government departments, matters specific to devolved nations etc."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A Parliamentary House e.g. the House of Lords."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
 	rdfs:comment "A grouping of activities performed by a Formal Body potentially including meetings, calls for evidence, evidence sessions, publications etc. Work packages (including inquiries) are not a type of process. Formal bodies have roughly the same powers and undertake roughly the same activities but different formal bodies can choose to work differently. Individual activities may or may not get done and there's no defined order for when they happen."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Inquiry rdf:type owl:Class ;
 	rdfs:subClassOf pfb:WorkPackage ;
 	rdfs:label "Inquiry"@en ;
 	rdfs:comment "A type of work package investigating a specific subject or policy area."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:InquiryScope rdf:type owl:Class ;
 	rdfs:label "InquiryScope"@en ;
 	rdfs:comment "The scope or terms of reference of an inquiry. Sets out the context, constraints and questions which the inquiry seeks to address."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:WorkPackageType rdf:type owl:Class ;
 	rdfs:label "WorkPackageType"@en ;
 	rdfs:comment "Used to describe the type of a work package (a collection of activities). Note that inquiries have a specific Inquiry subclass; WorkPackageType is intended to describe non-inquiry work packages. e.g. a collection of hearings before a person is appointed to a public body or a set of hearings where a government minister appears before a committee."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
-pfb:Event rdf:type owl:Class ;
-	rdfs:label "Event"@en ;
-	rdfs:comment "A thing happening over a time interval, sometimes in a place, sometimes involving people and agents."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:Document rdf:type owl:Class ;
-	rdfs:label "Document"@en ;
-	rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence or that serves as an official record."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:FocussedOn rdf:type owl:Class ;
-	rdfs:label "FocussedOn"@en ;
-	rdfs:comment "A time bound period during which a Formal Body or work package is investigating a specific subject or policy area."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+pfb:BusinessItem rdf:type owl:Class ;
+	rdfs:label "BusinessItem"@en ;
+	rdfs:comment "An item of parliamentary business e.g. a second reading debate, the tabling of an early day motion, a laying of a paper."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment "A focus area for a Formal Body or work package."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:GovernmentDepartment rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "GovernmentDepartment"@en ;
-	rdfs:comment "The means by which the government exercises its executive authority."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:Concept rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "Concept"@en ;
-	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:LegislationType rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "LegislationType"@en ;
-	rdfs:comment "Used when the focus of a Formal Body is a type of legislation. e.g. a committee looking at legal drafting of secondary legislation."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-pfb:LegislationItem rdf:type owl:Class ;
-	rdfs:subClassOf pfb:Focus ;
-	rdfs:label "LegislationItem"@en ;
-	rdfs:comment "A specific piece of legislation. e.g. A named bill or statutory instrument."@en ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:comment "A focus area for a Formal Body or work package. This might be a specific government department, a specific type of legislation, an item of legislation or a SKOS type concept."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 	
 	
@@ -140,105 +106,84 @@ pfb:belongsToHouse rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a Formal Body to the House or Houses it belongs to. A joint committee will belong to both Houses."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:hasLeadHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "hasLeadHouse"@en ;
 	rdfs:comment "A joint committee will have a lead House responsible for its administration."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasParentFormalBody rdf:type owl:ObjectProperty ;
 	rdfs:label "hasParentFormalBody"@en ;
 	rdfs:comment "Allows for committees to have sub-committees and sub-committees to have parent committees."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:FormalBody ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:undertakesWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "undertakesWorkPackage"@en ;
 	rdfs:comment "Allows for committees to take on work packages like inquiries. A joint inquiry will have more than one associated Formal Body."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:WorkPackage ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:hasParentWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "hasParentWorkPackage"@en ;
 	rdfs:comment "Allows for work packages to have parent work packages. e.g. a sub-inquiry can belong to a wider inquiry."@en ;
 	rdfs:domain pfb:WorkPackage ;
 	rdfs:range pfb:WorkPackage ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasInquiryScope rdf:type owl:ObjectProperty ;
 	rdfs:label "hasInquiryScope"@en ;
 	rdfs:comment "Relates an inquiry to its scope of terms of reference."@en ;
 	rdfs:domain pfb:Inquiry ;
 	rdfs:range pfb:InquiryScope ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasWorkPackageType rdf:type owl:ObjectProperty ;
 	rdfs:label "hasWorkPackageType"@en ;
 	rdfs:comment "Defines the type of a work package where the work package is not an inquiry."@en ;
 	rdfs:domain pfb:WorkPackage ;
 	rdfs:range pfb:WorkPackageType ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:partOfWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "partOfWorkPackage"@en ;
-	rdfs:comment "Assigns an event to the work package it belongs in. An event may belong to more than one work package or none e.g. a joint evidence session may belong to more than one work package where each work package is owned by a different committee."@en ;
-	rdfs:domain pfb:Event ;
+	rdfs:comment "Assigns a business item to the work package it belongs in. A business item may belong to more than one work package or none e.g. a joint evidence session may belong to more than one work package where each work package is owned by a different committee."@en ;
+	rdfs:domain pfb:BusinessItem ;
 	rdfs:range pfb:WorkPackage ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasAgent rdf:type owl:ObjectProperty ;
 	rdfs:label "hasAgent"@en ;
-	rdfs:comment "Associates an event with the formal bodies responsible for organising it."@en ;
-	rdfs:domain pfb:Event ;
+	rdfs:comment "Associates a business item with the formal bodies responsible for organising it."@en ;
+	rdfs:domain pfb:BusinessItem ;
 	rdfs:range pfb:FormalBody ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:publishes rdf:type owl:ObjectProperty ;
-	rdfs:label "publishes"@en ;
-	rdfs:comment "Allows an event to be a document publication event and points at the resulting published document."@en ;
-	rdfs:domain pfb:Event ;
-	rdfs:range pfb:Document ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:inWorkPackage rdf:type owl:ObjectProperty ;
-	rdfs:label "inWorkPackage"@en ;
-	rdfs:comment "Assigns a document to the work package of which it forms a part."@en ;
-	rdfs:domain pfb:Document ;
-	rdfs:range pfb:WorkPackage ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
-pfb:formalBodyFocussedOn rdf:type owl:ObjectProperty ;
-	rdfs:label "formalBodyFocussedOn"@en ;
-	rdfs:comment "Allows a Formal Body to focus on different areas and for this focus to change over time."@en ;
+pfb:formalBodyFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "formalBodyFocus"@en ;
+	rdfs:comment "Allows a Formal Body to focus on different areas."@en ;
 	rdfs:domain pfb:FormalBody ;
-	rdfs:range pfb:FocussedOn ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:workPackageFocussedOn rdf:type owl:ObjectProperty ;
-	rdfs:label "workPackageFocussedOn"@en ;
-	rdfs:comment "Allows a work package to focus on different areas and for this focus to change over time."@en ;
-	rdfs:domain pfb:WorkPackage ;
-	rdfs:range pfb:FocussedOn ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
-pfb:hasFocus rdf:type owl:ObjectProperty ;
-	rdfs:label "hasFocus"@en ;
-	rdfs:comment "Relates a time bound focus to a specific focus area."@en ;
-	rdfs:domain pfb:FocussedOn ;
 	rdfs:range pfb:Focus ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
-pfb:setUpToFocusOn rdf:type owl:ObjectProperty ;
-	rdfs:label "setUpToFocusOn"@en ;
+pfb:workPackageFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "workPackageFocus"@en ;
+	rdfs:comment "Allows a work package to focus on different areas."@en ;
+	rdfs:domain pfb:WorkPackage ;
+	rdfs:range pfb:Focus ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+pfb:hasFocusCategory rdf:type owl:ObjectProperty ;
+	rdfs:label "hasFocusCategory"@en ;
 	rdfs:comment "Relates a Formal Body to its Focus Category."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:FocusCategory ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 				
 
 #######  Data properties ##### 
@@ -248,4 +193,4 @@ pfb:remit rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The task or area of activity officially assigned to a Formal Body. This is a textual description as opposed to Focus which points at entities to describe the areas to be examined."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range rdf:langString ;
-	rdf:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .

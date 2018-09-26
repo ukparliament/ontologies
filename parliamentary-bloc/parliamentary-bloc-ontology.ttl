@@ -1,0 +1,100 @@
+@prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/parliamentary-bloc/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Parliamentary bloc ontology"@en ;
+    dcterms:created "14/06/2017"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Parliamentary bloc ontology for UK Parliament. Extends and specialises the agency model to describe memberships and whippings to politic parties and affiliations to parliamentary blocs."@en .
+
+
+#######  Classes ##### 	
+
+ppb:Pact rdf:type owl:Class ;
+	rdfs:label "Pact"@en ;
+	rdfs:comment "A formal agreement between two or more political parties."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:Sistership rdf:type owl:Class ;
+	rdfs:label "Sistership"@en ;
+	rdfs:comment "A relationship between parties with ideologically similar positions who have agreed to co-operate."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:Party rdf:type owl:Class ;
+	rdfs:subClassOf ppb:ParliamentaryBloc ;
+	rdfs:label "Party"@en ;
+	rdfs:comment "An organised political group registered with the Electoral Commission."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:ParliamentaryBloc rdf:type owl:Class ;
+	rdfs:label "ParliamentaryBloc"@en ;
+	rdfs:comment "A group of members. This includes a political party such as Labour or Conservative, and also includes different types of grouping such as Bishops or Crossbenchers in the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:Affiliation rdf:type owl:Class ;
+	rdfs:label "Affiliation"@en ;
+	rdfs:comment "A person or group's affiliation to a parliamentary bloc between two dates. Could be used to describe affiliations to blocs which are not political parties e.g. Crossbenchers and bishops in the House of Lords. Could also be used to describe members having an affiliation to the Co-operative Party whilst being whipped to Labour."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:Whipping rdf:type owl:Class ;
+	rdfs:subClassOf ppb:Affiliation ;
+	rdfs:label "Whipping"@en ;
+	rdfs:comment "A member of a legislature being whipped to a political party between two dates. A member accepting a whip agrees to vote mainly in line with the party they're whipped to. The whip may be withdrawn by the party or rejected by the member."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:Member rdf:type owl:Class ;
+	rdfs:subClassOf ppb:Person ;
+	rdfs:label "Member"@en ;
+	rdfs:comment "A current or former member of a house."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+
+	
+##### Object properties ####
+
+
+ppb:hasPact rdf:type owl:ObjectProperty ;
+	rdfs:label "hasPact"@en ;
+	rdfs:comment "Relates a party to the pact it's part of."@en ;
+	rdfs:domain ppb:Party ;
+	rdfs:range ppb:Pact ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:hasSistership rdf:type owl:ObjectProperty ;
+	rdfs:label "hasSistership"@en ;
+	rdfs:comment "Relates a party to a sistership it's part of."@en ;
+	rdfs:domain ppb:Party ;
+	rdfs:range ppb:Sistership ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:affiliatedToParliamentaryBloc rdf:type owl:ObjectProperty ;
+	rdfs:label "affiliatedToParliamentaryBloc"@en ;
+	rdfs:comment "Relates an affiliation to a parliamentary bloc. e.g. covers the affiliation of a Crossbencher to the Crossbench bloc in the House of Lords. "@en ;
+	rdfs:domain ppb:Affiliation ;
+	rdfs:range ppb:ParliamentaryBloc ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:whippingTo rdf:type owl:ObjectProperty ;
+	rdfs:label "whippingTo"@en ;
+	rdfs:comment "Relates a whipping to a political party."@en ;
+	rdfs:domain ppb:Whipping ;
+	rdfs:range ppb:Party ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+	
+ppb:hasWhipping rdf:type owl:ObjectProperty ;
+	rdfs:label "hasWhipping"@en ;
+	rdfs:comment "Relates a member to a whipping."@en ;
+	rdfs:domain ppb:Member ;
+	rdfs:range ppb:Whipping ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
+				
+	
+##### Data properties ####	
+			
+
+						

@@ -1,0 +1,73 @@
+@prefix pcon: <http://parliament.uk/ontologies/contribution/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://parliament.uk/ontologies/contribution/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Contribution ontology"@en ;
+    dcterms:created "28/06/2018"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Contribution ontology for UK Parliament"@en .
+
+
+#######  Classes #####
+
+pcon:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:Contribution rdf:type owl:Class ;
+	rdfs:label "Contribution"@en ;
+	rdfs:comment "A contribution by an individual or organisation to a document or committee inquiry etc."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:ContributionRole rdf:type owl:Class ;
+	rdfs:label "ContributionRole"@en ;
+	rdfs:comment "The type of contribution made. Might be as an author or reviewer or inquiry witness etc."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:Focus rdf:type owl:Class ;
+	rdfs:label "Focus"@en ;
+	rdfs:comment "A focus area of a contribution."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+				
+
+#######  Object properties ##### 
+
+pcon:makesContribution rdf:type owl:ObjectProperty ;
+	rdfs:label "makesContribution"@en ;
+	rdfs:comment "Relates a person or group to a contribution they've made."@en ;
+	rdfs:domain pcon:Agent ;
+	rdfs:range pcon:Contribution ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:hasContributionRole rdf:type owl:ObjectProperty ;
+	rdfs:label "hasContributionRole"@en ;
+	rdfs:comment "Relates a contribution to the type of contribution made."@en ;
+	rdfs:domain pcon:Contribution ;
+	rdfs:range pcon:ContributionRole ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:inCapacity rdf:type owl:ObjectProperty ;
+	rdfs:label "inCapacity"@en ;
+	rdfs:comment "Relates a contribution to an incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation."@en ;
+	rdfs:domain pcon:Contribution ;
+	rdfs:range pcon:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+	
+pcon:focussedOn rdf:type owl:ObjectProperty ;
+	rdfs:label "focussedOn"@en ;
+	rdfs:comment "Relates a contribution a focus area."@en ;
+	rdfs:domain pcon:Contribution ;
+	rdfs:range pcon:Focus ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
