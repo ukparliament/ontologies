@@ -29,49 +29,49 @@
 
 plg:ActOfParliament rdf:type owl:Class ;
 	rdfs:label "Act of Parliament"@en ;
-	rdfs:comment "An Act of Parliament creates, updates or repeals legislation. An Act is a Bill which has been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law (or the statute book)."@en ;
+	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:DayCount rdf:type owl:Class ;
 	rdfs:label "Day count"@en ;
-	rdfs:comment "Some Acts of Parliament define a day count during which Parliament may scrutinise a piece of secondary legislation. The days may be sitting days or statutory days (see the time period ontology) e.g. the Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. Sometimes the enabling Act may define an exception to this default. Most commonly this will be 28, 60 or 120 days. The European Union (Withdrawal) Act 2018 defines a default period of 10 sitting days of scrutiny for proposed negative statutory instruments."@en ;
+	rdfs:comment "Acts of Parliament may define a day count during which Parliament may scrutinise a piece of secondary legislation. The days may be sitting days or statutory days, as described in the time period ontology. For example, the Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. The enabling Act may define an exception to this default, commonly 28, 60 or 120 days. The European Union (Withdrawal) Act 2018 defines a period of 10 sitting days of scrutiny for proposed negative statutory instruments."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DayCountType rdf:type owl:Class ;
 	rdfs:label "Day count type"@en ;
-	rdfs:comment "Day count type can be sitting days or statutory days. See the time period ontology for definitions."@en ;
+	rdfs:comment "A day count type can be sitting days or statutory days, as defined in the time period ontology."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:EnablingPower rdf:type owl:Class ;
 	rdfs:label "Enabling power"@en ;
-	rdfs:comment "A power delegated by one or more items of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward - such as the procedure it will be subject to, any override of statutory day count, and its scope - are specified by an enabling power."@en ;
+	rdfs:comment "A power delegated by one or more items of primary legislation, enabling a government minister to bring forward secondary legislation. The terms under which the secondary legislation can be brought forward - including the procedure it will be subject to, any override of statutory day count, and its scope - are specified by an enabling power."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
 	rdfs:subClassOf plg:StatutoryEnabledThing ;
 	rdfs:label "Proposed negative statutory instrument"@en ;
-	rdfs:comment "A regulation made under the powers in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 which government ministers consider needs to be made under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument(s) be instead laid under the affirmative procedure."@en ;
+	rdfs:comment "A regulation, made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018, which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument(s) be instead laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:StatutoryEnabledThing rdf:type owl:Class ;
 	rdfs:label "Statutory enabled thing"@en ;
-	rdfs:comment "A parliamentary thing, the existence of which is enabled by statute law."@en ;
+	rdfs:comment "A thing, the existence of which is enabled by the exercise of an enabling power."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
 	rdfs:subClassOf plg:StatutoryEnabledThing ;
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
-	rdfs:comment "Of made and draft statutory instruments, The National Archives classify made instruments as legislation. Parliament considers both made and drafts as part of the legislative process, which is modelled at a more abstract conceptual level than the FRBR work used by The National Archives. It groups both made and draft statutory instrument papers within Parliament."@en ;
+	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and drafts as part of the legislative process, distinct from a FRBR work as used by The National Archives. Within Parliament made and draft statutory instrument papers are grouped together."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DraftStatutoryInstrument rdf:type owl:Class ;
 	rdfs:label "Draft statutory instrument"@en ;
-	rdfs:comment "Draft statutory instruments are laid before Parliament as part of the process of secondary legislation. Draft statutory instruments may be objected to. A draft instrument is made into secondary legislation after a government minister signs it. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:comment "Draft statutory instruments are laid before Parliament, and may be objected to. A draft instrument is made into secondary legislation after being signed by a government minister. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:MadeStatutoryInstrument rdf:type owl:Class ;
 	rdfs:label "Made statutory instrument"@en ;
-	rdfs:comment "Made statutory instruments may progress from draft or be laid without draft before Parliament, as made. Parliament may direct that certain statutory instruments progress into legislation without being laid. Made statutory instruments may be objected to. A made instrument becomes secondary legislation after it has been signed by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may direct that statutory instruments progress into legislation without being laid. Made statutory instruments may be objected to. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:StatutoryInstrumentSeriesItem rdf:type owl:Class ;
