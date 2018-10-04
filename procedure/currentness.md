@@ -4,27 +4,47 @@
 
 (
 
-Laid before the House of Lords actualised
+	(
 
-AND
+			Laid before the House of Lords actualised
 
-Proposed negative statutory instrument withdrawn from the House of Lords NOT actualised
+			AND
 
-AND
+			Proposed negative statutory instrument withdrawn from the House of Lords NOT actualised
 
-Decision made by the Secondary Legislation Scrutiny Committee (SLSC) NOT actualised
+			AND
+
+			Decision made by the Secondary Legislation Scrutiny Committee (SLSC) NOT actualised
+
+		)
+
+		OR
+
+		(
+
+			Laid before the House of Commons actualised
+
+			AND
+
+			Proposed negative statutory instrument withdrawn from the House of Commons NOT actualised
+
+			AND
+
+			Decision made by the European Statutory Instruments Committee (ESIC) NOT actualised
+
+		)
 
 )
 
-OR
+AND
 
 (
 
-Proposed negative statutory instrument withdrawn from the House of Commons NOT actualised
+	Sifting period ends actualised with date >= today - 1
 
-AND
+	OR
 
-Decision made by the European Statutory Instruments Committee (ESIC) NOT actualised
+	Sifting period ends NOT actualised
 
 )
 
@@ -37,6 +57,14 @@ OR
 
 Instrument remains law NOT actualised
 
+OR
+
+Objection period ends actualised with date >= today - 1
+	
+OR
+	
+Objection period ends NOT actualised
+
 
 ## Draft negative
 
@@ -45,6 +73,14 @@ Instrument cannot become law NOT actualised
 OR
 
 Instrument can be made (signed into law) NOT actualised
+
+OR
+
+Objection period ends actualised with date >= today - 1
+	
+OR
+	
+Objection period ends NOT actualised
 
 
 ## Made affirmative
