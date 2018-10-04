@@ -53,34 +53,42 @@ AND
 
 Instrument stops being law NOT actualised
 
-OR
+AND
 
 Instrument remains law NOT actualised
 
-OR
+AND
 
-Objection period ends actualised with date >= today - 1
+(
+
+	Objection period ends actualised with date >= today - 1
 	
-OR
+	OR
 	
-Objection period ends NOT actualised
+	Objection period ends NOT actualised
+	
+)
 
 
 ## Draft negative
 
 Instrument cannot become law NOT actualised
 
-OR
+AND
 
 Instrument can be made (signed into law) NOT actualised
 
-OR
+AND
 
-Objection period ends actualised with date >= today - 1
+(
+
+	Objection period ends actualised with date >= today - 1
 	
-OR
+	OR
 	
-Objection period ends NOT actualised
+	Objection period ends NOT actualised
+	
+)
 
 
 ## Made affirmative
@@ -94,6 +102,18 @@ Instrument approved by the House of Commons and the House of Lords NOT actualise
 AND
 
 Instrument stops being law NOT actualised
+
+AND
+
+(
+
+	Approval period ends actualised with date >= today - 1
+	
+	OR
+	
+	Approval period ends NOT actualised
+	
+)
 
 
 ## Draft affirmative
