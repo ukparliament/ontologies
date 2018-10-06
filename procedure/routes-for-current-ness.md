@@ -67,3 +67,39 @@ Instrument no longer before the House of Commons or the House of Lords REQUIRES 
 Instrument no longer before the House of Commons REQUIRES laid before the House of Commons.
 
 Laid before the House of Lords PRECLUDES instrument no longer before the House of Commons.
+
+## DRAFT AFFIRMATIVE
+
+Instrument cannot become law allows Instrument no longer before the House of Commons
+
+Instrument cannot become law allows Instrument no longer before the House of Commons or the House of Lords
+
+Instrument approved by the House of Commons causes Instrument no longer before the House of Commons
+
+Instrument approved by the House of Commons and the House of Lords causes Instrument no longer before the House of Commons or the House of Lords
+
+Instrument no longer before the House of Commons requires Laid before the House of Commons
+
+Instrument no longer before the House of Commons or House of Lords requires Laid before the House of Commons
+
+Instrument no longer before the House of Commons or House of Lords requires Laid before the House of Lords
+
+Instrument withdrawn from the House of Lords precludes Instrument no longer before the House of Commons or House of Lords
+
+Instrument withdrawn from the House of Commons causes Instrument no longer before the House of Commons
+
+## MADE AFFIRMATIVE
+
+Instrument cannot become law allows Instrument no longer before the House of Commons
+
+Instrument cannot become law allows Instrument no longer before the House of Commons or the House of Lords
+
+Instrument approved by the House of Commons causes Instrument no longer before the House of Commons
+
+Instrument approved by the House of Commons and the House of Lords causes Instrument no longer before the House of Commons or the House of Lords
+
+Instrument no longer before the House of Commons requires Laid before the House of Commons
+
+Instrument no longer before the House of Commons or House of Lords requires Laid before the House of Commons
+
+Instrument no longer before the House of Commons or House of Lords requires Laid before the House of Lords
