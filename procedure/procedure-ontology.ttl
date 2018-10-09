@@ -54,24 +54,23 @@ ppr:House rdf:type owl:Class ;
 	rdfs:comment "A House forming part of a parliament. For example, the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-	
-	##### edited to here
-	
-	
 ppr:BusinessItem rdf:type owl:Class ;
 	rdfs:label "BusinessItem"@en ;
-	rdfs:comment "An item of parliamentary business e.g. a second reading debate, the tabling of an early day motion, a laying of a paper."@en ;
+	rdfs:comment "An item of business conducted either within Parliament or outside Parliament and producing an outcome subject to procedure. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:WorkPackage rdf:type owl:Class ;
 	rdfs:label "WorkPackage"@en ;
-	rdfs:comment "A package of work grouping together business items e.g. the business items that occur during the passage of a statutory instrument, or during the passage of a public bill. A work package is comprised of business items used during the progress of a process. See also the procedure ontology."@en ;
+	rdfs:comment "A grouping of business items being considered together. Membership of a work package group is constrained by the capacity of a business item to actualise a step in the applicable procedure. For example, business items during the passage of a particular statutory instrument, or during the passage of a particular public bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:label "WorkPackageableThing"@en ;
-	rdfs:comment "A thing that is the focus of a work package."@en ;
+	rdfs:comment "A thing resulting in business items grouped into a work package. The model describes the relationship between a work package and a workpackageable thing as the focus of the work package."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+	
+####### edited to here
 	
 #######  Object properties ##### 
 
