@@ -84,7 +84,11 @@ Instrument no longer before the House of Commons or House of Lords requires Laid
 
 Instrument no longer before the House of Commons or House of Lords requires Laid before the House of Lords
 
-Instrument withdrawn from the House of Commons causes Instrument no longer before the House of Commons
+Instrument withdrawn from the House of Commons allows Instrument no longer before the House of Commons
+
+Instrument withdrawn from the House of Commons allows Instrument no longer before the House of Commons or House of Lords
+
+Instrument withdrawn from the House of Lords allows Instrument no longer before the House of Commons or House of Lords
 
 ## MADE AFFIRMATIVE
 
