@@ -132,28 +132,28 @@ pap:reportedIn rdf:type owl:ObjectProperty ;
 
 #######  Data properties #####
 
-pa:dateReceived rdf:type owl:DatatypeProperty ;
+pap:dateReceived rdf:type owl:DatatypeProperty ;
 	rdfs:label "dateReceived"@en ;
 	rdfs:comment "Date a registered benefit was received."@en ;
 	rdfs:domain pap:RegisteredBenefit;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
 
-pa:dateRegistered rdf:type owl:DatatypeProperty ;
+pap:dateRegistered rdf:type owl:DatatypeProperty ;
 	rdfs:label "dateRegistered"@en ;
 	rdfs:comment "Date a benefit was registered."@en ;
 	rdfs:domain pap:RegisteredBenefit ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
 
-pa:benefitValue rdf:type owl:DatatypeProperty ;
+pap:benefitValue rdf:type owl:DatatypeProperty ;
 	rdfs:label "benefitValue"@en ;
 	rdfs:comment "The value of the registered benefit."@en ;
 	rdfs:domain pap:RegisteredBenefit ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
 
-pa:benefitCurrency rdf:type owl:DatatypeProperty ;
+pap:benefitCurrency rdf:type owl:DatatypeProperty ;
 	rdfs:label "benefitCurrency"@en ;
 	rdfs:comment "The currency the benefit value is expressed in."@en ;
 	rdfs:domain pa:RegisteredBenefit;
