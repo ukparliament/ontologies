@@ -4,6 +4,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/appg/>
     rdf:type owl:Ontology ;
@@ -11,6 +12,11 @@
     dcterms:created "2018-10-10"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
     dcterms:description "All Party Parliamentary Group ontology for UK Parliament"@en .
+	foaf:depiction <all-party-parliamentary-group.png> ;
+	foaf:maker
+		[ foaf:name "Alison Desimone" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],.
 
 
 #######  Classes #####
