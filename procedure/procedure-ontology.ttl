@@ -74,9 +74,9 @@ ppr:WorkPackageableThing rdf:type owl:Class ;
 	
 #######  Object properties ##### 
 
-ppr:belongsTo rdf:type owl:ObjectProperty ;
-	rdfs:label "belongsTo"@en ;
-	rdfs:comment "Relates a particular business item to the work package it forms part of. Note that whilst a work package can contain many business items, a business item might form part of several work packages e.g. a meeting of the Joint Committee on Statutory Instruments might include business relating to many SI work packages with no distinct segmentation. Note also that the ordering of business items in a work package cannot be determined by the (end) date alone. Many business items inside a work package may share the same (end) date. In this case ordinality can only be determined by spanning the procedure tree, taking into account actualised steps and the route types joining steps to determine the real-world order."@en ;
+ppr:formsPartOf rdf:type owl:ObjectProperty ;
+	rdfs:label "formsPartOf"@en ;
+	rdfs:comment "Relates a particular business item to the work package it forms part of. Whilst a work package can contain many business items, a business item may form part of more than one work package. For example, a meeting of the Joint Committee on Statutory Instruments may include business relating to one or more work packages each with a focus on a different SI with no distinct segmentation. The ordering of business items in a work package cannot be determined by the (end) date alone. Many business items inside a work package may share the same (end) date. In this case ordinality can only be determined by spanning the procedure tree, taking into account actualised steps and the route types joining steps to determine the real-world order."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
