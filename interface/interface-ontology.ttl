@@ -1,0 +1,38 @@
+@prefix pint: <http://parliament.uk/ontologies/interface/> .
+@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
+@prefix plg: <http://parliament.uk/ontologies/legislation/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/interface/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Interface ontology"@en ;
+    dcterms:created "2018-10-11"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology to link together models for UK Parliament."@en ;
+	foaf:depiction <legislation.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Silver Oliver" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
+
+
+#######  Equivalent classes ##### 	
+
+ppr:Procedure owl:equivalentClass plg:Procedure .
+
+#######  Subclasses ##### 	
+
+plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	ppr:WorkPackageableThing .
+
+plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	rdfs:subClassOf
+	ppr:WorkPackageableThing .
+
+
