@@ -1,12 +1,13 @@
 @prefix pint: <http://parliament.uk/ontologies/interface/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
-@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
-@prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
+@prefix plg: <http://parliament.uk/ontologies/legislation/> .
+@prefix pl: <http://parliament.uk/ontologies/laying/> .
 
 <http://parliament.uk/ontologies/interface/> 
     rdf:type owl:Ontology ;
@@ -24,7 +25,13 @@
 
 #######  Equivalent classes ##### 	
 
-ppr:Procedure owl:equivalentClass plg:Procedure .
+ppr:Procedure
+	owl:equivalentClass
+	plg:Procedure .
+
+pl:LayingDuty
+	owl:equivalentClass
+	plg:LayingDuty .
 
 #######  Subclasses ##### 	
 
@@ -35,5 +42,24 @@ plg:ProposedNegativeStatutoryInstrument
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	rdfs:subClassOf
 	ppr:WorkPackageableThing .
+	
+plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	pl:LaidThing .
+	
+plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	rdfs:subClassOf
+	pl:LaidThing .
+	
+plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	pl:WithdrawnThing .
 
+plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	rdfs:subClassOf
+	pl:WithdrawnThing .
+
+pl:LayingOrWithdrawl
+	rdfs:subClassOf
+	ppr:BusinessItem .
 
