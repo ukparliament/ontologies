@@ -1,0 +1,135 @@
+@prefix pbi: <http://parliament.uk/ontologies/business-item/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/business-item/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Business item ontology"@en ;
+    dcterms:created "2018-10-13"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology describing business items and agendas for the UK Parliament."@en ;
+	foaf:depiction <business-item.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Silver Oliver" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
+
+
+#######  Classes ##### 	
+
+pbi:BusinessItem rdf:type owl:Class ;
+	rdfs:label "Business item"@en ;
+	rdfs:comment "An item of business conducted either within Parliament or outside Parliament and producing an outcome subject to procedure. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+
+pbi:BusinessItemSeries rdf:type owl:Class ;
+	rdfs:label "Business item series"@en ;
+	rdfs:comment "A series of regularly occurring recurring business items. For example, questions to the Department of Health and Social Care."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+
+pbi:BusinessItemType rdf:type owl:Class ;
+	rdfs:label "Business item type"@en ;
+	rdfs:comment "The type of a business item. For example a committee visit, a committee evidence session, a chamber debate."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+
+pbi:Document rdf:type owl:Class ;
+	rdfs:label "Document"@en ;
+	rdfs:comment "A document. Equivalent to a FRBR work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:AgendaItem rdf:type owl:Class ;
+	rdfs:label "Agenda item"@en ;
+	rdfs:comment "An item on an agenda."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:Place rdf:type owl:Class ;
+	rdfs:label "Place"@en ;
+	rdfs:comment "A geographic place."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+	
+	
+	
+	
+	
+
+##### Object properties ####
+
+pbi:partOfSeries rdf:type owl:ObjectProperty ;
+	rdfs:label "Part of series"@en ;
+	rdfs:comment "Relates a business item to the business item series it is part of."@en ;
+	rdfs:domain pbi:BusinessItem ;
+	rdfs:range pbi:BusinessItemSeries ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:containsBusinessItem rdf:type owl:ObjectProperty ;
+	rdfs:label "Contains business item"@en ;
+	rdfs:comment "Allows a business item to be nested inside a business item. For example, a committee meeting during a committee visit."@en ;
+	rdfs:domain pbi:BusinessItem ;
+	rdfs:range pbi:BusinessItem ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:hasBusinessItemType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has business item type"@en ;
+	rdfs:comment "Relates a business item to its type."@en ;
+	rdfs:domain pbi:BusinessItem ;
+	rdfs:range pbi:BusinessItemType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:transcriptOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Transcript of"@en ;
+	rdfs:comment "Relates a document to the business item it transcribes."@en ;
+	rdfs:domain pbi:Document ;
+	rdfs:range pbi:BusinessItem ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:agendaisation rdf:type owl:ObjectProperty ;
+	rdfs:label "Agendaisation"@en ;
+	rdfs:comment "Relates a business item to it's place on an agenda."@en ;
+	rdfs:domain pbi:BusinessItem ;
+	rdfs:range pbi:AgendaItem ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:takesPlaceIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Takes place in"@en ;
+	rdfs:comment "Relates an agenda item to the place it takes place in."@en ;
+	rdfs:domain pbi:AgendaItem ;
+	rdfs:range pbi:Place ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+					
+	
+##### Data properties ####	
+			
+pbi:ordinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality"@en ;
+	rdfs:comment "The position of an agenda item on an agenda."@en ;
+	rdfs:domain pbi:AgendaItem ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+
+pbi:notReached rdf:type owl:DatatypeProperty ;
+	rdfs:label "Not reached"@en ;
+	rdfs:comment "A flag to say if an agenda item was not reached."@en ;
+	rdfs:domain pbi:AgendaItem ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:cancelledAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Cancelled at"@en ;
+	rdfs:comment "The time at which an agenda item was cancelled."@en ;
+	rdfs:domain pbi:AgendaItem ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+
+pbi:disposedOfAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Disposed of at"@en ;
+	rdfs:comment "The time at which an agenda item was disposed of (completed)."@en ;
+	rdfs:domain pbi:AgendaItem ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
