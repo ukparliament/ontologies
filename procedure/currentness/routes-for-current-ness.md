@@ -6,9 +6,9 @@ Laid before the House of Commons ALLOWS Proposed negative statutory instrument w
 
 Proposed negative statutory instrument withdrawn from the House of Commons PRECLUDES Considered by the European Statutory Instruments Committee (ESIC)
 
-Proposed negative statutory instrument withdrawn from the House of Commons CAUSES Procedure concluded in the House of Commons
+Proposed negative statutory instrument withdrawn from the House of Commons ALLOWS Procedure concluded in the House of Commons
 
-Proposed negative statutory instrument withdrawn from the House of Commons CAUSES Procedure concluded in the House of Commons and House of Lords
+Proposed negative statutory instrument withdrawn from the House of Commons ALLOWS Procedure concluded in the House of Commons and House of Lords
 
 Decision made by the European Statutory Instruments Committee (ESIC) ALLOWS Procedure concluded in the House of Commons
 
@@ -16,7 +16,7 @@ Procedure concluded in the House of Commons REQUIRES Laid before the House of Co
 
 Laid before the House of Lords ALLOWS Proposed negative statutory instrument withdrawn from the House of Lords
 
-Proposed negative statutory instrument withdrawn from the House of Lords CAUSES Procedure concluded in the House of Commons and House of Lords
+Proposed negative statutory instrument withdrawn from the House of Lords ALLOWS Procedure concluded in the House of Commons and House of Lords
 
 Proposed negative statutory instrument withdrawn from the House of Lords PRECLUDES Considered by the Secondary Legislation Scrutiny Committee (SLSC)
 
