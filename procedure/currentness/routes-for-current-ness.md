@@ -2,27 +2,38 @@
 
 ## PNSI
 
-Decision made by the European Statutory Instruments Committee (ESIC) ALLOWS Proposed Negative Statutory Instrument no longer before the House of Commons.
+Laid before the House of Commons ALLOWS Proposed negative statutory instrument withdrawn from the House of Commons
 
-Decision made by the European Statutory Instruments Committee (ESIC) ALLOWS Proposed Negative Statutory Instrument no longer before the House of Commons or the House of Lords.
+Proposed negative statutory instrument withdrawn from the House of Commons PRECLUDES Considered by the European Statutory Instruments Committee (ESIC)
 
-Decision made by the Secondary Legislation Scrutiny Committee (SLSC) ALLOWS Proposed Negative Statutory Instrument no longer before the House of Commons or the House of Lords.
+Proposed negative statutory instrument withdrawn from the House of Commons CAUSES Procedure concluded in the House of Commons
 
-Sifting period ends ALLOWS Proposed Negative Statutory Instrument no longer before the House of Commons.
+Proposed negative statutory instrument withdrawn from the House of Commons CAUSES Procedure concluded in the House of Commons and House of Lords
 
-Sifting period ends ALLOWS Proposed Negative Statutory Instrument no longer before the House of Lords.
+Decision made by the European Statutory Instruments Committee (ESIC) ALLOWS Procedure concluded in the House of Commons
 
-Proposed Negative Statutory Instrument withdrawn from the House of Lords CAUSES Proposed Negative Statutory Instrument no longer before the House of Commons or the House of Lords.
+Procedure concluded in the House of Commons REQUIRES Laid before the House of Commons
 
-Proposed Negative Statutory Instrument withdrawn from the House of Commons CAUSES Proposed Negative Statutory Instrument no longer before the House of Commons or the House of Lords.
+Laid before the House of Lords ALLOWS Proposed negative statutory instrument withdrawn from the House of Lords
 
-Proposed Negative Statutory Instrument withdrawn from the House of Commons CAUSES Proposed Negative Statutory Instrument no longer before the House of Commons.
+Proposed negative statutory instrument withdrawn from the House of Lords PRECLUDES Procedure concluded in the House of Commons
 
-Proposed Negative Statutory Instrument withdrawn from the House of Commons REQUIRES laid before the House of Commons.
+Proposed negative statutory instrument withdrawn from the House of Lords CAUSES Procedure concluded in the House of Commons and House of Lords
 
-Proposed Negative Statutory Instrument no longer before the House of Commons or the House of Lords REQUIRES laid before the House of Lords.
+Proposed negative statutory instrument withdrawn from the House of Lords PRECLUDES Considered by the Secondary Legislation Scrutiny Committee (SLSC)
 
-Proposed Negative Statutory Instrument no longer before the House of Commons or the House of Lords REQUIRES laid before the House of Commons.
+Decision made by the European Statutory Instruments Committee (ESIC) ALLOWS Procedure concluded in the House of Commons and the House of Lords
+
+Procedure concluded in the House of Commons and the House of Lords REQUIRES Laid before the House of Commons
+
+Procedure concluded in the House of Lords and the House of Lords REQUIRES Laid before the House of Lords
+
+Decision made by the Secondary Legislation Scrutiny Committee (SLSC) AlLOWS Procedure concluded in the House of Commons and the House of Lords
+
+Sifting period ends ALLOWS Procedure concluded in the House of Commons
+
+Sifting period ends ALLOWS Procedure concluded in the House of Commons and House of Lords
+
 
 ## DRAFT NEGATIVE
 
