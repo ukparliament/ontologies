@@ -1,167 +1,253 @@
-@prefix pap: <http://parliament.uk/ontologies/appg/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://parliament.uk/ontologies/appg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
-<http://parliament.uk/ontologies/appg/>
-    rdf:type owl:Ontology ;
-    dcterms:title "All Party Parliamentary Group ontology"@en ;
-    dcterms:created "2018-10-10"^^xsd:date ;
+<http://parliament.uk/ontologies/appg/> a owl:Ontology ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "All Party Parliamentary Group ontology for UK Parliament"@en ;
-	foaf:depiction <all-party-parliamentary-group.png> ;
-	foaf:maker
-		[ foaf:name "Alison Desimone" ],
-		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
-		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ].
+	dcterms:title "All Party Parliamentary Group ontology"@en ;
+	foaf:depiction :all-party-parliamentary-group.png ;
+	dcterms:created "2018-10-10"^^xsd:date ;
+	dcterms:description "All Party Parliamentary Group ontology for UK Parliament"@en ;
+	foaf:maker _:genid1 .
 
+_:genid1 foaf:name "Alison Desimone" .
 
-#######  Classes #####
+<http://parliament.uk/ontologies/appg/> foaf:maker _:genid2 .
 
-pap:APPG rdf:type owl:Class ;
-	rdfs:subClassOf pap:Group ;
-	rdfs:label "All Party Parliamentary Group"@en ;
-	rdfs:comment "All Party Parliamentary Group."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+_:genid2 foaf:homepage <http://smethur.st/> ;
+	foaf:name "Michael Smethurst" .
 
-pap:RegisteredBenefit rdf:type owl:Class ;
-	rdfs:label "RegisteredBenefit"@en ;
-	rdfs:comment " A benefit received by the group from a source other than Parliament where the total value of the benefit from that source exceeds £1500 and the benefit was received on or after the date of the group’s Inaugural Meeting ."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+<http://parliament.uk/ontologies/appg/> foaf:maker _:genid3 .
 
-pap:FinancialBenefit rdf:type owl:Class ;
-	rdfs:subClassOf pap:RegisteredBenefit ;
-	rdfs:label "FinancialBenefit"@en ;
-	rdfs:comment "A financial benefit received by the group where the total value of the benefit from that source exceeds £1500 and the benefit was received on or after the date of the group’s Inaugural Meeting."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+_:genid3 foaf:homepage <https://robert-brook.com/> ;
+	foaf:name "Robert Brook" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/homepage
 
-pap:BenefitInKind rdf:type owl:Class ;
-	rdfs:subClassOf pap:RegisteredBenefit ;
-	rdfs:label "BenefitInKind"@en ;
-	rdfs:comment "A benefit in kind such as goods or services received by the group where the total value of the benefit from that source exceeds £1500 and the benefit was received on or after the date of the group’s Inaugural Meeting."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+foaf:homepage a owl:AnnotationProperty .
+# 
+# http://xmlns.com/foaf/0.1/name
 
-pap:FinancialReportingYear rdf:type owl:Class ;
-	rdfs:label "FinancialReportingYear"@en ;
-	rdfs:comment "The year for which an APPG makes its financial report."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+foaf:name a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://parliament.uk/ontologies/appg/hasAPPGCategory
 
-pap:Group rdf:type owl:Class ;
-	rdfs:label "Group"@en ;
-	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:Member rdf:type owl:Class ;
-	rdfs:label "Member"@en ;
-	rdfs:comment "A current or former Member of a House."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:Agent rdf:type owl:Class ;
-	rdfs:label "Agent"@en ;
-	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:APPGCategory rdf:type owl:Class ;
-	rdfs:label "APPGCategory"@en ;
-	rdfs:comment "A category of APPG, for example one focussed on a country or on a subject area."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:StatusType rdf:type owl:Class ;
-	rdfs:label "StatusType"@en ;
-	rdfs:comment "Status of an APPG, for example, registered, pending."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-
-
-#######  Object properties #####
-
-pap:receivedBenefit rdf:type owl:ObjectProperty ;
-	rdfs:label "receivedBenefit"@en ;
-	rdfs:comment "Relates an APPG to a benefit received."@en ;
-	rdfs:domain pap:APPG ;
-	rdfs:range pap:RegisteredBenefit ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:hasRegisteredContact rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRegisteredContact"@en ;
-	rdfs:comment "Relates an APPG to its registered contact. This is normally the Chair of the APPG, therefore a member."@en ;
-	rdfs:domain pap:APPG;
-	rdfs:range pap:Member ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:hasSecretariatRole rdf:type owl:ObjectProperty ;
-	rdfs:label "hasGSecretariatRole"@en ;
-	rdfs:comment "Relates an external group to an APPG where they are providing secretariat (administrative) services to that APPG."@en ;
-	rdfs:domain pap:Group ;
-	rdfs:range pap:APPG ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:hasPublicEnquiryPoint rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPublicEnquiryPoint"@en ;
-	rdfs:comment "Relates an APPG to an secondary enquiry point for that APPG. This may be a contact within or outside Parliament."@en ;
-	rdfs:domain pap:APPG;
-	rdfs:range pap:Agent ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:hasStatusType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has status type"@en ;
-	rdfs:comment "Relates an All Party ParliamentaryGroup to its status type."@en ;
-	rdfs:domain pap:APPG ;
-	rdfs:range pap:StatusType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:hasAPPGCategory rdf:type owl:ObjectProperty ;
-	rdfs:label "hasAPPGCategory"@en ;
+:hasAPPGCategory a owl:ObjectProperty ;
+	rdfs:domain :APPG ;
+	rdfs:range :APPGCategory ;
 	rdfs:comment "Relates an APPG to its category, such as a country or subject related APPG."@en ;
-	rdfs:domain pap:APPG ;
-	rdfs:range pap:APPGCategory ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "hasAllPartyParliamentaryGroupCategory"@en .
+# 
+# http://parliament.uk/ontologies/appg/hasPublicEnquiryPoint
 
-pap:hasBenefitSource rdf:type owl:ObjectProperty ;
-	rdfs:label "positionIn"@en ;
-	rdfs:comment "Relates a registered benefit to the group that donated it."@en ;
-	rdfs:domain pap:Position ;
-	rdfs:range pap:Group ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+:hasPublicEnquiryPoint a owl:ObjectProperty ;
+	rdfs:domain :APPG ;
+	rdfs:range :Agent ;
+	rdfs:comment "Relates an APPG to an secondary enquiry point for that APPG. This may be a contact within or outside Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "hasPublicEnquiryPoint"@en .
+# 
+# http://parliament.uk/ontologies/appg/hasRegisteredContact
 
-pap:reportedIn rdf:type owl:ObjectProperty ;
-	rdfs:label "reportedIn"@en ;
+:hasRegisteredContact a owl:ObjectProperty ;
+	rdfs:domain :APPG ;
+	rdfs:range :Member ;
+	rdfs:comment "Relates an APPG to its registered contact. This is normally the Chair of the APPG, therefore a member."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "hasRegisteredContact"@en .
+# 
+# http://parliament.uk/ontologies/appg/hasSecretariatRole
+
+:hasSecretariatRole a owl:ObjectProperty ;
+	rdfs:domain :Group ;
+	rdfs:range :APPG ;
+	rdfs:comment "Relates an external group to an APPG where they are providing secretariat (administrative) services to that APPG."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "hasSecretariatRole"@en .
+# 
+# http://parliament.uk/ontologies/appg/hasStatusType
+
+:hasStatusType a owl:ObjectProperty ;
+	rdfs:domain :APPG ;
+	rdfs:range :StatusType ;
+	rdfs:comment "Relates an All Party ParliamentaryGroup to its status type."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "hasStatusType"@en .
+# 
+# http://parliament.uk/ontologies/appg/receivedBenefit
+
+:receivedBenefit a owl:ObjectProperty ;
+	rdfs:domain :APPG ;
+	rdfs:range :RegisteredBenefit ;
+	rdfs:comment "Relates an APPG to a benefit received."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "receivedBenefit"@en .
+# 
+# http://parliament.uk/ontologies/appg/reportedIn
+
+:reportedIn a owl:ObjectProperty ;
+	rdfs:domain :RegisteredBenefit ;
+	rdfs:range :FinancialReportingYear ;
 	rdfs:comment "Relates a registered benefit to the financial reporting year it falls into."@en ;
-	rdfs:domain pap:RegisteredBenefit ;
-	rdfs:range pap:FinancialReportingYear;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "reportedIn"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://parliament.uk/ontologies/appg/benefitCurrency
 
-
-
-#######  Data properties #####
-
-pap:dateReceived rdf:type owl:DatatypeProperty ;
-	rdfs:label "dateReceived"@en ;
-	rdfs:comment "Date a registered benefit was received."@en ;
-	rdfs:domain pap:RegisteredBenefit;
-	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:dateRegistered rdf:type owl:DatatypeProperty ;
-	rdfs:label "dateRegistered"@en ;
-	rdfs:comment "Date a benefit was registered."@en ;
-	rdfs:domain pap:RegisteredBenefit ;
-	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:benefitValue rdf:type owl:DatatypeProperty ;
-	rdfs:label "benefitValue"@en ;
-	rdfs:comment "The value of the registered benefit."@en ;
-	rdfs:domain pap:RegisteredBenefit ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
-
-pap:benefitCurrency rdf:type owl:DatatypeProperty ;
-	rdfs:label "benefitCurrency"@en ;
-	rdfs:comment "The currency the benefit value is expressed in."@en ;
-	rdfs:domain pap:RegisteredBenefit;
+:benefitCurrency a owl:DatatypeProperty ;
+	rdfs:domain :RegisteredBenefit ;
 	rdfs:range xsd:string ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> .
+	rdfs:comment "The currency the benefit value is expressed in."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "benefitCurrency"@en .
+# 
+# http://parliament.uk/ontologies/appg/benefitValue
+
+:benefitValue a owl:DatatypeProperty ;
+	rdfs:domain :RegisteredBenefit ;
+	rdfs:range xsd:integer ;
+	rdfs:comment "The value of the registered benefit."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "benefitValue"@en .
+# 
+# http://parliament.uk/ontologies/appg/dateReceived
+
+:dateReceived a owl:DatatypeProperty ;
+	rdfs:domain :RegisteredBenefit ;
+	rdfs:range xsd:dateTime ;
+	rdfs:comment "Date a registered benefit was received."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "dateReceived"@en .
+# 
+# http://parliament.uk/ontologies/appg/dateRegistered
+
+:dateRegistered a owl:DatatypeProperty ;
+	rdfs:domain :RegisteredBenefit ;
+	rdfs:range xsd:dateTime ;
+	rdfs:comment "Date a benefit was registered."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "dateRegistered"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://parliament.uk/ontologies/appg/APPG
+
+:APPG a owl:Class ;
+	rdfs:subClassOf :Group ;
+	rdfs:comment "All Party Parliamentary Group."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "All Party Parliamentary Group"@en .
+# 
+# http://parliament.uk/ontologies/appg/APPGCategory
+
+:APPGCategory a owl:Class ;
+	rdfs:comment "A category of APPG, for example one focussed on a country or on a subject area."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "All Party Parliamentary Group Category"@en .
+# 
+# http://parliament.uk/ontologies/appg/Agent
+
+:Agent a owl:Class ;
+	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "Agent"@en .
+# 
+# http://parliament.uk/ontologies/appg/BenefitInKind
+
+:BenefitInKind a owl:Class ;
+	rdfs:subClassOf :RegisteredBenefit ;
+	rdfs:comment "A benefit in kind such as goods or services received by the group where the total value of the benefit from that source exceeds £1500 and the benefit was received on or after the date of the group’s Inaugural Meeting."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "BenefitInKind"@en .
+# 
+# http://parliament.uk/ontologies/appg/FinancialBenefit
+
+:FinancialBenefit a owl:Class ;
+	rdfs:subClassOf :RegisteredBenefit ;
+	rdfs:comment "A financial benefit received by the group where the total value of the benefit from that source exceeds £1500 and the benefit was received on or after the date of the group’s Inaugural Meeting."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "FinancialBenefit"@en .
+# 
+# http://parliament.uk/ontologies/appg/FinancialReportingYear
+
+:FinancialReportingYear a owl:Class ;
+	rdfs:comment "The year for which an APPG makes its financial report."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "FinancialReportingYear"@en .
+# 
+# http://parliament.uk/ontologies/appg/Group
+
+:Group a owl:Class ;
+	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "Group"@en .
+# 
+# http://parliament.uk/ontologies/appg/Member
+
+:Member a owl:Class ;
+	rdfs:comment "A current or former Member of a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "Member"@en .
+# 
+# http://parliament.uk/ontologies/appg/RegisteredBenefit
+
+:RegisteredBenefit a owl:Class ;
+	rdfs:comment " A benefit received by the group from a source other than Parliament where the total value of the benefit from that source exceeds £1500 and the benefit was received on or after the date of the group’s Inaugural Meeting ."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "RegisteredBenefit"@en .
+# 
+# http://parliament.uk/ontologies/appg/StatusType
+
+:StatusType a owl:Class ;
+	rdfs:comment "Status of an APPG, for example, registered, pending."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/appg/> ;
+	rdfs:label "StatusType"@en .
+# 
+
+_:genid4 foaf:homepage <https://robert-brook.com/> ;
+	foaf:name "Robert Brook" .
+
+_:genid5 foaf:homepage <http://smethur.st/> ;
+	foaf:name "Michael Smethurst" .
+
+_:genid6 foaf:name "Alison Desimone" .
+# Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
