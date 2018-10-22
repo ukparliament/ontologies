@@ -43,6 +43,16 @@ ppr:RouteType rdf:type owl:Class ;
 	rdfs:label "Route type"@en ;
 	rdfs:comment "A route type is one of causes, allows, requires and precludes. A route with type 'causes' relates a preceding step (linked via fromStep) to a following step (linked via toStep) where actualisation of the preceding step by a business item with a date in the past causes the inevitability of the following step. A route with type 'allows' relates a preceding step to a following step where actualisation of the preceding step by a business item with a date in the past allows but does not cause the following step. A route with type 'requires' relates a preceding step to a following step where actualisation of the following step by a business item with a date in the past is necessary before the preceding step can happen. A route with type 'precludes' relates a preceding step to a following step where actualisation of the preceding step by a business item with a date in the past precludes the following step. Particular steps occur only once in a work package. For example, in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' may happen only once. A route with the type 'precludes' may route a step to the same step. When a step is actualised by a business item with a date in the past, further instances of that step being actualised in the work package become precluded."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:LogicGate rdf:type owl:Class ;
+	rdfs:label "Logic gate"@en ;
+	rdfs:comment "A logic gate routes from either a step or a logic gate and routes to either a step or a logic gate. Logic gates provide a mechanism to perform boolean operations over routes. They perform a logical operation on one or more binary inputs and produces a single binary output."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:LogicGateType rdf:type owl:Class ;
+	rdfs:label "Logic gate type"@en ;
+	rdfs:comment "A logic gate type is one of NOT, AND and OR. A logic gate of type NOT takes one route input and reverses its condition. A logic gate of type AND takes two or more route inputs. If all are satisfied the output route is activated. A logic gate of type OR takes two or more route inputs. If one or more are satisfied the output route is activated."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Step rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
@@ -120,6 +130,27 @@ ppr:hasRouteType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a route to a route type. A route can have one only type."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:RouteType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:fromRoute rdf:type owl:ObjectProperty ;
+	rdfs:label "From route"@en ;
+	rdfs:comment "Relates a logic gate to a preceding route."@en ;
+	rdfs:domain ppr:LogicGate ;
+	rdfs:range ppr:Route ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:toRoute rdf:type owl:ObjectProperty ;
+	rdfs:label "From route"@en ;
+	rdfs:comment "Relates a logic gate to a following route."@en ;
+	rdfs:domain ppr:LogicGate ;
+	rdfs:range ppr:Route ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has logic gate type"@en ;
+	rdfs:comment "Relates a logic gate to a logic gate type. A logic gate can have one only type."@en ;
+	rdfs:domain ppr:LogicGate ;
+	rdfs:range ppr:LogicGateType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:follows rdf:type owl:ObjectProperty ;
