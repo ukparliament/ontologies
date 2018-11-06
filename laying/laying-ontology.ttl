@@ -4,47 +4,60 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/laying/> 
     rdf:type owl:Ontology ;
     dcterms:title "Laying ontology"@en ;
     dcterms:created "2018-02-06"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Laying ontology for UK Parliament. Used to describe the process of laying papers before Parliament and any subsequent withdrawal"@en .
+    dcterms:description "Laying ontology for UK Parliament. Describes the process of laying papers before a House and any subsequent withdrawal."@en;
+	foaf:depiction <laying.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Stephen McGinness"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
 
 
 #######  Classes #####
 
 pl:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
-	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
+	rdfs:comment "A parliamentary House. For example, the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:LayingOrWithdrawal rdf:type owl:Class ;
 	rdfs:label "Laying or withdrawal"@en ;
-	rdfs:comment "The act of laying before or withdrawing from a House."@en ;
+	rdfs:comment "The act of laying before or withdrawing a paper from a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is active. The first session of a parliament begins on the same day as the parliament. This date is named in the dissolution proclamation. It ends on the day named in the subsequent prorogation proclamation. Subsequent sessions begin and end on dates named in prorogation proclamations. The final session ends with a prorogation followed by a dissolution. Parliament may be prorogued a few days before dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
+	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The final session of a parliament ends with a prorogation followed by a dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
-
+	
 pl:LayingBody rdf:type owl:Class ;
 	rdfs:label "Laying body"@en ;
-	rdfs:comment "A body with the authority to lay papers before a House."@en ;
+	rdfs:comment "A body competent to lay papers before a House or Houses."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	
+pl:MakingAvailable rdf:type owl:Class ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making something available to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:Laying rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
+	rdfs:subClassOf pl:MakingAvailable ;
 	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of presenting a paper (and supporting documents) into either the House of Commons or the House of Lords. In the majority of cases papers are laid in both Houses on the same day. Each House has a Journal Office where papers are laid."@en ;
+	rdfs:comment "The act of presenting a paper and supporting documents into either House. Papers may be laid in both Houses on the same day."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Withdrawal rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Withdrawal"@en ;
-	rdfs:comment "The act of withdrawing a laid thing from a House."@en ;
+	rdfs:comment "The act of withdrawing a paper laid before a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Person rdf:type owl:Class ;
@@ -54,13 +67,22 @@ pl:Person rdf:type owl:Class ;
 
 pl:LayingAuthorityType rdf:type owl:Class ;
 	rdfs:label "Laying authority type"@en ;
-	rdfs:comment "The procedural authority by which a paper is laid before a House. Many documents are required by law to be laid before the House. These are called Act papers and are referred to as being laid 'by Act'. Other papers are made available to the House by the Government. These are called Command papers and are referred to as being laid 'by Command'. A paper cannot be laid by both Act and Command, although in some cases papers are laid by Act in the Commons and by Command in the Lords."@en ;
+	rdfs:comment "The authority under which a paper is laid before a House. Legislation may impose a duty on a body to lay Act papers before a House, there are referred to as being laid 'by Act'. Command papers are laid in the House by the government and are referred to as being laid 'by Command'. A paper is laid either 'by Act' or 'by Command', and may be laid 'by Act' in the Commons and 'by Command' in the Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
-
+	
 pl:LayingDuty rdf:type owl:Class ;
 	rdfs:label "Laying duty"@en ;
-	rdfs:comment "The duty of a body to lay papers before Parliament as imposed by an Act of Parliament."@en ;
+	rdfs:comment "The duty of a body to lay papers before a House as imposed by an Act of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	
+	
+	
+#### edited to here
+	
+	
+	
+	
+	
 
 pl:LaidThing rdf:type owl:Class ;
 	rdfs:label "Laid thing"@en ;
