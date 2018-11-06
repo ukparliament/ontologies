@@ -36,7 +36,7 @@ ppr:Procedure rdf:type owl:Class ;
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "A route with a type links a step or steps. To allow for changes in procedure over time, a route's start and end date are marked by means of startOn and endOn from the core ontology. A route is made traversable after the appropriate preceding step (linked via fromStep) is actualised by a business item having a date in the past."@en ;
+	rdfs:comment "A route is a link from one step or logic gate to one step or logic gate. A route source may also be its destination. A route is available only when the input step is True, actualised by a business item having a date in the past, or by the input from a logic gate operation being True. Where a route has a start or end date it indicates the validity period for that route."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:RouteType rdf:type owl:Class ;
@@ -46,12 +46,12 @@ ppr:RouteType rdf:type owl:Class ;
 
 ppr:LogicGate rdf:type owl:Class ;
 	rdfs:label "Logic gate"@en ;
-	rdfs:comment "A logic gate routes from either a step or a logic gate and routes to either a step or a logic gate. Logic gates provide a mechanism to perform boolean operations over routes. They perform a logical operation on one or more binary inputs and produce a single binary output."@en ;
+	rdfs:comment "A logic gate routes from a step or a logic gate and routes to a step or a logic gate. A gate performs one logical operation on one or more routes. Both the input and the output of a logic gate are either true or false."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:LogicGateType rdf:type owl:Class ;
 	rdfs:label "Logic gate type"@en ;
-	rdfs:comment "A logic gate type is one of NOT, AND and OR. A logic gate of type NOT takes one route input and reverses its condition. A logic gate of type AND takes two or more route inputs. If all are satisfied the output route is activated. A logic gate of type OR takes two or more route inputs. If one or more are satisfied the output route is activated."@en ;
+	rdfs:comment "A logic gate has a type of NOT, AND or OR. A logic gate with type NOT when given True has the result False and when given False has the result True. A logic gate with type AND takes at least two routes as inputs: if all are True the output route is True. A logic gate with type OR takes at least two routes as inputs: if at least one is True the output route is True."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Step rdf:type owl:Class ;
@@ -90,79 +90,72 @@ ppr:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-	
-	
-####### edited to here
-
-
-
-	
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Subject to"@en ;
-	rdfs:comment "Relates a work packageable thing to the procedure it is subject to. A work packageable thing can only be subject to one procedure."@en ;
+	rdfs:comment "Relates a work packageable thing to the procedure it is subject to. A work packageable thing is only subject to one procedure."@en ;
 	rdfs:domain ppr:WorkPackageableThing ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
-	rdfs:comment "Relates a business item to a step in a procedure (via a route) e.g. relates the second reading of a specific public bill to the corresponding (conceptual) step in the procedure. Note that whilst a step might be actualised by several business items (in different work packages), a business item might actualise one or several steps e.g. there might be a calendarised business item on the order paper that includes a debate on a number of motions. This would actualise steps relating each of those motions."@en ;
+	rdfs:comment "Relates a business item to a step in a procedure via a route. For example, relating the second reading of a public bill to the second reading step in the procedure. Whilst a step may be actualised by more than one business item in different work packages, a business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:fromStep rdf:type owl:ObjectProperty ;
 	rdfs:label "From step"@en ;
-	rdfs:comment "Relates a route to a preceding step."@en ;
+	rdfs:comment "Relates a route to its input step."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:label "To step"@en ;
-	rdfs:comment "Relates a route to a potential following step. Note that the 'next' step might be precluded by the route type."@en ;
+	rdfs:comment "Relates a route to its output step."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasRouteType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has route type"@en ;
-	rdfs:comment "Relates a route to a route type. A route can have one only type."@en ;
+	rdfs:comment "Relates a route to a route type. A route has one type."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:RouteType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:fromRoute rdf:type owl:ObjectProperty ;
-	rdfs:label "From route"@en ;
-	rdfs:comment "Relates a logic gate to a preceding route."@en ;
-	rdfs:domain ppr:LogicGate ;
-	rdfs:range ppr:Route ;
+ppr:fromLogicGate rdf:type owl:ObjectProperty ;
+	rdfs:label "From logic gate"@en ;
+	rdfs:comment "Relates a route to its input logic gate."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:LogicGate ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:toRoute rdf:type owl:ObjectProperty ;
-	rdfs:label "To route"@en ;
-	rdfs:comment "Relates a logic gate to a following route."@en ;
-	rdfs:domain ppr:LogicGate ;
-	rdfs:range ppr:Route ;
+ppr:toLogicGate rdf:type owl:ObjectProperty ;
+	rdfs:label "To logic gate"@en ;
+	rdfs:comment "Relates a route to its output logic gate."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:LogicGate ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has logic gate type"@en ;
-	rdfs:comment "Relates a logic gate to a logic gate type. A logic gate can have one only type."@en ;
+	rdfs:comment "Relates a logic gate to a logic gate type. A logic gate has one type."@en ;
 	rdfs:domain ppr:LogicGate ;
 	rdfs:range ppr:LogicGateType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:follows rdf:type owl:ObjectProperty ;
 	rdfs:label "Follows"@en ;
-	rdfs:comment "Relates a procedure to a route. A route can belong to only one procedure."@en ;
+	rdfs:comment "Relates a procedure to a route. A route forms part of one procedure."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:Route ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in House"@en ;
-	rdfs:comment "Relates a step to one or both Houses."@en ;
+	rdfs:comment "Relates a step to one or both Houses where such a relationship exists."@en ;
 	rdfs:domain ppr:Step ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -176,7 +169,7 @@ ppr:procedureInHouse rdf:type owl:ObjectProperty ;
 		
 ppr:focus rdf:type owl:ObjectProperty ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment "Relates a work package to a workpackageable thing."@en ;
+	rdfs:comment "Relates a work package to its focus, this being a work packageable thing."@en ;
 	rdfs:domain ppr:WorkPackage ;
 	rdfs:range ppr:WorkPackageableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
