@@ -5,9 +5,11 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
-@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
-@prefix plg: <http://parliament.uk/ontologies/legislation/> .
+
+@prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
+@prefix plg: <http://parliament.uk/ontologies/legislation/> .
+@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 
 <http://parliament.uk/ontologies/interface/> 
     rdf:type owl:Ontology ;
@@ -32,6 +34,10 @@ ppr:Procedure
 pl:LayingDuty
 	owl:equivalentClass
 	plg:LayingDuty .
+
+pa:Person
+	owl:equivalentClass
+	pl:Person .
 
 #######  Subclasses ##### 	
 
@@ -62,4 +68,12 @@ plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 pl:LayingOrWithdrawl
 	rdfs:subClassOf
 	ppr:BusinessItem .
+	
+pl:House
+	rdfs:subClassOf
+	pa:Group .
+
+pl:LayingBody
+	rdfs:subClassOf
+	pa:Group .
 
