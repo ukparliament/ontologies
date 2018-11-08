@@ -7,6 +7,7 @@
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
+@prefix pbi: <http://parliament.uk/ontologies/business-item/> . 
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
@@ -38,6 +39,14 @@ pl:LayingDuty
 pa:Person
 	owl:equivalentClass
 	pl:Person .
+
+pa:Place
+	owl:equivalentClass
+	pbi:Place .
+	
+ppr:BusinessItem
+	owl:equivalentClass
+	pbi:BusinessItem .
 
 #######  Subclasses ##### 	
 
@@ -76,4 +85,8 @@ pl:House
 pl:LayingBody
 	rdfs:subClassOf
 	pa:Group .
+
+pl:LayingOrWithdrawal
+	rdfs:subClassOf
+	pbi:BusinessItem .
 
