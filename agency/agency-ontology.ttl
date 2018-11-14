@@ -4,13 +4,20 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/agency/> 
     rdf:type owl:Ontology ;
     dcterms:title "Agency ontology"@en ;
     dcterms:created "2016-10-05"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Agency ontology for UK Parliament"@en .
+    dcterms:description "An ontology supporting the description of people and groups by the UK Parliament."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/agency/agency.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Silver Oliver" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
 
 
 #######  Classes ##### 	
