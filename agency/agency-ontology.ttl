@@ -24,7 +24,7 @@
 
 pa:Agent rdf:type owl:Class ;
 	rdfs:label "Agent"@en ;
-	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
+	rdfs:comment "Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
 pa:Person rdf:type owl:Class ;
@@ -36,23 +36,28 @@ pa:Person rdf:type owl:Class ;
 pa:Group rdf:type owl:Class ;
 	rdfs:subClassOf pa:Agent ;
 	rdfs:label "Group"@en ;
-	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-
+	rdfs:comment "A group of people. Groups may contain other groups or be empty."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
 pa:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
-	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
 pa:Position rdf:type owl:Class ;
 	rdfs:label "Position"@en ;
-	rdfs:comment "A position in a group that persists over time which can be occupied by different people at different times e.g. many people have been Foreign Secretary."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
-	
-pa:Affiliation rdf:type owl:Class ;
-	rdfs:label "Affiliation"@en ;
-	rdfs:comment "A person or group's affiliation to a group between between two dates. Might be a membership of a committee or a whipping to a party."@en ;
+	rdfs:comment "A named position, having existence over time, which may be held by one or more people, or have no current incumbency. For example, Minister of Food, a position having existed in the past."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:GroupInclusion rdf:type owl:Class ;
+	rdfs:label "Group inclusion"@en ;
+	rdfs:comment "The inclusion of a person or group in another group over a period of time. For example, a membership of a committee or a whipping to a party."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+	
+### edited to here
+	
+	
 	
 pa:GenderIdentity rdf:type owl:Class ;
 	rdfs:label "GenderIdentity"@en ;
@@ -90,6 +95,13 @@ pa:hasExpertiseIn rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an agent (person or group) to a concept to express (policy area) expertise. Intended for use with House of Commons Library sections and researchers."@en ;
 	rdfs:domain pa:Agent ;
 	rdfs:range pa:Concept ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
+	
+pa:hasInterestIn rdf:type owl:ObjectProperty ;
+	rdfs:label "hasInterestIn"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain pa:Agent ;
+	rdfs:range pa:Concept ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:hasGender rdf:type owl:ObjectProperty ;
@@ -99,11 +111,11 @@ pa:hasGender rdf:type owl:ObjectProperty ;
 	rdfs:range pa:Gender ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
-pa:hasAffiliation rdf:type owl:ObjectProperty ;
-	rdfs:label "hasAffiliation"@en ;
+pa:hasGroupInclusion rdf:type owl:ObjectProperty ;
+	rdfs:label "Has group inclusion"@en ;
 	rdfs:comment "Relates an agent (person or group) to an affiliation e.g. person is member of a committee, or a sub-committee is a member of a committee."@en ;
 	rdfs:domain pa:Agent ;
-	rdfs:range pa:Affiliation ;
+	rdfs:range pa:GroupInclusion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasIncumbency rdf:type owl:ObjectProperty ;
@@ -127,10 +139,10 @@ pa:positionIn rdf:type owl:ObjectProperty ;
 	rdfs:range pa:Group ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .				
 		
-pa:affiliatedTo rdf:type owl:ObjectProperty ;
-	rdfs:label "affiliatedTo"@en ;
+pa:inGroup rdf:type owl:ObjectProperty ;
+	rdfs:label "In group"@en ;
 	rdfs:comment "Relates an affiliation to a group e.g. membership of a committee between two dates."@en ;
-	rdfs:domain pa:Affiliation ;
+	rdfs:domain pa:GroupInclusion ;
 	rdfs:range pa:Group ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 	
@@ -184,11 +196,4 @@ pa:dateOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:comment "A person's date of death."@en ;
 	rdfs:domain pa:Person ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .		
-
-pa:purpose rdf:type owl:DatatypeProperty ;
-	rdfs:label "purpose"@en ;
-	rdfs:comment "A statement on why a group exists and what its job is."@en ;
-	rdfs:domain pa:Group ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
