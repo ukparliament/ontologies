@@ -31,7 +31,7 @@
 	
 ppr:Procedure rdf:type owl:Class ;
 	rdfs:label "Procedure"@en ;
-	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure."@en ;
+	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Route rdf:type owl:Class ;
@@ -148,7 +148,7 @@ ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
 	
 ppr:follows rdf:type owl:ObjectProperty ;
 	rdfs:label "Follows"@en ;
-	rdfs:comment "Relates a procedure to a route. A route forms part of one procedure."@en ;
+	rdfs:comment "Relates a procedure to a route. A route may appear in one or more procedures. For example, the allows route between 'Considered for English votes for English laws (EVEL) certification' to 'Certified as England only under the English votes for English laws (EVEL) process' appears in the draft negative, made negative, draft affirmative and made affirmative procedures."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:Route ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
