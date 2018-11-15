@@ -207,7 +207,7 @@
 ,/postcodes/lookup?source=:source&id=:id,Provides a way to look up a postcode from a foreign identifier. Seems slightly unlikely,Redirect
 ✓,/postcodes/:postcode,A postcode page,Thing page
 ,,,
-,/groups,"List of all groups of all types to include committees, government organisations, answering bodies etc.",Paginated list
+✓,/groups,"List of all groups of all types to include committees, government organisations, answering bodies etc.",Paginated list
 ,/groups/lookup?source=:source&id=:id,Provides a way to look up a group from a foreign identifier eg /lookup?source=wikidata&id=Q17152450,Redirect
 ,/groups/:letters,Provides a way to look up a group from a name match. Redirect to group page if unique match else to list,Redirect
 ,/groups/a-z,Namespace for navigation of all groups,Namespace
@@ -233,7 +233,7 @@
 ,/groups/answering-bodies/current,Currently active answering bodies,Paginated list
 ,/groups/answering-bodies/current/a-z,Namespace for navigation of all current answering bodies,Namespace
 ,/groups/answering-bodies/current/a-z/:letters,List of current answering bodies with name starting with / matching the letter pattern,Paginated list
-,/groups/:group,"A group. Might be a committee, government organisation, answering body etc.",Thing page
+✓,/groups/:group,"A group. Might be a committee, government organisation, answering body etc.",Thing page
 ,/groups/:group/positions, List of all positions ever in a group. Nested list of people who have ever occupied those positions, Paginated list
 ,/group/:group/positions/current, List of all current positions in a group. Nested list of people currently occupying those positions, Paginated list
 ,/groups/:group/positions/chairs,List of all chairs of a group ever grouping individual periods of being chair,Paginated list
@@ -246,9 +246,9 @@
 ,/groups/:group/sub-committees,List of sub-committees belonging to a committee,Paginated list
 ,/groups/:group/sub-committees/current,List of currently active sub-committees belonging to a committee,Paginated list
 ,/groups/:group/parent-committee,For a sub-committee its parent committee,Paginated list
-,/groups/:groups/made-available,"A list of all making availables to either House by a body, grouped by the thing made available to avoid duplication across Houses. Grouped because the same thing may have a laying etc in each House. Ordered by (latest) date of action",Paginated list
-,/groups/:groups/made-available/availability-types,"A list of all actions making things available to Parliament by a body grouped by the thing made available to avoid duplication across Houses. List to include layings, depositings etc. Grouped because the same thing may have a laying in each House",Paginated list
-,/groups/:groups/made-available/availability-types/laid-papers,A list of all layings into Parliament by a body grouped by the thing laid to avoid duplication across Houses. Grouped because the same thing may have a laying in each House. Ordered by (latest) date of laying,Paginated list
+✓,/groups/:groups/made-available,"A list of all making availables to either House by a body, grouped by the thing made available to avoid duplication across Houses. Grouped because the same thing may have a laying etc in each House. Ordered by (latest) date of action",Paginated list
+✓,/groups/:groups/made-available/availability-types,"A list of all actions making things available to Parliament by a body grouped by the thing made available to avoid duplication across Houses. List to include layings, depositings etc. Grouped because the same thing may have a laying in each House",Paginated list
+✓,/groups/:groups/made-available/availability-types/laid-papers,A list of all layings into Parliament by a body grouped by the thing laid to avoid duplication across Houses. Grouped because the same thing may have a laying in each House. Ordered by (latest) date of laying,Paginated list
 ,/groups/:groups/made-available/availability-types/laid-papers/paper-types,A list of paper types that can be laid into either House. Types of paper which have been laid by a laying body,Paginated list
 ,/groups/:groups/made-available/availability-types/laid-papers/paper-types/:paper-type,A list of layings of papers of a given type by a body grouped by the thing laid to avoid duplication across Houses,Paginated list
 ,/groups/:group/questions,All parliamentary questions asked of an answering body,Paginated list
@@ -269,19 +269,19 @@
 ,,,
 ✓,/procedures,List of all procedures ever. Ordered alphabetically. Just five for now,Paginated list
 ✓,/procedures/:procedure,A procedure page,Thing page
-,/procedures/:procedure/work-packages,"List of all workpackages subject to a procedure. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
-,/procedures/:procedure/work-packages/current,A list of work packages under a given procedure within the scrutiny period. Ordered by (latest) made-available date of work packageble thing,Paginated list
+✓,/procedures/:procedure/work-packages,"List of all workpackages subject to a procedure. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
+✓,/procedures/:procedure/work-packages/current,A list of work packages under a given procedure within the scrutiny period. Ordered by (latest) made-available date of work packageble thing,Paginated list
 ,,,
 ✓,/procedure-steps,A list of all steps in all procedures,Paginated list
 ✓,/procedure-steps/:procedure-step,A step in a procedure or procedures,Thing page
 ✓,/procedure-steps/:procedure-step/work-packages,A list of all work packages having a business item that actualises the step. Ordered by business item date,Paginated list
-,/procedure-steps/:procedure-step/work-packages/current,A list of all work packages having a business item that actualises the step within the scrutiny period. Ordered by business item date,Paginated list
+✓,/procedure-steps/:procedure-step/work-packages/current,A list of all work packages having a business item that actualises the step within the scrutiny period. Ordered by business item date,Paginated list
 ,,,
 ✓,/work-packages,"List of all workpackages ever. Ordered by date they entered Parliament: laid date for SIs, presentation date for Bills",Paginated list
-,/work-packages/current,A list of work packages currently within the scrutiny period. Ordered by (latest) made available date of work packageble thing,Paginated list
-,/work-packages/paper-types,A list of paper types resulting in work packages. Types which have papers which are the focus of a work package. Ordered alphabetically,Paginated list
-,/work-packages/paper-types/:paper-type,A list of work packages generated by laid papers of a type. Work packages which focus on a document of a given type. Ordered by (latest) laid date of work packageble thing,Paginated list
-,/work-packages/paper-types/:paper-type/current,A list of work packages generated by laid papers of a type currently within the scrutiny period. Ordered by (latest) laid date of work packageble thing,Paginated list
+✓,/work-packages/current,A list of work packages currently within the scrutiny period. Ordered by (latest) made available date of work packageble thing,Paginated list
+✓,/work-packages/paper-types,A list of paper types resulting in work packages. Types which have papers which are the focus of a work package. Ordered alphabetically,Paginated list
+✓,/work-packages/paper-types/:paper-type,A list of work packages generated by laid papers of a type. Work packages which focus on a document of a given type. Ordered by (latest) laid date of work packageble thing,Paginated list
+✓,/work-packages/paper-types/:paper-type/current,A list of work packages generated by laid papers of a type currently within the scrutiny period. Ordered by (latest) laid date of work packageble thing,Paginated list
 ✓,/work-packages/:work-package,Workpackage page,Thing page
 ,/work-packages/:work-package/business-items,List of business items in the past or future in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
 ,/work-packages/:work-package/business-items/concluded,List of business items in the past in this workpackage ordered by the date they happen(ed) then by the order of the steps they actualise in the workpackage's procedure,Paginated list
@@ -290,13 +290,13 @@
 ,/laid-papers,A list of layings into either House. Probably not grouped by laid paper. Ordered by date of laying,Paginated list
 ,/laid-papers/:laying,An act of laying,Thing page
 ,,,
-,/statutory-instruments,A list of all statutory instruments ordered by (latest) laying date (across Houses). Note that laying dates may differ between Houses. Hence latest,Paginated list
+✓,/statutory-instruments,A list of all statutory instruments ordered by (latest) laying date (across Houses). Note that laying dates may differ between Houses. Hence latest,Paginated list
 ,/statutory-instruments/lookup?source=:source&id=:id,Provides a way to look up an SI from a foreign identifier eg /lookup?source=citation&id=SI2018-1053,Redirect
-,/statutory-instruments/:statutory-instrument,A statutory instrument,Thing page
+✓,/statutory-instruments/:statutory-instrument,A statutory instrument,Thing page
 ,/statutory-instruments/:statutory-instrument/work-packages,A list of work packages the SI is the focus of. Usually one,Paginated list
 ,,,
-,/proposed-negative-statutory-instruments,A list of all proposed negative statutory instruments ordered by (latest) laying date (across Houses). Note that laying dates may differ between Houses. Hence latest,Paginated list
-,/proposed-negative-statutory-instruments/:proposed-negative-statutory-instrument,A proposed negative statutory instrument,Thing page
+✓,/proposed-negative-statutory-instruments,A list of all proposed negative statutory instruments ordered by (latest) laying date (across Houses). Note that laying dates may differ between Houses. Hence latest,Paginated list
+✓,/proposed-negative-statutory-instruments/:proposed-negative-statutory-instrument,A proposed negative statutory instrument,Thing page
 ,/proposed-negative-statutory-instruments/:proposed-negative-statutory-instrument/work-packages,A list of work packages the PNSI is the focus of. Usually one,Paginated list
 ,,,
 ,/questions,All tabled parliamentary questions ever,Paginated list
