@@ -1,7 +1,12 @@
 #  PNSI
 
 if (Procedure_concluded_in_the_House_of_Commons OR Procedure_concluded_in_the_House_of_Commons_and_House_of_Lords)
-	"Sifting has ended. The government may lay this instrument as a statutory instrument under the negative or affirmative procedures."
+	"Sifting has ended."
+	if (Proposed_negative_statutory_instrument_withdrawn_from_the_House_of_Commons)
+		"The instrument was withdrawn by the government."
+	else
+		"The government may lay this instrument as a statutory instrument under the negative or affirmative procedures."
+	end
 else
 	"The sifting period ends on {committee_sifting_period_ends.business_item.date}"
 end
