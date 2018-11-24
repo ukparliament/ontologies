@@ -1,4 +1,4 @@
-# Draft Affirmative
+# Draft affirmative procedure
 
 ```
 ### we have no withdrawal steps here. should we have?

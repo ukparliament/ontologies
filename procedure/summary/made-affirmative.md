@@ -1,4 +1,4 @@
-# Made Affirmative
+# Made affirmative procedure
 
 ```
 # we have no withdrawal steps here. should we have?
