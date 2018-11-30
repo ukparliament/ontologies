@@ -1,6 +1,6 @@
 # Draft affirmative 
 
-Instruments subject to the draft affirmative procedure are laid in draft and need to be approved before it can be made by the Minister and signed into law. 
+Instruments subject to the draft affirmative procedure are laid in draft and require the approval of Parliament signed into law.
 
 Draft affirmatives are usually laid before both Houses of Parliament and require a motion to approve to be agreed to in both Houses before they can be made and come into force. Instruments related to taxation are laid in the House of Commons only and require only the approval of the House of Commons. 
 
