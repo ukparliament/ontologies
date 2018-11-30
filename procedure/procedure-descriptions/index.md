@@ -1,7 +1,7 @@
 # Procedure descriptions
 
-* [PNSI](pnsi.html)
-* [Draft negative](draft-negative.html)
-* [Made negative](made-negative.html)
-* [Draft affirmative](draft-affirmative.html)
-* [Made affirmative](made-affirmative.html)
+* [PNSI](pnsi.md)
+* [Draft negative](draft-negative.md)
+* [Made negative](made-negative.md)
+* [Draft affirmative](draft-affirmative.md)
+* [Made affirmative](made-affirmative.md)
