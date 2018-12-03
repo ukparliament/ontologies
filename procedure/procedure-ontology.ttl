@@ -38,15 +38,16 @@ ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
 	rdfs:comment "A route is a link from one step or logic gate to one step or logic gate. A route source may also be its destination. A route is available only when the input step is True, actualised by a business item having a date in the past, or by the input from a logic gate operation being True. Where a route has a start or end date it indicates the validity period for that route."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:RouteType rdf:type owl:Class ;
-	rdfs:label "Route type"@en ;
-	rdfs:comment "A route type is one of causes, allows, requires and precludes. A route with type 'causes' relates a preceding step (linked via fromStep) to a following step (linked via toStep) where actualisation of the preceding step by a business item with a date in the past causes the inevitability of the following step. A route with type 'allows' relates a preceding step to a following step where actualisation of the preceding step by a business item with a date in the past allows but does not cause the following step. A route with type 'requires' relates a preceding step to a following step where actualisation of the following step by a business item with a date in the past is necessary before the preceding step can happen. A route with type 'precludes' relates a preceding step to a following step where actualisation of the preceding step by a business item with a date in the past precludes the following step. Particular steps occur only once in a work package. For example, in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' may happen only once. A route with the type 'precludes' may route a step to the same step. When a step is actualised by a business item with a date in the past, further instances of that step being actualised in the work package become precluded."@en ;
+
+ppr:Step rdf:type owl:Class ;
+	rdfs:label "Step"@en ;
+	rdfs:comment "A step forming part of a procedure by means of a route. For example, English Votes for English Laws (EVEL) consideration of a  a statutory instrument. Steps may form part of more than one procedure. For example, all statutory instruments are subject to EVEL consideration."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
-ppr:LogicGate rdf:type owl:Class ;
-	rdfs:label "Logic gate"@en ;
-	rdfs:comment "A logic gate routes from a step or a logic gate and routes to a step or a logic gate. A gate performs one logical operation on one or more routes. Both the input and the output of a logic gate are either true or false."@en ;
+ppr:LogicGateStep rdf:type owl:Class ;
+	rdfs:subClassOf ppr:Step ;
+	rdfs:label "Logic gate step"@en ;
+	rdfs:comment "A logic gate step routes from a step or a logic gate and routes to a step or a logic gate. A gate performs one logical operation on one or more routes. Both the input and the output of a logic gate are either true or false."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:LogicGateType rdf:type owl:Class ;
@@ -54,9 +55,10 @@ ppr:LogicGateType rdf:type owl:Class ;
 	rdfs:comment "A logic gate has a type of NOT, AND or OR. A logic gate with type NOT when given True has the result False and when given False has the result True. A logic gate with type AND takes at least two routes as inputs: if all are True the output route is True. A logic gate with type OR takes at least two routes as inputs: if at least one is True the output route is True."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:Step rdf:type owl:Class ;
-	rdfs:label "Step"@en ;
-	rdfs:comment "A step forming part of a procedure by means of a route. For example, English Votes for English Laws (EVEL) consideration of a  a statutory instrument. Steps may form part of more than one procedure. For example, all statutory instruments are subject to EVEL consideration."@en ;
+ppr:DecisionStep rdf:type owl:Class ;
+	rdfs:subClassOf ppr:Step ;
+	rdfs:label "Decision step"@en ;
+	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:House rdf:type owl:Class ;
@@ -125,24 +127,10 @@ ppr:hasRouteType rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:RouteType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:fromLogicGate rdf:type owl:ObjectProperty ;
-	rdfs:label "From logic gate"@en ;
-	rdfs:comment "Relates a route to its input logic gate."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range ppr:LogicGate ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:toLogicGate rdf:type owl:ObjectProperty ;
-	rdfs:label "To logic gate"@en ;
-	rdfs:comment "Relates a route to its output logic gate."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range ppr:LogicGate ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has logic gate type"@en ;
-	rdfs:comment "Relates a logic gate to a logic gate type. A logic gate has one type."@en ;
-	rdfs:domain ppr:LogicGate ;
+	rdfs:comment "Relates a logic gate step to a logic gate type. A logic gate step has one type."@en ;
+	rdfs:domain ppr:LogicGateStep ;
 	rdfs:range ppr:LogicGateType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
