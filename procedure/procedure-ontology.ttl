@@ -14,6 +14,7 @@
     dcterms:description "Procedure ontology for UK Parliament. An abstract ontology for describing how process steps or stages can be combined into a procedure. In this model, the procedure is analogous to a journey map to a set of potential destinations, a route is a set of directions on one of those journeys and a step is a waypoint."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/procedure/procedure.png> ;
 	foaf:maker
+		[ foaf:name "Chris Alcock" ],
 		[ foaf:name "David Beamish" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Gordon Clarke" ],
@@ -118,13 +119,6 @@ ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a route to its output step."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:hasRouteType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has route type"@en ;
-	rdfs:comment "Relates a route to a route type. A route has one type."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range ppr:RouteType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
