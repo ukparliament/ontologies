@@ -1,0 +1,83 @@
+@prefix pma: <http://parliament.uk/ontologies/making-available/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/making-available/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Making available ontology"@en ;
+    dcterms:created "2018-12-09"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Making available ontology for UK Parliament. Describes the process of making things available to a House."@en;
+	foaf:depiction <https://ukparliament.github.io/ontologies/making-available/making-available.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+
+pma:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary House. For example, the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The final session of a parliament ends with a prorogation followed by a dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:MakingAvailable rdf:type owl:Class ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making something available to a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:Laying rdf:type owl:Class ;
+	rdfs:subClassOf pma:MakingAvailable ;
+	rdfs:label "Laying"@en ;
+	rdfs:comment "The act of laying a paper and supporting documents into a House. Papers may be laid in both Houses on the same day."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:Tabling rdf:type owl:Class ;
+	rdfs:subClassOf pma:MakingAvailable ;
+	rdfs:label "Tabling"@en ;
+	rdfs:comment "The act of tabling a question, motion or amendement into a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:Presenting rdf:type owl:Class ;
+	rdfs:subClassOf pma:MakingAvailable ;
+	rdfs:label "Presenting"@en ;
+	rdfs:comment "The act of presenting a paper to a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+	
+
+#######  Object properties ##### 
+
+pma:toHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "To House"@en ;
+	rdfs:comment "Relates an act of making something available to the House in which it's made available."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:inSession rdf:type owl:ObjectProperty ;
+	rdfs:label "In session"@en ;
+	rdfs:comment "Relates an act of making something available to the session in which it's made available."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-availabl/> .
+				
+
+#######  Data properties ##### 
+
+pma:madeAvailableOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Made available on"@en ;
+	rdfs:comment "Relates an act of making something available to the the date on which it's made available."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
