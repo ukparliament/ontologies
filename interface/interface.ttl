@@ -12,6 +12,8 @@
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
+@prefix pma: <http://parliament.uk/ontologies/making-available/> .
+
 
 
 
@@ -60,6 +62,22 @@ ppr:BusinessItem
 ppr:House
 	owl:equivalentClass
 	pl:House .
+	
+pma:House
+	owl:equivalentClass
+	pl:House .
+	
+pma:House
+	owl:equivalentClass
+	ppr:House .
+
+pma:Session
+	owl:equivalentClass
+	pl:Session .
+	
+pma:Laying
+	owl:equivalentClass
+	pl:Laying .
 
 #######  Subclasses ##### 	
 
@@ -98,6 +116,10 @@ pl:House
 ppr:House
 	rdfs:subClassOf
 	pa:Group .
+	
+pma:House
+	rdfs:subClassOf
+	pa:Group .
 
 pl:LayingBody
 	rdfs:subClassOf
@@ -106,4 +128,3 @@ pl:LayingBody
 pl:LayingOrWithdrawal
 	rdfs:subClassOf
 	pbi:BusinessItem .
-
