@@ -1,9 +1,3 @@
 # Made affirmative 
 
-Instruments subject to the made affirmative procedure are made on being laid, then come into force.  
-
-The making of the instrument starts the approval period, being defined within the parent Act. 
-
-If either House does not approve the instrument within the approval period, the instrument is stopped.
-
-Instruments concerning taxation do not require approval in the House of Lords.
+Instruments subject to the made affirmative procedure are signed into law before they are laid. Some come into force before laying, others come into force if approved by Parliament. For instruments that come into force before being laid, the signing into law starts the approval period, being defined within the parent Act. In this case, if either House does not approve the instrument within the approval period, the instrument is stopped. Instruments concerning taxation are not laid in the House of Lords and only need the approval of the House of Commons.
