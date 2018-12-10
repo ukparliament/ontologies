@@ -20,7 +20,7 @@ if (Decision_made_by_the_European_Statutory_Instruments_Committee_(ESIC))
 	else
 		"The European Statutory Instruments Committee (ESIC) agreed that the instrument should follow the negative procedure."
 	end
-else
+elsif (NOT Proposed_negative_statutory_instrument_withdrawn_from_the_House_of_Commons)
 	"The instrument remains under consideration by the European Statutory Instruments Committee (ESIC)."
 end
 if (Decision_made_by_the_Secondary_Legislation_Scrutiny_Committee_(SLSC))
@@ -29,7 +29,7 @@ if (Decision_made_by_the_Secondary_Legislation_Scrutiny_Committee_(SLSC))
 	else
 		"The Secondary Legislation Scrutiny Committee (SLSC) agreed that the instrument should follow the negative procedure."
 	end
-else
+elsif (NOT Proposed_negative_statutory_instrument_withdrawn_from_the_House_of_Commons)
 	"The instrument remains under consideration by the Secondary Legislation Scrutiny Committee (SLSC)."
 end
 
