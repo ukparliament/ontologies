@@ -92,13 +92,13 @@ pbi:calanderisation rdf:type owl:ObjectProperty ;
 	rdfs:label "Calanderisation"@en ;
 	rdfs:comment "Relates a business item to it's place in a calendar."@en ;
 	rdfs:domain pbi:BusinessItem ;
-	rdfs:range pbi:CalendarEvent ;
+	rdfs:range pbi:CalendaredEvent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:takesPlaceIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Takes place in"@en ;
 	rdfs:comment "Relates an agenda item to the place it takes place in."@en ;
-	rdfs:domain pbi:CalendarEvent ;
+	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range pbi:Place ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
@@ -109,20 +109,20 @@ pbi:takesPlaceIn rdf:type owl:ObjectProperty ;
 pbi:notReached rdf:type owl:DatatypeProperty ;
 	rdfs:label "Not reached"@en ;
 	rdfs:comment "A flag to say if an agenda item was not reached."@en ;
-	rdfs:domain pbi:CalendarEvent ;
+	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:cancelledAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Cancelled at"@en ;
 	rdfs:comment "The time at which an agenda item was cancelled."@en ;
-	rdfs:domain pbi:CalendarEvent ;
+	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 
 pbi:disposedOfAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Disposed of at"@en ;
 	rdfs:comment "The time at which an agenda item was disposed of (completed)."@en ;
-	rdfs:domain pbi:CalendarEvent ;
+	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
