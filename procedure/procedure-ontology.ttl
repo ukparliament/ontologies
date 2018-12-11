@@ -88,15 +88,13 @@ ppr:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:comment "A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-#### edited to here
-	
-	
-	
+
+
 #######  Object properties ##### 
 
 ppr:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Forms part of"@en ;
-	rdfs:comment "Relates a particular business item to the work package it forms part of. A work package may be formed of more than one business item and a particular business item may be included in more than one work package. For example, a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, with each SI being the focus of a separate work package."@en ;
+	rdfs:comment "Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages. For example, a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -110,7 +108,7 @@ ppr:subjectTo rdf:type owl:ObjectProperty ;
 	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
-	rdfs:comment "Relates a business item to a step in a procedure via a route. For example, relating the second reading of a public bill to the second reading step in the procedure. Whilst a step may be actualised by more than one business item in different work packages, a business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion."@en ;
+	rdfs:comment "Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion."@en ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -138,14 +136,14 @@ ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
 	
 ppr:follows rdf:type owl:ObjectProperty ;
 	rdfs:label "Follows"@en ;
-	rdfs:comment "Relates a procedure to a route. A route may appear in one or more procedures. For example, the allows route between 'Considered for English votes for English laws (EVEL) certification' to 'Certified as England only under the English votes for English laws (EVEL) process' appears in the draft negative, made negative, draft affirmative and made affirmative procedures."@en ;
+	rdfs:comment "Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between 'Considered for English votes for English laws (EVEL) certification' to 'Certified as England only under the English votes for English laws (EVEL) process' appears in the draft negative, made negative, draft affirmative and made affirmative procedures."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:Route ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in House"@en ;
-	rdfs:comment "Relates a step to one or both Houses where such a relationship exists."@en ;
+	rdfs:comment "Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument happens outside of Parliament."@en ;
 	rdfs:domain ppr:Step ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
