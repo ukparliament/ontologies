@@ -37,7 +37,7 @@ ppr:Procedure rdf:type owl:Class ;
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date."@en ;
+	rdfs:comment "A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:Step rdf:type owl:Class ;
@@ -48,7 +48,7 @@ ppr:Step rdf:type owl:Class ;
 ppr:LogicGateStep rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Step ;
 	rdfs:label "Logic gate step"@en ;
-	rdfs:comment "A logic gate step performs a logical operation on one or more routes. Both the input and the output of a logic gate are either True or False."@en ;
+	rdfs:comment "A logic gate step performs a logical operation on one or more routes. Both the input and the output of a logic gate are either True or False. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a logic gate step with type NOT indicates that actualisation of the step cannot happen in the future, being a precluding relationship. A step may preclude itself from repeated actualisations by means of a set of routes through a logic gate step of type NOT to itself. For example, in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' may happen only once, being a precluding relationship."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:LogicGateType rdf:type owl:Class ;
@@ -59,7 +59,7 @@ ppr:LogicGateType rdf:type owl:Class ;
 ppr:DecisionStep rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Step ;
 	rdfs:label "Decision step"@en ;
-	rdfs:comment "A decision step describes the requirement for a separate	decision to be made before the to route can be followed. Routes may be indicated as allowed rather than causal by means of a decision step."@en ;
+	rdfs:comment "A decision step describes the requirement for a decision to be made before the to route can be followed. Routes may be indicated as allowed rather than causal by means of a decision step. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a decision step indicates that actualisation of the step may happen in the future, being an allowed relationship."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:BusinessStep rdf:type owl:Class ;
