@@ -24,7 +24,7 @@
 
 pbi:BusinessItem rdf:type owl:Class ;
 	rdfs:label "Business item"@en ;
-	rdfs:comment "An item of business conducted either within or outside Parliament and producing an outcome subject to procedure. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
+	rdfs:comment "An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 
 pbi:BusinessItemSeries rdf:type owl:Class ;
@@ -39,18 +39,22 @@ pbi:BusinessItemType rdf:type owl:Class ;
 
 pbi:Document rdf:type owl:Class ;
 	rdfs:label "Document"@en ;
-	rdfs:comment "A document. Equivalent to a FRBR work."@en ;
+	rdfs:comment "A document being a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:CalendaredEvent rdf:type owl:Class ;
 	rdfs:label "Calendared event"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "An event during which business items happen."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
-	rdfs:comment "A geographic place."@en ;
+	rdfs:comment "A place named in a geography."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+	
+	
+### edited to here
 	
 	
 	
@@ -81,9 +85,9 @@ pbi:hasBusinessItemType rdf:type owl:ObjectProperty ;
 	rdfs:range pbi:BusinessItemType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
-pbi:transcriptOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Transcript of"@en ;
-	rdfs:comment "Relates a document to the business item it transcribes."@en ;
+pbi:recordOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Record of"@en ;
+	rdfs:comment "Relates a document to the calendared event it records."@en ;
 	rdfs:domain pbi:Document ;
 	rdfs:range pbi:BusinessItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
