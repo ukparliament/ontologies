@@ -17,7 +17,7 @@
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
-	   [ foaf:name "Anya Somerville" ].
+	   	[ foaf:name "Anya Somerville" ].
 
 
 #######  Classes ##### 	
@@ -51,29 +51,21 @@ pbi:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
 	rdfs:comment "A place named in a geography."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
-	
-	
-	
-### edited to here
-	
-	
-	
-	
-	
-	
+
+
 
 ##### Object properties ####
 
 pbi:partOfSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "Part of series"@en ;
-	rdfs:comment "Relates a business item to the business item series it is part of."@en ;
+	rdfs:comment "Relates a business item to a business item series it is part of."@en ;
 	rdfs:domain pbi:BusinessItem ;
 	rdfs:range pbi:BusinessItemSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:containsBusinessItem rdf:type owl:ObjectProperty ;
 	rdfs:label "Contains business item"@en ;
-	rdfs:comment "Allows a business item to be nested inside a business item. For example, a committee meeting during a committee visit."@en ;
+	rdfs:comment "Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit."@en ;
 	rdfs:domain pbi:BusinessItem ;
 	rdfs:range pbi:BusinessItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
@@ -94,14 +86,21 @@ pbi:recordOf rdf:type owl:ObjectProperty ;
 	
 pbi:calendarisation rdf:type owl:ObjectProperty ;
 	rdfs:label "Calendarisation"@en ;
-	rdfs:comment "Relates a business item to it's place in a calendar."@en ;
+	rdfs:comment "Describes the process of setting a time or date at which a business item is expected to take place."@en ;
 	rdfs:domain pbi:BusinessItem ;
+	rdfs:range pbi:CalendaredEvent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
+	
+pbi:followedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Followed by"@en ;
+	rdfs:comment "Relates a calendared event to a subsequent calendared event"@en ;
+	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range pbi:CalendaredEvent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:takesPlaceIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Takes place in"@en ;
-	rdfs:comment "Relates an agenda item to the place it takes place in."@en ;
+	rdfs:comment "Relates a calendared event to the place it occurs."@en ;
 	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range pbi:Place ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
@@ -112,21 +111,21 @@ pbi:takesPlaceIn rdf:type owl:ObjectProperty ;
 			
 pbi:notReached rdf:type owl:DatatypeProperty ;
 	rdfs:label "Not reached"@en ;
-	rdfs:comment "A flag to say if an agenda item was not reached."@en ;
+	rdfs:comment "A boolean which is true when a calendared event was not reached or became unavailable for disposal."@en ;
 	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 	
 pbi:cancelledAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Cancelled at"@en ;
-	rdfs:comment "The time at which an agenda item was cancelled."@en ;
+	rdfs:comment "The time at which a calendared event was cancelled."@en ;
 	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
 
 pbi:disposedOfAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Disposed of at"@en ;
-	rdfs:comment "The time at which an agenda item was disposed of (completed)."@en ;
+	rdfs:comment "The time at which an agenda item was completed."@en ;
 	rdfs:domain pbi:CalendaredEvent ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/business-item/> .
