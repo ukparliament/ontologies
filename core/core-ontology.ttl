@@ -4,13 +4,20 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/core/> 
     rdf:type owl:Ontology ;
     dcterms:title "Core ontology"@en ;
     dcterms:created "2016-10-05"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Core ontology for UK Parliament"@en .
+    dcterms:description "Provides a set of common properties for reuse by other models."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/core/core-ontology.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Silver Oliver" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
 
 
 #######  Classes ##### 	
@@ -120,16 +127,30 @@ pc:endOn rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 	
-pc:startAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "startAt"@en ;
-	rdfs:comment "Relates a thing to a start date time."@en ;
+pc:scheduledStartAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "scheduled start at"@en ;
+	rdfs:comment "Relates a thing to its scheduled start time."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/core/> .	
 
-pc:endAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "endAt"@en ;
-	rdfs:comment "Relates a thing to an end date time."@en ;
+pc:scheduledEndAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Scheduled end at"@en ;
+	rdfs:comment "Relates a thing to its scheduled end time."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+
+pc:recordedStartAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Recorded start at"@en ;
+	rdfs:comment "Relates a thing to its recorded start time."@en ;
+	rdfs:domain pc:Thing ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/core/> .	
+
+pc:recordedEndAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Recorded end at"@en ;
+	rdfs:comment "Relates a thing to its recorded end time."@en ;
 	rdfs:domain pc:Thing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/core/> .	
