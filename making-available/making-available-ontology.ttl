@@ -11,10 +11,11 @@
     dcterms:title "Making available ontology"@en ;
     dcterms:created "2018-12-09"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "An ontology to describe the methods of making things available to a House in the UK Parliament."@en;
+    dcterms:description "An ontology describing the methods of making materials available to a House or to a House by means of its library."@en;
 	foaf:depiction <https://ukparliament.github.io/ontologies/making-available/making-available.png> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Jack Dent" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ].
 
@@ -28,30 +29,30 @@ pma:House rdf:type owl:Class ;
 	
 pma:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The final session of a parliament ends with a prorogation followed by a dissolution. A session typically lasts for one year though isn't bound by that. Session periods are the same across both Houses."@en ;
+	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. A session typically lasts for one year. Session periods are the same across both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:MakingAvailable rdf:type owl:Class ;
 	rdfs:label "Making available"@en ;
-	rdfs:comment "The act of making something available to a House."@en ;
+	rdfs:comment "The act of making materials available to a House or to a House by means of its library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Laying rdf:type owl:Class ;
 	rdfs:subClassOf pma:MakingAvailable ;
 	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of laying a paper and supporting documents into a House. Papers may be laid in both Houses on the same day."@en ;
+	rdfs:comment "The act of presenting a paper and supporting documents into either House. Papers may be laid in both Houses on the same day."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Depositing rdf:type owl:Class ;
 	rdfs:subClassOf pma:MakingAvailable ;
 	rdfs:label "Depositing"@en ;
-	rdfs:comment "The act of depositing a paper into the library of a House."@en ;
+	rdfs:comment "The act of depositing materials into the library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Presenting rdf:type owl:Class ;
 	rdfs:subClassOf pma:MakingAvailable ;
 	rdfs:label "Presenting"@en ;
-	rdfs:comment "The act of presenting a paper to a House."@en ;
+	rdfs:comment "The act of presenting materials to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 	
@@ -60,24 +61,24 @@ pma:Presenting rdf:type owl:Class ;
 
 pma:toHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "To House"@en ;
-	rdfs:comment "Relates an act of making something available to the House in which it's made available."@en ;
+	rdfs:comment "Relates an act of making materials available to a House, to the House in which they are made available."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:inSession rdf:type owl:ObjectProperty ;
 	rdfs:label "In session"@en ;
-	rdfs:comment "Relates an act of making something available to the session in which it's made available."@en ;
+	rdfs:comment "Relates an act of making materials available to a House, to the session in which they are made available."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Session ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-availabl/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 				
 
 #######  Data properties ##### 
 
 pma:madeAvailableOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made available on"@en ;
-	rdfs:comment "Relates an act of making something available to the the date on which it's made available."@en ;
+	rdfs:comment "Relates an act of making materials available to a House, to the date on which they are made available."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
