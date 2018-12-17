@@ -9,6 +9,7 @@
 
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix pbi: <http://parliament.uk/ontologies/business-item/> . 
+@prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> . 
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
@@ -20,6 +21,7 @@
 <http://parliament.uk/ontologies/interface/> 
 	owl:imports <https://ukparliament.github.io/ontologies/agency/agency-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/business-item/business-item-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
@@ -109,6 +111,20 @@ pma:Laying
 pl:Laying
 	owl:equivalentClass
 	pma:Laying .
+	
+pfba:GroupInclusion
+	owl:equivalentClass
+	pa:GroupInclusion .
+pa:GroupInclusion
+	owl:equivalentClass
+	pfba:GroupInclusion .
+	
+pfba:Position
+	owl:equivalentClass
+	pa:Position .
+pa:Position
+	owl:equivalentClass
+	pfba:Position .
 
 #######  Subclasses ##### 	
 
