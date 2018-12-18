@@ -9,6 +9,7 @@
 
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix pbi: <http://parliament.uk/ontologies/business-item/> . 
+@prefix pfb: <http://parliament.uk/ontologies/formal-body/> . 
 @prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> . 
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
@@ -21,6 +22,7 @@
 <http://parliament.uk/ontologies/interface/> 
 	owl:imports <https://ukparliament.github.io/ontologies/agency/agency-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/business-item/business-item-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/formal-body/formal-body-affiliation.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
@@ -125,6 +127,48 @@ pfba:Position
 pa:Position
 	owl:equivalentClass
 	pfba:Position .
+	
+pfb:House
+	owl:equivalentClass
+	pma:House .
+pma:House
+	owl:equivalentClass
+	pfb:House .
+	
+pfb:House
+	owl:equivalentClass
+	pl:House .
+pl:House
+	owl:equivalentClass
+	pfb:House .
+		
+pfb:House
+	owl:equivalentClass
+	ppr:House .
+ppr:House
+	owl:equivalentClass
+	pfb:House .
+
+pfb:WorkPackage
+	owl:equivalentClass
+	ppr:WorkPackage .
+ppr:WorkPackage
+	owl:equivalentClass
+	pfb:WorkPackage .
+	
+pfb:BusinessItem
+	owl:equivalentClass
+	ppr:BusinessItem .
+ppr:BusinessItem
+	owl:equivalentClass
+	pfb:BusinessItem .
+	
+pfb:BusinessItem
+	owl:equivalentClass
+	pbi:BusinessItem .
+pbi:BusinessItem
+	owl:equivalentClass
+	pfb:BusinessItem .
 
 #######  Subclasses ##### 	
 
@@ -175,3 +219,11 @@ pl:LayingBody
 pl:LayingOrWithdrawal
 	rdfs:subClassOf
 	pbi:BusinessItem .
+
+pfb:FormalBody
+	rdfs:subClassOf
+	pa:Group .
+	
+pl:LayingOrWithdrawl
+	rdfs:subClassOf
+	pfb:BusinessItem .
