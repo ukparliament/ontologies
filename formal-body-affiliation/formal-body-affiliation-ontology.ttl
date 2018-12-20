@@ -11,9 +11,11 @@
     dcterms:title "Formal body affiliation ontology"@en ;
     dcterms:created "2017-06-22"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "An ontology to extend the agency model to specialise group inclusion and position to formal bodies."@en ;
+    dcterms:description "An ontology to extend the agency model to specialise group inclusion and position to formal bodies, a formal body being a committee or similar group."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation.png> ;
 	foaf:maker
+		[ foaf:name "James Bowman" ],
+		[ foaf:name "Gordon Clarke" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Edward McCarthy" ],
 		[ foaf:name "Silver Oliver" ],
@@ -31,14 +33,16 @@ pfba:GroupInclusion rdf:type owl:Class ;
 pfba:FormalBodyMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:GroupInclusion ;
 	rdfs:label "Formal body membership"@en ;
-	rdfs:comment "Specialises group inclusion to membership of a formal body - a committee-like groups. In most cases membership is drawn from the backbenches of a House. Occasionally people who are subject area experts but not Members of either House will appointed as members of a committee. Usually membership will be assigned by one of the two Houses. Co-opted members are appointed by the existing members of a committee."@en ;
+	rdfs:comment "Specialises group inclusion to membership of a formal body. Membership of a formal body may be from the backbenches nominated in a House, subject experts not being Members of a House, or other appointed members."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:CooptedMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyMembership ;
-	rdfs:label "Coopted membership"@en ;
-	rdfs:comment "A member of a committee who is invited to join on occasion. Co-opted members might be drawn from people who are not Members of a House. These are referred to as lay members in the House of Commons and external members in the House of Lords For example, the Executive Committee will occasionally co-opt the Director of the Parliamentary Digital Service and / or Parliamentary Security Director into its membership. Sometimes a co-opted member will be drawn from the membership of a House e.g. in the House of Lords a peer who is a subject matter expert might be co-opted onto a committee."@en ;
+	rdfs:label "Co-opted membership"@en ;
+	rdfs:comment "A member who is invited to join at the discretion of the formal body. A co-opted member may be a Member of a House. For example in the House of Lords a peer who is a subject matter expert. Co-opted members may be people who are not Members of a House, referred to as lay members in the House of Commons and external members in the House of Lords. For example, the Executive Committee may co-opt the Director of the Parliamentary Digital Service or Parliamentary Security Director into its membership."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
+	
+## edited to here
 	
 pfba:AlternateMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyMembership ;
