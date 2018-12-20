@@ -98,7 +98,14 @@ ppr:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
+
+ppr:followsProcedure rdf:type owl:ObjectProperty ;
+	rdfs:label "Follows procedure"@en ;
+	rdfs:comment "Relates a work package to the procedure it follows. A work package only follows one procedure."@en ;
+	rdfs:domain ppr:WorkPackage ;
+	rdfs:range ppr:Procedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Subject to"@en ;
 	rdfs:comment "Relates a work packageable thing to the procedure it is subject to. A work packageable thing is only subject to one procedure."@en ;
@@ -134,8 +141,8 @@ ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:LogicGateType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:follows rdf:type owl:ObjectProperty ;
-	rdfs:label "Follows"@en ;
+ppr:followsRoute rdf:type owl:ObjectProperty ;
+	rdfs:label "Follows route"@en ;
 	rdfs:comment "Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between 'Considered for English votes for English laws (EVEL) certification' to 'Certified as England only under the English votes for English laws (EVEL) process' appears in the draft negative, made negative, draft affirmative and made affirmative procedures."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:Route ;
