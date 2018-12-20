@@ -21,6 +21,14 @@
 
 <http://parliament.uk/ontologies/interface/> 
 	owl:imports <https://ukparliament.github.io/ontologies/agency/agency-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/business-item/business-item-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/formal-body/formal-body-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl> ;
+	#owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
+	#owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
+	#owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
+	#owl:imports <https://ukparliament.github.io/ontologies/procedure/procedure-ontology.ttl> ;
+	#owl:imports <http://www.w3.org/2004/02/skos/core#> ;
     rdf:type owl:Ontology ;
     dcterms:title "Interface ontology"@en ;
     dcterms:created "2018-10-11"^^xsd:date ;
@@ -36,26 +44,26 @@
 
 #######  Equivalent classes ##### 	
 
-ppr:Procedure
-	owl:equivalentClass
-	plg:Procedure .
-plg:Procedure
-	owl:equivalentClass
-	ppr:Procedure .
+#ppr:Procedure
+#	owl:equivalentClass
+#	plg:Procedure .
+#plg:Procedure
+#	owl:equivalentClass
+#	ppr:Procedure .
 
-pl:LayingDuty
-	owl:equivalentClass
-	plg:LayingDuty .
-plg:LayingDuty
-	owl:equivalentClass
-	pl:LayingDuty .
+#pl:LayingDuty
+#	owl:equivalentClass
+#	plg:LayingDuty .
+#plg:LayingDuty
+#	owl:equivalentClass
+#	pl:LayingDuty .
 
-pa:Person
-	owl:equivalentClass
-	pl:Person .
-pl:Person
-	owl:equivalentClass
-	pa:Person .
+#pa:Person
+#	owl:equivalentClass
+#	pl:Person .
+#pl:Person
+#	owl:equivalentClass
+#	pa:Person .
 
 pa:Place
 	owl:equivalentClass
@@ -64,47 +72,47 @@ pbi:Place
 	owl:equivalentClass
 	pa:Place .
 	
-ppr:BusinessItem
-	owl:equivalentClass
-	pbi:BusinessItem .
-pbi:BusinessItem
-	owl:equivalentClass
-	ppr:BusinessItem .
+#ppr:BusinessItem
+#	owl:equivalentClass
+#	pbi:BusinessItem .
+#pbi:BusinessItem
+#	owl:equivalentClass
+#	ppr:BusinessItem .
 	
-ppr:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	ppr:House .
+#ppr:House
+#	owl:equivalentClass
+#	pl:House .
+#pl:House
+#	owl:equivalentClass
+#	ppr:House .
 	
-pma:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	pma:House .
+#pma:House
+#	owl:equivalentClass
+#	pl:House .
+#pl:House
+#	owl:equivalentClass
+#	pma:House .
 	
-pma:House
-	owl:equivalentClass
-	ppr:House .
-ppr:House
-	owl:equivalentClass
-	pma:House .
+#pma:House
+#	owl:equivalentClass
+#	ppr:House .
+#ppr:House
+#	owl:equivalentClass
+#	pma:House .
 
-pma:Session
-	owl:equivalentClass
-	pl:Session .
-pl:Session
-	owl:equivalentClass
-	pma:Session .
+#pma:Session
+#	owl:equivalentClass
+#	pl:Session .
+#pl:Session
+#	owl:equivalentClass
+#	pma:Session .
 	
-pma:Laying
-	owl:equivalentClass
-	pl:Laying .
-pl:Laying
-	owl:equivalentClass
-	pma:Laying .
+#pma:Laying
+#	owl:equivalentClass
+#	pl:Laying .
+#pl:Laying
+#	owl:equivalentClass
+#	pma:Laying .
 	
 pfba:GroupInclusion
 	owl:equivalentClass
@@ -127,33 +135,33 @@ pma:House
 	owl:equivalentClass
 	pfb:House .
 	
-pfb:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	pfb:House .
+#pfb:House
+#	owl:equivalentClass
+#	pl:House .
+#pl:House
+#	owl:equivalentClass
+#	pfb:House .
 		
-pfb:House
-	owl:equivalentClass
-	ppr:House .
-ppr:House
-	owl:equivalentClass
-	pfb:House .
+#pfb:House
+#	owl:equivalentClass
+#	ppr:House .
+#ppr:House
+#	owl:equivalentClass
+#	pfb:House .
 
-pfb:WorkPackage
-	owl:equivalentClass
-	ppr:WorkPackage .
-ppr:WorkPackage
-	owl:equivalentClass
-	pfb:WorkPackage .
+#pfb:WorkPackage
+#	owl:equivalentClass
+#	ppr:WorkPackage .
+#ppr:WorkPackage
+#	owl:equivalentClass
+#	pfb:WorkPackage .
 	
-pfb:BusinessItem
-	owl:equivalentClass
-	ppr:BusinessItem .
-ppr:BusinessItem
-	owl:equivalentClass
-	pfb:BusinessItem .
+#pfb:BusinessItem
+#	owl:equivalentClass
+#	ppr:BusinessItem .
+#ppr:BusinessItem
+#	owl:equivalentClass
+#	pfb:BusinessItem .
 	
 pfb:BusinessItem
 	owl:equivalentClass
@@ -164,58 +172,58 @@ pbi:BusinessItem
 
 #######  Subclasses ##### 	
 
-plg:ProposedNegativeStatutoryInstrument
-	rdfs:subClassOf
-	ppr:WorkPackageableThing .
+#plg:ProposedNegativeStatutoryInstrument
+#	rdfs:subClassOf
+#	ppr:WorkPackageableThing .
 
-plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-	rdfs:subClassOf
-	ppr:WorkPackageableThing .
+#plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+#	rdfs:subClassOf
+#	ppr:WorkPackageableThing .
 	
-plg:ProposedNegativeStatutoryInstrument
-	rdfs:subClassOf
-	pl:LaidPaper .
+#plg:ProposedNegativeStatutoryInstrument
+#	rdfs:subClassOf
+#	pl:LaidPaper .
 	
-plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-	rdfs:subClassOf
-	pl:LaidPaper .
+#plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+#	rdfs:subClassOf
+#	pl:LaidPaper .
 	
-plg:ProposedNegativeStatutoryInstrument
-	rdfs:subClassOf
-	pl:WithdrawnPaper .
+#plg:ProposedNegativeStatutoryInstrument
+#	rdfs:subClassOf
+#	pl:WithdrawnPaper .
 
-plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-	rdfs:subClassOf
-	pl:WithdrawnPaper .
+#plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+#	rdfs:subClassOf
+#	pl:WithdrawnPaper .
 
-pl:LayingOrWithdrawl
-	rdfs:subClassOf
-	ppr:BusinessItem .
+#pl:LayingOrWithdrawl
+#	rdfs:subClassOf
+#	ppr:BusinessItem .
 	
-pl:House
-	rdfs:subClassOf
-	pa:Group .
+#pl:House
+#	rdfs:subClassOf
+#	pa:Group .
 	
-ppr:House
-	rdfs:subClassOf
-	pa:Group .
+#ppr:House
+#	rdfs:subClassOf
+#	pa:Group .
 	
-pma:House
-	rdfs:subClassOf
-	pa:Group .
+#pma:House
+#	rdfs:subClassOf
+#	pa:Group .
 
-pl:LayingBody
-	rdfs:subClassOf
-	pa:Group .
+#pl:LayingBody
+#	rdfs:subClassOf
+#	pa:Group .
 
-pl:LayingOrWithdrawal
-	rdfs:subClassOf
-	pbi:BusinessItem .
+#pl:LayingOrWithdrawal
+#	rdfs:subClassOf
+#	pbi:BusinessItem .
 
 pfb:FormalBody
 	rdfs:subClassOf
 	pa:Group .
 	
-pl:LayingOrWithdrawl
-	rdfs:subClassOf
-	pfb:BusinessItem .
+#pl:LayingOrWithdrawl
+#	rdfs:subClassOf
+#	pfb:BusinessItem .
