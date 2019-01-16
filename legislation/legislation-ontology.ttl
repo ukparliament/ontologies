@@ -100,6 +100,13 @@ plg:StatutoryInstrumentSeries rdf:type owl:Class ;
 
 ##### Object properties ####
 
+plg:describedInPartBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Described in part by"@en ;
+	rdfs:comment "Relates a procedure to an Act of Parliament in which the procedure is partly described."@en ;
+	rdfs:domain plg:Procedure ;
+	rdfs:range plg:ActOfParliament ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
 plg:delegates rdf:type owl:ObjectProperty ;
 	rdfs:label "Delegates"@en ;
 	rdfs:comment "Relates an Act of Parliament to an enabling power delegated by that Act. An Act of Parliament may delegate more than one enabling power. Secondary legislation may delegate powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure."@en ;
