@@ -1,0 +1,152 @@
+@prefix ptr: <http://parliament.uk/ontologies/treaty/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/treaty/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Treaty ontology"@en ;
+    dcterms:created "2019-01-16"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology describing the form of treaties considered by UK Parliament."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/treaty/treaty.png> ;
+	foaf:maker
+		[ foaf:name "David Beamish" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Jack Dent" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ],
+		[ foaf:name "Jane White" ].
+
+
+#######  Classes ##### 	
+
+ptr:Treaty rdf:type owl:Class ;
+	rdfs:label "Treaty"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:NotYetInForceTreaty rdf:type owl:Class ;
+	rdfs:subClassOf ptr:Treaty ;
+	rdfs:label "Not yet in force treaty"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:InForceTreaty rdf:type owl:Class ;
+	rdfs:subClassOf ptr:Treaty ;
+	rdfs:label "In force treaty"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:InternationalEntity rdf:type owl:Class ;
+	rdfs:label "International entity"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:TreatySeriesItem rdf:type owl:Class ;
+	rdfs:label "Treaty series item"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:TreatySeries rdf:type owl:Class ;
+	rdfs:label "Treaty series"@en ;
+	rdfs:comment "bilateral, multilateral, eu"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
+	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
+	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
+	
+ptr:Bill rdf:type owl:Class ;
+	rdfs:label "Bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+	
+	
+##### Object properties ####
+
+ptr:partyTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Party to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:InternationalEntity ;
+	rdfs:range ptr:Treaty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:asSeriesItem rdf:type owl:ObjectProperty ;
+	rdfs:label "As series item"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:TreatySeriesItem ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:inSeries rdf:type owl:ObjectProperty ;
+	rdfs:label "In series"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:TreatySeriesItem ;
+	rdfs:range ptr:TreatySeries ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:siSatisfies rdf:type owl:ObjectProperty ;
+	rdfs:label "SI satisfies"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:range ptr:Treaty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:billSatisfies rdf:type owl:ObjectProperty ;
+	rdfs:label "Bill satisfies"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Bill ;
+	rdfs:range ptr:Treaty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+					
+	
+##### Data properties ####	
+			
+ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
+	rdfs:label "Series item citation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:TreatySeriesItem ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Command paper number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
+	rdfs:label "Command paper prefix"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Coming into force note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:comingIntoForceDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Coming into force date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "UK coming into force date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
