@@ -26,34 +26,34 @@
 
 ptr:Treaty rdf:type owl:Class ;
 	rdfs:label "Treaty"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A treaty between two or more international entities."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:NotYetInForceTreaty rdf:type owl:Class ;
 	rdfs:subClassOf ptr:Treaty ;
 	rdfs:label "Not yet in force treaty"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A treaty that is not yet in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:InForceTreaty rdf:type owl:Class ;
 	rdfs:subClassOf ptr:Treaty ;
 	rdfs:label "In force treaty"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A treaty that is in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:InternationalEntity rdf:type owl:Class ;
 	rdfs:label "International entity"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An international entity with the capacity to enter into treaty obligations. This may be a nation state or a supranational body such as the United Nations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:TreatySeriesItem rdf:type owl:Class ;
 	rdfs:label "Treaty series item"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A treaty is part of one series. Whilst the treaty is not yet in force in the United Kingdom it will form part of either a bilateral, multilateral or European Union series. If the treaty comes into force it will be part of an in force series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:TreatySeries rdf:type owl:Class ;
 	rdfs:label "Treaty series"@en ;
-	rdfs:comment "bilateral, multilateral, eu"@en ;
+	rdfs:comment "A series of which a treaty forms part. This may be the bilateral series, the multilateral series, the European Union series or the in force series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
@@ -63,7 +63,7 @@ ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:
 	
 ptr:Bill rdf:type owl:Class ;
 	rdfs:label "Bill"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A bill presented to Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 	
@@ -72,35 +72,35 @@ ptr:Bill rdf:type owl:Class ;
 
 ptr:partyTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Party to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an Internation Entity to a treaty to which it is a party. An international entity may be party to one or more treaties, or none. A bilateral treaty has two parties. A multilateral treaty has more than two parties."@en ;
 	rdfs:domain ptr:InternationalEntity ;
 	rdfs:range ptr:Treaty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:asSeriesItem rdf:type owl:ObjectProperty ;
 	rdfs:label "As series item"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a treaty to a treaty series item. A treaty may belong to more than one series by means of a series item. The series will change when the treaty comes into force in the United Kingdom. A series item is formed of a treaty."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:TreatySeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a treaty series item to a treaty series. A series may have one or more items, or none. A series item places a treaty in a single series."@en ;
 	rdfs:domain ptr:TreatySeriesItem ;
 	rdfs:range ptr:TreatySeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:siSatisfies rdf:type owl:ObjectProperty ;
 	rdfs:label "SI satisfies"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to a treaty which requires the SI to be in force before the treaty can be satisfied."@en ;
 	rdfs:domain ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range ptr:Treaty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:billSatisfies rdf:type owl:ObjectProperty ;
 	rdfs:label "Bill satisfies"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a bill to a treaty which requires the bill to be in force as an Act before the treaty can be satisfied."@en ;
 	rdfs:domain ptr:Bill ;
 	rdfs:range ptr:Treaty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
@@ -111,7 +111,7 @@ ptr:billSatisfies rdf:type owl:ObjectProperty ;
 			
 ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
 	rdfs:label "Series item citation"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a treaty series item to its citation as part of a series."@en ;
 	rdfs:domain ptr:TreatySeriesItem ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
@@ -132,21 +132,21 @@ ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
 
 ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A coming into force note sets out details of the commencement of a treaty."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force date"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The date on which a treaty comes into force for all parties."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK coming into force date"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The date on which a treaty comes into force in the United Kingdom."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
