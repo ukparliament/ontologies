@@ -99,6 +99,13 @@ ptr:takesAction rdf:type owl:ObjectProperty ;
 	rdfs:range ptr:Action ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
+ptr:hasActionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has action type"@en ;
+	rdfs:comment "Relates an action to its type."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range ptr:ActionType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
 ptr:onTreaty rdf:type owl:ObjectProperty ;
 	rdfs:label "On treaty"@en ;
 	rdfs:comment "Relates an action by a party to a treaty. A treaty may have many actions over time. An action is on a single treaty."@en ;
