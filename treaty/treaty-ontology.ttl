@@ -41,10 +41,27 @@ ptr:InForceTreaty rdf:type owl:Class ;
 	rdfs:comment "A treaty that is in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:InternationalEntity rdf:type owl:Class ;
-	rdfs:label "International entity"@en ;
-	rdfs:comment "An international entity with the capacity to enter into treaty obligations. This may be a nation state, a supranational body such as the United Nations or any intergovernmental organisation can be a party to a treaty if its rules so permit."@en ;
+ptr:Party rdf:type owl:Class ;
+	rdfs:label "Party"@en ;
+	rdfs:comment "A state or international organisation with the capacity to enter into treaty obligations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:State rdf:type owl:Class ;
+	rdfs:subClassOf ptr:Party ;
+	rdfs:label "State"@en ;
+	rdfs:comment "A state."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:InternationalOrganisation rdf:type owl:Class ;
+	rdfs:subClassOf ptr:Party ;
+	rdfs:label "International organisation"@en ;
+	rdfs:comment "An international organisation with the capacity to enter into treaty obligations. This may be a supranational body such as the United Nations or any intergovernmental organisation can be a party to a treaty if its rules so permit."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+	
+	
+	
+	
 	
 ptr:TreatySeriesItem rdf:type owl:Class ;
 	rdfs:label "Treaty series item"@en ;
