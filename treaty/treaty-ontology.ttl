@@ -106,11 +106,11 @@ ptr:hasStageType rdf:type owl:ObjectProperty ;
 	rdfs:range ptr:StageType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:onTreaty rdf:type owl:ObjectProperty ;
-	rdfs:label "On treaty"@en ;
-	rdfs:comment "Relates an action by a party to a treaty. A treaty may have many actions over time. An action is on a single treaty."@en ;
-	rdfs:domain ptr:Action ;
-	rdfs:range ptr:Treaty ;
+ptr:hasTreatyStage rdf:type owl:ObjectProperty ;
+	rdfs:label "Has treaty stage"@en ;
+	rdfs:comment "Relates a treaty to a stage undertaken by a party to a treaty. A treaty may have many stages over time. A stage is on a single treaty."@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:Stage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:asSeriesItem rdf:type owl:ObjectProperty ;
