@@ -41,6 +41,16 @@ ptr:InForceTreaty rdf:type owl:Class ;
 	rdfs:comment "A treaty that is in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
+ptr:Action rdf:type owl:Class ;
+	rdfs:label "Action"@en ;
+	rdfs:comment "An action taken by a party to a treaty on a treaty."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:ActionType rdf:type owl:Class ;
+	rdfs:label "Action type"@en ;
+	rdfs:comment "The type of an action taken by a party to a treaty on a treaty. Might be signing, ratification, accession or bringing into force."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+		
 ptr:Party rdf:type owl:Class ;
 	rdfs:label "Party"@en ;
 	rdfs:comment "A state or international organisation with the capacity to enter into treaty obligations."@en ;
@@ -57,11 +67,6 @@ ptr:InternationalOrganisation rdf:type owl:Class ;
 	rdfs:label "International organisation"@en ;
 	rdfs:comment "An international organisation with the capacity to enter into treaty obligations. This may be a supranational body such as the United Nations or any intergovernmental organisation can be a party to a treaty if its rules so permit."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-	
-	
-	
-	
 	
 ptr:TreatySeriesItem rdf:type owl:Class ;
 	rdfs:label "Treaty series item"@en ;
@@ -87,10 +92,17 @@ ptr:Bill rdf:type owl:Class ;
 	
 ##### Object properties ####
 
-ptr:partyTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Party to"@en ;
-	rdfs:comment "Relates a party to a treaty. A party may be party to one or more treaties, or none. A bilateral treaty has two parties. A multilateral treaty has more than two parties."@en ;
+ptr:takesAction rdf:type owl:ObjectProperty ;
+	rdfs:label "Takes action"@en ;
+	rdfs:comment "Relates a party to an action on a treaty. A party might take many actions on one treaty over time, or on many treaties over time."@en ;
 	rdfs:domain ptr:Party ;
+	rdfs:range ptr:Action ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:onTreaty rdf:type owl:ObjectProperty ;
+	rdfs:label "On treaty"@en ;
+	rdfs:comment "Relates an action by a party to a treaty. A treaty may have many actions over time. An action is on a single treaty."@en ;
+	rdfs:domain ptr:Action ;
 	rdfs:range ptr:Treaty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
@@ -124,7 +136,14 @@ ptr:billSatisfies rdf:type owl:ObjectProperty ;
 	
 					
 	
-##### Data properties ####	
+##### Data properties ####
+
+ptr:actionOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Action on"@en ;
+	rdfs:comment "The date on which an action was taken or is due to be taken."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 			
 ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
 	rdfs:label "Series item citation"@en ;
@@ -157,13 +176,6 @@ ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 ptr:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force date"@en ;
 	rdfs:comment "The date on which a treaty comes into force for all parties."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "UK coming into force date"@en ;
-	rdfs:comment "The date on which a treaty comes into force in the United Kingdom."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
