@@ -1,3 +1,12 @@
 # Treaty
 
-A treaty may be ratified if neither House resolves against ratification within 21 sitting days. This period can be extended by the Minister. If the House of Lords resolves against ratification, a treaty can still be ratified following a statement by the Minister explaining why the treaty should nonetheless be ratified. If the House of Commons resolves against ratification, a treaty can still be ratified if the Minister lays a statement explaining why the treaty should nonetheless be ratified and the House of Commons does not pass a further resolution against ratification within 21 sitting days of the Minister's statement being laid. In exceptional cases, a Minister can determine a treaty should be ratified without being laid before Parliament.
+A treaty may be ratified if the Commons does not resolve against ratification within 21 sitting days. A Minister may extend this period.
+
+If the Commons resolves against ratification, a Minister may make a statement in disagreement, following which the Commons considers for a further 21 sitting days.
+
+
+
+
+Even if the Lords resolves against ratification, a Minister may make a statement that the treaty be ratified. 
+
+A Minister may determine a treaty should be ratified without being laid before Parliament.
