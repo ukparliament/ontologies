@@ -41,14 +41,14 @@ ptr:InForceTreaty rdf:type owl:Class ;
 	rdfs:comment "A treaty that is in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:Stage rdf:type owl:Class ;
-	rdfs:label "Stage"@en ;
-	rdfs:comment "An stage undertaken by a party to a treaty on a treaty."@en ;
+ptr:Action rdf:type owl:Class ;
+	rdfs:label "Action"@en ;
+	rdfs:comment "An action taken by a party to a treaty on a treaty."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
-ptr:StageType rdf:type owl:Class ;
-	rdfs:label "Stage type"@en ;
-	rdfs:comment "The type of a stage undertaken by a party to a treaty on a treaty. Might be signing, ratification, accession or bringing into force."@en ;
+ptr:ActionType rdf:type owl:Class ;
+	rdfs:label "Action type"@en ;
+	rdfs:comment "The type of action taken by a party to a treaty on a treaty. Might be signing, ratification, accession or bringing into force."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 		
 ptr:Party rdf:type owl:Class ;
@@ -92,25 +92,25 @@ ptr:Bill rdf:type owl:Class ;
 	
 ##### Object properties ####
 
-ptr:undertakesStage rdf:type owl:ObjectProperty ;
-	rdfs:label "Undertakes stage"@en ;
-	rdfs:comment "Relates a party to a stage on a treaty. A party might undertake many stages on one treaty over time, or on many treaties over time."@en ;
+ptr:completesAction rdf:type owl:ObjectProperty ;
+	rdfs:label "Completes action"@en ;
+	rdfs:comment "Relates a party to an action on a treaty. A party may take many actions on one treaty over time, or on many treaties over time. An action is always by one party."@en ;
 	rdfs:domain ptr:Party ;
-	rdfs:range ptr:Stage ;
+	rdfs:range ptr:Action ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:hasStageType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has stage type"@en ;
-	rdfs:comment "Relates a stage to its type."@en ;
-	rdfs:domain ptr:Stage ;
-	rdfs:range ptr:StageType ;
+ptr:hasActionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has action type"@en ;
+	rdfs:comment "Relates an action to its type."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range ptr:ActionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:hasTreatyStage rdf:type owl:ObjectProperty ;
-	rdfs:label "Has treaty stage"@en ;
-	rdfs:comment "Relates a treaty to a stage undertaken by a party to a treaty. A treaty may have many stages over time. A stage is on a single treaty."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range ptr:Stage ;
+ptr:onTreaty rdf:type owl:ObjectProperty ;
+	rdfs:label "On treaty"@en ;
+	rdfs:comment "Relates an action by a party to a treaty. A treaty may have many actions over time. An action is on a single treaty."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range ptr:Treaty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:asSeriesItem rdf:type owl:ObjectProperty ;
@@ -147,8 +147,8 @@ ptr:billSatisfies rdf:type owl:ObjectProperty ;
 
 ptr:occursOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Occurs on"@en ;
-	rdfs:comment "The date on which a stage was undertaken or is due to be undertaken."@en ;
-	rdfs:domain ptr:Stage ;
+	rdfs:comment "The date on which an action was taken or is due to be taken."@en ;
+	rdfs:domain ptr:Action ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 			
