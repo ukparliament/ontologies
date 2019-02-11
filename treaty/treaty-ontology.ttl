@@ -87,7 +87,11 @@ ptr:Bill rdf:type owl:Class ;
 	rdfs:label "Bill"@en ;
 	rdfs:comment "A bill presented to Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
+
+ptr:GovernmentOrganisation rdf:type owl:Class ;
+	rdfs:label "Government organisation"@en ;
+	rdfs:comment "Government departments, agencies and public bodies which have responsibility for a specific sector of public administration. Is a specialised type of group."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 	
 ##### Object properties ####
@@ -141,6 +145,12 @@ ptr:billSatisfies rdf:type owl:ObjectProperty ;
 	rdfs:range ptr:Treaty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
+ptr:leadDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Lead department"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:GovernmentOrganisation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 					
 	
 ##### Data properties ####
