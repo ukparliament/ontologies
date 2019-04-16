@@ -27,7 +27,7 @@ ppsa:BusinessStep rdf:type owl:Class ;
 	
 ppsa:Publication rdf:type owl:Class ;
 	rdfs:label "Publication"@en ;
-	rdfs:comment "An online parliamentary publication."@en ;
+	rdfs:comment "An online publication."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 
@@ -46,7 +46,7 @@ ppsa:actualiseAlongside rdf:type owl:ObjectProperty ;
 
 ppsa:source rdf:type owl:ObjectProperty ;
 	rdfs:label "Source"@en ;
-	rdfs:comment "Relates a business step to the publication which contains reports of the type of business described by the step."@en ;
+	rdfs:comment "Relates a business step to the publication which is the authoritative source of information for that step."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range ppsa:Publication ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
@@ -58,21 +58,21 @@ ppsa:source rdf:type owl:ObjectProperty ;
 
 ppsa:scopeNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Scope note"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A note that clarifies the rules around actualising a business step."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 ppsa:linkNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Link note"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A note that clarifies where a business item should link to in a publication."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 ppsa:dateNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date note"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A note that clarifies the date to use when actualising a business step."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
