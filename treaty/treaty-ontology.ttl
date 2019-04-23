@@ -19,41 +19,41 @@
 		[ foaf:name "Jack Dent" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ],
-		[ foaf:name "Jane White" ].
+		[ foaf:name "Jane White" ] .
 
 
 #######  Classes ##### 	
 
 ptr:Treaty rdf:type owl:Class ;
 	rdfs:label "Treaty"@en ;
-	rdfs:comment "A treaty between two or more international entities. Treaties between nation states are governed by the Vienna Convention on the Law of Treaties. Treaties between nation states and international organisations and between international organisations themselves are governed by the Vienna Convention on the Law of Treaties between States and International Organizations or between International Organizations."@en ;
+	rdfs:comment "A treaty between two or more parties. Treaties between nation states are described by the Vienna Convention on the Law of Treaties. Treaties between nation states and international organisations and between international organisations themselves are described by the Vienna Convention on the Law of Treaties between States and International Organizations or between International Organizations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:NotYetInForceTreaty rdf:type owl:Class ;
 	rdfs:subClassOf ptr:Treaty ;
 	rdfs:label "Not yet in force treaty"@en ;
-	rdfs:comment "A treaty that is not yet in force in the United Kingdom."@en ;
+	rdfs:comment "A treaty that is not in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:InForceTreaty rdf:type owl:Class ;
 	rdfs:subClassOf ptr:Treaty ;
 	rdfs:label "In force treaty"@en ;
-	rdfs:comment "A treaty that is in force in the United Kingdom."@en ;
+	rdfs:comment "A treaty that is in force."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:Action rdf:type owl:Class ;
 	rdfs:label "Action"@en ;
-	rdfs:comment "An action taken by a party to a treaty on a treaty."@en ;
+	rdfs:comment "An action by a party on a treaty."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:ActionType rdf:type owl:Class ;
 	rdfs:label "Action type"@en ;
-	rdfs:comment "The type of action taken by a party to a treaty on a treaty. Might be signing, ratification, accession or bringing into force."@en ;
+	rdfs:comment "The type of action by a party on a treaty. These include signing, ratification, accession or bringing into force."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 		
 ptr:Party rdf:type owl:Class ;
 	rdfs:label "Party"@en ;
-	rdfs:comment "A state or international organisation with the capacity to enter into treaty obligations."@en ;
+	rdfs:comment "An entity with the capacity to enter into treaty obligations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:State rdf:type owl:Class ;
@@ -65,23 +65,23 @@ ptr:State rdf:type owl:Class ;
 ptr:InternationalOrganisation rdf:type owl:Class ;
 	rdfs:subClassOf ptr:Party ;
 	rdfs:label "International organisation"@en ;
-	rdfs:comment "An international organisation with the capacity to enter into treaty obligations. This may be a supranational body such as the United Nations or any intergovernmental organisation can be a party to a treaty if its rules so permit."@en ;
+	rdfs:comment "An organisation with the capacity to enter into treaty obligations, being a supranational body such as the United Nations or an intergovernmental organisation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:TreatySeriesItem rdf:type owl:Class ;
 	rdfs:label "Treaty series item"@en ;
-	rdfs:comment "A treaty is part of one series. Whilst the treaty is not yet in force in the United Kingdom it will form part of either a bilateral, multilateral or European Union series. If the treaty comes into force it will be part of an in force series."@en ;
+	rdfs:comment "A treaty is in one series. Whilst the treaty is not yet in force in the United Kingdom it is in either the bilateral, multilateral or European Union series. If the treaty comes into force it is in the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:TreatySeries rdf:type owl:Class ;
 	rdfs:label "Treaty series"@en ;
-	rdfs:comment "A series of which a treaty forms part. This may be the bilateral series, the multilateral series, the European Union series or the in force series."@en ;
+	rdfs:comment "A series of which a treaty is an item. This is one of the bilateral series, the multilateral series, the European Union series or the Treaty Series. One of the four treaty series is itself called the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
 	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:Bill rdf:type owl:Class ;
 	rdfs:label "Bill"@en ;
@@ -92,6 +92,8 @@ ptr:GovernmentOrganisation rdf:type owl:Class ;
 	rdfs:label "Government organisation"@en ;
 	rdfs:comment "A government department, agency or public body with responsibility for a specific sector of public administration."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+### edited to here
 	
 	
 ##### Object properties ####
