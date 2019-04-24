@@ -13,8 +13,9 @@
 @prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> . 
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
-@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> .
+@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
+@prefix ppsa: <http://parliament.uk/ontologies/procedure-step-annotation/> .
 
 
 
@@ -28,6 +29,7 @@
 	owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/procedure/procedure-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation-ontology.ttl> ;
 	owl:imports <http://www.w3.org/2004/02/skos/core#> ;
     rdf:type owl:Ontology ;
     dcterms:title "Interface ontology"@en ;
@@ -39,7 +41,7 @@
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
-	    [ foaf:name "Anya Somerville" ].
+	    [ foaf:name "Anya Somerville" ] .
 
 
 #######  Equivalent classes ##### 	
@@ -85,6 +87,13 @@ ppr:House
 pl:House
 	owl:equivalentClass
 	ppr:House .
+	
+ppr:BusinessStep
+	owl:equivalentClass
+	ppsa:BusinessStep .
+ppsa:BusinessStep
+	owl:equivalentClass
+	ppr:BusinessStep .
 	
 pma:House
 	owl:equivalentClass
