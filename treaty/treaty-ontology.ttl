@@ -162,44 +162,37 @@ ptr:leadDepartment rdf:type owl:ObjectProperty ;
 	
 ##### Data properties ####
 
-ptr:occursOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "Occurs on"@en ;
-	rdfs:comment "The date on which an action was taken or is due to be taken."@en ;
+ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
+	rdfs:label "Series item citation"@en ;
+	rdfs:comment "Each item in a treaty series has its own citation."@en ;
+	rdfs:domain ptr:TreatySeriesItem ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:actionDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Action date"@en ;
+	rdfs:comment "The date on which an action was completed or is due to be completed. An action may not have a recorded date."@en ;
 	rdfs:domain ptr:Action ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:actionDateNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Action date note"@en ;
+	rdfs:comment "A note describing details of the application of dates which apply to an action."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 			
-ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
-	rdfs:label "Series item citation"@en ;
-	rdfs:comment "Relates a treaty series item to its citation as part of a series."@en ;
-	rdfs:domain ptr:TreatySeriesItem ;
+ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
+	rdfs:label "Command paper prefix"@en ;
+	rdfs:comment "A command paper prefix is applied until a command paper number reaches 9999, after which the command paper prefix is changed. Each command paper has one command paper prefix."@en ;
+	rdfs:domain ptr:Treaty ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command paper number"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A command paper number follows its prefix and does not exceed 9999. Each command paper has one command paper number."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
-ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
-	rdfs:label "Command paper prefix"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
-ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
-	rdfs:label "Coming into force note"@en ;
-	rdfs:comment "A coming into force note sets out details of the commencement of a treaty."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:comingIntoForceDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "Coming into force date"@en ;
-	rdfs:comment "The date on which a treaty comes into force for all parties."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
