@@ -41,6 +41,12 @@ ptr:InForceTreaty rdf:type owl:Class ;
 	rdfs:comment "A treaty that is in force."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
+ptr:NoLongerInForceTreaty rdf:type owl:Class ;
+	rdfs:subClassOf ptr:Treaty ;
+	rdfs:label "No longer in force treaty"@en ;
+	rdfs:comment "A treaty that has previously been in force and is no longer in force. A treaty may include sunset clauses which cause some or all of the treaty to no longer be in force. A treaty may be overtaken by another treaty, either explicitly or implicitly."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
 ptr:Action rdf:type owl:Class ;
 	rdfs:label "Action"@en ;
 	rdfs:comment "An action by a party on a treaty."@en ;
@@ -93,10 +99,7 @@ ptr:GovernmentOrganisation rdf:type owl:Class ;
 	rdfs:comment "A government department, agency or public body with responsibility for a specific sector of public administration."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-### edited to here
-### OUT OF FORCE TREATY (sunset clause, overtaken by another treaty (specifically, or implied). sometimes in part)
-### provisonal application on mulitlateral to bring bits into force for one or more parties before ratification
-### if there's an existing treaty we're not a party to it may be in force elsewhere but not in force here til ratification etc
+
 	
 ##### Object properties ####
 
