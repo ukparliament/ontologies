@@ -28,21 +28,26 @@ ptr:Treaty rdf:type owl:Class ;
 	rdfs:label "Treaty"@en ;
 	rdfs:comment "A treaty between two or more parties. Treaties between nation states are described by the Vienna Convention on the Law of Treaties. Treaties between nation states and international organisations and between international organisations themselves are described by the Vienna Convention on the Law of Treaties between States and International Organizations or between International Organizations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:TreatyAsLaid rdf:type owl:Class ;
+	rdfs:label "Treaty as laid"@en ;
+	rdfs:comment "A treaty as laid before Parliament"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:NotYetInForceTreaty rdf:type owl:Class ;
-	rdfs:subClassOf ptr:Treaty ;
+	rdfs:subClassOf ptr:TreatyAsLaid ;
 	rdfs:label "Not yet in force treaty"@en ;
 	rdfs:comment "A treaty that is not in force in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:InForceTreaty rdf:type owl:Class ;
-	rdfs:subClassOf ptr:Treaty ;
+	rdfs:subClassOf ptr:TreatyAsLaid ;
 	rdfs:label "In force treaty"@en ;
 	rdfs:comment "A treaty that is in force."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:NoLongerInForceTreaty rdf:type owl:Class ;
-	rdfs:subClassOf ptr:Treaty ;
+	rdfs:subClassOf ptr:TreatyAsLaid ;
 	rdfs:label "No longer in force treaty"@en ;
 	rdfs:comment "A treaty that has previously been in force and is no longer in force. A treaty may include sunset clauses which cause some or all of the treaty to no longer be in force. A treaty may be overtaken by another treaty, either explicitly or implicitly."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
@@ -103,6 +108,13 @@ ptr:GovernmentOrganisation rdf:type owl:Class ;
 	
 ##### Object properties ####
 
+ptr:laidAs rdf:type owl:ObjectProperty ;
+	rdfs:label "Laid as"@en ;
+	rdfs:comment "????"@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:TreatyAsLaid ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
 ptr:completesAction rdf:type owl:ObjectProperty ;
 	rdfs:label "Completes action"@en ;
 	rdfs:comment "A party may complete many actions on one or more treaties over time. An action is recorded as having been completed by one party."@en ;
@@ -127,7 +139,7 @@ ptr:actsOn rdf:type owl:ObjectProperty ;
 ptr:asSeriesItem rdf:type owl:ObjectProperty ;
 	rdfs:label "As series item"@en ;
 	rdfs:comment "A treaty may appear in more than one series over time by means of a series item. A treaty appears in the Treaty series on coming into force in the United Kingdom. Each series item refers to one treaty."@en ;
-	rdfs:domain ptr:Treaty ;
+	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range ptr:TreatySeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
@@ -186,13 +198,13 @@ ptr:actionDateNote rdf:type owl:DatatypeProperty ;
 ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command paper prefix"@en ;
 	rdfs:comment "A command paper prefix is applied until a command paper number reaches 9999, after which the command paper prefix is changed. Each command paper has one command paper prefix."@en ;
-	rdfs:domain ptr:Treaty ;
+	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command paper number"@en ;
 	rdfs:comment "A command paper number follows its prefix and does not exceed 9999. Each command paper has one command paper number."@en ;
-	rdfs:domain ptr:Treaty ;
+	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
