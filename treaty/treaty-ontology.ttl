@@ -17,6 +17,7 @@
 		[ foaf:name "David Beamish" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Jack Dent" ],
+		[ foaf:name "Arabella Lang" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ],
 		[ foaf:name "Jane White" ] .
@@ -31,7 +32,7 @@ ptr:Treaty rdf:type owl:Class ;
 
 ptr:TreatyAsLaid rdf:type owl:Class ;
 	rdfs:label "Treaty as laid"@en ;
-	rdfs:comment "A treaty as laid before Parliament"@en ;
+	rdfs:comment "A treaty as laid before Parliament. Treaties that do not require ratification are not subject to the Constitutional Reform and Governance Act 2010 and so are not laid before Parliament. Treaties which do require ratification are laid twice before Parliament; once pre-ratification when they are subject to scrutiny under the CRAG procedure, and again at the point they come into force. The second laying is for information and does not trigger any parliamentary procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:NotYetInForceTreaty rdf:type owl:Class ;
@@ -110,7 +111,7 @@ ptr:GovernmentOrganisation rdf:type owl:Class ;
 
 ptr:laidAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Laid as"@en ;
-	rdfs:comment "????"@en ;
+	rdfs:comment "Relates a treaty to an instantiation as laid into Parliament."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:TreatyAsLaid ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
