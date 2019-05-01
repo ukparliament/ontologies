@@ -54,9 +54,9 @@ ppb:Affiliation rdf:type owl:Class ;
 	rdfs:comment "A person or group's affiliation to a parliamentary bloc between two dates. Could be used to describe affiliations to blocs which are not political parties e.g. Crossbenchers and bishops in the House of Lords. Could also be used to describe members having an affiliation to the Co-operative Party whilst being whipped to Labour."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
-ppb:Whipping rdf:type owl:Class ;
+ppb:MemberWhipping rdf:type owl:Class ;
 	rdfs:subClassOf ppb:Affiliation ;
-	rdfs:label "Whipping"@en ;
+	rdfs:label "Member whipping"@en ;
 	rdfs:comment "A member of a legislature being whipped to a political party between two dates. A member accepting a whip agrees to vote mainly in line with the party they're whipped to. The whip may be withdrawn by the party or rejected by the member."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
@@ -108,7 +108,7 @@ ppb:hasAffiliation rdf:type owl:ObjectProperty ;
 ppb:whippedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "whippedTo"@en ;
 	rdfs:comment "Relates a whipping to a parliamentary party."@en ;
-	rdfs:domain ppb:Whipping ;
+	rdfs:domain ppb:MemberWhipping ;
 	rdfs:range ppb:ParliamentaryParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
@@ -116,7 +116,7 @@ ppb:accepts rdf:type owl:ObjectProperty ;
 	rdfs:label "accepts"@en ;
 	rdfs:comment "Relates a member to a whipping."@en ;
 	rdfs:domain ppb:Member ;
-	rdfs:range ppb:Whipping ;
+	rdfs:range ppb:MemberWhipping ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 				
 	
