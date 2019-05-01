@@ -45,7 +45,7 @@ ppb:ParliamentaryParty rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:ParliamentaryBloc rdf:type owl:Class ;
-	rdfs:label "ParliamentaryBloc"@en ;
+	rdfs:label "Parliamentary bloc"@en ;
 	rdfs:comment "A group of members. This includes a political party such as Labour or Conservative, and also includes different types of grouping such as Bishops or Crossbenchers in the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
@@ -71,14 +71,14 @@ ppb:Member rdf:type owl:Class ;
 
 
 ppb:hasPact rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPact"@en ;
+	rdfs:label "Has pact"@en ;
 	rdfs:comment "Relates a party to the pact it's part of."@en ;
 	rdfs:domain ppb:PoliticalParty ;
 	rdfs:range ppb:Pact ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:hasSistership rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSistership"@en ;
+	rdfs:label "Has sistership"@en ;
 	rdfs:comment "Relates a party to a sistership it's part of."@en ;
 	rdfs:domain ppb:PoliticalParty ;
 	rdfs:range ppb:Sistership ;
@@ -106,14 +106,14 @@ ppb:hasAffiliation rdf:type owl:ObjectProperty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:whippedTo rdf:type owl:ObjectProperty ;
-	rdfs:label "whippedTo"@en ;
+	rdfs:label "Whipped to"@en ;
 	rdfs:comment "Relates a whipping to a parliamentary party."@en ;
 	rdfs:domain ppb:MemberWhipping ;
 	rdfs:range ppb:ParliamentaryParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:accepts rdf:type owl:ObjectProperty ;
-	rdfs:label "accepts"@en ;
+	rdfs:label "Accepts"@en ;
 	rdfs:comment "Relates a member to a whipping."@en ;
 	rdfs:domain ppb:Member ;
 	rdfs:range ppb:MemberWhipping ;
