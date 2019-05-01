@@ -190,6 +190,11 @@ ppr:WorkPackage
 
 #######  Subclasses #####
 
+# Affiliation
+ppb:Affiliation
+	rdfs:subClassOf
+	pa:GroupInclusion .
+
 # Draft and made statutory instrument subject to parliamentary procedure
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	rdfs:subClassOf
@@ -232,6 +237,21 @@ pl:LayingOrWithdrawal
 pl:LayingOrWithdrawal
 	rdfs:subClassOf
 	pfb:BusinessItem .
+	
+# Member
+ppb:Member
+	rdfs:subClassOf
+	pa:Person .
+	
+# Parliamentary bloc
+ppb:ParliamentaryBloc
+	rdfs:subClassOf
+	pa:Group .
+	
+# Political party
+ppb:PoliticalParty
+	rdfs:subClassOf
+	pa:Group .
 
 # Proposed nagative statutory instrument
 plg:ProposedNegativeStatutoryInstrument
