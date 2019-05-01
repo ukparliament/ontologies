@@ -14,6 +14,7 @@
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> .
+@prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> . 
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix ppsa: <http://parliament.uk/ontologies/procedure-step-annotation/> .
 
@@ -28,6 +29,7 @@
 	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/parliamentary-bloc/parliamentary-bloc-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/procedure/procedure-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation-ontology.ttl> ;
 	owl:imports <http://www.w3.org/2004/02/skos/core#> ;
@@ -44,50 +46,29 @@
 	    [ foaf:name "Anya Somerville" ] .
 
 
-#######  Equivalent classes ##### 	
+#######  Equivalent classes #####
 
-ppr:Procedure
-	owl:equivalentClass
-	plg:Procedure .
-plg:Procedure
-	owl:equivalentClass
-	ppr:Procedure .
-
-pl:LayingDuty
-	owl:equivalentClass
-	plg:LayingDuty .
-plg:LayingDuty
-	owl:equivalentClass
-	pl:LayingDuty .
-
-pa:Person
-	owl:equivalentClass
-	pl:Person .
-pl:Person
-	owl:equivalentClass
-	pa:Person .
-
-pa:Place
-	owl:equivalentClass
-	pbi:Place .
-pbi:Place
-	owl:equivalentClass
-	pa:Place .
-	
+# Business item
 ppr:BusinessItem
 	owl:equivalentClass
 	pbi:BusinessItem .
 pbi:BusinessItem
 	owl:equivalentClass
 	ppr:BusinessItem .
-	
-ppr:House
+pfb:BusinessItem
 	owl:equivalentClass
-	pl:House .
-pl:House
+	ppr:BusinessItem .
+ppr:BusinessItem
 	owl:equivalentClass
-	ppr:House .
+	pfb:BusinessItem .
+pfb:BusinessItem
+	owl:equivalentClass
+	pbi:BusinessItem .
+pbi:BusinessItem
+	owl:equivalentClass
+	pfb:BusinessItem .
 	
+# Business step
 ppr:BusinessStep
 	owl:equivalentClass
 	ppsa:BusinessStep .
@@ -95,34 +76,7 @@ ppsa:BusinessStep
 	owl:equivalentClass
 	ppr:BusinessStep .
 	
-pma:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	pma:House .
-	
-pma:House
-	owl:equivalentClass
-	ppr:House .
-ppr:House
-	owl:equivalentClass
-	pma:House .
-
-pma:Session
-	owl:equivalentClass
-	pl:Session .
-pl:Session
-	owl:equivalentClass
-	pma:Session .
-	
-pma:Laying
-	owl:equivalentClass
-	pl:Laying .
-pl:Laying
-	owl:equivalentClass
-	pma:Laying .
-	
+# Group inclusion
 pfba:GroupInclusion
 	owl:equivalentClass
 	pa:GroupInclusion .
@@ -130,109 +84,182 @@ pa:GroupInclusion
 	owl:equivalentClass
 	pfba:GroupInclusion .
 	
-pfba:Position
+# House
+ppr:House
 	owl:equivalentClass
-	pa:Position .
-pa:Position
+	pl:House .
+pl:House
 	owl:equivalentClass
-	pfba:Position .
-	
+	ppr:House .
+pma:House
+	owl:equivalentClass
+	pl:House .
+pl:House
+	owl:equivalentClass
+	pma:House .
+pma:House
+	owl:equivalentClass
+	ppr:House .
+ppr:House
+	owl:equivalentClass
+	pma:House .
 pfb:House
 	owl:equivalentClass
 	pma:House .
 pma:House
 	owl:equivalentClass
 	pfb:House .
-	
 pfb:House
 	owl:equivalentClass
 	pl:House .
 pl:House
 	owl:equivalentClass
-	pfb:House .
-		
+	pfb:House .	
 pfb:House
 	owl:equivalentClass
 	ppr:House .
 ppr:House
 	owl:equivalentClass
 	pfb:House .
+	
+# Laying
+pma:Laying
+	owl:equivalentClass
+	pl:Laying .
+pl:Laying
+	owl:equivalentClass
+	pma:Laying .
 
+# Laying Duty
+pl:LayingDuty
+	owl:equivalentClass
+	plg:LayingDuty .
+plg:LayingDuty
+	owl:equivalentClass
+	pl:LayingDuty .
+	
+# Person
+pa:Person
+	owl:equivalentClass
+	pl:Person .
+pl:Person
+	owl:equivalentClass
+	pa:Person .
+	
+# Place
+pa:Place
+	owl:equivalentClass
+	pbi:Place .
+pbi:Place
+	owl:equivalentClass
+	pa:Place .
+	
+# Position
+pfba:Position
+	owl:equivalentClass
+	pa:Position .
+pa:Position
+	owl:equivalentClass
+	pfba:Position .
+
+# Procedure
+ppr:Procedure
+	owl:equivalentClass
+	plg:Procedure .
+plg:Procedure
+	owl:equivalentClass
+	ppr:Procedure .
+	
+# Session
+pma:Session
+	owl:equivalentClass
+	pl:Session .
+pl:Session
+	owl:equivalentClass
+	pma:Session .
+	
+# Work package
 pfb:WorkPackage
 	owl:equivalentClass
 	ppr:WorkPackage .
 ppr:WorkPackage
 	owl:equivalentClass
 	pfb:WorkPackage .
-	
-pfb:BusinessItem
-	owl:equivalentClass
-	ppr:BusinessItem .
-ppr:BusinessItem
-	owl:equivalentClass
-	pfb:BusinessItem .
-	
-pfb:BusinessItem
-	owl:equivalentClass
-	pbi:BusinessItem .
-pbi:BusinessItem
-	owl:equivalentClass
-	pfb:BusinessItem .
 
-#######  Subclasses ##### 	
 
-plg:ProposedNegativeStatutoryInstrument
+
+#######  Subclasses #####
+
+# Affiliation
+ppb:Affiliation
 	rdfs:subClassOf
-	ppr:WorkPackageableThing .
+	pa:GroupInclusion .
 
+# Draft and made statutory instrument subject to parliamentary procedure
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	rdfs:subClassOf
 	ppr:WorkPackageableThing .
-	
-plg:ProposedNegativeStatutoryInstrument
-	rdfs:subClassOf
-	pl:LaidPaper .
-	
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	rdfs:subClassOf
 	pl:LaidPaper .
-	
-plg:ProposedNegativeStatutoryInstrument
-	rdfs:subClassOf
-	pl:WithdrawnPaper .
-
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	rdfs:subClassOf
 	pl:WithdrawnPaper .
-
-pl:LayingOrWithdrawl
-	rdfs:subClassOf
-	ppr:BusinessItem .
 	
+# Formal body
+pfb:FormalBody
+	rdfs:subClassOf
+	pa:Group .
+
+# House
 pl:House
 	rdfs:subClassOf
 	pa:Group .
-	
 ppr:House
 	rdfs:subClassOf
 	pa:Group .
-	
 pma:House
 	rdfs:subClassOf
 	pa:Group .
 
+# Laying body
 pl:LayingBody
 	rdfs:subClassOf
 	pa:Group .
-
+	
+# Laying or withdrawal
+pl:LayingOrWithdrawl
+	rdfs:subClassOf
+	ppr:BusinessItem .
 pl:LayingOrWithdrawal
 	rdfs:subClassOf
 	pbi:BusinessItem .
-
-pfb:FormalBody
+pl:LayingOrWithdrawal
+	rdfs:subClassOf
+	pfb:BusinessItem .
+	
+# Member
+ppb:Member
+	rdfs:subClassOf
+	pa:Person .
+	
+# Parliamentary bloc
+ppb:ParliamentaryBloc
 	rdfs:subClassOf
 	pa:Group .
 	
-pl:LayingOrWithdrawl
+# Political party
+ppb:PoliticalParty
 	rdfs:subClassOf
-	pfb:BusinessItem .
+	pa:Group .
+
+# Proposed nagative statutory instrument
+plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	ppr:WorkPackageableThing .
+plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	pl:LaidPaper .
+plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	pl:WithdrawnPaper .
