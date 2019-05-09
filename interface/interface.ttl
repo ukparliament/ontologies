@@ -17,6 +17,7 @@
 @prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> . 
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix ppsa: <http://parliament.uk/ontologies/procedure-step-annotation/> .
+@prefix ptr: <http://parliament.uk/ontologies/treaty/> .
 
 
 
@@ -32,6 +33,7 @@
 	owl:imports <https://ukparliament.github.io/ontologies/parliamentary-bloc/parliamentary-bloc-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/procedure/procedure-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/treaty/treaty-ontology.ttl> ;
 	owl:imports <http://www.w3.org/2004/02/skos/core#> ;
     rdf:type owl:Ontology ;
     dcterms:title "Interface ontology"@en ;
@@ -75,6 +77,14 @@ ppr:BusinessStep
 ppsa:BusinessStep
 	owl:equivalentClass
 	ppr:BusinessStep .
+	
+# Draft and made statutory instrument subject to parliamentary procedure
+plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	owl:equivalentClass
+	ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
+ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	owl:equivalentClass
+	plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
 	
 # Group inclusion
 pfba:GroupInclusion
@@ -210,6 +220,11 @@ plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 pfb:FormalBody
 	rdfs:subClassOf
 	pa:Group .
+	
+# Government organisation
+ptr:GovernmentOrganisation
+	rdfs:subClassOf
+	pa:Group .
 
 # House
 pl:House
@@ -248,6 +263,11 @@ ppb:ParliamentaryBloc
 	rdfs:subClassOf
 	pa:Group .
 	
+# Party
+ptr:Party
+	rdfs:subClassOf
+	pa:Group .
+	
 # Political party
 ppb:PoliticalParty
 	rdfs:subClassOf
@@ -261,5 +281,13 @@ plg:ProposedNegativeStatutoryInstrument
 	rdfs:subClassOf
 	pl:LaidPaper .
 plg:ProposedNegativeStatutoryInstrument
+	rdfs:subClassOf
+	pl:WithdrawnPaper .
+	
+# Treaty as laid
+ptr:TreatyAsLaid
+	rdfs:subClassOf
+	pl:LaidPaper .
+ptr:TreatyAsLaid
 	rdfs:subClassOf
 	pl:WithdrawnPaper .
