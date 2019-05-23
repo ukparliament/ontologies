@@ -6,7 +6,7 @@ Over the past couple of years [Andrew Gray](https://twitter.com/generalising) ha
 
 If you have an interest in what Wikidata is, how you might contribute or how you might use it to help with your research, please come along to G-01 at 2:30pm on Friday, 7th June. If you have questions or would like to attend please contact [Anya Somerville](somervillea@parliament.uk).
 
-Thanks to Liz Marley for her consumate administration skills.
+Thanks to Liz Marley for her consummate administration skills.
 
 Andrew Gray is a librarian at the [British Antarctic Survey](https://www.bas.ac.uk/) by day and a Wikipedian at all other times.
 
