@@ -106,6 +106,20 @@ ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:endStep rdf:type owl:ObjectProperty ;
+	rdfs:label "End step"@en ;
+	rdfs:comment "Relates a procedure to a terminal business step. A work package including a business item that actualises a business step that is identified as an end step for the procedure the work package is subject to, is considered no longer currently before Parliament."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:BusinessStep ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:keyStep rdf:type owl:ObjectProperty ;
+	rdfs:label "Key step"@en ;
+	rdfs:comment "Relates a procedure to a key business step. Allows for an editorial layer to differentiate some business steps as key to the procedure."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:BusinessStep ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
 	rdfs:comment "Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion."@en ;
