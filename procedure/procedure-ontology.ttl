@@ -99,17 +99,10 @@ ppr:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
-ppr:followsProcedure rdf:type owl:ObjectProperty ;
-	rdfs:label "Follows procedure"@en ;
-	rdfs:comment "Relates a work package to the procedure it follows. A work package only follows one procedure."@en ;
-	rdfs:domain ppr:WorkPackage ;
-	rdfs:range ppr:Procedure ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Subject to"@en ;
-	rdfs:comment "Relates a work packageable thing to the procedure it is subject to. A work packageable thing is only subject to one procedure."@en ;
-	rdfs:domain ppr:WorkPackageableThing ;
+	rdfs:comment "Relates a work package to the procedure it is subject to. A work package is only subject to one procedure."@en ;
+	rdfs:domain ppr:WorkPackage ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
