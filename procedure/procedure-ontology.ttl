@@ -108,14 +108,14 @@ ppr:subjectTo rdf:type owl:ObjectProperty ;
 	
 ppr:hasConcludingStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Has concluding step"@en ;
-	rdfs:comment "Relates a procedure to a business step at which a work package subject to that procedure is considered to be concluded."@en ;
+	rdfs:comment "A procedure may have one or more steps described as concluding steps, at which a work package subject to that procedure is considered to be concluded."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasKeyStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Has key step"@en ;
-	rdfs:comment "Relates a procedure to a key business step. One or more business steps may be described as key within a procedure."@en ;
+	rdfs:comment "A procedure may have one or more business steps described as key steps."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
