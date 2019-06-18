@@ -23,6 +23,8 @@
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ],
+	    [ foaf:name "Dominic Stockbridge" ],
+	    [ foaf:name "Jayne Sunley" ],
 		[ foaf:name "James Vinter" ],
 		[ foaf:name "Jane White" ],
 		[ foaf:name "Ben Woodhams" ].
@@ -116,6 +118,13 @@ ppr:hasConcludingStep rdf:type owl:ObjectProperty ;
 ppr:hasKeyStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Has key step"@en ;
 	rdfs:comment "A procedure may have one or more business steps described as key steps."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:BusinessStep ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasMemberActionStep rdf:type owl:ObjectProperty ;
+	rdfs:label "Has Member action step"@en ;
+	rdfs:comment "A procedure may have one or more steps described as Member action steps, points at which a Member is able to take an action."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
