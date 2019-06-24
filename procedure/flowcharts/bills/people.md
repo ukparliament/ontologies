@@ -2,25 +2,25 @@
 
 Tim Holmes
 
-Richard Kelly
+Richard Kelly x 2
 
 # Meeting
 
 Martyn Atkins
 
-# To meet
-
 Adam Mellors-Facer
+
+Matt Korris
+
+David Beamish
+
+# To meet
 
 Joanna Dodd
 
 Michael R Everett
 
 Kenneth Fox
-
-Matt Korris
-
-David Beamish
 
 Andrew Makower
 
