@@ -2,9 +2,7 @@
 
 Tim Holmes
 
-Richard Kelly x 2
-
-# Meeting
+Richard Kelly x 3
 
 Martyn Atkins
 
@@ -13,6 +11,10 @@ Adam Mellors-Facer
 Matt Korris
 
 David Beamish
+
+# Meeting
+
+Simon Holt
 
 # To meet
 
