@@ -23,6 +23,8 @@
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ],
+	    [ foaf:name "Dominic Stockbridge" ],
+	    [ foaf:name "Jayne Sunley" ],
 		[ foaf:name "James Vinter" ],
 		[ foaf:name "Jane White" ],
 		[ foaf:name "Ben Woodhams" ].
@@ -99,18 +101,32 @@ ppr:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
-ppr:followsProcedure rdf:type owl:ObjectProperty ;
-	rdfs:label "Follows procedure"@en ;
-	rdfs:comment "Relates a work package to the procedure it follows. A work package only follows one procedure."@en ;
+ppr:subjectTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Subject to"@en ;
+	rdfs:comment "Relates a work package to the procedure it is subject to. A work package is only subject to one procedure."@en ;
 	rdfs:domain ppr:WorkPackage ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:subjectTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Subject to"@en ;
-	rdfs:comment "Relates a work packageable thing to the procedure it is subject to. A work packageable thing is only subject to one procedure."@en ;
-	rdfs:domain ppr:WorkPackageableThing ;
-	rdfs:range ppr:Procedure ;
+	
+ppr:hasConcludingStep rdf:type owl:ObjectProperty ;
+	rdfs:label "Has concluding step"@en ;
+	rdfs:comment "A procedure may have one or more steps described as concluding steps, at which a work package subject to that procedure is considered to be concluded."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:BusinessStep ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasKeyStep rdf:type owl:ObjectProperty ;
+	rdfs:label "Has key step"@en ;
+	rdfs:comment "A procedure may have one or more business steps described as key steps."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:BusinessStep ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasMemberActionStep rdf:type owl:ObjectProperty ;
+	rdfs:label "Has Member action step"@en ;
+	rdfs:comment "A procedure may have one or more steps described as Member action steps, points at which a Member is able to take an action."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:actualises rdf:type owl:ObjectProperty ;

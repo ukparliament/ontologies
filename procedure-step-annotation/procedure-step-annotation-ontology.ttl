@@ -1,0 +1,80 @@
+@prefix ppsa: <http://parliament.uk/ontologies/procedure-step-annotation/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/procedure-step-annotation/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Procedure step ontology"@en ;
+    dcterms:created "2019-04-16"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "Ontology allowing annotation of procedure steps by the Indexing and Data Management Section in the House of Commons Library. Allows us to capture how and when procedure steps are actualised."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ] .
+
+
+#######  Classes ##### 	
+
+ppsa:BusinessStep rdf:type owl:Class ;
+	rdfs:label "Business step"@en ;
+	rdfs:comment "A business step is a step that can be actualised by a business item."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+	
+ppsa:Publication rdf:type owl:Class ;
+	rdfs:label "Publication"@en ;
+	rdfs:comment "A publication."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+	
+
+	
+
+	
+##### Object properties ####
+
+
+ppsa:actualiseWith rdf:type owl:ObjectProperty ;
+	rdfs:label "Actualise with"@en ;
+	rdfs:comment "Relates a business step to a business step where steps may be actualised together."@en ;
+	rdfs:domain ppsa:BusinessStep ;
+	rdfs:range ppsa:BusinessStep ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+
+ppsa:source rdf:type owl:ObjectProperty ;
+	rdfs:label "Source"@en ;
+	rdfs:comment "Relates a business step to the publication which is the source of information for that step."@en ;
+	rdfs:domain ppsa:BusinessStep ;
+	rdfs:range ppsa:Publication ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+	
+
+				
+	
+##### Data properties ####	
+
+ppsa:scopeNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Scope note"@en ;
+	rdfs:comment "A note that describes the rules for actualising a business step."@en ;
+	rdfs:domain ppsa:BusinessStep ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+	
+ppsa:linkNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Link note"@en ;
+	rdfs:comment "A note that describes where a business item should link to in a publication."@en ;
+	rdfs:domain ppsa:BusinessStep ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+	
+ppsa:dateNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Date note"@en ;
+	rdfs:comment "A note that describes the date to use when actualising a business step."@en ;
+	rdfs:domain ppsa:BusinessStep ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+						

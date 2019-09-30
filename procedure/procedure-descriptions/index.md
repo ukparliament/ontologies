@@ -5,3 +5,4 @@
 * [Made negative](made-negative.md)
 * [Draft affirmative](draft-affirmative.md)
 * [Made affirmative](made-affirmative.md)
+* [Treaty](treaty.md)

@@ -1,0 +1,211 @@
+@prefix ptr: <http://parliament.uk/ontologies/treaty/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/treaty/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Treaty ontology"@en ;
+    dcterms:created "2019-01-16"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology describing the form of treaties considered by UK Parliament."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/treaty/treaty.png> ;
+	foaf:maker
+		[ foaf:name "David Beamish" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Jack Dent" ],
+		[ foaf:name "Arabella Lang" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ],
+		[ foaf:name "Jane White" ] .
+
+
+#######  Classes ##### 	
+
+ptr:Bill rdf:type owl:Class ;
+	rdfs:label "Bill"@en ;
+	rdfs:comment "A bill presented to Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
+	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
+	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:Treaty rdf:type owl:Class ;
+	rdfs:label "Treaty"@en ;
+	rdfs:comment "A text recording agreement between two or more parties, including nation states and international organisations. Treaties between nation states are described by the Vienna Convention on the Law of Treaties. Treaties between nation states and international organisations and between international organisations themselves are described by the Vienna Convention on the Law of Treaties between States and International Organizations or between International Organizations."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:TreatyAsLaid rdf:type owl:Class ;
+	rdfs:label "Treaty as laid"@en ;
+	rdfs:comment "Treaties requiring ratification are subject to the Constitutional Reform and Governance Act 2010 and are laid before Parliament before ratification and afterwards on coming into force. Laying before ratification is subject to procedure described in part within the 2010 Act."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+	
+
+
+
+
+# edited to here
+	
+ptr:TreatySeriesItem rdf:type owl:Class ;
+	rdfs:label "Treaty series item"@en ;
+	rdfs:comment "A treaty is in one series. Whilst the treaty is not yet in force in the United Kingdom it is in either the bilateral, multilateral or European Union series. If the treaty comes into force it is in the Treaty Series. A treaty which has come out of force may appear in the Treaty Series."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:TreatySeries rdf:type owl:Class ;
+	rdfs:label "Treaty series"@en ;
+	rdfs:comment "A series of which a treaty is an item. This is one of the bilateral series, the multilateral series, the European Union series or the Treaty Series. One of the four treaty series is itself called the Treaty Series."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:InForceness rdf:type owl:Class ;
+	rdfs:label "In forceness"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:GovernmentOrganisation rdf:type owl:Class ;
+	rdfs:label "Government organisation"@en ;
+	rdfs:comment "A government department, agency or public body with responsibility for a specific sector of public administration."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:Action rdf:type owl:Class ;
+	rdfs:label "Action"@en ;
+	rdfs:comment "An action by a party on a treaty."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:ActionType rdf:type owl:Class ;
+	rdfs:label "Action type"@en ;
+	rdfs:comment "The type of action by a party on a treaty. These include signing, ratification, accession or bringing into force."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+		
+ptr:Party rdf:type owl:Class ;
+	rdfs:label "Party"@en ;
+	rdfs:comment "An entity with the capacity to enter into treaty obligations."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+
+	
+##### Object properties ####
+
+ptr:requiresPassageOfBill rdf:type owl:ObjectProperty ;
+	rdfs:label "Requires passage of bill"@en ;
+	rdfs:comment "A treaty may require one or more bills to be in force as Acts in order that the treaty may be satisfied."@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:Bill ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:ObjectProperty ;
+	rdfs:label "Requires passage of a draft and made statutory instrument subject to parliamentary procedure"@en ;
+	rdfs:comment "A treaty may require one or more SIs to be in force in order that the treaty may be satisfied."@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:laidAs rdf:type owl:ObjectProperty ;
+	rdfs:label "Laid as"@en ;
+	rdfs:comment "A treaty may be laid twice before Parliament."@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:TreatyAsLaid ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:asSeriesItem rdf:type owl:ObjectProperty ;
+	rdfs:label "As series item"@en ;
+	rdfs:comment "A treaty may appear in more than one series over time by means of a series item. A treaty appears in the Treaty series on coming into force in the United Kingdom. Each series item refers to one treaty."@en ;
+	rdfs:domain ptr:TreatyAsLaid ;
+	rdfs:range ptr:TreatySeriesItem ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:inSeries rdf:type owl:ObjectProperty ;
+	rdfs:label "In series"@en ;
+	rdfs:comment "A series may have one or more items, or none. A series item places a treaty in a single series."@en ;
+	rdfs:domain ptr:TreatySeriesItem ;
+	rdfs:range ptr:TreatySeries ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:inForceness rdf:type owl:ObjectProperty ;
+	rdfs:label "In forceness"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:InForceness ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:for rdf:type owl:ObjectProperty ;
+	rdfs:label "for"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:InForceness ;
+	rdfs:range ptr:Party ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:leadDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Lead department"@en ;
+	rdfs:comment "Treaties laid into Parliament by the Foreign and Commonwealth Office may have a separate recorded lead department."@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:GovernmentOrganisation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:actsOn rdf:type owl:ObjectProperty ;
+	rdfs:label "Acts on"@en ;
+	rdfs:comment "A treaty has one or more actions over time. Each action applies to a single treaty."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range ptr:Treaty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:completesAction rdf:type owl:ObjectProperty ;
+	rdfs:label "Completes action"@en ;
+	rdfs:comment "A party may complete many actions on one or more treaties over time. An action is recorded as having been completed by one party."@en ;
+	rdfs:domain ptr:Party ;
+	rdfs:range ptr:Action ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:hasActionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has action type"@en ;
+	rdfs:comment "Each action has one type. An action type may be applied to many actions."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range ptr:ActionType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+
+	
+
+					
+	
+##### Data properties ####
+
+ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
+	rdfs:label "Command paper prefix"@en ;
+	rdfs:comment "A command paper prefix is applied until a command paper number reaches 9999, after which the command paper prefix is changed. Each command paper has one command paper prefix."@en ;
+	rdfs:domain ptr:TreatyAsLaid ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Command paper number"@en ;
+	rdfs:comment "A command paper number follows its prefix and does not exceed 9999. Each command paper has one command paper number."@en ;
+	rdfs:domain ptr:TreatyAsLaid ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
+	rdfs:label "Series item citation"@en ;
+	rdfs:comment "Each item in a treaty series has its own citation."@en ;
+	rdfs:domain ptr:TreatySeriesItem ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Coming into force note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:InForceness ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
+	
+ptr:actionDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Action date"@en ;
+	rdfs:comment "The date on which an action was completed or is due to be completed. An action may not have a recorded date."@en ;
+	rdfs:domain ptr:Action ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .

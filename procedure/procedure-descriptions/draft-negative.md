@@ -1,3 +1,3 @@
 # Draft negative 
 
-Instruments subject to the draft negative procedure are laid in draft and do not require approval in Parliament before being signed in law. Instruments concerning taxation are not laid in the House of Lords. Either House may pass a motion within the objection period preventing the instrument being signed into law. The instrument cannot be signed into law by the Minister before the end of the objection period.
+Instruments subject to the draft negative procedure are laid in draft and do not require approval in Parliament before being signed in law. Instruments concerning taxation are not laid in the Lords. Either House may pass a motion within the objection period which prevents the instrument being signed into law. The instrument cannot be signed into law by a Minister until the end of the objection period.
