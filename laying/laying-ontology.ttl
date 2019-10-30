@@ -29,12 +29,12 @@ pl:House rdf:type owl:Class ;
 
 pl:LayingOrWithdrawal rdf:type owl:Class ;
 	rdfs:label "Laying or withdrawal"@en ;
-	rdfs:comment "The act of laying before or withdrawing a paper from a House."@en ;
+	rdfs:comment "The act of laying a paper before a House or withdrawing a paper from a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. A session typically lasts for one year. Session periods are the same across both Houses."@en ;
+	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:LayingBody rdf:type owl:Class ;
@@ -45,13 +45,13 @@ pl:LayingBody rdf:type owl:Class ;
 pl:Laying rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of presenting a paper and supporting documents into either House. Papers may be laid in both Houses on the same day."@en ;
+	rdfs:comment "The act of making available a paper and any supporting documents into a House. Papers may be laid before both Houses on the same day."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Withdrawal rdf:type owl:Class ;
 	rdfs:subClassOf pl:LayingOrWithdrawal ;
 	rdfs:label "Withdrawal"@en ;
-	rdfs:comment "The act of withdrawing a paper laid before a House."@en ;
+	rdfs:comment "The act of withdrawing a paper previously laid before a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:Person rdf:type owl:Class ;
@@ -59,9 +59,9 @@ pl:Person rdf:type owl:Class ;
 	rdfs:comment "A person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
-pl:LayingAuthorityWithType rdf:type owl:Class ;
+pl:LayingAuthority rdf:type owl:Class ;
 	rdfs:label "Laying authority with type"@en ;
-	rdfs:comment "The authority under which a paper is laid before a House. Legislation may impose a duty on a body to lay Act papers before a House, there are referred to as being laid 'by Act'. Command papers are laid in the House by the government and are referred to as being laid 'by Command'. A paper is laid either 'by Act' or 'by Command', and may be laid 'by Act' in the Commons and 'by Command' in the Lords."@en ;
+	rdfs:comment "The authority under which a paper is laid before a House. Legislation may impose a duty on a body to lay papers before a House, these are laid 'by Act'. Command papers are laid in a House by the government and are laid 'by Command'. A paper is laid in the House of Commons or House of Lords either 'by Act' or 'by Command'."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:LayingDuty rdf:type owl:Class ;
@@ -71,12 +71,12 @@ pl:LayingDuty rdf:type owl:Class ;
 	
 pl:LaidPaper rdf:type owl:Class ;
 	rdfs:label "Laid paper"@en ;
-	rdfs:comment "A paper having been laid before a House. Papers may be joined to supporting papers and laid as a bundle."@en ;
+	rdfs:comment "A paper having been laid before a House. Papers and supporting documents may be laid as a bundle."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:WithdrawnPaper rdf:type owl:Class ;
 	rdfs:label "Withdrawn paper"@en ;
-	rdfs:comment "A paper withdrawn after previously having been laid. Papers which form part of a bundle may be individually withdrawn."@en ;
+	rdfs:comment "A paper withdrawn after having been laid. Papers or documents forming part of a bundle may be individually withdrawn."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 	
@@ -85,56 +85,56 @@ pl:WithdrawnPaper rdf:type owl:Class ;
 
 pl:hasHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Has House"@en ;
-	rdfs:comment "Relates an act of laying or withdrawing to the House in which the paper is laid or withdrawn."@en ;
+	rdfs:comment "Relates an act of laying or withdrawing a paper to the House in which the paper is laid or withdrawn."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
-pl:inSession rdf:type owl:ObjectProperty ;
-	rdfs:label "In session"@en ;
-	rdfs:comment "Relates an act of laying or withdrawing to the session in which the paper is laid or withdrawn. Papers may be laid during a prorogation period for the attention of the House during the subsequent session but are considered laid into the preceding session."@en ;
+pl:hasSession rdf:type owl:ObjectProperty ;
+	rdfs:label "Has session"@en ;
+	rdfs:comment "Relates an act of laying or withdrawing a paper to the session in which the paper is laid or withdrawn. Papers laid during a prorogation period are considered laid into the session which has been prorogued."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:hasLayingBody rdf:type owl:ObjectProperty ;
 	rdfs:label "Has laying body"@en ;
-	rdfs:comment "Relates an act of laying or withdrawal to the laying body laying or withdrawing the paper."@en ;
+	rdfs:comment "Relates an act of laying or withdrawal a paper to the laying body laying or withdrawing it."@en ;
 	rdfs:domain pl:LayingOrWithdrawal ;
 	rdfs:range pl:LayingBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:hasLayingPerson rdf:type owl:ObjectProperty ;
 	rdfs:label "Has laying person"@en ;
-	rdfs:comment "Relates an act of laying to the person responsible for the laying of the paper."@en ;
+	rdfs:comment "Relates an act of laying a paper to the person laying it."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:Person ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
-pl:hasLayingAuthorityWithType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has laying authority with type"@en ;
-	rdfs:comment "Relates an act of laying to a laying authority type."@en ;
+pl:hasLayingAuthority rdf:type owl:ObjectProperty ;
+	rdfs:label "Has laying authority"@en ;
+	rdfs:comment "Relates an act of laying a paper to a laying authority."@en ;
 	rdfs:domain pl:Laying ;
-	rdfs:range pl:LayingAuthorityWithType ;
+	rdfs:range pl:LayingAuthority ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:hasLayingDuty rdf:type owl:ObjectProperty ;
 	rdfs:label "Has laying duty"@en ;
-	rdfs:comment "Relates an act of laying to a duty to lay papers under an Act."@en ;
+	rdfs:comment "Relates an act of laying a paper to a duty to lay papers under an Act."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:LayingDuty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:lays rdf:type owl:ObjectProperty ;
 	rdfs:label "Lays"@en ;
-	rdfs:comment "Relates an act of laying to the paper being laid."@en ;
+	rdfs:comment "Relates an act of laying a paper to the paper which has been laid."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:LaidPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:withdraws rdf:type owl:ObjectProperty ;
 	rdfs:label "Withdraws"@en ;
-	rdfs:comment "Relates an act of withdrawal to the paper being withdrawn."@en ;
+	rdfs:comment "Relates an act of withdrawing a paper to the paper which has been withdrawn."@en ;
 	rdfs:domain pl:Withdrawal ;
 	rdfs:range pl:WithdrawnPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .	
@@ -151,14 +151,14 @@ pl:replaces rdf:type owl:ObjectProperty ;
 
 pl:laidOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Laid on"@en ;
-	rdfs:comment "Relates an act of laying to the date on which the laying occurs, being during a parliamentary session or prorogation, though not during dissolution."@en ;
+	rdfs:comment "Relates an act of laying a paper to the date on which the laying occurs. This date falls within a parliamentary session or prorogation period, and not during a dissolution period."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:withdrawnOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Withdrawn on"@en ;
-	rdfs:comment "Relates an act of withdrawal to the date on which the withdrawal occurs, being during a parliamentary session or prorogation, though not during dissolution."@en ;
+	rdfs:comment "Relates an act of withdrawal of a paper to the date on which the withdrawal occurs. This date falls within a parliamentary session or prorogation period, and not during a dissolution period."@en ;
 	rdfs:domain pl:Withdrawal ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
