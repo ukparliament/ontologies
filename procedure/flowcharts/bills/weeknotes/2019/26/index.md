@@ -4,7 +4,7 @@ Your second in a semi-regular series of updates on what we’re up to with model
 
 ## This week
 
-On Tuesday, Robert and [Michael](https://twitter.com/fantasticlife) spent an hour squinting at photos of the whiteboard they’d filled with bits of Richard Kelly’s brains last week. A few extra bits were [decanted into the flowchart](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf).
+On Tuesday, Robert and [Michael](https://twitter.com/fantasticlife) spent an hour squinting at photos of the whiteboard they’d filled with bits of Richard’s brains last week. A few extra bits were [decanted into the flowchart](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf).
 
 On Wednesday, there was a second meeting with Richard. He spotted some problems with our logic flow around Queen's and Prince of Wales' Consent and second reading. These are fixed now.
 
