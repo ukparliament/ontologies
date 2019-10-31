@@ -2,7 +2,7 @@
 
 Some "highlights" from...
 
-# This week
+## This week
 
 On Monday, Robert and [Michael](https://twitter.com/fantasticlife) met Richard to fill in some gaps around Commons third readings and [ten minute rule bills](https://www.parliament.uk/site-information/glossary/ten-minute-rule-bill/). These are now [all drawn up](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf) and in search of feedback.
 
@@ -12,7 +12,7 @@ On Thursday [Matthieu](https://twitter.com/cognithive), Robert and Michael met t
 
 And on Thursday afternoon, Anya, Robert and Matthieu met Martyn and Adam to stare in trepidation at the foothills of [EVEL](https://www.parliament.uk/about/how/laws/bills/public/english-votes-for-english-laws/).
 
-# Next week
+## Next week
 
 Anya and Michael have a meeting with Dominic and Librarian Jayne to talk through the procedure model and how that fits with the flowcharts.
 
