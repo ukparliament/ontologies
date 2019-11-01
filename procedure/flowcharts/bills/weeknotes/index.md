@@ -1,5 +1,9 @@
 # Public bill procedure modelling weeknotes
 
+* [Trello](https://trello.com/b/f2zmF5EZ/parliament-bill-procedure)
+
+* [Flowchart](../public-bill.pdf)
+
 ## 2019
 
 * [Week 22](2019/22)
