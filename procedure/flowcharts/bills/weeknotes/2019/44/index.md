@@ -30,7 +30,7 @@ All of these changes are [drawn up in the flowchart](https://ukparliament.github
 
 Jayne and [Michael](https://twitter.com/fantasticlife) have just emerged blinking from a meeting with Martyn about [motions, orders and resolutions](https://mobile.twitter.com/fantasticlife/status/1189942589983772672). In the immediate future this has more implications for our statutory instrument and treaty flowcharts but we'll be double checking against the bill procedure to ensure everything is consistent.
 
-# Next week
+## Next week
 
 We have a meeting with some academics who've been [analysing changes to Standing Orders over time](https://blogs.lse.ac.uk/politicsandpolicy/uk-parlrules-dataset/). We’d like to see if we might be able to put stable identifiers to SOs. We have a dream of being able to cite specific SOs from procedural routes where appropriate.
 

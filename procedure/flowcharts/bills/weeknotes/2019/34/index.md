@@ -2,7 +2,7 @@
 
 Another week down, more weeknotes.
 
-# This week
+## This week
 
 [Anya](https://twitter.com/bitten_), Jayne and [Michael](https://twitter.com/fantasticlife) met Richard to talk through where the Commons second reading map had inadvertently crept out of sync with the Lords model. Particularly around questions being put forthwith. They agreed that the Commons map should look similar. After some time squinting at the Lords map, they made a few tidying tweaks. All of which are now [drawn up](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf) and hopefully easier to follow. Michael still needs to amend the picture for the Commons to align all this.
 
@@ -12,7 +12,7 @@ Anya and Michael met [Matt](https://twitter.com/mattkorris) to go back over comm
 
 Anya and Michael have started to add references to Standing Orders to the flowcharts. All rather vague, but a nod in the direction of procedure models citing sources.
 
-# Next week
+## Next week
 
 No meetings are planned.
 
