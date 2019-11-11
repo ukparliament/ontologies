@@ -4,6 +4,8 @@
 
 * [Flowchart](../public-bill.pdf)
 
+* [RSS](feed.rss)
+
 ## 2019
 
 * [Week 22](2019/22)
