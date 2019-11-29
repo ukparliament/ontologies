@@ -1,10 +1,6 @@
 # 2019 - Week 22
 
-We thought it might be helpful to keep a record of where we're up to with modelling public bills and public bill procedure. So this is the first in a semi-regular series of updates.
-
-If you'd rather not follow along, let me know. If there are people not here, who you think we should include, let me know.
-
-Comments on all of this always welcome.
+We thought it might be helpful to keep a record of where we're up to with modelling public bills and public bill procedure. So this is the first in a semi-regular series of updates. If you'd rather not follow along, let me know. If there are people not here, who you think we should include, let me know. Comments on all of this always welcome.
 
 ## This week
 
@@ -17,8 +13,4 @@ All language in the bubbles is improvised and not fixed.
 
 ## Next week
 
-More time with Richard to double check we've documented his thinking correctly.
-
-Arranging an introduction to domain modelling for interested parties.
-
-Happy weekends everyone.
+More time with Richard to double check we've documented his thinking correctly. Arranging an introduction to domain modelling for interested parties. Happy weekends everyone.
