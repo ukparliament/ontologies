@@ -1,7 +1,5 @@
 # 2019 - Week 29
 
-A somewhat tardy update on last week and this...
-
 ## Last week
 
 [Anya](https://twitter.com/bitten_) and [Michael](https://twitter.com/fantasticlife) talked Dominic through the [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) and logic gates and [associated flowcharts](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#flowcharts).
