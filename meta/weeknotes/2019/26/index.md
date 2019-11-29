@@ -12,10 +12,10 @@ On Friday Michael gave Dominic a brief introduction to how we work and why and h
 
 ## Next week
                 
-A further hour is booked in with Richard, possibly looking at 3rd readings, 10 min rule bills and carry overs motions.
+A further hour is booked in with Richard, possibly looking at third readings, ten minute rule bills and carry over motions.
 
 On Tuesday, [Matthieu](https://twitter.com/cognithive), Robert and Michael are meeting to discuss the approach to implementing logic gates in the procedure model.
 
 On Thursday [Anya](https://twitter.com/bitten_), Robert and Michael have 2 hours booked in with [David](https://twitter.com/clerkly) and [Matt](https://mobile.twitter.com/MattKorris) to dip a first toe into House of Lords procedural waters.
 
-And on Friday, Anya, Robert and Michael are meeting Martyn and Adam to get fresh eyes over what we have so far for House of Commons procedure.
+On Friday, Anya, Robert and Michael are meeting Martyn and Adam to get fresh eyes over what we have so far for House of Commons procedure.
