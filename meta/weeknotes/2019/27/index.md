@@ -1,13 +1,11 @@
 # 2019 - Week 27
 
-Some "highlights" from...
-
 ## This week
 
 On Monday, Robert and [Michael](https://twitter.com/fantasticlife) met Richard to fill in some gaps around Commons third readings and [ten minute rule bills](https://www.parliament.uk/site-information/glossary/ten-minute-rule-bill/). These are now [all drawn up](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf) and in search of feedback.
 
 On Wednesday [Anya](https://twitter.com/bitten_), Robert and Michael met [David](https://twitter.com/clerkly) and [Matt](https://twitter.com/mattkorris) to make a start on Lords procedure. Three [whiteboards were filled](https://twitter.com/fantasticlife/status/1146450945074708480). These await decantation into documentation.
-
+    
 On Thursday [Matthieu](https://twitter.com/cognithive), Robert and Michael met to chat about adding logic gates and decision steps to the [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html). Agreement not yet reached but we're edging closer.
 
 And on Thursday afternoon, Anya, Robert and Matthieu met Martyn and Adam to stare in trepidation at the foothills of [EVEL](https://www.parliament.uk/about/how/laws/bills/public/english-votes-for-english-laws/).
