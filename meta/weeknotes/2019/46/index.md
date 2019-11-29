@@ -1,1 +1,3 @@
 # 2019 - Week 46
+
+[Anya](https://twitter.com/bitten_) and [Michael](https://twitter.com/fantasticlife) headed up to Glasgow to visit [Matthew](https://twitter.com/metju_betju) and see where the worlds of procedure modelling and [LDAPP](http://www.legislation.gov.uk/projects/drafting-tool) might intersect. Another [whiteboard got a hammering](https://twitter.com/fantasticlife/status/1195012199686791169), a rough sketch of interface classes emerged and some pubs were visited. Anya and Michael can heartily recommend [the Laurieston](https://www.tripadvisor.co.uk/Attraction_Review-g186534-d4725276-Reviews-Laurieston_Bar-Glasgow_Scotland.html) which features two types of Guinness - the good stuff and the excellent stuff - and a heated smoking garden with a telly.
