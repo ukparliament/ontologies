@@ -147,6 +147,20 @@ pundit:ThingWithTwoGoodFeet rdf:type owl:Class ;
 	rdfs:subClassOf pundit:TheLads ;
 	rdfs:label "Thing with two good feet"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:ThingsAreTemporary rdf:type owl:Class ;
+	rdfs:label "Thing that are temporary"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:ThingsArePermanent rdf:type owl:Class ;
+	rdfs:label "Thing that are permanent"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:Class rdf:type owl:Class ;
+	rdfs:subClassOf pundit:ThingsArePermanent ;
+	rdfs:label "Class"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:Form rdf:type owl:Class ;
+	rdfs:subClassOf pundit:ThingsAreTemporary ;
+	rdfs:label "Form"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -259,4 +273,14 @@ pundit:wantToSack rdf:type owl:ObjectProperty ;
 	rdfs:label "Want to sack"@en ;
 	rdfs:domain pundit:TheFans ;
 	rdfs:range pundit:TheBoard ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:exhibitsForm rdf:type owl:ObjectProperty ;
+	rdfs:label "Exhibits form"@en ;
+	rdfs:domain pundit:TheLads ;
+	rdfs:range pundit:Form ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:exhibitsClass rdf:type owl:ObjectProperty ;
+	rdfs:label "Exhibits class"@en ;
+	rdfs:domain pundit:TheLads ;
+	rdfs:range pundit:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
