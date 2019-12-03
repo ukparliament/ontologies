@@ -79,6 +79,9 @@ pundit:ShowPony rdf:type owl:Class ;
 	rdfs:subClassOf pundit:ForeignBuy ;
 	rdfs:label "Show pony"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:ThingThatShowsNoDisrespect rdf:type owl:Class ;
+	rdfs:label "Thing that show no disrespect"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -141,4 +144,9 @@ pundit:bringsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Brings in"@en ;
 	rdfs:domain pundit:TheManager ;
 	rdfs:range pundit:ForeignBuy ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:showsNoDisrespectTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Shows no disrespect to"@en ;
+	rdfs:domain pundit:ThingThatShowsNoDisrespect ;
+	rdfs:range pundit:ThingThatCanBeDisrespected ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
