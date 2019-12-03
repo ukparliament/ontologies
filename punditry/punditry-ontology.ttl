@@ -94,6 +94,9 @@ pundit:BigLadUpFront rdf:type owl:Class ;
 	rdfs:subClassOf pundit:StrongEnglishSpine ;
 	rdfs:label "Big lad up front"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:ThingThatIsSmallerThanTheFootballClub rdf:type owl:Class ;
+	rdfs:label "Thing that is smaller than the football club"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -166,4 +169,9 @@ pundit:playWith rdf:type owl:ObjectProperty ;
 	rdfs:label "Play with"@en ;
 	rdfs:domain pundit:StrongEnglishSpine ;
 	rdfs:range pundit:Passion ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:footballClubIsBiggerThan rdf:type owl:ObjectProperty ;
+	rdfs:label "Football club is bigger than"@en ;
+	rdfs:domain pundit:FootballClub ;
+	rdfs:range pundit:ThingThatIsSmallerThanTheFootballClub ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
