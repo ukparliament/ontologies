@@ -27,6 +27,9 @@ pundit:TheBadge rdf:type owl:Class ;
 	rdfs:subClassOf pundit:ThingThatCantBeDisrespected ;
 	rdfs:label "The badge"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TheLads rdf:type owl:Class ;
+	rdfs:label "The lads"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -49,4 +52,9 @@ pundit:badgeIsBiggerThan rdf:type owl:ObjectProperty ;
 	rdfs:label "Badge is bigger than"@en ;
 	rdfs:domain pundit:TheBadge ;
 	rdfs:range pundit:TheFootballClub ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:playFor rdf:type owl:ObjectProperty ;
+	rdfs:label "Play for"@en ;
+	rdfs:domain pundit:TheLads ;
+	rdfs:range pundit:TheBadge ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
