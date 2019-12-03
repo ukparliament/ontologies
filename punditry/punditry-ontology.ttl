@@ -42,6 +42,7 @@ pundit:TheLads rdf:type owl:Class ;
 	rdfs:subClassOf pundit:ThingThatCanBeDisrespected ;
 	rdfs:subClassOf pundit:ThingThatShowsNoDisrespect ;
 	rdfs:subClassOf pundit:ThingThatIsSmallerThanTheFootballClub ;
+	rdfs:subClassOf pundit:TheTeam ;
 	rdfs:label "The lads"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 pundit:TheManager rdf:type owl:Class ;
@@ -123,6 +124,16 @@ pundit:TheTeam rdf:type owl:Class ;
 	rdfs:subClassOf pundit:TheLads ;
 	rdfs:subClassOf pundit:ThingThatIsSmallerThanTheFootballClub ;
 	rdfs:label "The team"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TheChairman rdf:type owl:Class ;
+	rdfs:subClassOf pundit:ThingThatCanBeDisrespected ;
+	rdfs:subClassOf pundit:ThingThatIsSmallerThanTheFootballClub ;
+	rdfs:label "The chairman"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TheBoard rdf:type owl:Class ;
+	rdfs:subClassOf pundit:ThingThatCanBeDisrespected ;
+	rdfs:subClassOf pundit:ThingThatIsSmallerThanTheFootballClub ;
+	rdfs:label "The board"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
@@ -206,4 +217,24 @@ pundit:haveGaffer rdf:type owl:ObjectProperty ;
 	rdfs:label "Have gaffer"@en ;
 	rdfs:domain pundit:TheLads ;
 	rdfs:range pundit:TheManager ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:picks rdf:type owl:ObjectProperty ;
+	rdfs:label "Picks"@en ;
+	rdfs:domain pundit:TheManager ;
+	rdfs:range pundit:TheTeam ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:chairs rdf:type owl:ObjectProperty ;
+	rdfs:label "Chairs"@en ;
+	rdfs:domain pundit:TheChairman ;
+	rdfs:range pundit:TheBoard ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:hasBoard rdf:type owl:ObjectProperty ;
+	rdfs:label "Has board"@en ;
+	rdfs:domain pundit:TheFootballClub ;
+	rdfs:range pundit:TheBoard ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:pushedUpstairsTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Pushed upstairs to"@en ;
+	rdfs:domain pundit:TheManager ;
+	rdfs:range pundit:TheBoard ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
