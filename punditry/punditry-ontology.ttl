@@ -67,6 +67,10 @@ pundit:BadBuy rdf:type owl:Class ;
 	rdfs:subClassOf pundit:TheLads ;
 	rdfs:label "GoodBuy"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TheYouth rdf:type owl:Class ;
+	rdfs:subClassOf pundit:TheLads ;
+	rdfs:label "The youth"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -119,4 +123,9 @@ pundit:madAGoodBuyBuy rdf:type owl:ObjectProperty ;
 	rdfs:label "Made a good buy"@en ;
 	rdfs:domain pundit:TheManager ;
 	rdfs:range pundit:GoodBuy ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:bringsThrough rdf:type owl:ObjectProperty ;
+	rdfs:label "Brings through"@en ;
+	rdfs:domain pundit:TheManager ;
+	rdfs:range pundit:TheYouth ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
