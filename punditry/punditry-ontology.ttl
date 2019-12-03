@@ -54,6 +54,9 @@ pundit:ThingThatHasToGo rdf:type owl:Class ;
 	rdfs:subClassOf pundit:TheManager ;
 	rdfs:label "Thing that has to go (has to go)"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TheDressingRoom rdf:type owl:Class ;
+	rdfs:label "The dressing room"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -81,4 +84,14 @@ pundit:playFor rdf:type owl:ObjectProperty ;
 	rdfs:label "Play for"@en ;
 	rdfs:domain pundit:TheLads ;
 	rdfs:range pundit:TheBadge ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:partOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Part of"@en ;
+	rdfs:domain pundit:TheLads ;
+	rdfs:range pundit:TheDressingRoom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:hasLost rdf:type owl:ObjectProperty ;
+	rdfs:label "Part of"@en ;
+	rdfs:domain pundit:TheManager ;
+	rdfs:range pundit:TheDressingRoom ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
