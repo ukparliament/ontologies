@@ -135,6 +135,18 @@ pundit:TheBoard rdf:type owl:Class ;
 	rdfs:subClassOf pundit:ThingThatIsSmallerThanTheFootballClub ;
 	rdfs:label "The board"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TheBenchwarmers rdf:type owl:Class ;
+	rdfs:subClassOf pundit:TheLads ;
+	rdfs:label "The benchwarmers"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:TightBackFour rdf:type owl:Class ;
+	rdfs:subClassOf pundit:TheLads ;
+	rdfs:subClassOf pundit:ThingThatShowsGoodUnderstanding ;
+	rdfs:label "Tight back four"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:ThingThatShowsGoodUnderstanding rdf:type owl:Class ;
+	rdfs:label "Thing that shows good understanding"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -236,5 +248,15 @@ pundit:hasBoard rdf:type owl:ObjectProperty ;
 pundit:pushedUpstairsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Pushed upstairs to"@en ;
 	rdfs:domain pundit:TheManager ;
+	rdfs:range pundit:TheBoard ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:haveCompleteFaithIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Have complete faith in"@en ;
+	rdfs:domain pundit:TheBoard ;
+	rdfs:range pundit:TheManager ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:wantToSack rdf:type owl:ObjectProperty ;
+	rdfs:label "Want to sack"@en ;
+	rdfs:domain pundit:TheFans ;
 	rdfs:range pundit:TheBoard ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
