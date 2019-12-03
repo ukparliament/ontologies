@@ -17,6 +17,9 @@
 pundit:TheFootballClub rdf:type owl:Class ;
 	rdfs:label "The Football Club"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:ThingThatIsBornAndBred rdf:type owl:Class ;
+	rdfs:label "Thing that is born and bred"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
 	
 ##### Object properties ####
 	
@@ -25,9 +28,13 @@ pundit:isABiggerClubThan rdf:type owl:ObjectProperty ;
 	rdfs:domain pundit:TheFootballClub ;
 	rdfs:range pundit:TheFootballClub ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
-	
 pundit:hasMoreHistoryThan rdf:type owl:ObjectProperty ;
 	rdfs:label "Has more history than"@en ;
 	rdfs:domain pundit:TheFootballClub ;
 	rdfs:range pundit:TheFootballClub ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
+pundit:inTheBonesOf rdf:type owl:ObjectProperty ;
+	rdfs:label "In the bones of"@en ;
+	rdfs:domain pundit:TheFootballClub ;
+	rdfs:range pundit:ThingThatIsBornAndBred ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/punditry/> .
