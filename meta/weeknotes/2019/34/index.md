@@ -2,7 +2,7 @@
 
 ## This week
 
-[Anya](https://twitter.com/bitten_), Jayne and [Michael](https://twitter.com/fantasticlife) met Richard to talk through where the Commons second reading map had inadvertently crept out of sync with the Lords model, particularly around questions being put forthwith. They agreed that the Commons map should look similar. After some time squinting at the Lords map, they made a few tidying tweaks, all of which are now [drawn up](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf) and hopefully easier to follow. Michael still needs to amend the picture for the Commons to align all this.
+[Anya](https://twitter.com/bitten_), Jayne and [Michael](https://twitter.com/fantasticlife) met Richard to talk through where the Commons second reading map has inadvertently crept out of sync with the Lords model, particularly around questions being put forthwith. They agreed that the Commons map should look similar. After some time squinting at the Lords map, they made a few tidying tweaks, all of which are now [drawn up](https://ukparliament.github.io/ontologies/procedure/flowcharts/bills/public-bill.pdf) and hopefully easier to follow. Michael still needs to amend the picture for the Commons to align with this.
 
 They also spent some time chatting through [Commons Standing Order No. 97](https://publications.parliament.uk/pa/cm201213/cmstords/614/body.htm#97), certification, ministerial motions and the Scottish Grand Committee. The result [exists as a sketch](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/bills/so97.pdf) but Jayne wants to spend a little more time with SO No. 97 before we add it to the big map.
 
