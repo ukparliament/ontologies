@@ -1,4 +1,4 @@
-# Public bill procedure modelling weeknotes 2019
+# Procedure modelling weeknotes 2019
 
 * [Week 49](49)
 * [Week 48](48)

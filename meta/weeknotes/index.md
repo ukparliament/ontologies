@@ -1,4 +1,4 @@
-# Public bill procedure modelling weeknotes
+# Procedure modelling weeknotes
 
 * [Trello](https://trello.com/b/f2zmF5EZ/parliament-bill-procedure)
 
