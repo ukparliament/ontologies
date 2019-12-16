@@ -6,10 +6,10 @@ The [House of Commons Public Standing Order data](https://parlrulesdata.org/vers
 
 At the risk of repetition, we'd like to cite Standing Orders that inform procedure from our assorted procedure maps. But they're currently cited by their position in a publication, which is subject to change. Obviously. So, we're envisaging being able to [cite SO fragments in a way that's persistent over time](http://standing-orders.herokuapp.com/standing-order-fragments/1137) and shows:
 
-* if the order - or fragment of an order" is still "in force".
+* if the order - or fragment of an order - is still "in force"
 
-* how it looked in the context of the final publication it appeared / appears in.
+* how it looked in the context of the final or latest publication it appeared or appears in
 
-* how it's changed over time.
+* how it's changed over time
 
 We're planning to spend some time in the new year going over what's there, what should be there and drawing up an ontology to capture Standing Orders in as descriptive a fashion as possible.
