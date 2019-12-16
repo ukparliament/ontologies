@@ -8,7 +8,7 @@ At the risk of repetition, we'd like to cite Standing Orders that inform procedu
 
 * if the order - or fragment of an order - is still "in force"
 
-* how it looked in the context of the final or latest publication it appeared or appears in
+* how it looked in the context of the latest publication in which it appeared
 
 * how it's changed over time
 
