@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2019
 
+* [Week 51](51)
 * [Week 50](50)
 * [Week 49](49)
 * [Week 48](48)
