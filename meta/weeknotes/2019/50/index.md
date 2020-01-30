@@ -13,5 +13,3 @@ At the risk of repetition, we'd like to cite Standing Orders that inform procedu
 * how it's changed over time
 
 We're planning to spend some time in the new year going over what's there, what should be there and drawing up an ontology to capture Standing Orders in as descriptive a fashion as possible.
-
-Testing by Jayne dog
