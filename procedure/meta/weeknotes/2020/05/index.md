@@ -1,7 +1,8 @@
 # 2020 - Week 05
 
 ## Awaiting clerkly confirmation (new items)
- ### [Commons only items considered by JCSI](https://trello.com/c/Ho11p2xf/74-commons-only-instruments-considered-by-jcsi) 
+ ### [Commons only items considered by JCSI](https://trello.com/c/Ho11p2xf/74-commons-only-instruments-considered-by-jcsi)
+
 Three HoC only instruments were considered by the JCSI when according to our models they should have been considered by the SCSI. JCSI lawyers have suggested it was within the JCSI remit to do so. Awaiting JCSI Clerk to come back with more information as this would impact the routes around HoC only SIs and committee steps.
  
 ### Revoked Instruments not considered by JCSI
