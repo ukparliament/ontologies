@@ -1,4 +1,4 @@
-# 2020 - Week 04
+# 2020 - Week 4
 
 [Rad](https://radoslawzubek.com/) and colleagues got back late Friday to say the slight bug we'd identified with the [Standing Order data](https://parlrulesdata.org/) was now fixed. So [Michael](https://twitter.com/fantasticlife)'s computer spent most of the weekend normalising a spreadsheet into a relational database. Robert and Michael checked [the website](http://standing-orders.herokuapp.com/) on Monday and it was indeed fixed. Thanks Rad.
 
