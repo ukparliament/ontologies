@@ -30,6 +30,7 @@ This came about as a result of the first Exit Day SI potentially needing to be a
 ###[Other types of delegated legislation](https://trello.com/c/z3oIlaIJ/25-other-types-of-secondary-legislation-procedure)
 
 Following on from the last meeting where we talked about the requests to model other procedure, Michael and I met with Jane White to discuss. This has brought a whole new beast about other types of delegated legislation in general that use variations on the procedure models – example being the Immigration Rules is laid under the draft negative procedure. It also brought to the fore the super made affirmative procedure. Michael and I are planning to sit down tomorrow to go through all the information Jane provided (it was a lot) to see what we need to do next model wise.
+
 **Caveat**: This is not for the purpose of adding different delegated leg types to the website. We’re treating this work completely separately from SI Service/Treaty Tracker land. This is primarily because we have no development time for the work this would entail.
 
 ###Step descriptions
