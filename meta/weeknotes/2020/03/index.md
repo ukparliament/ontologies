@@ -1,4 +1,4 @@
-# 2020 - Week 03
+# 2020 - Week 3
 
 The week started in high excitement. [Anya](https://twitter.com/bitten_) and [Michael](https://twitter.com/fantasticlife) had mistakenly and somewhat drunkenly volunteered to give a talk at the [Study of Parliament Group](http://www.studyofparliament.org.uk/) conference in Oxford. And for some reason their offer had been taken up. Armed with the conceit that if [Erskine May](https://en.wikipedia.org/wiki/Erskine_May) had had a computer he may not have written a book and some lovely slides courtesy of Robert, they [took to the stage](https://www.youtube.com/watch?v=rgEw_YtfxYM). They'd like to thank [David](https://twitter.com/clerkly) for offering a friendly front row face which Michael chose to not look past. It seemed to go quite well. But they were perhaps too nervous to remember.
 
