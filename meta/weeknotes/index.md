@@ -2,8 +2,6 @@
 
 * [Trello](https://trello.com/b/f2zmF5EZ/parliament-bill-procedure)
 
-* [Flowchart](../public-bill.pdf)
-
 * [RSS](feed.rss)
 
 ## 2020
