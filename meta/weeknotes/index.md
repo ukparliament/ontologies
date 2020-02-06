@@ -2,14 +2,13 @@
 
 * [Trello](https://trello.com/b/f2zmF5EZ/parliament-bill-procedure)
 
-* [Flowchart](../public-bill.pdf)
-
 * [RSS](feed.rss)
 
 ## 2020
 
-* [Week 4](2019/04)
-* [Week 3](2019/03)
+* [Week 5](2020/05)
+* [Week 4](2020/04)
+* [Week 3](2020/03)
 
 ## 2019
 
