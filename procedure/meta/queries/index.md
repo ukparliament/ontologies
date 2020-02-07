@@ -6,7 +6,7 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 ## Queries for 'currentness'
 
-These three queries will help you establish which [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) have reached their end date. We run them to check when we need to actualise end steps, where actualising an end step removes the work package from the list of current work packages. 
+These three queries will help you establish which [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) have reached their end date. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
 
 The query will return all work packages without actualised end steps. You can search for your date or show by most recent date. Or alternatively you can add an additional string to your query to search by specific date (note you have to add +1 to your date):
  
