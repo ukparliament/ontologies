@@ -4,6 +4,22 @@ Given [accurate maps of procedures](https://ukparliament.github.io/ontologies/pr
 
 This is a list of SPARQL queries used by the House of Commons Library to check and report on their work. Feedback and requests always welcome. Please email [RIIDMSMailbox@parliament.uk](mailto:RIIDMSMailbox@parliament.uk).
 
+## Query to generate a CSV of procedure step descriptions
+
+We used to maintain a separate spreadsheet of [procedure steps](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e175) with scope notes, links notes and information around how to select a date for a [business item](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e248). This information is now in the data platform so we can generate the same spreadsheet but from live data:
+
+* [Procedure step information](PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <https://id.parliament.uk/schema/>
+select ?Procedurestep ?procedureStepName ?scope ?date ?link ?legislaturename where {
+ ?Procedurestep a :ProcedureStep .
+ ?Procedurestep rdfs:label ?procedureStepName .
+  OPTIONAL{ ?Procedurestep :procedureStepScopeNote ?scope } .
+  OPTIONAL { ?Procedurestep :procedureStepDateNote ?date } .
+  OPTIONAL { ?Procedurestep :procedureStepLinkNote ?link }.
+  OPTIONAL {?Procedurestep :procedureStepHasHouse ?legislature .
+  ?legislature rdfs:label ?legislaturename}  
+  })
+
 ## Queries for 'currentness'
 
 These three queries will help you establish which [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) have reached their end date. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
