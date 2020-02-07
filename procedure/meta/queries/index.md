@@ -8,17 +8,7 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 We used to maintain a separate spreadsheet of [procedure steps](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e175) with scope notes, links notes and information around how to select a date for a [business item](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e248). This information is now in the data platform so we can generate the same spreadsheet but from live data:
 
-* [Procedure step information](PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX : <https://id.parliament.uk/schema/>
-select ?Procedurestep ?procedureStepName ?scope ?date ?link ?legislaturename where {
- ?Procedurestep a :ProcedureStep .
- ?Procedurestep rdfs:label ?procedureStepName .
-  OPTIONAL{ ?Procedurestep :procedureStepScopeNote ?scope } .
-  OPTIONAL { ?Procedurestep :procedureStepDateNote ?date } .
-  OPTIONAL { ?Procedurestep :procedureStepLinkNote ?link }.
-  OPTIONAL {?Procedurestep :procedureStepHasHouse ?legislature .
-  ?legislature rdfs:label ?legislaturename}  
-  })
+* [Procedure step information](https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0Aselect+%3FProcedurestep+%3FprocedureStepName+%3Fscope+%3Fdate+%3Flink+%3Flegislaturename+where+%7B%3FProcedurestep+a+%3AProcedureStep+.%3FProcedurestep+rdfs%3Alabel+%3FprocedureStepName+.OPTIONAL%7B+%3FProcedurestep+%3AprocedureStepScopeNote+%3Fscope+%7D+.OPTIONAL+%7B+%3FProcedurestep+%3AprocedureStepDateNote+%3Fdate+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepLinkNote+%3Flink+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepHasHouse+%3Flegislature+.%3Flegislature+rdfs%3Alabel+%3Flegislaturename%7D++%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
 
 ## Queries for 'currentness'
 
