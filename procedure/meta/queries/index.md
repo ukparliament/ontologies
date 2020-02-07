@@ -2,7 +2,7 @@
 
 Given [accurate maps of procedures](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#flowcharts) and enough instance data of things subject to those procedures, we can start to treat precedence as a thing we can query for.
 
-This is a list of SPARQL queries used by the House of Commons Library to check and report on their work. Feedback and requests always welcome.
+This is a list of SPARQL queries used by the House of Commons Library to check and report on their work. Feedback and requests always welcome. Please email [RIIDMSMailbox@parliament.uk](mailto:RIIDMSMailbox@parliament.uk).
 
 ## Queries for 'currentness'
 
