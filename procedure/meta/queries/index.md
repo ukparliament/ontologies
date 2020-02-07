@@ -1,4 +1,4 @@
-# Handy [SPARQL](https://en.wikipedia.org/wiki/SPARQL) queries
+# Some handy [SPARQL](https://en.wikipedia.org/wiki/SPARQL) queries
 
 Given [accurate maps of procedures](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#flowcharts) and enough instance data of things subject to those procedures, we can start to treat precedence as a thing we can query for.
 
