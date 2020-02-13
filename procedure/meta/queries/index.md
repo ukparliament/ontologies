@@ -12,7 +12,7 @@ We used to maintain a separate spreadsheet of [procedure steps](https://ukparlia
 
 ## Queries for all statutory instruments
 
-The following [queries](All statutory instruments) will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
+The following [queries](All statutory instruments/index) will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
 
 ## Queries for 'currentness'
 
