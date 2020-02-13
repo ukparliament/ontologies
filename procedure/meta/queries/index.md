@@ -10,11 +10,15 @@ We used to maintain a separate spreadsheet of [procedure steps](https://ukparlia
 
 * [Procedure step information](https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0Aselect+%3FProcedurestep+%3FprocedureStepName+%3Fscope+%3Fdate+%3Flink+%3Flegislaturename+where+%7B%3FProcedurestep+a+%3AProcedureStep+.%3FProcedurestep+rdfs%3Alabel+%3FprocedureStepName+.OPTIONAL%7B+%3FProcedurestep+%3AprocedureStepScopeNote+%3Fscope+%7D+.OPTIONAL+%7B+%3FProcedurestep+%3AprocedureStepDateNote+%3Fdate+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepLinkNote+%3Flink+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepHasHouse+%3Flegislature+.%3Flegislature+rdfs%3Alabel+%3Flegislaturename%7D++%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
 
+## Queries for all statutory instruments
+
+The following [queries](All statutory instruments) will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
+
 ## Queries for 'currentness'
 
 These three queries will help you establish which [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) have reached their end date. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
 
-The query will return all work packages without actualised end steps. You can search for your date or show by most recent date. Or alternatively you can add an additional string to your query to search by specific date (note you have to add +1 to your date):
+The query will return all work packages without actualised end steps. Librarians use this query to look for work packages reaching the end of their objection period on any given date or time period. The results will show all current work packages and the date field can be filtered chronologically or you can use the search bar to look for a specific date.  Alternatively you can add an additional string to your query to search by specific date (note you have to add +1 to your date):
  
 FILTER ( str(?itemDate) <= '2020-02-06')
  
