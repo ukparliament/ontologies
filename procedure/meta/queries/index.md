@@ -34,4 +34,4 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 
 Proposed Negative Statutory Instuments are laid before Parliament where a decision is taken on whether they can be laid under the negative procedure or must be laid under an affirmative procedure. 
 
-* [PNSI queries]((https://ukparliament.github.io/ontologies/procedure/meta/queries/proposed-negative-statutory-instruments/)
+* [PNSI queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/proposed-negative-statutory-instruments/)
