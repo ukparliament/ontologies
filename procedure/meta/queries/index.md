@@ -10,11 +10,11 @@ We used to maintain a separate spreadsheet of [procedure steps](https://ukparlia
 
 * [Procedure step information](https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0Aselect+%3FProcedurestep+%3FprocedureStepName+%3Fscope+%3Fdate+%3Flink+%3Flegislaturename+where+%7B%3FProcedurestep+a+%3AProcedureStep+.%3FProcedurestep+rdfs%3Alabel+%3FprocedureStepName+.OPTIONAL%7B+%3FProcedurestep+%3AprocedureStepScopeNote+%3Fscope+%7D+.OPTIONAL+%7B+%3FProcedurestep+%3AprocedureStepDateNote+%3Fdate+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepLinkNote+%3Flink+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepHasHouse+%3Flegislature+.%3Flegislature+rdfs%3Alabel+%3Flegislaturename%7D++%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
 
-## Queries for all statutory instruments
+## Queries for statutory instruments
 
 The following queries will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
 
-* [All statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/All%20statutory%20instruments/)
+* [Statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/statutory-instruments/)
 
 ## Queries for 'currentness'
 
