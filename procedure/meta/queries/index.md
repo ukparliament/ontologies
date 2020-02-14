@@ -14,7 +14,7 @@ We used to maintain a separate spreadsheet of [procedure steps](https://ukparlia
 
 The following queries will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
 
-* [Statutory instruments](ukparliament.github.io/ontologies/procedure/meta/queries/statutory-instruments)
+* [Statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/statutory-instruments/)
 
 ## Queries for 'currentness'
 
