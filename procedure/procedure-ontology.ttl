@@ -89,6 +89,17 @@ ppr:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:label "Work packageable thing"@en ;
 	rdfs:comment "A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:StepGrouping rdf:type owl:Class ;
+	rdfs:label "Step grouping"@en ;
+	rdfs:comment "A grouping of steps in a procedure. A step grouping may belong to one or both Houses, or neither."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:BillStage rdf:type owl:Class ;
+	rdfs:subClassOf ppr:StepGrouping ;
+	rdfs:label "Bill stage"@en ;
+	rdfs:comment "A type of step grouping intended to denote a stage in the passage of a bill."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 
 
@@ -166,7 +177,7 @@ ppr:followsRoute rdf:type owl:ObjectProperty ;
 	
 ppr:stepInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in House"@en ;
-	rdfs:comment "Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument happens outside of Parliament."@en ;
+	rdfs:comment "Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament."@en ;
 	rdfs:domain ppr:Step ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -176,4 +187,25 @@ ppr:focus rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a work package to its focus, this being a work packageable thing."@en ;
 	rdfs:domain ppr:WorkPackage ;
 	rdfs:range ppr:WorkPackageableThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:stepGroupingInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Step grouping in House"@en ;
+	rdfs:comment "Relates a step grouping to one or both Houses where such a relationship exists. A step grouping may exist with no relationship to a House. For example, Welsh Assembly consent takes place outside of Parliament."@en ;
+	rdfs:domain ppr:StepGrouping ;
+	rdfs:range ppr:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:groups rdf:type owl:ObjectProperty ;
+	rdfs:label "Groups"@en ;
+	rdfs:comment "Relates a step grouping to the steps which are grouped within it."@en ;
+	rdfs:domain ppr:StepGrouping ;
+	rdfs:range ppr:Step ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasProcedure rdf:type owl:ObjectProperty ;
+	rdfs:label "Has procedure"@en ;
+	rdfs:comment "Relates a step grouping to the procedure containing those steps."@en ;
+	rdfs:domain ppr:StepGrouping ;
+	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
