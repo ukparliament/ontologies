@@ -16,6 +16,12 @@ The following queries will show all statutory instruments available in the Statu
 
 * [Statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/statutory-instruments/)
 
+## Queries for SI committee consideration
+
+The following queries will show committee consideration and decisions of all statutory instruments available in the Statutory Instrument Service.
+
+* [Committee consideration](https://ukparliament.github.ion/ontologies/procedure/meta/queries/committees/)
+
 ## Queries for 'currentness'
 
 These three queries will help you establish which [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) have reached their end date. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
