@@ -20,7 +20,7 @@ The following queries will show all statutory instruments available in the Statu
 
 The following queries will show committee consideration and decisions of all statutory instruments available in the Statutory Instrument Service.
 
-* [Committee consideration](https://ukparliament.github.ion/ontologies/procedure/meta/queries/committees/)
+* [Committee consideration](https://ukparliament.github.io/ontologies/procedure/meta/queries/committees/)
 
 ## Queries for 'currentness'
 
