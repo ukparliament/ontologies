@@ -1,6 +1,7 @@
 # 2020 - Week 9
 
-Week 9 of 2020 has been something of a quiet one. That said, it's actually been quite noisy but not in the sense we can type about.
+The week felt ridiculously busy but looking back there's not an awful lot to type about. If you're here for the procedure modelling you might want to look away now. If you have any interest in querying procedure, Wardley mapping and general purpose process modelling, do read on.
+
 
 Librarian Jayne has continued to wield her [SPARQL](https://en.wikipedia.org/wiki/SPARQL) spanner, this week in the direction of [committees considering Statutory Instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/committees/). We'd still like to model [reporting criteria](https://publications.parliament.uk/pa/jt5801/jtstatin/26/2602.htm), but possibly need more insulation between data platform and website before we venture down that road.
 
