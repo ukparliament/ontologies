@@ -1,0 +1,43 @@
+@prefix pdes: <http://parliament.uk/ontologies/description/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/description/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Description ontology"@en ;
+    dcterms:created "2020-03-05"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology to connect things to the things they are described by. For example, a procedure or procedure route as described by a standing order or item of legislation."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/description/description.png> ;
+	foaf:maker
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ],
+		[ foaf:name "Jayne Sunley" ].
+
+
+#######  Classes ##### 	
+
+pdes:DescribedThing rdf:type owl:Class ;
+	rdfs:label "Described thing"@en ;
+	rdfs:comment " "@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/description/> .
+
+pdes:DescribingThing rdf:type owl:Class ;
+	rdfs:label "Describing thing"@en ;
+	rdfs:comment " "@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/description/> .
+
+#######  Object properties ##### 
+	
+pdes:describedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Described by"@en ;
+	rdfs:comment " "@en ;
+	rdfs:domain pdes:DescribedThing ;
+	rdfs:range pdes:DescribingThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/description/> .
+	
