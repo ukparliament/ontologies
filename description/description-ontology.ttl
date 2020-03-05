@@ -12,7 +12,7 @@
     dcterms:title "Description ontology"@en ;
     dcterms:created "2020-03-05"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "An ontology to connect things to the things they are described by. For example, a procedure or procedure route as described by a standing order or item of legislation."@en ;
+    dcterms:description "An ontology describing any connection between a thing that has a description to a thing that provides that description. For example, a procedure as described by an item of legislation, or a procedure route as described by a Standing Order."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/description/description.png> ;
 	foaf:maker
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
@@ -24,19 +24,19 @@
 
 pdes:DescribedThing rdf:type owl:Class ;
 	rdfs:label "Described thing"@en ;
-	rdfs:comment " "@en ;
+	rdfs:comment "A thing that has a description."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/description/> .
 
 pdes:DescribingThing rdf:type owl:Class ;
 	rdfs:label "Describing thing"@en ;
-	rdfs:comment " "@en ;
+	rdfs:comment "A thing that provides a description."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/description/> .
 
 #######  Object properties ##### 
 	
 pdes:describedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Described by"@en ;
-	rdfs:comment " "@en ;
+	rdfs:comment "Relates a thing that has a description to a thing that provides that description."@en ;
 	rdfs:domain pdes:DescribedThing ;
 	rdfs:range pdes:DescribingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/description/> .
