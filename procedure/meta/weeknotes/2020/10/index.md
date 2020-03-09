@@ -35,8 +35,10 @@ Affirmatives tend to come in three classes (not including the slightly scary sup
 * SIs are laid after being made and cannot remain in force unless the instrument is approved within a specific period (our made affirmative)
 
 Currently the second class SIs we treat as made affirmatives but unlike most made affirmatives they're not laid with an SI number and do not come into force until approved by the House. There are also usually different rules around the approval clock. It comes into force once approved, as long as that approval happens before the approval deadline. A few examples:
-https://statutoryinstruments.parliament.uk/timeline/ySBtGskZ/SI-2019/ 
-https://statutoryinstruments.parliament.uk/timeline/7j71c7DW/SI-2019/ 
+
+* https://statutoryinstruments.parliament.uk/timeline/ySBtGskZ/SI-2019/ 
+* https://statutoryinstruments.parliament.uk/timeline/7j71c7DW/SI-2019/ 
+
 Jayne has been tasked with following up with Jane and Peter Stam to see if this class falls into its own procedure and if we are indeed right to be treating it as a normal made affirmative.
 
 ## Blocked - awaiting development
