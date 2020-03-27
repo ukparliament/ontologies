@@ -1,4 +1,4 @@
-# Procedure mapping
+# Design notes for procedure maps
 
 ## What are procedure maps?
 
