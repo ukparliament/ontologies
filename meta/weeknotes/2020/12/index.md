@@ -22,4 +22,3 @@ In other semantic news, [David](https://twitter.com/clerkly) emailed with an ans
 
 So that then was week one of our new lives. Nice at least to see people. If only in pixels. Take good care of each other, everyone.
 
-test
