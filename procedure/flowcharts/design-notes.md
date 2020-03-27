@@ -116,7 +116,7 @@ Steps that can happen multiple times are shown on the procedure maps in white.
 
 ## How is a procedure map with logic gates parsed in the context of a work package?
 
-The [published procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
+The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
 
 Steps are specialised as business steps. The step class is specialised as either a logic gate step or a decision step.
 
