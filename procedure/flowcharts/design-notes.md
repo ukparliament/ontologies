@@ -26,11 +26,11 @@ Procedure maps may show steps that happen outside Parliament: for example, the m
 
 ## What is a work package?
 
-A work package is a number of business items undertaken by one or both Houses of Parliament. It may be subject to procedure: for example, a package of work to scrutinise, amend and pass or reject a bill. It may not be subject to a procedure: for example, a select committee inquiry following no procedural path.
+A work package is **a number of business items** undertaken by one or both Houses of Parliament. It may be subject to procedure: for example, a package of work to scrutinise, amend and pass or reject a bill. It may not be subject to a procedure: for example, a select committee inquiry following no procedural path.
 
-Work packages have a focus, a work packageable thing. For example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, or secondary - or delegated - legislation, or a treaty.
+Work packages have a **focus**, a work packageable thing. For example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, or secondary - or delegated - legislation, or a treaty.
 
-Work packages - rather than particular instruments or papers - are subject to procedure, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the [CRAG](http://www.legislation.gov.uk/ukpga/2010/25/contents) procedure - and once following ratification, when no work package is triggered.
+Work packages - rather than particular instruments or papers - are **subject to procedure**, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the [CRAG](http://www.legislation.gov.uk/ukpga/2010/25/contents) procedure - and once following ratification, when no work package is triggered.
 
 ## Why do the procedure maps differ from the procedure model?
 
@@ -116,7 +116,7 @@ Steps that can happen multiple times are shown on the procedure maps in white.
 
 ## How is a procedure map with logic gates parsed in the context of a work package?
 
-The [published procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
+The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
 
 Steps are specialised as business steps. The step class is specialised as either a logic gate step or a decision step.
 
@@ -130,9 +130,9 @@ Decision steps and logic gate steps may be combined to form logical flows.
 
 ## Limitations in parsing procedure maps
 
-Some of the information required to parse the procedure map completely does not appear on the map. Steps involving tabling and withdrawal present a particular problem:
+Some of the information required to parse the procedure map completely does not appear on the map.
 
-An approval motion may be tabled and withdrawn and a new approval motion tabled, which itself may be withdrawn. Both tabling and withdrawal can happen multiple times. Determining whether an approval motion is ‘in play’ requires knowledge of the symmetry between tabling and withdrawal.
+Steps involving tabling and withdrawal present a particular problem: an approval motion may be tabled and withdrawn and a new approval motion tabled, which itself may be withdrawn. Both tabling and withdrawal can happen multiple times. Determining whether an approval motion is ‘in play’ requires knowledge of the symmetry between tabling and withdrawal.
 
 Our intention is to specialise the business item model into explicit types of parliamentary business such as laying, tabling and withdrawal. Anyone parsing the procedure maps would need to also query across this data to determine if there was currently a motion in play. Further expression of procedural rules will be possible after those models have been populated.
 
@@ -140,9 +140,9 @@ Our intention is to specialise the business item model into explicit types of pa
 
 A step may be actualised multiple times by different business items in the same work package. 
 
-A step may be actualised multiple times in series: for example, an approval motion for an affirmative instrument might be tabled and subsequently withdrawn and a new approval motion tabled. 
+**A step may be actualised multiple times in series**: for example, an approval motion for an affirmative instrument might be tabled and subsequently withdrawn and a new approval motion tabled. 
 
-A step may be actualised multiple times in parallel: for example, different Members may table different fatal prayers against a negative instrument. These may be in series, as preceding prayers are withdrawn, or may be in parallel with multiple prayers being in play.
+**A step may be actualised multiple times in parallel**: for example, different Members may table different fatal prayers against a negative instrument. These may be in series, as preceding prayers are withdrawn, or may be in parallel with multiple prayers being in play.
 
 Steps later in a procedure are dependent on the action of previously actualised steps. Describing the availability of steps happening later in a procedure depends on information that is available outside the procedure map and cannot be determined using the procedural map alone. For example, there may be multiple decisions taken on different fatal prayers. Determining whether a decision step will occur later in the procedure depends on knowing the symmetry between tablings and withdrawals.
 
