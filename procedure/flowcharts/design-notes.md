@@ -1,4 +1,4 @@
-# Procedure mapping
+# Design notes for procedure maps
 
 ## What are procedure maps?
 
@@ -152,7 +152,6 @@ We have taken the decision that a withdrawal or lapsing step which may occur mul
 
 We have taken the decision that a withdrawal or lapsing step which may occur multiple times cannot preclude a later consequential step that is only ever actualised once in the same work package, because there is no evident or implied symmetry.
 
-*Conversations between Jayne and Michael on 27th November 2019 and 23rd March 2020.*
 
 
 
