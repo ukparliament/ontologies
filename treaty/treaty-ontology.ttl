@@ -47,42 +47,41 @@ ptr:TreatyAsLaid rdf:type owl:Class ;
 	
 ptr:TreatySeriesItem rdf:type owl:Class ;
 	rdfs:label "Treaty series item"@en ;
-	rdfs:comment "A treaty is listed in a treaty series as a treaty series item. A treaty series item is always in a treaty series. A treaty series item is created when a treaty subject to the Constitutional Reform and Governance Act 2010 is first laid before Parliament, after which the treaty may be available to be ratified. Before a treaty comes into force in the United Kingdom, it is listed in one of the bilateral, multilateral or European Union treaty series. If a treaty comes into force it is listed in the Treaty Series."@en ;
+	rdfs:comment "A treaty is listed in a treaty series as a treaty series item. At any time, a treaty series item is always in a treaty series. A treaty may be placed in a new treaty series by means of a new treaty series item. A treaty is listed in one of the bilateral, multilateral or European Union treaty series if it has not come into force in the United Kingdom. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of these series when first laid before Parliament. If Parliament permits ratification of the treaty, the treaty becomes available to the government to ratify and then may come into force. When a treaty comes into force, it is listed in the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-	
-# edited to here
 	
 ptr:TreatySeries rdf:type owl:Class ;
 	rdfs:label "Treaty series"@en ;
-	rdfs:comment "A series of which a treaty is an item. This is one of the bilateral series, the multilateral series, the European Union series or the Treaty Series. One of the four treaty series is itself called the Treaty Series."@en ;
+	rdfs:comment "A series of which a treaty is an item by means of a treaty series item. The United Kingdom Foreign and Commonwealth Office lists treaties in one of four series: the bilateral series, the multilateral series, the European Union series or the Treaty Series. One of the four treaty series is itself called the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:InForceness rdf:type owl:Class ;
 	rdfs:label "In forceness"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The process by which a party to a treaty brings that treaty into force in their jurisdiction."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:GovernmentOrganisation rdf:type owl:Class ;
 	rdfs:label "Government organisation"@en ;
-	rdfs:comment "A government department, agency or public body with responsibility for a specific sector of public administration."@en ;
+	rdfs:comment "A government department, agency or public body with responsibility for a sector of public administration."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:Action rdf:type owl:Class ;
 	rdfs:label "Action"@en ;
-	rdfs:comment "An action by a party on a treaty."@en ;
+	rdfs:comment "An action taken by a party as part of the process of entering into a treaty."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:ActionType rdf:type owl:Class ;
 	rdfs:label "Action type"@en ;
-	rdfs:comment "The type of action by a party on a treaty. These include signing, ratification, accession or bringing into force."@en ;
+	rdfs:comment "The type of action taken by a party on a treaty. For example: signing, ratification, accession or withdrawal."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 		
 ptr:Party rdf:type owl:Class ;
 	rdfs:label "Party"@en ;
-	rdfs:comment "An entity with the capacity to enter into treaty obligations."@en ;
+	rdfs:comment "An entity having the capacity to enter into treaty obligations. For example: a nation state, an intergovernmental organisation or internationally recognised authority."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
+	
+		# edited to here
 
 	
 ##### Object properties ####
