@@ -80,39 +80,39 @@ ptr:Party rdf:type owl:Class ;
 	rdfs:comment "An entity having the capacity to enter into treaty obligations. For example: a nation state, an intergovernmental organisation or internationally recognised authority."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-	
-		# edited to here
 
 	
 ##### Object properties ####
 
 ptr:requiresPassageOfBill rdf:type owl:ObjectProperty ;
 	rdfs:label "Requires passage of bill"@en ;
-	rdfs:comment "A treaty may require one or more bills to be in force as Acts in order that the treaty may be satisfied."@en ;
+	rdfs:comment "Relates a treaty to the required passage of one or more bills in order to enable the satisfaction of treaty obligations."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:ObjectProperty ;
-	rdfs:label "Requires passage of a draft and made statutory instrument subject to parliamentary procedure"@en ;
-	rdfs:comment "A treaty may require one or more SIs to be in force in order that the treaty may be satisfied."@en ;
+	rdfs:label "Requires passage of a draft or made Statutory Instrument subject to parliamentary procedure"@en ;
+	rdfs:comment "Relates a treaty to the required passage of one or more statutory instruments in order to enable the satisfaction of treaty obligations."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:laidAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Laid as"@en ;
-	rdfs:comment "A treaty may be laid twice before Parliament."@en ;
+	rdfs:comment "When first laid, a treaty which requires ratification is subject to procedure described in the Constitutional Reform and Governance Act 2010. If the treaty is not rejected by Parliament, it becomes available to the government for ratification. After a treaty is ratified, it is laid before Parliament again, without procedural effect. This property relates a treaty as an abstract work to the form in which it is laid. The ‘Laid as’ property relates a treaty to the form in which it is laid."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:TreatyAsLaid ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:asSeriesItem rdf:type owl:ObjectProperty ;
 	rdfs:label "As series item"@en ;
-	rdfs:comment "A treaty may appear in more than one series over time by means of a series item. A treaty appears in the Treaty series on coming into force in the United Kingdom. Each series item refers to one treaty."@en ;
+	rdfs:comment "Relates a treaty as laid before Parliament to a treaty series item. A treaty series item maps a treaty to the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item."@en ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range ptr:TreatySeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+						# edited to here
 
 ptr:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
