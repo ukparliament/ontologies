@@ -55,8 +55,8 @@ ptr:TreatySeries rdf:type owl:Class ;
 	rdfs:comment "A series of which a treaty is an item by means of a treaty series item. The United Kingdom Foreign and Commonwealth Office lists treaties in one of four series: the bilateral series, the multilateral series, the European Union series or the Treaty Series. One of the four treaty series is itself called the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:InForceness rdf:type owl:Class ;
-	rdfs:label "In forceness"@en ;
+ptr:InForceStatus rdf:type owl:Class ;
+	rdfs:label "In force status"@en ;
 	rdfs:comment "The process by which a party to a treaty brings that treaty into force in their jurisdiction."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
@@ -111,29 +111,34 @@ ptr:asSeriesItem rdf:type owl:ObjectProperty ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range ptr:TreatySeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-						# edited to here
 
 ptr:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
-	rdfs:comment "A series may have one or more items, or none. A series item places a treaty in a single series."@en ;
+	rdfs:comment "Relates a treaty series item to the treaty series it appears in. A treaty series item is listed in a single treaty series."@en ;
 	rdfs:domain ptr:TreatySeriesItem ;
 	rdfs:range ptr:TreatySeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:inForceness rdf:type owl:ObjectProperty ;
-	rdfs:label "In forceness"@en ;
-	rdfs:comment ""@en ;
+						# edited to here
+	
+ptr:hasInForceStatus rdf:type owl:ObjectProperty ;
+	rdfs:label "Has in force status"@en ;
+	rdfs:comment "Relates a treaty to its in force status for a given party."@en ;
 	rdfs:domain ptr:Treaty ;
-	rdfs:range ptr:InForceness ;
+	rdfs:range ptr:InForceStatus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:for rdf:type owl:ObjectProperty ;
-	rdfs:label "for"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain ptr:InForceness ;
+ptr:inForceStatusFor rdf:type owl:ObjectProperty ;
+	rdfs:label "In force status for"@en ;
+	rdfs:comment "Relates the in force status of a treaty to a party."@en ;
+	rdfs:domain ptr:InForceStatus ;
 	rdfs:range ptr:Party ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+	
+	
+	
+	
 	
 ptr:leadDepartment rdf:type owl:ObjectProperty ;
 	rdfs:label "Lead department"@en ;
@@ -194,7 +199,7 @@ ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
 ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain ptr:InForceness ;
+	rdfs:domain ptr:InForceStatus ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
 	
