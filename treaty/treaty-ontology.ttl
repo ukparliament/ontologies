@@ -186,21 +186,21 @@ ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-										# edited to here
-	
 ptr:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force date"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note.."@en ;
 	rdfs:domain ptr:InForceStatus ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
 
 ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A coming into force note sets out details of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date."@en ;
 	rdfs:domain ptr:InForceStatus ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
+	
+											# edited to here
 	
 ptr:actionDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Action date"@en ;
