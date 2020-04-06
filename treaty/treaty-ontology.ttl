@@ -160,36 +160,41 @@ ptr:hasActionType rdf:type owl:ObjectProperty ;
 	rdfs:domain ptr:Action ;
 	rdfs:range ptr:ActionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
 
-								# edited to here
-	
 
-					
 	
 ##### Data properties ####
 
 ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command paper prefix"@en ;
-	rdfs:comment "A command paper prefix is applied until a command paper number reaches 9999, after which the command paper prefix is changed. Each command paper has one command paper prefix."@en ;
+	rdfs:comment "A treaty as laid has a citation formed of a command paper prefix and command paper number. Each command paper has one command paper prefix. Each series of command papers has its own prefix. A series has command paper numbers between 1 and 9999, after which a new series is created."@en ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command paper number"@en ;
-	rdfs:comment "A command paper number follows its prefix and does not exceed 9999. Each command paper has one command paper number."@en ;
+	rdfs:comment "A treaty as laid has a citation formed of a command paper prefix and command paper number. A series has command paper numbers between 1 and 9999, after which a new series is created."@en ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
 	rdfs:label "Series item citation"@en ;
-	rdfs:comment "Each item in a treaty series has its own citation."@en ;
+	rdfs:comment "An item in a treaty series has a citation, in addition to a Command Paper number: for example, China No. 1 (2017)."@en ;
 	rdfs:domain ptr:TreatySeriesItem ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
+										# edited to here
+	
+ptr:comingIntoForceDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Coming into force date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ptr:InForceStatus ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
+
 ptr:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
 	rdfs:comment ""@en ;
