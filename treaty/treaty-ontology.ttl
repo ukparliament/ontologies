@@ -50,16 +50,14 @@ ptr:TreatyAsLaid rdf:type owl:Class ;
 	rdfs:comment "Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-# edited to here
-	
 ptr:TreatySeriesItem rdf:type owl:Class ;
 	rdfs:label "Treaty series item"@en ;
-	rdfs:comment "A treaty is listed in a treaty series as a treaty series item. At any time, a treaty series item is always in a treaty series. A treaty may be placed in a new treaty series by means of a new treaty series item. A treaty is listed in one of the bilateral, multilateral or European Union treaty series if it has not come into force in the United Kingdom. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of these series when first laid before Parliament. If Parliament ((( does not object to ))) ratification of the treaty, the treaty becomes available to the government to ratify and then may come into force. When a treaty comes into force, it is listed in the Treaty Series. Use FCO definitions here"@en ;
+	rdfs:comment "A treaty is published in a treaty series as a treaty series item. At any time, a treaty series item is always in a treaty series. A treaty may be placed in a new treaty series by means of a new treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. If Parliament does not object to ratification of the treaty, the treaty becomes available to the government to ratify and then may come into force. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:TreatySeries rdf:type owl:Class ;
 	rdfs:label "Treaty series"@en ;
-	rdfs:comment "A series of which a treaty is an item by means of a treaty series item. The United Kingdom Foreign and Commonwealth Office lists treaties in one of four series: the bilateral series, the multilateral series, the European Union series or the Treaty Series. One of the four treaty series is itself called the Treaty Series."@en ;
+	rdfs:comment "A series of which a treaty is an item by means of a treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 
@@ -82,21 +80,21 @@ ptr:requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProced
 	
 ptr:laidAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Laid as"@en ;
-	rdfs:comment "When first laid, a treaty which requires ratification is subject to procedure described in the Constitutional Reform and Governance Act 2010. If the treaty is not rejected by Parliament, it becomes available to the government for ratification. After a treaty is ratified, it is laid before Parliament again, without procedural effect. This property relates a treaty as an abstract work to the form in which it is laid. The 'Laid as' property relates a treaty to the form in which it is laid."@en ;
+	rdfs:comment "The 'Laid as' property relates a treaty to the form in which it is laid. Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure. "@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:TreatyAsLaid ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:asSeriesItem rdf:type owl:ObjectProperty ;
 	rdfs:label "As series item"@en ;
-	rdfs:comment "Relates a treaty as laid before Parliament to a treaty series item. A treaty series item maps a treaty to the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item."@en ;
+	rdfs:comment "Relates a treaty as laid before Parliament to a treaty series item. A treaty series item places a treaty in the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item"@en ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range ptr:TreatySeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
-	rdfs:comment "Relates a treaty series item to the treaty series it appears in. A treaty series item is listed in a single treaty series."@en ;
+	rdfs:comment "Relates a treaty series item to the treaty series in which it appears. A treaty series item is listed in a single treaty series."@en ;
 	rdfs:domain ptr:TreatySeriesItem ;
 	rdfs:range ptr:TreatySeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
@@ -108,6 +106,7 @@ ptr:hasLeadDepartment rdf:type owl:ObjectProperty ;
 	rdfs:range ptr:GovernmentOrganisation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
+			# edited to here
 
 	
 ##### Data properties ####
