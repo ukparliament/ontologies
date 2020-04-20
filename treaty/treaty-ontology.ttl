@@ -106,21 +106,20 @@ ptr:hasLeadDepartment rdf:type owl:ObjectProperty ;
 	rdfs:range ptr:GovernmentOrganisation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
-			# edited to here
 
 	
 ##### Data properties ####
 
 ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
-	rdfs:label "Command paper prefix"@en ;
-	rdfs:comment "A treaty as laid has a citation formed of a command paper prefix and command paper number. Each command paper has one command paper prefix. Each series of command papers has its own prefix. A series has command paper numbers between 1 and 9999, after which a new series is created."@en ;
+	rdfs:label "Command Paper prefix"@en ;
+	rdfs:comment "A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. A series of Command Papers has a unique prefix."@en ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
-	rdfs:label "Command paper number"@en ;
-	rdfs:comment "A treaty as laid has a citation formed of a command paper prefix and command paper number. A series has command paper numbers between 1 and 9999, after which a new series is created."@en ;
+	rdfs:label "Command Paper number"@en ;
+	rdfs:comment "A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. Within a series, Command Paper numbers start at 1 and do not exceed 9999."@en ;
 	rdfs:domain ptr:TreatyAsLaid ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
@@ -134,7 +133,7 @@ ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
 	
 ptr:ukRatificationDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK ratification date"@en ;
-	rdfs:comment "The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note."@en ;
+	rdfs:comment "The date on which the treaty is ratified by the UK."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
@@ -148,7 +147,7 @@ ptr:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
 
 ptr:ukComingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK coming into force note"@en ;
-	rdfs:comment "A coming into force note sets out details of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date."@en ;
+	rdfs:comment "A coming into force note sets out details applying to the UK of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
