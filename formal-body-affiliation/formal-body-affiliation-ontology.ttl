@@ -48,8 +48,6 @@ pfba:ExOfficioMembership rdf:type owl:Class ;
 	rdfs:comment "Ex-officio membership is membership granted by the holding of a position external to the formal body. A frontbencher may hold an ex-officio membership of a committee: for example, Government and Opposition Whips having membership of the Administration Committee; Ministers having membership of the Committee of Public Accounts and the Environmental Audit Committee, though by convention not attending meetings of either committee; or Leaders of the House chairing the Select Committee on Modernisation of the House of Commons between 1997 and 2010."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
-		## edited to here
-	
 pfba:FormalBodyPosition rdf:type owl:Class ;
 	rdfs:label "Formal body position"@en ;
 	rdfs:comment "Specialises position to formal bodies."@en ;
@@ -58,12 +56,14 @@ pfba:FormalBodyPosition rdf:type owl:Class ;
 pfba:Chair rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyPosition ;
 	rdfs:label "Chair"@en ;
-	rdfs:comment "Used to describe the position of chair of a formal body. A formal body may have more that one incumbency in the chair position at the same time, or none."@en ;
+	rdfs:comment "The position of chair of a formal body. A formal body may have one or more incumbents in the chair position at the same time, or none. "@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
-pfba:CommitteeClerk rdf:type owl:Class ;
+			## edited to here
+	
+pfba:PrincipalClerk rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyPosition ;
-	rdfs:label "Committee clerk"@en ;
+	rdfs:label "Principal clerk"@en ;
 	rdfs:comment "Used to describe the principal clerk of a formal body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
