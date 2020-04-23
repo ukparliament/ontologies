@@ -88,14 +88,6 @@ ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	owl:equivalentClass
 	plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
 	
-# Group inclusion
-pfba:GroupInclusion
-	owl:equivalentClass
-	pa:GroupInclusion .
-pa:GroupInclusion
-	owl:equivalentClass
-	pfba:GroupInclusion .
-	
 # House
 ppr:House
 	owl:equivalentClass
@@ -165,14 +157,6 @@ pa:Place
 pbi:Place
 	owl:equivalentClass
 	pa:Place .
-	
-# Position
-pfba:Position
-	owl:equivalentClass
-	pa:Position .
-pa:Position
-	owl:equivalentClass
-	pfba:Position .
 
 # Procedure
 ppr:Procedure
@@ -230,6 +214,16 @@ plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 pfb:FormalBody
 	rdfs:subClassOf
 	pa:Group .
+	
+# Formal body membership
+pfba:FormalBodyMembership
+	rdfs:subClassOf
+	pa:GroupInclusion .
+	
+# Formal body position
+pfba:FormalBodyPosition
+	rdfs:subClassOf
+	pa:Position .
 	
 # Government organisation
 ptr:GovernmentOrganisation
