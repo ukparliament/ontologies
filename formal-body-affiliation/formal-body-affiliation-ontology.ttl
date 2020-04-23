@@ -11,7 +11,7 @@
     dcterms:title "Formal body affiliation ontology"@en ;
     dcterms:created "2017-06-22"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "An ontology to extend the agency model to specialise group inclusion and position to formal bodies, a formal body being a committee or similar group."@en ;
+    dcterms:description "An ontology extending the agency model, specialising group inclusion and position to formal bodies, being committees or similar groups."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation.png> ;
 	foaf:maker
 		[ foaf:name "James Bowman" ],
@@ -25,44 +25,32 @@
 
 #######  Classes ##### 	
 
-pfba:GroupInclusion rdf:type owl:Class ;
-	rdfs:label "Group inclusion"@en ;
-	rdfs:comment "The inclusion of a person or group in another group over a period of time. For example, a membership of a committee or a whipping to a party."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
-	
 pfba:FormalBodyMembership rdf:type owl:Class ;
-	rdfs:subClassOf pfba:GroupInclusion ;
 	rdfs:label "Formal body membership"@en ;
-	rdfs:comment "Specialises group inclusion to membership of a formal body. Membership of a formal body may be from the backbenches nominated in a House, subject experts not being Members of a House, or other appointed members."@en ;
+	rdfs:comment "Specialises group inclusion to membership of a formal body; membership being taken from the backbenches nominated in a House, subject experts not being Members of a House, or other appointed members."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:CooptedMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyMembership ;
 	rdfs:label "Co-opted membership"@en ;
-	rdfs:comment "A member who is invited to join at the discretion of the formal body. A co-opted member may be a Member of a House. For example in the House of Lords a peer who is a subject matter expert. Co-opted members may be people who are not Members of a House, referred to as lay members in the House of Commons and external members in the House of Lords. For example, the Executive Committee may co-opt the Director of the Parliamentary Digital Service or Parliamentary Security Director into its membership."@en ;
+	rdfs:comment "Co-opted membership results from a formal body adding a member at the discretion of existing members. A co-opted member may be a Member of a House: for example, in the House of Lords a peer who is a subject matter expert. Co-opted members may be people who are not Members of a House, referred to as lay members in the House of Commons and external members in the House of Lords: for example, the Executive Committee may co-opt the Director of the Parliamentary Digital Service or Parliamentary Security Director into its membership."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
-	
-## edited to here
 	
 pfba:AlternateMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyMembership ;
 	rdfs:label "Alternate membership"@en ;
-	rdfs:comment "Alternate members act as substitutes when other members are unable to attend. For example, the Lords Procedure Committee is supplemented by one alternate for each party group of backbench members and one for the Crossbenchers, plus an alternate for the Convenor. They receive papers and if any of the relevant members cannot attend, alternate members are entitled to attend and vote."@en ;
+	rdfs:comment "Alternate members substitute for other members when those members are unable to attend: for example, the Lords Procedure Committee is supplemented by an alternate for each party grouping, an alternate for the Crossbenchers and an alternate for the Convenor. Alternate members receive papers to the formal body, even when not substituting for a member. When substituting for a member, alternate members are entitled to attend meetings and to vote."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
 pfba:ExOfficioMembership rdf:type owl:Class ;
 	rdfs:subClassOf pfba:FormalBodyMembership ;
 	rdfs:label "Ex-officio membership"@en ;
-	rdfs:comment "Ex-officios are members appointed by virtue of roles or positions, by convention. Some Ministers are appointed ex-officio members of committees. Examples include Government and Opposition Whips regularly serving on the Administration Committee; specific government Ministers being members of (but by convention not attending meetings of) the Committee of Public Accounts and the Environmental Audit Committee; and successive Leaders of the House chairing the Select Committee on Modernisation of the House of Commons between 1997 and 2010."@en ;
+	rdfs:comment "Ex-officio membership is membership granted by the holding of a position external to the formal body. A frontbencher may hold an ex-officio membership of a committee: for example, Government and Opposition Whips having membership of the Administration Committee; Ministers having membership of the Committee of Public Accounts and the Environmental Audit Committee, though by convention not attending meetings of either committee; or Leaders of the House chairing the Select Committee on Modernisation of the House of Commons between 1997 and 2010."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
 	
-pfba:Position rdf:type owl:Class ;
-	rdfs:label "Position"@en ;
-	rdfs:comment "A named position, having existence over time, which may be held by one or more people, or have no current incumbency. For example, Minister of Food, a position having existed in the past."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
+		## edited to here
 	
 pfba:FormalBodyPosition rdf:type owl:Class ;
-	rdfs:subClassOf pfba:Position ;
 	rdfs:label "Formal body position"@en ;
 	rdfs:comment "Specialises position to formal bodies."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body-affiliation/> .
