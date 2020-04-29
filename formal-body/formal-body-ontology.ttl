@@ -39,7 +39,7 @@ pfb:ParliamentaryCommittee rdf:type owl:Class ;
 pfb:SelectCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:ParliamentaryCommittee ;
 	rdfs:label "Select Committee"@en ;
-	rdfs:comment "There are Select Committees in both the House of Commons and the House of Lords. Select Committees conduct inquiries into and report on matters as directed by their remit. The results of these inquiries are public. The government may be expected to respond to a published inquiry. Select Committees in the House of Commons are primarily concerned with examining the work of government departments. Select Committees in the House of Lords concentrate on broader themes rather than individual government departments."@en ;
+	rdfs:comment "There are Select Committees in both the House of Commons and the House of Lords. Select Committees conduct inquiries into and report on matters as directed by their remit. The results of inquiries are public. The government may be expected to respond to a published inquiry. Select Committees in the House of Commons are primarily concerned with examining the work of government departments. Select Committees in the House of Lords concentrate on broader themes rather than on individual government departments. When a Select Committee in the House of Lords is not deliberating, any peer may attend and speak at the committee. When a Select Committee in the House of Lords is deliberating, peers without membership of the committee may not attend, unless invited by the Committee to do so. Any peer not being a member of a Select Committee in the House of Lords cannot vote in that committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:GeneralCommittee rdf:type owl:Class ;
@@ -47,26 +47,29 @@ pfb:GeneralCommittee rdf:type owl:Class ;
 	rdfs:label "General Committee"@en ;
 	rdfs:comment "The House of Commons has General Committees: their primary role is to consider proposed legislation. The House of Lords does not have General Committees, meeting as a whole House to consider proposed legislation. General Committees include Committees on Bills, Grand Committees considering matters specific to the devolved nations of the UK, and General Committees on delegated legislation and European documents."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-	# edited to here
 
 pfb:NonSelectCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:ParliamentaryCommittee ;
-	rdfs:label "Non Select Committee"@en ;
-	rdfs:comment "The House of Lords does not have General Committees but does have non-Select Committees. At a Select Committee of the House of Lords, Peers are not excluded from attending and speaking but they must not attend any meeting while the Committee deliberate, unless invited by the Committee to do so, and they must not vote. At a non-Select Committee, any Peer can attend, speak and vote."@en ;
+	rdfs:label "Non-Select Committee"@en ;
+	rdfs:comment "The House of Lords has non-Select Committees, fulfilling a similar function to the General Committees of the House of Commons. Any Peer may attend, speak and vote in a non-Select Committee - including those not being members of the committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:StatutoryCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:FormalBody ;
-	rdfs:label "StatutoryCommittee"@en ;
-	rdfs:comment "Statutory Committees are formed as a result of legislation. For example, the Ecclesiastical Committee."@en ;
+	rdfs:label "Statutory Committee"@en ;
+	rdfs:comment "Statutory Committees are committees constituted by means of legislation, for example: the Ecclesiastical Committee, by the Church of England Assembly (Powers) Act 1919."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:InformallyConstitutedCommittee rdf:type owl:Class ;
 	rdfs:subClassOf pfb:FormalBody ;
-	rdfs:label "InformallyConstitutedCommittee"@en ;
-	rdfs:comment "An InformallyConstitutedCommittee is a committee-like body that is not established under Parliamentary procedure or by statute."@en ;
+	rdfs:label "Informally constituted committee"@en ;
+	rdfs:comment "An informally constituted committee is a committee-like formal body, not established under Parliamentary procedure or by statute.
+"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
+
+
+# edited to here
+
 
 pfb:FocusCategory rdf:type owl:Class ;
 	rdfs:label "Focus category"@en ;
@@ -114,14 +117,14 @@ pfb:Focus rdf:type owl:Class ;
 #######  Object properties ##### 
 
 pfb:belongsToHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "Belongs to house"@en ;
+	rdfs:label "Belongs to House"@en ;
 	rdfs:comment "Relates a formal body to the House or Houses it belongs to. A joint committee will belong to both Houses."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:hasLeadHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "Has lead house"@en ;
+	rdfs:label "Has lead House"@en ;
 	rdfs:comment "A joint committee will have a lead House responsible for its administration."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
