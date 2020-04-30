@@ -67,51 +67,48 @@ pfb:InformallyConstitutedCommittee rdf:type owl:Class ;
 "@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
-
-# edited to here
-
-
 pfb:FocusCategory rdf:type owl:Class ;
 	rdfs:label "Focus category"@en ;
-	rdfs:comment "Provides a way to aggregate formal bodies by the type of thing they focus on or scrutinise. In theory this could be derived from any 'focus' relationships, but in some cases the thing these classes point at are not well enough defined to determine their type. For example, the Scottish Grand Committee would point at a library subject heading / concept of Scotland. This concept is only typed as a geographic entity, and not identified as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the 'focus' relationships alone. Therefore, we introduced focus category to give a higher level means to group formal bodies by interest areas. To give another example, 'focus' might point to a named item of legislation, and the focus category would say that this Formal Body was constituted to scrutinise a specific item of legislation but not identify which one. Options for focus category are: a specific item of legislation, a type of legislation, one or more government departments, matters specific to devolved nations etc."@en ;
+	rdfs:comment "A focus category provides a way to aggregate formal bodies by the type of thing they focus on or scrutinise, for example: a type of legislation, one or more government departments, matters specific to devolved nations. Eventually, the type of the thing focussed on may be derived from any ‘focus’ relationships, together with the types of the things being focussed on. Presently, the things that focus categories point at have insufficient definition to support a determination of their type, for example: the Scottish Grand Committee would have a library subject heading or concept of Scotland as a focus category, typed as a geographic entity rather than as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the 'focus' relationships alone: the focus category gives a higher level means to group formal bodies by interest areas. A focus category is able to be populated regardless of whether the thing focussed on is sufficiently defined, for example: 'focus' may point to a named item of legislation, with the focus category recording that the formal body was constituted to scrutinise a specific item of legislation but without identifying which."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
-	rdfs:comment "A parliamentary House. For example, the House of Lords"@en ;
+	rdfs:comment "A parliamentary House, for example: the House of Lords"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:WorkPackage rdf:type owl:Class ;
 	rdfs:label "Work package"@en ;
-	rdfs:comment "A grouping of business items which may be a group falling under a procedure, or a grouping determined by a committee. For example, business items considered during the passage of a particular statutory instrument or public bill, or during an inquiry by a select committee."@en ;
+	rdfs:comment "A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
+
 pfb:Inquiry rdf:type owl:Class ;
 	rdfs:subClassOf pfb:WorkPackage ;
 	rdfs:label "Inquiry"@en ;
 	rdfs:comment "A type of work package investigating a specific subject or policy area."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
+		
 pfb:InquiryScope rdf:type owl:Class ;
 	rdfs:label "Inquiry scope"@en ;
-	rdfs:comment "The scope or terms of reference of an inquiry. Sets out the context, constraints and questions which the inquiry seeks to address."@en ;
+	rdfs:comment "The scope or terms of reference of an inquiry, setting out the context, constraints and questions which the inquiry seeks to address."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:WorkPackageType rdf:type owl:Class ;
 	rdfs:label "Work package type"@en ;
-	rdfs:comment "Used to describe the type of a work package. Whilst inquiries have a specific Inquiry subclass, work package type is intended to describe non-inquiry work packages. For example, a collection of hearings before a person is appointed to a public body or a set of hearings where a government minister appears before a committee."@en ;
+	rdfs:comment "A description of the type of a work package. Whilst inquiries have a specific Inquiry subclass, work package type describes work packages which are not associated with inquiries, for example: a collection of hearings before a person is appointed to a public body or a set of hearings where a government minister appears before a committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:BusinessItem rdf:type owl:Class ;
 	rdfs:label "Business item"@en ;
-	rdfs:comment "An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister."@en ;
+	rdfs:comment "An item of business conducted either within or outside Parliament, for example: a second reading debate, the tabling of an Early Day Motion, a laying of a paper, the making of a Statutory Instrument by a government minister."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment "A focus area for a formal body or work package. This might be a government department, a type of legislation, an item of legislation or a SKOS type concept."@en ;
+	rdfs:comment "A focus area for a formal body or work package, for example: a government department, a type of legislation, an item of legislation or a SKOS type concept."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
+	# edited to here
 	
 	
 #######  Object properties ##### 
