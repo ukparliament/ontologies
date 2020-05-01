@@ -106,8 +106,7 @@ pfb:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
 	rdfs:comment "A focus area for a formal body or work package, for example: a government department, a type of legislation, an item of legislation or a SKOS type concept."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-	
-	# edited to here
+
 	
 	
 #######  Object properties ##### 
@@ -118,73 +117,73 @@ pfb:belongsToHouse rdf:type owl:ObjectProperty ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
-
+	
 pfb:hasLeadHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Has lead House"@en ;
-	rdfs:comment "A joint committee will have a lead House responsible for its administration."@en ;
+	rdfs:comment "A joint committee has a lead House, responsible for the administration of the committee."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasParentFormalBody rdf:type owl:ObjectProperty ;
 	rdfs:label "Has parent formal body"@en ;
-	rdfs:comment "Allows for committees to have sub-committees and sub-committees to have parent committees."@en ;
+	rdfs:comment "Relates a sub-committee to its parent committee. "@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:FormalBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:undertakesWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "Undertakes work package"@en ;
-	rdfs:comment "Allows for formal bodies to take on work packages like inquiries. A joint inquiry will have more than one associated formal body."@en ;
+	rdfs:comment "Relates a formal body to a work package undertaken by the formal body. A joint inquiry will be undertaken by more than one formal body."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:hasParentWorkPackage rdf:type owl:ObjectProperty ;
 	rdfs:label "Has parent work package"@en ;
-	rdfs:comment "Allows for work packages to have parent work packages. e.g. a sub-inquiry can belong to a wider inquiry."@en ;
+	rdfs:comment "Relates a work package to the work package it forms a part of, for example: a sub-inquiry forming part of a wider inquiry."@en ;
 	rdfs:domain pfb:WorkPackage ;
 	rdfs:range pfb:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasInquiryScope rdf:type owl:ObjectProperty ;
 	rdfs:label "Has inquiry scope"@en ;
-	rdfs:comment "Relates an inquiry to its scope or terms of reference."@en ;
+	rdfs:comment "Relates an inquiry to the scope of the inquiry.."@en ;
 	rdfs:domain pfb:Inquiry ;
 	rdfs:range pfb:InquiryScope ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasWorkPackageType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has work package type"@en ;
-	rdfs:comment "Defines the type of a work package where the work package is not an inquiry."@en ;
+	rdfs:comment "Relates a work package to the type of the work package, where the work package is not an inquiry."@en ;
 	rdfs:domain pfb:WorkPackage ;
 	rdfs:range pfb:WorkPackageType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Forms part of"@en ;
-	rdfs:comment "Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages. For example, a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package."@en ;
+	rdfs:comment "Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package."@en ;
 	rdfs:domain pfb:BusinessItem ;
 	rdfs:range pfb:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:hasAgent rdf:type owl:ObjectProperty ;
 	rdfs:label "Has agent"@en ;
-	rdfs:comment "Associates a business item with the formal body responsible for organising it. A business item may be run by more than one formal body. For example, a joint evidence session."@en ;
+	rdfs:comment "Relates a business item to the formal body responsible for its organisation. A business item may be organised by more than one formal body, for example: a joint evidence session."@en ;
 	rdfs:domain pfb:BusinessItem ;
 	rdfs:range pfb:FormalBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 	
 pfb:formalBodyFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "Formal body focus"@en ;
-	rdfs:comment "Associates a formal body with its area of focus."@en ;
+	rdfs:comment "Relates a formal body to the object of its focus."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range pfb:Focus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
 
 pfb:workPackageFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "Work package focus"@en ;
-	rdfs:comment "Associates a work package with its area of focus."@en ;
+	rdfs:comment "Relates a work package to the object of its focus."@en ;
 	rdfs:domain pfb:WorkPackage ;
 	rdfs:range pfb:Focus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
@@ -201,7 +200,7 @@ pfb:hasFocusCategory rdf:type owl:ObjectProperty ;
 
 pfb:remit rdf:type owl:DatatypeProperty ;
 	rdfs:label "Remit"@en ;
-	rdfs:comment "The task or area of activity officially assigned to a formal body. This is a textual description as opposed to Focus which points at entities to describe the areas to be examined."@en ;
+	rdfs:comment "A textual description of the task or area of activity assigned to a formal body."@en ;
 	rdfs:domain pfb:FormalBody ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/formal-body/> .
