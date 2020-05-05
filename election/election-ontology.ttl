@@ -28,11 +28,9 @@ pe:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-	# edited to here
-	
 pe:GeneralElection rdf:type owl:Class ;
 	rdfs:label "GeneralElection"@en ;
-	rdfs:comment "A set of elections held at the same time."@en ;
+	rdfs:comment "A set of elections to seats in the House of Commons held in all UK constituencies concurrently."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Population rdf:type owl:Class ;
@@ -43,18 +41,17 @@ pe:Population rdf:type owl:Class ;
 pe:Electorate rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
 	rdfs:label "Electorate"@en ;
-	rdfs:comment "A group of people who at the time of an election are eligible to vote e.g. a constituency electorate or members of the Commons voting for the Speaker of the Commons. "@en ;
+	rdfs:comment "A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
-	rdfs:label "ConstituencyGroup"@en ;
-	rdfs:comment "A group of people represented by the winner of an election. Includes people other than those eligible to vote (e.g. children, prisoners)."@en ;
+	rdfs:label "A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 	
 pe:ConstituencyAreaType rdf:type owl:Class ;
 	rdfs:label "ConstituencyAreaType"@en ;
-	rdfs:comment "The type of constituency area (borough or county)."@en ;
+	rdfs:comment "The type of constituency area, for example: a borough or a county."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 
 pe:ConstituencyArea rdf:type owl:Class ;
@@ -64,24 +61,26 @@ pe:ConstituencyArea rdf:type owl:Class ;
 	
 pe:Candidacy rdf:type owl:Class ;
 	rdfs:label "Candidacy"@en ;
-	rdfs:comment "A person standing (possibly for a party) in an election e.g. Phillip Hammond standing for the Conservative Party in Runnymede and Weybridge at the 2015 General Election."@en ;
+	rdfs:comment "A person standing as a candidate in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:CandidacyResult rdf:type owl:Class ;
 	rdfs:label "CandidacyResult"@en ;
-	rdfs:comment "The result of a candidacy."@en ;
+	rdfs:comment "The result of a person’s candidacy in an election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:WinningCandidacyResult rdf:type owl:Class ;
 	rdfs:subClassOf pe:CandidacyResult ;
 	rdfs:label "WinningCandidacyResult"@en ;
-	rdfs:comment "The details of the winning candidacy in an election."@en ;
+	rdfs:comment "Identifies a winning candidacy in an election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Certification rdf:type owl:Class ;
 	rdfs:label "Certification"@en ;
-	rdfs:comment "A candidacy's certification by a political party to stand in an election on behalf of that party. A person may be certified by more than one party. e.g. The Labour Party and The Co-operative Party."@en ;
+	rdfs:comment "A certification of a candidate by a political party, registered by the Electoral Commission, to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+										# edited to here
 
 pe:Party rdf:type owl:Class ;
 	rdfs:label "Party"@en ;
