@@ -128,73 +128,72 @@ pe:eligibleToVoteIn rdf:type owl:ObjectProperty ;
 	rdfs:range pe:Election ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-																# edited to here
-	
-	
 pe:hasElectorate rdf:type owl:ObjectProperty ;
-	rdfs:label "hasElectorate"@en ;
-	rdfs:comment "Relates a geographic constituency to the group of eligible voters."@en ;
+	rdfs:label "Has electorate"@en ;
+	rdfs:comment "Relates a geographic area to a group of people who at the time of an election are eligible to vote in the election for that area."@en ;
 	rdfs:domain pe:ConstituencyArea ;
 	rdfs:range pe:Electorate  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasConstituencyGroup rdf:type owl:ObjectProperty ;
-	rdfs:label "hasConstituencyGroup"@en ;
-	rdfs:comment "Relates a geographic constituency to its population."@en ;
+	rdfs:label "Has constituency group"@en ;
+	rdfs:comment "Relates a geographic area to its population."@en ;
 	rdfs:domain pe:ConstituencyArea ;
 	rdfs:range pe:ConstituencyGroup ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidacy rdf:type owl:ObjectProperty ;
-	rdfs:label "hasCandidacy"@en ;
-	rdfs:comment "Relates an election to a candidacy."@en ;
+	rdfs:label "Has candidacy"@en ;
+	rdfs:comment "Relates an election to a candidacy within that election."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:Candidacy  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCertification rdf:type owl:ObjectProperty ;
-	rdfs:label "hasCertification"@en ;
-	rdfs:comment "Relates a candidacy to a certification."@en ;
+	rdfs:label "Has certification"@en ;
+	rdfs:comment "Relates a candidacy to a certification of the candidate by a political party."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:Certification  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:adjunctTo rdf:type owl:ObjectProperty ;
-	rdfs:label "adjunctTo"@en ;
-	rdfs:comment "Relates an adjunct certification to a certification. Used to relate a Co-operative Party certification to a Labour Party certification."@en ;
+	rdfs:label "Adjunct to"@en ;
+	rdfs:comment "Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:Certification  ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:toParty rdf:type owl:ObjectProperty ;
-	rdfs:label "toParty"@en ;
-	rdfs:comment "Relates a certification to the certifying party."@en ;
+	rdfs:label "To party"@en ;
+	rdfs:comment "Relates a certification of a candidate to the party issuing the certification."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:Party  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidate rdf:type owl:ObjectProperty ;
-	rdfs:label "hasCandidate"@en ;
-	rdfs:comment "Relates a candidacy to a person."@en ;
+	rdfs:label "Has candidate"@en ;
+	rdfs:comment "Relates a candidacy to a person being a candidate."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:Person  ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
-	rdfs:label "hasCandidacyResult"@en ;
-	rdfs:comment "Relates a candidacy to a result."@en ;
+	rdfs:label "Has candidacy result"@en ;
+	rdfs:comment "Relates a candidacy to the result of that candidacy in an election."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:CandidacyResult  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:establishesIncumbency rdf:type owl:ObjectProperty ;
-	rdfs:label "establishesIncumbency"@en ;
+	rdfs:label "Establishes incumbency"@en ;
 	rdfs:comment "Relates a winning candidacy result to an electoral incumbency."@en ;
 	rdfs:domain pe:WinningCandidacyResult  ;
 	rdfs:range pe:ElectoralIncumbency  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .				
 
 #######  Data properties ##### 
+
+						# edited to here
 
 pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "voteCount"@en ;
