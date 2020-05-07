@@ -193,21 +193,21 @@ pe:establishesIncumbency rdf:type owl:ObjectProperty ;
 
 #######  Data properties ##### 
 
-						# edited to here
-
 pe:voteCount rdf:type owl:DatatypeProperty ;
-	rdfs:label "voteCount"@en ;
-	rdfs:comment "Total number of votes cast."@en ;
+	rdfs:label "Vote count"@en ;
+	rdfs:comment "The number of accepted votes recorded for a candidacy."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:voteShare rdf:type owl:DatatypeProperty ;
-	rdfs:label "voteShare"@en ;
-	rdfs:comment "The share of the vote won by a candidacy."@en ;
+	rdfs:label "Vote share"@en ;
+	rdfs:comment "The share of a vote won in an election by a candidate as a fraction of the accepted votes."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+	# edited to here
 
 pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "resultPosition"@en ;
