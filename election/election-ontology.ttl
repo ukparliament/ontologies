@@ -206,75 +206,59 @@ pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-	# edited to here
 
 pe:resultPosition rdf:type owl:DatatypeProperty ;
-	rdfs:label "resultPosition"@en ;
-	rdfs:comment "The relative position (ordinality) of the candidacy in the election."@en ;
+	rdfs:label "Result position"@en ;
+	rdfs:comment "The relative position of the result of the candidacy in an election."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:populationSize rdf:type owl:DatatypeProperty ;
-	rdfs:label "populationSize"@en ;
-	rdfs:comment "A population size."@en ;
+	rdfs:label "Population size"@en ;
+	rdfs:comment "The size of a population, for example: an electorate or constituency group."@en ;
 	rdfs:domain pe:Population ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:recordedDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "recordedDate"@en ;
-	rdfs:comment "The date at which population figures are recorded."@en ;
+	rdfs:label "Recorded date"@en ;
+	rdfs:comment "The date on which a population size was recorded."@en ;
 	rdfs:domain pe:Population ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
-
-pe:majority rdf:type owl:DatatypeProperty ;
-	rdfs:label "majority"@en ;
-	rdfs:comment "The difference between the number of votes for the winning candidacy and the number of votes for the second placed candidacy."@en ;
-	rdfs:domain pe:WinningCandidacyResult ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:partyGained rdf:type owl:DatatypeProperty ;
-	rdfs:label "partyGained"@en ;
-	rdfs:comment "Whether the party with the winning candidacy gained a seat not won by them at the previous election."@en ;
+	rdfs:label "Party gained"@en ;
+	rdfs:comment "Whether the party certification of the winning candidate at an election differs from the party certification of the winning candidate at the preceding election."@en ;
 	rdfs:domain pe:WinningCandidacyResult ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:validBallotsCast rdf:type owl:DatatypeProperty ;
-	rdfs:label "validBallotsCast"@en ;
-	rdfs:comment "The number of valid ballots cast by the electorate in the election. Note that turnout is derived as a percentage of ( people who voted / people registered to vote ) but is calculated differently by different organisations. Academics and the House of Commons Library use only the valid ballots, but Returning Officers tend to use all ballots cast, including invalid (spoilt) ballots."@en ;
+pe:totalVotesCast rdf:type owl:DatatypeProperty ;
+	rdfs:label "Total votes cast"@en ;
+	rdfs:comment "The total number of votes cast across all candidacies in an election, including spoiled ballots. Turnout is defined by the House of Commons Library as the total number of votes cast and not spoiled, divided by the size of the electorate. This definition conforms to the generally accepted academic usage. Turnout is generally defined by Returning Officers as the total number of votes cast divided by the size of the electorate."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:invalidBallotsCast rdf:type owl:DatatypeProperty ;
-	rdfs:label "invalidBallotsCast"@en ;
-	rdfs:comment "The number of invalid (spoilt) ballots cast by the electorate in the election."@en ;
+		
+pe:ballotsSpoiled rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ballots spoiled"@en ;
+	rdfs:comment "The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or void for uncertainty."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:round rdf:type owl:DatatypeProperty ;
 	rdfs:label "round"@en ;
-	rdfs:comment "The number of the round in a multi-round election."@en ;
+	rdfs:comment "The number of the round in an election having more than one round of voting."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:isNotional rdf:type owl:DatatypeProperty ;
-	rdfs:label "isNotional"@en ;
-	rdfs:comment "Determines whether a general election in the database is a real general election or a notional general election. Notional general elections can be modelled with different constituency boundaries to experiment with potential outcomes."@en ;
-	rdfs:domain pe:GeneralElection ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
 pe:declarationTime rdf:type owl:DatatypeProperty ;
 	rdfs:label "declarationTime"@en ;
-	rdfs:comment "The time at which results were declared for a specific election. e.g. by the returning officer in a constituency election."@en ;
+	rdfs:comment "The date and time at which results were declared for an election, for example: the declaration of the results in a constituency election, by the Returning Officer."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
