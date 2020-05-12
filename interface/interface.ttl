@@ -10,6 +10,7 @@
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix pbi: <http://parliament.uk/ontologies/business-item/> . 
 @prefix pdes: <http://parliament.uk/ontologies/description/> . 
+@prefix pe: <http://parliament.uk/ontologies/election/> .
 @prefix pfb: <http://parliament.uk/ontologies/formal-body/> . 
 @prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> . 
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
@@ -27,6 +28,7 @@
 	owl:imports <https://ukparliament.github.io/ontologies/agency/agency-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/business-item/business-item-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/description/description-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/election/election-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body/formal-body-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
@@ -149,6 +151,18 @@ pa:Person
 pl:Person
 	owl:equivalentClass
 	pa:Person .
+pa:Person
+	owl:equivalentClass
+	pe:Person .
+pe:Person
+	owl:equivalentClass
+	pa:Person .
+pe:Person
+	owl:equivalentClass
+	pl:Person .
+pl:Person
+	owl:equivalentClass
+	pe:Person .
 	
 # Place
 pa:Place
@@ -157,7 +171,15 @@ pa:Place
 pbi:Place
 	owl:equivalentClass
 	pa:Place .
-
+	
+# Political party
+pe:PoliticalParty
+	owl:equivalentClass
+	ppb:PoliticalParty .
+ppb:PoliticalParty
+	owl:equivalentClass
+	pa:PoliticalParty .
+	
 # Procedure
 ppr:Procedure
 	owl:equivalentClass
@@ -210,6 +232,11 @@ plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	rdfs:subClassOf
 	pdes:DescribingThing .
 	
+# Electoral incumbency
+pe:ElectoralIncumbency
+	rdfs:subClassOf
+	pa:Incumbency .
+
 # Formal body
 pfb:FormalBody
 	rdfs:subClassOf
@@ -269,6 +296,11 @@ ppb:ParliamentaryBloc
 	
 # Political party
 ppb:PoliticalParty
+	rdfs:subClassOf
+	pa:Group .
+	
+# Population
+ppb:Population
 	rdfs:subClassOf
 	pa:Group .
 
