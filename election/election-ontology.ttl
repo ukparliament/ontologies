@@ -81,8 +81,8 @@ pe:Certification rdf:type owl:Class ;
 	rdfs:comment "A certification of a candidate by a political party, registered by the Electoral Commission, to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
-pe:Party rdf:type owl:Class ;
-	rdfs:label "Party"@en ;
+pe:PoliticalParty rdf:type owl:Class ;
+	rdfs:label "Political party"@en ;
 	rdfs:comment "A group registered with the Electoral Commission as a political party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
@@ -167,7 +167,7 @@ pe:toParty rdf:type owl:ObjectProperty ;
 	rdfs:label "To party"@en ;
 	rdfs:comment "Relates a certification of a candidate to the party issuing the certification."@en ;
 	rdfs:domain pe:Certification ;
-	rdfs:range pe:Party  ;
+	rdfs:range pe:PoliticalParty  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidate rdf:type owl:ObjectProperty ;
