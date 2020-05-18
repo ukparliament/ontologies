@@ -64,7 +64,7 @@ In order to ensure that research service output remains findable to users both i
 
 ## Fixing search
 
-* Focus on optimising for indexing, making internal search easier to implement.
+* Focus on optimising for search engine indexing, making internal search easier to implement.
 
 * Concentrate efforts on things that improve both internal and external search. Driving information architecture through information management and maximising link density to content will help with this.
 
@@ -84,7 +84,7 @@ In order to ensure that research service output remains findable to users both i
 
 ## Sitemap
 
-A work in progress, target sitemap for the House of Commons Library, the House of Lords Library and Post:
+A work in progress, target sitemap for the House of Commons Library, the House of Lords Library and POST:
 
 * [Sitemap](sitemap.pdf)
 
