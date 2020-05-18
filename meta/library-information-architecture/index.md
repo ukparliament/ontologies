@@ -32,7 +32,7 @@ In order to ensure that research service output remains findable to users both i
 
 * Design URLs to provide findable content.
 
-* Build search engine value over time aggregations.
+* Maximise search engine value by exploiting aggregations that build over time.
 
 * Integrate with the wider web.
 
