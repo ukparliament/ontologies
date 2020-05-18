@@ -26,7 +26,7 @@ In order to ensure that research service output remains findable to users both i
 
 * Design for collaboration between Library sections and between research services.
 
-* Credit researchers by name.
+* Credit researchers by name and by link. Always with informed consent.
 
 * Maximise the value across the lifecycle of our content.
 
