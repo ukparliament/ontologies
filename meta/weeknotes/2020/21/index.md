@@ -14,19 +14,23 @@ A little while back, the team did [some work on made affirmatives](https://trell
 
 In the course of all these changes, Jayne and Michael noticed they'd added allows routes from [SLSC](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee) decisions to the tabling of an approval motion in the House of Lords. And this in both affirmative procedures. They had no idea when they happened or indeed why. But as any fule kno it quite clearly broke JCSI scrutiny reserve under [Standing Order 72](https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/the-standing-orders-of-the-house-of-lords-relating-to-public-business/#jump-link-12). So those routes [have now been removed](https://trello.com/c/nClMjjLA/114-remove-allows-route-from-slsc-to-lords-motion-to-approve-the-instrument-tabled-by-the-govt).
 
-
-
-
-
-
-
-
 ## Your weekly egg timer update
 
-If you tuned in last week, you'll know that Michael's [egg timer](http://parliament-calendar.herokuapp.com/) date handling code was, for want of a better word, somewhat shonky. This was not a reflection on his handling of sitting days or adjourned days or prorogued days or dissolution days or parliamentary days as yet unannounced. All of which he's fairly confident work just fine. This was his handling of normal days. Like the ones that appear in calendars. To sidestep said shonkiness, he's now stripped out his calendar data class and [monkey patched](https://en.wikipedia.org/wiki/Monkey_patch) the [Ruby date class](https://ruby-doc.org/stdlib-2.7.1/libdoc/date/rdoc/Date.html). This particular piece of monkey patching seems quite safe since it seems unlikely method names such as is_commons_short_adjournment? are part of anybody's core date handling. This patching took up a good part of Monday and Wednesday and did not really help to prove the concept. Which was the point of this work. By Wednesday morning he was pretty much back to where he was on Friday night. But happier. And that's not nothing. In these times (TM).
+If you tuned in last week, you'll know that Michael's [egg timer](http://parliament-calendar.herokuapp.com/) date handling code was, for want of a better word, somewhat shonky. This was not a reflection on his handling of sitting days or adjourned days or prorogued days or dissolution days or parliamentary days as yet unannounced. All of which he's fairly confident work just fine. This was his handling of normal days. Like the ones that appear in calendars. To sidestep said shonkiness, he's now stripped out his calendar date class and [monkey patched](https://en.wikipedia.org/wiki/Monkey_patch) the [Ruby date class](https://ruby-doc.org/stdlib-2.7.1/libdoc/date/rdoc/Date.html). This particular piece of monkey patching appears quite safe since it seems unlikely method names such as `is_commons_short_adjournment?` are part of many people's core date handling. The patching took up a good part of Monday and Tuesday and did not really help to prove the concept. Which was the point of this work. By Wednesday morning he was pretty much back to where he was on Friday night. But happier. And that's not nothing. In these troubled times (TM).
 
-Whilst Michael took apart his code and rewrote it all, Librarian Jayshree was populating our Google calendars with anticipated dates for future sittings. Obviously this anticipation is slightly less reliable than it might normally be. Because the sitting patterns of both Houses are less predictable. In these times (TM).
+Whilst Michael took apart his code and rewrote it all, Librarian Jayshree was populating our Google calendars with anticipated dates for future sittings. Obviously this anticipation is slightly less reliable than it might normally be. Because the sitting patterns of both Houses are less predictable. In these troubled times (TM).
 
-The Proposed Negative Statutory Instrument calculation had been kicking off its clock on the first joint sitting day as indeed it should have been. But Michael got confused by some paperwork and changed it to the first sitting day of either House. Following chats with JO Jane and Librarian Jayne, Michael has now changed it back to starting from the first joint sitting day. So again, he's roughly back to where he was last week.
+The Proposed Negative Statutory Instrument calculation had been kicking off its clock on the first joint sitting day as indeed it should have been. But Michael got confused by some paperwork and changed it to the first sitting day of either House. Following chats with the Ja(y)nes, Michael has now changed it back to starting from the first joint sitting day. So again, he's roughly back to where he was last week.
 
-In actual progress news, he's now added a calculator for SIs laid before both Houses to the existing list of PNSIs and Commons only SIs. Which *seems* to work but does require testing. A lot of testing.
+In actual progress news, he's now added a calculator for SIs laid before both Houses to the existing list of PNSIs and Commons only SIs. He's also added a calculator for made affirmatives laid before both Houses. All of which *seems* to work but does require testing. A lot of testing.
+
+Meanwhile, Jayshree has set off backdating our calendars again to the start of the 2017-19 session. Once we have that Jayne will be able to test the calculators against what happened in actuality. And then we'll know whether any of this was worth anything.
+
+Next week, Michael plans to add calculators for Commons only made affirmatives, Legislative Reform Orders, Localism Orders and Public Body Orders. Whilst in no way attempting to put off working on the treaty scrutiny calendar. Which uses a slightly different definition of 'day' and looks a hell of a lot harder.
+
+## Tiny chisel news
+
+Robert and Michael's tiny chisels have been chipping away at model level description comments. Because [this list](https://ukparliament.github.io/ontologies/) looked terrible, read terribly and made them both sad. Some improvement has been detected. Work continues as work always does.
+
+They've also added the [house membership model](https://ukparliament.github.io/ontologies/house-membership/house-membership-ontology.html) to the [interface class definitions](https://ukparliament.github.io/ontologies/interface/interface.html) so the [huge ever growing pulsating brain that rules from the centre of the etc](https://api.parliament.uk/webvowl/#opts=sidebar=0;doc=0;mode_compact=true;mode_colorExt=false;#iri=https://ukparliament.github.io/ontologies/interface/interface.ttl) has grown ever so slightly larger. But you still have to worry about all those subclasses.
+
