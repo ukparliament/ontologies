@@ -50,9 +50,39 @@
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ] .
+		
+
+#######  Classes #####
+#######  Declared here to allow equivalent class statements without linking every model to every other model #####
+
+pint:Person rdf:type owl:Class ;
+	rdfs:label "Person"@en ;
+	rdfs:comment "A person."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+
 
 
 #######  Equivalent classes #####
+
+# Person
+pint:Person
+	owl:equivalentClass
+	pa:Person .
+pint:Person
+	owl:equivalentClass
+	pe:Person .
+pint:Person
+	owl:equivalentClass
+	pl:Person .
+pint:Person
+	owl:equivalentClass
+	ppb:Person .
+
+
+
+
+
+#################
 
 # Business item
 ppr:BusinessItem
