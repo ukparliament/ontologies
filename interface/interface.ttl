@@ -104,6 +104,11 @@ pint:Procedure rdf:type owl:Class ;
 	rdfs:label "Procedure"@en ;
 	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 
 
@@ -204,6 +209,14 @@ pint:Procedure
 	owl:equivalentClass
 	ppr:Procedure .
 	
+# Session
+pint:Session
+	owl:equivalentClass
+	pl:Session .
+pint:Session
+	owl:equivalentClass
+	pma:Session .
+	
 
 	
 
@@ -233,13 +246,7 @@ pint:Procedure
 	
 
 	
-# Session
-pma:Session
-	owl:equivalentClass
-	pl:Session .
-pl:Session
-	owl:equivalentClass
-	pma:Session .
+
 	
 # Work package
 pfb:WorkPackage
