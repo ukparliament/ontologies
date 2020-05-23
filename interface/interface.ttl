@@ -74,15 +74,35 @@ pint:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:Laying rdf:type owl:Class ;
+	rdfs:label "Laying"@en ;
+	rdfs:comment "The act of making available a paper and any supporting documents into a House. Papers may be laid before both Houses on the same day."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+
+pint:LayingDuty rdf:type owl:Class ;
+	rdfs:label "Laying duty"@en ;
+	rdfs:comment "The duty of a body to lay papers before a House as imposed by an Act of Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 pint:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 	
-pint:Laying rdf:type owl:Class ;
-	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of making available a paper and any supporting documents into a House. Papers may be laid before both Houses on the same day."@en ;
+pint:Place rdf:type owl:Class ;
+	rdfs:label "Place"@en ;
+	rdfs:comment "A place named in a geography."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:PoliticalParty rdf:type owl:Class ;
+	rdfs:label "Political party"@en ;
+	rdfs:comment "A group registered with the Electoral Commission as a political party."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+
+pint:Procedure rdf:type owl:Class ;
+	rdfs:label "Procedure"@en ;
+	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 
@@ -129,6 +149,22 @@ pint:House
 pint:House
 	owl:equivalentClass
 	ppr:House .
+	
+# Laying
+pint:Laying
+	owl:equivalentClass
+	pl:Laying .
+pint:Laying
+	owl:equivalentClass
+	pma:Laying .
+	
+# Laying duty
+pint:LayingDuty
+	owl:equivalentClass
+	pl:LayingDuty .
+pint:LayingDuty
+	owl:equivalentClass
+	plg:LayingDuty .
 
 # Person
 pint:Person
@@ -144,13 +180,33 @@ pint:Person
 	owl:equivalentClass
 	ppb:Person .
 	
-# Laying
-pint:Laying
+# Place
+pint:Place
 	owl:equivalentClass
-	pl:Laying .
-pint:Laying
+	pa:Place .
+pint:Place
 	owl:equivalentClass
-	pma:Laying .
+	pbi:Place .
+	
+# Political party
+pint:PoliticalParty
+	owl:equivalentClass
+	pe:PoliticalParty .
+pint:PoliticalParty
+	owl:equivalentClass
+	ppb:PoliticalParty .
+	
+# Procedure plg ppr
+pint:Procedure
+	owl:equivalentClass
+	plg:Procedure .
+pint:Procedure
+	owl:equivalentClass
+	ppr:Procedure .
+	
+
+	
+
 
 
 
@@ -168,38 +224,14 @@ pint:Laying
 	
 
 
-# Laying Duty
-pl:LayingDuty
-	owl:equivalentClass
-	plg:LayingDuty .
-plg:LayingDuty
-	owl:equivalentClass
-	pl:LayingDuty .
+
 	
 
-# Place
-pa:Place
-	owl:equivalentClass
-	pbi:Place .
-pbi:Place
-	owl:equivalentClass
-	pa:Place .
+
 	
-# Political party
-pe:PoliticalParty
-	owl:equivalentClass
-	ppb:PoliticalParty .
-ppb:PoliticalParty
-	owl:equivalentClass
-	pa:PoliticalParty .
+
 	
-# Procedure
-ppr:Procedure
-	owl:equivalentClass
-	plg:Procedure .
-plg:Procedure
-	owl:equivalentClass
-	ppr:Procedure .
+
 	
 # Session
 pma:Session
