@@ -59,10 +59,26 @@ pint:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:Laying rdf:type owl:Class ;
+	rdfs:label "Laying"@en ;
+	rdfs:comment "The act of making available a paper and any supporting documents into a House. Papers may be laid before both Houses on the same day."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 
 
 #######  Equivalent classes #####
+
+# Business item
+pint:BusinessItem
+	owl:equivalentClass
+	pbi:BusinessItem .
+pint:BusinessItem
+	owl:equivalentClass
+	pfb:BusinessItem .
+pint:BusinessItem
+	owl:equivalentClass
+	ppr:BusinessItem .
 
 # Person
 pint:Person
@@ -77,6 +93,14 @@ pint:Person
 pint:Person
 	owl:equivalentClass
 	ppb:Person .
+	
+# Laying
+pint:Laying
+	owl:equivalentClass
+	pl:Laying .
+pint:Laying
+	owl:equivalentClass
+	pma:Laying .
 
 
 
@@ -84,25 +108,7 @@ pint:Person
 
 #################
 
-# Business item
-ppr:BusinessItem
-	owl:equivalentClass
-	pbi:BusinessItem .
-pbi:BusinessItem
-	owl:equivalentClass
-	ppr:BusinessItem .
-pfb:BusinessItem
-	owl:equivalentClass
-	ppr:BusinessItem .
-ppr:BusinessItem
-	owl:equivalentClass
-	pfb:BusinessItem .
-pfb:BusinessItem
-	owl:equivalentClass
-	pbi:BusinessItem .
-pbi:BusinessItem
-	owl:equivalentClass
-	pfb:BusinessItem .
+
 	
 # Business step
 ppr:BusinessStep
@@ -158,13 +164,7 @@ ppr:House
 	owl:equivalentClass
 	pfb:House .
 	
-# Laying
-pma:Laying
-	owl:equivalentClass
-	pl:Laying .
-pl:Laying
-	owl:equivalentClass
-	pma:Laying .
+
 
 # Laying Duty
 pl:LayingDuty
