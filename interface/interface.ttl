@@ -64,6 +64,11 @@ pint:BusinessStep rdf:type owl:Class ;
 	rdfs:label "Business step"@en ;
 	rdfs:comment "A business step is a step that can be actualised by a business item."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
+	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
+	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 pint:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
@@ -91,12 +96,20 @@ pint:BusinessItem
 	ppr:BusinessItem .
 	
 # Business step
-ppr:BusinessStep
-	owl:equivalentClass
-	ppsa:BusinessStep .
-ppsa:BusinessStep
+pint:BusinessStep
 	owl:equivalentClass
 	ppr:BusinessStep .
+pint:BusinessStep
+	owl:equivalentClass
+	ppsa:BusinessStep .
+	
+# Draft and made statutory instrument subject to parliamentary procedure
+pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	owl:equivalentClass
+	plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
+pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+	owl:equivalentClass
+	ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
 
 # Person
 pint:Person
@@ -130,13 +143,7 @@ pint:Laying
 	
 
 	
-# Draft and made statutory instrument subject to parliamentary procedure
-plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-	owl:equivalentClass
-	ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
-ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-	owl:equivalentClass
-	plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
+
 	
 # House
 ppr:House
