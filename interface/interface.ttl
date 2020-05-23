@@ -69,6 +69,11 @@ pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
 	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 pint:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
@@ -111,6 +116,20 @@ pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	owl:equivalentClass
 	ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure .
 
+# House
+pint:House
+	owl:equivalentClass
+	pfb:House .
+pint:House
+	owl:equivalentClass
+	pl:House .
+pint:House
+	owl:equivalentClass
+	pma:House .
+pint:House
+	owl:equivalentClass
+	ppr:House .
+
 # Person
 pint:Person
 	owl:equivalentClass
@@ -145,43 +164,7 @@ pint:Laying
 	
 
 	
-# House
-ppr:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	ppr:House .
-pma:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	pma:House .
-pma:House
-	owl:equivalentClass
-	ppr:House .
-ppr:House
-	owl:equivalentClass
-	pma:House .
-pfb:House
-	owl:equivalentClass
-	pma:House .
-pma:House
-	owl:equivalentClass
-	pfb:House .
-pfb:House
-	owl:equivalentClass
-	pl:House .
-pl:House
-	owl:equivalentClass
-	pfb:House .	
-pfb:House
-	owl:equivalentClass
-	ppr:House .
-ppr:House
-	owl:equivalentClass
-	pfb:House .
+
 	
 
 
@@ -193,43 +176,6 @@ plg:LayingDuty
 	owl:equivalentClass
 	pl:LayingDuty .
 	
-# Person
-pa:Person
-	owl:equivalentClass
-	pl:Person .
-pl:Person
-	owl:equivalentClass
-	pa:Person .
-pa:Person
-	owl:equivalentClass
-	pe:Person .
-pe:Person
-	owl:equivalentClass
-	pa:Person .
-pe:Person
-	owl:equivalentClass
-	pl:Person .
-pl:Person
-	owl:equivalentClass
-	pe:Person .
-ppb:Person
-	owl:equivalentClass
-	pa:Person .
-pa:Person
-	owl:equivalentClass
-	ppb:Person .
-ppb:Person
-	owl:equivalentClass
-	pe:Person .
-pe:Person
-	owl:equivalentClass
-	ppb:Person .
-ppb:Person
-	owl:equivalentClass
-	pl:Person .
-pl:Person
-	owl:equivalentClass
-	ppb:Person .
 
 # Place
 pa:Place
