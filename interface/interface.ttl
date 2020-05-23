@@ -55,6 +55,16 @@
 #######  Classes #####
 #######  Declared here to allow equivalent class statements without linking every model to every other model #####
 
+pint:BusinessItem rdf:type owl:Class ;
+	rdfs:label "Business item"@en ;
+	rdfs:comment "An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:BusinessStep rdf:type owl:Class ;
+	rdfs:label "Business step"@en ;
+	rdfs:comment "A business step is a step that can be actualised by a business item."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+
 pint:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
@@ -79,6 +89,14 @@ pint:BusinessItem
 pint:BusinessItem
 	owl:equivalentClass
 	ppr:BusinessItem .
+	
+# Business step
+ppr:BusinessStep
+	owl:equivalentClass
+	ppsa:BusinessStep .
+ppsa:BusinessStep
+	owl:equivalentClass
+	ppr:BusinessStep .
 
 # Person
 pint:Person
@@ -110,13 +128,7 @@ pint:Laying
 
 
 	
-# Business step
-ppr:BusinessStep
-	owl:equivalentClass
-	ppsa:BusinessStep .
-ppsa:BusinessStep
-	owl:equivalentClass
-	ppr:BusinessStep .
+
 	
 # Draft and made statutory instrument subject to parliamentary procedure
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
