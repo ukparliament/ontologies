@@ -109,6 +109,11 @@ pint:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
 	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
+pint:WorkPackage rdf:type owl:Class ;
+	rdfs:label "Work package"@en ;
+	rdfs:comment "A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
 
 
@@ -217,44 +222,23 @@ pint:Session
 	owl:equivalentClass
 	pma:Session .
 	
-
-	
-
-
-
-
-
-
-#################
-
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-
-	
-
-	
-
-	
-
-	
 # Work package
-pfb:WorkPackage
-	owl:equivalentClass
-	ppr:WorkPackage .
-ppr:WorkPackage
+pint:WorkPackage
 	owl:equivalentClass
 	pfb:WorkPackage .
+pint:WorkPackage
+	owl:equivalentClass
+	pppr:WorkPackage .
+	
+
+	
+
+
+
+
+
+
+
 
 
 
