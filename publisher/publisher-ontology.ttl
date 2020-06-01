@@ -17,44 +17,46 @@
 
 ppub:Agent rdf:type owl:Class ;
 	rdfs:label "Agent"@en ;
-	rdfs:comment "An agent. The superset of all people and all groups of people."@en ;
+	rdfs:comment "Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:Group rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Agent ;
 	rdfs:label "Group"@en ;
-	rdfs:comment "A group of people or a group of groups or a group of people and groups."@en ;
+	rdfs:comment "A group of people. Groups may contain other groups or be empty."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:Publisher rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Agent ;
 	rdfs:label "Publisher"@en ;
-	rdfs:comment "A publisher of recorded material."@en ;
+	rdfs:comment "An entity responsible for making a resource available."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:Board rdf:type owl:Class ;
+ppub:EditorialBoard rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Group ;
-	rdfs:label "Board"@en ;
-	rdfs:comment "A group of people who direct the publisher e.g. POST has a board made up of Members of Parliament who consider and approve research areas to be covered."@en ;
+	rdfs:label "Editorial board"@en ;
+	rdfs:comment "A group overseeing a publisher, for example: the board of POST, made up of Members of Parliament, considering and approving areas of research."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:House rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Group ;
 	rdfs:label "House"@en ;
-	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
+	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:Library rdf:type owl:Class ;
+ppub:ResearchService rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Publisher ;
-	rdfs:label "Library"@en ;
-	rdfs:comment "One of the two parliamentary libraries. Either the House of Commons Library or the House of Lords Library."@en ;
+	rdfs:label "Research service"@en ;
+	rdfs:comment "A group of researchers, for example: in the Library of the House of Commons, in the Library of the House of Lords or the Parliamentary Office of Science and Technology."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:LibrarySection rdf:type owl:Class ;
+ppub:ResearchSection rdf:type owl:Class ;
 	rdfs:subClassOf ppub:Publisher ;
-	rdfs:label "LibrarySection"@en ;
-	rdfs:comment "The House of Commons Library is divided into sections some of which are research sections and publishers. e.g. the Parliament and Constitution Centre."@en ;
+	rdfs:label "Research section"@en ;
+	rdfs:comment "A group of researchers within the Library of the House of Commons having a particular focus, for example: the Parliament and Constitution Centre."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+					# edited to here
 	
 ppub:Concept rdf:type owl:Class ;
 	rdfs:label "Concept"@en ;
@@ -64,30 +66,30 @@ ppub:Concept rdf:type owl:Class ;
 
 ##### Object properties ####
 
-ppub:hasBoard rdf:type owl:ObjectProperty ;
-	rdfs:label "hasBoard"@en ;
+ppub:hasEditorialBoard rdf:type owl:ObjectProperty ;
+	rdfs:label "Has editorial board"@en ;
 	rdfs:comment "Relates a publisher to its board."@en ;
 	rdfs:domain ppub:Publisher ;
-	rdfs:range ppub:Board ;
+	rdfs:range ppub:EditorialBoard ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:hasLibrary rdf:type owl:ObjectProperty ;
-	rdfs:label "hasLibrary"@en ;
+ppub:hasResearchService rdf:type owl:ObjectProperty ;
+	rdfs:label "Has research service"@en ;
 	rdfs:comment "Relates a House to its library."@en ;
 	rdfs:domain ppub:House ;
-	rdfs:range ppub:Library ;
+	rdfs:range ppub:ResearchService ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:hasSection rdf:type owl:ObjectProperty ;
+ppub:hasResearchSection rdf:type owl:ObjectProperty ;
 	rdfs:label "hasSection"@en ;
-	rdfs:comment "Relates a library to a section."@en ;
-	rdfs:domain ppub:Library ;
-	rdfs:range ppub:LibrarySection ;
+	rdfs:comment "Relates a research service to a section."@en ;
+	rdfs:domain ppub:ResearchService ;
+	rdfs:range ppub:ResearchSection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:coversPolicyArea rdf:type owl:ObjectProperty ;
-	rdfs:label "coversPolicyArea"@en ;
+ppub:focus rdf:type owl:ObjectProperty ;
+	rdfs:label "Focus"@en ;
 	rdfs:comment "Relates a library section to a policy area or policy areas as a SKOS-like concept."@en ;
-	rdfs:domain ppub:LibrarySection ;
+	rdfs:domain ppub:Publisher ;
 	rdfs:range ppub:Concept ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
