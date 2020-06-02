@@ -56,11 +56,9 @@ ppub:ResearchSection rdf:type owl:Class ;
 	rdfs:comment "A group of researchers within the Library of the House of Commons having a particular focus, for example: the Parliament and Constitution Centre."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-					# edited to here
-	
 ppub:Concept rdf:type owl:Class ;
 	rdfs:label "Concept"@en ;
-	rdfs:comment "A concept. Similar to a SKOS concept / a library subject term."@en ;
+	rdfs:comment "A SKOS Concept, for example: a library subject term."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 
@@ -68,28 +66,28 @@ ppub:Concept rdf:type owl:Class ;
 
 ppub:hasEditorialBoard rdf:type owl:ObjectProperty ;
 	rdfs:label "Has editorial board"@en ;
-	rdfs:comment "Relates a publisher to its board."@en ;
+	rdfs:comment "Relates a publisher to its editorial board."@en ;
 	rdfs:domain ppub:Publisher ;
 	rdfs:range ppub:EditorialBoard ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:hasResearchService rdf:type owl:ObjectProperty ;
 	rdfs:label "Has research service"@en ;
-	rdfs:comment "Relates a House to its library."@en ;
+	rdfs:comment "Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office."@en ;
 	rdfs:domain ppub:House ;
 	rdfs:range ppub:ResearchService ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:hasResearchSection rdf:type owl:ObjectProperty ;
 	rdfs:label "Has section"@en ;
-	rdfs:comment "Relates a research service to a section."@en ;
+	rdfs:comment "Relates a research service to a research section within that service."@en ;
 	rdfs:domain ppub:ResearchService ;
 	rdfs:range ppub:ResearchSection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
 ppub:focus rdf:type owl:ObjectProperty ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment "Relates a library section to a policy area or policy areas as a SKOS-like concept."@en ;
+	rdfs:comment "Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts."@en ;
 	rdfs:domain ppub:Publisher ;
 	rdfs:range ppub:Concept ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
