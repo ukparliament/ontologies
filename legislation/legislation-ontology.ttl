@@ -44,16 +44,6 @@ plg:Procedure rdf:type owl:Class ;
 	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:DayCount rdf:type owl:Class ;
-	rdfs:label "Day count"@en ;
-	rdfs:comment "An Act of Parliament may define a day count during which Parliament may scrutinise an item of secondary legislation. These may be sitting days or statutory days, as described in the time period ontology. The Statutory Instruments Act 1946 defines a default period of 40 statutory days of scrutiny for instruments subject to parliamentary procedure. The enabling Act may define an exception to this default - commonly 28, 60 or 120 days. The European Union (Withdrawal) Act 2018 defines a period of 10 sitting days of scrutiny for proposed negative statutory instruments."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:DayCountType rdf:type owl:Class ;
-	rdfs:label "Day count type"@en ;
-	rdfs:comment "A day count type can be sitting days or statutory days, as defined in the time period ontology."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
 plg:LayingDuty rdf:type owl:Class ;
 	rdfs:label "Laying duty"@en ;
 	rdfs:comment "The duty of a body to lay papers before Parliament as imposed by an Act of Parliament."@en ;
@@ -121,20 +111,6 @@ plg:imposesProcedureDuty rdf:type owl:ObjectProperty ;
 	rdfs:range plg:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:imposesDayCountDuty rdf:type owl:ObjectProperty ;
-	rdfs:label "Imposes day count duty"@en ;
-	rdfs:comment "Relates an enabling power to a day count. For statutory instruments the default count is 40 statutory days, as set out by the Statutory Instruments Act 1946. An enabling Act may override this count. A day count is set by a single Act of Parliament. A single Act of Parliament may specify differing day counts for different enabling powers. A statutory instrument is required to have a single day count when enabling powers are delegated from more than one Act of Parliament."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range plg:DayCount ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:hasDayType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has day type"@en ;
-	rdfs:comment "Relates a day count to its type, being sitting days or statutory days as defined in the time period ontology. A day count is described by a single day count type and a day count type may describe more than one day count."@en ;
-	rdfs:domain plg:DayCount ;
-	rdfs:range plg:DayCountType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
 plg:imposesLayingDuty rdf:type owl:ObjectProperty ;
 	rdfs:label "Imposes laying duty"@en ;
 	rdfs:comment "An enabling power may impose a duty to lay papers before Parliament. A laying duty is imposed by a single enabling power."@en ;
@@ -187,11 +163,11 @@ plg:inSeries rdf:type owl:ObjectProperty ;
 					
 	
 ##### Data properties ####	
-			
-plg:count rdf:type owl:DatatypeProperty ;
-	rdfs:label "Count"@en ;
-	rdfs:comment "The number of days of a particular type, being the period during which a statutory instrument or proposed negative statutory instrument is subject to parliamentary scrutiny."@en ;
-	rdfs:domain plg:DayCount ;
+
+plg:imposesDayCountDuty rdf:type owl:ObjectProperty ;
+	rdfs:label "Imposes day count duty"@en ;
+	rdfs:comment "Relates an enabling power to a numbered count of days, during which an instrument is subject to parliamentary scrutiny. The Statutory Instruments Act 1946 sets out a default count of 40 sitting days for scrutiny of statutory instruments, though an enabling Act may set a different number - commonly 28, 60 or 120. The European Union (Withdrawal) Act 2018 defines a period of ten sitting days of scrutiny for proposed negative statutory instruments. An Act of Parliament may set out a particular day count for each enabling power. An instrument is required to have a single day count when enabling powers are delegated from more than one Act of Parliament. Definitions of sitting day may differ between Acts of Parliament."@en ;
+	rdfs:domain plg:EnablingPower ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
