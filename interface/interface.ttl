@@ -12,7 +12,8 @@
 @prefix pdes: <http://parliament.uk/ontologies/description/> . 
 @prefix pe: <http://parliament.uk/ontologies/election/> .
 @prefix pfb: <http://parliament.uk/ontologies/formal-body/> . 
-@prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> . 
+@prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .  
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> .
@@ -22,8 +23,6 @@
 @prefix ptr: <http://parliament.uk/ontologies/treaty/> .
 
 
-
-
 <http://parliament.uk/ontologies/interface/> 
 	owl:imports <https://ukparliament.github.io/ontologies/agency/agency-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/business-item/business-item-ontology.ttl> ;
@@ -31,6 +30,7 @@
 	owl:imports <https://ukparliament.github.io/ontologies/election/election-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body/formal-body-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/house-membership/house-membership-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
@@ -65,6 +65,11 @@ pint:BusinessStep rdf:type owl:Class ;
 	rdfs:comment "A business step is a step that can be actualised by a business item."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 	
+pint:ConstituencyGroup rdf:type owl:Class ;
+	rdfs:label "Constituency group"@en ;
+	rdfs:comment "A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
 pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
 	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
@@ -85,6 +90,11 @@ pint:LayingDuty rdf:type owl:Class ;
 	rdfs:comment "The duty of a body to lay papers before a House as imposed by an Act of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
 
+pint:ParliamentPeriod rdf:type owl:Class ;
+	rdfs:label "Parliament period"@en ;
+	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/interface/> .
+	
 pint:Person rdf:type owl:Class ;
 	rdfs:label "Person"@en ;
 	rdfs:comment "A person."@en ;
@@ -138,6 +148,14 @@ pint:BusinessStep
 	owl:equivalentClass
 	ppsa:BusinessStep .
 	
+# Constituency group
+pint:ConstituencyGroup
+	owl:equivalentClass
+	phm:ConstituencyGroup .
+pint:ConstituencyGroup
+	owl:equivalentClass
+	pe:ConstituencyGroup .
+		
 # Draft and made statutory instrument subject to parliamentary procedure
 pint:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
 	owl:equivalentClass
@@ -159,6 +177,9 @@ pint:House
 pint:House
 	owl:equivalentClass
 	ppr:House .
+pint:House
+	owl:equivalentClass
+	phm:House .
 	
 # Laying
 pint:Laying
@@ -175,7 +196,16 @@ pint:LayingDuty
 pint:LayingDuty
 	owl:equivalentClass
 	plg:LayingDuty .
-
+	
+# Parliament period
+pint:ParliamentPeriod
+	owl:equivalentClass
+	phm:ParliamentPeriod .
+	
+pint:ParliamentPeriod
+	owl:equivalentClass
+	pe:ParliamentPeriod .
+	
 # Person
 pint:Person
 	owl:equivalentClass
@@ -189,6 +219,9 @@ pint:Person
 pint:Person
 	owl:equivalentClass
 	ppb:Person .
+pint:Person
+	owl:equivalentClass
+	phm:Person .
 	
 # Place
 pint:Place
@@ -303,7 +336,21 @@ ppr:House
 pma:House
 	rdfs:subClassOf
 	pa:Group .
-
+phm:House
+	rdfs:subClassOf
+	pa:Group .
+	
+# House seat
+phm:HouseSeat
+    rdfs:subClassOf
+    pa:Position .
+	
+	
+# House seat incumbency
+phm:SeatIncumbency
+    rdfs:subClassOf
+    pa:Incumbency .
+    
 # Laying body
 pl:LayingBody
 	rdfs:subClassOf
