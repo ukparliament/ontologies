@@ -24,44 +24,46 @@
 
 prec:Work rdf:type owl:Class ;
 	rdfs:label "Work"@en ;
-	rdfs:comment "A work. Equivalent to a FRBR work."@en ;
+	rdfs:comment "A distinct intellectual creation, similar to a work as defined in FRBR."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Publisher rdf:type owl:Class ;
 	rdfs:label "Publisher"@en ;
-	rdfs:comment "An agent responsible for the publishing of material."@en ;
+	rdfs:comment "An entity responsible for making a resource available."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
-	rdfs:comment "A place. For the purposes of this model this includes England, Scotland, Wales or Northern Ireland."@en ;
+	rdfs:comment "A place named in a geography."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:EditorialForm rdf:type owl:Class ;
 	rdfs:label "Editorial form"@en ;
-	rdfs:comment "The editorial form of a work e.g. a report, an article, a transcript, meeting minutes etc."@en ;
+	rdfs:comment "The editorial form of a work, for example: a report, an article, a transcript, or the minutes of a meeting."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Collection rdf:type owl:Class ;
 	rdfs:label "Collection"@en ;
-	rdfs:comment "An editorial collection of works e.g. POSTnotes, a section of the Guide to Procedure etc."@en ;
+	rdfs:comment "A curated collection of works."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Series rdf:type owl:Class ;
 	rdfs:subClassOf prec:Collection ;
 	rdfs:label "Series"@en ;
-	rdfs:comment "A specialised form of collection allowing for documents to be given an editorial ordering."@en ;
+	rdfs:comment "A specialised form of collection, allowing works to be placed in an order."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:SeriesPosition rdf:type owl:Class ;
 	rdfs:label "Series position"@en ;
-	rdfs:comment "Allows a document to be editorially positioned within a series."@en ;
+	rdfs:comment "The position of a work within a series of works."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Focus rdf:type owl:Class ;
 	rdfs:label "Focus"@en ;
-	rdfs:comment "A focus area for a document or collection of documents. Allows us to point at any modelled thing as a focus area e.g. a committee, a bill."@en ;
+	rdfs:comment "A focus area for a manifestation or collection of works. Allows us to point at any modelled thing as a focus area, for example: a committee or a bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+					# edited to here
 	
 prec:Expression rdf:type owl:Class ;
 	rdfs:label "Expression"@en ;
