@@ -12,7 +12,8 @@
 @prefix pdes: <http://parliament.uk/ontologies/description/> . 
 @prefix pe: <http://parliament.uk/ontologies/election/> .
 @prefix pfb: <http://parliament.uk/ontologies/formal-body/> . 
-@prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> . 
+@prefix pfba: <http://parliament.uk/ontologies/formal-body-affiliation/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .  
 @prefix pl: <http://parliament.uk/ontologies/laying/> .
 @prefix plg: <http://parliament.uk/ontologies/legislation/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> .
@@ -20,17 +21,16 @@
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix ppsa: <http://parliament.uk/ontologies/procedure-step-annotation/> .
 @prefix ptr: <http://parliament.uk/ontologies/treaty/> .
-@prefix phm: <http://parliament.uk/ontologies/house-membership/> . 
 
 
 <http://parliament.uk/ontologies/interface/> 
-	owl:imports <https://ukparliament.github.io/ontologies/house-membership/house-membership-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/agency/agency-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/business-item/business-item-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/description/description-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/election/election-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body/formal-body-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/house-membership/house-membership-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/legislation/legislation-ontology.ttl> ;
 	owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
@@ -303,7 +303,10 @@ ppr:House
 pma:House
 	rdfs:subClassOf
 	pa:Group .
-
+phm:House
+	rdfs:subClassOf
+	pa:Group .
+	
 # Laying body
 pl:LayingBody
 	rdfs:subClassOf
