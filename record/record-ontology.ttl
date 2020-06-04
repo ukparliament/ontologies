@@ -63,32 +63,32 @@ prec:Focus rdf:type owl:Class ;
 	rdfs:comment "A focus area for a manifestation or collection of works. Allows us to point at any modelled thing as a focus area, for example: a committee or a bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-					# edited to here
-	
 prec:Expression rdf:type owl:Class ;
 	rdfs:label "Expression"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A work may be realised - as an expression - having more than one format, for example: a podcast episode made available as an audio file and as a text transcript."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Format rdf:type owl:Class ;
 	rdfs:label "Format"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The format taken by the expression of a work, for example: the format of the expression of a podcast episode - as an audio file, or as a text transcript."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Manifestation rdf:type owl:Class ;
 	rdfs:label "Manifestation"@en ;
-	rdfs:comment "An manifestation of a document. Allows for multiple versions of a document over time."@en ;
+	rdfs:comment "A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:Contribution rdf:type owl:Class ;
 	rdfs:label "Contribution"@en ;
-	rdfs:comment "A contribution by an agent to a document version."@en ;
+	rdfs:comment "A contribution by an agent, for example: by a person or by a corporate author."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:EditorialVersionType rdf:type owl:Class ;
-	rdfs:label "Editorial version type"@en ;
-	rdfs:comment "The type of a manifestation. Allows us to distinguish between major and minor updates."@en ;
+prec:RevisionType rdf:type owl:Class ;
+	rdfs:label "Revision type"@en ;
+	rdfs:comment "The type of an edit between two manifestations, for example: a major update or a minor update."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+										# edited to here
 	
 prec:File rdf:type owl:Class ;
 	rdfs:label "File"@en ;
@@ -190,8 +190,8 @@ prec:hasContribution rdf:type owl:ObjectProperty ;
 	rdfs:range prec:Contribution ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:hasEditorialVersionType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has editorial version type"@en ;
+prec:hasRevisionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has revision type"@en ;
 	rdfs:comment "Relates a manifestation to its editorial version type."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range prec:EditorialVersionType ;
@@ -242,4 +242,11 @@ prec:mimeType rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The mime type of a file."@en ;
 	rdfs:domain prec:File ;
 	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+prec:hasRevsionReason rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision reason"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain prec:Manifestation ;
+	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
