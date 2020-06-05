@@ -92,7 +92,7 @@ A work in progress, target sitemap for the House of Commons Library, the House o
 
 * [Publisher model](https://ukparliament.github.io/ontologies/publisher/publisher-ontology.html)
 
-* [Document model](https://ukparliament.github.io/ontologies/document/document-ontology.html)
+* [Record model](https://ukparliament.github.io/ontologies/record/record-ontology.html)
 
 * [Contribution model](https://ukparliament.github.io/ontologies/contribution/contribution-ontology.html)
 
