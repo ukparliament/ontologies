@@ -2,7 +2,7 @@
 
 ## Career opportunities
 
-We cannot let this week pass by without mentioning the rare opportunity that emerged to [take over the management reins of Robert, Michael and their fellow computational data experts](https://housesofparliament.tal.net/vx/mobile-0/appcentre-HouseOfCommons/brand-0/candidate/so/pm/3/pl/14/opp/1652-Head-of-Data-and-Search/en-GB). If you've been thinking that lockdown might be an ideal opportunity to adopt a puppy, just [take a look into these sad eyes](https://twitter.com/fantasticlife/status/1269230180847038472) and tell us you can resist. Career shots like this don't come around too often, so please get in early.
+We cannot let this week pass without mentioning the rare opportunity that emerged to [take over the management reins of Robert, Michael and their fellow computational data experts](https://housesofparliament.tal.net/vx/mobile-0/appcentre-HouseOfCommons/brand-0/candidate/so/pm/3/pl/14/opp/1652-Head-of-Data-and-Search/en-GB). If you've been thinking that lockdown might be an ideal opportunity to adopt a puppy, just [take a look into these sad eyes](https://twitter.com/fantasticlife/status/1269230180847038472) and tell us you can resist. Career shots like this don't come around too often, so please get in early.
 
 ## Procedure mapping
 
