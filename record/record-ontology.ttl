@@ -104,57 +104,56 @@ prec:hasPublisher rdf:type owl:ObjectProperty ;
 	rdfs:range prec:Publisher ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-	
-												# edited to here
-	
 prec:hasGeographicScope rdf:type owl:ObjectProperty ;
 	rdfs:label "Has geographic scope"@en ;
-	rdfs:comment "Relates a work to any territory its contents are applicable in."@en ;
+	rdfs:comment "Denotes the geographic scope of a work, the scope being a geographic place."@en ;
 	rdfs:domain prec:Work ;
 	rdfs:range prec:Place ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:takesEditorialForm rdf:type owl:ObjectProperty ;
 	rdfs:label "Takes editorial form"@en ;
-	rdfs:comment "Relates a work to its editorial form."@en ;
+	rdfs:comment "Relates a work to an editorial form."@en ;
 	rdfs:domain prec:Work ;
 	rdfs:range prec:EditorialForm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:partOfCollection rdf:type owl:ObjectProperty ;
 	rdfs:label "Part of collection"@en ;
-	rdfs:comment "Relates a work to a collection of which it forms part."@en ;
+	rdfs:comment "Includes a work within a collection, as a part of that collection."@en ;
 	rdfs:domain prec:Work ;
 	rdfs:range prec:Collection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:collectionPartOfCollection rdf:type owl:ObjectProperty ;
 	rdfs:label "Collection part of collection"@en ;
-	rdfs:comment "Relates a collection to a wider collection it forms part of."@en ;
+	rdfs:comment "Relates a collection to a wider collection it forms part of, for example: a collection of works on health policy generally formed of collections of works concerned with particular areas of health policy."@en ;
 	rdfs:domain prec:Collection ;
 	rdfs:range prec:Collection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:inSeriesPosition rdf:type owl:ObjectProperty ;
 	rdfs:label "In series position"@en ;
-	rdfs:comment "Relates a work to its position in an ordered series."@en ;
+	rdfs:comment "Relates a work to the position that work has within a series."@en ;
 	rdfs:domain prec:Work ;
 	rdfs:range prec:SeriesPosition ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 
 prec:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
-	rdfs:comment "Relates a series position to the series it's part of."@en ;
+	rdfs:comment "Relates the series position of a work to a series in which that work appears."@en ;
 	rdfs:domain prec:SeriesPosition ;
 	rdfs:range prec:Series ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 
 prec:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Expression of"@en ;
-	rdfs:comment "Relates an expression to a work."@en ;
+	rdfs:comment "Relates an expression to the work as expressed. An expression is of a single work. A work has one or more expressions."@en ;
 	rdfs:domain prec:Expression ;
 	rdfs:range prec:Work ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+							# edited to here
 	
 prec:hasFormat rdf:type owl:ObjectProperty ;
 	rdfs:label "Has format"@en ;
