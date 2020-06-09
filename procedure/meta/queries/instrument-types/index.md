@@ -1,4 +1,4 @@
-# Procedures
+# Instrument types
 
 * [Proposed Negative Statutory Instruments](proposed-negative-statutory-instruments)
 
