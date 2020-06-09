@@ -25,7 +25,7 @@ The following query will show all PNSIs currently before Parliament which are wa
 
 ## Filtering by time period
 
-If you have a specified time period you're interested in then you can amend the query above by adding either of the following strings to row 21 in the Sparql query:
+If you have a specified time period you're interested in then you can amend the query above by adding either of the following strings to row 15 in the Sparql query:
 
     FILTER ( str(?itemDate) > '2017-06-01' && str(?itemDate) < '2019-10-09') 
 
