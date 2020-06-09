@@ -88,11 +88,9 @@ prec:RevisionType rdf:type owl:Class ;
 	rdfs:comment "The type of an edit between two manifestations, for example: a major update or a minor update."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-										# edited to here
-	
 prec:File rdf:type owl:Class ;
 	rdfs:label "File"@en ;
-	rdfs:comment "A file associated with an editorial version. Usually a spreadsheet, occasionally a PDF or Word document."@en ;
+	rdfs:comment "A file associated with a manifestation of a work, for example: a spreadsheet, a PDF or a Word document."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 				
@@ -106,8 +104,11 @@ prec:hasPublisher rdf:type owl:ObjectProperty ;
 	rdfs:range prec:Publisher ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:hasTerritorialApplicability rdf:type owl:ObjectProperty ;
-	rdfs:label "Has territorial applicability"@en ;
+	
+												# edited to here
+	
+prec:hasGeographicScope rdf:type owl:ObjectProperty ;
+	rdfs:label "Has geographic scope"@en ;
 	rdfs:comment "Relates a work to any territory its contents are applicable in."@en ;
 	rdfs:domain prec:Work ;
 	rdfs:range prec:Place ;
