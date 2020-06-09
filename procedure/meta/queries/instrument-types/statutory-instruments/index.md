@@ -67,7 +67,7 @@ To follow.
 
 ## Committee consideration
 
-To follow.
+[Committee consider of Statutory Instruments](committees)
 
 ## Motions tabled on Statutory Instruments 
 
