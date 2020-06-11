@@ -153,53 +153,51 @@ prec:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:range prec:Work ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-							# edited to here
-	
 prec:hasFormat rdf:type owl:ObjectProperty ;
 	rdfs:label "Has format"@en ;
-	rdfs:comment "Relates an expression to it format."@en ;
+	rdfs:comment "Relates an expression to the format taken by that expression. Different expressions of the same work may have different formats."@en ;
 	rdfs:domain prec:Expression ;
 	rdfs:range prec:Format ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:manifestationOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Manifestation of"@en ;
-	rdfs:comment "Relates a manifestation to an expression."@en ;
+	rdfs:comment "Relates a manifestation of an expression to that expression. An expression may have more than one manifestation. A manifestation has a single expression."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range prec:Expression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:manifestationHasFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "Manifestation has focus"@en ;
-	rdfs:comment "Relates a manifestation its focus area."@en ;
+	rdfs:comment "Relates a manifestation to the focus area of that manifestation."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range prec:Focus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:collectionHasFocus rdf:type owl:ObjectProperty ;
 	rdfs:label "Collection has focus"@en ;
-	rdfs:comment "Relates a collection to its focus area."@en ;
+	rdfs:comment "Relates a collection to the focus area of that collection."@en ;
 	rdfs:domain prec:Collection ;
 	rdfs:range prec:Focus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:hasContribution rdf:type owl:ObjectProperty ;
 	rdfs:label "hasContribution"@en ;
-	rdfs:comment "Relates anmanifestation to a contribution."@en ;
+	rdfs:comment "Relates a manifestation to a contribution. Contributors to a work may differ across different manifestations of that work."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range prec:Contribution ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:hasRevisionType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has revision type"@en ;
-	rdfs:comment "Relates a manifestation to its editorial version type."@en ;
+	rdfs:comment "Relates a manifestation to the revision type of that manifestation."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range prec:EditorialVersionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:hasAttachment rdf:type owl:ObjectProperty ;
 	rdfs:label "Has attachment"@en ;
-	rdfs:comment "Relates a manifestation to a file attachment."@en ;
+	rdfs:comment "Relates a manifestation to a file.."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range prec:File ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
@@ -211,7 +209,7 @@ prec:hasAttachment rdf:type owl:ObjectProperty ;
 	
 prec:scope rdf:type owl:DatatypeProperty ;
 	rdfs:label "Scope"@en ;
-	rdfs:comment "The scope of a POST briefing. POST write and publish scope notes for research areas before writing the briefing."@en ;
+	rdfs:comment "The scope of a work, for example: the scope of a POST briefing."@en ;
 	rdfs:domain prec:Work ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
@@ -223,30 +221,30 @@ prec:referenceNumber rdf:type owl:DatatypeProperty ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:readingAge rdf:type owl:DatatypeProperty ;
-	rdfs:label "Reading age"@en ;
-	rdfs:comment "The minimum reading age for a manifestation of a document."@en ;
+prec:minimumReadingAge rdf:type owl:DatatypeProperty ;
+	rdfs:label "Minimum reading age"@en ;
+	rdfs:comment "The minimum reading age for a manifestation of a work."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:publishedAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Published at"@en ;
-	rdfs:comment "The date time of publishing of a manifestation."@en ;
+	rdfs:comment "The date and time of the publication of a manifestation."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:mimeType rdf:type owl:DatatypeProperty ;
-	rdfs:label "Mime type"@en ;
-	rdfs:comment "The mime type of a file."@en ;
+prec:mediaType rdf:type owl:DatatypeProperty ;
+	rdfs:label "Media type"@en ;
+	rdfs:comment "The media type of a file."@en ;
 	rdfs:domain prec:File ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:hasRevsionReason rdf:type owl:DatatypeProperty ;
-	rdfs:label "Has revision reason"@en ;
-	rdfs:comment ""@en ;
+prec:hasRevisionDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision description"@en ;
+	rdfs:comment "The description of a revision made to a manifestation."@en ;
 	rdfs:domain prec:Manifestation ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
