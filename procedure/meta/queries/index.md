@@ -33,23 +33,23 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 
 The following queries will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
 
-* [Statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/statutory-instruments/)
+* [Statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/)
 
 ## Queries for SI committee consideration
 
 The following queries will show committee consideration and decisions of all statutory instruments available in the Statutory Instrument Service.
 
-* [Committee consideration](https://ukparliament.github.io/ontologies/procedure/meta/queries/committees/)
+* [Committee consideration](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/committees/)
 
  
 ## Treaties subject to the Constitutional Reform and Governance Act 2010
 
 The following queries will show all treaties available in the [Treaty Tracker](https://treaties.parliament.uk). This data goes back to the beginning of the 2017-19 session.
 
-* [Treaty queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/treaties/)
+* [Treaty queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/treaties/)
 
 ## Proposed Negative SIs and their following SIs
 
 Proposed Negative Statutory Instuments are laid before Parliament where a decision is taken on whether they can be laid under the negative procedure or must be laid under an affirmative procedure. 
 
-* [PNSI queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/proposed-negative-statutory-instruments/)
+* [PNSI queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/proposed-negative-statutory-instruments/)
