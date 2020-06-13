@@ -4,4 +4,4 @@
 
 * [Statutory Instruments](statutory-instruments)
 
-* [Treaties](statutory-instruments)
+* [Treaties](treaties)
