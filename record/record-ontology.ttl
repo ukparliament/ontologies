@@ -83,6 +83,11 @@ prec:Contribution rdf:type owl:Class ;
 	rdfs:comment "A contribution by an agent, for example: by a person or by a corporate author."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
+prec:Revision rdf:type owl:Class ;
+	rdfs:label "Revision"@en ;
+	rdfs:comment "The type of an edit between two manifestations, for example: a major update or a minor update."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
 prec:RevisionType rdf:type owl:Class ;
 	rdfs:label "Revision type"@en ;
 	rdfs:comment "The type of an edit between two manifestations, for example: a major update or a minor update."@en ;
@@ -188,11 +193,25 @@ prec:hasContribution rdf:type owl:ObjectProperty ;
 	rdfs:range prec:Contribution ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
+prec:fromManifestation rdf:type owl:ObjectProperty ;
+	rdfs:label "From manifestation"@en ;
+	rdfs:comment "Relates a revision to the manifestation which was revised."@en ;
+	rdfs:domain prec:Revision ;
+	rdfs:range prec:Manifestation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+prec:toManifestation rdf:type owl:ObjectProperty ;
+	rdfs:label "To manifestation"@en ;
+	rdfs:comment "Relates a revision to the resulting revised manifestation."@en ;
+	rdfs:domain prec:Revision ;
+	rdfs:range prec:Manifestation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
 prec:hasRevisionType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has revision type"@en ;
-	rdfs:comment "Relates a manifestation to the revision type of that manifestation."@en ;
-	rdfs:domain prec:Manifestation ;
-	rdfs:range prec:EditorialVersionType ;
+	rdfs:comment "Relates a revision to the revision type of that manifestation."@en ;
+	rdfs:domain prec:Revision ;
+	rdfs:range prec:RevisionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
 prec:hasAttachment rdf:type owl:ObjectProperty ;
@@ -245,6 +264,6 @@ prec:mediaType rdf:type owl:DatatypeProperty ;
 prec:hasRevisionDescription rdf:type owl:DatatypeProperty ;
 	rdfs:label "Has revision description"@en ;
 	rdfs:comment "The description of a revision made to a manifestation."@en ;
-	rdfs:domain prec:Manifestation ;
+	rdfs:domain prec:Revision ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
