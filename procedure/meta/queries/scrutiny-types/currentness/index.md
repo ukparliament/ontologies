@@ -1,6 +1,6 @@
 ## Queries for 'currentness'
 
-These queries show all [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) subject to a procedrual clock (objection period, approval period, sifting period) that are currently before Parliament. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
+These queries show all [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) subject to a procedural clock (objection period, approval period, sifting period) that are currently before Parliament. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
 
 These queries may be of particular use to Members who are interested in how long they may have left to table a motion against a statutory instrument or treaty.  The results will show all current work packages and the date field can be filtered chronologically or you can use the search bar to look for a specific date.  Alternatively you can add an additional string to your query to search by specific date (note you have to add +1 to your date):
  
