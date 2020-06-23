@@ -1,3 +1,3 @@
-# Procedure meta
+# Procedure map meta
 
 * [Procedure steps](steps)
