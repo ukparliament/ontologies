@@ -4,52 +4,18 @@ Given [accurate maps of procedures](https://ukparliament.github.io/ontologies/pr
 
 This is a list of SPARQL queries used by the House of Commons Library to check and report on their work. Feedback and requests always welcome. Please email [RIIDMSMailbox@parliament.uk](mailto:RIIDMSMailbox@parliament.uk).
 
-## Query to generate a CSV of procedure step descriptions
+## Queries by instrument type
 
-We used to maintain a separate spreadsheet of [procedure steps](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e175) with scope notes, links notes and information around how to select a date for a [business item](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e248). This information is now in the data platform so we can generate the same spreadsheet but from live data:
+* [Proposed Negative Statutory Instruments](instrument-types/proposed-negative-statutory-instruments)
 
-* [Procedure step information](https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0Aselect+%3FProcedurestep+%3FprocedureStepName+%3Fscope+%3Fdate+%3Flink+%3Flegislaturename+where+%7B%3FProcedurestep+a+%3AProcedureStep+.%3FProcedurestep+rdfs%3Alabel+%3FprocedureStepName+.OPTIONAL%7B+%3FProcedurestep+%3AprocedureStepScopeNote+%3Fscope+%7D+.OPTIONAL+%7B+%3FProcedurestep+%3AprocedureStepDateNote+%3Fdate+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepLinkNote+%3Flink+%7D.OPTIONAL+%7B%3FProcedurestep+%3AprocedureStepHasHouse+%3Flegislature+.%3Flegislature+rdfs%3Alabel+%3Flegislaturename%7D++%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
+* [Statutory Instruments](instrument-types/statutory-instruments)
 
-## Queries for 'currentness'
+* [Treaties](instrument-types/treaties)
 
-These queries show all [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e259) subject to a procedrual clock (objection period, approval period, sifting period) that are currently before Parliament. We run them to check when we need to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e358) end steps, where actualising an end step removes the work package from the list of current work packages. 
+## Queries by scrutiny type
 
-These queries may be of particular use to Members who are interested in how long they may have left to table a motion against a statutory instrument or treaty.  The results will show all current work packages and the date field can be filtered chronologically or you can use the search bar to look for a specific date.  Alternatively you can add an additional string to your query to search by specific date (note you have to add +1 to your date):
- 
-FILTER ( str(?itemDate) <= '2020-02-06')
- 
-* [Negative SIs](https://api.parliament.uk/sparql#query=PREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+distinct+%3FSI+%3FSIname+%3FlayingBodyName+%3FworkPackage+%3FObjectionEnds+%3Fdate++where+%7B+%0A%0A+%3FSI+a+%3AStatutoryInstrumentPaper+.+++%0A+++++%3FSI+rdfs%3Alabel+%3FSIname+%3B+%0A+++++%3AlaidThingHasLaying%2F%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.+%0A+++%3FSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FObjectionEndsId+%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3FObjectionEndsId+%3AprocedureStepName+%3FObjectionEnds.%0A++FILTER+(%3FObjectionEndsId+in+(id%3Ag8B3R2Ou))%0A%0A+MINUS+%7B%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi2.%0A++++%3Fbi2+%3AbusinessItemHasProcedureStep+%3FConcludedId.%0A++++FILTER+(%3FConcludedId+in+(id%3Au5AUJb2q%2C+id%3AhN1EDPLv)).%7D%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
- 
-* [Made affirmative SIs](https://api.parliament.uk/sparql#query=PREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+distinct+%3FSI+%3FSIname+%3FlayingBodyName+%3FworkPackage+%3FApprovalEnds+%3Fdate++where+%7B+%0A%0A+%3FSI+a+%3AStatutoryInstrumentPaper+.+++%0A+++++%3FSI+rdfs%3Alabel+%3FSIname+%3B+%0A+++++%3AlaidThingHasLaying%2F%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.+%0A+++%3FSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FApprovalEndsId+%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3FApprovalEndsId+%3AprocedureStepName+%3FApprovalEnds.%0A++FILTER+(%3FApprovalEndsId+in+(id%3AKsnj7JJ8))%0A%0A+MINUS+%7B%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi2.%0A++++%3Fbi2+%3AbusinessItemHasProcedureStep+%3FConcludedId.%0A++++FILTER+(%3FConcludedId+in+(id%3Au5AUJb2q%2C+id%3AhN1EDPLv)).%7D%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
+* [Instruments currently before Parliament](scrutiny-types/currentness)
 
-* [Proposed negative statutory instruments](https://api.parliament.uk/sparql#query=PREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+distinct+%3FPNSI+%3FPNSIname+%3FlayingBodyName+%3FworkPackage+%3FSiftingEnds+%3Fdate++where+%7B+%0A%0A+%3FPNSI+a+%3AProposedNegativeStatutoryInstrumentPaper+.+++%0A+++++%3FPNSI+rdfs%3Alabel+%3FPNSIname+%3B+%0A+++++%3AlaidThingHasLaying%2F%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.+%0A+++%3FPNSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FSiftingEndsId+%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3FSiftingEndsId+%3AprocedureStepName+%3FSiftingEnds.%0A++FILTER+(%3FSiftingEndsId+in+(id%3A3TPVFlNJ))%0A%0A+MINUS+%7B%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi2.%0A++++%3Fbi2+%3AbusinessItemHasProcedureStep+id%3Au5AUJb2q.%7D%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Current+PNSIs&headers=%7B%7D&outputFormat=table)
+## Meta
 
-* [Treaties - Objection Period A](https://api.parliament.uk/sparql#query=PREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+distinct+%3Ftreaty+%3Ftreatyname+%3FLeadOrg+%3FworkPackage+%3FObjectionEnds+%3Fdate++where+%7B+%0A%0A+%3Ftreaty+a+%3ATreaty+.+++%0A+++++%3Ftreaty+rdfs%3Alabel+%3Ftreatyname+%3B+%0A+++%3AtreatyHasLeadGovernmentOrganisation%2F+rdfs%3Alabel+%3FLeadOrg+.+%0A+++%3Ftreaty+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FObjectionEndsId+%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3FObjectionEndsId+%3AprocedureStepName+%3FObjectionEnds.%0A++FILTER+(%3FObjectionEndsId+in+(id%3Ay3MuaSK6))%0A%0A+MINUS+%7B%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi2.%0A++++%3Fbi2+%3AbusinessItemHasProcedureStep+%3FConcludedId.%0A++++FILTER+(%3FConcludedId+in+(id%3AypryR1wZ%2C+id%3Aqkrlv9rh)).%7D%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table) 
-
-* [Treaties - Objection Period B (As of April 2020 this step has not been actualised)](https://api.parliament.uk/sparql#query=PREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+distinct+%3Ftreaty+%3Ftreatyname+%3FLeadOrg+%3FworkPackage+%3FObjectionEnds+%3Fdate++where+%7B+%0A%0A+%3Ftreaty+a+%3ATreaty+.+++%0A+++++%3Ftreaty+rdfs%3Alabel+%3Ftreatyname+%3B+%0A+++%3AtreatyHasLeadGovernmentOrganisation%2F+rdfs%3Alabel+%3FLeadOrg+.+%0A+++%3Ftreaty+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FObjectionEndsId+%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3FObjectionEndsId+%3AprocedureStepName+%3FObjectionEnds.%0A++FILTER+(%3FObjectionEndsId+in+(id%3AiCQRUZuA))%0A%0A+MINUS+%7B%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi2.%0A++++%3Fbi2+%3AbusinessItemHasProcedureStep+%3FConcludedId.%0A++++FILTER+(%3FConcludedId+in+(id%3AypryR1wZ%2C+id%3Aqkrlv9rh)).%7D%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table)
-
-
-## Queries for statutory instruments
-
-The following queries will show all statutory instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session.
-
-* [Statutory instruments](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/)
-
-## Queries for SI committee consideration
-
-The following queries will show committee consideration and decisions of all statutory instruments available in the Statutory Instrument Service.
-
-* [Committee consideration](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/committees/)
-
- 
-## Treaties subject to the Constitutional Reform and Governance Act 2010
-
-The following queries will show all treaties available in the [Treaty Tracker](https://treaties.parliament.uk). This data goes back to the beginning of the 2017-19 session.
-
-* [Treaty queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/treaties/)
-
-## Proposed Negative SIs and their following SIs
-
-Proposed Negative Statutory Instuments are laid before Parliament where a decision is taken on whether they can be laid under the negative procedure or must be laid under an affirmative procedure. 
-
-* [PNSI queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/proposed-negative-statutory-instruments/)
+* [Procedure steps](meta/steps)
