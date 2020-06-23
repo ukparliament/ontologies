@@ -1,4 +1,4 @@
-# Instrument types
+# Queries by instrument type
 
 * [Proposed Negative Statutory Instruments](proposed-negative-statutory-instruments)
 
