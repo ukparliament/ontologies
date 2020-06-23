@@ -18,4 +18,4 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 ## Procedure map meta
 
-* [Procedure steps](meta/steps)
+* [Procedure steps](procedure-map-meta/steps)
