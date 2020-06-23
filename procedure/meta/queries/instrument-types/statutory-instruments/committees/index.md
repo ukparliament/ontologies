@@ -2,11 +2,11 @@
 
 All statutory instruments subject to the modelled procedures must be considered by at least one of the following committees:
 
-* [Statutory Instrument Select Committee (SCSI)](https://committees.parliament.uk/committee/149/statutory-instruments-select-committee) - Considers all instruments that are laid in the House of Commons only (usually instruments related to financial and tax matters)
+* [Statutory Instrument Select Committee (SCSI)](https://committees.parliament.uk/committee/149/statutory-instruments-select-committee) - considers all instruments that are laid in the House of Commons only (usually instruments related to financial and tax matters)
 
-* [Joint Committee on Statutory Instruments (JCSI)](https://committees.parliament.uk/committee/148/statutory-instruments-joint-committee/) - Considers all instruments laid before both Houses
+* [Joint Committee on Statutory Instruments (JCSI)](https://committees.parliament.uk/committee/148/statutory-instruments-joint-committee/) - considers all instruments laid before both Houses
 
-* [Secondary Legislation Scrutiny Committee (SLSC)](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee/) - Considers all instruments laid before both Houses 
+* [Secondary Legislation Scrutiny Committee (SLSC)](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee/) - considers all instruments laid before both Houses 
 
 ## All instruments
 
