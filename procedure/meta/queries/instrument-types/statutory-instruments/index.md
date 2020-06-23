@@ -51,7 +51,7 @@ Or if you want to only see proposed negative statutory instruments before/after 
 
     FILTER ( str(?itemDate) > '2019-12-13')
 	
-# Statutory Instruments by laying department 
+## Statutory Instruments by laying department 
 
 To follow.
 
