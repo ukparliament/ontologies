@@ -71,13 +71,7 @@ To follow.
 
 ## Motions tabled on Statutory Instruments 
 
-### Approval motions for affirmative Statutory Instruments 
-
-To follow.
-
-### Prayers against Statutory Instruments 
-
-To follow.
+[Motions tabled on Statutory Instruments](motions)
 
 ## Debates on Statutory Instruments 
 
