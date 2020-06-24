@@ -20,7 +20,11 @@ This query will show you all instruments laid before Parliament since the Statut
 
 ## Statutory Instruments currently before Parliament
 
-To follow.
+This query shows all instruments currently before Parliament:
+
+* <a href="https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+%3Fproc+%3FSI+%3FSIname+%3FStatutoryInstrumentYear+%3FlayingBodyName+%3FMadedate+%3FComesintoforceDate+%3FComesintoforceNote+%3FLink+%3FworkPackage+%3FprocStepName+%3Fdate+where+%7B%0A+%3FSI+a+%3AStatutoryInstrumentPaper+.++%0A+++++%3FSI+rdfs%3Alabel+%3FSIname+%3B%0A++%3AstatutoryInstrumentPaperYear+%3FStatutoryInstrumentYear+.%0A++OPTIONAL%7B++%3FSI+%3AworkPackagedThingHasWorkPackagedThingWebLink+%3FLink+.%7D%0A+++OPTIONAL+%7B+%3FSI+%3AstatutoryInstrumentPaperMadeDate+%3FMadedate+.%7D%0A++OPTIONAL+%7B+%3FSI+%3AstatutoryInstrumentPaperComingIntoForceDate+%3FComesintoforceDate+.+%7D%0A++OPTIONAL+%7B+%3FSI+%3AstatutoryInstrumentPaperComingIntoForceNote+%3FComesintoforceNote.+%7D%0A+++%09%3FSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.%0A++%09%3FworkPackage+%3AworkPackageHasProcedure%2Frdfs%3Alabel+%3Fproc%0A+FILTER(%3Fproc+IN+(%22Draft+affirmative%22%2C+%22Made+affirmative%22%2C+%22Made+negative%22%2C+%22Draft+negative%22))%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3FprocStep+.%0A+++++%3FprocStep+%3AbusinessItemDate+%3Fdate+.%0A++%3FprocStep+%3AbusinessItemHasProcedureStep+id%3Acspzmb6w+.%0A++%3FprocStep+%3AbusinessItemHasProcedureStep%2Frdfs%3Alabel+%3FprocStepName.+++%0A++%3FprocStep+%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.%0AMINUS+%7B++%3FworkPackage+++%3AworkPackageHasBusinessItem+%3Fbi2.%0A++%3Fbi2+%3AbusinessItemHasProcedureStep+%3FstepId2.%0A++%3Fbi2++++%3AbusinessItemDate+%3Fdate2.%0A++%3FstepId2+%3AprocedureStepName+%3FstepName2.%0A++++FILTER+(%3FstepId2+in+(id%3AhN1EDPLv%2C+id%3Au5AUJb2q))%7D%0A%0A%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=All+statutory+instruments&headers=%7B%7D&outputFormat=table">Statutory instruments currently before Parliament</a>
+
+The [Non-contentious Probate (Fees) Order 2018](https://statutoryinstruments.parliament.uk/timeline/meOzHTQS/SI-2018null), that was laid under the draft affirmative procedure in November 2018, shows in the list despite it's age. This instrument was approved in the Lords in December 2018. It was considered in a Commons Delegated Legislation Committee in February 2019 but it has yet to receive a vote. It will remain 'current' until either the Commons approve the instrument or the Government withdraws it. 
 
 
 ## Statutory instruments by session
@@ -53,7 +57,13 @@ Or if you want to only see proposed negative statutory instruments before/after 
 	
 ## Statutory Instruments by laying department 
 
-To follow.
+Results can be narrowed down further by laying department. For example, the following query looks for all statutory instruments laid by the Ministry of Justice:
+
+ * <a ref="https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+%3Fproc+%3FSI+%3FSIname+%3FStatutoryInstrumentYear+%3FlayingBodyName+%3FMadedate+%3FComesintoforceDate+%3FComesintoforceNote+%3FLink+%3FworkPackage+%3FprocStepName+%3Fdate+where+%7B%0A+%3FSI+a+%3AStatutoryInstrumentPaper+.++%0A+++++%3FSI+rdfs%3Alabel+%3FSIname+%3B%0A++%3AstatutoryInstrumentPaperYear+%3FStatutoryInstrumentYear+.%0A++OPTIONAL%7B++%3FSI+%3AworkPackagedThingHasWorkPackagedThingWebLink+%3FLink+.%7D%0A+++OPTIONAL+%7B+%3FSI+%3AstatutoryInstrumentPaperMadeDate+%3FMadedate+.%7D%0A++OPTIONAL+%7B+%3FSI+%3AstatutoryInstrumentPaperComingIntoForceDate+%3FComesintoforceDate+.+%7D%0A++OPTIONAL+%7B+%3FSI+%3AstatutoryInstrumentPaperComingIntoForceNote+%3FComesintoforceNote.+%7D%0A+++%09%3FSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.%0A++%09%3FworkPackage+%3AworkPackageHasProcedure%2Frdfs%3Alabel+%3Fproc%0A+FILTER(%3Fproc+IN+(%22Draft+affirmative%22%2C+%22Made+affirmative%22%2C+%22Made+negative%22%2C+%22Draft+negative%22))%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3FprocStep+.%0A+++++%3FprocStep+%3AbusinessItemDate+%3Fdate+.%0A++%3FprocStep+%3AbusinessItemHasProcedureStep+id%3Acspzmb6w+.%0A++%3FprocStep+%3AbusinessItemHasProcedureStep%2Frdfs%3Alabel+%3FprocStepName.+++%0A++%3FprocStep+%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.%0A++++FILTER+regex+(%3FlayingBodyName%2C+%22Ministry+of+Justice%22)%0A%0A%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=All+statutory+instruments&headers=%7B%7D&outputFormat=table">Ministry of Justice</a>
+
+To do this add the following string (changing the name of the department to suit your query) to row 20 in the query:
+
+    FILTER regex (?layingBodyName, "Ministry of Justice")
 
 ## Statutory Instruments by procedure
 
