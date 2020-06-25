@@ -102,7 +102,7 @@ As of June 2020 there were no draft negative instruments laid before the House o
 
 ## Debates on Statutory Instruments 
 
-To follow.
+[Debates on statutory instruments](debates)
 
 ## English Votes for English Laws consideration
 
