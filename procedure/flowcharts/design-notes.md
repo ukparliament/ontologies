@@ -152,6 +152,10 @@ We have taken the decision that a withdrawal or lapsing step which may occur mul
 
 We have taken the decision that a withdrawal or lapsing step which may occur multiple times cannot preclude a later consequential step that is only ever actualised once in the same work package, because there is no evident or implied symmetry.
 
+## Procedure conclusion
+
+Procedure conclusion steps should only be brought into play by either an allows or causes route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
+
 
 
 
