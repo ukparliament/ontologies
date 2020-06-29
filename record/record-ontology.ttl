@@ -27,11 +27,6 @@ prec:Work rdf:type owl:Class ;
 	rdfs:comment "A distinct intellectual creation, similar to a work as defined in FRBR."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
 	
-prec:Publisher rdf:type owl:Class ;
-	rdfs:label "Publisher"@en ;
-	rdfs:comment "An entity responsible for making a resource available."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-	
 prec:Place rdf:type owl:Class ;
 	rdfs:label "Place"@en ;
 	rdfs:comment "A place named in a geography."@en ;
@@ -102,13 +97,6 @@ prec:File rdf:type owl:Class ;
 
 #######  Object properties ##### 
 
-prec:hasPublisher rdf:type owl:ObjectProperty ;
-	rdfs:label "Has publisher"@en ;
-	rdfs:comment "Relates a work to a publisher or publishers."@en ;
-	rdfs:domain prec:Work ;
-	rdfs:range prec:Publisher ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-	
 prec:hasGeographicScope rdf:type owl:ObjectProperty ;
 	rdfs:label "Has geographic scope"@en ;
 	rdfs:comment "Denotes the geographic scope of a work, the scope being a geographic place."@en ;
