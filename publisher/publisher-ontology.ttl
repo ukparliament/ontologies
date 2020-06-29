@@ -68,6 +68,11 @@ ppub:Concept rdf:type owl:Class ;
 	rdfs:comment "A SKOS Concept, for example: a library subject term."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
+ppub:ThingHavingPublisher rdf:type owl:Class ;
+	rdfs:label "Thing having a publisher"@en ;
+	rdfs:comment "A published thing, which has a publisher."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
 
 ##### Object properties ####
 
@@ -92,9 +97,16 @@ ppub:hasResearchSection rdf:type owl:ObjectProperty ;
 	rdfs:range ppub:ResearchSection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
 	
-ppub:focus rdf:type owl:ObjectProperty ;
-	rdfs:label "Focus"@en ;
+ppub:hasFocus rdf:type owl:ObjectProperty ;
+	rdfs:label "Has focus"@en ;
 	rdfs:comment "Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts."@en ;
 	rdfs:domain ppub:Publisher ;
 	rdfs:range ppub:Concept ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
+	
+ppub:hasPublisher rdf:type owl:ObjectProperty ;
+	rdfs:label "Has publisher"@en ;
+	rdfs:comment "Relates a thing, which has a publisher, to the publisher of the thing."@en ;
+	rdfs:domain ppub:ThingHavingPublisher ;
+	rdfs:range ppub:Publisher ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/publisher/> .
