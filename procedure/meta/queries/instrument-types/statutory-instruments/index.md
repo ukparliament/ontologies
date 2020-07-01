@@ -1,6 +1,6 @@
 # Statutory Instruments subject to procedure
 
-The following queries will show all Statutory Instruments available in the Statutory Instrument Service. This data goes back to the beginning of the 2017-19 session. The main query will return all work packages with a 'Laid before the House of Commons' step. The other queries have then broken down by procedure, session or by year (given that Statutory Instruments are numbered by calendar year rather than sessional). 
+The following queries will show all Statutory Instruments available in the [Statutory Instrument Service](https://statutoryinstruments.parliament.uk/). This data goes back to the beginning of the 2017-19 session. The [available SIs query](#all-available-statutory-instruments) will return all work packages with a 'Laid before the House of Commons' step. The other queries are broken down by procedure, session or by year (given that Statutory Instruments are numbered by calendar year rather than sessional). 
 
 Note that the Statutory Instrument Service omits Statutory Instruments:
 
