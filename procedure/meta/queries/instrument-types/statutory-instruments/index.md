@@ -92,6 +92,12 @@ Some instruments, usually to do with financial or tax matters, are laid before t
 
 As of June 2020 there were no draft negative instruments laid before the House of Commons only. 
 
+## Communication declaring that the instrument came into force before being laid
+
+When an instrument has been brought into operation before it has been laid before Parliament the Government must communicate this to the Speaker of the House of Commons and the Lord Speaker explaining why the instrument was not laid before Parliament first. The communication shall be laid upon the Table of the House. This is laid out in both Houses's standing orders (House of Commons 160, House of Lords 71). 
+
+* [All instruments that came into force being laid](https://api.parliament.uk/sparql#query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0Aselect+distinct+%3Fsi+%3FsiName+%3FworkPackage+%3Flink+%3FLaidDate+%3FLayingBody+%3Fprocedure+%3FstepName+%3Fdate+%3Flink2+where%0A%7B%0A++%3Fsi+a+%3AStatutoryInstrumentPaper%3B%0A++++++%3AstatutoryInstrumentPaperName+%3FsiName%3B%0A++++++++++++++++++%3AworkPackagedThingHasWorkPackage+%3FworkPackage.%0A++%3FworkPackage+%3AworkPackageHasProcedure%2Frdfs%3Alabel+%3Fprocedure.%0A++%3Fsi+%3AwebLinkedThingHasWebLink+%3Flink.%0A++++FILTER(%3Fprocedure+IN+(%22Made+affirmative%22%2C+%22Made+negative%22))%0A++%3Fsi+%3AlaidThingHasLaying+%3Flaying.%0A++%3Flaying+%3AlayingHasLayingBody%2Frdfs%3Alabel+%3FLayingBody.%0A++%3Flaying+%3AlayingDate+%3FLaidDate.%0A+%3FworkPackage+++%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FstepId%3B%0A++++++%3AbusinessItemDate+%3Fdate%3B%0A++++++%3AbusinessItemHasBusinessItemWebLink+%3Flink2.%0A++++%3FstepId+%3AprocedureStepName+%3FstepName.%0A++FILTER+(%3FstepId+in+(id%3ABT6vLIzF))%0A%0A%0A%0A%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Instruments+that+came+into+force+before+being+laid&headers=%7B%7D&outputFormat=table)
+
 ## Committee consideration
 
 [Committee consideration of Statutory Instruments](committees)
