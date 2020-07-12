@@ -4,13 +4,19 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/contribution/> 
     rdf:type owl:Ontology ;
     dcterms:title "Contribution ontology"@en ;
     dcterms:created "2018-06-28"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Contribution ontology for UK Parliament"@en .
+    dcterms:description "A model describing contributions made by people or groups."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/contribution/contribution.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ] .
 
 
 #######  Classes #####
@@ -33,11 +39,6 @@ pcon:ContributionRole rdf:type owl:Class ;
 pcon:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
 	rdfs:comment "A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
-	
-pcon:Focus rdf:type owl:Class ;
-	rdfs:label "Focus"@en ;
-	rdfs:comment "A focus area of a contribution."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
 				
@@ -65,9 +66,20 @@ pcon:inCapacity rdf:type owl:ObjectProperty ;
 	rdfs:range pcon:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
 	
-pcon:focussedOn rdf:type owl:ObjectProperty ;
-	rdfs:label "focussedOn"@en ;
-	rdfs:comment "Relates a contribution a focus area."@en ;
+	
+	
+#######  Data properties ##### 
+
+pcon:isPublic rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is public"@en ;
+	rdfs:comment "Relates a contribution to whether not that contribution is made public. The is public flag will by necessity not be public."@en ;
 	rdfs:domain pcon:Contribution ;
-	rdfs:range pcon:Focus ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
+
+pcon:displayOrder rdf:type owl:DatatypeProperty ;
+	rdfs:label "Display order"@en ;
+	rdfs:comment "Relates a contribution type to its display order."@en ;
+	rdfs:domain pcon:ContributionType ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contribution/> .
