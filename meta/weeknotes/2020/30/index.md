@@ -35,9 +35,6 @@ On Tuesday, Robert and Michael were joined by Felisia and [Ganesh](https://twitt
 On Wednesday, Anya and Michael reprised their [What would Erskine May do?](https://smethur.st/posts/176135870) talk, first outed at the annual [Study of Parliament Group](http://www.studyofparliament.org.uk/) conference back in January. Which starts to feel like years ago. This time they talked through their work on procedure modelling to a bunch of data interested people in the House of Commons Library. It seemed to go quite well. Though heckling is harder with microphones muted. 
 
 
-weds anya michael reprised spg talk 
-
-
 
 
 
