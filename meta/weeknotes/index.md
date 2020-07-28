@@ -1,7 +1,6 @@
 # Procedure modelling weeknotes
 
-* [Trello](https://trello.com/b/f2zmF5EZ/parliament-bill-procedure)
-
+* [Previously](https://ukparliament.github.io/Weeknotes/)
 * [RSS](feed.rss)
 
 ## 2020
