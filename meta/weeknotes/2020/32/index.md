@@ -2,7 +2,7 @@
 
 ## Under new ownership
 
-If you are our regular reader, you'll know that back in [week 23](https://ukparliament.github.io/ontologies/meta/weeknotes/2020/23/), Robert and [Michael](https://twitter.com/fantasticlife) put out [a rather touching advert for a new owner](https://twitter.com/fantasticlife/status/1269230180847038472). This week, their efforts came to fruition when the data platform picked up a new manager in the shape of [Ian](https://www.linkedin.com/in/ianwharrison/). Welcome aboard Ian. As Robert continues to vacation in Battersea-upon-Thames, Ian has yet to set eyes on his wrinkly wee face. We can only imagine the joy.
+If you are our regular reader, you'll know that back in [week 23](https://ukparliament.github.io/ontologies/meta/weeknotes/2020/23/) Robert and [Michael](https://twitter.com/fantasticlife) put out [a rather touching advert for a new owner](https://twitter.com/fantasticlife/status/1269230180847038472). This week, their efforts came to fruition when the data platform picked up a new manager in the shape of [Ian](https://www.linkedin.com/in/ianwharrison/). Welcome aboard Ian. As Robert continues to vacation in Battersea-upon-Thames, Ian has yet to set eyes on his wrinkly wee face. We can only imagine the joy.
 
 As [the pause button on the data platform](https://pds.blog.parliament.uk/2019/02/15/a-new-way-of-working-single-technical-direction/) was flipped to unpause, we also welcomed Sadia to the fold. The week of welcomes continued as [Jianhan](https://twitter.com/jianhanzhu) and Kunal returned to the warm embrace of everyone's favourite pedantic web team. Onwards.
 
