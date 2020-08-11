@@ -137,6 +137,12 @@ The following query provides the instruments from Jeni's spreadsheet alongside t
  And add it to the url like so:
  
  https://statutoryinstruments.parliament.uk/timeline/vFYzfuo7/SI
+ 
+### Secondary Legislation Scrutiny Committee's scrutiny of coronavirus legislation
+
+The [Secondary Legislation Scrutiny Committee](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee/) is considering statutory instruments (subject to parliamentary procedure) that are being laid to tackle the coronavirus pandemic. A dedicated webpage has been set up to provide a running list of the instruments that have been laid. Once they have been considered by the Committee, a link to the relevant report will be added. Note that this page is usually only updated during sitting times. 
+
+* [Scrutiny of secondary legislation laid to tackle coronavirus pandemic](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee/news/145773/scrutiny-of-secondary-legislation-laid-to-tackle-coronavirus-pandemic/)
 
 ## Committee consideration
 
