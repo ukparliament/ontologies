@@ -24,6 +24,8 @@ Way back on Tuesday, before the skies cracked and the streets flooded, [Dame Jen
 
 We are quite prepared to swear that this is not simply padding because we've had a really rubbish week. But also we cannot pretend this is new work this week. But it was news to Michael, which seems a fair enough reason to include. Every week [Librarian Liz](https://twitter.com/greensideknits) issues a new and updated terms report covering any changes to the [parliamentary vocabulary](http://www.data.parliament.uk/dataset/thesauri). Since some time back, every new and amended term now comes complete with a link to [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). And Wikidata gets edited to add a link to the term. Not only this, but Librarian Ned has been approaching the same problem from a different angle. Ned has spent a good week leafing through all the organisations in the vocabulary and linking what he can to Wikidata and vice versa. All adding to the wonderful web of linked data. Top marks Librarians Liz and Ned.
 
+Michael had a quick call on Monday with Julian and [Silver](https://twitter.com/silveroliver) from [Data Language](https://datalanguage.com/). They're about to embark on a piece of work to investigate the orchestration from the [Member's Names Information Service](http://data.parliament.uk/membersdataplatform/) to the [data platform](https://api.parliament.uk/). General data flows were sketched out and general problems discussed. Though, to be honest, it was more about the company. At least for Michael.
+
 
 
 
