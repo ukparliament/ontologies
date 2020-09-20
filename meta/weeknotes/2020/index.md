@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2020
 
+* [Week 38](38)
 * [Week 37](37)
 * [Week 36](36)
 * [Week 35](35)
