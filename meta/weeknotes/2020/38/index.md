@@ -2,7 +2,7 @@
 
 ## Expanding the family
 
-As part of the preparation in our search for a new librarian, [Anya](https://twitter.com/bitten_), Jayne, [Claire](https://twitter.com/tinysprite) and visiting printer fixer [Michael](https://twitter.com/fantasticlife) kicked off Monday morning drafting interview questions. And prompts. And checklists. Then re-drafting them. We now have four questions, numerous prompts and a surplus of things to tick. Interviews to follow shortly.
+As part of the Preparation in our search for a new librarian, [Anya](https://twitter.com/bitten_), Jayne, [Claire](https://twitter.com/tinysprite) and visiting printer fixer [Michael](https://twitter.com/fantasticlife) kicked off Monday morning drafting interview questions. And prompts. And checklists. Then re-drafting them. We now have four questions, numerous prompts and a surplus of things to tick. Interviews to follow shortly.
 
 ## Procedure mapping
 
