@@ -23,9 +23,16 @@ a > route > b
 			if the route is an allows, causes or requires
 				show route
 			if the route is a precludes
-				# logic collapses. eeeeeek
-				show b highlighted somehow (red)
-				# what do we do here? we should show some kind of error ..?
+				# if you arrived before you set off. i.e. you arrived down a different path
+				if route.source_step_date < route.target_step.date
+					# b was not precluded on its actualisation date because a was not actualised
+					# a is now actualised so b is now precluded and cannot be actualised again
+					show b in grey
+				# if you arrived later than - or on the same date - that you set off. i.e. you may have arrived down this path
+				otherwise
+					# logic collapses. eeeeeek
+					show b highlighted in red
+				end
 		# if you set off and arrived before the route opened or after the route closed ...
 		otherwise
 			do not show route
