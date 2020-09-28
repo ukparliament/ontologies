@@ -30,7 +30,7 @@ Colleagues in the House of Commons Library have been looking at how they might i
 
 A couple of weeks back, [Jason](https://twitter.com/RoundTableLaw), another of the rules of code coterie, got in touch with Anya and Michael to say he's a big fan of their work. A big fan. Which is not something that usually happens. "He who says he hates every kind of flattery, and says it in earnest, certainly does not yet know every kind of flattery," as the saying goes. And neither Anya nor Michael can declare themselves imune. So this week they spent an hour on the telephone to Canada, bending Jason's ear about all the trials and tribulations of modelling parliamentary procedure. All of them. Sorry Jason.
 
-Somewhat nerve racked in the lead up to their talk, Anya and Michael dedicated a part of Friday morning to a chat with [Glyn](https://twitter.com/GlynRJones). He's just been handed the chalice of Head of the Government's Knowledge, Information and Records Management. All of it. Which seemed as good an excuse as any to bend his ear about answering bodies, user accounts, join tables and the lack thereof. Lovely, as ever, to chat Glyn.
+Somewhat nerve racked in the lead up to their talk, Anya and Michael dedicated a part of Friday morning to a chat with [Glyn](https://twitter.com/GlynRJones). He's just been handed the chalice of Head of the Government's Knowledge, Information and Records Management. All of it. Which seemed as good an excuse as any to bend his ear about answering bodies, user accounts, [join tables](https://twitter.com/fantasticlife/status/1308837558848290820) and the lack thereof. Lovely, as ever, to chat Glyn.
  
 ## Lifelong learning
 
