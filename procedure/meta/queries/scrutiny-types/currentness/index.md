@@ -12,6 +12,6 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 
 * [Proposed negative statutory instruments](https://api.parliament.uk/s/a2381d85)
 
-* [Treaties - Objection Period A](https://api.parliament.uk/s/b6a97b88 
+* [Treaties - Objection Period A](https://api.parliament.uk/s/b6a97b88) 
 
 * [Treaties - Objection Period B (As of April 2020 this step has not been actualised)](https://api.parliament.uk/s/81b0c331)
