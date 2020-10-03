@@ -46,7 +46,7 @@ Our [three](https://commonslibrary.parliament.uk/) [research](https://lordslibra
 
 ## Strolls
 
-Back in the glory days of weeknotes - when we still wrote with a gentle humour and a lightness of touch that now evades us - we always made room for recollections of our many strolls. This Wednesday, Anya, Robert and Michael took the day off and headed into The City for a decent stroll that started at Temple, took in [a Hawksmore](https://en.wikipedia.org/wiki/St_George_in_the_East) and ended at the [Prospect of Whitby](https://en.wikipedia.org/wiki/Prospect_of_Whitby). It was wonderful to see the wheels of commerce spin back into life and a sense of normality finally return. [If you're Edgar Allan Poe anyway](https://twitter.com/fantasticlife/status/1310944040456728576).
+Back in the glory days of weeknotes - when we still wrote with a gentle humour and a lightness of touch that now evades us - we always made room for recollections of our many strolls. This Wednesday, Anya, Robert and Michael took the day off and headed into The City for a decent stroll that started at Temple, took in [a Hawksmoor](https://en.wikipedia.org/wiki/St_George_in_the_East) and ended at the [Prospect of Whitby](https://en.wikipedia.org/wiki/Prospect_of_Whitby). It was wonderful to see the wheels of commerce spin back into life and a sense of normality finally return. [If you're Edgar Allan Poe anyway](https://twitter.com/fantasticlife/status/1310944040456728576).
 
  
 
