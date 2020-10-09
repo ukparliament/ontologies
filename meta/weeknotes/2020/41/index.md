@@ -1,6 +1,6 @@
 # 2020 - Week 41
 
-So then, another week down. And another week closer to the end of the Now Times. Perhaps. It has not, in all honesty, been our most productive of weeks. [Anya](https://twitter.com/bitten_)_ was mostly mired in meetings and other assorted administrivia. And Librarians Anya, Jayne and [Claire](https://twitter.com/tinysprite), together with dabbling computational dilettante [Michael](https://twitter.com/fantasticlife) spent two whole days glued to headsets in their latest efforts at...
+So then, another week down. And another week closer to the end of the Now Times. Perhaps. It has not, in all honesty, been our most productive of weeks. [Anya](https://twitter.com/bitten_) was mostly mired in meetings and other assorted administrivia. And Librarians Anya, Jayne and [Claire](https://twitter.com/tinysprite), together with dabbling computational dilettante [Michael](https://twitter.com/fantasticlife) spent two whole days glued to headsets in their latest efforts at...
 
 ## ...expanding the family
 
