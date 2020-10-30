@@ -43,3 +43,4 @@ By about Wednesday of this week, Robert had declared himself happy - or as happy
 Never ones to let a week go "bye without learnings, Anya, Liz, Jayne and Michael popped along to the latest in the long-running series of Lords' Procedural Seminars. This time on the subjects of ping pong and powers. With a dash of money thrown in for good measure. It proved, as ever, to be both informative and entertaining.
 
 Anya and Michael ended the week with yet more food for thought when they popped in pixels  to the Open Data Institute's Friday talk. This week featuring Full Fact's Andy on [why bad information ruins lives](https://theodi.org/event/odi-fridays-full-fact-on-why-bad-information-ruins-lives/). An excellent talk from a bright lad with a lovely manner. Thanks Andy.
+
