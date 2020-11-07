@@ -1,6 +1,6 @@
 # 2020 - Week 45
 
-Given our reentry into lockdown, week 45 was more meeting heavy than anyone had any right to expect. But despite having faces glued to pixels and poor Robert's ears being glued to misfiring headphones, it also proved remarkably productive.
+Given our re-entry into lockdown, week 45 was more meeting heavy than anyone had any right to expect. But despite having faces glued to pixels and poor Robert's ears being glued to misfiring headphones, it also proved remarkably productive.
 
 ## Modelling their Lordships
 
