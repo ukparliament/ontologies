@@ -1,7 +1,7 @@
 # Procedure modelling weeknotes 2020
 
-* [Week 42](45)
-* [Week 42](44)
+* [Week 45](45)
+* [Week 44](44)
 * [Week 42](42)
 * [Week 41](41)
 * [Week 40](40)
