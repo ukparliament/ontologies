@@ -40,7 +40,7 @@ Following feedback from [Tony](https://twitter.com/psychemedia), Librarian Jayne
 
 ## Your weekly egg timer update
 
-Although the [egg timer](https://parliament-calendar.herokuapp.com/) is nominally complete, we all know that nothing is ever complete. And without maintenance all things eventually submit to entropy. So this week, young Robert has been busying himself with fixes and tidies. There were, in short order:
+Although the [egg timer](https://parliament-calendar.herokuapp.com/) is nominally complete, we all know that nothing is ever complete. And without maintenance all things eventually submit to entropy. So this week, young Robert has been busying himself with fixes and tidies. These were, in short order:
 
 * [Switching the application to https](https://trello.com/c/1U1fSjmz/275-work-out-if-and-how-to-compel-https-connection-to-egg-timer). After all, we don't want random strangers interfering with the boiling of our procedural eggs.
 
