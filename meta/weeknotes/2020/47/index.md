@@ -38,7 +38,7 @@ There is still work to do to reduce screen clutter and only list order versions 
 
 ## Return to motion mountain
 
-Librarian Jayne and Michael attempted to stretch their limited brains around another mail from Mr Evans. This time on the question of questions not being decided. A couple of small matters were cleared up, again with David and Matt. They have now reconciled questions not decided as a result of being talked out and questions being not decided on the grounds of being inquorate into a single step. And made questions not decided on being talked out allowed from the moment the motion is moved. At least so long as another motion to exempt the first motion from being decided past the moment of interuption has not been agreed. Jayne and Michael both look forward to redrawing their motion map with logic gates. They really do.
+Librarian Jayne and Michael attempted to stretch their limited brains around another mail from Mr Evans. This time on the question of questions not being decided. A couple of small matters were cleared up, again with David and Matt. They have now reconciled questions not decided as a result of being talked out and questions being not decided on the grounds of being inquorate into a single step. And made questions not decided on being talked out allowed from the moment the motion is moved. At least so long as another motion to exempt the first motion from not being decided past the moment of interruption has not been agreed. Quite remarkable how Parliament nudges you in the direction of the triple negative. Jayne and Michael both look forward to redrawing their motion map with logic gates. They really do.
 
 ## Our librarians' SPARQL library
 
@@ -50,6 +50,6 @@ Shortly after luncheon on Thursday, Anya, Jayne, Robert and Michael met with JO 
 
 Michael had planned to talk Jane through the calculation code but realised just before the meeting that the comments took no account of the timers for made instruments being turned over at making rather than laying. This would most definitely have resulted in one of those moments where JO Jane says, "have you taken any notice of anything I've ever said?" So he backed out gracefully and collared Robert to help him fix up comments and messaging to reflect a little more making and a little less laying.
 
-Our only other change was a tweak by Robert to add IDs to calendar dates so anyone can now link to one. Nice work Bobs.
+Our only other change was a tweak by Robert to [add IDs to calendar dates](https://trello.com/c/9nyg79Er/243-make-egg-timer-calendar-table-items-linkable) so anyone can now link to one. Nice work Bobs.
 
 
