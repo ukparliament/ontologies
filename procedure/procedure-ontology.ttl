@@ -46,28 +46,11 @@ ppr:Step rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
 	rdfs:comment "A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:LogicGateStep rdf:type owl:Class ;
-	rdfs:subClassOf ppr:Step ;
-	rdfs:label "Logic gate step"@en ;
-	rdfs:comment "A logic gate step performs a logical operation on one or more routes. Both the input and the output of a logic gate are either True or False. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a logic gate step with type NOT indicates that actualisation of the step cannot happen in the future, being a precluding relationship. A step may preclude itself from repeated actualisations by means of a set of routes through a logic gate step of type NOT to itself. For example, in the made affirmative statutory instrument procedure the step 'cleared by the Joint Committee on Statutory Instruments' may happen only once, being a precluding relationship."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:LogicGateType rdf:type owl:Class ;
-	rdfs:label "Logic gate type"@en ;
-	rdfs:comment "A logic gate has a type of NOT, AND or OR. A logic gate with type NOT when given True has the result False and when given False has the result True. A logic gate with type AND takes at least two routes as inputs: if all are True the output route is True. A logic gate with type OR takes at least two routes as inputs: if at least one is True the output route is True."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:DecisionStep rdf:type owl:Class ;
-	rdfs:subClassOf ppr:Step ;
-	rdfs:label "Decision step"@en ;
-	rdfs:comment "A decision step describes the requirement for a decision to be made before the to route can be followed. Routes may be indicated as allowed rather than causal by means of a decision step. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a decision step indicates that actualisation of the step may happen in the future, being an allowed relationship."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:BusinessStep rdf:type owl:Class ;
-	rdfs:subClassOf ppr:Step ;
-	rdfs:label "Business step"@en ;
-	rdfs:comment "A business step is a step that can be actualised by a business item."@en ;
+ppr:StepType rdf:type owl:Class ;
+	rdfs:label "Step type"@en ;
+	rdfs:comment "A step has one type: a business step type, a decision step type, a logical NOT step type, a logical AND step type or a logical OR step type. Business step: a step that can be actualised by a business item. Decision step: a step that is used to describe the requirement for a decision to be made before the subsequent route can be followed. Routes including a decision step indicate that the target step is allowed and not caused: a route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a decision step indicates that actualisation of the step may happen in the future, being an allowed relationship. Logical step: a step that describes logical operations performed over routes. Inputs and outputs of a logic gate are either TRUE or FALSE. The output from a business step which has been actualised by a business item with a date in the past is TRUE. The output from a business step which has not been actualised, or which has been actualised with a business item with a date in the future, is neither TRUE nor FALSE: this is recorded as NULL. A NULL route entering a logic step acts as a bypass to that step: a logic gate with a NULL input outputs the other given input, or NULL if there is no other input."@en ;
+	rdfs:seeAlso <https://ukparliament.github.io/ontologies/procedure/flowcharts/design-notes.html> ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:House rdf:type owl:Class ;
@@ -123,28 +106,35 @@ ppr:hasConcludingStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Has concluding step"@en ;
 	rdfs:comment "A procedure may have one or more steps described as concluding steps, at which a work package subject to that procedure is considered to be concluded."@en ;
 	rdfs:domain ppr:Procedure ;
-	rdfs:range ppr:BusinessStep ;
+	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasKeyStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Has key step"@en ;
-	rdfs:comment "A procedure may have one or more business steps described as key steps."@en ;
+	rdfs:comment "A procedure may have one or more steps described as key steps."@en ;
 	rdfs:domain ppr:Procedure ;
-	rdfs:range ppr:BusinessStep ;
+	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasMemberActionStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Member action step"@en ;
 	rdfs:comment "A procedure may have one or more steps described as Member action steps, points at which a Member is able to take an action."@en ;
 	rdfs:domain ppr:Procedure ;
-	rdfs:range ppr:BusinessStep ;
+	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
 	rdfs:comment "Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion."@en ;
 	rdfs:domain ppr:BusinessItem ;
-	rdfs:range ppr:BusinessStep ;
+	rdfs:range ppr:Step ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:hasStepType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has step type"@en ;
+	rdfs:comment "Relates a step to its type. A step may only be of one type. A step type may be related to zero, one or more steps."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:StepType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:fromStep rdf:type owl:ObjectProperty ;
@@ -159,13 +149,6 @@ ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a route to its output step."@en ;
 	rdfs:domain ppr:Route ;
 	rdfs:range ppr:Step ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:hasLogicGateType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has logic gate type"@en ;
-	rdfs:comment "Relates a logic gate step to a logic gate type. A logic gate step has one type."@en ;
-	rdfs:domain ppr:LogicGateStep ;
-	rdfs:range ppr:LogicGateType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:followsRoute rdf:type owl:ObjectProperty ;
