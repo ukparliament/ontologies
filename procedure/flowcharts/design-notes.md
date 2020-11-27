@@ -28,15 +28,15 @@ Procedure maps may show steps that happen outside Parliament: for example, the m
 
 A work package is **a number of business items** undertaken by one or both Houses of Parliament. It may be subject to procedure: for example, a package of work to scrutinise, amend and pass or reject a bill. It may not be subject to a procedure: for example, a select committee inquiry following no procedural path.
 
-Work packages have a **focus**, a work packageable thing. For example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, or secondary - or delegated - legislation, or a treaty.
+Work packages have a **focus**, a work packageable thing. For example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, secondary - or delegated - legislation, or a treaty.
 
-Work packages - rather than particular instruments or papers - are **subject to procedure**, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the [CRAG](http://www.legislation.gov.uk/ukpga/2010/25/contents) procedure - and once following ratification, when no work package is triggered.
+Work packages - rather than particular instruments or papers - are **subject to procedure**, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the procedure set out by the [Constitutional Reform and Governance Act 2010](http://www.legislation.gov.uk/ukpga/2010/25/contents) - and once following ratification, when no work package is triggered.
 
 ## Why do the procedure maps differ from the procedure model?
 
 Current procedure maps follow a previous version of the model, with explicit route types: allows, causes, precludes and requires. These will be replaced by combinations of boolean operators.
 
-## How is a procedure map parsed in the context of a work package?
+## How is a procedure map with route types parsed in the context of a work package?
 
 Procedure maps for a given work package are parsed by looking for steps which have been actualised by a business item and following the routes out.
 
@@ -59,8 +59,30 @@ The [SI Service website](https://statutoryinstruments.parliament.uk/) lists what
 Whether a step is in play or not may change over time as preceding steps are actualised. A step may be actualised before being precluded and then subsequently become precluded, after which it should not be actualised again.
 
 Parsing rules describe what may happen in the future and have no retrospective effect. 
+ 
+[Pseudocode for the parsing of a work package](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/) is described here.
 
-Preclusion of steps only happens on output. Input is kept as flexible as possible, without precluding steps from future actualisation, allowing for adaptations to procedure and for revisions required by government or Parliament.
+Whilst we use the logic of the maps to output what may, must and cannot happen, this logic is not used to constrain data entry. Any step can be actualised in a work package regardless of what the current state of the map suggests. This allows us to respond to changes in procedure which have not yet been mapped and to cope with mistakes. We endeavour to be liberal on input, even where we are conservative on output.
+
+
+<!--- edited to here ---> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Why are some routes not recorded?
 
