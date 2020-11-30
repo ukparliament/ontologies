@@ -136,7 +136,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 	<tbody>
 		<tr>
 			<th>TRUE</th>
-			<td>FALSE</th>
+			<td>FALSE</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
@@ -167,8 +167,8 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 		<tr>
 			<th>TRUE</th>
 			<td>TRUE</td>
-			<td>FALSE</th>
-			<td>TRUE</th>
+			<td>FALSE</td>
+			<td>TRUE</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
@@ -203,8 +203,8 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 		<tr>
 			<th>TRUE</th>
 			<td>TRUE</td>
-			<td>TRUE</th>
-			<td>TRUE</th>
+			<td>TRUE</td>
+			<td>TRUE</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
