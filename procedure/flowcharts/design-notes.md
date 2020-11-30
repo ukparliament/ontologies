@@ -32,11 +32,35 @@ Work packages have a **focus**, a work packageable thing. For example: a topic a
 
 Work packages - rather than particular instruments or papers - are **subject to procedure**, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the procedure set out by the [Constitutional Reform and Governance Act 2010](http://www.legislation.gov.uk/ukpga/2010/25/contents) - and once following ratification, when no work package is triggered.
 
+## Why are some routes not recorded?
+
+The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts.
+
+The [parsing rules](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/) set out how a machine should traverse routes from [actualised](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e344) steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
+
+It may appear that common routes are missing: for example, a common outcome for [a motion](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/meta/motions/motion.pdf) is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the beg leave to withdraw step is still **in play** at the point of the debate and there is no need for a separate route.
+
+In deciding between making the maps parseable by machines as state diagrams and making them legible by people as flowcharts, we’ve decided to err on the side of machine parsability.
+
+Routes are not added where they would be redundant when encountered by a machine.
+
+## Will the procedure maps ever be finished?
+
+Procedure maps are not intended to be considered as being finished.
+
+Procedure cannot be completely described using a set of rules. How Parliament conducts business is decided by the Members of each House. Rules set out in statute may be changed. Procedure is necessarily open to adaptation and evolution.
+
+Where explicit changes to procedure are not made, Members may combine accepted parts of procedure in ways not previously described.
+
+There are occasions when one or both Houses make a mistake and do not follow procedure. For example, a House of Commons only instrument might be considered by the Joint Committee on Statutory Instruments because Lords Members of that committee are not told to leave when Commons only business is scheduled. Our procedure maps say that only instruments laid before both Houses are considered by the JCSI and this is procedurally true. Where procedure is accidentally not followed we do not update the procedure maps, which might lead to visualisations that at least appear to be broken.
+
 ## Why do the procedure maps differ from the procedure model?
 
 Current procedure maps follow a previous version of the model, with explicit route types: allows, causes, precludes and requires. These will be replaced by combinations of boolean operators.
 
-## How is a procedure map with route types parsed in the context of a work package?
+## Procedure maps with route types
+
+### How is a procedure map with route types parsed in the context of a work package?
 
 Procedure maps for a given work package are parsed by looking for steps which have been actualised by a business item and following the routes out.
 
@@ -64,41 +88,7 @@ Parsing rules describe what may happen in the future and have no retrospective e
 
 Whilst we use the logic of the maps to output what may, must and cannot happen, this logic is not used to constrain data entry. Any step can be actualised in a work package regardless of what the current state of the map suggests. This allows us to respond to changes in procedure which have not yet been mapped and to cope with mistakes. We endeavour to be liberal on input, even where we are conservative on output.
 
-
-<!--- edited to here ---> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Why are some routes not recorded?
-
-The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts.
-
-The parsing rules set out how a machine should traverse routes from actualised steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
-
-It may appear that common routes are missing: for example, a common outcome for a motion is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the beg leave to withdraw step is still in play at the point of the debate and there is no need for a separate route.
-
-In deciding between making the maps parseable by machines as state diagrams and making them legible by people as flowcharts, we’ve decided to err on the side of machine parsability.
-
-Routes are not added where they would be redundant when encountered by a machine.
-
-## Do route types have precedence?
-
-Each route has a type - and types have precedence.
+### Do route types have precedence?
 
 The order of precedence for route types is:
 
@@ -112,43 +102,141 @@ The order of precedence for route types is:
 
 A precludes route has precedence over any other route. If a step is both allowed and precluded, it is counted as precluded.
 
-Similarly, a caused route has precedence over an allows route. If a step is both caused and allowed, it is counted as caused.
-
 A requires route has precedence over both an allowed and a caused route. So if Step A is both allowed and requires another step to be actualised that isn’t currently actualised, Step A is not yet allowed.
 
-## Will the procedure maps ever be finished?
+Similarly, a caused route has precedence over an allows route. If a step is both caused and allowed, it is counted as caused.
 
-Procedure maps are not intended to be considered as being finished.
-
-Procedure cannot be completely described using a set of rules. How Parliament conducts business is decided by the Members of each House. Rules set out in statute may be changed. Procedure is necessarily open to adaptation and evolution.
-
-Where explicit changes to procedure are not made, Members may combine accepted parts of procedure in ways not previously described - often in the House of Lords.
-
-There are occasions when one or both Houses make a mistake and do not follow procedure. For example, a House of Commons only instrument might be considered by the Joint Committee on Statutory Instruments because Lords Members of that committee are not told to leave when Commons only business is scheduled. Our procedure maps say that only instruments laid before both Houses are considered by the JCSI and this is procedurally true. Where procedure is accidentally not followed, we do not update the procedure maps which might lead to visualisations that at least appear to be broken.
-
-## What is self-preclusion?
+### What is self-preclusion?
 
 A procedural step may happen once in a given work package: for example, a work package for an affirmative SI can only have one laying of the instrument into the House of Commons.
 
 A procedural step may happen multiple times: for example, a motion to approve a work package for an affirmative SI can have multiple approval motions tabled over time in the House of Commons, assuming that any preceding approval motions have been withdrawn.
 
-Steps that can only happen once are shown on the procedure maps in red. In the data, this is a preclusion route linking that step to itself. When we move to logic gates it will be a link from the step to a NOT gate and a route from the NOT gate back to that step.
+Steps that can only happen once are shown on the procedure maps in red. In the data, this is a preclusion route linking that step to itself.
 
 Steps that can happen multiple times are shown on the procedure maps in white.
 
-## How is a procedure map with logic gates parsed in the context of a work package?
+## Procedure maps with logic gates
 
+### How is a procedure map with logic gates parsed in the context of a work package?
+ 
 The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
+ 
+Each step has one type. The step can be a business step, decision step, logical NOT, logical AND or logical OR.
+ 
+Logic gates operate as classical logic, with the addition of a value called NULL. Truth tables for the logic gates are:
+ 
+<!-- NOT table -->
+<table>
+	<thead>
+		<tr>
+			<td colspan="2">NOT</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>TRUE</th>
+			<td>FALSE</th>
+		</tr>
+		<tr>
+			<th>FALSE</th>
+			<td>TRUE</td>
+		</tr>
+		<tr>
+			<th>NULL</th>
+			<td>NULL</td>
+		</tr>
+	</tbody>
+</table>
 
-Steps are specialised as business steps. The step class is specialised as either a logic gate step or a decision step.
 
+<!-- AND table -->
+<table>
+	<thead>
+		<tr>
+			<td colspan="4">AND</td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td>TRUE</td>
+			<td>FALSE</td>
+			<td>NULL</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>TRUE</th>
+			<td>TRUE</td>
+			<td>FALSE</th>
+			<td>TRUE</th>
+		</tr>
+		<tr>
+			<th>FALSE</th>
+			<td>FALSE</td>
+			<td>FALSE</td>
+			<td>FALSE</td>
+		</tr>
+		<tr>
+			<th>NULL</th>
+			<td>TRUE</td>
+			<td>FALSE</td>
+			<td>NULL</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<!-- OR table -->
+<table>
+	<thead>
+		<tr>
+			<td colspan="4">OR</td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td>TRUE</td>
+			<td>FALSE</td>
+			<td>NULL</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>TRUE</th>
+			<td>TRUE</td>
+			<td>TRUE</th>
+			<td>TRUE</th>
+		</tr>
+		<tr>
+			<th>FALSE</th>
+			<td>TRUE</td>
+			<td>FALSE</td>
+			<td>FALSE</td>
+		</tr>
+		<tr>
+			<th>NULL</th>
+			<td>TRUE</td>
+			<td>FALSE</td>
+			<td>NULL</td>
+		</tr>
+	</tbody>
+</table>
+ 
+A business step that is not yet actualised emits a NULL. An actualised business step emits a TRUE. 
+ 
 When an actualised business step is linked directly to a non-actualised business step, the step linked to is caused. A direct link is a link which is not through a logic gate step or a decision step.
-
-When an actualised business step is linked to a non-actualised business step through a NOT logic gate step, the step linked to is precluded.
-
+ 
 When an actualised business step is linked to a non-actualised business step through a decision step, the step linked to is allowed.
-
+ 
+When an actualised business step is linked to a non-actualised business step through a NOT logic gate step, the step linked to is precluded.
+ 
 Decision steps and logic gate steps may be combined to form logical flows.
+
+
+
+
+
+<!-- edited to here -->
+
 
 ## Limitations in parsing procedure maps
 
