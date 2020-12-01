@@ -44,6 +44,28 @@ In deciding between making the maps parseable by machines as state diagrams and 
 
 Routes are not added where they would be redundant when encountered by a machine.
 
+## Limitations in parsing procedure maps: multiple actualisations
+ 
+Describing the availability of steps able to happen later in a procedure depends on information that is only available outside the procedure map and cannot be determined using the procedural map alone, for example: there may be multiple decisions taken on different fatal prayers.
+ 
+A step may be actualised multiple times by different business items in the same work package, for example: the tabling or withdrawal of a motion. Determining whether a motion is in play and a decision step will occur later in the procedure depends on knowing the symmetry between tablings and withdrawals. 
+ 
+**A step may be actualised multiple times in series**: for example, an approval motion for an affirmative instrument might be tabled and subsequently withdrawn and a new approval motion tabled. There will never be two approval motions for the same instrument in the same House at one time.
+ 
+**A step may be actualised multiple times in parallel**: for example, different Members may table different fatal prayers against a negative instrument. These may be in series, as preceding prayers are withdrawn, or may be in parallel with multiple prayers being in play.
+ 
+ 
+### Withdrawals: preclusions between multiple and non-multiple steps
+ 
+We have taken the decision that a withdrawal or lapsing step which may occur multiple times may preclude another later consequential step, which itself may occur multiple times - even when it is not possible to determine if a given motion is still in play and with consequence. There is an assumption of symmetry - that the same motion is being described, even though motions would need to be attached to decisions to determine that.
+ 
+We have taken the decision that a withdrawal or lapsing step which may occur multiple times cannot preclude a later consequential step that is only ever actualised once in the same work package, because there is no evident or implied symmetry.
+ 
+ 
+### Specialising the business item model
+ 
+Our intention is to specialise the business item model into explicit types of parliamentary business such as tablings, withdrawals and decisions. Decisions are linked to the motion being decided upon. Anyone parsing the procedure maps would also need to query across this data to determine if there was currently a motion in play. Further expression of procedural rules will be possible after those models have been populated.
+
 ## Will the procedure maps ever be finished?
 
 Procedure maps are not intended to be considered as being finished.
@@ -220,6 +242,8 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 		</tr>
 	</tbody>
 </table>
+
+These tables are [available as a diagram](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/meta/logic-gates/logic-gates.png).
  
 A business step that is not yet actualised emits a NULL. An actualised business step emits a TRUE. 
  
@@ -238,29 +262,9 @@ Decision steps and logic gate steps may be combined to form logical flows.
 <!-- edited to here -->
 
 
-## Limitations in parsing procedure maps
 
-Some of the information required to parse the procedure map completely does not appear on the map.
 
-Steps involving tabling and withdrawal present a particular problem: an approval motion may be tabled and withdrawn and a new approval motion tabled, which itself may be withdrawn. Both tabling and withdrawal can happen multiple times. Determining whether an approval motion is ‘in play’ requires knowledge of the symmetry between tabling and withdrawal.
 
-Our intention is to specialise the business item model into explicit types of parliamentary business such as laying, tabling and withdrawal. Anyone parsing the procedure maps would need to also query across this data to determine if there was currently a motion in play. Further expression of procedural rules will be possible after those models have been populated.
-
-## Withdrawals: preclusions between multiple and non-multiple steps
-
-A step may be actualised multiple times by different business items in the same work package. 
-
-**A step may be actualised multiple times in series**: for example, an approval motion for an affirmative instrument might be tabled and subsequently withdrawn and a new approval motion tabled. 
-
-**A step may be actualised multiple times in parallel**: for example, different Members may table different fatal prayers against a negative instrument. These may be in series, as preceding prayers are withdrawn, or may be in parallel with multiple prayers being in play.
-
-Steps later in a procedure are dependent on the action of previously actualised steps. Describing the availability of steps happening later in a procedure depends on information that is available outside the procedure map and cannot be determined using the procedural map alone. For example, there may be multiple decisions taken on different fatal prayers. Determining whether a decision step will occur later in the procedure depends on knowing the symmetry between tablings and withdrawals.
-
-In order to completely parse the maps we intend to specialise the business item model into tablings, withdrawals and decisions. Decisions are linked to the item being decided upon. 
-
-We have taken the decision that a withdrawal or lapsing step which may occur multiple times may preclude another later consequential step, which itself may occur multiple times - even when it is not possible to determine if a given motion is still in play and with consequence. There is an assumption of symmetry - that the same motion is being described, even though motions would need to be attached to decisions to determine that.
-
-We have taken the decision that a withdrawal or lapsing step which may occur multiple times cannot preclude a later consequential step that is only ever actualised once in the same work package, because there is no evident or implied symmetry.
 
 ## Procedure conclusion
 
