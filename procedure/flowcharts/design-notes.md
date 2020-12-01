@@ -46,7 +46,7 @@ Routes are not added where they would be redundant when encountered by a machine
 
 ## Limitations in parsing procedure maps: multiple actualisations
  
-Describing the availability of steps able to happen later in a procedure depends on information that is only available outside the procedure map and cannot be determined using the procedural map alone, for example: there may be multiple decisions taken on different fatal prayers.
+Describing the availability of steps able to happen later in a work package depends on information that is only available outside the procedure map and cannot be determined using the procedural map alone.
  
 A step may be actualised multiple times by different business items in the same work package, for example: the tabling or withdrawal of a motion. Determining whether a motion is in play and a decision step will occur later in the procedure depends on knowing the symmetry between tablings and withdrawals. 
  
