@@ -44,7 +44,7 @@ In deciding between making the maps parseable by machines as state diagrams and 
 
 Routes are not added where they would be redundant when encountered by a machine.
 
-## Limitations in parsing procedure maps: multiple actualisations
+## Limitations in parsing procedure maps: symmetry of multiple actualisations
  
 Describing the availability of steps able to happen later in a work package depends on information that is only available outside the procedure map and cannot be determined using the procedural map alone.
  
@@ -137,6 +137,10 @@ A procedural step may happen multiple times: for example, a motion to approve a 
 Steps that can only happen once are shown on the procedure maps in red. In the data, this is a preclusion route linking that step to itself.
 
 Steps that can happen multiple times are shown on the procedure maps in white.
+
+### Procedure conclusion
+
+Procedure conclusion steps should only be brought into play by either an allows or causes route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
 
 ## Procedure maps with logic gates
 
@@ -255,20 +259,10 @@ When an actualised business step is linked to a non-actualised business step thr
  
 Decision steps and logic gate steps may be combined to form logical flows.
 
+### Procedure conclusion
 
+Procedure conclusion steps should only be brought into play by either a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
 
-
-
-<!-- edited to here -->
-
-
-
-
-
-
-## Procedure conclusion
-
-Procedure conclusion steps should only be brought into play by either an allows or causes route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
 
 
 
