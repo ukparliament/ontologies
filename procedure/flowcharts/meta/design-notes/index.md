@@ -248,8 +248,18 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 </table>
 
 These tables are [available as a diagram](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/meta/logic-gates/logic-gates.png).
- 
-A business step that is not yet actualised emits a NULL. An actualised business step emits a TRUE. 
+
+A NULL value entering a logic gate renders that gate ‘transparent’:
+
+* A NOT gate with an input value of NULL will output a NULL.
+
+* An AND gate with one input value of NULL will output the value of the second input, be that TRUE, FALSE or NULL.
+
+* An OR gate with one input value of NULL will output the value of the second input, be that TRUE, FALSE or NULL.
+
+A business step that is not yet actualised emits a NULL.
+
+A business step that has been actualised emits a TRUE.
  
 When an actualised business step is linked directly to a non-actualised business step, the step linked to is caused. A direct link is a link which is not through a logic gate step or a decision step.
  
