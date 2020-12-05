@@ -50,7 +50,7 @@ ppr:Step rdf:type owl:Class ;
 ppr:StepType rdf:type owl:Class ;
 	rdfs:label "Step type"@en ;
 	rdfs:comment "A step has one type: a business step type, a decision step type, a logical NOT step type, a logical AND step type or a logical OR step type. Business step: a step that can be actualised by a business item. Decision step: a step that is used to describe the requirement for a decision to be made before the subsequent route can be followed. Routes including a decision step indicate that the target step is allowed and not caused: a route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a decision step indicates that actualisation of the step may happen in the future, being an allowed relationship. Logical step: a step that describes logical operations performed over routes. Inputs and outputs of a logic gate are either TRUE or FALSE. The output from a business step which has been actualised by a business item with a date in the past is TRUE. The output from a business step which has not been actualised, or which has been actualised with a business item with a date in the future, is neither TRUE nor FALSE: this is recorded as NULL. A NULL route entering a logic step acts as a bypass to that step: a logic gate with a NULL input outputs the other given input, or NULL if there is no other input."@en ;
-	rdfs:seeAlso <https://ukparliament.github.io/ontologies/procedure/flowcharts/design-notes.html> ;
+	rdfs:seeAlso <https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/> ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:House rdf:type owl:Class ;
