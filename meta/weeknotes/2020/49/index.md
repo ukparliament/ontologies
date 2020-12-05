@@ -18,6 +18,8 @@ So far we have made lists of Standing Orders at all points in time at which some
 
 Michael also spent some considerable time writing code to chase Standing Orders back through time to build a simple node and edge graph of position changes over time. His intention was to spit out JSON and load it into some form of Sankey diagram to get a sense of when major edits to Standing Orders had happened. An intention that only half worked in practice. The application does indeed now output Sankey compliant node / edge JSON but loading the visualisation takes upwards of three minutes. And then crashes his browser. More work is needed here.
 
+Finally, whilst the data model we've generated is still subject to change and the language used needs more work, Michael has made a start on translating our relational model to something more ontological. So far it's just a picture. Turtle and HTML to follow next week we hope.
+
 ## Your weekly egg timer update
 
 Once again we have no real updates. Though this week did see the arrival of another of those start date / end date Word tables that JO Jane is forced to churn out. Librarian Jayne did some testing against the dates set out by JO Jane and declared both brain and code to be in agreement. So that's good. We still plan to wait for a recess to check that our dates still agree for instruments laid when benches are empty before we roll out the egg timer further. Should God ever grant us another recess.
