@@ -162,8 +162,8 @@ pso:revisedOn rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:ordinality rdf:type owl:DatatypeProperty ;
-	rdfs:label "Ordinality"@en ;
+pso:revisionSetOrdinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Revision set ordinality"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range xsd:integer ;
@@ -190,18 +190,18 @@ pso:label rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
-pso:orderVersionParlrulesIdentifier rdf:type owl:DatatypeProperty ;
-	rdfs:label "Order version Parlrules identifier"@en ;
+pso:orderVersionOrdinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Order version ordinality"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pso:OrderVersion ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
-pso:FragmentVersionParlrulesIdentifier rdf:type owl:DatatypeProperty ;
-	rdfs:label "Fragment version Parlrules identifier"@en ;
+pso:fragmentVersionOrdinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Fragment version ordinality"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pso:FragmentVersion ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:isMajorRevision rdf:type owl:DatatypeProperty ;
