@@ -161,3 +161,52 @@ pso:revisedOn rdf:type owl:DatatypeProperty ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:ordinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:RevisionSet ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:text rdf:type owl:DatatypeProperty ;
+	rdfs:label "Text"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:FragmentVersion ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
+pso:currentNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Current number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:FragmentVersion ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
+pso:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:BusinessExtent ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
+pso:orderVersionParlrulesIdentifier rdf:type owl:DatatypeProperty ;
+	rdfs:label "Order version Parlrules identifier"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:OrderVersion ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
+pso:FragmentVersionParlrulesIdentifier rdf:type owl:DatatypeProperty ;
+	rdfs:label "Fragment version Parlrules identifier"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:FragmentVersion ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
+pso:isMajorRevision rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is major revision"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:Revision ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
