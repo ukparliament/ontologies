@@ -269,6 +269,47 @@ When an actualised business step is linked to a non-actualised business step thr
  
 Decision steps and logic gate steps may be combined to form logical flows.
 
+### Validating inputs and outputs to steps
+
+
+
+<table>
+	<thead>
+		<tr>
+			<td>Step type</td>
+			<td>Input count</td>
+			<td>Output count</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Business step</th>
+			<td>1</td>
+			<td>0, 1 or more than one</td>
+		</tr>
+		<tr>
+			<th>Decision step</th>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<th>Logical NOT</th>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<th>Logical AND</th>
+			<td>2</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<th>Logical OR</th>
+			<td>2</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+
 ### Procedure conclusion
 
 Procedure conclusion steps should only be brought into play by either a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
