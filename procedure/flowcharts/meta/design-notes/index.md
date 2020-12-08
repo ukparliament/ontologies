@@ -271,7 +271,7 @@ Decision steps and logic gate steps may be combined to form logical flows.
 
 ### Validating inputs and outputs to steps
 
-
+Each type of step has a fixed number of inputs and a fixed number of outputs.
 
 <table>
 	<thead>
@@ -285,7 +285,7 @@ Decision steps and logic gate steps may be combined to form logical flows.
 		<tr>
 			<th>Business step</th>
 			<td>1</td>
-			<td>0, 1 or more than one</td>
+			<td>0, 1 or more than 1</td>
 		</tr>
 		<tr>
 			<th>Decision step</th>
