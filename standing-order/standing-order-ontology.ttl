@@ -33,3 +33,23 @@ pso:BusinessExtent rdf:type owl:Class ;
 	rdfs:label "Business extent"@en ;
 	rdfs:comment "Sets out the extent of business described by a Standing Order as public business or private business."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:RevisionSet rdf:type owl:Class ;
+	rdfs:label "Revision set"@en ;
+	rdfs:comment "A set of orders as they exist at the time of revision of one or more orders."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:OrderVersion rdf:type owl:Class ;
+	rdfs:label "Order version"@en ;
+	rdfs:comment "A version of an order contained by a revision set."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:Order rdf:type owl:Class ;
+	rdfs:label "Order"@en ;
+	rdfs:comment "An order is an FRBR-style work level item, wrapping different manifestations - described as versions - over time. It represents a platonic entity and associated intent."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
+pso:FragmentVersion rdf:type owl:Class ;
+	rdfs:label "Fragment version"@en ;
+	rdfs:comment "A version of a fragment of a Standing Order, contained by a revision set."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
