@@ -11,7 +11,7 @@
     dcterms:title "Standing Order ontology"@en ;
     dcterms:created "2020-12-07"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en;
+    dcterms:description "A model describing Standing Orders for both Houses of Parliament, establishing persistent identification of orders and fragments of orders."@en;
 	foaf:depiction <https://ukparliament.github.io/ontologies/standing-order/standing-order.png> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -31,37 +31,37 @@ pso:House rdf:type owl:Class ;
 
 pso:BusinessExtent rdf:type owl:Class ;
 	rdfs:label "Business extent"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Sets out the extent of business described by a Standing Order as public business or private business."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:RevisionSet rdf:type owl:Class ;
 	rdfs:label "Revision set"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A set of orders as they exist at the time of revision of one or more orders."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:OrderVersion rdf:type owl:Class ;
 	rdfs:label "Order version"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A version of an order contained by a revision set."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:Order rdf:type owl:Class ;
 	rdfs:label "Order"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An order is an FRBR-style work level item, wrapping different manifestations - described as versions - over time. It represents a platonic entity and associated intent."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:FragmentVersion rdf:type owl:Class ;
 	rdfs:label "Fragment version"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A version of a fragment of a Standing Order, contained by a revision set."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:Fragment rdf:type owl:Class ;
 	rdfs:label "Fragment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A fragment is an FRBR-style work level item, wrapping different manifestations - described as fragment versions - over time. It represents a platonic entity and associated intent."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:Revision rdf:type owl:Class ;
 	rdfs:label "Revision"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A revision is a change to the text of a Standing Order fragment."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 
@@ -69,31 +69,33 @@ pso:Revision rdf:type owl:Class ;
 
 pso:issuedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Issued by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision set to the House it is issued by."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range pso:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:revisionSetCoversBusinessExtent rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision set covers business extent"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision set to the business extent which that set covers."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range pso:BusinessExtent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
-pso:containsOrderVersion rdf:type owl:ObjectProperty ;
-	rdfs:label "Contains order version"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pso:RevisionSet ;
-	rdfs:range pso:OrderVersion ;
+pso:orderVersionContainedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Order version contained by"@en ;
+	rdfs:comment "Relates an order version to the revision set it is contained by."@en ;
+	rdfs:domain pso:OrderVersion ;
+	rdfs:range pso:RevisionSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:containsFragmentVersion rdf:type owl:ObjectProperty ;
-	rdfs:label "Contains fragment version"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pso:RevisionSet ;
-	rdfs:range pso:FragmentVersion ;
+pso:fragmentVersionContainedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Fragment version contained by"@en ;
+	rdfs:comment "Relates a fragment version to the revision set it is contained by."@en ;RevisionSet
+	rdfs:domain pso:FragmentVersion ;
+	rdfs:range pso:RevisionSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+# edited to here
 	
 pso:contains rdf:type owl:ObjectProperty ;
 	rdfs:label "Contains"@en ;
