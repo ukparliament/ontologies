@@ -87,3 +87,19 @@ pso:orderVersionContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range pso:RevisionSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:fragmentVersionContainedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Fragment version contained by"@en ;
+	rdfs:comment "Relates a fragment version to the revision set it is contained by."@en ;RevisionSet
+	rdfs:domain pso:FragmentVersion ;
+	rdfs:range pso:RevisionSet ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+# edited to here
+	
+pso:contains rdf:type owl:ObjectProperty ;
+	rdfs:label "Contains"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pso:OrderVersion ;
+	rdfs:range pso:FragmentVersion ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
