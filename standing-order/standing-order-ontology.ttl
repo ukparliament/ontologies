@@ -31,7 +31,7 @@ pso:House rdf:type owl:Class ;
 
 pso:BusinessExtent rdf:type owl:Class ;
 	rdfs:label "Business extent"@en ;
-	rdfs:comment "Sets out the extent of business described by a standing order as public business or private business."@en ;
+	rdfs:comment "Sets out the extent of business covered by a standing order as public business or private business."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:RevisionSet rdf:type owl:Class ;
@@ -95,60 +95,51 @@ pso:fragmentVersionContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:range pso:RevisionSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-# edited to here
-	
-pso:contains rdf:type owl:ObjectProperty ;
-	rdfs:label "Contains"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pso:OrderVersion ;
-	rdfs:range pso:FragmentVersion ;
+pso:containedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Contained by"@en ;
+	rdfs:comment "Relates a fragment version to the order version it is contained by."@en ;
+	rdfs:domain pso:FragmentVersion ;
+	rdfs:range pso:OrderVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:revisionFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision from"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision to the fragment version being revised."@en ;
 	rdfs:domain pso:Revision ;
 	rdfs:range pso:FragmentVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:revisionTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision to the fragment version resulting from the revision."@en ;
 	rdfs:domain pso:Revision ;
 	rdfs:range pso:FragmentVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:orderedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Ordered by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an order to the House by which it was ordered."@en ;
 	rdfs:domain pso:Order ;
 	rdfs:range pso:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:orderCoversBusinessExtent rdf:type owl:ObjectProperty ;
 	rdfs:label "Order covers business extent"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an order to the business extent is covers."@en ;
 	rdfs:domain pso:Order ;
 	rdfs:range pso:BusinessExtent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:versionOfOrder rdf:type owl:ObjectProperty ;
 	rdfs:label "Version of order"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an order version to the order it is a version of."@en ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range pso:Order ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
-pso:comprisedOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Comprised of"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pso:Order ;
-	rdfs:range pso:FragmentVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:versionOfFragment rdf:type owl:ObjectProperty ;
 	rdfs:label "Version of fragment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a fragment version to the fragment it is a version of."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range pso:Fragment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
@@ -159,56 +150,49 @@ pso:versionOfFragment rdf:type owl:ObjectProperty ;
 
 pso:revisedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Revised on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision set to the date on which one or more orders contained by the revision set were revised."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:revisionSetOrdinality rdf:type owl:DatatypeProperty ;
 	rdfs:label "Revision set ordinality"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:text rdf:type owl:DatatypeProperty ;
 	rdfs:label "Text"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a fragment version to the text content of that fragment version."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
-pso:currentNumber rdf:type owl:DatatypeProperty ;
-	rdfs:label "Current number"@en ;
-	rdfs:comment ""@en ;
+pso:number rdf:type owl:DatatypeProperty ;
+	rdfs:label "Number"@en ;
+	rdfs:comment "Relates a fragment version to its number as it appears, within a revision set."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
-pso:label rdf:type owl:DatatypeProperty ;
-	rdfs:label "Label"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pso:BusinessExtent ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
+	
 pso:orderVersionOrdinality rdf:type owl:DatatypeProperty ;
 	rdfs:label "Order version ordinality"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an order version to its position in the list of order versions contained by a revision set."@en ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:fragmentVersionOrdinality rdf:type owl:DatatypeProperty ;
 	rdfs:label "Fragment version ordinality"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a fragment version to its position in the list of fragment versions contained by a revision set."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:isMajorRevision rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is major revision"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a revision to boolean describing if the revision is major: a FALSE value indicates only a change of case to the text content, a TRUE value indicates a major revision involving a change of wording to the text content."@en ;
 	rdfs:domain pso:Revision ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
