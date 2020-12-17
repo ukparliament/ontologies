@@ -149,6 +149,8 @@ Procedure conclusion steps should only be brought into play by either an allows 
 The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
  
 Each step has one type. The step can be a business step, decision step, logical NOT, logical AND or logical OR.
+
+#### Logic gates
  
 Logic gates operate as classical logic, with the addition of a value called NULL. Truth tables for the logic gates are:
  
@@ -257,17 +259,56 @@ A NULL value entering a logic gate renders that gate ‘transparent’:
 
 * An OR gate with one input value of NULL will output the value of the second input, be that TRUE, FALSE or NULL.
 
-A business step that is not yet actualised emits a NULL.
+#### Impact of actualisation
 
-A business step that has been actualised emits a TRUE.
+A business step that has not been actualised emits a NULL.
+
+A business item that has been actualised by a business item or items only having dates in the future emits a NULL.
+
+A business step that has been actualised by at least one business item with a date in the past or with a date of today emits a TRUE.
+
  
+#### Causes, allows and precludes
+
 When an actualised business step is linked directly to a non-actualised business step, the step linked to is caused. A direct link is a link which is not through a logic gate step or a decision step.
- 
+
 When an actualised business step is linked to a non-actualised business step through a decision step, the step linked to is allowed.
- 
+
 When an actualised business step is linked to a non-actualised business step through a NOT logic gate step, the step linked to is precluded.
- 
+
 Decision steps and logic gate steps may be combined to form logical flows.
+
+#### Work package visualisations
+
+Work package visualisations show the routes in a procedure and the steps linked by those routes. Routes that are not currently traversable - having a start date in the future or an end date in the past - are indicated as such as per the procedure visualisation. In these respects they are identical to the procedure visualisation. 
+
+#### Business steps in work package visualisations
+
+Business steps in a work package can be in one of three current states and one of three potential states. Any combination of one current state and one potential state is possible.
+
+##### Current states of a business step
+
+Business steps can be in one of three current states:
+
+* Not actualised.
+
+* Actualised one or more times, with all associated business items having dates in the future.
+
+* Actualised one or more times, by at least least one associated business item with a date in the past or a date of today.
+
+Current states are determined by actualisation of steps rather than processing of routes and logic. These states are indicated visually.
+
+##### Potential states of a business step
+
+Business steps can be in one of three potential states:
+
+* Not actualisable - business steps having a direct input of either FALSE or NULL when all logical processing is taken into account.
+
+* Caused to be actualised - business steps having a direct input of TRUE when all logical processing is taken into account.
+
+* Allowed to be actualised - business steps having an input of TRUE through a decision step when all logical processing is taken into account.
+
+Potential states result from the parsing of routes and associated logic. These states are indicated visually.
 
 ### Validating inputs and outputs to steps
 
