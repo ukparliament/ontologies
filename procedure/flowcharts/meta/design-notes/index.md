@@ -345,7 +345,7 @@ Business steps at the start of a procedure - for example, 'Instrument created' -
 
 ### Procedure conclusion
 
-Procedure conclusion steps should only be brought into play by either a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
+Procedure conclusion steps can only be brought into play by either a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
 
 
 
