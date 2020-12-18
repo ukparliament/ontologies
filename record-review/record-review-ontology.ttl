@@ -234,3 +234,59 @@ precr:reinstatedAt rdf:type owl:DatatypeProperty ;
 	rdfs:domain precr:Withdrawal ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:publishedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Published at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Manifestation ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:archivedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Archived at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Archiving ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:submittedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Submitted at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Submission ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reviewed on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Review ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:receivedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Received at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:feedbackText rdf:type owl:DatatypeProperty ;
+	rdfs:label "Feedback text"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:hasRevisionDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:hasRevisionTypeDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision type description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:RevisionType ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
