@@ -32,13 +32,14 @@ precr:Manifestation rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:EditorialReview rdf:type owl:Class ;
+	rdfs:subClassOf precr:EditorialAction ;
 	rdfs:label "Editorial review"@en ;
 	rdfs:comment "A review of a manifestation by a reviewer."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:EditorialAction rdf:type owl:Class ;
 	rdfs:label "Editorial action"@en ;
-	rdfs:comment "An editorial action taken on a manifestation or a work: the archiving of a work, the revision of a manifestation or the withdrawal of a manifestation."@en ;
+	rdfs:comment "An editorial action taken on a manifestation or a work: the archiving of a work, the reviewing of a manifestation, the revision of a manifestation or the withdrawal of a manifestation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:Archiving rdf:type owl:Class ;
@@ -54,7 +55,7 @@ precr:Withdrawal rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 	
-# comments to here
+# comments to heres
 	
 precr:Revision rdf:type owl:Class ;
 	rdfs:subClassOf precr:EditorialAction ;
@@ -94,12 +95,12 @@ precr:RevisionType rdf:type owl:Class ;
 precr:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Leads to"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain precr:EditorialReview ;
+	rdfs:domain precr:EditorialAction ;
 	rdfs:range precr:EditorialAction ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 
-precr:carriedOutBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Carried out by"@en ;
+precr:by rdf:type owl:ObjectProperty ;
+	rdfs:label "By"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain precr:EditorialAction ;
 	rdfs:range precr:Agent ;
@@ -166,13 +167,6 @@ precr:toManifestation rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain precr:Revision ;
 	rdfs:range precr:Manifestation ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
-
-precr:undertakenBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Undertaken by"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain precr:EditorialReview ;
-	rdfs:range precr:Agent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:makes rdf:type owl:ObjectProperty ;
