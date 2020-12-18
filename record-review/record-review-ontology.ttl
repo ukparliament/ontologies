@@ -5,3 +5,23 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/record-review/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Record reviews ontology"@en ;
+    dcterms:created "2020-12-18"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/record-review/record-review.png> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ] .
+
+
+#######  Classes #####
+
+precr:Work rdf:type owl:Class ;
+	rdfs:label "Work"@en ;
+	rdfs:comment "A distinct intellectual creation, similar to a work as defined in FRBR."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
