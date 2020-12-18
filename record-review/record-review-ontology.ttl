@@ -11,7 +11,7 @@
     dcterms:title "Record reviews ontology"@en ;
     dcterms:created "2020-12-18"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing editorial reviews of records and resulting actions."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/record-review/record-review.png> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -33,25 +33,28 @@ precr:Manifestation rdf:type owl:Class ;
 	
 precr:EditorialReview rdf:type owl:Class ;
 	rdfs:label "Editorial review"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A review of a manifestation by a reviewer."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:EditorialAction rdf:type owl:Class ;
 	rdfs:label "Editorial action"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An editorial action taken on a manifestation or a work: the archiving of a work, the revision of a manifestation or the withdrawal of a manifestation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:Archiving rdf:type owl:Class ;
 	rdfs:subClassOf precr:EditorialAction ;
 	rdfs:label "Archiving"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The act of archiving of a work, indicating that no further revisions will take place. The work and any non-withdrawn manifestations will remain available."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:Withdrawal rdf:type owl:Class ;
 	rdfs:subClassOf precr:EditorialAction ;
 	rdfs:label "Withdrawal"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The act of withdrawing a manifestation. A manifestation might be withdrawn for a period and reinstated or permanently withdrawn."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+	
+# comments to here
 	
 precr:Revision rdf:type owl:Class ;
 	rdfs:subClassOf precr:EditorialAction ;
