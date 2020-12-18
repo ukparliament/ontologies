@@ -215,3 +215,22 @@ precr:hasRevisionType rdf:type owl:ObjectProperty ;
 	rdfs:domain precr:Revision ;
 	rdfs:range precr:RevisionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+
+				
+	
+##### Data properties ####	
+	
+precr:withdrawnAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Withdrawn at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Withdrawal ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reinstatedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reinstated at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Withdrawal ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
