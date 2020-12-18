@@ -26,11 +26,6 @@ precr:Work rdf:type owl:Class ;
 	rdfs:comment "A distinct intellectual creation, similar to a work as defined in FRBR."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
-precr:Expression rdf:type owl:Class ;
-	rdfs:label "Expression"@en ;
-	rdfs:comment "A work may be realised - as an expression - having more than one format, for example: a podcast episode made available as an audio file and as a text transcript."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
-	
 precr:Manifestation rdf:type owl:Class ;
 	rdfs:label "Manifestation"@en ;
 	rdfs:comment "A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode."@en ;
@@ -107,4 +102,67 @@ precr:archivingOf rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain precr:Archiving ;
 	rdfs:range precr:Work ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:hasReviewCycle rdf:type owl:ObjectProperty ;
+	rdfs:label "Has review cycle"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Work ;
+	rdfs:range precr:ReviewCycle ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewLeadsToArchiving rdf:type owl:ObjectProperty ;
+	rdfs:label "Review leads to archiving"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Review ;
+	rdfs:range precr:Archiving ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:resultsInReview rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in review"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:ReviewCycle ;
+	rdfs:range precr:Review ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewLeadsToNewWork rdf:type owl:ObjectProperty ;
+	rdfs:label "Review leads to new work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Review ;
+	rdfs:range precr:Work ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:withdrawnBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Manifestation ;
+	rdfs:range precr:Withdrawal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewLeadsToWithdrawal rdf:type owl:ObjectProperty ;
+	rdfs:label "Review leads to withdrawal"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Review ;
+	rdfs:range precr:Withdrawal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Review of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Review ;
+	rdfs:range precr:Work ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:fromManifestation rdf:type owl:ObjectProperty ;
+	rdfs:label "From manifestation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range precr:Manifestation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:toManifestation rdf:type owl:ObjectProperty ;
+	rdfs:label "To manifestation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range precr:Manifestation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
