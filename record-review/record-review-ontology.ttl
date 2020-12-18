@@ -173,3 +173,45 @@ precr:reviewLeadsToRevision rdf:type owl:ObjectProperty ;
 	rdfs:domain precr:Review ;
 	rdfs:range precr:Revision ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:reviewedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Reviewed by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Review ;
+	rdfs:range precr:Agent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:makes rdf:type owl:ObjectProperty ;
+	rdfs:label "Makes"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Agent ;
+	rdfs:range precr:Submission ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:of rdf:type owl:ObjectProperty ;
+	rdfs:label "Of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Submission ;
+	rdfs:range precr:Feedback ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:receivedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Received by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range precr:Agent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:feedbackLeadsTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Feedback leads to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range precr:Review ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:hasRevisionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has revision type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range precr:RevisionType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
