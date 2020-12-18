@@ -263,50 +263,40 @@ A NULL value entering a logic gate renders that gate ‘transparent’:
 
 A business step that has not been actualised emits a NULL.
 
-A business item that has been actualised by a business item or items only having dates in the future emits a NULL.
+A business step that has been actualised by a business item or items only having dates in the future emits a NULL.
 
 A business step that has been actualised by at least one business item with a date in the past or with a date of today emits a TRUE.
 
- 
-#### Causes, allows and precludes
-
-When an actualised business step is linked directly to a non-actualised business step, the step linked to is caused. A direct link is a link which is not through a logic gate step or a decision step.
-
-When an actualised business step is linked to a non-actualised business step through a decision step, the step linked to is allowed.
-
-When an actualised business step is linked to a non-actualised business step through a NOT logic gate step, the step linked to is precluded.
-
-Decision steps and logic gate steps may be combined to form logical flows.
 
 #### Work package visualisations
 
-Work package visualisations show the routes in a procedure and the steps linked by those routes. Routes that are not currently traversable - having a start date in the future or an end date in the past - are indicated as such as per the procedure visualisation. In these respects they are identical to the procedure visualisation. 
+Work package visualisations show the routes in a procedure and the steps linked by those routes.
 
-#### Business steps in work package visualisations
+Routes that are not currently traversable - having a start date in the future or an end date in the past - are indicated as such as per the procedure visualisation. In these respects they are identical to the procedure visualisation.
 
-Business steps in a work package can be in one of three current states and one of three potential states. Any combination of one current state and one potential state is possible.
+Business steps in a work package are in one of three current states and in one of three potential states. Any combination of one current state and one potential state is possible.
 
 ##### Current states of a business step
 
-Business steps can be in one of three current states:
+Business steps are in one of three current states:
 
 * Not actualised.
 
 * Actualised one or more times, with all associated business items having dates in the future.
 
-* Actualised one or more times, by at least least one associated business item with a date in the past or a date of today.
+* Actualised one or more times, with at least one associated business item having a date in the past or a date of today.
 
 Current states are determined by actualisation of steps rather than processing of routes and logic. These states are indicated visually.
 
 ##### Potential states of a business step
 
-Business steps can be in one of three potential states:
+Business steps are in one of three potential states:
 
-* Not actualisable - business steps having a direct input of either FALSE or NULL when all logical processing is taken into account.
+* Not actualisable - business steps having an input of either FALSE or NULL.
 
-* Caused to be actualised - business steps having a direct input of TRUE when all logical processing is taken into account.
+* Caused to be actualised - business steps having an input of TRUE, not through a decision step. Such steps must be actualised at some point in the future.
 
-* Allowed to be actualised - business steps having an input of TRUE through a decision step when all logical processing is taken into account.
+* Allowed to be actualised - business steps having an input of TRUE, through a decision step. Such steps may be actualised depending on a decision made elsewhere.
 
 Potential states result from the parsing of routes and associated logic. These states are indicated visually.
 
