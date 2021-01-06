@@ -1,3 +1,4 @@
+@prefix pcommon: <http://parliament.uk/ontologies/common/> .
 @prefix pa: <http://parliament.uk/ontologies/agency/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -23,19 +24,10 @@
 
 #######  Classes ##### 	
 
-pa:Agent rdf:type owl:Class ;
-	rdfs:label "Agent"@en ;
-	rdfs:comment "Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
-pa:Person rdf:type owl:Class ;
-	rdfs:subClassOf pa:Agent ;
-	rdfs:label "Person"@en ;
-	rdfs:comment "A person."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:Group rdf:type owl:Class ;
-	rdfs:subClassOf pa:Agent ;
+	rdfs:subClassOf pcommon:Agent ;
 	rdfs:label "Group"@en ;
 	rdfs:comment "A group of people. Groups may contain other groups or be empty."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
@@ -71,28 +63,28 @@ skos:Concept rdf:type owl:Class ;
 pa:hasExpertiseIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Has expertise in"@en ;
 	rdfs:comment "Relates an agent to a concept to express an area of expertise. An agent may have one or more areas of expertise, or none."@en ;
-	rdfs:domain pa:Agent ;
+	rdfs:domain pcommon:Agent ;
 	rdfs:range skos:Concept ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasInterestIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Has interest in"@en ;
 	rdfs:comment "Relates an agent to a concept to express an area of interest. An agent may have one or more areas of interest, or none."@en ;
-	rdfs:domain pa:Agent ;
+	rdfs:domain pcommon:Agent ;
 	rdfs:range skos:Concept ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasGroupInclusion rdf:type owl:ObjectProperty ;
 	rdfs:label "Has group inclusion"@en ;
 	rdfs:comment "Relates an agent to a group inclusion. An agent may have one or more group inclusions, or none. A group inclusion is to a single agent."@en ;
-	rdfs:domain pa:Agent ;
+	rdfs:domain pcommon:Agent ;
 	rdfs:range pa:GroupInclusion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
 pa:hasIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "Has incumbency"@en ;
 	rdfs:comment "Relates a person to an incumbency. A person may have one or more incumbencies, or none. An incumbency is to a single person."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range pa:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
@@ -120,7 +112,7 @@ pa:inGroup rdf:type owl:ObjectProperty ;
 pa:placeOfBirth rdf:type owl:ObjectProperty ;
 	rdfs:label "Place of birth"@en ;
 	rdfs:comment "Relates a person to their place of birth."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range pa:Place ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
@@ -133,28 +125,28 @@ pa:placeOfBirth rdf:type owl:ObjectProperty ;
 pa:title rdf:type owl:DatatypeProperty ;
 	rdfs:label "Title"@en ;
 	rdfs:comment "A person's title. For example, Mr., Ms. or Dr."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:givenName rdf:type owl:DatatypeProperty ;
 	rdfs:label "Given name"@en ;
 	rdfs:comment "A person's personal name, commonly known in the west as first or forename."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:otherNames rdf:type owl:DatatypeProperty ;
 	rdfs:label "Other names"@en ;
 	rdfs:comment "A person's additional given names."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .	
 
 pa:familyName rdf:type owl:DatatypeProperty ;
 	rdfs:label "Family name"@en ;
 	rdfs:comment "A person's inherited name, commonly known in the west as surname."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 ### To be replaced by a full time bound person name model ###
@@ -162,13 +154,13 @@ pa:familyName rdf:type owl:DatatypeProperty ;
 pa:dateOfBirth rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date of birth"@en ;
 	rdfs:comment "A person's date of birth."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 
 pa:dateOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date of death"@en ;
 	rdfs:comment "A person's date of death."@en ;
-	rdfs:domain pa:Person ;
+	rdfs:domain pcommon:Person ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
