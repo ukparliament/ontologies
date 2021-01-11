@@ -40,3 +40,6 @@ Jayne has been in regular communication with our colleagues in Software Engineer
 
 On the night before Christmas, a request came in from another academic for a dump of the [Rush data](https://membersafter1832.historyofparliamentonline.org/) which Michael attempted to comply with. But his version of Postgres appears to be incompatible with the rest of the internet and the rest of his computer. So young Robert stepped in and the data was dispatched. If anyone can help Michael upgrade his Postgres, he'd be delighted to hear from them.
 
+## In continuence of our limited education
+
+In normal years, when you're imprisoned in the house by the cold and the wet, one bright spot on the far horizon is a trip to Oxford. The second weekend of January usually involving a train journey from Marylebone to the [Study of Parliament Group](https://studyofparliamentgroup.org/) annual weekend. This year of course we are also imprisoned by the rona. So Anya and Michael were forced to join esteemed colleagues and academics to socialise purely in pixels. And not pubs. Still, it was [a fantastic programme](https://studyofparliamentgroup.org/programme/), as ever. They think they followed at least 30% but it was an interesting 30%. Thanks [Cristina](https://twitter.com/estrangeirada), speakers, panellists and organisers.
