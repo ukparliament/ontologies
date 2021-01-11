@@ -1,3 +1,3 @@
 # Procedure modelling weeknotes 2021
 
-* [Week 1](01)s
+* [Week 1](01)
