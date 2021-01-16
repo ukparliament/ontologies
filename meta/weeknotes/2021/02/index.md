@@ -28,7 +28,7 @@ On Thursday, [Anya](https://twitter.com/bitten_) and Michael sat down with a cop
 
 ## In continuence of our limited education
 
-Thursday also saw the latest in a long line of Lords' procedural seminars. This time offered by [Anna](https://twitter.com/LoogaGirl) and on the subject of [parliamentary time](https://ukparliament.github.io/ontologies/time-period/time-period-ontology.html). Librarians Anya, Jayne, [Liz](https://twitter.com/greensideknits) and [Clare](https://twitter.com/tinysprite) and computational diletante Michael all popped along and learnt much. Thanks Anna.
+Thursday also saw the latest in a long line of Lords' procedural seminars. This time offered by [Anna](https://twitter.com/LoogaGirl) and on the subject of [parliamentary time](https://ukparliament.github.io/ontologies/time-period/time-period-ontology.html). Librarians Anya, [Liz](https://twitter.com/greensideknits) and [Clare](https://twitter.com/tinysprite) and computational diletante Michael all popped along and learnt much. Thanks Anna.
 
 Michael popped his head into a Rules as Code hackday show and tell organised by folks at the Bank of England. He's not quite sure who invited him but if it was you, [Adam](https://twitter.com/AdamWyner), thanks. It was all good stuff but he'd still pay money to attend an event where [John](https://twitter.com/johnlsheridan) or [Luke](https://twitter.com/Lenorbury) or somebody just told him [what to make of all this](https://twitter.com/johnlsheridan/status/1349760983984701441).
 
