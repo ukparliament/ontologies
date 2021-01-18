@@ -2,7 +2,7 @@
 
 ## Box fresh brarian
 
-Our regular reader might recall we spent a [sizeable slice of September](https://ukparliament.github.io/ontologies/meta/weeknotes/2020/39/#expanding-the-family) interviewing for a brand new librarian. And this is the week we finally met our new colleague, as AK appeared on our Teams screens. It might be some time before we meet outside of pixels. Nevertheless, hello and welcome AK. 
+Our regular reader might recall we spent a [sizeable slice of September](https://ukparliament.github.io/ontologies/meta/weeknotes/2020/39/#expanding-the-family) interviewing for a brand new librarian. And this is the week we finally met our new colleague, as [Ayesha](https://twitter.com/askalibrarylady) appeared on our Teams screens. It might be some time before we meet outside of pixels. Nevertheless, hello and welcome Ayesha. 
 
 ## Logicifying the procedure model
 
