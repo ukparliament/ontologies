@@ -84,6 +84,16 @@ ppr:BillStage rdf:type owl:Class ;
 	rdfs:comment "A type of step grouping intended to denote a stage in the passage of a bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:Citation rdf:type owl:Class ;
+	rdfs:label "Citation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:DocumentType rdf:type owl:Class ;
+	rdfs:label "Document type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 
 
 #######  Object properties ##### 
@@ -191,4 +201,42 @@ ppr:hasProcedure rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a step grouping to the procedure containing those steps."@en ;
 	rdfs:domain ppr:StepGrouping ;
 	rdfs:range ppr:Procedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:stepHasCitation rdf:type owl:ObjectProperty ;
+	rdfs:label "Step has citation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:procedureHasCitation rdf:type owl:ObjectProperty ;
+	rdfs:label "Procedure has citation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasDocumentType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has document type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:Citation ;
+	rdfs:range ppr:DocumentType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+				
+
+#######  Data properties ##### 
+
+ppr:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "Title"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:Citation ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:uri rdf:type owl:DatatypeProperty ;
+	rdfs:label "URI"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:Citation ;
+	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
