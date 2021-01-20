@@ -57,7 +57,7 @@ precr:Withdrawal rdf:type owl:Class ;
 precr:Revision rdf:type owl:Class ;
 	rdfs:subClassOf precr:EditorialAction ;
 	rdfs:label "Revision"@en ;
-	rdfs:comment "The action of revising a manifestation, resulting in a new manifestation.""@en ;
+	rdfs:comment "The action of revising a manifestation, resulting in a new manifestation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:ReviewCycle rdf:type owl:Class ;
@@ -83,4 +83,188 @@ precr:Feedback rdf:type owl:Class ;
 precr:RevisionType rdf:type owl:Class ;
 	rdfs:label "Revision type"@en ;
 	rdfs:comment "The type of a revision, for example: a major or minor edit."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+#######  Object properties ##### 
+
+precr:leadsTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Leads to"@en ;
+	rdfs:comment "Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation."@en ;
+	rdfs:domain precr:EditorialAction ;
+	rdfs:range precr:EditorialAction ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:by rdf:type owl:ObjectProperty ;
+	rdfs:label "By"@en ;
+	rdfs:comment "Relates an editorial action to the person or group performing that action."@en ;
+	rdfs:domain precr:EditorialAction ;
+	rdfs:range precr:Agent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:supersedes rdf:type owl:ObjectProperty ;
+	rdfs:label "Supersedes"@en ;
+	rdfs:comment "Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work."@en ;
+	rdfs:domain precr:Work ;
+	rdfs:range precr:Work ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:archivingOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Archiving of"@en ;
+	rdfs:comment "Relates an archiving action to the work being archived."@en ;
+	rdfs:domain precr:Archiving ;
+	rdfs:range precr:Work ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:hasReviewCycle rdf:type owl:ObjectProperty ;
+	rdfs:label "Has review cycle"@en ;
+	rdfs:comment "Relates a work to the review cycle of that work. A work has a single review cycle, or none."@en ;
+	rdfs:domain precr:Work ;
+	rdfs:range precr:ReviewCycle ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:resultsIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in"@en ;
+	rdfs:comment "Relates a review cycle to resulting editorial reviews."@en ;
+	rdfs:domain precr:ReviewCycle ;
+	rdfs:range precr:EditorialReview ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:leadsToNew rdf:type owl:ObjectProperty ;
+	rdfs:label "Leads to new"@en ;
+	rdfs:comment "Relates an editorial review to the creation of a new work."@en ;
+	rdfs:domain precr:EditorialReview ;
+	rdfs:range precr:Work ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+														### edited to here
+	
+precr:withdrawnBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Manifestation ;
+	rdfs:range precr:Withdrawal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Review of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:EditorialReview ;
+	rdfs:range precr:Manifestation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:fromManifestation rdf:type owl:ObjectProperty ;
+	rdfs:label "From manifestation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range precr:Manifestation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:toManifestation rdf:type owl:ObjectProperty ;
+	rdfs:label "To manifestation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range precr:Manifestation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:makes rdf:type owl:ObjectProperty ;
+	rdfs:label "Makes"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Agent ;
+	rdfs:range precr:Submission ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:of rdf:type owl:ObjectProperty ;
+	rdfs:label "Of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Submission ;
+	rdfs:range precr:Feedback ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:receivedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Received by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range precr:Agent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:feedbackLeadsTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Feedback leads to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range precr:EditorialReview ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+
+precr:hasRevisionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has revision type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range precr:RevisionType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+
+				
+	
+##### Data properties ####	
+	
+precr:at rdf:type owl:DatatypeProperty ;
+	rdfs:label "At"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:EditorialAction ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reinstatedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reinstated at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Withdrawal ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:publishedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Published at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Manifestation ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:submittedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Submitted at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Submission ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:reviewedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reviewed on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:EditorialReview ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:receivedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Received at"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:feedbackText rdf:type owl:DatatypeProperty ;
+	rdfs:label "Feedback text"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Feedback ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:hasRevisionDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:Revision ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:hasRevisionTypeDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision type description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain precr:RevisionType ;
+	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
