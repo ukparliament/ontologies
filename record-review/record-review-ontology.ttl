@@ -41,3 +41,21 @@ precr:EditorialAction rdf:type owl:Class ;
 	rdfs:label "Editorial action"@en ;
 	rdfs:comment "An editorial action is an action taken on a manifestation or a work, for example: archiving a work, reviewing a manifestation, revising a manifestation or withdrawing a manifestation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:Archiving rdf:type owl:Class ;
+	rdfs:subClassOf precr:EditorialAction ;
+	rdfs:label "Archiving"@en ;
+	rdfs:comment "The action of archiving a work, indicating that no further revisions are intended to take place. Manifestations of the work which have not been withdrawn remain available, marked with an indication that no further updates are anticipated."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:Withdrawal rdf:type owl:Class ;
+	rdfs:subClassOf precr:EditorialAction ;
+	rdfs:label "Withdrawal"@en ;
+	rdfs:comment "The action of withdrawing a manifestation. A manifestation may be withdrawn for a period and reinstated, or permanently withdrawn."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
+	
+precr:Revision rdf:type owl:Class ;
+	rdfs:subClassOf precr:EditorialAction ;
+	rdfs:label "Revision"@en ;
+	rdfs:comment The action of revising a manifestation, resulting in a new manifestation.""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
