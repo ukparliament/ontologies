@@ -57,7 +57,7 @@ precr:Withdrawal rdf:type owl:Class ;
 precr:Revision rdf:type owl:Class ;
 	rdfs:subClassOf precr:EditorialAction ;
 	rdfs:label "Revision"@en ;
-	rdfs:comment "The action of revising a manifestation, resulting in a new manifestation."@en ;
+	rdfs:comment "The action of revising an existing manifestation, resulting in a new manifestation. The existing manifestation remains unchanged."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:ReviewCycle rdf:type owl:Class ;
@@ -68,11 +68,6 @@ precr:ReviewCycle rdf:type owl:Class ;
 precr:Agent rdf:type owl:Class ;
 	rdfs:label "Agent"@en ;
 	rdfs:comment "Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
-	
-precr:Submission rdf:type owl:Class ;
-	rdfs:label "Submission"@en ;
-	rdfs:comment "The action of submitting feedback about a record. Submissions may be made by people or groups inside or outside of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:Feedback rdf:type owl:Class ;
@@ -136,71 +131,57 @@ precr:leadsToNew rdf:type owl:ObjectProperty ;
 	rdfs:range precr:Work ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
-														### edited to here
-	
 precr:withdrawnBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Withdrawn by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a manifestation to the action of withdrawing that manifestation."@en ;
 	rdfs:domain precr:Manifestation ;
 	rdfs:range precr:Withdrawal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:reviewOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Review of"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an editorial review to the manifestation being reviewed."@en ;
 	rdfs:domain precr:EditorialReview ;
 	rdfs:range precr:Manifestation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
 precr:fromManifestation rdf:type owl:ObjectProperty ;
 	rdfs:label "From manifestation"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an act of revision to an existing manifestation to be revised."@en ;
 	rdfs:domain precr:Revision ;
 	rdfs:range precr:Manifestation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 
 precr:toManifestation rdf:type owl:ObjectProperty ;
 	rdfs:label "To manifestation"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an act of revision to a new manifestation resulting from the revision."@en ;
 	rdfs:domain precr:Revision ;
 	rdfs:range precr:Manifestation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
-precr:makes rdf:type owl:ObjectProperty ;
+precr:submits rdf:type owl:ObjectProperty ;
 	rdfs:label "Makes"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an agent to the feedback submitted by that agent."@en ;
 	rdfs:domain precr:Agent ;
-	rdfs:range precr:Submission ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
-
-precr:of rdf:type owl:ObjectProperty ;
-	rdfs:label "Of"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain precr:Submission ;
 	rdfs:range precr:Feedback ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
-
-precr:receivedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Received by"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain precr:Feedback ;
-	rdfs:range precr:Agent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 
 precr:feedbackLeadsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Feedback leads to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none."@en ;
 	rdfs:domain precr:Feedback ;
 	rdfs:range precr:EditorialReview ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 
 precr:hasRevisionType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has revision type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an action of revision to the type of that revision."@en ;
 	rdfs:domain precr:Revision ;
 	rdfs:range precr:RevisionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
+	
+											### edited to here
 
 				
 	
@@ -224,13 +205,6 @@ precr:publishedAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Published at"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain precr:Manifestation ;
-	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
-	
-precr:submittedAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "Submitted at"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain precr:Submission ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record-review/> .
 	
