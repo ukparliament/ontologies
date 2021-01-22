@@ -90,11 +90,13 @@ A work in progress, target sitemap for the House of Commons Library, the House o
 
 ## Models
 
+* [Contribution model](https://ukparliament.github.io/ontologies/contribution/contribution-ontology.html)
+
 * [Publisher model](https://ukparliament.github.io/ontologies/publisher/publisher-ontology.html)
 
 * [Record model](https://ukparliament.github.io/ontologies/record/record-ontology.html)
 
-* [Contribution model](https://ukparliament.github.io/ontologies/contribution/contribution-ontology.html)
+* [Record review model](https://ukparliament.github.io/ontologies/record-review/record-review-ontology.html)
 
 Interface classes stitching these models together to follow.
 
