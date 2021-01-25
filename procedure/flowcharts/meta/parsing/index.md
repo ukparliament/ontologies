@@ -1,8 +1,70 @@
-# With route types
+# Parsing work packages
+
+## With step types
+
+	get an array of routes in the procedure with status set to 'unparsed'
+
+	until all routes have a status that in not 'unparsed'
+
+		loop through the routes with status 'unparsed'
+	
+			find the source step
+	
+			if the source step is a business step
+		
+				if the source business step has been actualised with a business item with a date in the past (or today?)
+			
+					set the route status to TRUE
+			
+				other
+			
+					set the route status to NULL
+				end
+		
+			elsif the source step is a logic step
+		
+				for each input route into the logic step
+			
+					check the route has a value that is not 'uparsed'
+				
+				end
+			
+				if all inputs to the logic step are not of value 'unparsed'
+			
+					calculate and set the value of the input route according to logic step type
+				
+				end
+			
+			end
+		
+			find the target step
+		
+			if the target step is a business step
+		
+				if the route value is TRUE
+			
+					flag target business step as actualisable
+				
+				else
+			
+					flag target step as not actualisable
+				
+				end
+			
+			elsif the target step is a logic step
+		
+				# do nothing. this is dealt with on next pass when inputs will be further populated
+		
+			end
+		end
+	end
+
+
+## With route types
 
 a > route > b
 
-## Actualised steps
+### Actualised steps
 
 	if step is actualised
 		if step.date <= today
@@ -12,7 +74,7 @@ a > route > b
 		end
 	end
 
-## Past
+### Past
 
 	if a is actualised and b is actualised ...
 		show a
@@ -37,7 +99,7 @@ a > route > b
 		otherwise
 			do not show route
 
-## Future real conditional
+### Future real conditional
 
 	if a is actualised and b is not actualised
 		if the routes is an allows or causes
@@ -75,7 +137,7 @@ a > route > b
 			otherwise
 				show a
 				
-## Future unreal conditional
+### Future unreal conditional
 
 	if neither a nor b are actualised 
 		do not show a
