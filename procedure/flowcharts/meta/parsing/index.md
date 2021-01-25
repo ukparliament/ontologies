@@ -2,9 +2,9 @@
 
 ## With step types
 
-	get an array of routes in the procedure with status set to 'unparsed'
+	get an array of routes in the procedure with status and set the status of each to 'unparsed'
 
-	until all routes have a status that in not 'unparsed'
+	until all routes have a status that is not 'unparsed'
 
 		loop through the routes with status 'unparsed'
 	
@@ -21,17 +21,17 @@
 					set the route status to NULL
 				end
 		
-			elsif the source step is a logic step
+			otherwise if the source step is a logic step
 		
 				for each input route into the logic step
 			
-					check the route has a value that is not 'uparsed'
+					check the route has a value that is not 'unparsed'
 				
 				end
 			
 				if all inputs to the logic step are not of value 'unparsed'
 			
-					calculate and set the value of the input route according to logic step type
+					calculate and set the value of the output route according to logic step type
 				
 				end
 			
