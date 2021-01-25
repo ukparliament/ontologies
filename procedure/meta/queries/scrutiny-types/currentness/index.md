@@ -6,12 +6,12 @@ These queries may be of particular use to Members who are interested in how long
  
 FILTER ( str(?itemDate) <= '2020-02-06')
  
-* [Negative SIs](https://api.parliament.uk/s/362b0108)
+* [Negative SIs](https://api.parliament.uk/s/9d108121)
  
-* [Made affirmative SIs](https://api.parliament.uk/s/062ed8e3)
+* [Made affirmative SIs](https://api.parliament.uk/s/0a4476ee)
 
-* [Proposed negative statutory instruments](https://api.parliament.uk/s/a2381d85)
+* [Proposed negative statutory instruments](https://api.parliament.uk/s/667457a1)
 
-* [Treaties - Objection Period A](https://api.parliament.uk/s/b6a97b88) 
+* [Treaties - Objection Period A](https://api.parliament.uk/s/dd616eba) 
 
-* [Treaties - Objection Period B (As of April 2020 this step has not been actualised)](https://api.parliament.uk/s/81b0c331)
+* [Treaties - Objection Period B (As of January 2021 this step has not been actualised)](https://api.parliament.uk/s/aa9e7080)
