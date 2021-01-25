@@ -34,6 +34,25 @@
 					calculate and set the value of the output route according to logic step type
 				
 				end
+				
+			otherwise if the source step is a decsion step
+			
+				if the input route to the decsion step does not have a value of 'unparsed'
+				
+					if the input route has a value of TRUE
+					
+						set the output route value to 'allows'
+					
+					otherwise if the input route has a value of FALSE
+					
+						set the output route to FALSE
+						
+					otherwise if the input route has a value of NULL
+					
+						set the output route to NULL
+					end
+					
+				end
 			
 			end
 		
@@ -43,9 +62,13 @@
 		
 				if the route value is TRUE
 			
-					flag target business step as actualisable
+					flag target business step as caused to be actualised
+					
+				otherwise if the route value is 'allow'
 				
-				else
+					flag the target step as allowed to actualised
+				
+				otherwise if the route value is NULL or FALSE
 			
 					flag target step as not actualisable
 				
