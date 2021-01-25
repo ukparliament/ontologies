@@ -286,6 +286,8 @@ Business steps are in one of three current states:
 
 * Actualised one or more times, with at least one associated business item having a date in the past or a date of today.
 
+* Actualised one or more times, with no business item having a date. This only applies to 'coming into force steps' where the instrument specifies a condition as a text string rather than a date.
+
 Current states are determined by actualisation of steps rather than processing of routes and logic. These states are indicated visually.
 
 ##### Potential states of a business step
