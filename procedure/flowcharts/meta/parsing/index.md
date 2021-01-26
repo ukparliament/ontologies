@@ -2,61 +2,159 @@
 
 ## With step types
 
-	get an array of routes in the procedure with status and set the status of each to 'unparsed'
-
+	get an array of routes in the procedure and set the status of each to 'unparsed'
+	
 	until all routes have a status that is not 'unparsed'
-
+	
 		loop through the routes with status 'unparsed'
 	
-			find the source step
-	
+			get the source step of the route
+		
 			if the source step is a business step
 		
-				if the source business step has been actualised with a business item with a date in the past (or today?)
+				if the source step is actualised with a date in the past or today
 			
 					set the route status to TRUE
-			
-				other
+				
+				otherwise if the source step is actualised with a date in the future or the source step is not actualised
 			
 					set the route status to NULL
+				
 				end
+			
+			otherwise if the source step is a AND step
 		
-			otherwise if the source step is a logic step
-		
-				for each input route into the logic step
+				if the source AND step is the target step of two routes
 			
-					check the route has a value that is not 'unparsed'
+					if both inputs are TRUE
 				
-				end
-			
-				if all inputs to the logic step are not of value 'unparsed'
-			
-					calculate and set the value of the output route according to logic step type
+						set the route to TRUE
+					
+					otherwise if one input is TRUE and the other input is FALSE
 				
-				end
+						set the route to FALSE
+					
+					otherwise if both inputs are FALSE
 				
-			otherwise if the source step is a decsion step
-			
-				if the input route to the decsion step does not have a value of 'unparsed'
+						set the route to FALSE
+					
+					otherwise if one input is TRUE and the other is NULL
 				
-					if the input route has a value of TRUE
+						set the route to TRUE
 					
-						set the output route value to 'allows'
-					
-					otherwise if the input route has a value of FALSE
-					
-						set the output route to FALSE
-						
-					otherwise if the input route has a value of NULL
-					
-						set the output route to NULL
+					otherwise if one input is FALSE and the other is NULL
+				
+						set the route to FALSE
+				
+					otherwise if either input is 'unparsed'
+				
+						# do nothing and pick up on next loop
+				
 					end
+			
+				otherwise
+			
+					log an error: step with incorrect number of inputs
 					
 				end
 			
-			end
+			otherwise if the source step is an OR step
 		
-			find the target step
+				if the source OR step is the target step of two routes
+			
+					if both inputs are TRUE
+				
+						set the route to TRUE
+					
+					otherwise if one input is TRUE and the other input is FALSE
+				
+						set the route to TRUE
+					
+					otherwise if both inputs are FALSE
+				
+						set the route to FALSE
+					
+					otherwise if one input is TRUE and the other is NULL
+				
+						set the route to TRUE
+					
+					otherwise if one input is FALSE and the other is NULL
+				
+						set the route to FALSE
+				
+					otherwise if either input is 'unparsed'
+				
+						# do nothing and pick up on next loop
+				
+					end
+			
+				otherwise
+			
+					log an error: step with incorrect number of inputs
+					
+				end
+			
+			otherwise if the source step is a NOT step
+		
+				if the source NOT step is the target step of one route
+			
+					if the input is TRUE
+				
+						set the route to TRUE
+					
+					otherwise if the input is FALSE
+				
+						set the route to FALSE
+					
+					otherwise if the input is NULL
+				
+						set the route to NULL
+				
+					otherwise if the input is 'unparsed'
+				
+						# do nothing and pick up on next loop
+				
+					end
+			
+				otherwise
+			
+					log an error: step with incorrect number of inputs
+					
+				end
+				
+			end
+			
+			otherwise if the source step is a decision step
+		
+				if the source decision step is the target step of one route
+			
+					if the input is TRUE
+				
+						set the route to 'allows'
+					
+					otherwise if the input is FALSE
+				
+						set the route to FALSE
+					
+					otherwise if the input is NULL
+				
+						set the route to NULL
+				
+					otherwise if the input is 'unparsed'
+				
+						# do nothing and pick up on next loop
+				
+					end
+			
+				otherwise
+			
+					log an error: step with incorrect number of inputs
+					
+				end
+				
+			end
+			
+			get the target step
 		
 			if the target step is a business step
 		
@@ -64,9 +162,9 @@
 			
 					flag target business step as caused to be actualised
 					
-				otherwise if the route value is 'allow'
+				otherwise if the route value is 'allows'
 				
-					flag the target step as allowed to actualised
+					flag the target step as allowed to be actualised
 				
 				otherwise if the route value is NULL or FALSE
 			
@@ -76,7 +174,7 @@
 			
 			elsif the target step is a logic step
 		
-				# do nothing. this is dealt with on next pass when inputs will be further populated
+				# do nothing and pick up on next loop
 		
 			end
 		end
