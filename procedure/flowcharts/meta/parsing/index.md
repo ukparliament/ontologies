@@ -2,7 +2,7 @@
 
 ## With step types
 
-	get an array of routes in the procedure and set the status of each to 'unparsed'
+	get an array of routes in the procedure whose start date is not greater than today and whose end date is not less than today and set the status of each to 'unparsed'
 	
 	until all routes have a status that is not 'unparsed'
 	
