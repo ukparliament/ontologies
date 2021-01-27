@@ -261,7 +261,7 @@ A NULL value entering a logic gate renders that gate ‘transparent’:
 
 #### Decision steps
 
-Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
+Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
 
 
 A decision step with an input value of TRUE will output a value of 'allows'. A decision step with an input value of NULL, or FALSE, will act as transparent - the output being the same as the input.
@@ -270,7 +270,7 @@ The truth table for a decision step is:
 <table>
 	<thead>
 		<tr>
-			<td colspan="2">NOT</td>
+			<td colspan="2">Decision step</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -290,6 +290,7 @@ The truth table for a decision step is:
 </table>
 
 It is expected that decision steps will output a route directly into a business step without any intervening logic gate steps: a logic gate step will never have an input with a value of 'allows'.
+
 A business step with an input value of TRUE is caused to happen. A business step with an input value of 'allows' is allowed to happen. A business step with an input value of FALSE, or NULL, is not actualisable being neither allowed nor caused to happen.
 
 #### Impact of actualisation
@@ -333,7 +334,7 @@ Business steps are in one of three potential states:
 
 * Caused to be actualised - business steps having an input of TRUE, not through a decision step. Such steps must be actualised at some point in the future.
 
-* Allowed to be actualised - business steps having an input of TRUE, through a decision step. Such steps may be actualised depending on a decision made elsewhere.
+* Allowed to be actualised - business steps having an input of ‘allows’, through a decision step. Such steps may be actualised depending on a decision made elsewhere.
 
 Potential states result from the parsing of routes and associated logic. These states are indicated visually.
 
