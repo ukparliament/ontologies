@@ -106,7 +106,7 @@ Whether a step is in play or not may change over time as preceding steps are act
 
 Parsing rules describe what may happen in the future and have no retrospective effect. 
  
-[Pseudocode for the parsing of a work package](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/) is described here.
+[Pseudocode for the parsing of a work package with route types](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/#with-route-types) is here.
 
 Whilst we use the logic of the maps to output what may, must and cannot happen, this logic is not used to constrain data entry. Any step can be actualised in a work package regardless of what the current state of the map suggests. This allows us to respond to changes in procedure which have not yet been mapped and to cope with mistakes. We endeavour to be liberal on input, even where we are conservative on output.
 
@@ -259,6 +259,39 @@ A NULL value entering a logic gate renders that gate ‘transparent’:
 
 * An OR gate with one input value of NULL will output the value of the second input, be that TRUE, FALSE or NULL.
 
+#### Decision steps
+
+Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
+
+
+A decision step with an input value of TRUE will output a value of 'allows'. A decision step with an input value of NULL, or FALSE, will act as transparent - the output being the same as the input.
+
+The truth table for a decision step is:
+<table>
+	<thead>
+		<tr>
+			<td colspan="2">NOT</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>TRUE</th>
+			<td>allows</td>
+		</tr>
+		<tr>
+			<th>FALSE</th>
+			<td>FALSE</td>
+		</tr>
+		<tr>
+			<th>NULL</th>
+			<td>NULL</td>
+		</tr>
+	</tbody>
+</table>
+
+It is expected that decision steps will output a route directly into a business step without any intervening logic gate steps: a logic gate step will never have an input with a value of 'allows'.
+A business step with an input value of TRUE is caused to happen. A business step with an input value of 'allows' is allowed to happen. A business step with an input value of FALSE, or NULL, is not actualisable being neither allowed nor caused to happen.
+
 #### Impact of actualisation
 
 A business step that has not been actualised emits a NULL.
@@ -273,6 +306,8 @@ A business step that has been actualised by at least one business item with a da
 Work package visualisations show the routes in a procedure and the steps linked by those routes.
 
 Routes that are not currently traversable - having a start date in the future or an end date in the past - are indicated as such as per the procedure visualisation. In these respects they are identical to the procedure visualisation.
+
+[Pseudocode for the parsing of a work package with step types](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/#with-step-types) is here.
 
 Business steps in a work package are in one of three current states and in one of three potential states. Any combination of one current state and one potential state is possible.
 
