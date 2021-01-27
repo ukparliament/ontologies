@@ -290,6 +290,7 @@ The truth table for a decision step is:
 </table>
 
 It is expected that decision steps will output a route directly into a business step without any intervening logic gate steps: a logic gate step will never have an input with a value of 'allows'.
+
 A business step with an input value of TRUE is caused to happen. A business step with an input value of 'allows' is allowed to happen. A business step with an input value of FALSE, or NULL, is not actualisable being neither allowed nor caused to happen.
 
 #### Impact of actualisation
