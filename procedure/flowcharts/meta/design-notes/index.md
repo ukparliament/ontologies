@@ -270,7 +270,7 @@ The truth table for a decision step is:
 <table>
 	<thead>
 		<tr>
-			<td colspan="2">NOT</td>
+			<td colspan="2">Decision step</td>
 		</tr>
 	</thead>
 	<tbody>
