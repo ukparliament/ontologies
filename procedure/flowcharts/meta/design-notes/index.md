@@ -334,7 +334,7 @@ Business steps are in one of three potential states:
 
 * Caused to be actualised - business steps having an input of TRUE, not through a decision step. Such steps must be actualised at some point in the future.
 
-* Allowed to be actualised - business steps having an input of TRUE, through a decision step. Such steps may be actualised depending on a decision made elsewhere.
+* Allowed to be actualised - business steps having an input of ‘allows’, through a decision step. Such steps may be actualised depending on a decision made elsewhere.
 
 Potential states result from the parsing of routes and associated logic. These states are indicated visually.
 
