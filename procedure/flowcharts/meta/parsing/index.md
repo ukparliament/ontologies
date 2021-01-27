@@ -100,11 +100,11 @@
 			
 					if the input is TRUE
 				
-						set the route to TRUE
+						set the route to FALSE
 					
 					otherwise if the input is FALSE
 				
-						set the route to FALSE
+						set the route to TRUE
 					
 					otherwise if the input is NULL
 				
