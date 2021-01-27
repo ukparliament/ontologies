@@ -261,7 +261,7 @@ A NULL value entering a logic gate renders that gate ‘transparent’:
 
 #### Decision steps
 
-Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
+Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
 
 
 A decision step with an input value of TRUE will output a value of 'allows'. A decision step with an input value of NULL, or FALSE, will act as transparent - the output being the same as the input.
