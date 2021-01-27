@@ -54,7 +54,7 @@
 			
 				otherwise
 			
-					log an error: step with incorrect number of inputs
+					# do nothing
 					
 				end
 			
@@ -90,7 +90,7 @@
 			
 				otherwise
 			
-					log an error: step with incorrect number of inputs
+					# do nothing
 					
 				end
 			
@@ -118,7 +118,7 @@
 			
 				otherwise
 			
-					log an error: step with incorrect number of inputs
+					# do nothing
 					
 				end
 				
@@ -148,7 +148,7 @@
 			
 				otherwise
 			
-					log an error: step with incorrect number of inputs
+					# do nothing
 					
 				end
 				
