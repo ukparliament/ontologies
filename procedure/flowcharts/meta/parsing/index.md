@@ -43,7 +43,7 @@
 							# taint the roads off the bridge as closed if the bridge is closed
 							set the route status to 'untraversable'
 						
-						otherwise if the source actualised
+						otherwise if the source step is actualised
 						
 							if the source step is actualised with a date in the past or today
 			
@@ -64,7 +64,7 @@
 					end
 			
 				# AND gate
-				otherwise if the source step is a AND step
+				otherwise if the source step is an AND step
 				
 					if the AND step is the target step for less than or more than two routes
 		
@@ -168,16 +168,16 @@
 				
 					flag the target step as allowed to be actualised
 				
-				# For example, EVEL standing order suspension
+				# not theoretically reachable given current procedural "rules"
+				# for example, EVEL standing order suspension
 				# the bridge is closed so steps on the far side cannot be reached unless the bridge opens
 				otherwise if the route value is 'untraversable'
-				# Not theoretically reachable given current procedural "rules"
 			
 					flag target step as not currently actualisable
 				
-				# Future potential state
-				# For example, a question on a fatal motion has not been put because no fatal motion has been tabled yet and may possibly never be
-				# Theoretically reachable given current procedural "rules"
+				# theoretically reachable given current procedural "rules"
+				# future potential state
+				# for example, a question on a fatal motion has not been put because no fatal motion has been tabled yet and may possibly never be
 				otherwise if the route value is NULL or FALSE
 			
 					flag target step as not yet actualisable
