@@ -78,7 +78,8 @@
 							
 						otherwise if neither input is 'unparsed'
 						
-							# process as per [AND gate logic](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-and)
+							# process as per AND gate logic
+							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-and
 							
 						end
 						
@@ -99,7 +100,8 @@
 							
 						otherwise if neither input is 'unparsed'
 						
-							# process as per [OR gate logic](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-or)
+							# process as per OR gate logic
+							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-or
 							
 						end
 						
@@ -120,7 +122,8 @@
 							
 						otherwise if the input is not 'unparsed'
 						
-							# process as per [NOT gate logic](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-not)
+							# process as per NOT gate logic
+							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-not
 							
 						end
 						
@@ -141,7 +144,8 @@
 							
 						otherwise if the input is not 'unparsed'
 						
-							# process as per [decision step logic](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-decision)
+							# process as per decision step logic
+							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-decision
 							
 						end
 						
