@@ -20,7 +20,7 @@
 				
 				set the route current status to FALSE
 			
-				set the route status to 'not traverable'
+				set the route status to 'untraverable'
 		
 			otherwise if the route's start date is not greater than today and its end date is not less than today
 				
@@ -29,8 +29,12 @@
 				get the source step of the route
 		
 				if the source step is a business step
-		
-					if the source step is actualised with a date in the past or today
+				
+					if the source step has one input and that input has a value of 'untraversable'
+					
+						set the route status to 'untraversable'
+						
+					otherwise if the source step is actualised with a date in the past or today
 			
 						set the route status to TRUE
 				
