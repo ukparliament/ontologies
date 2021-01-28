@@ -158,7 +158,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="2">NOT</td>
+			<td colspan="2" id="truth-table-not">NOT</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -182,7 +182,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="4">AND</td>
+			<td colspan="4" id="truth-table-and">AND</td>
 		</tr>
 		<tr>
 			<td> </td>
@@ -218,7 +218,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="4">OR</td>
+			<td colspan="4" id="truth-table-or">OR</td>
 		</tr>
 		<tr>
 			<td> </td>
@@ -270,7 +270,7 @@ The truth table for a decision step is:
 <table>
 	<thead>
 		<tr>
-			<td colspan="2">Decision step</td>
+			<td colspan="2" id="truth-table-decision">Decision step</td>
 		</tr>
 	</thead>
 	<tbody>
