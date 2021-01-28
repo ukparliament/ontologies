@@ -158,7 +158,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="2">NOT</td>
+			<td colspan="2" id="truth-table-not">NOT</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -173,6 +173,10 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 		<tr>
 			<th>NULL</th>
 			<td>NULL</td>
+		</tr>
+		<tr>
+			<th>untraversable</th>
+			<td>untraversable</td>
 		</tr>
 	</tbody>
 </table>
@@ -182,13 +186,14 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="4">AND</td>
+			<td colspan="5" id="truth-table-and">AND</td>
 		</tr>
 		<tr>
 			<td> </td>
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
+			<td>untraversable</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -197,18 +202,28 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>TRUE</td>
+			<td>untraversable</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>FALSE</td>
 			<td>FALSE</td>
 			<td>FALSE</td>
+			<td>untraversable</td>
 		</tr>
 		<tr>
 			<th>NULL</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
+			<td>untraversable</td>
+		</tr>
+		<tr>
+			<th>untraversable</th>
+			<td>untraversable</td>
+			<td>untraversable</td>
+			<td>untraversable</td>
+			<td>untraversable</td>
 		</tr>
 	</tbody>
 </table>
@@ -218,18 +233,20 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="4">OR</td>
+			<td colspan="5" id="truth-table-or">OR</td>
 		</tr>
 		<tr>
 			<td> </td>
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
+			<td>untraversable</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<th>TRUE</th>
+			<td>TRUE</td>
 			<td>TRUE</td>
 			<td>TRUE</td>
 			<td>TRUE</td>
@@ -239,12 +256,21 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>FALSE</td>
+			<td>untraversable</td>
 		</tr>
 		<tr>
 			<th>NULL</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
+			<td>untraversable</td>
+		</tr>
+		<tr>
+			<th>untraversable</th>
+			<td>TRUE</td>
+			<td>untraversable</td>
+			<td>untraversable</td>
+			<td>untraversable</td>
 		</tr>
 	</tbody>
 </table>
@@ -270,7 +296,7 @@ The truth table for a decision step is:
 <table>
 	<thead>
 		<tr>
-			<td colspan="2">Decision step</td>
+			<td colspan="2" id="truth-table-decision">Decision step</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -285,6 +311,10 @@ The truth table for a decision step is:
 		<tr>
 			<th>NULL</th>
 			<td>NULL</td>
+		</tr>
+		<tr>
+			<th>untraversable</th>
+			<td>untraversable</td>
 		</tr>
 	</tbody>
 </table>
