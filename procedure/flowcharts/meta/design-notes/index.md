@@ -312,6 +312,10 @@ The truth table for a decision step is:
 			<th>NULL</th>
 			<td>NULL</td>
 		</tr>
+		<tr>
+			<th>untraversable</th>
+			<td>untraversable</td>
+		</tr>
 	</tbody>
 </table>
 
