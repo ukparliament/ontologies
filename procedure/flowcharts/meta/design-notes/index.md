@@ -186,7 +186,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 <table>
 	<thead>
 		<tr>
-			<td colspan="4" id="truth-table-and">AND</td>
+			<td colspan="5" id="truth-table-and">AND</td>
 		</tr>
 		<tr>
 			<td> </td>
