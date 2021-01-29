@@ -146,13 +146,13 @@ Procedure conclusion steps should only be brought into play by either an allows 
 
 ### How is a procedure map with logic gates parsed in the context of a work package?
  
-The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses new step types - rather than route types such as allows, causes, precludes and requires.
+We are in the process of redesigning the [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) to use typed steps rather than route types.
  
 Each step has one type. The step can be a business step, decision step, logical NOT, logical AND or logical OR.
 
 #### Logic gates
  
-Logic gates operate as classical logic, with the addition of a value called NULL. Truth tables for the logic gates are:
+The logic gates take one input or two inputs and emit one output. A value is called NULL, TRUE, FALSE or UNTRAVERSABLE. Truth tables for the logic gates are:
  
 <!-- NOT table -->
 <table>
@@ -175,8 +175,8 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>NULL</td>
 		</tr>
 		<tr>
-			<th>untraversable</th>
-			<td>untraversable</td>
+			<th>UNTRAVERSABLE</th>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
@@ -193,7 +193,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -202,28 +202,28 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>TRUE</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>FALSE</td>
 			<td>FALSE</td>
 			<td>FALSE</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
 			<th>NULL</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
-			<th>untraversable</th>
-			<td>untraversable</td>
-			<td>untraversable</td>
-			<td>untraversable</td>
-			<td>untraversable</td>
+			<th>UNTRAVERSABLE</th>
+			<td>UNTRAVERSABLE</td>
+			<td>UNTRAVERSABLE</td>
+			<td>UNTRAVERSABLE</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
@@ -240,7 +240,7 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -256,41 +256,38 @@ Logic gates operate as classical logic, with the addition of a value called NULL
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>FALSE</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
 			<th>NULL</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
 			<td>NULL</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
 			<th>untraversable</th>
 			<td>TRUE</td>
-			<td>untraversable</td>
-			<td>untraversable</td>
-			<td>untraversable</td>
+			<td>UNTRAVERSABLE</td>
+			<td>UNTRAVERSABLE</td>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
 
-These tables are [available as a diagram](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/meta/logic-gates/logic-gates.png).
-
-A NULL value entering a logic gate renders that gate ‘transparent’:
+A NULL value entering a logic gate renders that gate 'transparent':
 
 * A NOT gate with an input value of NULL will output a NULL.
 
-* An AND gate with one input value of NULL will output the value of the second input, be that TRUE, FALSE or NULL.
+* An AND gate or an OR gate with one input value of NULL will output the value of the second input - be that TRUE, FALSE, NULL or UNTRAVERSABLE.
 
-* An OR gate with one input value of NULL will output the value of the second input, be that TRUE, FALSE or NULL.
 
 #### Decision steps
 
 Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
 
 
-A decision step with an input value of TRUE will output a value of 'allows'. A decision step with an input value of NULL, or FALSE, will act as transparent - the output being the same as the input.
+A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of NULL, FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
 
 The truth table for a decision step is:
 <table>
@@ -302,7 +299,7 @@ The truth table for a decision step is:
 	<tbody>
 		<tr>
 			<th>TRUE</th>
-			<td>allows</td>
+			<td>ALLOWS</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
@@ -313,34 +310,35 @@ The truth table for a decision step is:
 			<td>NULL</td>
 		</tr>
 		<tr>
-			<th>untraversable</th>
-			<td>untraversable</td>
+			<th>UNTRAVERSABLE</th>
+			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
 
-It is expected that decision steps will output a route directly into a business step without any intervening logic gate steps: a logic gate step will never have an input with a value of 'allows'.
+It is expected that decision steps will output a route directly into a business step without any intervening logic gate steps: a logic gate step will never have an input with a value of ALLOWS.
 
-A business step with an input value of TRUE is caused to happen. A business step with an input value of 'allows' is allowed to happen. A business step with an input value of FALSE, or NULL, is not actualisable being neither allowed nor caused to happen.
+A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE, NULL or UNTRAVERSABLE, is neither allowed nor caused to happen.
 
 #### Impact of actualisation
 
-A business step that has not been actualised emits a NULL.
+A business step with an input being UNTRAVERSABLE has all outputs being UNTRAVERSABLE.
 
-A business step that has been actualised by a business item or items only having dates in the future emits a NULL.
+A business step with an input not being UNTRAVERSABLE ...
 
-A business step that has been actualised by at least one business item with a date in the past or with a date of today emits a TRUE.
+* ... emits a NULL if that business step has not been actualised.
 
+* ... emits a NULL if that business step has been actualised by a business item or items only having dates in the future.
+
+* ... emits a TRUE if that business step that has been actualised by at least one business item with a date in the past or with a date of today.
 
 #### Work package visualisations
 
-Work package visualisations show the routes in a procedure and the steps linked by those routes.
+[Pseudocode for the parsing of a work package with step types](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/#with-step-types-2) is here.
 
-Routes that are not currently traversable - having a start date in the future or an end date in the past - are indicated as such as per the procedure visualisation. In these respects they are identical to the procedure visualisation.
+Business steps in a work package are in one of four current states and in one of four  potential states.
 
-[Pseudocode for the parsing of a work package with step types](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/#with-step-types) is here.
-
-Business steps in a work package are in one of three current states and in one of three potential states. Any combination of one current state and one potential state is possible.
+Any combination of one current state and one potential state is possible.
 
 ##### Current states of a business step
 
@@ -352,21 +350,23 @@ Business steps are in one of three current states:
 
 * Actualised one or more times, with at least one associated business item having a date in the past or a date of today.
 
-* Actualised one or more times, with no business item having a date. This only applies to 'coming into force steps' where the instrument specifies a condition as a text string rather than a date.
+* Actualised one or more times, with no business item having a date: this only applies to 'coming into force steps', where the instrument specifies a condition as a text string rather than a date.
 
-Current states are determined by actualisation of steps rather than processing of routes and logic. These states are indicated visually.
+Current states are determined by actualisation of steps, rather than processing of routes and logic. 
 
 ##### Potential states of a business step
 
-Business steps are in one of three potential states:
+Business steps are in one of four potential states:
 
-* Not actualisable - business steps having an input of either FALSE or NULL.
+* Not currently actualisable, with a business step having an input of UNTRAVERSABLE. This covers cases where procedural rules would be required to change before the step could be actualised, for example: the Speaker cannot certify under the English Votes for English Laws procedure unless and until the EVEL standing orders are reinstated.
 
-* Caused to be actualised - business steps having an input of TRUE, not through a decision step. Such steps must be actualised at some point in the future.
+* Not yet actualisable, with a business step having an input of either FALSE or NULL. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
 
-* Allowed to be actualised - business steps having an input of ‘allows’, through a decision step. Such steps may be actualised depending on a decision made elsewhere.
+* Caused to be actualised, with a business step having an input of TRUE, not through a decision step. Such a step must be actualised at some point in the future.
 
-Potential states result from the parsing of routes and associated logic. These states are indicated visually.
+* Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
+
+Potential states result from the parsing of routes and associated logic. 
 
 ### Validating inputs and outputs to steps
 
@@ -408,8 +408,6 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 		</tr>
 	</tbody>
 </table>
-
-Business steps at the start of a procedure - for example, 'Instrument created' - have 0 inputs. We have no means at present to distinguish such steps.
 
 ### Procedure conclusion
 
