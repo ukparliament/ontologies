@@ -8,19 +8,19 @@
 		
 		add a boolean attribute of current with value NULL
 	
-		add a string attribute of status with value 'unparsed'
+		add a string attribute of status with value UNPARSED
 	
 	end
 	
-	until all routes have a status that is not 'unparsed'
+	until all routes have a status that is not UNPARSED
 	
-		loop through the routes with status 'unparsed'
+		loop through the routes with status UNPARSED
 		
 			if the route's start date is greater than today or its end date is less than today
 				
 				set the route current status to FALSE
 			
-				set the route status to 'untraversable'
+				set the route status to UNTRAVERSABLE
 			
 			# Set the route status according to source steps and inputs thereof
 			otherwise if the route's start date is not greater than today and its end date is not less than today
@@ -38,10 +38,10 @@
 				
 					otherwise if the source step has less than one input or more than one inputs
 					
-						 if input has a value of 'untraversable'
+						 if input has a value of UNTRAVERSABLE
 					
 							# taint the roads off the bridge as closed if the bridge is closed
-							set the route status to 'untraversable'
+							set the route status to UNTRAVERSABLE
 						
 						otherwise if the source step is actualised
 						
@@ -72,11 +72,11 @@
 		
 					otherwise if the source AND step is the target step of two routes
 					
-						if either input is 'unparsed'
+						if either input is UNPARSED
 						
 							# do nothing and pick up on next loop
 							
-						otherwise if neither input is 'unparsed'
+						otherwise if neither input is UNPARSED
 						
 							# process as per AND gate logic
 							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-and
@@ -94,11 +94,11 @@
 		
 					otherwise if the source OR step is the target step of two routes
 					
-						if either input is 'unparsed'
+						if either input is UNPARSED
 						
 							# do nothing and pick up on next loop
 							
-						otherwise if neither input is 'unparsed'
+						otherwise if neither input is UNPARSED
 						
 							# process as per OR gate logic
 							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-or
@@ -116,11 +116,11 @@
 		
 					otherwise if the source NOT step is the target step of one route
 					
-						if the input is 'unparsed'
+						if the input is UNPARSED
 						
 							# do nothing and pick up on next loop
 							
-						otherwise if the input is not 'unparsed'
+						otherwise if the input is not UNPARSED
 						
 							# process as per NOT gate logic
 							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-not
@@ -138,11 +138,11 @@
 		
 					otherwise if the source decision step is the target step of one route
 					
-						if the input is 'unparsed'
+						if the input is UNPARSED
 						
 							# do nothing and pick up on next loop
 							
-						otherwise if the input is not 'unparsed'
+						otherwise if the input is not UNPARSED
 						
 							# process as per decision step logic
 							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-decision
@@ -164,14 +164,14 @@
 			
 					flag target business step as caused to be actualised
 					
-				otherwise if the route value is 'allows'
+				otherwise if the route value is ALLOWS
 				
 					flag the target step as allowed to be actualised
 				
 				# not theoretically reachable given current procedural "rules"
 				# for example, EVEL standing order suspension
 				# the bridge is closed so steps on the far side cannot be reached unless the bridge opens
-				otherwise if the route value is 'untraversable'
+				otherwise if the route value is UNTRAVERSABLE
 			
 					flag target step as not currently actualisable
 				
