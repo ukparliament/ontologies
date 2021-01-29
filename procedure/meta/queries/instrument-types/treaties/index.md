@@ -62,7 +62,7 @@ The above query can then be amended to suit whichever department is of interest 
 
 ## Committee consideration
 
-Treaties subject to the Crag procedure will always be considered by a Lords Select Committee. There is currently no requirement for a Commons Select Committee to consider treaties.  In the Lords, up until April 2020 treaties could be considered by the [Secondary Legislation Scrutiny Committee (SLSC)](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee/), the whole of the [European Union Select Committee](https://committees.parliament.uk/committee/176/european-union-committee/) or allocated to one of its sub-Committees. As of April 2020 a new sub-committee, the [International Agreements Sub-Committee (IAC)](https://committees.parliament.uk/committee/448/eu-international-agreements-subcommittee/), or the whole of the European Union Select Committee will be responsible for considering all treaties going forward. The SLSC and other sub-committees will have no more involvement in the scrutiny of treaties. 
+Treaties subject to the Crag procedure will always be considered by a Lords Select Committee. There is currently no requirement for a Commons Select Committee to consider treaties.  In the Lords, up until April 2020 treaties could be considered by the [Secondary Legislation Scrutiny Committee (SLSC)](https://committees.parliament.uk/committee/255/secondary-legislation-scrutiny-committee/), the whole of the [European Union Select Committee](https://committees.parliament.uk/committee/176/european-union-committee/) or allocated to one of its sub-Committees. As of April 2020, the International Agreements Sub-Committee (IAC) or the whole of the European Union Select Committee became responsible for considering all treaties going forward. The SLSC and other sub-committees had no more involvement in the scrutiny of treaties. As of January 2021 this changed again when the [International Agreements Committee](https://committees.parliament.uk/committee/448/eu-international-agreements-subcommittee/) became a fully-fledged committee on its own and will have sole responsibility for all CRaG treaties laid before the House. 
 
 In the Commons any select committee can open an inquiry into a treaty and report on it if they feel it fits into their remit. As of December 2020 we've only seen the International Trade Committee publish a report on a treaty. We have, however, seen the Environment, Food and Rural Affairs Committee open an inquiry. 
 
@@ -74,13 +74,16 @@ The Joint Committee on Human Rights can also consider treaties but as of Decembe
 
 * <a href="https://api.parliament.uk/s/540da338">Lords consideration of treaties</a>
 
+* <a href="https://api.parliament.uk/s/05dc2489">International Agreements Committee (IAC) inquiries and calls for evidence</a> 
+
+* <a href="https://api.parliament.uk/s/dd20a09a">Consideration by the full International Agreements Committee (IAC)</a> 
+
 * <a href="https://api.parliament.uk/s/8f309f6f">Consideration by the SLSC</a>
 
 * <a href="https://api.parliament.uk/s/fc35fd35">Consideration by the European Union Select Committee and its sub-committees</a>
 
 * <a href="https://api.parliament.uk/s/53e68777">Consideration by the International Agreements Sub-Committee (IAC)</a>
 
-The European Union Select Committee and the International Agreements Sub-Committee can also publish additional information related to a treaty such as correspondence or evidence. This can happen before or after the Committee reports on a treaty. As of April 2020 there has been no additional information published by either committee.
 
 ## Prayers against Treaties 
 
