@@ -412,8 +412,3 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 ### Procedure conclusion
 
 Procedure conclusion steps can only be brought into play by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
-
-
-
-
-
