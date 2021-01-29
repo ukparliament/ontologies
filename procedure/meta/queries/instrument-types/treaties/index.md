@@ -72,7 +72,7 @@ The Joint Committee on Human Rights can also consider treaties but as of Decembe
 
 * <a href="https://api.parliament.uk/s/7a32083c">Commons consideration of treaties</a>  
 
-* <a href="https://api.parliament.uk/s/540da338">Lords consideration of treaties</a>
+* <a href="https://api.parliament.uk/s/f1f0e4ea">Lords consideration of treaties</a>
 
 * <a href="https://api.parliament.uk/s/05dc2489">International Agreements Committee (IAC) inquiries and calls for evidence</a> 
 
