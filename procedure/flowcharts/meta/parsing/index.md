@@ -36,7 +36,7 @@
 		
 						log an error: unexpected number of inputs
 				
-					otherwise if the source step has less than one input or more than one inputs
+					otherwise if the source step has one input
 					
 						 if input has a value of UNTRAVERSABLE
 					
