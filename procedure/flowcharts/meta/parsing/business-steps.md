@@ -1,11 +1,15 @@
 	# BUSINESS STEP
+	
+	hard code an array of start steps
+	# move this into procedure model alongside conclusion steps?
+	
 	if the source step is a business step
 	
 		if the source step does not have one input
 
 			log an error: unexpected number of inputs
 	
-		otherwise if the source step has less than one input or more than one inputs
+		otherwise if the source step has one input
 		
 			 if input has a value of UNTRAVERSABLE
 		
@@ -14,7 +18,7 @@
 				
 			otherwise if the input has a value of UNPARSED
 			
-				 if the step is in the array of start steps (hardcoded?)
+				 if the step is in the array of start steps
 				 
 				 	# ignore any inbound routes for start steps or no route will ever get parsed
 					if the source step is actualised with a date in the past or today
@@ -27,10 +31,12 @@
 				
 					end
 					
-				# otherwise if the step is not in the array of start steps (hardcoded?)
+				# otherwise if the step is not in the array of start steps
 			
 					# do nothing and pick up on next loop
-					# HOW does the first route ever get unparsed...?
+					# should in theory traverse the graph from the start step
+					# and not parse a route until all inbounds up the tree have been parsed
+					# which is a recursion explosion?!?
 				
 				end
 			
