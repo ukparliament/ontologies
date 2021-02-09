@@ -409,6 +409,10 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 	</tbody>
 </table>
 
+### Why are some steps redundant?
+
+Some business steps may appear redundant. The draft negative statutory instrument map has an 'instrument made (signed into law)' step preceded by a decision step. The route to the decision step being true, this can be read as making being allowed. Preceding the decision step is a step labelled 'Instrument can be made (signed into law)' which is a duplication of the following logic. This latter step exists because the website does not yet display future possible steps. If it were to do so, such steps would no longer be needed and would be removed from the procedure maps and data.
+
 ### Procedure conclusion
 
 Procedure conclusion steps can only be brought into play by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
