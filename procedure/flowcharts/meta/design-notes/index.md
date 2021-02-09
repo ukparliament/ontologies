@@ -388,7 +388,7 @@ It is possible to show or hide a set of **routes** which share the same state, f
 
 * Hiding the set of routes which have a value of UNTRAVERSABLE - routes that can only be traversed by crossing a non-current route - for example: routes from EVEL certification.
 
-* Hiding the set of business steps which have a value of NOT YET ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification. Regardless of whether those steps have already been actualised.
+* Hiding the set of business steps which have a value of NOT YET ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
 
 * Hiding the set of routes which have a value of NULL or FALSE - any routes that cannot yet be traversed - for example: routes to the question being put on an approval motion where no such motion has yet been tabled.
 
