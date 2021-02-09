@@ -1,5 +1,8 @@
 # With step types
 
+	hard code an array of start steps
+	# move this into procedure model alongside conclusion steps?
+	
 	get an array of routes in the procedure
 	
 	for each route
@@ -13,52 +16,80 @@
 	until all routes have a status that is not UNPARSED
 	
 		loop through the routes with status UNPARSED
-		
-			if the route's start date is greater than today or its end date is less than today
 				
-				set the route current status to FALSE
+			set the route current status to TRUE
 			
-				set the route status to UNTRAVERSABLE
-			
-			# Set the route status according to source steps and inputs thereof
-			otherwise if the route's start date is not greater than today and its end date is not less than today
-				
-				set the route current status to TRUE
-			
-				get the source step of the route
+			get the source step of the route
 		
 				# BUSINESS STEP
+	
 				if the source step is a business step
-				
+	
 					if the source step does not have one input
-		
+
 						log an error: unexpected number of inputs
-				
+	
 					otherwise if the source step has one input
 					
-						 if input has a value of UNTRAVERSABLE
-					
-							# taint the roads off the bridge as closed if the bridge is closed
-							set the route status to UNTRAVERSABLE
+						if the route's start date is greater than today or its end date is less than today
 						
-						otherwise if the source step is actualised
-						
-							if the source step is actualised with a date in the past or today
-			
-								set the route status to TRUE
-				
-							otherwise if the source step is actualised with a date in the future
-			
-								set the route status to NULL
+							set the route value to UNTRAVERSABLE
+								
+							set the route current attribute to FALSE
+								
+						otherwise if the route's start date is not greater than today and its end date is not less than today
+								
+							set the route current attribute to TRUE
 							
+							if input has a value of UNTRAVERSABLE
+		
+								# taint the roads off the bridge as closed if the bridge is closed
+								set the route status to UNTRAVERSABLE
+				
+							otherwise if the input has a value of UNPARSED
+			
+								if the step is in the array of start steps
+				 
+							 		# ignore any inbound routes for start steps or no route will ever get parsed
+									if the source step is actualised with a date in the past or today
+
+										set the route status to TRUE
+	
+									otherwise if the source step is actualised with a date in the future
+
+										set the route status to NULL
+				
+									end
+					
+								# otherwise if the step is not in the array of start steps
+			
+									# do nothing and pick up on next loop
+									# should in theory traverse the graph from the start step
+									# and not parse a route until all inbounds up the tree have been parsed
+									# which is a recursion explosion?!?
+				
+								end
+			
+							otherwise if the source step is actualised
+			
+								if the source step is actualised with a date in the past or today
+
+									set the route status to TRUE
+	
+								otherwise if the source step is actualised with a date in the future
+
+									set the route status to NULL
+				
+								end
+				
+							otherwise if the source step is not actualised
+
+								set the route status to NULL
+	
 							end
 							
-						otherwise if the source step is not actualised
-			
-							set the route status to NULL
-				
 						end
-						
+			
 					end
 			
 				# AND gate
@@ -76,8 +107,19 @@
 							
 						otherwise if neither input is UNPARSED
 						
-							# process as per AND gate logic
-							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-and
+							if the route's start date is greater than today or its end date is less than today
+							
+								set the route value to UNTRAVERSABLE
+									
+								set the route current attribute to FALSE
+									
+							otherwise if the route's start date is not greater than today and its end date is not less than today
+									
+								set the route current attribute to TRUE	
+							
+								# process as per AND gate logic
+								# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-and
+							end
 							
 						end
 						
@@ -98,8 +140,20 @@
 							
 						otherwise if neither input is UNPARSED
 						
-							# process as per OR gate logic
-							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-or
+							if the route's start date is greater than today or its end date is less than today
+							
+								set the route value to UNTRAVERSABLE
+									
+								set the route current attribute to FALSE
+									
+							otherwise if the route's start date is not greater than today and its end date is not less than today
+									
+								set the route current attribute to TRUE
+							
+								# process as per OR gate logic
+								# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-or
+							
+							end
 							
 						end
 						
@@ -120,8 +174,20 @@
 							
 						otherwise if the input is not UNPARSED
 						
-							# process as per NOT gate logic
-							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-not
+							if the route's start date is greater than today or its end date is less than today
+							
+								set the route value to UNTRAVERSABLE
+									
+								set the route current attribute to FALSE
+									
+							otherwise if the route's start date is not greater than today and its end date is not less than today
+									
+								set the route current attribute to TRUE	
+							
+								# process as per NOT gate logic
+								# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-not
+								
+							end
 							
 						end
 						
@@ -142,8 +208,20 @@
 							
 						otherwise if the input is not UNPARSED
 						
-							# process as per decision step logic
-							# https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-decision
+							if the route's start date is greater than today or its end date is less than today
+							
+								set the route value to UNTRAVERSABLE
+									
+								set the route current attribute to FALSE
+									
+							otherwise if the route's start date is not greater than today and its end date is not less than today
+									
+								set the route current attribute to TRUE
+							
+								# process as per decision step logic
+								# htps://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/#truth-table-decision
+							
+							end
 							
 						end
 						
