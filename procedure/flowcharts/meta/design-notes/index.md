@@ -36,7 +36,7 @@ Work packages - rather than particular instruments or papers - are **subject to 
 
 The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts.
 
-The [parsing rules](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/route-types) set out how a machine should traverse routes from [actualised](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e344) steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
+The [parsing rules](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing) set out how a machine should traverse routes from [actualised](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e344) steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
 
 It may appear that common routes are missing: for example, a common outcome for [a motion](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/meta/motions/motion.pdf) is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the beg leave to withdraw step is still **in play** at the point of the debate and there is no need for a separate route.
 
