@@ -160,25 +160,25 @@
 		
 				if the route value is TRUE
 			
-					flag target business step as caused to be actualised
+					flag target business step as CAUSED TO BE ACTUALISED
 					
 				otherwise if the route value is ALLOWS
 				
-					flag the target step as allowed to be actualised
+					flag the target step as ALLOWED TO BE ACTUALISED
 				
 				# not theoretically reachable given current procedural "rules"
 				# for example, EVEL standing order suspension
 				# the bridge is closed so steps on the far side cannot be reached unless the bridge opens
 				otherwise if the route value is UNTRAVERSABLE
 			
-					flag target step as not currently actualisable
+					flag target step as NOT CURRENTLY ACTUALISABLE
 				
 				# theoretically reachable given current procedural "rules"
 				# future potential state
 				# for example, a question on a fatal motion has not been put because no fatal motion has been tabled yet and may possibly never be
 				otherwise if the route value is NULL or FALSE
 			
-					flag target step as not yet actualisable
+					flag target step as NOT YET ACTUALISABLE
 				
 				end
 			
