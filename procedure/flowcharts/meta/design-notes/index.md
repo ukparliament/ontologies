@@ -332,7 +332,7 @@ A business step with an input not being UNTRAVERSABLE ...
 
 * ... emits a TRUE if that business step that has been actualised by at least one business item with a date in the past or with a date of today.
 
-#### Work package visualisations
+#### Parsing work packages
 
 [Pseudocode for the parsing of a work package with step types](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/step-types) is here.
 
@@ -367,6 +367,33 @@ Business steps are in one of four potential states:
 * Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
 
 Potential states result from the parsing of routes and associated logic. 
+
+### Visualising a work package
+
+A work package can be visualised using the procedure maps: this allows a view of what has already occurred, what is scheduled to occur and what the procedure map says must or may occur.
+
+Visualisation of a work package has four layers: the procedure map, the parsing logic, the control over what to show and the visual appearance.
+
+Parsing a work package assigns values to routes and potential states to steps. Both routes and steps can be shown or hidden according to the assigned values and states.
+
+#### Showing or hiding routes and steps
+
+It is possible to show or hide a set of **business steps** which share the same current or potential states, for example: 'show all business steps which have the state ALLOW TO BE ACTUALISED'.
+
+It is possible to show or hide a set of **non-business steps** which share an input route or routes with the same values, for example: 'hide all AND steps with one or both input routes having a value of NULL'.
+
+It is possible to show or hide a set of **routes** which share the same state, for example: 'show all routes which have the value TRUE'.
+
+#### Examples of visibility control
+
+* Hiding the set of routes which have a value of UNTRAVERSABLE - routes that can only be traversed by crossing a non-current route - for example: routes from EVEL certification.
+
+* Hiding the set of business steps which have a value of NOT YET ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification. Regardless of whether those steps have already been actualised.
+
+* Hiding the set of routes which have a value of NULL or FALSE - any routes that cannot yet be traversed - for example: routes to the question being put on an approval motion where no such motion has yet been tabled.
+
+* Hiding the set of business steps which have a value of NOT CURRENTLY ACTUALISABLE - steps that cannot yet be reached - for example: steps describing the putting of a question on an approval motion where no such motion has yet been tabled, regardless of whether those steps have already been actualised.
+
 
 ### Validating inputs and outputs to steps
 
@@ -411,7 +438,11 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 
 ### Why are some steps redundant?
 
-Some business steps may appear redundant. The draft negative statutory instrument map has an 'instrument made (signed into law)' step preceded by a decision step. The route to the decision step being true, this can be read as making being allowed. Preceding the decision step is a step labelled 'Instrument can be made (signed into law)' which is a duplication of the following logic. This latter step exists because the website does not yet display future possible steps. If it were to do so, such steps would no longer be needed and would be removed from the procedure maps and data.
+Some business steps may appear redundant, for example: the draft negative statutory instrument map has an 'Instrument made (signed into law)' step preceded by a decision step. The route to the decision step being true, this allows making. 
+
+Preceding the decision step is a business step labelled 'Instrument can be made (signed into law)' which is a duplication of the logic described above.
+
+This latter step exists because the website does not yet display future possible steps. If it were to do so, such steps would no longer be needed and would be removed from the procedure maps and data.
 
 ### Procedure conclusion
 
