@@ -6,6 +6,7 @@
 	# in order to do this we need to ...
 	hard code an array of start steps
 	# start step for PNSI: u7VOBBH0
+	# start steps for draft negative: wShvPQbP, j4iPxsxb
 	# start steps for made negative: wShvPQbP, j4iPxsxb
 	# move this into procedure model alongside conclusion steps
 	
