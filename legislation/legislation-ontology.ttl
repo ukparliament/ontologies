@@ -39,16 +39,6 @@ plg:EnablingPower rdf:type owl:Class ;
 	rdfs:comment "A power delegated by one or more items of primary legislation, enabling the exercise of regulations as described in the Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:Procedure rdf:type owl:Class ;
-	rdfs:label "Procedure"@en ;
-	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:LayingDuty rdf:type owl:Class ;
-	rdfs:label "Laying duty"@en ;
-	rdfs:comment "The duty of a body to lay papers before Parliament as imposed by an Act of Parliament."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
 plg:StatutoryEnabledThing rdf:type owl:Class ;
 	rdfs:label "Statutory enabled thing"@en ;
 	rdfs:comment "A thing which exists following the exercising of an enabling power."@en ;
@@ -86,43 +76,48 @@ plg:StatutoryInstrumentSeries rdf:type owl:Class ;
 	rdfs:comment "A statutory instrument may appear in one or more series, or in none. Series include: Welsh Instruments, corresponding to Wales Statutory Instruments; Northern Ireland Orders in Council; Commencement Orders; Appointed Day Orders; Legal Statutory Instruments; and Scottish Statutory Instruments, being United Kingdom instruments that have particular application to Scotland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
+plg:Duty rdf:type owl:Class ;
+	rdfs:label "Duty"@en ;
+	rdfs:comment "An obligation that must be discharged in relation to the exercise of an enabling power."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
 	
 
 ##### Object properties ####
 
-plg:delegates rdf:type owl:ObjectProperty ;
-	rdfs:label "Delegates"@en ;
-	rdfs:comment "Relates an Act of Parliament to an enabling power delegated by that Act. An Act of Parliament may delegate more than one enabling power. Secondary legislation may delegate powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure."@en ;
+plg:confers rdf:type owl:ObjectProperty ;
+	rdfs:label "Confers"@en ;
+	rdfs:comment "Relates an Act of Parliament to an enabling power conferred by that Act. An Act of Parliament may confer more than one enabling power. Secondary legislation may confer powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure."@en ;
 	rdfs:domain plg:ActOfParliament ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:combines rdf:type owl:ObjectProperty ;
-	rdfs:label "Combines"@en ;
-	rdfs:comment "Relates enabling powers delegated from Acts of Parliament to a combined enabling power. Allows powers to be combined to authorise statutory enabled things."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range plg:EnablingPower ;
+	
+plg:imposes rdf:type owl:ObjectProperty ;
+	rdfs:label "Imposes"@en ;
+	rdfs:comment "Relates an Act of Parliament to a duty imposed in the exercise of an associated enabling power."@en ;
+	rdfs:domain plg:ActOfParliament ;
+	rdfs:range plg:Duty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:imposesProcedureDuty rdf:type owl:ObjectProperty ;
-	rdfs:label "Imposes procedure duty"@en ;
-	rdfs:comment "A duty to follow a procedure is imposed by an enabling power. An Act of Parliament that delegates an enabling power may impose a duty to follow a particular procedure, or none."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range plg:Procedure ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:imposesLayingDuty rdf:type owl:ObjectProperty ;
-	rdfs:label "Imposes laying duty"@en ;
-	rdfs:comment "An enabling power may impose a duty to lay papers before Parliament. A laying duty is imposed by a single enabling power."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range plg:LayingDuty ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:enabledBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Enabled by"@en ;
-	rdfs:comment "Relates a statutory enabled thing to an enabling power. A statutory enabled thing is enabled by an enabling power and an enabling power may enable more than one statutory enabled thing."@en ;
+plg:exercises rdf:type owl:ObjectProperty ;
+	rdfs:label "Exercises"@en ;
+	rdfs:comment "Relates a statutory enabled thing to an enabling power. A statutory enabled thing is enabled by one or more enabling powers and an enabling power may enable more than one statutory enabled thing."@en ;
 	rdfs:domain plg:StatutoryEnabledThing ;
 	rdfs:range plg:EnablingPower ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:requires rdf:type owl:ObjectProperty ;
+	rdfs:label "Requires"@en ;
+	rdfs:comment "Relates an enabling power to a duty. The exercise of an enabling power may require one or more duties, or none. A duty may be associated with the exercise of one or more enabling powers."@en ;
+	rdfs:domain plg:EnablingPower ;
+	rdfs:range plg:Duty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:enabledBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Enabled by"@en ;
+	rdfs:comment "Relates a statutory enabled thing to an Act of Parliament which enables it. A statutory enabled thing may be enabled by one or more Acts of Parliament. An Act of Parliament may enable one or more statutory enabled things, or none."@en ;
+	rdfs:domain plg:StatutoryEnabledThing ;
+	rdfs:range plg:ActOfParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
@@ -163,13 +158,6 @@ plg:inSeries rdf:type owl:ObjectProperty ;
 					
 	
 ##### Data properties ####	
-
-plg:imposesDayCountDuty rdf:type owl:DatatypeProperty ;
-	rdfs:label "Imposes day count duty"@en ;
-	rdfs:comment "Relates an enabling power to a numbered count of days, during which an instrument is subject to parliamentary scrutiny. The Statutory Instruments Act 1946 sets out a default count of 40 sitting days for scrutiny of statutory instruments, though an enabling Act may set a different number - commonly 28, 60 or 120. The European Union (Withdrawal) Act 2018 defines a period of ten sitting days of scrutiny for proposed negative statutory instruments. An Act of Parliament may set out a particular day count for each enabling power. An instrument is required to have a single day count when enabling powers are delegated from more than one Act of Parliament. Definitions of sitting day may differ between Acts of Parliament."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:siPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "SI prefix"@en ;
