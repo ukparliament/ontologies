@@ -1,4 +1,4 @@
-# Meeting notes from Wikidata matching with Simon and Catherine
+# Meeting notes from Wikidata matching with SS and CT
 
 ## General matching notes
 
