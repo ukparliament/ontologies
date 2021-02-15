@@ -1,5 +1,9 @@
 # Meeting notes from Wikidata matching with SS and CT
 
+## Documentation
+
+[Wikidata and the UK Parliament Thesaurus](https://docs.google.com/document/d/1_MjxU_SKHPHvXa6mcFN0gOz6rRgO-kfKz9wD2tMH5RE/edit?usp=sharing)
+
 ## General matching notes
 
 One wikidata item, many UKPT terms - e.g NHS trusts - wikidata items stores many UKPT terms - and the named as qualifier removes constraint warning.
