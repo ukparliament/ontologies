@@ -214,3 +214,24 @@ plg:siSeriesItemIdentifier rdf:type owl:DatatypeProperty ;
 	rdfs:domain plg:StatutoryInstrumentSeriesItem ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:chapterNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Chapter number"@en ;
+	rdfs:comment "The identifier in year part of an Act of Parliament number, for example, '12' in '1986 c. 12'."@en ;
+	rdfs:domain plg:ActOfParliament ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:actYear rdf:type owl:DatatypeProperty ;
+	rdfs:label "Act year"@en ;
+	rdfs:comment "The year part of an Act of Parliament number, for example, '1986' in '1986 c. 12'. The Act year is the year in which Royal Assent was given."@en ;
+	rdfs:domain plg:ActOfParliament ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:royalAssentOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Royal Assent on"@en ;
+	rdfs:comment "The date on which Royal Assent was given, as recorded by legislation.gov.uk. This may differ from the date recorded by Parliament if Royal Assent is given after midnight on a sitting day."@en ;
+	rdfs:domain plg:ActOfParliament ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
