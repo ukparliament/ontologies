@@ -1,17 +1,20 @@
-drop table if exists people_parliamentary_blocs;
 drop table if exists house_seat_incumbencies;
+drop table if exists peerage_holdings;
 drop table if exists house_seats;
+drop table if exists peerages;
+drop table if exists letters_patents;
+drop table if exists people_parliamentary_blocs;
 drop table if exists house_seat_end_reasons;
 drop table if exists houses;
 drop table if exists gendered_rank_labels;
-drop table if exists gender_identities;
+drop table if exists expressed_genders;
 drop table if exists people;
 drop table if exists genders;
-drop table if exists peerages;
 drop table if exists peerage_ranks;
 drop table if exists parliamentary_bloc_affiliations;
 drop table if exists parliamentary_blocs;
 drop table if exists political_parties;
+
 
 
 
@@ -28,6 +31,30 @@ create table people (
 	date_of_death date null,
 	date_of_death_exact boolean not null,
 	year_of_death smallint null,
+	primary key (id)
+);
+create table letters_patents (
+	id serial,
+	patent_on date not null,
+	person_id int not null,
+	constraint fk_person foreign key (person_id) references people(id),
+	primary key (id)
+);
+create table peerages (
+	id serial,
+	of_title boolean default false,
+	title varchar(255) not null,
+	territorial_designation varchar(255) not null,
+	extinct_on date default null,
+	last_number int default null,
+	peerage_rank_id int not null,
+	special_remainder_id int not null,
+	letters_patent_id int not null,
+	peerage_type_id int not null,
+	/*constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
+	constraint fk_special_remainder foreign key (special_remainder_id) references special_remainders(id),*/
+	constraint fk_letters_patent foreign key (letters_patent_id) references letters_patents(id),
+	/*constraint fk_peerage_type foreign key (peerage_type_id) references peerage_types(id),*/
 	primary key (id)
 );
 create table parliamentary_bloc_affiliations (
@@ -65,7 +92,7 @@ create table genders (
 	label varchar(255) not null,
 	primary key (id)
 );
-create table gender_identities (
+create table expressed_genders (
 	id serial,
 	start_date date null,
 	end_date date null,
@@ -78,12 +105,6 @@ create table gender_identities (
 create table peerage_ranks (
 	id serial,
 	degree smallint not null,
-	primary key (id)
-);
-create table peerages (
-	id serial,
-	peerage_rank_id int not null,
-	constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
 	primary key (id)
 );
 create table gendered_rank_labels (
@@ -120,5 +141,16 @@ create table house_seat_incumbencies (
 	house_seat_id int not null,
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
+	primary key (id)
+);
+create table peerage_holdings (
+	id serial,
+	start_on date not null,
+	end_on date not null,
+	ordinal_number int not null,
+	person_id int not null,
+	peerage_id int not null,
+	constraint fk_person foreign key (person_id) references people(id),
+	constraint fk_peerage foreign key (peerage_id) references peerages(id),
 	primary key (id)
 );
