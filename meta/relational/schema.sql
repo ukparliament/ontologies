@@ -1,7 +1,11 @@
 drop table if exists house_seat_incumbencies;
 drop table if exists peerage_holdings;
 drop table if exists house_seats;
+drop table if exists law_lords;
 drop table if exists peerages;
+drop table if exists jurisdictions;
+drop table if exists peerage_types;
+drop table if exists special_remainders;
 drop table if exists letters_patents;
 drop table if exists people_parliamentary_blocs;
 drop table if exists house_seat_end_reasons;
@@ -40,6 +44,23 @@ create table letters_patents (
 	constraint fk_person foreign key (person_id) references people(id),
 	primary key (id)
 );
+create table special_remainders (
+	id serial,
+	label varchar(255) not null,
+	description varchar(1000) not null,
+	primary key (id)
+);
+create table peerage_ranks (
+	id serial,
+	label varchar(255),
+	degree smallint not null,
+	primary key (id)
+);
+create table peerage_types (
+	id serial,
+	label varchar(255),
+	primary key (id)
+);
 create table peerages (
 	id serial,
 	of_title boolean default false,
@@ -51,10 +72,36 @@ create table peerages (
 	special_remainder_id int not null,
 	letters_patent_id int not null,
 	peerage_type_id int not null,
-	/*constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
-	constraint fk_special_remainder foreign key (special_remainder_id) references special_remainders(id),*/
+	constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
+	constraint fk_special_remainder foreign key (special_remainder_id) references special_remainders(id),
 	constraint fk_letters_patent foreign key (letters_patent_id) references letters_patents(id),
-	/*constraint fk_peerage_type foreign key (peerage_type_id) references peerage_types(id),*/
+	constraint fk_peerage_type foreign key (peerage_type_id) references peerage_types(id),
+	primary key (id)
+);
+create table jurisdictions (
+	id serial,
+	label varchar(255) not null,
+	primary key (id)
+);
+create table law_lords (
+	id serial,
+	appointed_on date not null,
+	retired_on date not null,
+	peerage_id int not null,
+	jurisdiction_id int not null,
+	constraint fk_peerage foreign key (peerage_id) references peerages(id),
+	constraint fk_jurisdiction foreign key (jurisdiction_id) references jurisdictions(id),
+	primary key (id)
+);
+create table peerage_holdings (
+	id serial,
+	start_on date not null,
+	end_on date not null,
+	ordinal_number int not null,
+	person_id int not null,
+	peerage_id int not null,
+	constraint fk_person foreign key (person_id) references people(id),
+	constraint fk_peerage foreign key (peerage_id) references peerages(id),
 	primary key (id)
 );
 create table parliamentary_bloc_affiliations (
@@ -102,11 +149,6 @@ create table expressed_genders (
 	constraint fk_gender foreign key (gender_id) references genders(id),
 	primary key (id)
 );
-create table peerage_ranks (
-	id serial,
-	degree smallint not null,
-	primary key (id)
-);
 create table gendered_rank_labels (
 	id serial,
 	label varchar(255) not null,
@@ -123,8 +165,8 @@ create table house_seat_end_reasons (
 );
 create table house_seats (
 	id serial,
-	start_date date not null,
-	end_date date not null,
+	start_on date not null,
+	end_on date not null,
 	peerage_id int null,
 	house_id int not null,
 	house_seat_end_reason_id int null,
@@ -135,22 +177,13 @@ create table house_seats (
 );
 create table house_seat_incumbencies (
 	id serial,
-	start_date date not null,
-	end_date date not null,
+	start_on date not null,
+	end_on date,
 	person_id int not null,
 	house_seat_id int not null,
+	peerage_holding_id int,
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
-	primary key (id)
-);
-create table peerage_holdings (
-	id serial,
-	start_on date not null,
-	end_on date not null,
-	ordinal_number int not null,
-	person_id int not null,
-	peerage_id int not null,
-	constraint fk_person foreign key (person_id) references people(id),
-	constraint fk_peerage foreign key (peerage_id) references peerages(id),
+	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
 	primary key (id)
 );
