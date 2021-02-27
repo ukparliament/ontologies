@@ -29,6 +29,3 @@ Librarian [Anya](https://twitter.com/bitten_) and computational experts Robert a
 ## Forming like Voltron
 
 Friday saw the first of what will hopefully be many meetings between librarians Anya and Jayne, computational experts Jianhan, Robert and Michael, and computational expert boss bloke Ian. Talk turned toward our inference explosion, a subject that was hardly avoidable, and how we might mitigate against such things in the future. We also hatched a plan [to](http://parliamentary-procedures.herokuapp.com/procedures) [migrate](https://standing-orders.herokuapp.com/) [some](http://made-n-laid.herokuapp.com/) [of](http://tweaty-twacker.herokuapp.com/) [the](https://parliament-calendar.herokuapp.com/) [applications](http://peerages.herokuapp.com/) we currently have running on Heroku to Azure. Which, if nothing else, should save Michael £30 a month.
-
-
-
