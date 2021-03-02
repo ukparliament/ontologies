@@ -167,12 +167,12 @@ create table house_seats (
 	id serial,
 	start_on date not null,
 	end_on date not null,
-	peerage_id int null,
 	house_id int not null,
 	house_seat_end_reason_id int null,
-	constraint fk_peerage foreign key (peerage_id) references peerages(id),
+	peerage_id int null,
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_house_seat_end_reason foreign key (house_seat_end_reason_id) references house_seat_end_reasons(id),
+	constraint fk_peerage foreign key (peerage_id) references peerages(id),
 	primary key (id)
 );
 create table house_seat_incumbencies (
