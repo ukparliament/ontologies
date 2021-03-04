@@ -195,6 +195,13 @@ ppr:stepHasCitation rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Citation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:routeHasCitation rdf:type owl:ObjectProperty ;
+	rdfs:label "Route has citation"@en ;
+	rdfs:comment "Relates a route to a citation. A route may have more than one citation, or none."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:procedureHasCitation rdf:type owl:ObjectProperty ;
 	rdfs:label "Procedure has citation"@en ;
 	rdfs:comment "Relates a procedure to a citation. A procedure may have more than one citation, or none."@en ;
@@ -224,4 +231,11 @@ ppr:uri rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a citation to the URI of the document being cited."@en ;
 	rdfs:domain ppr:Citation ;
 	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:stepDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Step description"@en ;
+	rdfs:comment "Relates a step to its description."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
