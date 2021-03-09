@@ -112,20 +112,27 @@ create table parliamentary_bloc_affiliations (
 create table political_parties (
 	id serial,
 	name varchar(255) not null,
-	electoral_commission_id varchar(255) not null,
+	abbreviation varchar(10) not null,
 	primary key (id)
 );
 create table parliamentary_blocs (
 	id serial,
 	name varchar(255) not null,
+	abbreviation varchar(10) not null,
+	background_colour char(6) null,
+	text_colour char(6) null,
+	low_res_logo bytea null,
+	low_res_logo_mime_type varchar(20) null,
+	high_res_logo bytea null,
+	high_res_logo_mime_type varchar(20) null,
 	political_party_id int null,
 	constraint fk_political_party foreign key (political_party_id) references political_parties(id),
 	primary key (id)
 );
 create table people_parliamentary_blocs (
 	id serial,
-	start_date date null,
-	end_date date null,
+	start_on date null,
+	end_on date null,
 	person_id int not null,
 	parliamentary_bloc_id int not null,
 	parliamentary_bloc_affiliation_id int not null,
