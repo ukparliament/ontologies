@@ -25,7 +25,7 @@ So by Thursday we had maps of component procedures for [EVEL certification](http
 ## Citing Acts
 
 Librarian Jayne had noticed that a couple of our procedural steps made mention of legislation without properly citing it. Which is not like us. Not like us at all. Jayne has now fixed this. So for steps [actualised](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e319) by [instruments introducing one - or indeed more - criminal offences](https://trello.com/c/PqtCLGUU/367-instruments-introducing-one-or-more-criminal-offences), we now properly cite [Schedule 7 of the European Union (Withdrawal) Act 2018](https://www.legislation.gov.uk/ukpga/2018/16/schedule/7). And for instruments made under the [Sanctions and Anti-money Laundering Act](https://trello.com/c/RDb4lGAR/366-made-affirmative-instruments-made-under-the-sanctions-and-anti-money-laundering-act), we now properly cite [Section 56(5) of the
-Sanctions and Antimoney Laundering Act 2018](https://www.legislation.gov.uk/ukpga/2018/13/section/56#section-56-5). Top work Jayne.
+Sanctions and Anti-money Laundering Act 2018](https://www.legislation.gov.uk/ukpga/2018/13/section/56#section-56-5). Top work Jayne.
 
 ## Schrödinger motions
 
