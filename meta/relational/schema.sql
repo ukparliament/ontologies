@@ -1,3 +1,6 @@
+drop table if exists external_identifiers;
+drop table if exists external_identifier_authorities;
+drop table if exists authority_owners;
 drop table if exists house_seat_incumbencies;
 drop table if exists peerage_holdings;
 drop table if exists house_seats;
@@ -191,6 +194,50 @@ create table house_seat_incumbencies (
 	peerage_holding_id int,
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
+	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
+	primary key (id)
+);
+create table authority_owners (
+	id serial,
+	name varchar(255) not null,
+	primary key (id)
+);
+create table external_identifier_authorities (
+	id serial,
+	name varchar(255) not null,
+	authority_owner_id int not null,
+	constraint fk_authority_owner foreign key (authority_owner_id) references authority_owners(id),
+	primary key (id)
+);
+create table external_identifiers (
+	id serial,
+	value varchar(255) not null,
+	uri varchar(255) null,
+	external_identifier_authority_id int not null,
+	political_party_id int null,
+	parliamentary_bloc_id int null,
+	person_id int null,
+	peerage_id int null,
+	house_id int null,
+	letters_patent_id int null,
+	special_remainder_id int null,
+	jurisdiction_id int null,
+	law_lord_id int null,
+	peerage_type_id int null,
+	peerage_rank_id int null,
+	peerage_holding_id int null,
+	constraint fk_external_identifier_authority foreign key (external_identifier_authority_id) references external_identifier_authorities(id),
+	constraint fk_political_party foreign key (political_party_id) references political_parties(id),
+	constraint fk_parliamentary_bloc foreign key (parliamentary_bloc_id) references parliamentary_blocs(id),
+	constraint fk_person foreign key (person_id) references people(id),
+	constraint fk_peerage foreign key (peerage_id) references peerages(id),
+	constraint fk_house foreign key (house_id) references houses(id),
+	constraint fk_letters_patent foreign key (letters_patent_id) references letters_patents(id),
+	constraint fk_special_remainder foreign key (special_remainder_id) references special_remainders(id),
+	constraint fk_jurisdiction foreign key (jurisdiction_id) references jurisdictions(id),
+	constraint fk_law_lord foreign key (law_lord_id) references law_lords(id),
+	constraint fk_peerage_type foreign key (peerage_type_id) references peerage_types(id),
+	constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
 	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
 	primary key (id)
 );
