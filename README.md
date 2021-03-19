@@ -7,9 +7,9 @@ Easier to read versions at: https://ukparliament.github.io/ontologies/
 
 Authors: [Christopher Alcock](https://twitter.com/chrisalcockdev), [Silver Oliver](https://twitter.com/silveroliver), [Michael Smethurst](https://twitter.com/fantasticlife), [Anya Somerville](https://twitter.com/bitten_), [Ben Woodhams](https://twitter.com/benwoodhams)
 
-twitter: [@UKParliData](https://twitter.com/ukparlidata)
+Twitter: [@UKParliData](https://twitter.com/ukparlidata)
 
-github: [ukparliament](https://github.com/ukparliament)
+GitHub: [ukparliament](https://github.com/ukparliament)
 
 
 
