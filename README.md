@@ -11,8 +11,4 @@ Twitter: [@UKParliData](https://twitter.com/ukparlidata)
 
 GitHub: [ukparliament](https://github.com/ukparliament)
 
-
-
-
-
 Licensed under the [Open Parliament Licence](http://www.parliament.uk/site-information/copyright/open-parliament-licence/).
