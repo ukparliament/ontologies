@@ -2,7 +2,7 @@
 
 [Proposed negative statutory instruments](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) (PNSIs) are laid before Parliament where a decision is taken on whether the instrument should be laid under the negative procedure or upgraded to the affirmative procedure. 
 
-The following queries provide data for all proposed negative statutory instruments going back to July 2018 when these types of papers started to be laid before Parliament. 
+The following queries provide data for all proposed negative statutory instruments going back to July 2018 when these types of papers started to be laid before Parliament.
 
 ## All proposed negative statutory instruments laid before Parliament
 
