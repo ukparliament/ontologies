@@ -47,7 +47,7 @@ Or if you want to only see treaties before/after a certain point use the followi
 
 ## Work packaged things by department
 
-Statutory instruments and proposed negative statutory instruments are laid by the department that leads on the instrument. Treaties are rarely, if ever, laid by the department that leads on the instrument; they are primarily laid by the Foreign, Commowealth and Development Office (previously FCO). The query below returns SIs and PNSIs laid by a particular department, and treaties led by that department. 
+Statutory instruments and proposed negative statutory instruments are laid by the department that leads on the instrument. Treaties are rarely laid by the department that leads on the instrument; they are primarily laid by the Foreign, Commonwealth and Development Office (previously FCO). The query below returns SIs and PNSIs laid by a particular department, and treaties led by that department. 
 
 * <a href="https://api.parliament.uk/s/6e92a812">Department for Transport instruments</a>
 
