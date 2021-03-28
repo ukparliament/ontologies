@@ -47,17 +47,16 @@ Or if you want to only see treaties before/after a certain point use the followi
 
 ## Work packaged things by department
 
-Statutory instruments and PNSIs can be broken down by their laying department while treaties can be broken down by lead department. There is a fundamental difference between laying department and lead department, treaties also get laid but primarily by the Foreign, Commowealth and Development Office (previously FCO). Sometimes users might be interested to know all things laid/led by one department. 
+Statutory instruments and proposed negative statutory instruments are laid by the department that leads on the instrument. Treaties are rarely, if ever, laid by the department that leads on the instrument; they are primarily laid by the Foreign, Commowealth and Development Office (previously FCO). The query below returns SIs and PNSIs laid by a particular department, and treaties led by that department. 
 
+* <a href="https://api.parliament.uk/s/6e92a812">Department for Transport instruments</a>
 
-* <a href="https://api.parliament.uk/s/6e92a812">Department for Transport treaties</a>
-
-The above query can then be amended to suit whichever department is of interest by editing 13 and 16:
+The query can be amended to suit whichever department is of interest by editing 13 and 16:
 
 	FILTER (?layingBodyName IN ("Department for Transport"))
     FILTER regex (?LeadOrg, "Department for Transport")
 	
-Users can also search by multiple departments.
+You can also search by multiple departments.
 
 ## Committee consideration
 
