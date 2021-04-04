@@ -22,7 +22,7 @@ Now that our work to enable enabling Acts is enabled, we've been wondering if we
 
 ## Indexing petitions
 
-[Anya](https://twitter.com/bitten_), Jianhan and young Robert have been busy beavering away on ingesting [petitions data](https://petition.parliament.uk/) - first into the data platform and from there, in a slightly reduced form, into our search and indexing triple store. They're waiting on the people at the other end of the pipes to retain Government responses that have been succeeded by a more recent response, but everything else is proceeding smoothly. Mostly. There was a brief kerfuffle when Anya added petitions as a new subtype and the facet refused to show up in the web interface. But a quick smack from Jianhan's trusty computational spanner seemed to fix that snaggle. There is almost no computational problem that can't be fixed by hitting the thing with a spanner.
+[Anya](https://twitter.com/bitten_), Jianhan and young Robert have been busy beavering away on ingesting [petitions data](https://petition.parliament.uk/) - first into the data platform and from there, in a slightly reduced form, into our search and indexing triple store. They're waiting on people at the other end of the pipes to retain Government responses that have been succeeded by a more recent response, but everything else is proceeding smoothly. Mostly. There was a brief kerfuffle when Anya added petitions as a new subtype and the facet refused to show up in the web interface. But a quick smack from Jianhan's trusty computational spanner seemed to fix that snaggle. There is almost no computational problem that can't be fixed by hitting the thing with a spanner.
 
 ## Kind hearts / coronets
 
