@@ -18,7 +18,7 @@ drop table if exists expressed_genders;
 drop table if exists people;
 drop table if exists genders;
 drop table if exists peerage_ranks;
-drop table if exists parliamentary_bloc_affiliations;
+drop table if exists parliamentary_bloc_affiliation_types;
 drop table if exists parliamentary_blocs;
 drop table if exists political_parties;
 
@@ -107,7 +107,7 @@ create table peerage_holdings (
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
 	primary key (id)
 );
-create table parliamentary_bloc_affiliations (
+create table parliamentary_bloc_affiliation_types (
 	id serial,
 	label varchar(255) not null,
 	primary key (id)
@@ -137,11 +137,14 @@ create table people_parliamentary_blocs (
 	start_on date null,
 	end_on date null,
 	person_id int not null,
+	whip_withdrawn boolean default false,
+	resigned_whip boolean default false,
+	notes varchar(255) null,
 	parliamentary_bloc_id int not null,
-	parliamentary_bloc_affiliation_id int not null,
+	parliamentary_bloc_affiliation_type_id int not null,
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_parliamentary_bloc foreign key (parliamentary_bloc_id) references parliamentary_blocs(id),
-	constraint fk_parliamentary_bloc_affiliation foreign key (parliamentary_bloc_affiliation_id) references parliamentary_bloc_affiliations(id),
+	constraint fk_parliamentary_bloc_affiliation_type foreign key (parliamentary_bloc_affiliation_type_id) references parliamentary_bloc_affiliation_types(id),
 	primary key (id)
 );
 create table genders (
