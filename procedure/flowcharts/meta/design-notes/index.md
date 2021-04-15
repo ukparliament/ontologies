@@ -334,7 +334,7 @@ A business step with an input not being UNTRAVERSABLE ...
 
 #### Parsing work packages
 
-[Pseudocode for the parsing of a work package with step types](https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/parsing/step-types) is here.
+[Ruby code for the parsing of a work package with step types](https://api.parliament.uk/procedures/meta/comments) is here.
 
 Business steps in a work package are in one of four current states and in one of four  potential states.
 
@@ -366,7 +366,9 @@ Business steps are in one of four potential states:
 
 * Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
 
-Potential states result from the parsing of routes and associated logic. 
+Potential states result from the parsing of routes and associated logic.
+
+Multiple parse passes are required in order to successfully parse a route whose source is an AND or an OR step. A route is only available to be successfully parsed when all inbound routes to its source step have been successfully parsed. Both AND and OR steps have two inbound routes: both are required to be successfully parsed before the outbound route can be successfully parsed. The parsing code will always make a parse pass along any route it encounters, regardless of whether all inbound routes to its source step have been successfully parsed. This leads to a distinction between a route having been subject to a parse pass and a route being successfully parsed.
 
 ### Visualising a work package
 
