@@ -1,6 +1,6 @@
 # 2021 - Week 15
 
-[Jianhan](https://twitter.com/jianhanzhu) suspected a bug in the orchestration code from the Search and Indexing triple store to the [SOLR](https://en.wikipedia.org/wiki/Apache_Solr) instance was causing the petitions import to hang. He created a new version on his own machine using an updated version of the [dotNetRDF](https://www.dotnetrdf.org/) library. The import ran successfully. He's now replaced the import code on the server with code using the new library which is running smoothly.
+[Jianhan](https://twitter.com/jianhanzhu) suspected that a bug in the orchestration code from the Search and Indexing triple store to the [SOLR](https://en.wikipedia.org/wiki/Apache_Solr) instance was causing the petitions import to hang. He created a new version, on his own machine, using an updated version of the [dotNetRDF](https://www.dotnetrdf.org/) library. The import ran successfully. He's now replaced the import code on the server with code using the new library which is running smoothly.
 
 Jayne and [Michael](https://twitter.com/fantasticlife) have added labels to non-business steps on the [logical made affirmative map](https://ukparliament.github.io/ontologies/procedure/flowcharts/sis/logic-gates/made-affirmative.pdf). This to prepare the ground for adding the procedure data next week.
 
