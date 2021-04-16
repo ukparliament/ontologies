@@ -2,7 +2,7 @@
 
 [Jianhan](https://twitter.com/jianhanzhu) suspected that a bug in the orchestration code from the Search and Indexing triple store to the [Solr](https://en.wikipedia.org/wiki/Apache_Solr) instance was causing the petitions import to hang. He created a new version, on his own machine, using an updated version of the [dotNetRDF](https://www.dotnetrdf.org/) library. The import ran successfully. He's now replaced the import code on the server with code using the new library which is running smoothly.
 
-Jayne and [Michael](https://twitter.com/fantasticlife) have added labels to non-business steps on the [logical made affirmative map](https://ukparliament.github.io/ontologies/procedure/flowcharts/sis/logic-gates/made-affirmative.pdf). This to prepare the ground for adding the procedure data next week.
+Jayne and [Michael](https://twitter.com/fantasticlife) have added labels to non-business steps on the [logical made affirmative map](https://ukparliament.github.io/ontologies/procedure/flowcharts/sis/logic-gates/made-affirmative.pdf) and made a start on entering the data. The Commons side, the clocks, the conclusions and about half the Lords side are done. More next week.
 
 Jayne, Robert and Michael have made changes to both the [procedure editor database schema](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/editor/schema.pdf) and [the procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) to take account of new thinking on [step collections](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e244). They're now fairly clear on what that work entails and hope to do it soon after the logical procedure map work goes live.
 
