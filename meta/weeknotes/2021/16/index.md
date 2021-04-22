@@ -10,7 +10,7 @@ The newly [logical made affirmative procedure](https://ukparliament.github.io/on
 
 ## Parsing procedure maps
 
-Robert and Michael have [finally finished](https://trello.com/c/GvL445bU/119-comment-parsing-code) commenting and refactoring their [procedure parsing code](https://github.com/ukparliament/procedure-parsing). All comments are once more written in [Markdown](https://en.wikipedia.org/wiki/Markdown), which have themselves been parsed and are [available to read](https://api.parliament.uk/procedures/meta/comments). Feedback and pull requests as welcome as ever. Probably more so.
+Robert and Michael have [finally finished](https://trello.com/c/GvL445bU/119-comment-parsing-code) commenting and refactoring their [procedure parsing code](https://github.com/ukparliament/procedure-parsing). All comments are once more written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and have themselves been parsed for [anyone to read and enjoy](https://api.parliament.uk/procedures/meta/comments). Feedback and pull requests as welcome as ever. Probably more so.
 
 There are quite a few queries [firing in the code](https://github.com/ukparliament/procedure-parsing/blob/master/lib/parsing/parse.rb#L60), so nothing is as fast as we'd like it to be. We suspect the parsing code would be more efficient if we loaded the procedure graph into memory and did the processing there. But we don't know how to do that. If you do, please get in touch.
 
