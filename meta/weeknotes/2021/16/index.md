@@ -32,7 +32,7 @@ On Wednesday, Anya, Ned, [Ben](https://twitter.com/benwoodhams) and Michael were
 
 ## In continuance of our limited education
 
-Thursday lunchtime saw Librarians [Claire](https://twitter.com/tinysprite) and Jayne, together with computational expert Michael, pop along to the latest in the series of Lords' Procedural Seminars. This time out, Ms Salmon Percival on secondary legislation - our very favourite subject. Claire even managed to answer a question. Quite correctly. We are learning. Slowly.
+Thursday lunchtime saw Librarians [Claire](https://twitter.com/tinysprite) and Jayne, together with computational expert Michael, pop along to the latest in the series of Lords' Procedural Seminars. This time out, Ms Salmon Percival on [secondary legislation](https://en.wikipedia.org/wiki/Delegated_legislation_in_the_United_Kingdom) - our very favourite subject. Claire even managed to answer a question. Quite correctly. We are learning. Slowly.
 
 
 
