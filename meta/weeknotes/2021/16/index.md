@@ -22,7 +22,7 @@ Our [Jianhan](https://twitter.com/jianhanzhu) has started work to migrate the ma
 
 In Jayne's absence, Michael attended his first ever Statutory Instruments Forum, where much of the talk focussed on what looks to be a new procedure. All courtesy of [Paragraph 14 of Schedule 8 of the European Union (Withdrawal) Act 2018](https://www.legislation.gov.uk/ukpga/2018/16/schedule/8/enacted#schedule-8-paragraph-14). On Thursday, [Anya](https://twitter.com/bitten_), Jayne and Michael were joined by JO Jane to chat through the work required at the Library / data platform end. A [Trello board](https://trello.com/b/6Tv4O13K/published-drafts) was created. To no-one's great surprise.
 
-## King hearts / coronets
+## Kind hearts / coronets
 
 Grant - our new friend from the [College of Arms](https://www.college-of-arms.gov.uk/) - has continued on his quest to backfill [holders of peerages](https://api.parliament.uk/peerages/peerages/414) atop [David](https://twitter.com/clerkly)'s data. Thanks Grant.
 
