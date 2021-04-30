@@ -22,8 +22,14 @@ drop table if exists parliamentary_blocs;
 drop table if exists political_parties;
 drop table if exists kingdoms;
 drop table if exists genders;
+drop table if exists letters_patent_times;
 
 
+create table letters_patent_times (
+	id serial,
+	label varchar(255) not null,
+	primary key (id)
+);
 create table genders (
 	id serial,
 	label varchar(255) not null,
@@ -56,10 +62,15 @@ create table people (
 create table letters_patents (
 	id serial,
 	patent_on date not null,
+	ordinality_on_date int not null,
+	previous_rank varchar(255),
+	previous_title varchar(255),
 	person_id int not null,
 	kingdom_id int not null,
+	letters_patent_time_id int,
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_kingdom foreign key (kingdom_id) references kingdoms(id),
+	constraint fk_letters_patent_time_id foreign key (letters_patent_time_id) references letters_patent_times(id),
 	primary key (id)
 );
 create table special_remainders (
