@@ -97,7 +97,11 @@ In both Houses there is the potential for a Member to table a motion against a t
 
 ### Prayers against treaties lapsed at the end of session
 
-* <a href="https://api.parliament.uk/s/6997b923">Prayers lapsed at the end of the 2019 session</a>
+* <a href="https://api.parliament.uk/s/9811e157">All prayers lapsed at the end of sessions</a>
+
+* <a href="https://api.parliament.uk/s/9744a0c8">Prayers lapsed at the end of the 2019-21 session</a>
+
+* <a href="https://api.parliament.uk/s/343c6693">Prayers lapsed at the end of the 2019 session</a>
 
 ## Debates on treaties
 
