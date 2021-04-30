@@ -15,17 +15,20 @@ drop table if exists people_parliamentary_blocs;
 drop table if exists house_seat_end_reasons;
 drop table if exists houses;
 drop table if exists rank_labels;
-drop table if exists expressed_genders;
 drop table if exists people;
-drop table if exists genders;
 drop table if exists peerage_ranks;
 drop table if exists parliamentary_bloc_affiliation_types;
 drop table if exists parliamentary_blocs;
 drop table if exists political_parties;
 drop table if exists kingdoms;
+drop table if exists genders;
 
 
-
+create table genders (
+	id serial,
+	label varchar(255) not null,
+	primary key (id)
+);
 create table kingdoms (
 	id serial,
 	name varchar(50) not null,
@@ -46,6 +49,8 @@ create table people (
 	date_of_death date null,
 	date_of_death_exact boolean not null,
 	year_of_death smallint null,
+	gender_id int,
+	constraint fk_gender foreign key (gender_id) references genders(id),
 	primary key (id)
 );
 create table letters_patents (
@@ -157,21 +162,6 @@ create table people_parliamentary_blocs (
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_parliamentary_bloc foreign key (parliamentary_bloc_id) references parliamentary_blocs(id),
 	constraint fk_parliamentary_bloc_affiliation_type foreign key (parliamentary_bloc_affiliation_type_id) references parliamentary_bloc_affiliation_types(id),
-	primary key (id)
-);
-create table genders (
-	id serial,
-	label varchar(255) not null,
-	primary key (id)
-);
-create table expressed_genders (
-	id serial,
-	start_date date null,
-	end_date date null,
-	person_id int not null,
-	gender_id int not null,
-	constraint fk_person foreign key (person_id) references people(id),
-	constraint fk_gender foreign key (gender_id) references genders(id),
 	primary key (id)
 );
 create table rank_labels (
