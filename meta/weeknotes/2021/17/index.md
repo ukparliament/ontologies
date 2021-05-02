@@ -22,7 +22,7 @@ On the subject of [paragraph 14 of schedule 8 of the European Union (Withdrawal)
 
 ## Sessional tweeturns
 
-End of session also brought a flurry of tweets from our [SI](https://twitter.com/madenlaid/status/1388115553869602816) and [tweaty tracking](https://twitter.com/TweatyTwacker/status/1388128572397735949) Twitter bots. Or at least from the team of crack librarians that sit behind them. Credit to [Anya](https://twitter.com/bitten_) for the original idea and her determination to prove that [Sessional Returns](https://www.parliament.uk/business/publications/commons/sessional-returns/) would ideally be be formed from a set of reusable, repurpose-able [queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/). And why not, we all say.
+End of session also brought a flurry of tweets from our [SI](https://twitter.com/madenlaid/status/1388115553869602816) and [tweaty tracking](https://twitter.com/TweatyTwacker/status/1388128572397735949) Twitter bots. Or at least from the team of crack librarians that sit behind them. Credit to [Anya](https://twitter.com/bitten_) for the original idea and her determination to prove that [Sessional Returns](https://www.parliament.uk/business/publications/commons/sessional-returns/) would ideally be formed from a set of reusable, repurpose-able [queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/). And why not, we all say.
 
 ## Kind hearts / coronets
 
