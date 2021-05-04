@@ -22,7 +22,7 @@ This query will show you all treaties laid before Parliament since the Treaty Tr
 
 ## Treaties by session
 
-* <a href="https://api.parliament.uk/s/dfb67b9b">2019-21</a>
+* <a href="https://api.parliament.uk/s/73462af9">2019-21</a>
 
 * <a href="https://api.parliament.uk/s/39d61af0">2019</a>
 
@@ -99,7 +99,7 @@ In both Houses there is the potential for a Member to table a motion against a t
 
 * <a href="https://api.parliament.uk/s/9811e157">All prayers lapsed at the end of sessions</a>
 
-* <a href="https://api.parliament.uk/s/9744a0c8">Prayers lapsed at the end of the 2019-21 session</a>
+* <a href="https://api.parliament.uk/s/59c8e3e2">Prayers lapsed at the end of the 2019-21 session</a>
 
 * <a href="https://api.parliament.uk/s/343c6693">Prayers lapsed at the end of the 2019 session</a>
 
