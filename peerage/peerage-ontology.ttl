@@ -97,11 +97,74 @@ ppeer:Jurisdiction rdf:type owl:Class ;
 
 #######  Object properties ##### 
 	
+ppeer:isOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Is of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:PeerageHolding ;
+	rdfs:range ppeer:Peerage ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
+ppeer:hasPeerageHolding rdf:type owl:ObjectProperty ;
+	rdfs:label "Has peerage holding"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Person ;
+	rdfs:range ppeer:PeerageHolding ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
+ppeer:receives rdf:type owl:ObjectProperty ;
+	rdfs:label "Receives"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Person ;
+	rdfs:range ppeer:LettersPatent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
+ppeer:hasGender rdf:type owl:ObjectProperty ;
+	rdfs:label "Has gender"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Person ;
+	rdfs:range ppeer:Gender ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:appliesTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Applies to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:RankLabel ;
+	rdfs:range ppeer:Gender ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:hasRankLabel rdf:type owl:ObjectProperty ;
+	rdfs:label "Has rank label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Rank ;
+	rdfs:range ppeer:RankLabel ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
 ppeer:inKingdom rdf:type owl:ObjectProperty ;
 	rdfs:label "In Kingdom"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppeer:Rank ;
 	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:ofKingdom rdf:type owl:ObjectProperty ;
+	rdfs:label "Of Kingdom"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Peerage ;
+	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:hasKingdom rdf:type owl:ObjectProperty ;
+	rdfs:label "Has Kingdom"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
+ppeer:creates rdf:type owl:ObjectProperty ;
+	rdfs:label "Creates"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range ppeer:Peerage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 	
