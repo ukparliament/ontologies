@@ -1,0 +1,56 @@
+@prefix ppeer: <http://parliament.uk/ontologies/peerage/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/peerage/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Peerage ontology"@en ;
+    dcterms:created "2021-05-06"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/peerage/peerage.png> ;
+	foaf:maker
+		[ foaf:name "Grant Bavister" ],
+		[ foaf:name "David Beamish" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ].
+
+
+#######  Classes ##### 	
+
+ppeer:Kingdom rdf:type owl:Class ;
+	rdfs:label "Kingdom"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
+ppeer:Rank rdf:type owl:Class ;
+	rdfs:label "Rank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+				
+
+#######  Object properties ##### 
+	
+ppeer:inKingdom rdf:type owl:ObjectProperty ;
+	rdfs:label "In Kingdom"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Rank ;
+	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
+	
+	
+#######  Data properties ##### 
+
+ppeer:degree rdf:type owl:DatatypeProperty ;
+	rdfs:label "Degree"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:Rank ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
