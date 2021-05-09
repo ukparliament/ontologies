@@ -12,7 +12,7 @@ Librarian Jayne and [Michael](https://twitter.com/fantasticlife) spent some time
 
 ## Parsing procedure maps
 
-Michael has shaved another second off our [procedure parsing code](https://github.com/ukparliament/procedure-parsing). What had been a set of queries running in templates is now far fewer queries done up front. And what was taking around fifteen seconds now takes [around one](https://api.parliament.uk/procedures/work-packages/9). [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) being useful until you get lazy.
+Michael has shaved another second off our [procedure parsing code](https://github.com/ukparliament/procedure-parsing). What had been a set of queries running in templates is now far fewer queries done up front. And what started off taking around fifteen seconds now takes [around one](https://api.parliament.uk/procedures/work-packages/9). [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) being useful until you get lazy.
 
 Young Robert and Michael have been busy refactoring and commenting the code. Which is not particularly exciting for either us or our reader. The comments are still not quite finished but are themselves [parsed for legibility](https://api.parliament.uk/procedures/meta/comments). And presented here as proof that at least some work was done.
 
