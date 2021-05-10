@@ -22,7 +22,7 @@ Librarians [Anya](https://twitter.com/bitten_) and Jayne met with computational 
 
 Jayne and Michael met with Ben from Commons' clerkly land to chat through progress on the [procedural sketch](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/published-drafts-under-euwa/published-drafts-under-euwa.pdf) so far. It's all rather minimalist so you wouldn't think there'd be awful lot that could go wrong. But we're still a little unsure on whether such instruments might be withdrawn and, if so, how that might happen.
 
-In the meantime, Librarian [Claire](https://twitter.com/tinysprite) did some information retrieval and discovered we appear to have a [ping-ponged amendment](https://hansard.parliament.uk/lords/2018-06-18/debates/38C39823-F992-450D-AD1F-1A7A0FC6E706/EuropeanUnion(Withdrawal)Bill#contribution-9BAF781B-1CF6-420B-A525-7A406347D27E) from [Lord Callanan](https://members.parliament.uk/member/4336/career) to thank for this one. Which does cause one to wonder why it's been a surprise to all concerned.
+In the meantime, Librarian [Claire](https://twitter.com/tinysprite) did some information retrieval and discovered we appear to have a [ping-ponged amendment](https://hansard.parliament.uk/lords/2018-06-18/debates/38C39823-F992-450D-AD1F-1A7A0FC6E706/EuropeanUnion(Withdrawal)Bill#contribution-9BAF781B-1CF6-420B-A525-7A406347D27E) to thank for this one. Which does cause one to wonder why it's been a surprise to all concerned.
 
 ## Option one is always do nothing
 
