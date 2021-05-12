@@ -25,22 +25,22 @@
 
 ppeer:Peerage rdf:type owl:Class ;
 	rdfs:label "Peerage"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A specific named title of nobility held within the system of peerages of the United Kingdom and nations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:PeerageType rdf:type owl:Class ;
 	rdfs:label "Peerage type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The type of a peerage, for example: a hereditary peerage, or a life peerage."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:SpecialRemainder rdf:type owl:Class ;
 	rdfs:label "Special remainder"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A hereditary peerage is issued with rules governing who might inherit, known as a remainder. In the peerage of the United Kingdom, the default remainder allows inheritance by direct male descendants only, whereas under the peerage of Scotland both male and female direct descendants may inherit. Special remainders are issued with peerages wherever default rules do not apply."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:PeerageHolding rdf:type owl:Class ;
 	rdfs:label "Peerage holding"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The holding of a peerage by a person between two dates, A life peerage will have a single peerage holding. A hereditary peerage may have more than one peerage holding over time."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Person rdf:type owl:Class ;
@@ -50,47 +50,42 @@ ppeer:Person rdf:type owl:Class ;
 
 ppeer:Gender rdf:type owl:Class ;
 	rdfs:label "Gender"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
-
-ppeer:Gender rdf:type owl:Class ;
-	rdfs:label "Gender"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The gender of a person, for example: male."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:RankLabel rdf:type owl:Class ;
 	rdfs:label "Rank label"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The label of a rank, determined by the gender of the person holding a peerage."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Kingdom rdf:type owl:Class ;
 	rdfs:label "Kingdom"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The kingdom within which a peerage is created. After 1801, the name of the division within the peerage of the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Rank rdf:type owl:Class ;
 	rdfs:label "Rank"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The rank of a peerage. Ranks vary between Kingdoms. For example: in the Scottish peerage the lowest rank is Lordship, whilst in the peerages of England, Ireland, Great Britain and the United Kingdom, the lowest rank is Barony."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:LettersPatent rdf:type owl:Class ;
 	rdfs:label "Letters Patent"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The document affirming that the monarch has issued a peerage to a person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:LettersPatentTime rdf:type owl:Class ;
 	rdfs:label "Letters Patent time"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The time of day at which a letters patent was issued. This may be morning or afternoon or a given hour."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:LawLordIncumbency rdf:type owl:Class ;
 	rdfs:label "Law Lord incumbency"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An incumbency period for a peerage held by a person appointed to the role of a Law Lord."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Jurisdiction rdf:type owl:Class ;
 	rdfs:label "Jurisdiction"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The jurisdiction of a Law Lord, being England and Wales, Ireland, Northern Ireland or Scotland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 				
@@ -146,11 +141,11 @@ ppeer:inKingdom rdf:type owl:ObjectProperty ;
 	rdfs:range ppeer:Kingdom ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-ppeer:ofKingdom rdf:type owl:ObjectProperty ;
-	rdfs:label "Of Kingdom"@en ;
+ppeer:hasRank rdf:type owl:ObjectProperty ;
+	rdfs:label "Has rank"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppeer:Peerage ;
-	rdfs:range ppeer:Kingdom ;
+	rdfs:range ppeer:Rank ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasKingdom rdf:type owl:ObjectProperty ;
