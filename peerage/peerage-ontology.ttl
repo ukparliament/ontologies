@@ -247,3 +247,66 @@ ppeer:degree rdf:type owl:DatatypeProperty ;
 	rdfs:domain ppeer:Rank ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:description rdf:type owl:DatatypeProperty ;
+	rdfs:label "Description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:SpecialRemainder ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:introducedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Introduced on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:PeerageHolding ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:ordinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:PeerageHolding ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:appointedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Appointed on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LawLordIncumbency ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:retiredOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Retired on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LawLordIncumbency ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:issuedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Issued on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:ordinalityOnDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality on date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:previousRank rdf:type owl:DatatypeProperty ;
+	rdfs:label "Previous rank"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:previousTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "Previous title"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
