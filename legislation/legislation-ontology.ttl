@@ -27,31 +27,44 @@
 		[ foaf:name "Jane White" ].
 
 
-#######  Classes ##### 	
+#######  Classes #####
 
+plg:EnablingThing rdf:type owl:Class ;
+	rdfs:label "Enabling thing"@en ;
+	rdfs:comment "A thing that enables the exercise of a power."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
 plg:ActOfParliament rdf:type owl:Class ;
+	rdfs:subClassOf plg:EnablingThing ;
 	rdfs:label "Act of Parliament"@en ;
 	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:EnablingPower rdf:type owl:Class ;
+	rdfs:subClassOf plg:EnablingThing ;
 	rdfs:label "Enabling power"@en ;
 	rdfs:comment "A power delegated by one or more items of primary legislation, enabling the exercise of regulations as described in the Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:StatutoryEnabledThing rdf:type owl:Class ;
-	rdfs:label "Statutory enabled thing"@en ;
-	rdfs:comment "A thing which exists following the exercising of an enabling power."@en ;
+plg:EnabledThing rdf:type owl:Class ;
+	rdfs:label "Enabled thing"@en ;
+	rdfs:comment "A thing which is intended to exercise a power set out in statute."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:PublishedDraftUnderEUWA rdf:type owl:Class ;
+	rdfs:subClassOf plg:EnabledThing ;
+	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018"@en ;
+	rdfs:comment "A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of any instrument which intends to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
-	rdfs:subClassOf plg:StatutoryEnabledThing ;
+	rdfs:subClassOf plg:EnabledThing ;
 	rdfs:label "Proposed negative statutory instrument"@en ;
 	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
-	rdfs:subClassOf plg:StatutoryEnabledThing ;
+	rdfs:subClassOf plg:EnabledThing ;
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
 	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
@@ -101,8 +114,8 @@ plg:imposes rdf:type owl:ObjectProperty ;
 	
 plg:exercises rdf:type owl:ObjectProperty ;
 	rdfs:label "Exercises"@en ;
-	rdfs:comment "Relates a statutory enabled thing to an enabling power. A statutory enabled thing is enabled by one or more enabling powers and an enabling power may enable more than one statutory enabled thing."@en ;
-	rdfs:domain plg:StatutoryEnabledThing ;
+	rdfs:comment "Relates an enabled thing to an enabling power. An enabled thing is enabled by one or more enabling powers and an enabling power may enable more than one enabled thing."@en ;
+	rdfs:domain plg:EnabledThing ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
@@ -115,16 +128,16 @@ plg:requires rdf:type owl:ObjectProperty ;
 
 plg:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Enabled by"@en ;
-	rdfs:comment "Relates a statutory enabled thing to an Act of Parliament which enables it. A statutory enabled thing may be enabled by one or more Acts of Parliament. An Act of Parliament may enable one or more statutory enabled things, or none."@en ;
-	rdfs:domain plg:StatutoryEnabledThing ;
-	rdfs:range plg:ActOfParliament ;
+	rdfs:comment "Relates an enabled thing to the thing which enables it. An enabled thing may be enabled by one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
+	rdfs:domain plg:EnabledThing ;
+	rdfs:range plg:EnablingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:precededByProposedNegativeStatutoryInstrument rdf:type owl:ObjectProperty ;
-	rdfs:label "Preceded by proposed negative statutory instrument"@en ;
-	rdfs:comment "Relates draft or made statutory instruments subject to parliamentary procedure to proposed negative statutory instruments which precede them. A draft or made statutory instrument subject to parliamentary procedure may be preceded by one or more proposed negative statutory instruments, or by none. A proposed negative statutory instrument may precede the laying of one or more draft or made statutory instruments subject to parliamentary procedure, or none."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
-	rdfs:range plg:ProposedNegativeStatutoryInstrument ;
+plg:precededBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Preceded by"@en ;
+	rdfs:comment "Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none."@en ;
+	rdfs:domain plg:EnabledThing ;
+	rdfs:range plg:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:embodiedAsDraftStatutoryInstrument rdf:type owl:ObjectProperty ;
