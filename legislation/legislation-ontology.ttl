@@ -105,6 +105,13 @@ plg:confers rdf:type owl:ObjectProperty ;
 	rdfs:domain plg:EnablingThing ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:imposes rdf:type owl:ObjectProperty ;
+	rdfs:label "Imposes"@en ;
+	rdfs:comment "Relates an enabling thing to a duty imposed in the exercise of an associated enabling power."@en ;
+	rdfs:domain plg:EnablingThing ;
+	rdfs:range plg:Duty ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:exercises rdf:type owl:ObjectProperty ;
 	rdfs:label "Exercises"@en ;
