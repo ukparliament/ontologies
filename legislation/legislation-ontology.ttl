@@ -47,7 +47,6 @@ plg:EnablingPower rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:EnabledThing rdf:type owl:Class ;
-	rdfs:subClassOf plg:EnablingThing ;
 	rdfs:label "Enabled thing"@en ;
 	rdfs:comment "A thing which is intended to exercise a power set out in statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
@@ -101,15 +100,15 @@ plg:Duty rdf:type owl:Class ;
 
 plg:confers rdf:type owl:ObjectProperty ;
 	rdfs:label "Confers"@en ;
-	rdfs:comment "Relates an Act of Parliament to an enabling power conferred by that Act. An Act of Parliament may confer more than one enabling power. Secondary legislation may confer powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure."@en ;
-	rdfs:domain plg:ActOfParliament ;
+	rdfs:comment "Relates an enabling thing to an enabling power. An enabling thing may confer more than one enabling power. Secondary legislation may confer powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure."@en ;
+	rdfs:domain plg:EnablingThing ;
 	rdfs:range plg:EnablingPower ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:imposes rdf:type owl:ObjectProperty ;
 	rdfs:label "Imposes"@en ;
-	rdfs:comment "Relates an Act of Parliament to a duty imposed in the exercise of an associated enabling power."@en ;
-	rdfs:domain plg:ActOfParliament ;
+	rdfs:comment "Relates an enabling thing to a duty imposed in the exercise of an associated enabling power."@en ;
+	rdfs:domain plg:EnablingPower ;
 	rdfs:range plg:Duty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
