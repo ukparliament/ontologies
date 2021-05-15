@@ -32,6 +32,10 @@ As mentioned [last week](https://ukparliament.github.io/ontologies/meta/weeknote
 
 Anya, Robert and Michael once more met with [Oli](https://twitter.com/olihawkins) to chat through all things elections, candidates and constituencies. Which is always a pleasure. A [picture of the candidate database](https://github.com/ukparliament/ontologies/blob/master/meta/relational/candidates/candidates.pdf) was sketched which Anya, Robert and Michael have now half stitched into [our more relational efforts](https://github.com/ukparliament/ontologies/blob/master/meta/relational/index.md). For now, it's only there in pixels. SQL and design notes to follow shortly.
 
+## So we went to the pub
+
+In years past this would have been less than remarkable, We have visited many pubs on a number of occasions and never had much cause to regret it. He types through half-opened and remarkably red eyes. But in recent months, our pub skills have had cause to suffer. So it is of note that on Friday, Anya, young Robert and Michael were joined by boss brarian Bryn and our [Dan](https://twitter.com/danbri) for pints and chummer that took in Hansard, statements, claims, Wikidata and all things fact checking. Michael, being drunk, went off on a rant about why organisations need to be more porous. Dan seemed to agree and had a half-formed plan for co-working across the, erm, civic tech space. Michael would like to apologise for getting drunk and ranting but also alert our reader to [more rantings on a similar subject here](https://smethur.st/posts/176135863).
+
 
 
 
