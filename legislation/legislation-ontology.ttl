@@ -41,11 +41,6 @@ plg:ActOfParliament rdf:type owl:Class ;
 	rdfs:label "Act of Parliament"@en ;
 	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:EnablingPower rdf:type owl:Class ;
-	rdfs:label "Enabling power"@en ;
-	rdfs:comment "A power delegated by one or more items of primary legislation, enabling the exercise of regulations as described in the Act."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:EnabledThing rdf:type owl:Class ;
 	rdfs:label "Enabled thing"@en ;
@@ -90,46 +85,13 @@ plg:StatutoryInstrumentSeries rdf:type owl:Class ;
 	rdfs:comment "A statutory instrument may appear in one or more series, or in none. Series include: Welsh Instruments, corresponding to Wales Statutory Instruments; Northern Ireland Orders in Council; Commencement Orders; Appointed Day Orders; Legal Statutory Instruments; and Scottish Statutory Instruments, being United Kingdom instruments that have particular application to Scotland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:Duty rdf:type owl:Class ;
-	rdfs:label "Duty"@en ;
-	rdfs:comment "An obligation that must be discharged in relation to the exercise of an enabling power."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
 	
 
 ##### Object properties ####
 
-plg:confers rdf:type owl:ObjectProperty ;
-	rdfs:label "Confers"@en ;
-	rdfs:comment "Relates an enabling thing to an enabling power. An enabling thing may confer more than one enabling power. Secondary legislation may confer powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure."@en ;
-	rdfs:domain plg:EnablingThing ;
-	rdfs:range plg:EnablingPower ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:imposes rdf:type owl:ObjectProperty ;
-	rdfs:label "Imposes"@en ;
-	rdfs:comment "Relates an enabling thing to a duty imposed in the exercise of an associated enabling power."@en ;
-	rdfs:domain plg:EnablingThing ;
-	rdfs:range plg:Duty ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:exercises rdf:type owl:ObjectProperty ;
-	rdfs:label "Exercises"@en ;
-	rdfs:comment "Relates an enabled thing to an enabling power. An enabled thing is enabled by one or more enabling powers and an enabling power may enable more than one enabled thing."@en ;
-	rdfs:domain plg:EnabledThing ;
-	rdfs:range plg:EnablingPower ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:requires rdf:type owl:ObjectProperty ;
-	rdfs:label "Requires"@en ;
-	rdfs:comment "Relates an enabling power to a duty. The exercise of an enabling power may require one or more duties, or none. A duty may be associated with the exercise of one or more enabling powers."@en ;
-	rdfs:domain plg:EnablingPower ;
-	rdfs:range plg:Duty ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-
-plg:enabledBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Enabled by"@en ;
-	rdfs:comment "Relates an enabled thing to the thing which enables it. An enabled thing may be enabled by one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
+plg:madeUnder rdf:type owl:ObjectProperty ;
+	rdfs:label "Made under"@en ;
+	rdfs:comment "Relates an enabled thing to the enabling thing under which it was made. An enabled thing may be made under one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
 	rdfs:domain plg:EnabledThing ;
 	rdfs:range plg:EnablingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
