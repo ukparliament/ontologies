@@ -60,7 +60,7 @@ ppeer:RankLabel rdf:type owl:Class ;
 
 ppeer:Kingdom rdf:type owl:Class ;
 	rdfs:label "Kingdom"@en ;
-	rdfs:comment "The kingdom within which a peerage is created. After 1801, the name of the division within the peerage of the United Kingdom."@en ;
+	rdfs:comment "The kingdom within which a peerage is created. After 1801, the name of the division within the peerage of the United Kingdom. Kingdom is used in this model to denote what is usually known as the peerage of a kingdom, for example: the Kingdom of Scotland denotes the Peerage of the Kingdom of Scotland. We avoid using the word peerage because this is already used to describe a single title, for example: the peerage of the Earldom of Onslow."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Rank rdf:type owl:Class ;
@@ -94,73 +94,76 @@ ppeer:Jurisdiction rdf:type owl:Class ;
 	
 ppeer:isOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Is of"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage holding to the peerage the holding is of. A peerage holding is of one peerage. A peerage may have one or more peerage holdings."@en ;
 	rdfs:domain ppeer:PeerageHolding ;
 	rdfs:range ppeer:Peerage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:hasPeerageHolding rdf:type owl:ObjectProperty ;
 	rdfs:label "Has peerage holding"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a person to a peerage holding. A person may have one or more peerage holdings, or none. A peerage holding is by one person."@en ;
 	rdfs:domain ppeer:Person ;
 	rdfs:range ppeer:PeerageHolding ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:receives rdf:type owl:ObjectProperty ;
 	rdfs:label "Receives"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a person to a Letters Patent that person is in receipt of, affirming the creation of a peerage for that person. A person may receive one or more Letters Patent, or none. A Letters Patent is received by one person."@en ;
 	rdfs:domain ppeer:Person ;
 	rdfs:range ppeer:LettersPatent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:hasGender rdf:type owl:ObjectProperty ;
 	rdfs:label "Has gender"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a person to their gender."@en ;
 	rdfs:domain ppeer:Person ;
 	rdfs:range ppeer:Gender ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:appliesTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Applies to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a rank label to the gender it applies to. A rank label applies to one gender, for example: a female person holding an Earldom has the rank label Countess. A gender has more than one rank label according to the rank of the peerage, for example: a female person holding a peerage in the Kingdom of Scotland may be a Lady, a Viscountess, Countess, Marchioness or Duchess."@en ;
 	rdfs:domain ppeer:RankLabel ;
 	rdfs:range ppeer:Gender ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasRankLabel rdf:type owl:ObjectProperty ;
 	rdfs:label "Has rank label"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a rank to a rank label. A rank has one of two rank labels in accordance with the gender of a person holding a peerage of that rank, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank."@en ;
 	rdfs:domain ppeer:Rank ;
 	rdfs:range ppeer:RankLabel ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:inKingdom rdf:type owl:ObjectProperty ;
 	rdfs:label "In Kingdom"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a rank to a kingdom in which a peerage of that rank may be created. A kingdom has peerages of more than one rank. A rank may be found in one or more kingdoms."@en ;
 	rdfs:domain ppeer:Rank ;
 	rdfs:range ppeer:Kingdom ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasRank rdf:type owl:ObjectProperty ;
 	rdfs:label "Has rank"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to the rank of that peerage. A peerage has one rank. A rank may apply to more than one peerage."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range ppeer:Rank ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasKingdom rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Kingdom"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to the kingdom in which that Letters Patent was issued. A Letters Patent belongs to one kingdom. A kingdom may have more than one Letters Patent."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:Kingdom ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
-ppeer:creates rdf:type owl:ObjectProperty ;
-	rdfs:label "Creates"@en ;
-	rdfs:comment ""@en ;
+ppeer:affirmsCreationOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Affirms creation of"@en ;
+	rdfs:comment "Relates a Letters Patent to a peerage it affirms the creation of. A Letters Patent may affirm the creation of one or more peerages, always for the same person. The creation of a peerage is affirmed by one Letters Patent."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:Peerage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+	
+			# edited to here
 	
 ppeer:issuedAt rdf:type owl:ObjectProperty ;
 	rdfs:label "Issued at"@en ;
