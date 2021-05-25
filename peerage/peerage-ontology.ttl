@@ -75,7 +75,7 @@ ppeer:LettersPatent rdf:type owl:Class ;
 
 ppeer:LettersPatentTime rdf:type owl:Class ;
 	rdfs:label "Letters Patent time"@en ;
-	rdfs:comment "The time of day at which a letters patent was issued. This may be morning or afternoon or a given hour."@en ;
+	rdfs:comment "The time of day of a meeting of the Privy Council at which the Letters Patent was presented, as recorded in the Gazette. This may be morning or afternoon or a given hour."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:LawLordIncumbency rdf:type owl:Class ;
@@ -162,40 +162,37 @@ ppeer:affirmsCreationOf rdf:type owl:ObjectProperty ;
 	rdfs:range ppeer:Peerage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-	
-			# edited to here
-	
-ppeer:issuedAt rdf:type owl:ObjectProperty ;
-	rdfs:label "Issued at"@en ;
-	rdfs:comment ""@en ;
+ppeer:presentedAt rdf:type owl:ObjectProperty ;
+	rdfs:label "Presented at"@en ;
+	rdfs:comment "Relates a Letters Patent to the recorded time of day at which it was presented at a meeting of the Privy Council. A Letters Patent may only have one recorded time in a day. A recorded time in a day may refer to more than one Letters Patent, issued across different days, for example: “10 am”, referring to any number of Letters Patent issued at that time on different days. A recorded time may only have one Letters Patent on one day."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:LettersPatentTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasLawLordIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Law Lord incumbency"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to an incumbency as a Law Lord. A Law Lord incumbency is for one peerage. A peerage may have one or more Law Lord incumbencies, or none - it being possible for a Law Lord to retire and be reappointed."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range ppeer:LawLordIncumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:inJurisdiction rdf:type owl:ObjectProperty ;
 	rdfs:label "In jurisdiction"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Law Lord incumbency to the jurisdiction that incumbency applied to. A Law Lord incumbency is in one jurisdiction. A jurisdiction may have more than one incumbent Law Lord."@en ;
 	rdfs:domain ppeer:LawLordIncumbency ;
 	rdfs:range ppeer:Jurisdiction ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:hasPeerageType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has peerage type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to its type. A peerage is of one type. A type has more than one peerage. "@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range ppeer:PeerageType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasSpecialRemainder rdf:type owl:ObjectProperty ;
 	rdfs:label "Has special remainder"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to any special remainder applying to that peerage. Where a peerage has a special remainder, it has only one. Types of special remainder may apply to more than one peerage."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range ppeer:SpecialRemainder ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
@@ -281,8 +278,8 @@ ppeer:retiredOn rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-ppeer:issuedOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "Issued on"@en ;
+ppeer:presentedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Presented on"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:date ;
