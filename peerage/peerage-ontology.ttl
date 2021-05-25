@@ -40,7 +40,7 @@ ppeer:SpecialRemainder rdf:type owl:Class ;
 
 ppeer:PeerageHolding rdf:type owl:Class ;
 	rdfs:label "Peerage holding"@en ;
-	rdfs:comment "The holding of a peerage by a person between two dates, A life peerage will have a single peerage holding. A hereditary peerage may have more than one peerage holding over time."@en ;
+	rdfs:comment "The holding of a peerage by a person between two dates. A life peerage will have a single peerage holding. A hereditary peerage may have more than one peerage holding over time."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Person rdf:type owl:Class ;
@@ -164,21 +164,21 @@ ppeer:affirmsCreationOf rdf:type owl:ObjectProperty ;
 	
 ppeer:presentedAt rdf:type owl:ObjectProperty ;
 	rdfs:label "Presented at"@en ;
-	rdfs:comment "Relates a Letters Patent to the recorded time of day at which it was presented at a meeting of the Privy Council. A Letters Patent may only have one recorded time in a day. A recorded time in a day may refer to more than one Letters Patent, issued across different days, for example: “10 am”, referring to any number of Letters Patent issued at that time on different days. A recorded time may only have one Letters Patent on one day."@en ;
+	rdfs:comment "Relates a Letters Patent to the recorded time of day at which it was presented at a meeting of the Privy Council. A Letters Patent may only have one recorded time in a day. A recorded time in a day may refer to more than one Letters Patent, issued across different days, for example: '10 am', referring to any number of Letters Patent issued at that time on different days. A recorded time may only have one Letters Patent on one day."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:LettersPatentTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasLawLordIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Law Lord incumbency"@en ;
-	rdfs:comment "Relates a peerage to an incumbency as a Law Lord. A Law Lord incumbency is for one peerage. A peerage may have one or more Law Lord incumbencies, or none - it being possible for a Law Lord to retire and be reappointed."@en ;
+	rdfs:comment "Relates a peerage to an incumbency as a Law Lord. A Law Lord incumbency is for one peerage. A peerage may have one or more Law Lord incumbencies, or none - it being possible for a Law Lord to resign and be reappointed."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range ppeer:LawLordIncumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:inJurisdiction rdf:type owl:ObjectProperty ;
 	rdfs:label "In jurisdiction"@en ;
-	rdfs:comment "Relates a Law Lord incumbency to the jurisdiction that incumbency applied to. A Law Lord incumbency is in one jurisdiction. A jurisdiction may have more than one incumbent Law Lord."@en ;
+	rdfs:comment "Relates a Law Lord incumbency to the jurisdiction in which the appointee held office or practised. A Law Lord incumbency is in one jurisdiction. A jurisdiction may have more than one incumbent Law Lord."@en ;
 	rdfs:domain ppeer:LawLordIncumbency ;
 	rdfs:range ppeer:Jurisdiction ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
