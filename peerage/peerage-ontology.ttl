@@ -196,6 +196,13 @@ ppeer:hasSpecialRemainder rdf:type owl:ObjectProperty ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range ppeer:SpecialRemainder ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:previousTitleHasKingdom rdf:type owl:ObjectProperty ;
+	rdfs:label "Previous title has kingdom"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 	
 	
@@ -203,105 +210,113 @@ ppeer:hasSpecialRemainder rdf:type owl:ObjectProperty ;
 
 ppeer:ofTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Of title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to a flag indicating if the peerage has an 'of' between the rank and the title. For a peerage such as Earl of Onslow, this flag is true. For a peerage such as Earl Mountbatten, this flag is false."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:title rdf:type owl:DatatypeProperty ;
 	rdfs:label "Title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to the title of the peerage, being the part of the peerage name other than rank, 'of' and territorial designation. For example: 'Onslow' being the title for 'Earl of Onslow, of Onslow in the County of Salop'."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:territorialDesignation rdf:type owl:DatatypeProperty ;
 	rdfs:label "Territorial designation"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to the territorial designation of that peerage, for example: 'of Onslow in the County of Salop' being the territorial designation for 'Earl of Onslow, of Onslow in the County of Salop'."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:extinctOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Extinct on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to the date on which that peerage became extinct, being the date of death of the last holder. For a life peerage, the first holder being the last holder."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:numberOfLastHolder rdf:type owl:DatatypeProperty ;
 	rdfs:label "Number of last holder"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage to the ordinality in line of succession of the last holder of that peerage, for example: a peerage becoming extinct with the 11th holder, will have the value 11."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:degree rdf:type owl:DatatypeProperty ;
 	rdfs:label "Degree"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a rank to a number representing the degree of that rank in the hierarchy of peerages. The lower the number the higher the degree of the rank, for example: the rank of Barony has a degree of 5, whilst the rank of Dukedom has a degree of 1. Included in the dataset are records for Princes of Wales which are not peerages and given a rank of 0."@en ;
 	rdfs:domain ppeer:Rank ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:description rdf:type owl:DatatypeProperty ;
 	rdfs:label "Description"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a special remainder to a textual description of that special remainder."@en ;
 	rdfs:domain ppeer:SpecialRemainder ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:introducedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Introduced on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage holding to the date on which the holder of that peerage was introduced into the House of Lords, after being summoned. Not all peers are summoned, or introduced. For a hereditary peerage, only the first holder will be introduced, unless the peerage has a special remainder, in which case subsequent holders are also introduced."@en ;
 	rdfs:domain ppeer:PeerageHolding ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:ordinality rdf:type owl:DatatypeProperty ;
 	rdfs:label "Ordinality"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a peerage holding to the number of the holder in line of succession of that peerage, for example: the '1'st, '2'nd and '3'rd Earls of Onslow."@en ;
 	rdfs:domain ppeer:PeerageHolding ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:appointedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Appointed on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Law Lord incumbency to the date on which that Law Lord was appointed."@en ;
 	rdfs:domain ppeer:LawLordIncumbency ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-ppeer:retiredOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "Retired on"@en ;
-	rdfs:comment ""@en ;
+ppeer:endOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "End on"@en ;
+	rdfs:comment "Relates a Law Lord incumbency to the date on which that incumbency ended. This may be on the death, resignation or retirement of the incumbent."@en ;
 	rdfs:domain ppeer:LawLordIncumbency ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:presentedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Presented on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to the date on which it was presented at a meeting of the Privy Council."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:ordinalityOnDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Ordinality on date"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to its ordinality of the date of presentation. This is used as a proxy for precedence. A peerage of a higher rank will have a lower ordinality - and greater precedence - than a peerage of a lower rank whose Letters Patent are presented on the same day. For peerages of the same rank presented on the same day, precedence is determined by the time of day at which the Letters Patent was presented. A peerage whose Letters Patent is presented earlier in the day is determined to have a greater precedence - and lower ordinality - than a peerage of the same rank whose Letters Patent is presented later in that day."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:previousRank rdf:type owl:DatatypeProperty ;
 	rdfs:label "Previous rank"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to the rank of the previous title born by its recipient, as it appeared on the Letters Patent."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
+ppeer:previousOfTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "Previous of title"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
 ppeer:previousTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Previous title"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+		
