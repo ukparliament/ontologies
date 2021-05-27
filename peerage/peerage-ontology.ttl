@@ -88,6 +88,16 @@ ppeer:Jurisdiction rdf:type owl:Class ;
 	rdfs:comment "The jurisdiction of a Law Lord, being England and Wales, Ireland, Northern Ireland or Scotland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
+ppeer:Monarch rdf:type owl:Class ;
+	rdfs:label "Monarch"@en ;
+	rdfs:comment "A person reigning within a kingdom."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:Reign rdf:type owl:Class ;
+	rdfs:label "Reign"@en ;
+	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
 				
 
 #######  Object properties ##### 
@@ -199,9 +209,30 @@ ppeer:hasSpecialRemainder rdf:type owl:ObjectProperty ;
 	
 ppeer:previousTitleHasKingdom rdf:type owl:ObjectProperty ;
 	rdfs:label "Previous title has kingdom"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to the kingdom of the previous title borne by its recipient, as it appeared on the Letters Patent. Where a Letters Patent has a previous title with a kingdom, it has only one."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:reignOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Reign of"@en ;
+	rdfs:comment "Relates a reign to a monarch during that reign. The reign of William and Mary is considered as a joint reign. A monarch may have more than one reign in more than one kingdom, for example: the reigns of George III in Great Britain, in Ireland and later in the United Kingdom."@en ;
+	rdfs:domain ppeer:Reign ;
+	rdfs:range ppeer:Monarch ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:reignIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Reign in"@en ;
+	rdfs:comment "Relates a reign to a kingdom the reign is in. A reign has one kingdom. A kingdom may have more than one reign over time, but only one reign at one time."@en ;
+	rdfs:domain ppeer:Reign ;
+	rdfs:range ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:issuedDuring rdf:type owl:ObjectProperty ;
+	rdfs:label "Issued during"@en ;
+	rdfs:comment "Relates a Letters Patent to the reign in which that Letters Patent was issued. A Letters Patent is issued in one reign. One or more Letters Patent may be issued in a reign."@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range ppeer:Reign ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 	
@@ -294,29 +325,28 @@ ppeer:presentedOn rdf:type owl:DatatypeProperty ;
 	
 ppeer:ordinalityOnDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Ordinality on date"@en ;
-	rdfs:comment "Relates a Letters Patent to its ordinality of the date of presentation. This is used as a proxy for precedence. A peerage of a higher rank will have a lower ordinality - and greater precedence - than a peerage of a lower rank whose Letters Patent are presented on the same day. For peerages of the same rank presented on the same day, precedence is determined by the time of day at which the Letters Patent was presented. A peerage whose Letters Patent is presented earlier in the day is determined to have a greater precedence - and lower ordinality - than a peerage of the same rank whose Letters Patent is presented later in that day."@en ;
+	rdfs:comment "Relates a Letters Patent to its ordinality on the date of presentation. This is used as a proxy for precedence. A peerage of a higher rank will have a lower ordinality - and greater precedence - than a peerage of a lower rank whose Letters Patent are presented on the same day. For peerages of the same rank presented on the same day, precedence is determined by the time of day at which the Letters Patent was presented. A peerage whose Letters Patent is presented earlier in the day is determined to have a greater precedence - and lower ordinality - than a peerage of the same rank whose Letters Patent is presented later in that day."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:previousRank rdf:type owl:DatatypeProperty ;
 	rdfs:label "Previous rank"@en ;
-	rdfs:comment "Relates a Letters Patent to the rank of the previous title born by its recipient, as it appeared on the Letters Patent."@en ;
+	rdfs:comment "Relates a Letters Patent to the rank of the previous title borne by its recipient, as it appeared on the Letters Patent."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:previousOfTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Previous of title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to a flag indicating if the title previously borne by the recipient, as it appeared on the Letters Patent, has an 'of' between the rank and the title. For a peerage such as Earl of Onslow, this flag is true. For a peerage such as Earl Mountbatten, this flag is false."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:previousTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Previous title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Letters Patent to that part of the title previously borne by the recipient other than rank, 'of' and any territorial designation. For example: 'Onslow' being the title for 'Earl of Onslow, of Onslow in the County of Salop'."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
-		
