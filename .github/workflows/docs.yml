@@ -1,0 +1,35 @@
+
+name: generate-docs
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        
+      - name: install newlisp
+        run: apt-fast install newlisp -y
+        
+      - name: ls
+        run: ls
+        
+      - name: create test doc
+        run: touch doctest.html
+      
+      - name: commit doctest.html
+        run: |
+          git config user.name "Robert Brook"
+          git config user.email robertbrook@fastmail.fm
+          git add "doctest.html"
+          git commit -m "Added doctest.html"
+          git push
+          
