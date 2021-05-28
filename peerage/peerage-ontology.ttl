@@ -228,8 +228,8 @@ ppeer:reignIn rdf:type owl:ObjectProperty ;
 	rdfs:range ppeer:Kingdom ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-ppeer:issuedDuring rdf:type owl:ObjectProperty ;
-	rdfs:label "Issued during"@en ;
+ppeer:issuedIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Issued in"@en ;
 	rdfs:comment "Relates a Letters Patent to the reign in which that Letters Patent was issued. A Letters Patent is issued in one reign. One or more Letters Patent may be issued in a reign."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:Reign ;
@@ -339,7 +339,7 @@ ppeer:previousRank rdf:type owl:DatatypeProperty ;
 	
 ppeer:previousOfTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Previous of title"@en ;
-	rdfs:comment "Relates a Letters Patent to a flag indicating if the title previously borne by the recipient, as it appeared on the Letters Patent, has an 'of' between the rank and the title. For a peerage such as Earl of Onslow, this flag is true. For a peerage such as Earl Mountbatten, this flag is false."@en ;
+	rdfs:comment "Relates a Letters Patent to a flag indicating if the title previously borne by the recipient, as it appeared on the Letters Patent, has an 'of' between the rank and the title. For a title such as Earl of Onslow, this flag is true. For a title such as Earl Mountbatten, this flag is false."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
