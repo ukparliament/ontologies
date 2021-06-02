@@ -11,7 +11,7 @@
     dcterms:title "Peerage ontology"@en ;
     dcterms:created "2021-05-06"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing peerages, the holding of peerage by a person, Letters Patent affirming the creation of a peerage - and kingdoms, monarchs and reigns as they apply to peerages."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/peerage/peerage.png> ;
 	foaf:maker
 		[ foaf:name "Grant Bavister" ],
@@ -100,7 +100,7 @@ ppeer:Reign rdf:type owl:Class ;
 	
 ppeer:Announcement rdf:type owl:Class ;
 	rdfs:label "Announcement"@en ;
-	rdfs:comment "An announcement of the creation of a peerage or peerages for a person. An announcement is followed by the issuing of a Letters Patent."@en ;
+	rdfs:comment "An announcement of the creation of a peerage - or peerages - for one or more people. An announcement is followed by the issuing of a Letters Patent."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:AnnouncementType rdf:type owl:Class ;
@@ -389,21 +389,14 @@ ppeer:previousTitle rdf:type owl:DatatypeProperty ;
 
 ppeer:announcedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Announced on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an announcement of a peerage to the date on which that announcement was made."@en ;
 	rdfs:domain ppeer:Announcement ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:gazetteUrl rdf:type owl:DatatypeProperty ;
 	rdfs:label "Gazette URL"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an announcement to the URL of the record of that announcement in the edition of the Gazette in which that announcement appears."@en ;
 	rdfs:domain ppeer:Announcement ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
-	
-ppeer:primeMinister rdf:type owl:DatatypeProperty ;
-	rdfs:label "Prime Minister"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain ppeer:GovernmentAdministrationPeriod ;
-	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
