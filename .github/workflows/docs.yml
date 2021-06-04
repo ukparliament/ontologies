@@ -8,16 +8,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  # This workflow contains a single job called "build"
+
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        
-      - name: python3 --version
-        run: python3 --version
         
       - name: pip3 install rdflib
         run: pip3 install rdflib
