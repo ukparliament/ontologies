@@ -3,13 +3,14 @@ name: generate-docs
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
 
   workflow_dispatch:
 
 jobs:
 
-  build:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,4 +28,7 @@ jobs:
           git config --global user.email "robertbrook@fastmail.fm"
           git commit -am "Added html files."
           git push
+
+      - name: github event
+        run: echo echo "${{ github.event }}"
           
