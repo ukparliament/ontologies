@@ -16,8 +16,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
-      - name: python3 -v
-        run: python3 -v
+      - name: python3 --version
+        run: python3 --version
+        
+      - name: pip3 install rdflib
+        run: pip3 install rdflib
         
       - name: ls
         run: ls
