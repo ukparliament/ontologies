@@ -16,5 +16,6 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     htmlfile.write(str(ttlpath))
     htmlfile.write(str(datetime.now()))
     htmlfile.close()
+    print(str(ttlpath))
 
 
