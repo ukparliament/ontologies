@@ -22,11 +22,17 @@ jobs:
       - name: pip3 install rdflib
         run: pip3 install rdflib
         
+      - name: pip3 install requests
+        run: pip3 install requests
+        
       - name: ls
         run: ls
         
-      - name: create test doc
-        run: touch /meta/html/doctest.html
+      - name: pwd
+        run: pwd
+        
+      #- name: create test doc
+      #  run: touch /meta/html/doctest.html
       
       - name: commit doctest.html
         run: |
