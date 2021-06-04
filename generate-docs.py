@@ -7,6 +7,13 @@ htmldir = "./meta/html/"
 
 for ttlpath in list(Path(".").rglob("*.ttl")): 
 
+    g = rdflib.Graph()
+
+    ttlfile = open(ttlpath, "r")
+    result = g.parse(data=ttlfile.read(), format="turtle")
+
+    print(result)
+
     try:
         os.makedirs(htmldir + str(ttlpath.parent))
     except FileExistsError:
@@ -17,5 +24,10 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     htmlfile.write(str(datetime.now()))
     htmlfile.close()
     print(str(ttlpath))
+
+    
+
+    
+
 
 
