@@ -8,22 +8,23 @@ htmldir = "./meta/html/"
 for ttlpath in list(Path(".").rglob("*.ttl")): 
 
     g = rdflib.Graph()
-    print(ttlpath)
+    
     ttlfile = open(ttlpath, "r")
     result = g.parse(data=ttlfile.read(), format="turtle")
-
-    
+    print("PARSED\t" + str(ttlpath))
 
     try:
         os.makedirs(htmldir + str(ttlpath.parent))
     except FileExistsError:
         pass
 
-    htmlfile = open(htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html", "w")
-    htmlfile.write(str(ttlpath))
-    htmlfile.write(str(datetime.now()))
+    htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
+    htmlfile = open(htmlpath, "w")
+    for subject, predicate, object in g:
+        htmlfile.write("\t".join([subject, predicate, object]))
+        htmlfile.write("\n")
     htmlfile.close()
-    # print(str(ttlpath))
+    print("WROTE\t" + htmlpath)
 
     
 
