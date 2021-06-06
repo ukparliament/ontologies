@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image ontology</title>
+<style>
+</style>
+</head>
+<body>
+<header>
+
+      <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+
+<h1>Image ontology</h1>
+
+
+<p>Ontology to describe storage and retrieval of parliamentary images</p>
+
+
+
+
+
+<details open id="imports">
+
+ <summary>Imported ontologies</summary>
+
+<ul>
+
+</ul>
+
+</details>
+
+
+
+
+<details id="equivalentclasses">
+
+ <summary>Equivalent classes</summary>
+
+</details>
+
+
+
+
+<details id="subclasses">
+
+ <summary>Subclasses</summary>
+
+<p>
+<b>image: GeoLocation</b>
+<br>is a subclass of<br>
+<b>image: GeographicalThing</b>
+</p>
+
+<p>
+<b>image: ImageCreator</b>
+<br>is a subclass of<br>
+<b>image: Agent</b>
+</p>
+
+<p>
+<b>image: ImageOwner</b>
+<br>is a subclass of<br>
+<b>image: Agent</b>
+</p>
+
+<p>
+<b>image: Photograph</b>
+<br>is a subclass of<br>
+<b>image: Image</b>
+</p>
+
+</details>
+
+
+
+
+
+<section id="classes">
+<h2>Classes</h2>
+
+
+<article class="class">
+<h3>Agent
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/agency/ -->
+
+<p>An agent. The superset of all people and all groups of people.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>GeoLocation
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>An area within a image, that will be used to identify multiple ImageSubjects</p>
+
+
+
+
+<p>GeographicalThing (superclass) &rarr; GeoLocation (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Image
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>A image file, 2D unless otherwise stated, stored in the highest available quality</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>ImageCoordinate
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>A coordinate used to identify the location of the ImageZone within the Image</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>ImageCreator
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>The creator of the image - photographer, artist, designer of a diagram etc</p>
+
+
+
+
+<p>Agent (superclass) &rarr; ImageCreator (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>ImageOwner
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>The entity with the legal rights to the image and its use</p>
+
+
+
+
+<p>Agent (superclass) &rarr; ImageOwner (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>ImageResolution
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>An image's resolution</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>ImageSubject
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>A thing that appears in the image - what the image is at partially or wholly 'of'</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>ImageZone
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>An area within a image, that will be used to identify multiple ImageSubjects</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Logo
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>A graphic mark, emblem, or symbol used to represent an organisation or person</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Photograph
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>A Image taken with a camera</p>
+
+
+
+
+<p>Image (superclass) &rarr; Photograph (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>UsageLicence
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/image/ -->
+
+<p>The licence of the image's use, such as GNU or various Creative Commons licences</p>
+
+
+
+
+</article>
+
+</section>
+
+
+
+
+<section id="properties">
+<h2>Object properties</h2>
+
+
+
+<article class="property">
+
+<h3>agentHasLogo <span class="subhead">object property</span></h3>
+
+
+<p>Object property <strong>agentHasLogo</strong> &rarr; is a subproperty of &rarr; Object property <strong>logo</strong></p>
+
+
+
+
+<p>Agent (domain)
+&rarr;
+agentHasLogo (object property)
+&rarr;
+Logo (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageCoordinateHasImageZone <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>ImageCoordinate (domain)
+&rarr;
+imageCoordinateHasImageZone (object property)
+&rarr;
+ImageZone (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageHasImageCoordinate <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>Image (domain)
+&rarr;
+imageHasImageCoordinate (object property)
+&rarr;
+ImageCoordinate (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageHasImageCreator <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>Image (domain)
+&rarr;
+imageHasImageCreator (object property)
+&rarr;
+ImageCreator (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageHasImageOwner <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>Image (domain)
+&rarr;
+imageHasImageOwner (object property)
+&rarr;
+ImageOwner (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageHasImageResolution <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>Image (domain)
+&rarr;
+imageHasImageResolution (object property)
+&rarr;
+ImageResolution (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageHasImageSubject <span class="subhead">object property</span></h3>
+
+
+<p>Object property <strong>imageHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object property <strong>depicts</strong></p>
+
+
+
+
+<p>Image (domain)
+&rarr;
+imageHasImageSubject (object property)
+&rarr;
+ImageSubject (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageHasUsageLicence <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>Image (domain)
+&rarr;
+imageHasUsageLicence (object property)
+&rarr;
+UsageLicence (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>imageZoneHasImageSubject <span class="subhead">object property</span></h3>
+
+
+<p>Object property <strong>imageZoneHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object property <strong>depicts</strong></p>
+
+
+
+
+<p>ImageZone (domain)
+&rarr;
+imageZoneHasImageSubject (object property)
+&rarr;
+ImageSubject (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>photographHasGeoLocation <span class="subhead">object property</span></h3>
+
+
+
+
+
+<p>Photograph (domain)
+&rarr;
+photographHasGeoLocation (object property)
+&rarr;
+GeoLocation (range)</p>
+
+</article>
+
+</section>
+
+
+
+
+<section id="dataproperties">
+<h2>Data properties</h2>
+
+
+<article class="dataproperty">
+<h3>bitsPerSample <span class="subhead">data property</span></h3>
+
+<p>Number of bits per component in each channel.</p>
+
+<p>Image (domain) &rarr; bitsPerSample &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>compression <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>Image (domain) &rarr; compression &rarr; string (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageCreatedAt <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>Image (domain) &rarr; imageCreatedAt &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageLength <span class="subhead">data property</span></h3>
+
+<p>Image height in pixels</p>
+
+<p>Image (domain) &rarr; imageLength &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageResolutionUnit <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>ImageResolution (domain) &rarr; imageResolutionUnit &rarr; string (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageSoftware <span class="subhead">data property</span></h3>
+
+<p>Software used to create image</p>
+
+<p>Image (domain) &rarr; imageSoftware &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageStorageLocation <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>Image (domain) &rarr; imageStorageLocation &rarr; string (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageWidth <span class="subhead">data property</span></h3>
+
+<p>Image width in pixels</p>
+
+<p>Image (domain) &rarr; imageWidth &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageXResolution <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>ImageResolution (domain) &rarr; imageXResolution &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>imageYResolution <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>ImageResolution (domain) &rarr; imageYResolution &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>samplesPerPixel <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>Image (domain) &rarr; samplesPerPixel &rarr; integer (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>usageLicenceDetails <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>UsageLicence (domain) &rarr; usageLicenceDetails &rarr; string (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>usageLicenceName <span class="subhead">data property</span></h3>
+
+<p>None</p>
+
+<p>UsageLicence (domain) &rarr; usageLicenceName &rarr; string (range)</p>
+
+
+</article>
+
+</section>
+
+
+
+
+
+
+
+<details id="namespaces">
+
+ <summary>Namespaces</summary>
+ 
+
+
+<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+
+
+<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+
+
+<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+
+
+<p class="namespace"><strong>pi</strong> http://parliament.uk/ontologies/image/</p>
+
+
+
+<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+
+
+<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+
+
+<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+
+
+<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+
+</details>
+
+
+
+<p><time id="created">Created 2017-06-28</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
+
+</main>
+
+<footer>
+
+<p>Source <a href="ttlurl">ttlurl</a></p>
+
+<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
+</footer>
+</body>
+</html>

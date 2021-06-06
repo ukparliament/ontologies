@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publisher ontology</title>
+<style>
+</style>
+</head>
+<body>
+<header>
+
+      <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+
+<h1>Publisher ontology</h1>
+
+
+<p>A model describing the publishing of material by offices within Parliament, for example: the House of Commons Library.</p>
+
+
+
+<a href="https://ukparliament.github.io/ontologies/publisher/publisher.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/publisher/publisher.png"></a>
+
+
+
+<details open id="imports">
+
+ <summary>Imported ontologies</summary>
+
+<ul>
+
+</ul>
+
+</details>
+
+
+
+
+<details id="equivalentclasses">
+
+ <summary>Equivalent classes</summary>
+
+</details>
+
+
+
+
+<details id="subclasses">
+
+ <summary>Subclasses</summary>
+
+<p>
+<b>publisher: EditorialBoard</b>
+<br>is a subclass of<br>
+<b>publisher: Group</b>
+</p>
+
+<p>
+<b>publisher: Group</b>
+<br>is a subclass of<br>
+<b>publisher: Agent</b>
+</p>
+
+<p>
+<b>publisher: House</b>
+<br>is a subclass of<br>
+<b>publisher: Group</b>
+</p>
+
+<p>
+<b>publisher: Publisher</b>
+<br>is a subclass of<br>
+<b>publisher: Agent</b>
+</p>
+
+<p>
+<b>publisher: ResearchSection</b>
+<br>is a subclass of<br>
+<b>publisher: Publisher</b>
+</p>
+
+<p>
+<b>publisher: ResearchService</b>
+<br>is a subclass of<br>
+<b>publisher: Publisher</b>
+</p>
+
+</details>
+
+
+
+
+
+<section id="classes">
+<h2>Classes</h2>
+
+
+<article class="class">
+<h3>Agent
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Concept
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A SKOS Concept, for example: a library subject term.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Editorial board
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A group overseeing a publisher, for example: the board of POST, made up of Members of Parliament, considering and approving areas of research.</p>
+
+
+
+
+<p>Group (superclass) &rarr; Editorial board (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Group
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A group of people. Groups may contain other groups or be empty.</p>
+
+
+
+
+<p>Agent (superclass) &rarr; Group (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>House
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A parliamentary House, for example: the House of Lords.</p>
+
+
+
+
+<p>Group (superclass) &rarr; House (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Publisher
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>An entity responsible for making a resource available.</p>
+
+
+
+
+<p>Agent (superclass) &rarr; Publisher (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Research section
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A group of researchers within the Library of the House of Commons having a particular focus, for example: the Parliament and Constitution Centre.</p>
+
+
+
+
+<p>Publisher (superclass) &rarr; Research section (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Research service
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A group of researchers, for example: in the Library of the House of Commons, in the Library of the House of Lords or the Parliamentary Office of Science and Technology.</p>
+
+
+
+
+<p>Publisher (superclass) &rarr; Research service (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Thing having a publisher
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/publisher/ -->
+
+<p>A published thing, which has a publisher.</p>
+
+
+
+
+</article>
+
+</section>
+
+
+
+
+<section id="properties">
+<h2>Object properties</h2>
+
+
+
+<article class="property">
+
+<h3>Has editorial board <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a publisher to its editorial board.</p>
+
+
+<p>Publisher (domain)
+&rarr;
+Has editorial board (object property)
+&rarr;
+EditorialBoard (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has focus <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts.</p>
+
+
+<p>Publisher (domain)
+&rarr;
+Has focus (object property)
+&rarr;
+Concept (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has publisher <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a thing, which has a publisher, to the publisher of the thing.</p>
+
+
+<p>ThingHavingPublisher (domain)
+&rarr;
+Has publisher (object property)
+&rarr;
+Publisher (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has research service <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office.</p>
+
+
+<p>House (domain)
+&rarr;
+Has research service (object property)
+&rarr;
+ResearchService (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has section <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a research service to a research section within that service.</p>
+
+
+<p>ResearchService (domain)
+&rarr;
+Has section (object property)
+&rarr;
+ResearchSection (range)</p>
+
+</article>
+
+</section>
+
+
+
+
+
+
+ 
+ <details id="foaf">
+
+ <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ 
+ <ul id="makers">
+
+
+<li class="maker">Anya Somerville
+        </li> 
+
+    
+
+<li class="maker">Michael Smethurst
+        
+        &mdash; <a href="http://smethur.st/">http://smethur.st/</a>
+        
+        </li> 
+
+    
+
+<li class="maker">Robert Brook
+        
+        &mdash; <a href="https://robert-brook.com/">https://robert-brook.com/</a>
+        
+        </li> 
+
+    
+
+<li class="maker">Silver Oliver
+        </li> 
+
+    
+    </ul>
+    </details>
+
+
+
+
+<details id="namespaces">
+
+ <summary>Namespaces</summary>
+ 
+
+
+<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+
+
+<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+
+
+<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+
+
+<p class="namespace"><strong>ppub</strong> http://parliament.uk/ontologies/publisher/</p>
+
+
+
+<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+
+
+<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+
+
+<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+
+
+<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+
+</details>
+
+
+
+<p><time id="created">Created 2018-06-28</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
+
+</main>
+
+<footer>
+
+<p>Source <a href="ttlurl">ttlurl</a></p>
+
+<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
+</footer>
+</body>
+</html>
