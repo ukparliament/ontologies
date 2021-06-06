@@ -2,6 +2,14 @@ import os
 import rdflib
 from datetime import datetime
 from pathlib import Path
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+env = Environment(
+    loader = FileSystemLoader("templates"),
+    autoescape=select_autoescape()
+)
+
+template = env.get_template("ontology.jinja")
 
 htmldir = "./meta/html/"
 
