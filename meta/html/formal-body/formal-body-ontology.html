@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Formal body ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2017-08-29</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Formal body ontology</h1>
+
+
 
 
 <p>A model describing formally constituted bodies, including committees.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -136,7 +141,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/formal-body/ -->
 
-<p>A focus category provides a way to aggregate formal bodies by the type of thing they focus on or scrutinise, for example: a type of legislation, one or more government departments, matters specific to devolved nations. Eventually, the type of the thing focussed on may be derived from any ‘focus’ relationships, together with the types of the things being focussed on. Presently, the things that focus categories point at have insufficient definition to support a determination of their type, for example: the Scottish Grand Committee would have a library subject heading or concept of Scotland as a focus category, typed as a geographic entity rather than as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the 'focus' relationships alone: the focus category gives a higher level means to group formal bodies by interest areas. A focus category is able to be populated regardless of whether the thing focussed on is sufficiently defined, for example: 'focus' may point to a named item of legislation, with the focus category recording that the formal body was constituted to scrutinise a specific item of legislation but without identifying which.</p>
+<p>A focus category provides a way to aggregate formal bodies by the type of thing they focus on or scrutinise, for example: a type of legislation, one or more government departments, matters specific to devolved nations. Eventually, the type of the thing focussed on may be derived from any ‘focus’ relationships, together with the types of the things being focussed on. Presently, the things that focus categories point at have insufficient definition to support a determination of their type, for example: the Scottish Grand Committee would have a library subject heading or concept of Scotland as a focus category, typed as a geographic entity rather than as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the &#39;focus&#39; relationships alone: the focus category gives a higher level means to group formal bodies by interest areas. A focus category is able to be populated regardless of whether the thing focussed on is sufficiently defined, for example: &#39;focus&#39; may point to a named item of legislation, with the focus category recording that the formal body was constituted to scrutinise a specific item of legislation but without identifying which.</p>
 
 
 
@@ -347,11 +352,9 @@
 <p>Relates a formal body to the House or Houses it belongs to. A joint committee will belong to both Houses.</p>
 
 
-<p>FormalBody (domain)
-&rarr;
-Belongs to House (object property)
-&rarr;
-House (range)</p>
+<p>Domain: FormalBody
+<br>
+Range: House</p>
 
 </article>
 
@@ -366,11 +369,9 @@ House (range)</p>
 <p>Relates a formal body to the object of its focus.</p>
 
 
-<p>FormalBody (domain)
-&rarr;
-Formal body focus (object property)
-&rarr;
-Focus (range)</p>
+<p>Domain: FormalBody
+<br>
+Range: Focus</p>
 
 </article>
 
@@ -385,11 +386,9 @@ Focus (range)</p>
 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Forms part of (object property)
-&rarr;
-WorkPackage (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: WorkPackage</p>
 
 </article>
 
@@ -404,11 +403,9 @@ WorkPackage (range)</p>
 <p>Relates a business item to the formal body responsible for its organisation. A business item may be organised by more than one formal body, for example: a joint evidence session.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Has agent (object property)
-&rarr;
-FormalBody (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: FormalBody</p>
 
 </article>
 
@@ -423,11 +420,9 @@ FormalBody (range)</p>
 <p>Relates a formal body to its focus category.</p>
 
 
-<p>FormalBody (domain)
-&rarr;
-Has focus category (object property)
-&rarr;
-FocusCategory (range)</p>
+<p>Domain: FormalBody
+<br>
+Range: FocusCategory</p>
 
 </article>
 
@@ -442,11 +437,9 @@ FocusCategory (range)</p>
 <p>Relates an inquiry to the scope of the inquiry..</p>
 
 
-<p>Inquiry (domain)
-&rarr;
-Has inquiry scope (object property)
-&rarr;
-InquiryScope (range)</p>
+<p>Domain: Inquiry
+<br>
+Range: InquiryScope</p>
 
 </article>
 
@@ -461,11 +454,9 @@ InquiryScope (range)</p>
 <p>A joint committee has a lead House, responsible for the administration of the committee.</p>
 
 
-<p>FormalBody (domain)
-&rarr;
-Has lead House (object property)
-&rarr;
-House (range)</p>
+<p>Domain: FormalBody
+<br>
+Range: House</p>
 
 </article>
 
@@ -480,11 +471,9 @@ House (range)</p>
 <p>Relates a sub-committee to its parent committee. </p>
 
 
-<p>FormalBody (domain)
-&rarr;
-Has parent formal body (object property)
-&rarr;
-FormalBody (range)</p>
+<p>Domain: FormalBody
+<br>
+Range: FormalBody</p>
 
 </article>
 
@@ -499,11 +488,9 @@ FormalBody (range)</p>
 <p>Relates a work package to the work package it forms a part of, for example: a sub-inquiry forming part of a wider inquiry.</p>
 
 
-<p>WorkPackage (domain)
-&rarr;
-Has parent work package (object property)
-&rarr;
-WorkPackage (range)</p>
+<p>Domain: WorkPackage
+<br>
+Range: WorkPackage</p>
 
 </article>
 
@@ -518,11 +505,9 @@ WorkPackage (range)</p>
 <p>Relates a work package to the type of the work package, where the work package is not an inquiry.</p>
 
 
-<p>WorkPackage (domain)
-&rarr;
-Has work package type (object property)
-&rarr;
-WorkPackageType (range)</p>
+<p>Domain: WorkPackage
+<br>
+Range: WorkPackageType</p>
 
 </article>
 
@@ -537,11 +522,9 @@ WorkPackageType (range)</p>
 <p>Relates a formal body to a work package undertaken by the formal body. A joint inquiry will be undertaken by more than one formal body.</p>
 
 
-<p>FormalBody (domain)
-&rarr;
-Undertakes work package (object property)
-&rarr;
-WorkPackage (range)</p>
+<p>Domain: FormalBody
+<br>
+Range: WorkPackage</p>
 
 </article>
 
@@ -556,11 +539,9 @@ WorkPackage (range)</p>
 <p>Relates a work package to the object of its focus.</p>
 
 
-<p>WorkPackage (domain)
-&rarr;
-Work package focus (object property)
-&rarr;
-Focus (range)</p>
+<p>Domain: WorkPackage
+<br>
+Range: Focus</p>
 
 </article>
 
@@ -589,10 +570,7 @@ Focus (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -638,14 +616,12 @@ Focus (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -680,17 +656,12 @@ Focus (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2017-08-29</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

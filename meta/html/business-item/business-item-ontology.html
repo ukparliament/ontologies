@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Business item ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2018-10-13</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Business item ontology</h1>
+
+
 
 
 <p>A model describing items of business taking place in Parliament or outside Parliament - as part of a process involving Parliament - and their scheduling.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -160,11 +165,9 @@
 <p>Describes the process of setting a time or date at which a business item is expected to take place.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Calendarisation (object property)
-&rarr;
-CalendaredEvent (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: CalendaredEvent</p>
 
 </article>
 
@@ -179,11 +182,9 @@ CalendaredEvent (range)</p>
 <p>Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Contains business item (object property)
-&rarr;
-BusinessItem (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: BusinessItem</p>
 
 </article>
 
@@ -198,11 +199,9 @@ BusinessItem (range)</p>
 <p>Relates a calendared event to a subsequent calendared event</p>
 
 
-<p>CalendaredEvent (domain)
-&rarr;
-Followed by (object property)
-&rarr;
-CalendaredEvent (range)</p>
+<p>Domain: CalendaredEvent
+<br>
+Range: CalendaredEvent</p>
 
 </article>
 
@@ -217,11 +216,9 @@ CalendaredEvent (range)</p>
 <p>Relates a business item to its type.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Has business item type (object property)
-&rarr;
-BusinessItemType (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: BusinessItemType</p>
 
 </article>
 
@@ -236,11 +233,9 @@ BusinessItemType (range)</p>
 <p>Relates a business item to a business item series it is part of.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Part of series (object property)
-&rarr;
-BusinessItemSeries (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: BusinessItemSeries</p>
 
 </article>
 
@@ -255,11 +250,9 @@ BusinessItemSeries (range)</p>
 <p>Relates a document to the calendared event it records.</p>
 
 
-<p>Document (domain)
-&rarr;
-Record of (object property)
-&rarr;
-CalendaredEvent (range)</p>
+<p>Domain: Document
+<br>
+Range: CalendaredEvent</p>
 
 </article>
 
@@ -274,11 +267,9 @@ CalendaredEvent (range)</p>
 <p>Relates a calendared event to the place it occurs.</p>
 
 
-<p>CalendaredEvent (domain)
-&rarr;
-Takes place in (object property)
-&rarr;
-Place (range)</p>
+<p>Domain: CalendaredEvent
+<br>
+Range: Place</p>
 
 </article>
 
@@ -329,10 +320,7 @@ Place (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -363,14 +351,12 @@ Place (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -405,17 +391,12 @@ Place (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2018-10-13</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

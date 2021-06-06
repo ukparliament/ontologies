@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Election ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,26 +19,27 @@
 
 <main>
 
+    <p><time id="created">Created 2016-10-06</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Election ontology</h1>
+
+
 
 
 <p>A model describing incumbencies resulting from general elections and by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election process, rather than the process by which an election has been conducted: election returns by the “first past the post” system and those which follow other methods are included. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.</p>
 
 
 
-<a href="file:///home/runner/work/ontologies/ontologies/election.png"><img id="depiction" src="file:///home/runner/work/ontologies/ontologies/election.png"></a>
+<a href="file:///home/robert/Documents/ontologies/election.png"><img id="depiction" src="file:///home/robert/Documents/ontologies/election.png"></a>
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -307,11 +312,9 @@
 <p>Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
 
 
-<p>Certification (domain)
-&rarr;
-Adjunct to (object property)
-&rarr;
-Certification (range)</p>
+<p>Domain: Certification
+<br>
+Range: Certification</p>
 
 </article>
 
@@ -326,11 +329,9 @@ Certification (range)</p>
 <p>Relates a group of people - who at the time of an election are eligible to vote - to that election.</p>
 
 
-<p>Electorate (domain)
-&rarr;
-Eligible to vote in (object property)
-&rarr;
-Election (range)</p>
+<p>Domain: Electorate
+<br>
+Range: Election</p>
 
 </article>
 
@@ -345,11 +346,9 @@ Election (range)</p>
 <p>Relates a winning candidacy result to an electoral incumbency.</p>
 
 
-<p>WinningCandidacyResult (domain)
-&rarr;
-Establishes incumbency (object property)
-&rarr;
-ElectoralIncumbency (range)</p>
+<p>Domain: WinningCandidacyResult
+<br>
+Range: ElectoralIncumbency</p>
 
 </article>
 
@@ -364,11 +363,9 @@ ElectoralIncumbency (range)</p>
 <p>Relates an election to a candidacy within that election.</p>
 
 
-<p>Election (domain)
-&rarr;
-Has candidacy (object property)
-&rarr;
-Candidacy (range)</p>
+<p>Domain: Election
+<br>
+Range: Candidacy</p>
 
 </article>
 
@@ -383,11 +380,9 @@ Candidacy (range)</p>
 <p>Relates a candidacy to the result of that candidacy in an election.</p>
 
 
-<p>Candidacy (domain)
-&rarr;
-Has candidacy result (object property)
-&rarr;
-CandidacyResult (range)</p>
+<p>Domain: Candidacy
+<br>
+Range: CandidacyResult</p>
 
 </article>
 
@@ -402,11 +397,9 @@ CandidacyResult (range)</p>
 <p>Relates a candidacy to a person being a candidate.</p>
 
 
-<p>Candidacy (domain)
-&rarr;
-Has candidate (object property)
-&rarr;
-Person (range)</p>
+<p>Domain: Candidacy
+<br>
+Range: Person</p>
 
 </article>
 
@@ -421,11 +414,9 @@ Person (range)</p>
 <p>Relates a candidacy to a certification of the candidate by a political party.</p>
 
 
-<p>Candidacy (domain)
-&rarr;
-Has certification (object property)
-&rarr;
-Certification (range)</p>
+<p>Domain: Candidacy
+<br>
+Range: Certification</p>
 
 </article>
 
@@ -440,11 +431,9 @@ Certification (range)</p>
 <p>Relates a constituency area to a constituency area type.</p>
 
 
-<p>ConstituencyArea (domain)
-&rarr;
-Has constituency area type (object property)
-&rarr;
-ConstituencyAreaType (range)</p>
+<p>Domain: ConstituencyArea
+<br>
+Range: ConstituencyAreaType</p>
 
 </article>
 
@@ -459,11 +448,9 @@ ConstituencyAreaType (range)</p>
 <p>Relates a geographic area to its population.</p>
 
 
-<p>ConstituencyArea (domain)
-&rarr;
-Has constituency group (object property)
-&rarr;
-ConstituencyGroup (range)</p>
+<p>Domain: ConstituencyArea
+<br>
+Range: ConstituencyGroup</p>
 
 </article>
 
@@ -478,11 +465,9 @@ ConstituencyGroup (range)</p>
 <p>Relates a geographic area to a group of people who at the time of an election are eligible to vote in the election for that area.</p>
 
 
-<p>ConstituencyArea (domain)
-&rarr;
-Has electorate (object property)
-&rarr;
-Electorate (range)</p>
+<p>Domain: ConstituencyArea
+<br>
+Range: Electorate</p>
 
 </article>
 
@@ -497,11 +482,9 @@ Electorate (range)</p>
 <p>Relates an election to the Parliament period within which any resulting incumbency will take place.</p>
 
 
-<p>Election (domain)
-&rarr;
-Into Parliament period (object property)
-&rarr;
-ParliamentPeriod (range)</p>
+<p>Domain: Election
+<br>
+Range: ParliamentPeriod</p>
 
 </article>
 
@@ -516,11 +499,9 @@ ParliamentPeriod (range)</p>
 <p>Relates a constituency election to the general election of which it forms part.</p>
 
 
-<p>Election (domain)
-&rarr;
-Is part of general election (object property)
-&rarr;
-GeneralElection (range)</p>
+<p>Domain: Election
+<br>
+Range: GeneralElection</p>
 
 </article>
 
@@ -535,11 +516,9 @@ GeneralElection (range)</p>
 <p>Relates a certification of a candidate to the party issuing the certification.</p>
 
 
-<p>Certification (domain)
-&rarr;
-To party (object property)
-&rarr;
-PoliticalParty (range)</p>
+<p>Domain: Certification
+<br>
+Range: PoliticalParty</p>
 
 </article>
 
@@ -669,9 +648,7 @@ PoliticalParty (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -706,17 +683,12 @@ PoliticalParty (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2016-10-06</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

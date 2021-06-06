@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Procedure ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2018-02-20</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Procedure ontology</h1>
+
+
 
 
 <p>A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -81,7 +86,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/procedure/ -->
 
-<p>A citation of a document. A citation may be from a procedure, for example: the proposed negative statutory instrument procedure citing Schedule 7 to the European Union (Withdrawal) Act 2018. A citation may be from a step in a procedure, for example: the step 'CF - AND' in the made negative statutory instrument procedure citing Section 4(1) of the Statutory Instrument Act 1946. A citation may be from a step without reference to a particular procedure, for example: the step 'Considered for English votes for English laws (EVEL) certification' citing House of Commons public Standing Order 83P. A citation may be from a route in a procedure, for example: the route from 'Considered by the Joint Committee on Statutory Instruments' to 'Motion to approve the instrument tabled by the Government (House of Lords)' in both affirmative procedures citing House of Lords public Standing Order 72.</p>
+<p>A citation of a document. A citation may be from a procedure, for example: the proposed negative statutory instrument procedure citing Schedule 7 to the European Union (Withdrawal) Act 2018. A citation may be from a step in a procedure, for example: the step &#39;CF - AND&#39; in the made negative statutory instrument procedure citing Section 4(1) of the Statutory Instrument Act 1946. A citation may be from a step without reference to a particular procedure, for example: the step &#39;Considered for English votes for English laws (EVEL) certification&#39; citing House of Commons public Standing Order 83P. A citation may be from a route in a procedure, for example: the route from &#39;Considered by the Joint Committee on Statutory Instruments&#39; to &#39;Motion to approve the instrument tabled by the Government (House of Lords)&#39; in both affirmative procedures citing House of Lords public Standing Order 72.</p>
 
 
 
@@ -146,7 +151,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/procedure/ -->
 
-<p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
+<p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
 
 
 
@@ -159,7 +164,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/procedure/ -->
 
-<p>A collection of steps in a procedure. A step collection may belong to one House, or none. A step collection is always within one procedure. A step collection may group one or more steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Key steps' collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named 'Member action steps' collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
+<p>A collection of steps in a procedure. A step collection may belong to one House, or none. A step collection is always within one procedure. A step collection may group one or more steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
 
 
 
@@ -225,11 +230,9 @@
 <p>Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Actualises (object property)
-&rarr;
-Step (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: Step</p>
 
 </article>
 
@@ -244,11 +247,9 @@ Step (range)</p>
 <p>Relates a work package to its focus, this being a work packageable thing.</p>
 
 
-<p>WorkPackage (domain)
-&rarr;
-Focus (object property)
-&rarr;
-WorkPackageableThing (range)</p>
+<p>Domain: WorkPackage
+<br>
+Range: WorkPackageableThing</p>
 
 </article>
 
@@ -260,14 +261,12 @@ WorkPackageableThing (range)</p>
 
 
 
-<p>Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between 'Considered for English votes for English laws (EVEL) certification' to 'Certified as England only under the English votes for English laws (EVEL) process' appears in the draft negative, made negative, draft affirmative and made affirmative procedures.</p>
+<p>Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between &#39;Considered for English votes for English laws (EVEL) certification&#39; to &#39;Certified as England only under the English votes for English laws (EVEL) process&#39; appears in the draft negative, made negative, draft affirmative and made affirmative procedures.</p>
 
 
-<p>Procedure (domain)
-&rarr;
-Follows route (object property)
-&rarr;
-Route (range)</p>
+<p>Domain: Procedure
+<br>
+Range: Route</p>
 
 </article>
 
@@ -282,11 +281,9 @@ Route (range)</p>
 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
 
 
-<p>BusinessItem (domain)
-&rarr;
-Forms part of (object property)
-&rarr;
-WorkPackage (range)</p>
+<p>Domain: BusinessItem
+<br>
+Range: WorkPackage</p>
 
 </article>
 
@@ -301,11 +298,9 @@ WorkPackage (range)</p>
 <p>Relates a route to its input step.</p>
 
 
-<p>Route (domain)
-&rarr;
-From step (object property)
-&rarr;
-Step (range)</p>
+<p>Domain: Route
+<br>
+Range: Step</p>
 
 </article>
 
@@ -320,11 +315,9 @@ Step (range)</p>
 <p>Relates a citation to the type of the document being cited.</p>
 
 
-<p>Citation (domain)
-&rarr;
-Has document type (object property)
-&rarr;
-DocumentType (range)</p>
+<p>Domain: Citation
+<br>
+Range: DocumentType</p>
 
 </article>
 
@@ -339,11 +332,9 @@ DocumentType (range)</p>
 <p>Relates a step collection to a procedure. A step collection has one procedure. A procedure may have one or more step collections, or none.</p>
 
 
-<p>StepCollection (domain)
-&rarr;
-Has procedure (object property)
-&rarr;
-Procedure (range)</p>
+<p>Domain: StepCollection
+<br>
+Range: Procedure</p>
 
 </article>
 
@@ -358,11 +349,9 @@ Procedure (range)</p>
 <p>Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none.</p>
 
 
-<p>Step (domain)
-&rarr;
-Has step type (object property)
-&rarr;
-StepType (range)</p>
+<p>Domain: Step
+<br>
+Range: StepType</p>
 
 </article>
 
@@ -377,11 +366,9 @@ StepType (range)</p>
 <p>Relates a step to a step collection the step is collected by. A step collection collects one or more steps. A step may be collected by one or more step collections, or none.</p>
 
 
-<p>Step (domain)
-&rarr;
-Is collected by (object property)
-&rarr;
-StepCollection (range)</p>
+<p>Domain: Step
+<br>
+Range: StepCollection</p>
 
 </article>
 
@@ -396,11 +383,9 @@ StepCollection (range)</p>
 <p>Relates a procedure to a citation. A procedure may have more than one citation, or none.</p>
 
 
-<p>Procedure (domain)
-&rarr;
-Procedure has citation (object property)
-&rarr;
-Citation (range)</p>
+<p>Domain: Procedure
+<br>
+Range: Citation</p>
 
 </article>
 
@@ -415,11 +400,9 @@ Citation (range)</p>
 <p>Relates a route to a citation. A route may have more than one citation, or none.</p>
 
 
-<p>Route (domain)
-&rarr;
-Route has citation (object property)
-&rarr;
-Citation (range)</p>
+<p>Domain: Route
+<br>
+Range: Citation</p>
 
 </article>
 
@@ -434,11 +417,9 @@ Citation (range)</p>
 <p>Relates a step collection to one House, or none.</p>
 
 
-<p>StepCollection (domain)
-&rarr;
-Step collection in House (object property)
-&rarr;
-House (range)</p>
+<p>Domain: StepCollection
+<br>
+Range: House</p>
 
 </article>
 
@@ -453,11 +434,9 @@ House (range)</p>
 <p>Relates a step to a citation. A step may have more than one citation, or none.</p>
 
 
-<p>Step (domain)
-&rarr;
-Step has citation (object property)
-&rarr;
-Citation (range)</p>
+<p>Domain: Step
+<br>
+Range: Citation</p>
 
 </article>
 
@@ -472,11 +451,9 @@ Citation (range)</p>
 <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
 
 
-<p>Step (domain)
-&rarr;
-Step in House (object property)
-&rarr;
-House (range)</p>
+<p>Domain: Step
+<br>
+Range: House</p>
 
 </article>
 
@@ -491,11 +468,9 @@ House (range)</p>
 <p>Relates a work package to the procedure it is subject to. A work package is only subject to one procedure.</p>
 
 
-<p>WorkPackage (domain)
-&rarr;
-Subject to (object property)
-&rarr;
-Procedure (range)</p>
+<p>Domain: WorkPackage
+<br>
+Range: Procedure</p>
 
 </article>
 
@@ -510,11 +485,9 @@ Procedure (range)</p>
 <p>Relates a route to its output step.</p>
 
 
-<p>Route (domain)
-&rarr;
-To step (object property)
-&rarr;
-Step (range)</p>
+<p>Domain: Route
+<br>
+Range: Step</p>
 
 </article>
 
@@ -565,10 +538,7 @@ Step (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -649,14 +619,12 @@ Step (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -691,17 +659,12 @@ Step (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2018-02-20</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agency ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2016-10-05</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Agency ontology</h1>
+
+
 
 
 <p>A model describing people and groups of people with agency. The model also describes a person’s membership of and positions in groups.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -204,11 +209,9 @@
 <p>Relates an agent to a concept to express an area of expertise. An agent may have one or more areas of expertise, or none.</p>
 
 
-<p>Agent (domain)
-&rarr;
-Has expertise in (object property)
-&rarr;
-core#Concept (range)</p>
+<p>Domain: Agent
+<br>
+Range: core#Concept</p>
 
 </article>
 
@@ -223,11 +226,9 @@ core#Concept (range)</p>
 <p>Relates an agent to a group inclusion. An agent may have one or more group inclusions, or none. A group inclusion is to a single agent.</p>
 
 
-<p>Agent (domain)
-&rarr;
-Has group inclusion (object property)
-&rarr;
-GroupInclusion (range)</p>
+<p>Domain: Agent
+<br>
+Range: GroupInclusion</p>
 
 </article>
 
@@ -242,11 +243,9 @@ GroupInclusion (range)</p>
 <p>Relates a person to an incumbency. A person may have one or more incumbencies, or none. An incumbency is to a single person.</p>
 
 
-<p>Person (domain)
-&rarr;
-Has incumbency (object property)
-&rarr;
-Incumbency (range)</p>
+<p>Domain: Person
+<br>
+Range: Incumbency</p>
 
 </article>
 
@@ -261,11 +260,9 @@ Incumbency (range)</p>
 <p>Relates an agent to a concept to express an area of interest. An agent may have one or more areas of interest, or none.</p>
 
 
-<p>Agent (domain)
-&rarr;
-Has interest in (object property)
-&rarr;
-core#Concept (range)</p>
+<p>Domain: Agent
+<br>
+Range: core#Concept</p>
 
 </article>
 
@@ -280,11 +277,9 @@ core#Concept (range)</p>
 <p>Relates an incumbency to a position. An incumbency is to a single position. A position may have one or more incumbencies, or none.</p>
 
 
-<p>Incumbency (domain)
-&rarr;
-Has position (object property)
-&rarr;
-Position (range)</p>
+<p>Domain: Incumbency
+<br>
+Range: Position</p>
 
 </article>
 
@@ -299,11 +294,9 @@ Position (range)</p>
 <p>Relates a group inclusion to a group. A group inclusion is in a single group. A group may have one or more group inclusions, or none.</p>
 
 
-<p>GroupInclusion (domain)
-&rarr;
-In group (object property)
-&rarr;
-Group (range)</p>
+<p>Domain: GroupInclusion
+<br>
+Range: Group</p>
 
 </article>
 
@@ -318,11 +311,9 @@ Group (range)</p>
 <p>Relates a person to their place of birth.</p>
 
 
-<p>Person (domain)
-&rarr;
-Place of birth (object property)
-&rarr;
-Place (range)</p>
+<p>Domain: Person
+<br>
+Range: Place</p>
 
 </article>
 
@@ -337,11 +328,9 @@ Place (range)</p>
 <p>Relates a position to a group. A position is in a single group. A group may have one or more positions, or none.</p>
 
 
-<p>Position (domain)
-&rarr;
-Position in (object property)
-&rarr;
-Group (range)</p>
+<p>Domain: Position
+<br>
+Range: Group</p>
 
 </article>
 
@@ -357,7 +346,7 @@ Group (range)</p>
 <article class="dataproperty">
 <h3>Date of birth <span class="subhead">data property</span></h3>
 
-<p>A person's date of birth.</p>
+<p>A person&#39;s date of birth.</p>
 
 <p>Person (domain) &rarr; Date of birth &rarr; date (range)</p>
 
@@ -368,7 +357,7 @@ Group (range)</p>
 <article class="dataproperty">
 <h3>Date of death <span class="subhead">data property</span></h3>
 
-<p>A person's date of death.</p>
+<p>A person&#39;s date of death.</p>
 
 <p>Person (domain) &rarr; Date of death &rarr; date (range)</p>
 
@@ -379,7 +368,7 @@ Group (range)</p>
 <article class="dataproperty">
 <h3>Family name <span class="subhead">data property</span></h3>
 
-<p>A person's inherited name, commonly known in the west as surname.</p>
+<p>A person&#39;s inherited name, commonly known in the west as surname.</p>
 
 <p>Person (domain) &rarr; Family name &rarr; langString (range)</p>
 
@@ -390,7 +379,7 @@ Group (range)</p>
 <article class="dataproperty">
 <h3>Given name <span class="subhead">data property</span></h3>
 
-<p>A person's personal name, commonly known in the west as first or forename.</p>
+<p>A person&#39;s personal name, commonly known in the west as first or forename.</p>
 
 <p>Person (domain) &rarr; Given name &rarr; langString (range)</p>
 
@@ -401,7 +390,7 @@ Group (range)</p>
 <article class="dataproperty">
 <h3>Other names <span class="subhead">data property</span></h3>
 
-<p>A person's additional given names.</p>
+<p>A person&#39;s additional given names.</p>
 
 <p>Person (domain) &rarr; Other names &rarr; langString (range)</p>
 
@@ -412,7 +401,7 @@ Group (range)</p>
 <article class="dataproperty">
 <h3>Title <span class="subhead">data property</span></h3>
 
-<p>A person's title. For example, Mr., Ms. or Dr.</p>
+<p>A person&#39;s title. For example, Mr., Ms. or Dr.</p>
 
 <p>Person (domain) &rarr; Title &rarr; langString (range)</p>
 
@@ -425,10 +414,7 @@ Group (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -459,14 +445,12 @@ Group (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -505,17 +489,12 @@ Group (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2016-10-05</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

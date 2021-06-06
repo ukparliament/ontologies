@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Record reviews ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2020-12-18</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Record reviews ontology</h1>
+
+
 
 
 <p>A model describing editorial reviews of records and actions taken following review.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -265,11 +270,9 @@
 <p>Relates an archiving action to the work being archived.</p>
 
 
-<p>Archiving (domain)
-&rarr;
-Archiving of (object property)
-&rarr;
-Work (range)</p>
+<p>Domain: Archiving
+<br>
+Range: Work</p>
 
 </article>
 
@@ -284,11 +287,9 @@ Work (range)</p>
 <p>Relates an editorial action to the person or group performing that action.</p>
 
 
-<p>EditorialAction (domain)
-&rarr;
-By (object property)
-&rarr;
-Agent (range)</p>
+<p>Domain: EditorialAction
+<br>
+Range: Agent</p>
 
 </article>
 
@@ -303,11 +304,9 @@ Agent (range)</p>
 <p>Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.</p>
 
 
-<p>Feedback (domain)
-&rarr;
-Feedback leads to (object property)
-&rarr;
-EditorialReview (range)</p>
+<p>Domain: Feedback
+<br>
+Range: EditorialReview</p>
 
 </article>
 
@@ -322,11 +321,9 @@ EditorialReview (range)</p>
 <p>Relates an act of revision to an existing manifestation to be revised.</p>
 
 
-<p>Revision (domain)
-&rarr;
-From manifestation (object property)
-&rarr;
-Manifestation (range)</p>
+<p>Domain: Revision
+<br>
+Range: Manifestation</p>
 
 </article>
 
@@ -341,11 +338,9 @@ Manifestation (range)</p>
 <p>Relates a work to the review cycle of that work. A work has a single review cycle, or none.</p>
 
 
-<p>Work (domain)
-&rarr;
-Has review cycle (object property)
-&rarr;
-ReviewCycle (range)</p>
+<p>Domain: Work
+<br>
+Range: ReviewCycle</p>
 
 </article>
 
@@ -360,11 +355,9 @@ ReviewCycle (range)</p>
 <p>Relates an action of revision to the type of that revision.</p>
 
 
-<p>Revision (domain)
-&rarr;
-Has revision type (object property)
-&rarr;
-RevisionType (range)</p>
+<p>Domain: Revision
+<br>
+Range: RevisionType</p>
 
 </article>
 
@@ -379,11 +372,9 @@ RevisionType (range)</p>
 <p>Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.</p>
 
 
-<p>EditorialAction (domain)
-&rarr;
-Leads to (object property)
-&rarr;
-EditorialAction (range)</p>
+<p>Domain: EditorialAction
+<br>
+Range: EditorialAction</p>
 
 </article>
 
@@ -398,11 +389,9 @@ EditorialAction (range)</p>
 <p>Relates an editorial review to the creation of a new work.</p>
 
 
-<p>EditorialReview (domain)
-&rarr;
-Leads to new (object property)
-&rarr;
-Work (range)</p>
+<p>Domain: EditorialReview
+<br>
+Range: Work</p>
 
 </article>
 
@@ -417,11 +406,9 @@ Work (range)</p>
 <p>Relates an agent to the feedback submitted by that agent.</p>
 
 
-<p>Agent (domain)
-&rarr;
-Makes (object property)
-&rarr;
-Feedback (range)</p>
+<p>Domain: Agent
+<br>
+Range: Feedback</p>
 
 </article>
 
@@ -436,11 +423,9 @@ Feedback (range)</p>
 <p>Relates a review cycle to resulting editorial reviews.</p>
 
 
-<p>ReviewCycle (domain)
-&rarr;
-Results in (object property)
-&rarr;
-EditorialReview (range)</p>
+<p>Domain: ReviewCycle
+<br>
+Range: EditorialReview</p>
 
 </article>
 
@@ -455,11 +440,9 @@ EditorialReview (range)</p>
 <p>Relates an editorial review to the manifestation being reviewed.</p>
 
 
-<p>EditorialReview (domain)
-&rarr;
-Review of (object property)
-&rarr;
-Manifestation (range)</p>
+<p>Domain: EditorialReview
+<br>
+Range: Manifestation</p>
 
 </article>
 
@@ -474,11 +457,9 @@ Manifestation (range)</p>
 <p>Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.</p>
 
 
-<p>Work (domain)
-&rarr;
-Supersedes (object property)
-&rarr;
-Work (range)</p>
+<p>Domain: Work
+<br>
+Range: Work</p>
 
 </article>
 
@@ -493,11 +474,9 @@ Work (range)</p>
 <p>Relates an act of revision to a new manifestation resulting from the revision.</p>
 
 
-<p>Revision (domain)
-&rarr;
-To manifestation (object property)
-&rarr;
-Manifestation (range)</p>
+<p>Domain: Revision
+<br>
+Range: Manifestation</p>
 
 </article>
 
@@ -512,11 +491,9 @@ Manifestation (range)</p>
 <p>Relates a manifestation to the action of withdrawing that manifestation.</p>
 
 
-<p>Manifestation (domain)
-&rarr;
-Withdrawn by (object property)
-&rarr;
-Withdrawal (range)</p>
+<p>Domain: Manifestation
+<br>
+Range: Withdrawal</p>
 
 </article>
 
@@ -622,10 +599,7 @@ Withdrawal (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -651,14 +625,12 @@ Withdrawal (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -693,17 +665,12 @@ Withdrawal (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2020-12-18</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

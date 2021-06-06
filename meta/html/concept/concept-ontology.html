@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Concept ontology - deprecated</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2016-10-22</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Concept ontology - deprecated</h1>
+
+
 
 
 <p>Concept ontology for UK Parliament. Deprecated in favour of SKOS.</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -158,11 +163,9 @@
 <p>Relates an annotation to a agent.</p>
 
 
-<p>Annotation (domain)
-&rarr;
-annotatedBy (object property)
-&rarr;
-Agent (range)</p>
+<p>Domain: Annotation
+<br>
+Range: Agent</p>
 
 </article>
 
@@ -177,11 +180,9 @@ Agent (range)</p>
 <p>Relates an annotatable thing to an annotation.</p>
 
 
-<p>AnnotatableThing (domain)
-&rarr;
-hasAnnotation (object property)
-&rarr;
-Annotation (range)</p>
+<p>Domain: AnnotatableThing
+<br>
+Range: Annotation</p>
 
 </article>
 
@@ -196,11 +197,9 @@ Annotation (range)</p>
 <p>Relates a concept to a broader concept.</p>
 
 
-<p>Concept (domain)
-&rarr;
-hasBroaderConcept (object property)
-&rarr;
-Concept (range)</p>
+<p>Domain: Concept
+<br>
+Range: Concept</p>
 
 </article>
 
@@ -215,11 +214,9 @@ Concept (range)</p>
 <p>Relates an annotation to a concept.</p>
 
 
-<p>Annotation (domain)
-&rarr;
-hasConcept (object property)
-&rarr;
-Concept (range)</p>
+<p>Domain: Annotation
+<br>
+Range: Concept</p>
 
 </article>
 
@@ -234,11 +231,9 @@ Concept (range)</p>
 <p>Relates a concept to a real world thing that is its focus e.g. The concept / library subject term Winston Churchill to the person Winston Churchill.</p>
 
 
-<p>Concept (domain)
-&rarr;
-hasFocus (object property)
-&rarr;
-Thing (range)</p>
+<p>Domain: Concept
+<br>
+Range: Thing</p>
 
 </article>
 
@@ -253,11 +248,9 @@ Thing (range)</p>
 <p>Relates a concept to another concept.</p>
 
 
-<p>Concept (domain)
-&rarr;
-hasRelatedConcept (object property)
-&rarr;
-Concept (range)</p>
+<p>Domain: Concept
+<br>
+Range: Concept</p>
 
 </article>
 
@@ -272,11 +265,9 @@ Concept (range)</p>
 <p>Relates a concept to a concept scheme.</p>
 
 
-<p>Concept (domain)
-&rarr;
-inConceptScheme (object property)
-&rarr;
-ConceptScheme (range)</p>
+<p>Domain: Concept
+<br>
+Range: ConceptScheme</p>
 
 </article>
 
@@ -362,9 +353,7 @@ ConceptScheme (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -395,17 +384,12 @@ ConceptScheme (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2016-10-22</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

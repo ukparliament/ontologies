@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Submission ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2017-08-29</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Submission ontology</h1>
+
+
 
 
 <p>Ontology to describe calls from Parliament for submission of evidence and resulting submissions.</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -309,11 +314,9 @@
 <p>Relates a call for oral evidence to a contribution made in response to that call.</p>
 
 
-<p>CallForOralEvidence (domain)
-&rarr;
-callForOralEvidence (object property)
-&rarr;
-Contribution (range)</p>
+<p>Domain: CallForOralEvidence
+<br>
+Range: Contribution</p>
 
 </article>
 
@@ -328,11 +331,9 @@ Contribution (range)</p>
 <p>Relates a call for papers to a contribution made in response to that call.</p>
 
 
-<p>CallForPapers (domain)
-&rarr;
-callForPapers (object property)
-&rarr;
-Contribution (range)</p>
+<p>Domain: CallForPapers
+<br>
+Range: Contribution</p>
 
 </article>
 
@@ -347,11 +348,9 @@ Contribution (range)</p>
 <p>Relates a call for records to a contribution made in response to that call.</p>
 
 
-<p>CallForRecords (domain)
-&rarr;
-callForRecords (object property)
-&rarr;
-Contribution (range)</p>
+<p>Domain: CallForRecords
+<br>
+Range: Contribution</p>
 
 </article>
 
@@ -366,11 +365,9 @@ Contribution (range)</p>
 <p>Relates a compelled call for oral evidence to a calendar event where the witness is expected to be heard.</p>
 
 
-<p>Compelled (domain)
-&rarr;
-compelledToAttend (object property)
-&rarr;
-CalendarEvent (range)</p>
+<p>Domain: Compelled
+<br>
+Range: CalendarEvent</p>
 
 </article>
 
@@ -385,11 +382,9 @@ CalendarEvent (range)</p>
 <p>Relates a contribution to a document contributed.</p>
 
 
-<p>Contribution (domain)
-&rarr;
-contributes (object property)
-&rarr;
-Document (range)</p>
+<p>Domain: Contribution
+<br>
+Range: Document</p>
 
 </article>
 
@@ -404,11 +399,9 @@ Document (range)</p>
 <p>Relates a contribution to its focus (subject) area(s).</p>
 
 
-<p>Contribution (domain)
-&rarr;
-focusOfContribution (object property)
-&rarr;
-Focus (range)</p>
+<p>Domain: Contribution
+<br>
+Range: Focus</p>
 
 </article>
 
@@ -423,11 +416,9 @@ Focus (range)</p>
 <p>Relates a contribution to the incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation.</p>
 
 
-<p>Contribution (domain)
-&rarr;
-inCapacity (object property)
-&rarr;
-Incumbency (range)</p>
+<p>Domain: Contribution
+<br>
+Range: Incumbency</p>
 
 </article>
 
@@ -442,11 +433,9 @@ Incumbency (range)</p>
 <p>Relates a person making a contribution to their contribution.</p>
 
 
-<p>Person (domain)
-&rarr;
-makesContribution (object property)
-&rarr;
-Contribution (range)</p>
+<p>Domain: Person
+<br>
+Range: Contribution</p>
 
 </article>
 
@@ -461,11 +450,9 @@ Contribution (range)</p>
 <p>Relates any type of contribution to the call it is submitted in response to.</p>
 
 
-<p>Contribution (domain)
-&rarr;
-respondsToCall (object property)
-&rarr;
-Call (range)</p>
+<p>Domain: Contribution
+<br>
+Range: Call</p>
 
 </article>
 
@@ -518,9 +505,7 @@ Call (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -551,17 +536,12 @@ Call (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2017-08-29</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

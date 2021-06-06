@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Image ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2017-06-28</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Image ontology</h1>
+
+
 
 
 <p>Ontology to describe storage and retrieval of parliamentary images</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -180,7 +185,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/image/ -->
 
-<p>An image's resolution</p>
+<p>An image&#39;s resolution</p>
 
 
 
@@ -193,7 +198,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/image/ -->
 
-<p>A thing that appears in the image - what the image is at partially or wholly 'of'</p>
+<p>A thing that appears in the image - what the image is at partially or wholly &#39;of&#39;</p>
 
 
 
@@ -249,7 +254,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/image/ -->
 
-<p>The licence of the image's use, such as GNU or various Creative Commons licences</p>
+<p>The licence of the image&#39;s use, such as GNU or various Creative Commons licences</p>
 
 
 
@@ -276,11 +281,9 @@
 
 
 
-<p>Agent (domain)
-&rarr;
-agentHasLogo (object property)
-&rarr;
-Logo (range)</p>
+<p>Domain: Agent
+<br>
+Range: Logo</p>
 
 </article>
 
@@ -293,11 +296,9 @@ Logo (range)</p>
 
 
 
-<p>ImageCoordinate (domain)
-&rarr;
-imageCoordinateHasImageZone (object property)
-&rarr;
-ImageZone (range)</p>
+<p>Domain: ImageCoordinate
+<br>
+Range: ImageZone</p>
 
 </article>
 
@@ -310,11 +311,9 @@ ImageZone (range)</p>
 
 
 
-<p>Image (domain)
-&rarr;
-imageHasImageCoordinate (object property)
-&rarr;
-ImageCoordinate (range)</p>
+<p>Domain: Image
+<br>
+Range: ImageCoordinate</p>
 
 </article>
 
@@ -327,11 +326,9 @@ ImageCoordinate (range)</p>
 
 
 
-<p>Image (domain)
-&rarr;
-imageHasImageCreator (object property)
-&rarr;
-ImageCreator (range)</p>
+<p>Domain: Image
+<br>
+Range: ImageCreator</p>
 
 </article>
 
@@ -344,11 +341,9 @@ ImageCreator (range)</p>
 
 
 
-<p>Image (domain)
-&rarr;
-imageHasImageOwner (object property)
-&rarr;
-ImageOwner (range)</p>
+<p>Domain: Image
+<br>
+Range: ImageOwner</p>
 
 </article>
 
@@ -361,11 +356,9 @@ ImageOwner (range)</p>
 
 
 
-<p>Image (domain)
-&rarr;
-imageHasImageResolution (object property)
-&rarr;
-ImageResolution (range)</p>
+<p>Domain: Image
+<br>
+Range: ImageResolution</p>
 
 </article>
 
@@ -380,11 +373,9 @@ ImageResolution (range)</p>
 
 
 
-<p>Image (domain)
-&rarr;
-imageHasImageSubject (object property)
-&rarr;
-ImageSubject (range)</p>
+<p>Domain: Image
+<br>
+Range: ImageSubject</p>
 
 </article>
 
@@ -397,11 +388,9 @@ ImageSubject (range)</p>
 
 
 
-<p>Image (domain)
-&rarr;
-imageHasUsageLicence (object property)
-&rarr;
-UsageLicence (range)</p>
+<p>Domain: Image
+<br>
+Range: UsageLicence</p>
 
 </article>
 
@@ -416,11 +405,9 @@ UsageLicence (range)</p>
 
 
 
-<p>ImageZone (domain)
-&rarr;
-imageZoneHasImageSubject (object property)
-&rarr;
-ImageSubject (range)</p>
+<p>Domain: ImageZone
+<br>
+Range: ImageSubject</p>
 
 </article>
 
@@ -433,11 +420,9 @@ ImageSubject (range)</p>
 
 
 
-<p>Photograph (domain)
-&rarr;
-photographHasGeoLocation (object property)
-&rarr;
-GeoLocation (range)</p>
+<p>Domain: Photograph
+<br>
+Range: GeoLocation</p>
 
 </article>
 
@@ -600,9 +585,7 @@ GeoLocation (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -637,17 +620,12 @@ GeoLocation (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2017-06-28</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

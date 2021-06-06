@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Utility ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2016-10-05</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Utility ontology</h1>
+
+
 
 
 <p>Provides a set of common properties for reuse by other models.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -173,11 +178,9 @@
 <p>Relates a thing to an identifier.</p>
 
 
-<p>Thing (domain)
-&rarr;
-hasIdentifier (object property)
-&rarr;
-Identifier (range)</p>
+<p>Domain: Thing
+<br>
+Range: Identifier</p>
 
 </article>
 
@@ -192,11 +195,9 @@ Identifier (range)</p>
 <p>Relates an identifier to its source.</p>
 
 
-<p>Identifier (domain)
-&rarr;
-hasIdentifierSource (object property)
-&rarr;
-IdentifierSource (range)</p>
+<p>Domain: Identifier
+<br>
+Range: IdentifierSource</p>
 
 </article>
 
@@ -211,11 +212,9 @@ IdentifierSource (range)</p>
 <p>Relates a thing to a label during a time period.</p>
 
 
-<p>Thing (domain)
-&rarr;
-hasLabel (object property)
-&rarr;
-Label (range)</p>
+<p>Domain: Thing
+<br>
+Range: Label</p>
 
 </article>
 
@@ -230,11 +229,9 @@ Label (range)</p>
 <p>Relates a thing to a web link. e.g. Person to a twitter account.</p>
 
 
-<p>Thing (domain)
-&rarr;
-hasWebLink (object property)
-&rarr;
-WebLink (range)</p>
+<p>Domain: Thing
+<br>
+Range: WebLink</p>
 
 </article>
 
@@ -249,11 +246,9 @@ WebLink (range)</p>
 <p>Relates a web link to a link source.</p>
 
 
-<p>WebLink (domain)
-&rarr;
-hasWebLinkScource (object property)
-&rarr;
-WebLinkSource (range)</p>
+<p>Domain: WebLink
+<br>
+Range: WebLinkSource</p>
 
 </article>
 
@@ -268,11 +263,9 @@ WebLinkSource (range)</p>
 <p>Relates a link to a weblink type.</p>
 
 
-<p>WebLink (domain)
-&rarr;
-hasWebLinkType (object property)
-&rarr;
-WebLinkType (range)</p>
+<p>Domain: WebLink
+<br>
+Range: WebLinkType</p>
 
 </article>
 
@@ -287,11 +280,9 @@ WebLinkType (range)</p>
 <p>Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class.</p>
 
 
-<p>Thing (domain)
-&rarr;
-precededBy (object property)
-&rarr;
-Thing (range)</p>
+<p>Domain: Thing
+<br>
+Range: Thing</p>
 
 </article>
 
@@ -485,10 +476,7 @@ Thing (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -519,14 +507,12 @@ Thing (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -561,17 +547,12 @@ Thing (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2016-10-05</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

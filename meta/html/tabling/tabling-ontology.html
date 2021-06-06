@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tabling ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2017-12-01</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Tabling ontology</h1>
+
+
 
 
 <p>Ontology to describe the activity of members tabling parliamentary questions, motions, amendments and nominations.</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -117,7 +122,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/tabling/ -->
 
-<p>Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
+<p>Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
 
 
 
@@ -130,7 +135,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/tabling/ -->
 
-<p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
+<p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
 
 
 
@@ -217,11 +222,9 @@
 <p>Relates an act of tabling to a written notice.</p>
 
 
-<p>Tabling (domain)
-&rarr;
-givesNotice (object property)
-&rarr;
-WrittenNotice (range)</p>
+<p>Domain: Tabling
+<br>
+Range: WrittenNotice</p>
 
 </article>
 
@@ -236,11 +239,9 @@ WrittenNotice (range)</p>
 <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
 
 
-<p>TablingOrWithdrawal (domain)
-&rarr;
-hasHouse (object property)
-&rarr;
-House (range)</p>
+<p>Domain: TablingOrWithdrawal
+<br>
+Range: House</p>
 
 </article>
 
@@ -255,11 +256,9 @@ House (range)</p>
 <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
 
 
-<p>TablingOrWithdrawal (domain)
-&rarr;
-inSession (object property)
-&rarr;
-Session (range)</p>
+<p>Domain: TablingOrWithdrawal
+<br>
+Range: Session</p>
 
 </article>
 
@@ -274,11 +273,9 @@ Session (range)</p>
 <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
 
 
-<p>TabledThing (domain)
-&rarr;
-replaces (object property)
-&rarr;
-WithdrawnThing (range)</p>
+<p>Domain: TabledThing
+<br>
+Range: WithdrawnThing</p>
 
 </article>
 
@@ -293,11 +290,9 @@ WithdrawnThing (range)</p>
 <p>Relates a Member to an act of tabling.</p>
 
 
-<p>Member (domain)
-&rarr;
-requests (object property)
-&rarr;
-Tabling (range)</p>
+<p>Domain: Member
+<br>
+Range: Tabling</p>
 
 </article>
 
@@ -312,11 +307,9 @@ Tabling (range)</p>
 <p>Relates an act of tabling to the business item which it tables.</p>
 
 
-<p>Tabling (domain)
-&rarr;
-tables (object property)
-&rarr;
-TabledThing (range)</p>
+<p>Domain: Tabling
+<br>
+Range: TabledThing</p>
 
 </article>
 
@@ -331,11 +324,9 @@ TabledThing (range)</p>
 <p>Relates an act of withdrawal to the business item which it withdraws.</p>
 
 
-<p>Withdrawal (domain)
-&rarr;
-withdraws (object property)
-&rarr;
-WithdrawnThing (range)</p>
+<p>Domain: Withdrawal
+<br>
+Range: WithdrawnThing</p>
 
 </article>
 
@@ -351,7 +342,7 @@ WithdrawnThing (range)</p>
 <article class="dataproperty">
 <h3>isInterestDeclared <span class="subhead">data property</span></h3>
 
-<p>Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members' Financial Interests.</p>
+<p>Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members&#39; Financial Interests.</p>
 
 <p>Tabling (domain) &rarr; isInterestDeclared &rarr; boolean (range)</p>
 
@@ -388,9 +379,7 @@ WithdrawnThing (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -421,17 +410,12 @@ WithdrawnThing (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2017-12-01</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

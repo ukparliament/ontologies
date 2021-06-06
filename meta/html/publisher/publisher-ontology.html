@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publisher ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2018-06-28</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Publisher ontology</h1>
+
+
 
 
 <p>A model describing the publishing of material by offices within Parliament, for example: the House of Commons Library.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -259,11 +264,9 @@
 <p>Relates a publisher to its editorial board.</p>
 
 
-<p>Publisher (domain)
-&rarr;
-Has editorial board (object property)
-&rarr;
-EditorialBoard (range)</p>
+<p>Domain: Publisher
+<br>
+Range: EditorialBoard</p>
 
 </article>
 
@@ -278,11 +281,9 @@ EditorialBoard (range)</p>
 <p>Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts.</p>
 
 
-<p>Publisher (domain)
-&rarr;
-Has focus (object property)
-&rarr;
-Concept (range)</p>
+<p>Domain: Publisher
+<br>
+Range: Concept</p>
 
 </article>
 
@@ -297,11 +298,9 @@ Concept (range)</p>
 <p>Relates a thing, which has a publisher, to the publisher of the thing.</p>
 
 
-<p>ThingHavingPublisher (domain)
-&rarr;
-Has publisher (object property)
-&rarr;
-Publisher (range)</p>
+<p>Domain: ThingHavingPublisher
+<br>
+Range: Publisher</p>
 
 </article>
 
@@ -316,11 +315,9 @@ Publisher (range)</p>
 <p>Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office.</p>
 
 
-<p>House (domain)
-&rarr;
-Has research service (object property)
-&rarr;
-ResearchService (range)</p>
+<p>Domain: House
+<br>
+Range: ResearchService</p>
 
 </article>
 
@@ -335,11 +332,9 @@ ResearchService (range)</p>
 <p>Relates a research service to a research section within that service.</p>
 
 
-<p>ResearchService (domain)
-&rarr;
-Has section (object property)
-&rarr;
-ResearchSection (range)</p>
+<p>Domain: ResearchService
+<br>
+Range: ResearchSection</p>
 
 </article>
 
@@ -350,10 +345,7 @@ ResearchSection (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -384,14 +376,12 @@ ResearchSection (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -426,17 +416,12 @@ ResearchSection (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2018-06-28</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

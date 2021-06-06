@@ -12,7 +12,7 @@ env = Environment(
     autoescape=select_autoescape()
 )
 
-template = env.get_template("ontology.jinja")
+template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
