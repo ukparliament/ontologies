@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact point ontology</title>
+<style>
+</style>
+</head>
+<body>
+<header>
+
+      <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+
+<h1>Contact point ontology</h1>
+
+
+<p>Contact point ontology for UK Parliament</p>
+
+
+
+
+
+<details open id="imports">
+
+ <summary>Imported ontologies</summary>
+
+<ul>
+
+</ul>
+
+</details>
+
+
+
+
+<details id="equivalentclasses">
+
+ <summary>Equivalent classes</summary>
+
+</details>
+
+
+
+
+<details id="subclasses">
+
+ <summary>Subclasses</summary>
+
+</details>
+
+
+
+
+
+<section id="classes">
+<h2>Classes</h2>
+
+
+<article class="class">
+<h3>ContactableThing
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/contact-point/ -->
+
+<p>A thing that can be contacted. Might be a person or a person in the context of a role or a group.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>ContactPoint
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/contact-point/ -->
+
+<p>A postal address or other contact details.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>PostalAddress
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/contact-point/ -->
+
+<p>A postal address.</p>
+
+
+
+
+</article>
+
+</section>
+
+
+
+
+<section id="properties">
+<h2>Object properties</h2>
+
+
+
+<article class="property">
+
+<h3>hasContactPoint <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a contactable thing (a person, group or position etc) to a contact point.</p>
+
+
+<p>ContactableThing (domain)
+&rarr;
+hasContactPoint (object property)
+&rarr;
+ContactPoint (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>hasPostalAddress <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a contact point to its postal address.</p>
+
+
+<p>ContactPoint (domain)
+&rarr;
+hasPostalAddress (object property)
+&rarr;
+PostalAddress (range)</p>
+
+</article>
+
+</section>
+
+
+
+
+<section id="dataproperties">
+<h2>Data properties</h2>
+
+
+<article class="dataproperty">
+<h3>addressLine1 <span class="subhead">data property</span></h3>
+
+<p>The first line of a postal address.</p>
+
+<p>PostalAddress (domain) &rarr; addressLine1 &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>addressLine2 <span class="subhead">data property</span></h3>
+
+<p>The second line of a postal address.</p>
+
+<p>PostalAddress (domain) &rarr; addressLine2 &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>addressLine3 <span class="subhead">data property</span></h3>
+
+<p>The third line of a postal address.</p>
+
+<p>PostalAddress (domain) &rarr; addressLine3 &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>addressLine4 <span class="subhead">data property</span></h3>
+
+<p>The fourth line of a postal address.</p>
+
+<p>PostalAddress (domain) &rarr; addressLine4 &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>addressLine5 <span class="subhead">data property</span></h3>
+
+<p>The fifth line of a postal address.</p>
+
+<p>PostalAddress (domain) &rarr; addressLine5 &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>availabilityNote <span class="subhead">data property</span></h3>
+
+<p>Temporal availability note for a contact point. Used for constituency office opening days and hours.</p>
+
+<p>ContactPoint (domain) &rarr; availabilityNote &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>contactForm <span class="subhead">data property</span></h3>
+
+<p>URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses.</p>
+
+<p>ContactPoint (domain) &rarr; contactForm &rarr; Literal (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>email <span class="subhead">data property</span></h3>
+
+<p>Contact point has an email address.</p>
+
+<p>ContactPoint (domain) &rarr; email &rarr; Literal (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>faxNumber <span class="subhead">data property</span></h3>
+
+<p>Contact point has a fax number.</p>
+
+<p>ContactPoint (domain) &rarr; faxNumber &rarr; Literal (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>phoneNumber <span class="subhead">data property</span></h3>
+
+<p>Contact point has a phone number.</p>
+
+<p>ContactPoint (domain) &rarr; phoneNumber &rarr; Literal (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>postcode <span class="subhead">data property</span></h3>
+
+<p>Postal address has a postcode.</p>
+
+<p>PostalAddress (domain) &rarr; postcode &rarr; Literal (range)</p>
+
+
+</article>
+
+</section>
+
+
+
+
+
+
+
+<details id="namespaces">
+
+ <summary>Namespaces</summary>
+ 
+
+
+<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+
+
+<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+
+
+<p class="namespace"><strong>pcp</strong> http://parliament.uk/ontologies/contact-point/</p>
+
+
+
+<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+
+
+<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+
+
+<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+
+
+<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+
+</details>
+
+
+
+<p><time id="created">Created 2017-01-27</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
+
+</main>
+
+<footer>
+
+<p>Source <a href="ttlurl">ttlurl</a></p>
+
+<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
+</footer>
+</body>
+</html>

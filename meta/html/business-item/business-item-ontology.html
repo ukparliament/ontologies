@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business item ontology</title>
+<style>
+</style>
+</head>
+<body>
+<header>
+
+      <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+
+<h1>Business item ontology</h1>
+
+
+<p>A model describing items of business taking place in Parliament or outside Parliament - as part of a process involving Parliament - and their scheduling.</p>
+
+
+
+<a href="https://ukparliament.github.io/ontologies/business-item/business-item.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/business-item/business-item.png"></a>
+
+
+
+<details open id="imports">
+
+ <summary>Imported ontologies</summary>
+
+<ul>
+
+</ul>
+
+</details>
+
+
+
+
+<details id="equivalentclasses">
+
+ <summary>Equivalent classes</summary>
+
+</details>
+
+
+
+
+<details id="subclasses">
+
+ <summary>Subclasses</summary>
+
+</details>
+
+
+
+
+
+<section id="classes">
+<h2>Classes</h2>
+
+
+<article class="class">
+<h3>Business item
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/business-item/ -->
+
+<p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Business item series
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/business-item/ -->
+
+<p>A series of regularly recurring business items. For example: questions to the Department of Health and Social Care.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Business item type
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/business-item/ -->
+
+<p>The type of a business item. For example: a committee visit, a committee evidence session or a chamber debate.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Calendared event
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/business-item/ -->
+
+<p>An event during which business items happen.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Document
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/business-item/ -->
+
+<p>A document being a FRBR work.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Place
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/business-item/ -->
+
+<p>A place named in a geography.</p>
+
+
+
+
+</article>
+
+</section>
+
+
+
+
+<section id="properties">
+<h2>Object properties</h2>
+
+
+
+<article class="property">
+
+<h3>Calendarisation <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Describes the process of setting a time or date at which a business item is expected to take place.</p>
+
+
+<p>BusinessItem (domain)
+&rarr;
+Calendarisation (object property)
+&rarr;
+CalendaredEvent (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Contains business item <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit.</p>
+
+
+<p>BusinessItem (domain)
+&rarr;
+Contains business item (object property)
+&rarr;
+BusinessItem (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Followed by <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a calendared event to a subsequent calendared event</p>
+
+
+<p>CalendaredEvent (domain)
+&rarr;
+Followed by (object property)
+&rarr;
+CalendaredEvent (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has business item type <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a business item to its type.</p>
+
+
+<p>BusinessItem (domain)
+&rarr;
+Has business item type (object property)
+&rarr;
+BusinessItemType (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Part of series <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a business item to a business item series it is part of.</p>
+
+
+<p>BusinessItem (domain)
+&rarr;
+Part of series (object property)
+&rarr;
+BusinessItemSeries (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Record of <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a document to the calendared event it records.</p>
+
+
+<p>Document (domain)
+&rarr;
+Record of (object property)
+&rarr;
+CalendaredEvent (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Takes place in <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a calendared event to the place it occurs.</p>
+
+
+<p>CalendaredEvent (domain)
+&rarr;
+Takes place in (object property)
+&rarr;
+Place (range)</p>
+
+</article>
+
+</section>
+
+
+
+
+<section id="dataproperties">
+<h2>Data properties</h2>
+
+
+<article class="dataproperty">
+<h3>Cancelled at <span class="subhead">data property</span></h3>
+
+<p>The time at which a calendared event was cancelled.</p>
+
+<p>CalendaredEvent (domain) &rarr; Cancelled at &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Disposed of at <span class="subhead">data property</span></h3>
+
+<p>The time at which an agenda item was completed.</p>
+
+<p>CalendaredEvent (domain) &rarr; Disposed of at &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Not reached <span class="subhead">data property</span></h3>
+
+<p>A boolean which is true when a calendared event was not reached or became unavailable for disposal.</p>
+
+<p>CalendaredEvent (domain) &rarr; Not reached &rarr; boolean (range)</p>
+
+
+</article>
+
+</section>
+
+
+
+
+
+ 
+ <details id="foaf">
+
+ <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ 
+ <ul id="makers">
+
+
+<li class="maker">Anya Somerville
+        </li> 
+
+    
+
+<li class="maker">Michael Smethurst
+        
+        &mdash; <a href="http://smethur.st/">http://smethur.st/</a>
+        
+        </li> 
+
+    
+
+<li class="maker">Robert Brook
+        
+        &mdash; <a href="https://robert-brook.com/">https://robert-brook.com/</a>
+        
+        </li> 
+
+    
+
+<li class="maker">Silver Oliver
+        </li> 
+
+    
+    </ul>
+    </details>
+
+
+
+
+<details id="namespaces">
+
+ <summary>Namespaces</summary>
+ 
+
+
+<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+
+
+<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+
+
+<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+
+
+<p class="namespace"><strong>pbi</strong> http://parliament.uk/ontologies/business-item/</p>
+
+
+
+<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+
+
+<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+
+
+<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+
+
+<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+
+</details>
+
+
+
+<p><time id="created">Created 2018-10-13</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
+
+</main>
+
+<footer>
+
+<p>Source <a href="ttlurl">ttlurl</a></p>
+
+<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
+</footer>
+</body>
+</html>
