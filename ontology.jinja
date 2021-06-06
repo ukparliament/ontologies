@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<style>
+</style>
+</head>
+<body>
+<header>
+
+      <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+
+<h1>{{ title }}</h1>
+
+{% if description != "None" %}
+<p>{{ description }}</p>
+{% endif %}
+
+{% if depiction %}
+<a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
+{% endif %}
+
+{% if imports %}
+<details open id="imports">
+
+ <summary>Imported ontologies</summary>
+
+<ul>
+{% for import in imports|sort %}
+{% if import.2.startswith(root_url) %}
+
+<li><a href="{{ import.2[30:] }}" title="{{ import.2 }}">{{ import.2.split('/')[5] }}</a></li>
+
+{% endif %}
+{% endfor %}
+</ul>
+
+</details>
+
+
+{% if equivalentClasses %}
+
+<details id="equivalentclasses">
+
+ <summary>Equivalent classes</summary>
+{% for equivalentClass in equivalentClasses|sort %}
+<p>
+<b>{{ equivalentClass.0.split('/')[4:][0] }}: {{ equivalentClass.0.split('/')[4:][1] }}</b>
+<br>is equivalent to</br>
+<b>{{ equivalentClass.2.split('/')[4:][0] }}: {{ equivalentClass.2.split('/')[4:][1] }}</b>
+</p>
+{% endfor %}
+</details>
+{% endif %}
+
+{% if subClasses %}
+
+<details id="subclasses">
+
+ <summary>Subclasses</summary>
+{% for subClass in subClasses|sort %}
+<p>
+<b>{{ subClass.0.split('/')[4:][0] }}: {{ subClass.0.split('/')[4:][1] }}</b>
+<br>is a subclass of<br>
+<b>{{ subClass.2.split('/')[4:][0] }}: {{ subClass.2.split('/')[4:][1] }}</b>
+</p>
+{% endfor %}
+</details>
+{% endif %}
+
+{% endif %}
+
+{% if classes %}
+<section id="classes">
+<h2>Classes</h2>
+
+{% for class in classes|sort(attribute='label') %}
+<article class="class">
+<h3>{{ class.label }}
+
+<span class="subhead">class</span></h3>
+<!-- {{ class.isDefinedBy }} -->
+{% if class.comment %}
+<p>{{ class.comment }}</p>
+{% endif %}
+
+{% if class.superclasses %}
+{% for superclass in class.superclasses %}
+<p>{{ superclass }} (superclass) &rarr; {{ class.label }} (class)</p>
+{% endfor %}
+{% endif %}
+
+</article>
+{% endfor %}
+</section>
+{% endif %}
+
+{% if objectproperties %}
+
+<section id="properties">
+<h2>Object properties</h2>
+
+{% for objectproperty in objectproperties|sort(attribute='label') %}
+
+<article class="property">
+
+<h3>{{ objectproperty.label }} <span class="subhead">object property</span></h3>
+
+{% if objectproperty.superproperty %}
+<p>Object property <strong>{{ objectproperty.label }}</strong> &rarr; is a subproperty of &rarr; Object property <strong>{{ objectproperty.superproperty }}</strong></p>
+{% endif %}
+
+{% if objectproperty.comment %}
+<p>{{ objectproperty.comment }}</p>
+{% endif %}
+
+<p>{{ objectproperty.domain }} (domain)
+&rarr;
+{{ objectproperty.label }} (object property)
+&rarr;
+{{ objectproperty.range }} (range)</p>
+
+</article>
+{% endfor %}
+</section>
+{% endif %}
+
+{% if dataproperties %}
+
+<section id="dataproperties">
+<h2>Data properties</h2>
+{% for dataproperty in dataproperties|sort(attribute='label') %}
+
+<article class="dataproperty">
+<h3>{{ dataproperty.label }} <span class="subhead">data property</span></h3>
+
+<p>{{ dataproperty.comment }}</p>
+
+<p>{{ dataproperty.domain }} (domain) &rarr; {{ dataproperty.label }} &rarr; {{ dataproperty.range }} (range)</p>
+
+
+</article>
+{% endfor %}
+</section>
+
+{% endif %}
+
+{% if makers %}
+
+ 
+ <details id="foaf">
+
+ <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ 
+ <ul id="makers">
+{% for maker in makers|sort(attribute='name') %}
+
+<li class="maker">{{ maker.name|e }}
+        {% if maker.homepage|e != "None" %}
+        &mdash; <a href="{{ maker.homepage|e }}">{{ maker.homepage|e }}</a>
+        
+        {% endif %}</li> 
+
+    {% endfor %}
+    </ul>
+    </details>
+{% endif %}
+
+
+
+<details id="namespaces">
+
+ <summary>Namespaces</summary>
+ 
+{% for namespace in namespaces|sort(attribute='0') %}
+
+<p class="namespace"><strong>{{ namespace.0 }}</strong> {{ namespace.1 }}</p>
+
+{% endfor %}
+</details>
+
+
+
+<p><time id="created">Created {{ created }}</time> <span id="copyright">&copy; {{ rights|e }}</span></p>
+
+</main>
+
+<footer>
+
+<p>Source <a href="{{ ttlurl }}">{{ ttlurl|e }}</a></p>
+
+<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttlurl }}">WebVOWL</a></p>
+</footer>
+</body>
+</html>
