@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Person name ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2017-05-30</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Person name ontology</h1>
+
+
 
 
 <p>Person name ontology for UK Parliament.</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -102,7 +107,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This class is a proposed way of allowing clients to understand that the naming in question is eg. from a culture where the given name comes before the family name</p>
+<p>In using more meaningful semantic terms such as &#39;given name&#39; rather than &#39;first name&#39; we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This class is a proposed way of allowing clients to understand that the naming in question is eg. from a culture where the given name comes before the family name</p>
 
 
 
@@ -180,7 +185,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>This is a PersonNaming that comes directly from a person's Incumbency - eg The Archbishop Of Canterbury, or an MP taking the initials MP </p>
+<p>This is a PersonNaming that comes directly from a person&#39;s Incumbency - eg The Archbishop Of Canterbury, or an MP taking the initials MP </p>
 
 
 
@@ -244,7 +249,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>In a Peer's title, are they Baron Placename or Baron Of Placename</p>
+<p>In a Peer&#39;s title, are they Baron Placename or Baron Of Placename</p>
 
 
 
@@ -283,7 +288,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>a type of PersonNaming that has been influenced by someone's peerage, whether that be through birth or through appointment to the House Of Lords</p>
+<p>a type of PersonNaming that has been influenced by someone&#39;s peerage, whether that be through birth or through appointment to the House Of Lords</p>
 
 
 
@@ -326,7 +331,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>Could also be called 'identity' if that wasn't so ambiguous.  ie People often have more than one naming over the course of their lives, from people changing their surnames at marriage to people being given appointments that have styles of address</p>
+<p>Could also be called &#39;identity&#39; if that wasn&#39;t so ambiguous.  ie People often have more than one naming over the course of their lives, from people changing their surnames at marriage to people being given appointments that have styles of address</p>
 
 
 
@@ -339,7 +344,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>A term or letters used after a person's name, eg. FRCOG</p>
+<p>A term or letters used after a person&#39;s name, eg. FRCOG</p>
 
 
 
@@ -369,7 +374,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>A term or letters used before a person's name, eg. General</p>
+<p>A term or letters used before a person&#39;s name, eg. General</p>
 
 
 
@@ -399,7 +404,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/person-name/ -->
 
-<p>In a Peer's title, are they The Baron Of Placename or Baron Of Placename</p>
+<p>In a Peer&#39;s title, are they The Baron Of Placename or Baron Of Placename</p>
 
 
 
@@ -424,11 +429,9 @@
 
 
 
-<p>PersonNaming (domain)
-&rarr;
-hasCulturalOrdering (object property)
-&rarr;
-CulturalOrdering (range)</p>
+<p>Domain: PersonNaming
+<br>
+Range: CulturalOrdering</p>
 
 </article>
 
@@ -441,11 +444,9 @@ CulturalOrdering (range)</p>
 
 
 
-<p>GenderIdentity (domain)
-&rarr;
-hasGender (object property)
-&rarr;
-Gender (range)</p>
+<p>Domain: GenderIdentity
+<br>
+Range: Gender</p>
 
 </article>
 
@@ -458,11 +459,9 @@ Gender (range)</p>
 
 
 
-<p>Person (domain)
-&rarr;
-hasGenderIdentity (object property)
-&rarr;
-GenderIdentity (range)</p>
+<p>Domain: Person
+<br>
+Range: GenderIdentity</p>
 
 </article>
 
@@ -475,11 +474,9 @@ GenderIdentity (range)</p>
 
 
 
-<p>HouseSeat (domain)
-&rarr;
-hasHouse (object property)
-&rarr;
-House (range)</p>
+<p>Domain: HouseSeat
+<br>
+Range: House</p>
 
 </article>
 
@@ -492,11 +489,9 @@ House (range)</p>
 
 
 
-<p>SeatIncumbency (domain)
-&rarr;
-hasHouseSeat (object property)
-&rarr;
-HouseSeat (range)</p>
+<p>Domain: SeatIncumbency
+<br>
+Range: HouseSeat</p>
 
 </article>
 
@@ -509,11 +504,9 @@ HouseSeat (range)</p>
 
 
 
-<p>Person (domain)
-&rarr;
-hasIncumbency (object property)
-&rarr;
-Incumbency (range)</p>
+<p>Domain: Person
+<br>
+Range: Incumbency</p>
 
 </article>
 
@@ -526,11 +519,9 @@ Incumbency (range)</p>
 
 
 
-<p>IncumbencyThatAffectsName (domain)
-&rarr;
-hasIncumbencyPersonNaming (object property)
-&rarr;
-IncumbencyPersonNaming (range)</p>
+<p>Domain: IncumbencyThatAffectsName
+<br>
+Range: IncumbencyPersonNaming</p>
 
 </article>
 
@@ -543,11 +534,9 @@ IncumbencyPersonNaming (range)</p>
 
 
 
-<p>PeerageNaming (domain)
-&rarr;
-hasOfUsage (object property)
-&rarr;
-OfUsage (range)</p>
+<p>Domain: PeerageNaming
+<br>
+Range: OfUsage</p>
 
 </article>
 
@@ -560,11 +549,9 @@ OfUsage (range)</p>
 
 
 
-<p>Person (domain)
-&rarr;
-hasPeerage (object property)
-&rarr;
-Peerage (range)</p>
+<p>Domain: Person
+<br>
+Range: Peerage</p>
 
 </article>
 
@@ -577,11 +564,9 @@ Peerage (range)</p>
 
 
 
-<p>Peerage (domain)
-&rarr;
-hasPeerageAuthority (object property)
-&rarr;
-PeerageAuthority (range)</p>
+<p>Domain: Peerage
+<br>
+Range: PeerageAuthority</p>
 
 </article>
 
@@ -594,11 +579,9 @@ PeerageAuthority (range)</p>
 
 
 
-<p>Peerage (domain)
-&rarr;
-hasPeerageNaming (object property)
-&rarr;
-PeerageNaming (range)</p>
+<p>Domain: Peerage
+<br>
+Range: PeerageNaming</p>
 
 </article>
 
@@ -611,11 +594,9 @@ PeerageNaming (range)</p>
 
 
 
-<p>Peerage (domain)
-&rarr;
-hasPeerageRank (object property)
-&rarr;
-PeerageRank (range)</p>
+<p>Domain: Peerage
+<br>
+Range: PeerageRank</p>
 
 </article>
 
@@ -628,11 +609,9 @@ PeerageRank (range)</p>
 
 
 
-<p>Peerage (domain)
-&rarr;
-hasPeerageType (object property)
-&rarr;
-PeerageType (range)</p>
+<p>Domain: Peerage
+<br>
+Range: PeerageType</p>
 
 </article>
 
@@ -647,11 +626,9 @@ PeerageType (range)</p>
 <p>Connects a person to their PersonNaming</p>
 
 
-<p>Person (domain)
-&rarr;
-hasPersonNaming (object property)
-&rarr;
-PersonNaming (range)</p>
+<p>Domain: Person
+<br>
+Range: PersonNaming</p>
 
 </article>
 
@@ -664,11 +641,9 @@ PersonNaming (range)</p>
 
 
 
-<p>Member (domain)
-&rarr;
-hasSeatIncumbency (object property)
-&rarr;
-SeatIncumbency (range)</p>
+<p>Domain: Member
+<br>
+Range: SeatIncumbency</p>
 
 </article>
 
@@ -681,11 +656,9 @@ SeatIncumbency (range)</p>
 
 
 
-<p>PeerageNaming (domain)
-&rarr;
-hasTheUsage (object property)
-&rarr;
-TheUsage (range)</p>
+<p>Domain: PeerageNaming
+<br>
+Range: TheUsage</p>
 
 </article>
 
@@ -698,11 +671,9 @@ TheUsage (range)</p>
 
 
 
-<p>NamingQualification (domain)
-&rarr;
-namingQualificationHasPostNominal (object property)
-&rarr;
-PostNominal (range)</p>
+<p>Domain: NamingQualification
+<br>
+Range: PostNominal</p>
 
 </article>
 
@@ -715,11 +686,9 @@ PostNominal (range)</p>
 
 
 
-<p>NamingQualification (domain)
-&rarr;
-namingQualificationHasPreNominal (object property)
-&rarr;
-PreNominal (range)</p>
+<p>Domain: NamingQualification
+<br>
+Range: PreNominal</p>
 
 </article>
 
@@ -732,11 +701,9 @@ PreNominal (range)</p>
 
 
 
-<p>Peerage (domain)
-&rarr;
-peerageHasHouseSeat (object property)
-&rarr;
-HouseSeat (range)</p>
+<p>Domain: Peerage
+<br>
+Range: HouseSeat</p>
 
 </article>
 
@@ -749,11 +716,9 @@ HouseSeat (range)</p>
 
 
 
-<p>PersonNaming (domain)
-&rarr;
-personNamingHasGender (object property)
-&rarr;
-Gender (range)</p>
+<p>Domain: PersonNaming
+<br>
+Range: Gender</p>
 
 </article>
 
@@ -766,11 +731,9 @@ Gender (range)</p>
 
 
 
-<p>PersonNaming (domain)
-&rarr;
-personNamingHasPostNominal (object property)
-&rarr;
-PostNominal (range)</p>
+<p>Domain: PersonNaming
+<br>
+Range: PostNominal</p>
 
 </article>
 
@@ -783,11 +746,9 @@ PostNominal (range)</p>
 
 
 
-<p>PersonNaming (domain)
-&rarr;
-personNamingHasPreNominal (object property)
-&rarr;
-PreNominal (range)</p>
+<p>Domain: PersonNaming
+<br>
+Range: PreNominal</p>
 
 </article>
 
@@ -873,9 +834,7 @@ PreNominal (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -906,17 +865,12 @@ PreNominal (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2017-05-30</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

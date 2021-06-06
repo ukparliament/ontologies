@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Legislation ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2018-03-21</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Legislation ontology</h1>
+
+
 
 
 <p>A model describing the forms of draft and made legislation considered by Parliament, powers delegated by primary legislation and accompanying duties toward Parliament.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -251,7 +256,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/legislation/ -->
 
-<p>A statutory instrument series item links a draft or made statutory instrument subject to parliamentary procedure to a statutory instrument series. A statutory instrument can be included by means of an item in more than one series excepting these cases: Northern Ireland series instruments do not form part of any other series; legal series instruments do not form part of any other series; National Assembly for Wales series SIs and Scottish series instruments can be included in the commencement order series but no other. Commencement order series items may also form part of either the Welsh or Scottish series. Where an instrument appears as an item in more than one series, the citation order is formed by (1) the commencement order series and item identifier followed by (2) any other series and item identifier. Where the instrument is made by the Welsh Ministers, the 'W. / Cy.' number follows the SI number.</p>
+<p>A statutory instrument series item links a draft or made statutory instrument subject to parliamentary procedure to a statutory instrument series. A statutory instrument can be included by means of an item in more than one series excepting these cases: Northern Ireland series instruments do not form part of any other series; legal series instruments do not form part of any other series; National Assembly for Wales series SIs and Scottish series instruments can be included in the commencement order series but no other. Commencement order series items may also form part of either the Welsh or Scottish series. Where an instrument appears as an item in more than one series, the citation order is formed by (1) the commencement order series and item identifier followed by (2) any other series and item identifier. Where the instrument is made by the Welsh Ministers, the &#39;W. / Cy.&#39; number follows the SI number.</p>
 
 
 
@@ -278,11 +283,9 @@
 <p>Relates a made statutory instrument to a statutory instrument series item. A made statutory instrument may belong to more than one series by means of a series item. A series item is formed of a single made statutory instrument.</p>
 
 
-<p>MadeStatutoryInstrument (domain)
-&rarr;
-As series item (object property)
-&rarr;
-StatutoryInstrumentSeriesItem (range)</p>
+<p>Domain: MadeStatutoryInstrument
+<br>
+Range: StatutoryInstrumentSeriesItem</p>
 
 </article>
 
@@ -297,11 +300,9 @@ StatutoryInstrumentSeriesItem (range)</p>
 <p>Relates an enabling thing to a power. An enabling thing may confer more than one power. Secondary legislation may confer powers to enable further legislation, being sub-delegation into tertiary law. Such law may be made without statutory instrument and is not itself subject to parliamentary procedure.</p>
 
 
-<p>EnablingThing (domain)
-&rarr;
-Confers (object property)
-&rarr;
-Power (range)</p>
+<p>Domain: EnablingThing
+<br>
+Range: Power</p>
 
 </article>
 
@@ -316,11 +317,9 @@ Power (range)</p>
 <p>Relates a draft or made statutory instrument subject to parliamentary procedure to draft legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure is embodied as a single draft statutory instrument, or none. A draft statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none.</p>
 
 
-<p>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure (domain)
-&rarr;
-Embodied as draft statutory instrument (object property)
-&rarr;
-DraftStatutoryInstrument (range)</p>
+<p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+<br>
+Range: DraftStatutoryInstrument</p>
 
 </article>
 
@@ -335,11 +334,9 @@ DraftStatutoryInstrument (range)</p>
 <p>Relates a draft or made statutory instrument subject to parliamentary procedure to made legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure will be embodied as a single made statutory instrument, or none. A made statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none.</p>
 
 
-<p>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure (domain)
-&rarr;
-Embodied as made statutory instrument (object property)
-&rarr;
-MadeStatutoryInstrument (range)</p>
+<p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+<br>
+Range: MadeStatutoryInstrument</p>
 
 </article>
 
@@ -354,11 +351,9 @@ MadeStatutoryInstrument (range)</p>
 <p>Relates a power to a duty. The exercise of a power may entail one or more duties, or none. A duty may be associated with the exercise of one or more powers.</p>
 
 
-<p>Power (domain)
-&rarr;
-Entails (object property)
-&rarr;
-Duty (range)</p>
+<p>Domain: Power
+<br>
+Range: Duty</p>
 
 </article>
 
@@ -373,11 +368,9 @@ Duty (range)</p>
 <p>Relates an enabling thing to a duty imposed in the exercise of an associated power.</p>
 
 
-<p>EnablingThing (domain)
-&rarr;
-Imposes (object property)
-&rarr;
-Duty (range)</p>
+<p>Domain: EnablingThing
+<br>
+Range: Duty</p>
 
 </article>
 
@@ -392,11 +385,9 @@ Duty (range)</p>
 <p>Relates a statutory instrument series item to a statutory instrument series. A series may have one or more items, or none. A series item places an instrument in a single series.</p>
 
 
-<p>StatutoryInstrumentSeriesItem (domain)
-&rarr;
-In series (object property)
-&rarr;
-StatutoryInstrumentSeries (range)</p>
+<p>Domain: StatutoryInstrumentSeriesItem
+<br>
+Range: StatutoryInstrumentSeries</p>
 
 </article>
 
@@ -411,11 +402,9 @@ StatutoryInstrumentSeries (range)</p>
 <p>Relates an enabled thing to a power. An enabled thing is made in exercise of one or more powers and a power may enable more than one enabled thing.</p>
 
 
-<p>EnabledThing (domain)
-&rarr;
-Made in exercise of (object property)
-&rarr;
-Power (range)</p>
+<p>Domain: EnabledThing
+<br>
+Range: Power</p>
 
 </article>
 
@@ -430,11 +419,9 @@ Power (range)</p>
 <p>Relates an enabled thing to the enabling thing under which it was made. An enabled thing may be made under one or more enabling things. An enabling thing may enable one or more enabled things, or none.</p>
 
 
-<p>EnabledThing (domain)
-&rarr;
-Made under (object property)
-&rarr;
-EnablingThing (range)</p>
+<p>Domain: EnabledThing
+<br>
+Range: EnablingThing</p>
 
 </article>
 
@@ -449,11 +436,9 @@ EnablingThing (range)</p>
 <p>Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none.</p>
 
 
-<p>EnabledThing (domain)
-&rarr;
-Preceded by (object property)
-&rarr;
-EnabledThing (range)</p>
+<p>Domain: EnabledThing
+<br>
+Range: EnabledThing</p>
 
 </article>
 
@@ -469,7 +454,7 @@ EnabledThing (range)</p>
 <article class="dataproperty">
 <h3>Act year <span class="subhead">data property</span></h3>
 
-<p>The year part of an Act of Parliament number, for example, '1986' in '1986 c. 12'. The Act year is the year in which Royal Assent was given.</p>
+<p>The year part of an Act of Parliament number, for example, &#39;1986&#39; in &#39;1986 c. 12&#39;. The Act year is the year in which Royal Assent was given.</p>
 
 <p>ActOfParliament (domain) &rarr; Act year &rarr; Literal (range)</p>
 
@@ -480,7 +465,7 @@ EnabledThing (range)</p>
 <article class="dataproperty">
 <h3>Chapter number <span class="subhead">data property</span></h3>
 
-<p>The identifier in year part of an Act of Parliament number, for example, '12' in '1986 c. 12'.</p>
+<p>The identifier in year part of an Act of Parliament number, for example, &#39;12&#39; in &#39;1986 c. 12&#39;.</p>
 
 <p>ActOfParliament (domain) &rarr; Chapter number &rarr; Literal (range)</p>
 
@@ -546,7 +531,7 @@ EnabledThing (range)</p>
 <article class="dataproperty">
 <h3>SI identifer in year <span class="subhead">data property</span></h3>
 
-<p>The identifier in year part of a statutory instrument number, for example, '925' in 'SI 1986/925'.</p>
+<p>The identifier in year part of a statutory instrument number, for example, &#39;925&#39; in &#39;SI 1986/925&#39;.</p>
 
 <p>MadeStatutoryInstrument (domain) &rarr; SI identifer in year &rarr; Literal (range)</p>
 
@@ -557,7 +542,7 @@ EnabledThing (range)</p>
 <article class="dataproperty">
 <h3>SI prefix <span class="subhead">data property</span></h3>
 
-<p>The prefix part of a statutory instrument number, for example, 'SI' in 'SI 1986/925'.</p>
+<p>The prefix part of a statutory instrument number, for example, &#39;SI&#39; in &#39;SI 1986/925&#39;.</p>
 
 <p>MadeStatutoryInstrument (domain) &rarr; SI prefix &rarr; Literal (range)</p>
 
@@ -568,7 +553,7 @@ EnabledThing (range)</p>
 <article class="dataproperty">
 <h3>SI series item identifier <span class="subhead">data property</span></h3>
 
-<p>The identifier of an item within a series, for example, '121' in ' SI 2018/647 (W. 121)'.</p>
+<p>The identifier of an item within a series, for example, &#39;121&#39; in &#39; SI 2018/647 (W. 121)&#39;.</p>
 
 <p>StatutoryInstrumentSeriesItem (domain) &rarr; SI series item identifier &rarr; Literal (range)</p>
 
@@ -579,7 +564,7 @@ EnabledThing (range)</p>
 <article class="dataproperty">
 <h3>SI year <span class="subhead">data property</span></h3>
 
-<p>The year part of a statutory instrument number, for example, '1986' in 'SI 1986/925'. The SI year is the year the instrument was laid before Parliament, except when laid in draft in one calendar year, made in a following year and having its SI year updated.</p>
+<p>The year part of a statutory instrument number, for example, &#39;1986&#39; in &#39;SI 1986/925&#39;. The SI year is the year the instrument was laid before Parliament, except when laid in draft in one calendar year, made in a following year and having its SI year updated.</p>
 
 <p>MadeStatutoryInstrument (domain) &rarr; SI year &rarr; Literal (range)</p>
 
@@ -592,10 +577,7 @@ EnabledThing (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -671,14 +653,12 @@ EnabledThing (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -713,17 +693,12 @@ EnabledThing (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2018-03-21</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

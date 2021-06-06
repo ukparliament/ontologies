@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stats series ontology - deprecated</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2018-03-08</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Stats series ontology - deprecated</h1>
+
+
 
 
 <p>Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -196,7 +201,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/stats-series/ -->
 
-<p>A place. Any geographical extent. In the case of parliamentary demographic statistics we'll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas.</p>
+<p>A place. Any geographical extent. In the case of parliamentary demographic statistics we&#39;ll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas.</p>
 
 
 
@@ -305,11 +310,9 @@
 <p>Relates a temporal coverage to any means of averaging employed on the data.</p>
 
 
-<p>TemporalCoverage (domain)
-&rarr;
-averagedOverPeriodAs (object property)
-&rarr;
-AverageType (range)</p>
+<p>Domain: TemporalCoverage
+<br>
+Range: AverageType</p>
 
 </article>
 
@@ -324,11 +327,9 @@ AverageType (range)</p>
 <p>Relates a population (of people, residences, businesses etc) to a geographic area.</p>
 
 
-<p>Population (domain)
-&rarr;
-boundBy (object property)
-&rarr;
-Place (range)</p>
+<p>Domain: Population
+<br>
+Range: Place</p>
 
 </article>
 
@@ -343,11 +344,9 @@ Place (range)</p>
 <p>Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week.</p>
 
 
-<p>DataSet (domain)
-&rarr;
-countPer (object property)
-&rarr;
-Period (range)</p>
+<p>Domain: DataSet
+<br>
+Range: Period</p>
 
 </article>
 
@@ -362,11 +361,9 @@ Period (range)</p>
 <p>Relates territorial applicability to a data source organisation.</p>
 
 
-<p>TerritorialApplicability (domain)
-&rarr;
-fromSource (object property)
-&rarr;
-Source (range)</p>
+<p>Domain: TerritorialApplicability
+<br>
+Range: Source</p>
 
 </article>
 
@@ -378,14 +375,12 @@ Source (range)</p>
 
 
 
-<p>Relates a data set release to it's territorial applicability.</p>
+<p>Relates a data set release to it&#39;s territorial applicability.</p>
 
 
-<p>DataSetRelease (domain)
-&rarr;
-hasTerritorialApplicability (object property)
-&rarr;
-TerritorialApplicability (range)</p>
+<p>Domain: DataSetRelease
+<br>
+Range: TerritorialApplicability</p>
 
 </article>
 
@@ -400,11 +395,9 @@ TerritorialApplicability (range)</p>
 <p>Relates a data set to the unit in which the data is counted e.g. GBP.</p>
 
 
-<p>DataSet (domain)
-&rarr;
-hasUnit (object property)
-&rarr;
-Unit (range)</p>
+<p>Domain: DataSet
+<br>
+Range: Unit</p>
 
 </article>
 
@@ -419,11 +412,9 @@ Unit (range)</p>
 <p>Relates a data point to the data set release version it forms part of.</p>
 
 
-<p>DataPoint (domain)
-&rarr;
-inDataSetReleaseVersion (object property)
-&rarr;
-DataSetReleaseVersion (range)</p>
+<p>Domain: DataPoint
+<br>
+Range: DataSetReleaseVersion</p>
 
 </article>
 
@@ -438,11 +429,9 @@ DataSetReleaseVersion (range)</p>
 <p>Relates territorial applicability to a geographic area.</p>
 
 
-<p>TerritorialApplicability (domain)
-&rarr;
-inPlace (object property)
-&rarr;
-Place (range)</p>
+<p>Domain: TerritorialApplicability
+<br>
+Range: Place</p>
 
 </article>
 
@@ -457,11 +446,9 @@ Place (range)</p>
 <p>Relates a data point to a given population.</p>
 
 
-<p>DataPoint (domain)
-&rarr;
-measureOf (object property)
-&rarr;
-Population (range)</p>
+<p>Domain: DataPoint
+<br>
+Range: Population</p>
 
 </article>
 
@@ -476,11 +463,9 @@ Population (range)</p>
 <p>Relates a data set release to a data set it forms part of.</p>
 
 
-<p>DataSetRelease (domain)
-&rarr;
-releaseOf (object property)
-&rarr;
-DataSet (range)</p>
+<p>Domain: DataSetRelease
+<br>
+Range: DataSet</p>
 
 </article>
 
@@ -495,11 +480,9 @@ DataSet (range)</p>
 <p>Relates a data set release version to a data set release.</p>
 
 
-<p>DataSetReleaseVersion (domain)
-&rarr;
-releaseVersionOf (object property)
-&rarr;
-DataSetRelease (range)</p>
+<p>Domain: DataSetReleaseVersion
+<br>
+Range: DataSetRelease</p>
 
 </article>
 
@@ -514,11 +497,9 @@ DataSetRelease (range)</p>
 <p>Relates a data set release to the time period or point in time the data was gathered.</p>
 
 
-<p>DataSetRelease (domain)
-&rarr;
-temporalCoverage (object property)
-&rarr;
-TemporalCoverage (range)</p>
+<p>Domain: DataSetRelease
+<br>
+Range: TemporalCoverage</p>
 
 </article>
 
@@ -622,7 +603,7 @@ TemporalCoverage (range)</p>
 <article class="dataproperty">
 <h3>value <span class="subhead">data property</span></h3>
 
-<p>Relates a data point to it's value as an integer.</p>
+<p>Relates a data point to it&#39;s value as an integer.</p>
 
 <p>DataPoint (domain) &rarr; value &rarr; integer (range)</p>
 
@@ -637,9 +618,7 @@ TemporalCoverage (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -670,17 +649,12 @@ TemporalCoverage (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2018-03-08</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

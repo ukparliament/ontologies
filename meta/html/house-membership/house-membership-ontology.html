@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>House membership ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2016-11-08</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>House membership ontology</h1>
+
+
 
 
 <p>A model describing a person occupying a seat in a House, by means of an incumbency over a period of time.</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -279,11 +284,9 @@
 <p>Relates a disqualification to a disqualification type.</p>
 
 
-<p>Disqualification (domain)
-&rarr;
-Has disqualification type (object property)
-&rarr;
-DisqualificationType (range)</p>
+<p>Domain: Disqualification
+<br>
+Range: DisqualificationType</p>
 
 </article>
 
@@ -298,11 +301,9 @@ DisqualificationType (range)</p>
 <p>Relates a seat incumbency to the reason for that incumbency ending.</p>
 
 
-<p>SeatIncumbency (domain)
-&rarr;
-Has end reason (object property)
-&rarr;
-EndReason (range)</p>
+<p>Domain: SeatIncumbency
+<br>
+Range: EndReason</p>
 
 </article>
 
@@ -317,11 +318,9 @@ EndReason (range)</p>
 <p>Relates a House to a seat in that House.</p>
 
 
-<p>House (domain)
-&rarr;
-Has House seat (object property)
-&rarr;
-HouseSeat (range)</p>
+<p>Domain: House
+<br>
+Range: HouseSeat</p>
 
 </article>
 
@@ -336,11 +335,9 @@ HouseSeat (range)</p>
 <p>Relates a seat in a House to a seat type.</p>
 
 
-<p>HouseSeat (domain)
-&rarr;
-Has House seat type (object property)
-&rarr;
-HouseSeatType (range)</p>
+<p>Domain: HouseSeat
+<br>
+Range: HouseSeatType</p>
 
 </article>
 
@@ -355,11 +352,9 @@ HouseSeatType (range)</p>
 <p>Relates a seat incumbency to a person.</p>
 
 
-<p>SeatIncumbency (domain)
-&rarr;
-Has incumbent (object property)
-&rarr;
-Person (range)</p>
+<p>Domain: SeatIncumbency
+<br>
+Range: Person</p>
 
 </article>
 
@@ -374,11 +369,9 @@ Person (range)</p>
 <p>Relates a seat in a House to an incumbency for that seat.</p>
 
 
-<p>HouseSeat (domain)
-&rarr;
-Has seat incumbency (object property)
-&rarr;
-SeatIncumbency (range)</p>
+<p>Domain: HouseSeat
+<br>
+Range: SeatIncumbency</p>
 
 </article>
 
@@ -393,11 +386,9 @@ SeatIncumbency (range)</p>
 <p>Relates a seat incumbency to an interruption.</p>
 
 
-<p>SeatIncumbency (domain)
-&rarr;
-Has seat incumbency interruption (object property)
-&rarr;
-SeatIncumbencyInterruption (range)</p>
+<p>Domain: SeatIncumbency
+<br>
+Range: SeatIncumbencyInterruption</p>
 
 </article>
 
@@ -412,11 +403,9 @@ SeatIncumbencyInterruption (range)</p>
 <p>Relates a seat incumbency to the Parliament period the incumbency is contained by.</p>
 
 
-<p>SeatIncumbency (domain)
-&rarr;
-In Parliament period (object property)
-&rarr;
-ParliamentPeriod (range)</p>
+<p>Domain: SeatIncumbency
+<br>
+Range: ParliamentPeriod</p>
 
 </article>
 
@@ -431,11 +420,9 @@ ParliamentPeriod (range)</p>
 <p>Relates a seat in a House to a constituency group.</p>
 
 
-<p>HouseSeat (domain)
-&rarr;
-Represents constituency group (object property)
-&rarr;
-ConstituencyGroup (range)</p>
+<p>Domain: HouseSeat
+<br>
+Range: ConstituencyGroup</p>
 
 </article>
 
@@ -477,9 +464,7 @@ ConstituencyGroup (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -510,17 +495,12 @@ ConstituencyGroup (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2016-11-08</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Standing order ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2020-12-07</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Standing order ontology</h1>
+
+
 
 
 <p>A model describing standing orders for both Houses of Parliament, establishing persistent identification of orders and fragments of orders.</p>
@@ -26,15 +34,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -172,7 +177,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/standing-order/ -->
 
-<p>A suspension period is the time during which one or more standing orders, or fragments of standing orders, are suspended. A suspension period has a start date and, where specified, an end date. These dates are set out in the utility model. Some suspensions do not specify an end date, for example: the suspension of House of Lords Standing Order 10(6) (Hereditary peers: by-elections) pending a further report from the Procedure and Privileges Committee. An order or fragment may be 'suspended, for a period' or 'dispensed with, for a purpose'. Orders and fragments may be dispensed with on a case by case basis: in the House of Commons this is usually indicated by the presence of 'notwithstanding' in the text of the motion. The suspension period class only covers suspensions and does not cover cases where standing orders are dispensed with. The procedure maps have steps which express the dispensing of standing orders.</p>
+<p>A suspension period is the time during which one or more standing orders, or fragments of standing orders, are suspended. A suspension period has a start date and, where specified, an end date. These dates are set out in the utility model. Some suspensions do not specify an end date, for example: the suspension of House of Lords Standing Order 10(6) (Hereditary peers: by-elections) pending a further report from the Procedure and Privileges Committee. An order or fragment may be &#39;suspended, for a period&#39; or &#39;dispensed with, for a purpose&#39;. Orders and fragments may be dispensed with on a case by case basis: in the House of Commons this is usually indicated by the presence of &#39;notwithstanding&#39; in the text of the motion. The suspension period class only covers suspensions and does not cover cases where standing orders are dispensed with. The procedure maps have steps which express the dispensing of standing orders.</p>
 
 
 
@@ -199,11 +204,9 @@
 <p>Relates a fragment version to the order version it is contained by.</p>
 
 
-<p>FragmentVersion (domain)
-&rarr;
-Contained by (object property)
-&rarr;
-OrderVersion (range)</p>
+<p>Domain: FragmentVersion
+<br>
+Range: OrderVersion</p>
 
 </article>
 
@@ -218,11 +221,9 @@ OrderVersion (range)</p>
 <p>Relates a fragment version to the revision set it is contained by.</p>
 
 
-<p>FragmentVersion (domain)
-&rarr;
-Fragment version contained by (object property)
-&rarr;
-RevisionSet (range)</p>
+<p>Domain: FragmentVersion
+<br>
+Range: RevisionSet</p>
 
 </article>
 
@@ -237,11 +238,9 @@ RevisionSet (range)</p>
 <p>Relates a revision set to the House it is issued by.</p>
 
 
-<p>RevisionSet (domain)
-&rarr;
-Issued by (object property)
-&rarr;
-House (range)</p>
+<p>Domain: RevisionSet
+<br>
+Range: House</p>
 
 </article>
 
@@ -256,11 +255,9 @@ House (range)</p>
 <p>Relates an order to the business extent it covers.</p>
 
 
-<p>Order (domain)
-&rarr;
-Order covers business extent (object property)
-&rarr;
-BusinessExtent (range)</p>
+<p>Domain: Order
+<br>
+Range: BusinessExtent</p>
 
 </article>
 
@@ -275,11 +272,9 @@ BusinessExtent (range)</p>
 <p>Relates an order version to the revision set it is contained by.</p>
 
 
-<p>OrderVersion (domain)
-&rarr;
-Order version contained by (object property)
-&rarr;
-RevisionSet (range)</p>
+<p>Domain: OrderVersion
+<br>
+Range: RevisionSet</p>
 
 </article>
 
@@ -294,11 +289,9 @@ RevisionSet (range)</p>
 <p>Relates an order to the House by which it was ordered.</p>
 
 
-<p>Order (domain)
-&rarr;
-Ordered by (object property)
-&rarr;
-House (range)</p>
+<p>Domain: Order
+<br>
+Range: House</p>
 
 </article>
 
@@ -313,11 +306,9 @@ House (range)</p>
 <p>Relates a revision to the fragment version being revised.</p>
 
 
-<p>Revision (domain)
-&rarr;
-Revision from (object property)
-&rarr;
-FragmentVersion (range)</p>
+<p>Domain: Revision
+<br>
+Range: FragmentVersion</p>
 
 </article>
 
@@ -332,11 +323,9 @@ FragmentVersion (range)</p>
 <p>Relates a revision set to the business extent which that set covers.</p>
 
 
-<p>RevisionSet (domain)
-&rarr;
-Revision set covers business extent (object property)
-&rarr;
-BusinessExtent (range)</p>
+<p>Domain: RevisionSet
+<br>
+Range: BusinessExtent</p>
 
 </article>
 
@@ -351,11 +340,9 @@ BusinessExtent (range)</p>
 <p>Relates a revision to the fragment version resulting from the revision.</p>
 
 
-<p>Revision (domain)
-&rarr;
-Revision to (object property)
-&rarr;
-FragmentVersion (range)</p>
+<p>Domain: Revision
+<br>
+Range: FragmentVersion</p>
 
 </article>
 
@@ -370,11 +357,9 @@ FragmentVersion (range)</p>
 <p>Relates a suspension period to the fragment that is suspended for that period.</p>
 
 
-<p>SuspensionPeriod (domain)
-&rarr;
-Suspension period of fragment (object property)
-&rarr;
-Fragment (range)</p>
+<p>Domain: SuspensionPeriod
+<br>
+Range: Fragment</p>
 
 </article>
 
@@ -389,11 +374,9 @@ Fragment (range)</p>
 <p>Relates a suspension period to the order that is suspended for that period.</p>
 
 
-<p>SuspensionPeriod (domain)
-&rarr;
-Suspension period of order (object property)
-&rarr;
-Order (range)</p>
+<p>Domain: SuspensionPeriod
+<br>
+Range: Order</p>
 
 </article>
 
@@ -408,11 +391,9 @@ Order (range)</p>
 <p>Relates a fragment version to the fragment it is a version of.</p>
 
 
-<p>FragmentVersion (domain)
-&rarr;
-Version of fragment (object property)
-&rarr;
-Fragment (range)</p>
+<p>Domain: FragmentVersion
+<br>
+Range: Fragment</p>
 
 </article>
 
@@ -427,11 +408,9 @@ Fragment (range)</p>
 <p>Relates an order version to the order it is a version of.</p>
 
 
-<p>OrderVersion (domain)
-&rarr;
-Version of order (object property)
-&rarr;
-Order (range)</p>
+<p>Domain: OrderVersion
+<br>
+Range: Order</p>
 
 </article>
 
@@ -526,10 +505,7 @@ Order (range)</p>
 
 
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 
@@ -589,14 +565,12 @@ Order (range)</p>
 
     
     </ul>
-    </details>
 
 
 
 
-<details id="namespaces">
 
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -631,17 +605,12 @@ Order (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2020-12-07</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

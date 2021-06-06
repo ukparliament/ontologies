@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Time period ontology</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created 2017-03-09</time> - Source <a href="ttlurl">ttlurl</a></p>
+
 <h1>Time period ontology</h1>
+
+
 
 
 <p>Ontology to describe high level time periods for UK Parliament</p>
@@ -24,15 +32,12 @@
 
 
 
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 
 </ul>
-
-</details>
 
 
 
@@ -409,7 +414,7 @@
 <span class="subhead">class</span></h3>
 <!-- http://parliament.uk/ontologies/time-period/ -->
 
-<p>There is a defined period of time during which Members of either House can object to negative and made affirmative statutory instruments. Only certain calendar days are included when calculating this period. The total number and nature of days on which a Member can object are defined by statute and differ across parliamentary procedure. These statutory days comprise consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account, unless the instrument is laid into the House of Commons only. In this case the calculation is based on Commons sitting days and short adjournments. On the day on which a negative statutory instrument is laid, a forty day time period commences during which it is possible for Members to 'pray' against (table a motion objecting to) the instrument. This forty day period is defined by the Statutory Instruments Act 1946. For made affirmative statutory instruments the time limit is set out in the enabling Act, rather than in the Statutory Instruments Act 1946. It is typically 28 or 40 days. The time period commences on the day the instrument is made, rather than laid. The enabling Act stipulates which days are counted towards the time limit, and typically follows the logic previously described.</p>
+<p>There is a defined period of time during which Members of either House can object to negative and made affirmative statutory instruments. Only certain calendar days are included when calculating this period. The total number and nature of days on which a Member can object are defined by statute and differ across parliamentary procedure. These statutory days comprise consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account, unless the instrument is laid into the House of Commons only. In this case the calculation is based on Commons sitting days and short adjournments. On the day on which a negative statutory instrument is laid, a forty day time period commences during which it is possible for Members to &#39;pray&#39; against (table a motion objecting to) the instrument. This forty day period is defined by the Statutory Instruments Act 1946. For made affirmative statutory instruments the time limit is set out in the enabling Act, rather than in the Statutory Instruments Act 1946. It is typically 28 or 40 days. The time period commences on the day the instrument is made, rather than laid. The enabling Act stipulates which days are counted towards the time limit, and typically follows the logic previously described.</p>
 
 
 
@@ -484,14 +489,12 @@
 
 
 
-<p>Relates an event to a time period it's contained in.</p>
+<p>Relates an event to a time period it&#39;s contained in.</p>
 
 
-<p>Event (domain)
-&rarr;
-containedIn (object property)
-&rarr;
-TimePeriod (range)</p>
+<p>Domain: Event
+<br>
+Range: TimePeriod</p>
 
 </article>
 
@@ -506,11 +509,9 @@ TimePeriod (range)</p>
 <p>Relates a dissolution period to a post-election dissolution period.</p>
 
 
-<p>DissolutionPeriod (domain)
-&rarr;
-hasPostElectionDissolutionPeriod (object property)
-&rarr;
-PostElectionDissolutionPeriod (range)</p>
+<p>Domain: DissolutionPeriod
+<br>
+Range: PostElectionDissolutionPeriod</p>
 
 </article>
 
@@ -525,11 +526,9 @@ PostElectionDissolutionPeriod (range)</p>
 <p>Relates a dissolution period to a pre-election dissolution period.</p>
 
 
-<p>DissolutionPeriod (domain)
-&rarr;
-hasPreElectionDissolutionPeriod (object property)
-&rarr;
-PreElectionDissolutionPeriod (range)</p>
+<p>Domain: DissolutionPeriod
+<br>
+Range: PreElectionDissolutionPeriod</p>
 
 </article>
 
@@ -544,11 +543,9 @@ PreElectionDissolutionPeriod (range)</p>
 <p>Relates a term to a printing day.</p>
 
 
-<p>Term (domain)
-&rarr;
-hasPrintingDay (object property)
-&rarr;
-PrintingDay (range)</p>
+<p>Domain: Term
+<br>
+Range: PrintingDay</p>
 
 </article>
 
@@ -563,11 +560,9 @@ PrintingDay (range)</p>
 <p>Relates a Parliament period to a prorogation period.</p>
 
 
-<p>ParliamentPeriod (domain)
-&rarr;
-hasProrogationPeriod (object property)
-&rarr;
-ProrogationPeriod (range)</p>
+<p>Domain: ParliamentPeriod
+<br>
+Range: ProrogationPeriod</p>
 
 </article>
 
@@ -582,11 +577,9 @@ ProrogationPeriod (range)</p>
 <p>Relates a session to a recess.</p>
 
 
-<p>Session (domain)
-&rarr;
-hasRecess (object property)
-&rarr;
-Recess (range)</p>
+<p>Domain: Session
+<br>
+Range: Recess</p>
 
 </article>
 
@@ -601,11 +594,9 @@ Recess (range)</p>
 <p>Relates a recess to a printing day. Allows for printing days to happen in a recess period.</p>
 
 
-<p>Recess (domain)
-&rarr;
-hasRecessPrintingDay (object property)
-&rarr;
-PrintingDay (range)</p>
+<p>Domain: Recess
+<br>
+Range: PrintingDay</p>
 
 </article>
 
@@ -620,11 +611,9 @@ PrintingDay (range)</p>
 <p>Relates a recess to a statutory day.</p>
 
 
-<p>Recess (domain)
-&rarr;
-hasRecessStatutoryDay (object property)
-&rarr;
-StatutoryDay (range)</p>
+<p>Domain: Recess
+<br>
+Range: StatutoryDay</p>
 
 </article>
 
@@ -639,11 +628,9 @@ StatutoryDay (range)</p>
 <p>Relates a recess to a tabling day. Allows for tabling days to happen in a recess period.</p>
 
 
-<p>Recess (domain)
-&rarr;
-hasRecessTablingDay (object property)
-&rarr;
-TablingDay (range)</p>
+<p>Domain: Recess
+<br>
+Range: TablingDay</p>
 
 </article>
 
@@ -658,11 +645,9 @@ TablingDay (range)</p>
 <p>Relates a Parliament period to a session.</p>
 
 
-<p>ParliamentPeriod (domain)
-&rarr;
-hasSession (object property)
-&rarr;
-Session (range)</p>
+<p>Domain: ParliamentPeriod
+<br>
+Range: Session</p>
 
 </article>
 
@@ -677,11 +662,9 @@ Session (range)</p>
 <p>Relates a term to a sitting day.</p>
 
 
-<p>Term (domain)
-&rarr;
-hasSittingDay (object property)
-&rarr;
-SittingDay (range)</p>
+<p>Domain: Term
+<br>
+Range: SittingDay</p>
 
 </article>
 
@@ -696,11 +679,9 @@ SittingDay (range)</p>
 <p>Relates a term to a statutory day.</p>
 
 
-<p>Term (domain)
-&rarr;
-hasStatutoryDay (object property)
-&rarr;
-StatutoryDay (range)</p>
+<p>Domain: Term
+<br>
+Range: StatutoryDay</p>
 
 </article>
 
@@ -715,11 +696,9 @@ StatutoryDay (range)</p>
 <p>Relates a term to a tabling day.</p>
 
 
-<p>Term (domain)
-&rarr;
-hasTablingDay (object property)
-&rarr;
-TablingDay (range)</p>
+<p>Domain: Term
+<br>
+Range: TablingDay</p>
 
 </article>
 
@@ -734,11 +713,9 @@ TablingDay (range)</p>
 <p>Relates a session to a term.</p>
 
 
-<p>Session (domain)
-&rarr;
-hasTerm (object property)
-&rarr;
-Term (range)</p>
+<p>Domain: Session
+<br>
+Range: Term</p>
 
 </article>
 
@@ -753,11 +730,9 @@ Term (range)</p>
 <p>Relates a House to a recess. Allows for different recess periods in different Houses.</p>
 
 
-<p>House (domain)
-&rarr;
-houseHasRecess (object property)
-&rarr;
-Recess (range)</p>
+<p>Domain: House
+<br>
+Range: Recess</p>
 
 </article>
 
@@ -772,11 +747,9 @@ Recess (range)</p>
 <p>Relates a House to a term. Allows for different term periods in different Houses.</p>
 
 
-<p>House (domain)
-&rarr;
-houseHasTerm (object property)
-&rarr;
-Term (range)</p>
+<p>Domain: House
+<br>
+Range: Term</p>
 
 </article>
 
@@ -791,11 +764,9 @@ Term (range)</p>
 <p>Relates an agent to an event they initiate.</p>
 
 
-<p>Agent (domain)
-&rarr;
-initiatesEvent (object property)
-&rarr;
-Event (range)</p>
+<p>Domain: Agent
+<br>
+Range: Event</p>
 
 </article>
 
@@ -810,11 +781,9 @@ Event (range)</p>
 <p>Relates an event to a time period it initiates.</p>
 
 
-<p>Event (domain)
-&rarr;
-initiatesTimePeriod (object property)
-&rarr;
-TimePeriod (range)</p>
+<p>Domain: Event
+<br>
+Range: TimePeriod</p>
 
 </article>
 
@@ -826,14 +795,12 @@ TimePeriod (range)</p>
 
 
 
-<p>Relates a government administration period to a premiership period. e.g. allows for grouping of 3 Thatcher administrations into one 'premiership'.</p>
+<p>Relates a government administration period to a premiership period. e.g. allows for grouping of 3 Thatcher administrations into one &#39;premiership&#39;.</p>
 
 
-<p>GovernmentAdministrationPeriod (domain)
-&rarr;
-partOfPremiershipPeriod (object property)
-&rarr;
-PremiershipPeriod (range)</p>
+<p>Domain: GovernmentAdministrationPeriod
+<br>
+Range: PremiershipPeriod</p>
 
 </article>
 
@@ -886,9 +853,7 @@ PremiershipPeriod (range)</p>
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 
 
@@ -919,17 +884,12 @@ PremiershipPeriod (range)</p>
 <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
 
-</details>
-
-
-
-<p><time id="created">Created 2017-03-09</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="ttlurl">ttlurl</a></p>
+<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
 </footer>

@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }}</title>
 <style>
+body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
+img {width:100%;}
+main {word-wrap: break-word;}
+p {line-height:1.4;}
 </style>
 </head>
 <body>
@@ -15,7 +19,11 @@
 
 <main>
 
+    <p><time id="created">Created {{ created }}</time> - Source <a href="{{ ttlurl }}">{{ ttlurl|e }}</a></p>
+
 <h1>{{ title }}</h1>
+
+
 
 {% if description != "None" %}
 <p>{{ description }}</p>
@@ -26,12 +34,14 @@
 {% endif %}
 
 {% if imports %}
-<details open id="imports">
 
- <summary>Imported ontologies</summary>
+ <h2 id="imports">Imported ontologies</h2>
 
 <ul>
 {% for import in imports|sort %}
+
+<li>{{ import.2 }}</li>
+
 {% if import.2.startswith(root_url) %}
 
 <li><a href="{{ import.2[30:] }}" title="{{ import.2 }}">{{ import.2.split('/')[5] }}</a></li>
@@ -39,8 +49,6 @@
 {% endif %}
 {% endfor %}
 </ul>
-
-</details>
 
 
 {% if equivalentClasses %}
@@ -119,11 +127,9 @@
 <p>{{ objectproperty.comment }}</p>
 {% endif %}
 
-<p>{{ objectproperty.domain }} (domain)
-&rarr;
-{{ objectproperty.label }} (object property)
-&rarr;
-{{ objectproperty.range }} (range)</p>
+<p>Domain: {{ objectproperty.domain }}
+<br>
+Range: {{ objectproperty.range }}</p>
 
 </article>
 {% endfor %}
@@ -152,10 +158,7 @@
 
 {% if makers %}
 
- 
- <details id="foaf">
-
- <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ <h2 id="makers">Made by</h2>
  
  <ul id="makers">
 {% for maker in makers|sort(attribute='name') %}
@@ -168,31 +171,24 @@
 
     {% endfor %}
     </ul>
-    </details>
+
 {% endif %}
 
 
 
-<details id="namespaces">
-
- <summary>Namespaces</summary>
+<h2 id="namespaces">Namespaces</h2>
  
 {% for namespace in namespaces|sort(attribute='0') %}
 
 <p class="namespace"><strong>{{ namespace.0 }}</strong> {{ namespace.1 }}</p>
 
 {% endfor %}
-</details>
-
-
-
-<p><time id="created">Created {{ created }}</time> <span id="copyright">&copy; {{ rights|e }}</span></p>
 
 </main>
 
 <footer>
 
-<p>Source <a href="{{ ttlurl }}">{{ ttlurl|e }}</a></p>
+<p><span id="copyright">&copy; {{ rights|e }}</span></p>
 
 <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttlurl }}">WebVOWL</a></p>
 </footer>
