@@ -106,10 +106,6 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
             makers.append(i)
 
 
- 
-
-
-
     print("PARSED\t" + str(ttlpath))
 
     try:
