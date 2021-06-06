@@ -1,392 +1,711 @@
-<<<<<<< HEAD
-<pre>http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-ub7bL17C3	http://xmlns.com/foaf/0.1/homepage	http://smethur.st/
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#comment	The action of archiving a work, indicating that no further revisions are intended to take place. Manifestations of the work which have not been withdrawn remain available, marked with an indication that no further updates are anticipated.
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/RevisionType
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#label	Leads to new
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#label	Review of
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/rights	Open Parliament Licence v3.0
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-ub7bL18C6	http://xmlns.com/foaf/0.1/name	Anya Somerville
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/2000/01/rdf-schema#comment	The type of a revision, for example: a major or minor edit.
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#label	Feedback leads to
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#label	To manifestation
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-ub7bL16C3	http://xmlns.com/foaf/0.1/homepage	https://robert-brook.com/
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#comment	Relates a manifestation to the action of withdrawing that manifestation.
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#label	Published at
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#label	Received at
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/2000/01/rdf-schema#comment	A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode.
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/ReviewCycle
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#label	Withdrawal
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/title	Record reviews ontology
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/2000/01/rdf-schema#comment	A distinct intellectual creation, similar to a work as defined in FRBR.
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#label	Has review cycle
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#label	Makes
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#label	Revision
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/2000/01/rdf-schema#label	Editorial action
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#label	Has revision type description
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-ub7bL16C3	http://xmlns.com/foaf/0.1/name	Robert Brook
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#comment	Relates an action of revision to the type of that revision.
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/2000/01/rdf-schema#comment	Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/maker	ub7bL16C3
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#label	Withdrawn by
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/depiction	https://ukparliament.github.io/ontologies/record-review/record-review.png
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates an archiving action to the work being archived.
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/2000/01/rdf-schema#comment	Feedback on a record, provided in a submission. An instance of the feedback class may contain the text of the feedback, or a pointer to the substance of the feedback in a separate system.
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#label	Leads to
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#comment	Relates a manifestation to the time at which it was published.
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/2000/01/rdf-schema#comment	An editorial action is an action taken on a manifestation or a work, for example: archiving a work, reviewing a manifestation, revising a manifestation or withdrawing a manifestation.
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#comment	The action of withdrawing a manifestation. A manifestation may be withdrawn for a period and reinstated, or permanently withdrawn.
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/maker	ub7bL17C3
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#label	Has revision type
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/2000/01/rdf-schema#label	Work
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#label	Reviewed on
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Ontology
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Agent
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial review to the creation of a new work.
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial action to the person or group performing that action.
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#comment	A review of a manifestation. A decision to review may be triggered by an external event, for example: a change in Government policy, the availability of new data, external work in the same area or the output of parliamentary business; a change in user needs, for example: a new type of enquiry; or a change to library policy or practice, for example: in presentation, citation style, method of acknowledgement, change of portfolio or change of specialist.
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#label	Has revision description
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Agent
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-ub7bL17C3	http://xmlns.com/foaf/0.1/name	Michael Smethurst
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial review of a manifestation to the date on which the review took place.
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of revision to a new manifestation resulting from the revision.
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#label	Feedback text
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Withdrawal
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#comment	Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#comment	Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#comment	Relates an item of feedback to the text of that feedback.
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#label	Archiving of
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/2000/01/rdf-schema#label	Agent
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of revision to an existing manifestation to be revised.
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/description	A model describing editorial reviews of records and actions taken following review.
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#comment	Relates a withdrawal of a manifestation to the time at which it was withdrawn.
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/2000/01/rdf-schema#label	Manifestation
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial review to the manifestation being reviewed.
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#label	From manifestation
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial action to the time at which the action was taken.
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#label	Reinstated at
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#label	Archiving
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Withdrawal
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#comment	Relates an item of feedback to the time at which the feedback was received.
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/created	2020-12-18
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#comment	Relates a revision type to a textual description of that type.
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#label	Results in
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/maker	ub7bL18C6
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#label	By
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#comment	Relates an agent to the feedback submitted by that agent.
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/2000/01/rdf-schema#label	Revision type
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#comment	The action of revising an existing manifestation, resulting in a new manifestation. The existing manifestation remains unchanged.
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/ReviewCycle
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/2000/01/rdf-schema#label	Review cycle
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#label	Editorial review
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#comment	Relates a work to the review cycle of that work. A work has a single review cycle, or none.
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/RevisionType
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#label	At
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Archiving
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#comment	Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/2000/01/rdf-schema#comment	A review cycle describes the period between reviews of a work.
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/2000/01/rdf-schema#label	Feedback
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#comment	Relates a review cycle to resulting editorial reviews.
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#label	Supersedes
-=======
-<pre>http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/description	A model describing editorial reviews of records and actions taken following review.
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#comment	Relates a work to the review cycle of that work. A work has a single review cycle, or none.
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates an archiving action to the work being archived.
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#label	Reviewed on
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#label	Revision
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/2000/01/rdf-schema#label	Editorial action
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#label	Has revision description
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Ontology
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#label	Published at
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#label	Leads to
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Agent
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/2000/01/rdf-schema#comment	An editorial action is an action taken on a manifestation or a work, for example: archiving a work, reviewing a manifestation, revising a manifestation or withdrawing a manifestation.
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#comment	The action of revising an existing manifestation, resulting in a new manifestation. The existing manifestation remains unchanged.
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#comment	Relates a review cycle to resulting editorial reviews.
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#comment	Relates a revision type to a textual description of that type.
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#comment	Relates an action of revision to the type of that revision.
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/maker	ub9bL16C3
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#label	Leads to new
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/maker	ub9bL18C6
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#label	At
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Withdrawal
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial action to the person or group performing that action.
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial action to the time at which the action was taken.
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#comment	A review of a manifestation. A decision to review may be triggered by an external event, for example: a change in Government policy, the availability of new data, external work in the same area or the output of parliamentary business; a change in user needs, for example: a new type of enquiry; or a change to library policy or practice, for example: in presentation, citation style, method of acknowledgement, change of portfolio or change of specialist.
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/2000/01/rdf-schema#comment	A distinct intellectual creation, similar to a work as defined in FRBR.
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#label	Archiving of
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#label	Feedback text
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#comment	Relates an item of feedback to the time at which the feedback was received.
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/2000/01/rdf-schema#comment	The type of a revision, for example: a major or minor edit.
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#label	Makes
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#comment	Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#comment	Relates a manifestation to the time at which it was published.
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/2000/01/rdf-schema#comment	A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode.
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial review of a manifestation to the date on which the review took place.
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#label	Editorial review
-http://parliament.uk/ontologies/record-review/hasRevisionDescription	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Feedback
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/depiction	https://ukparliament.github.io/ontologies/record-review/record-review.png
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#comment	Relates a manifestation to the action of withdrawing that manifestation.
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Archiving
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/2000/01/rdf-schema#label	Review cycle
-ub9bL18C6	http://xmlns.com/foaf/0.1/name	Anya Somerville
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#label	Archiving
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial review to the creation of a new work.
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/RevisionType
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/RevisionType
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#label	Supersedes
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/ReviewCycle
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#label	By
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Manifestation	http://www.w3.org/2000/01/rdf-schema#label	Manifestation
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/rights	Open Parliament Licence v3.0
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates an editorial review to the manifestation being reviewed.
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/supersedes	http://www.w3.org/2000/01/rdf-schema#comment	Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/title	Record reviews ontology
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-ub9bL16C3	http://xmlns.com/foaf/0.1/name	Robert Brook
-http://parliament.uk/ontologies/record-review/leadsTo	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/archivingOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/2000/01/rdf-schema#label	Work
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#comment	Relates an item of feedback to the text of that feedback.
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#label	From manifestation
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#dateTime
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#label	Has review cycle
-ub9bL17C3	http://xmlns.com/foaf/0.1/homepage	http://smethur.st/
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/at	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Withdrawal
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#label	Feedback leads to
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#label	Has revision type description
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of revision to a new manifestation resulting from the revision.
-ub9bL16C3	http://xmlns.com/foaf/0.1/homepage	https://robert-brook.com/
-http://parliament.uk/ontologies/record-review/hasRevisionTypeDescription	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/record-review/EditorialReview	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/ReviewCycle	http://www.w3.org/2000/01/rdf-schema#comment	A review cycle describes the period between reviews of a work.
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/record-review/EditorialAction
-http://parliament.uk/ontologies/record-review/Revision	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/	http://xmlns.com/foaf/0.1/maker	ub9bL17C3
-http://parliament.uk/ontologies/record-review/Work	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#label	Review of
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#label	Has revision type
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/ReviewCycle
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/receivedAt	http://www.w3.org/2000/01/rdf-schema#label	Received at
-ub9bL17C3	http://xmlns.com/foaf/0.1/name	Michael Smethurst
-http://parliament.uk/ontologies/record-review/	http://purl.org/dc/terms/created	2020-12-18
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#label	Withdrawal
-http://parliament.uk/ontologies/record-review/toManifestation	http://www.w3.org/2000/01/rdf-schema#label	To manifestation
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/2000/01/rdf-schema#label	Feedback
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/2000/01/rdf-schema#comment	The action of archiving a work, indicating that no further revisions are intended to take place. Manifestations of the work which have not been withdrawn remain available, marked with an indication that no further updates are anticipated.
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of revision to an existing manifestation to be revised.
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/record-review/leadsToNew	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/resultsIn	http://www.w3.org/2000/01/rdf-schema#label	Results in
-http://parliament.uk/ontologies/record-review/hasRevisionType	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#comment	Relates a withdrawal of a manifestation to the time at which it was withdrawn.
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/reviewedOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/EditorialReview
-http://parliament.uk/ontologies/record-review/withdrawnBy	http://www.w3.org/2000/01/rdf-schema#label	Withdrawn by
-http://parliament.uk/ontologies/record-review/hasReviewCycle	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Work
-http://parliament.uk/ontologies/record-review/reinstatedAt	http://www.w3.org/2000/01/rdf-schema#label	Reinstated at
-http://parliament.uk/ontologies/record-review/by	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/record-review/Agent
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/record-review/feedbackText	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/fromManifestation	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Revision
-http://parliament.uk/ontologies/record-review/EditorialAction	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/Archiving	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/record-review/Withdrawal	http://www.w3.org/2000/01/rdf-schema#comment	The action of withdrawing a manifestation. A manifestation may be withdrawn for a period and reinstated, or permanently withdrawn.
-http://parliament.uk/ontologies/record-review/submits	http://www.w3.org/2000/01/rdf-schema#comment	Relates an agent to the feedback submitted by that agent.
-http://parliament.uk/ontologies/record-review/Feedback	http://www.w3.org/2000/01/rdf-schema#comment	Feedback on a record, provided in a submission. An instance of the feedback class may contain the text of the feedback, or a pointer to the substance of the feedback in a separate system.
-http://parliament.uk/ontologies/record-review/publishedAt	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/record-review/Manifestation
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/2000/01/rdf-schema#comment	Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.
-http://parliament.uk/ontologies/record-review/reviewOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/record-review/
-http://parliament.uk/ontologies/record-review/feedbackLeadsTo	http://www.w3.org/2000/01/rdf-schema#comment	Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.
-http://parliament.uk/ontologies/record-review/RevisionType	http://www.w3.org/2000/01/rdf-schema#label	Revision type
-http://parliament.uk/ontologies/record-review/Agent	http://www.w3.org/2000/01/rdf-schema#label	Agent
->>>>>>> 166336acae9925bf605b2ee99a1593215a68d0c1
-</pre>
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Record reviews ontology</title>
+<style>
+</style>
+</head>
+<body>
+<header>
+
+      <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+
+<h1>Record reviews ontology</h1>
+
+
+<p>A model describing editorial reviews of records and actions taken following review.</p>
+
+
+
+<a href="https://ukparliament.github.io/ontologies/record-review/record-review.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/record-review/record-review.png"></a>
+
+
+
+<details open id="imports">
+
+ <summary>Imported ontologies</summary>
+
+<ul>
+
+</ul>
+
+</details>
+
+
+
+
+<details id="equivalentclasses">
+
+ <summary>Equivalent classes</summary>
+
+</details>
+
+
+
+
+<details id="subclasses">
+
+ <summary>Subclasses</summary>
+
+<p>
+<b>record-review: Archiving</b>
+<br>is a subclass of<br>
+<b>record-review: EditorialAction</b>
+</p>
+
+<p>
+<b>record-review: EditorialReview</b>
+<br>is a subclass of<br>
+<b>record-review: EditorialAction</b>
+</p>
+
+<p>
+<b>record-review: Revision</b>
+<br>is a subclass of<br>
+<b>record-review: EditorialAction</b>
+</p>
+
+<p>
+<b>record-review: Withdrawal</b>
+<br>is a subclass of<br>
+<b>record-review: EditorialAction</b>
+</p>
+
+</details>
+
+
+
+
+
+<section id="classes">
+<h2>Classes</h2>
+
+
+<article class="class">
+<h3>Agent
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Archiving
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>The action of archiving a work, indicating that no further revisions are intended to take place. Manifestations of the work which have not been withdrawn remain available, marked with an indication that no further updates are anticipated.</p>
+
+
+
+
+<p>EditorialAction (superclass) &rarr; Archiving (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Editorial action
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>An editorial action is an action taken on a manifestation or a work, for example: archiving a work, reviewing a manifestation, revising a manifestation or withdrawing a manifestation.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Editorial review
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>A review of a manifestation. A decision to review may be triggered by an external event, for example: a change in Government policy, the availability of new data, external work in the same area or the output of parliamentary business; a change in user needs, for example: a new type of enquiry; or a change to library policy or practice, for example: in presentation, citation style, method of acknowledgement, change of portfolio or change of specialist.</p>
+
+
+
+
+<p>EditorialAction (superclass) &rarr; Editorial review (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Feedback
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>Feedback on a record, provided in a submission. An instance of the feedback class may contain the text of the feedback, or a pointer to the substance of the feedback in a separate system.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Manifestation
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Review cycle
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>A review cycle describes the period between reviews of a work.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Revision
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>The action of revising an existing manifestation, resulting in a new manifestation. The existing manifestation remains unchanged.</p>
+
+
+
+
+<p>EditorialAction (superclass) &rarr; Revision (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Revision type
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>The type of a revision, for example: a major or minor edit.</p>
+
+
+
+
+</article>
+
+<article class="class">
+<h3>Withdrawal
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>The action of withdrawing a manifestation. A manifestation may be withdrawn for a period and reinstated, or permanently withdrawn.</p>
+
+
+
+
+<p>EditorialAction (superclass) &rarr; Withdrawal (class)</p>
+
+
+
+</article>
+
+<article class="class">
+<h3>Work
+
+<span class="subhead">class</span></h3>
+<!-- http://parliament.uk/ontologies/record-review/ -->
+
+<p>A distinct intellectual creation, similar to a work as defined in FRBR.</p>
+
+
+
+
+</article>
+
+</section>
+
+
+
+
+<section id="properties">
+<h2>Object properties</h2>
+
+
+
+<article class="property">
+
+<h3>Archiving of <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an archiving action to the work being archived.</p>
+
+
+<p>Archiving (domain)
+&rarr;
+Archiving of (object property)
+&rarr;
+Work (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>By <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an editorial action to the person or group performing that action.</p>
+
+
+<p>EditorialAction (domain)
+&rarr;
+By (object property)
+&rarr;
+Agent (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Feedback leads to <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.</p>
+
+
+<p>Feedback (domain)
+&rarr;
+Feedback leads to (object property)
+&rarr;
+EditorialReview (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>From manifestation <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an act of revision to an existing manifestation to be revised.</p>
+
+
+<p>Revision (domain)
+&rarr;
+From manifestation (object property)
+&rarr;
+Manifestation (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has review cycle <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a work to the review cycle of that work. A work has a single review cycle, or none.</p>
+
+
+<p>Work (domain)
+&rarr;
+Has review cycle (object property)
+&rarr;
+ReviewCycle (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Has revision type <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an action of revision to the type of that revision.</p>
+
+
+<p>Revision (domain)
+&rarr;
+Has revision type (object property)
+&rarr;
+RevisionType (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Leads to <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.</p>
+
+
+<p>EditorialAction (domain)
+&rarr;
+Leads to (object property)
+&rarr;
+EditorialAction (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Leads to new <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an editorial review to the creation of a new work.</p>
+
+
+<p>EditorialReview (domain)
+&rarr;
+Leads to new (object property)
+&rarr;
+Work (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Makes <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an agent to the feedback submitted by that agent.</p>
+
+
+<p>Agent (domain)
+&rarr;
+Makes (object property)
+&rarr;
+Feedback (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Results in <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a review cycle to resulting editorial reviews.</p>
+
+
+<p>ReviewCycle (domain)
+&rarr;
+Results in (object property)
+&rarr;
+EditorialReview (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Review of <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an editorial review to the manifestation being reviewed.</p>
+
+
+<p>EditorialReview (domain)
+&rarr;
+Review of (object property)
+&rarr;
+Manifestation (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Supersedes <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.</p>
+
+
+<p>Work (domain)
+&rarr;
+Supersedes (object property)
+&rarr;
+Work (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>To manifestation <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates an act of revision to a new manifestation resulting from the revision.</p>
+
+
+<p>Revision (domain)
+&rarr;
+To manifestation (object property)
+&rarr;
+Manifestation (range)</p>
+
+</article>
+
+
+<article class="property">
+
+<h3>Withdrawn by <span class="subhead">object property</span></h3>
+
+
+
+
+<p>Relates a manifestation to the action of withdrawing that manifestation.</p>
+
+
+<p>Manifestation (domain)
+&rarr;
+Withdrawn by (object property)
+&rarr;
+Withdrawal (range)</p>
+
+</article>
+
+</section>
+
+
+
+
+<section id="dataproperties">
+<h2>Data properties</h2>
+
+
+<article class="dataproperty">
+<h3>At <span class="subhead">data property</span></h3>
+
+<p>Relates an editorial action to the time at which the action was taken.</p>
+
+<p>EditorialAction (domain) &rarr; At &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Feedback text <span class="subhead">data property</span></h3>
+
+<p>Relates an item of feedback to the text of that feedback.</p>
+
+<p>Feedback (domain) &rarr; Feedback text &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Has revision description <span class="subhead">data property</span></h3>
+
+<p>Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.</p>
+
+<p>Revision (domain) &rarr; Has revision description &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Has revision type description <span class="subhead">data property</span></h3>
+
+<p>Relates a revision type to a textual description of that type.</p>
+
+<p>RevisionType (domain) &rarr; Has revision type description &rarr; langString (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Published at <span class="subhead">data property</span></h3>
+
+<p>Relates a manifestation to the time at which it was published.</p>
+
+<p>Manifestation (domain) &rarr; Published at &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Received at <span class="subhead">data property</span></h3>
+
+<p>Relates an item of feedback to the time at which the feedback was received.</p>
+
+<p>Feedback (domain) &rarr; Received at &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Reinstated at <span class="subhead">data property</span></h3>
+
+<p>Relates a withdrawal of a manifestation to the time at which it was withdrawn.</p>
+
+<p>Withdrawal (domain) &rarr; Reinstated at &rarr; dateTime (range)</p>
+
+
+</article>
+
+
+<article class="dataproperty">
+<h3>Reviewed on <span class="subhead">data property</span></h3>
+
+<p>Relates an editorial review of a manifestation to the date on which the review took place.</p>
+
+<p>EditorialReview (domain) &rarr; Reviewed on &rarr; date (range)</p>
+
+
+</article>
+
+</section>
+
+
+
+
+
+ 
+ <details id="foaf">
+
+ <summary><abbr title="Friend Of A Friend">FOAF</abbr></summary>
+ 
+ <ul id="makers">
+
+
+<li class="maker">Anya Somerville
+        </li> 
+
+    
+
+<li class="maker">Michael Smethurst
+        
+        &mdash; <a href="http://smethur.st/">http://smethur.st/</a>
+        
+        </li> 
+
+    
+
+<li class="maker">Robert Brook
+        
+        &mdash; <a href="https://robert-brook.com/">https://robert-brook.com/</a>
+        
+        </li> 
+
+    
+    </ul>
+    </details>
+
+
+
+
+<details id="namespaces">
+
+ <summary>Namespaces</summary>
+ 
+
+
+<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+
+
+<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+
+
+<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+
+
+<p class="namespace"><strong>precr</strong> http://parliament.uk/ontologies/record-review/</p>
+
+
+
+<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+
+
+<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+
+
+<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+
+
+<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+
+</details>
+
+
+
+<p><time id="created">Created 2020-12-18</time> <span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
+
+</main>
+
+<footer>
+
+<p>Source <a href="ttlurl">ttlurl</a></p>
+
+<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
+</footer>
+</body>
+</html>
