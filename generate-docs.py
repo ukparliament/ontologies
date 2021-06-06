@@ -20,9 +20,11 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
     htmlfile = open(htmlpath, "w")
+    htmlfile.write("<pre>")
     for subject, predicate, object in g:
         htmlfile.write("\t".join([subject, predicate, object]))
         htmlfile.write("\n")
+    htmlfile.write("</pre>")
     htmlfile.close()
     print("WROTE\t" + htmlpath)
 
