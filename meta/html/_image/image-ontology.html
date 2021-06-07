@@ -1,22 +1,43 @@
 <!doctype html>
 <html lang="en-GB">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Image ontology</title>
-<style>
-body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
-img {width:100%;}
-main {word-wrap: break-word;}
-p {line-height:1.4;}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 42rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            word-wrap: break-word;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+    </style>
 </head>
+
 <body>
-<header>
+    <header>
 
-      <nav><a href="././meta/html/">Ontologies</a></nav>
+        <nav><a href="../">Ontologies</a></nav>
 
-      <pre>{&#39;context&#39;: {&#39;classes&#39;: [{...}, {...}, {...}, {...}, {...}, {...}, {...}, {...},
+
+
+        <p>
+        <details>
+            <summary>Debug</summary>
+            <pre>{&#39;context&#39;: {&#39;classes&#39;: [{...}, {...}, {...}, {...}, {...}, {...}, {...}, {...},
                          {...}, {...}, {...}, {...}],
              &#39;created&#39;: Markup(&#39;2017-06-28&#39;),
              &#39;cycler&#39;: &lt;class &#39;jinja2.utils.Cycler&#39;&gt;,
@@ -25,22 +46,23 @@ p {line-height:1.4;}
              &#39;depiction&#39;: Markup(&#39;&#39;),
              &#39;description&#39;: Markup(&#39;Ontology to describe storage and retrieval of parliamentary images&#39;),
              &#39;dict&#39;: &lt;class &#39;dict&#39;&gt;,
-             &#39;equivalentClasses&#39;: &lt;generator object Graph.triples at 0x7f01504ddf90&gt;,
+             &#39;equivalentClasses&#39;: [],
              &#39;htmldir&#39;: &#39;./meta/html/&#39;,
-             &#39;imports&#39;: &lt;generator object Graph.triples at 0x7f01504dd660&gt;,
+             &#39;imports&#39;: [],
              &#39;joiner&#39;: &lt;class &#39;jinja2.utils.Joiner&#39;&gt;,
-             &#39;lipsum&#39;: &lt;function generate_lorem_ipsum at 0x7f0150794b80&gt;,
+             &#39;lipsum&#39;: &lt;function generate_lorem_ipsum at 0x7fae7c50bb80&gt;,
              &#39;makers&#39;: [],
              &#39;namespace&#39;: &lt;class &#39;jinja2.utils.Namespace&#39;&gt;,
-             &#39;namespaces&#39;: &lt;generator object Graph.namespaces at 0x7f01504ddac0&gt;,
+             &#39;namespaces&#39;: &lt;generator object Graph.namespaces at 0x7fae7c259890&gt;,
              &#39;objectproperties&#39;: [{...}, {...}, {...}, {...}, {...}, {...},
                                   {...}, {...}, {...}, {...}],
              &#39;range&#39;: &lt;class &#39;range&#39;&gt;,
              &#39;rights&#39;: Markup(&#39;Open Parliament Licence v3.0&#39;),
              &#39;root_url&#39;: &#39;https://ukparliament.github.io/ontologies/&#39;,
-             &#39;subClasses&#39;: &lt;generator object Graph.triples at 0x7f01504f63c0&gt;,
+             &#39;subClasses&#39;: &lt;generator object Graph.triples at 0x7fae7c259c10&gt;,
              &#39;title&#39;: Markup(&#39;Image ontology&#39;),
-             &#39;ttlurl&#39;: &#39;ttlurl&#39;},
+             &#39;ttldir&#39;: &#39;https://raw.githubusercontent.com/ukparliament/ontologies/master/&#39;,
+             &#39;ttlpath&#39;: PosixPath(&#39;_image/image-ontology.ttl&#39;)},
  &#39;filters&#39;: [&#39;abs&#39;, &#39;attr&#39;, &#39;batch&#39;, &#39;capitalize&#39;, &#39;center&#39;, &#39;count&#39;, &#39;d&#39;,
              &#39;default&#39;, &#39;dictsort&#39;, &#39;e&#39;, &#39;escape&#39;, &#39;filesizeformat&#39;, &#39;first&#39;,
              &#39;float&#39;, &#39;forceescape&#39;, &#39;format&#39;, &#39;groupby&#39;, &#39;indent&#39;, &#39;int&#39;,
@@ -56,618 +78,651 @@ p {line-height:1.4;}
            &#39;le&#39;, &#39;lessthan&#39;, &#39;lower&#39;, &#39;lt&#39;, &#39;mapping&#39;, &#39;ne&#39;, &#39;none&#39;, &#39;number&#39;,
            &#39;odd&#39;, &#39;sameas&#39;, &#39;sequence&#39;, &#39;string&#39;, &#39;test&#39;, &#39;true&#39;, &#39;undefined&#39;,
            &#39;upper&#39;]}</pre>
-</header>
+        </details>
+        </p>
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Image ontology</h1>
+
+        
+        <p>Ontology to describe storage and retrieval of parliamentary images</p>
+        
+
+
+        
+
+
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>image: GeoLocation</b>
+                <br>is a subclass of<br>
+                <b>image: GeographicalThing</b>
+            </p>
+            
+            <p>
+                <b>image: ImageCreator</b>
+                <br>is a subclass of<br>
+                <b>image: Agent</b>
+            </p>
+            
+            <p>
+                <b>image: ImageOwner</b>
+                <br>is a subclass of<br>
+                <b>image: Agent</b>
+            </p>
+            
+            <p>
+                <b>image: Photograph</b>
+                <br>is a subclass of<br>
+                <b>image: Image</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Agent
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/agency/ -->
+                
+                <p>An agent. The superset of all people and all groups of people.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>GeoLocation
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>An area within a image, that will be used to identify multiple ImageSubjects</p>
+                
+
+                
+                
+                <p>GeographicalThing (superclass) &rarr; GeoLocation (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Image
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>A image file, 2D unless otherwise stated, stored in the highest available quality</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ImageCoordinate
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>A coordinate used to identify the location of the ImageZone within the Image</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ImageCreator
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>The creator of the image - photographer, artist, designer of a diagram etc</p>
+                
+
+                
+                
+                <p>Agent (superclass) &rarr; ImageCreator (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ImageOwner
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>The entity with the legal rights to the image and its use</p>
+                
+
+                
+                
+                <p>Agent (superclass) &rarr; ImageOwner (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ImageResolution
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>An image&#39;s resolution</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ImageSubject
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>A thing that appears in the image - what the image is at partially or wholly &#39;of&#39;</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ImageZone
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>An area within a image, that will be used to identify multiple ImageSubjects</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Logo
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>A graphic mark, emblem, or symbol used to represent an organisation or person</p>
+                
 
-<main>
+                
 
-    <p><time id="created">Created 2017-06-28</time> - Source <a href="ttlurl">ttlurl</a></p>
+            </article>
+            
+            <article class="class">
+                <h3>Photograph
 
-<h1>Image ontology</h1>
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>A Image taken with a camera</p>
+                
 
+                
+                
+                <p>Image (superclass) &rarr; Photograph (class)</p>
+                
+                
 
-<p>Ontology to describe storage and retrieval of parliamentary images</p>
+            </article>
+            
+            <article class="class">
+                <h3>UsageLicence
 
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/image/ -->
+                
+                <p>The licence of the image&#39;s use, such as GNU or various Creative Commons licences</p>
+                
 
+                
 
+            </article>
+            
+        </section>
+        
 
+        
 
- <h2 id="imports">Imported ontologies</h2>
+        <section id="properties">
+            <h2>Object properties</h2>
 
-<ul>
-    
-</ul>
+            
 
+            <article class="property">
 
+                <h3>agentHasLogo <span class="subhead">object property</span></h3>
 
+                
+                <p>Object property <strong>agentHasLogo</strong> &rarr; is a subproperty of &rarr; Object
+                    property <strong>logo</strong></p>
+                
 
+                
 
-<details id="equivalentclasses">
+                <p>Domain: Agent
+                    <br>
+                    Range: Logo
+                </p>
 
- <summary>Equivalent classes</summary>
+            </article>
+            
 
-</details>
+            <article class="property">
 
+                <h3>imageCoordinateHasImageZone <span class="subhead">object property</span></h3>
 
+                
 
+                
 
-<details id="subclasses">
+                <p>Domain: ImageCoordinate
+                    <br>
+                    Range: ImageZone
+                </p>
 
- <summary>Subclasses</summary>
+            </article>
+            
 
-<p>
-<b>image: GeoLocation</b>
-<br>is a subclass of<br>
-<b>image: GeographicalThing</b>
-</p>
+            <article class="property">
 
-<p>
-<b>image: ImageCreator</b>
-<br>is a subclass of<br>
-<b>image: Agent</b>
-</p>
+                <h3>imageHasImageCoordinate <span class="subhead">object property</span></h3>
 
-<p>
-<b>image: ImageOwner</b>
-<br>is a subclass of<br>
-<b>image: Agent</b>
-</p>
+                
 
-<p>
-<b>image: Photograph</b>
-<br>is a subclass of<br>
-<b>image: Image</b>
-</p>
+                
 
-</details>
+                <p>Domain: Image
+                    <br>
+                    Range: ImageCoordinate
+                </p>
 
+            </article>
+            
 
+            <article class="property">
 
+                <h3>imageHasImageCreator <span class="subhead">object property</span></h3>
 
-<section id="classes">
-<h2>Classes</h2>
+                
 
+                
 
-<article class="class">
-<h3>Agent
+                <p>Domain: Image
+                    <br>
+                    Range: ImageCreator
+                </p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/agency/ -->
+            </article>
+            
 
-<p>An agent. The superset of all people and all groups of people.</p>
+            <article class="property">
 
+                <h3>imageHasImageOwner <span class="subhead">object property</span></h3>
 
+                
 
+                
 
-</article>
+                <p>Domain: Image
+                    <br>
+                    Range: ImageOwner
+                </p>
 
-<article class="class">
-<h3>GeoLocation
+            </article>
+            
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+            <article class="property">
 
-<p>An area within a image, that will be used to identify multiple ImageSubjects</p>
+                <h3>imageHasImageResolution <span class="subhead">object property</span></h3>
 
+                
 
+                
 
+                <p>Domain: Image
+                    <br>
+                    Range: ImageResolution
+                </p>
 
-<p>GeographicalThing (superclass) &rarr; GeoLocation (class)</p>
+            </article>
+            
 
+            <article class="property">
 
+                <h3>imageHasImageSubject <span class="subhead">object property</span></h3>
 
-</article>
+                
+                <p>Object property <strong>imageHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object
+                    property <strong>depicts</strong></p>
+                
 
-<article class="class">
-<h3>Image
+                
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+                <p>Domain: Image
+                    <br>
+                    Range: ImageSubject
+                </p>
 
-<p>A image file, 2D unless otherwise stated, stored in the highest available quality</p>
+            </article>
+            
 
+            <article class="property">
 
+                <h3>imageHasUsageLicence <span class="subhead">object property</span></h3>
 
+                
 
-</article>
+                
 
-<article class="class">
-<h3>ImageCoordinate
+                <p>Domain: Image
+                    <br>
+                    Range: UsageLicence
+                </p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+            </article>
+            
 
-<p>A coordinate used to identify the location of the ImageZone within the Image</p>
+            <article class="property">
 
+                <h3>imageZoneHasImageSubject <span class="subhead">object property</span></h3>
 
+                
+                <p>Object property <strong>imageZoneHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object
+                    property <strong>depicts</strong></p>
+                
 
+                
 
-</article>
+                <p>Domain: ImageZone
+                    <br>
+                    Range: ImageSubject
+                </p>
 
-<article class="class">
-<h3>ImageCreator
+            </article>
+            
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+            <article class="property">
 
-<p>The creator of the image - photographer, artist, designer of a diagram etc</p>
+                <h3>photographHasGeoLocation <span class="subhead">object property</span></h3>
 
+                
 
+                
 
+                <p>Domain: Photograph
+                    <br>
+                    Range: GeoLocation
+                </p>
 
-<p>Agent (superclass) &rarr; ImageCreator (class)</p>
+            </article>
+            
+        </section>
+        
 
+        
 
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
 
-</article>
+            <article class="dataproperty">
+                <h3>bitsPerSample <span class="subhead">data property</span></h3>
 
-<article class="class">
-<h3>ImageOwner
+                <p>Number of bits per component in each channel.</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+                <p>Image (domain) &rarr; bitsPerSample &rarr; integer
+                    (range)</p>
 
-<p>The entity with the legal rights to the image and its use</p>
 
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>compression <span class="subhead">data property</span></h3>
 
+                <p>None</p>
 
-<p>Agent (superclass) &rarr; ImageOwner (class)</p>
+                <p>Image (domain) &rarr; compression &rarr; string
+                    (range)</p>
 
 
+            </article>
+            
 
-</article>
+            <article class="dataproperty">
+                <h3>imageCreatedAt <span class="subhead">data property</span></h3>
 
-<article class="class">
-<h3>ImageResolution
+                <p>None</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+                <p>Image (domain) &rarr; imageCreatedAt &rarr; dateTime
+                    (range)</p>
 
-<p>An image&#39;s resolution</p>
 
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>imageLength <span class="subhead">data property</span></h3>
 
+                <p>Image height in pixels</p>
 
-</article>
+                <p>Image (domain) &rarr; imageLength &rarr; integer
+                    (range)</p>
 
-<article class="class">
-<h3>ImageSubject
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+            </article>
+            
 
-<p>A thing that appears in the image - what the image is at partially or wholly &#39;of&#39;</p>
+            <article class="dataproperty">
+                <h3>imageResolutionUnit <span class="subhead">data property</span></h3>
 
+                <p>None</p>
 
+                <p>ImageResolution (domain) &rarr; imageResolutionUnit &rarr; string
+                    (range)</p>
 
 
-</article>
+            </article>
+            
 
-<article class="class">
-<h3>ImageZone
+            <article class="dataproperty">
+                <h3>imageSoftware <span class="subhead">data property</span></h3>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+                <p>Software used to create image</p>
 
-<p>An area within a image, that will be used to identify multiple ImageSubjects</p>
+                <p>Image (domain) &rarr; imageSoftware &rarr; integer
+                    (range)</p>
 
 
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>imageStorageLocation <span class="subhead">data property</span></h3>
 
-</article>
+                <p>None</p>
 
-<article class="class">
-<h3>Logo
+                <p>Image (domain) &rarr; imageStorageLocation &rarr; string
+                    (range)</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
 
-<p>A graphic mark, emblem, or symbol used to represent an organisation or person</p>
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>imageWidth <span class="subhead">data property</span></h3>
 
+                <p>Image width in pixels</p>
 
+                <p>Image (domain) &rarr; imageWidth &rarr; integer
+                    (range)</p>
 
-</article>
 
-<article class="class">
-<h3>Photograph
+            </article>
+            
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+            <article class="dataproperty">
+                <h3>imageXResolution <span class="subhead">data property</span></h3>
 
-<p>A Image taken with a camera</p>
+                <p>None</p>
 
+                <p>ImageResolution (domain) &rarr; imageXResolution &rarr; integer
+                    (range)</p>
 
 
+            </article>
+            
 
-<p>Image (superclass) &rarr; Photograph (class)</p>
+            <article class="dataproperty">
+                <h3>imageYResolution <span class="subhead">data property</span></h3>
 
+                <p>None</p>
 
+                <p>ImageResolution (domain) &rarr; imageYResolution &rarr; integer
+                    (range)</p>
 
-</article>
 
-<article class="class">
-<h3>UsageLicence
+            </article>
+            
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/image/ -->
+            <article class="dataproperty">
+                <h3>samplesPerPixel <span class="subhead">data property</span></h3>
 
-<p>The licence of the image&#39;s use, such as GNU or various Creative Commons licences</p>
+                <p>None</p>
 
+                <p>Image (domain) &rarr; samplesPerPixel &rarr; integer
+                    (range)</p>
 
 
+            </article>
+            
 
-</article>
+            <article class="dataproperty">
+                <h3>usageLicenceDetails <span class="subhead">data property</span></h3>
 
-</section>
+                <p>None</p>
 
+                <p>UsageLicence (domain) &rarr; usageLicenceDetails &rarr; string
+                    (range)</p>
 
 
+            </article>
+            
 
-<section id="properties">
-<h2>Object properties</h2>
+            <article class="dataproperty">
+                <h3>usageLicenceName <span class="subhead">data property</span></h3>
 
+                <p>None</p>
 
+                <p>UsageLicence (domain) &rarr; usageLicenceName &rarr; string
+                    (range)</p>
 
-<article class="property">
 
-<h3>agentHasLogo <span class="subhead">object property</span></h3>
+            </article>
+            
+        </section>
 
+        
 
-<p>Object property <strong>agentHasLogo</strong> &rarr; is a subproperty of &rarr; Object property <strong>logo</strong></p>
+        
 
 
 
+        <h2 id="namespaces">Namespaces</h2>
 
-<p>Domain: Agent
-<br>
-Range: Logo</p>
+        
 
-</article>
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
 
+        
 
-<article class="property">
+        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
 
-<h3>imageCoordinateHasImageZone <span class="subhead">object property</span></h3>
+        
 
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
 
+        
 
+        <p class="namespace"><strong>pi</strong> http://parliament.uk/ontologies/image/</p>
 
+        
 
-<p>Domain: ImageCoordinate
-<br>
-Range: ImageZone</p>
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
 
-</article>
+        
 
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
 
-<article class="property">
+        
 
-<h3>imageHasImageCoordinate <span class="subhead">object property</span></h3>
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
 
+        
 
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
+        
 
+        
 
-<p>Domain: Image
-<br>
-Range: ImageCoordinate</p>
+    </main>
 
-</article>
+    <footer>
 
+        <p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
-<article class="property">
+        <p>Ontology created: <time id="created">2017-06-28</time></p>
+        
+        <p><Source <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl</a></p>
 
-<h3>imageHasImageCreator <span class="subhead">object property</span></h3>
-
-
-
-
-
-<p>Domain: Image
-<br>
-Range: ImageCreator</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>imageHasImageOwner <span class="subhead">object property</span></h3>
-
-
-
-
-
-<p>Domain: Image
-<br>
-Range: ImageOwner</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>imageHasImageResolution <span class="subhead">object property</span></h3>
-
-
-
-
-
-<p>Domain: Image
-<br>
-Range: ImageResolution</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>imageHasImageSubject <span class="subhead">object property</span></h3>
-
-
-<p>Object property <strong>imageHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object property <strong>depicts</strong></p>
-
-
-
-
-<p>Domain: Image
-<br>
-Range: ImageSubject</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>imageHasUsageLicence <span class="subhead">object property</span></h3>
-
-
-
-
-
-<p>Domain: Image
-<br>
-Range: UsageLicence</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>imageZoneHasImageSubject <span class="subhead">object property</span></h3>
-
-
-<p>Object property <strong>imageZoneHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object property <strong>depicts</strong></p>
-
-
-
-
-<p>Domain: ImageZone
-<br>
-Range: ImageSubject</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>photographHasGeoLocation <span class="subhead">object property</span></h3>
-
-
-
-
-
-<p>Domain: Photograph
-<br>
-Range: GeoLocation</p>
-
-</article>
-
-</section>
-
-
-
-
-<section id="dataproperties">
-<h2>Data properties</h2>
-
-
-<article class="dataproperty">
-<h3>bitsPerSample <span class="subhead">data property</span></h3>
-
-<p>Number of bits per component in each channel.</p>
-
-<p>Image (domain) &rarr; bitsPerSample &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>compression <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>Image (domain) &rarr; compression &rarr; string (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageCreatedAt <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>Image (domain) &rarr; imageCreatedAt &rarr; dateTime (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageLength <span class="subhead">data property</span></h3>
-
-<p>Image height in pixels</p>
-
-<p>Image (domain) &rarr; imageLength &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageResolutionUnit <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>ImageResolution (domain) &rarr; imageResolutionUnit &rarr; string (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageSoftware <span class="subhead">data property</span></h3>
-
-<p>Software used to create image</p>
-
-<p>Image (domain) &rarr; imageSoftware &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageStorageLocation <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>Image (domain) &rarr; imageStorageLocation &rarr; string (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageWidth <span class="subhead">data property</span></h3>
-
-<p>Image width in pixels</p>
-
-<p>Image (domain) &rarr; imageWidth &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageXResolution <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>ImageResolution (domain) &rarr; imageXResolution &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>imageYResolution <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>ImageResolution (domain) &rarr; imageYResolution &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>samplesPerPixel <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>Image (domain) &rarr; samplesPerPixel &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>usageLicenceDetails <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>UsageLicence (domain) &rarr; usageLicenceDetails &rarr; string (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>usageLicenceName <span class="subhead">data property</span></h3>
-
-<p>None</p>
-
-<p>UsageLicence (domain) &rarr; usageLicenceName &rarr; string (range)</p>
-
-
-</article>
-
-</section>
-
-
-
-
-
-
-
-<h2 id="namespaces">Namespaces</h2>
- 
-
-
-<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
-
-
-
-<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
-
-
-
-<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
-
-
-
-<p class="namespace"><strong>pi</strong> http://parliament.uk/ontologies/image/</p>
-
-
-
-<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
-
-
-
-<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
-
-
-
-<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
-
-
-
-<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
-
-
-
-
-
-</main>
-
-<footer>
-
-<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
-
-<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
-</footer>
+        <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=">WebVOWL</a></p>
+    </footer>
 </body>
+
 </html>

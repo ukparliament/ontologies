@@ -1,22 +1,43 @@
 <!doctype html>
 <html lang="en-GB">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Election ontology</title>
-<style>
-body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
-img {width:100%;}
-main {word-wrap: break-word;}
-p {line-height:1.4;}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Election ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 42rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            word-wrap: break-word;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+    </style>
 </head>
+
 <body>
-<header>
+    <header>
 
-      <nav><a href="././meta/html/">Ontologies</a></nav>
+        <nav><a href="../">Ontologies</a></nav>
 
-      <pre>{&#39;context&#39;: {&#39;classes&#39;: [{...}, {...}, {...}, {...}, {...}, {...}, {...}, {...},
+
+
+        <p>
+        <details>
+            <summary>Debug</summary>
+            <pre>{&#39;context&#39;: {&#39;classes&#39;: [{...}, {...}, {...}, {...}, {...}, {...}, {...}, {...},
                          {...}, {...}, {...}, {...}, {...}, {...}, {...}],
              &#39;created&#39;: Markup(&#39;2016-10-06&#39;),
              &#39;cycler&#39;: &lt;class &#39;jinja2.utils.Cycler&#39;&gt;,
@@ -25,23 +46,24 @@ p {line-height:1.4;}
              &#39;depiction&#39;: Markup(&#39;file:///home/robert/Documents/ontologies/election.png&#39;),
              &#39;description&#39;: Markup(&#39;A model describing incumbencies resulting from general elections and by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election process, rather than the process by which an election has been conducted: election returns by the “first past the post” system and those which follow other methods are included. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.&#39;),
              &#39;dict&#39;: &lt;class &#39;dict&#39;&gt;,
-             &#39;equivalentClasses&#39;: &lt;generator object Graph.triples at 0x7f01505ffb30&gt;,
+             &#39;equivalentClasses&#39;: [],
              &#39;htmldir&#39;: &#39;./meta/html/&#39;,
-             &#39;imports&#39;: &lt;generator object Graph.triples at 0x7f01505ffac0&gt;,
+             &#39;imports&#39;: [],
              &#39;joiner&#39;: &lt;class &#39;jinja2.utils.Joiner&#39;&gt;,
-             &#39;lipsum&#39;: &lt;function generate_lorem_ipsum at 0x7f0150794b80&gt;,
+             &#39;lipsum&#39;: &lt;function generate_lorem_ipsum at 0x7fae7c50bb80&gt;,
              &#39;makers&#39;: [],
              &#39;namespace&#39;: &lt;class &#39;jinja2.utils.Namespace&#39;&gt;,
-             &#39;namespaces&#39;: &lt;generator object Graph.namespaces at 0x7f01505ff9e0&gt;,
+             &#39;namespaces&#39;: &lt;generator object Graph.namespaces at 0x7fae7c375890&gt;,
              &#39;objectproperties&#39;: [{...}, {...}, {...}, {...}, {...}, {...},
                                   {...}, {...}, {...}, {...}, {...}, {...},
                                   {...}],
              &#39;range&#39;: &lt;class &#39;range&#39;&gt;,
              &#39;rights&#39;: Markup(&#39;Open Parliament Licence v3.0&#39;),
              &#39;root_url&#39;: &#39;https://ukparliament.github.io/ontologies/&#39;,
-             &#39;subClasses&#39;: &lt;generator object Graph.triples at 0x7f01505ffa50&gt;,
+             &#39;subClasses&#39;: &lt;generator object Graph.triples at 0x7fae7c3759e0&gt;,
              &#39;title&#39;: Markup(&#39;Election ontology&#39;),
-             &#39;ttlurl&#39;: &#39;ttlurl&#39;},
+             &#39;ttldir&#39;: &#39;https://raw.githubusercontent.com/ukparliament/ontologies/master/&#39;,
+             &#39;ttlpath&#39;: PosixPath(&#39;election/election-ontology.ttl&#39;)},
  &#39;filters&#39;: [&#39;abs&#39;, &#39;attr&#39;, &#39;batch&#39;, &#39;capitalize&#39;, &#39;center&#39;, &#39;count&#39;, &#39;d&#39;,
              &#39;default&#39;, &#39;dictsort&#39;, &#39;e&#39;, &#39;escape&#39;, &#39;filesizeformat&#39;, &#39;first&#39;,
              &#39;float&#39;, &#39;forceescape&#39;, &#39;format&#39;, &#39;groupby&#39;, &#39;indent&#39;, &#39;int&#39;,
@@ -57,687 +79,714 @@ p {line-height:1.4;}
            &#39;le&#39;, &#39;lessthan&#39;, &#39;lower&#39;, &#39;lt&#39;, &#39;mapping&#39;, &#39;ne&#39;, &#39;none&#39;, &#39;number&#39;,
            &#39;odd&#39;, &#39;sameas&#39;, &#39;sequence&#39;, &#39;string&#39;, &#39;test&#39;, &#39;true&#39;, &#39;undefined&#39;,
            &#39;upper&#39;]}</pre>
-</header>
+        </details>
+        </p>
 
-<main>
 
-    <p><time id="created">Created 2016-10-06</time> - Source <a href="ttlurl">ttlurl</a></p>
+    </header>
+
+    <main>
 
-<h1>Election ontology</h1>
+        
 
+        <h1>Election ontology</h1>
 
-<p>A model describing incumbencies resulting from general elections and by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election process, rather than the process by which an election has been conducted: election returns by the “first past the post” system and those which follow other methods are included. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.</p>
+        
+        <p>A model describing incumbencies resulting from general elections and by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election process, rather than the process by which an election has been conducted: election returns by the “first past the post” system and those which follow other methods are included. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.</p>
+        
 
 
+        
+
+
+        
+
+        
 
-<<<<<<< HEAD
-=======
-<a href="file:///home/runner/work/ontologies/ontologies/election.png"><img id="depiction" src="file:///home/runner/work/ontologies/ontologies/election.png"></a>
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>election: ConstituencyGroup</b>
+                <br>is a subclass of<br>
+                <b>election: Population</b>
+            </p>
+            
+            <p>
+                <b>election: Electorate</b>
+                <br>is a subclass of<br>
+                <b>election: Population</b>
+            </p>
+            
+            <p>
+                <b>election: WinningCandidacyResult</b>
+                <br>is a subclass of<br>
+                <b>election: CandidacyResult</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Candidacy
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A person standing as a candidate in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Candidacy result
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>The result of a person’s candidacy in an election.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Certification
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A certification of a candidate by a political party, registered by the Electoral Commission, to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Constituency area
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A geographic bounding of a constituency group.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Constituency area type
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>The type of constituency area, for example: a borough or a county.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Constituency group
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election.</p>
+                
+
+                
+                
+                <p>Population (superclass) &rarr; Constituency group (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Election
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>An election to elect a candidate or candidates to a seat or position.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Electoral incumbency
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>An incumbency in a position or parliamentary seat decided by the result of an election.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Electorate
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker.</p>
+                
+
+                
+                
+                <p>Population (superclass) &rarr; Electorate (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>General election
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A set of elections to seats in the House of Commons held in all UK constituencies concurrently.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Parliament period
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Person
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A person.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Political party
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A group registered with the Electoral Commission as a political party.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Population
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>A set of people.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Winning candidacy result
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>Identifies a winning candidacy in an election.</p>
+                
+
+                
+                
+                <p>CandidacyResult (superclass) &rarr; Winning candidacy result (class)</p>
+                
+                
+
+            </article>
+            
+        </section>
+        
 
+        
 
->>>>>>> b711c9502a123d44c08f1a311877349437aa16b3
+        <section id="properties">
+            <h2>Object properties</h2>
 
+            
 
- <h2 id="imports">Imported ontologies</h2>
+            <article class="property">
 
-<ul>
-    
-</ul>
+                <h3>Adjunct to <span class="subhead">object property</span></h3>
 
+                
 
+                
+                <p>Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
+                
 
+                <p>Domain: Certification
+                    <br>
+                    Range: Certification
+                </p>
 
+            </article>
+            
 
-<details id="equivalentclasses">
+            <article class="property">
 
- <summary>Equivalent classes</summary>
+                <h3>Eligible to vote in <span class="subhead">object property</span></h3>
 
-</details>
+                
 
+                
+                <p>Relates a group of people - who at the time of an election are eligible to vote - to that election.</p>
+                
 
+                <p>Domain: Electorate
+                    <br>
+                    Range: Election
+                </p>
 
+            </article>
+            
 
-<details id="subclasses">
+            <article class="property">
 
- <summary>Subclasses</summary>
+                <h3>Establishes incumbency <span class="subhead">object property</span></h3>
 
-<p>
-<b>election: ConstituencyGroup</b>
-<br>is a subclass of<br>
-<b>election: Population</b>
-</p>
+                
 
-<p>
-<b>election: Electorate</b>
-<br>is a subclass of<br>
-<b>election: Population</b>
-</p>
+                
+                <p>Relates a winning candidacy result to an electoral incumbency.</p>
+                
 
-<p>
-<b>election: WinningCandidacyResult</b>
-<br>is a subclass of<br>
-<b>election: CandidacyResult</b>
-</p>
+                <p>Domain: WinningCandidacyResult
+                    <br>
+                    Range: ElectoralIncumbency
+                </p>
 
-</details>
+            </article>
+            
 
+            <article class="property">
 
+                <h3>Has candidacy <span class="subhead">object property</span></h3>
 
+                
 
-<section id="classes">
-<h2>Classes</h2>
+                
+                <p>Relates an election to a candidacy within that election.</p>
+                
 
+                <p>Domain: Election
+                    <br>
+                    Range: Candidacy
+                </p>
 
-<article class="class">
-<h3>Candidacy
+            </article>
+            
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+            <article class="property">
 
-<p>A person standing as a candidate in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
+                <h3>Has candidacy result <span class="subhead">object property</span></h3>
 
+                
 
+                
+                <p>Relates a candidacy to the result of that candidacy in an election.</p>
+                
 
+                <p>Domain: Candidacy
+                    <br>
+                    Range: CandidacyResult
+                </p>
 
-</article>
+            </article>
+            
 
-<article class="class">
-<h3>Candidacy result
+            <article class="property">
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                <h3>Has candidate <span class="subhead">object property</span></h3>
 
-<p>The result of a person’s candidacy in an election.</p>
+                
 
+                
+                <p>Relates a candidacy to a person being a candidate.</p>
+                
 
+                <p>Domain: Candidacy
+                    <br>
+                    Range: Person
+                </p>
 
+            </article>
+            
 
-</article>
+            <article class="property">
 
-<article class="class">
-<h3>Certification
+                <h3>Has certification <span class="subhead">object property</span></h3>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                
 
-<p>A certification of a candidate by a political party, registered by the Electoral Commission, to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party.</p>
+                
+                <p>Relates a candidacy to a certification of the candidate by a political party.</p>
+                
 
+                <p>Domain: Candidacy
+                    <br>
+                    Range: Certification
+                </p>
 
+            </article>
+            
 
+            <article class="property">
 
-</article>
+                <h3>Has constituency area type <span class="subhead">object property</span></h3>
 
-<article class="class">
-<h3>Constituency area
+                
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>Relates a constituency area to a constituency area type.</p>
+                
 
-<p>A geographic bounding of a constituency group.</p>
+                <p>Domain: ConstituencyArea
+                    <br>
+                    Range: ConstituencyAreaType
+                </p>
 
+            </article>
+            
 
+            <article class="property">
 
+                <h3>Has constituency group <span class="subhead">object property</span></h3>
 
-</article>
+                
 
-<article class="class">
-<h3>Constituency area type
+                
+                <p>Relates a geographic area to its population.</p>
+                
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                <p>Domain: ConstituencyArea
+                    <br>
+                    Range: ConstituencyGroup
+                </p>
 
-<p>The type of constituency area, for example: a borough or a county.</p>
+            </article>
+            
 
+            <article class="property">
 
+                <h3>Has electorate <span class="subhead">object property</span></h3>
 
+                
 
-</article>
+                
+                <p>Relates a geographic area to a group of people who at the time of an election are eligible to vote in the election for that area.</p>
+                
 
-<article class="class">
-<h3>Constituency group
+                <p>Domain: ConstituencyArea
+                    <br>
+                    Range: Electorate
+                </p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+            </article>
+            
 
-<p>A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election.</p>
+            <article class="property">
 
+                <h3>Into Parliament period <span class="subhead">object property</span></h3>
 
+                
 
+                
+                <p>Relates an election to the Parliament period within which any resulting incumbency will take place.</p>
+                
 
-<p>Population (superclass) &rarr; Constituency group (class)</p>
+                <p>Domain: Election
+                    <br>
+                    Range: ParliamentPeriod
+                </p>
 
+            </article>
+            
 
+            <article class="property">
 
-</article>
+                <h3>Is part of general election <span class="subhead">object property</span></h3>
 
-<article class="class">
-<h3>Election
+                
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                
+                <p>Relates a constituency election to the general election of which it forms part.</p>
+                
 
-<p>An election to elect a candidate or candidates to a seat or position.</p>
+                <p>Domain: Election
+                    <br>
+                    Range: GeneralElection
+                </p>
 
+            </article>
+            
 
+            <article class="property">
 
+                <h3>To party <span class="subhead">object property</span></h3>
 
-</article>
+                
 
-<article class="class">
-<h3>Electoral incumbency
+                
+                <p>Relates a certification of a candidate to the party issuing the certification.</p>
+                
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                <p>Domain: Certification
+                    <br>
+                    Range: PoliticalParty
+                </p>
 
-<p>An incumbency in a position or parliamentary seat decided by the result of an election.</p>
+            </article>
+            
+        </section>
+        
 
+        
 
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
 
+            <article class="dataproperty">
+                <h3>Ballots spoiled <span class="subhead">data property</span></h3>
 
-</article>
+                <p>The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or void for uncertainty.</p>
 
-<article class="class">
-<h3>Electorate
+                <p>Election (domain) &rarr; Ballots spoiled &rarr; integer
+                    (range)</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
 
-<p>A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker.</p>
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>Declaration time <span class="subhead">data property</span></h3>
 
+                <p>The date and time at which results were declared for an election, for example: the declaration of the results in a constituency election, by the Returning Officer.</p>
 
+                <p>Election (domain) &rarr; Declaration time &rarr; dateTime
+                    (range)</p>
 
-<p>Population (superclass) &rarr; Electorate (class)</p>
 
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>Party gained <span class="subhead">data property</span></h3>
 
-</article>
+                <p>Whether the party certification of the winning candidate at an election differs from the party certification of the winning candidate at the preceding election.</p>
 
-<article class="class">
-<h3>General election
+                <p>WinningCandidacyResult (domain) &rarr; Party gained &rarr; boolean
+                    (range)</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
 
-<p>A set of elections to seats in the House of Commons held in all UK constituencies concurrently.</p>
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>Population size <span class="subhead">data property</span></h3>
 
+                <p>The size of a population, for example: an electorate or constituency group.</p>
 
+                <p>Population (domain) &rarr; Population size &rarr; integer
+                    (range)</p>
 
-</article>
 
-<article class="class">
-<h3>Parliament period
+            </article>
+            
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+            <article class="dataproperty">
+                <h3>Recorded date <span class="subhead">data property</span></h3>
 
-<p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
+                <p>The date on which a population size was recorded.</p>
 
+                <p>Population (domain) &rarr; Recorded date &rarr; date
+                    (range)</p>
 
 
+            </article>
+            
 
-</article>
+            <article class="dataproperty">
+                <h3>Result position <span class="subhead">data property</span></h3>
 
-<article class="class">
-<h3>Person
+                <p>The relative position of the result of the candidacy in an election.</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                <p>CandidacyResult (domain) &rarr; Result position &rarr; integer
+                    (range)</p>
 
-<p>A person.</p>
 
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>Round <span class="subhead">data property</span></h3>
 
+                <p>The number of the round in an election having more than one round of voting.</p>
 
-</article>
+                <p>Election (domain) &rarr; Round &rarr; integer
+                    (range)</p>
 
-<article class="class">
-<h3>Political party
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+            </article>
+            
 
-<p>A group registered with the Electoral Commission as a political party.</p>
+            <article class="dataproperty">
+                <h3>Total votes cast <span class="subhead">data property</span></h3>
 
+                <p>The total number of votes cast across all candidacies in an election, including spoiled ballots. Turnout is defined by the House of Commons Library as the total number of votes cast and not spoiled, divided by the size of the electorate. This definition conforms to the generally accepted academic usage. Turnout is generally defined by Returning Officers as the total number of votes cast divided by the size of the electorate.</p>
 
+                <p>Election (domain) &rarr; Total votes cast &rarr; integer
+                    (range)</p>
 
 
-</article>
+            </article>
+            
 
-<article class="class">
-<h3>Population
+            <article class="dataproperty">
+                <h3>Vote count <span class="subhead">data property</span></h3>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
+                <p>The number of accepted votes recorded for a candidacy.</p>
 
-<p>A set of people.</p>
+                <p>CandidacyResult (domain) &rarr; Vote count &rarr; integer
+                    (range)</p>
 
 
+            </article>
+            
 
+            <article class="dataproperty">
+                <h3>Vote share <span class="subhead">data property</span></h3>
 
-</article>
+                <p>The share of a vote won in an election by a candidate as a fraction of the accepted votes.</p>
 
-<article class="class">
-<h3>Winning candidacy result
+                <p>CandidacyResult (domain) &rarr; Vote share &rarr; decimal
+                    (range)</p>
 
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/election/ -->
 
-<p>Identifies a winning candidacy in an election.</p>
+            </article>
+            
+        </section>
 
+        
 
+        
 
 
-<p>CandidacyResult (superclass) &rarr; Winning candidacy result (class)</p>
 
+        <h2 id="namespaces">Namespaces</h2>
 
+        
 
-</article>
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
 
-</section>
+        
 
+        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
 
+        
 
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
 
-<section id="properties">
-<h2>Object properties</h2>
+        
 
+        <p class="namespace"><strong>pe</strong> http://parliament.uk/ontologies/election/</p>
 
+        
 
-<article class="property">
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
 
-<h3>Adjunct to <span class="subhead">object property</span></h3>
+        
 
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
 
+        
 
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
 
-<p>Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
+        
 
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
-<p>Domain: Certification
-<br>
-Range: Certification</p>
+        
 
-</article>
+        
+        <a href="file:///home/robert/Documents/ontologies/election.png"><img id="depiction" src="file:///home/robert/Documents/ontologies/election.png"></a>
+        
 
+    </main>
 
-<article class="property">
+    <footer>
 
-<h3>Eligible to vote in <span class="subhead">object property</span></h3>
+        <p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
+        <p>Ontology created: <time id="created">2016-10-06</time></p>
+        
+        <p><Source <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/election/election-ontology.ttl">https://raw.githubusercontent.com/ukparliament/ontologies/master/election/election-ontology.ttl</a></p>
 
-
-
-<p>Relates a group of people - who at the time of an election are eligible to vote - to that election.</p>
-
-
-<p>Domain: Electorate
-<br>
-Range: Election</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Establishes incumbency <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a winning candidacy result to an electoral incumbency.</p>
-
-
-<p>Domain: WinningCandidacyResult
-<br>
-Range: ElectoralIncumbency</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has candidacy <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates an election to a candidacy within that election.</p>
-
-
-<p>Domain: Election
-<br>
-Range: Candidacy</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has candidacy result <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a candidacy to the result of that candidacy in an election.</p>
-
-
-<p>Domain: Candidacy
-<br>
-Range: CandidacyResult</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has candidate <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a candidacy to a person being a candidate.</p>
-
-
-<p>Domain: Candidacy
-<br>
-Range: Person</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has certification <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a candidacy to a certification of the candidate by a political party.</p>
-
-
-<p>Domain: Candidacy
-<br>
-Range: Certification</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has constituency area type <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a constituency area to a constituency area type.</p>
-
-
-<p>Domain: ConstituencyArea
-<br>
-Range: ConstituencyAreaType</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has constituency group <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a geographic area to its population.</p>
-
-
-<p>Domain: ConstituencyArea
-<br>
-Range: ConstituencyGroup</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Has electorate <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a geographic area to a group of people who at the time of an election are eligible to vote in the election for that area.</p>
-
-
-<p>Domain: ConstituencyArea
-<br>
-Range: Electorate</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Into Parliament period <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates an election to the Parliament period within which any resulting incumbency will take place.</p>
-
-
-<p>Domain: Election
-<br>
-Range: ParliamentPeriod</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>Is part of general election <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a constituency election to the general election of which it forms part.</p>
-
-
-<p>Domain: Election
-<br>
-Range: GeneralElection</p>
-
-</article>
-
-
-<article class="property">
-
-<h3>To party <span class="subhead">object property</span></h3>
-
-
-
-
-<p>Relates a certification of a candidate to the party issuing the certification.</p>
-
-
-<p>Domain: Certification
-<br>
-Range: PoliticalParty</p>
-
-</article>
-
-</section>
-
-
-
-
-<section id="dataproperties">
-<h2>Data properties</h2>
-
-
-<article class="dataproperty">
-<h3>Ballots spoiled <span class="subhead">data property</span></h3>
-
-<p>The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or void for uncertainty.</p>
-
-<p>Election (domain) &rarr; Ballots spoiled &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Declaration time <span class="subhead">data property</span></h3>
-
-<p>The date and time at which results were declared for an election, for example: the declaration of the results in a constituency election, by the Returning Officer.</p>
-
-<p>Election (domain) &rarr; Declaration time &rarr; dateTime (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Party gained <span class="subhead">data property</span></h3>
-
-<p>Whether the party certification of the winning candidate at an election differs from the party certification of the winning candidate at the preceding election.</p>
-
-<p>WinningCandidacyResult (domain) &rarr; Party gained &rarr; boolean (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Population size <span class="subhead">data property</span></h3>
-
-<p>The size of a population, for example: an electorate or constituency group.</p>
-
-<p>Population (domain) &rarr; Population size &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Recorded date <span class="subhead">data property</span></h3>
-
-<p>The date on which a population size was recorded.</p>
-
-<p>Population (domain) &rarr; Recorded date &rarr; date (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Result position <span class="subhead">data property</span></h3>
-
-<p>The relative position of the result of the candidacy in an election.</p>
-
-<p>CandidacyResult (domain) &rarr; Result position &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Round <span class="subhead">data property</span></h3>
-
-<p>The number of the round in an election having more than one round of voting.</p>
-
-<p>Election (domain) &rarr; Round &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Total votes cast <span class="subhead">data property</span></h3>
-
-<p>The total number of votes cast across all candidacies in an election, including spoiled ballots. Turnout is defined by the House of Commons Library as the total number of votes cast and not spoiled, divided by the size of the electorate. This definition conforms to the generally accepted academic usage. Turnout is generally defined by Returning Officers as the total number of votes cast divided by the size of the electorate.</p>
-
-<p>Election (domain) &rarr; Total votes cast &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Vote count <span class="subhead">data property</span></h3>
-
-<p>The number of accepted votes recorded for a candidacy.</p>
-
-<p>CandidacyResult (domain) &rarr; Vote count &rarr; integer (range)</p>
-
-
-</article>
-
-
-<article class="dataproperty">
-<h3>Vote share <span class="subhead">data property</span></h3>
-
-<p>The share of a vote won in an election by a candidate as a fraction of the accepted votes.</p>
-
-<p>CandidacyResult (domain) &rarr; Vote share &rarr; decimal (range)</p>
-
-
-</article>
-
-</section>
-
-
-
-
-
-
-
-<h2 id="namespaces">Namespaces</h2>
- 
-
-
-<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
-
-
-
-<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
-
-
-
-<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
-
-
-
-<p class="namespace"><strong>pe</strong> http://parliament.uk/ontologies/election/</p>
-
-
-
-<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
-
-
-
-<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
-
-
-
-<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
-
-
-
-<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
-
-
-
-
-<a href="file:///home/robert/Documents/ontologies/election.png"><img id="depiction" src="file:///home/robert/Documents/ontologies/election.png"></a>
-
-
-</main>
-
-<footer>
-
-<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
-
-<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
-</footer>
+        <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=">WebVOWL</a></p>
+    </footer>
 </body>
+
 </html>

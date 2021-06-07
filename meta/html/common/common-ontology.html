@@ -1,43 +1,65 @@
 <!doctype html>
 <html lang="en-GB">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Common ontology</title>
-<style>
-body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
-img {width:100%;}
-main {word-wrap: break-word;}
-p {line-height:1.4;}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Common ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 42rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            word-wrap: break-word;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+    </style>
 </head>
+
 <body>
-<header>
+    <header>
 
-      <nav><a href="././meta/html/">Ontologies</a></nav>
+        <nav><a href="../">Ontologies</a></nav>
 
-      <pre>{&#39;context&#39;: {&#39;classes&#39;: [{...}, {...}, {...}],
+
+
+        <p>
+        <details>
+            <summary>Debug</summary>
+            <pre>{&#39;context&#39;: {&#39;classes&#39;: [{...}, {...}, {...}],
              &#39;created&#39;: Markup(&#39;2021-01-06&#39;),
              &#39;cycler&#39;: &lt;class &#39;jinja2.utils.Cycler&#39;&gt;,
              &#39;dataproperties&#39;: [],
              &#39;depiction&#39;: Markup(&#39;&#39;),
              &#39;description&#39;: Markup(&#39;&#39;),
              &#39;dict&#39;: &lt;class &#39;dict&#39;&gt;,
-             &#39;equivalentClasses&#39;: &lt;generator object Graph.triples at 0x7f01504f6eb0&gt;,
+             &#39;equivalentClasses&#39;: [],
              &#39;htmldir&#39;: &#39;./meta/html/&#39;,
-             &#39;imports&#39;: &lt;generator object Graph.triples at 0x7f01504f6d60&gt;,
+             &#39;imports&#39;: [],
              &#39;joiner&#39;: &lt;class &#39;jinja2.utils.Joiner&#39;&gt;,
-             &#39;lipsum&#39;: &lt;function generate_lorem_ipsum at 0x7f0150794b80&gt;,
+             &#39;lipsum&#39;: &lt;function generate_lorem_ipsum at 0x7fae7c50bb80&gt;,
              &#39;makers&#39;: [{...}, {...}, {...}, {...}],
              &#39;namespace&#39;: &lt;class &#39;jinja2.utils.Namespace&#39;&gt;,
-             &#39;namespaces&#39;: &lt;generator object Graph.namespaces at 0x7f01504f6f20&gt;,
+             &#39;namespaces&#39;: &lt;generator object Graph.namespaces at 0x7fae7c195900&gt;,
              &#39;objectproperties&#39;: [],
              &#39;range&#39;: &lt;class &#39;range&#39;&gt;,
              &#39;rights&#39;: Markup(&#39;Open Parliament Licence v3.0&#39;),
              &#39;root_url&#39;: &#39;https://ukparliament.github.io/ontologies/&#39;,
-             &#39;subClasses&#39;: &lt;generator object Graph.triples at 0x7f01504f6dd0&gt;,
+             &#39;subClasses&#39;: &lt;generator object Graph.triples at 0x7fae7c1959e0&gt;,
              &#39;title&#39;: Markup(&#39;Common ontology&#39;),
-             &#39;ttlurl&#39;: &#39;ttlurl&#39;},
+             &#39;ttldir&#39;: &#39;https://raw.githubusercontent.com/ukparliament/ontologies/master/&#39;,
+             &#39;ttlpath&#39;: PosixPath(&#39;common/common-ontology.ttl&#39;)},
  &#39;filters&#39;: [&#39;abs&#39;, &#39;attr&#39;, &#39;batch&#39;, &#39;capitalize&#39;, &#39;center&#39;, &#39;count&#39;, &#39;d&#39;,
              &#39;default&#39;, &#39;dictsort&#39;, &#39;e&#39;, &#39;escape&#39;, &#39;filesizeformat&#39;, &#39;first&#39;,
              &#39;float&#39;, &#39;forceescape&#39;, &#39;format&#39;, &#39;groupby&#39;, &#39;indent&#39;, &#39;int&#39;,
@@ -53,192 +75,190 @@ p {line-height:1.4;}
            &#39;le&#39;, &#39;lessthan&#39;, &#39;lower&#39;, &#39;lt&#39;, &#39;mapping&#39;, &#39;ne&#39;, &#39;none&#39;, &#39;number&#39;,
            &#39;odd&#39;, &#39;sameas&#39;, &#39;sequence&#39;, &#39;string&#39;, &#39;test&#39;, &#39;true&#39;, &#39;undefined&#39;,
            &#39;upper&#39;]}</pre>
-</header>
+        </details>
+        </p>
 
-<main>
 
-    <p><time id="created">Created 2021-01-06</time> - Source <a href="ttlurl">ttlurl</a></p>
+    </header>
 
-<h1>Common ontology</h1>
+    <main>
 
-
-<p></p>
-
-
-
-
-
- <h2 id="imports">Imported ontologies</h2>
-
-<ul>
-    
-</ul>
-
-
-
-
-
-<details id="equivalentclasses">
-
- <summary>Equivalent classes</summary>
-
-</details>
-
-
-
-
-<details id="subclasses">
-
- <summary>Subclasses</summary>
-
-<p>
-<b>common: Person</b>
-<br>is a subclass of<br>
-<b>common: Agent</b>
-</p>
-
-</details>
-
-
-
-
-<section id="classes">
-<h2>Classes</h2>
-
-
-<article class="class">
-<h3>Agent
-
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/common/ -->
-
-<p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
-
-
-
-
-</article>
-
-<article class="class">
-<h3>Business item
-
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/common/ -->
-
-<p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
-
-
-
-
-</article>
-
-<article class="class">
-<h3>Person
-
-<span class="subhead">class</span></h3>
-<!-- http://parliament.uk/ontologies/common/ -->
-
-<p>A person.</p>
-
-
-
-
-<p>Agent (superclass) &rarr; Person (class)</p>
-
-
-
-</article>
-
-</section>
-
-
-
-
-
-
-
-
- <h2 id="makers">Made by</h2>
- 
- <ul id="makers">
-
-
-<li class="maker">Anya Somerville
-        </li> 
-
-    
-
-<li class="maker">Michael Smethurst
         
-        &mdash; <a href="http://smethur.st/">http://smethur.st/</a>
+
+        <h1>Common ontology</h1>
+
         
-        </li> 
-
-    
-
-<li class="maker">Robert Brook
+        <p></p>
         
-        &mdash; <a href="https://robert-brook.com/">https://robert-brook.com/</a>
+
+
         
-        </li> 
-
-    
-
-<li class="maker">Silver Oliver
-        </li> 
-
-    
-    </ul>
 
 
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>common: Person</b>
+                <br>is a subclass of<br>
+                <b>common: Agent</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Agent
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/common/ -->
+                
+                <p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Business item
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/common/ -->
+                
+                <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Person
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/common/ -->
+                
+                <p>A person.</p>
+                
+
+                
+                
+                <p>Agent (superclass) &rarr; Person (class)</p>
+                
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        
+
+        
+
+        <h2 id="makers">Made by</h2>
+
+        <ul id="makers">
+            
+
+            <li class="maker">Anya Somerville
+                </li>
+
+            
+
+            <li class="maker">Michael Smethurst
+                
+                &mdash; <a href="http://smethur.st/">http://smethur.st/</a>
+
+                </li>
+
+            
+
+            <li class="maker">Robert Brook
+                
+                &mdash; <a href="https://robert-brook.com/">https://robert-brook.com/</a>
+
+                </li>
+
+            
+
+            <li class="maker">Silver Oliver
+                </li>
+
+            
+        </ul>
+
+        
 
 
 
-<h2 id="namespaces">Namespaces</h2>
- 
+        <h2 id="namespaces">Namespaces</h2>
 
+        
 
-<p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
 
+        
 
+        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
 
-<p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+        
 
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
 
+        
 
-<p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+        <p class="namespace"><strong>pcommon</strong> http://parliament.uk/ontologies/common/</p>
 
+        
 
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
 
-<p class="namespace"><strong>pcommon</strong> http://parliament.uk/ontologies/common/</p>
+        
 
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
 
+        
 
-<p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
 
+        
 
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
 
-<p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+        
 
+        
 
+    </main>
 
-<p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+    <footer>
 
+        <p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
 
+        <p>Ontology created: <time id="created">2021-01-06</time></p>
+        
+        <p><Source <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/common/common-ontology.ttl">https://raw.githubusercontent.com/ukparliament/ontologies/master/common/common-ontology.ttl</a></p>
 
-<p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
-
-
-
-
-
-</main>
-
-<footer>
-
-<p><span id="copyright">&copy; Open Parliament Licence v3.0</span></p>
-
-<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=ttlurl">WebVOWL</a></p>
-</footer>
+        <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=">WebVOWL</a></p>
+    </footer>
 </body>
+
 </html>

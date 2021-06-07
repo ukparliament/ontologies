@@ -106,8 +106,22 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         if i not in makers:
             makers.append(i)
 
+    imports = []
+    
+    for object in g.objects(None, OWL.imports):
+        imports.append(object)
 
-    print("PARSED\t" + str(ttlpath))
+    equivalentClasses = []
+
+    for s,p,o in g.triples((None, OWL.equivalentClass, None)):
+        equivalentClassObject = {}
+        equivalentClassObject["s"] = str(s)
+        equivalentClassObject["o"] = str(o)
+        equivalentClasses.append(equivalentClassObject)
+
+    
+
+    # print("PARSED\t" + str(ttlpath))
 
     try:
         os.makedirs(htmldir + str(ttlpath.parent))
@@ -123,17 +137,18 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
             description=Markup(description),
             depiction=Markup(depiction),
             htmldir=htmldir,
-            ttlurl="ttlurl",
+            ttlpath=ttlpath,
+            ttldir="https://raw.githubusercontent.com/ukparliament/ontologies/master/",
             classes=classes,
             objectproperties=objectproperties,
             namespaces=g.namespaces(),
             makers=makers,
             root_url="https://ukparliament.github.io/ontologies/",
-            imports=g.triples((None, OWL.imports, None)),
-            equivalentClasses=g.triples((None, OWL.equivalentClass, None)),
+            imports=imports,
+            equivalentClasses=equivalentClasses,
             subClasses=g.triples((None, RDFS.subClassOf, None)),
             dataproperties=dataproperties))
-    print("WROTE\t" + htmlpath)
+    # print("WROTE\t" + htmlpath)
 
     
 
