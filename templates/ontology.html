@@ -14,7 +14,9 @@ p {line-height:1.4;}
 <body>
 <header>
 
-      <nav><a href="/">Home</a></nav>
+      <nav><a href="./{{ htmldir }}">Ontologies</a></nav>
+
+      <pre>{% debug %}</pre>
 </header>
 
 <main>
@@ -23,32 +25,30 @@ p {line-height:1.4;}
 
 <h1>{{ title }}</h1>
 
-
-
 {% if description != "None" %}
 <p>{{ description }}</p>
 {% endif %}
 
-{% if depiction %}
-<a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
-{% endif %}
 
 {% if imports %}
 
  <h2 id="imports">Imported ontologies</h2>
 
 <ul>
-{% for import in imports|sort %}
+    {% for import in imports|sort %}
 
-<li>{{ import.2 }}</li>
+        {% if import.2.startswith(root_url) %}
 
-{% if import.2.startswith(root_url) %}
+        <li><a href="{{ import.2[30:] }}" title="{{ import.2 }}">{{ import.2.split('/')[5] }}</a></li>
 
-<li><a href="{{ import.2[30:] }}" title="{{ import.2 }}">{{ import.2.split('/')[5] }}</a></li>
+        {% else %}
 
-{% endif %}
-{% endfor %}
+        <li>{{ import.2 }}</li>
+
+        {% endif %}
+    {% endfor %}
 </ul>
+{% endif %}
 
 
 {% if equivalentClasses %}
@@ -59,7 +59,7 @@ p {line-height:1.4;}
 {% for equivalentClass in equivalentClasses|sort %}
 <p>
 <b>{{ equivalentClass.0.split('/')[4:][0] }}: {{ equivalentClass.0.split('/')[4:][1] }}</b>
-<br>is equivalent to</br>
+<br>is equivalent to
 <b>{{ equivalentClass.2.split('/')[4:][0] }}: {{ equivalentClass.2.split('/')[4:][1] }}</b>
 </p>
 {% endfor %}
@@ -81,7 +81,6 @@ p {line-height:1.4;}
 </details>
 {% endif %}
 
-{% endif %}
 
 {% if classes %}
 <section id="classes">
@@ -183,6 +182,10 @@ Range: {{ objectproperty.range }}</p>
 <p class="namespace"><strong>{{ namespace.0 }}</strong> {{ namespace.1 }}</p>
 
 {% endfor %}
+
+{% if depiction %}
+<a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
+{% endif %}
 
 </main>
 
