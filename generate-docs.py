@@ -9,7 +9,8 @@ from markupsafe import Markup
 
 env = Environment(
     loader = FileSystemLoader("templates"),
-    autoescape=select_autoescape()
+    autoescape=select_autoescape(),
+    extensions=['jinja2.ext.debug']
 )
 
 template = env.get_template("ontology.html")
@@ -114,24 +115,24 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         pass
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
-    htmlfile = open(htmlpath, "w")
-    htmlfile.write(template.render(
-        title=Markup(title),
-        created=Markup(created),
-        rights=Markup(rights),
-        description=Markup(description),
-        depiction=Markup(depiction),
-        ttlurl="ttlurl",
-        classes=classes,
-        objectproperties=objectproperties,
-        namespaces=g.namespaces(),
-        makers=makers,
-        root_url="root_url",
-        imports=g.triples((None, OWL.imports, None)),
-        equivalentClasses=g.triples((None, OWL.equivalentClass, None)),
-        subClasses=g.triples((None, RDFS.subClassOf, None)),
-        dataproperties=dataproperties))
-    htmlfile.close()
+    with open(htmlpath, 'w') as htmlfile:
+        htmlfile.write(template.render(
+            title=Markup(title),
+            created=Markup(created),
+            rights=Markup(rights),
+            description=Markup(description),
+            depiction=Markup(depiction),
+            htmldir=htmldir,
+            ttlurl="ttlurl",
+            classes=classes,
+            objectproperties=objectproperties,
+            namespaces=g.namespaces(),
+            makers=makers,
+            root_url="https://ukparliament.github.io/ontologies/",
+            imports=g.triples((None, OWL.imports, None)),
+            equivalentClasses=g.triples((None, OWL.equivalentClass, None)),
+            subClasses=g.triples((None, RDFS.subClassOf, None)),
+            dataproperties=dataproperties))
     print("WROTE\t" + htmlpath)
 
     
