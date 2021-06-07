@@ -1,199 +1,223 @@
 <!doctype html>
 <html lang="en-GB">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ title }}</title>
-<style>
-body {font-family:system-ui;max-width:42rem;margin:1rem auto;padding:1rem;}
-img {width:100%;}
-main {word-wrap: break-word;}
-p {line-height:1.4;}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 42rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            word-wrap: break-word;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+    </style>
 </head>
+
 <body>
-<header>
+    <header>
 
-      <nav><a href="./{{ htmldir }}">Ontologies</a></nav>
-
-      <pre>{% debug %}</pre>
-</header>
-
-<main>
-
-    <p><time id="created">Created {{ created }}</time> - Source <a href="{{ ttlurl }}">{{ ttlurl|e }}</a></p>
-
-<h1>{{ title }}</h1>
-
-{% if description != "None" %}
-<p>{{ description }}</p>
-{% endif %}
+        <nav><a href="../">Ontologies</a></nav>
 
 
-{% if imports %}
 
- <h2 id="imports">Imported ontologies</h2>
+        <p>
+        <details>
+            <summary>Debug</summary>
+            <pre>{% debug %}</pre>
+        </details>
+        </p>
 
-<ul>
-    {% for import in imports|sort %}
 
-        {% if import.2.startswith(root_url) %}
+    </header>
 
-        <li><a href="{{ import.2[30:] }}" title="{{ import.2 }}">{{ import.2.split('/')[5] }}</a></li>
+    <main>
 
-        {% else %}
+        
 
-        <li>{{ import.2 }}</li>
+        <h1>{{ title }}</h1>
+
+        {% if description != "None" %}
+        <p>{{ description }}</p>
+        {% endif %}
+
+
+        {% if imports %}
+
+        <h2 id="imports">Imported ontologies</h2>
+
+        <ul>
+            {% for import in imports %}
+
+            <li>{{ import }}</li>
+
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+
+        {% if equivalentClasses %}
+
+            <h2 id="equivalentclasses">Equivalent classes</h2>
+            <ul>
+            {% for equivalentClass in equivalentClasses %}
+            <li>
+                {{ equivalentClass.s }} ... {{ equivalentClass.o }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if subClasses %}
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            {% for subClass in subClasses|sort %}
+            <p>
+                <b>{{ subClass.0.split('/')[4:][0] }}: {{ subClass.0.split('/')[4:][1] }}</b>
+                <br>is a subclass of<br>
+                <b>{{ subClass.2.split('/')[4:][0] }}: {{ subClass.2.split('/')[4:][1] }}</b>
+            </p>
+            {% endfor %}
+        </details>
+        {% endif %}
+
+
+        {% if classes %}
+        <section id="classes">
+            <h2>Classes</h2>
+
+            {% for class in classes|sort(attribute='label') %}
+            <article class="class">
+                <h3>{{ class.label }}
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- {{ class.isDefinedBy }} -->
+                {% if class.comment %}
+                <p>{{ class.comment }}</p>
+                {% endif %}
+
+                {% if class.superclasses %}
+                {% for superclass in class.superclasses %}
+                <p>{{ superclass }} (superclass) &rarr; {{ class.label }} (class)</p>
+                {% endfor %}
+                {% endif %}
+
+            </article>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        {% if objectproperties %}
+
+        <section id="properties">
+            <h2>Object properties</h2>
+
+            {% for objectproperty in objectproperties|sort(attribute='label') %}
+
+            <article class="property">
+
+                <h3>{{ objectproperty.label }} <span class="subhead">object property</span></h3>
+
+                {% if objectproperty.superproperty %}
+                <p>Object property <strong>{{ objectproperty.label }}</strong> &rarr; is a subproperty of &rarr; Object
+                    property <strong>{{ objectproperty.superproperty }}</strong></p>
+                {% endif %}
+
+                {% if objectproperty.comment %}
+                <p>{{ objectproperty.comment }}</p>
+                {% endif %}
+
+                <p>Domain: {{ objectproperty.domain }}
+                    <br>
+                    Range: {{ objectproperty.range }}
+                </p>
+
+            </article>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        {% if dataproperties %}
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            {% for dataproperty in dataproperties|sort(attribute='label') %}
+
+            <article class="dataproperty">
+                <h3>{{ dataproperty.label }} <span class="subhead">data property</span></h3>
+
+                <p>{{ dataproperty.comment }}</p>
+
+                <p>{{ dataproperty.domain }} (domain) &rarr; {{ dataproperty.label }} &rarr; {{ dataproperty.range }}
+                    (range)</p>
+
+
+            </article>
+            {% endfor %}
+        </section>
 
         {% endif %}
-    {% endfor %}
-</ul>
-{% endif %}
+
+        {% if makers %}
+
+        <h2 id="makers">Made by</h2>
+
+        <ul id="makers">
+            {% for maker in makers|sort(attribute='name') %}
+
+            <li class="maker">{{ maker.name|e }}
+                {% if maker.homepage|e != "None" %}
+                &mdash; <a href="{{ maker.homepage|e }}">{{ maker.homepage|e }}</a>
+
+                {% endif %}</li>
+
+            {% endfor %}
+        </ul>
+
+        {% endif %}
 
 
-{% if equivalentClasses %}
 
-<details id="equivalentclasses">
+        <h2 id="namespaces">Namespaces</h2>
 
- <summary>Equivalent classes</summary>
-{% for equivalentClass in equivalentClasses|sort %}
-<p>
-<b>{{ equivalentClass.0.split('/')[4:][0] }}: {{ equivalentClass.0.split('/')[4:][1] }}</b>
-<br>is equivalent to
-<b>{{ equivalentClass.2.split('/')[4:][0] }}: {{ equivalentClass.2.split('/')[4:][1] }}</b>
-</p>
-{% endfor %}
-</details>
-{% endif %}
+        {% for namespace in namespaces|sort(attribute='0') %}
 
-{% if subClasses %}
+        <p class="namespace"><strong>{{ namespace.0 }}</strong> {{ namespace.1 }}</p>
 
-<details id="subclasses">
+        {% endfor %}
 
- <summary>Subclasses</summary>
-{% for subClass in subClasses|sort %}
-<p>
-<b>{{ subClass.0.split('/')[4:][0] }}: {{ subClass.0.split('/')[4:][1] }}</b>
-<br>is a subclass of<br>
-<b>{{ subClass.2.split('/')[4:][0] }}: {{ subClass.2.split('/')[4:][1] }}</b>
-</p>
-{% endfor %}
-</details>
-{% endif %}
+        {% if depiction %}
+        <a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
+        {% endif %}
 
+    </main>
 
-{% if classes %}
-<section id="classes">
-<h2>Classes</h2>
+    <footer>
 
-{% for class in classes|sort(attribute='label') %}
-<article class="class">
-<h3>{{ class.label }}
+        <p><span id="copyright">&copy; {{ rights|e }}</span></p>
 
-<span class="subhead">class</span></h3>
-<!-- {{ class.isDefinedBy }} -->
-{% if class.comment %}
-<p>{{ class.comment }}</p>
-{% endif %}
-
-{% if class.superclasses %}
-{% for superclass in class.superclasses %}
-<p>{{ superclass }} (superclass) &rarr; {{ class.label }} (class)</p>
-{% endfor %}
-{% endif %}
-
-</article>
-{% endfor %}
-</section>
-{% endif %}
-
-{% if objectproperties %}
-
-<section id="properties">
-<h2>Object properties</h2>
-
-{% for objectproperty in objectproperties|sort(attribute='label') %}
-
-<article class="property">
-
-<h3>{{ objectproperty.label }} <span class="subhead">object property</span></h3>
-
-{% if objectproperty.superproperty %}
-<p>Object property <strong>{{ objectproperty.label }}</strong> &rarr; is a subproperty of &rarr; Object property <strong>{{ objectproperty.superproperty }}</strong></p>
-{% endif %}
-
-{% if objectproperty.comment %}
-<p>{{ objectproperty.comment }}</p>
-{% endif %}
-
-<p>Domain: {{ objectproperty.domain }}
-<br>
-Range: {{ objectproperty.range }}</p>
-
-</article>
-{% endfor %}
-</section>
-{% endif %}
-
-{% if dataproperties %}
-
-<section id="dataproperties">
-<h2>Data properties</h2>
-{% for dataproperty in dataproperties|sort(attribute='label') %}
-
-<article class="dataproperty">
-<h3>{{ dataproperty.label }} <span class="subhead">data property</span></h3>
-
-<p>{{ dataproperty.comment }}</p>
-
-<p>{{ dataproperty.domain }} (domain) &rarr; {{ dataproperty.label }} &rarr; {{ dataproperty.range }} (range)</p>
-
-
-</article>
-{% endfor %}
-</section>
-
-{% endif %}
-
-{% if makers %}
-
- <h2 id="makers">Made by</h2>
- 
- <ul id="makers">
-{% for maker in makers|sort(attribute='name') %}
-
-<li class="maker">{{ maker.name|e }}
-        {% if maker.homepage|e != "None" %}
-        &mdash; <a href="{{ maker.homepage|e }}">{{ maker.homepage|e }}</a>
+        <p>Ontology created: <time id="created">{{ created }}</time></p>
         
-        {% endif %}</li> 
+        <p><Source <a href="{{ ttldir }}{{ ttlpath }}">{{ttldir }}{{ ttlpath }}</a></p>
 
-    {% endfor %}
-    </ul>
-
-{% endif %}
-
-
-
-<h2 id="namespaces">Namespaces</h2>
- 
-{% for namespace in namespaces|sort(attribute='0') %}
-
-<p class="namespace"><strong>{{ namespace.0 }}</strong> {{ namespace.1 }}</p>
-
-{% endfor %}
-
-{% if depiction %}
-<a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
-{% endif %}
-
-</main>
-
-<footer>
-
-<p><span id="copyright">&copy; {{ rights|e }}</span></p>
-
-<p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttlurl }}">WebVOWL</a></p>
-</footer>
+        <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttlurl }}">WebVOWL</a></p>
+    </footer>
 </body>
+
 </html>
