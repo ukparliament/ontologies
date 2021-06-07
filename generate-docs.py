@@ -9,8 +9,7 @@ from markupsafe import Markup
 
 env = Environment(
     loader = FileSystemLoader("templates"),
-    autoescape=select_autoescape(),
-    extensions=['jinja2.ext.debug']
+    autoescape=select_autoescape()
 )
 
 template = env.get_template("ontology.html")
