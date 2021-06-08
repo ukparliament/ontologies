@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interface ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 40rem;
+            margin: 1rem auto;
+            padding: 1.4rem;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        main {
+            line-height: 1.4;
+            padding: 2rem 0;
+        }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+        <br>
+        interface/interface.ttl</nav>
+
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Interface ontology</h1>
+
+        
+        <p>An ontology to link together models for UK Parliament.</p>
+        
+
+
+        
+
+        <h2 id="imports">Imported ontologies</h2>
+
+        <ul>
+            
+
+            
+
+            <li>www.w3.org/2004/02/skos/core</li>
+
+            
+
+            
+
+            
+            <li>/ontologies/agency/agency-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/business-item/business-item-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/description/description-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/election/election-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/formal-body-affiliation/formal-body-affiliation-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/formal-body/formal-body-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/house-membership/house-membership-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/laying/laying-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/legislation/legislation-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/making-available/making-available-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/parliamentary-bloc/parliamentary-bloc-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/procedure-step-annotation/procedure-step-annotation-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/procedure/procedure-ontology.ttl</li>
+            
+
+            
+
+            
+            <li>/ontologies/treaty/treaty-ontology.ttl</li>
+            
+
+            
+        </ul>
+        
+
+
+        
+
+            <h2 id="equivalentclasses">Equivalent classes</h2>
+            <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>BusinessItem ... /<wbr>ontologies/<wbr>business-item/<wbr>BusinessItem
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>WorkPackage ... /<wbr>ontologies/<wbr>procedure/<wbr>WorkPackage
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Laying ... /<wbr>ontologies/<wbr>laying/<wbr>Laying
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>BusinessItem ... /<wbr>ontologies/<wbr>procedure/<wbr>BusinessItem
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>House ... /<wbr>ontologies/<wbr>procedure/<wbr>House
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Laying ... /<wbr>ontologies/<wbr>making-available/<wbr>Laying
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>PoliticalParty ... /<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>PoliticalParty
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>LayingDuty ... /<wbr>ontologies/<wbr>laying/<wbr>LayingDuty
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ... /<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Person ... /<wbr>ontologies/<wbr>house-membership/<wbr>Person
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>House ... /<wbr>ontologies/<wbr>making-available/<wbr>House
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Session ... /<wbr>ontologies/<wbr>making-available/<wbr>Session
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Place ... /<wbr>ontologies/<wbr>business-item/<wbr>Place
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>ConstituencyGroup ... /<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>BusinessItem ... /<wbr>ontologies/<wbr>formal-body/<wbr>BusinessItem
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>BusinessStep ... /<wbr>ontologies/<wbr>procedure-step-annotation/<wbr>BusinessStep
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>House ... /<wbr>ontologies/<wbr>formal-body/<wbr>House
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Procedure ... /<wbr>ontologies/<wbr>legislation/<wbr>Procedure
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>WorkPackage ... /<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>House ... /<wbr>ontologies/<wbr>laying/<wbr>House
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>LayingDuty ... /<wbr>ontologies/<wbr>legislation/<wbr>LayingDuty
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>ParliamentPeriod ... /<wbr>ontologies/<wbr>house-membership/<wbr>ParliamentPeriod
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Person ... /<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Person
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>ParliamentPeriod ... /<wbr>ontologies/<wbr>election/<wbr>ParliamentPeriod
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Session ... /<wbr>ontologies/<wbr>laying/<wbr>Session
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ... /<wbr>ontologies/<wbr>treaty/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>House ... /<wbr>ontologies/<wbr>house-membership/<wbr>House
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Person ... /<wbr>ontologies/<wbr>agency/<wbr>Person
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>BusinessStep ... /<wbr>ontologies/<wbr>procedure/<wbr>BusinessStep
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>PoliticalParty ... /<wbr>ontologies/<wbr>election/<wbr>PoliticalParty
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Place ... /<wbr>ontologies/<wbr>agency/<wbr>Place
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Procedure ... /<wbr>ontologies/<wbr>procedure/<wbr>Procedure
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Person ... /<wbr>ontologies/<wbr>election/<wbr>Person
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>Person ... /<wbr>ontologies/<wbr>laying/<wbr>Person
+            </li>
+            
+            <li>
+                /<wbr>ontologies/<wbr>interface/<wbr>ConstituencyGroup ... /<wbr>ontologies/<wbr>house-membership/<wbr>ConstituencyGroup
+            </li>
+            
+        </ul>
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>election: ElectoralIncumbency</b>
+                <br>is a subclass of<br>
+                <b>agency: Incumbency</b>
+            </p>
+            
+            <p>
+                <b>formal-body-affiliation: FormalBodyMembership</b>
+                <br>is a subclass of<br>
+                <b>agency: GroupInclusion</b>
+            </p>
+            
+            <p>
+                <b>formal-body-affiliation: FormalBodyPosition</b>
+                <br>is a subclass of<br>
+                <b>agency: Position</b>
+            </p>
+            
+            <p>
+                <b>formal-body: FormalBody</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>house-membership: House</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>house-membership: HouseSeat</b>
+                <br>is a subclass of<br>
+                <b>agency: Position</b>
+            </p>
+            
+            <p>
+                <b>house-membership: SeatIncumbency</b>
+                <br>is a subclass of<br>
+                <b>agency: Incumbency</b>
+            </p>
+            
+            <p>
+                <b>laying: House</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>laying: LayingBody</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>laying: LayingOrWithdrawal</b>
+                <br>is a subclass of<br>
+                <b>business-item: BusinessItem</b>
+            </p>
+            
+            <p>
+                <b>laying: LayingOrWithdrawal</b>
+                <br>is a subclass of<br>
+                <b>formal-body: BusinessItem</b>
+            </p>
+            
+            <p>
+                <b>laying: LayingOrWithdrawl</b>
+                <br>is a subclass of<br>
+                <b>procedure: BusinessItem</b>
+            </p>
+            
+            <p>
+                <b>legislation: ActOfParliament</b>
+                <br>is a subclass of<br>
+                <b>description: DescribingThing</b>
+            </p>
+            
+            <p>
+                <b>legislation: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</b>
+                <br>is a subclass of<br>
+                <b>description: DescribingThing</b>
+            </p>
+            
+            <p>
+                <b>legislation: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</b>
+                <br>is a subclass of<br>
+                <b>laying: LaidPaper</b>
+            </p>
+            
+            <p>
+                <b>legislation: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</b>
+                <br>is a subclass of<br>
+                <b>laying: WithdrawnPaper</b>
+            </p>
+            
+            <p>
+                <b>legislation: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</b>
+                <br>is a subclass of<br>
+                <b>procedure: WorkPackageableThing</b>
+            </p>
+            
+            <p>
+                <b>legislation: ProposedNegativeStatutoryInstrument</b>
+                <br>is a subclass of<br>
+                <b>laying: LaidPaper</b>
+            </p>
+            
+            <p>
+                <b>legislation: ProposedNegativeStatutoryInstrument</b>
+                <br>is a subclass of<br>
+                <b>laying: WithdrawnPaper</b>
+            </p>
+            
+            <p>
+                <b>legislation: ProposedNegativeStatutoryInstrument</b>
+                <br>is a subclass of<br>
+                <b>procedure: WorkPackageableThing</b>
+            </p>
+            
+            <p>
+                <b>making-available: House</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>parliamentary-bloc: Affiliation</b>
+                <br>is a subclass of<br>
+                <b>agency: GroupInclusion</b>
+            </p>
+            
+            <p>
+                <b>parliamentary-bloc: Member</b>
+                <br>is a subclass of<br>
+                <b>agency: Person</b>
+            </p>
+            
+            <p>
+                <b>parliamentary-bloc: ParliamentaryBloc</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>parliamentary-bloc: PoliticalParty</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>procedure: House</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>procedure: Procedure</b>
+                <br>is a subclass of<br>
+                <b>description: DescribedThing</b>
+            </p>
+            
+            <p>
+                <b>procedure: Route</b>
+                <br>is a subclass of<br>
+                <b>description: DescribedThing</b>
+            </p>
+            
+            <p>
+                <b>treaty: GovernmentOrganisation</b>
+                <br>is a subclass of<br>
+                <b>agency: Group</b>
+            </p>
+            
+            <p>
+                <b>treaty: TreatyAsLaid</b>
+                <br>is a subclass of<br>
+                <b>laying: LaidPaper</b>
+            </p>
+            
+            <p>
+                <b>treaty: TreatyAsLaid</b>
+                <br>is a subclass of<br>
+                <b>laying: WithdrawnPaper</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Business item
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Business step
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A business step is a step that can be actualised by a business item.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Constituency group
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Draft and made statutory instrument subject to parliamentary procedure
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>House
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A parliamentary House, for example: the House of Lords.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Laying
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>The act of making available a paper and any supporting documents into a House. Papers may be laid before both Houses on the same day.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Laying duty
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>The duty of a body to lay papers before a House as imposed by an Act of Parliament.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Parliament period
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Person
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A person.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Place
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A place named in a geography.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Political party
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A group registered with the Electoral Commission as a political party.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Procedure
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Session
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Work package
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/interface/ -->
+                
+                <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        
+
+        
+
+
+
+        <h2 id="namespaces">Namespaces</h2>
+
+        
+
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+        
+
+        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+        
+
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+        
+
+        <p class="namespace"><strong>pa</strong> http://parliament.uk/ontologies/agency/</p>
+
+        
+
+        <p class="namespace"><strong>pbi</strong> http://parliament.uk/ontologies/business-item/</p>
+
+        
+
+        <p class="namespace"><strong>pdes</strong> http://parliament.uk/ontologies/description/</p>
+
+        
+
+        <p class="namespace"><strong>pe</strong> http://parliament.uk/ontologies/election/</p>
+
+        
+
+        <p class="namespace"><strong>pfb</strong> http://parliament.uk/ontologies/formal-body/</p>
+
+        
+
+        <p class="namespace"><strong>pfba</strong> http://parliament.uk/ontologies/formal-body-affiliation/</p>
+
+        
+
+        <p class="namespace"><strong>phm</strong> http://parliament.uk/ontologies/house-membership/</p>
+
+        
+
+        <p class="namespace"><strong>pint</strong> http://parliament.uk/ontologies/interface/</p>
+
+        
+
+        <p class="namespace"><strong>pl</strong> http://parliament.uk/ontologies/laying/</p>
+
+        
+
+        <p class="namespace"><strong>plg</strong> http://parliament.uk/ontologies/legislation/</p>
+
+        
+
+        <p class="namespace"><strong>pma</strong> http://parliament.uk/ontologies/making-available/</p>
+
+        
+
+        <p class="namespace"><strong>ppb</strong> http://parliament.uk/ontologies/parliamentary-bloc/</p>
+
+        
+
+        <p class="namespace"><strong>ppr</strong> http://parliament.uk/ontologies/procedure/</p>
+
+        
+
+        <p class="namespace"><strong>ppsa</strong> http://parliament.uk/ontologies/procedure-step-annotation/</p>
+
+        
+
+        <p class="namespace"><strong>ptr</strong> http://parliament.uk/ontologies/treaty/</p>
+
+        
+
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+        
+
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+        
+
+        <p class="namespace"><strong>skos</strong> http://www.w3.org/2004/02/skos/core#</p>
+
+        
+
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+        
+
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+        
+
+        
+
+
+        
+        <a href="https://ukparliament.github.io/ontologies/interface/interface.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/interface/interface.png"></a>
+        
+
+        <p id="makers">
+        <strong>Made by</strong>
+
+
+            
+- 
+            
+
+                
+
+                Anya Somerville
+
+                
+
+            
+- 
+            
+
+                
+                <a href="http://smethur.st/">Michael Smethurst</a>
+                
+                
+
+            
+- 
+            
+
+                
+                <a href="https://robert-brook.com/">Robert Brook</a>
+                
+                
+
+            
+- 
+            
+
+                
+
+                Silver Oliver
+
+                
+
+            
+        </p>
+        
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2018-10-11</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/interface/interface.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/interface/interface.ttl">WebVOWL</a></p>
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>
