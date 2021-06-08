@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Petition ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 40rem;
+            margin: 1rem auto;
+            padding: 1.4rem;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        main {
+            line-height: 1.4;
+            padding: 2rem 0;
+        }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+        <br>
+        petition/petition-ontology.ttl</nav>
+
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Petition ontology</h1>
+
+        
+        <p>Petition ontology for UK Parliament. Covers the public surface area of petitions.</p>
+        
+
+
+        
+
+
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>petition: Approval</b>
+                <br>is a subclass of<br>
+                <b>petition: ModerationOption</b>
+            </p>
+            
+            <p>
+                <b>petition: Rejection</b>
+                <br>is a subclass of<br>
+                <b>petition: ModerationOption</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Approval
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>Explicit moderation option for when a petition is approved.</p>
+                
+
+                
+                
+                <p>ModerationOption (superclass) &rarr; Approval (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Debate
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>A Parliamentary debate.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>GovernmentResponse
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>A response from the Government.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>LocatedSignatureCount
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>The number of signatures on a petition from a given place.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Moderation
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>The moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ModerationOption
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>The available moderation options for a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Person
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>A person.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Petition
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>An online Parliamentary petition.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Place
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>A place. Any kind of place.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Rejection
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>Explicit moderation option for when a petition is rejected.</p>
+                
+
+                
+                
+                <p>ModerationOption (superclass) &rarr; Rejection (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Threshold
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>A type of threshold. Might be moderation threshold, government response threshold or debate threshold.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ThresholdAttainment
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/petition/ -->
+                
+                <p>The threshold attainment levels a petition might pass through from moderation threshold to government response threshold to debate threshold.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="properties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="property">
+
+                <h3>fromPlace <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a located signature count to the place the signatures came from.</p>
+                
+
+                <p>Domain: LocatedSignatureCount
+                    <br>
+                    Range: Place
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasCreator <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a petition to the person who created it.</p>
+                
+
+                <p>Domain: Petition
+                    <br>
+                    Range: Person
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasDebate <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a petition to a debate.</p>
+                
+
+                <p>Domain: Petition
+                    <br>
+                    Range: Debate
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasGovernmentResponse <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a petition to a Government response.</p>
+                
+
+                <p>Domain: Petition
+                    <br>
+                    Range: GovernmentResponse
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasLocatedSignatureCount <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a petition to a located signature count.</p>
+                
+
+                <p>Domain: Petition
+                    <br>
+                    Range: LocatedSignatureCount
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasModeration <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a petition to its moderation states.</p>
+                
+
+                <p>Domain: Petition
+                    <br>
+                    Range: Moderation
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasModerationOption <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a moderation to its moderation option.</p>
+                
+
+                <p>Domain: Moderation
+                    <br>
+                    Range: ModerationOption
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasThreshold <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a threshold attainment to a threshold.</p>
+                
+
+                <p>Domain: ThresholdAttainment
+                    <br>
+                    Range: Threshold
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasThresholdAttainment <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a petition to a threshold attainment.</p>
+                
+
+                <p>Domain: Petition
+                    <br>
+                    Range: ThresholdAttainment
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>action <span class="subhead">data property</span></h3>
+
+                <p>The action text (title) of the petition entered by the petition creator.</p>
+
+                <p>Petition (domain) &rarr; action &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>additionalDetails <span class="subhead">data property</span></h3>
+
+                <p>Additional text to justify the petition entered by the petition creator.</p>
+
+                <p>Petition (domain) &rarr; additionalDetails &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>background <span class="subhead">data property</span></h3>
+
+                <p>A background explanation of why the petition was created entered by the petition creator.</p>
+
+                <p>Petition (domain) &rarr; background &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>closedAt <span class="subhead">data property</span></h3>
+
+                <p>Date time at which the petition was closed.</p>
+
+                <p>Petition (domain) &rarr; closedAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>rejectionCode <span class="subhead">data property</span></h3>
+
+                <p>A number identifying a specific rejection code.</p>
+
+                <p>Rejection (domain) &rarr; rejectionCode &rarr; integer
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>rejectionDetails <span class="subhead">data property</span></h3>
+
+                <p>Written explanation of why a petition was rejected.</p>
+
+                <p>Rejection (domain) &rarr; rejectionDetails &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>signatureCount <span class="subhead">data property</span></h3>
+
+                <p>Number of signatures on a located signature count.</p>
+
+                <p>LocatedSignatureCount (domain) &rarr; signatureCount &rarr; integer
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>signatureCountRetrievedAt <span class="subhead">data property</span></h3>
+
+                <p>Date time at which a located signature count was retrieved from the petitions API.</p>
+
+                <p>LocatedSignatureCount (domain) &rarr; signatureCountRetrievedAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>thresholdAttainmentAt <span class="subhead">data property</span></h3>
+
+                <p>Date time at which a threshold is met.</p>
+
+                <p>ThresholdAttainment (domain) &rarr; thresholdAttainmentAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>thresholdSignatureNumber <span class="subhead">data property</span></h3>
+
+                <p>The number of signatures required to meet a threshold.</p>
+
+                <p>Threshold (domain) &rarr; thresholdSignatureNumber &rarr; integer
+                    (range)</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+        
+
+
+
+        <h2 id="namespaces">Namespaces</h2>
+
+        
+
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+        
+
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+        
+
+        <p class="namespace"><strong>ppt</strong> http://parliament.uk/ontologies/petition/</p>
+
+        
+
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+        
+
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+        
+
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+        
+
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+        
+
+        
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2017-02-22</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">WebVOWL</a></p>
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>
