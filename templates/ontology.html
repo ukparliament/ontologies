@@ -8,33 +8,34 @@
     <style>
         body {
             font-family: system-ui;
-            max-width: 42rem;
+            max-width: 40rem;
             margin: 1rem auto;
             padding: 1rem;
         }
 
         img {
             width: 100%;
+            
         }
 
         main {
-            word-break: break-word;
-        }
-
-        footer a {
-            word-break: break-all;
-        }
-
-        p {
             line-height: 1.4;
+            padding: 2rem 0;
         }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+}
     </style>
 </head>
 
 <body>
     <header>
 
-        <nav><a href="../">Ontologies</a></nav>
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a> {{ ttlpath }}</nav>
 
 
 
@@ -56,9 +57,15 @@
         <h2 id="imports">Imported ontologies</h2>
 
         <ul>
-            {% for import in imports %}
+            {% for import in imports|sort %}
 
-            <li>{{ import }}</li>
+            {% if import.netloc == 'ukparliament.github.io' %}
+            <li>{{ import.path }}</li>
+            {% else %}
+
+            <li>{{ import.netloc }}{{ import.path }}</li>
+
+            {% endif %}
 
             {% endfor %}
         </ul>
@@ -170,23 +177,7 @@
 
         {% endif %}
 
-        {% if makers %}
-
-        <h2 id="makers">Made by</h2>
-
-        <ul id="makers">
-            {% for maker in makers|sort(attribute='name') %}
-
-            <li class="maker">{{ maker.name|e }}
-                {% if maker.homepage|e != "None" %}
-                &mdash; <a href="{{ maker.homepage|e }}">{{ maker.homepage|e }}</a>
-
-                {% endif %}</li>
-
-            {% endfor %}
-        </ul>
-
-        {% endif %}
+        
 
 
 
@@ -198,21 +189,42 @@
 
         {% endfor %}
 
+        {% if makers %}
+
+
         {% if depiction %}
         <a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
+        {% endif %}
+
+        <p id="makers">
+        <strong>Made by</strong>
+
+
+            {% for maker in makers|sort(attribute='name') %}
+- 
+            
+
+                {% if maker.homepage|e != "None" %}
+                <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
+                
+                {% else %}
+
+                {{ maker.name|e }}
+
+                {% endif %}
+
+            {% endfor %}
+        </p>
         {% endif %}
 
     </main>
 
     <footer>
 
-        <p><span id="copyright">&copy; {{ rights|e }}</span></p>
+        <p>Ontology created <time id="created">{{ created }}</time> - <a href="{{ ttldir }}{{ ttlpath }}">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">WebVOWL</a></p>
 
-        <p>Ontology created: <time id="created">{{ created }}</time></p>
-        
-        <p><Source <a href="{{ ttldir }}{{ ttlpath }}">{{ttldir }}{{ ttlpath }}</a></p>
+        <p>&copy; {{ rights|e }}</p>
 
-        <p>Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttlurl }}">WebVOWL</a></p>
     </footer>
 </body>
 
