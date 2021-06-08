@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Making available ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 40rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        main {
+            line-height: 1.4;
+            padding: 2rem 0;
+        }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a> making-available/making-available-ontology.ttl</nav>
+
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Making available ontology</h1>
+
+        
+        <p>A model describing the means of making material available to a House, for example: by presenting, laying or depositing.</p>
+        
+
+
+        
+
+
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>making-available: Depositing</b>
+                <br>is a subclass of<br>
+                <b>making-available: MakingAvailable</b>
+            </p>
+            
+            <p>
+                <b>making-available: Laying</b>
+                <br>is a subclass of<br>
+                <b>making-available: MakingAvailable</b>
+            </p>
+            
+            <p>
+                <b>making-available: Presenting</b>
+                <br>is a subclass of<br>
+                <b>making-available: MakingAvailable</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Depositing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/making-available/ -->
+                
+                <p>The act of depositing materials into the library of a House.</p>
+                
+
+                
+                
+                <p>MakingAvailable (superclass) &rarr; Depositing (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>House
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/making-available/ -->
+                
+                <p>A parliamentary House, for example: the House of Lords.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Laying
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/making-available/ -->
+                
+                <p>The act of presenting a paper and supporting documents into either House. Papers may be laid in both Houses on the same day.</p>
+                
+
+                
+                
+                <p>MakingAvailable (superclass) &rarr; Laying (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Making available
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/making-available/ -->
+                
+                <p>The act of making materials available to a House or to a House by means of its library.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Presenting
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/making-available/ -->
+                
+                <p>The act of presenting materials to a House.</p>
+                
+
+                
+                
+                <p>MakingAvailable (superclass) &rarr; Presenting (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Session
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/making-available/ -->
+                
+                <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. A session typically lasts for one year. Session periods are the same across both Houses.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="properties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="property">
+
+                <h3>In session <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of making materials available to a House, to the session in which they are made available.</p>
+                
+
+                <p>Domain: MakingAvailable
+                    <br>
+                    Range: Session
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>To House <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of making materials available to a House, to the House in which they are made available.</p>
+                
+
+                <p>Domain: MakingAvailable
+                    <br>
+                    Range: House
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>Made available on <span class="subhead">data property</span></h3>
+
+                <p>Relates an act of making materials available to a House, to the date on which they are made available.</p>
+
+                <p>MakingAvailable (domain) &rarr; Made available on &rarr; date
+                    (range)</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+        
+
+
+
+        <h2 id="namespaces">Namespaces</h2>
+
+        
+
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+        
+
+        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+        
+
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+        
+
+        <p class="namespace"><strong>pma</strong> http://parliament.uk/ontologies/making-available/</p>
+
+        
+
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+        
+
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+        
+
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+        
+
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+        
+
+        
+
+
+        
+        <a href="https://ukparliament.github.io/ontologies/making-available/making-available.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/making-available/making-available.png"></a>
+        
+
+        <p id="makers">
+        <strong>Made by</strong>
+
+
+            
+- 
+            
+
+                
+
+                Anya Somerville
+
+                
+
+            
+- 
+            
+
+                
+
+                Jack Dent
+
+                
+
+            
+- 
+            
+
+                
+                <a href="http://smethur.st/">Michael Smethurst</a>
+                
+                
+
+            
+- 
+            
+
+                
+                <a href="https://robert-brook.com/">Robert Brook</a>
+                
+                
+
+            
+        </p>
+        
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2018-12-09</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/making-available/making-available-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/making-available/making-available-ontology.ttl">WebVOWL</a></p>
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>
