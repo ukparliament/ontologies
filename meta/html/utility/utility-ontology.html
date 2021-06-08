@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Utility ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 40rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        main {
+            line-height: 1.4;
+            padding: 2rem 0;
+        }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a> utility/utility-ontology.ttl</nav>
+
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Utility ontology</h1>
+
+        
+        <p>Provides a set of common properties for reuse by other models.</p>
+        
+
+
+        
+
+
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Identifier
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>An identifier from an external system. Might be another Parliament system or an external system such as Wikidata.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>IdentifierSource
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>An identifier source. The system or website from which the identifier originates.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Label
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>Allows a thing to have different labels at different time periods. e.g. a Government Department, Select Committee, Bill or inquiry might change its name during its lifetime. Reuses preferredLabel, abbreviationLabel, sortLabel, startDate and endDate from Thing.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Thing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>A thing. Anything. At all. Provides a set of properties for reuse by any other model.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>WebLink
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>A web link with a source, type and URL.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>WebLinkSource
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>The publisher of the URL identified by the web link e.g. The Daily Mail, personal website, Facebook, Wikipedia.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>WebLinkType
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/utility/ -->
+                
+                <p>A link type e.g. personal homepage, obituary.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="properties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="property">
+
+                <h3>hasIdentifier <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a thing to an identifier.</p>
+                
+
+                <p>Domain: Thing
+                    <br>
+                    Range: Identifier
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasIdentifierSource <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an identifier to its source.</p>
+                
+
+                <p>Domain: Identifier
+                    <br>
+                    Range: IdentifierSource
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasLabel <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a thing to a label during a time period.</p>
+                
+
+                <p>Domain: Thing
+                    <br>
+                    Range: Label
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasWebLink <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a thing to a web link. e.g. Person to a twitter account.</p>
+                
+
+                <p>Domain: Thing
+                    <br>
+                    Range: WebLink
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasWebLinkScource <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a web link to a link source.</p>
+                
+
+                <p>Domain: WebLink
+                    <br>
+                    Range: WebLinkSource
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasWebLinkType <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a link to a weblink type.</p>
+                
+
+                <p>Domain: WebLink
+                    <br>
+                    Range: WebLinkType
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>precededBy <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class.</p>
+                
+
+                <p>Domain: Thing
+                    <br>
+                    Range: Thing
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>abbreviationLabel <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to an abbreviation label.</p>
+
+                <p>Thing (domain) &rarr; abbreviationLabel &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>createdAt <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to a created at date / time.</p>
+
+                <p>Thing (domain) &rarr; createdAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>description <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to its textual description.</p>
+
+                <p>Thing (domain) &rarr; description &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>endOn <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to an end date.</p>
+
+                <p>Thing (domain) &rarr; endOn &rarr; date
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>identifierValue <span class="subhead">data property</span></h3>
+
+                <p>Relates an identifier to its value.</p>
+
+                <p>Identifier (domain) &rarr; identifierValue &rarr; Literal
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>preferredLabel <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to its preferred label.</p>
+
+                <p>Thing (domain) &rarr; preferredLabel &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>Recorded end at <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to its recorded end time.</p>
+
+                <p>Thing (domain) &rarr; Recorded end at &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>Recorded start at <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to its recorded start time.</p>
+
+                <p>Thing (domain) &rarr; Recorded start at &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>sameAs <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs.</p>
+
+                <p>Thing (domain) &rarr; sameAs &rarr; Literal
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>Scheduled end at <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to its scheduled end time.</p>
+
+                <p>Thing (domain) &rarr; Scheduled end at &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>Scheduled start at <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to its scheduled start time.</p>
+
+                <p>Thing (domain) &rarr; Scheduled start at &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>sortLabel <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to a sort label e.g. Churchill, Winston.</p>
+
+                <p>Thing (domain) &rarr; sortLabel &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>sortOrder <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to a sort order.</p>
+
+                <p>Thing (domain) &rarr; sortOrder &rarr; integer
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>startOn <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to a start date.</p>
+
+                <p>Thing (domain) &rarr; startOn &rarr; date
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>updatedAt <span class="subhead">data property</span></h3>
+
+                <p>Relates a thing to an updated at date / time.</p>
+
+                <p>Thing (domain) &rarr; updatedAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>url <span class="subhead">data property</span></h3>
+
+                <p>Relates a web link to a url.</p>
+
+                <p>WebLink (domain) &rarr; url &rarr; Literal
+                    (range)</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+        
+
+
+
+        <h2 id="namespaces">Namespaces</h2>
+
+        
+
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+        
+
+        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+
+        
+
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+        
+
+        <p class="namespace"><strong>putil</strong> http://parliament.uk/ontologies/utility/</p>
+
+        
+
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+        
+
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+        
+
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+        
+
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+        
+
+        
+
+
+        
+        <a href="https://ukparliament.github.io/ontologies/utility/utility.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/utility/utility.png"></a>
+        
+
+        <p id="makers">
+        <strong>Made by</strong>
+
+
+            
+- 
+            
+
+                
+
+                Anya Somerville
+
+                
+
+            
+- 
+            
+
+                
+                <a href="http://smethur.st/">Michael Smethurst</a>
+                
+                
+
+            
+- 
+            
+
+                
+                <a href="https://robert-brook.com/">Robert Brook</a>
+                
+                
+
+            
+- 
+            
+
+                
+
+                Silver Oliver
+
+                
+
+            
+        </p>
+        
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2016-10-05</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">WebVOWL</a></p>
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>

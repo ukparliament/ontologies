@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concept ontology - deprecated</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 40rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        main {
+            line-height: 1.4;
+            padding: 2rem 0;
+        }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a> concept/concept-ontology.ttl</nav>
+
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Concept ontology - deprecated</h1>
+
+        
+        <p>Concept ontology for UK Parliament. Deprecated in favour of SKOS.</p>
+        
+
+
+        
+
+
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Agent
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/concept/ -->
+                
+                <p>A person or group. In this context a librarian or machine subject indexing annotatable things.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>AnnotatableThing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/concept/ -->
+                
+                <p>A thing which can be annotated with a concept or free text tag. e.g. a debate or petition or answer.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Annotation
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/concept/ -->
+                
+                <p>A relationship between an annotatable thing and a concept or free-text tag. e.g. an act of subject indexing.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Concept
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/concept/ -->
+                
+                <p>A concept. Similar to a SKOS concept / a library subject term.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>ConceptScheme
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/concept/ -->
+                
+                <p>A concept scheme. Provides an arbitrary way to group concepts e.g. Commons Library to Lords Library.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Thing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/concept/ -->
+                
+                <p>A thing. Anything at all.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="properties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="property">
+
+                <h3>annotatedBy <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an annotation to a agent.</p>
+                
+
+                <p>Domain: Annotation
+                    <br>
+                    Range: Agent
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasAnnotation <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an annotatable thing to an annotation.</p>
+                
+
+                <p>Domain: AnnotatableThing
+                    <br>
+                    Range: Annotation
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasBroaderConcept <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a concept to a broader concept.</p>
+                
+
+                <p>Domain: Concept
+                    <br>
+                    Range: Concept
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasConcept <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an annotation to a concept.</p>
+                
+
+                <p>Domain: Annotation
+                    <br>
+                    Range: Concept
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasFocus <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a concept to a real world thing that is its focus e.g. The concept / library subject term Winston Churchill to the person Winston Churchill.</p>
+                
+
+                <p>Domain: Concept
+                    <br>
+                    Range: Thing
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>hasRelatedConcept <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a concept to another concept.</p>
+                
+
+                <p>Domain: Concept
+                    <br>
+                    Range: Concept
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>inConceptScheme <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a concept to a concept scheme.</p>
+                
+
+                <p>Domain: Concept
+                    <br>
+                    Range: ConceptScheme
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>alternativeLabel <span class="subhead">data property</span></h3>
+
+                <p>An alternative label.</p>
+
+                <p>Concept (domain) &rarr; alternativeLabel &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>annotatedAt <span class="subhead">data property</span></h3>
+
+                <p>Date time an annotation was created.</p>
+
+                <p>Annotation (domain) &rarr; annotatedAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>historyNote <span class="subhead">data property</span></h3>
+
+                <p>A history note. Textual description of editorial changes to a concept over time.</p>
+
+                <p>Concept (domain) &rarr; historyNote &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>indexerNote <span class="subhead">data property</span></h3>
+
+                <p>A note for indexers. Provides additional guidance on use of the concept.</p>
+
+                <p>Concept (domain) &rarr; indexerNote &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>scopeNote <span class="subhead">data property</span></h3>
+
+                <p>A scope note. Textual description of the intended usage of a concept.</p>
+
+                <p>Concept (domain) &rarr; scopeNote &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>uncontrolledTag <span class="subhead">data property</span></h3>
+
+                <p>To allow for annotations that reference free text tags rather than controlled concepts.</p>
+
+                <p>Annotation (domain) &rarr; uncontrolledTag &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+        
+
+
+
+        <h2 id="namespaces">Namespaces</h2>
+
+        
+
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+        
+
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+        
+
+        <p class="namespace"><strong>pco</strong> http://parliament.uk/ontologies/concept/</p>
+
+        
+
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+        
+
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+        
+
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+        
+
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+        
+
+        
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2016-10-22</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">WebVOWL</a></p>
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>

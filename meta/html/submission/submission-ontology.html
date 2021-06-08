@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submission ontology</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 40rem;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        main {
+            line-height: 1.4;
+            padding: 2rem 0;
+        }
+
+        h2 {padding-top: 1rem;}
+        h3 {padding-top: 1rem;}
+
+        ul {
+    padding-left: 0;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a> submission/submission-ontology.ttl</nav>
+
+
+
+    </header>
+
+    <main>
+
+        
+
+        <h1>Submission ontology</h1>
+
+        
+        <p>Ontology to describe calls from Parliament for submission of evidence and resulting submissions.</p>
+        
+
+
+        
+
+
+        
+
+        
+
+        <details id="subclasses">
+
+            <summary>Subclasses</summary>
+            
+            <p>
+                <b>submission: Call</b>
+                <br>is a subclass of<br>
+                <b>submission: Event</b>
+            </p>
+            
+            <p>
+                <b>submission: CallForEvidence</b>
+                <br>is a subclass of<br>
+                <b>submission: Call</b>
+            </p>
+            
+            <p>
+                <b>submission: CallForOralEvidence</b>
+                <br>is a subclass of<br>
+                <b>submission: Call</b>
+            </p>
+            
+            <p>
+                <b>submission: CallForPapers</b>
+                <br>is a subclass of<br>
+                <b>submission: Call</b>
+            </p>
+            
+            <p>
+                <b>submission: CallForRecords</b>
+                <br>is a subclass of<br>
+                <b>submission: Call</b>
+            </p>
+            
+            <p>
+                <b>submission: Compelled</b>
+                <br>is a subclass of<br>
+                <b>submission: CallForOralEvidence</b>
+            </p>
+            
+        </details>
+        
+
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>CalendarEvent
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A planned or arranged event in a place.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Call
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A call by a committee or committees conducting an inquiry for written evidence, oral evidence, papers or records.</p>
+                
+
+                
+                
+                <p>Event (superclass) &rarr; Call (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>CallForEvidence
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>An open call by a committee or committees conducting an inquiry for members of the public or organisations to provide written evidence. Sometimes referred to as a call for written submissions.</p>
+                
+
+                
+                
+                <p>Call (superclass) &rarr; CallForEvidence (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>CallForOralEvidence
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A call by a committee or committees conducting an inquiry for a named witness to provide oral evidence.</p>
+                
+
+                
+                
+                <p>Call (superclass) &rarr; CallForOralEvidence (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>CallForPapers
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A call by a committee or committees conducting an inquiry for a named individual or organisation to provide papers. Papers are understood to be documents that the individual or organisation are unlikely to possess but would be able to compile.</p>
+                
+
+                
+                
+                <p>Call (superclass) &rarr; CallForPapers (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>CallForRecords
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A call by a committee or committees conducting an inquiry for a named individual or organisation to provide records. Records are understood to be documents that the individual or organisation are known to possess.</p>
+                
+
+                
+                
+                <p>Call (superclass) &rarr; CallForRecords (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Compelled
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A call by a committee or committees conducting an inquiry compelling a named witness to provide oral evidence.</p>
+                
+
+                
+                
+                <p>CallForOralEvidence (superclass) &rarr; Compelled (class)</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Contribution
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A contribution by an individual or organisation to a committee inquiry. This might be in the form of written evidence, oral evidence, papers or records.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Document
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A document.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Event
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>An event. A thing that happens over a time interval.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Focus
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A focus area for a contribution. Borrowed from the formal body ontology to identify the subject area or areas covered by a contribution.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Incumbency
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A position held by a person for a period of time e.g. Philip Hammond occupying the position of Foreign Secretary between two dates.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Person
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/submission/ -->
+                
+                <p>A person.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="properties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="property">
+
+                <h3>callForOralEvidence <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a call for oral evidence to a contribution made in response to that call.</p>
+                
+
+                <p>Domain: CallForOralEvidence
+                    <br>
+                    Range: Contribution
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>callForPapers <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a call for papers to a contribution made in response to that call.</p>
+                
+
+                <p>Domain: CallForPapers
+                    <br>
+                    Range: Contribution
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>callForRecords <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a call for records to a contribution made in response to that call.</p>
+                
+
+                <p>Domain: CallForRecords
+                    <br>
+                    Range: Contribution
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>compelledToAttend <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a compelled call for oral evidence to a calendar event where the witness is expected to be heard.</p>
+                
+
+                <p>Domain: Compelled
+                    <br>
+                    Range: CalendarEvent
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>contributes <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a contribution to a document contributed.</p>
+                
+
+                <p>Domain: Contribution
+                    <br>
+                    Range: Document
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>focusOfContribution <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a contribution to its focus (subject) area(s).</p>
+                
+
+                <p>Domain: Contribution
+                    <br>
+                    Range: Focus
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>inCapacity <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a contribution to the incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation.</p>
+                
+
+                <p>Domain: Contribution
+                    <br>
+                    Range: Incumbency
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>makesContribution <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a person making a contribution to their contribution.</p>
+                
+
+                <p>Domain: Person
+                    <br>
+                    Range: Contribution
+                </p>
+
+            </article>
+            
+
+            <article class="property">
+
+                <h3>respondsToCall <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates any type of contribution to the call it is submitted in response to.</p>
+                
+
+                <p>Domain: Contribution
+                    <br>
+                    Range: Call
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>callDescription <span class="subhead">data property</span></h3>
+
+                <p>Relates any type of call to its descriptive text.</p>
+
+                <p>Call (domain) &rarr; callDescription &rarr; langString
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>calledAt <span class="subhead">data property</span></h3>
+
+                <p>The date time at which a call is made.</p>
+
+                <p>Call (domain) &rarr; calledAt &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>callEnds <span class="subhead">data property</span></h3>
+
+                <p>The date time at which a call ends.</p>
+
+                <p>Call (domain) &rarr; callEnds &rarr; dateTime
+                    (range)</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+        
+
+
+
+        <h2 id="namespaces">Namespaces</h2>
+
+        
+
+        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
+
+        
+
+        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+
+        
+
+        <p class="namespace"><strong>ps</strong> http://parliament.uk/ontologies/submission/</p>
+
+        
+
+        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
+
+        
+
+        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
+
+        
+
+        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
+
+        
+
+        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
+
+        
+
+        
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2017-08-29</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/submission/submission-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/submission/submission-ontology.ttl">WebVOWL</a></p>
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>
