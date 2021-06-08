@@ -10,7 +10,7 @@
             font-family: system-ui;
             max-width: 40rem;
             margin: 1rem auto;
-            padding: 1rem;
+            padding: 1.4rem;
         }
 
         img {
@@ -28,6 +28,7 @@
 
         ul {
     padding-left: 0;
+    list-style-type: none;
 }
     </style>
 </head>
@@ -35,7 +36,9 @@
 <body>
     <header>
 
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a> {{ ttlpath }}</nav>
+        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+        <br>
+        {{ ttlpath }}</nav>
 
 
 
@@ -78,7 +81,7 @@
             <ul>
             {% for equivalentClass in equivalentClasses %}
             <li>
-                {{ equivalentClass.s }} ... {{ equivalentClass.o }}
+                {{ equivalentClass.s|slash2wbr }} ... {{ equivalentClass.o|slash2wbr }}
             </li>
             {% endfor %}
         </ul>
