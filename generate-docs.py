@@ -8,10 +8,15 @@ from rdflib.namespace import RDF, FOAF, OWL, RDFS, DCTERMS
 from markupsafe import Markup
 from urllib.parse import urlparse
 
+def slash2wbr(value):
+    return Markup(value.replace("/", "/<wbr>"))
+
 env = Environment(
     loader = FileSystemLoader("templates"),
     autoescape=select_autoescape()
 )
+
+env.filters["slash2wbr"] = slash2wbr
 
 template = env.get_template("ontology.html")
 
