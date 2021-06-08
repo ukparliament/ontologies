@@ -6,6 +6,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from rdflib.namespace import RDF, FOAF, OWL, RDFS, DCTERMS
 from markupsafe import Markup
+from urllib.parse import urlparse
 
 env = Environment(
     loader = FileSystemLoader("templates"),
@@ -108,17 +109,15 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     imports = []
     
     for object in g.objects(None, OWL.imports):
-        imports.append(object)
+        imports.append(urlparse(object))
 
     equivalentClasses = []
 
     for s,p,o in g.triples((None, OWL.equivalentClass, None)):
         equivalentClassObject = {}
-        equivalentClassObject["s"] = str(s)
-        equivalentClassObject["o"] = str(o)
+        equivalentClassObject["s"] = urlparse(s).path
+        equivalentClassObject["o"] = urlparse(o).path
         equivalentClasses.append(equivalentClassObject)
-
-    
 
     # print("PARSED\t" + str(ttlpath))
 
