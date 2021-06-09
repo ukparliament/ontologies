@@ -19,6 +19,10 @@
 
         }
 
+        span.subhead {
+            font-weight: normal;
+        }
+
         main {
             padding: 2rem 0;
         }
@@ -59,8 +63,14 @@
                 government-organisation/government-organisation-ontology.ttl
             </p>
             <p>
-                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
-                Namespaces | Depiction
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                <a href="#importedontologies">Imported ontologies</a> |
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+                <a href="#depiction">Depiction</a>
             </p>
 
         </nav>
@@ -78,14 +88,13 @@
 
         
         <section id="classes">
-            <h2>Classes<sup>#</sup></h2>
-
+            <h2>Classes</h2>
 
             
             <article class="class">
                 <h3>AttendsCabinet
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -99,7 +108,7 @@
             <article class="class">
                 <h3>GovernmentIncumbency
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -108,7 +117,7 @@
 
                 
                 
-                <p>Incumbency (superclass) &rarr; GovernmentIncumbency (class)</p>
+                <p>Superclass: Incumbency.</p>
                 
                 
 
@@ -117,7 +126,7 @@
             <article class="class">
                 <h3>GovernmentOrganisation
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -126,7 +135,7 @@
 
                 
                 
-                <p>Group (superclass) &rarr; GovernmentOrganisation (class)</p>
+                <p>Superclass: Group.</p>
                 
                 
 
@@ -135,7 +144,7 @@
             <article class="class">
                 <h3>GovernmentPosition
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -144,7 +153,7 @@
 
                 
                 
-                <p>Position (superclass) &rarr; GovernmentPosition (class)</p>
+                <p>Superclass: Position.</p>
                 
                 
 
@@ -153,7 +162,7 @@
             <article class="class">
                 <h3>GovernmentRank
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -167,7 +176,7 @@
             <article class="class">
                 <h3>Group
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -181,7 +190,7 @@
             <article class="class">
                 <h3>Incumbency
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -195,7 +204,7 @@
             <article class="class">
                 <h3>Position
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -211,12 +220,12 @@
 
         
 
-        <section id="properties">
+        <section id="objectproperties">
             <h2>Object properties</h2>
 
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>attendsCabinet <span class="subhead">object property</span></h3>
 
@@ -232,7 +241,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>hasRank <span class="subhead">object property</span></h3>
 
@@ -376,58 +385,115 @@
         
 
         
-
-        <h2 id="subclasses">Subclasses</h2>
-        <ul>
-            
-            <li>
-                /<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentPosition ... /<wbr>ontologies/<wbr>government-organisation/<wbr>Position
-            <li>
+        <section id="subClasses">
+        <h2>Subclasses</h2>
+        <table>
                 
-            <li>
-                /<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentOrganisation ... /<wbr>ontologies/<wbr>government-organisation/<wbr>Group
-            <li>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentPosition</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Position</td>
+                </tr>
                 
-            <li>
-                /<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentIncumbency ... /<wbr>ontologies/<wbr>government-organisation/<wbr>Incumbency
-            <li>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentOrganisation</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Group</td>
+                </tr>
                 
-        </ul>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentIncumbency</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Incumbency</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td>xml</td>
+                    <td><a href="https://prefix.cc/xml">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=xml">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td>rdf</td>
+                    <td><a href="https://prefix.cc/rdf">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=rdf">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td>rdfs</td>
+                    <td><a href="https://prefix.cc/rdfs">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=rdfs">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td>xsd</td>
+                    <td><a href="https://prefix.cc/xsd">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=xsd">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td>pgo</td>
+                    <td><a href="https://prefix.cc/pgo">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=pgo">LOV</a></td>
+
+                    
+                    <td>http://parliament.uk/ontologies/government-organisation/</td>
+                </tr>
+                
+                <tr>
+                    <td>dcterms</td>
+                    <td><a href="https://prefix.cc/dcterms">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=dcterms">LOV</a></td>
+
+                    
+                    <td>http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td>owl</td>
+                    <td><a href="https://prefix.cc/owl">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=owl">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+        </table>
+        </section>  
         
 
 
-        <h2 id="namespaces">Namespaces</h2>
+
 
         
 
-        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
 
-        
+    </main>
 
-        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+    <footer>
 
-        
-
-        <p class="namespace"><strong>pgo</strong> http://parliament.uk/ontologies/government-organisation/</p>
-
-        
-
-        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
-
-        
-
-        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
-
-        
-
-        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
-
-        
-
-        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
-
-        
-
+        <p>Ontology created <time id="created">2017-09-29</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/government-organisation/government-organisation-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/government-organisation/government-organisation-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
         
 
 

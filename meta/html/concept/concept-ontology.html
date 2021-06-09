@@ -19,6 +19,10 @@
 
         }
 
+        span.subhead {
+            font-weight: normal;
+        }
+
         main {
             padding: 2rem 0;
         }
@@ -59,8 +63,14 @@
                 concept/concept-ontology.ttl
             </p>
             <p>
-                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
-                Namespaces | Depiction
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                <a href="#importedontologies">Imported ontologies</a> |
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+                <a href="#depiction">Depiction</a>
             </p>
 
         </nav>
@@ -78,14 +88,13 @@
 
         
         <section id="classes">
-            <h2>Classes<sup>#</sup></h2>
-
+            <h2>Classes</h2>
 
             
             <article class="class">
                 <h3>Agent
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -99,7 +108,7 @@
             <article class="class">
                 <h3>AnnotatableThing
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -113,7 +122,7 @@
             <article class="class">
                 <h3>Annotation
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -127,7 +136,7 @@
             <article class="class">
                 <h3>Concept
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -141,7 +150,7 @@
             <article class="class">
                 <h3>ConceptScheme
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -155,7 +164,7 @@
             <article class="class">
                 <h3>Thing
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -171,12 +180,12 @@
 
         
 
-        <section id="properties">
+        <section id="objectproperties">
             <h2>Object properties</h2>
 
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>annotatedBy <span class="subhead">object property</span></h3>
 
@@ -192,7 +201,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>hasAnnotation <span class="subhead">object property</span></h3>
 
@@ -208,7 +217,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>hasBroaderConcept <span class="subhead">object property</span></h3>
 
@@ -224,7 +233,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>hasConcept <span class="subhead">object property</span></h3>
 
@@ -240,7 +249,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>hasFocus <span class="subhead">object property</span></h3>
 
@@ -256,7 +265,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>hasRelatedConcept <span class="subhead">object property</span></h3>
 
@@ -272,7 +281,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>inConceptScheme <span class="subhead">object property</span></h3>
 
@@ -373,39 +382,92 @@
 
         
 
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td>xml</td>
+                    <td><a href="https://prefix.cc/xml">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=xml">LOV</a></td>
 
-        <h2 id="namespaces">Namespaces</h2>
+                    
+                    <td>http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td>rdf</td>
+                    <td><a href="https://prefix.cc/rdf">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=rdf">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td>rdfs</td>
+                    <td><a href="https://prefix.cc/rdfs">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=rdfs">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td>xsd</td>
+                    <td><a href="https://prefix.cc/xsd">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=xsd">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td>pco</td>
+                    <td><a href="https://prefix.cc/pco">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=pco">LOV</a></td>
+
+                    
+                    <td>http://parliament.uk/ontologies/concept/</td>
+                </tr>
+                
+                <tr>
+                    <td>dcterms</td>
+                    <td><a href="https://prefix.cc/dcterms">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=dcterms">LOV</a></td>
+
+                    
+                    <td>http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td>owl</td>
+                    <td><a href="https://prefix.cc/owl">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=owl">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+
+
 
         
 
-        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
 
-        
+    </main>
 
-        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
+    <footer>
 
-        
-
-        <p class="namespace"><strong>pco</strong> http://parliament.uk/ontologies/concept/</p>
-
-        
-
-        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
-
-        
-
-        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
-
-        
-
-        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
-
-        
-
-        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
-
-        
-
+        <p>Ontology created <time id="created">2016-10-22</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
         
 
 

@@ -132,6 +132,14 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         subClassObject["o"] = urlparse(o).path
         subClasses.append(subClassObject)
 
+    namespaces = []
+
+    for p, n in g.namespaces():
+        namespaceObject = {}
+        namespaceObject["p"] = p
+        namespaceObject["n"] = n
+        namespaces.append(namespaceObject)
+
     # print("PARSED\t" + str(ttlpath))
 
     try:
@@ -153,7 +161,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
                 ttldir="https://raw.githubusercontent.com/ukparliament/ontologies/master/",
                 classes=classes,
                 objectproperties=objectproperties,
-                namespaces=g.namespaces(),
+                namespaces=namespaces,
                 makers=makers,
                 root_url="https://ukparliament.github.io/ontologies/",
                 imports=imports,
