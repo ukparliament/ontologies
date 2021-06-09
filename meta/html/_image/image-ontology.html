@@ -7,11 +7,11 @@
     <title>Image ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,55 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            _image/image-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                _image/image-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Image ontology</h1>
 
         
         <p>Ontology to describe storage and retrieval of parliamentary images</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>image: GeoLocation</b>
-                <br>is a subclass of<br>
-                <b>image: GeographicalThing</b>
-            </p>
-            
-            <p>
-                <b>image: ImageCreator</b>
-                <br>is a subclass of<br>
-                <b>image: Agent</b>
-            </p>
-            
-            <p>
-                <b>image: ImageOwner</b>
-                <br>is a subclass of<br>
-                <b>image: Agent</b>
-            </p>
-            
-            <p>
-                <b>image: Photograph</b>
-                <br>is a subclass of<br>
-                <b>image: Image</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -313,9 +287,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Agent
-                    <br>
-                    Range: Logo
+                <p>Domain: Agent. Range: Logo.
                 </p>
 
             </article>
@@ -329,9 +301,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: ImageCoordinate
-                    <br>
-                    Range: ImageZone
+                <p>Domain: ImageCoordinate. Range: ImageZone.
                 </p>
 
             </article>
@@ -345,9 +315,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Image
-                    <br>
-                    Range: ImageCoordinate
+                <p>Domain: Image. Range: ImageCoordinate.
                 </p>
 
             </article>
@@ -361,9 +329,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Image
-                    <br>
-                    Range: ImageCreator
+                <p>Domain: Image. Range: ImageCreator.
                 </p>
 
             </article>
@@ -377,9 +343,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Image
-                    <br>
-                    Range: ImageOwner
+                <p>Domain: Image. Range: ImageOwner.
                 </p>
 
             </article>
@@ -393,9 +357,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Image
-                    <br>
-                    Range: ImageResolution
+                <p>Domain: Image. Range: ImageResolution.
                 </p>
 
             </article>
@@ -412,9 +374,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Image
-                    <br>
-                    Range: ImageSubject
+                <p>Domain: Image. Range: ImageSubject.
                 </p>
 
             </article>
@@ -428,9 +388,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Image
-                    <br>
-                    Range: UsageLicence
+                <p>Domain: Image. Range: UsageLicence.
                 </p>
 
             </article>
@@ -447,9 +405,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: ImageZone
-                    <br>
-                    Range: ImageSubject
+                <p>Domain: ImageZone. Range: ImageSubject.
                 </p>
 
             </article>
@@ -463,9 +419,7 @@ h1 {            font-weight: normal;
 
                 
 
-                <p>Domain: Photograph
-                    <br>
-                    Range: GeoLocation
+                <p>Domain: Photograph. Range: GeoLocation.
                 </p>
 
             </article>
@@ -484,8 +438,7 @@ h1 {            font-weight: normal;
 
                 <p>Number of bits per component in each channel.</p>
 
-                <p>Image (domain) &rarr; bitsPerSample &rarr; integer
-                    (range)</p>
+                <p>Domain: Image. Range: integer.</p>
 
 
             </article>
@@ -496,8 +449,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>Image (domain) &rarr; compression &rarr; string
-                    (range)</p>
+                <p>Domain: Image. Range: string.</p>
 
 
             </article>
@@ -508,8 +460,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>Image (domain) &rarr; imageCreatedAt &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Image. Range: dateTime.</p>
 
 
             </article>
@@ -520,8 +471,7 @@ h1 {            font-weight: normal;
 
                 <p>Image height in pixels</p>
 
-                <p>Image (domain) &rarr; imageLength &rarr; integer
-                    (range)</p>
+                <p>Domain: Image. Range: integer.</p>
 
 
             </article>
@@ -532,8 +482,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>ImageResolution (domain) &rarr; imageResolutionUnit &rarr; string
-                    (range)</p>
+                <p>Domain: ImageResolution. Range: string.</p>
 
 
             </article>
@@ -544,8 +493,7 @@ h1 {            font-weight: normal;
 
                 <p>Software used to create image</p>
 
-                <p>Image (domain) &rarr; imageSoftware &rarr; integer
-                    (range)</p>
+                <p>Domain: Image. Range: integer.</p>
 
 
             </article>
@@ -556,8 +504,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>Image (domain) &rarr; imageStorageLocation &rarr; string
-                    (range)</p>
+                <p>Domain: Image. Range: string.</p>
 
 
             </article>
@@ -568,8 +515,7 @@ h1 {            font-weight: normal;
 
                 <p>Image width in pixels</p>
 
-                <p>Image (domain) &rarr; imageWidth &rarr; integer
-                    (range)</p>
+                <p>Domain: Image. Range: integer.</p>
 
 
             </article>
@@ -580,8 +526,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>ImageResolution (domain) &rarr; imageXResolution &rarr; integer
-                    (range)</p>
+                <p>Domain: ImageResolution. Range: integer.</p>
 
 
             </article>
@@ -592,8 +537,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>ImageResolution (domain) &rarr; imageYResolution &rarr; integer
-                    (range)</p>
+                <p>Domain: ImageResolution. Range: integer.</p>
 
 
             </article>
@@ -604,8 +548,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>Image (domain) &rarr; samplesPerPixel &rarr; integer
-                    (range)</p>
+                <p>Domain: Image. Range: integer.</p>
 
 
             </article>
@@ -616,8 +559,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>UsageLicence (domain) &rarr; usageLicenceDetails &rarr; string
-                    (range)</p>
+                <p>Domain: UsageLicence. Range: string.</p>
 
 
             </article>
@@ -628,8 +570,7 @@ h1 {            font-weight: normal;
 
                 <p>None</p>
 
-                <p>UsageLicence (domain) &rarr; usageLicenceName &rarr; string
-                    (range)</p>
+                <p>Domain: UsageLicence. Range: string.</p>
 
 
             </article>
@@ -639,7 +580,34 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>image/<wbr>ImageCreator ... /<wbr>ontologies/<wbr>image/<wbr>Agent
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>image/<wbr>Photograph ... /<wbr>ontologies/<wbr>image/<wbr>Image
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>image/<wbr>GeoLocation ... /<wbr>ontologies/<wbr>image/<wbr>GeographicalThing
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>image/<wbr>ImageOwner ... /<wbr>ontologies/<wbr>image/<wbr>Agent
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -680,13 +648,6 @@ h1 {            font-weight: normal;
 
         
 
-    </main>
-
-    <footer>
-
-        <p>Ontology created <time id="created">2017-06-28</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

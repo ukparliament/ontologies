@@ -7,11 +7,11 @@
     <title>Government organisation ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,49 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            government-organisation/government-organisation-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                government-organisation/government-organisation-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Government organisation ontology</h1>
 
         
         <p>Government organisation ontology for UK Parliament</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>government-organisation: GovernmentIncumbency</b>
-                <br>is a subclass of<br>
-                <b>government-organisation: Incumbency</b>
-            </p>
-            
-            <p>
-                <b>government-organisation: GovernmentOrganisation</b>
-                <br>is a subclass of<br>
-                <b>government-organisation: Group</b>
-            </p>
-            
-            <p>
-                <b>government-organisation: GovernmentPosition</b>
-                <br>is a subclass of<br>
-                <b>government-organisation: Position</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -246,9 +226,7 @@ h1 {            font-weight: normal;
                 <p>Relates a government position to cabinet attendance.</p>
                 
 
-                <p>Domain: GovernmentPosition
-                    <br>
-                    Range: AttendsCabinet
+                <p>Domain: GovernmentPosition. Range: AttendsCabinet.
                 </p>
 
             </article>
@@ -264,9 +242,7 @@ h1 {            font-weight: normal;
                 <p>Relates a government position to assorted ways of describing rank.</p>
                 
 
-                <p>Domain: GovernmentPosition
-                    <br>
-                    Range: GovernmentRank
+                <p>Domain: GovernmentPosition. Range: GovernmentRank.
                 </p>
 
             </article>
@@ -285,8 +261,7 @@ h1 {            font-weight: normal;
 
                 <p>Used to capture how the government ranks assorted positions in the cabinet. e.g. whether the Foreign Secretary is ranked above or below the Health Secretary.</p>
 
-                <p>GovernmentPosition (domain) &rarr; cabinetRank &rarr; integer
-                    (range)</p>
+                <p>Domain: GovernmentPosition. Range: integer.</p>
 
 
             </article>
@@ -297,8 +272,7 @@ h1 {            font-weight: normal;
 
                 <p></p>
 
-                <p>GovernmentRank (domain) &rarr; clerksRank &rarr; langString
-                    (range)</p>
+                <p>Domain: GovernmentRank. Range: langString.</p>
 
 
             </article>
@@ -309,8 +283,7 @@ h1 {            font-weight: normal;
 
                 <p>Used to determine how the government chooses to order government organisations. e.g. whether they choose to rank the Foreign Office higher than the Department of Health.</p>
 
-                <p>GovernmentOrganisation (domain) &rarr; governmentSortOrder &rarr; integer
-                    (range)</p>
+                <p>Domain: GovernmentOrganisation. Range: integer.</p>
 
 
             </article>
@@ -321,8 +294,7 @@ h1 {            font-weight: normal;
 
                 <p>Used to determine if a government position has the authority to lay papers into Parliament.</p>
 
-                <p>GovernmentPosition (domain) &rarr; isLayingPosition &rarr; boolean
-                    (range)</p>
+                <p>Domain: GovernmentPosition. Range: boolean.</p>
 
 
             </article>
@@ -333,8 +305,7 @@ h1 {            font-weight: normal;
 
                 <p>Used to describe whether an incumbency is paid or not.</p>
 
-                <p>GovernmentIncumbency (domain) &rarr; isPaid &rarr; boolean
-                    (range)</p>
+                <p>Domain: GovernmentIncumbency. Range: boolean.</p>
 
 
             </article>
@@ -345,8 +316,7 @@ h1 {            font-weight: normal;
 
                 <p></p>
 
-                <p>GovernmentRank (domain) &rarr; ministerialRank &rarr; integer
-                    (range)</p>
+                <p>Domain: GovernmentRank. Range: integer.</p>
 
 
             </article>
@@ -357,8 +327,7 @@ h1 {            font-weight: normal;
 
                 <p>Used to determine how the official opposition chooses to order government organisations. e.g. whether they choose to rank the Foreign Office higher than the Department of Health.</p>
 
-                <p>GovernmentOrganisation (domain) &rarr; oppositionSortOrder &rarr; integer
-                    (range)</p>
+                <p>Domain: GovernmentOrganisation. Range: integer.</p>
 
 
             </article>
@@ -369,8 +338,7 @@ h1 {            font-weight: normal;
 
                 <p></p>
 
-                <p>GovernmentRank (domain) &rarr; orderRank &rarr; integer
-                    (range)</p>
+                <p>Domain: GovernmentRank. Range: integer.</p>
 
 
             </article>
@@ -381,8 +349,7 @@ h1 {            font-weight: normal;
 
                 <p>Used to determine whether a government position is paid to attend cabinet or not.</p>
 
-                <p>GovernmentPosition (domain) &rarr; paidToAttendCabinet &rarr; boolean
-                    (range)</p>
+                <p>Domain: GovernmentPosition. Range: boolean.</p>
 
 
             </article>
@@ -393,8 +360,7 @@ h1 {            font-weight: normal;
 
                 <p></p>
 
-                <p>GovernmentRank (domain) &rarr; statsRank &rarr; langString
-                    (range)</p>
+                <p>Domain: GovernmentRank. Range: langString.</p>
 
 
             </article>
@@ -404,7 +370,30 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentPosition ... /<wbr>ontologies/<wbr>government-organisation/<wbr>Position
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentOrganisation ... /<wbr>ontologies/<wbr>government-organisation/<wbr>Group
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentIncumbency ... /<wbr>ontologies/<wbr>government-organisation/<wbr>Incumbency
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -441,13 +430,6 @@ h1 {            font-weight: normal;
 
         
 
-    </main>
-
-    <footer>
-
-        <p>Ontology created <time id="created">2017-09-29</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/government-organisation/government-organisation-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/government-organisation/government-organisation-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

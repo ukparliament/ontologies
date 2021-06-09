@@ -7,11 +7,11 @@
     <title>Standing order ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,31 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            standing-order/standing-order-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                standing-order/standing-order-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Standing order ontology</h1>
 
         
         <p>A model describing standing orders for both Houses of Parliament, establishing persistent identification of orders and fragments of orders.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-        
-
 
         
         <section id="classes">
@@ -230,9 +228,7 @@ h1 {            font-weight: normal;
                 <p>Relates a fragment version to the order version it is contained by.</p>
                 
 
-                <p>Domain: FragmentVersion
-                    <br>
-                    Range: OrderVersion
+                <p>Domain: FragmentVersion. Range: OrderVersion.
                 </p>
 
             </article>
@@ -248,9 +244,7 @@ h1 {            font-weight: normal;
                 <p>Relates a fragment version to the revision set it is contained by.</p>
                 
 
-                <p>Domain: FragmentVersion
-                    <br>
-                    Range: RevisionSet
+                <p>Domain: FragmentVersion. Range: RevisionSet.
                 </p>
 
             </article>
@@ -266,9 +260,7 @@ h1 {            font-weight: normal;
                 <p>Relates a revision set to the House it is issued by.</p>
                 
 
-                <p>Domain: RevisionSet
-                    <br>
-                    Range: House
+                <p>Domain: RevisionSet. Range: House.
                 </p>
 
             </article>
@@ -284,9 +276,7 @@ h1 {            font-weight: normal;
                 <p>Relates an order to the business extent it covers.</p>
                 
 
-                <p>Domain: Order
-                    <br>
-                    Range: BusinessExtent
+                <p>Domain: Order. Range: BusinessExtent.
                 </p>
 
             </article>
@@ -302,9 +292,7 @@ h1 {            font-weight: normal;
                 <p>Relates an order version to the revision set it is contained by.</p>
                 
 
-                <p>Domain: OrderVersion
-                    <br>
-                    Range: RevisionSet
+                <p>Domain: OrderVersion. Range: RevisionSet.
                 </p>
 
             </article>
@@ -320,9 +308,7 @@ h1 {            font-weight: normal;
                 <p>Relates an order to the House by which it was ordered.</p>
                 
 
-                <p>Domain: Order
-                    <br>
-                    Range: House
+                <p>Domain: Order. Range: House.
                 </p>
 
             </article>
@@ -338,9 +324,7 @@ h1 {            font-weight: normal;
                 <p>Relates a revision to the fragment version being revised.</p>
                 
 
-                <p>Domain: Revision
-                    <br>
-                    Range: FragmentVersion
+                <p>Domain: Revision. Range: FragmentVersion.
                 </p>
 
             </article>
@@ -356,9 +340,7 @@ h1 {            font-weight: normal;
                 <p>Relates a revision set to the business extent which that set covers.</p>
                 
 
-                <p>Domain: RevisionSet
-                    <br>
-                    Range: BusinessExtent
+                <p>Domain: RevisionSet. Range: BusinessExtent.
                 </p>
 
             </article>
@@ -374,9 +356,7 @@ h1 {            font-weight: normal;
                 <p>Relates a revision to the fragment version resulting from the revision.</p>
                 
 
-                <p>Domain: Revision
-                    <br>
-                    Range: FragmentVersion
+                <p>Domain: Revision. Range: FragmentVersion.
                 </p>
 
             </article>
@@ -392,9 +372,7 @@ h1 {            font-weight: normal;
                 <p>Relates a suspension period to the fragment that is suspended for that period.</p>
                 
 
-                <p>Domain: SuspensionPeriod
-                    <br>
-                    Range: Fragment
+                <p>Domain: SuspensionPeriod. Range: Fragment.
                 </p>
 
             </article>
@@ -410,9 +388,7 @@ h1 {            font-weight: normal;
                 <p>Relates a suspension period to the order that is suspended for that period.</p>
                 
 
-                <p>Domain: SuspensionPeriod
-                    <br>
-                    Range: Order
+                <p>Domain: SuspensionPeriod. Range: Order.
                 </p>
 
             </article>
@@ -428,9 +404,7 @@ h1 {            font-weight: normal;
                 <p>Relates a fragment version to the fragment it is a version of.</p>
                 
 
-                <p>Domain: FragmentVersion
-                    <br>
-                    Range: Fragment
+                <p>Domain: FragmentVersion. Range: Fragment.
                 </p>
 
             </article>
@@ -446,9 +420,7 @@ h1 {            font-weight: normal;
                 <p>Relates an order version to the order it is a version of.</p>
                 
 
-                <p>Domain: OrderVersion
-                    <br>
-                    Range: Order
+                <p>Domain: OrderVersion. Range: Order.
                 </p>
 
             </article>
@@ -467,8 +439,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a fragment version to its position in the list of fragment versions contained by a revision set.</p>
 
-                <p>FragmentVersion (domain) &rarr; Fragment version ordinality &rarr; integer
-                    (range)</p>
+                <p>Domain: FragmentVersion. Range: integer.</p>
 
 
             </article>
@@ -479,8 +450,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a revision to boolean describing if the revision is major: a FALSE value indicates only a change of case to the text content, a TRUE value indicates a major revision involving a change of wording to the text content.</p>
 
-                <p>Revision (domain) &rarr; Is major revision &rarr; boolean
-                    (range)</p>
+                <p>Domain: Revision. Range: boolean.</p>
 
 
             </article>
@@ -491,8 +461,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a fragment version to its number as it appears, within a revision set.</p>
 
-                <p>FragmentVersion (domain) &rarr; Number &rarr; Literal
-                    (range)</p>
+                <p>Domain: FragmentVersion. Range: Literal.</p>
 
 
             </article>
@@ -503,8 +472,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an order version to its position in the list of order versions contained by a revision set.</p>
 
-                <p>OrderVersion (domain) &rarr; Order version ordinality &rarr; integer
-                    (range)</p>
+                <p>Domain: OrderVersion. Range: integer.</p>
 
 
             </article>
@@ -515,8 +483,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a revision set to the date on which one or more orders contained by the revision set were revised.</p>
 
-                <p>RevisionSet (domain) &rarr; Revised on &rarr; date
-                    (range)</p>
+                <p>Domain: RevisionSet. Range: date.</p>
 
 
             </article>
@@ -527,8 +494,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day.</p>
 
-                <p>RevisionSet (domain) &rarr; Revision set ordinality &rarr; integer
-                    (range)</p>
+                <p>Domain: RevisionSet. Range: integer.</p>
 
 
             </article>
@@ -539,8 +505,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a fragment version to the text content of that fragment version.</p>
 
-                <p>FragmentVersion (domain) &rarr; Text &rarr; langString
-                    (range)</p>
+                <p>Domain: FragmentVersion. Range: langString.</p>
 
 
             </article>
@@ -550,7 +515,12 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -596,96 +566,61 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/standing-order/standing-order.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/standing-order/standing-order.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-
-            David Beamish
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://ngoet.com/">Niels D. Goet</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Paul Evans
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://radoslawzubek.com/">Radoslaw Zubek</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://tgfleming.wordpress.com/">Thomas Fleming</a>
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2020-12-07</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/standing-order/standing-order-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/standing-order/standing-order-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2020-12-07</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/standing-order/standing-order-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/standing-order/standing-order-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            David Beamish.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://ngoet.com/">Niels D. Goet</a>.
+            
+            &nbsp;
+            
+            
+            Paul Evans.
+            
+            &nbsp;
+            
+            
+            <a href="https://radoslawzubek.com/">Radoslaw Zubek</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://tgfleming.wordpress.com/">Thomas Fleming</a>.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

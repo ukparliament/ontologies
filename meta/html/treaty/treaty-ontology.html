@@ -7,11 +7,11 @@
     <title>Treaty ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,31 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            treaty/treaty-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                treaty/treaty-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Treaty ontology</h1>
 
         
         <p>A model describing the form of treaties considered by Parliament, treaty membership of an FCO series and the relationship of a treaty to legislation required to be passed in order for the UK to comply with treaty obligations.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-        
-
 
         
         <section id="classes">
@@ -202,9 +200,7 @@ h1 {            font-weight: normal;
                 <p>Relates a treaty as laid before Parliament to a treaty series item. A treaty series item places a treaty in the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item</p>
                 
 
-                <p>Domain: TreatyAsLaid
-                    <br>
-                    Range: TreatySeriesItem
+                <p>Domain: TreatyAsLaid. Range: TreatySeriesItem.
                 </p>
 
             </article>
@@ -220,9 +216,7 @@ h1 {            font-weight: normal;
                 <p>Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department.</p>
                 
 
-                <p>Domain: Treaty
-                    <br>
-                    Range: GovernmentOrganisation
+                <p>Domain: Treaty. Range: GovernmentOrganisation.
                 </p>
 
             </article>
@@ -238,9 +232,7 @@ h1 {            font-weight: normal;
                 <p>Relates a treaty series item to the treaty series in which it appears. A treaty series item is listed in a single treaty series.</p>
                 
 
-                <p>Domain: TreatySeriesItem
-                    <br>
-                    Range: TreatySeries
+                <p>Domain: TreatySeriesItem. Range: TreatySeries.
                 </p>
 
             </article>
@@ -256,9 +248,7 @@ h1 {            font-weight: normal;
                 <p>The &#39;Laid as&#39; property relates a treaty to the form in which it is laid. Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure. </p>
                 
 
-                <p>Domain: Treaty
-                    <br>
-                    Range: TreatyAsLaid
+                <p>Domain: Treaty. Range: TreatyAsLaid.
                 </p>
 
             </article>
@@ -274,9 +264,7 @@ h1 {            font-weight: normal;
                 <p>Relates a treaty to the required passage of one or more statutory instruments in order to enable the satisfaction of treaty obligations.</p>
                 
 
-                <p>Domain: Treaty
-                    <br>
-                    Range: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
+                <p>Domain: Treaty. Range: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure.
                 </p>
 
             </article>
@@ -292,9 +280,7 @@ h1 {            font-weight: normal;
                 <p>Relates a treaty to the required passage of one or more bills in order to enable the satisfaction of treaty obligations.</p>
                 
 
-                <p>Domain: Treaty
-                    <br>
-                    Range: Bill
+                <p>Domain: Treaty. Range: Bill.
                 </p>
 
             </article>
@@ -313,8 +299,7 @@ h1 {            font-weight: normal;
 
                 <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. Within a series, Command Paper numbers start at 1 and do not exceed 9999.</p>
 
-                <p>TreatyAsLaid (domain) &rarr; Command Paper number &rarr; Literal
-                    (range)</p>
+                <p>Domain: TreatyAsLaid. Range: Literal.</p>
 
 
             </article>
@@ -325,8 +310,7 @@ h1 {            font-weight: normal;
 
                 <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. A series of Command Papers has a unique prefix.</p>
 
-                <p>TreatyAsLaid (domain) &rarr; Command Paper prefix &rarr; Literal
-                    (range)</p>
+                <p>Domain: TreatyAsLaid. Range: Literal.</p>
 
 
             </article>
@@ -337,8 +321,7 @@ h1 {            font-weight: normal;
 
                 <p>An item in a treaty series has a citation, in addition to a Command Paper number: for example, China No. 1 (2017).</p>
 
-                <p>TreatySeriesItem (domain) &rarr; Series item citation &rarr; Literal
-                    (range)</p>
+                <p>Domain: TreatySeriesItem. Range: Literal.</p>
 
 
             </article>
@@ -349,8 +332,7 @@ h1 {            font-weight: normal;
 
                 <p>The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note.</p>
 
-                <p>Treaty (domain) &rarr; UK coming into force date &rarr; date
-                    (range)</p>
+                <p>Domain: Treaty. Range: date.</p>
 
 
             </article>
@@ -361,8 +343,7 @@ h1 {            font-weight: normal;
 
                 <p>A coming into force note sets out details applying to the UK of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date.</p>
 
-                <p>Treaty (domain) &rarr; UK coming into force note &rarr; langString
-                    (range)</p>
+                <p>Domain: Treaty. Range: langString.</p>
 
 
             </article>
@@ -373,8 +354,7 @@ h1 {            font-weight: normal;
 
                 <p>The date on which the treaty is ratified by the UK.</p>
 
-                <p>Treaty (domain) &rarr; UK ratification date &rarr; date
-                    (range)</p>
+                <p>Domain: Treaty. Range: date.</p>
 
 
             </article>
@@ -384,7 +364,12 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -430,89 +415,56 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/treaty/treaty.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/treaty/treaty.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-
-            Arabella Lang
-
-            
-
-            
-            -
-
-
-            
-
-            David Beamish
-
-            
-
-            
-            -
-
-
-            
-
-            Jack Dent
-
-            
-
-            
-            -
-
-
-            
-
-            Jane White
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2019-01-16</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/treaty/treaty-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/treaty/treaty-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2019-01-16</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/treaty/treaty-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/treaty/treaty-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            Arabella Lang.
+            
+            &nbsp;
+            
+            
+            David Beamish.
+            
+            &nbsp;
+            
+            
+            Jack Dent.
+            
+            &nbsp;
+            
+            
+            Jane White.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

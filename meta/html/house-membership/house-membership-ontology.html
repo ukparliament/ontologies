@@ -7,11 +7,11 @@
     <title>House membership ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,49 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            house-membership/house-membership-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                house-membership/house-membership-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>House membership ontology</h1>
 
         
         <p>A model describing a person occupying a seat in a House, by means of an incumbency over a period of time.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>house-membership: Disqualification</b>
-                <br>is a subclass of<br>
-                <b>house-membership: SeatIncumbencyInterruption</b>
-            </p>
-            
-            <p>
-                <b>house-membership: LeaveOfAbsence</b>
-                <br>is a subclass of<br>
-                <b>house-membership: SeatIncumbencyInterruption</b>
-            </p>
-            
-            <p>
-                <b>house-membership: Suspension</b>
-                <br>is a subclass of<br>
-                <b>house-membership: SeatIncumbencyInterruption</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -316,9 +296,7 @@ h1 {            font-weight: normal;
                 <p>Relates a disqualification to a disqualification type.</p>
                 
 
-                <p>Domain: Disqualification
-                    <br>
-                    Range: DisqualificationType
+                <p>Domain: Disqualification. Range: DisqualificationType.
                 </p>
 
             </article>
@@ -334,9 +312,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat incumbency to the reason for that incumbency ending.</p>
                 
 
-                <p>Domain: SeatIncumbency
-                    <br>
-                    Range: EndReason
+                <p>Domain: SeatIncumbency. Range: EndReason.
                 </p>
 
             </article>
@@ -352,9 +328,7 @@ h1 {            font-weight: normal;
                 <p>Relates a House to a seat in that House.</p>
                 
 
-                <p>Domain: House
-                    <br>
-                    Range: HouseSeat
+                <p>Domain: House. Range: HouseSeat.
                 </p>
 
             </article>
@@ -370,9 +344,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat in a House to a seat type.</p>
                 
 
-                <p>Domain: HouseSeat
-                    <br>
-                    Range: HouseSeatType
+                <p>Domain: HouseSeat. Range: HouseSeatType.
                 </p>
 
             </article>
@@ -388,9 +360,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat incumbency to a person.</p>
                 
 
-                <p>Domain: SeatIncumbency
-                    <br>
-                    Range: Person
+                <p>Domain: SeatIncumbency. Range: Person.
                 </p>
 
             </article>
@@ -406,9 +376,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat in a House to an incumbency for that seat.</p>
                 
 
-                <p>Domain: HouseSeat
-                    <br>
-                    Range: SeatIncumbency
+                <p>Domain: HouseSeat. Range: SeatIncumbency.
                 </p>
 
             </article>
@@ -424,9 +392,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat incumbency to an interruption.</p>
                 
 
-                <p>Domain: SeatIncumbency
-                    <br>
-                    Range: SeatIncumbencyInterruption
+                <p>Domain: SeatIncumbency. Range: SeatIncumbencyInterruption.
                 </p>
 
             </article>
@@ -442,9 +408,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat incumbency to the Parliament period the incumbency is contained by.</p>
                 
 
-                <p>Domain: SeatIncumbency
-                    <br>
-                    Range: ParliamentPeriod
+                <p>Domain: SeatIncumbency. Range: ParliamentPeriod.
                 </p>
 
             </article>
@@ -460,9 +424,7 @@ h1 {            font-weight: normal;
                 <p>Relates a seat in a House to a constituency group.</p>
                 
 
-                <p>Domain: HouseSeat
-                    <br>
-                    Range: ConstituencyGroup
+                <p>Domain: HouseSeat. Range: ConstituencyGroup.
                 </p>
 
             </article>
@@ -481,8 +443,7 @@ h1 {            font-weight: normal;
 
                 <p>Denotes that a Member of the House of Commons has announced that they intend to stand down at the next election.</p>
 
-                <p>SeatIncumbency (domain) &rarr; Intends to stand down &rarr; boolean
-                    (range)</p>
+                <p>Domain: SeatIncumbency. Range: boolean.</p>
 
 
             </article>
@@ -493,8 +454,7 @@ h1 {            font-weight: normal;
 
                 <p>The order in which Members take an oath or make an affirmation at the beginning of a new Parliament or following a by-election. Swearing in order may be used in determining the longest serving member of a House, known as the Father or Mother of the House.</p>
 
-                <p>SeatIncumbency (domain) &rarr; Swearing in order &rarr; integer
-                    (range)</p>
+                <p>Domain: SeatIncumbency. Range: integer.</p>
 
 
             </article>
@@ -504,7 +464,30 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>house-membership/<wbr>Suspension ... /<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruption
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>house-membership/<wbr>LeaveOfAbsence ... /<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruption
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>house-membership/<wbr>Disqualification ... /<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruption
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -541,13 +524,6 @@ h1 {            font-weight: normal;
 
         
 
-    </main>
-
-    <footer>
-
-        <p>Ontology created <time id="created">2016-11-08</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/house-membership/house-membership-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/house-membership/house-membership-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

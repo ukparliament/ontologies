@@ -7,11 +7,11 @@
     <title>Laying ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,43 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            laying/laying-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                laying/laying-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Laying ontology</h1>
 
         
         <p>A model describing the process of laying papers before a House and any subsequent withdrawal and replacement.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>laying: Laying</b>
-                <br>is a subclass of<br>
-                <b>laying: LayingOrWithdrawal</b>
-            </p>
-            
-            <p>
-                <b>laying: Withdrawal</b>
-                <br>is a subclass of<br>
-                <b>laying: LayingOrWithdrawal</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -278,9 +264,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying or withdrawing a paper to the House in which the paper is laid or withdrawn.</p>
                 
 
-                <p>Domain: LayingOrWithdrawal
-                    <br>
-                    Range: House
+                <p>Domain: LayingOrWithdrawal. Range: House.
                 </p>
 
             </article>
@@ -296,9 +280,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying a paper to a laying authority.</p>
                 
 
-                <p>Domain: Laying
-                    <br>
-                    Range: LayingAuthority
+                <p>Domain: Laying. Range: LayingAuthority.
                 </p>
 
             </article>
@@ -314,9 +296,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying or withdrawal a paper to the laying body laying or withdrawing it.</p>
                 
 
-                <p>Domain: LayingOrWithdrawal
-                    <br>
-                    Range: LayingBody
+                <p>Domain: LayingOrWithdrawal. Range: LayingBody.
                 </p>
 
             </article>
@@ -332,9 +312,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying a paper to a duty to lay papers under an Act.</p>
                 
 
-                <p>Domain: Laying
-                    <br>
-                    Range: LayingDuty
+                <p>Domain: Laying. Range: LayingDuty.
                 </p>
 
             </article>
@@ -350,9 +328,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying a paper to the person laying it.</p>
                 
 
-                <p>Domain: Laying
-                    <br>
-                    Range: Person
+                <p>Domain: Laying. Range: Person.
                 </p>
 
             </article>
@@ -368,9 +344,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying or withdrawing a paper to the session which the paper is laid into or withdrawn from. Papers laid during a prorogation period are considered laid into the session which has been prorogued.</p>
                 
 
-                <p>Domain: LayingOrWithdrawal
-                    <br>
-                    Range: Session
+                <p>Domain: LayingOrWithdrawal. Range: Session.
                 </p>
 
             </article>
@@ -386,9 +360,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of laying a paper to the paper which has been laid.</p>
                 
 
-                <p>Domain: Laying
-                    <br>
-                    Range: LaidPaper
+                <p>Domain: Laying. Range: LaidPaper.
                 </p>
 
             </article>
@@ -404,9 +376,7 @@ h1 {            font-weight: normal;
                 <p>Relates a laid paper to the withdrawn paper being replaced.</p>
                 
 
-                <p>Domain: LaidPaper
-                    <br>
-                    Range: WithdrawnPaper
+                <p>Domain: LaidPaper. Range: WithdrawnPaper.
                 </p>
 
             </article>
@@ -422,9 +392,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of withdrawing a paper to the paper which has been withdrawn.</p>
                 
 
-                <p>Domain: Withdrawal
-                    <br>
-                    Range: WithdrawnPaper
+                <p>Domain: Withdrawal. Range: WithdrawnPaper.
                 </p>
 
             </article>
@@ -443,8 +411,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an act of laying a paper to the date on which the laying occurs. This date falls within a parliamentary session or prorogation period, and not during a dissolution period.</p>
 
-                <p>Laying (domain) &rarr; Laid on &rarr; date
-                    (range)</p>
+                <p>Domain: Laying. Range: date.</p>
 
 
             </article>
@@ -455,8 +422,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an act of withdrawal of a paper to the date on which the withdrawal occurs. This date falls within a parliamentary session or prorogation period, and not during a dissolution period.</p>
 
-                <p>Withdrawal (domain) &rarr; Withdrawn on &rarr; date
-                    (range)</p>
+                <p>Domain: Withdrawal. Range: date.</p>
 
 
             </article>
@@ -466,7 +432,26 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>laying/<wbr>Laying ... /<wbr>ontologies/<wbr>laying/<wbr>LayingOrWithdrawal
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>laying/<wbr>Withdrawal ... /<wbr>ontologies/<wbr>laying/<wbr>LayingOrWithdrawal
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -512,59 +497,41 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/laying/laying.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/laying/laying.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Stephen McGinness
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-02-06</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/laying/laying-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/laying/laying-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2018-02-06</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/laying/laying-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/laying/laying-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Stephen McGinness.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

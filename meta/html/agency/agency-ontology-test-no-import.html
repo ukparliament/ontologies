@@ -7,11 +7,11 @@
     <title>Agency ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,37 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            agency/agency-ontology-test-no-import.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                agency/agency-ontology-test-no-import.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Agency ontology</h1>
 
         
         <p>A model describing people and groups of people with agency. The model also describes a person’s membership of and positions in groups.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>agency: Group</b>
-                <br>is a subclass of<br>
-                <b>common: Agent</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -196,9 +188,7 @@ h1 {            font-weight: normal;
                 <p>Relates an agent to a concept to express an area of expertise. An agent may have one or more areas of expertise, or none.</p>
                 
 
-                <p>Domain: Agent
-                    <br>
-                    Range: core#Concept
+                <p>Domain: Agent. Range: core#Concept.
                 </p>
 
             </article>
@@ -214,9 +204,7 @@ h1 {            font-weight: normal;
                 <p>Relates an agent to a group inclusion. An agent may have one or more group inclusions, or none. A group inclusion is to a single agent.</p>
                 
 
-                <p>Domain: Agent
-                    <br>
-                    Range: GroupInclusion
+                <p>Domain: Agent. Range: GroupInclusion.
                 </p>
 
             </article>
@@ -232,9 +220,7 @@ h1 {            font-weight: normal;
                 <p>Relates a person to an incumbency. A person may have one or more incumbencies, or none. An incumbency is to a single person.</p>
                 
 
-                <p>Domain: Person
-                    <br>
-                    Range: Incumbency
+                <p>Domain: Person. Range: Incumbency.
                 </p>
 
             </article>
@@ -250,9 +236,7 @@ h1 {            font-weight: normal;
                 <p>Relates an agent to a concept to express an area of interest. An agent may have one or more areas of interest, or none.</p>
                 
 
-                <p>Domain: Agent
-                    <br>
-                    Range: core#Concept
+                <p>Domain: Agent. Range: core#Concept.
                 </p>
 
             </article>
@@ -268,9 +252,7 @@ h1 {            font-weight: normal;
                 <p>Relates an incumbency to a position. An incumbency is to a single position. A position may have one or more incumbencies, or none.</p>
                 
 
-                <p>Domain: Incumbency
-                    <br>
-                    Range: Position
+                <p>Domain: Incumbency. Range: Position.
                 </p>
 
             </article>
@@ -286,9 +268,7 @@ h1 {            font-weight: normal;
                 <p>Relates a group inclusion to a group. A group inclusion is in a single group. A group may have one or more group inclusions, or none.</p>
                 
 
-                <p>Domain: GroupInclusion
-                    <br>
-                    Range: Group
+                <p>Domain: GroupInclusion. Range: Group.
                 </p>
 
             </article>
@@ -304,9 +284,7 @@ h1 {            font-weight: normal;
                 <p>Relates a person to their place of birth.</p>
                 
 
-                <p>Domain: Person
-                    <br>
-                    Range: Place
+                <p>Domain: Person. Range: Place.
                 </p>
 
             </article>
@@ -322,9 +300,7 @@ h1 {            font-weight: normal;
                 <p>Relates a position to a group. A position is in a single group. A group may have one or more positions, or none.</p>
                 
 
-                <p>Domain: Position
-                    <br>
-                    Range: Group
+                <p>Domain: Position. Range: Group.
                 </p>
 
             </article>
@@ -343,8 +319,7 @@ h1 {            font-weight: normal;
 
                 <p>A person&#39;s date of birth.</p>
 
-                <p>Person (domain) &rarr; Date of birth &rarr; date
-                    (range)</p>
+                <p>Domain: Person. Range: date.</p>
 
 
             </article>
@@ -355,8 +330,7 @@ h1 {            font-weight: normal;
 
                 <p>A person&#39;s date of death.</p>
 
-                <p>Person (domain) &rarr; Date of death &rarr; date
-                    (range)</p>
+                <p>Domain: Person. Range: date.</p>
 
 
             </article>
@@ -367,8 +341,7 @@ h1 {            font-weight: normal;
 
                 <p>A person&#39;s inherited name, commonly known in the west as surname.</p>
 
-                <p>Person (domain) &rarr; Family name &rarr; langString
-                    (range)</p>
+                <p>Domain: Person. Range: langString.</p>
 
 
             </article>
@@ -379,8 +352,7 @@ h1 {            font-weight: normal;
 
                 <p>A person&#39;s personal name, commonly known in the west as first or forename.</p>
 
-                <p>Person (domain) &rarr; Given name &rarr; langString
-                    (range)</p>
+                <p>Domain: Person. Range: langString.</p>
 
 
             </article>
@@ -391,8 +363,7 @@ h1 {            font-weight: normal;
 
                 <p>A person&#39;s additional given names.</p>
 
-                <p>Person (domain) &rarr; Other names &rarr; langString
-                    (range)</p>
+                <p>Domain: Person. Range: langString.</p>
 
 
             </article>
@@ -403,8 +374,7 @@ h1 {            font-weight: normal;
 
                 <p>A person&#39;s title. For example, Mr., Ms. or Dr.</p>
 
-                <p>Person (domain) &rarr; Title &rarr; langString
-                    (range)</p>
+                <p>Domain: Person. Range: langString.</p>
 
 
             </article>
@@ -414,7 +384,22 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>agency/<wbr>Group ... /<wbr>ontologies/<wbr>common/<wbr>Agent
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -468,59 +453,41 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/agency/agency.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/agency/agency.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Silver Oliver
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2016-10-05</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/agency/agency-ontology-test-no-import.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/agency/agency-ontology-test-no-import.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2016-10-05</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/agency/agency-ontology-test-no-import.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/agency/agency-ontology-test-no-import.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Silver Oliver.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

@@ -8,13 +8,12 @@ from rdflib.namespace import RDF, FOAF, OWL, RDFS, DCTERMS
 from markupsafe import Markup
 from urllib.parse import urlparse
 
+
 def slash2wbr(value):
     return Markup(value.replace("/", "/<wbr>"))
 
-env = Environment(
-    loader = FileSystemLoader("templates"),
-    autoescape=select_autoescape()
-)
+
+env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
 
 env.filters["slash2wbr"] = slash2wbr
 
@@ -22,10 +21,10 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-for ttlpath in list(Path(".").rglob("*.ttl")): 
+for ttlpath in list(Path(".").rglob("*.ttl")):
 
     g = rdflib.Graph()
-    
+
     ttlfile = open(ttlpath, "r")
     result = g.parse(data=ttlfile.read(), format="turtle")
 
@@ -48,15 +47,15 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
                 "superclasses": superclasses,
             }
         )
-        
+
     dataproperties = []
-    
+
     for s, p, o in g.triples((None, RDF.type, OWL.DatatypeProperty)):
-    
-    	dataproperties.append(
-    		{
+
+        dataproperties.append(
+            {
                 "label": g.label(s),
-				"comment": g.value(s, RDFS.comment),
+                "comment": g.value(s, RDFS.comment),
                 "domain": g.value(s, RDFS.domain).split("/")[-1],
                 "range": g.value(s, RDFS.range).split("#")[-1],
             }
@@ -112,13 +111,13 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
             makers.append(i)
 
     imports = []
-    
+
     for object in g.objects(None, OWL.imports):
         imports.append(urlparse(object))
 
     equivalentClasses = []
 
-    for s,p,o in g.triples((None, OWL.equivalentClass, None)):
+    for s, p, o in g.triples((None, OWL.equivalentClass, None)):
         equivalentClassObject = {}
         equivalentClassObject["s"] = urlparse(s).path
         equivalentClassObject["o"] = urlparse(o).path
@@ -126,12 +125,12 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
 
     subClasses = []
 
-    for s,p,o in g.triples((None, RDFS.subClassOf, None)):
-        print(s,o)
-        # equivalentClassObject = {}
-        # equivalentClassObject["s"] = urlparse(s).path
-        # equivalentClassObject["o"] = urlparse(o).path
-        # equivalentClasses.append(equivalentClassObject)
+    for s, p, o in g.triples((None, RDFS.subClassOf, None)):
+
+        subClassObject = {}
+        subClassObject["s"] = urlparse(s).path
+        subClassObject["o"] = urlparse(o).path
+        subClasses.append(subClassObject)
 
     # print("PARSED\t" + str(ttlpath))
 
@@ -141,30 +140,26 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         pass
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
-    with open(htmlpath, 'w') as htmlfile:
-        htmlfile.write(template.render(
-            title=Markup(title),
-            created=Markup(created),
-            rights=Markup(rights),
-            description=Markup(description),
-            depiction=Markup(depiction),
-            htmldir=htmldir,
-            ttlpath=ttlpath,
-            ttldir="https://raw.githubusercontent.com/ukparliament/ontologies/master/",
-            classes=classes,
-            objectproperties=objectproperties,
-            namespaces=g.namespaces(),
-            makers=makers,
-            root_url="https://ukparliament.github.io/ontologies/",
-            imports=imports,
-            equivalentClasses=equivalentClasses,
-            subClasses=g.triples((None, RDFS.subClassOf, None)),
-            dataproperties=dataproperties))
+    with open(htmlpath, "w") as htmlfile:
+        htmlfile.write(
+            template.render(
+                title=Markup(title),
+                created=Markup(created),
+                rights=Markup(rights),
+                description=Markup(description),
+                depiction=Markup(depiction),
+                htmldir=htmldir,
+                ttlpath=ttlpath,
+                ttldir="https://raw.githubusercontent.com/ukparliament/ontologies/master/",
+                classes=classes,
+                objectproperties=objectproperties,
+                namespaces=g.namespaces(),
+                makers=makers,
+                root_url="https://ukparliament.github.io/ontologies/",
+                imports=imports,
+                equivalentClasses=equivalentClasses,
+                subClasses=subClasses,
+                dataproperties=dataproperties,
+            )
+        )
     # print("WROTE\t" + htmlpath)
-
-    
-
-    
-
-
-

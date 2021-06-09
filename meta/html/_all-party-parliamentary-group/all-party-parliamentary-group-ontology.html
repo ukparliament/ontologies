@@ -7,11 +7,11 @@
     <title>All Party Parliamentary Group ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,49 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            _all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                _all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>All Party Parliamentary Group ontology</h1>
 
         
         <p>All Party Parliamentary Group ontology for UK Parliament</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>appg: APPG</b>
-                <br>is a subclass of<br>
-                <b>appg: Group</b>
-            </p>
-            
-            <p>
-                <b>appg: BenefitInKind</b>
-                <br>is a subclass of<br>
-                <b>appg: RegisteredBenefit</b>
-            </p>
-            
-            <p>
-                <b>appg: FinancialBenefit</b>
-                <br>is a subclass of<br>
-                <b>appg: RegisteredBenefit</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -274,9 +254,7 @@ h1 {            font-weight: normal;
                 <p>Relates an APPG to its category, such as a country or subject related APPG.</p>
                 
 
-                <p>Domain: APPG
-                    <br>
-                    Range: APPGCategory
+                <p>Domain: APPG. Range: APPGCategory.
                 </p>
 
             </article>
@@ -292,9 +270,7 @@ h1 {            font-weight: normal;
                 <p>Relates an APPG to an secondary enquiry point for that APPG. This may be a contact within or outside Parliament.</p>
                 
 
-                <p>Domain: APPG
-                    <br>
-                    Range: Agent
+                <p>Domain: APPG. Range: Agent.
                 </p>
 
             </article>
@@ -310,9 +286,7 @@ h1 {            font-weight: normal;
                 <p>Relates an APPG to its registered contact. This is normally the Chair of the APPG, therefore a member.</p>
                 
 
-                <p>Domain: APPG
-                    <br>
-                    Range: Member
+                <p>Domain: APPG. Range: Member.
                 </p>
 
             </article>
@@ -328,9 +302,7 @@ h1 {            font-weight: normal;
                 <p>Relates an external group to an APPG where they are providing secretariat (administrative) services to that APPG.</p>
                 
 
-                <p>Domain: Group
-                    <br>
-                    Range: APPG
+                <p>Domain: Group. Range: APPG.
                 </p>
 
             </article>
@@ -346,9 +318,7 @@ h1 {            font-weight: normal;
                 <p>Relates an All Party ParliamentaryGroup to its status type.</p>
                 
 
-                <p>Domain: APPG
-                    <br>
-                    Range: StatusType
+                <p>Domain: APPG. Range: StatusType.
                 </p>
 
             </article>
@@ -364,9 +334,7 @@ h1 {            font-weight: normal;
                 <p>Relates an APPG to a benefit received.</p>
                 
 
-                <p>Domain: APPG
-                    <br>
-                    Range: RegisteredBenefit
+                <p>Domain: APPG. Range: RegisteredBenefit.
                 </p>
 
             </article>
@@ -382,9 +350,7 @@ h1 {            font-weight: normal;
                 <p>Relates a registered benefit to the financial reporting year it falls into.</p>
                 
 
-                <p>Domain: RegisteredBenefit
-                    <br>
-                    Range: FinancialReportingYear
+                <p>Domain: RegisteredBenefit. Range: FinancialReportingYear.
                 </p>
 
             </article>
@@ -403,8 +369,7 @@ h1 {            font-weight: normal;
 
                 <p>The currency the benefit value is expressed in.</p>
 
-                <p>RegisteredBenefit (domain) &rarr; benefitCurrency &rarr; string
-                    (range)</p>
+                <p>Domain: RegisteredBenefit. Range: string.</p>
 
 
             </article>
@@ -415,8 +380,7 @@ h1 {            font-weight: normal;
 
                 <p>The value of the registered benefit.</p>
 
-                <p>RegisteredBenefit (domain) &rarr; benefitValue &rarr; integer
-                    (range)</p>
+                <p>Domain: RegisteredBenefit. Range: integer.</p>
 
 
             </article>
@@ -427,8 +391,7 @@ h1 {            font-weight: normal;
 
                 <p>Date a registered benefit was received.</p>
 
-                <p>RegisteredBenefit (domain) &rarr; dateReceived &rarr; dateTime
-                    (range)</p>
+                <p>Domain: RegisteredBenefit. Range: dateTime.</p>
 
 
             </article>
@@ -439,8 +402,7 @@ h1 {            font-weight: normal;
 
                 <p>Date a benefit was registered.</p>
 
-                <p>RegisteredBenefit (domain) &rarr; dateRegistered &rarr; dateTime
-                    (range)</p>
+                <p>Domain: RegisteredBenefit. Range: dateTime.</p>
 
 
             </article>
@@ -450,7 +412,30 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>appg/<wbr>APPG ... /<wbr>ontologies/<wbr>appg/<wbr>Group
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>appg/<wbr>BenefitInKind ... /<wbr>ontologies/<wbr>appg/<wbr>RegisteredBenefit
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>appg/<wbr>FinancialBenefit ... /<wbr>ontologies/<wbr>appg/<wbr>RegisteredBenefit
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -493,52 +478,39 @@ h1 {            font-weight: normal;
 
 
         
-        <a href="file:///home/runner/work/ontologies/ontologies/all-party-parliamentary-group.png"><img id="depiction" src="file:///home/runner/work/ontologies/ontologies/all-party-parliamentary-group.png"></a>
+        <a href="file:///home/robert/Documents/ontologies/all-party-parliamentary-group.png"><img id="depiction" src="file:///home/robert/Documents/ontologies/all-party-parliamentary-group.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Alison Desimone
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-10-10</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2018-10-10</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Alison Desimone.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 
