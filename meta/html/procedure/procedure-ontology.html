@@ -7,11 +7,11 @@
     <title>Procedure ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,31 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            procedure/procedure-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                procedure/procedure-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Procedure ontology</h1>
 
         
         <p>A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-        
-
 
         
         <section id="classes">
@@ -258,9 +256,7 @@ h1 {            font-weight: normal;
                 <p>Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion.</p>
                 
 
-                <p>Domain: BusinessItem
-                    <br>
-                    Range: Step
+                <p>Domain: BusinessItem. Range: Step.
                 </p>
 
             </article>
@@ -276,9 +272,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work package to its focus, this being a work packageable thing.</p>
                 
 
-                <p>Domain: WorkPackage
-                    <br>
-                    Range: WorkPackageableThing
+                <p>Domain: WorkPackage. Range: WorkPackageableThing.
                 </p>
 
             </article>
@@ -294,9 +288,7 @@ h1 {            font-weight: normal;
                 <p>Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between &#39;Considered for English votes for English laws (EVEL) certification&#39; to &#39;Certified as England only under the English votes for English laws (EVEL) process&#39; appears in the draft negative, made negative, draft affirmative and made affirmative procedures.</p>
                 
 
-                <p>Domain: Procedure
-                    <br>
-                    Range: Route
+                <p>Domain: Procedure. Range: Route.
                 </p>
 
             </article>
@@ -312,9 +304,7 @@ h1 {            font-weight: normal;
                 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
                 
 
-                <p>Domain: BusinessItem
-                    <br>
-                    Range: WorkPackage
+                <p>Domain: BusinessItem. Range: WorkPackage.
                 </p>
 
             </article>
@@ -330,9 +320,7 @@ h1 {            font-weight: normal;
                 <p>Relates a route to its input step.</p>
                 
 
-                <p>Domain: Route
-                    <br>
-                    Range: Step
+                <p>Domain: Route. Range: Step.
                 </p>
 
             </article>
@@ -348,9 +336,7 @@ h1 {            font-weight: normal;
                 <p>Relates a citation to the type of the document being cited.</p>
                 
 
-                <p>Domain: Citation
-                    <br>
-                    Range: DocumentType
+                <p>Domain: Citation. Range: DocumentType.
                 </p>
 
             </article>
@@ -366,9 +352,7 @@ h1 {            font-weight: normal;
                 <p>Relates a step collection to a procedure. A step collection has one procedure. A procedure may have one or more step collections, or none.</p>
                 
 
-                <p>Domain: StepCollection
-                    <br>
-                    Range: Procedure
+                <p>Domain: StepCollection. Range: Procedure.
                 </p>
 
             </article>
@@ -384,9 +368,7 @@ h1 {            font-weight: normal;
                 <p>Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none.</p>
                 
 
-                <p>Domain: Step
-                    <br>
-                    Range: StepType
+                <p>Domain: Step. Range: StepType.
                 </p>
 
             </article>
@@ -402,9 +384,7 @@ h1 {            font-weight: normal;
                 <p>Relates a step to a step collection the step is collected by. A step collection collects one or more steps. A step may be collected by one or more step collections, or none.</p>
                 
 
-                <p>Domain: Step
-                    <br>
-                    Range: StepCollection
+                <p>Domain: Step. Range: StepCollection.
                 </p>
 
             </article>
@@ -420,9 +400,7 @@ h1 {            font-weight: normal;
                 <p>Relates a procedure to a citation. A procedure may have more than one citation, or none.</p>
                 
 
-                <p>Domain: Procedure
-                    <br>
-                    Range: Citation
+                <p>Domain: Procedure. Range: Citation.
                 </p>
 
             </article>
@@ -438,9 +416,7 @@ h1 {            font-weight: normal;
                 <p>Relates a route to a citation. A route may have more than one citation, or none.</p>
                 
 
-                <p>Domain: Route
-                    <br>
-                    Range: Citation
+                <p>Domain: Route. Range: Citation.
                 </p>
 
             </article>
@@ -456,9 +432,7 @@ h1 {            font-weight: normal;
                 <p>Relates a step collection to one House, or none.</p>
                 
 
-                <p>Domain: StepCollection
-                    <br>
-                    Range: House
+                <p>Domain: StepCollection. Range: House.
                 </p>
 
             </article>
@@ -474,9 +448,7 @@ h1 {            font-weight: normal;
                 <p>Relates a step to a citation. A step may have more than one citation, or none.</p>
                 
 
-                <p>Domain: Step
-                    <br>
-                    Range: Citation
+                <p>Domain: Step. Range: Citation.
                 </p>
 
             </article>
@@ -492,9 +464,7 @@ h1 {            font-weight: normal;
                 <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
                 
 
-                <p>Domain: Step
-                    <br>
-                    Range: House
+                <p>Domain: Step. Range: House.
                 </p>
 
             </article>
@@ -510,9 +480,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work package to the procedure it is subject to. A work package is only subject to one procedure.</p>
                 
 
-                <p>Domain: WorkPackage
-                    <br>
-                    Range: Procedure
+                <p>Domain: WorkPackage. Range: Procedure.
                 </p>
 
             </article>
@@ -528,9 +496,7 @@ h1 {            font-weight: normal;
                 <p>Relates a route to its output step.</p>
                 
 
-                <p>Domain: Route
-                    <br>
-                    Range: Step
+                <p>Domain: Route. Range: Step.
                 </p>
 
             </article>
@@ -549,8 +515,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a step to its description.</p>
 
-                <p>Step (domain) &rarr; Step description &rarr; langString
-                    (range)</p>
+                <p>Domain: Step. Range: langString.</p>
 
 
             </article>
@@ -561,8 +526,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a citation to the title of the document being cited.</p>
 
-                <p>Citation (domain) &rarr; Title &rarr; langString
-                    (range)</p>
+                <p>Domain: Citation. Range: langString.</p>
 
 
             </article>
@@ -573,8 +537,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a citation to the URI of the document being cited.</p>
 
-                <p>Citation (domain) &rarr; URI &rarr; Literal
-                    (range)</p>
+                <p>Domain: Citation. Range: Literal.</p>
 
 
             </article>
@@ -584,7 +547,12 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -630,159 +598,91 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/procedure/procedure.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/procedure/procedure.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-
-            Ben Woodhams
-
-            
-
-            
-            -
-
-
-            
-
-            Chris Alcock
-
-            
-
-            
-            -
-
-
-            
-
-            David Beamish
-
-            
-
-            
-            -
-
-
-            
-
-            Dominic Stockbridge
-
-            
-
-            
-            -
-
-
-            
-
-            Gordon Clarke
-
-            
-
-            
-            -
-
-
-            
-
-            Jack Dent
-
-            
-
-            
-            -
-
-
-            
-
-            James Vinter
-
-            
-
-            
-            -
-
-
-            
-
-            Jane White
-
-            
-
-            
-            -
-
-
-            
-
-            Jayne Sunley
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Samu Lang
-
-            
-
-            
-            -
-
-
-            
-
-            Silver Oliver
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-02-20</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2018-02-20</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            Ben Woodhams.
+            
+            &nbsp;
+            
+            
+            Chris Alcock.
+            
+            &nbsp;
+            
+            
+            David Beamish.
+            
+            &nbsp;
+            
+            
+            Dominic Stockbridge.
+            
+            &nbsp;
+            
+            
+            Gordon Clarke.
+            
+            &nbsp;
+            
+            
+            Jack Dent.
+            
+            &nbsp;
+            
+            
+            James Vinter.
+            
+            &nbsp;
+            
+            
+            Jane White.
+            
+            &nbsp;
+            
+            
+            Jayne Sunley.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Samu Lang.
+            
+            &nbsp;
+            
+            
+            Silver Oliver.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

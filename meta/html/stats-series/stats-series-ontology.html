@@ -7,11 +7,11 @@
     <title>Stats series ontology - deprecated</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,49 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            stats-series/stats-series-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                stats-series/stats-series-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Stats series ontology - deprecated</h1>
 
         
         <p>Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>stats-series: Businesses</b>
-                <br>is a subclass of<br>
-                <b>stats-series: Population</b>
-            </p>
-            
-            <p>
-                <b>stats-series: People</b>
-                <br>is a subclass of<br>
-                <b>stats-series: Population</b>
-            </p>
-            
-            <p>
-                <b>stats-series: Residences</b>
-                <br>is a subclass of<br>
-                <b>stats-series: Population</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -344,9 +324,7 @@ h1 {            font-weight: normal;
                 <p>Relates a temporal coverage to any means of averaging employed on the data.</p>
                 
 
-                <p>Domain: TemporalCoverage
-                    <br>
-                    Range: AverageType
+                <p>Domain: TemporalCoverage. Range: AverageType.
                 </p>
 
             </article>
@@ -362,9 +340,7 @@ h1 {            font-weight: normal;
                 <p>Relates a population (of people, residences, businesses etc) to a geographic area.</p>
                 
 
-                <p>Domain: Population
-                    <br>
-                    Range: Place
+                <p>Domain: Population. Range: Place.
                 </p>
 
             </article>
@@ -380,9 +356,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week.</p>
                 
 
-                <p>Domain: DataSet
-                    <br>
-                    Range: Period
+                <p>Domain: DataSet. Range: Period.
                 </p>
 
             </article>
@@ -398,9 +372,7 @@ h1 {            font-weight: normal;
                 <p>Relates territorial applicability to a data source organisation.</p>
                 
 
-                <p>Domain: TerritorialApplicability
-                    <br>
-                    Range: Source
+                <p>Domain: TerritorialApplicability. Range: Source.
                 </p>
 
             </article>
@@ -416,9 +388,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data set release to it&#39;s territorial applicability.</p>
                 
 
-                <p>Domain: DataSetRelease
-                    <br>
-                    Range: TerritorialApplicability
+                <p>Domain: DataSetRelease. Range: TerritorialApplicability.
                 </p>
 
             </article>
@@ -434,9 +404,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data set to the unit in which the data is counted e.g. GBP.</p>
                 
 
-                <p>Domain: DataSet
-                    <br>
-                    Range: Unit
+                <p>Domain: DataSet. Range: Unit.
                 </p>
 
             </article>
@@ -452,9 +420,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data point to the data set release version it forms part of.</p>
                 
 
-                <p>Domain: DataPoint
-                    <br>
-                    Range: DataSetReleaseVersion
+                <p>Domain: DataPoint. Range: DataSetReleaseVersion.
                 </p>
 
             </article>
@@ -470,9 +436,7 @@ h1 {            font-weight: normal;
                 <p>Relates territorial applicability to a geographic area.</p>
                 
 
-                <p>Domain: TerritorialApplicability
-                    <br>
-                    Range: Place
+                <p>Domain: TerritorialApplicability. Range: Place.
                 </p>
 
             </article>
@@ -488,9 +452,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data point to a given population.</p>
                 
 
-                <p>Domain: DataPoint
-                    <br>
-                    Range: Population
+                <p>Domain: DataPoint. Range: Population.
                 </p>
 
             </article>
@@ -506,9 +468,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data set release to a data set it forms part of.</p>
                 
 
-                <p>Domain: DataSetRelease
-                    <br>
-                    Range: DataSet
+                <p>Domain: DataSetRelease. Range: DataSet.
                 </p>
 
             </article>
@@ -524,9 +484,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data set release version to a data set release.</p>
                 
 
-                <p>Domain: DataSetReleaseVersion
-                    <br>
-                    Range: DataSetRelease
+                <p>Domain: DataSetReleaseVersion. Range: DataSetRelease.
                 </p>
 
             </article>
@@ -542,9 +500,7 @@ h1 {            font-weight: normal;
                 <p>Relates a data set release to the time period or point in time the data was gathered.</p>
                 
 
-                <p>Domain: DataSetRelease
-                    <br>
-                    Range: TemporalCoverage
+                <p>Domain: DataSetRelease. Range: TemporalCoverage.
                 </p>
 
             </article>
@@ -563,8 +519,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a data set to any caveat text accompanying it.</p>
 
-                <p>DataSet (domain) &rarr; caveatText &rarr; langString
-                    (range)</p>
+                <p>Domain: DataSet. Range: langString.</p>
 
 
             </article>
@@ -575,8 +530,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a temporal coverage of a period to the end date of that period.</p>
 
-                <p>TemporalCoverage (domain) &rarr; endOn &rarr; date
-                    (range)</p>
+                <p>Domain: TemporalCoverage. Range: date.</p>
 
 
             </article>
@@ -587,8 +541,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a temporal coverage of a day to that date.</p>
 
-                <p>TemporalCoverage (domain) &rarr; onDate &rarr; date
-                    (range)</p>
+                <p>Domain: TemporalCoverage. Range: date.</p>
 
 
             </article>
@@ -599,8 +552,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a data set release version to the date on which it was released.</p>
 
-                <p>DataPoint (domain) &rarr; releasedOn &rarr; date
-                    (range)</p>
+                <p>Domain: DataPoint. Range: date.</p>
 
 
             </article>
@@ -611,8 +563,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a data set release to explanatory notes.</p>
 
-                <p>DataSetRelease (domain) &rarr; releaseNotes &rarr; langString
-                    (range)</p>
+                <p>Domain: DataSetRelease. Range: langString.</p>
 
 
             </article>
@@ -623,8 +574,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a data set release version to explanatory notes.</p>
 
-                <p>DataSetReleaseVersion (domain) &rarr; releaseVersionNotes &rarr; langString
-                    (range)</p>
+                <p>Domain: DataSetReleaseVersion. Range: langString.</p>
 
 
             </article>
@@ -635,8 +585,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a temporal coverage of a period to the start date of that period.</p>
 
-                <p>TemporalCoverage (domain) &rarr; startOn &rarr; date
-                    (range)</p>
+                <p>Domain: TemporalCoverage. Range: date.</p>
 
 
             </article>
@@ -647,8 +596,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a data set to any textual account of its update frequency.</p>
 
-                <p>DataSet (domain) &rarr; updateFrequency &rarr; langString
-                    (range)</p>
+                <p>Domain: DataSet. Range: langString.</p>
 
 
             </article>
@@ -659,8 +607,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a data point to it&#39;s value as an integer.</p>
 
-                <p>DataPoint (domain) &rarr; value &rarr; integer
-                    (range)</p>
+                <p>Domain: DataPoint. Range: integer.</p>
 
 
             </article>
@@ -670,7 +617,30 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>stats-series/<wbr>Residences ... /<wbr>ontologies/<wbr>stats-series/<wbr>Population
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>stats-series/<wbr>Businesses ... /<wbr>ontologies/<wbr>stats-series/<wbr>Population
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>stats-series/<wbr>People ... /<wbr>ontologies/<wbr>stats-series/<wbr>Population
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -707,13 +677,6 @@ h1 {            font-weight: normal;
 
         
 
-    </main>
-
-    <footer>
-
-        <p>Ontology created <time id="created">2018-03-08</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

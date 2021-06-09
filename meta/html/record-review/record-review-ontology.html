@@ -7,11 +7,11 @@
     <title>Record reviews ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,55 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            record-review/record-review-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                record-review/record-review-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Record reviews ontology</h1>
 
         
         <p>A model describing editorial reviews of records and actions taken following review.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>record-review: Archiving</b>
-                <br>is a subclass of<br>
-                <b>record-review: EditorialAction</b>
-            </p>
-            
-            <p>
-                <b>record-review: EditorialReview</b>
-                <br>is a subclass of<br>
-                <b>record-review: EditorialAction</b>
-            </p>
-            
-            <p>
-                <b>record-review: Revision</b>
-                <br>is a subclass of<br>
-                <b>record-review: EditorialAction</b>
-            </p>
-            
-            <p>
-                <b>record-review: Withdrawal</b>
-                <br>is a subclass of<br>
-                <b>record-review: EditorialAction</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -298,9 +272,7 @@ h1 {            font-weight: normal;
                 <p>Relates an archiving action to the work being archived.</p>
                 
 
-                <p>Domain: Archiving
-                    <br>
-                    Range: Work
+                <p>Domain: Archiving. Range: Work.
                 </p>
 
             </article>
@@ -316,9 +288,7 @@ h1 {            font-weight: normal;
                 <p>Relates an editorial action to the person or group performing that action.</p>
                 
 
-                <p>Domain: EditorialAction
-                    <br>
-                    Range: Agent
+                <p>Domain: EditorialAction. Range: Agent.
                 </p>
 
             </article>
@@ -334,9 +304,7 @@ h1 {            font-weight: normal;
                 <p>Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.</p>
                 
 
-                <p>Domain: Feedback
-                    <br>
-                    Range: EditorialReview
+                <p>Domain: Feedback. Range: EditorialReview.
                 </p>
 
             </article>
@@ -352,9 +320,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of revision to an existing manifestation to be revised.</p>
                 
 
-                <p>Domain: Revision
-                    <br>
-                    Range: Manifestation
+                <p>Domain: Revision. Range: Manifestation.
                 </p>
 
             </article>
@@ -370,9 +336,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work to the review cycle of that work. A work has a single review cycle, or none.</p>
                 
 
-                <p>Domain: Work
-                    <br>
-                    Range: ReviewCycle
+                <p>Domain: Work. Range: ReviewCycle.
                 </p>
 
             </article>
@@ -388,9 +352,7 @@ h1 {            font-weight: normal;
                 <p>Relates an action of revision to the type of that revision.</p>
                 
 
-                <p>Domain: Revision
-                    <br>
-                    Range: RevisionType
+                <p>Domain: Revision. Range: RevisionType.
                 </p>
 
             </article>
@@ -406,9 +368,7 @@ h1 {            font-weight: normal;
                 <p>Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.</p>
                 
 
-                <p>Domain: EditorialAction
-                    <br>
-                    Range: EditorialAction
+                <p>Domain: EditorialAction. Range: EditorialAction.
                 </p>
 
             </article>
@@ -424,9 +384,7 @@ h1 {            font-weight: normal;
                 <p>Relates an editorial review to the creation of a new work.</p>
                 
 
-                <p>Domain: EditorialReview
-                    <br>
-                    Range: Work
+                <p>Domain: EditorialReview. Range: Work.
                 </p>
 
             </article>
@@ -442,9 +400,7 @@ h1 {            font-weight: normal;
                 <p>Relates an agent to the feedback submitted by that agent.</p>
                 
 
-                <p>Domain: Agent
-                    <br>
-                    Range: Feedback
+                <p>Domain: Agent. Range: Feedback.
                 </p>
 
             </article>
@@ -460,9 +416,7 @@ h1 {            font-weight: normal;
                 <p>Relates a review cycle to resulting editorial reviews.</p>
                 
 
-                <p>Domain: ReviewCycle
-                    <br>
-                    Range: EditorialReview
+                <p>Domain: ReviewCycle. Range: EditorialReview.
                 </p>
 
             </article>
@@ -478,9 +432,7 @@ h1 {            font-weight: normal;
                 <p>Relates an editorial review to the manifestation being reviewed.</p>
                 
 
-                <p>Domain: EditorialReview
-                    <br>
-                    Range: Manifestation
+                <p>Domain: EditorialReview. Range: Manifestation.
                 </p>
 
             </article>
@@ -496,9 +448,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.</p>
                 
 
-                <p>Domain: Work
-                    <br>
-                    Range: Work
+                <p>Domain: Work. Range: Work.
                 </p>
 
             </article>
@@ -514,9 +464,7 @@ h1 {            font-weight: normal;
                 <p>Relates an act of revision to a new manifestation resulting from the revision.</p>
                 
 
-                <p>Domain: Revision
-                    <br>
-                    Range: Manifestation
+                <p>Domain: Revision. Range: Manifestation.
                 </p>
 
             </article>
@@ -532,9 +480,7 @@ h1 {            font-weight: normal;
                 <p>Relates a manifestation to the action of withdrawing that manifestation.</p>
                 
 
-                <p>Domain: Manifestation
-                    <br>
-                    Range: Withdrawal
+                <p>Domain: Manifestation. Range: Withdrawal.
                 </p>
 
             </article>
@@ -553,8 +499,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an editorial action to the time at which the action was taken.</p>
 
-                <p>EditorialAction (domain) &rarr; At &rarr; dateTime
-                    (range)</p>
+                <p>Domain: EditorialAction. Range: dateTime.</p>
 
 
             </article>
@@ -565,8 +510,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an item of feedback to the text of that feedback.</p>
 
-                <p>Feedback (domain) &rarr; Feedback text &rarr; langString
-                    (range)</p>
+                <p>Domain: Feedback. Range: langString.</p>
 
 
             </article>
@@ -577,8 +521,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.</p>
 
-                <p>Revision (domain) &rarr; Has revision description &rarr; langString
-                    (range)</p>
+                <p>Domain: Revision. Range: langString.</p>
 
 
             </article>
@@ -589,8 +532,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a revision type to a textual description of that type.</p>
 
-                <p>RevisionType (domain) &rarr; Has revision type description &rarr; langString
-                    (range)</p>
+                <p>Domain: RevisionType. Range: langString.</p>
 
 
             </article>
@@ -601,8 +543,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a manifestation to the time at which it was published.</p>
 
-                <p>Manifestation (domain) &rarr; Published at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Manifestation. Range: dateTime.</p>
 
 
             </article>
@@ -613,8 +554,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an item of feedback to the time at which the feedback was received.</p>
 
-                <p>Feedback (domain) &rarr; Received at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Feedback. Range: dateTime.</p>
 
 
             </article>
@@ -625,8 +565,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a withdrawal of a manifestation to the time at which it was withdrawn.</p>
 
-                <p>Withdrawal (domain) &rarr; Reinstated at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Withdrawal. Range: dateTime.</p>
 
 
             </article>
@@ -637,8 +576,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an editorial review of a manifestation to the date on which the review took place.</p>
 
-                <p>EditorialReview (domain) &rarr; Reviewed on &rarr; date
-                    (range)</p>
+                <p>Domain: EditorialReview. Range: date.</p>
 
 
             </article>
@@ -648,7 +586,34 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>record-review/<wbr>EditorialReview ... /<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>record-review/<wbr>Revision ... /<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>record-review/<wbr>Withdrawal ... /<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>record-review/<wbr>Archiving ... /<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -694,49 +659,36 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/record-review/record-review.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/record-review/record-review.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2020-12-18</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2020-12-18</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

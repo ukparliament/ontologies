@@ -7,11 +7,11 @@
     <title>Formal body ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,73 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            formal-body/formal-body-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                formal-body/formal-body-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Formal body ontology</h1>
 
         
         <p>A model describing formally constituted bodies, including committees.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>formal-body: GeneralCommittee</b>
-                <br>is a subclass of<br>
-                <b>formal-body: ParliamentaryCommittee</b>
-            </p>
-            
-            <p>
-                <b>formal-body: InformallyConstitutedCommittee</b>
-                <br>is a subclass of<br>
-                <b>formal-body: FormalBody</b>
-            </p>
-            
-            <p>
-                <b>formal-body: Inquiry</b>
-                <br>is a subclass of<br>
-                <b>formal-body: WorkPackage</b>
-            </p>
-            
-            <p>
-                <b>formal-body: NonSelectCommittee</b>
-                <br>is a subclass of<br>
-                <b>formal-body: ParliamentaryCommittee</b>
-            </p>
-            
-            <p>
-                <b>formal-body: ParliamentaryCommittee</b>
-                <br>is a subclass of<br>
-                <b>formal-body: FormalBody</b>
-            </p>
-            
-            <p>
-                <b>formal-body: SelectCommittee</b>
-                <br>is a subclass of<br>
-                <b>formal-body: ParliamentaryCommittee</b>
-            </p>
-            
-            <p>
-                <b>formal-body: StatutoryCommittee</b>
-                <br>is a subclass of<br>
-                <b>formal-body: FormalBody</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -384,9 +340,7 @@ h1 {            font-weight: normal;
                 <p>Relates a formal body to the House or Houses it belongs to. A joint committee will belong to both Houses.</p>
                 
 
-                <p>Domain: FormalBody
-                    <br>
-                    Range: House
+                <p>Domain: FormalBody. Range: House.
                 </p>
 
             </article>
@@ -402,9 +356,7 @@ h1 {            font-weight: normal;
                 <p>Relates a formal body to the object of its focus.</p>
                 
 
-                <p>Domain: FormalBody
-                    <br>
-                    Range: Focus
+                <p>Domain: FormalBody. Range: Focus.
                 </p>
 
             </article>
@@ -420,9 +372,7 @@ h1 {            font-weight: normal;
                 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
                 
 
-                <p>Domain: BusinessItem
-                    <br>
-                    Range: WorkPackage
+                <p>Domain: BusinessItem. Range: WorkPackage.
                 </p>
 
             </article>
@@ -438,9 +388,7 @@ h1 {            font-weight: normal;
                 <p>Relates a business item to the formal body responsible for its organisation. A business item may be organised by more than one formal body, for example: a joint evidence session.</p>
                 
 
-                <p>Domain: BusinessItem
-                    <br>
-                    Range: FormalBody
+                <p>Domain: BusinessItem. Range: FormalBody.
                 </p>
 
             </article>
@@ -456,9 +404,7 @@ h1 {            font-weight: normal;
                 <p>Relates a formal body to its focus category.</p>
                 
 
-                <p>Domain: FormalBody
-                    <br>
-                    Range: FocusCategory
+                <p>Domain: FormalBody. Range: FocusCategory.
                 </p>
 
             </article>
@@ -474,9 +420,7 @@ h1 {            font-weight: normal;
                 <p>Relates an inquiry to the scope of the inquiry..</p>
                 
 
-                <p>Domain: Inquiry
-                    <br>
-                    Range: InquiryScope
+                <p>Domain: Inquiry. Range: InquiryScope.
                 </p>
 
             </article>
@@ -492,9 +436,7 @@ h1 {            font-weight: normal;
                 <p>A joint committee has a lead House, responsible for the administration of the committee.</p>
                 
 
-                <p>Domain: FormalBody
-                    <br>
-                    Range: House
+                <p>Domain: FormalBody. Range: House.
                 </p>
 
             </article>
@@ -510,9 +452,7 @@ h1 {            font-weight: normal;
                 <p>Relates a sub-committee to its parent committee. </p>
                 
 
-                <p>Domain: FormalBody
-                    <br>
-                    Range: FormalBody
+                <p>Domain: FormalBody. Range: FormalBody.
                 </p>
 
             </article>
@@ -528,9 +468,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work package to the work package it forms a part of, for example: a sub-inquiry forming part of a wider inquiry.</p>
                 
 
-                <p>Domain: WorkPackage
-                    <br>
-                    Range: WorkPackage
+                <p>Domain: WorkPackage. Range: WorkPackage.
                 </p>
 
             </article>
@@ -546,9 +484,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work package to the type of the work package, where the work package is not an inquiry.</p>
                 
 
-                <p>Domain: WorkPackage
-                    <br>
-                    Range: WorkPackageType
+                <p>Domain: WorkPackage. Range: WorkPackageType.
                 </p>
 
             </article>
@@ -564,9 +500,7 @@ h1 {            font-weight: normal;
                 <p>Relates a formal body to a work package undertaken by the formal body. A joint inquiry will be undertaken by more than one formal body.</p>
                 
 
-                <p>Domain: FormalBody
-                    <br>
-                    Range: WorkPackage
+                <p>Domain: FormalBody. Range: WorkPackage.
                 </p>
 
             </article>
@@ -582,9 +516,7 @@ h1 {            font-weight: normal;
                 <p>Relates a work package to the object of its focus.</p>
                 
 
-                <p>Domain: WorkPackage
-                    <br>
-                    Range: Focus
+                <p>Domain: WorkPackage. Range: Focus.
                 </p>
 
             </article>
@@ -603,8 +535,7 @@ h1 {            font-weight: normal;
 
                 <p>A textual description of the task or area of activity assigned to a formal body.</p>
 
-                <p>FormalBody (domain) &rarr; Remit &rarr; langString
-                    (range)</p>
+                <p>Domain: FormalBody. Range: langString.</p>
 
 
             </article>
@@ -614,7 +545,46 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee ... /<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>StatutoryCommittee ... /<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>Inquiry ... /<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>InformallyConstitutedCommittee ... /<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>SelectCommittee ... /<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>GeneralCommittee ... /<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>formal-body/<wbr>NonSelectCommittee ... /<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -660,89 +630,56 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/formal-body/formal-body.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/formal-body/formal-body.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-
-            Edward McCarthy
-
-            
-
-            
-            -
-
-
-            
-
-            Gordon Clark
-
-            
-
-            
-            -
-
-
-            
-
-            James Bowman
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Silver Oliver
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-08-29</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2017-08-29</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            Edward McCarthy.
+            
+            &nbsp;
+            
+            
+            Gordon Clark.
+            
+            &nbsp;
+            
+            
+            James Bowman.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Silver Oliver.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

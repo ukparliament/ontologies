@@ -7,11 +7,11 @@
     <title>Peerage ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,31 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            peerage/peerage-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                peerage/peerage-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Peerage ontology</h1>
 
         
         <p>A model describing peerages, the holding of peerage by a person, Letters Patent affirming the creation of a peerage - and kingdoms, monarchs and reigns as they apply to peerages.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-        
-
 
         
         <section id="classes">
@@ -356,9 +354,7 @@ h1 {            font-weight: normal;
                 <p>Relates a Letters Patent to a peerage it affirms the creation of. A Letters Patent may affirm the creation of one or more peerages, always for the same person. The creation of a peerage is affirmed by one Letters Patent.</p>
                 
 
-                <p>Domain: LettersPatent
-                    <br>
-                    Range: Peerage
+                <p>Domain: LettersPatent. Range: Peerage.
                 </p>
 
             </article>
@@ -374,9 +370,7 @@ h1 {            font-weight: normal;
                 <p>Relates an announcement to the Letters Patent - and the peerages whose creation that Letters Patent affirms - being announced. An announcement may announce more than one Letters Patent. A Letters Patent is the subject of one announcement.</p>
                 
 
-                <p>Domain: Announcement
-                    <br>
-                    Range: LettersPatent
+                <p>Domain: Announcement. Range: LettersPatent.
                 </p>
 
             </article>
@@ -392,9 +386,7 @@ h1 {            font-weight: normal;
                 <p>Relates a rank label to the gender it applies to. A rank label applies to one gender, for example: a female person holding an Earldom has the rank label Countess. A gender has more than one rank label according to the rank of the peerage, for example: a female person holding a peerage in the Kingdom of Scotland may be a Lady, Viscountess, Countess, Marchioness or Duchess.</p>
                 
 
-                <p>Domain: RankLabel
-                    <br>
-                    Range: Gender
+                <p>Domain: RankLabel. Range: Gender.
                 </p>
 
             </article>
@@ -410,9 +402,7 @@ h1 {            font-weight: normal;
                 <p>Relates an announcement to the government administration period during which that announcement was made.</p>
                 
 
-                <p>Domain: Announcement
-                    <br>
-                    Range: GovernmentAdministrationPeriod
+                <p>Domain: Announcement. Range: GovernmentAdministrationPeriod.
                 </p>
 
             </article>
@@ -428,9 +418,7 @@ h1 {            font-weight: normal;
                 <p>Relates an announcement to the type of that announcement. An announcement is of one type.</p>
                 
 
-                <p>Domain: Announcement
-                    <br>
-                    Range: AnnouncementType
+                <p>Domain: Announcement. Range: AnnouncementType.
                 </p>
 
             </article>
@@ -446,9 +434,7 @@ h1 {            font-weight: normal;
                 <p>Relates a person to their gender.</p>
                 
 
-                <p>Domain: Person
-                    <br>
-                    Range: Gender
+                <p>Domain: Person. Range: Gender.
                 </p>
 
             </article>
@@ -464,9 +450,7 @@ h1 {            font-weight: normal;
                 <p>Relates a Letters Patent to the kingdom in which that Letters Patent was issued. A Letters Patent belongs to one kingdom. A kingdom may have more than one Letters Patent.</p>
                 
 
-                <p>Domain: LettersPatent
-                    <br>
-                    Range: Kingdom
+                <p>Domain: LettersPatent. Range: Kingdom.
                 </p>
 
             </article>
@@ -482,9 +466,7 @@ h1 {            font-weight: normal;
                 <p>Relates a peerage to an incumbency as a Law Lord. A Law Lord incumbency is for one peerage. A peerage may have one or more Law Lord incumbencies, or none - it being possible for a Law Lord to resign and be reappointed.</p>
                 
 
-                <p>Domain: Peerage
-                    <br>
-                    Range: LawLordIncumbency
+                <p>Domain: Peerage. Range: LawLordIncumbency.
                 </p>
 
             </article>
@@ -500,9 +482,7 @@ h1 {            font-weight: normal;
                 <p>Relates a person to a peerage holding. A person may have one or more peerage holdings, or none. A peerage holding is by one person.</p>
                 
 
-                <p>Domain: Person
-                    <br>
-                    Range: PeerageHolding
+                <p>Domain: Person. Range: PeerageHolding.
                 </p>
 
             </article>
@@ -518,9 +498,7 @@ h1 {            font-weight: normal;
                 <p>Relates a peerage to its type. A peerage is of one type. A type has more than one peerage. </p>
                 
 
-                <p>Domain: Peerage
-                    <br>
-                    Range: PeerageType
+                <p>Domain: Peerage. Range: PeerageType.
                 </p>
 
             </article>
@@ -536,9 +514,7 @@ h1 {            font-weight: normal;
                 <p>Relates a peerage to the rank of that peerage. A peerage has one rank. A rank may apply to more than one peerage.</p>
                 
 
-                <p>Domain: Peerage
-                    <br>
-                    Range: Rank
+                <p>Domain: Peerage. Range: Rank.
                 </p>
 
             </article>
@@ -554,9 +530,7 @@ h1 {            font-weight: normal;
                 <p>Relates a rank to a rank label. A rank has one of two rank labels in accordance with the gender of a person holding a peerage of that rank, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank.</p>
                 
 
-                <p>Domain: Rank
-                    <br>
-                    Range: RankLabel
+                <p>Domain: Rank. Range: RankLabel.
                 </p>
 
             </article>
@@ -572,9 +546,7 @@ h1 {            font-weight: normal;
                 <p>Relates a peerage to any special remainder applying to that peerage. Where a peerage has a special remainder, it has only one. Types of special remainder may apply to more than one peerage.</p>
                 
 
-                <p>Domain: Peerage
-                    <br>
-                    Range: SpecialRemainder
+                <p>Domain: Peerage. Range: SpecialRemainder.
                 </p>
 
             </article>
@@ -590,9 +562,7 @@ h1 {            font-weight: normal;
                 <p>Relates a Law Lord incumbency to the jurisdiction in which the appointee held office or practised. A Law Lord incumbency is in one jurisdiction. A jurisdiction may have more than one incumbent Law Lord.</p>
                 
 
-                <p>Domain: LawLordIncumbency
-                    <br>
-                    Range: Jurisdiction
+                <p>Domain: LawLordIncumbency. Range: Jurisdiction.
                 </p>
 
             </article>
@@ -608,9 +578,7 @@ h1 {            font-weight: normal;
                 <p>Relates a rank to a kingdom in which a peerage of that rank may be created. A kingdom has peerages of more than one rank. A rank may be found in one or more kingdoms.</p>
                 
 
-                <p>Domain: Rank
-                    <br>
-                    Range: Kingdom
+                <p>Domain: Rank. Range: Kingdom.
                 </p>
 
             </article>
@@ -626,9 +594,7 @@ h1 {            font-weight: normal;
                 <p>Relates a peerage holding to the peerage the holding is of. A peerage holding is of one peerage. A peerage may have one or more peerage holdings.</p>
                 
 
-                <p>Domain: PeerageHolding
-                    <br>
-                    Range: Peerage
+                <p>Domain: PeerageHolding. Range: Peerage.
                 </p>
 
             </article>
@@ -644,9 +610,7 @@ h1 {            font-weight: normal;
                 <p>Relates a Letters Patent to the reign in which that Letters Patent was issued. A Letters Patent is issued in one reign. One or more Letters Patent may be issued in a reign.</p>
                 
 
-                <p>Domain: LettersPatent
-                    <br>
-                    Range: Reign
+                <p>Domain: LettersPatent. Range: Reign.
                 </p>
 
             </article>
@@ -662,9 +626,7 @@ h1 {            font-weight: normal;
                 <p>Relates a Letters Patent to the recorded time of day at which it was presented at a meeting of the Privy Council. A Letters Patent may only have one recorded time in a day. A recorded time in a day may refer to more than one Letters Patent, issued across different days, for example: &#39;10 am&#39;, referring to any number of Letters Patent issued at that time on different days. A recorded time may only have one Letters Patent on one day.</p>
                 
 
-                <p>Domain: LettersPatent
-                    <br>
-                    Range: LettersPatentTime
+                <p>Domain: LettersPatent. Range: LettersPatentTime.
                 </p>
 
             </article>
@@ -680,9 +642,7 @@ h1 {            font-weight: normal;
                 <p>Relates a Letters Patent to the kingdom of the previous title borne by its recipient, as it appeared on the Letters Patent. Where a Letters Patent has a previous title with a kingdom, it has only one.</p>
                 
 
-                <p>Domain: LettersPatent
-                    <br>
-                    Range: Kingdom
+                <p>Domain: LettersPatent. Range: Kingdom.
                 </p>
 
             </article>
@@ -698,9 +658,7 @@ h1 {            font-weight: normal;
                 <p>Relates a person to a Letters Patent that person is in receipt of, affirming the creation of a peerage for that person. A person may receive one or more Letters Patent, or none. A Letters Patent is received by one person.</p>
                 
 
-                <p>Domain: Person
-                    <br>
-                    Range: LettersPatent
+                <p>Domain: Person. Range: LettersPatent.
                 </p>
 
             </article>
@@ -716,9 +674,7 @@ h1 {            font-weight: normal;
                 <p>Relates a reign to a kingdom the reign is in. A reign has one kingdom. A kingdom may have more than one reign over time, but only one reign at one time.</p>
                 
 
-                <p>Domain: Reign
-                    <br>
-                    Range: Kingdom
+                <p>Domain: Reign. Range: Kingdom.
                 </p>
 
             </article>
@@ -734,9 +690,7 @@ h1 {            font-weight: normal;
                 <p>Relates a reign to a monarch during that reign. The reign of William and Mary is considered as a joint reign. A monarch may have more than one reign in more than one kingdom, for example: the reigns of George III in Great Britain, in Ireland and later in the United Kingdom.</p>
                 
 
-                <p>Domain: Reign
-                    <br>
-                    Range: Monarch
+                <p>Domain: Reign. Range: Monarch.
                 </p>
 
             </article>
@@ -755,8 +709,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an announcement of a peerage to the date on which that announcement was made.</p>
 
-                <p>Announcement (domain) &rarr; Announced on &rarr; date
-                    (range)</p>
+                <p>Domain: Announcement. Range: date.</p>
 
 
             </article>
@@ -767,8 +720,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Law Lord incumbency to the date on which that Law Lord was appointed.</p>
 
-                <p>LawLordIncumbency (domain) &rarr; Appointed on &rarr; date
-                    (range)</p>
+                <p>Domain: LawLordIncumbency. Range: date.</p>
 
 
             </article>
@@ -779,8 +731,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a rank to a number representing the degree of that rank in the hierarchy of peerages. The lower the number the higher the degree of the rank, for example: the rank of Barony has a degree of 5, whilst the rank of Dukedom has a degree of 1. Included in the dataset are records for Princes of Wales which are not peerages and given a rank of 0.</p>
 
-                <p>Rank (domain) &rarr; Degree &rarr; integer
-                    (range)</p>
+                <p>Domain: Rank. Range: integer.</p>
 
 
             </article>
@@ -791,8 +742,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a special remainder to a textual description of that special remainder.</p>
 
-                <p>SpecialRemainder (domain) &rarr; Description &rarr; langString
-                    (range)</p>
+                <p>Domain: SpecialRemainder. Range: langString.</p>
 
 
             </article>
@@ -803,8 +753,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Law Lord incumbency to the date on which that incumbency ended. This may be on the death, resignation or retirement of the incumbent.</p>
 
-                <p>LawLordIncumbency (domain) &rarr; End on &rarr; date
-                    (range)</p>
+                <p>Domain: LawLordIncumbency. Range: date.</p>
 
 
             </article>
@@ -815,8 +764,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage to the date on which that peerage became extinct, being the date of death of the last holder. For a life peerage, the first holder being the last holder.</p>
 
-                <p>Peerage (domain) &rarr; Extinct on &rarr; date
-                    (range)</p>
+                <p>Domain: Peerage. Range: date.</p>
 
 
             </article>
@@ -827,8 +775,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an announcement to the URL of the record of that announcement in the edition of the Gazette in which that announcement appears.</p>
 
-                <p>Announcement (domain) &rarr; Gazette URL &rarr; Literal
-                    (range)</p>
+                <p>Domain: Announcement. Range: Literal.</p>
 
 
             </article>
@@ -839,8 +786,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage holding to the date on which the holder of that peerage was introduced into the House of Lords, after being summoned. Not all peers are summoned, or introduced. For a hereditary peerage, only the first holder will be introduced, unless the peerage has a special remainder, in which case subsequent holders are also introduced.</p>
 
-                <p>PeerageHolding (domain) &rarr; Introduced on &rarr; date
-                    (range)</p>
+                <p>Domain: PeerageHolding. Range: date.</p>
 
 
             </article>
@@ -851,8 +797,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage to the ordinality in line of succession of the last holder of that peerage, for example: a peerage becoming extinct with the 11th holder, will have the value 11.</p>
 
-                <p>Peerage (domain) &rarr; Number of last holder &rarr; integer
-                    (range)</p>
+                <p>Domain: Peerage. Range: integer.</p>
 
 
             </article>
@@ -863,8 +808,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage to a flag indicating if the peerage has an &#39;of&#39; between the rank and the title. For a peerage such as Earl of Plymouth, this flag is true. For a peerage such as Earl Nelson, this flag is false.</p>
 
-                <p>Peerage (domain) &rarr; Of title &rarr; boolean
-                    (range)</p>
+                <p>Domain: Peerage. Range: boolean.</p>
 
 
             </article>
@@ -875,8 +819,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage holding to the number of the holder in line of succession of that peerage, for example: the &#39;1&#39;st, &#39;2&#39;nd and &#39;3&#39;rd Earls of Onslow.</p>
 
-                <p>PeerageHolding (domain) &rarr; Ordinality &rarr; integer
-                    (range)</p>
+                <p>Domain: PeerageHolding. Range: integer.</p>
 
 
             </article>
@@ -887,8 +830,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Letters Patent to its ordinality on the date of presentation. This is used as a proxy for precedence. A peerage of a higher rank will have a lower ordinality - and greater precedence - than a peerage of a lower rank whose Letters Patent are presented on the same day. For peerages of the same rank presented on the same day, precedence is determined by the time of day at which the Letters Patent was presented. A peerage whose Letters Patent is presented earlier in the day is determined to have a greater precedence - and lower ordinality - than a peerage of the same rank whose Letters Patent is presented later in that day.</p>
 
-                <p>LettersPatent (domain) &rarr; Ordinality on date &rarr; integer
-                    (range)</p>
+                <p>Domain: LettersPatent. Range: integer.</p>
 
 
             </article>
@@ -899,8 +841,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Letters Patent to the date on which it was presented at a meeting of the Privy Council.</p>
 
-                <p>LettersPatent (domain) &rarr; Presented on &rarr; date
-                    (range)</p>
+                <p>Domain: LettersPatent. Range: date.</p>
 
 
             </article>
@@ -911,8 +852,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Letters Patent to a flag indicating if the title previously borne by the recipient, as it appeared on the Letters Patent, has an &#39;of&#39; between the rank and the title. For a title such as Earl of Plymouth, this flag is true. For a title such as Earl Nelson, this flag is false.</p>
 
-                <p>LettersPatent (domain) &rarr; Previous of title &rarr; boolean
-                    (range)</p>
+                <p>Domain: LettersPatent. Range: boolean.</p>
 
 
             </article>
@@ -923,8 +863,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Letters Patent to the rank of the previous title borne by its recipient, as it appeared on the Letters Patent.</p>
 
-                <p>LettersPatent (domain) &rarr; Previous rank &rarr; langString
-                    (range)</p>
+                <p>Domain: LettersPatent. Range: langString.</p>
 
 
             </article>
@@ -935,8 +874,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a Letters Patent to that part of the title previously borne by the recipient other than rank, &#39;of&#39; and any territorial designation, for example: &#39;Plymouth&#39; being the title for &#39;Earl of Plymouth, in the County of Devon&#39;.</p>
 
-                <p>LettersPatent (domain) &rarr; Previous title &rarr; langString
-                    (range)</p>
+                <p>Domain: LettersPatent. Range: langString.</p>
 
 
             </article>
@@ -947,8 +885,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage to the territorial designation of that peerage, for example: &#39;in the County of Devon&#39; being the territorial designation for &#39;Earl of Plymouth, in the County of Devon&#39;.</p>
 
-                <p>Peerage (domain) &rarr; Territorial designation &rarr; langString
-                    (range)</p>
+                <p>Domain: Peerage. Range: langString.</p>
 
 
             </article>
@@ -959,8 +896,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a peerage to the title of the peerage, being the part of the peerage name other than rank, &#39;of&#39; and territorial designation. For example: &#39;Plymouth&#39; being the title for &#39;Earl of Plymouth, in the County of Devon&#39;.</p>
 
-                <p>Peerage (domain) &rarr; Title &rarr; langString
-                    (range)</p>
+                <p>Domain: Peerage. Range: langString.</p>
 
 
             </article>
@@ -970,7 +906,12 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -1016,69 +957,46 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/peerage/peerage.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/peerage/peerage.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            David Beamish
-
-            
-
-            
-            -
-
-
-            
-
-            Grant Bavister
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Ned Morrell
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2021-05-06</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/peerage/peerage-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/peerage/peerage-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2021-05-06</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/peerage/peerage-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/peerage/peerage-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            David Beamish.
+            
+            &nbsp;
+            
+            
+            Grant Bavister.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            Ned Morrell.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

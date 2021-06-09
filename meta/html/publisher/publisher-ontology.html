@@ -7,11 +7,11 @@
     <title>Publisher ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,67 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            publisher/publisher-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                publisher/publisher-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Publisher ontology</h1>
 
         
         <p>A model describing the publishing of material by offices within Parliament, for example: the House of Commons Library.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>publisher: EditorialBoard</b>
-                <br>is a subclass of<br>
-                <b>publisher: Group</b>
-            </p>
-            
-            <p>
-                <b>publisher: Group</b>
-                <br>is a subclass of<br>
-                <b>publisher: Agent</b>
-            </p>
-            
-            <p>
-                <b>publisher: House</b>
-                <br>is a subclass of<br>
-                <b>publisher: Group</b>
-            </p>
-            
-            <p>
-                <b>publisher: Publisher</b>
-                <br>is a subclass of<br>
-                <b>publisher: Agent</b>
-            </p>
-            
-            <p>
-                <b>publisher: ResearchSection</b>
-                <br>is a subclass of<br>
-                <b>publisher: Publisher</b>
-            </p>
-            
-            <p>
-                <b>publisher: ResearchService</b>
-                <br>is a subclass of<br>
-                <b>publisher: Publisher</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -290,9 +252,7 @@ h1 {            font-weight: normal;
                 <p>Relates a publisher to its editorial board.</p>
                 
 
-                <p>Domain: Publisher
-                    <br>
-                    Range: EditorialBoard
+                <p>Domain: Publisher. Range: EditorialBoard.
                 </p>
 
             </article>
@@ -308,9 +268,7 @@ h1 {            font-weight: normal;
                 <p>Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts.</p>
                 
 
-                <p>Domain: Publisher
-                    <br>
-                    Range: Concept
+                <p>Domain: Publisher. Range: Concept.
                 </p>
 
             </article>
@@ -326,9 +284,7 @@ h1 {            font-weight: normal;
                 <p>Relates a thing, which has a publisher, to the publisher of the thing.</p>
                 
 
-                <p>Domain: ThingHavingPublisher
-                    <br>
-                    Range: Publisher
+                <p>Domain: ThingHavingPublisher. Range: Publisher.
                 </p>
 
             </article>
@@ -344,9 +300,7 @@ h1 {            font-weight: normal;
                 <p>Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office.</p>
                 
 
-                <p>Domain: House
-                    <br>
-                    Range: ResearchService
+                <p>Domain: House. Range: ResearchService.
                 </p>
 
             </article>
@@ -362,9 +316,7 @@ h1 {            font-weight: normal;
                 <p>Relates a research service to a research section within that service.</p>
                 
 
-                <p>Domain: ResearchService
-                    <br>
-                    Range: ResearchSection
+                <p>Domain: ResearchService. Range: ResearchSection.
                 </p>
 
             </article>
@@ -375,7 +327,42 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>publisher/<wbr>Group ... /<wbr>ontologies/<wbr>publisher/<wbr>Agent
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>publisher/<wbr>House ... /<wbr>ontologies/<wbr>publisher/<wbr>Group
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>publisher/<wbr>ResearchSection ... /<wbr>ontologies/<wbr>publisher/<wbr>Publisher
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>publisher/<wbr>EditorialBoard ... /<wbr>ontologies/<wbr>publisher/<wbr>Group
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>publisher/<wbr>ResearchService ... /<wbr>ontologies/<wbr>publisher/<wbr>Publisher
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>publisher/<wbr>Publisher ... /<wbr>ontologies/<wbr>publisher/<wbr>Agent
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -421,59 +408,41 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/publisher/publisher.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/publisher/publisher.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Silver Oliver
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-06-28</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/publisher/publisher-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/publisher/publisher-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2018-06-28</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/publisher/publisher-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/publisher/publisher-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Silver Oliver.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

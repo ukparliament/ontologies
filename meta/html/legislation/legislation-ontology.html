@@ -7,11 +7,11 @@
     <title>Legislation ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,55 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            legislation/legislation-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                legislation/legislation-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Legislation ontology</h1>
 
         
         <p>A model describing the forms of draft and made legislation considered by Parliament, powers delegated by primary legislation and accompanying duties toward Parliament.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>legislation: ActOfParliament</b>
-                <br>is a subclass of<br>
-                <b>legislation: EnablingThing</b>
-            </p>
-            
-            <p>
-                <b>legislation: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</b>
-                <br>is a subclass of<br>
-                <b>legislation: EnabledThing</b>
-            </p>
-            
-            <p>
-                <b>legislation: ProposedNegativeStatutoryInstrument</b>
-                <br>is a subclass of<br>
-                <b>legislation: EnabledThing</b>
-            </p>
-            
-            <p>
-                <b>legislation: PublishedDraftUnderEUWA</b>
-                <br>is a subclass of<br>
-                <b>legislation: EnabledThing</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -284,9 +258,7 @@ h1 {            font-weight: normal;
                 <p>Relates a made statutory instrument to a statutory instrument series item. A made statutory instrument may belong to more than one series by means of a series item. A series item is formed of a single made statutory instrument.</p>
                 
 
-                <p>Domain: MadeStatutoryInstrument
-                    <br>
-                    Range: StatutoryInstrumentSeriesItem
+                <p>Domain: MadeStatutoryInstrument. Range: StatutoryInstrumentSeriesItem.
                 </p>
 
             </article>
@@ -302,9 +274,7 @@ h1 {            font-weight: normal;
                 <p>Relates a draft or made statutory instrument subject to parliamentary procedure to draft legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure is embodied as a single draft statutory instrument, or none. A draft statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none.</p>
                 
 
-                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-                    <br>
-                    Range: DraftStatutoryInstrument
+                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure. Range: DraftStatutoryInstrument.
                 </p>
 
             </article>
@@ -320,9 +290,7 @@ h1 {            font-weight: normal;
                 <p>Relates a draft or made statutory instrument subject to parliamentary procedure to made legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure will be embodied as a single made statutory instrument, or none. A made statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none.</p>
                 
 
-                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure
-                    <br>
-                    Range: MadeStatutoryInstrument
+                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure. Range: MadeStatutoryInstrument.
                 </p>
 
             </article>
@@ -338,9 +306,7 @@ h1 {            font-weight: normal;
                 <p>Relates a statutory instrument series item to a statutory instrument series. A series may have one or more items, or none. A series item places an instrument in a single series.</p>
                 
 
-                <p>Domain: StatutoryInstrumentSeriesItem
-                    <br>
-                    Range: StatutoryInstrumentSeries
+                <p>Domain: StatutoryInstrumentSeriesItem. Range: StatutoryInstrumentSeries.
                 </p>
 
             </article>
@@ -356,9 +322,7 @@ h1 {            font-weight: normal;
                 <p>Relates an enabled thing to the enabling thing under which it was made. An enabled thing may be made under one or more enabling things. An enabling thing may enable one or more enabled things, or none.</p>
                 
 
-                <p>Domain: EnabledThing
-                    <br>
-                    Range: EnablingThing
+                <p>Domain: EnabledThing. Range: EnablingThing.
                 </p>
 
             </article>
@@ -374,9 +338,7 @@ h1 {            font-weight: normal;
                 <p>Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none.</p>
                 
 
-                <p>Domain: EnabledThing
-                    <br>
-                    Range: EnabledThing
+                <p>Domain: EnabledThing. Range: EnabledThing.
                 </p>
 
             </article>
@@ -395,8 +357,7 @@ h1 {            font-weight: normal;
 
                 <p>The year part of an Act of Parliament number, for example, &#39;1986&#39; in &#39;1986 c. 12&#39;. The Act year is the year in which Royal Assent was given.</p>
 
-                <p>ActOfParliament (domain) &rarr; Act year &rarr; Literal
-                    (range)</p>
+                <p>Domain: ActOfParliament. Range: Literal.</p>
 
 
             </article>
@@ -407,8 +368,7 @@ h1 {            font-weight: normal;
 
                 <p>The identifier in year part of an Act of Parliament number, for example, &#39;12&#39; in &#39;1986 c. 12&#39;.</p>
 
-                <p>ActOfParliament (domain) &rarr; Chapter number &rarr; Literal
-                    (range)</p>
+                <p>Domain: ActOfParliament. Range: Literal.</p>
 
 
             </article>
@@ -419,8 +379,7 @@ h1 {            font-weight: normal;
 
                 <p>The date on which a statutory instrument comes into force. Schedules within an instrument may come into force on different dates. Coming into force details would be given in a coming into force note where no single coming into force date is given.</p>
 
-                <p>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure (domain) &rarr; Coming into force date &rarr; date
-                    (range)</p>
+                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure. Range: date.</p>
 
 
             </article>
@@ -431,8 +390,7 @@ h1 {            font-weight: normal;
 
                 <p>A coming into force note sets out details of the commencement of provisions or effects forming part or parts of an instrument, or the instrument as a whole.</p>
 
-                <p>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure (domain) &rarr; Coming into force note &rarr; langString
-                    (range)</p>
+                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure. Range: langString.</p>
 
 
             </article>
@@ -443,8 +401,7 @@ h1 {            font-weight: normal;
 
                 <p>An identifier conforming to the ISBN standard.</p>
 
-                <p>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure (domain) &rarr; ISBN &rarr; Literal
-                    (range)</p>
+                <p>Domain: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure. Range: Literal.</p>
 
 
             </article>
@@ -455,8 +412,7 @@ h1 {            font-weight: normal;
 
                 <p>The date on which a statutory instrument is made by a government minister.</p>
 
-                <p>MadeStatutoryInstrument (domain) &rarr; Made date &rarr; date
-                    (range)</p>
+                <p>Domain: MadeStatutoryInstrument. Range: date.</p>
 
 
             </article>
@@ -467,8 +423,7 @@ h1 {            font-weight: normal;
 
                 <p>The date on which Royal Assent was given, as recorded by legislation.gov.uk. This may differ from the date recorded by Parliament if Royal Assent is given after midnight on a sitting day.</p>
 
-                <p>ActOfParliament (domain) &rarr; Royal Assent on &rarr; date
-                    (range)</p>
+                <p>Domain: ActOfParliament. Range: date.</p>
 
 
             </article>
@@ -479,8 +434,7 @@ h1 {            font-weight: normal;
 
                 <p>The identifier in year part of a statutory instrument number, for example, &#39;925&#39; in &#39;SI 1986/925&#39;.</p>
 
-                <p>MadeStatutoryInstrument (domain) &rarr; SI identifer in year &rarr; Literal
-                    (range)</p>
+                <p>Domain: MadeStatutoryInstrument. Range: Literal.</p>
 
 
             </article>
@@ -491,8 +445,7 @@ h1 {            font-weight: normal;
 
                 <p>The prefix part of a statutory instrument number, for example, &#39;SI&#39; in &#39;SI 1986/925&#39;.</p>
 
-                <p>MadeStatutoryInstrument (domain) &rarr; SI prefix &rarr; Literal
-                    (range)</p>
+                <p>Domain: MadeStatutoryInstrument. Range: Literal.</p>
 
 
             </article>
@@ -503,8 +456,7 @@ h1 {            font-weight: normal;
 
                 <p>The identifier of an item within a series, for example, &#39;121&#39; in &#39; SI 2018/647 (W. 121)&#39;.</p>
 
-                <p>StatutoryInstrumentSeriesItem (domain) &rarr; SI series item identifier &rarr; Literal
-                    (range)</p>
+                <p>Domain: StatutoryInstrumentSeriesItem. Range: Literal.</p>
 
 
             </article>
@@ -515,8 +467,7 @@ h1 {            font-weight: normal;
 
                 <p>The year part of a statutory instrument number, for example, &#39;1986&#39; in &#39;SI 1986/925&#39;. The SI year is the year the instrument was laid before Parliament, except when laid in draft in one calendar year, made in a following year and having its SI year updated.</p>
 
-                <p>MadeStatutoryInstrument (domain) &rarr; SI year &rarr; Literal
-                    (range)</p>
+                <p>Domain: MadeStatutoryInstrument. Range: Literal.</p>
 
 
             </article>
@@ -526,7 +477,34 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ... /<wbr>ontologies/<wbr>legislation/<wbr>EnabledThing
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>legislation/<wbr>PublishedDraftUnderEUWA ... /<wbr>ontologies/<wbr>legislation/<wbr>EnabledThing
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>legislation/<wbr>ActOfParliament ... /<wbr>ontologies/<wbr>legislation/<wbr>EnablingThing
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument ... /<wbr>ontologies/<wbr>legislation/<wbr>EnabledThing
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -572,149 +550,86 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/legislation/legislation.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/legislation/legislation.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-
-            David Beamish
-
-            
-
-            
-            -
-
-
-            
-
-            Jack Dent
-
-            
-
-            
-            -
-
-
-            
-
-            Jane White
-
-            
-
-            
-            -
-
-
-            
-
-            Jayne Sunley
-
-            
-
-            
-            -
-
-
-            
-
-            John Sheridan
-
-            
-
-            
-            -
-
-
-            
-
-            Lucinda Maer
-
-            
-
-            
-            -
-
-
-            
-
-            Matthew Waddington
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Nerys Davies
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Samu Lang
-
-            
-
-            
-            -
-
-
-            
-
-            Silver Oliver
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-03-21</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/legislation/legislation-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/legislation/legislation-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2018-03-21</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/legislation/legislation-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/legislation/legislation-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            David Beamish.
+            
+            &nbsp;
+            
+            
+            Jack Dent.
+            
+            &nbsp;
+            
+            
+            Jane White.
+            
+            &nbsp;
+            
+            
+            Jayne Sunley.
+            
+            &nbsp;
+            
+            
+            John Sheridan.
+            
+            &nbsp;
+            
+            
+            Lucinda Maer.
+            
+            &nbsp;
+            
+            
+            Matthew Waddington.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            Nerys Davies.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Samu Lang.
+            
+            &nbsp;
+            
+            
+            Silver Oliver.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

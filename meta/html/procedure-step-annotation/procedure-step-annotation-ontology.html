@@ -7,11 +7,11 @@
     <title>Procedure step ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,31 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            procedure-step-annotation/procedure-step-annotation-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                procedure-step-annotation/procedure-step-annotation-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Procedure step ontology</h1>
 
         
         <p>A model describing annotations added to procedure steps by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a procedure step is actualised.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-        
-
 
         
         <section id="classes">
@@ -132,9 +130,7 @@ h1 {            font-weight: normal;
                 <p>Relates a business step to a business step where steps may be actualised together.</p>
                 
 
-                <p>Domain: BusinessStep
-                    <br>
-                    Range: BusinessStep
+                <p>Domain: BusinessStep. Range: BusinessStep.
                 </p>
 
             </article>
@@ -150,9 +146,7 @@ h1 {            font-weight: normal;
                 <p>Relates a business step to the publication which is the source of information for that step.</p>
                 
 
-                <p>Domain: BusinessStep
-                    <br>
-                    Range: Publication
+                <p>Domain: BusinessStep. Range: Publication.
                 </p>
 
             </article>
@@ -171,8 +165,7 @@ h1 {            font-weight: normal;
 
                 <p>A note that describes the date to use when actualising a business step.</p>
 
-                <p>BusinessStep (domain) &rarr; Date note &rarr; langString
-                    (range)</p>
+                <p>Domain: BusinessStep. Range: langString.</p>
 
 
             </article>
@@ -183,8 +176,7 @@ h1 {            font-weight: normal;
 
                 <p>A note that describes where a business item should link to in a publication.</p>
 
-                <p>BusinessStep (domain) &rarr; Link note &rarr; langString
-                    (range)</p>
+                <p>Domain: BusinessStep. Range: langString.</p>
 
 
             </article>
@@ -195,8 +187,7 @@ h1 {            font-weight: normal;
 
                 <p>A note that describes the rules for actualising a business step.</p>
 
-                <p>BusinessStep (domain) &rarr; Scope note &rarr; langString
-                    (range)</p>
+                <p>Domain: BusinessStep. Range: langString.</p>
 
 
             </article>
@@ -206,7 +197,12 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -252,49 +248,36 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2019-04-16</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2019-04-16</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

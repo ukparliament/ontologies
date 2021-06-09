@@ -7,11 +7,11 @@
     <title>Utility ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,31 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            utility/utility-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                utility/utility-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Utility ontology</h1>
 
         
         <p>Provides a set of common properties for reuse by other models.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-        
-
 
         
         <section id="classes">
@@ -202,9 +200,7 @@ h1 {            font-weight: normal;
                 <p>Relates a thing to an identifier.</p>
                 
 
-                <p>Domain: Thing
-                    <br>
-                    Range: Identifier
+                <p>Domain: Thing. Range: Identifier.
                 </p>
 
             </article>
@@ -220,9 +216,7 @@ h1 {            font-weight: normal;
                 <p>Relates an identifier to its source.</p>
                 
 
-                <p>Domain: Identifier
-                    <br>
-                    Range: IdentifierSource
+                <p>Domain: Identifier. Range: IdentifierSource.
                 </p>
 
             </article>
@@ -238,9 +232,7 @@ h1 {            font-weight: normal;
                 <p>Relates a thing to a label during a time period.</p>
                 
 
-                <p>Domain: Thing
-                    <br>
-                    Range: Label
+                <p>Domain: Thing. Range: Label.
                 </p>
 
             </article>
@@ -256,9 +248,7 @@ h1 {            font-weight: normal;
                 <p>Relates a thing to a web link. e.g. Person to a twitter account.</p>
                 
 
-                <p>Domain: Thing
-                    <br>
-                    Range: WebLink
+                <p>Domain: Thing. Range: WebLink.
                 </p>
 
             </article>
@@ -274,9 +264,7 @@ h1 {            font-weight: normal;
                 <p>Relates a web link to a link source.</p>
                 
 
-                <p>Domain: WebLink
-                    <br>
-                    Range: WebLinkSource
+                <p>Domain: WebLink. Range: WebLinkSource.
                 </p>
 
             </article>
@@ -292,9 +280,7 @@ h1 {            font-weight: normal;
                 <p>Relates a link to a weblink type.</p>
                 
 
-                <p>Domain: WebLink
-                    <br>
-                    Range: WebLinkType
+                <p>Domain: WebLink. Range: WebLinkType.
                 </p>
 
             </article>
@@ -310,9 +296,7 @@ h1 {            font-weight: normal;
                 <p>Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class.</p>
                 
 
-                <p>Domain: Thing
-                    <br>
-                    Range: Thing
+                <p>Domain: Thing. Range: Thing.
                 </p>
 
             </article>
@@ -331,8 +315,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to an abbreviation label.</p>
 
-                <p>Thing (domain) &rarr; abbreviationLabel &rarr; langString
-                    (range)</p>
+                <p>Domain: Thing. Range: langString.</p>
 
 
             </article>
@@ -343,8 +326,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to a created at date / time.</p>
 
-                <p>Thing (domain) &rarr; createdAt &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Thing. Range: dateTime.</p>
 
 
             </article>
@@ -355,8 +337,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to its textual description.</p>
 
-                <p>Thing (domain) &rarr; description &rarr; langString
-                    (range)</p>
+                <p>Domain: Thing. Range: langString.</p>
 
 
             </article>
@@ -367,8 +348,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to an end date.</p>
 
-                <p>Thing (domain) &rarr; endOn &rarr; date
-                    (range)</p>
+                <p>Domain: Thing. Range: date.</p>
 
 
             </article>
@@ -379,8 +359,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates an identifier to its value.</p>
 
-                <p>Identifier (domain) &rarr; identifierValue &rarr; Literal
-                    (range)</p>
+                <p>Domain: Identifier. Range: Literal.</p>
 
 
             </article>
@@ -391,8 +370,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to its preferred label.</p>
 
-                <p>Thing (domain) &rarr; preferredLabel &rarr; langString
-                    (range)</p>
+                <p>Domain: Thing. Range: langString.</p>
 
 
             </article>
@@ -403,8 +381,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to its recorded end time.</p>
 
-                <p>Thing (domain) &rarr; Recorded end at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Thing. Range: dateTime.</p>
 
 
             </article>
@@ -415,8 +392,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to its recorded start time.</p>
 
-                <p>Thing (domain) &rarr; Recorded start at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Thing. Range: dateTime.</p>
 
 
             </article>
@@ -427,8 +403,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs.</p>
 
-                <p>Thing (domain) &rarr; sameAs &rarr; Literal
-                    (range)</p>
+                <p>Domain: Thing. Range: Literal.</p>
 
 
             </article>
@@ -439,8 +414,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to its scheduled end time.</p>
 
-                <p>Thing (domain) &rarr; Scheduled end at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Thing. Range: dateTime.</p>
 
 
             </article>
@@ -451,8 +425,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to its scheduled start time.</p>
 
-                <p>Thing (domain) &rarr; Scheduled start at &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Thing. Range: dateTime.</p>
 
 
             </article>
@@ -463,8 +436,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to a sort label e.g. Churchill, Winston.</p>
 
-                <p>Thing (domain) &rarr; sortLabel &rarr; langString
-                    (range)</p>
+                <p>Domain: Thing. Range: langString.</p>
 
 
             </article>
@@ -475,8 +447,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to a sort order.</p>
 
-                <p>Thing (domain) &rarr; sortOrder &rarr; integer
-                    (range)</p>
+                <p>Domain: Thing. Range: integer.</p>
 
 
             </article>
@@ -487,8 +458,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to a start date.</p>
 
-                <p>Thing (domain) &rarr; startOn &rarr; date
-                    (range)</p>
+                <p>Domain: Thing. Range: date.</p>
 
 
             </article>
@@ -499,8 +469,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a thing to an updated at date / time.</p>
 
-                <p>Thing (domain) &rarr; updatedAt &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Thing. Range: dateTime.</p>
 
 
             </article>
@@ -511,8 +480,7 @@ h1 {            font-weight: normal;
 
                 <p>Relates a web link to a url.</p>
 
-                <p>WebLink (domain) &rarr; url &rarr; Literal
-                    (range)</p>
+                <p>Domain: WebLink. Range: Literal.</p>
 
 
             </article>
@@ -522,7 +490,12 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -568,59 +541,41 @@ h1 {            font-weight: normal;
         <a href="https://ukparliament.github.io/ontologies/utility/utility.png"><img id="depiction" src="https://ukparliament.github.io/ontologies/utility/utility.png"></a>
         
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            
-            -
-
-
-            
-
-            Anya Somerville
-
-            
-
-            
-            -
-
-
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>
-
-            
-
-            
-            -
-
-
-            
-            <a href="https://robert-brook.com/">Robert Brook</a>
-
-            
-
-            
-            -
-
-
-            
-
-            Silver Oliver
-
-            
-
-            
-        </p>
-        
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2016-10-05</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2016-10-05</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            &nbsp;
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            &nbsp;
+            
+            
+            <a href="https://robert-brook.com/">Robert Brook</a>.
+            
+            &nbsp;
+            
+            
+            Silver Oliver.
+            
+            &nbsp;
+            
+        </p>
+        
+
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

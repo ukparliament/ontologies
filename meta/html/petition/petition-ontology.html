@@ -7,11 +7,11 @@
     <title>Petition ontology</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,43 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            petition/petition-ontology.ttl
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                petition/petition-ontology.ttl
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>Petition ontology</h1>
 
         
         <p>Petition ontology for UK Parliament. Covers the public surface area of petitions.</p>
         
-
-
-        
-
-
-        
-
-        
-
-            <h2 id="subclasses">Subclasses</h2>
-            
-            <p>
-                <b>petition: Approval</b>
-                <br>is a subclass of<br>
-                <b>petition: ModerationOption</b>
-            </p>
-            
-            <p>
-                <b>petition: Rejection</b>
-                <br>is a subclass of<br>
-                <b>petition: ModerationOption</b>
-            </p>
-            
-        
-
 
         
         <section id="classes">
@@ -292,9 +278,7 @@ h1 {            font-weight: normal;
                 <p>Relates a located signature count to the place the signatures came from.</p>
                 
 
-                <p>Domain: LocatedSignatureCount
-                    <br>
-                    Range: Place
+                <p>Domain: LocatedSignatureCount. Range: Place.
                 </p>
 
             </article>
@@ -310,9 +294,7 @@ h1 {            font-weight: normal;
                 <p>Relates a petition to the person who created it.</p>
                 
 
-                <p>Domain: Petition
-                    <br>
-                    Range: Person
+                <p>Domain: Petition. Range: Person.
                 </p>
 
             </article>
@@ -328,9 +310,7 @@ h1 {            font-weight: normal;
                 <p>Relates a petition to a debate.</p>
                 
 
-                <p>Domain: Petition
-                    <br>
-                    Range: Debate
+                <p>Domain: Petition. Range: Debate.
                 </p>
 
             </article>
@@ -346,9 +326,7 @@ h1 {            font-weight: normal;
                 <p>Relates a petition to a Government response.</p>
                 
 
-                <p>Domain: Petition
-                    <br>
-                    Range: GovernmentResponse
+                <p>Domain: Petition. Range: GovernmentResponse.
                 </p>
 
             </article>
@@ -364,9 +342,7 @@ h1 {            font-weight: normal;
                 <p>Relates a petition to a located signature count.</p>
                 
 
-                <p>Domain: Petition
-                    <br>
-                    Range: LocatedSignatureCount
+                <p>Domain: Petition. Range: LocatedSignatureCount.
                 </p>
 
             </article>
@@ -382,9 +358,7 @@ h1 {            font-weight: normal;
                 <p>Relates a petition to its moderation states.</p>
                 
 
-                <p>Domain: Petition
-                    <br>
-                    Range: Moderation
+                <p>Domain: Petition. Range: Moderation.
                 </p>
 
             </article>
@@ -400,9 +374,7 @@ h1 {            font-weight: normal;
                 <p>Relates a moderation to its moderation option.</p>
                 
 
-                <p>Domain: Moderation
-                    <br>
-                    Range: ModerationOption
+                <p>Domain: Moderation. Range: ModerationOption.
                 </p>
 
             </article>
@@ -418,9 +390,7 @@ h1 {            font-weight: normal;
                 <p>Relates a threshold attainment to a threshold.</p>
                 
 
-                <p>Domain: ThresholdAttainment
-                    <br>
-                    Range: Threshold
+                <p>Domain: ThresholdAttainment. Range: Threshold.
                 </p>
 
             </article>
@@ -436,9 +406,7 @@ h1 {            font-weight: normal;
                 <p>Relates a petition to a threshold attainment.</p>
                 
 
-                <p>Domain: Petition
-                    <br>
-                    Range: ThresholdAttainment
+                <p>Domain: Petition. Range: ThresholdAttainment.
                 </p>
 
             </article>
@@ -457,8 +425,7 @@ h1 {            font-weight: normal;
 
                 <p>The action text (title) of the petition entered by the petition creator.</p>
 
-                <p>Petition (domain) &rarr; action &rarr; langString
-                    (range)</p>
+                <p>Domain: Petition. Range: langString.</p>
 
 
             </article>
@@ -469,8 +436,7 @@ h1 {            font-weight: normal;
 
                 <p>Additional text to justify the petition entered by the petition creator.</p>
 
-                <p>Petition (domain) &rarr; additionalDetails &rarr; langString
-                    (range)</p>
+                <p>Domain: Petition. Range: langString.</p>
 
 
             </article>
@@ -481,8 +447,7 @@ h1 {            font-weight: normal;
 
                 <p>A background explanation of why the petition was created entered by the petition creator.</p>
 
-                <p>Petition (domain) &rarr; background &rarr; langString
-                    (range)</p>
+                <p>Domain: Petition. Range: langString.</p>
 
 
             </article>
@@ -493,8 +458,7 @@ h1 {            font-weight: normal;
 
                 <p>Date time at which the petition was closed.</p>
 
-                <p>Petition (domain) &rarr; closedAt &rarr; dateTime
-                    (range)</p>
+                <p>Domain: Petition. Range: dateTime.</p>
 
 
             </article>
@@ -505,8 +469,7 @@ h1 {            font-weight: normal;
 
                 <p>A number identifying a specific rejection code.</p>
 
-                <p>Rejection (domain) &rarr; rejectionCode &rarr; integer
-                    (range)</p>
+                <p>Domain: Rejection. Range: integer.</p>
 
 
             </article>
@@ -517,8 +480,7 @@ h1 {            font-weight: normal;
 
                 <p>Written explanation of why a petition was rejected.</p>
 
-                <p>Rejection (domain) &rarr; rejectionDetails &rarr; langString
-                    (range)</p>
+                <p>Domain: Rejection. Range: langString.</p>
 
 
             </article>
@@ -529,8 +491,7 @@ h1 {            font-weight: normal;
 
                 <p>Number of signatures on a located signature count.</p>
 
-                <p>LocatedSignatureCount (domain) &rarr; signatureCount &rarr; integer
-                    (range)</p>
+                <p>Domain: LocatedSignatureCount. Range: integer.</p>
 
 
             </article>
@@ -541,8 +502,7 @@ h1 {            font-weight: normal;
 
                 <p>Date time at which a located signature count was retrieved from the petitions API.</p>
 
-                <p>LocatedSignatureCount (domain) &rarr; signatureCountRetrievedAt &rarr; dateTime
-                    (range)</p>
+                <p>Domain: LocatedSignatureCount. Range: dateTime.</p>
 
 
             </article>
@@ -553,8 +513,7 @@ h1 {            font-weight: normal;
 
                 <p>Date time at which a threshold is met.</p>
 
-                <p>ThresholdAttainment (domain) &rarr; thresholdAttainmentAt &rarr; dateTime
-                    (range)</p>
+                <p>Domain: ThresholdAttainment. Range: dateTime.</p>
 
 
             </article>
@@ -565,8 +524,7 @@ h1 {            font-weight: normal;
 
                 <p>The number of signatures required to meet a threshold.</p>
 
-                <p>Threshold (domain) &rarr; thresholdSignatureNumber &rarr; integer
-                    (range)</p>
+                <p>Domain: Threshold. Range: integer.</p>
 
 
             </article>
@@ -576,7 +534,26 @@ h1 {            font-weight: normal;
         
 
 
+        
 
+
+        
+
+        
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            
+            <li>
+                /<wbr>ontologies/<wbr>petition/<wbr>Rejection ... /<wbr>ontologies/<wbr>petition/<wbr>ModerationOption
+            <li>
+                
+            <li>
+                /<wbr>ontologies/<wbr>petition/<wbr>Approval ... /<wbr>ontologies/<wbr>petition/<wbr>ModerationOption
+            <li>
+                
+        </ul>
+        
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -613,13 +590,6 @@ h1 {            font-weight: normal;
 
         
 
-    </main>
-
-    <footer>
-
-        <p>Ontology created <time id="created">2017-02-22</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

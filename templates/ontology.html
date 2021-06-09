@@ -7,11 +7,11 @@
     <title>{{ title }}</title>
     <style>
         body {
-            font-family: system-ui;
-            max-width: 40rem;
-            margin: 1rem auto;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
             padding: 1.4rem;
-            font-size: larger;
+            font-size: 1.2rem;
         }
 
         img {
@@ -28,11 +28,11 @@
         nav {
             line-height: 1.4;
         }
-h1 {            font-weight: normal;
-}
+
+
         h2 {
             padding-top: 1rem;
-            
+
         }
 
         h3 {
@@ -52,64 +52,29 @@ h1 {            font-weight: normal;
 
 <body>
     <header>
-        <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-            <br>
-            {{ ttlpath }}
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                {{ ttlpath }}
+            </p>
+            <p>
+                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
+                Namespaces | Depiction
+            </p>
+
         </nav>
     </header>
 
     <main>
+
+
+
         <h1>{{ title }}</h1>
 
         {% if description != "None" %}
         <p>{{ description }}</p>
         {% endif %}
-
-
-        {% if imports %}
-
-        <h2 id="imports">Imported ontologies</h2>
-
-        <ul>
-            {% for import in imports|sort %}
-
-            {% if import.netloc == 'ukparliament.github.io' %}
-            <li>{{ import.path }}</li>
-            {% else %}
-
-            <li>{{ import.netloc }}{{ import.path }}</li>
-
-            {% endif %}
-
-            {% endfor %}
-        </ul>
-        {% endif %}
-
-
-        {% if equivalentClasses %}
-
-        <h2 id="equivalentclasses">Equivalent classes</h2>
-        <ul>
-            {% for equivalentClass in equivalentClasses %}
-            <li>
-                {{ equivalentClass.s|slash2wbr }} ... {{ equivalentClass.o|slash2wbr }}
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-
-        {% if subClasses %}
-
-            <h2 id="subclasses">Subclasses</h2>
-            {% for subClass in subClasses|sort %}
-            <p>
-                <b>{{ subClass.0.split('/')[4:][0] }}: {{ subClass.0.split('/')[4:][1] }}</b>
-                <br>is a subclass of<br>
-                <b>{{ subClass.2.split('/')[4:][0] }}: {{ subClass.2.split('/')[4:][1] }}</b>
-            </p>
-            {% endfor %}
-        {% endif %}
-
 
         {% if classes %}
         <section id="classes">
@@ -158,9 +123,7 @@ h1 {            font-weight: normal;
                 <p>{{ objectproperty.comment }}</p>
                 {% endif %}
 
-                <p>Domain: {{ objectproperty.domain }}
-                    <br>
-                    Range: {{ objectproperty.range }}
+                <p>Domain: {{ objectproperty.domain }}. Range: {{ objectproperty.range }}.
                 </p>
 
             </article>
@@ -179,8 +142,7 @@ h1 {            font-weight: normal;
 
                 <p>{{ dataproperty.comment }}</p>
 
-                <p>{{ dataproperty.domain }} (domain) &rarr; {{ dataproperty.label }} &rarr; {{ dataproperty.range }}
-                    (range)</p>
+                <p>Domain: {{ dataproperty.domain }}. Range: {{ dataproperty.range }}.</p>
 
 
             </article>
@@ -190,7 +152,49 @@ h1 {            font-weight: normal;
         {% endif %}
 
 
+        {% if imports %}
 
+        <h2 id="imports">Imported ontologies</h2>
+
+        <ul>
+            {% for import in imports|sort %}
+
+            {% if import.netloc == 'ukparliament.github.io' %}
+            <li>{{ import.path }}</li>
+            {% else %}
+
+            <li>{{ import.netloc }}{{ import.path }}</li>
+
+            {% endif %}
+
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+
+        {% if equivalentClasses %}
+
+        <h2 id="equivalentclasses">Equivalent classes</h2>
+        <ul>
+            {% for equivalentClass in equivalentClasses %}
+            <li>
+                {{ equivalentClass.s|slash2wbr }} ... {{ equivalentClass.o|slash2wbr }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if subClasses %}
+
+        <h2 id="subclasses">Subclasses</h2>
+        <ul>
+            {% for subClass in subClasses %}
+            <li>
+                {{ subClass.s|slash2wbr }} ... {{ subClass.o|slash2wbr }}
+            <li>
+                {% endfor %}
+        </ul>
+        {% endif %}
 
 
         <h2 id="namespaces">Namespaces</h2>
@@ -208,34 +212,28 @@ h1 {            font-weight: normal;
         <a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
         {% endif %}
 
-        <p id="makers">
-            <strong>Made by</strong>
-
-
-            {% for maker in makers|sort(attribute='name') %}
-            -
-
-
-            {% if maker.homepage|e != "None" %}
-            <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
-
-            {% else %}
-
-            {{ maker.name|e }}
-
-            {% endif %}
-
-            {% endfor %}
-        </p>
-        {% endif %}
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">{{ created }}</time> - <a href="{{ ttldir }}{{ ttlpath }}">TTL file on
-                GitHub</a> - Visualise <a
-                href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">WebVOWL</a></p>
+        <p>Ontology created <time id="created">{{ created }}</time>. <a href="{{ ttldir }}{{ ttlpath }}">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">Visualise</a> on
+            WebVOWL.</p>
+        <p id="makers">
+
+            {% for maker in makers|sort(attribute='name') %}
+            {% if maker.homepage|e != "None" %}
+            <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>.
+            {% else %}
+            {{ maker.name|e }}.
+            {% endif %}
+            &nbsp;
+            {% endfor %}
+        </p>
+        {% endif %}
+
 
         <p>&copy; {{ rights|e }}</p>
 
