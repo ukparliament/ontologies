@@ -11,43 +11,54 @@
             max-width: 40rem;
             margin: 1rem auto;
             padding: 1.4rem;
+            font-size: larger;
         }
 
         img {
             width: 100%;
-            
+
         }
 
         main {
-            line-height: 1.4;
             padding: 2rem 0;
         }
 
-        h2 {padding-top: 1rem;}
-        h3 {padding-top: 1rem;}
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+h1 {            font-weight: normal;
+}
+        h2 {
+            padding-top: 1rem;
+            
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
 
         ul {
-    padding-left: 0;
-    list-style-type: none;
-}
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        sup {
+            font-weight: normal;
+        }
     </style>
 </head>
 
 <body>
     <header>
-
         <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-        <br>
-        {{ ttlpath }}</nav>
-
-
-
+            <br>
+            {{ ttlpath }}
+        </nav>
     </header>
 
     <main>
-
-        
-
         <h1>{{ title }}</h1>
 
         {% if description != "None" %}
@@ -77,8 +88,8 @@
 
         {% if equivalentClasses %}
 
-            <h2 id="equivalentclasses">Equivalent classes</h2>
-            <ul>
+        <h2 id="equivalentclasses">Equivalent classes</h2>
+        <ul>
             {% for equivalentClass in equivalentClasses %}
             <li>
                 {{ equivalentClass.s|slash2wbr }} ... {{ equivalentClass.o|slash2wbr }}
@@ -89,9 +100,7 @@
 
         {% if subClasses %}
 
-        <details id="subclasses">
-
-            <summary>Subclasses</summary>
+            <h2 id="subclasses">Subclasses</h2>
             {% for subClass in subClasses|sort %}
             <p>
                 <b>{{ subClass.0.split('/')[4:][0] }}: {{ subClass.0.split('/')[4:][1] }}</b>
@@ -99,19 +108,19 @@
                 <b>{{ subClass.2.split('/')[4:][0] }}: {{ subClass.2.split('/')[4:][1] }}</b>
             </p>
             {% endfor %}
-        </details>
         {% endif %}
 
 
         {% if classes %}
         <section id="classes">
-            <h2>Classes</h2>
+            <h2>Classes<sup>#</sup></h2>
+
 
             {% for class in classes|sort(attribute='label') %}
             <article class="class">
                 <h3>{{ class.label }}
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- {{ class.isDefinedBy }} -->
                 {% if class.comment %}
@@ -180,7 +189,7 @@
 
         {% endif %}
 
-        
+
 
 
 
@@ -200,21 +209,21 @@
         {% endif %}
 
         <p id="makers">
-        <strong>Made by</strong>
+            <strong>Made by</strong>
 
 
             {% for maker in makers|sort(attribute='name') %}
-- 
-            
+            -
 
-                {% if maker.homepage|e != "None" %}
-                <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
-                
-                {% else %}
 
-                {{ maker.name|e }}
+            {% if maker.homepage|e != "None" %}
+            <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
 
-                {% endif %}
+            {% else %}
+
+            {{ maker.name|e }}
+
+            {% endif %}
 
             {% endfor %}
         </p>
@@ -224,7 +233,9 @@
 
     <footer>
 
-        <p>Ontology created <time id="created">{{ created }}</time> - <a href="{{ ttldir }}{{ ttlpath }}">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">WebVOWL</a></p>
+        <p>Ontology created <time id="created">{{ created }}</time> - <a href="{{ ttldir }}{{ ttlpath }}">TTL file on
+                GitHub</a> - Visualise <a
+                href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">WebVOWL</a></p>
 
         <p>&copy; {{ rights|e }}</p>
 

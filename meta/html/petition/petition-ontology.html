@@ -11,43 +11,54 @@
             max-width: 40rem;
             margin: 1rem auto;
             padding: 1.4rem;
+            font-size: larger;
         }
 
         img {
             width: 100%;
-            
+
         }
 
         main {
-            line-height: 1.4;
             padding: 2rem 0;
         }
 
-        h2 {padding-top: 1rem;}
-        h3 {padding-top: 1rem;}
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+h1 {            font-weight: normal;
+}
+        h2 {
+            padding-top: 1rem;
+            
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
 
         ul {
-    padding-left: 0;
-    list-style-type: none;
-}
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        sup {
+            font-weight: normal;
+        }
     </style>
 </head>
 
 <body>
     <header>
-
         <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-        <br>
-        petition/petition-ontology.ttl</nav>
-
-
-
+            <br>
+            petition/petition-ontology.ttl
+        </nav>
     </header>
 
     <main>
-
-        
-
         <h1>Petition ontology</h1>
 
         
@@ -62,9 +73,7 @@
 
         
 
-        <details id="subclasses">
-
-            <summary>Subclasses</summary>
+            <h2 id="subclasses">Subclasses</h2>
             
             <p>
                 <b>petition: Approval</b>
@@ -78,19 +87,19 @@
                 <b>petition: ModerationOption</b>
             </p>
             
-        </details>
         
 
 
         
         <section id="classes">
-            <h2>Classes</h2>
+            <h2>Classes<sup>#</sup></h2>
+
 
             
             <article class="class">
                 <h3>Approval
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -108,7 +117,7 @@
             <article class="class">
                 <h3>Debate
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -122,7 +131,7 @@
             <article class="class">
                 <h3>GovernmentResponse
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -136,7 +145,7 @@
             <article class="class">
                 <h3>LocatedSignatureCount
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -150,7 +159,7 @@
             <article class="class">
                 <h3>Moderation
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -164,7 +173,7 @@
             <article class="class">
                 <h3>ModerationOption
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -178,7 +187,7 @@
             <article class="class">
                 <h3>Person
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -192,7 +201,7 @@
             <article class="class">
                 <h3>Petition
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -206,7 +215,7 @@
             <article class="class">
                 <h3>Place
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -220,7 +229,7 @@
             <article class="class">
                 <h3>Rejection
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -238,7 +247,7 @@
             <article class="class">
                 <h3>Threshold
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -252,7 +261,7 @@
             <article class="class">
                 <h3>ThresholdAttainment
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -566,7 +575,7 @@
 
         
 
-        
+
 
 
 
@@ -608,7 +617,9 @@
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-02-22</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2017-02-22</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">TTL file on
+                GitHub</a> - Visualise <a
+                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

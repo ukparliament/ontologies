@@ -11,43 +11,54 @@
             max-width: 40rem;
             margin: 1rem auto;
             padding: 1.4rem;
+            font-size: larger;
         }
 
         img {
             width: 100%;
-            
+
         }
 
         main {
-            line-height: 1.4;
             padding: 2rem 0;
         }
 
-        h2 {padding-top: 1rem;}
-        h3 {padding-top: 1rem;}
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+h1 {            font-weight: normal;
+}
+        h2 {
+            padding-top: 1rem;
+            
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
 
         ul {
-    padding-left: 0;
-    list-style-type: none;
-}
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        sup {
+            font-weight: normal;
+        }
     </style>
 </head>
 
 <body>
     <header>
-
         <nav><a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-        <br>
-        _image/image-ontology.ttl</nav>
-
-
-
+            <br>
+            _image/image-ontology.ttl
+        </nav>
     </header>
 
     <main>
-
-        
-
         <h1>Image ontology</h1>
 
         
@@ -62,9 +73,7 @@
 
         
 
-        <details id="subclasses">
-
-            <summary>Subclasses</summary>
+            <h2 id="subclasses">Subclasses</h2>
             
             <p>
                 <b>image: GeoLocation</b>
@@ -90,19 +99,19 @@
                 <b>image: Image</b>
             </p>
             
-        </details>
         
 
 
         
         <section id="classes">
-            <h2>Classes</h2>
+            <h2>Classes<sup>#</sup></h2>
+
 
             
             <article class="class">
                 <h3>Agent
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/agency/ -->
                 
@@ -116,7 +125,7 @@
             <article class="class">
                 <h3>GeoLocation
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -134,7 +143,7 @@
             <article class="class">
                 <h3>Image
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -148,7 +157,7 @@
             <article class="class">
                 <h3>ImageCoordinate
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -162,7 +171,7 @@
             <article class="class">
                 <h3>ImageCreator
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -180,7 +189,7 @@
             <article class="class">
                 <h3>ImageOwner
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -198,7 +207,7 @@
             <article class="class">
                 <h3>ImageResolution
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -212,7 +221,7 @@
             <article class="class">
                 <h3>ImageSubject
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -226,7 +235,7 @@
             <article class="class">
                 <h3>ImageZone
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -240,7 +249,7 @@
             <article class="class">
                 <h3>Logo
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -254,7 +263,7 @@
             <article class="class">
                 <h3>Photograph
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -272,7 +281,7 @@
             <article class="class">
                 <h3>UsageLicence
 
-                    <span class="subhead">class</span>
+                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -629,7 +638,7 @@
 
         
 
-        
+
 
 
 
@@ -675,7 +684,9 @@
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-06-28</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">TTL file on GitHub</a> - Visualise <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">WebVOWL</a></p>
+        <p>Ontology created <time id="created">2017-06-28</time> - <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">TTL file on
+                GitHub</a> - Visualise <a
+                href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">WebVOWL</a></p>
 
         <p>&copy; Open Parliament Licence v3.0</p>
 

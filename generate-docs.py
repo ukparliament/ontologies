@@ -124,6 +124,15 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         equivalentClassObject["o"] = urlparse(o).path
         equivalentClasses.append(equivalentClassObject)
 
+    subClasses = []
+
+    for s,p,o in g.triples((None, RDFS.subClassOf, None)):
+        print(s,o)
+        # equivalentClassObject = {}
+        # equivalentClassObject["s"] = urlparse(s).path
+        # equivalentClassObject["o"] = urlparse(o).path
+        # equivalentClasses.append(equivalentClassObject)
+
     # print("PARSED\t" + str(ttlpath))
 
     try:
