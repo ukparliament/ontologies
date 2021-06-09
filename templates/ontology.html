@@ -19,6 +19,10 @@
 
         }
 
+        span.subhead {
+            font-weight: normal;
+        }
+
         main {
             padding: 2rem 0;
         }
@@ -59,8 +63,14 @@
                 {{ ttlpath }}
             </p>
             <p>
-                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
-                Namespaces | Depiction
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                <a href="#importedontologies">Imported ontologies</a> |
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+                <a href="#depiction">Depiction</a>
             </p>
 
         </nav>
@@ -78,14 +88,13 @@
 
         {% if classes %}
         <section id="classes">
-            <h2>Classes<sup>#</sup></h2>
-
+            <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
             <article class="class">
                 <h3>{{ class.label }}
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- {{ class.isDefinedBy }} -->
                 {% if class.comment %}
@@ -94,7 +103,7 @@
 
                 {% if class.superclasses %}
                 {% for superclass in class.superclasses %}
-                <p>{{ superclass }} (superclass) &rarr; {{ class.label }} (class)</p>
+                <p>Superclass: {{ superclass }}.</p>
                 {% endfor %}
                 {% endif %}
 
@@ -105,12 +114,12 @@
 
         {% if objectproperties %}
 
-        <section id="properties">
+        <section id="objectproperties">
             <h2>Object properties</h2>
 
             {% for objectproperty in objectproperties|sort(attribute='label') %}
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>{{ objectproperty.label }} <span class="subhead">object property</span></h3>
 
@@ -153,59 +162,70 @@
 
 
         {% if imports %}
+        <section id="importedontologies">
+            <h2>Imported ontologies</h2>
 
-        <h2 id="imports">Imported ontologies</h2>
+            <ul>
+                {% for import in imports|sort %}
 
-        <ul>
-            {% for import in imports|sort %}
+                {% if import.netloc == 'ukparliament.github.io' %}
+                <li>{{ import.path }}</li>
+                {% else %}
 
-            {% if import.netloc == 'ukparliament.github.io' %}
-            <li>{{ import.path }}</li>
-            {% else %}
+                <li>{{ import.netloc }}{{ import.path }}</li>
 
-            <li>{{ import.netloc }}{{ import.path }}</li>
+                {% endif %}
 
-            {% endif %}
-
-            {% endfor %}
-        </ul>
+                {% endfor %}
+            </ul>
+        </section>
         {% endif %}
 
 
         {% if equivalentClasses %}
-
-        <h2 id="equivalentclasses">Equivalent classes</h2>
-        <ul>
-            {% for equivalentClass in equivalentClasses %}
-            <li>
-                {{ equivalentClass.s|slash2wbr }} ... {{ equivalentClass.o|slash2wbr }}
-            </li>
-            {% endfor %}
-        </ul>
+        <section id="equivalentclasses">
+        <h2>Equivalent classes</h2>
+        <table>
+                {% for equivalentClass in equivalentClasses %}
+                <tr>
+                    <td>{{ equivalentClass.s|slash2wbr }}</td>
+                    <td>{{ equivalentClass.o|slash2wbr }}</td>
+                </tr>
+                {% endfor %}
+        </table>
+        </section>  
         {% endif %}
 
         {% if subClasses %}
-
-        <h2 id="subclasses">Subclasses</h2>
-        <ul>
-            {% for subClass in subClasses %}
-            <li>
-                {{ subClass.s|slash2wbr }} ... {{ subClass.o|slash2wbr }}
-            <li>
+        <section id="subClasses">
+        <h2>Subclasses</h2>
+        <table>
+                {% for subClass in subClasses %}
+                <tr>
+                    <td>{{ subClass.s|slash2wbr }}</td>
+                    <td>{{ subClass.o|slash2wbr }}</td>
+                </tr>
                 {% endfor %}
-        </ul>
+        </table>
+        </section>  
+        {% endif %}
+
+        {% if namespaces %}
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                {% for namespace in namespaces %}
+                <tr>
+                    <td>{{ namespace.p }}</td>
+                    <td><a href="https://prefix.cc/{{ namespace.p }}">prefix.cc</a></td>                    
+                    <td>{{ namespace.n }}</td>
+                </tr>
+                {% endfor %}
+        </table>
+        </section>  
         {% endif %}
 
 
-        <h2 id="namespaces">Namespaces</h2>
-
-        {% for namespace in namespaces|sort(attribute='0') %}
-
-        <p class="namespace"><strong>{{ namespace.0 }}</strong> {{ namespace.1 }}</p>
-
-        {% endfor %}
-
-        {% if makers %}
 
 
         {% if depiction %}
@@ -221,6 +241,7 @@
                 file</a> on
             GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">Visualise</a> on
             WebVOWL.</p>
+        {% if makers %}
         <p id="makers">
 
             {% for maker in makers|sort(attribute='name') %}

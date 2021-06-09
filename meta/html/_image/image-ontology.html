@@ -19,6 +19,10 @@
 
         }
 
+        span.subhead {
+            font-weight: normal;
+        }
+
         main {
             padding: 2rem 0;
         }
@@ -59,8 +63,14 @@
                 _image/image-ontology.ttl
             </p>
             <p>
-                Classes | Object properties | Data properties | Imported ontologies | Equivalent classes | Subclasses |
-                Namespaces | Depiction
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                <a href="#importedontologies">Imported ontologies</a> |
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+                <a href="#depiction">Depiction</a>
             </p>
 
         </nav>
@@ -78,14 +88,13 @@
 
         
         <section id="classes">
-            <h2>Classes<sup>#</sup></h2>
-
+            <h2>Classes</h2>
 
             
             <article class="class">
                 <h3>Agent
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/agency/ -->
                 
@@ -99,7 +108,7 @@
             <article class="class">
                 <h3>GeoLocation
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -108,7 +117,7 @@
 
                 
                 
-                <p>GeographicalThing (superclass) &rarr; GeoLocation (class)</p>
+                <p>Superclass: GeographicalThing.</p>
                 
                 
 
@@ -117,7 +126,7 @@
             <article class="class">
                 <h3>Image
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -131,7 +140,7 @@
             <article class="class">
                 <h3>ImageCoordinate
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -145,7 +154,7 @@
             <article class="class">
                 <h3>ImageCreator
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -154,7 +163,7 @@
 
                 
                 
-                <p>Agent (superclass) &rarr; ImageCreator (class)</p>
+                <p>Superclass: Agent.</p>
                 
                 
 
@@ -163,7 +172,7 @@
             <article class="class">
                 <h3>ImageOwner
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -172,7 +181,7 @@
 
                 
                 
-                <p>Agent (superclass) &rarr; ImageOwner (class)</p>
+                <p>Superclass: Agent.</p>
                 
                 
 
@@ -181,7 +190,7 @@
             <article class="class">
                 <h3>ImageResolution
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -195,7 +204,7 @@
             <article class="class">
                 <h3>ImageSubject
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -209,7 +218,7 @@
             <article class="class">
                 <h3>ImageZone
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -223,7 +232,7 @@
             <article class="class">
                 <h3>Logo
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -237,7 +246,7 @@
             <article class="class">
                 <h3>Photograph
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -246,7 +255,7 @@
 
                 
                 
-                <p>Image (superclass) &rarr; Photograph (class)</p>
+                <p>Superclass: Image.</p>
                 
                 
 
@@ -255,7 +264,7 @@
             <article class="class">
                 <h3>UsageLicence
 
-                    <span class="subhead">class</span>&ast;<sup>&ast;</sup>
+                    <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -271,12 +280,12 @@
 
         
 
-        <section id="properties">
+        <section id="objectproperties">
             <h2>Object properties</h2>
 
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>agentHasLogo <span class="subhead">object property</span></h3>
 
@@ -293,7 +302,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageCoordinateHasImageZone <span class="subhead">object property</span></h3>
 
@@ -307,7 +316,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageHasImageCoordinate <span class="subhead">object property</span></h3>
 
@@ -321,7 +330,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageHasImageCreator <span class="subhead">object property</span></h3>
 
@@ -335,7 +344,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageHasImageOwner <span class="subhead">object property</span></h3>
 
@@ -349,7 +358,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageHasImageResolution <span class="subhead">object property</span></h3>
 
@@ -363,7 +372,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageHasImageSubject <span class="subhead">object property</span></h3>
 
@@ -380,7 +389,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageHasUsageLicence <span class="subhead">object property</span></h3>
 
@@ -394,7 +403,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>imageZoneHasImageSubject <span class="subhead">object property</span></h3>
 
@@ -411,7 +420,7 @@
             </article>
             
 
-            <article class="property">
+            <article class="objectproperty">
 
                 <h3>photographHasGeoLocation <span class="subhead">object property</span></h3>
 
@@ -586,66 +595,129 @@
         
 
         
-
-        <h2 id="subclasses">Subclasses</h2>
-        <ul>
-            
-            <li>
-                /<wbr>ontologies/<wbr>image/<wbr>ImageCreator ... /<wbr>ontologies/<wbr>image/<wbr>Agent
-            <li>
+        <section id="subClasses">
+        <h2>Subclasses</h2>
+        <table>
                 
-            <li>
-                /<wbr>ontologies/<wbr>image/<wbr>Photograph ... /<wbr>ontologies/<wbr>image/<wbr>Image
-            <li>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>ImageOwner</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Agent</td>
+                </tr>
                 
-            <li>
-                /<wbr>ontologies/<wbr>image/<wbr>GeoLocation ... /<wbr>ontologies/<wbr>image/<wbr>GeographicalThing
-            <li>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Photograph</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Image</td>
+                </tr>
                 
-            <li>
-                /<wbr>ontologies/<wbr>image/<wbr>ImageOwner ... /<wbr>ontologies/<wbr>image/<wbr>Agent
-            <li>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>GeoLocation</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>GeographicalThing</td>
+                </tr>
                 
-        </ul>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>ImageCreator</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Agent</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td>xml</td>
+                    <td><a href="https://prefix.cc/xml">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=xml">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td>rdf</td>
+                    <td><a href="https://prefix.cc/rdf">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=rdf">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td>rdfs</td>
+                    <td><a href="https://prefix.cc/rdfs">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=rdfs">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td>xsd</td>
+                    <td><a href="https://prefix.cc/xsd">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=xsd">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td>pi</td>
+                    <td><a href="https://prefix.cc/pi">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=pi">LOV</a></td>
+
+                    
+                    <td>http://parliament.uk/ontologies/image/</td>
+                </tr>
+                
+                <tr>
+                    <td>dcterms</td>
+                    <td><a href="https://prefix.cc/dcterms">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=dcterms">LOV</a></td>
+
+                    
+                    <td>http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td>owl</td>
+                    <td><a href="https://prefix.cc/owl">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=owl">LOV</a></td>
+
+                    
+                    <td>http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+                <tr>
+                    <td>foaf</td>
+                    <td><a href="https://prefix.cc/foaf">prefix.cc</a></td>
+                    <td><a href="https://lov.linkeddata.es/dataset/lov/vocabs?q=foaf">LOV</a></td>
+
+                    
+                    <td>http://xmlns.com/foaf/0.1/</td>
+                </tr>
+                
+        </table>
+        </section>  
         
 
 
-        <h2 id="namespaces">Namespaces</h2>
+
 
         
 
-        <p class="namespace"><strong>dcterms</strong> http://purl.org/dc/terms/</p>
 
-        
+    </main>
 
-        <p class="namespace"><strong>foaf</strong> http://xmlns.com/foaf/0.1/</p>
+    <footer>
 
-        
-
-        <p class="namespace"><strong>owl</strong> http://www.w3.org/2002/07/owl#</p>
-
-        
-
-        <p class="namespace"><strong>pi</strong> http://parliament.uk/ontologies/image/</p>
-
-        
-
-        <p class="namespace"><strong>rdf</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#</p>
-
-        
-
-        <p class="namespace"><strong>rdfs</strong> http://www.w3.org/2000/01/rdf-schema#</p>
-
-        
-
-        <p class="namespace"><strong>xml</strong> http://www.w3.org/XML/1998/namespace</p>
-
-        
-
-        <p class="namespace"><strong>xsd</strong> http://www.w3.org/2001/XMLSchema#</p>
-
-        
-
+        <p>Ontology created <time id="created">2017-06-28</time>. <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">Visualise</a> on
+            WebVOWL.</p>
         
 
 
