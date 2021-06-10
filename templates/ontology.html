@@ -14,17 +14,13 @@
             font-size: 1.2rem;
         }
 
-        img {
-            width: 100%;
-
-        }
 
         span.subhead {
             font-weight: normal;
         }
 
         main {
-            padding: 2rem 0;
+            padding: 1rem 0;
         }
 
         p,
@@ -48,9 +44,6 @@
             list-style-type: none;
         }
 
-        sup {
-            font-weight: normal;
-        }
     </style>
 </head>
 
@@ -70,7 +63,11 @@
                 <a href="#equivalentclasses">Equivalent classes</a> |
                 <a href="#subclasses">Subclasses</a> |
                 <a href="#namespaces">Namespaces</a> |
-                <a href="#depiction">Depiction</a>
+
+                {% if depiction %}
+        <a href="{{ depiction }}">Depiction</a>
+        {% endif %}
+
             </p>
 
         </nav>
@@ -85,6 +82,8 @@
         {% if description != "None" %}
         <p>{{ description }}</p>
         {% endif %}
+
+        
 
         {% if classes %}
         <section id="classes">
@@ -169,10 +168,10 @@
                 {% for import in imports|sort %}
 
                 {% if import.netloc == 'ukparliament.github.io' %}
-                <li>{{ import.path }}</li>
+                <li>{{ import.path|ttlpath2ontologyname }}</li>
                 {% else %}
 
-                <li>{{ import.netloc }}{{ import.path }}</li>
+                <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
 
                 {% endif %}
 
@@ -216,8 +215,8 @@
         <table>
                 {% for namespace in namespaces %}
                 <tr>
-                    <td>{{ namespace.p }}</td>
-                    <td>{{ namespace.n }}</td>
+                    <td style="width:20%;padding:0.5rem;">{{ namespace.p }}</td>
+                    <td style="width:80%;">{{ namespace.n }}</td>
                 </tr>
                 {% endfor %}
         </table>
@@ -227,19 +226,19 @@
 
 
 
-        {% if depiction %}
-        <a href="{{ depiction }}"><img id="depiction" src="{{ depiction }}"></a>
-        {% endif %}
+        
 
 
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">{{ created }}</time>. <a href="{{ ttldir }}{{ ttlpath }}">Turtle source
+        <p>Ontology created <time id="created">{{ created }}</time>.</p>
+        
+        <p><a href="{{ ttldir }}{{ ttlpath }}">Turtle source
                 file</a> on
             GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">Visualise</a> on
-            WebVOWL.</p>
+            WebVOWL. </p>
         {% if makers %}
         <p id="makers">
 
@@ -249,7 +248,6 @@
             {% else %}
             {{ maker.name|e }}.
             {% endif %}
-            &nbsp;
             {% endfor %}
         </p>
         {% endif %}

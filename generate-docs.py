@@ -12,10 +12,14 @@ from urllib.parse import urlparse
 def slash2wbr(value):
     return Markup(value.replace("/", "/<wbr>"))
 
+def ttlpath2ontologyname(value):
+    return Markup(Path(value).stem.replace('-', ' ').title())
 
 env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
 
 env.filters["slash2wbr"] = slash2wbr
+
+env.filters["ttlpath2ontologyname"] = ttlpath2ontologyname
 
 template = env.get_template("ontology.html")
 
