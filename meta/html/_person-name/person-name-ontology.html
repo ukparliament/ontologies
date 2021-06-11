@@ -1,267 +1,933 @@
-http://parliament.uk/ontologies/person-name/PostNominal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/PreNominal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/HouseSeat	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/personNamingHasGender	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/Gender
-http://parliament.uk/ontologies/person-name/	http://purl.org/dc/terms/title	Person name ontology
-http://parliament.uk/ontologies/person-name/middleNames	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/person-name/personNamingHasPostNominal	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/SeatIncumbency	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/CulturalOrdering	http://www.w3.org/2000/01/rdf-schema#comment	In using more meaningful semantic terms such as 'given name' rather than 'first name' we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This class is a proposed way of allowing clients to understand that the naming in question is eg. from a culture where the given name comes before the family name
-http://parliament.uk/ontologies/person-name/namingQualificationHasPreNominal	http://www.w3.org/2000/01/rdf-schema#label	namingQualificationHasPreNominal
-http://parliament.uk/ontologies/person-name/namingQualificationHasPreNominal	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/NamingQualification
-http://parliament.uk/ontologies/person-name/Member	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/person-name/Person
-http://parliament.uk/ontologies/person-name/personNamingHasPostNominal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/preNominalOrdering	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/person-name/hasGenderIdentity	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/personNamingHasPreNominal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/hasPersonNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageAuthority	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Peerage
-http://parliament.uk/ontologies/person-name/	http://purl.org/dc/terms/created	2017-05-30
-http://parliament.uk/ontologies/person-name/PreferredNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/Peerage	http://www.w3.org/2000/01/rdf-schema#label	Peerage
-http://parliament.uk/ontologies/person-name/peerageHasHouseSeat	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasPeerage	http://www.w3.org/2000/01/rdf-schema#label	hasPeerage
-http://parliament.uk/ontologies/person-name/hasTheUsage	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/TheUsage
-http://parliament.uk/ontologies/person-name/Incumbency	http://www.w3.org/2000/01/rdf-schema#label	Incumbency
-http://parliament.uk/ontologies/person-name/PeerageType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasSeatIncumbency	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/SeatIncumbency
-http://parliament.uk/ontologies/person-name/familyName	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasGender	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/Gender
-http://parliament.uk/ontologies/person-name/House	http://www.w3.org/2000/01/rdf-schema#label	House
-http://parliament.uk/ontologies/person-name/peerageHasHouseSeat	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/HouseSeat
-http://parliament.uk/ontologies/person-name/peerageHasHouseSeat	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/PersonNaming	http://www.w3.org/2000/01/rdf-schema#label	PersonNaming
-http://parliament.uk/ontologies/person-name/GenderIdentity	http://www.w3.org/2000/01/rdf-schema#label	GenderIdentity
-http://parliament.uk/ontologies/person-name/hasIncumbency	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/Incumbency
-http://parliament.uk/ontologies/person-name/OfUsage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/PeerageType	http://www.w3.org/2000/01/rdf-schema#label	PeerageType
-http://parliament.uk/ontologies/person-name/PostNominal	http://www.w3.org/2000/01/rdf-schema#label	PostNominal
-http://parliament.uk/ontologies/person-name/hasCulturalOrdering	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/CulturalOrdering
-http://parliament.uk/ontologies/person-name/personNamingHasGender	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/givenName	http://www.w3.org/2000/01/rdf-schema#label	givenName
-http://parliament.uk/ontologies/person-name/hasGender	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Ontology
-http://parliament.uk/ontologies/person-name/Gender	http://www.w3.org/2000/01/rdf-schema#label	Gender
-http://parliament.uk/ontologies/person-name/middleNames	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasOfUsage	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PeerageNaming
-http://parliament.uk/ontologies/person-name/hasHouse	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/GenderIdentity	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/preNominalOrdering	http://www.w3.org/2000/01/rdf-schema#comment	States the position in which a PreNominal is listed
-http://parliament.uk/ontologies/person-name/Member	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasIncumbency	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Person
-http://parliament.uk/ontologies/person-name/hasIncumbencyPersonNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/hasHouse	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/personNamingHasPreNominal	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PreNominal
-http://parliament.uk/ontologies/person-name/patronymic	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/person-name/hasGender	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/GenderIdentity
-http://parliament.uk/ontologies/person-name/TheUsage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasSeatIncumbency	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Member
-http://parliament.uk/ontologies/person-name/hasGenderIdentity	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/PreferredNaming	http://www.w3.org/2000/01/rdf-schema#label	PreferredNaming
-http://parliament.uk/ontologies/person-name/hasHouseSeat	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/peerageHasHouseSeat	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/TheUsage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasTheUsage	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PeerageNaming
-http://parliament.uk/ontologies/person-name/IncumbencyThatAffectsName	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PreNominal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/TheUsage	http://www.w3.org/2000/01/rdf-schema#comment	In a Peer's title, are they The Baron Of Placename or Baron Of Placename
-http://parliament.uk/ontologies/person-name/HouseSeat	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/middleNames	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/Incumbency	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageType	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PeerageType
-http://parliament.uk/ontologies/person-name/IncumbencyThatAffectsName	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/person-name/Incumbency
-http://parliament.uk/ontologies/person-name/hasIncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/IncumbencyPersonNaming
-http://parliament.uk/ontologies/person-name/hasPeerageType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PersonNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/patronymic	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/peerageHasHouseSeat	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Peerage
-http://parliament.uk/ontologies/person-name/givenName	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/hasCulturalOrdering	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/hasHouseSeat	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/IncumbencyThatAffectsName	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasPeerageType	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Peerage
-http://parliament.uk/ontologies/person-name/HouseSeat	http://www.w3.org/2000/01/rdf-schema#comment	A seat in a House in Parliament
-http://parliament.uk/ontologies/person-name/Peerage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasHouseSeat	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/hasPeerageType	http://www.w3.org/2000/01/rdf-schema#label	hasPeerageType
-http://parliament.uk/ontologies/person-name/namingQualificationHasPostNominal	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/NamingQualification
-http://parliament.uk/ontologies/person-name/Gender	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/namingQualificationHasPreNominal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasGenderIdentity	http://www.w3.org/2000/01/rdf-schema#label	hasGenderIdentity
-http://parliament.uk/ontologies/person-name/hasPersonNaming	http://www.w3.org/2000/01/rdf-schema#comment	Connects a person to their PersonNaming
-http://parliament.uk/ontologies/person-name/SeatIncumbency	http://www.w3.org/2000/01/rdf-schema#label	SeatIncumbency
-http://parliament.uk/ontologies/person-name/hasHouse	http://www.w3.org/2000/01/rdf-schema#label	hasHouse
-http://parliament.uk/ontologies/person-name/IncumbencyThatAffectsName	http://www.w3.org/2000/01/rdf-schema#label	IncumbencyThatAffectsName
-http://parliament.uk/ontologies/person-name/hasPeerage	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/Peerage
-http://parliament.uk/ontologies/person-name/hasHouse	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/preNominalOrdering	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#integer
-http://parliament.uk/ontologies/person-name/hasSeatIncumbency	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/peerageHasHouseSeat	http://www.w3.org/2000/01/rdf-schema#label	peerageHasHouseSeat
-http://parliament.uk/ontologies/person-name/namingQualificationHasPostNominal	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PostNominal
-http://parliament.uk/ontologies/person-name/hasPeerage	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Person
-http://parliament.uk/ontologies/person-name/PostNominal	http://www.w3.org/2000/01/rdf-schema#comment	A term or letters used after a person's name, eg. FRCOG
-http://parliament.uk/ontologies/person-name/middleNames	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/Member	http://www.w3.org/2000/01/rdf-schema#comment	A member of a House of Parliament
-http://parliament.uk/ontologies/person-name/House	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/NamingQualification	http://www.w3.org/2000/01/rdf-schema#label	NamingQualification
-http://parliament.uk/ontologies/person-name/hasPersonNaming	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Person
-http://parliament.uk/ontologies/person-name/patronymic	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/person-name/patronymic	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/Peerage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/postNominalOrdering	http://www.w3.org/2000/01/rdf-schema#label	postNominalOrdering
-http://parliament.uk/ontologies/person-name/IncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasHouseSeat	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/SeatIncumbency
-http://parliament.uk/ontologies/person-name/hasPeerageNaming	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/Incumbency	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/PeerageNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageNaming	http://www.w3.org/2000/01/rdf-schema#label	hasPeerageNaming
-http://parliament.uk/ontologies/person-name/OfUsage	http://www.w3.org/2000/01/rdf-schema#comment	In a Peer's title, are they Baron Placename or Baron Of Placename
-http://parliament.uk/ontologies/person-name/postNominalOrdering	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PostNominal
-http://parliament.uk/ontologies/person-name/familyName	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/person-name/patronymic	http://www.w3.org/2000/01/rdf-schema#label	patronymic
-http://parliament.uk/ontologies/person-name/IncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#comment	This is a PersonNaming that comes directly from a person's Incumbency - eg The Archbishop Of Canterbury, or an MP taking the initials MP 
-http://parliament.uk/ontologies/person-name/PersonNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasOfUsage	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/OfUsage
-http://parliament.uk/ontologies/person-name/PeerageType	http://www.w3.org/2000/01/rdf-schema#comment	Type of peerage, eg Life or Hereditary
-http://parliament.uk/ontologies/person-name/namingQualificationHasPostNominal	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasCulturalOrdering	http://www.w3.org/2000/01/rdf-schema#label	hasCulturalOrdering
-http://parliament.uk/ontologies/person-name/postNominalOrdering	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/person-name/IncumbencyThatAffectsName	http://www.w3.org/2000/01/rdf-schema#comment	A type of Incumbency that gives a IncumbencyPersonNaming, eg the office of Archbishop or Member of Parliament
-http://parliament.uk/ontologies/person-name/GenderIdentity	http://www.w3.org/2000/01/rdf-schema#comment	Links a person to the gender identity they publically displayed
-http://parliament.uk/ontologies/person-name/hasTheUsage	http://www.w3.org/2000/01/rdf-schema#label	hasTheUsage
-http://parliament.uk/ontologies/person-name/personNamingHasGender	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasOfUsage	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasPeerage	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/PeerageNaming	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/PeerageRank	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasCulturalOrdering	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/PeerageRank	http://www.w3.org/2000/01/rdf-schema#label	PeerageRank
-http://parliament.uk/ontologies/person-name/personNamingHasGender	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/Gender	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/givenName	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/person-name/hasOfUsage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/hasPeerage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/namingQualificationHasPreNominal	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/familyName	http://www.w3.org/2000/01/rdf-schema#label	familyName
-http://parliament.uk/ontologies/person-name/familyName	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/person-name/personNamingHasPostNominal	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/hasPeerageNaming	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PeerageNaming
-http://parliament.uk/ontologies/person-name/PreNominal	http://www.w3.org/2000/01/rdf-schema#label	PreNominal
-http://parliament.uk/ontologies/person-name/PeerageAuthority	http://www.w3.org/2000/01/rdf-schema#comment	An authority that a peerage can be awarded in. e.g. an Scottish peerage or a UK peerage.
-http://parliament.uk/ontologies/person-name/namingQualificationHasPreNominal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/personNamingHasPreNominal	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/hasTheUsage	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/House	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/NamingQualification	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasGender	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasSeatIncumbency	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/PeerageNaming	http://www.w3.org/2000/01/rdf-schema#label	PeerageNaming
-http://parliament.uk/ontologies/person-name/hasPeerageAuthority	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasTheUsage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/PostNominal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasHouseSeat	http://www.w3.org/2000/01/rdf-schema#label	hasHouseSeat
-http://parliament.uk/ontologies/person-name/preNominalOrdering	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PreNominal
-http://parliament.uk/ontologies/person-name/PeerageRank	http://www.w3.org/2000/01/rdf-schema#comment	The peerage system is explicitly ranked, with a Baron being junior to an Earl.  This level number will allow clients to display the more senior peergae where a peer has more than one peerage per Lords convention 
-http://parliament.uk/ontologies/person-name/hasGenderIdentity	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Person
-http://parliament.uk/ontologies/person-name/IncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/hasSeatIncumbency	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/postNominalOrdering	http://www.w3.org/2000/01/rdf-schema#comment	States the position in which a PostNominal is listed
-http://parliament.uk/ontologies/person-name/familyName	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/personNamingHasGender	http://www.w3.org/2000/01/rdf-schema#label	personNamingHasGender
-http://parliament.uk/ontologies/person-name/preNominalOrdering	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/givenName	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/person-name/hasIncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/IncumbencyThatAffectsName
-http://parliament.uk/ontologies/person-name/patronymic	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasIncumbency	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasPeerageRank	http://www.w3.org/2000/01/rdf-schema#label	hasPeerageRank
-http://parliament.uk/ontologies/person-name/IncumbencyPersonNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/PreNominal	http://www.w3.org/2000/01/rdf-schema#comment	A term or letters used before a person's name, eg. General
-http://parliament.uk/ontologies/person-name/PeerageNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/givenName	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/hasPeerageNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasIncumbency	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/CulturalOrdering	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/Peerage	http://www.w3.org/2000/01/rdf-schema#comment	This refers to the actual fact that a Person is awarded a Peerage.  This should probably be modelled differently but is here a placeholder as of 8-6-17
-http://parliament.uk/ontologies/person-name/hasIncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#label	hasIncumbencyPersonNaming
-http://parliament.uk/ontologies/person-name/personNamingHasPreNominal	http://www.w3.org/2000/01/rdf-schema#label	personNamingHasPreNominal
-http://parliament.uk/ontologies/person-name/hasHouse	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/HouseSeat
-http://parliament.uk/ontologies/person-name/PeerageType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/namingQualificationHasPostNominal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasIncumbency	http://www.w3.org/2000/01/rdf-schema#label	hasIncumbency
-http://parliament.uk/ontologies/person-name/HouseSeat	http://www.w3.org/2000/01/rdf-schema#label	HouseSeat
-http://parliament.uk/ontologies/person-name/hasPeerageAuthority	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/middleNames	http://www.w3.org/2000/01/rdf-schema#label	middleNames
-http://parliament.uk/ontologies/person-name/postNominalOrdering	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#integer
-http://parliament.uk/ontologies/person-name/PeerageAuthority	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasIncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/OfUsage	http://www.w3.org/2000/01/rdf-schema#label	OfUsage
-http://parliament.uk/ontologies/person-name/hasPeerageAuthority	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/PeerageRank	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/personNamingHasGender	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/personNamingHasPostNominal	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PostNominal
-http://parliament.uk/ontologies/person-name/hasPeerageRank	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PeerageRank
-http://parliament.uk/ontologies/person-name/hasGenderIdentity	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/GenderIdentity
-http://parliament.uk/ontologies/person-name/hasPeerageAuthority	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PeerageAuthority
-http://parliament.uk/ontologies/person-name/hasOfUsage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/Incumbency	http://www.w3.org/2000/01/rdf-schema#comment	Acts as essentially a join between a person and a position, eg a job, something that a person has been appointed to
-http://parliament.uk/ontologies/person-name/hasGenderIdentity	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/GenderIdentity	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageRank	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/namingQualificationHasPostNominal	http://www.w3.org/2000/01/rdf-schema#label	namingQualificationHasPostNominal
-http://parliament.uk/ontologies/person-name/hasGender	http://www.w3.org/2000/01/rdf-schema#label	hasGender
-http://parliament.uk/ontologies/person-name/hasSeatIncumbency	http://www.w3.org/2000/01/rdf-schema#label	hasSeatIncumbency
-http://parliament.uk/ontologies/person-name/hasCulturalOrdering	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PreferredNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageRank	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPeerageAuthority	http://www.w3.org/2000/01/rdf-schema#label	hasPeerageAuthority
-http://parliament.uk/ontologies/person-name/hasPeerageRank	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/Gender	http://www.w3.org/2000/01/rdf-schema#comment	A gender.
-http://parliament.uk/ontologies/person-name/PeerageNaming	http://www.w3.org/2000/01/rdf-schema#comment	a type of PersonNaming that has been influenced by someone's peerage, whether that be through birth or through appointment to the House Of Lords
-http://parliament.uk/ontologies/person-name/hasPeerageNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/House	http://www.w3.org/2000/01/rdf-schema#comment	A house in Parliament - i.e. the House of Lords or Commons
-http://parliament.uk/ontologies/person-name/hasOfUsage	http://www.w3.org/2000/01/rdf-schema#label	hasOfUsage
-http://parliament.uk/ontologies/person-name/hasTheUsage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/namingQualificationHasPreNominal	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PreNominal
-http://parliament.uk/ontologies/person-name/	http://purl.org/dc/terms/rights	Open Parliament Licence v3.0
-http://parliament.uk/ontologies/person-name/hasPeerageType	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/NamingQualification	http://www.w3.org/2000/01/rdf-schema#comment	A qualification or professional achievement which grants someone a pre-nominal or post-nominal decoration to their name, eg. attaining a doctorate allowing you to use the pre-nominal Dr or the post-nominal PhD
-http://parliament.uk/ontologies/person-name/PeerageAuthority	http://www.w3.org/2000/01/rdf-schema#label	PeerageAuthority
-http://parliament.uk/ontologies/person-name/OfUsage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasGender	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/SeatIncumbency	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/personNamingHasPostNominal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/personNamingHasPreNominal	http://www.w3.org/2000/01/rdf-schema#comment	
-http://parliament.uk/ontologies/person-name/postNominalOrdering	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/	http://purl.org/dc/terms/description	Person name ontology for UK Parliament.
-http://parliament.uk/ontologies/person-name/hasPeerageRank	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Peerage
-http://parliament.uk/ontologies/person-name/SeatIncumbency	http://www.w3.org/2000/01/rdf-schema#comment	The time someone is in a HouseSeat
-http://parliament.uk/ontologies/person-name/middleNames	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/person-name/hasPeerageNaming	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/person-name/Peerage
-http://parliament.uk/ontologies/person-name/namingQualificationHasPostNominal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/personNamingHasPreNominal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasIncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PeerageAuthority	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PreferredNaming	http://www.w3.org/2000/01/rdf-schema#comment	This subclassing is here to provide a pointer to clients as to which naming to use when otherwise not explicitly dictated by context
-http://parliament.uk/ontologies/person-name/CulturalOrdering	http://www.w3.org/2000/01/rdf-schema#label	CulturalOrdering
-http://parliament.uk/ontologies/person-name/personNamingHasPostNominal	http://www.w3.org/2000/01/rdf-schema#label	personNamingHasPostNominal
-http://parliament.uk/ontologies/person-name/SeatIncumbency	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/person-name/Incumbency
-http://parliament.uk/ontologies/person-name/Member	http://www.w3.org/2000/01/rdf-schema#label	Member
-http://parliament.uk/ontologies/person-name/TheUsage	http://www.w3.org/2000/01/rdf-schema#label	TheUsage
-http://parliament.uk/ontologies/person-name/hasIncumbency	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PreferredNaming	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/Member	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/hasPersonNaming	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/PersonNaming
-http://parliament.uk/ontologies/person-name/CulturalOrdering	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/hasHouseSeat	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/HouseSeat
-http://parliament.uk/ontologies/person-name/givenName	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/preNominalOrdering	http://www.w3.org/2000/01/rdf-schema#label	preNominalOrdering
-http://parliament.uk/ontologies/person-name/hasPersonNaming	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/hasHouse	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/person-name/House
-http://parliament.uk/ontologies/person-name/hasCulturalOrdering	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/person-name/familyName	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/person-name/
-http://parliament.uk/ontologies/person-name/PersonNaming	http://www.w3.org/2000/01/rdf-schema#comment	Could also be called 'identity' if that wasn't so ambiguous.  ie People often have more than one naming over the course of their lives, from people changing their surnames at marriage to people being given appointments that have styles of address
-http://parliament.uk/ontologies/person-name/hasPersonNaming	http://www.w3.org/2000/01/rdf-schema#label	hasPersonNaming
-http://parliament.uk/ontologies/person-name/NamingQualification	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/person-name/IncumbencyPersonNaming	http://www.w3.org/2000/01/rdf-schema#label	IncumbencyPersonNaming
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Person name ontology</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
+            padding: 1.4rem;
+            font-size: 1.2rem;
+        }
+
+
+        span.subhead {
+            font-weight: normal;
+        }
+
+        main {
+            padding: 1rem 0;
+        }
+
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+
+
+        h2 {
+            padding-top: 1rem;
+
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                _person-name/person-name-ontology.ttl
+            </p>
+            <p>
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+
+                
+
+            </p>
+
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <h1>Person name ontology</h1>
+
+        
+        <p>Person name ontology for UK Parliament.</p>
+        
+
+        
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>CulturalOrdering
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>In using more meaningful semantic terms such as &#39;given name&#39; rather than &#39;first name&#39; we encounter cultural issues when the names are displayed in full - should the family name or given name be listed first?  This class is a proposed way of allowing clients to understand that the naming in question is eg. from a culture where the given name comes before the family name</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Gender
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A gender.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>GenderIdentity
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>Links a person to the gender identity they publically displayed</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>House
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A house in Parliament - i.e. the House of Lords or Commons</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>HouseSeat
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A seat in a House in Parliament</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Incumbency
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>Acts as essentially a join between a person and a position, eg a job, something that a person has been appointed to</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>IncumbencyPersonNaming
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>This is a PersonNaming that comes directly from a person&#39;s Incumbency - eg The Archbishop Of Canterbury, or an MP taking the initials MP </p>
+                
+
+                
+                
+                <p>Superclass: PersonNaming.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>IncumbencyThatAffectsName
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A type of Incumbency that gives a IncumbencyPersonNaming, eg the office of Archbishop or Member of Parliament</p>
+                
+
+                
+                
+                <p>Superclass: Incumbency.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Member
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A member of a House of Parliament</p>
+                
+
+                
+                
+                <p>Superclass: Person.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>NamingQualification
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A qualification or professional achievement which grants someone a pre-nominal or post-nominal decoration to their name, eg. attaining a doctorate allowing you to use the pre-nominal Dr or the post-nominal PhD</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>OfUsage
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>In a Peer&#39;s title, are they Baron Placename or Baron Of Placename</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Peerage
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>This refers to the actual fact that a Person is awarded a Peerage.  This should probably be modelled differently but is here a placeholder as of 8-6-17</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PeerageAuthority
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>An authority that a peerage can be awarded in. e.g. an Scottish peerage or a UK peerage.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PeerageNaming
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>a type of PersonNaming that has been influenced by someone&#39;s peerage, whether that be through birth or through appointment to the House Of Lords</p>
+                
+
+                
+                
+                <p>Superclass: PersonNaming.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PeerageRank
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>The peerage system is explicitly ranked, with a Baron being junior to an Earl.  This level number will allow clients to display the more senior peergae where a peer has more than one peerage per Lords convention </p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PeerageType
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>Type of peerage, eg Life or Hereditary</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PersonNaming
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>Could also be called &#39;identity&#39; if that wasn&#39;t so ambiguous.  ie People often have more than one naming over the course of their lives, from people changing their surnames at marriage to people being given appointments that have styles of address</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PostNominal
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A term or letters used after a person&#39;s name, eg. FRCOG</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PreferredNaming
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>This subclassing is here to provide a pointer to clients as to which naming to use when otherwise not explicitly dictated by context</p>
+                
+
+                
+                
+                <p>Superclass: PersonNaming.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>PreNominal
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>A term or letters used before a person&#39;s name, eg. General</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>SeatIncumbency
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>The time someone is in a HouseSeat</p>
+                
+
+                
+                
+                <p>Superclass: Incumbency.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>TheUsage
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/person-name/ -->
+                
+                <p>In a Peer&#39;s title, are they The Baron Of Placename or Baron Of Placename</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="objectproperty">
+
+                <h3>hasCulturalOrdering <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: PersonNaming. Range: CulturalOrdering.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasGender <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: GenderIdentity. Range: Gender.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasGenderIdentity <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Person. Range: GenderIdentity.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasHouse <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: HouseSeat. Range: House.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasHouseSeat <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: SeatIncumbency. Range: HouseSeat.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasIncumbency <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Person. Range: Incumbency.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasIncumbencyPersonNaming <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: IncumbencyThatAffectsName. Range: IncumbencyPersonNaming.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasOfUsage <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: PeerageNaming. Range: OfUsage.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasPeerage <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Person. Range: Peerage.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasPeerageAuthority <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Peerage. Range: PeerageAuthority.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasPeerageNaming <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Peerage. Range: PeerageNaming.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasPeerageRank <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Peerage. Range: PeerageRank.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasPeerageType <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Peerage. Range: PeerageType.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasPersonNaming <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Connects a person to their PersonNaming</p>
+                
+
+                <p>Domain: Person. Range: PersonNaming.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasSeatIncumbency <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Member. Range: SeatIncumbency.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasTheUsage <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: PeerageNaming. Range: TheUsage.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>namingQualificationHasPostNominal <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: NamingQualification. Range: PostNominal.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>namingQualificationHasPreNominal <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: NamingQualification. Range: PreNominal.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>peerageHasHouseSeat <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: Peerage. Range: HouseSeat.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>personNamingHasGender <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: PersonNaming. Range: Gender.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>personNamingHasPostNominal <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: PersonNaming. Range: PostNominal.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>personNamingHasPreNominal <span class="subhead">object property</span></h3>
+
+                
+
+                
+
+                <p>Domain: PersonNaming. Range: PreNominal.
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>familyName <span class="subhead">data property</span></h3>
+
+                <p></p>
+
+                <p>Domain: PersonNaming. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>givenName <span class="subhead">data property</span></h3>
+
+                <p></p>
+
+                <p>Domain: PersonNaming. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>middleNames <span class="subhead">data property</span></h3>
+
+                <p></p>
+
+                <p>Domain: PersonNaming. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>patronymic <span class="subhead">data property</span></h3>
+
+                <p></p>
+
+                <p>Domain: PersonNaming. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>postNominalOrdering <span class="subhead">data property</span></h3>
+
+                <p>States the position in which a PostNominal is listed</p>
+
+                <p>Domain: PostNominal. Range: integer.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>preNominalOrdering <span class="subhead">data property</span></h3>
+
+                <p>States the position in which a PreNominal is listed</p>
+
+                <p>Domain: PreNominal. Range: integer.</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+
+        
+
+
+        
+
+        
+        <section id="subClasses">
+        <h2>Subclasses</h2>
+        <table>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>PreferredNaming</td>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>PersonNaming</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>Member</td>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>Person</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>IncumbencyPersonNaming</td>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>PersonNaming</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>PeerageNaming</td>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>PersonNaming</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>SeatIncumbency</td>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>Incumbency</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>IncumbencyThatAffectsName</td>
+                    <td>/<wbr>ontologies/<wbr>person-name/<wbr>Incumbency</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xml</td>
+                    <td style="width:80%;">http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdf</td>
+                    <td style="width:80%;">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdfs</td>
+                    <td style="width:80%;">http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xsd</td>
+                    <td style="width:80%;">http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">ppn</td>
+                    <td style="width:80%;">http://parliament.uk/ontologies/person-name/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">dcterms</td>
+                    <td style="width:80%;">http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">owl</td>
+                    <td style="width:80%;">http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+
+
+
+        
+
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2017-05-30</time>.</p>
+        
+        <p><a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_person-name/person-name-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_person-name/person-name-ontology.ttl">Visualise</a> on
+            WebVOWL. </p>
+        
+
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>

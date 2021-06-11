@@ -1,27 +1,254 @@
-http://parliament.uk/ontologies/description/DescribingThing	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/description/describedBy	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/description/describedBy	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/description/DescribingThing
-ub18bL17C3	http://xmlns.com/foaf/0.1/homepage	http://smethur.st/
-http://parliament.uk/ontologies/description/	http://xmlns.com/foaf/0.1/maker	ub18bL17C3
-http://parliament.uk/ontologies/description/DescribedThing	http://www.w3.org/2000/01/rdf-schema#label	Described thing
-http://parliament.uk/ontologies/description/DescribedThing	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/description/describedBy	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/description/DescribedThing
-http://parliament.uk/ontologies/description/	http://xmlns.com/foaf/0.1/maker	ub18bL19C3
-http://parliament.uk/ontologies/description/DescribedThing	http://www.w3.org/2000/01/rdf-schema#comment	A thing that has a description.
-http://parliament.uk/ontologies/description/	http://xmlns.com/foaf/0.1/maker	ub18bL18C6
-http://parliament.uk/ontologies/description/DescribingThing	http://www.w3.org/2000/01/rdf-schema#label	Describing thing
-http://parliament.uk/ontologies/description/DescribedThing	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/description/
-http://parliament.uk/ontologies/description/	http://purl.org/dc/terms/created	2020-03-05
-http://parliament.uk/ontologies/description/DescribingThing	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/description/
-ub18bL18C6	http://xmlns.com/foaf/0.1/name	Anya Somerville
-http://parliament.uk/ontologies/description/describedBy	http://www.w3.org/2000/01/rdf-schema#comment	Relates a thing that has a description to a thing that provides that description.
-http://parliament.uk/ontologies/description/	http://purl.org/dc/terms/title	Description ontology
-http://parliament.uk/ontologies/description/	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Ontology
-http://parliament.uk/ontologies/description/DescribingThing	http://www.w3.org/2000/01/rdf-schema#comment	A thing that provides a description.
-http://parliament.uk/ontologies/description/	http://purl.org/dc/terms/rights	Open Parliament Licence v3.0
-ub18bL17C3	http://xmlns.com/foaf/0.1/name	Michael Smethurst
-http://parliament.uk/ontologies/description/describedBy	http://www.w3.org/2000/01/rdf-schema#label	Described by
-http://parliament.uk/ontologies/description/	http://xmlns.com/foaf/0.1/depiction	https://ukparliament.github.io/ontologies/description/description.png
-http://parliament.uk/ontologies/description/describedBy	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/description/
-ub18bL19C3	http://xmlns.com/foaf/0.1/name	Jayne Sunley
-http://parliament.uk/ontologies/description/	http://purl.org/dc/terms/description	A model describing the connection between a thing having a description and the thing providing that description, for example: a procedure as described by an item of legislation, or a procedure route as described by a Standing Order.
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Description ontology</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
+            padding: 1.4rem;
+            font-size: 1.2rem;
+        }
+
+
+        span.subhead {
+            font-weight: normal;
+        }
+
+        main {
+            padding: 1rem 0;
+        }
+
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+
+
+        h2 {
+            padding-top: 1rem;
+
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                description/description-ontology.ttl
+            </p>
+            <p>
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+
+                
+        <a href="https://ukparliament.github.io/ontologies/description/description.png">Depiction</a>
+        
+
+            </p>
+
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <h1>Description ontology</h1>
+
+        
+        <p>A model describing the connection between a thing having a description and the thing providing that description, for example: a procedure as described by an item of legislation, or a procedure route as described by a Standing Order.</p>
+        
+
+        
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>Described thing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/description/ -->
+                
+                <p>A thing that has a description.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Describing thing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/description/ -->
+                
+                <p>A thing that provides a description.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="objectproperty">
+
+                <h3>Described by <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a thing that has a description to a thing that provides that description.</p>
+                
+
+                <p>Domain: DescribedThing. Range: DescribingThing.
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+
+        
+
+
+        
+
+        
+
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xml</td>
+                    <td style="width:80%;">http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdf</td>
+                    <td style="width:80%;">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdfs</td>
+                    <td style="width:80%;">http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xsd</td>
+                    <td style="width:80%;">http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">pdes</td>
+                    <td style="width:80%;">http://parliament.uk/ontologies/description/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">dcterms</td>
+                    <td style="width:80%;">http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">owl</td>
+                    <td style="width:80%;">http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">skos</td>
+                    <td style="width:80%;">http://www.w3.org/2004/02/skos/core#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">foaf</td>
+                    <td style="width:80%;">http://xmlns.com/foaf/0.1/</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+
+
+
+        
+
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2020-03-05</time>.</p>
+        
+        <p><a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/description/description-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/description/description-ontology.ttl">Visualise</a> on
+            WebVOWL. </p>
+        
+        <p id="makers">
+
+            
+            
+            Anya Somerville.
+            
+            
+            
+            Jayne Sunley.
+            
+            
+            
+            <a href="http://smethur.st/">Michael Smethurst</a>.
+            
+            
+        </p>
+        
+
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>

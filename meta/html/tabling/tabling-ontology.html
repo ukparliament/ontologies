@@ -1,103 +1,484 @@
-http://parliament.uk/ontologies/tabling/replaces	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/TabledThing
-http://parliament.uk/ontologies/tabling/Tabling	http://www.w3.org/2000/01/rdf-schema#label	Tabling
-http://parliament.uk/ontologies/tabling/hasHouse	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/hasHouse	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/TablingOrWithdrawal
-http://parliament.uk/ontologies/tabling/TabledThing	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/tables	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/replaces	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/WithdrawnThing
-http://parliament.uk/ontologies/tabling/TablingOrWithdrawal	http://www.w3.org/2000/01/rdf-schema#comment	The act of tabling into, or withdrawing a tabled thing from, a House.
-http://parliament.uk/ontologies/tabling/tables	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/TabledThing
-http://parliament.uk/ontologies/tabling/Member	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/givesNotice	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/TabledThing	http://www.w3.org/2000/01/rdf-schema#label	TabledThing
-http://parliament.uk/ontologies/tabling/tabledOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/tabling/House	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/withdraws	http://www.w3.org/2000/01/rdf-schema#label	withdraws
-http://parliament.uk/ontologies/tabling/tabledOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Tabling
-http://parliament.uk/ontologies/tabling/Withdrawal	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/tabling/TablingOrWithdrawal
-http://parliament.uk/ontologies/tabling/Member	http://www.w3.org/2000/01/rdf-schema#comment	A current or former Member of a House.
-http://parliament.uk/ontologies/tabling/Session	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/WrittenNotice	http://www.w3.org/2000/01/rdf-schema#comment	Official notice of an item of future business.
-http://parliament.uk/ontologies/tabling/replaces	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/requests	http://www.w3.org/2000/01/rdf-schema#label	requests
-http://parliament.uk/ontologies/tabling/isInterestDeclared	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members' Financial Interests.
-http://parliament.uk/ontologies/tabling/withdrawnOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/	http://purl.org/dc/terms/created	2017-12-01
-http://parliament.uk/ontologies/tabling/Tabling	http://www.w3.org/2000/01/rdf-schema#comment	The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day's business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.
-http://parliament.uk/ontologies/tabling/Session	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/requests	http://www.w3.org/2000/01/rdf-schema#comment	Relates a Member to an act of tabling.
-http://parliament.uk/ontologies/tabling/givesNotice	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of tabling to a written notice.
-http://parliament.uk/ontologies/tabling/tables	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Tabling
-http://parliament.uk/ontologies/tabling/withdrawnOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Withdrawal
-http://parliament.uk/ontologies/tabling/tabledOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/requests	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/Tabling
-http://parliament.uk/ontologies/tabling/replaces	http://www.w3.org/2000/01/rdf-schema#label	replaces
-http://parliament.uk/ontologies/tabling/inSession	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/House	http://www.w3.org/2000/01/rdf-schema#comment	A parliamentary House e.g. the House of Lords.
-http://parliament.uk/ontologies/tabling/withdraws	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/givesNotice	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Tabling
-http://parliament.uk/ontologies/tabling/withdrawnOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/tabling/inSession	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/Session
-http://parliament.uk/ontologies/tabling/isInterestDeclared	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/tabling/tables	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/withdraws	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/WithdrawnThing
-http://parliament.uk/ontologies/tabling/withdraws	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of withdrawal to the business item which it withdraws.
-http://parliament.uk/ontologies/tabling/Member	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/inSession	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/WithdrawnThing	http://www.w3.org/2000/01/rdf-schema#comment	A tabled thing which has subsequently been withdrawn.
-http://parliament.uk/ontologies/tabling/isInterestDeclared	http://www.w3.org/2000/01/rdf-schema#label	isInterestDeclared
-http://parliament.uk/ontologies/tabling/isInterestDeclared	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Tabling
-http://parliament.uk/ontologies/tabling/givesNotice	http://www.w3.org/2000/01/rdf-schema#label	givesNotice
-http://parliament.uk/ontologies/tabling/WrittenNotice	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/replaces	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/House	http://www.w3.org/2000/01/rdf-schema#label	House
-http://parliament.uk/ontologies/tabling/WithdrawnThing	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/isInterestDeclared	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/tabledOn	http://www.w3.org/2000/01/rdf-schema#label	tabledOn
-http://parliament.uk/ontologies/tabling/WithdrawnThing	http://www.w3.org/2000/01/rdf-schema#label	WithdrawnThing
-http://parliament.uk/ontologies/tabling/TablingOrWithdrawal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/TablingOrWithdrawal	http://www.w3.org/2000/01/rdf-schema#label	TablingOrWithdrawal
-http://parliament.uk/ontologies/tabling/House	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/WrittenNotice	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/WithdrawnThing	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/TabledThing	http://www.w3.org/2000/01/rdf-schema#comment	Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day's business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.
-http://parliament.uk/ontologies/tabling/isInterestDeclared	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#boolean
-http://parliament.uk/ontologies/tabling/requests	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/tabledOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of tabling to the date on which it happened.
-http://parliament.uk/ontologies/tabling/TablingOrWithdrawal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/hasHouse	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/House
-http://parliament.uk/ontologies/tabling/hasHouse	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of tabling or withdrawal to the House in which it happens.
-http://parliament.uk/ontologies/tabling/Tabling	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/tabling/TablingOrWithdrawal
-http://parliament.uk/ontologies/tabling/replaces	http://www.w3.org/2000/01/rdf-schema#comment	Relates a tabled thing to the withdrawn thing it replaces.
-http://parliament.uk/ontologies/tabling/Withdrawal	http://www.w3.org/2000/01/rdf-schema#label	Withdrawal
-http://parliament.uk/ontologies/tabling/Withdrawal	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/Member	http://www.w3.org/2000/01/rdf-schema#label	Member
-http://parliament.uk/ontologies/tabling/inSession	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of tabling or withdrawal to the session in which it happens.
-http://parliament.uk/ontologies/tabling/Session	http://www.w3.org/2000/01/rdf-schema#label	Session
-http://parliament.uk/ontologies/tabling/tables	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of tabling to the business item which it tables.
-http://parliament.uk/ontologies/tabling/withdrawnOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates an act of withdrawal to the date on which it happened.
-http://parliament.uk/ontologies/tabling/Withdrawal	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/Tabling	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/tabledOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/tabling/	http://purl.org/dc/terms/rights	Open Parliament Licence v3.0
-http://parliament.uk/ontologies/tabling/withdrawnOn	http://www.w3.org/2000/01/rdf-schema#label	withdrawnOn
-http://parliament.uk/ontologies/tabling/Session	http://www.w3.org/2000/01/rdf-schema#comment	The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.
-http://parliament.uk/ontologies/tabling/requests	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/	http://purl.org/dc/terms/description	Ontology to describe the activity of members tabling parliamentary questions, motions, amendments and nominations.
-http://parliament.uk/ontologies/tabling/tables	http://www.w3.org/2000/01/rdf-schema#label	tables
-http://parliament.uk/ontologies/tabling/	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Ontology
-http://parliament.uk/ontologies/tabling/hasHouse	http://www.w3.org/2000/01/rdf-schema#label	hasHouse
-http://parliament.uk/ontologies/tabling/hasHouse	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/withdraws	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Withdrawal
-http://parliament.uk/ontologies/tabling/Tabling	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/tabling/givesNotice	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/tabling/WrittenNotice
-http://parliament.uk/ontologies/tabling/	http://purl.org/dc/terms/title	Tabling ontology
-http://parliament.uk/ontologies/tabling/WrittenNotice	http://www.w3.org/2000/01/rdf-schema#label	WrittenNotice
-http://parliament.uk/ontologies/tabling/requests	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/Member
-http://parliament.uk/ontologies/tabling/inSession	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/tabling/TablingOrWithdrawal
-http://parliament.uk/ontologies/tabling/withdraws	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/tabling/givesNotice	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/inSession	http://www.w3.org/2000/01/rdf-schema#label	inSession
-http://parliament.uk/ontologies/tabling/Withdrawal	http://www.w3.org/2000/01/rdf-schema#comment	The act of withdrawing a tabled thing from a House.
-http://parliament.uk/ontologies/tabling/TabledThing	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/tabling/
-http://parliament.uk/ontologies/tabling/withdrawnOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabling ontology</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
+            padding: 1.4rem;
+            font-size: 1.2rem;
+        }
+
+
+        span.subhead {
+            font-weight: normal;
+        }
+
+        main {
+            padding: 1rem 0;
+        }
+
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+
+
+        h2 {
+            padding-top: 1rem;
+
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                tabling/tabling-ontology.ttl
+            </p>
+            <p>
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+
+                
+
+            </p>
+
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <h1>Tabling ontology</h1>
+
+        
+        <p>Ontology to describe the activity of members tabling parliamentary questions, motions, amendments and nominations.</p>
+        
+
+        
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>House
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>A parliamentary House e.g. the House of Lords.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Member
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>A current or former Member of a House.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Session
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>TabledThing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Tabling
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
+                
+
+                
+                
+                <p>Superclass: TablingOrWithdrawal.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>TablingOrWithdrawal
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>The act of tabling into, or withdrawing a tabled thing from, a House.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Withdrawal
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>The act of withdrawing a tabled thing from a House.</p>
+                
+
+                
+                
+                <p>Superclass: TablingOrWithdrawal.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>WithdrawnThing
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>A tabled thing which has subsequently been withdrawn.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>WrittenNotice
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/tabling/ -->
+                
+                <p>Official notice of an item of future business.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="objectproperty">
+
+                <h3>givesNotice <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of tabling to a written notice.</p>
+                
+
+                <p>Domain: Tabling. Range: WrittenNotice.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasHouse <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
+                
+
+                <p>Domain: TablingOrWithdrawal. Range: House.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>inSession <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
+                
+
+                <p>Domain: TablingOrWithdrawal. Range: Session.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>replaces <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
+                
+
+                <p>Domain: TabledThing. Range: WithdrawnThing.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>requests <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a Member to an act of tabling.</p>
+                
+
+                <p>Domain: Member. Range: Tabling.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>tables <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of tabling to the business item which it tables.</p>
+                
+
+                <p>Domain: Tabling. Range: TabledThing.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>withdraws <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates an act of withdrawal to the business item which it withdraws.</p>
+                
+
+                <p>Domain: Withdrawal. Range: WithdrawnThing.
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>isInterestDeclared <span class="subhead">data property</span></h3>
+
+                <p>Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members&#39; Financial Interests.</p>
+
+                <p>Domain: Tabling. Range: boolean.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>tabledOn <span class="subhead">data property</span></h3>
+
+                <p>Relates an act of tabling to the date on which it happened.</p>
+
+                <p>Domain: Tabling. Range: date.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>withdrawnOn <span class="subhead">data property</span></h3>
+
+                <p>Relates an act of withdrawal to the date on which it happened.</p>
+
+                <p>Domain: Withdrawal. Range: date.</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+
+        
+
+
+        
+
+        
+        <section id="subClasses">
+        <h2>Subclasses</h2>
+        <table>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>tabling/<wbr>Tabling</td>
+                    <td>/<wbr>ontologies/<wbr>tabling/<wbr>TablingOrWithdrawal</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>tabling/<wbr>Withdrawal</td>
+                    <td>/<wbr>ontologies/<wbr>tabling/<wbr>TablingOrWithdrawal</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xml</td>
+                    <td style="width:80%;">http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdf</td>
+                    <td style="width:80%;">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdfs</td>
+                    <td style="width:80%;">http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xsd</td>
+                    <td style="width:80%;">http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">pt</td>
+                    <td style="width:80%;">http://parliament.uk/ontologies/tabling/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">dcterms</td>
+                    <td style="width:80%;">http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">owl</td>
+                    <td style="width:80%;">http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+
+
+
+        
+
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2017-12-01</time>.</p>
+        
+        <p><a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">Visualise</a> on
+            WebVOWL. </p>
+        
+
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>
