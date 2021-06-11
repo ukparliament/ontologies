@@ -1,194 +1,723 @@
-http://parliament.uk/ontologies/stats-series/Source	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/temporalCoverage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/value	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#integer
-http://parliament.uk/ontologies/stats-series/releaseNotes	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/releaseOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/countPer	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week.
-http://parliament.uk/ontologies/stats-series/AverageType	http://www.w3.org/2000/01/rdf-schema#comment	Used to express the method of averaging used for data set releases covering a time period rather than a point in time (date).
-http://parliament.uk/ontologies/stats-series/fromSource	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/TerritorialApplicability
-http://parliament.uk/ontologies/stats-series/Source	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/value	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataPoint
-http://parliament.uk/ontologies/stats-series/AverageType	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/caveatText	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/stats-series/averagedOverPeriodAs	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/Population	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/Businesses	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/TemporalCoverage	http://www.w3.org/2000/01/rdf-schema#label	TemporalCoverage
-http://parliament.uk/ontologies/stats-series/boundBy	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/Place
-http://parliament.uk/ontologies/stats-series/Source	http://www.w3.org/2000/01/rdf-schema#comment	The source organisation for a given subset of a data set release. Much of the data published by the House of Commons Library originates with the Office of National Statistics but often originates with other organisations for the devolved nations e.g. Northern Ireland Statistics and Research Agency for Northern Ireland. Other data sets originate in government departments.
-http://parliament.uk/ontologies/stats-series/measureOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/startOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates a temporal coverage of a period to the start date of that period.
-http://parliament.uk/ontologies/stats-series/caveatText	http://www.w3.org/2000/01/rdf-schema#label	caveatText
-http://parliament.uk/ontologies/stats-series/Population	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/DataSet	http://www.w3.org/2000/01/rdf-schema#label	DataSet
-http://parliament.uk/ontologies/stats-series/DataSet	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/releasedOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/stats-series/DataPoint	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/DataSet	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/inPlace	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/TerritorialApplicability
-http://parliament.uk/ontologies/stats-series/releaseVersionOf	http://www.w3.org/2000/01/rdf-schema#label	releaseVersionOf
-http://parliament.uk/ontologies/stats-series/countPer	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSet
-http://parliament.uk/ontologies/stats-series/boundBy	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/Population
-http://parliament.uk/ontologies/stats-series/Residences	http://www.w3.org/2000/01/rdf-schema#comment	A population of residences in a place. This might be all residences or local authority owned residences etc.
-http://parliament.uk/ontologies/stats-series/DataSetRelease	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/onDate	http://www.w3.org/2000/01/rdf-schema#comment	Relates a temporal coverage of a day to that date.
-http://parliament.uk/ontologies/stats-series/measureOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/Place	http://www.w3.org/2000/01/rdf-schema#comment	A place. Any geographical extent. In the case of parliamentary demographic statistics we'll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas.
-http://parliament.uk/ontologies/stats-series/Place	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/Unit	http://www.w3.org/2000/01/rdf-schema#comment	The unit of measurement for all data points in a stats series e.g. GBP.
-http://parliament.uk/ontologies/stats-series/Period	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/boundBy	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/releaseOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/DataSet
-http://parliament.uk/ontologies/stats-series/fromSource	http://www.w3.org/2000/01/rdf-schema#comment	Relates territorial applicability to a data source organisation.
-http://parliament.uk/ontologies/stats-series/releaseVersionOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/DataSetRelease
-http://parliament.uk/ontologies/stats-series/measureOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataPoint
-http://parliament.uk/ontologies/stats-series/releasedOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release version to the date on which it was released.
-http://parliament.uk/ontologies/stats-series/hasTerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release to it's territorial applicability.
-http://parliament.uk/ontologies/stats-series/updateFrequency	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/Businesses	http://www.w3.org/2000/01/rdf-schema#comment	A population of businesses in a place. This might be all registered businesses or business in a certain industrial sector.
-http://parliament.uk/ontologies/stats-series/Businesses	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/stats-series/Population
-http://parliament.uk/ontologies/stats-series/hasTerritorialApplicability	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/fromSource	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/releasedOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/updateFrequency	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSet
-http://parliament.uk/ontologies/stats-series/averagedOverPeriodAs	http://www.w3.org/2000/01/rdf-schema#label	averagedOverPeriodAs
-http://parliament.uk/ontologies/stats-series/startOn	http://www.w3.org/2000/01/rdf-schema#label	startOn
-http://parliament.uk/ontologies/stats-series/People	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/stats-series/Population
-http://parliament.uk/ontologies/stats-series/hasTerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/fromSource	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/startOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/onDate	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/	http://purl.org/dc/terms/created	2018-03-08
-http://parliament.uk/ontologies/stats-series/temporalCoverage	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSetRelease
-http://parliament.uk/ontologies/stats-series/releaseNotes	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSetRelease
-http://parliament.uk/ontologies/stats-series/temporalCoverage	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release to the time period or point in time the data was gathered.
-http://parliament.uk/ontologies/stats-series/onDate	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/TemporalCoverage
-http://parliament.uk/ontologies/stats-series/temporalCoverage	http://www.w3.org/2000/01/rdf-schema#label	temporalCoverage
-http://parliament.uk/ontologies/stats-series/Residences	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://parliament.uk/ontologies/stats-series/Population
-http://parliament.uk/ontologies/stats-series/Businesses	http://www.w3.org/2000/01/rdf-schema#label	Businesses
-http://parliament.uk/ontologies/stats-series/releaseOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSetRelease
-http://parliament.uk/ontologies/stats-series/onDate	http://www.w3.org/2000/01/rdf-schema#label	onDate
-http://parliament.uk/ontologies/stats-series/endOn	http://www.w3.org/2000/01/rdf-schema#comment	Relates a temporal coverage of a period to the end date of that period.
-http://parliament.uk/ontologies/stats-series/inPlace	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/value	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data point to it's value as an integer.
-http://parliament.uk/ontologies/stats-series/hasUnit	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set to the unit in which the data is counted e.g. GBP.
-http://parliament.uk/ontologies/stats-series/releaseVersionNotes	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion
-http://parliament.uk/ontologies/stats-series/DataSetRelease	http://www.w3.org/2000/01/rdf-schema#comment	A release of a data set. Different versions may be published over time to correct mistakes.
-http://parliament.uk/ontologies/stats-series/boundBy	http://www.w3.org/2000/01/rdf-schema#comment	Relates a population (of people, residences, businesses etc) to a geographic area.
-http://parliament.uk/ontologies/stats-series/inPlace	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/Businesses	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/updateFrequency	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/stats-series/Residences	http://www.w3.org/2000/01/rdf-schema#label	Residences
-http://parliament.uk/ontologies/stats-series/hasUnit	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSet
-http://parliament.uk/ontologies/stats-series/People	http://www.w3.org/2000/01/rdf-schema#comment	A population of people in a place. This might be all people resident or over 70s resident or people in receipt of Universal Credit etc.
-http://parliament.uk/ontologies/stats-series/Period	http://www.w3.org/2000/01/rdf-schema#comment	The period over which a measurement is counted e.g. wages per week.
-http://parliament.uk/ontologies/stats-series/DataPoint	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/DataSet	http://www.w3.org/2000/01/rdf-schema#comment	A data set e.g. age profiles by constituency over time.
-http://parliament.uk/ontologies/stats-series/Period	http://www.w3.org/2000/01/rdf-schema#label	Period
-http://parliament.uk/ontologies/stats-series/TerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#label	TerritorialApplicability
-http://parliament.uk/ontologies/stats-series/startOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/stats-series/Place	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/TerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#comment	The territorial applicability of a data set release. Allows us to say that a given release of a data set contains data from a given source (organisation) for a given place e.g. a constituency. Sources may change between releases.
-http://parliament.uk/ontologies/stats-series/Period	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/boundBy	http://www.w3.org/2000/01/rdf-schema#label	boundBy
-http://parliament.uk/ontologies/stats-series/inPlace	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/Place
-http://parliament.uk/ontologies/stats-series/countPer	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/hasTerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSetRelease
-http://parliament.uk/ontologies/stats-series/Population	http://www.w3.org/2000/01/rdf-schema#comment	A set of things bounded by a geographical extent. Might be a population of residents, a population of those eligible to vote, a population of small businesses, a population of static caravans, in a constituency etc.
-http://parliament.uk/ontologies/stats-series/onDate	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/stats-series/hasTerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#label	hasTerritorialApplicability
-http://parliament.uk/ontologies/stats-series/releaseOf	http://www.w3.org/2000/01/rdf-schema#label	releaseOf
-http://parliament.uk/ontologies/stats-series/countPer	http://www.w3.org/2000/01/rdf-schema#label	countPer
-http://parliament.uk/ontologies/stats-series/inPlace	http://www.w3.org/2000/01/rdf-schema#comment	Relates territorial applicability to a geographic area.
-http://parliament.uk/ontologies/stats-series/inDataSetReleaseVersion	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/	http://purl.org/dc/terms/title	Stats series ontology - deprecated
-http://parliament.uk/ontologies/stats-series/averagedOverPeriodAs	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/TemporalCoverage
-http://parliament.uk/ontologies/stats-series/hasTerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/TerritorialApplicability
-http://parliament.uk/ontologies/stats-series/caveatText	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set to any caveat text accompanying it.
-http://parliament.uk/ontologies/stats-series/releaseNotes	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/stats-series/releaseVersionOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release version to a data set release.
-http://parliament.uk/ontologies/stats-series/caveatText	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/updateFrequency	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/inDataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data point to the data set release version it forms part of.
-http://parliament.uk/ontologies/stats-series/fromSource	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/Source
-http://parliament.uk/ontologies/stats-series/releasedOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataPoint
-http://parliament.uk/ontologies/stats-series/measureOf	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/Population
-http://parliament.uk/ontologies/stats-series/inDataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataPoint
-http://parliament.uk/ontologies/stats-series/releaseVersionOf	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion
-http://parliament.uk/ontologies/stats-series/People	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/releaseVersionNotes	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/releaseNotes	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release to explanatory notes.
-http://parliament.uk/ontologies/stats-series/endOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/releasedOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/Population	http://www.w3.org/2000/01/rdf-schema#label	Population
-http://parliament.uk/ontologies/stats-series/	http://purl.org/dc/terms/rights	Open Parliament Licence v3.0
-http://parliament.uk/ontologies/stats-series/value	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/releaseVersionNotes	http://www.w3.org/2000/01/rdf-schema#label	releaseVersionNotes
-http://parliament.uk/ontologies/stats-series/endOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/TemporalCoverage
-http://parliament.uk/ontologies/stats-series/hasUnit	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/TemporalCoverage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/releaseNotes	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/releasedOn	http://www.w3.org/2000/01/rdf-schema#label	releasedOn
-http://parliament.uk/ontologies/stats-series/hasUnit	http://www.w3.org/2000/01/rdf-schema#label	hasUnit
-http://parliament.uk/ontologies/stats-series/boundBy	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/Unit	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/updateFrequency	http://www.w3.org/2000/01/rdf-schema#label	updateFrequency
-http://parliament.uk/ontologies/stats-series/TerritorialApplicability	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/Place	http://www.w3.org/2000/01/rdf-schema#label	Place
-http://parliament.uk/ontologies/stats-series/countPer	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/releaseNotes	http://www.w3.org/2000/01/rdf-schema#label	releaseNotes
-http://parliament.uk/ontologies/stats-series/countPer	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/Period
-http://parliament.uk/ontologies/stats-series/releaseOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/inDataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/value	http://www.w3.org/2000/01/rdf-schema#label	value
-http://parliament.uk/ontologies/stats-series/releaseVersionNotes	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-http://parliament.uk/ontologies/stats-series/measureOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data point to a given population.
-http://parliament.uk/ontologies/stats-series/inPlace	http://www.w3.org/2000/01/rdf-schema#label	inPlace
-http://parliament.uk/ontologies/stats-series/releaseVersionNotes	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release version to explanatory notes.
-http://parliament.uk/ontologies/stats-series/People	http://www.w3.org/2000/01/rdf-schema#label	People
-http://parliament.uk/ontologies/stats-series/AverageType	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/fromSource	http://www.w3.org/2000/01/rdf-schema#label	fromSource
-http://parliament.uk/ontologies/stats-series/endOn	http://www.w3.org/2000/01/rdf-schema#label	endOn
-http://parliament.uk/ontologies/stats-series/measureOf	http://www.w3.org/2000/01/rdf-schema#label	measureOf
-http://parliament.uk/ontologies/stats-series/People	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/AverageType	http://www.w3.org/2000/01/rdf-schema#label	AverageType
-http://parliament.uk/ontologies/stats-series/releaseOf	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set release to a data set it forms part of.
-http://parliament.uk/ontologies/stats-series/onDate	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/Residences	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/averagedOverPeriodAs	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/TemporalCoverage	http://www.w3.org/2000/01/rdf-schema#comment	The period or point in time (date) covered by a statistics release e.g. quarter 1 of 2018 or April 2016. Allows period coverage to vary between releases.
-http://parliament.uk/ontologies/stats-series/averagedOverPeriodAs	http://www.w3.org/2000/01/rdf-schema#comment	Relates a temporal coverage to any means of averaging employed on the data.
-http://parliament.uk/ontologies/stats-series/Residences	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/inDataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion
-http://parliament.uk/ontologies/stats-series/averagedOverPeriodAs	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/AverageType
-http://parliament.uk/ontologies/stats-series/startOn	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/temporalCoverage	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/TemporalCoverage
-http://parliament.uk/ontologies/stats-series/endOn	http://www.w3.org/2000/01/rdf-schema#range	http://www.w3.org/2001/XMLSchema#date
-http://parliament.uk/ontologies/stats-series/hasUnit	http://www.w3.org/2000/01/rdf-schema#range	http://parliament.uk/ontologies/stats-series/Unit
-http://parliament.uk/ontologies/stats-series/DataSetRelease	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Class
-http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#label	DataSetReleaseVersion
-http://parliament.uk/ontologies/stats-series/	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#Ontology
-http://parliament.uk/ontologies/stats-series/startOn	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/TemporalCoverage
-http://parliament.uk/ontologies/stats-series/updateFrequency	http://www.w3.org/2000/01/rdf-schema#comment	Relates a data set to any textual account of its update frequency.
-http://parliament.uk/ontologies/stats-series/hasUnit	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/releaseVersionNotes	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/	http://purl.org/dc/terms/description	Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.
-http://parliament.uk/ontologies/stats-series/releaseVersionOf	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/caveatText	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#DatatypeProperty
-http://parliament.uk/ontologies/stats-series/caveatText	http://www.w3.org/2000/01/rdf-schema#domain	http://parliament.uk/ontologies/stats-series/DataSet
-http://parliament.uk/ontologies/stats-series/endOn	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/TemporalCoverage	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/Unit	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/DataPoint	http://www.w3.org/2000/01/rdf-schema#label	DataPoint
-http://parliament.uk/ontologies/stats-series/DataPoint	http://www.w3.org/2000/01/rdf-schema#comment	A specific data point in a statistics release version. A measure for a given population at a point in time or averaged over an interval.
-http://parliament.uk/ontologies/stats-series/releaseVersionOf	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/value	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/TerritorialApplicability	http://www.w3.org/2000/01/rdf-schema#isDefinedBy	http://parliament.uk/ontologies/stats-series/
-http://parliament.uk/ontologies/stats-series/DataSetRelease	http://www.w3.org/2000/01/rdf-schema#label	DataSetRelease
-http://parliament.uk/ontologies/stats-series/DataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#comment	A version of a release of a data set. Different versions may be released over time to correct miscalculations etc.
-http://parliament.uk/ontologies/stats-series/Source	http://www.w3.org/2000/01/rdf-schema#label	Source
-http://parliament.uk/ontologies/stats-series/inDataSetReleaseVersion	http://www.w3.org/2000/01/rdf-schema#label	inDataSetReleaseVersion
-http://parliament.uk/ontologies/stats-series/temporalCoverage	http://www.w3.org/1999/02/22-rdf-syntax-ns#type	http://www.w3.org/2002/07/owl#ObjectProperty
-http://parliament.uk/ontologies/stats-series/Unit	http://www.w3.org/2000/01/rdf-schema#label	Unit
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stats series ontology - deprecated</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            max-width: 48rem;
+            margin: 1rem;
+            padding: 1.4rem;
+            font-size: 1.2rem;
+        }
+
+
+        span.subhead {
+            font-weight: normal;
+        }
+
+        main {
+            padding: 1rem 0;
+        }
+
+        p,
+        li,
+        nav {
+            line-height: 1.4;
+        }
+
+
+        h2 {
+            padding-top: 1rem;
+
+        }
+
+        h3 {
+            padding-top: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p>
+                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <br>
+                stats-series/stats-series-ontology.ttl
+            </p>
+            <p>
+                <a href="#classes">Classes</a> |
+                <a href="#objectproperties">Object properties</a> |
+                <a href="#dataproperties">Data properties</a> |
+                
+                <a href="#equivalentclasses">Equivalent classes</a> |
+                <a href="#subclasses">Subclasses</a> |
+                <a href="#namespaces">Namespaces</a> |
+
+                
+
+            </p>
+
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <h1>Stats series ontology - deprecated</h1>
+
+        
+        <p>Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.</p>
+        
+
+        
+
+        
+        <section id="classes">
+            <h2>Classes</h2>
+
+            
+            <article class="class">
+                <h3>AverageType
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>Used to express the method of averaging used for data set releases covering a time period rather than a point in time (date).</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Businesses
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A population of businesses in a place. This might be all registered businesses or business in a certain industrial sector.</p>
+                
+
+                
+                
+                <p>Superclass: Population.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>DataPoint
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A specific data point in a statistics release version. A measure for a given population at a point in time or averaged over an interval.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>DataSet
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A data set e.g. age profiles by constituency over time.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>DataSetRelease
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A release of a data set. Different versions may be published over time to correct mistakes.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>DataSetReleaseVersion
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A version of a release of a data set. Different versions may be released over time to correct miscalculations etc.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>People
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A population of people in a place. This might be all people resident or over 70s resident or people in receipt of Universal Credit etc.</p>
+                
+
+                
+                
+                <p>Superclass: Population.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Period
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>The period over which a measurement is counted e.g. wages per week.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Place
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A place. Any geographical extent. In the case of parliamentary demographic statistics we&#39;ll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Population
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A set of things bounded by a geographical extent. Might be a population of residents, a population of those eligible to vote, a population of small businesses, a population of static caravans, in a constituency etc.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Residences
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>A population of residences in a place. This might be all residences or local authority owned residences etc.</p>
+                
+
+                
+                
+                <p>Superclass: Population.</p>
+                
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Source
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>The source organisation for a given subset of a data set release. Much of the data published by the House of Commons Library originates with the Office of National Statistics but often originates with other organisations for the devolved nations e.g. Northern Ireland Statistics and Research Agency for Northern Ireland. Other data sets originate in government departments.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>TemporalCoverage
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>The period or point in time (date) covered by a statistics release e.g. quarter 1 of 2018 or April 2016. Allows period coverage to vary between releases.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>TerritorialApplicability
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>The territorial applicability of a data set release. Allows us to say that a given release of a data set contains data from a given source (organisation) for a given place e.g. a constituency. Sources may change between releases.</p>
+                
+
+                
+
+            </article>
+            
+            <article class="class">
+                <h3>Unit
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/stats-series/ -->
+                
+                <p>The unit of measurement for all data points in a stats series e.g. GBP.</p>
+                
+
+                
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+            
+
+            <article class="objectproperty">
+
+                <h3>averagedOverPeriodAs <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a temporal coverage to any means of averaging employed on the data.</p>
+                
+
+                <p>Domain: TemporalCoverage. Range: AverageType.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>boundBy <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a population (of people, residences, businesses etc) to a geographic area.</p>
+                
+
+                <p>Domain: Population. Range: Place.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>countPer <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week.</p>
+                
+
+                <p>Domain: DataSet. Range: Period.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>fromSource <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates territorial applicability to a data source organisation.</p>
+                
+
+                <p>Domain: TerritorialApplicability. Range: Source.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasTerritorialApplicability <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data set release to it&#39;s territorial applicability.</p>
+                
+
+                <p>Domain: DataSetRelease. Range: TerritorialApplicability.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>hasUnit <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data set to the unit in which the data is counted e.g. GBP.</p>
+                
+
+                <p>Domain: DataSet. Range: Unit.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>inDataSetReleaseVersion <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data point to the data set release version it forms part of.</p>
+                
+
+                <p>Domain: DataPoint. Range: DataSetReleaseVersion.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>inPlace <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates territorial applicability to a geographic area.</p>
+                
+
+                <p>Domain: TerritorialApplicability. Range: Place.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>measureOf <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data point to a given population.</p>
+                
+
+                <p>Domain: DataPoint. Range: Population.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>releaseOf <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data set release to a data set it forms part of.</p>
+                
+
+                <p>Domain: DataSetRelease. Range: DataSet.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>releaseVersionOf <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data set release version to a data set release.</p>
+                
+
+                <p>Domain: DataSetReleaseVersion. Range: DataSetRelease.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>temporalCoverage <span class="subhead">object property</span></h3>
+
+                
+
+                
+                <p>Relates a data set release to the time period or point in time the data was gathered.</p>
+                
+
+                <p>Domain: DataSetRelease. Range: TemporalCoverage.
+                </p>
+
+            </article>
+            
+        </section>
+        
+
+        
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+            
+
+            <article class="dataproperty">
+                <h3>caveatText <span class="subhead">data property</span></h3>
+
+                <p>Relates a data set to any caveat text accompanying it.</p>
+
+                <p>Domain: DataSet. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>endOn <span class="subhead">data property</span></h3>
+
+                <p>Relates a temporal coverage of a period to the end date of that period.</p>
+
+                <p>Domain: TemporalCoverage. Range: date.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>onDate <span class="subhead">data property</span></h3>
+
+                <p>Relates a temporal coverage of a day to that date.</p>
+
+                <p>Domain: TemporalCoverage. Range: date.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>releasedOn <span class="subhead">data property</span></h3>
+
+                <p>Relates a data set release version to the date on which it was released.</p>
+
+                <p>Domain: DataPoint. Range: date.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>releaseNotes <span class="subhead">data property</span></h3>
+
+                <p>Relates a data set release to explanatory notes.</p>
+
+                <p>Domain: DataSetRelease. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>releaseVersionNotes <span class="subhead">data property</span></h3>
+
+                <p>Relates a data set release version to explanatory notes.</p>
+
+                <p>Domain: DataSetReleaseVersion. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>startOn <span class="subhead">data property</span></h3>
+
+                <p>Relates a temporal coverage of a period to the start date of that period.</p>
+
+                <p>Domain: TemporalCoverage. Range: date.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>updateFrequency <span class="subhead">data property</span></h3>
+
+                <p>Relates a data set to any textual account of its update frequency.</p>
+
+                <p>Domain: DataSet. Range: langString.</p>
+
+
+            </article>
+            
+
+            <article class="dataproperty">
+                <h3>value <span class="subhead">data property</span></h3>
+
+                <p>Relates a data point to it&#39;s value as an integer.</p>
+
+                <p>Domain: DataPoint. Range: integer.</p>
+
+
+            </article>
+            
+        </section>
+
+        
+
+
+        
+
+
+        
+
+        
+        <section id="subClasses">
+        <h2>Subclasses</h2>
+        <table>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Residences</td>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>People</td>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Businesses</td>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+        
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <table>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xml</td>
+                    <td style="width:80%;">http://www.w3.org/XML/1998/namespace</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdf</td>
+                    <td style="width:80%;">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">rdfs</td>
+                    <td style="width:80%;">http://www.w3.org/2000/01/rdf-schema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">xsd</td>
+                    <td style="width:80%;">http://www.w3.org/2001/XMLSchema#</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">pss</td>
+                    <td style="width:80%;">http://parliament.uk/ontologies/stats-series/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">dcterms</td>
+                    <td style="width:80%;">http://purl.org/dc/terms/</td>
+                </tr>
+                
+                <tr>
+                    <td style="width:20%;padding:0.5rem;">owl</td>
+                    <td style="width:80%;">http://www.w3.org/2002/07/owl#</td>
+                </tr>
+                
+        </table>
+        </section>  
+        
+
+
+
+
+        
+
+
+    </main>
+
+    <footer>
+
+        <p>Ontology created <time id="created">2018-03-08</time>.</p>
+        
+        <p><a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">Turtle source
+                file</a> on
+            GitHub. <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">Visualise</a> on
+            WebVOWL. </p>
+        
+
+
+        <p>&copy; Open Parliament Licence v3.0</p>
+
+    </footer>
+</body>
+
+</html>
