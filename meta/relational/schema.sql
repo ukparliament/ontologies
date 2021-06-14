@@ -13,6 +13,7 @@ drop table if exists special_remainders;
 drop table if exists letters_patents;
 drop table if exists people_parliamentary_blocs;
 drop table if exists house_seat_end_reasons;
+drop table if exists house_seat_incumbency_end_reasons;
 drop table if exists houses;
 drop table if exists rank_labels;
 drop table if exists people;
@@ -23,6 +24,12 @@ drop table if exists political_parties;
 drop table if exists kingdoms;
 drop table if exists genders;
 drop table if exists letters_patent_times;
+drop table if exists constituency_groups;
+drop table if exists bishoprics;
+drop table if exists bishopric_parliamentary_seniorities;
+drop table if exists winning_candidates;
+drop table if exists bishopric_incumbencies;
+drop table if exists bishopric_parliamentary_seniority_incumbencies;
 
 
 create table letters_patent_times (
@@ -49,12 +56,12 @@ create table houses (
 );
 create table people (
 	id serial,
-	date_of_birth date null,
-	date_of_birth_exact boolean not null,
 	year_of_birth smallint null,
-	date_of_death date null,
-	date_of_death_exact boolean not null,
+	month_of_birth smallint null,
+	day_of_birth smallint null,
 	year_of_death smallint null,
+	month_of_death smallint null,
+	day_of_death smallint null,
 	gender_id int,
 	constraint fk_gender foreign key (gender_id) references genders(id),
 	primary key (id)
@@ -189,27 +196,70 @@ create table house_seat_end_reasons (
 	label varchar(255) not null,
 	primary key (id)
 );
+create table constituency_groups (
+	id serial,
+	primary key (id)
+);
+create table bishoprics (
+	id serial,
+	primary key (id)
+);
+create table bishopric_parliamentary_seniorities (
+	id serial,
+	primary key (id)
+);
 create table house_seats (
 	id serial,
 	start_on date not null,
 	end_on date not null,
-	house_id int not null,
 	house_seat_end_reason_id int null,
+	house_id int not null,
+	constituency_group_id int,
+	bishopric_id int,
+	bishopric_parliamentary_seniority_id int,
 	peerage_id int null,
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_house_seat_end_reason foreign key (house_seat_end_reason_id) references house_seat_end_reasons(id),
+	constraint fk_contituency_group foreign key (constituency_group_id) references constituency_groups(id),
+	constraint fk_bishopric foreign key (bishopric_id) references bishoprics(id),
+	constraint fk_bishopric_parliamentary_seniority foreign key (bishopric_parliamentary_seniority_id) references bishopric_parliamentary_seniorities(id),
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
+	primary key (id)
+);
+create table house_seat_incumbency_end_reasons (
+	id serial,
+	label varchar(255) not null,
+	primary key (id)
+);
+create table winning_candidates (
+	id serial,
+	primary key (id)
+);
+create table bishopric_incumbencies (
+	id serial,
+	primary key (id)
+);
+create table bishopric_parliamentary_seniority_incumbencies (
+	id serial,
 	primary key (id)
 );
 create table house_seat_incumbencies (
 	id serial,
 	start_on date not null,
 	end_on date,
+	house_seat_incumbency_end_reason_id int null,
 	person_id int not null,
 	house_seat_id int not null,
+	winning_candidate_id int,
+	bishopric_incumbency_id int,
+	bishopric_parliamentary_seniority_incumbency_id int,
 	peerage_holding_id int,
+	constraint fk_house_seat_incumbency_end_reason foreign key (house_seat_incumbency_end_reason_id) references house_seat_incumbency_end_reasons(id),
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
+	constraint fk_winning_candidate foreign key (winning_candidate_id) references winning_candidates(id),
+	constraint fk_bishopric_incumbency foreign key (bishopric_incumbency_id) references bishopric_incumbencies(id),
+	constraint fk_bishopric_parliamentary_seniority_incumbency foreign key (bishopric_parliamentary_seniority_incumbency_id) references bishopric_parliamentary_seniority_incumbencies(id),
 	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
 	primary key (id)
 );
