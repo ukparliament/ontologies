@@ -60,8 +60,8 @@
                 <a href="#objectproperties">Object properties</a> |
                 <a href="#dataproperties">Data properties</a> |
                 {% if imports %}  <a href="#importedontologies">Imported ontologies</a> | {% endif %}
-                <a href="#equivalentclasses">Equivalent classes</a> |
-                <a href="#subclasses">Subclasses</a> |
+                {% if equivalentclasses %} <a href="#equivalentclasses">Equivalent classes</a> | {% endif %}
+                {% if subClasses %} <a href="#subclasses">Subclasses</a> | {% endif %}
                 <a href="#namespaces">Namespaces</a> |
 
                 {% if depiction %}
