@@ -4,13 +4,22 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/time-point/> 
     rdf:type owl:Ontology ;
     dcterms:title "Time period ontology"@en ;
     dcterms:created "2017-03-09"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Ontology to describe high level time periods for UK Parliament"@en .
+    dcterms:description "A model describing time periods used by the UK Parliament."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/time-period/time-period.png> ;
+	foaf:maker
+		[ foaf:name "David Beamish" ],
+		[ foaf:name "Nic Besly" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ] .
 
 
 #######  Classes #####
@@ -93,7 +102,7 @@ pt:Term rdf:type owl:Class ;
 pt:Recess rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Recess"@en ;
-	rdfs:comment "A period during a session when one or both Houses have adjourned to a day other than the next usual sitting day, which may last between a few days and several weeks. Officially, a recess is the period when Parliament is prorogued, but it is now used to indicate what are officially known as periodic adjournments (which would normally be called holidays). A periodic adjournment may be ended by a prorogation or a dissolution."@en ;
+	rdfs:comment "A period during a session when one or both Houses have adjourned to a day other than the next usual sitting day, which may last between a few days and several weeks. Officially, a recess is the period when Parliament is prorogued, but it is now used to indicate what are officially known as periodic adjournments. A periodic adjournment may be ended by a prorogation or a dissolution."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:SittingDay rdf:type owl:Class ;
