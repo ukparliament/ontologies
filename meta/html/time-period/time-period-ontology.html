@@ -91,15 +91,17 @@
 
             
             <article class="class">
-                <h3>Agent
+                <h3>Adjournment day
 
                     <span class="subhead">class</span>
                 </h3>
                 <!-- http://parliament.uk/ontologies/time-period/ -->
                 
-                <p>An agent. The superset of all people and all groups of people.</p>
-                
 
+                
+                
+                <p>Superclass: TimePeriod.</p>
+                
                 
 
             </article>
@@ -118,20 +120,6 @@
                 
                 <p>Superclass: TimePeriod.</p>
                 
-                
-
-            </article>
-            
-            <article class="class">
-                <h3>Event
-
-                    <span class="subhead">class</span>
-                </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
-                
-                <p>A discrete event involving agents, locations and / or outputs. Events frequently initiate changes between time periods. Examples might be: State Opening, coronation, abdication, general election, prorogation, dissolution, recall.</p>
-                
-
                 
 
             </article>
@@ -420,6 +408,22 @@
 
             </article>
             
+            <article class="class">
+                <h3>Virtual sitting day
+
+                    <span class="subhead">class</span>
+                </h3>
+                <!-- http://parliament.uk/ontologies/time-period/ -->
+                
+
+                
+                
+                <p>Superclass: TimePeriod.</p>
+                
+                
+
+            </article>
+            
         </section>
         
 
@@ -432,15 +436,27 @@
 
             <article class="objectproperty">
 
-                <h3>containedIn <span class="subhead">object property</span></h3>
+                <h3>Has adjournment day <span class="subhead">object property</span></h3>
 
                 
 
                 
-                <p>Relates an event to a time period it&#39;s contained in.</p>
+
+                <p>Domain: Term. Range: AdjournmentDay.
+                </p>
+
+            </article>
+            
+
+            <article class="objectproperty">
+
+                <h3>Has virtual sitting day <span class="subhead">object property</span></h3>
+
                 
 
-                <p>Domain: Event. Range: TimePeriod.
+                
+
+                <p>Domain: Term. Range: VirtualSittingDay.
                 </p>
 
             </article>
@@ -688,38 +704,6 @@
 
             <article class="objectproperty">
 
-                <h3>initiatesEvent <span class="subhead">object property</span></h3>
-
-                
-
-                
-                <p>Relates an agent to an event they initiate.</p>
-                
-
-                <p>Domain: Agent. Range: Event.
-                </p>
-
-            </article>
-            
-
-            <article class="objectproperty">
-
-                <h3>initiatesTimePeriod <span class="subhead">object property</span></h3>
-
-                
-
-                
-                <p>Relates an event to a time period it initiates.</p>
-                
-
-                <p>Domain: Event. Range: TimePeriod.
-                </p>
-
-            </article>
-            
-
-            <article class="objectproperty">
-
                 <h3>partOfPremiershipPeriod <span class="subhead">object property</span></h3>
 
                 
@@ -795,17 +779,7 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -815,47 +789,12 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>GovernmentAdministrationPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -865,7 +804,62 @@
                 </tr>
                 
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>VirtualSittingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>GovernmentAdministrationPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
