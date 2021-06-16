@@ -26,31 +26,34 @@
 #######  Classes #####
 
 pt:TimePeriod rdf:type owl:Class ;
-	rdfs:label "TimePeriod"@en ;
-	rdfs:comment "An identifiable and named period of time. An interval."@en ;
+	rdfs:label "Time period"@en ;
+	rdfs:comment "A period of time, having a name. An interval rather than a single point in time."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:GovernmentAdministrationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "GovernmentAdministrationPeriod"@en ;
+	rdfs:label "Government administration period"@en ;
 	rdfs:comment "A period of a single government, under a single Prime Minister, bounded by general elections, for example: Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:PremiershipPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "PremiershipPeriod"@en ;
-	rdfs:comment "A grouping of contiguous periods of government, under a single Prime Minister, not bounded by general elections, for example: Thatcher administration 1979-1990."@en ;
+	rdfs:label "Premiership period"@en ;
+	rdfs:comment "A continuous period of government under a single Prime Minister, spanning general elections, for example: Thatcher administration 1979-1990."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Reign rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Reign"@en ;
-	rdfs:comment "The period under a monarch."@en ;
+	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+	
+	# edited to here
 
 pt:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "ParliamentPeriod"@en ;
+	rdfs:label "Parliament period"@en ;
 	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
@@ -141,13 +144,6 @@ pt:House rdf:type owl:Class ;
 
 				
 #######  Object properties ##### 
-	
-pt:partOfPremiershipPeriod rdf:type owl:ObjectProperty ;
-	rdfs:label "partOfPremiershipPeriod"@en ;
-	rdfs:comment "Relates a government administration period to a premiership period. e.g. allows for grouping of 3 Thatcher administrations into one 'premiership'."@en ;
-	rdfs:domain pt:GovernmentAdministrationPeriod ;
-	rdfs:range pt:PremiershipPeriod ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:hasSession rdf:type owl:ObjectProperty ;
 	rdfs:label "hasSession"@en ;
