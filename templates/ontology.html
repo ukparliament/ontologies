@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: system-ui;
-            max-width: 48rem;
+            max-width: 42rem;
             margin: 1rem;
             padding: 1rem;
         }
@@ -52,7 +52,7 @@
             <p>
                 <a href="{{ root_url }}">ukparliament.github.io/ontologies</a>
                 <br>
-                /meta/html/{{ ttlpath }}
+                {{ htmlpath }}
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -89,7 +89,7 @@
             <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
-            <article class="class">
+            <article class="class" id="{{ class.idString }}"> #{{ class.idString }}
                 <h3>{{ class.label }}
 
                     <span class="subhead">class</span>
