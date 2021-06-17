@@ -144,7 +144,6 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         namespaceObject["n"] = n
         namespaces.append(namespaceObject)
 
-    # print("PARSED\t" + str(ttlpath))
 
     try:
         os.makedirs(htmldir + str(ttlpath.parent))
@@ -174,4 +173,3 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
                 dataproperties=dataproperties,
             )
         )
-    # print("WROTE\t" + htmlpath)
