@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -156,8 +159,7 @@
                 <p>Relates a contactable thing (a person, group or position etc) to a contact point.</p>
                 
 
-                <p>Domain: ContactableThing. Range: ContactPoint.
-                </p>
+                <p><strong>ContactableThing</strong> &mdash; hasContactPoint &mdash; <strong>ContactPoint</strong></p>
 
             </article>
             
@@ -172,8 +174,7 @@
                 <p>Relates a contact point to its postal address.</p>
                 
 
-                <p>Domain: ContactPoint. Range: PostalAddress.
-                </p>
+                <p><strong>ContactPoint</strong> &mdash; hasPostalAddress &mdash; <strong>PostalAddress</strong></p>
 
             </article>
             
@@ -191,7 +192,7 @@
 
                 <p>The first line of a postal address.</p>
 
-                <p>Domain: PostalAddress. Range: langString.</p>
+                <p><strong>PostalAddress</strong> &mdash; addressLine1 &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -202,7 +203,7 @@
 
                 <p>The second line of a postal address.</p>
 
-                <p>Domain: PostalAddress. Range: langString.</p>
+                <p><strong>PostalAddress</strong> &mdash; addressLine2 &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -213,7 +214,7 @@
 
                 <p>The third line of a postal address.</p>
 
-                <p>Domain: PostalAddress. Range: langString.</p>
+                <p><strong>PostalAddress</strong> &mdash; addressLine3 &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -224,7 +225,7 @@
 
                 <p>The fourth line of a postal address.</p>
 
-                <p>Domain: PostalAddress. Range: langString.</p>
+                <p><strong>PostalAddress</strong> &mdash; addressLine4 &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -235,7 +236,7 @@
 
                 <p>The fifth line of a postal address.</p>
 
-                <p>Domain: PostalAddress. Range: langString.</p>
+                <p><strong>PostalAddress</strong> &mdash; addressLine5 &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -246,7 +247,7 @@
 
                 <p>Temporal availability note for a contact point. Used for constituency office opening days and hours.</p>
 
-                <p>Domain: ContactPoint. Range: langString.</p>
+                <p><strong>ContactPoint</strong> &mdash; availabilityNote &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -257,7 +258,7 @@
 
                 <p>URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses.</p>
 
-                <p>Domain: ContactPoint. Range: Literal.</p>
+                <p><strong>ContactPoint</strong> &mdash; contactForm &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -268,7 +269,7 @@
 
                 <p>Contact point has an email address.</p>
 
-                <p>Domain: ContactPoint. Range: Literal.</p>
+                <p><strong>ContactPoint</strong> &mdash; email &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -279,7 +280,7 @@
 
                 <p>Contact point has a fax number.</p>
 
-                <p>Domain: ContactPoint. Range: Literal.</p>
+                <p><strong>ContactPoint</strong> &mdash; faxNumber &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -290,7 +291,7 @@
 
                 <p>Contact point has a phone number.</p>
 
-                <p>Domain: ContactPoint. Range: Literal.</p>
+                <p><strong>ContactPoint</strong> &mdash; phoneNumber &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -301,7 +302,7 @@
 
                 <p>Postal address has a postcode.</p>
 
-                <p>Domain: PostalAddress. Range: Literal.</p>
+                <p><strong>PostalAddress</strong> &mdash; postcode &mdash; <strong>Literal</strong></p>
 
 
             </article>

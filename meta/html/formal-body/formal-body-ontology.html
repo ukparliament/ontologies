@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -378,8 +381,7 @@
                 <p>Relates a formal body to the House or Houses it belongs to. A joint committee will belong to both Houses.</p>
                 
 
-                <p>Domain: FormalBody. Range: House.
-                </p>
+                <p><strong>FormalBody</strong> &mdash; Belongs to House &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -394,8 +396,7 @@
                 <p>Relates a formal body to the object of its focus.</p>
                 
 
-                <p>Domain: FormalBody. Range: Focus.
-                </p>
+                <p><strong>FormalBody</strong> &mdash; Formal body focus &mdash; <strong>Focus</strong></p>
 
             </article>
             
@@ -410,8 +411,7 @@
                 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
                 
 
-                <p>Domain: BusinessItem. Range: WorkPackage.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Forms part of &mdash; <strong>WorkPackage</strong></p>
 
             </article>
             
@@ -426,8 +426,7 @@
                 <p>Relates a business item to the formal body responsible for its organisation. A business item may be organised by more than one formal body, for example: a joint evidence session.</p>
                 
 
-                <p>Domain: BusinessItem. Range: FormalBody.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Has agent &mdash; <strong>FormalBody</strong></p>
 
             </article>
             
@@ -442,8 +441,7 @@
                 <p>Relates a formal body to its focus category.</p>
                 
 
-                <p>Domain: FormalBody. Range: FocusCategory.
-                </p>
+                <p><strong>FormalBody</strong> &mdash; Has focus category &mdash; <strong>FocusCategory</strong></p>
 
             </article>
             
@@ -458,8 +456,7 @@
                 <p>Relates an inquiry to the scope of the inquiry..</p>
                 
 
-                <p>Domain: Inquiry. Range: InquiryScope.
-                </p>
+                <p><strong>Inquiry</strong> &mdash; Has inquiry scope &mdash; <strong>InquiryScope</strong></p>
 
             </article>
             
@@ -474,8 +471,7 @@
                 <p>A joint committee has a lead House, responsible for the administration of the committee.</p>
                 
 
-                <p>Domain: FormalBody. Range: House.
-                </p>
+                <p><strong>FormalBody</strong> &mdash; Has lead House &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -490,8 +486,7 @@
                 <p>Relates a sub-committee to its parent committee. </p>
                 
 
-                <p>Domain: FormalBody. Range: FormalBody.
-                </p>
+                <p><strong>FormalBody</strong> &mdash; Has parent formal body &mdash; <strong>FormalBody</strong></p>
 
             </article>
             
@@ -506,8 +501,7 @@
                 <p>Relates a work package to the work package it forms a part of, for example: a sub-inquiry forming part of a wider inquiry.</p>
                 
 
-                <p>Domain: WorkPackage. Range: WorkPackage.
-                </p>
+                <p><strong>WorkPackage</strong> &mdash; Has parent work package &mdash; <strong>WorkPackage</strong></p>
 
             </article>
             
@@ -522,8 +516,7 @@
                 <p>Relates a work package to the type of the work package, where the work package is not an inquiry.</p>
                 
 
-                <p>Domain: WorkPackage. Range: WorkPackageType.
-                </p>
+                <p><strong>WorkPackage</strong> &mdash; Has work package type &mdash; <strong>WorkPackageType</strong></p>
 
             </article>
             
@@ -538,8 +531,7 @@
                 <p>Relates a formal body to a work package undertaken by the formal body. A joint inquiry will be undertaken by more than one formal body.</p>
                 
 
-                <p>Domain: FormalBody. Range: WorkPackage.
-                </p>
+                <p><strong>FormalBody</strong> &mdash; Undertakes work package &mdash; <strong>WorkPackage</strong></p>
 
             </article>
             
@@ -554,8 +546,7 @@
                 <p>Relates a work package to the object of its focus.</p>
                 
 
-                <p>Domain: WorkPackage. Range: Focus.
-                </p>
+                <p><strong>WorkPackage</strong> &mdash; Work package focus &mdash; <strong>Focus</strong></p>
 
             </article>
             
@@ -573,7 +564,7 @@
 
                 <p>A textual description of the task or area of activity assigned to a formal body.</p>
 
-                <p>Domain: FormalBody. Range: langString.</p>
+                <p><strong>FormalBody</strong> &mdash; Remit &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -589,28 +580,23 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
-<<<<<<< HEAD
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>Inquiry</td>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>NonSelectCommittee</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>GeneralCommittee</td>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>InformallyConstitutedCommittee</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>InformallyConstitutedCommittee</td>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                 </tr>
                 
                 <tr>
@@ -619,41 +605,18 @@
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>StatutoryCommittee</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>InformallyConstitutedCommittee</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>GeneralCommittee</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>Inquiry</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>StatutoryCommittee</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>GeneralCommittee</td>
-=======
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>NonSelectCommittee</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>StatutoryCommittee</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
                 </tr>
                 
         </table>
@@ -727,34 +690,34 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            Edward McCarthy.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
             
-            Gordon Clark.
+            &middot; Silver Oliver
             
             
             
-            James Bowman.
+            &middot; Gordon Clark
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; James Bowman
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; Anya Somerville
             
             
             
-            Silver Oliver.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; Edward McCarthy
             
             
         </p>

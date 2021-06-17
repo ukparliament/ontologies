@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -360,8 +363,7 @@
                 <p>Relates a temporal coverage to any means of averaging employed on the data.</p>
                 
 
-                <p>Domain: TemporalCoverage. Range: AverageType.
-                </p>
+                <p><strong>TemporalCoverage</strong> &mdash; averagedOverPeriodAs &mdash; <strong>AverageType</strong></p>
 
             </article>
             
@@ -376,8 +378,7 @@
                 <p>Relates a population (of people, residences, businesses etc) to a geographic area.</p>
                 
 
-                <p>Domain: Population. Range: Place.
-                </p>
+                <p><strong>Population</strong> &mdash; boundBy &mdash; <strong>Place</strong></p>
 
             </article>
             
@@ -392,8 +393,7 @@
                 <p>Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week.</p>
                 
 
-                <p>Domain: DataSet. Range: Period.
-                </p>
+                <p><strong>DataSet</strong> &mdash; countPer &mdash; <strong>Period</strong></p>
 
             </article>
             
@@ -408,8 +408,7 @@
                 <p>Relates territorial applicability to a data source organisation.</p>
                 
 
-                <p>Domain: TerritorialApplicability. Range: Source.
-                </p>
+                <p><strong>TerritorialApplicability</strong> &mdash; fromSource &mdash; <strong>Source</strong></p>
 
             </article>
             
@@ -424,8 +423,7 @@
                 <p>Relates a data set release to it&#39;s territorial applicability.</p>
                 
 
-                <p>Domain: DataSetRelease. Range: TerritorialApplicability.
-                </p>
+                <p><strong>DataSetRelease</strong> &mdash; hasTerritorialApplicability &mdash; <strong>TerritorialApplicability</strong></p>
 
             </article>
             
@@ -440,8 +438,7 @@
                 <p>Relates a data set to the unit in which the data is counted e.g. GBP.</p>
                 
 
-                <p>Domain: DataSet. Range: Unit.
-                </p>
+                <p><strong>DataSet</strong> &mdash; hasUnit &mdash; <strong>Unit</strong></p>
 
             </article>
             
@@ -456,8 +453,7 @@
                 <p>Relates a data point to the data set release version it forms part of.</p>
                 
 
-                <p>Domain: DataPoint. Range: DataSetReleaseVersion.
-                </p>
+                <p><strong>DataPoint</strong> &mdash; inDataSetReleaseVersion &mdash; <strong>DataSetReleaseVersion</strong></p>
 
             </article>
             
@@ -472,8 +468,7 @@
                 <p>Relates territorial applicability to a geographic area.</p>
                 
 
-                <p>Domain: TerritorialApplicability. Range: Place.
-                </p>
+                <p><strong>TerritorialApplicability</strong> &mdash; inPlace &mdash; <strong>Place</strong></p>
 
             </article>
             
@@ -488,8 +483,7 @@
                 <p>Relates a data point to a given population.</p>
                 
 
-                <p>Domain: DataPoint. Range: Population.
-                </p>
+                <p><strong>DataPoint</strong> &mdash; measureOf &mdash; <strong>Population</strong></p>
 
             </article>
             
@@ -504,8 +498,7 @@
                 <p>Relates a data set release to a data set it forms part of.</p>
                 
 
-                <p>Domain: DataSetRelease. Range: DataSet.
-                </p>
+                <p><strong>DataSetRelease</strong> &mdash; releaseOf &mdash; <strong>DataSet</strong></p>
 
             </article>
             
@@ -520,8 +513,7 @@
                 <p>Relates a data set release version to a data set release.</p>
                 
 
-                <p>Domain: DataSetReleaseVersion. Range: DataSetRelease.
-                </p>
+                <p><strong>DataSetReleaseVersion</strong> &mdash; releaseVersionOf &mdash; <strong>DataSetRelease</strong></p>
 
             </article>
             
@@ -536,8 +528,7 @@
                 <p>Relates a data set release to the time period or point in time the data was gathered.</p>
                 
 
-                <p>Domain: DataSetRelease. Range: TemporalCoverage.
-                </p>
+                <p><strong>DataSetRelease</strong> &mdash; temporalCoverage &mdash; <strong>TemporalCoverage</strong></p>
 
             </article>
             
@@ -555,7 +546,7 @@
 
                 <p>Relates a data set to any caveat text accompanying it.</p>
 
-                <p>Domain: DataSet. Range: langString.</p>
+                <p><strong>DataSet</strong> &mdash; caveatText &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -566,7 +557,7 @@
 
                 <p>Relates a temporal coverage of a period to the end date of that period.</p>
 
-                <p>Domain: TemporalCoverage. Range: date.</p>
+                <p><strong>TemporalCoverage</strong> &mdash; endOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -577,7 +568,7 @@
 
                 <p>Relates a temporal coverage of a day to that date.</p>
 
-                <p>Domain: TemporalCoverage. Range: date.</p>
+                <p><strong>TemporalCoverage</strong> &mdash; onDate &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -588,7 +579,7 @@
 
                 <p>Relates a data set release version to the date on which it was released.</p>
 
-                <p>Domain: DataPoint. Range: date.</p>
+                <p><strong>DataPoint</strong> &mdash; releasedOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -599,7 +590,7 @@
 
                 <p>Relates a data set release to explanatory notes.</p>
 
-                <p>Domain: DataSetRelease. Range: langString.</p>
+                <p><strong>DataSetRelease</strong> &mdash; releaseNotes &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -610,7 +601,7 @@
 
                 <p>Relates a data set release version to explanatory notes.</p>
 
-                <p>Domain: DataSetReleaseVersion. Range: langString.</p>
+                <p><strong>DataSetReleaseVersion</strong> &mdash; releaseVersionNotes &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -621,7 +612,7 @@
 
                 <p>Relates a temporal coverage of a period to the start date of that period.</p>
 
-                <p>Domain: TemporalCoverage. Range: date.</p>
+                <p><strong>TemporalCoverage</strong> &mdash; startOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -632,7 +623,7 @@
 
                 <p>Relates a data set to any textual account of its update frequency.</p>
 
-                <p>Domain: DataSet. Range: langString.</p>
+                <p><strong>DataSet</strong> &mdash; updateFrequency &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -643,7 +634,7 @@
 
                 <p>Relates a data point to it&#39;s value as an integer.</p>
 
-                <p>Domain: DataPoint. Range: integer.</p>
+                <p><strong>DataPoint</strong> &mdash; value &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -659,7 +650,7 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
@@ -669,20 +660,12 @@
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Residences</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Businesses</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>People</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Residences</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Businesses</td>
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
                 </tr>
                 

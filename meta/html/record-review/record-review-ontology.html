@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -302,8 +305,7 @@
                 <p>Relates an archiving action to the work being archived.</p>
                 
 
-                <p>Domain: Archiving. Range: Work.
-                </p>
+                <p><strong>Archiving</strong> &mdash; Archiving of &mdash; <strong>Work</strong></p>
 
             </article>
             
@@ -318,8 +320,7 @@
                 <p>Relates an editorial action to the person or group performing that action.</p>
                 
 
-                <p>Domain: EditorialAction. Range: Agent.
-                </p>
+                <p><strong>EditorialAction</strong> &mdash; By &mdash; <strong>Agent</strong></p>
 
             </article>
             
@@ -334,8 +335,7 @@
                 <p>Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.</p>
                 
 
-                <p>Domain: Feedback. Range: EditorialReview.
-                </p>
+                <p><strong>Feedback</strong> &mdash; Feedback leads to &mdash; <strong>EditorialReview</strong></p>
 
             </article>
             
@@ -350,8 +350,7 @@
                 <p>Relates an act of revision to an existing manifestation to be revised.</p>
                 
 
-                <p>Domain: Revision. Range: Manifestation.
-                </p>
+                <p><strong>Revision</strong> &mdash; From manifestation &mdash; <strong>Manifestation</strong></p>
 
             </article>
             
@@ -366,8 +365,7 @@
                 <p>Relates a work to the review cycle of that work. A work has a single review cycle, or none.</p>
                 
 
-                <p>Domain: Work. Range: ReviewCycle.
-                </p>
+                <p><strong>Work</strong> &mdash; Has review cycle &mdash; <strong>ReviewCycle</strong></p>
 
             </article>
             
@@ -382,8 +380,7 @@
                 <p>Relates an action of revision to the type of that revision.</p>
                 
 
-                <p>Domain: Revision. Range: RevisionType.
-                </p>
+                <p><strong>Revision</strong> &mdash; Has revision type &mdash; <strong>RevisionType</strong></p>
 
             </article>
             
@@ -398,8 +395,7 @@
                 <p>Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.</p>
                 
 
-                <p>Domain: EditorialAction. Range: EditorialAction.
-                </p>
+                <p><strong>EditorialAction</strong> &mdash; Leads to &mdash; <strong>EditorialAction</strong></p>
 
             </article>
             
@@ -414,8 +410,7 @@
                 <p>Relates an editorial review to the creation of a new work.</p>
                 
 
-                <p>Domain: EditorialReview. Range: Work.
-                </p>
+                <p><strong>EditorialReview</strong> &mdash; Leads to new &mdash; <strong>Work</strong></p>
 
             </article>
             
@@ -430,8 +425,7 @@
                 <p>Relates an agent to the feedback submitted by that agent.</p>
                 
 
-                <p>Domain: Agent. Range: Feedback.
-                </p>
+                <p><strong>Agent</strong> &mdash; Makes &mdash; <strong>Feedback</strong></p>
 
             </article>
             
@@ -446,8 +440,7 @@
                 <p>Relates a review cycle to resulting editorial reviews.</p>
                 
 
-                <p>Domain: ReviewCycle. Range: EditorialReview.
-                </p>
+                <p><strong>ReviewCycle</strong> &mdash; Results in &mdash; <strong>EditorialReview</strong></p>
 
             </article>
             
@@ -462,8 +455,7 @@
                 <p>Relates an editorial review to the manifestation being reviewed.</p>
                 
 
-                <p>Domain: EditorialReview. Range: Manifestation.
-                </p>
+                <p><strong>EditorialReview</strong> &mdash; Review of &mdash; <strong>Manifestation</strong></p>
 
             </article>
             
@@ -478,8 +470,7 @@
                 <p>Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.</p>
                 
 
-                <p>Domain: Work. Range: Work.
-                </p>
+                <p><strong>Work</strong> &mdash; Supersedes &mdash; <strong>Work</strong></p>
 
             </article>
             
@@ -494,8 +485,7 @@
                 <p>Relates an act of revision to a new manifestation resulting from the revision.</p>
                 
 
-                <p>Domain: Revision. Range: Manifestation.
-                </p>
+                <p><strong>Revision</strong> &mdash; To manifestation &mdash; <strong>Manifestation</strong></p>
 
             </article>
             
@@ -510,8 +500,7 @@
                 <p>Relates a manifestation to the action of withdrawing that manifestation.</p>
                 
 
-                <p>Domain: Manifestation. Range: Withdrawal.
-                </p>
+                <p><strong>Manifestation</strong> &mdash; Withdrawn by &mdash; <strong>Withdrawal</strong></p>
 
             </article>
             
@@ -529,7 +518,7 @@
 
                 <p>Relates an editorial action to the time at which the action was taken.</p>
 
-                <p>Domain: EditorialAction. Range: dateTime.</p>
+                <p><strong>EditorialAction</strong> &mdash; At &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -540,7 +529,7 @@
 
                 <p>Relates an item of feedback to the text of that feedback.</p>
 
-                <p>Domain: Feedback. Range: langString.</p>
+                <p><strong>Feedback</strong> &mdash; Feedback text &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -551,7 +540,7 @@
 
                 <p>Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.</p>
 
-                <p>Domain: Revision. Range: langString.</p>
+                <p><strong>Revision</strong> &mdash; Has revision description &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -562,7 +551,7 @@
 
                 <p>Relates a revision type to a textual description of that type.</p>
 
-                <p>Domain: RevisionType. Range: langString.</p>
+                <p><strong>RevisionType</strong> &mdash; Has revision type description &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -573,7 +562,7 @@
 
                 <p>Relates a manifestation to the time at which it was published.</p>
 
-                <p>Domain: Manifestation. Range: dateTime.</p>
+                <p><strong>Manifestation</strong> &mdash; Published at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -584,7 +573,7 @@
 
                 <p>Relates an item of feedback to the time at which the feedback was received.</p>
 
-                <p>Domain: Feedback. Range: dateTime.</p>
+                <p><strong>Feedback</strong> &mdash; Received at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -595,7 +584,7 @@
 
                 <p>Relates a withdrawal of a manifestation to the time at which it was withdrawn.</p>
 
-                <p>Domain: Withdrawal. Range: dateTime.</p>
+                <p><strong>Withdrawal</strong> &mdash; Reinstated at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -606,7 +595,7 @@
 
                 <p>Relates an editorial review of a manifestation to the date on which the review took place.</p>
 
-                <p>Domain: EditorialReview. Range: date.</p>
+                <p><strong>EditorialReview</strong> &mdash; Reviewed on &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -622,39 +611,27 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
-<<<<<<< HEAD
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Revision</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Withdrawal</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialReview</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>record-review/<wbr>Archiving</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialReview</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Withdrawal</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Revision</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Revision</td>
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialReview</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Withdrawal</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                     <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
                 </tr>
                 
@@ -729,18 +706,18 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; Anya Somerville
             
             
         </p>

@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -254,8 +257,7 @@
                 <p>Relates a fragment version to the order version it is contained by.</p>
                 
 
-                <p>Domain: FragmentVersion. Range: OrderVersion.
-                </p>
+                <p><strong>FragmentVersion</strong> &mdash; Contained by &mdash; <strong>OrderVersion</strong></p>
 
             </article>
             
@@ -270,8 +272,7 @@
                 <p>Relates a fragment version to the revision set it is contained by.</p>
                 
 
-                <p>Domain: FragmentVersion. Range: RevisionSet.
-                </p>
+                <p><strong>FragmentVersion</strong> &mdash; Fragment version contained by &mdash; <strong>RevisionSet</strong></p>
 
             </article>
             
@@ -286,8 +287,7 @@
                 <p>Relates a revision set to the House it is issued by.</p>
                 
 
-                <p>Domain: RevisionSet. Range: House.
-                </p>
+                <p><strong>RevisionSet</strong> &mdash; Issued by &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -302,8 +302,7 @@
                 <p>Relates an order to the business extent it covers.</p>
                 
 
-                <p>Domain: Order. Range: BusinessExtent.
-                </p>
+                <p><strong>Order</strong> &mdash; Order covers business extent &mdash; <strong>BusinessExtent</strong></p>
 
             </article>
             
@@ -318,8 +317,7 @@
                 <p>Relates an order version to the revision set it is contained by.</p>
                 
 
-                <p>Domain: OrderVersion. Range: RevisionSet.
-                </p>
+                <p><strong>OrderVersion</strong> &mdash; Order version contained by &mdash; <strong>RevisionSet</strong></p>
 
             </article>
             
@@ -334,8 +332,7 @@
                 <p>Relates an order to the House by which it was ordered.</p>
                 
 
-                <p>Domain: Order. Range: House.
-                </p>
+                <p><strong>Order</strong> &mdash; Ordered by &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -350,8 +347,7 @@
                 <p>Relates a revision to the fragment version being revised.</p>
                 
 
-                <p>Domain: Revision. Range: FragmentVersion.
-                </p>
+                <p><strong>Revision</strong> &mdash; Revision from &mdash; <strong>FragmentVersion</strong></p>
 
             </article>
             
@@ -366,8 +362,7 @@
                 <p>Relates a revision set to the business extent which that set covers.</p>
                 
 
-                <p>Domain: RevisionSet. Range: BusinessExtent.
-                </p>
+                <p><strong>RevisionSet</strong> &mdash; Revision set covers business extent &mdash; <strong>BusinessExtent</strong></p>
 
             </article>
             
@@ -382,8 +377,7 @@
                 <p>Relates a revision to the fragment version resulting from the revision.</p>
                 
 
-                <p>Domain: Revision. Range: FragmentVersion.
-                </p>
+                <p><strong>Revision</strong> &mdash; Revision to &mdash; <strong>FragmentVersion</strong></p>
 
             </article>
             
@@ -398,8 +392,7 @@
                 <p>Relates a suspension period to the fragment that is suspended for that period.</p>
                 
 
-                <p>Domain: SuspensionPeriod. Range: Fragment.
-                </p>
+                <p><strong>SuspensionPeriod</strong> &mdash; Suspension period of fragment &mdash; <strong>Fragment</strong></p>
 
             </article>
             
@@ -414,8 +407,7 @@
                 <p>Relates a suspension period to the order that is suspended for that period.</p>
                 
 
-                <p>Domain: SuspensionPeriod. Range: Order.
-                </p>
+                <p><strong>SuspensionPeriod</strong> &mdash; Suspension period of order &mdash; <strong>Order</strong></p>
 
             </article>
             
@@ -430,8 +422,7 @@
                 <p>Relates a fragment version to the fragment it is a version of.</p>
                 
 
-                <p>Domain: FragmentVersion. Range: Fragment.
-                </p>
+                <p><strong>FragmentVersion</strong> &mdash; Version of fragment &mdash; <strong>Fragment</strong></p>
 
             </article>
             
@@ -446,8 +437,7 @@
                 <p>Relates an order version to the order it is a version of.</p>
                 
 
-                <p>Domain: OrderVersion. Range: Order.
-                </p>
+                <p><strong>OrderVersion</strong> &mdash; Version of order &mdash; <strong>Order</strong></p>
 
             </article>
             
@@ -465,7 +455,7 @@
 
                 <p>Relates a fragment version to its position in the list of fragment versions contained by a revision set.</p>
 
-                <p>Domain: FragmentVersion. Range: integer.</p>
+                <p><strong>FragmentVersion</strong> &mdash; Fragment version ordinality &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -476,7 +466,7 @@
 
                 <p>Relates a revision to boolean describing if the revision is major: a FALSE value indicates only a change of case to the text content, a TRUE value indicates a major revision involving a change of wording to the text content.</p>
 
-                <p>Domain: Revision. Range: boolean.</p>
+                <p><strong>Revision</strong> &mdash; Is major revision &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -487,7 +477,7 @@
 
                 <p>Relates a fragment version to its number as it appears, within a revision set.</p>
 
-                <p>Domain: FragmentVersion. Range: Literal.</p>
+                <p><strong>FragmentVersion</strong> &mdash; Number &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -498,7 +488,7 @@
 
                 <p>Relates an order version to its position in the list of order versions contained by a revision set.</p>
 
-                <p>Domain: OrderVersion. Range: integer.</p>
+                <p><strong>OrderVersion</strong> &mdash; Order version ordinality &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -509,7 +499,7 @@
 
                 <p>Relates a revision set to the date on which one or more orders contained by the revision set were revised.</p>
 
-                <p>Domain: RevisionSet. Range: date.</p>
+                <p><strong>RevisionSet</strong> &mdash; Revised on &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -520,7 +510,7 @@
 
                 <p>Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day.</p>
 
-                <p>Domain: RevisionSet. Range: integer.</p>
+                <p><strong>RevisionSet</strong> &mdash; Revision set ordinality &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -531,7 +521,7 @@
 
                 <p>Relates a fragment version to the text content of that fragment version.</p>
 
-                <p>Domain: FragmentVersion. Range: langString.</p>
+                <p><strong>FragmentVersion</strong> &mdash; Text &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -615,38 +605,38 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            David Beamish.
+            &middot; <a href="https://ngoet.com/">Niels D. Goet</a>
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Paul Evans
             
             
             
-            <a href="https://ngoet.com/">Niels D. Goet</a>.
+            &middot; <a href="https://radoslawzubek.com/">Radoslaw Zubek</a>
             
             
             
-            Paul Evans.
+            &middot; Anya Somerville
             
             
             
-            <a href="https://radoslawzubek.com/">Radoslaw Zubek</a>.
+            &middot; David Beamish
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="https://tgfleming.wordpress.com/">Thomas Fleming</a>
             
             
             
-            <a href="https://tgfleming.wordpress.com/">Thomas Fleming</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
         </p>

@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -222,8 +225,7 @@
                 <p>Relates a thing to an identifier.</p>
                 
 
-                <p>Domain: Thing. Range: Identifier.
-                </p>
+                <p><strong>Thing</strong> &mdash; hasIdentifier &mdash; <strong>Identifier</strong></p>
 
             </article>
             
@@ -238,8 +240,7 @@
                 <p>Relates an identifier to its source.</p>
                 
 
-                <p>Domain: Identifier. Range: IdentifierSource.
-                </p>
+                <p><strong>Identifier</strong> &mdash; hasIdentifierSource &mdash; <strong>IdentifierSource</strong></p>
 
             </article>
             
@@ -254,8 +255,7 @@
                 <p>Relates a thing to a label during a time period.</p>
                 
 
-                <p>Domain: Thing. Range: Label.
-                </p>
+                <p><strong>Thing</strong> &mdash; hasLabel &mdash; <strong>Label</strong></p>
 
             </article>
             
@@ -270,8 +270,7 @@
                 <p>Relates a thing to a web link. e.g. Person to a twitter account.</p>
                 
 
-                <p>Domain: Thing. Range: WebLink.
-                </p>
+                <p><strong>Thing</strong> &mdash; hasWebLink &mdash; <strong>WebLink</strong></p>
 
             </article>
             
@@ -286,8 +285,7 @@
                 <p>Relates a web link to a link source.</p>
                 
 
-                <p>Domain: WebLink. Range: WebLinkSource.
-                </p>
+                <p><strong>WebLink</strong> &mdash; hasWebLinkScource &mdash; <strong>WebLinkSource</strong></p>
 
             </article>
             
@@ -302,8 +300,7 @@
                 <p>Relates a link to a weblink type.</p>
                 
 
-                <p>Domain: WebLink. Range: WebLinkType.
-                </p>
+                <p><strong>WebLink</strong> &mdash; hasWebLinkType &mdash; <strong>WebLinkType</strong></p>
 
             </article>
             
@@ -318,8 +315,7 @@
                 <p>Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class.</p>
                 
 
-                <p>Domain: Thing. Range: Thing.
-                </p>
+                <p><strong>Thing</strong> &mdash; precededBy &mdash; <strong>Thing</strong></p>
 
             </article>
             
@@ -337,7 +333,7 @@
 
                 <p>Relates a thing to an abbreviation label.</p>
 
-                <p>Domain: Thing. Range: langString.</p>
+                <p><strong>Thing</strong> &mdash; abbreviationLabel &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -348,7 +344,7 @@
 
                 <p>Relates a thing to a created at date / time.</p>
 
-                <p>Domain: Thing. Range: dateTime.</p>
+                <p><strong>Thing</strong> &mdash; createdAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -359,7 +355,7 @@
 
                 <p>Relates a thing to its textual description.</p>
 
-                <p>Domain: Thing. Range: langString.</p>
+                <p><strong>Thing</strong> &mdash; description &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -370,7 +366,7 @@
 
                 <p>Relates a thing to an end date.</p>
 
-                <p>Domain: Thing. Range: date.</p>
+                <p><strong>Thing</strong> &mdash; endOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -381,7 +377,7 @@
 
                 <p>Relates an identifier to its value.</p>
 
-                <p>Domain: Identifier. Range: Literal.</p>
+                <p><strong>Identifier</strong> &mdash; identifierValue &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -392,7 +388,7 @@
 
                 <p>Relates a thing to its preferred label.</p>
 
-                <p>Domain: Thing. Range: langString.</p>
+                <p><strong>Thing</strong> &mdash; preferredLabel &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -403,7 +399,7 @@
 
                 <p>Relates a thing to its recorded end time.</p>
 
-                <p>Domain: Thing. Range: dateTime.</p>
+                <p><strong>Thing</strong> &mdash; Recorded end at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -414,7 +410,7 @@
 
                 <p>Relates a thing to its recorded start time.</p>
 
-                <p>Domain: Thing. Range: dateTime.</p>
+                <p><strong>Thing</strong> &mdash; Recorded start at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -425,7 +421,7 @@
 
                 <p>Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs.</p>
 
-                <p>Domain: Thing. Range: Literal.</p>
+                <p><strong>Thing</strong> &mdash; sameAs &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -436,7 +432,7 @@
 
                 <p>Relates a thing to its scheduled end time.</p>
 
-                <p>Domain: Thing. Range: dateTime.</p>
+                <p><strong>Thing</strong> &mdash; Scheduled end at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -447,7 +443,7 @@
 
                 <p>Relates a thing to its scheduled start time.</p>
 
-                <p>Domain: Thing. Range: dateTime.</p>
+                <p><strong>Thing</strong> &mdash; Scheduled start at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -458,7 +454,7 @@
 
                 <p>Relates a thing to a sort label e.g. Churchill, Winston.</p>
 
-                <p>Domain: Thing. Range: langString.</p>
+                <p><strong>Thing</strong> &mdash; sortLabel &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -469,7 +465,7 @@
 
                 <p>Relates a thing to a sort order.</p>
 
-                <p>Domain: Thing. Range: integer.</p>
+                <p><strong>Thing</strong> &mdash; sortOrder &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -480,7 +476,7 @@
 
                 <p>Relates a thing to a start date.</p>
 
-                <p>Domain: Thing. Range: date.</p>
+                <p><strong>Thing</strong> &mdash; startOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -491,7 +487,7 @@
 
                 <p>Relates a thing to an updated at date / time.</p>
 
-                <p>Domain: Thing. Range: dateTime.</p>
+                <p><strong>Thing</strong> &mdash; updatedAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -502,7 +498,7 @@
 
                 <p>Relates a web link to a url.</p>
 
-                <p>Domain: WebLink. Range: Literal.</p>
+                <p><strong>WebLink</strong> &mdash; url &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -586,22 +582,22 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; Silver Oliver
             
             
             
-            Silver Oliver.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
+            &middot; Anya Somerville
             
             
         </p>
