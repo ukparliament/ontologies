@@ -7,15 +7,22 @@
     <title>Procedure step ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                procedure-step-annotation/procedure-step-annotation-ontology.ttl
+                /meta/html/procedure-step-annotation/procedure-step-annotation-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="BusinessStep">
                 <h3>Business step
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#BusinessStep">#BusinessStep</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure-step-annotation/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Publication">
                 <h3>Publication
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Publication">#Publication</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure-step-annotation/ -->
                 
@@ -138,8 +145,7 @@
                 <p>Relates a business step to a business step where steps may be actualised together.</p>
                 
 
-                <p>Domain: BusinessStep. Range: BusinessStep.
-                </p>
+                <p><strong>BusinessStep</strong> &mdash; Actualise with &mdash; <strong>BusinessStep</strong></p>
 
             </article>
             
@@ -154,8 +160,7 @@
                 <p>Relates a business step to the publication which is the source of information for that step.</p>
                 
 
-                <p>Domain: BusinessStep. Range: Publication.
-                </p>
+                <p><strong>BusinessStep</strong> &mdash; Source &mdash; <strong>Publication</strong></p>
 
             </article>
             
@@ -173,7 +178,7 @@
 
                 <p>A note that describes the date to use when actualising a business step.</p>
 
-                <p>Domain: BusinessStep. Range: langString.</p>
+                <p><strong>BusinessStep</strong> &mdash; Date note &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -184,7 +189,7 @@
 
                 <p>A note that describes where a business item should link to in a publication.</p>
 
-                <p>Domain: BusinessStep. Range: langString.</p>
+                <p><strong>BusinessStep</strong> &mdash; Link note &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -195,7 +200,7 @@
 
                 <p>A note that describes the rules for actualising a business step.</p>
 
-                <p>Domain: BusinessStep. Range: langString.</p>
+                <p><strong>BusinessStep</strong> &mdash; Scope note &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -279,18 +284,18 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Anya Somerville
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
         </p>

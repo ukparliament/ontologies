@@ -7,15 +7,22 @@
     <title>Procedure ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                procedure/procedure-ontology.ttl
+                /meta/html/procedure/procedure-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="BusinessItem">
                 <h3>Business item
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#BusinessItem">#BusinessItem</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Citation">
                 <h3>Citation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Citation">#Citation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -118,10 +125,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="DocumentType">
                 <h3>Document type
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#DocumentType">#DocumentType</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -132,10 +141,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="House">
                 <h3>House
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#House">#House</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -146,10 +157,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Procedure">
                 <h3>Procedure
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Procedure">#Procedure</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -160,10 +173,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Route">
                 <h3>Route
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Route">#Route</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -174,10 +189,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Step">
                 <h3>Step
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Step">#Step</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -188,10 +205,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="StepCollection">
                 <h3>Step collection
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#StepCollection">#StepCollection</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -202,10 +221,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="StepType">
                 <h3>Step type
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#StepType">#StepType</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -216,10 +237,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="WorkPackage">
                 <h3>Work package
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#WorkPackage">#WorkPackage</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -230,10 +253,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="WorkPackageableThing">
                 <h3>Work packageable thing
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#WorkPackageableThing">#WorkPackageableThing</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/procedure/ -->
                 
@@ -264,8 +289,7 @@
                 <p>Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion.</p>
                 
 
-                <p>Domain: BusinessItem. Range: Step.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Actualises &mdash; <strong>Step</strong></p>
 
             </article>
             
@@ -280,8 +304,7 @@
                 <p>Relates a work package to its focus, this being a work packageable thing.</p>
                 
 
-                <p>Domain: WorkPackage. Range: WorkPackageableThing.
-                </p>
+                <p><strong>WorkPackage</strong> &mdash; Focus &mdash; <strong>WorkPackageableThing</strong></p>
 
             </article>
             
@@ -296,8 +319,7 @@
                 <p>Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between &#39;Considered for English votes for English laws (EVEL) certification&#39; to &#39;Certified as England only under the English votes for English laws (EVEL) process&#39; appears in the draft negative, made negative, draft affirmative and made affirmative procedures.</p>
                 
 
-                <p>Domain: Procedure. Range: Route.
-                </p>
+                <p><strong>Procedure</strong> &mdash; Follows route &mdash; <strong>Route</strong></p>
 
             </article>
             
@@ -312,8 +334,7 @@
                 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
                 
 
-                <p>Domain: BusinessItem. Range: WorkPackage.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Forms part of &mdash; <strong>WorkPackage</strong></p>
 
             </article>
             
@@ -328,8 +349,7 @@
                 <p>Relates a route to its input step.</p>
                 
 
-                <p>Domain: Route. Range: Step.
-                </p>
+                <p><strong>Route</strong> &mdash; From step &mdash; <strong>Step</strong></p>
 
             </article>
             
@@ -344,8 +364,7 @@
                 <p>Relates a citation to the type of the document being cited.</p>
                 
 
-                <p>Domain: Citation. Range: DocumentType.
-                </p>
+                <p><strong>Citation</strong> &mdash; Has document type &mdash; <strong>DocumentType</strong></p>
 
             </article>
             
@@ -360,8 +379,7 @@
                 <p>Relates a step collection to a procedure. A step collection has one procedure. A procedure may have one or more step collections, or none.</p>
                 
 
-                <p>Domain: StepCollection. Range: Procedure.
-                </p>
+                <p><strong>StepCollection</strong> &mdash; Has procedure &mdash; <strong>Procedure</strong></p>
 
             </article>
             
@@ -376,8 +394,7 @@
                 <p>Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none.</p>
                 
 
-                <p>Domain: Step. Range: StepType.
-                </p>
+                <p><strong>Step</strong> &mdash; Has step type &mdash; <strong>StepType</strong></p>
 
             </article>
             
@@ -392,8 +409,7 @@
                 <p>Relates a step to a step collection the step is collected by. A step collection collects one or more steps. A step may be collected by one or more step collections, or none.</p>
                 
 
-                <p>Domain: Step. Range: StepCollection.
-                </p>
+                <p><strong>Step</strong> &mdash; Is collected by &mdash; <strong>StepCollection</strong></p>
 
             </article>
             
@@ -408,8 +424,7 @@
                 <p>Relates a procedure to a citation. A procedure may have more than one citation, or none.</p>
                 
 
-                <p>Domain: Procedure. Range: Citation.
-                </p>
+                <p><strong>Procedure</strong> &mdash; Procedure has citation &mdash; <strong>Citation</strong></p>
 
             </article>
             
@@ -424,8 +439,7 @@
                 <p>Relates a route to a citation. A route may have more than one citation, or none.</p>
                 
 
-                <p>Domain: Route. Range: Citation.
-                </p>
+                <p><strong>Route</strong> &mdash; Route has citation &mdash; <strong>Citation</strong></p>
 
             </article>
             
@@ -440,8 +454,7 @@
                 <p>Relates a step collection to one House, or none.</p>
                 
 
-                <p>Domain: StepCollection. Range: House.
-                </p>
+                <p><strong>StepCollection</strong> &mdash; Step collection in House &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -456,8 +469,7 @@
                 <p>Relates a step to a citation. A step may have more than one citation, or none.</p>
                 
 
-                <p>Domain: Step. Range: Citation.
-                </p>
+                <p><strong>Step</strong> &mdash; Step has citation &mdash; <strong>Citation</strong></p>
 
             </article>
             
@@ -472,8 +484,7 @@
                 <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
                 
 
-                <p>Domain: Step. Range: House.
-                </p>
+                <p><strong>Step</strong> &mdash; Step in House &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -488,8 +499,7 @@
                 <p>Relates a work package to the procedure it is subject to. A work package is only subject to one procedure.</p>
                 
 
-                <p>Domain: WorkPackage. Range: Procedure.
-                </p>
+                <p><strong>WorkPackage</strong> &mdash; Subject to &mdash; <strong>Procedure</strong></p>
 
             </article>
             
@@ -504,8 +514,7 @@
                 <p>Relates a route to its output step.</p>
                 
 
-                <p>Domain: Route. Range: Step.
-                </p>
+                <p><strong>Route</strong> &mdash; To step &mdash; <strong>Step</strong></p>
 
             </article>
             
@@ -523,7 +532,7 @@
 
                 <p>Relates a step to its description.</p>
 
-                <p>Domain: Step. Range: langString.</p>
+                <p><strong>Step</strong> &mdash; Step description &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -534,7 +543,7 @@
 
                 <p>Relates a citation to the title of the document being cited.</p>
 
-                <p>Domain: Citation. Range: langString.</p>
+                <p><strong>Citation</strong> &mdash; Title &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -545,7 +554,7 @@
 
                 <p>Relates a citation to the URI of the document being cited.</p>
 
-                <p>Domain: Citation. Range: Literal.</p>
+                <p><strong>Citation</strong> &mdash; URI &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -629,62 +638,62 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            Ben Woodhams.
+            &middot; Chris Alcock
             
             
             
-            Chris Alcock.
+            &middot; Anya Somerville
             
             
             
-            David Beamish.
+            &middot; Jack Dent
             
             
             
-            Dominic Stockbridge.
+            &middot; Silver Oliver
             
             
             
-            Gordon Clarke.
+            &middot; Gordon Clarke
             
             
             
-            Jack Dent.
+            &middot; David Beamish
             
             
             
-            James Vinter.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            Jane White.
+            &middot; Samu Lang
             
             
             
-            Jayne Sunley.
+            &middot; Dominic Stockbridge
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Jane White
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; Jayne Sunley
             
             
             
-            Samu Lang.
+            &middot; Ben Woodhams
             
             
             
-            Silver Oliver.
+            &middot; James Vinter
+            
+            
+            
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
         </p>

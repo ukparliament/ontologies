@@ -7,15 +7,22 @@
     <title>Making available ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                making-available/making-available-ontology.ttl
+                /meta/html/making-available/making-available-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Depositing">
                 <h3>Depositing
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Depositing">#Depositing</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/making-available/ -->
                 
@@ -108,10 +113,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="House">
                 <h3>House
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#House">#House</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/making-available/ -->
                 
@@ -122,10 +129,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Laying">
                 <h3>Laying
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Laying">#Laying</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/making-available/ -->
                 
@@ -140,10 +149,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="MakingAvailable">
                 <h3>Making available
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#MakingAvailable">#MakingAvailable</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/making-available/ -->
                 
@@ -154,10 +165,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Presenting">
                 <h3>Presenting
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Presenting">#Presenting</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/making-available/ -->
                 
@@ -172,10 +185,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Session">
                 <h3>Session
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Session">#Session</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/making-available/ -->
                 
@@ -206,8 +221,7 @@
                 <p>Relates an act of making materials available to a House, to the session in which they are made available.</p>
                 
 
-                <p>Domain: MakingAvailable. Range: Session.
-                </p>
+                <p><strong>MakingAvailable</strong> &mdash; In session &mdash; <strong>Session</strong></p>
 
             </article>
             
@@ -222,8 +236,7 @@
                 <p>Relates an act of making materials available to a House, to the House in which they are made available.</p>
                 
 
-                <p>Domain: MakingAvailable. Range: House.
-                </p>
+                <p><strong>MakingAvailable</strong> &mdash; To House &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -241,7 +254,7 @@
 
                 <p>Relates an act of making materials available to a House, to the date on which they are made available.</p>
 
-                <p>Domain: MakingAvailable. Range: date.</p>
+                <p><strong>MakingAvailable</strong> &mdash; Made available on &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -257,7 +270,7 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
@@ -267,12 +280,12 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Laying</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Presenting</td>
                     <td>/<wbr>ontologies/<wbr>making-available/<wbr>MakingAvailable</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Presenting</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Laying</td>
                     <td>/<wbr>ontologies/<wbr>making-available/<wbr>MakingAvailable</td>
                 </tr>
                 
@@ -347,22 +360,22 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            Jack Dent.
+            &middot; Jack Dent
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
+            &middot; Anya Somerville
             
             
         </p>

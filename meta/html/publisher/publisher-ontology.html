@@ -7,15 +7,22 @@
     <title>Publisher ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                publisher/publisher-ontology.ttl
+                /meta/html/publisher/publisher-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Agent">
                 <h3>Agent
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Agent">#Agent</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Concept">
                 <h3>Concept
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Concept">#Concept</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -118,10 +125,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="EditorialBoard">
                 <h3>Editorial board
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#EditorialBoard">#EditorialBoard</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -136,10 +145,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Group">
                 <h3>Group
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Group">#Group</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -154,10 +165,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="House">
                 <h3>House
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#House">#House</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -172,10 +185,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Publisher">
                 <h3>Publisher
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Publisher">#Publisher</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -190,10 +205,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ResearchSection">
                 <h3>Research section
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ResearchSection">#ResearchSection</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -208,10 +225,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ResearchService">
                 <h3>Research service
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ResearchService">#ResearchService</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -226,10 +245,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ThingHavingPublisher">
                 <h3>Thing having a publisher
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ThingHavingPublisher">#ThingHavingPublisher</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/publisher/ -->
                 
@@ -260,8 +281,7 @@
                 <p>Relates a publisher to its editorial board.</p>
                 
 
-                <p>Domain: Publisher. Range: EditorialBoard.
-                </p>
+                <p><strong>Publisher</strong> &mdash; Has editorial board &mdash; <strong>EditorialBoard</strong></p>
 
             </article>
             
@@ -276,8 +296,7 @@
                 <p>Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts.</p>
                 
 
-                <p>Domain: Publisher. Range: Concept.
-                </p>
+                <p><strong>Publisher</strong> &mdash; Has focus &mdash; <strong>Concept</strong></p>
 
             </article>
             
@@ -292,8 +311,7 @@
                 <p>Relates a thing, which has a publisher, to the publisher of the thing.</p>
                 
 
-                <p>Domain: ThingHavingPublisher. Range: Publisher.
-                </p>
+                <p><strong>ThingHavingPublisher</strong> &mdash; Has publisher &mdash; <strong>Publisher</strong></p>
 
             </article>
             
@@ -308,8 +326,7 @@
                 <p>Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office.</p>
                 
 
-                <p>Domain: House. Range: ResearchService.
-                </p>
+                <p><strong>House</strong> &mdash; Has research service &mdash; <strong>ResearchService</strong></p>
 
             </article>
             
@@ -324,8 +341,7 @@
                 <p>Relates a research service to a research section within that service.</p>
                 
 
-                <p>Domain: ResearchService. Range: ResearchSection.
-                </p>
+                <p><strong>ResearchService</strong> &mdash; Has section &mdash; <strong>ResearchSection</strong></p>
 
             </article>
             
@@ -341,28 +357,23 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>EditorialBoard</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Agent</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>publisher/<wbr>Group</td>
                     <td>/<wbr>ontologies/<wbr>publisher/<wbr>Agent</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchService</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Agent</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchSection</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
                 </tr>
                 
                 <tr>
@@ -371,8 +382,13 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>EditorialBoard</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Group</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchSection</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchService</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
                 </tr>
                 
         </table>
@@ -446,22 +462,22 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Anya Somerville
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; Silver Oliver
             
             
             
-            Silver Oliver.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
         </p>

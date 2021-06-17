@@ -7,15 +7,22 @@
     <title>Treaty ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                treaty/treaty-ontology.ttl
+                /meta/html/treaty/treaty-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Bill">
                 <h3>Bill
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Bill">#Bill</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">
                 <h3>Draft and made statutory instrument subject to parliamentary procedure
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">#DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -118,10 +125,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GovernmentOrganisation">
                 <h3>Government organisation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GovernmentOrganisation">#GovernmentOrganisation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -132,10 +141,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Treaty">
                 <h3>Treaty
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Treaty">#Treaty</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -146,10 +157,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="TreatyAsLaid">
                 <h3>Treaty as laid
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#TreatyAsLaid">#TreatyAsLaid</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -160,10 +173,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="TreatySeries">
                 <h3>Treaty series
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#TreatySeries">#TreatySeries</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -174,10 +189,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="TreatySeriesItem">
                 <h3>Treaty series item
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#TreatySeriesItem">#TreatySeriesItem</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/treaty/ -->
                 
@@ -208,8 +225,7 @@
                 <p>Relates a treaty as laid before Parliament to a treaty series item. A treaty series item places a treaty in the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item</p>
                 
 
-                <p>Domain: TreatyAsLaid. Range: TreatySeriesItem.
-                </p>
+                <p><strong>TreatyAsLaid</strong> &mdash; As series item &mdash; <strong>TreatySeriesItem</strong></p>
 
             </article>
             
@@ -224,8 +240,7 @@
                 <p>Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department.</p>
                 
 
-                <p>Domain: Treaty. Range: GovernmentOrganisation.
-                </p>
+                <p><strong>Treaty</strong> &mdash; Has lead department &mdash; <strong>GovernmentOrganisation</strong></p>
 
             </article>
             
@@ -240,8 +255,7 @@
                 <p>Relates a treaty series item to the treaty series in which it appears. A treaty series item is listed in a single treaty series.</p>
                 
 
-                <p>Domain: TreatySeriesItem. Range: TreatySeries.
-                </p>
+                <p><strong>TreatySeriesItem</strong> &mdash; In series &mdash; <strong>TreatySeries</strong></p>
 
             </article>
             
@@ -256,8 +270,7 @@
                 <p>The &#39;Laid as&#39; property relates a treaty to the form in which it is laid. Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure. </p>
                 
 
-                <p>Domain: Treaty. Range: TreatyAsLaid.
-                </p>
+                <p><strong>Treaty</strong> &mdash; Laid as &mdash; <strong>TreatyAsLaid</strong></p>
 
             </article>
             
@@ -272,8 +285,7 @@
                 <p>Relates a treaty to the required passage of one or more statutory instruments in order to enable the satisfaction of treaty obligations.</p>
                 
 
-                <p>Domain: Treaty. Range: DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure.
-                </p>
+                <p><strong>Treaty</strong> &mdash; Requires passage of a draft or made Statutory Instrument subject to parliamentary procedure &mdash; <strong>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</strong></p>
 
             </article>
             
@@ -288,8 +300,7 @@
                 <p>Relates a treaty to the required passage of one or more bills in order to enable the satisfaction of treaty obligations.</p>
                 
 
-                <p>Domain: Treaty. Range: Bill.
-                </p>
+                <p><strong>Treaty</strong> &mdash; Requires passage of bill &mdash; <strong>Bill</strong></p>
 
             </article>
             
@@ -307,7 +318,7 @@
 
                 <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. Within a series, Command Paper numbers start at 1 and do not exceed 9999.</p>
 
-                <p>Domain: TreatyAsLaid. Range: Literal.</p>
+                <p><strong>TreatyAsLaid</strong> &mdash; Command Paper number &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -318,7 +329,7 @@
 
                 <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. A series of Command Papers has a unique prefix.</p>
 
-                <p>Domain: TreatyAsLaid. Range: Literal.</p>
+                <p><strong>TreatyAsLaid</strong> &mdash; Command Paper prefix &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -329,7 +340,7 @@
 
                 <p>An item in a treaty series has a citation, in addition to a Command Paper number: for example, China No. 1 (2017).</p>
 
-                <p>Domain: TreatySeriesItem. Range: Literal.</p>
+                <p><strong>TreatySeriesItem</strong> &mdash; Series item citation &mdash; <strong>Literal</strong></p>
 
 
             </article>
@@ -340,7 +351,7 @@
 
                 <p>The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note.</p>
 
-                <p>Domain: Treaty. Range: date.</p>
+                <p><strong>Treaty</strong> &mdash; UK coming into force date &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -351,7 +362,7 @@
 
                 <p>A coming into force note sets out details applying to the UK of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date.</p>
 
-                <p>Domain: Treaty. Range: langString.</p>
+                <p><strong>Treaty</strong> &mdash; UK coming into force note &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -362,7 +373,7 @@
 
                 <p>The date on which the treaty is ratified by the UK.</p>
 
-                <p>Domain: Treaty. Range: date.</p>
+                <p><strong>Treaty</strong> &mdash; UK ratification date &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -446,34 +457,34 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            Arabella Lang.
+            &middot; David Beamish
             
             
             
-            David Beamish.
+            &middot; Anya Somerville
             
             
             
-            Jack Dent.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            Jane White.
+            &middot; Arabella Lang
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Jack Dent
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; Jane White
+            
+            
+            
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
         </p>
