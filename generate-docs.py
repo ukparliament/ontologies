@@ -12,8 +12,10 @@ from urllib.parse import urlparse
 def slash2wbr(value):
     return Markup(value.replace("/", "/<wbr>"))
 
+
 def ttlpath2ontologyname(value):
-    return Markup(Path(value).stem.replace('-', ' ').title())
+    return Markup(Path(value).stem.replace("-", " ").title())
+
 
 env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
 
@@ -35,6 +37,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     classes = []
 
     for s, p, o in g.triples((None, RDF.type, OWL.Class)):
+
         superclasses = []
 
         superclassobjects = g.objects(s, RDFS.subClassOf)
@@ -46,6 +49,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         classes.append(
             {
                 "label": g.label(s),
+                "idString": s.split('/')[-1],
                 "comment": g.value(s, RDFS.comment),
                 "isDefinedBy": g.value(s, RDFS.isDefinedBy),
                 "superclasses": superclasses,
@@ -144,7 +148,6 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         namespaceObject["n"] = n
         namespaces.append(namespaceObject)
 
-
     try:
         os.makedirs(htmldir + str(ttlpath.parent))
     except FileExistsError:
@@ -154,6 +157,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     with open(htmlpath, "w") as htmlfile:
         htmlfile.write(
             template.render(
+                htmlpath=htmlpath.lstrip("."),
                 title=Markup(title),
                 created=Markup(created),
                 rights=Markup(rights),
