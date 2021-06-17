@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -260,8 +263,7 @@
                 <p>Relates an act of tabling to a written notice.</p>
                 
 
-                <p>Domain: Tabling. Range: WrittenNotice.
-                </p>
+                <p><strong>Tabling</strong> &mdash; givesNotice &mdash; <strong>WrittenNotice</strong></p>
 
             </article>
             
@@ -276,8 +278,7 @@
                 <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
                 
 
-                <p>Domain: TablingOrWithdrawal. Range: House.
-                </p>
+                <p><strong>TablingOrWithdrawal</strong> &mdash; hasHouse &mdash; <strong>House</strong></p>
 
             </article>
             
@@ -292,8 +293,7 @@
                 <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
                 
 
-                <p>Domain: TablingOrWithdrawal. Range: Session.
-                </p>
+                <p><strong>TablingOrWithdrawal</strong> &mdash; inSession &mdash; <strong>Session</strong></p>
 
             </article>
             
@@ -308,8 +308,7 @@
                 <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
                 
 
-                <p>Domain: TabledThing. Range: WithdrawnThing.
-                </p>
+                <p><strong>TabledThing</strong> &mdash; replaces &mdash; <strong>WithdrawnThing</strong></p>
 
             </article>
             
@@ -324,8 +323,7 @@
                 <p>Relates a Member to an act of tabling.</p>
                 
 
-                <p>Domain: Member. Range: Tabling.
-                </p>
+                <p><strong>Member</strong> &mdash; requests &mdash; <strong>Tabling</strong></p>
 
             </article>
             
@@ -340,8 +338,7 @@
                 <p>Relates an act of tabling to the business item which it tables.</p>
                 
 
-                <p>Domain: Tabling. Range: TabledThing.
-                </p>
+                <p><strong>Tabling</strong> &mdash; tables &mdash; <strong>TabledThing</strong></p>
 
             </article>
             
@@ -356,8 +353,7 @@
                 <p>Relates an act of withdrawal to the business item which it withdraws.</p>
                 
 
-                <p>Domain: Withdrawal. Range: WithdrawnThing.
-                </p>
+                <p><strong>Withdrawal</strong> &mdash; withdraws &mdash; <strong>WithdrawnThing</strong></p>
 
             </article>
             
@@ -375,7 +371,7 @@
 
                 <p>Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members&#39; Financial Interests.</p>
 
-                <p>Domain: Tabling. Range: boolean.</p>
+                <p><strong>Tabling</strong> &mdash; isInterestDeclared &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -386,7 +382,7 @@
 
                 <p>Relates an act of tabling to the date on which it happened.</p>
 
-                <p>Domain: Tabling. Range: date.</p>
+                <p><strong>Tabling</strong> &mdash; tabledOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -397,7 +393,7 @@
 
                 <p>Relates an act of withdrawal to the date on which it happened.</p>
 
-                <p>Domain: Withdrawal. Range: date.</p>
+                <p><strong>Withdrawal</strong> &mdash; withdrawnOn &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -413,7 +409,7 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 

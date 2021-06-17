@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -65,7 +68,7 @@
                 <a href="#namespaces">Namespaces</a> |
 
                 
-        <a href="file:///home/runner/work/ontologies/ontologies/election.png">Depiction</a>
+        <a href="file:///home/robert/Documents/ontologies/election.png">Depiction</a>
         
 
             </p>
@@ -362,8 +365,7 @@
                 <p>Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
                 
 
-                <p>Domain: Certification. Range: Certification.
-                </p>
+                <p><strong>Certification</strong> &mdash; Adjunct to &mdash; <strong>Certification</strong></p>
 
             </article>
             
@@ -378,8 +380,7 @@
                 <p>Relates a group of people - who at the time of an election are eligible to vote - to that election.</p>
                 
 
-                <p>Domain: Electorate. Range: Election.
-                </p>
+                <p><strong>Electorate</strong> &mdash; Eligible to vote in &mdash; <strong>Election</strong></p>
 
             </article>
             
@@ -394,8 +395,7 @@
                 <p>Relates a winning candidacy result to an electoral incumbency.</p>
                 
 
-                <p>Domain: WinningCandidacyResult. Range: ElectoralIncumbency.
-                </p>
+                <p><strong>WinningCandidacyResult</strong> &mdash; Establishes incumbency &mdash; <strong>ElectoralIncumbency</strong></p>
 
             </article>
             
@@ -410,8 +410,7 @@
                 <p>Relates an election to a candidacy within that election.</p>
                 
 
-                <p>Domain: Election. Range: Candidacy.
-                </p>
+                <p><strong>Election</strong> &mdash; Has candidacy &mdash; <strong>Candidacy</strong></p>
 
             </article>
             
@@ -426,8 +425,7 @@
                 <p>Relates a candidacy to the result of that candidacy in an election.</p>
                 
 
-                <p>Domain: Candidacy. Range: CandidacyResult.
-                </p>
+                <p><strong>Candidacy</strong> &mdash; Has candidacy result &mdash; <strong>CandidacyResult</strong></p>
 
             </article>
             
@@ -442,8 +440,7 @@
                 <p>Relates a candidacy to a person being a candidate.</p>
                 
 
-                <p>Domain: Candidacy. Range: Person.
-                </p>
+                <p><strong>Candidacy</strong> &mdash; Has candidate &mdash; <strong>Person</strong></p>
 
             </article>
             
@@ -458,8 +455,7 @@
                 <p>Relates a candidacy to a certification of the candidate by a political party.</p>
                 
 
-                <p>Domain: Candidacy. Range: Certification.
-                </p>
+                <p><strong>Candidacy</strong> &mdash; Has certification &mdash; <strong>Certification</strong></p>
 
             </article>
             
@@ -474,8 +470,7 @@
                 <p>Relates a constituency area to a constituency area type.</p>
                 
 
-                <p>Domain: ConstituencyArea. Range: ConstituencyAreaType.
-                </p>
+                <p><strong>ConstituencyArea</strong> &mdash; Has constituency area type &mdash; <strong>ConstituencyAreaType</strong></p>
 
             </article>
             
@@ -490,8 +485,7 @@
                 <p>Relates a geographic area to its population.</p>
                 
 
-                <p>Domain: ConstituencyArea. Range: ConstituencyGroup.
-                </p>
+                <p><strong>ConstituencyArea</strong> &mdash; Has constituency group &mdash; <strong>ConstituencyGroup</strong></p>
 
             </article>
             
@@ -506,8 +500,7 @@
                 <p>Relates a geographic area to a group of people who at the time of an election are eligible to vote in the election for that area.</p>
                 
 
-                <p>Domain: ConstituencyArea. Range: Electorate.
-                </p>
+                <p><strong>ConstituencyArea</strong> &mdash; Has electorate &mdash; <strong>Electorate</strong></p>
 
             </article>
             
@@ -522,8 +515,7 @@
                 <p>Relates an election to the Parliament period within which any resulting incumbency will take place.</p>
                 
 
-                <p>Domain: Election. Range: ParliamentPeriod.
-                </p>
+                <p><strong>Election</strong> &mdash; Into Parliament period &mdash; <strong>ParliamentPeriod</strong></p>
 
             </article>
             
@@ -538,8 +530,7 @@
                 <p>Relates a constituency election to the general election of which it forms part.</p>
                 
 
-                <p>Domain: Election. Range: GeneralElection.
-                </p>
+                <p><strong>Election</strong> &mdash; Is part of general election &mdash; <strong>GeneralElection</strong></p>
 
             </article>
             
@@ -554,8 +545,7 @@
                 <p>Relates a certification of a candidate to the party issuing the certification.</p>
                 
 
-                <p>Domain: Certification. Range: PoliticalParty.
-                </p>
+                <p><strong>Certification</strong> &mdash; To party &mdash; <strong>PoliticalParty</strong></p>
 
             </article>
             
@@ -573,7 +563,7 @@
 
                 <p>The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or void for uncertainty.</p>
 
-                <p>Domain: Election. Range: integer.</p>
+                <p><strong>Election</strong> &mdash; Ballots spoiled &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -584,7 +574,7 @@
 
                 <p>The date and time at which results were declared for an election, for example: the declaration of the results in a constituency election, by the Returning Officer.</p>
 
-                <p>Domain: Election. Range: dateTime.</p>
+                <p><strong>Election</strong> &mdash; Declaration time &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -595,7 +585,7 @@
 
                 <p>Whether the party certification of the winning candidate at an election differs from the party certification of the winning candidate at the preceding election.</p>
 
-                <p>Domain: WinningCandidacyResult. Range: boolean.</p>
+                <p><strong>WinningCandidacyResult</strong> &mdash; Party gained &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -606,7 +596,7 @@
 
                 <p>The size of a population, for example: an electorate or constituency group.</p>
 
-                <p>Domain: Population. Range: integer.</p>
+                <p><strong>Population</strong> &mdash; Population size &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -617,7 +607,7 @@
 
                 <p>The date on which a population size was recorded.</p>
 
-                <p>Domain: Population. Range: date.</p>
+                <p><strong>Population</strong> &mdash; Recorded date &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -628,7 +618,7 @@
 
                 <p>The relative position of the result of the candidacy in an election.</p>
 
-                <p>Domain: CandidacyResult. Range: integer.</p>
+                <p><strong>CandidacyResult</strong> &mdash; Result position &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -639,7 +629,7 @@
 
                 <p>The number of the round in an election having more than one round of voting.</p>
 
-                <p>Domain: Election. Range: integer.</p>
+                <p><strong>Election</strong> &mdash; Round &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -650,7 +640,7 @@
 
                 <p>The total number of votes cast across all candidacies in an election, including spoiled ballots. Turnout is defined by the House of Commons Library as the total number of votes cast and not spoiled, divided by the size of the electorate. This definition conforms to the generally accepted academic usage. Turnout is generally defined by Returning Officers as the total number of votes cast divided by the size of the electorate.</p>
 
-                <p>Domain: Election. Range: integer.</p>
+                <p><strong>Election</strong> &mdash; Total votes cast &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -661,7 +651,7 @@
 
                 <p>The number of accepted votes recorded for a candidacy.</p>
 
-                <p>Domain: CandidacyResult. Range: integer.</p>
+                <p><strong>CandidacyResult</strong> &mdash; Vote count &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -672,7 +662,7 @@
 
                 <p>The share of a vote won in an election by a candidate as a fraction of the accepted votes.</p>
 
-                <p>Domain: CandidacyResult. Range: decimal.</p>
+                <p><strong>CandidacyResult</strong> &mdash; Vote share &mdash; <strong>decimal</strong></p>
 
 
             </article>
@@ -688,7 +678,7 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
@@ -698,18 +688,13 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>WinningCandidacyResult</td>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>CandidacyResult</td>
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
                     <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
                     <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>WinningCandidacyResult</td>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>CandidacyResult</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                 </tr>
                 
         </table>

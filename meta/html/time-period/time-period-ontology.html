@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -480,8 +483,7 @@
 
                 
 
-                <p>Domain: Term. Range: AdjournmentDay.
-                </p>
+                <p><strong>Term</strong> &mdash; Has adjournment day &mdash; <strong>AdjournmentDay</strong></p>
 
             </article>
             
@@ -494,8 +496,7 @@
 
                 
 
-                <p>Domain: Term. Range: VirtualSittingDay.
-                </p>
+                <p><strong>Term</strong> &mdash; Has virtual sitting day &mdash; <strong>VirtualSittingDay</strong></p>
 
             </article>
             
@@ -510,8 +511,7 @@
                 <p>Relates a dissolution period to a post-election dissolution period.</p>
                 
 
-                <p>Domain: DissolutionPeriod. Range: PostElectionDissolutionPeriod.
-                </p>
+                <p><strong>DissolutionPeriod</strong> &mdash; hasPostElectionDissolutionPeriod &mdash; <strong>PostElectionDissolutionPeriod</strong></p>
 
             </article>
             
@@ -526,8 +526,7 @@
                 <p>Relates a dissolution period to a pre-election dissolution period.</p>
                 
 
-                <p>Domain: DissolutionPeriod. Range: PreElectionDissolutionPeriod.
-                </p>
+                <p><strong>DissolutionPeriod</strong> &mdash; hasPreElectionDissolutionPeriod &mdash; <strong>PreElectionDissolutionPeriod</strong></p>
 
             </article>
             
@@ -542,8 +541,7 @@
                 <p>Relates a term to a printing day.</p>
                 
 
-                <p>Domain: Term. Range: PrintingDay.
-                </p>
+                <p><strong>Term</strong> &mdash; hasPrintingDay &mdash; <strong>PrintingDay</strong></p>
 
             </article>
             
@@ -558,8 +556,7 @@
                 <p>Relates a Parliament period to a prorogation period.</p>
                 
 
-                <p>Domain: ParliamentPeriod. Range: ProrogationPeriod.
-                </p>
+                <p><strong>ParliamentPeriod</strong> &mdash; hasProrogationPeriod &mdash; <strong>ProrogationPeriod</strong></p>
 
             </article>
             
@@ -574,8 +571,7 @@
                 <p>Relates a session to a recess.</p>
                 
 
-                <p>Domain: Session. Range: Recess.
-                </p>
+                <p><strong>Session</strong> &mdash; hasRecess &mdash; <strong>Recess</strong></p>
 
             </article>
             
@@ -590,8 +586,7 @@
                 <p>Relates a recess to a printing day. Allows for printing days to happen in a recess period.</p>
                 
 
-                <p>Domain: Recess. Range: PrintingDay.
-                </p>
+                <p><strong>Recess</strong> &mdash; hasRecessPrintingDay &mdash; <strong>PrintingDay</strong></p>
 
             </article>
             
@@ -606,8 +601,7 @@
                 <p>Relates a recess to a statutory day.</p>
                 
 
-                <p>Domain: Recess. Range: StatutoryDay.
-                </p>
+                <p><strong>Recess</strong> &mdash; hasRecessStatutoryDay &mdash; <strong>StatutoryDay</strong></p>
 
             </article>
             
@@ -622,8 +616,7 @@
                 <p>Relates a recess to a tabling day. Allows for tabling days to happen in a recess period.</p>
                 
 
-                <p>Domain: Recess. Range: TablingDay.
-                </p>
+                <p><strong>Recess</strong> &mdash; hasRecessTablingDay &mdash; <strong>TablingDay</strong></p>
 
             </article>
             
@@ -638,8 +631,7 @@
                 <p>Relates a Parliament period to a session.</p>
                 
 
-                <p>Domain: ParliamentPeriod. Range: Session.
-                </p>
+                <p><strong>ParliamentPeriod</strong> &mdash; hasSession &mdash; <strong>Session</strong></p>
 
             </article>
             
@@ -654,8 +646,7 @@
                 <p>Relates a term to a sitting day.</p>
                 
 
-                <p>Domain: Term. Range: SittingDay.
-                </p>
+                <p><strong>Term</strong> &mdash; hasSittingDay &mdash; <strong>SittingDay</strong></p>
 
             </article>
             
@@ -670,8 +661,7 @@
                 <p>Relates a term to a statutory day.</p>
                 
 
-                <p>Domain: Term. Range: StatutoryDay.
-                </p>
+                <p><strong>Term</strong> &mdash; hasStatutoryDay &mdash; <strong>StatutoryDay</strong></p>
 
             </article>
             
@@ -686,8 +676,7 @@
                 <p>Relates a term to a tabling day.</p>
                 
 
-                <p>Domain: Term. Range: TablingDay.
-                </p>
+                <p><strong>Term</strong> &mdash; hasTablingDay &mdash; <strong>TablingDay</strong></p>
 
             </article>
             
@@ -702,8 +691,7 @@
                 <p>Relates a session to a term.</p>
                 
 
-                <p>Domain: Session. Range: Term.
-                </p>
+                <p><strong>Session</strong> &mdash; hasTerm &mdash; <strong>Term</strong></p>
 
             </article>
             
@@ -718,8 +706,7 @@
                 <p>Relates a House to a recess. Allows for different recess periods in different Houses.</p>
                 
 
-                <p>Domain: House. Range: Recess.
-                </p>
+                <p><strong>House</strong> &mdash; houseHasRecess &mdash; <strong>Recess</strong></p>
 
             </article>
             
@@ -734,8 +721,7 @@
                 <p>Relates a House to a term. Allows for different term periods in different Houses.</p>
                 
 
-                <p>Domain: House. Range: Term.
-                </p>
+                <p><strong>House</strong> &mdash; houseHasTerm &mdash; <strong>Term</strong></p>
 
             </article>
             
@@ -753,7 +739,7 @@
 
                 <p>Parliament period has an ordinal number. Numbered from the Act of Union 1800.</p>
 
-                <p>Domain: ParliamentPeriod. Range: integer.</p>
+                <p><strong>ParliamentPeriod</strong> &mdash; parliamentNumber &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -764,7 +750,7 @@
 
                 <p>Time period has a proposed end date.</p>
 
-                <p>Domain: TimePeriod. Range: date.</p>
+                <p><strong>TimePeriod</strong> &mdash; proposedEndDate &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -775,7 +761,7 @@
 
                 <p>Time period has a proposed start date.</p>
 
-                <p>Domain: TimePeriod. Range: date.</p>
+                <p><strong>TimePeriod</strong> &mdash; proposedStartDate &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -791,169 +777,97 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>VirtualSittingDay</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>StatutoryDay</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PremiershipPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>GovernmentAdministrationPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>GovernmentAdministrationPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>VirtualSittingDay</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>StatutoryDay</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>PremiershipPeriod</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
-=======
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>VirtualSittingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>StatutoryDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -1028,34 +942,34 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            David Beamish.
+            &middot; David Beamish
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
             
-            Ned Morrell.
+            &middot; Anya Somerville
             
             
             
-            Nic Besly.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            Paul Evans.
+            &middot; Ned Morrell
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; Nic Besly
+            
+            
+            
+            &middot; Paul Evans
             
             
         </p>

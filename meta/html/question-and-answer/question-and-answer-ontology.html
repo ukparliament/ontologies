@@ -13,6 +13,9 @@
             padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -398,8 +401,7 @@
                 <p>Allows an allocation at a point in time to an answering body.</p>
                 
 
-                <p>Domain: AllocatedAnsweringBody. Range: AnsweringBody.
-                </p>
+                <p><strong>AllocatedAnsweringBody</strong> &mdash; allocatedTo &mdash; <strong>AnsweringBody</strong></p>
 
             </article>
             
@@ -414,8 +416,7 @@
                 <p>Allows a question to be assigned to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. Note that this would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly (e.g. when referring to the gender of the answering member), treating a round robin as a single question is not yet possible.</p>
                 
 
-                <p>Domain: Question. Range: AllocatedAnsweringBody.
-                </p>
+                <p><strong>Question</strong> &mdash; allocation &mdash; <strong>AllocatedAnsweringBody</strong></p>
 
             </article>
             
@@ -430,8 +431,7 @@
                 <p>Relates a question to a time-bound means of capturing the format of the answer expected (either oral or written).</p>
                 
 
-                <p>Domain: Question. Range: AnswerExpectedAs.
-                </p>
+                <p><strong>Question</strong> &mdash; answerExpectedAs &mdash; <strong>AnswerExpectedAs</strong></p>
 
             </article>
             
@@ -446,8 +446,7 @@
                 <p>Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body.</p>
                 
 
-                <p>Domain: Answer. Range: AnsweringBody.
-                </p>
+                <p><strong>Answer</strong> &mdash; answeringBody &mdash; <strong>AnsweringBody</strong></p>
 
             </article>
             
@@ -462,8 +461,7 @@
                 <p>Relates an answer to the Member who provided it. In practice this will usually be a Minister in a government department or a person occupying a government position in a non-departmental answering body.</p>
                 
 
-                <p>Domain: Answer. Range: Member.
-                </p>
+                <p><strong>Answer</strong> &mdash; answeringMember &mdash; <strong>Member</strong></p>
 
             </article>
             
@@ -478,8 +476,7 @@
                 <p>Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question.</p>
                 
 
-                <p>Domain: Answer. Range: Question.
-                </p>
+                <p><strong>Answer</strong> &mdash; answerTo &mdash; <strong>Question</strong></p>
 
             </article>
             
@@ -494,8 +491,7 @@
                 <p>Relates a Member to a question they have asked. Note that in the House of Lords the Member who tabled the question may on occasion delegate another Member to be present in the Chamber to receive the answer. Note also that whilst parliamentary questions have to be tabled with the Lords or Commons Table Offices, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately. </p>
                 
 
-                <p>Domain: Member. Range: Question.
-                </p>
+                <p><strong>Member</strong> &mdash; asks &mdash; <strong>Question</strong></p>
 
             </article>
             
@@ -510,8 +506,7 @@
                 <p>Relates an answer to a delegated answer provided by an arm&#39;s length body. The delegated answer may provide part or all of the full answer.</p>
                 
 
-                <p>Domain: Answer. Range: DelegatedAnswer.
-                </p>
+                <p><strong>Answer</strong> &mdash; delegatedAnswer &mdash; <strong>DelegatedAnswer</strong></p>
 
             </article>
             
@@ -526,8 +521,7 @@
                 <p>Relates a delegated answer to the arm&#39;s length body that provided it.</p>
                 
 
-                <p>Domain: DelegatedAnswer. Range: ArmsLengthBody.
-                </p>
+                <p><strong>DelegatedAnswer</strong> &mdash; delegatedTo &mdash; <strong>ArmsLengthBody</strong></p>
 
             </article>
             
@@ -542,8 +536,7 @@
                 <p>Relates an answer to its type i.e. a holding answer, substantive answer or corrected substantive answer.</p>
                 
 
-                <p>Domain: Answer. Range: AnswerType.
-                </p>
+                <p><strong>Answer</strong> &mdash; hasAnswerType &mdash; <strong>AnswerType</strong></p>
 
             </article>
             
@@ -558,8 +551,7 @@
                 <p>Relates a question to a piece of parliamentary business cited by the question.</p>
                 
 
-                <p>Domain: Question. Range: PursuableThing.
-                </p>
+                <p><strong>Question</strong> &mdash; inPursuantTo &mdash; <strong>PursuableThing</strong></p>
 
             </article>
             
@@ -574,8 +566,7 @@
                 <p>Relates a question to the round robin grouping it is deemed to be part of.</p>
                 
 
-                <p>Domain: Question. Range: RoundRobin.
-                </p>
+                <p><strong>Question</strong> &mdash; partOfRoundRobin &mdash; <strong>RoundRobin</strong></p>
 
             </article>
             
@@ -590,8 +581,7 @@
                 <p>Relates a written answer to a document provided by the answering body. This may be provided as an attachment to the answer text. The document might form part or all of the answer.</p>
                 
 
-                <p>Domain: Answer. Range: Document.
-                </p>
+                <p><strong>Answer</strong> &mdash; refersToDocument &mdash; <strong>Document</strong></p>
 
             </article>
             
@@ -606,8 +596,7 @@
                 <p>Relates an answer to a Library deposit i.e. the answer to a question may include a commitment to deposit papers in the Libraries of either House.</p>
                 
 
-                <p>Domain: Answer. Range: LibraryDeposit.
-                </p>
+                <p><strong>Answer</strong> &mdash; refersToLibraryDeposit &mdash; <strong>LibraryDeposit</strong></p>
 
             </article>
             
@@ -622,8 +611,7 @@
                 <p>Relates an answer to a previous answer that answers the question in whole or in part e.g. &#39;I refer the honourable X to the answer given...&#39;</p>
                 
 
-                <p>Domain: Answer. Range: Answer.
-                </p>
+                <p><strong>Answer</strong> &mdash; refersToPreviousAnswer &mdash; <strong>Answer</strong></p>
 
             </article>
             
@@ -638,8 +626,7 @@
                 <p>Relates an answer to a subsequent answer given to the same question e.g. a holding answer to a substantive answer, or a substantive answer to a corrected answer, a corrected answer to a further corrected answer. Substantive answers replace holding answers in whole, whereas corrected answers may replace a previous answer in whole or in part.</p>
                 
 
-                <p>Domain: Answer. Range: Answer.
-                </p>
+                <p><strong>Answer</strong> &mdash; replacesAnswer &mdash; <strong>Answer</strong></p>
 
             </article>
             
@@ -654,8 +641,7 @@
                 <p>Allows a transferral to specify the answering body to which the question was formerly allocated.</p>
                 
 
-                <p>Domain: Transferral. Range: AllocatedAnsweringBody.
-                </p>
+                <p><strong>Transferral</strong> &mdash; transferredFrom &mdash; <strong>AllocatedAnsweringBody</strong></p>
 
             </article>
             
@@ -670,8 +656,7 @@
                 <p>Allows a transferral to specify the answering body to which the question is subsequently allocated.</p>
                 
 
-                <p>Domain: Transferral. Range: AllocatedAnsweringBody.
-                </p>
+                <p><strong>Transferral</strong> &mdash; transferredTo &mdash; <strong>AllocatedAnsweringBody</strong></p>
 
             </article>
             
@@ -689,7 +674,7 @@
 
                 <p>Relates an answer to the actual text of the answer as supplied by the answering body.</p>
 
-                <p>Domain: Answer. Range: langString.</p>
+                <p><strong>Answer</strong> &mdash; answerText &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -700,7 +685,7 @@
 
                 <p>Relates a Parliamentary Question to a date for answer. For an ordinary written question this is expected to be within 7 days of tabling. If the Member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed.</p>
 
-                <p>Domain: ParliamentaryQuestion. Range: date.</p>
+                <p><strong>ParliamentaryQuestion</strong> &mdash; dateForAnswer &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -711,7 +696,7 @@
 
                 <p>Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For oral parliamentary questions, the headings are supplied by Lords or Commons Hansard.</p>
 
-                <p>Domain: Question. Range: langString.</p>
+                <p><strong>Question</strong> &mdash; heading &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -722,7 +707,7 @@
 
                 <p>Determines if the answer is given orally in the Chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to parliamentary questions. All other answers are always oral.</p>
 
-                <p>Domain: Answer. Range: boolean.</p>
+                <p><strong>Answer</strong> &mdash; isAnswerOral &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -733,7 +718,7 @@
 
                 <p>Determines if the Member tabling a written parliamentary question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are ordinary and the value here is false. By convention a Member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response.</p>
 
-                <p>Domain: ParliamentaryQuestion. Range: boolean.</p>
+                <p><strong>ParliamentaryQuestion</strong> &mdash; isDateForAnswerNamed &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -744,7 +729,7 @@
 
                 <p>True if the answer expected (at that period in time) is oral. False if the answer expected (at that period in time) is written.</p>
 
-                <p>Domain: AnswerExpectedAs. Range: boolean.</p>
+                <p><strong>AnswerExpectedAs</strong> &mdash; isOralAnswerExpected &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -755,7 +740,7 @@
 
                 <p>Determines if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister&#39;s appointments (respectively topical questions and Prime Minister&#39;s questions in the House of Commons). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons. The process for topical questions in the House of Lords differs slightly from that in the House of Commons, in that all questions tabled are substantive. Here topical refers to the shorter notice period allowed when tabling a question.</p>
 
-                <p>Domain: ParliamentaryQuestion. Range: boolean.</p>
+                <p><strong>ParliamentaryQuestion</strong> &mdash; isQuestionSubstantive &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -766,7 +751,7 @@
 
                 <p>Not all questions scheduled for answer during oral question time are reached during the allocated time. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given to the question. This property records the point in time at which this happens. The oral unreached at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has not been reached.</p>
 
-                <p>Domain: AnswerExpectedAs. Range: dateTime.</p>
+                <p><strong>AnswerExpectedAs</strong> &mdash; oralUnreachedAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -777,7 +762,7 @@
 
                 <p>Relates a question to the actual text of the question as asked by the Member.</p>
 
-                <p>Domain: Question. Range: langString.</p>
+                <p><strong>Question</strong> &mdash; questionText &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -788,7 +773,7 @@
 
                 <p>The point in time at which a Member who has tabled a question for oral question time declares they are unable to attend the Chamber and would like a written answer to their question. The question is removed from the schedule. The unstarred at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has been unstarred.</p>
 
-                <p>Domain: AnswerExpectedAs. Range: dateTime.</p>
+                <p><strong>AnswerExpectedAs</strong> &mdash; unstarredAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -804,36 +789,28 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
-<<<<<<< HEAD
-                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>BusinessQuestion</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>UrgentQuestion</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
-                </tr>
-                
-                <tr>
-<<<<<<< HEAD
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>ParliamentaryQuestion</td>
-=======
-                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>BusinessQuestion</td>
->>>>>>> 65c054aab42add9f9a86553f49a8ed510a5d69fc
-                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>UrgentQuestion</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Answer</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>PursuableThing</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>BusinessQuestion</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>UrgentQuestion</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
                 </tr>
                 
         </table>
