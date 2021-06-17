@@ -7,15 +7,22 @@
     <title>Parliamentary bloc ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                parliamentary-bloc/parliamentary-bloc-ontology.ttl
+                /meta/html/parliamentary-bloc/parliamentary-bloc-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Affiliation">
                 <h3>Affiliation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Affiliation">#Affiliation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="MemberWhipping">
                 <h3>Member whipping
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#MemberWhipping">#MemberWhipping</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -122,10 +129,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Pact">
                 <h3>Pact
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Pact">#Pact</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -136,10 +145,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ParliamentaryAgreement">
                 <h3>Parliamentary agreement
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ParliamentaryAgreement">#ParliamentaryAgreement</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -150,10 +161,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ParliamentaryBloc">
                 <h3>Parliamentary bloc
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ParliamentaryBloc">#ParliamentaryBloc</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -164,10 +177,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ParliamentaryParty">
                 <h3>Parliamentary party
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ParliamentaryParty">#ParliamentaryParty</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -182,10 +197,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Person">
                 <h3>Person
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Person">#Person</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -196,10 +213,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="PoliticalParty">
                 <h3>Political party
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#PoliticalParty">#PoliticalParty</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -210,10 +229,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Sistership">
                 <h3>Sistership
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Sistership">#Sistership</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/parliamentary-bloc/ -->
                 
@@ -244,8 +265,7 @@
                 <p>The relationship between a person as a Member and a whipping of that person: the acceptance of a whip by a Member.</p>
                 
 
-                <p>Domain: Person. Range: MemberWhipping.
-                </p>
+                <p><strong>Person</strong> &mdash; Accepts &mdash; <strong>MemberWhipping</strong></p>
 
             </article>
             
@@ -260,8 +280,7 @@
                 <p>The relationship between an affiliation of a Member and a parliamentary bloc, for example: between a affiliation of a Crossbencher and the Crossbenchers in the House of Lords.</p>
                 
 
-                <p>Domain: ParliamentaryBloc. Range: Affiliation.
-                </p>
+                <p><strong>ParliamentaryBloc</strong> &mdash; Has affiliation &mdash; <strong>Affiliation</strong></p>
 
             </article>
             
@@ -276,8 +295,7 @@
                 <p>The relationship between a party within Parliament and the membership of the party outside Parliament.</p>
                 
 
-                <p>Domain: ParliamentaryParty. Range: PoliticalParty.
-                </p>
+                <p><strong>ParliamentaryParty</strong> &mdash; Has association &mdash; <strong>PoliticalParty</strong></p>
 
             </article>
             
@@ -292,8 +310,7 @@
                 <p>The relationship between a political party and the inclusion of that party within a pact.</p>
                 
 
-                <p>Domain: PoliticalParty. Range: Pact.
-                </p>
+                <p><strong>PoliticalParty</strong> &mdash; Has pact &mdash; <strong>Pact</strong></p>
 
             </article>
             
@@ -308,8 +325,7 @@
                 <p>The relationship between a parliamentary party and the participation of that party in an agreement.</p>
                 
 
-                <p>Domain: ParliamentaryParty. Range: ParliamentaryAgreement.
-                </p>
+                <p><strong>ParliamentaryParty</strong> &mdash; Has parliamentary agreement &mdash; <strong>ParliamentaryAgreement</strong></p>
 
             </article>
             
@@ -324,8 +340,7 @@
                 <p>The relationship between a political party and the participation of that party within a sistership.</p>
                 
 
-                <p>Domain: PoliticalParty. Range: Sistership.
-                </p>
+                <p><strong>PoliticalParty</strong> &mdash; Has sistership &mdash; <strong>Sistership</strong></p>
 
             </article>
             
@@ -340,8 +355,7 @@
                 <p>The relationship between a whipping of a Member and a parliamentary party, for example: between the whipping of a Liberal Member and the parliamentary Liberal Party.</p>
                 
 
-                <p>Domain: MemberWhipping. Range: ParliamentaryParty.
-                </p>
+                <p><strong>MemberWhipping</strong> &mdash; Whipped to &mdash; <strong>ParliamentaryParty</strong></p>
 
             </article>
             
@@ -357,18 +371,18 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>MemberWhipping</td>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Affiliation</td>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>ParliamentaryParty</td>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>ParliamentaryBloc</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>ParliamentaryParty</td>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>ParliamentaryBloc</td>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>MemberWhipping</td>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Affiliation</td>
                 </tr>
                 
         </table>
@@ -442,34 +456,34 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            David Beamish.
+            &middot; Silver Oliver
             
             
             
-            Lucinda Maer.
+            &middot; David Beamish
             
             
             
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            <a href="https://olihawkins.com/">Oli Hawkins</a>.
+            &middot; <a href="https://olihawkins.com/">Oli Hawkins</a>
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
             
-            Silver Oliver.
+            &middot; Lucinda Maer
+            
+            
+            
+            &middot; Anya Somerville
             
             
         </p>

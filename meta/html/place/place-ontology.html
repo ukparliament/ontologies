@@ -7,15 +7,22 @@
     <title>Place ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                place/place-ontology.ttl
+                /meta/html/place/place-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -88,10 +91,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Geometry">
                 <h3>Geometry.
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Geometry">#Geometry</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/place/ -->
                 
@@ -102,10 +107,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Place">
                 <h3>Place
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Place">#Place</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/place/ -->
                 
@@ -116,10 +123,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="PlaceType">
                 <h3>PlaceType
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#PlaceType">#PlaceType</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/place/ -->
                 
@@ -150,8 +159,7 @@
                 <p>Relates a place to a place it is contained by e.g. town in constituency in county in country.</p>
                 
 
-                <p>Domain: Place. Range: Place.
-                </p>
+                <p><strong>Place</strong> &mdash; containedByPlace &mdash; <strong>Place</strong></p>
 
             </article>
             
@@ -166,8 +174,7 @@
                 <p>Relates a place to its geometric representation.</p>
                 
 
-                <p>Domain: Place. Range: Geometry.
-                </p>
+                <p><strong>Place</strong> &mdash; hasGeometry &mdash; <strong>Geometry</strong></p>
 
             </article>
             
@@ -182,8 +189,7 @@
                 <p>Relates a place to a place type.</p>
                 
 
-                <p>Domain: Place. Range: PlaceType.
-                </p>
+                <p><strong>Place</strong> &mdash; hasPlaceType &mdash; <strong>PlaceType</strong></p>
 
             </article>
             

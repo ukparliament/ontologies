@@ -7,15 +7,22 @@
     <title>Government organisation ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                government-organisation/government-organisation-ontology.ttl
+                /meta/html/government-organisation/government-organisation-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -88,10 +91,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="AttendsCabinet">
                 <h3>AttendsCabinet
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#AttendsCabinet">#AttendsCabinet</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -102,10 +107,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GovernmentIncumbency">
                 <h3>GovernmentIncumbency
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GovernmentIncumbency">#GovernmentIncumbency</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -120,10 +127,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GovernmentOrganisation">
                 <h3>GovernmentOrganisation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GovernmentOrganisation">#GovernmentOrganisation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -138,10 +147,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GovernmentPosition">
                 <h3>GovernmentPosition
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GovernmentPosition">#GovernmentPosition</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -156,10 +167,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GovernmentRank">
                 <h3>GovernmentRank
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GovernmentRank">#GovernmentRank</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -170,10 +183,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Group">
                 <h3>Group
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Group">#Group</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -184,10 +199,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Incumbency">
                 <h3>Incumbency
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Incumbency">#Incumbency</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -198,10 +215,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Position">
                 <h3>Position
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Position">#Position</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/government-organisation/ -->
                 
@@ -232,8 +251,7 @@
                 <p>Relates a government position to cabinet attendance.</p>
                 
 
-                <p>Domain: GovernmentPosition. Range: AttendsCabinet.
-                </p>
+                <p><strong>GovernmentPosition</strong> &mdash; attendsCabinet &mdash; <strong>AttendsCabinet</strong></p>
 
             </article>
             
@@ -248,8 +266,7 @@
                 <p>Relates a government position to assorted ways of describing rank.</p>
                 
 
-                <p>Domain: GovernmentPosition. Range: GovernmentRank.
-                </p>
+                <p><strong>GovernmentPosition</strong> &mdash; hasRank &mdash; <strong>GovernmentRank</strong></p>
 
             </article>
             
@@ -267,7 +284,7 @@
 
                 <p>Used to capture how the government ranks assorted positions in the cabinet. e.g. whether the Foreign Secretary is ranked above or below the Health Secretary.</p>
 
-                <p>Domain: GovernmentPosition. Range: integer.</p>
+                <p><strong>GovernmentPosition</strong> &mdash; cabinetRank &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -278,7 +295,7 @@
 
                 <p></p>
 
-                <p>Domain: GovernmentRank. Range: langString.</p>
+                <p><strong>GovernmentRank</strong> &mdash; clerksRank &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -289,7 +306,7 @@
 
                 <p>Used to determine how the government chooses to order government organisations. e.g. whether they choose to rank the Foreign Office higher than the Department of Health.</p>
 
-                <p>Domain: GovernmentOrganisation. Range: integer.</p>
+                <p><strong>GovernmentOrganisation</strong> &mdash; governmentSortOrder &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -300,7 +317,7 @@
 
                 <p>Used to determine if a government position has the authority to lay papers into Parliament.</p>
 
-                <p>Domain: GovernmentPosition. Range: boolean.</p>
+                <p><strong>GovernmentPosition</strong> &mdash; isLayingPosition &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -311,7 +328,7 @@
 
                 <p>Used to describe whether an incumbency is paid or not.</p>
 
-                <p>Domain: GovernmentIncumbency. Range: boolean.</p>
+                <p><strong>GovernmentIncumbency</strong> &mdash; isPaid &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -322,7 +339,7 @@
 
                 <p></p>
 
-                <p>Domain: GovernmentRank. Range: integer.</p>
+                <p><strong>GovernmentRank</strong> &mdash; ministerialRank &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -333,7 +350,7 @@
 
                 <p>Used to determine how the official opposition chooses to order government organisations. e.g. whether they choose to rank the Foreign Office higher than the Department of Health.</p>
 
-                <p>Domain: GovernmentOrganisation. Range: integer.</p>
+                <p><strong>GovernmentOrganisation</strong> &mdash; oppositionSortOrder &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -344,7 +361,7 @@
 
                 <p></p>
 
-                <p>Domain: GovernmentRank. Range: integer.</p>
+                <p><strong>GovernmentRank</strong> &mdash; orderRank &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -355,7 +372,7 @@
 
                 <p>Used to determine whether a government position is paid to attend cabinet or not.</p>
 
-                <p>Domain: GovernmentPosition. Range: boolean.</p>
+                <p><strong>GovernmentPosition</strong> &mdash; paidToAttendCabinet &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -366,7 +383,7 @@
 
                 <p></p>
 
-                <p>Domain: GovernmentRank. Range: langString.</p>
+                <p><strong>GovernmentRank</strong> &mdash; statsRank &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -382,7 +399,7 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
@@ -392,13 +409,13 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentPosition</td>
-                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Position</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentIncumbency</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Incumbency</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentIncumbency</td>
-                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Incumbency</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentPosition</td>
+                    <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Position</td>
                 </tr>
                 
         </table>

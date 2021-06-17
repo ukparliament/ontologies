@@ -7,15 +7,22 @@
     <title>Business item ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                business-item/business-item-ontology.ttl
+                /meta/html/business-item/business-item-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="BusinessItem">
                 <h3>Business item
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#BusinessItem">#BusinessItem</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/business-item/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="BusinessItemSeries">
                 <h3>Business item series
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#BusinessItemSeries">#BusinessItemSeries</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/business-item/ -->
                 
@@ -118,10 +125,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="BusinessItemType">
                 <h3>Business item type
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#BusinessItemType">#BusinessItemType</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/business-item/ -->
                 
@@ -132,10 +141,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="CalendaredEvent">
                 <h3>Calendared event
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#CalendaredEvent">#CalendaredEvent</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/business-item/ -->
                 
@@ -146,10 +157,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Document">
                 <h3>Document
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Document">#Document</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/business-item/ -->
                 
@@ -160,10 +173,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Place">
                 <h3>Place
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Place">#Place</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/business-item/ -->
                 
@@ -194,8 +209,7 @@
                 <p>Describes the process of setting a time or date at which a business item is expected to take place.</p>
                 
 
-                <p>Domain: BusinessItem. Range: CalendaredEvent.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Calendarisation &mdash; <strong>CalendaredEvent</strong></p>
 
             </article>
             
@@ -210,8 +224,7 @@
                 <p>Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit.</p>
                 
 
-                <p>Domain: BusinessItem. Range: BusinessItem.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Contains business item &mdash; <strong>BusinessItem</strong></p>
 
             </article>
             
@@ -226,8 +239,7 @@
                 <p>Relates a calendared event to a subsequent calendared event</p>
                 
 
-                <p>Domain: CalendaredEvent. Range: CalendaredEvent.
-                </p>
+                <p><strong>CalendaredEvent</strong> &mdash; Followed by &mdash; <strong>CalendaredEvent</strong></p>
 
             </article>
             
@@ -242,8 +254,7 @@
                 <p>Relates a business item to its type.</p>
                 
 
-                <p>Domain: BusinessItem. Range: BusinessItemType.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Has business item type &mdash; <strong>BusinessItemType</strong></p>
 
             </article>
             
@@ -258,8 +269,7 @@
                 <p>Relates a business item to a business item series it is part of.</p>
                 
 
-                <p>Domain: BusinessItem. Range: BusinessItemSeries.
-                </p>
+                <p><strong>BusinessItem</strong> &mdash; Part of series &mdash; <strong>BusinessItemSeries</strong></p>
 
             </article>
             
@@ -274,8 +284,7 @@
                 <p>Relates a document to the calendared event it records.</p>
                 
 
-                <p>Domain: Document. Range: CalendaredEvent.
-                </p>
+                <p><strong>Document</strong> &mdash; Record of &mdash; <strong>CalendaredEvent</strong></p>
 
             </article>
             
@@ -290,8 +299,7 @@
                 <p>Relates a calendared event to the place it occurs.</p>
                 
 
-                <p>Domain: CalendaredEvent. Range: Place.
-                </p>
+                <p><strong>CalendaredEvent</strong> &mdash; Takes place in &mdash; <strong>Place</strong></p>
 
             </article>
             
@@ -309,7 +317,7 @@
 
                 <p>The time at which a calendared event was cancelled.</p>
 
-                <p>Domain: CalendaredEvent. Range: dateTime.</p>
+                <p><strong>CalendaredEvent</strong> &mdash; Cancelled at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -320,7 +328,7 @@
 
                 <p>The time at which an agenda item was completed.</p>
 
-                <p>Domain: CalendaredEvent. Range: dateTime.</p>
+                <p><strong>CalendaredEvent</strong> &mdash; Disposed of at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -331,7 +339,7 @@
 
                 <p>A boolean which is true when a calendared event was not reached or became unavailable for disposal.</p>
 
-                <p>Domain: CalendaredEvent. Range: boolean.</p>
+                <p><strong>CalendaredEvent</strong> &mdash; Not reached &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -415,22 +423,22 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Silver Oliver
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            Silver Oliver.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
+            &middot; Anya Somerville
             
             
         </p>

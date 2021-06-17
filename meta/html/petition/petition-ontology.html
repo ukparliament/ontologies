@@ -7,15 +7,22 @@
     <title>Petition ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                petition/petition-ontology.ttl
+                /meta/html/petition/petition-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -88,10 +91,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Approval">
                 <h3>Approval
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Approval">#Approval</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -106,10 +111,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Debate">
                 <h3>Debate
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Debate">#Debate</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -120,10 +127,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GovernmentResponse">
                 <h3>GovernmentResponse
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GovernmentResponse">#GovernmentResponse</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -134,10 +143,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="LocatedSignatureCount">
                 <h3>LocatedSignatureCount
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#LocatedSignatureCount">#LocatedSignatureCount</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -148,10 +159,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Moderation">
                 <h3>Moderation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Moderation">#Moderation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -162,10 +175,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ModerationOption">
                 <h3>ModerationOption
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ModerationOption">#ModerationOption</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -176,10 +191,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Person">
                 <h3>Person
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Person">#Person</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -190,10 +207,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Petition">
                 <h3>Petition
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Petition">#Petition</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -204,10 +223,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Place">
                 <h3>Place
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Place">#Place</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -218,10 +239,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Rejection">
                 <h3>Rejection
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Rejection">#Rejection</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -236,10 +259,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Threshold">
                 <h3>Threshold
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Threshold">#Threshold</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -250,10 +275,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ThresholdAttainment">
                 <h3>ThresholdAttainment
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ThresholdAttainment">#ThresholdAttainment</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/petition/ -->
                 
@@ -284,8 +311,7 @@
                 <p>Relates a located signature count to the place the signatures came from.</p>
                 
 
-                <p>Domain: LocatedSignatureCount. Range: Place.
-                </p>
+                <p><strong>LocatedSignatureCount</strong> &mdash; fromPlace &mdash; <strong>Place</strong></p>
 
             </article>
             
@@ -300,8 +326,7 @@
                 <p>Relates a petition to the person who created it.</p>
                 
 
-                <p>Domain: Petition. Range: Person.
-                </p>
+                <p><strong>Petition</strong> &mdash; hasCreator &mdash; <strong>Person</strong></p>
 
             </article>
             
@@ -316,8 +341,7 @@
                 <p>Relates a petition to a debate.</p>
                 
 
-                <p>Domain: Petition. Range: Debate.
-                </p>
+                <p><strong>Petition</strong> &mdash; hasDebate &mdash; <strong>Debate</strong></p>
 
             </article>
             
@@ -332,8 +356,7 @@
                 <p>Relates a petition to a Government response.</p>
                 
 
-                <p>Domain: Petition. Range: GovernmentResponse.
-                </p>
+                <p><strong>Petition</strong> &mdash; hasGovernmentResponse &mdash; <strong>GovernmentResponse</strong></p>
 
             </article>
             
@@ -348,8 +371,7 @@
                 <p>Relates a petition to a located signature count.</p>
                 
 
-                <p>Domain: Petition. Range: LocatedSignatureCount.
-                </p>
+                <p><strong>Petition</strong> &mdash; hasLocatedSignatureCount &mdash; <strong>LocatedSignatureCount</strong></p>
 
             </article>
             
@@ -364,8 +386,7 @@
                 <p>Relates a petition to its moderation states.</p>
                 
 
-                <p>Domain: Petition. Range: Moderation.
-                </p>
+                <p><strong>Petition</strong> &mdash; hasModeration &mdash; <strong>Moderation</strong></p>
 
             </article>
             
@@ -380,8 +401,7 @@
                 <p>Relates a moderation to its moderation option.</p>
                 
 
-                <p>Domain: Moderation. Range: ModerationOption.
-                </p>
+                <p><strong>Moderation</strong> &mdash; hasModerationOption &mdash; <strong>ModerationOption</strong></p>
 
             </article>
             
@@ -396,8 +416,7 @@
                 <p>Relates a threshold attainment to a threshold.</p>
                 
 
-                <p>Domain: ThresholdAttainment. Range: Threshold.
-                </p>
+                <p><strong>ThresholdAttainment</strong> &mdash; hasThreshold &mdash; <strong>Threshold</strong></p>
 
             </article>
             
@@ -412,8 +431,7 @@
                 <p>Relates a petition to a threshold attainment.</p>
                 
 
-                <p>Domain: Petition. Range: ThresholdAttainment.
-                </p>
+                <p><strong>Petition</strong> &mdash; hasThresholdAttainment &mdash; <strong>ThresholdAttainment</strong></p>
 
             </article>
             
@@ -431,7 +449,7 @@
 
                 <p>The action text (title) of the petition entered by the petition creator.</p>
 
-                <p>Domain: Petition. Range: langString.</p>
+                <p><strong>Petition</strong> &mdash; action &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -442,7 +460,7 @@
 
                 <p>Additional text to justify the petition entered by the petition creator.</p>
 
-                <p>Domain: Petition. Range: langString.</p>
+                <p><strong>Petition</strong> &mdash; additionalDetails &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -453,7 +471,7 @@
 
                 <p>A background explanation of why the petition was created entered by the petition creator.</p>
 
-                <p>Domain: Petition. Range: langString.</p>
+                <p><strong>Petition</strong> &mdash; background &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -464,7 +482,7 @@
 
                 <p>Date time at which the petition was closed.</p>
 
-                <p>Domain: Petition. Range: dateTime.</p>
+                <p><strong>Petition</strong> &mdash; closedAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -475,7 +493,7 @@
 
                 <p>A number identifying a specific rejection code.</p>
 
-                <p>Domain: Rejection. Range: integer.</p>
+                <p><strong>Rejection</strong> &mdash; rejectionCode &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -486,7 +504,7 @@
 
                 <p>Written explanation of why a petition was rejected.</p>
 
-                <p>Domain: Rejection. Range: langString.</p>
+                <p><strong>Rejection</strong> &mdash; rejectionDetails &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -497,7 +515,7 @@
 
                 <p>Number of signatures on a located signature count.</p>
 
-                <p>Domain: LocatedSignatureCount. Range: integer.</p>
+                <p><strong>LocatedSignatureCount</strong> &mdash; signatureCount &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -508,7 +526,7 @@
 
                 <p>Date time at which a located signature count was retrieved from the petitions API.</p>
 
-                <p>Domain: LocatedSignatureCount. Range: dateTime.</p>
+                <p><strong>LocatedSignatureCount</strong> &mdash; signatureCountRetrievedAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -519,7 +537,7 @@
 
                 <p>Date time at which a threshold is met.</p>
 
-                <p>Domain: ThresholdAttainment. Range: dateTime.</p>
+                <p><strong>ThresholdAttainment</strong> &mdash; thresholdAttainmentAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -530,7 +548,7 @@
 
                 <p>The number of signatures required to meet a threshold.</p>
 
-                <p>Domain: Threshold. Range: integer.</p>
+                <p><strong>Threshold</strong> &mdash; thresholdSignatureNumber &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -546,7 +564,7 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 

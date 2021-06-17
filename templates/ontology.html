@@ -7,15 +7,22 @@
     <title>{{ title }}</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -51,9 +54,9 @@
     <header>
         <nav>
             <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
+                <a href="{{ root_url }}">ukparliament.github.io/ontologies</a>
                 <br>
-                {{ ttlpath }}
+                {{ htmlpath }}
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
-            <article class="class">
+            <article class="class" id="{{ class.idString }}">
                 <h3>{{ class.label }}
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#{{ class.idString }}">#{{ class.idString }}</a>
+                    
                 </h3>
                 <!-- {{ class.isDefinedBy }} -->
                 {% if class.comment %}
@@ -131,8 +136,7 @@
                 <p>{{ objectproperty.comment }}</p>
                 {% endif %}
 
-                <p>Domain: {{ objectproperty.domain }}. Range: {{ objectproperty.range }}.
-                </p>
+                <p><strong>{{ objectproperty.domain }}</strong> &mdash; {{ objectproperty.label }} &mdash; <strong>{{ objectproperty.range }}</strong></p>
 
             </article>
             {% endfor %}
@@ -150,7 +154,7 @@
 
                 <p>{{ dataproperty.comment }}</p>
 
-                <p>Domain: {{ dataproperty.domain }}. Range: {{ dataproperty.range }}.</p>
+                <p><strong>{{ dataproperty.domain }}</strong> &mdash; {{ dataproperty.label }} &mdash; <strong>{{ dataproperty.range }}</strong></p>
 
 
             </article>
@@ -196,7 +200,7 @@
         {% endif %}
 
         {% if subClasses %}
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 {% for subClass in subClasses %}
@@ -241,12 +245,12 @@
             WebVOWL. </p>
         {% if makers %}
         <p id="makers">
-
-            {% for maker in makers|sort(attribute='name') %}
+            Made by
+            {% for maker in makers %}
             {% if maker.homepage|e != "None" %}
-            <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>.
+            &middot; <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
             {% else %}
-            {{ maker.name|e }}.
+            &middot; {{ maker.name|e }}
             {% endif %}
             {% endfor %}
         </p>

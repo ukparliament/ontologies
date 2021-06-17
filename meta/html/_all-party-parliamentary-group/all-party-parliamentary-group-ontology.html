@@ -7,15 +7,22 @@
     <title>All Party Parliamentary Group ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                _all-party-parliamentary-group/all-party-parliamentary-group-ontology.ttl
+                /meta/html/_all-party-parliamentary-group/all-party-parliamentary-group-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Agent">
                 <h3>Agent
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Agent">#Agent</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="APPG">
                 <h3>All Party Parliamentary Group
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#APPG">#APPG</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -122,10 +129,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="APPGCategory">
                 <h3>All Party Parliamentary Group Category
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#APPGCategory">#APPGCategory</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -136,10 +145,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="BenefitInKind">
                 <h3>BenefitInKind
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#BenefitInKind">#BenefitInKind</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -154,10 +165,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="FinancialBenefit">
                 <h3>FinancialBenefit
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#FinancialBenefit">#FinancialBenefit</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -172,10 +185,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="FinancialReportingYear">
                 <h3>FinancialReportingYear
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#FinancialReportingYear">#FinancialReportingYear</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -186,10 +201,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Group">
                 <h3>Group
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Group">#Group</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -200,10 +217,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Member">
                 <h3>Member
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Member">#Member</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -214,10 +233,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="RegisteredBenefit">
                 <h3>RegisteredBenefit
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#RegisteredBenefit">#RegisteredBenefit</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -228,10 +249,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="StatusType">
                 <h3>StatusType
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#StatusType">#StatusType</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/appg/ -->
                 
@@ -262,8 +285,7 @@
                 <p>Relates an APPG to its category, such as a country or subject related APPG.</p>
                 
 
-                <p>Domain: APPG. Range: APPGCategory.
-                </p>
+                <p><strong>APPG</strong> &mdash; hasAllPartyParliamentaryGroupCategory &mdash; <strong>APPGCategory</strong></p>
 
             </article>
             
@@ -278,8 +300,7 @@
                 <p>Relates an APPG to an secondary enquiry point for that APPG. This may be a contact within or outside Parliament.</p>
                 
 
-                <p>Domain: APPG. Range: Agent.
-                </p>
+                <p><strong>APPG</strong> &mdash; hasPublicEnquiryPoint &mdash; <strong>Agent</strong></p>
 
             </article>
             
@@ -294,8 +315,7 @@
                 <p>Relates an APPG to its registered contact. This is normally the Chair of the APPG, therefore a member.</p>
                 
 
-                <p>Domain: APPG. Range: Member.
-                </p>
+                <p><strong>APPG</strong> &mdash; hasRegisteredContact &mdash; <strong>Member</strong></p>
 
             </article>
             
@@ -310,8 +330,7 @@
                 <p>Relates an external group to an APPG where they are providing secretariat (administrative) services to that APPG.</p>
                 
 
-                <p>Domain: Group. Range: APPG.
-                </p>
+                <p><strong>Group</strong> &mdash; hasSecretariatRole &mdash; <strong>APPG</strong></p>
 
             </article>
             
@@ -326,8 +345,7 @@
                 <p>Relates an All Party ParliamentaryGroup to its status type.</p>
                 
 
-                <p>Domain: APPG. Range: StatusType.
-                </p>
+                <p><strong>APPG</strong> &mdash; hasStatusType &mdash; <strong>StatusType</strong></p>
 
             </article>
             
@@ -342,8 +360,7 @@
                 <p>Relates an APPG to a benefit received.</p>
                 
 
-                <p>Domain: APPG. Range: RegisteredBenefit.
-                </p>
+                <p><strong>APPG</strong> &mdash; receivedBenefit &mdash; <strong>RegisteredBenefit</strong></p>
 
             </article>
             
@@ -358,8 +375,7 @@
                 <p>Relates a registered benefit to the financial reporting year it falls into.</p>
                 
 
-                <p>Domain: RegisteredBenefit. Range: FinancialReportingYear.
-                </p>
+                <p><strong>RegisteredBenefit</strong> &mdash; reportedIn &mdash; <strong>FinancialReportingYear</strong></p>
 
             </article>
             
@@ -377,7 +393,7 @@
 
                 <p>The currency the benefit value is expressed in.</p>
 
-                <p>Domain: RegisteredBenefit. Range: string.</p>
+                <p><strong>RegisteredBenefit</strong> &mdash; benefitCurrency &mdash; <strong>string</strong></p>
 
 
             </article>
@@ -388,7 +404,7 @@
 
                 <p>The value of the registered benefit.</p>
 
-                <p>Domain: RegisteredBenefit. Range: integer.</p>
+                <p><strong>RegisteredBenefit</strong> &mdash; benefitValue &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -399,7 +415,7 @@
 
                 <p>Date a registered benefit was received.</p>
 
-                <p>Domain: RegisteredBenefit. Range: dateTime.</p>
+                <p><strong>RegisteredBenefit</strong> &mdash; dateReceived &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -410,7 +426,7 @@
 
                 <p>Date a benefit was registered.</p>
 
-                <p>Domain: RegisteredBenefit. Range: dateTime.</p>
+                <p><strong>RegisteredBenefit</strong> &mdash; dateRegistered &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -426,13 +442,13 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>appg/<wbr>APPG</td>
-                    <td>/<wbr>ontologies/<wbr>appg/<wbr>Group</td>
+                    <td>/<wbr>ontologies/<wbr>appg/<wbr>FinancialBenefit</td>
+                    <td>/<wbr>ontologies/<wbr>appg/<wbr>RegisteredBenefit</td>
                 </tr>
                 
                 <tr>
@@ -441,8 +457,8 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>appg/<wbr>FinancialBenefit</td>
-                    <td>/<wbr>ontologies/<wbr>appg/<wbr>RegisteredBenefit</td>
+                    <td>/<wbr>ontologies/<wbr>appg/<wbr>APPG</td>
+                    <td>/<wbr>ontologies/<wbr>appg/<wbr>Group</td>
                 </tr>
                 
         </table>
@@ -516,18 +532,18 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Alison Desimone.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
+            &middot; Alison Desimone
             
             
         </p>

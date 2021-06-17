@@ -7,15 +7,22 @@
     <title>Image ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                _image/image-ontology.ttl
+                /meta/html/_image/image-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -88,10 +91,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Agent">
                 <h3>Agent
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Agent">#Agent</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/agency/ -->
                 
@@ -102,10 +107,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="GeoLocation">
                 <h3>GeoLocation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#GeoLocation">#GeoLocation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -120,10 +127,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Image">
                 <h3>Image
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Image">#Image</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -134,10 +143,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ImageCoordinate">
                 <h3>ImageCoordinate
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ImageCoordinate">#ImageCoordinate</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -148,10 +159,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ImageCreator">
                 <h3>ImageCreator
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ImageCreator">#ImageCreator</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -166,10 +179,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ImageOwner">
                 <h3>ImageOwner
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ImageOwner">#ImageOwner</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -184,10 +199,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ImageResolution">
                 <h3>ImageResolution
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ImageResolution">#ImageResolution</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -198,10 +215,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ImageSubject">
                 <h3>ImageSubject
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ImageSubject">#ImageSubject</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -212,10 +231,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ImageZone">
                 <h3>ImageZone
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ImageZone">#ImageZone</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -226,10 +247,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Logo">
                 <h3>Logo
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Logo">#Logo</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -240,10 +263,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Photograph">
                 <h3>Photograph
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Photograph">#Photograph</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -258,10 +283,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="UsageLicence">
                 <h3>UsageLicence
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#UsageLicence">#UsageLicence</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/image/ -->
                 
@@ -293,8 +320,7 @@
 
                 
 
-                <p>Domain: Agent. Range: Logo.
-                </p>
+                <p><strong>Agent</strong> &mdash; agentHasLogo &mdash; <strong>Logo</strong></p>
 
             </article>
             
@@ -307,8 +333,7 @@
 
                 
 
-                <p>Domain: ImageCoordinate. Range: ImageZone.
-                </p>
+                <p><strong>ImageCoordinate</strong> &mdash; imageCoordinateHasImageZone &mdash; <strong>ImageZone</strong></p>
 
             </article>
             
@@ -321,8 +346,7 @@
 
                 
 
-                <p>Domain: Image. Range: ImageCoordinate.
-                </p>
+                <p><strong>Image</strong> &mdash; imageHasImageCoordinate &mdash; <strong>ImageCoordinate</strong></p>
 
             </article>
             
@@ -335,8 +359,7 @@
 
                 
 
-                <p>Domain: Image. Range: ImageCreator.
-                </p>
+                <p><strong>Image</strong> &mdash; imageHasImageCreator &mdash; <strong>ImageCreator</strong></p>
 
             </article>
             
@@ -349,8 +372,7 @@
 
                 
 
-                <p>Domain: Image. Range: ImageOwner.
-                </p>
+                <p><strong>Image</strong> &mdash; imageHasImageOwner &mdash; <strong>ImageOwner</strong></p>
 
             </article>
             
@@ -363,8 +385,7 @@
 
                 
 
-                <p>Domain: Image. Range: ImageResolution.
-                </p>
+                <p><strong>Image</strong> &mdash; imageHasImageResolution &mdash; <strong>ImageResolution</strong></p>
 
             </article>
             
@@ -380,8 +401,7 @@
 
                 
 
-                <p>Domain: Image. Range: ImageSubject.
-                </p>
+                <p><strong>Image</strong> &mdash; imageHasImageSubject &mdash; <strong>ImageSubject</strong></p>
 
             </article>
             
@@ -394,8 +414,7 @@
 
                 
 
-                <p>Domain: Image. Range: UsageLicence.
-                </p>
+                <p><strong>Image</strong> &mdash; imageHasUsageLicence &mdash; <strong>UsageLicence</strong></p>
 
             </article>
             
@@ -411,8 +430,7 @@
 
                 
 
-                <p>Domain: ImageZone. Range: ImageSubject.
-                </p>
+                <p><strong>ImageZone</strong> &mdash; imageZoneHasImageSubject &mdash; <strong>ImageSubject</strong></p>
 
             </article>
             
@@ -425,8 +443,7 @@
 
                 
 
-                <p>Domain: Photograph. Range: GeoLocation.
-                </p>
+                <p><strong>Photograph</strong> &mdash; photographHasGeoLocation &mdash; <strong>GeoLocation</strong></p>
 
             </article>
             
@@ -444,7 +461,7 @@
 
                 <p>Number of bits per component in each channel.</p>
 
-                <p>Domain: Image. Range: integer.</p>
+                <p><strong>Image</strong> &mdash; bitsPerSample &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -455,7 +472,7 @@
 
                 <p>None</p>
 
-                <p>Domain: Image. Range: string.</p>
+                <p><strong>Image</strong> &mdash; compression &mdash; <strong>string</strong></p>
 
 
             </article>
@@ -466,7 +483,7 @@
 
                 <p>None</p>
 
-                <p>Domain: Image. Range: dateTime.</p>
+                <p><strong>Image</strong> &mdash; imageCreatedAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -477,7 +494,7 @@
 
                 <p>Image height in pixels</p>
 
-                <p>Domain: Image. Range: integer.</p>
+                <p><strong>Image</strong> &mdash; imageLength &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -488,7 +505,7 @@
 
                 <p>None</p>
 
-                <p>Domain: ImageResolution. Range: string.</p>
+                <p><strong>ImageResolution</strong> &mdash; imageResolutionUnit &mdash; <strong>string</strong></p>
 
 
             </article>
@@ -499,7 +516,7 @@
 
                 <p>Software used to create image</p>
 
-                <p>Domain: Image. Range: integer.</p>
+                <p><strong>Image</strong> &mdash; imageSoftware &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -510,7 +527,7 @@
 
                 <p>None</p>
 
-                <p>Domain: Image. Range: string.</p>
+                <p><strong>Image</strong> &mdash; imageStorageLocation &mdash; <strong>string</strong></p>
 
 
             </article>
@@ -521,7 +538,7 @@
 
                 <p>Image width in pixels</p>
 
-                <p>Domain: Image. Range: integer.</p>
+                <p><strong>Image</strong> &mdash; imageWidth &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -532,7 +549,7 @@
 
                 <p>None</p>
 
-                <p>Domain: ImageResolution. Range: integer.</p>
+                <p><strong>ImageResolution</strong> &mdash; imageXResolution &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -543,7 +560,7 @@
 
                 <p>None</p>
 
-                <p>Domain: ImageResolution. Range: integer.</p>
+                <p><strong>ImageResolution</strong> &mdash; imageYResolution &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -554,7 +571,7 @@
 
                 <p>None</p>
 
-                <p>Domain: Image. Range: integer.</p>
+                <p><strong>Image</strong> &mdash; samplesPerPixel &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -565,7 +582,7 @@
 
                 <p>None</p>
 
-                <p>Domain: UsageLicence. Range: string.</p>
+                <p><strong>UsageLicence</strong> &mdash; usageLicenceDetails &mdash; <strong>string</strong></p>
 
 
             </article>
@@ -576,7 +593,7 @@
 
                 <p>None</p>
 
-                <p>Domain: UsageLicence. Range: string.</p>
+                <p><strong>UsageLicence</strong> &mdash; usageLicenceName &mdash; <strong>string</strong></p>
 
 
             </article>
@@ -592,19 +609,9 @@
         
 
         
-        <section id="subClasses">
+        <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>image/<wbr>ImageOwner</td>
-                    <td>/<wbr>ontologies/<wbr>image/<wbr>Agent</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>image/<wbr>Photograph</td>
-                    <td>/<wbr>ontologies/<wbr>image/<wbr>Image</td>
-                </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>GeoLocation</td>
@@ -612,8 +619,18 @@
                 </tr>
                 
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>ImageOwner</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Agent</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>ImageCreator</td>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>Agent</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Photograph</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Image</td>
                 </tr>
                 
         </table>

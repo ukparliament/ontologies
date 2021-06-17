@@ -7,15 +7,22 @@
     <title>Contribution ontology</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                contribution/contribution-ontology.ttl
+                /meta/html/contribution/contribution-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -90,10 +93,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Agent">
                 <h3>Agent
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Agent">#Agent</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/contribution/ -->
                 
@@ -104,10 +109,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Contribution">
                 <h3>Contribution
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Contribution">#Contribution</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/contribution/ -->
                 
@@ -118,10 +125,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ContributionRole">
                 <h3>ContributionRole
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ContributionRole">#ContributionRole</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/contribution/ -->
                 
@@ -132,10 +141,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Incumbency">
                 <h3>Incumbency
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Incumbency">#Incumbency</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/contribution/ -->
                 
@@ -166,8 +177,7 @@
                 <p>Relates a contribution to the type of contribution made.</p>
                 
 
-                <p>Domain: Contribution. Range: ContributionRole.
-                </p>
+                <p><strong>Contribution</strong> &mdash; hasContributionRole &mdash; <strong>ContributionRole</strong></p>
 
             </article>
             
@@ -182,8 +192,7 @@
                 <p>Relates a contribution to an incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation.</p>
                 
 
-                <p>Domain: Contribution. Range: Incumbency.
-                </p>
+                <p><strong>Contribution</strong> &mdash; inCapacity &mdash; <strong>Incumbency</strong></p>
 
             </article>
             
@@ -198,8 +207,7 @@
                 <p>Relates a person or group to a contribution they&#39;ve made.</p>
                 
 
-                <p>Domain: Agent. Range: Contribution.
-                </p>
+                <p><strong>Agent</strong> &mdash; makesContribution &mdash; <strong>Contribution</strong></p>
 
             </article>
             
@@ -217,7 +225,7 @@
 
                 <p>Relates a contribution type to its display order.</p>
 
-                <p>Domain: ContributionType. Range: integer.</p>
+                <p><strong>ContributionType</strong> &mdash; Display order &mdash; <strong>integer</strong></p>
 
 
             </article>
@@ -228,7 +236,7 @@
 
                 <p>Relates a contribution to whether not that contribution is made public. The is public flag will by necessity not be public.</p>
 
-                <p>Domain: Contribution. Range: boolean.</p>
+                <p><strong>Contribution</strong> &mdash; Is public &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -312,18 +320,18 @@
             WebVOWL. </p>
         
         <p id="makers">
-
+            Made by
             
             
-            Anya Somerville.
-            
-            
-            
-            <a href="http://smethur.st/">Michael Smethurst</a>.
+            &middot; Anya Somerville
             
             
             
-            <a href="https://robert-brook.com/">Robert Brook</a>.
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             
             
         </p>

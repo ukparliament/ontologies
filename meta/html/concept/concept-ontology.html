@@ -7,15 +7,22 @@
     <title>Concept ontology - deprecated</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            max-width: 48rem;
+            font-family: system-ui;
+            max-width: 42rem;
             margin: 1rem;
-            padding: 1.4rem;
-            font-size: 1.2rem;
+            padding: 1rem;
         }
 
+        a {text-decoration: none;}
+
+        a:hover {text-decoration: underline;}
 
         span.subhead {
+            font-weight: normal;
+        }
+
+        a.link {
+            float:right;
             font-weight: normal;
         }
 
@@ -30,13 +37,9 @@
         }
 
 
-        h2 {
-            padding-top: 1rem;
+        article {
+            padding: 0.5rem 0;
 
-        }
-
-        h3 {
-            padding-top: 1rem;
         }
 
         ul {
@@ -53,7 +56,7 @@
             <p>
                 <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
                 <br>
-                concept/concept-ontology.ttl
+                /meta/html/concept/concept-ontology.html
             </p>
             <p>
                 <a href="#classes">Classes</a> |
@@ -88,10 +91,12 @@
             <h2>Classes</h2>
 
             
-            <article class="class">
+            <article class="class" id="Agent">
                 <h3>Agent
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Agent">#Agent</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -102,10 +107,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="AnnotatableThing">
                 <h3>AnnotatableThing
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#AnnotatableThing">#AnnotatableThing</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -116,10 +123,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Annotation">
                 <h3>Annotation
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Annotation">#Annotation</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -130,10 +139,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Concept">
                 <h3>Concept
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Concept">#Concept</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -144,10 +155,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="ConceptScheme">
                 <h3>ConceptScheme
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#ConceptScheme">#ConceptScheme</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -158,10 +171,12 @@
 
             </article>
             
-            <article class="class">
+            <article class="class" id="Thing">
                 <h3>Thing
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#Thing">#Thing</a>
+                    
                 </h3>
                 <!-- http://parliament.uk/ontologies/concept/ -->
                 
@@ -192,8 +207,7 @@
                 <p>Relates an annotation to a agent.</p>
                 
 
-                <p>Domain: Annotation. Range: Agent.
-                </p>
+                <p><strong>Annotation</strong> &mdash; annotatedBy &mdash; <strong>Agent</strong></p>
 
             </article>
             
@@ -208,8 +222,7 @@
                 <p>Relates an annotatable thing to an annotation.</p>
                 
 
-                <p>Domain: AnnotatableThing. Range: Annotation.
-                </p>
+                <p><strong>AnnotatableThing</strong> &mdash; hasAnnotation &mdash; <strong>Annotation</strong></p>
 
             </article>
             
@@ -224,8 +237,7 @@
                 <p>Relates a concept to a broader concept.</p>
                 
 
-                <p>Domain: Concept. Range: Concept.
-                </p>
+                <p><strong>Concept</strong> &mdash; hasBroaderConcept &mdash; <strong>Concept</strong></p>
 
             </article>
             
@@ -240,8 +252,7 @@
                 <p>Relates an annotation to a concept.</p>
                 
 
-                <p>Domain: Annotation. Range: Concept.
-                </p>
+                <p><strong>Annotation</strong> &mdash; hasConcept &mdash; <strong>Concept</strong></p>
 
             </article>
             
@@ -256,8 +267,7 @@
                 <p>Relates a concept to a real world thing that is its focus e.g. The concept / library subject term Winston Churchill to the person Winston Churchill.</p>
                 
 
-                <p>Domain: Concept. Range: Thing.
-                </p>
+                <p><strong>Concept</strong> &mdash; hasFocus &mdash; <strong>Thing</strong></p>
 
             </article>
             
@@ -272,8 +282,7 @@
                 <p>Relates a concept to another concept.</p>
                 
 
-                <p>Domain: Concept. Range: Concept.
-                </p>
+                <p><strong>Concept</strong> &mdash; hasRelatedConcept &mdash; <strong>Concept</strong></p>
 
             </article>
             
@@ -288,8 +297,7 @@
                 <p>Relates a concept to a concept scheme.</p>
                 
 
-                <p>Domain: Concept. Range: ConceptScheme.
-                </p>
+                <p><strong>Concept</strong> &mdash; inConceptScheme &mdash; <strong>ConceptScheme</strong></p>
 
             </article>
             
@@ -307,7 +315,7 @@
 
                 <p>An alternative label.</p>
 
-                <p>Domain: Concept. Range: langString.</p>
+                <p><strong>Concept</strong> &mdash; alternativeLabel &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -318,7 +326,7 @@
 
                 <p>Date time an annotation was created.</p>
 
-                <p>Domain: Annotation. Range: dateTime.</p>
+                <p><strong>Annotation</strong> &mdash; annotatedAt &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -329,7 +337,7 @@
 
                 <p>A history note. Textual description of editorial changes to a concept over time.</p>
 
-                <p>Domain: Concept. Range: langString.</p>
+                <p><strong>Concept</strong> &mdash; historyNote &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -340,7 +348,7 @@
 
                 <p>A note for indexers. Provides additional guidance on use of the concept.</p>
 
-                <p>Domain: Concept. Range: langString.</p>
+                <p><strong>Concept</strong> &mdash; indexerNote &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -351,7 +359,7 @@
 
                 <p>A scope note. Textual description of the intended usage of a concept.</p>
 
-                <p>Domain: Concept. Range: langString.</p>
+                <p><strong>Concept</strong> &mdash; scopeNote &mdash; <strong>langString</strong></p>
 
 
             </article>
@@ -362,7 +370,7 @@
 
                 <p>To allow for annotations that reference free text tags rather than controlled concepts.</p>
 
-                <p>Domain: Annotation. Range: langString.</p>
+                <p><strong>Annotation</strong> &mdash; uncontrolledTag &mdash; <strong>langString</strong></p>
 
 
             </article>
