@@ -18,6 +18,11 @@
             font-weight: normal;
         }
 
+        a.link {
+            float:right;
+            font-weight: normal;
+        }
+
         main {
             padding: 1rem 0;
         }
@@ -89,10 +94,12 @@
             <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
-            <article class="class" id="{{ class.idString }}"> #{{ class.idString }}
+            <article class="class" id="{{ class.idString }}">
                 <h3>{{ class.label }}
 
                     <span class="subhead">class</span>
+                    <a class="link" href="#{{ class.idString }}">#{{ class.idString }}</a>
+                    
                 </h3>
                 <!-- {{ class.isDefinedBy }} -->
                 {% if class.comment %}
