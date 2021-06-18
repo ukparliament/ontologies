@@ -1,4 +1,5 @@
 import os
+import shutil
 import rdflib
 
 from datetime import datetime
@@ -27,6 +28,11 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
+for root, _, _ in os.walk(htmldir):
+    if root != htmldir:
+        print(root)
+        shutil.rmtree(root)
+
 for ttlpath in list(Path(".").rglob("*.ttl")):
 
     g = rdflib.Graph()
@@ -49,7 +55,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         classes.append(
             {
                 "label": g.label(s),
-                "idString": s.split('/')[-1],
+                "idString": s.split("/")[-1],
                 "comment": g.value(s, RDFS.comment),
                 "isDefinedBy": g.value(s, RDFS.isDefinedBy),
                 "superclasses": superclasses,
