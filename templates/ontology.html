@@ -10,6 +10,8 @@
             max-width: 42rem;
             margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-            border-bottom: thin dotted gray;
+            padding: 0.5rem;
+            background-color: rgb(232, 232, 232);
+            margin: 0.5rem;
         }
 
         ul {
@@ -91,7 +94,6 @@
                 <h3><a class="link" href="#{{ class.idString }}" title="#{{ class.idString }}">#</a> {{ class.label }}
                     <span class="subhead">class</span>
                 </h3>
-                <!-- {{ class.isDefinedBy }} -->
                 {% if class.comment %}
                 <p>{{ class.comment }}</p>
                 {% endif %}
@@ -219,18 +221,13 @@
         {% endif %}
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
         <p>Ontology created <time id="created">{{ created }}</time>.</p>
         
-        <p>Source Turtle file on <a href="{{ ttldir }}{{ ttlpath }}">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">visualdataweb.de/webvowl</a>. </p>
+       
         {% if makers %}
         <p id="makers">
             Made by
@@ -244,8 +241,7 @@
         </p>
         {% endif %}
 
-
-        
+        <p>Source Turtle file on <a href="{{ ttldir }}{{ ttlpath }}">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">visualdataweb.de/webvowl</a>. </p>
 
     </footer>
 </body>
