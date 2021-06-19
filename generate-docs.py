@@ -92,6 +92,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         objectproperties.append(
             {
                 "label": g.label(s),
+                "idString": s.split("/")[-1],
                 "domain": domainstub,
                 "range": rangestub,
                 "superproperty": superproperty,
