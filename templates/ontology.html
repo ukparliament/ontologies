@@ -142,8 +142,8 @@
             <h2>Data properties</h2>
             {% for dataproperty in dataproperties|sort(attribute='label') %}
 
-            <article class="dataproperty">
-                <h3>{{ dataproperty.label }} <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="{{ dataproperty.idString }}">
+                <h3>a class="link" href="#{{ dataproperty.idString }}" title="#{{ dataproperty.idString }}">#</a> {{ dataproperty.label }} <span class="subhead">data property</span></h3>
 
                 <p>{{ dataproperty.comment }}</p>
 

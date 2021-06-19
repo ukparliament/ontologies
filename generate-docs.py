@@ -70,6 +70,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         dataproperties.append(
             {
                 "label": g.label(s),
+                "idString": s.split("/")[-1],
                 "comment": g.value(s, RDFS.comment),
                 "domain": g.value(s, RDFS.domain).split("/")[-1],
                 "range": g.value(s, RDFS.range).split("#")[-1],
