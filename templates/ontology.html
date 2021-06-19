@@ -116,7 +116,7 @@
 
             {% for objectproperty in objectproperties|sort(attribute='label') %}
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="{{ objectproperty.idString }}">
 
                 <h3><a class="link" href="#{{ objectproperty.idString }}" title="#{{ objectproperty.idString }}">#</a> {{ objectproperty.label }} <span class="subhead">object property</span></h3>
 
