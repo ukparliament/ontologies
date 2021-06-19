@@ -51,12 +51,12 @@
 <body>
     <header>
         <nav>
-            <p>
+            <p id="global">
                 <a href="{{ root_url }}">ukparliament.github.io/ontologies</a>
                 <br>
                 {{ htmlpath }}
             </p>
-            <p>
+            <p id="local">
                 <a href="#classes">Classes</a> |
                 <a href="#objectproperties">Object properties</a> |
                 <a href="#dataproperties">Data properties</a> |
@@ -81,7 +81,7 @@
         <h1>{{ title }}</h1>
 
         {% if description != "None" %}
-        <p>{{ description }}</p>
+        <article>{{ description }}</article>
         {% endif %}
 
         
@@ -92,13 +92,8 @@
 
             {% for class in classes|sort(attribute='label') %}
             <article class="class" id="{{ class.idString }}">
-                <h3><a class="link" href="#{{ class.idString }}">#</a> {{ class.label }}
-
+                <h3><a class="link" href="#{{ class.idString }}" title="#{{ class.idString }}">#</a> {{ class.label }}
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#{{ class.idString }}">#{{ class.idString }}</a>
-                    
                 </h3>
                 <!-- {{ class.isDefinedBy }} -->
                 {% if class.comment %}
