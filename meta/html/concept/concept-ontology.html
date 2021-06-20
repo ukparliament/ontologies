@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,26 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/concept/concept-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                
-                <a href="#namespaces">Namespaces</a> |
-
-                
-
-            </p>
-
-        </nav>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
+        
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -77,9 +64,21 @@
 
 
         <h1>Concept ontology - deprecated</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+            
+            <a href="#namespaces">Namespaces</a> |
 
+            
+
+
+    </nav>
         
-        <p>Concept ontology for UK Parliament. Deprecated in favour of SKOS.</p>
+        <section id="description">Concept ontology for UK Parliament. Deprecated in favour of SKOS.</section>
         
 
         
@@ -90,15 +89,9 @@
 
             
             <article class="class" id="Agent">
-                <h3><a class="link" href="#Agent">#</a> Agent
-
+                <h3><a class="link" href="#Agent" title="#Agent">#</a> Agent
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Agent">#Agent</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/concept/ -->
                 
                 <p>A person or group. In this context a librarian or machine subject indexing annotatable things.</p>
                 
@@ -108,15 +101,9 @@
             </article>
             
             <article class="class" id="AnnotatableThing">
-                <h3><a class="link" href="#AnnotatableThing">#</a> AnnotatableThing
-
+                <h3><a class="link" href="#AnnotatableThing" title="#AnnotatableThing">#</a> AnnotatableThing
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#AnnotatableThing">#AnnotatableThing</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/concept/ -->
                 
                 <p>A thing which can be annotated with a concept or free text tag. e.g. a debate or petition or answer.</p>
                 
@@ -126,15 +113,9 @@
             </article>
             
             <article class="class" id="Annotation">
-                <h3><a class="link" href="#Annotation">#</a> Annotation
-
+                <h3><a class="link" href="#Annotation" title="#Annotation">#</a> Annotation
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Annotation">#Annotation</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/concept/ -->
                 
                 <p>A relationship between an annotatable thing and a concept or free-text tag. e.g. an act of subject indexing.</p>
                 
@@ -144,15 +125,9 @@
             </article>
             
             <article class="class" id="Concept">
-                <h3><a class="link" href="#Concept">#</a> Concept
-
+                <h3><a class="link" href="#Concept" title="#Concept">#</a> Concept
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Concept">#Concept</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/concept/ -->
                 
                 <p>A concept. Similar to a SKOS concept / a library subject term.</p>
                 
@@ -162,15 +137,9 @@
             </article>
             
             <article class="class" id="ConceptScheme">
-                <h3><a class="link" href="#ConceptScheme">#</a> ConceptScheme
-
+                <h3><a class="link" href="#ConceptScheme" title="#ConceptScheme">#</a> ConceptScheme
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ConceptScheme">#ConceptScheme</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/concept/ -->
                 
                 <p>A concept scheme. Provides an arbitrary way to group concepts e.g. Commons Library to Lords Library.</p>
                 
@@ -180,15 +149,9 @@
             </article>
             
             <article class="class" id="Thing">
-                <h3><a class="link" href="#Thing">#</a> Thing
-
+                <h3><a class="link" href="#Thing" title="#Thing">#</a> Thing
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Thing">#Thing</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/concept/ -->
                 
                 <p>A thing. Anything at all.</p>
                 
@@ -207,9 +170,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="annotatedBy">
 
-                <h3>annotatedBy <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#annotatedBy" title="#annotatedBy">#</a> annotatedBy <span class="subhead">object property</span></h3>
 
                 
 
@@ -222,9 +185,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasAnnotation">
 
-                <h3>hasAnnotation <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasAnnotation" title="#hasAnnotation">#</a> hasAnnotation <span class="subhead">object property</span></h3>
 
                 
 
@@ -237,9 +200,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasBroaderConcept">
 
-                <h3>hasBroaderConcept <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasBroaderConcept" title="#hasBroaderConcept">#</a> hasBroaderConcept <span class="subhead">object property</span></h3>
 
                 
 
@@ -252,9 +215,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasConcept">
 
-                <h3>hasConcept <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasConcept" title="#hasConcept">#</a> hasConcept <span class="subhead">object property</span></h3>
 
                 
 
@@ -267,9 +230,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasFocus">
 
-                <h3>hasFocus <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasFocus" title="#hasFocus">#</a> hasFocus <span class="subhead">object property</span></h3>
 
                 
 
@@ -282,9 +245,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasRelatedConcept">
 
-                <h3>hasRelatedConcept <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasRelatedConcept" title="#hasRelatedConcept">#</a> hasRelatedConcept <span class="subhead">object property</span></h3>
 
                 
 
@@ -297,9 +260,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="inConceptScheme">
 
-                <h3>inConceptScheme <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#inConceptScheme" title="#inConceptScheme">#</a> inConceptScheme <span class="subhead">object property</span></h3>
 
                 
 
@@ -320,8 +283,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>alternativeLabel <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="alternativeLabel">
+                <h3><a class="link" href="#alternativeLabel" title="#alternativeLabel">#</a> alternativeLabel <span class="subhead">data property</span></h3>
 
                 <p>An alternative label.</p>
 
@@ -331,8 +294,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>annotatedAt <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="annotatedAt">
+                <h3><a class="link" href="#annotatedAt" title="#annotatedAt">#</a> annotatedAt <span class="subhead">data property</span></h3>
 
                 <p>Date time an annotation was created.</p>
 
@@ -342,8 +305,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>historyNote <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="historyNote">
+                <h3><a class="link" href="#historyNote" title="#historyNote">#</a> historyNote <span class="subhead">data property</span></h3>
 
                 <p>A history note. Textual description of editorial changes to a concept over time.</p>
 
@@ -353,8 +316,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>indexerNote <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="indexerNote">
+                <h3><a class="link" href="#indexerNote" title="#indexerNote">#</a> indexerNote <span class="subhead">data property</span></h3>
 
                 <p>A note for indexers. Provides additional guidance on use of the concept.</p>
 
@@ -364,8 +327,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>scopeNote <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="scopeNote">
+                <h3><a class="link" href="#scopeNote" title="#scopeNote">#</a> scopeNote <span class="subhead">data property</span></h3>
 
                 <p>A scope note. Textual description of the intended usage of a concept.</p>
 
@@ -375,8 +338,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>uncontrolledTag <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="uncontrolledTag">
+                <h3><a class="link" href="#uncontrolledTag" title="#uncontrolledTag">#</a> uncontrolledTag <span class="subhead">data property</span></h3>
 
                 <p>To allow for annotations that reference free text tags rather than controlled concepts.</p>
 
@@ -442,22 +405,20 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2016-10-22</time>.</p>
+        <p>Ontology created &middot; <time id="created">2016-10-22</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

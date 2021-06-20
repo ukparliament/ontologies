@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,26 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/_image/image-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                 <a href="#subclasses">Subclasses</a> | 
-                <a href="#namespaces">Namespaces</a> |
-
-                
-
-            </p>
-
-        </nav>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
+        
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -77,9 +64,21 @@
 
 
         <h1>Image ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+             <a href="#subclasses">Subclasses</a> | 
+            <a href="#namespaces">Namespaces</a> |
 
+            
+
+
+    </nav>
         
-        <p>Ontology to describe storage and retrieval of parliamentary images</p>
+        <section id="description">Ontology to describe storage and retrieval of parliamentary images</section>
         
 
         
@@ -90,15 +89,9 @@
 
             
             <article class="class" id="Agent">
-                <h3><a class="link" href="#Agent">#</a> Agent
-
+                <h3><a class="link" href="#Agent" title="#Agent">#</a> Agent
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Agent">#Agent</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/agency/ -->
                 
                 <p>An agent. The superset of all people and all groups of people.</p>
                 
@@ -108,15 +101,9 @@
             </article>
             
             <article class="class" id="GeoLocation">
-                <h3><a class="link" href="#GeoLocation">#</a> GeoLocation
-
+                <h3><a class="link" href="#GeoLocation" title="#GeoLocation">#</a> GeoLocation
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#GeoLocation">#GeoLocation</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>An area within a image, that will be used to identify multiple ImageSubjects</p>
                 
@@ -130,15 +117,9 @@
             </article>
             
             <article class="class" id="Image">
-                <h3><a class="link" href="#Image">#</a> Image
-
+                <h3><a class="link" href="#Image" title="#Image">#</a> Image
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Image">#Image</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>A image file, 2D unless otherwise stated, stored in the highest available quality</p>
                 
@@ -148,15 +129,9 @@
             </article>
             
             <article class="class" id="ImageCoordinate">
-                <h3><a class="link" href="#ImageCoordinate">#</a> ImageCoordinate
-
+                <h3><a class="link" href="#ImageCoordinate" title="#ImageCoordinate">#</a> ImageCoordinate
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ImageCoordinate">#ImageCoordinate</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>A coordinate used to identify the location of the ImageZone within the Image</p>
                 
@@ -166,15 +141,9 @@
             </article>
             
             <article class="class" id="ImageCreator">
-                <h3><a class="link" href="#ImageCreator">#</a> ImageCreator
-
+                <h3><a class="link" href="#ImageCreator" title="#ImageCreator">#</a> ImageCreator
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ImageCreator">#ImageCreator</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>The creator of the image - photographer, artist, designer of a diagram etc</p>
                 
@@ -188,15 +157,9 @@
             </article>
             
             <article class="class" id="ImageOwner">
-                <h3><a class="link" href="#ImageOwner">#</a> ImageOwner
-
+                <h3><a class="link" href="#ImageOwner" title="#ImageOwner">#</a> ImageOwner
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ImageOwner">#ImageOwner</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>The entity with the legal rights to the image and its use</p>
                 
@@ -210,15 +173,9 @@
             </article>
             
             <article class="class" id="ImageResolution">
-                <h3><a class="link" href="#ImageResolution">#</a> ImageResolution
-
+                <h3><a class="link" href="#ImageResolution" title="#ImageResolution">#</a> ImageResolution
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ImageResolution">#ImageResolution</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>An image&#39;s resolution</p>
                 
@@ -228,15 +185,9 @@
             </article>
             
             <article class="class" id="ImageSubject">
-                <h3><a class="link" href="#ImageSubject">#</a> ImageSubject
-
+                <h3><a class="link" href="#ImageSubject" title="#ImageSubject">#</a> ImageSubject
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ImageSubject">#ImageSubject</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>A thing that appears in the image - what the image is at partially or wholly &#39;of&#39;</p>
                 
@@ -246,15 +197,9 @@
             </article>
             
             <article class="class" id="ImageZone">
-                <h3><a class="link" href="#ImageZone">#</a> ImageZone
-
+                <h3><a class="link" href="#ImageZone" title="#ImageZone">#</a> ImageZone
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ImageZone">#ImageZone</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>An area within a image, that will be used to identify multiple ImageSubjects</p>
                 
@@ -264,15 +209,9 @@
             </article>
             
             <article class="class" id="Logo">
-                <h3><a class="link" href="#Logo">#</a> Logo
-
+                <h3><a class="link" href="#Logo" title="#Logo">#</a> Logo
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Logo">#Logo</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>A graphic mark, emblem, or symbol used to represent an organisation or person</p>
                 
@@ -282,15 +221,9 @@
             </article>
             
             <article class="class" id="Photograph">
-                <h3><a class="link" href="#Photograph">#</a> Photograph
-
+                <h3><a class="link" href="#Photograph" title="#Photograph">#</a> Photograph
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Photograph">#Photograph</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>A Image taken with a camera</p>
                 
@@ -304,15 +237,9 @@
             </article>
             
             <article class="class" id="UsageLicence">
-                <h3><a class="link" href="#UsageLicence">#</a> UsageLicence
-
+                <h3><a class="link" href="#UsageLicence" title="#UsageLicence">#</a> UsageLicence
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#UsageLicence">#UsageLicence</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/image/ -->
                 
                 <p>The licence of the image&#39;s use, such as GNU or various Creative Commons licences</p>
                 
@@ -331,9 +258,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="agentHasLogo">
 
-                <h3>agentHasLogo <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#agentHasLogo" title="#agentHasLogo">#</a> agentHasLogo <span class="subhead">object property</span></h3>
 
                 
                 <p>Object property <strong>agentHasLogo</strong> &rarr; is a subproperty of &rarr; Object
@@ -347,9 +274,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageCoordinateHasImageZone">
 
-                <h3>imageCoordinateHasImageZone <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageCoordinateHasImageZone" title="#imageCoordinateHasImageZone">#</a> imageCoordinateHasImageZone <span class="subhead">object property</span></h3>
 
                 
 
@@ -360,9 +287,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageHasImageCoordinate">
 
-                <h3>imageHasImageCoordinate <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageHasImageCoordinate" title="#imageHasImageCoordinate">#</a> imageHasImageCoordinate <span class="subhead">object property</span></h3>
 
                 
 
@@ -373,9 +300,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageHasImageCreator">
 
-                <h3>imageHasImageCreator <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageHasImageCreator" title="#imageHasImageCreator">#</a> imageHasImageCreator <span class="subhead">object property</span></h3>
 
                 
 
@@ -386,9 +313,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageHasImageOwner">
 
-                <h3>imageHasImageOwner <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageHasImageOwner" title="#imageHasImageOwner">#</a> imageHasImageOwner <span class="subhead">object property</span></h3>
 
                 
 
@@ -399,9 +326,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageHasImageResolution">
 
-                <h3>imageHasImageResolution <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageHasImageResolution" title="#imageHasImageResolution">#</a> imageHasImageResolution <span class="subhead">object property</span></h3>
 
                 
 
@@ -412,9 +339,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageHasImageSubject">
 
-                <h3>imageHasImageSubject <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageHasImageSubject" title="#imageHasImageSubject">#</a> imageHasImageSubject <span class="subhead">object property</span></h3>
 
                 
                 <p>Object property <strong>imageHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object
@@ -428,9 +355,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageHasUsageLicence">
 
-                <h3>imageHasUsageLicence <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageHasUsageLicence" title="#imageHasUsageLicence">#</a> imageHasUsageLicence <span class="subhead">object property</span></h3>
 
                 
 
@@ -441,9 +368,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="imageZoneHasImageSubject">
 
-                <h3>imageZoneHasImageSubject <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#imageZoneHasImageSubject" title="#imageZoneHasImageSubject">#</a> imageZoneHasImageSubject <span class="subhead">object property</span></h3>
 
                 
                 <p>Object property <strong>imageZoneHasImageSubject</strong> &rarr; is a subproperty of &rarr; Object
@@ -457,9 +384,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="photographHasGeoLocation">
 
-                <h3>photographHasGeoLocation <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#photographHasGeoLocation" title="#photographHasGeoLocation">#</a> photographHasGeoLocation <span class="subhead">object property</span></h3>
 
                 
 
@@ -478,8 +405,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>bitsPerSample <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="bitsPerSample">
+                <h3><a class="link" href="#bitsPerSample" title="#bitsPerSample">#</a> bitsPerSample <span class="subhead">data property</span></h3>
 
                 <p>Number of bits per component in each channel.</p>
 
@@ -489,8 +416,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>compression <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="compression">
+                <h3><a class="link" href="#compression" title="#compression">#</a> compression <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -500,8 +427,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageCreatedAt <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageCreatedAt">
+                <h3><a class="link" href="#imageCreatedAt" title="#imageCreatedAt">#</a> imageCreatedAt <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -511,8 +438,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageLength <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageLength">
+                <h3><a class="link" href="#imageLength" title="#imageLength">#</a> imageLength <span class="subhead">data property</span></h3>
 
                 <p>Image height in pixels</p>
 
@@ -522,8 +449,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageResolutionUnit <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageResolutionUnit">
+                <h3><a class="link" href="#imageResolutionUnit" title="#imageResolutionUnit">#</a> imageResolutionUnit <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -533,8 +460,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageSoftware <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageSoftware">
+                <h3><a class="link" href="#imageSoftware" title="#imageSoftware">#</a> imageSoftware <span class="subhead">data property</span></h3>
 
                 <p>Software used to create image</p>
 
@@ -544,8 +471,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageStorageLocation <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageStorageLocation">
+                <h3><a class="link" href="#imageStorageLocation" title="#imageStorageLocation">#</a> imageStorageLocation <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -555,8 +482,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageWidth <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageWidth">
+                <h3><a class="link" href="#imageWidth" title="#imageWidth">#</a> imageWidth <span class="subhead">data property</span></h3>
 
                 <p>Image width in pixels</p>
 
@@ -566,8 +493,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageXResolution <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageXResolution">
+                <h3><a class="link" href="#imageXResolution" title="#imageXResolution">#</a> imageXResolution <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -577,8 +504,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>imageYResolution <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="imageYResolution">
+                <h3><a class="link" href="#imageYResolution" title="#imageYResolution">#</a> imageYResolution <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -588,8 +515,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>samplesPerPixel <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="samplesPerPixel">
+                <h3><a class="link" href="#samplesPerPixel" title="#samplesPerPixel">#</a> samplesPerPixel <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -599,8 +526,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>usageLicenceDetails <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="usageLicenceDetails">
+                <h3><a class="link" href="#usageLicenceDetails" title="#usageLicenceDetails">#</a> usageLicenceDetails <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -610,8 +537,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>usageLicenceName <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="usageLicenceName">
+                <h3><a class="link" href="#usageLicenceName" title="#usageLicenceName">#</a> usageLicenceName <span class="subhead">data property</span></h3>
 
                 <p>None</p>
 
@@ -641,11 +568,6 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>image/<wbr>Photograph</td>
-                    <td>/<wbr>ontologies/<wbr>image/<wbr>Image</td>
-                </tr>
-                
-                <tr>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>ImageCreator</td>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>Agent</td>
                 </tr>
@@ -653,6 +575,11 @@
                 <tr>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>GeoLocation</td>
                     <td>/<wbr>ontologies/<wbr>image/<wbr>GeographicalThing</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Photograph</td>
+                    <td>/<wbr>ontologies/<wbr>image/<wbr>Image</td>
                 </tr>
                 
         </table>
@@ -709,22 +636,20 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-06-28</time>.</p>
+        <p>Ontology created &middot; <time id="created">2017-06-28</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/_image/image-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

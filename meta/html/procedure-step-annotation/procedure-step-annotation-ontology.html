@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,28 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/procedure-step-annotation/procedure-step-annotation-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                
-                <a href="#namespaces">Namespaces</a> |
-
-                
-        <a href="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png">Depiction</a>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
         
-
-            </p>
-
-        </nav>
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -79,9 +64,23 @@
 
 
         <h1>Procedure step ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+            
+            <a href="#namespaces">Namespaces</a> |
 
+            
+    <a href="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png">Depiction</a>
+    
+
+
+    </nav>
         
-        <p>A model describing annotations added to procedure steps by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a procedure step is actualised.</p>
+        <section id="description">A model describing annotations added to procedure steps by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a procedure step is actualised.</section>
         
 
         
@@ -92,15 +91,9 @@
 
             
             <article class="class" id="BusinessStep">
-                <h3><a class="link" href="#BusinessStep">#</a> Business step
-
+                <h3><a class="link" href="#BusinessStep" title="#BusinessStep">#</a> Business step
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#BusinessStep">#BusinessStep</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/procedure-step-annotation/ -->
                 
                 <p>A business step is a step that can be actualised by a business item.</p>
                 
@@ -110,15 +103,9 @@
             </article>
             
             <article class="class" id="Publication">
-                <h3><a class="link" href="#Publication">#</a> Publication
-
+                <h3><a class="link" href="#Publication" title="#Publication">#</a> Publication
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Publication">#Publication</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/procedure-step-annotation/ -->
                 
                 <p>A publication.</p>
                 
@@ -137,9 +124,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="actualiseWith">
 
-                <h3>Actualise with <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#actualiseWith" title="#actualiseWith">#</a> Actualise with <span class="subhead">object property</span></h3>
 
                 
 
@@ -152,9 +139,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="source">
 
-                <h3>Source <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#source" title="#source">#</a> Source <span class="subhead">object property</span></h3>
 
                 
 
@@ -175,8 +162,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>Date note <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="dateNote">
+                <h3><a class="link" href="#dateNote" title="#dateNote">#</a> Date note <span class="subhead">data property</span></h3>
 
                 <p>A note that describes the date to use when actualising a business step.</p>
 
@@ -186,8 +173,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Link note <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="linkNote">
+                <h3><a class="link" href="#linkNote" title="#linkNote">#</a> Link note <span class="subhead">data property</span></h3>
 
                 <p>A note that describes where a business item should link to in a publication.</p>
 
@@ -197,8 +184,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Scope note <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="scopeNote">
+                <h3><a class="link" href="#scopeNote" title="#scopeNote">#</a> Scope note <span class="subhead">data property</span></h3>
 
                 <p>A note that describes the rules for actualising a business step.</p>
 
@@ -269,21 +256,20 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2019-04-16</time>.</p>
+        <p>Ontology created &middot; <time id="created">2019-04-16</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
         <p id="makers">
             Made by
+            
+            
+            &middot; Anya Somerville
+            
             
             
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
@@ -293,15 +279,14 @@
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
-            
-            &middot; Anya Somerville
-            
-            
         </p>
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure-step-annotation/procedure-step-annotation-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

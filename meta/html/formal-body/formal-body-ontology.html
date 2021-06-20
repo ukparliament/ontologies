@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,28 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/formal-body/formal-body-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                 <a href="#subclasses">Subclasses</a> | 
-                <a href="#namespaces">Namespaces</a> |
-
-                
-        <a href="https://ukparliament.github.io/ontologies/formal-body/formal-body.png">Depiction</a>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
         
-
-            </p>
-
-        </nav>
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -79,9 +64,23 @@
 
 
         <h1>Formal body ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+             <a href="#subclasses">Subclasses</a> | 
+            <a href="#namespaces">Namespaces</a> |
 
+            
+    <a href="https://ukparliament.github.io/ontologies/formal-body/formal-body.png">Depiction</a>
+    
+
+
+    </nav>
         
-        <p>A model describing formally constituted bodies, including committees.</p>
+        <section id="description">A model describing formally constituted bodies, including committees.</section>
         
 
         
@@ -92,15 +91,9 @@
 
             
             <article class="class" id="BusinessItem">
-                <h3><a class="link" href="#BusinessItem">#</a> Business item
-
+                <h3><a class="link" href="#BusinessItem" title="#BusinessItem">#</a> Business item
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#BusinessItem">#BusinessItem</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>An item of business conducted either within or outside Parliament, for example: a second reading debate, the tabling of an Early Day Motion, a laying of a paper, the making of a Statutory Instrument by a government minister.</p>
                 
@@ -110,15 +103,9 @@
             </article>
             
             <article class="class" id="Focus">
-                <h3><a class="link" href="#Focus">#</a> Focus
-
+                <h3><a class="link" href="#Focus" title="#Focus">#</a> Focus
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Focus">#Focus</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A focus area for a formal body or work package, for example: a government department, a type of legislation, an item of legislation or a SKOS type concept.</p>
                 
@@ -128,15 +115,9 @@
             </article>
             
             <article class="class" id="FocusCategory">
-                <h3><a class="link" href="#FocusCategory">#</a> Focus category
-
+                <h3><a class="link" href="#FocusCategory" title="#FocusCategory">#</a> Focus category
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#FocusCategory">#FocusCategory</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A focus category provides a way to aggregate formal bodies by the type of thing they focus on or scrutinise, for example: a type of legislation, one or more government departments, matters specific to devolved nations. Eventually, the type of the thing focussed on may be derived from any ‘focus’ relationships, together with the types of the things being focussed on. Presently, the things that focus categories point at have insufficient definition to support a determination of their type, for example: the Scottish Grand Committee would have a library subject heading or concept of Scotland as a focus category, typed as a geographic entity rather than as a devolved nation. Aggregating a list of formal bodies with a focus on devolved nations would not be possible from the &#39;focus&#39; relationships alone: the focus category gives a higher level means to group formal bodies by interest areas. A focus category is able to be populated regardless of whether the thing focussed on is sufficiently defined, for example: &#39;focus&#39; may point to a named item of legislation, with the focus category recording that the formal body was constituted to scrutinise a specific item of legislation but without identifying which.</p>
                 
@@ -146,15 +127,9 @@
             </article>
             
             <article class="class" id="FormalBody">
-                <h3><a class="link" href="#FormalBody">#</a> Formal body
-
+                <h3><a class="link" href="#FormalBody" title="#FormalBody">#</a> Formal body
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#FormalBody">#FormalBody</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A group formally constituted by Parliament to conduct specific business within Parliament, for example: a committee or a group acting as a committee. Formal groups are subject to parliamentary procedure and operate under parliamentary privilege. A formal body may be established by means of procedure - for example: by Standing Order - or by another process, for example: selection of the Advisory Panel on Works of Art by the Lords’ Speaker. A formal body may be established under statute, for example: the Intelligence and Security Committee of Parliament, by means of the Intelligence Services Act 1994 and the Justice and Security Act 2013. People in a formal body are Members of the House of Commons or of the House of Lords. A formal body may be joint, taking membership from both Houses. Groups with informally constituted memberships are not formal groups, for example: All-Party Parliamentary Groups. Informally constituted groups are not subject to parliamentary procedure and do not operate under parliamentary privilege.</p>
                 
@@ -164,15 +139,9 @@
             </article>
             
             <article class="class" id="GeneralCommittee">
-                <h3><a class="link" href="#GeneralCommittee">#</a> General Committee
-
+                <h3><a class="link" href="#GeneralCommittee" title="#GeneralCommittee">#</a> General Committee
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#GeneralCommittee">#GeneralCommittee</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>The House of Commons has General Committees: their primary role is to consider proposed legislation. The House of Lords does not have General Committees, meeting as a whole House to consider proposed legislation. General Committees include Committees on Bills, Grand Committees considering matters specific to the devolved nations of the UK, and General Committees on delegated legislation and European documents.</p>
                 
@@ -186,15 +155,9 @@
             </article>
             
             <article class="class" id="House">
-                <h3><a class="link" href="#House">#</a> House
-
+                <h3><a class="link" href="#House" title="#House">#</a> House
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#House">#House</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A parliamentary House, for example: the House of Lords.</p>
                 
@@ -204,15 +167,9 @@
             </article>
             
             <article class="class" id="InformallyConstitutedCommittee">
-                <h3><a class="link" href="#InformallyConstitutedCommittee">#</a> Informally constituted committee
-
+                <h3><a class="link" href="#InformallyConstitutedCommittee" title="#InformallyConstitutedCommittee">#</a> Informally constituted committee
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#InformallyConstitutedCommittee">#InformallyConstitutedCommittee</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>An informally constituted committee is a committee-like formal body, not established under Parliamentary procedure or by statute.</p>
                 
@@ -226,15 +183,9 @@
             </article>
             
             <article class="class" id="Inquiry">
-                <h3><a class="link" href="#Inquiry">#</a> Inquiry
-
+                <h3><a class="link" href="#Inquiry" title="#Inquiry">#</a> Inquiry
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Inquiry">#Inquiry</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A type of work package investigating a specific subject or policy area.</p>
                 
@@ -248,15 +199,9 @@
             </article>
             
             <article class="class" id="InquiryScope">
-                <h3><a class="link" href="#InquiryScope">#</a> Inquiry scope
-
+                <h3><a class="link" href="#InquiryScope" title="#InquiryScope">#</a> Inquiry scope
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#InquiryScope">#InquiryScope</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>The scope or terms of reference of an inquiry, setting out the context, constraints and questions which the inquiry seeks to address.</p>
                 
@@ -266,15 +211,9 @@
             </article>
             
             <article class="class" id="NonSelectCommittee">
-                <h3><a class="link" href="#NonSelectCommittee">#</a> Non-Select Committee
-
+                <h3><a class="link" href="#NonSelectCommittee" title="#NonSelectCommittee">#</a> Non-Select Committee
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#NonSelectCommittee">#NonSelectCommittee</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>The House of Lords has non-Select Committees, fulfilling a similar function to the General Committees of the House of Commons. Any Peer may attend, speak and vote in a non-Select Committee - including those not being members of the committee.</p>
                 
@@ -288,15 +227,9 @@
             </article>
             
             <article class="class" id="ParliamentaryCommittee">
-                <h3><a class="link" href="#ParliamentaryCommittee">#</a> Parliamentary committee
-
+                <h3><a class="link" href="#ParliamentaryCommittee" title="#ParliamentaryCommittee">#</a> Parliamentary committee
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ParliamentaryCommittee">#ParliamentaryCommittee</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A parliamentary committee is constituted and has members appointed by one or both Houses, by means of a motion or Standing Order.</p>
                 
@@ -310,15 +243,9 @@
             </article>
             
             <article class="class" id="SelectCommittee">
-                <h3><a class="link" href="#SelectCommittee">#</a> Select Committee
-
+                <h3><a class="link" href="#SelectCommittee" title="#SelectCommittee">#</a> Select Committee
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#SelectCommittee">#SelectCommittee</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>There are Select Committees in both the House of Commons and the House of Lords. Select Committees conduct inquiries into and report on matters as directed by their remit. The results of inquiries are public. The government may be expected to respond to a published inquiry. Select Committees in the House of Commons are primarily concerned with examining the work of government departments. Select Committees in the House of Lords concentrate on broader themes rather than on individual government departments. When a Select Committee in the House of Lords is not deliberating, any peer may attend and speak at the committee. When a Select Committee in the House of Lords is deliberating, peers without membership of the committee may not attend, unless invited by the Committee to do so. Any peer not being a member of a Select Committee in the House of Lords cannot vote in that committee.</p>
                 
@@ -332,15 +259,9 @@
             </article>
             
             <article class="class" id="StatutoryCommittee">
-                <h3><a class="link" href="#StatutoryCommittee">#</a> Statutory Committee
-
+                <h3><a class="link" href="#StatutoryCommittee" title="#StatutoryCommittee">#</a> Statutory Committee
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#StatutoryCommittee">#StatutoryCommittee</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>Statutory Committees are committees constituted by means of legislation, for example: the Ecclesiastical Committee, by the Church of England Assembly (Powers) Act 1919.</p>
                 
@@ -354,15 +275,9 @@
             </article>
             
             <article class="class" id="WorkPackage">
-                <h3><a class="link" href="#WorkPackage">#</a> Work package
-
+                <h3><a class="link" href="#WorkPackage" title="#WorkPackage">#</a> Work package
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#WorkPackage">#WorkPackage</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
                 
@@ -372,15 +287,9 @@
             </article>
             
             <article class="class" id="WorkPackageType">
-                <h3><a class="link" href="#WorkPackageType">#</a> Work package type
-
+                <h3><a class="link" href="#WorkPackageType" title="#WorkPackageType">#</a> Work package type
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#WorkPackageType">#WorkPackageType</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/formal-body/ -->
                 
                 <p>A description of the type of a work package. Whilst inquiries have a specific Inquiry subclass, work package type describes work packages which are not associated with inquiries, for example: a collection of hearings before a person is appointed to a public body or a set of hearings where a government minister appears before a committee.</p>
                 
@@ -399,9 +308,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="belongsToHouse">
 
-                <h3>Belongs to House <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#belongsToHouse" title="#belongsToHouse">#</a> Belongs to House <span class="subhead">object property</span></h3>
 
                 
 
@@ -414,9 +323,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="formalBodyFocus">
 
-                <h3>Formal body focus <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#formalBodyFocus" title="#formalBodyFocus">#</a> Formal body focus <span class="subhead">object property</span></h3>
 
                 
 
@@ -429,9 +338,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="formsPartOf">
 
-                <h3>Forms part of <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#formsPartOf" title="#formsPartOf">#</a> Forms part of <span class="subhead">object property</span></h3>
 
                 
 
@@ -444,9 +353,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasAgent">
 
-                <h3>Has agent <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasAgent" title="#hasAgent">#</a> Has agent <span class="subhead">object property</span></h3>
 
                 
 
@@ -459,9 +368,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasFocusCategory">
 
-                <h3>Has focus category <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasFocusCategory" title="#hasFocusCategory">#</a> Has focus category <span class="subhead">object property</span></h3>
 
                 
 
@@ -474,9 +383,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasInquiryScope">
 
-                <h3>Has inquiry scope <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasInquiryScope" title="#hasInquiryScope">#</a> Has inquiry scope <span class="subhead">object property</span></h3>
 
                 
 
@@ -489,9 +398,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasLeadHouse">
 
-                <h3>Has lead House <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasLeadHouse" title="#hasLeadHouse">#</a> Has lead House <span class="subhead">object property</span></h3>
 
                 
 
@@ -504,9 +413,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasParentFormalBody">
 
-                <h3>Has parent formal body <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasParentFormalBody" title="#hasParentFormalBody">#</a> Has parent formal body <span class="subhead">object property</span></h3>
 
                 
 
@@ -519,9 +428,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasParentWorkPackage">
 
-                <h3>Has parent work package <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasParentWorkPackage" title="#hasParentWorkPackage">#</a> Has parent work package <span class="subhead">object property</span></h3>
 
                 
 
@@ -534,9 +443,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasWorkPackageType">
 
-                <h3>Has work package type <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasWorkPackageType" title="#hasWorkPackageType">#</a> Has work package type <span class="subhead">object property</span></h3>
 
                 
 
@@ -549,9 +458,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="undertakesWorkPackage">
 
-                <h3>Undertakes work package <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#undertakesWorkPackage" title="#undertakesWorkPackage">#</a> Undertakes work package <span class="subhead">object property</span></h3>
 
                 
 
@@ -564,9 +473,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="workPackageFocus">
 
-                <h3>Work package focus <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#workPackageFocus" title="#workPackageFocus">#</a> Work package focus <span class="subhead">object property</span></h3>
 
                 
 
@@ -587,8 +496,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>Remit <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="remit">
+                <h3><a class="link" href="#remit" title="#remit">#</a> Remit <span class="subhead">data property</span></h3>
 
                 <p>A textual description of the task or area of activity assigned to a formal body.</p>
 
@@ -618,7 +527,7 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>SelectCommittee</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>GeneralCommittee</td>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
                 </tr>
                 
@@ -628,18 +537,18 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>Inquiry</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>GeneralCommittee</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>SelectCommittee</td>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>ParliamentaryCommittee</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>StatutoryCommittee</td>
                     <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>Inquiry</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage</td>
                 </tr>
                 
                 <tr>
@@ -701,40 +610,19 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-08-29</time>.</p>
+        <p>Ontology created &middot; <time id="created">2017-08-29</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
         <p id="makers">
             Made by
             
             
-            &middot; James Bowman
-            
-            
-            
-            &middot; Anya Somerville
-            
-            
-            
-            &middot; Gordon Clark
-            
-            
-            
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
-            &middot; Edward McCarthy
             
             
             
@@ -745,11 +633,30 @@
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
+            
+            &middot; Gordon Clark
+            
+            
+            
+            &middot; Anya Somerville
+            
+            
+            
+            &middot; Edward McCarthy
+            
+            
+            
+            &middot; James Bowman
+            
+            
         </p>
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/formal-body/formal-body-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

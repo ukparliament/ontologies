@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,28 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/utility/utility-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                
-                <a href="#namespaces">Namespaces</a> |
-
-                
-        <a href="https://ukparliament.github.io/ontologies/utility/utility.png">Depiction</a>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
         
-
-            </p>
-
-        </nav>
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -79,9 +64,23 @@
 
 
         <h1>Utility ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+            
+            <a href="#namespaces">Namespaces</a> |
 
+            
+    <a href="https://ukparliament.github.io/ontologies/utility/utility.png">Depiction</a>
+    
+
+
+    </nav>
         
-        <p>Provides a set of common properties for reuse by other models.</p>
+        <section id="description">Provides a set of common properties for reuse by other models.</section>
         
 
         
@@ -92,15 +91,9 @@
 
             
             <article class="class" id="Identifier">
-                <h3><a class="link" href="#Identifier">#</a> Identifier
-
+                <h3><a class="link" href="#Identifier" title="#Identifier">#</a> Identifier
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Identifier">#Identifier</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>An identifier from an external system. Might be another Parliament system or an external system such as Wikidata.</p>
                 
@@ -110,15 +103,9 @@
             </article>
             
             <article class="class" id="IdentifierSource">
-                <h3><a class="link" href="#IdentifierSource">#</a> IdentifierSource
-
+                <h3><a class="link" href="#IdentifierSource" title="#IdentifierSource">#</a> IdentifierSource
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#IdentifierSource">#IdentifierSource</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>An identifier source. The system or website from which the identifier originates.</p>
                 
@@ -128,15 +115,9 @@
             </article>
             
             <article class="class" id="Label">
-                <h3><a class="link" href="#Label">#</a> Label
-
+                <h3><a class="link" href="#Label" title="#Label">#</a> Label
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Label">#Label</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>Allows a thing to have different labels at different time periods. e.g. a Government Department, Select Committee, Bill or inquiry might change its name during its lifetime. Reuses preferredLabel, abbreviationLabel, sortLabel, startDate and endDate from Thing.</p>
                 
@@ -146,15 +127,9 @@
             </article>
             
             <article class="class" id="Thing">
-                <h3><a class="link" href="#Thing">#</a> Thing
-
+                <h3><a class="link" href="#Thing" title="#Thing">#</a> Thing
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Thing">#Thing</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>A thing. Anything. At all. Provides a set of properties for reuse by any other model.</p>
                 
@@ -164,15 +139,9 @@
             </article>
             
             <article class="class" id="WebLink">
-                <h3><a class="link" href="#WebLink">#</a> WebLink
-
+                <h3><a class="link" href="#WebLink" title="#WebLink">#</a> WebLink
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#WebLink">#WebLink</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>A web link with a source, type and URL.</p>
                 
@@ -182,15 +151,9 @@
             </article>
             
             <article class="class" id="WebLinkSource">
-                <h3><a class="link" href="#WebLinkSource">#</a> WebLinkSource
-
+                <h3><a class="link" href="#WebLinkSource" title="#WebLinkSource">#</a> WebLinkSource
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#WebLinkSource">#WebLinkSource</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>The publisher of the URL identified by the web link e.g. The Daily Mail, personal website, Facebook, Wikipedia.</p>
                 
@@ -200,15 +163,9 @@
             </article>
             
             <article class="class" id="WebLinkType">
-                <h3><a class="link" href="#WebLinkType">#</a> WebLinkType
-
+                <h3><a class="link" href="#WebLinkType" title="#WebLinkType">#</a> WebLinkType
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#WebLinkType">#WebLinkType</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/utility/ -->
                 
                 <p>A link type e.g. personal homepage, obituary.</p>
                 
@@ -227,9 +184,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasIdentifier">
 
-                <h3>hasIdentifier <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasIdentifier" title="#hasIdentifier">#</a> hasIdentifier <span class="subhead">object property</span></h3>
 
                 
 
@@ -242,9 +199,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasIdentifierSource">
 
-                <h3>hasIdentifierSource <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasIdentifierSource" title="#hasIdentifierSource">#</a> hasIdentifierSource <span class="subhead">object property</span></h3>
 
                 
 
@@ -257,9 +214,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasLabel">
 
-                <h3>hasLabel <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasLabel" title="#hasLabel">#</a> hasLabel <span class="subhead">object property</span></h3>
 
                 
 
@@ -272,9 +229,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasWebLink">
 
-                <h3>hasWebLink <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasWebLink" title="#hasWebLink">#</a> hasWebLink <span class="subhead">object property</span></h3>
 
                 
 
@@ -287,9 +244,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasWebLinkSource">
 
-                <h3>hasWebLinkScource <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasWebLinkSource" title="#hasWebLinkSource">#</a> hasWebLinkScource <span class="subhead">object property</span></h3>
 
                 
 
@@ -302,9 +259,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasWebLinkType">
 
-                <h3>hasWebLinkType <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasWebLinkType" title="#hasWebLinkType">#</a> hasWebLinkType <span class="subhead">object property</span></h3>
 
                 
 
@@ -317,9 +274,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="precededBy">
 
-                <h3>precededBy <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#precededBy" title="#precededBy">#</a> precededBy <span class="subhead">object property</span></h3>
 
                 
 
@@ -340,8 +297,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>abbreviationLabel <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="abbreviationLabel">
+                <h3><a class="link" href="#abbreviationLabel" title="#abbreviationLabel">#</a> abbreviationLabel <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to an abbreviation label.</p>
 
@@ -351,8 +308,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>createdAt <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="createdAt">
+                <h3><a class="link" href="#createdAt" title="#createdAt">#</a> createdAt <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to a created at date / time.</p>
 
@@ -362,8 +319,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>description <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="description">
+                <h3><a class="link" href="#description" title="#description">#</a> description <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to its textual description.</p>
 
@@ -373,8 +330,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>endOn <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="endOn">
+                <h3><a class="link" href="#endOn" title="#endOn">#</a> endOn <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to an end date.</p>
 
@@ -384,8 +341,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>identifierValue <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="identifierValue">
+                <h3><a class="link" href="#identifierValue" title="#identifierValue">#</a> identifierValue <span class="subhead">data property</span></h3>
 
                 <p>Relates an identifier to its value.</p>
 
@@ -395,8 +352,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>preferredLabel <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="preferredLabel">
+                <h3><a class="link" href="#preferredLabel" title="#preferredLabel">#</a> preferredLabel <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to its preferred label.</p>
 
@@ -406,8 +363,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Recorded end at <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="recordedEndAt">
+                <h3><a class="link" href="#recordedEndAt" title="#recordedEndAt">#</a> Recorded end at <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to its recorded end time.</p>
 
@@ -417,8 +374,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Recorded start at <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="recordedStartAt">
+                <h3><a class="link" href="#recordedStartAt" title="#recordedStartAt">#</a> Recorded start at <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to its recorded start time.</p>
 
@@ -428,8 +385,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>sameAs <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="sameAs">
+                <h3><a class="link" href="#sameAs" title="#sameAs">#</a> sameAs <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs.</p>
 
@@ -439,8 +396,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Scheduled end at <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="scheduledEndAt">
+                <h3><a class="link" href="#scheduledEndAt" title="#scheduledEndAt">#</a> Scheduled end at <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to its scheduled end time.</p>
 
@@ -450,8 +407,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Scheduled start at <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="scheduledStartAt">
+                <h3><a class="link" href="#scheduledStartAt" title="#scheduledStartAt">#</a> Scheduled start at <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to its scheduled start time.</p>
 
@@ -461,8 +418,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>sortLabel <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="sortLabel">
+                <h3><a class="link" href="#sortLabel" title="#sortLabel">#</a> sortLabel <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to a sort label e.g. Churchill, Winston.</p>
 
@@ -472,8 +429,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>sortOrder <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="sortOrder">
+                <h3><a class="link" href="#sortOrder" title="#sortOrder">#</a> sortOrder <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to a sort order.</p>
 
@@ -483,8 +440,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>startOn <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="startOn">
+                <h3><a class="link" href="#startOn" title="#startOn">#</a> startOn <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to a start date.</p>
 
@@ -494,8 +451,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>updatedAt <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="updatedAt">
+                <h3><a class="link" href="#updatedAt" title="#updatedAt">#</a> updatedAt <span class="subhead">data property</span></h3>
 
                 <p>Relates a thing to an updated at date / time.</p>
 
@@ -505,8 +462,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>url <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="url">
+                <h3><a class="link" href="#url" title="#url">#</a> url <span class="subhead">data property</span></h3>
 
                 <p>Relates a web link to a url.</p>
 
@@ -577,28 +534,19 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2016-10-05</time>.</p>
+        <p>Ontology created &middot; <time id="created">2016-10-05</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
         <p id="makers">
             Made by
             
             
-            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
-            &middot; Anya Somerville
+            &middot; Silver Oliver
             
             
             
@@ -606,14 +554,21 @@
             
             
             
-            &middot; Silver Oliver
+            &middot; Anya Somerville
+            
+            
+            
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
         </p>
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>
