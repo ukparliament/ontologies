@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,28 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/record/record-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                 <a href="#subclasses">Subclasses</a> | 
-                <a href="#namespaces">Namespaces</a> |
-
-                
-        <a href="https://ukparliament.github.io/ontologies/record/record.png">Depiction</a>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
         
-
-            </p>
-
-        </nav>
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -79,9 +64,23 @@
 
 
         <h1>Record ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+             <a href="#subclasses">Subclasses</a> | 
+            <a href="#namespaces">Namespaces</a> |
 
+            
+    <a href="https://ukparliament.github.io/ontologies/record/record.png">Depiction</a>
+    
+
+
+    </nav>
         
-        <p>A model informed by FRBR - describing works, collections of works, their expressions and manifestations.</p>
+        <section id="description">A model informed by FRBR - describing works, collections of works, their expressions and manifestations.</section>
         
 
         
@@ -92,15 +91,9 @@
 
             
             <article class="class" id="Collection">
-                <h3><a class="link" href="#Collection">#</a> Collection
-
+                <h3><a class="link" href="#Collection" title="#Collection">#</a> Collection
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Collection">#Collection</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A curated collection of works.</p>
                 
@@ -110,15 +103,9 @@
             </article>
             
             <article class="class" id="Contribution">
-                <h3><a class="link" href="#Contribution">#</a> Contribution
-
+                <h3><a class="link" href="#Contribution" title="#Contribution">#</a> Contribution
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Contribution">#Contribution</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A contribution by an agent, for example: by a person or by a corporate author.</p>
                 
@@ -128,15 +115,9 @@
             </article>
             
             <article class="class" id="EditorialForm">
-                <h3><a class="link" href="#EditorialForm">#</a> Editorial form
-
+                <h3><a class="link" href="#EditorialForm" title="#EditorialForm">#</a> Editorial form
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#EditorialForm">#EditorialForm</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>The editorial form of a work, for example: a report, an article, a transcript, or the minutes of a meeting.</p>
                 
@@ -146,15 +127,9 @@
             </article>
             
             <article class="class" id="Expression">
-                <h3><a class="link" href="#Expression">#</a> Expression
-
+                <h3><a class="link" href="#Expression" title="#Expression">#</a> Expression
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Expression">#Expression</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A work may be realised - as an expression - having more than one format, for example: a podcast episode made available as an audio file and as a text transcript.</p>
                 
@@ -164,15 +139,9 @@
             </article>
             
             <article class="class" id="File">
-                <h3><a class="link" href="#File">#</a> File
-
+                <h3><a class="link" href="#File" title="#File">#</a> File
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#File">#File</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A file associated with a manifestation of a work, for example: a spreadsheet, a PDF or a Word document.</p>
                 
@@ -182,15 +151,9 @@
             </article>
             
             <article class="class" id="Focus">
-                <h3><a class="link" href="#Focus">#</a> Focus
-
+                <h3><a class="link" href="#Focus" title="#Focus">#</a> Focus
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Focus">#Focus</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A focus area for a manifestation or collection of works. Allows us to point at any modelled thing as a focus area, for example: a committee or a bill.</p>
                 
@@ -200,15 +163,9 @@
             </article>
             
             <article class="class" id="Format">
-                <h3><a class="link" href="#Format">#</a> Format
-
+                <h3><a class="link" href="#Format" title="#Format">#</a> Format
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Format">#Format</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>The format taken by the expression of a work, for example: the format of the expression of a podcast episode - as an audio file, or as a text transcript.</p>
                 
@@ -218,15 +175,9 @@
             </article>
             
             <article class="class" id="Manifestation">
-                <h3><a class="link" href="#Manifestation">#</a> Manifestation
-
+                <h3><a class="link" href="#Manifestation" title="#Manifestation">#</a> Manifestation
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Manifestation">#Manifestation</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode.</p>
                 
@@ -236,15 +187,9 @@
             </article>
             
             <article class="class" id="Place">
-                <h3><a class="link" href="#Place">#</a> Place
-
+                <h3><a class="link" href="#Place" title="#Place">#</a> Place
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Place">#Place</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A place named in a geography.</p>
                 
@@ -254,15 +199,9 @@
             </article>
             
             <article class="class" id="Revision">
-                <h3><a class="link" href="#Revision">#</a> Revision
-
+                <h3><a class="link" href="#Revision" title="#Revision">#</a> Revision
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Revision">#Revision</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A revision from a preceding to a following manifestation.</p>
                 
@@ -272,15 +211,9 @@
             </article>
             
             <article class="class" id="RevisionType">
-                <h3><a class="link" href="#RevisionType">#</a> Revision type
-
+                <h3><a class="link" href="#RevisionType" title="#RevisionType">#</a> Revision type
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#RevisionType">#RevisionType</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>The type of a revision, for example: a major update or a minor update.</p>
                 
@@ -290,15 +223,9 @@
             </article>
             
             <article class="class" id="Series">
-                <h3><a class="link" href="#Series">#</a> Series
-
+                <h3><a class="link" href="#Series" title="#Series">#</a> Series
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Series">#Series</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A specialised form of collection, allowing works to be placed in an order.</p>
                 
@@ -312,15 +239,9 @@
             </article>
             
             <article class="class" id="SeriesPosition">
-                <h3><a class="link" href="#SeriesPosition">#</a> Series position
-
+                <h3><a class="link" href="#SeriesPosition" title="#SeriesPosition">#</a> Series position
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#SeriesPosition">#SeriesPosition</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>The position of a work within a series of works.</p>
                 
@@ -330,15 +251,9 @@
             </article>
             
             <article class="class" id="Work">
-                <h3><a class="link" href="#Work">#</a> Work
-
+                <h3><a class="link" href="#Work" title="#Work">#</a> Work
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Work">#Work</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/record/ -->
                 
                 <p>A distinct intellectual creation, similar to a work as defined in FRBR.</p>
                 
@@ -357,9 +272,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="collectionHasFocus">
 
-                <h3>Collection has focus <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#collectionHasFocus" title="#collectionHasFocus">#</a> Collection has focus <span class="subhead">object property</span></h3>
 
                 
 
@@ -372,9 +287,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="collectionPartOfCollection">
 
-                <h3>Collection part of collection <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#collectionPartOfCollection" title="#collectionPartOfCollection">#</a> Collection part of collection <span class="subhead">object property</span></h3>
 
                 
 
@@ -387,9 +302,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="expressionOf">
 
-                <h3>Expression of <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#expressionOf" title="#expressionOf">#</a> Expression of <span class="subhead">object property</span></h3>
 
                 
 
@@ -402,9 +317,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="fromManifestation">
 
-                <h3>From manifestation <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#fromManifestation" title="#fromManifestation">#</a> From manifestation <span class="subhead">object property</span></h3>
 
                 
 
@@ -417,9 +332,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasAttachment">
 
-                <h3>Has attachment <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasAttachment" title="#hasAttachment">#</a> Has attachment <span class="subhead">object property</span></h3>
 
                 
 
@@ -432,9 +347,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasFormat">
 
-                <h3>Has format <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasFormat" title="#hasFormat">#</a> Has format <span class="subhead">object property</span></h3>
 
                 
 
@@ -447,9 +362,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasGeographicScope">
 
-                <h3>Has geographic scope <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasGeographicScope" title="#hasGeographicScope">#</a> Has geographic scope <span class="subhead">object property</span></h3>
 
                 
 
@@ -462,9 +377,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasRevisionType">
 
-                <h3>Has revision type <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasRevisionType" title="#hasRevisionType">#</a> Has revision type <span class="subhead">object property</span></h3>
 
                 
 
@@ -477,9 +392,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasContribution">
 
-                <h3>hasContribution <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasContribution" title="#hasContribution">#</a> hasContribution <span class="subhead">object property</span></h3>
 
                 
 
@@ -492,9 +407,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="inSeries">
 
-                <h3>In series <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#inSeries" title="#inSeries">#</a> In series <span class="subhead">object property</span></h3>
 
                 
 
@@ -507,9 +422,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="inSeriesPosition">
 
-                <h3>In series position <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#inSeriesPosition" title="#inSeriesPosition">#</a> In series position <span class="subhead">object property</span></h3>
 
                 
 
@@ -522,9 +437,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="manifestationHasFocus">
 
-                <h3>Manifestation has focus <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#manifestationHasFocus" title="#manifestationHasFocus">#</a> Manifestation has focus <span class="subhead">object property</span></h3>
 
                 
 
@@ -537,9 +452,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="manifestationOf">
 
-                <h3>Manifestation of <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#manifestationOf" title="#manifestationOf">#</a> Manifestation of <span class="subhead">object property</span></h3>
 
                 
 
@@ -552,9 +467,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="partOfCollection">
 
-                <h3>Part of collection <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#partOfCollection" title="#partOfCollection">#</a> Part of collection <span class="subhead">object property</span></h3>
 
                 
 
@@ -567,9 +482,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="takesEditorialForm">
 
-                <h3>Takes editorial form <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#takesEditorialForm" title="#takesEditorialForm">#</a> Takes editorial form <span class="subhead">object property</span></h3>
 
                 
 
@@ -582,9 +497,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="toManifestation">
 
-                <h3>To manifestation <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#toManifestation" title="#toManifestation">#</a> To manifestation <span class="subhead">object property</span></h3>
 
                 
 
@@ -605,8 +520,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>Has revision description <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="hasRevisionDescription">
+                <h3><a class="link" href="#hasRevisionDescription" title="#hasRevisionDescription">#</a> Has revision description <span class="subhead">data property</span></h3>
 
                 <p>The description of a revision, for example: “updated to include recent legislation”.</p>
 
@@ -616,8 +531,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Media type <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="mediaType">
+                <h3><a class="link" href="#mediaType" title="#mediaType">#</a> Media type <span class="subhead">data property</span></h3>
 
                 <p>The media type of a file.</p>
 
@@ -627,8 +542,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Minimum reading age <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="minimumReadingAge">
+                <h3><a class="link" href="#minimumReadingAge" title="#minimumReadingAge">#</a> Minimum reading age <span class="subhead">data property</span></h3>
 
                 <p>The minimum reading age for a manifestation of a work.</p>
 
@@ -638,8 +553,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Published at <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="publishedAt">
+                <h3><a class="link" href="#publishedAt" title="#publishedAt">#</a> Published at <span class="subhead">data property</span></h3>
 
                 <p>The date and time of the publication of a manifestation.</p>
 
@@ -649,8 +564,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Reference number <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="referenceNumber">
+                <h3><a class="link" href="#referenceNumber" title="#referenceNumber">#</a> Reference number <span class="subhead">data property</span></h3>
 
                 <p>The reference number of a work.</p>
 
@@ -660,8 +575,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Scope <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="scope">
+                <h3><a class="link" href="#scope" title="#scope">#</a> Scope <span class="subhead">data property</span></h3>
 
                 <p>The scope of a work, for example: the scope of a POST briefing.</p>
 
@@ -744,21 +659,20 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-07-09</time>.</p>
+        <p>Ontology created &middot; <time id="created">2018-07-09</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/record/record-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/record/record-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
         <p id="makers">
             Made by
+            
+            
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            
             
             
             &middot; Anya Somerville
@@ -769,18 +683,17 @@
             
             
             
-            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
             &middot; Silver Oliver
             
             
         </p>
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/record/record-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/record/record-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,26 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/contact-point/contact-point-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                
-                <a href="#namespaces">Namespaces</a> |
-
-                
-
-            </p>
-
-        </nav>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
+        
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -77,9 +64,21 @@
 
 
         <h1>Contact point ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+            
+            <a href="#namespaces">Namespaces</a> |
 
+            
+
+
+    </nav>
         
-        <p>Contact point ontology for UK Parliament</p>
+        <section id="description">Contact point ontology for UK Parliament</section>
         
 
         
@@ -90,15 +89,9 @@
 
             
             <article class="class" id="ContactableThing">
-                <h3><a class="link" href="#ContactableThing">#</a> ContactableThing
-
+                <h3><a class="link" href="#ContactableThing" title="#ContactableThing">#</a> ContactableThing
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ContactableThing">#ContactableThing</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contact-point/ -->
                 
                 <p>A thing that can be contacted. Might be a person or a person in the context of a role or a group.</p>
                 
@@ -108,15 +101,9 @@
             </article>
             
             <article class="class" id="ContactPoint">
-                <h3><a class="link" href="#ContactPoint">#</a> ContactPoint
-
+                <h3><a class="link" href="#ContactPoint" title="#ContactPoint">#</a> ContactPoint
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ContactPoint">#ContactPoint</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contact-point/ -->
                 
                 <p>A postal address or other contact details.</p>
                 
@@ -126,15 +113,9 @@
             </article>
             
             <article class="class" id="PostalAddress">
-                <h3><a class="link" href="#PostalAddress">#</a> PostalAddress
-
+                <h3><a class="link" href="#PostalAddress" title="#PostalAddress">#</a> PostalAddress
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#PostalAddress">#PostalAddress</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contact-point/ -->
                 
                 <p>A postal address.</p>
                 
@@ -153,9 +134,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasContactPoint">
 
-                <h3>hasContactPoint <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasContactPoint" title="#hasContactPoint">#</a> hasContactPoint <span class="subhead">object property</span></h3>
 
                 
 
@@ -168,9 +149,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasPostalAddress">
 
-                <h3>hasPostalAddress <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasPostalAddress" title="#hasPostalAddress">#</a> hasPostalAddress <span class="subhead">object property</span></h3>
 
                 
 
@@ -191,8 +172,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>addressLine1 <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="addressLine1">
+                <h3><a class="link" href="#addressLine1" title="#addressLine1">#</a> addressLine1 <span class="subhead">data property</span></h3>
 
                 <p>The first line of a postal address.</p>
 
@@ -202,8 +183,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>addressLine2 <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="addressLine2">
+                <h3><a class="link" href="#addressLine2" title="#addressLine2">#</a> addressLine2 <span class="subhead">data property</span></h3>
 
                 <p>The second line of a postal address.</p>
 
@@ -213,8 +194,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>addressLine3 <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="addressLine3">
+                <h3><a class="link" href="#addressLine3" title="#addressLine3">#</a> addressLine3 <span class="subhead">data property</span></h3>
 
                 <p>The third line of a postal address.</p>
 
@@ -224,8 +205,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>addressLine4 <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="addressLine4">
+                <h3><a class="link" href="#addressLine4" title="#addressLine4">#</a> addressLine4 <span class="subhead">data property</span></h3>
 
                 <p>The fourth line of a postal address.</p>
 
@@ -235,8 +216,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>addressLine5 <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="addressLine5">
+                <h3><a class="link" href="#addressLine5" title="#addressLine5">#</a> addressLine5 <span class="subhead">data property</span></h3>
 
                 <p>The fifth line of a postal address.</p>
 
@@ -246,8 +227,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>availabilityNote <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="availabilityNote">
+                <h3><a class="link" href="#availabilityNote" title="#availabilityNote">#</a> availabilityNote <span class="subhead">data property</span></h3>
 
                 <p>Temporal availability note for a contact point. Used for constituency office opening days and hours.</p>
 
@@ -257,8 +238,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>contactForm <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="contactForm">
+                <h3><a class="link" href="#contactForm" title="#contactForm">#</a> contactForm <span class="subhead">data property</span></h3>
 
                 <p>URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses.</p>
 
@@ -268,8 +249,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>email <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="email">
+                <h3><a class="link" href="#email" title="#email">#</a> email <span class="subhead">data property</span></h3>
 
                 <p>Contact point has an email address.</p>
 
@@ -279,8 +260,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>faxNumber <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="faxNumber">
+                <h3><a class="link" href="#faxNumber" title="#faxNumber">#</a> faxNumber <span class="subhead">data property</span></h3>
 
                 <p>Contact point has a fax number.</p>
 
@@ -290,8 +271,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>phoneNumber <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="phoneNumber">
+                <h3><a class="link" href="#phoneNumber" title="#phoneNumber">#</a> phoneNumber <span class="subhead">data property</span></h3>
 
                 <p>Contact point has a phone number.</p>
 
@@ -301,8 +282,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>postcode <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="postcode">
+                <h3><a class="link" href="#postcode" title="#postcode">#</a> postcode <span class="subhead">data property</span></h3>
 
                 <p>Postal address has a postcode.</p>
 
@@ -368,22 +349,20 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-01-27</time>.</p>
+        <p>Ontology created &middot; <time id="created">2017-01-27</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

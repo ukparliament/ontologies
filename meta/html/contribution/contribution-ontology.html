@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,28 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/contribution/contribution-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                
-                <a href="#namespaces">Namespaces</a> |
-
-                
-        <a href="https://ukparliament.github.io/ontologies/contribution/contribution.png">Depiction</a>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
         
-
-            </p>
-
-        </nav>
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -79,9 +64,23 @@
 
 
         <h1>Contribution ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+            
+            <a href="#namespaces">Namespaces</a> |
 
+            
+    <a href="https://ukparliament.github.io/ontologies/contribution/contribution.png">Depiction</a>
+    
+
+
+    </nav>
         
-        <p>A model describing contributions made by people or groups.</p>
+        <section id="description">A model describing contributions made by people or groups.</section>
         
 
         
@@ -92,15 +91,9 @@
 
             
             <article class="class" id="Agent">
-                <h3><a class="link" href="#Agent">#</a> Agent
-
+                <h3><a class="link" href="#Agent" title="#Agent">#</a> Agent
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Agent">#Agent</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contribution/ -->
                 
                 <p>An agent. The superset of all people and all groups of people.</p>
                 
@@ -110,15 +103,9 @@
             </article>
             
             <article class="class" id="Contribution">
-                <h3><a class="link" href="#Contribution">#</a> Contribution
-
+                <h3><a class="link" href="#Contribution" title="#Contribution">#</a> Contribution
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Contribution">#Contribution</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contribution/ -->
                 
                 <p>A contribution by an individual or organisation to a document or committee inquiry etc.</p>
                 
@@ -128,15 +115,9 @@
             </article>
             
             <article class="class" id="ContributionRole">
-                <h3><a class="link" href="#ContributionRole">#</a> ContributionRole
-
+                <h3><a class="link" href="#ContributionRole" title="#ContributionRole">#</a> ContributionRole
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ContributionRole">#ContributionRole</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contribution/ -->
                 
                 <p>The type of contribution made. Might be as an author or reviewer or inquiry witness etc.</p>
                 
@@ -146,15 +127,9 @@
             </article>
             
             <article class="class" id="Incumbency">
-                <h3><a class="link" href="#Incumbency">#</a> Incumbency
-
+                <h3><a class="link" href="#Incumbency" title="#Incumbency">#</a> Incumbency
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Incumbency">#Incumbency</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/contribution/ -->
                 
                 <p>A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates.</p>
                 
@@ -173,9 +148,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasContributionRole">
 
-                <h3>hasContributionRole <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasContributionRole" title="#hasContributionRole">#</a> hasContributionRole <span class="subhead">object property</span></h3>
 
                 
 
@@ -188,9 +163,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="inCapacity">
 
-                <h3>inCapacity <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#inCapacity" title="#inCapacity">#</a> inCapacity <span class="subhead">object property</span></h3>
 
                 
 
@@ -203,9 +178,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="makesContribution">
 
-                <h3>makesContribution <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#makesContribution" title="#makesContribution">#</a> makesContribution <span class="subhead">object property</span></h3>
 
                 
 
@@ -226,8 +201,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>Display order <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="displayOrder">
+                <h3><a class="link" href="#displayOrder" title="#displayOrder">#</a> Display order <span class="subhead">data property</span></h3>
 
                 <p>Relates a contribution type to its display order.</p>
 
@@ -237,8 +212,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>Is public <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="isPublic">
+                <h3><a class="link" href="#isPublic" title="#isPublic">#</a> Is public <span class="subhead">data property</span></h3>
 
                 <p>Relates a contribution to whether not that contribution is made public. The is public flag will by necessity not be public.</p>
 
@@ -309,28 +284,23 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-06-28</time>.</p>
+        <p>Ontology created &middot; <time id="created">2018-06-28</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/contribution/contribution-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/contribution/contribution-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
         <p id="makers">
             Made by
             
             
-            &middot; Anya Somerville
-            
-            
-            
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
+            &middot; Anya Somerville
             
             
             
@@ -340,8 +310,11 @@
         </p>
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/contribution/contribution-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/contribution/contribution-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

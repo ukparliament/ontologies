@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,26 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/stats-series/stats-series-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                 <a href="#subclasses">Subclasses</a> | 
-                <a href="#namespaces">Namespaces</a> |
-
-                
-
-            </p>
-
-        </nav>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
+        
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -77,9 +64,21 @@
 
 
         <h1>Stats series ontology - deprecated</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+             <a href="#subclasses">Subclasses</a> | 
+            <a href="#namespaces">Namespaces</a> |
 
+            
+
+
+    </nav>
         
-        <p>Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.</p>
+        <section id="description">Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.</section>
         
 
         
@@ -90,15 +89,9 @@
 
             
             <article class="class" id="AverageType">
-                <h3><a class="link" href="#AverageType">#</a> AverageType
-
+                <h3><a class="link" href="#AverageType" title="#AverageType">#</a> AverageType
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#AverageType">#AverageType</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>Used to express the method of averaging used for data set releases covering a time period rather than a point in time (date).</p>
                 
@@ -108,15 +101,9 @@
             </article>
             
             <article class="class" id="Businesses">
-                <h3><a class="link" href="#Businesses">#</a> Businesses
-
+                <h3><a class="link" href="#Businesses" title="#Businesses">#</a> Businesses
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Businesses">#Businesses</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A population of businesses in a place. This might be all registered businesses or business in a certain industrial sector.</p>
                 
@@ -130,15 +117,9 @@
             </article>
             
             <article class="class" id="DataPoint">
-                <h3><a class="link" href="#DataPoint">#</a> DataPoint
-
+                <h3><a class="link" href="#DataPoint" title="#DataPoint">#</a> DataPoint
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#DataPoint">#DataPoint</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A specific data point in a statistics release version. A measure for a given population at a point in time or averaged over an interval.</p>
                 
@@ -148,15 +129,9 @@
             </article>
             
             <article class="class" id="DataSet">
-                <h3><a class="link" href="#DataSet">#</a> DataSet
-
+                <h3><a class="link" href="#DataSet" title="#DataSet">#</a> DataSet
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#DataSet">#DataSet</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A data set e.g. age profiles by constituency over time.</p>
                 
@@ -166,15 +141,9 @@
             </article>
             
             <article class="class" id="DataSetRelease">
-                <h3><a class="link" href="#DataSetRelease">#</a> DataSetRelease
-
+                <h3><a class="link" href="#DataSetRelease" title="#DataSetRelease">#</a> DataSetRelease
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#DataSetRelease">#DataSetRelease</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A release of a data set. Different versions may be published over time to correct mistakes.</p>
                 
@@ -184,15 +153,9 @@
             </article>
             
             <article class="class" id="DataSetReleaseVersion">
-                <h3><a class="link" href="#DataSetReleaseVersion">#</a> DataSetReleaseVersion
-
+                <h3><a class="link" href="#DataSetReleaseVersion" title="#DataSetReleaseVersion">#</a> DataSetReleaseVersion
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#DataSetReleaseVersion">#DataSetReleaseVersion</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A version of a release of a data set. Different versions may be released over time to correct miscalculations etc.</p>
                 
@@ -202,15 +165,9 @@
             </article>
             
             <article class="class" id="People">
-                <h3><a class="link" href="#People">#</a> People
-
+                <h3><a class="link" href="#People" title="#People">#</a> People
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#People">#People</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A population of people in a place. This might be all people resident or over 70s resident or people in receipt of Universal Credit etc.</p>
                 
@@ -224,15 +181,9 @@
             </article>
             
             <article class="class" id="Period">
-                <h3><a class="link" href="#Period">#</a> Period
-
+                <h3><a class="link" href="#Period" title="#Period">#</a> Period
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Period">#Period</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>The period over which a measurement is counted e.g. wages per week.</p>
                 
@@ -242,15 +193,9 @@
             </article>
             
             <article class="class" id="Place">
-                <h3><a class="link" href="#Place">#</a> Place
-
+                <h3><a class="link" href="#Place" title="#Place">#</a> Place
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Place">#Place</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A place. Any geographical extent. In the case of parliamentary demographic statistics we&#39;ll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas.</p>
                 
@@ -260,15 +205,9 @@
             </article>
             
             <article class="class" id="Population">
-                <h3><a class="link" href="#Population">#</a> Population
-
+                <h3><a class="link" href="#Population" title="#Population">#</a> Population
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Population">#Population</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A set of things bounded by a geographical extent. Might be a population of residents, a population of those eligible to vote, a population of small businesses, a population of static caravans, in a constituency etc.</p>
                 
@@ -278,15 +217,9 @@
             </article>
             
             <article class="class" id="Residences">
-                <h3><a class="link" href="#Residences">#</a> Residences
-
+                <h3><a class="link" href="#Residences" title="#Residences">#</a> Residences
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Residences">#Residences</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>A population of residences in a place. This might be all residences or local authority owned residences etc.</p>
                 
@@ -300,15 +233,9 @@
             </article>
             
             <article class="class" id="Source">
-                <h3><a class="link" href="#Source">#</a> Source
-
+                <h3><a class="link" href="#Source" title="#Source">#</a> Source
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Source">#Source</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>The source organisation for a given subset of a data set release. Much of the data published by the House of Commons Library originates with the Office of National Statistics but often originates with other organisations for the devolved nations e.g. Northern Ireland Statistics and Research Agency for Northern Ireland. Other data sets originate in government departments.</p>
                 
@@ -318,15 +245,9 @@
             </article>
             
             <article class="class" id="TemporalCoverage">
-                <h3><a class="link" href="#TemporalCoverage">#</a> TemporalCoverage
-
+                <h3><a class="link" href="#TemporalCoverage" title="#TemporalCoverage">#</a> TemporalCoverage
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#TemporalCoverage">#TemporalCoverage</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>The period or point in time (date) covered by a statistics release e.g. quarter 1 of 2018 or April 2016. Allows period coverage to vary between releases.</p>
                 
@@ -336,15 +257,9 @@
             </article>
             
             <article class="class" id="TerritorialApplicability">
-                <h3><a class="link" href="#TerritorialApplicability">#</a> TerritorialApplicability
-
+                <h3><a class="link" href="#TerritorialApplicability" title="#TerritorialApplicability">#</a> TerritorialApplicability
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#TerritorialApplicability">#TerritorialApplicability</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>The territorial applicability of a data set release. Allows us to say that a given release of a data set contains data from a given source (organisation) for a given place e.g. a constituency. Sources may change between releases.</p>
                 
@@ -354,15 +269,9 @@
             </article>
             
             <article class="class" id="Unit">
-                <h3><a class="link" href="#Unit">#</a> Unit
-
+                <h3><a class="link" href="#Unit" title="#Unit">#</a> Unit
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Unit">#Unit</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/stats-series/ -->
                 
                 <p>The unit of measurement for all data points in a stats series e.g. GBP.</p>
                 
@@ -381,9 +290,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="averagedOverPeriodAs">
 
-                <h3>averagedOverPeriodAs <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#averagedOverPeriodAs" title="#averagedOverPeriodAs">#</a> averagedOverPeriodAs <span class="subhead">object property</span></h3>
 
                 
 
@@ -396,9 +305,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="boundBy">
 
-                <h3>boundBy <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#boundBy" title="#boundBy">#</a> boundBy <span class="subhead">object property</span></h3>
 
                 
 
@@ -411,9 +320,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="countPer">
 
-                <h3>countPer <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#countPer" title="#countPer">#</a> countPer <span class="subhead">object property</span></h3>
 
                 
 
@@ -426,9 +335,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="fromSource">
 
-                <h3>fromSource <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#fromSource" title="#fromSource">#</a> fromSource <span class="subhead">object property</span></h3>
 
                 
 
@@ -441,9 +350,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasTerritorialApplicability">
 
-                <h3>hasTerritorialApplicability <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasTerritorialApplicability" title="#hasTerritorialApplicability">#</a> hasTerritorialApplicability <span class="subhead">object property</span></h3>
 
                 
 
@@ -456,9 +365,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasUnit">
 
-                <h3>hasUnit <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasUnit" title="#hasUnit">#</a> hasUnit <span class="subhead">object property</span></h3>
 
                 
 
@@ -471,9 +380,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="inDataSetReleaseVersion">
 
-                <h3>inDataSetReleaseVersion <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#inDataSetReleaseVersion" title="#inDataSetReleaseVersion">#</a> inDataSetReleaseVersion <span class="subhead">object property</span></h3>
 
                 
 
@@ -486,9 +395,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="inPlace">
 
-                <h3>inPlace <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#inPlace" title="#inPlace">#</a> inPlace <span class="subhead">object property</span></h3>
 
                 
 
@@ -501,9 +410,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="measureOf">
 
-                <h3>measureOf <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#measureOf" title="#measureOf">#</a> measureOf <span class="subhead">object property</span></h3>
 
                 
 
@@ -516,9 +425,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="releaseOf">
 
-                <h3>releaseOf <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#releaseOf" title="#releaseOf">#</a> releaseOf <span class="subhead">object property</span></h3>
 
                 
 
@@ -531,9 +440,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="releaseVersionOf">
 
-                <h3>releaseVersionOf <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#releaseVersionOf" title="#releaseVersionOf">#</a> releaseVersionOf <span class="subhead">object property</span></h3>
 
                 
 
@@ -546,9 +455,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="temporalCoverage">
 
-                <h3>temporalCoverage <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#temporalCoverage" title="#temporalCoverage">#</a> temporalCoverage <span class="subhead">object property</span></h3>
 
                 
 
@@ -569,8 +478,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>caveatText <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="caveatText">
+                <h3><a class="link" href="#caveatText" title="#caveatText">#</a> caveatText <span class="subhead">data property</span></h3>
 
                 <p>Relates a data set to any caveat text accompanying it.</p>
 
@@ -580,8 +489,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>endOn <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="endOn">
+                <h3><a class="link" href="#endOn" title="#endOn">#</a> endOn <span class="subhead">data property</span></h3>
 
                 <p>Relates a temporal coverage of a period to the end date of that period.</p>
 
@@ -591,8 +500,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>onDate <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="onDate">
+                <h3><a class="link" href="#onDate" title="#onDate">#</a> onDate <span class="subhead">data property</span></h3>
 
                 <p>Relates a temporal coverage of a day to that date.</p>
 
@@ -602,8 +511,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>releasedOn <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="releasedOn">
+                <h3><a class="link" href="#releasedOn" title="#releasedOn">#</a> releasedOn <span class="subhead">data property</span></h3>
 
                 <p>Relates a data set release version to the date on which it was released.</p>
 
@@ -613,8 +522,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>releaseNotes <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="releaseNotes">
+                <h3><a class="link" href="#releaseNotes" title="#releaseNotes">#</a> releaseNotes <span class="subhead">data property</span></h3>
 
                 <p>Relates a data set release to explanatory notes.</p>
 
@@ -624,8 +533,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>releaseVersionNotes <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="releaseVersionNotes">
+                <h3><a class="link" href="#releaseVersionNotes" title="#releaseVersionNotes">#</a> releaseVersionNotes <span class="subhead">data property</span></h3>
 
                 <p>Relates a data set release version to explanatory notes.</p>
 
@@ -635,8 +544,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>startOn <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="startOn">
+                <h3><a class="link" href="#startOn" title="#startOn">#</a> startOn <span class="subhead">data property</span></h3>
 
                 <p>Relates a temporal coverage of a period to the start date of that period.</p>
 
@@ -646,8 +555,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>updateFrequency <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="updateFrequency">
+                <h3><a class="link" href="#updateFrequency" title="#updateFrequency">#</a> updateFrequency <span class="subhead">data property</span></h3>
 
                 <p>Relates a data set to any textual account of its update frequency.</p>
 
@@ -657,8 +566,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>value <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="value">
+                <h3><a class="link" href="#value" title="#value">#</a> value <span class="subhead">data property</span></h3>
 
                 <p>Relates a data point to it&#39;s value as an integer.</p>
 
@@ -683,17 +592,17 @@
         <table>
                 
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>People</td>
+                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Residences</td>
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Businesses</td>
-                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>stats-series/<wbr>People</td>
                     <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
                 </tr>
                 
@@ -746,22 +655,20 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2018-03-08</time>.</p>
+        <p>Ontology created &middot; <time id="created">2018-03-08</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/stats-series/stats-series-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

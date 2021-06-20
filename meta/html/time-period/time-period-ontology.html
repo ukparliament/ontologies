@@ -8,8 +8,10 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem;
+            margin: 1rem 0.5rem;
             padding: 0.5rem;
+            color:black;
+            background-color: white;
         }
 
         a {text-decoration: none;}
@@ -36,8 +38,9 @@
 
 
         article {
-            padding: 0.5rem 0;
-
+            padding: 0.5rem 1rem;
+            background-color: rgb(240, 240, 240);
+            margin: 0.5rem 0;
         }
 
         ul {
@@ -50,28 +53,10 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="https://ukparliament.github.io/ontologies/">ukparliament.github.io/ontologies</a>
-                <br>
-                /meta/html/time-period/time-period-ontology.html
-            </p>
-            <p>
-                <a href="#classes">Classes</a> |
-                <a href="#objectproperties">Object properties</a> |
-                <a href="#dataproperties">Data properties</a> |
-                
-                
-                 <a href="#subclasses">Subclasses</a> | 
-                <a href="#namespaces">Namespaces</a> |
-
-                
-        <a href="https://ukparliament.github.io/ontologies/time-period/time-period.png">Depiction</a>
+        <p>
+                <strong><a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a></strong>
         
-
-            </p>
-
-        </nav>
+        <br>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
     </header>
 
     <main>
@@ -79,9 +64,23 @@
 
 
         <h1>Time period ontology</h1>
+        <nav id="local">  
+            <a href="#classes">Classes</a> |
+            <a href="#objectproperties">Object properties</a> |
+            <a href="#dataproperties">Data properties</a> |
+            
+            
+             <a href="#subclasses">Subclasses</a> | 
+            <a href="#namespaces">Namespaces</a> |
 
+            
+    <a href="https://ukparliament.github.io/ontologies/time-period/time-period.png">Depiction</a>
+    
+
+
+    </nav>
         
-        <p>A model describing time periods used by the UK Parliament.</p>
+        <section id="description">A model describing time periods used by the UK Parliament.</section>
         
 
         
@@ -92,15 +91,9 @@
 
             
             <article class="class" id="AdjournmentDay">
-                <h3><a class="link" href="#AdjournmentDay">#</a> Adjournment day
-
+                <h3><a class="link" href="#AdjournmentDay" title="#AdjournmentDay">#</a> Adjournment day
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#AdjournmentDay">#AdjournmentDay</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
 
                 
@@ -112,15 +105,9 @@
             </article>
             
             <article class="class" id="DissolutionPeriod">
-                <h3><a class="link" href="#DissolutionPeriod">#</a> DissolutionPeriod
-
+                <h3><a class="link" href="#DissolutionPeriod" title="#DissolutionPeriod">#</a> DissolutionPeriod
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#DissolutionPeriod">#DissolutionPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The period between parliament periods. Parliament is dissolved. During this time no parliamentary business can take place. From the point of dissolution until the general election there are no Members of the House of Commons. Note that Members of the House of Commons are considered Members on election even though Parliament is dissolved. Members of the House of Lords retain their positions during dissolution. Dissolution periods are the same across both Houses.</p>
                 
@@ -134,15 +121,9 @@
             </article>
             
             <article class="class" id="GovernmentAdministrationPeriod">
-                <h3><a class="link" href="#GovernmentAdministrationPeriod">#</a> Government administration period
-
+                <h3><a class="link" href="#GovernmentAdministrationPeriod" title="#GovernmentAdministrationPeriod">#</a> Government administration period
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#GovernmentAdministrationPeriod">#GovernmentAdministrationPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A period of a single government, under a single Prime Minister, bounded by general elections, for example: Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990.</p>
                 
@@ -156,15 +137,9 @@
             </article>
             
             <article class="class" id="House">
-                <h3><a class="link" href="#House">#</a> House
-
+                <h3><a class="link" href="#House" title="#House">#</a> House
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#House">#House</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A parliamentary House e.g. the House of Lords.</p>
                 
@@ -178,15 +153,9 @@
             </article>
             
             <article class="class" id="ParliamentPeriod">
-                <h3><a class="link" href="#ParliamentPeriod">#</a> Parliament period
-
+                <h3><a class="link" href="#ParliamentPeriod" title="#ParliamentPeriod">#</a> Parliament period
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ParliamentPeriod">#ParliamentPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
                 
@@ -200,15 +169,9 @@
             </article>
             
             <article class="class" id="PostElectionDissolutionPeriod">
-                <h3><a class="link" href="#PostElectionDissolutionPeriod">#</a> PostElectionDissolutionPeriod
-
+                <h3><a class="link" href="#PostElectionDissolutionPeriod" title="#PostElectionDissolutionPeriod">#</a> PostElectionDissolutionPeriod
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#PostElectionDissolutionPeriod">#PostElectionDissolutionPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The period between the results of all constituency elections being announced and the next parliament period. During this period, successful candidates are considered to be Members even though Parliament is dissolved.</p>
                 
@@ -222,15 +185,9 @@
             </article>
             
             <article class="class" id="PreElectionDissolutionPeriod">
-                <h3><a class="link" href="#PreElectionDissolutionPeriod">#</a> PreElectionDissolutionPeriod
-
+                <h3><a class="link" href="#PreElectionDissolutionPeriod" title="#PreElectionDissolutionPeriod">#</a> PreElectionDissolutionPeriod
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#PreElectionDissolutionPeriod">#PreElectionDissolutionPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The period between the end of a parliament period and the results of all constituency elections being announced. During this time there are no Members of the House of Commons.</p>
                 
@@ -244,15 +201,9 @@
             </article>
             
             <article class="class" id="PremiershipPeriod">
-                <h3><a class="link" href="#PremiershipPeriod">#</a> Premiership period
-
+                <h3><a class="link" href="#PremiershipPeriod" title="#PremiershipPeriod">#</a> Premiership period
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#PremiershipPeriod">#PremiershipPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A continuous period of government under a single Prime Minister, spanning general elections, for example: Thatcher administration 1979-1990.</p>
                 
@@ -266,15 +217,9 @@
             </article>
             
             <article class="class" id="PrintingDay">
-                <h3><a class="link" href="#PrintingDay">#</a> PrintingDay
-
+                <h3><a class="link" href="#PrintingDay" title="#PrintingDay">#</a> PrintingDay
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#PrintingDay">#PrintingDay</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>In the House of Commons, a printing day is a non-sitting day during an adjournment (not including a non-sitting Friday) on which any parliamentary questions or amendments to Bills tabled since the last sitting day are published. The parliamentary questions so published are not officially tabled until the next sitting day, but under House of Commons Standing Order No. 64 (retrieved at 17/04/2018), amendments to Bills received before 16h30 on the last business day of the period are treated as if that day were a sitting day.</p>
                 
@@ -288,15 +233,9 @@
             </article>
             
             <article class="class" id="ProrogationPeriod">
-                <h3><a class="link" href="#ProrogationPeriod">#</a> ProrogationPeriod
-
+                <h3><a class="link" href="#ProrogationPeriod" title="#ProrogationPeriod">#</a> ProrogationPeriod
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#ProrogationPeriod">#ProrogationPeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The period during which Parliament is inactive between prorogation and the start of the subsequent session or dissolution. During this time there are still Members but all parliamentary business stops. Prorogation periods are the same across both Houses.</p>
                 
@@ -310,15 +249,9 @@
             </article>
             
             <article class="class" id="Recess">
-                <h3><a class="link" href="#Recess">#</a> Recess
-
+                <h3><a class="link" href="#Recess" title="#Recess">#</a> Recess
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Recess">#Recess</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A period during a session when one or both Houses have adjourned to a day other than the next usual sitting day, which may last between a few days and several weeks. Officially, a recess is the period when Parliament is prorogued, but it is now used to indicate what are officially known as periodic adjournments. A periodic adjournment may be ended by a prorogation or a dissolution.</p>
                 
@@ -332,15 +265,9 @@
             </article>
             
             <article class="class" id="Reign">
-                <h3><a class="link" href="#Reign">#</a> Reign
-
+                <h3><a class="link" href="#Reign" title="#Reign">#</a> Reign
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Reign">#Reign</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A period of time during which a monarch has a reign in a kingdom.</p>
                 
@@ -354,15 +281,9 @@
             </article>
             
             <article class="class" id="Session">
-                <h3><a class="link" href="#Session">#</a> Session
-
+                <h3><a class="link" href="#Session" title="#Session">#</a> Session
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Session">#Session</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The final session of a parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
                 
@@ -376,15 +297,9 @@
             </article>
             
             <article class="class" id="SittingDay">
-                <h3><a class="link" href="#SittingDay">#</a> SittingDay
-
+                <h3><a class="link" href="#SittingDay" title="#SittingDay">#</a> SittingDay
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#SittingDay">#SittingDay</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A day on which a House is sitting. Sitting days are not the same across both Houses. A sitting day may continue after midnight and therefore cross more than one calendar day, but it is known by the day on which it started.</p>
                 
@@ -398,15 +313,9 @@
             </article>
             
             <article class="class" id="StatutoryDay">
-                <h3><a class="link" href="#StatutoryDay">#</a> StatutoryDay
-
+                <h3><a class="link" href="#StatutoryDay" title="#StatutoryDay">#</a> StatutoryDay
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#StatutoryDay">#StatutoryDay</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>There is a defined period of time during which Members of either House can object to negative and made affirmative statutory instruments. Only certain calendar days are included when calculating this period. The total number and nature of days on which a Member can object are defined by statute and differ across parliamentary procedure. These statutory days comprise consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account, unless the instrument is laid into the House of Commons only. In this case the calculation is based on Commons sitting days and short adjournments. On the day on which a negative statutory instrument is laid, a forty day time period commences during which it is possible for Members to &#39;pray&#39; against (table a motion objecting to) the instrument. This forty day period is defined by the Statutory Instruments Act 1946. For made affirmative statutory instruments the time limit is set out in the enabling Act, rather than in the Statutory Instruments Act 1946. It is typically 28 or 40 days. The time period commences on the day the instrument is made, rather than laid. The enabling Act stipulates which days are counted towards the time limit, and typically follows the logic previously described.</p>
                 
@@ -420,15 +329,9 @@
             </article>
             
             <article class="class" id="TablingDay">
-                <h3><a class="link" href="#TablingDay">#</a> TablingDay
-
+                <h3><a class="link" href="#TablingDay" title="#TablingDay">#</a> TablingDay
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#TablingDay">#TablingDay</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A day on which a Member of a House may table a question. In the House of Commons questions are tabled on sitting days. In the House of Lords questions are tabled on sitting days and  on selected recess days.</p>
                 
@@ -442,15 +345,9 @@
             </article>
             
             <article class="class" id="Term">
-                <h3><a class="link" href="#Term">#</a> Term
-
+                <h3><a class="link" href="#Term" title="#Term">#</a> Term
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#Term">#Term</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>The period between recess periods during which Parliament is active, and may be sitting. This period does not have an official name. Term periods are not necessarily the same across both Houses.</p>
                 
@@ -464,15 +361,9 @@
             </article>
             
             <article class="class" id="TimePeriod">
-                <h3><a class="link" href="#TimePeriod">#</a> Time period
-
+                <h3><a class="link" href="#TimePeriod" title="#TimePeriod">#</a> Time period
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#TimePeriod">#TimePeriod</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
                 <p>A period of time, having a name. An interval rather than a single point in time.</p>
                 
@@ -482,15 +373,9 @@
             </article>
             
             <article class="class" id="VirtualSittingDay">
-                <h3><a class="link" href="#VirtualSittingDay">#</a> Virtual sitting day
-
+                <h3><a class="link" href="#VirtualSittingDay" title="#VirtualSittingDay">#</a> Virtual sitting day
                     <span class="subhead">class</span>
-
-                    <br>
-                    <a class="link" href="#VirtualSittingDay">#VirtualSittingDay</a>
-                    
                 </h3>
-                <!-- http://parliament.uk/ontologies/time-period/ -->
                 
 
                 
@@ -511,9 +396,9 @@
 
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasAdjournmentDay">
 
-                <h3>Has adjournment day <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasAdjournmentDay" title="#hasAdjournmentDay">#</a> Has adjournment day <span class="subhead">object property</span></h3>
 
                 
 
@@ -524,9 +409,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasVirtualSittingDay">
 
-                <h3>Has virtual sitting day <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasVirtualSittingDay" title="#hasVirtualSittingDay">#</a> Has virtual sitting day <span class="subhead">object property</span></h3>
 
                 
 
@@ -537,9 +422,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasPostElectionDissolutionPeriod">
 
-                <h3>hasPostElectionDissolutionPeriod <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasPostElectionDissolutionPeriod" title="#hasPostElectionDissolutionPeriod">#</a> hasPostElectionDissolutionPeriod <span class="subhead">object property</span></h3>
 
                 
 
@@ -552,9 +437,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasPreElectionDissolutionPeriod">
 
-                <h3>hasPreElectionDissolutionPeriod <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasPreElectionDissolutionPeriod" title="#hasPreElectionDissolutionPeriod">#</a> hasPreElectionDissolutionPeriod <span class="subhead">object property</span></h3>
 
                 
 
@@ -567,9 +452,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasPrintingDay">
 
-                <h3>hasPrintingDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasPrintingDay" title="#hasPrintingDay">#</a> hasPrintingDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -582,9 +467,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasProrogationPeriod">
 
-                <h3>hasProrogationPeriod <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasProrogationPeriod" title="#hasProrogationPeriod">#</a> hasProrogationPeriod <span class="subhead">object property</span></h3>
 
                 
 
@@ -597,9 +482,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasRecess">
 
-                <h3>hasRecess <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasRecess" title="#hasRecess">#</a> hasRecess <span class="subhead">object property</span></h3>
 
                 
 
@@ -612,9 +497,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasRecessPrintingDay">
 
-                <h3>hasRecessPrintingDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasRecessPrintingDay" title="#hasRecessPrintingDay">#</a> hasRecessPrintingDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -627,9 +512,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasRecessStatutoryDay">
 
-                <h3>hasRecessStatutoryDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasRecessStatutoryDay" title="#hasRecessStatutoryDay">#</a> hasRecessStatutoryDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -642,9 +527,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasRecessTablingDay">
 
-                <h3>hasRecessTablingDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasRecessTablingDay" title="#hasRecessTablingDay">#</a> hasRecessTablingDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -657,9 +542,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasSession">
 
-                <h3>hasSession <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasSession" title="#hasSession">#</a> hasSession <span class="subhead">object property</span></h3>
 
                 
 
@@ -672,9 +557,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasSittingDay">
 
-                <h3>hasSittingDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasSittingDay" title="#hasSittingDay">#</a> hasSittingDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -687,9 +572,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasStatutoryDay">
 
-                <h3>hasStatutoryDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasStatutoryDay" title="#hasStatutoryDay">#</a> hasStatutoryDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -702,9 +587,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasTablingDay">
 
-                <h3>hasTablingDay <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasTablingDay" title="#hasTablingDay">#</a> hasTablingDay <span class="subhead">object property</span></h3>
 
                 
 
@@ -717,9 +602,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="hasTerm">
 
-                <h3>hasTerm <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#hasTerm" title="#hasTerm">#</a> hasTerm <span class="subhead">object property</span></h3>
 
                 
 
@@ -732,9 +617,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="houseHasRecess">
 
-                <h3>houseHasRecess <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#houseHasRecess" title="#houseHasRecess">#</a> houseHasRecess <span class="subhead">object property</span></h3>
 
                 
 
@@ -747,9 +632,9 @@
             </article>
             
 
-            <article class="objectproperty">
+            <article class="objectproperty" id="houseHasTerm">
 
-                <h3>houseHasTerm <span class="subhead">object property</span></h3>
+                <h3><a class="link" href="#houseHasTerm" title="#houseHasTerm">#</a> houseHasTerm <span class="subhead">object property</span></h3>
 
                 
 
@@ -770,8 +655,8 @@
             <h2>Data properties</h2>
             
 
-            <article class="dataproperty">
-                <h3>parliamentNumber <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="parliamentNumber">
+                <h3><a class="link" href="#parliamentNumber" title="#parliamentNumber">#</a> parliamentNumber <span class="subhead">data property</span></h3>
 
                 <p>Parliament period has an ordinal number. Numbered from the Act of Union 1800.</p>
 
@@ -781,8 +666,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>proposedEndDate <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="proposedEndDate">
+                <h3><a class="link" href="#proposedEndDate" title="#proposedEndDate">#</a> proposedEndDate <span class="subhead">data property</span></h3>
 
                 <p>Time period has a proposed end date.</p>
 
@@ -792,8 +677,8 @@
             </article>
             
 
-            <article class="dataproperty">
-                <h3>proposedStartDate <span class="subhead">data property</span></h3>
+            <article class="dataproperty" id="proposedStartDate">
+                <h3><a class="link" href="#proposedStartDate" title="#proposedStartDate">#</a> proposedStartDate <span class="subhead">data property</span></h3>
 
                 <p>Time period has a proposed start date.</p>
 
@@ -818,6 +703,26 @@
         <table>
                 
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>PremiershipPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
@@ -828,7 +733,27 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>GovernmentAdministrationPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -843,47 +768,17 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>StatutoryDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>SittingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>GovernmentAdministrationPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -893,17 +788,7 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>StatutoryDay</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -961,40 +846,23 @@
         
 
 
-
-
-        
-
-
     </main>
 
     <footer>
 
-        <p>Ontology created <time id="created">2017-03-09</time>.</p>
+        <p>Ontology created &middot; <time id="created">2017-03-09</time></p>
         
-        <p>Source Turtle file on <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/time-period/time-period-ontology.ttl">github.com/ukparliament</a>. Visualization on <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/time-period/time-period-ontology.ttl">visualdataweb.de/webvowl</a>. </p>
+       
         
         <p id="makers">
             Made by
-            
-            
-            &middot; Paul Evans
-            
-            
-            
-            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-            
             
             
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             
             
             
-            &middot; Ned Morrell
-            
-            
-            
-            &middot; Anya Somerville
+            &middot; David Beamish
             
             
             
@@ -1002,14 +870,29 @@
             
             
             
-            &middot; David Beamish
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
+            &middot; Ned Morrell
+            
+            
+            
+            &middot; Paul Evans
+            
+            
+            
+            &middot; Anya Somerville
             
             
         </p>
         
 
+        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/time-period/time-period-ontology.ttl">github.com/ukparliament</a></p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/time-period/time-period-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
-        <p>Material on this site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>. <q>You are <b>encouraged to use and re-use the information that is available under this licence freely and flexibly</b>, with only a few conditions.</q></p>
+        <p>Page last modified &middot; TIMESTAMP TK </p>
 
     </footer>
 </body>

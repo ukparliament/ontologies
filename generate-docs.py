@@ -30,8 +30,9 @@ htmldir = "./meta/html/"
 
 for root, _, _ in os.walk(htmldir):
     if root != htmldir:
-        print(root)
+
         shutil.rmtree(root)
+        print("Deleted dir " + root)
 
 for ttlpath in list(Path(".").rglob("*.ttl")):
 
@@ -69,6 +70,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         dataproperties.append(
             {
                 "label": g.label(s),
+                "idString": s.split("/")[-1],
                 "comment": g.value(s, RDFS.comment),
                 "domain": g.value(s, RDFS.domain).split("/")[-1],
                 "range": g.value(s, RDFS.range).split("#")[-1],
@@ -91,6 +93,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         objectproperties.append(
             {
                 "label": g.label(s),
+                "idString": s.split("/")[-1],
                 "domain": domainstub,
                 "range": rangestub,
                 "superproperty": superproperty,
@@ -156,11 +159,13 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
 
     try:
         os.makedirs(htmldir + str(ttlpath.parent))
+        print(" Made dir " + htmldir + str(ttlpath.parent))
     except FileExistsError:
         pass
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
     with open(htmlpath, "w") as htmlfile:
+        print("  Writing " + htmlpath)
         htmlfile.write(
             template.render(
                 htmlpath=htmlpath.lstrip("."),
