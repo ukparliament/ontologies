@@ -233,7 +233,7 @@
             Made by
             {% for maker in makers %}
             {% if maker.homepage|e != "None" %}
-            &middot; <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
+            &middot; <a href="{{ maker.homepage|e }}" title="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
             {% else %}
             &middot; {{ maker.name|e }}
             {% endif %}
