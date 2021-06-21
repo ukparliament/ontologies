@@ -4,11 +4,60 @@
  
 We are in the process of redesigning the [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) to use typed steps rather than route types.
  
-Each step has one type. The step can be a business step, decision step, logical NOT, logical AND or logical OR.
+The step can be a business step, a decision step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of PLUS or EQUALS.
 
-#### Logic gates
+#### Business steps
+
+A business step with an input being UNTRAVERSABLE has all outputs being UNTRAVERSABLE.
+
+A business step with an input not being UNTRAVERSABLE ...
+
+* ... emits a NULL if that business step has not been actualised.
+
+* ... emits a NULL if that business step has been actualised by a business item or items only having dates in the future.
+
+* ... emits a TRUE if that business step that has been actualised by at least one business item with a date in the past or with a date of today.
+
+#### Decision steps
+
+Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
+
+A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of NULL, FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
+
+The truth table for a decision step is:
+<table>
+	<thead>
+		<tr>
+			<td colspan="2" id="truth-table-decision">Decision step</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>TRUE</th>
+			<td>ALLOWS</td>
+		</tr>
+		<tr>
+			<th>FALSE</th>
+			<td>FALSE</td>
+		</tr>
+		<tr>
+			<th>NULL</th>
+			<td>NULL</td>
+		</tr>
+		<tr>
+			<th>UNTRAVERSABLE</th>
+			<td>UNTRAVERSABLE</td>
+		</tr>
+	</tbody>
+</table>
+
+It is expected that decision steps will output a route directly into a business step without any intervening logic steps: a logic step will never have an input with a value of ALLOWS.
+
+A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE, NULL or UNTRAVERSABLE, is neither allowed nor caused to happen.
+
+#### Logic steps
  
-The logic gates take one input or two inputs and emit one output. A value is called NULL, TRUE, FALSE or UNTRAVERSABLE. Truth tables for the logic gates are:
+The logic steps take one input or two inputs and emit one output. A value is called NULL, TRUE, FALSE or UNTRAVERSABLE. Truth tables for the logic steps are:
  
 <!-- NOT table -->
 <table>
@@ -84,7 +133,6 @@ The logic gates take one input or two inputs and emit one output. A value is cal
 	</tbody>
 </table>
 
-
 <!-- OR table -->
 <table>
 	<thead>
@@ -131,64 +179,23 @@ The logic gates take one input or two inputs and emit one output. A value is cal
 	</tbody>
 </table>
 
-A NULL value entering a logic gate renders that gate 'transparent':
+A NULL value entering a logic step renders that step 'transparent':
 
-* A NOT gate with an input value of NULL will output a NULL.
+* A NOT step with an input value of NULL will output a NULL.
 
-* An AND gate or an OR gate with one input value of NULL will output the value of the second input - be that TRUE, FALSE, NULL or UNTRAVERSABLE.
+* An AND step or an OR step with one input value of NULL will output the value of the second input - be that TRUE, FALSE, NULL or UNTRAVERSABLE.
 
+#### Arithmetic steps
 
-#### Decision steps
+An arithmetic step is either a PLUS step or an EQUALS step.
 
-Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the government to table an approval motion.
+A business step outputs a count of the number of actualisations of that step by business items having a date of today or in the past.
 
+A PLUS step directly follows a business step, having no intervening steps. A PLUS step takes two input routes from two business steps and sum the two counts. The summed value is emitted on the outbound route of the PLUS step. The target of the outbound route from an PLUS step is an arithmetic step.
 
-A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of NULL, FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
+An EQUALS step takes two input routes from either a business step or a PLUS step and evaluates whether the two values are equal. If the two values are equal, the EQUALS step emits a TRUE. If the two values are not equal, the EQUALS step emits a FALSE. The target of the outbound route from an EQUALS step is a business step, decision step or logic step.
 
-The truth table for a decision step is:
-<table>
-	<thead>
-		<tr>
-			<td colspan="2" id="truth-table-decision">Decision step</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>TRUE</th>
-			<td>ALLOWS</td>
-		</tr>
-		<tr>
-			<th>FALSE</th>
-			<td>FALSE</td>
-		</tr>
-		<tr>
-			<th>NULL</th>
-			<td>NULL</td>
-		</tr>
-		<tr>
-			<th>UNTRAVERSABLE</th>
-			<td>UNTRAVERSABLE</td>
-		</tr>
-	</tbody>
-</table>
-
-It is expected that decision steps will output a route directly into a business step without any intervening logic gate steps: a logic gate step will never have an input with a value of ALLOWS.
-
-A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE, NULL or UNTRAVERSABLE, is neither allowed nor caused to happen.
-
-#### Impact of actualisation
-
-A business step with an input being UNTRAVERSABLE has all outputs being UNTRAVERSABLE.
-
-A business step with an input not being UNTRAVERSABLE ...
-
-* ... emits a NULL if that business step has not been actualised.
-
-* ... emits a NULL if that business step has been actualised by a business item or items only having dates in the future.
-
-* ... emits a TRUE if that business step that has been actualised by at least one business item with a date in the past or with a date of today.
-
-#### Parsing work packages
+### Parsing work packages
 
 [Ruby code for the parsing of a work package with step types](https://api.parliament.uk/procedures/meta/comments) is here.
 
@@ -196,7 +203,7 @@ Business steps in a work package are in one of four current states and in one of
 
 Any combination of one current state and one potential state is possible.
 
-##### Current states of a business step
+#### Current states of a business step
 
 Business steps are in one of three current states:
 
@@ -210,7 +217,7 @@ Business steps are in one of three current states:
 
 Current states are determined by actualisation of steps, rather than processing of routes and logic. 
 
-##### Potential states of a business step
+#### Potential states of a business step
 
 Business steps are in one of four potential states:
 
