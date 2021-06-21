@@ -56,7 +56,7 @@ There are occasions when one or both Houses make a mistake and do not follow pro
 
 ## Parsing procedure maps
 
-Maps are based either on [route types](/with-route-types) or on [step types](/with-step-types), each having their own parsing rules.
+Maps are based either on [route types](with-route-types) or on [step types](with-step-types), each having their own parsing rules.
 
 
 
