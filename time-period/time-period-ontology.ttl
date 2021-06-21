@@ -47,20 +47,17 @@ pt:Reign rdf:type owl:Class ;
 	rdfs:label "Reign"@en ;
 	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-	
-	# edited to here
 
 pt:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Parliament period"@en ;
-	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
+	rdfs:comment "The time period of a Parliament between the date of its first assembly after a general election and the dissolution of that Parliament. We use the term Parliament period in this ontology to distinguish between a Parliament being a named period of time and Parliament as an institution. A Parliament period comprises contiguous periods while Parliament is either in session or prorogued. A Parliament period applies to both Houses. Proclamations naming dates for the assembly and dissolution of Parliaments are issued by the monarch. Before the passing of the Fixed-term Parliaments Act 2011, a dissolution proclamation named the date on which Parliament reassembled. After the passing of the Fixed-term Parliaments Act 2011, a Parliament begins on the date named in a proclamation issued following dissolution. The start date of a Parliament may be changed by subsequent proclamations. Before the passing of the Fixed-term Parliaments Act 2011, a dissolution proclamation named the date on which Parliament dissolved. After the passing of the Fixed-term Parliaments Act 2011, the date of dissolution is determined according to that Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:DissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "DissolutionPeriod"@en ;
-	rdfs:comment "The period between parliament periods. Parliament is dissolved. During this time no parliamentary business can take place. From the point of dissolution until the general election there are no Members of the House of Commons. Note that Members of the House of Commons are considered Members on election even though Parliament is dissolved. Members of the House of Lords retain their positions during dissolution. Dissolution periods are the same across both Houses."@en ;
+	rdfs:comment "The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PreElectionDissolutionPeriod rdf:type owl:Class ;
@@ -72,8 +69,10 @@ pt:PreElectionDissolutionPeriod rdf:type owl:Class ;
 pt:PostElectionDissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PostElectionDissolutionPeriod"@en ;
-	rdfs:comment "The period between the results of all constituency elections being announced and the next parliament period. During this period, successful candidates are considered to be Members even though Parliament is dissolved."@en ;
+	rdfs:comment "The period between the results of all constituency elections being announced and the next parliament period. During this period, successful candidates are Members even though Parliament is dissolved."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+				# edited to here
 
 pt:Session rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
@@ -284,7 +283,7 @@ pt:proposedEndDate rdf:type owl:DatatypeProperty ;
 	
 pt:parliamentNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "parliamentNumber"@en ;
-	rdfs:comment "Parliament period has an ordinal number. Numbered from the Act of Union 1800."@en ;
+	rdfs:comment "Parliament period has an ordinal number. Numbered from the Act of Union 1800. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
 	rdfs:domain pt:ParliamentPeriod ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
