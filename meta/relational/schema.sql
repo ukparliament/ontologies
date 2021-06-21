@@ -5,11 +5,11 @@ drop table if exists authority_owners;
 drop table if exists house_seat_incumbencies;
 drop table if exists peerage_holdings;
 drop table if exists house_seats;
-drop table if exists law_lords;
+drop table if exists law_lord_incumbencies;
 drop table if exists peerages;
 drop table if exists jurisdictions;
 drop table if exists peerage_types;
-drop table if exists special_remainders;
+drop table if exists special_remainder_types;
 drop table if exists letters_patents;
 drop table if exists people_parliamentary_blocs;
 drop table if exists house_seat_end_reasons;
@@ -83,9 +83,8 @@ create table letters_patents (
 	constraint fk_letters_patent_time_id foreign key (letters_patent_time_id) references letters_patent_times(id),
 	primary key (id)
 );
-create table special_remainders (
+create table special_remainder_types (
 	id serial,
-	label varchar(255) not null,
 	description varchar(1000) not null,
 	primary key (id)
 );
@@ -108,12 +107,12 @@ create table peerages (
 	extinct_on date default null,
 	last_number int default null,
 	peerage_rank_id int not null,
-	special_remainder_id int not null,
+	special_remainder_type_id int not null,
 	letters_patent_id int not null,
 	peerage_type_id int not null,
 	kingdom_id int not null,
 	constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
-	constraint fk_special_remainder foreign key (special_remainder_id) references special_remainders(id),
+	constraint fk_special_remainder_type foreign key (special_remainder_type_id) references special_remainder_types(id),
 	constraint fk_letters_patent foreign key (letters_patent_id) references letters_patents(id),
 	constraint fk_peerage_type foreign key (peerage_type_id) references peerage_types(id),
 	constraint fk_kingdom foreign key (kingdom_id) references kingdoms(id),
@@ -124,10 +123,10 @@ create table jurisdictions (
 	label varchar(255) not null,
 	primary key (id)
 );
-create table law_lords (
+create table law_lord_incumbencies (
 	id serial,
 	appointed_on date not null,
-	retired_on date not null,
+	end_on date not null,
 	peerage_id int not null,
 	jurisdiction_id int not null,
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
@@ -289,9 +288,9 @@ create table external_identifiers (
 	peerage_id int null,
 	house_id int null,
 	letters_patent_id int null,
-	special_remainder_id int null,
+	special_remainder_type_id int null,
 	jurisdiction_id int null,
-	law_lord_id int null,
+	law_lord_incumbency_id int null,
 	peerage_type_id int null,
 	peerage_rank_id int null,
 	peerage_holding_id int null,
@@ -302,9 +301,9 @@ create table external_identifiers (
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_letters_patent foreign key (letters_patent_id) references letters_patents(id),
-	constraint fk_special_remainder foreign key (special_remainder_id) references special_remainders(id),
+	constraint fk_special_remainder_type foreign key (special_remainder_type_id) references special_remainder_types(id),
 	constraint fk_jurisdiction foreign key (jurisdiction_id) references jurisdictions(id),
-	constraint fk_law_lord foreign key (law_lord_id) references law_lords(id),
+	constraint fk_law_lord_incumbency foreign key (law_lord_incumbency_id) references law_lord_incumbencies(id),
 	constraint fk_peerage_type foreign key (peerage_type_id) references peerage_types(id),
 	constraint fk_peerage_rank foreign key (peerage_rank_id) references peerage_ranks(id),
 	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
