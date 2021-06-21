@@ -191,7 +191,7 @@ An arithmetic step is either a PLUS step or an EQUALS step.
 
 A business step outputs a count of the number of actualisations of that step by business items having a date of today or in the past.
 
-A PLUS step directly follows a business step, having no intervening steps. A PLUS step takes two input routes from two business steps and sums the two counts. The summed count is emitted on the outbound route of the PLUS step. The target of the outbound route from an PLUS step is an arithmetic step.
+A PLUS step directly follows either a business step or another PLUS step, having no intervening steps. A PLUS step takes two input routes from two business steps and sums the two counts. The summed count is emitted on the outbound route of the PLUS step. The target of the outbound route from an PLUS step is an arithmetic step.
 
 An EQUALS step takes two input routes from either a business step or a PLUS step and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route from an EQUALS step is a business step, decision step or logic step.
 
