@@ -37,6 +37,9 @@ for root, _, _ in os.walk(htmldir):
 for ttlpath in list(Path(".").rglob("*.ttl")):
 
     g = rdflib.Graph()
+    
+    for s, p, o in g:
+        print(s, p, o)
 
     ttlfile = open(ttlpath, "r")
     result = g.parse(data=ttlfile.read(), format="turtle")
