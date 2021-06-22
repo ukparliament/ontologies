@@ -37,14 +37,14 @@ for root, _, _ in os.walk(htmldir):
 for ttlpath in list(Path(".").rglob("*.ttl")):
 
     g = rdflib.Graph()
-    
-    for s, p, o in g.triples():
-        print(s, p, o)
 
     ttlfile = open(ttlpath, "r")
     result = g.parse(data=ttlfile.read(), format="turtle")
 
     classes = []
+    
+    for s, p, o in g.triple():
+        print(s, p, o)
 
     for s, p, o in g.triples((None, RDF.type, OWL.Class)):
 
