@@ -22,8 +22,8 @@ jobs:
       - name: unzip, cd, make
         run: unzip janet.zip; cd janet-master; make; make test; make repl
 
-      - name: janet -v
-        run: janet -v
+      - name: cd, janet -v
+        run: cd; janet -v
 
 
 
