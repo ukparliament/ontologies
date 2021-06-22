@@ -175,6 +175,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     
     
     with open(dotpath, "w") as dotfile:
+        dotfile.write("test")
         print("  Writing " + dotpath)
         dotfile.write("digraph {" + tripleslist + "}")
 
