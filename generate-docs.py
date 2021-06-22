@@ -38,7 +38,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
 
     g = rdflib.Graph()
     
-    for s, p, o in g.triples():
+    for s, p, o in g.triples((None, None, None)):
         print(s, p, o)
 
     ttlfile = open(ttlpath, "r")
