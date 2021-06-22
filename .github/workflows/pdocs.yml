@@ -1,0 +1,27 @@
+
+name: generate-docs
+
+on:
+  push:
+    branches: 
+      - master
+
+  workflow_dispatch:
+
+jobs:
+
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # - uses: actions/checkout@v2
+        
+      - name: cpan install Attean
+        run: cpan install Attean
+
+      - name: perl -v
+        run: perl -v
+        
+
+
+          
