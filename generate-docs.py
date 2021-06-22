@@ -1,6 +1,7 @@
 import os
 import shutil
 import rdflib
+import csv
 
 from datetime import datetime
 from pathlib import Path
@@ -165,19 +166,27 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     except FileExistsError:
         pass
     
-    dotpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".dot"
+    # dotpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".dot"
     
-    dotlines = []
+    # dotlines = []
     
-    for s, p, o in g.triples((None, None, None)):
-        dotlines.append(f"{s} -> {p} -> {o};")
-    tripleslist = ''.join(dotlines)
+    # for s, p, o in g.triples((None, None, None)):
+    #     dotlines.append(f'"{s}" -> "{o}"[label="{p}"];')
+    # tripleslist = '\n'.join(dotlines)
     
     
-    with open(dotpath, "w") as dotfile:
-        dotfile.write("test")
-        print("  Writing " + dotpath)
-        dotfile.write("digraph {" + tripleslist + "}")
+    # with open(dotpath, "w+") as dotfile:
+    #     print("  Writing " + dotpath)
+    #     dotfile.write("digraph { node [shape=box];" + tripleslist + "}")
+
+    csvpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".csv"
+
+    with open(csvpath, mode='w+') as csvfile:
+        print("  Writing " + csvpath)
+        triple_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        triple_writer.writerow(['Subject', 'Predicate', 'Object'])
+        for s, p, o in g.triples((None, None, None)):
+            triple_writer.writerow([s, p, o])
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
     with open(htmlpath, "w") as htmlfile:
