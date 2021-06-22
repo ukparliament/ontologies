@@ -16,21 +16,13 @@ jobs:
     steps:
       # - uses: actions/checkout@v2
 
-
       - name: curl -L https://github.com/janet-lang/janet/archive/refs/heads/master.zip --output janet.zip
         run: curl -L https://github.com/janet-lang/janet/archive/refs/heads/master.zip --output janet.zip
         
-      - name: unzip janet.zip
-        run: unzip janet.zip
+      - name: unzip, cd, make
+        run: unzip janet.zip; cd janet-master; make
 
-      - name: cd janet-master
-        run: cd janet-master
-        
-      - name: pwd
-        run: pwd
-        
-      - name: make
-        run: make
+
 
 
           
