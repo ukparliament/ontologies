@@ -29,11 +29,11 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-for root, _, _ in os.walk(htmldir):
-    if root != htmldir:
+# for root, _, _ in os.walk(htmldir):
+#     if root != htmldir:
 
-        shutil.rmtree(root)
-        print("Deleted dir " + root)
+#         shutil.rmtree(root)
+#         print("Deleted dir " + root)
 
 for ttlpath in list(Path(".").rglob("*.ttl")):
 
