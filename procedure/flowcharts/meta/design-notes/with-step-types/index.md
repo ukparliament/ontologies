@@ -298,6 +298,16 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 			<td>2</td>
 			<td>1</td>
 		</tr>
+		<tr>
+			<th>Arithmetic PLUS</th>
+			<td>2</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<th>Arithmetic EQUALS</th>
+			<td>2</td>
+			<td>1</td>
+		</tr>
 	</tbody>
 </table>
 
