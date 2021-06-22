@@ -15,12 +15,13 @@ jobs:
 
     steps:
       # - uses: actions/checkout@v2
-        
-      - name: cpan install Attean
-        run: cpan install Attean
-
       - name: perl -v
         run: perl -v
+        
+      - name: cpanm install Attean
+        run: cpanm install Attean
+
+
         
 
 
