@@ -20,8 +20,10 @@ jobs:
         run: curl -L https://github.com/janet-lang/janet/archive/refs/heads/master.zip --output janet.zip
         
       - name: unzip, cd, make
-        run: unzip janet.zip; cd janet-master; make
+        run: unzip janet.zip; cd janet-master; make; make test; make repl
 
+      - name: janet -v
+        run: janet -v
 
 
 
