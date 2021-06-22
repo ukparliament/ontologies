@@ -171,7 +171,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     
     for s, p, o in g.triples((None, None, None)):
         dotlines.append(f"{s} -> {p} -> {o};")
-    tripleslist = ''.join[dotlines]
+    tripleslist = ''.join(dotlines)
     
     
     with open(dotpath, "w") as dotfile:
