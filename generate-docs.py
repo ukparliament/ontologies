@@ -43,7 +43,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
 
     classes = []
     
-    for s, p, o in g.triples(()):
+    for s, p, o in g.triples((None, None, None)):
         print(s, p, o)
 
     for s, p, o in g.triples((None, RDF.type, OWL.Class)):
