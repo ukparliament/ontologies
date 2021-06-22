@@ -43,8 +43,7 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
 
     classes = []
     
-    for s, p, o in g.triples((None, None, None)):
-        print(s, p, o)
+    
 
     for s, p, o in g.triples((None, RDF.type, OWL.Class)):
 
@@ -165,6 +164,19 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         print(" Made dir " + htmldir + str(ttlpath.parent))
     except FileExistsError:
         pass
+    
+    dotpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".dot"
+    
+    dotlines = []
+    
+    for s, p, o in g.triples((None, None, None)):
+        dotlines.append(f"{s} -> {p} -> {o};")
+    tripleslist = ''.join[dotlines]
+    
+    
+    with open(dotpath, "w") as dotfile:
+        print("  Writing " + dotpath)
+        dotfile.write("digraph {" + tripleslist + "}")
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
     with open(htmlpath, "w") as htmlfile:
