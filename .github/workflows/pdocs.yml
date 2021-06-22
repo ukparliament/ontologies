@@ -16,6 +16,9 @@ jobs:
     steps:
       # - uses: actions/checkout@v2
 
+
+      - name: perl -MCPAN -e upgrade
+        run: perl -MCPAN -e upgrade
         
       - name: perl -MCPAN -e 'install Attean'
         run: perl -MCPAN -e 'install Attean'
