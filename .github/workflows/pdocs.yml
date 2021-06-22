@@ -15,11 +15,10 @@ jobs:
 
     steps:
       # - uses: actions/checkout@v2
-      - name: perlbrew install-cpanm
-        run: perlbrew install-cpanm
+
         
-      - name: cpanm install Attean
-        run: cpanm install Attean
+      - name: cpan -fi install Attean
+        run: cpan -fi install Attean
 
 
         
