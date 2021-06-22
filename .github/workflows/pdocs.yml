@@ -15,8 +15,8 @@ jobs:
 
     steps:
       # - uses: actions/checkout@v2
-      - name: perl -v
-        run: perl -v
+      - name: perlbrew install-cpanm
+        run: perlbrew install-cpanm
         
       - name: cpanm install Attean
         run: cpanm install Attean
