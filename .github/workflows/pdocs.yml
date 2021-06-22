@@ -20,7 +20,7 @@ jobs:
         run: curl -L https://github.com/janet-lang/janet/archive/refs/heads/master.zip --output janet.zip
         
       - name: install janet
-        run: unzip janet.zip; cd janet-master; make install; janet -v
+        run: unzip janet.zip; cd janet-master; sudo make install; janet -v
 
 
 
