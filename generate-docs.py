@@ -1,6 +1,6 @@
-import os
-import shutil
 import rdflib
+import csv
+import os
 
 from datetime import datetime
 from pathlib import Path
@@ -28,11 +28,6 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-for root, _, _ in os.walk(htmldir):
-    if root != htmldir:
-
-        shutil.rmtree(root)
-        print("Deleted dir " + root)
 
 for ttlpath in list(Path(".").rglob("*.ttl")):
 
@@ -42,6 +37,8 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     result = g.parse(data=ttlfile.read(), format="turtle")
 
     classes = []
+    
+    
 
     for s, p, o in g.triples((None, RDF.type, OWL.Class)):
 
@@ -162,6 +159,28 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
         print(" Made dir " + htmldir + str(ttlpath.parent))
     except FileExistsError:
         pass
+    
+    # dotpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".dot"
+    
+    # dotlines = []
+    
+    # for s, p, o in g.triples((None, None, None)):
+    #     dotlines.append(f'"{s}" -> "{o}"[label="{p}"];')
+    # tripleslist = '\n'.join(dotlines)
+    
+    
+    # with open(dotpath, "w+") as dotfile:
+    #     print("  Writing " + dotpath)
+    #     dotfile.write("digraph { node [shape=box];" + tripleslist + "}")
+
+    csvpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".csv"
+
+    with open(csvpath, "w") as csvfile:
+        print("  Writing " + csvpath)
+        triple_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        triple_writer.writerow(['Subject', 'Predicate', 'Object'])
+        for s, p, o in g.triples((None, None, None)):
+            triple_writer.writerow([s, p, o])
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
     with open(htmlpath, "w") as htmlfile:
