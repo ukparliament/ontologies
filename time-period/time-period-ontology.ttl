@@ -122,12 +122,6 @@ pt:TablingDay rdf:type owl:Class ;
 	rdfs:comment "A day on which a Member of a House may table a question. In the House of Commons questions are tabled on sitting days. In the House of Lords questions are tabled on sitting days and  on selected recess days."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:StatutoryDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "StatutoryDay"@en ;
-	rdfs:comment "There is a defined period of time during which Members of either House can object to negative and made affirmative statutory instruments. Only certain calendar days are included when calculating this period. The total number and nature of days on which a Member can object are defined by statute and differ across parliamentary procedure. These statutory days comprise consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account, unless the instrument is laid into the House of Commons only. In this case the calculation is based on Commons sitting days and short adjournments. On the day on which a negative statutory instrument is laid, a forty day time period commences during which it is possible for Members to 'pray' against (table a motion objecting to) the instrument. This forty day period is defined by the Statutory Instruments Act 1946. For made affirmative statutory instruments the time limit is set out in the enabling Act, rather than in the Statutory Instruments Act 1946. It is typically 28 or 40 days. The time period commences on the day the instrument is made, rather than laid. The enabling Act stipulates which days are counted towards the time limit, and typically follows the logic previously described."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
 pt:PrintingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "PrintingDay"@en ;
@@ -170,20 +164,6 @@ pt:hasRecess rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a session to a recess."@en ;
 	rdfs:domain pt:Session ;
 	rdfs:range pt:Recess ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasStatutoryDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasStatutoryDay"@en ;
-	rdfs:comment "Relates a term to a statutory day."@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:StatutoryDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasRecessStatutoryDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRecessStatutoryDay"@en ;
-	rdfs:comment "Relates a recess to a statutory day."@en ;
-	rdfs:domain pt:Recess ;
-	rdfs:range pt:StatutoryDay ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:houseHasTerm rdf:type owl:ObjectProperty ;
