@@ -1,3 +1,5 @@
+drop table if exists change_events;
+drop type if exists change_types;
 drop table if exists kingdom_ranks;
 drop table if exists external_identifiers;
 drop table if exists external_identifier_authorities;
@@ -31,7 +33,15 @@ drop table if exists winning_candidates;
 drop table if exists bishopric_incumbencies;
 drop table if exists bishopric_parliamentary_seniority_incumbencies;
 
-
+create type change_types as enum ('insert', 'update', 'delete');
+create table change_events (
+	id serial,
+	table_name varchar(255) not null,
+	row_id int not null,
+	change_type change_types not null,
+	change_at timestamp not null,
+	primary key (id)
+);
 create table letters_patent_times (
 	id serial,
 	label varchar(255) not null,
