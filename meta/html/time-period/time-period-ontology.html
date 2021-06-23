@@ -6,6 +6,7 @@
     <link rel="canonical" href="">
     <link rel="index" href="https://ukparliament.github.io/ontologies">
     <link rel="alternate" href="https://raw.githubusercontent.com/ukparliament/ontologies/master/time-period/time-period-ontology.ttl" type="text/turtle" title="Turtle source file">
+    <link rel="alternate" href="" type="text/csv" title="CSV file">
     <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Time period ontology</title>
     <style>
@@ -73,13 +74,13 @@
 
         <h1>Time period ontology</h1>
         <nav>  
-            <a href="#classes">Classes</a> |
-            <a href="#objectproperties">Object properties</a> |
-            <a href="#dataproperties">Data properties</a> |
+            <a href="#classes">Classes</a> &middot;
+            <a href="#objectproperties">Object properties</a> &middot;
+            <a href="#dataproperties">Data properties</a> &middot;
             
             
-             <a href="#subclasses">Subclasses</a> | 
-            <a href="#namespaces">Namespaces</a> |
+             <a href="#subclasses">Subclasses</a> &middot; 
+            <a href="#namespaces">Namespaces</a> &middot;
 
             
     <a href="https://ukparliament.github.io/ontologies/time-period/time-period.png">Depiction</a>
@@ -117,7 +118,7 @@
                     <span class="subhead">class</span>
                 </h3>
                 
-                <p>The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses.</p>
+                <p>The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses. A proclamation to dissolve Parliament is made under a prerogative power of the Crown.</p>
                 
 
                 
@@ -245,7 +246,7 @@
                     <span class="subhead">class</span>
                 </h3>
                 
-                <p>The period during which Parliament is inactive between prorogation and the start of the subsequent session or dissolution. During this time there are still Members but all parliamentary business stops. Prorogation periods are the same across both Houses.</p>
+                <p>The time period between a prorogation and either dissolution or the start of the subsequent session. A prorogation period is within a Parliament period. Parliamentary business does not take place during a prorogation period. A prorogation period is the same across both Houses. A proclamation to prorogue Parliament is made under a prerogative power of the Crown.</p>
                 
 
                 
@@ -261,7 +262,7 @@
                     <span class="subhead">class</span>
                 </h3>
                 
-                <p>A period during a session when one or both Houses have adjourned to a day other than the next usual sitting day, which may last between a few days and several weeks. Officially, a recess is the period when Parliament is prorogued, but it is now used to indicate what are officially known as periodic adjournments. A periodic adjournment may be ended by a prorogation or a dissolution.</p>
+                <p>A ‘periodic adjournment’ during a session, when one or both Houses have adjourned to a day other than the next expected sitting day. A periodic adjournment ends with prorogation, dissolution or a new term.</p>
                 
 
                 
@@ -293,7 +294,7 @@
                     <span class="subhead">class</span>
                 </h3>
                 
-                <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The final session of a parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
+                <p>A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
                 
 
                 
@@ -310,22 +311,6 @@
                 </h3>
                 
                 <p>A day on which a House is sitting. Sitting days are not the same across both Houses. A sitting day may continue after midnight and therefore cross more than one calendar day, but it is known by the day on which it started.</p>
-                
-
-                
-                
-                <p>Superclass: TimePeriod.</p>
-                
-                
-
-            </article>
-            
-            <article class="class" id="StatutoryDay">
-                <h3><a class="link" href="#StatutoryDay" title="#StatutoryDay">#</a> StatutoryDay
-                    <span class="subhead">class</span>
-                </h3>
-                
-                <p>There is a defined period of time during which Members of either House can object to negative and made affirmative statutory instruments. Only certain calendar days are included when calculating this period. The total number and nature of days on which a Member can object are defined by statute and differ across parliamentary procedure. These statutory days comprise consecutive days including weekends, excluding any days during which Parliament is dissolved, or prorogued, or any period during which both Houses are adjourned for more than four days. Differences in sitting days between Houses are not taken into account, unless the instrument is laid into the House of Commons only. In this case the calculation is based on Commons sitting days and short adjournments. On the day on which a negative statutory instrument is laid, a forty day time period commences during which it is possible for Members to &#39;pray&#39; against (table a motion objecting to) the instrument. This forty day period is defined by the Statutory Instruments Act 1946. For made affirmative statutory instruments the time limit is set out in the enabling Act, rather than in the Statutory Instruments Act 1946. It is typically 28 or 40 days. The time period commences on the day the instrument is made, rather than laid. The enabling Act stipulates which days are counted towards the time limit, and typically follows the logic previously described.</p>
                 
 
                 
@@ -357,7 +342,7 @@
                     <span class="subhead">class</span>
                 </h3>
                 
-                <p>The period between recess periods during which Parliament is active, and may be sitting. This period does not have an official name. Term periods are not necessarily the same across both Houses.</p>
+                <p>A period between recess periods during which a House may be sitting. Term periods are not necessarily the same across both Houses.</p>
                 
 
                 
@@ -520,21 +505,6 @@
             </article>
             
 
-            <article class="objectproperty" id="hasRecessStatutoryDay">
-
-                <h3><a class="link" href="#hasRecessStatutoryDay" title="#hasRecessStatutoryDay">#</a> hasRecessStatutoryDay <span class="subhead">object property</span></h3>
-
-                
-
-                
-                <p>Relates a recess to a statutory day.</p>
-                
-
-                <p><strong>Recess</strong> &mdash; hasRecessStatutoryDay &mdash; <strong>StatutoryDay</strong></p>
-
-            </article>
-            
-
             <article class="objectproperty" id="hasRecessTablingDay">
 
                 <h3><a class="link" href="#hasRecessTablingDay" title="#hasRecessTablingDay">#</a> hasRecessTablingDay <span class="subhead">object property</span></h3>
@@ -576,21 +546,6 @@
                 
 
                 <p><strong>Term</strong> &mdash; hasSittingDay &mdash; <strong>SittingDay</strong></p>
-
-            </article>
-            
-
-            <article class="objectproperty" id="hasStatutoryDay">
-
-                <h3><a class="link" href="#hasStatutoryDay" title="#hasStatutoryDay">#</a> hasStatutoryDay <span class="subhead">object property</span></h3>
-
-                
-
-                
-                <p>Relates a term to a statutory day.</p>
-                
-
-                <p><strong>Term</strong> &mdash; hasStatutoryDay &mdash; <strong>StatutoryDay</strong></p>
 
             </article>
             
@@ -711,57 +666,7 @@
         <table>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PremiershipPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -771,12 +676,7 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TablingDay</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -786,7 +686,42 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Session</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PrintingDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PostElectionDissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PreElectionDissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Term</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>DissolutionPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>House</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -796,7 +731,22 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>StatutoryDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ParliamentPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>PremiershipPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>ProrogationPeriod</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TimePeriod</td>
                 </tr>
                 
@@ -870,14 +820,6 @@
             
             
             
-            &middot; David Beamish
-            
-            
-            
-            &middot; <a href="https://robert-brook.com/" title="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
             &middot; Nic Besly
             
             
@@ -890,7 +832,15 @@
             
             
             
+            &middot; <a href="https://robert-brook.com/" title="https://robert-brook.com/">Robert Brook</a>
+            
+            
+            
             &middot; Ned Morrell
+            
+            
+            
+            &middot; David Beamish
             
             
         </p>
