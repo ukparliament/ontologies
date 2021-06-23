@@ -1,0 +1,29 @@
+
+name: p-generate-docs
+
+on:
+  push:
+    branches: 
+      - master
+
+  workflow_dispatch:
+
+jobs:
+
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # - uses: actions/checkout@v2
+
+      - name: download janet
+        run: curl -L https://github.com/janet-lang/janet/archive/refs/heads/master.zip --output janet.zip
+        
+      - name: install janet
+        run: unzip janet.zip; cd janet-master; sudo make install; janet -v
+
+
+
+
+
+          
