@@ -57,7 +57,7 @@ pt:ParliamentPeriod rdf:type owl:Class ;
 pt:DissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "DissolutionPeriod"@en ;
-	rdfs:comment "The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses."@en ;
+	rdfs:comment "The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses. A proclamation to dissolve Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PreElectionDissolutionPeriod rdf:type owl:Class ;
@@ -71,32 +71,33 @@ pt:PostElectionDissolutionPeriod rdf:type owl:Class ;
 	rdfs:label "PostElectionDissolutionPeriod"@en ;
 	rdfs:comment "The period between the results of all constituency elections being announced and the next parliament period. During this period, successful candidates are Members even though Parliament is dissolved."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-				# edited to here
 
 pt:Session rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The final session of a parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
+	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:ProrogationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "ProrogationPeriod"@en ;
-	rdfs:comment "The period during which Parliament is inactive between prorogation and the start of the subsequent session or dissolution. During this time there are still Members but all parliamentary business stops. Prorogation periods are the same across both Houses."@en ;
+	rdfs:comment "The time period between a prorogation and either dissolution or the start of the subsequent session. A prorogation period is within a Parliament period. Parliamentary business does not take place during a prorogation period. A prorogation period is the same across both Houses. A proclamation to prorogue Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:Term rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Term"@en ;
-	rdfs:comment "The period between recess periods during which Parliament is active, and may be sitting. This period does not have an official name. Term periods are not necessarily the same across both Houses."@en ;
+	rdfs:comment "A period between recess periods during which a House may be sitting. Term periods are not necessarily the same across both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Recess rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Recess"@en ;
-	rdfs:comment "A period during a session when one or both Houses have adjourned to a day other than the next usual sitting day, which may last between a few days and several weeks. Officially, a recess is the period when Parliament is prorogued, but it is now used to indicate what are officially known as periodic adjournments. A periodic adjournment may be ended by a prorogation or a dissolution."@en ;
+	rdfs:comment "A ‘periodic adjournment’ during a session, when one or both Houses have adjourned to a day other than the next expected sitting day. A periodic adjournment ends with prorogation, dissolution or a new term."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+	
+							# edited to here
 
 pt:SittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
