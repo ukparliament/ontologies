@@ -108,9 +108,12 @@
                 {% endif %}
 
                 {% if class.superclasses %}
+                <p>Superclasses
                 {% for superclass in class.superclasses %}
-                <p>Superclass: {{ superclass }}.</p>
+                &middot; {{ superclass }}
                 {% endfor %}
+
+            </p>
                 {% endif %}
 
             </article>
