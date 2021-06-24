@@ -4,7 +4,9 @@
  
 We are in the process of redesigning the [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) to use typed steps rather than route types.
  
-The step can be a business step, a decision step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of PLUS or EQUALS.
+The step can be a business step, a decision step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of PLUS or EQUALS. 
+
+Labels for non-business steps are not in themselves meaningful. The labels facilitate conversations about the routes between steps, for example ‘the step AA NOT is linked to BA AND’.
 
 #### Business steps
 
