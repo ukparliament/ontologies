@@ -23,13 +23,8 @@
         }
 
         span.subhead {
-            font-weight: normal;
+            font-variant: small-caps;
         }
-
-
-        a:focus {
-            outline: 3px solid orange;
-          }
 
         main {
             padding: 1rem 0;
@@ -45,13 +40,13 @@
         
         nav {padding-bottom:1.5rem;}
 
-        h1 {font-weight:normal;padding-bottom:0;margin-bottom:0;}
-        h2 {padding-top:2rem;font-weight:normal;}
+        h1 {padding-bottom:0;margin-bottom:0;}
+        h2 {padding-top:2rem;}
+        h3 {padding-bottom:0;margin-bottom:0;}
 
         article {
-            padding: 0.5rem 1rem;
-            margin: 0.5rem 0;
-            border: thin solid gray;
+            padding: 1rem 0;
+            border-top: 1pt solid gray;
         }
 
         ul {
@@ -102,7 +97,7 @@
                 <h3><a href="#BusinessItem" title="#BusinessItem">Business item
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
                 
@@ -115,7 +110,7 @@
                 <h3><a href="#Citation" title="#Citation">Citation
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A citation of a document. A citation may be from a procedure, for example: the proposed negative statutory instrument procedure citing Schedule 7 to the European Union (Withdrawal) Act 2018. A citation may be from a step in a procedure, for example: the step &#39;CF - AND&#39; in the made negative statutory instrument procedure citing Section 4(1) of the Statutory Instrument Act 1946. A citation may be from a step without reference to a particular procedure, for example: the step &#39;Considered for English votes for English laws (EVEL) certification&#39; citing House of Commons public Standing Order 83P. A citation may be from a route in a procedure, for example: the route from &#39;Considered by the Joint Committee on Statutory Instruments&#39; to &#39;Motion to approve the instrument tabled by the Government (House of Lords)&#39; in both affirmative procedures citing House of Lords public Standing Order 72.</p>
                 
@@ -128,7 +123,7 @@
                 <h3><a href="#DocumentType" title="#DocumentType">Document type
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>The type of a document being cited, for example: a standing order or a section of legislation.</p>
                 
@@ -141,7 +136,7 @@
                 <h3><a href="#House" title="#House">House
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A parliamentary House, for example: the House of Lords.</p>
                 
@@ -154,7 +149,7 @@
                 <h3><a href="#Procedure" title="#Procedure">Procedure
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
                 
@@ -167,7 +162,7 @@
                 <h3><a href="#Route" title="#Route">Route
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
                 
@@ -180,7 +175,7 @@
                 <h3><a href="#Step" title="#Step">Step
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
                 
@@ -193,7 +188,7 @@
                 <h3><a href="#StepCollection" title="#StepCollection">Step collection
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A collection of steps in a procedure. A step collection may belong to one House, or none. A step collection is always within one procedure. A step collection may group one or more steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
                 
@@ -206,7 +201,7 @@
                 <h3><a href="#StepType" title="#StepType">Step type
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A step has one type: a business step type, a decision step type, a logical NOT step type, a logical AND step type or a logical OR step type. Business step: a step that can be actualised by a business item. Decision step: a step that is used to describe the requirement for a decision to be made before the subsequent route can be followed. Routes including a decision step indicate that the target step is allowed and not caused: a route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a decision step indicates that actualisation of the step may happen in the future, being an allowed relationship. Logical step: a step that describes logical operations performed over routes. Inputs and outputs of a logic gate are either TRUE or FALSE. The output from a business step which has been actualised by a business item with a date in the past is TRUE. The output from a business step which has not been actualised, or which has been actualised with a business item with a date in the future, is neither TRUE nor FALSE: this is recorded as NULL. A NULL route entering a logic step acts as a bypass to that step: a logic gate with a NULL input outputs the other given input, or NULL if there is no other input.</p>
                 
@@ -219,7 +214,7 @@
                 <h3><a href="#WorkPackage" title="#WorkPackage">Work package
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
                 
@@ -232,7 +227,7 @@
                 <h3><a href="#WorkPackageableThing" title="#WorkPackageableThing">Work packageable thing
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 
                 <p>A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department.</p>
                 
@@ -253,7 +248,14 @@
 
             <article class="objectproperty" id="actualises">
 
-                <h3><a class="link" href="#actualises" title="#actualises">#</a> Actualises <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#actualises" title="#actualises">Actualises
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -268,7 +270,14 @@
 
             <article class="objectproperty" id="focus">
 
-                <h3><a class="link" href="#focus" title="#focus">#</a> Focus <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#focus" title="#focus">Focus
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -283,7 +292,14 @@
 
             <article class="objectproperty" id="followsRoute">
 
-                <h3><a class="link" href="#followsRoute" title="#followsRoute">#</a> Follows route <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#followsRoute" title="#followsRoute">Follows route
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -298,7 +314,14 @@
 
             <article class="objectproperty" id="formsPartOf">
 
-                <h3><a class="link" href="#formsPartOf" title="#formsPartOf">#</a> Forms part of <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#formsPartOf" title="#formsPartOf">Forms part of
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -313,7 +336,14 @@
 
             <article class="objectproperty" id="fromStep">
 
-                <h3><a class="link" href="#fromStep" title="#fromStep">#</a> From step <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#fromStep" title="#fromStep">From step
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -328,7 +358,14 @@
 
             <article class="objectproperty" id="hasDocumentType">
 
-                <h3><a class="link" href="#hasDocumentType" title="#hasDocumentType">#</a> Has document type <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#hasDocumentType" title="#hasDocumentType">Has document type
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -343,7 +380,14 @@
 
             <article class="objectproperty" id="hasProcedure">
 
-                <h3><a class="link" href="#hasProcedure" title="#hasProcedure">#</a> Has procedure <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#hasProcedure" title="#hasProcedure">Has procedure
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -358,7 +402,14 @@
 
             <article class="objectproperty" id="hasStepType">
 
-                <h3><a class="link" href="#hasStepType" title="#hasStepType">#</a> Has step type <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#hasStepType" title="#hasStepType">Has step type
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -373,7 +424,14 @@
 
             <article class="objectproperty" id="isCollectedBy">
 
-                <h3><a class="link" href="#isCollectedBy" title="#isCollectedBy">#</a> Is collected by <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#isCollectedBy" title="#isCollectedBy">Is collected by
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -388,7 +446,14 @@
 
             <article class="objectproperty" id="procedureHasCitation">
 
-                <h3><a class="link" href="#procedureHasCitation" title="#procedureHasCitation">#</a> Procedure has citation <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#procedureHasCitation" title="#procedureHasCitation">Procedure has citation
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -403,7 +468,14 @@
 
             <article class="objectproperty" id="routeHasCitation">
 
-                <h3><a class="link" href="#routeHasCitation" title="#routeHasCitation">#</a> Route has citation <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#routeHasCitation" title="#routeHasCitation">Route has citation
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -418,7 +490,14 @@
 
             <article class="objectproperty" id="stepCollectionInHouse">
 
-                <h3><a class="link" href="#stepCollectionInHouse" title="#stepCollectionInHouse">#</a> Step collection in House <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#stepCollectionInHouse" title="#stepCollectionInHouse">Step collection in House
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -433,7 +512,14 @@
 
             <article class="objectproperty" id="stepHasCitation">
 
-                <h3><a class="link" href="#stepHasCitation" title="#stepHasCitation">#</a> Step has citation <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#stepHasCitation" title="#stepHasCitation">Step has citation
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -448,7 +534,14 @@
 
             <article class="objectproperty" id="stepInHouse">
 
-                <h3><a class="link" href="#stepInHouse" title="#stepInHouse">#</a> Step in House <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#stepInHouse" title="#stepInHouse">Step in House
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -463,7 +556,14 @@
 
             <article class="objectproperty" id="subjectTo">
 
-                <h3><a class="link" href="#subjectTo" title="#subjectTo">#</a> Subject to <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#subjectTo" title="#subjectTo">Subject to
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -478,7 +578,14 @@
 
             <article class="objectproperty" id="toStep">
 
-                <h3><a class="link" href="#toStep" title="#toStep">#</a> To step <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#toStep" title="#toStep">To step
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -500,7 +607,12 @@
             
 
             <article class="dataproperty" id="stepDescription">
-                <h3><a class="link" href="#stepDescription" title="#stepDescription">#</a> Step description <span class="subhead">data property</span></h3>
+                
+
+                <h3><a href="#stepDescription" title="#stepDescription">Step description
+                </a>
+            </h3>
+            <span class="subhead">DATA PROPERTY</span>
 
                 <p>Relates a step to its description.</p>
 
@@ -511,7 +623,12 @@
             
 
             <article class="dataproperty" id="title">
-                <h3><a class="link" href="#title" title="#title">#</a> Title <span class="subhead">data property</span></h3>
+                
+
+                <h3><a href="#title" title="#title">Title
+                </a>
+            </h3>
+            <span class="subhead">DATA PROPERTY</span>
 
                 <p>Relates a citation to the title of the document being cited.</p>
 
@@ -522,7 +639,12 @@
             
 
             <article class="dataproperty" id="uri">
-                <h3><a class="link" href="#uri" title="#uri">#</a> URI <span class="subhead">data property</span></h3>
+                
+
+                <h3><a href="#uri" title="#uri">URI
+                </a>
+            </h3>
+            <span class="subhead">DATA PROPERTY</span>
 
                 <p>Relates a citation to the URI of the document being cited.</p>
 
@@ -546,49 +668,33 @@
         
         <section id="namespaces">
         <h2>Namespaces</h2>
-        <table>
+        <dl>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">xml</td>
-                    <td style="width:80%;">http://www.w3.org/XML/1998/namespace</td>
-                </tr>
+                    <dt>xml</dt>
+                    <dd>http://www.w3.org/XML/1998/namespace</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">rdf</td>
-                    <td style="width:80%;">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
-                </tr>
+                    <dt>rdf</dt>
+                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">rdfs</td>
-                    <td style="width:80%;">http://www.w3.org/2000/01/rdf-schema#</td>
-                </tr>
+                    <dt>rdfs</dt>
+                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">xsd</td>
-                    <td style="width:80%;">http://www.w3.org/2001/XMLSchema#</td>
-                </tr>
+                    <dt>xsd</dt>
+                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">ppr</td>
-                    <td style="width:80%;">http://parliament.uk/ontologies/procedure/</td>
-                </tr>
+                    <dt>ppr</dt>
+                    <dd>http://parliament.uk/ontologies/procedure/</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">dcterms</td>
-                    <td style="width:80%;">http://purl.org/dc/terms/</td>
-                </tr>
+                    <dt>dcterms</dt>
+                    <dd>http://purl.org/dc/terms/</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">owl</td>
-                    <td style="width:80%;">http://www.w3.org/2002/07/owl#</td>
-                </tr>
+                    <dt>owl</dt>
+                    <dd>http://www.w3.org/2002/07/owl#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">foaf</td>
-                    <td style="width:80%;">http://xmlns.com/foaf/0.1/</td>
-                </tr>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
                 
-        </table>
+            </dl>
         </section>  
         
 
@@ -605,12 +711,7 @@
             Made by
             
             
-<<<<<<< HEAD
-            &middot; James Vinter
-            
-            
-            
-            &middot; Ben Woodhams
+            &middot; <a href="https://robert-brook.com/" title="https://robert-brook.com/">Robert Brook</a>
             
             
             
@@ -618,30 +719,11 @@
             
             
             
-            &middot; Gordon Clarke
-            
-            
-            
-            &middot; <a href="https://robert-brook.com/" title="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
-            &middot; Dominic Stockbridge
-            
-            
-            
-            &middot; Samu Lang
+            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
             
             
             
             &middot; Silver Oliver
-=======
-            &middot; Chris Alcock
-            
-            
-            
-            &middot; Jane White
->>>>>>> 9c2cfbfba5677f7503a220fe97fe6febee2f5d59
             
             
             
@@ -649,7 +731,14 @@
             
             
             
-<<<<<<< HEAD
+            &middot; Ben Woodhams
+            
+            
+            
+            &middot; Jane White
+            
+            
+            
             &middot; Jack Dent
             
             
@@ -658,37 +747,7 @@
             
             
             
-            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
-            &middot; Anya Somerville
-            
-            
-            
-            &middot; Jane White
-=======
             &middot; James Vinter
-            
-            
-            
-            &middot; Gordon Clarke
-            
-            
-            
-            &middot; Jack Dent
-            
-            
-            
-            &middot; Silver Oliver
-            
-            
-            
-            &middot; Ben Woodhams
-            
-            
-            
-            &middot; <a href="https://robert-brook.com/" title="https://robert-brook.com/">Robert Brook</a>
             
             
             
@@ -696,20 +755,15 @@
             
             
             
-            &middot; Samu Lang
-            
-            
-            
-            &middot; Jayne Sunley
-            
-            
-            
-            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
             &middot; Anya Somerville
->>>>>>> 9c2cfbfba5677f7503a220fe97fe6febee2f5d59
+            
+            
+            
+            &middot; Gordon Clarke
+            
+            
+            
+            &middot; Samu Lang
             
             
         </p>

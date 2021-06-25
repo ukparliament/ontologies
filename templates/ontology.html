@@ -23,13 +23,8 @@
         }
 
         span.subhead {
-            font-weight: normal;
+            font-variant: small-caps;
         }
-
-
-        a:focus {
-            outline: 3px solid orange;
-          }
 
         main {
             padding: 1rem 0;
@@ -45,13 +40,13 @@
         
         nav {padding-bottom:1.5rem;}
 
-        h1 {font-weight:normal;padding-bottom:0;margin-bottom:0;}
-        h2 {padding-top:2rem;font-weight:normal;}
+        h1 {padding-bottom:0;margin-bottom:0;}
+        h2 {padding-top:2rem;}
+        h3 {padding-bottom:0;margin-bottom:0;}
 
         article {
-            padding: 0.5rem 1rem;
-            margin: 0.5rem 0;
-            border: thin solid gray;
+            padding: 1rem 0;
+            border-top: 1pt solid gray;
         }
 
         ul {
@@ -102,7 +97,7 @@
                 <h3><a href="#{{ class.idString }}" title="#{{ class.idString }}">{{ class.label }}
                     </a>
                 </h3>
-                <small class="subhead">CLASS</small>
+                <span class="subhead">CLASS</span>
                 {% if class.comment %}
                 <p>{{ class.comment }}</p>
                 {% endif %}
@@ -130,7 +125,14 @@
 
             <article class="objectproperty" id="{{ objectproperty.idString }}">
 
-                <h3><a class="link" href="#{{ objectproperty.idString }}" title="#{{ objectproperty.idString }}">#</a> {{ objectproperty.label }} <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#{{ objectproperty.idString }}" title="#{{ objectproperty.idString }}">{{ objectproperty.label }}
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 {% if objectproperty.superproperty %}
                 <p>Object property <strong>{{ objectproperty.label }}</strong> &rarr; is a subproperty of &rarr; Object
@@ -155,7 +157,12 @@
             {% for dataproperty in dataproperties|sort(attribute='label') %}
 
             <article class="dataproperty" id="{{ dataproperty.idString }}">
-                <h3><a class="link" href="#{{ dataproperty.idString }}" title="#{{ dataproperty.idString }}">#</a> {{ dataproperty.label }} <span class="subhead">data property</span></h3>
+                
+
+                <h3><a href="#{{ dataproperty.idString }}" title="#{{ dataproperty.idString }}">{{ dataproperty.label }}
+                </a>
+            </h3>
+            <span class="subhead">DATA PROPERTY</span>
 
                 <p>{{ dataproperty.comment }}</p>
 
@@ -221,14 +228,12 @@
         {% if namespaces %}
         <section id="namespaces">
         <h2>Namespaces</h2>
-        <table>
+        <dl>
                 {% for namespace in namespaces %}
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">{{ namespace.p }}</td>
-                    <td style="width:80%;">{{ namespace.n }}</td>
-                </tr>
+                    <dt>{{ namespace.p }}</dt>
+                    <dd>{{ namespace.n }}</dd>
                 {% endfor %}
-        </table>
+            </dl>
         </section>  
         {% endif %}
 
