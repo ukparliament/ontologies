@@ -14,17 +14,13 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: system-ui;
             max-width: 42rem;
             margin: 1rem 0.5rem;
             padding: 0.5rem;
             color:black;
             background-color: white;
+
         }
-
-        xa {text-decoration: none;}
-
-        a:hover {text-decoration: underline;}
 
         span.subhead {
             font-weight: normal;
@@ -54,8 +50,8 @@
 
         article {
             padding: 0.5rem 1rem;
-            background-color: rgb(240, 240, 240);
             margin: 0.5rem 0;
+            border: thin solid gray;
         }
 
         ul {
@@ -387,28 +383,33 @@
         <table>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessStep</td>
-                    <td>/<wbr>ontologies/<wbr>procedure-step-annotation/<wbr>BusinessStep</td>
-                </tr>
-                
-                <tr>
                     <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessItem</td>
-                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>BusinessItem</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>BusinessItem</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Procedure</td>
-                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>Procedure</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Laying</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Laying</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Procedure</td>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>Procedure</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>Person</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>interface/<wbr>PoliticalParty</td>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>PoliticalParty</td>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>PoliticalParty</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Laying</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>Laying</td>
                 </tr>
                 
                 <tr>
@@ -417,13 +418,13 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>WorkPackage</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessItem</td>
-                    <td>/<wbr>ontologies/<wbr>business-item/<wbr>BusinessItem</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ParliamentPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>ParliamentPeriod</td>
                 </tr>
                 
                 <tr>
@@ -432,8 +433,38 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>WorkPackage</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>WorkPackage</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ConstituencyGroup</td>
+                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>ConstituencyGroup</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ConstituencyGroup</td>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ParliamentPeriod</td>
+                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>ParliamentPeriod</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Session</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>Session</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessStep</td>
+                    <td>/<wbr>ontologies/<wbr>procedure-step-annotation/<wbr>BusinessStep</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
+                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Person</td>
                 </tr>
                 
                 <tr>
@@ -442,13 +473,58 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ConstituencyGroup</td>
-                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>ConstituencyGroup</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessItem</td>
+                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>BusinessItem</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
+                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Person</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessItem</td>
+                    <td>/<wbr>ontologies/<wbr>business-item/<wbr>BusinessItem</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>House</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>House</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>House</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>PoliticalParty</td>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>PoliticalParty</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>interface/<wbr>Place</td>
                     <td>/<wbr>ontologies/<wbr>business-item/<wbr>Place</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Procedure</td>
+                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>Procedure</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Person</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>House</td>
                 </tr>
                 
                 <tr>
@@ -462,13 +538,8 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>LayingDuty</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingDuty</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Procedure</td>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>Procedure</td>
                 </tr>
                 
                 <tr>
@@ -477,88 +548,13 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ParliamentPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>ParliamentPeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>Person</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>PoliticalParty</td>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>PoliticalParty</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>House</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Person</td>
+                    <td>/<wbr>ontologies/<wbr>interface/<wbr>LayingDuty</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingDuty</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>interface/<wbr>Place</td>
                     <td>/<wbr>ontologies/<wbr>agency/<wbr>Place</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Laying</td>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Laying</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ParliamentPeriod</td>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>ParliamentPeriod</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Person</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Session</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>Session</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
-                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Laying</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>Laying</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>Person</td>
-                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Person</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>House</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>ConstituencyGroup</td>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>interface/<wbr>BusinessItem</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>BusinessItem</td>
                 </tr>
                 
         </table>
@@ -571,7 +567,47 @@
         <table>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingBody</td>
+                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>TreatyAsLaid</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LaidPaper</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbency</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Incumbency</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>GovernmentOrganisation</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>TreatyAsLaid</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>WithdrawnPaper</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>WithdrawnPaper</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>HouseSeat</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Position</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>formal-body-affiliation/<wbr>FormalBodyPosition</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Position</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>ParliamentaryBloc</td>
                     <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
                 </tr>
                 
@@ -581,8 +617,18 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingOrWithdrawal</td>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>BusinessItem</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingBody</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LaidPaper</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ActOfParliament</td>
+                    <td>/<wbr>ontologies/<wbr>description/<wbr>DescribingThing</td>
                 </tr>
                 
                 <tr>
@@ -591,13 +637,38 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument</td>
                     <td>/<wbr>ontologies/<wbr>laying/<wbr>WithdrawnPaper</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LaidPaper</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>House</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument</td>
+                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>WorkPackageableThing</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>PoliticalParty</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingOrWithdrawal</td>
+                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>BusinessItem</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>ElectoralIncumbency</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Incumbency</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Affiliation</td>
+                    <td>/<wbr>ontologies/<wbr>agency/<wbr>GroupInclusion</td>
                 </tr>
                 
                 <tr>
@@ -611,78 +682,13 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>ElectoralIncumbency</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Incumbency</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>PoliticalParty</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
-                    <td>/<wbr>ontologies/<wbr>description/<wbr>DescribingThing</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument</td>
-                    <td>/<wbr>ontologies/<wbr>procedure/<wbr>WorkPackageableThing</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>HouseSeat</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Position</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body/<wbr>FormalBody</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body-affiliation/<wbr>FormalBodyMembership</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>GroupInclusion</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>formal-body-affiliation/<wbr>FormalBodyPosition</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Position</td>
-                </tr>
-                
-                <tr>
                     <td>/<wbr>ontologies/<wbr>laying/<wbr>House</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LaidPaper</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>ParliamentaryBloc</td>
                     <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
                 </tr>
                 
                 <tr>
                     <td>/<wbr>ontologies/<wbr>house-membership/<wbr>House</td>
                     <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ProposedNegativeStatutoryInstrument</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>WithdrawnPaper</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbency</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Incumbency</td>
                 </tr>
                 
                 <tr>
@@ -701,28 +707,18 @@
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>parliamentary-bloc/<wbr>Affiliation</td>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
+                    <td>/<wbr>ontologies/<wbr>description/<wbr>DescribingThing</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>formal-body-affiliation/<wbr>FormalBodyMembership</td>
                     <td>/<wbr>ontologies/<wbr>agency/<wbr>GroupInclusion</td>
                 </tr>
                 
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>TreatyAsLaid</td>
-                    <td>/<wbr>ontologies/<wbr>laying/<wbr>WithdrawnPaper</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>GovernmentOrganisation</td>
-                    <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>treaty/<wbr>TreatyAsLaid</td>
+                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</td>
                     <td>/<wbr>ontologies/<wbr>laying/<wbr>LaidPaper</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>legislation/<wbr>ActOfParliament</td>
-                    <td>/<wbr>ontologies/<wbr>description/<wbr>DescribingThing</td>
                 </tr>
                 
         </table>
@@ -866,7 +862,7 @@
             Made by
             
             
-            &middot; Silver Oliver
+            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
             
             
             
@@ -874,7 +870,7 @@
             
             
             
-            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
+            &middot; Silver Oliver
             
             
             
