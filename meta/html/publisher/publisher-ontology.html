@@ -22,7 +22,7 @@
             background-color: white;
         }
 
-        a {text-decoration: none;}
+        xa {text-decoration: none;}
 
         a:hover {text-decoration: underline;}
 
@@ -30,14 +30,17 @@
             font-weight: normal;
         }
 
-        a.link {
-            font-weight: normal;
-        }
+
+        a:focus {
+            outline: 3px solid orange;
+          }
 
         main {
             padding: 1rem 0;
         }
+      
 
+        
         p,
         li,
         nav {
@@ -100,8 +103,8 @@
 
             
             <article class="class" id="Agent">
-                <h3><a class="link" href="#Agent" title="#Agent">#</a> Agent
-                    <span class="subhead">class</span>
+                <h3><a href="#Agent" title="#Agent">Agent
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
@@ -112,8 +115,8 @@
             </article>
             
             <article class="class" id="Concept">
-                <h3><a class="link" href="#Concept" title="#Concept">#</a> Concept
-                    <span class="subhead">class</span>
+                <h3><a href="#Concept" title="#Concept">Concept
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A SKOS Concept, for example: a library subject term.</p>
@@ -124,8 +127,8 @@
             </article>
             
             <article class="class" id="EditorialBoard">
-                <h3><a class="link" href="#EditorialBoard" title="#EditorialBoard">#</a> Editorial board
-                    <span class="subhead">class</span>
+                <h3><a href="#EditorialBoard" title="#EditorialBoard">Editorial board
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A group overseeing a publisher, for example: the board of POST, made up of Members of Parliament, considering and approving areas of research.</p>
@@ -143,8 +146,8 @@
             </article>
             
             <article class="class" id="Group">
-                <h3><a class="link" href="#Group" title="#Group">#</a> Group
-                    <span class="subhead">class</span>
+                <h3><a href="#Group" title="#Group">Group
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A group of people. Groups may contain other groups or be empty.</p>
@@ -162,8 +165,8 @@
             </article>
             
             <article class="class" id="House">
-                <h3><a class="link" href="#House" title="#House">#</a> House
-                    <span class="subhead">class</span>
+                <h3><a href="#House" title="#House">House
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A parliamentary House, for example: the House of Lords.</p>
@@ -181,8 +184,8 @@
             </article>
             
             <article class="class" id="Publisher">
-                <h3><a class="link" href="#Publisher" title="#Publisher">#</a> Publisher
-                    <span class="subhead">class</span>
+                <h3><a href="#Publisher" title="#Publisher">Publisher
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>An entity responsible for making a resource available.</p>
@@ -200,8 +203,8 @@
             </article>
             
             <article class="class" id="ResearchSection">
-                <h3><a class="link" href="#ResearchSection" title="#ResearchSection">#</a> Research section
-                    <span class="subhead">class</span>
+                <h3><a href="#ResearchSection" title="#ResearchSection">Research section
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A group of researchers within the Library of the House of Commons having a particular focus, for example: the Parliament and Constitution Centre.</p>
@@ -219,8 +222,8 @@
             </article>
             
             <article class="class" id="ResearchService">
-                <h3><a class="link" href="#ResearchService" title="#ResearchService">#</a> Research service
-                    <span class="subhead">class</span>
+                <h3><a href="#ResearchService" title="#ResearchService">Research service
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A group of researchers, for example: in the Library of the House of Commons, in the Library of the House of Lords or the Parliamentary Office of Science and Technology.</p>
@@ -238,8 +241,8 @@
             </article>
             
             <article class="class" id="ThingHavingPublisher">
-                <h3><a class="link" href="#ThingHavingPublisher" title="#ThingHavingPublisher">#</a> Thing having a publisher
-                    <span class="subhead">class</span>
+                <h3><a href="#ThingHavingPublisher" title="#ThingHavingPublisher">Thing having a publisher
+                    <span class="subhead">class</span></a>
                 </h3>
                 
                 <p>A published thing, which has a publisher.</p>
@@ -350,8 +353,23 @@
         <table>
                 
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchSection</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchService</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
+                </tr>
+                
+                <tr>
                     <td>/<wbr>ontologies/<wbr>publisher/<wbr>House</td>
                     <td>/<wbr>ontologies/<wbr>publisher/<wbr>Group</td>
+                </tr>
+                
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Group</td>
+                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Agent</td>
                 </tr>
                 
                 <tr>
@@ -362,21 +380,6 @@
                 <tr>
                     <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
                     <td>/<wbr>ontologies/<wbr>publisher/<wbr>Agent</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Group</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Agent</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchService</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
-                </tr>
-                
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>ResearchSection</td>
-                    <td>/<wbr>ontologies/<wbr>publisher/<wbr>Publisher</td>
                 </tr>
                 
         </table>
@@ -445,7 +448,7 @@
             Made by
             
             
-            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
+            &middot; Anya Somerville
             
             
             
@@ -453,11 +456,11 @@
             
             
             
+            &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
             &middot; Silver Oliver
-            
-            
-            
-            &middot; Anya Somerville
             
             
         </p>
