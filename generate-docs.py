@@ -63,7 +63,6 @@ for ttlpath in list(Path(".").rglob("*.ttl")):
     dataproperties = []
 
     for s, p, o in g.triples((None, RDF.type, OWL.DatatypeProperty)):
-
         dataproperties.append(
             {
                 "label": g.label(s),
