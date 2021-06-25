@@ -27,11 +27,11 @@ drop table if exists kingdoms;
 drop table if exists genders;
 drop table if exists letters_patent_times;
 drop table if exists constituency_groups;
-drop table if exists bishoprics;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishopric_incumbencies;
 drop table if exists bishopric_parliamentary_seniority_incumbencies;
+drop table if exists bishoprics;
 
 create type change_types as enum ('insert', 'update', 'delete');
 create table change_events (
@@ -40,6 +40,12 @@ create table change_events (
 	row_id int not null,
 	change_type change_types not null,
 	change_at timestamp not null,
+	primary key (id)
+);
+create table bishoprics (
+	id serial,
+	title varchar(255) not null,
+	diocese varchar(255) not null,
 	primary key (id)
 );
 create table letters_patent_times (
@@ -209,10 +215,6 @@ create table house_seat_end_reasons (
 	primary key (id)
 );
 create table constituency_groups (
-	id serial,
-	primary key (id)
-);
-create table bishoprics (
 	id serial,
 	primary key (id)
 );
