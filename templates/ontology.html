@@ -100,8 +100,9 @@
             {% for class in classes|sort(attribute='label') %}
             <article class="class" id="{{ class.idString }}">
                 <h3><a href="#{{ class.idString }}" title="#{{ class.idString }}">{{ class.label }}
-                    <span class="subhead">class</span></a>
+                    </a>
                 </h3>
+                <small class="subhead">CLASS</small>
                 {% if class.comment %}
                 <p>{{ class.comment }}</p>
                 {% endif %}
