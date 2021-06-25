@@ -22,7 +22,7 @@
             background-color: white;
         }
 
-        a {text-decoration: none;}
+        xa {text-decoration: none;}
 
         a:hover {text-decoration: underline;}
 
@@ -30,14 +30,17 @@
             font-weight: normal;
         }
 
-        a.link {
-            font-weight: normal;
-        }
+
+        a:focus {
+            outline: 3px solid orange;
+          }
 
         main {
             padding: 1rem 0;
         }
+      
 
+        
         p,
         li,
         nav {
@@ -100,8 +103,8 @@
 
             {% for class in classes|sort(attribute='label') %}
             <article class="class" id="{{ class.idString }}">
-                <h3><a class="link" href="#{{ class.idString }}" title="#{{ class.idString }}">#</a> {{ class.label }}
-                    <span class="subhead">class</span>
+                <h3><a href="#{{ class.idString }}" title="#{{ class.idString }}">{{ class.label }}
+                    <span class="subhead">class</span></a>
                 </h3>
                 {% if class.comment %}
                 <p>{{ class.comment }}</p>
