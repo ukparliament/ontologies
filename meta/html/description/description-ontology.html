@@ -14,30 +14,24 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: system-ui;
             max-width: 42rem;
             margin: 1rem 0.5rem;
             padding: 0.5rem;
             color:black;
             background-color: white;
+
         }
-
-        a {text-decoration: none;}
-
-        a:hover {text-decoration: underline;}
 
         span.subhead {
-            font-weight: normal;
-        }
-
-        a.link {
-            font-weight: normal;
+            font-variant: small-caps;
         }
 
         main {
             padding: 1rem 0;
         }
+      
 
+        
         p,
         li,
         nav {
@@ -46,13 +40,12 @@
         
         nav {padding-bottom:1.5rem;}
 
-        h1 {font-weight:normal;padding-bottom:0;margin-bottom:0;}
-        h2 {padding-top:2rem;font-weight:normal;}
+        h1 {padding-bottom:0;margin-bottom:0;}
+        h2 {padding-top:2rem;}
+        h3 {padding-bottom:0;margin-bottom:0;}
 
         article {
-            padding: 0.5rem 1rem;
-            background-color: rgb(240, 240, 240);
-            margin: 0.5rem 0;
+            padding: 0.25rem 0;
         }
 
         ul {
@@ -100,9 +93,10 @@
 
             
             <article class="class" id="DescribedThing">
-                <h3><a class="link" href="#DescribedThing" title="#DescribedThing">#</a> Described thing
-                    <span class="subhead">class</span>
+                <h3><a href="#DescribedThing" title="#DescribedThing">Described thing
+                    </a>
                 </h3>
+                <span class="subhead">CLASS</span>
                 
                 <p>A thing that has a description.</p>
                 
@@ -112,9 +106,10 @@
             </article>
             
             <article class="class" id="DescribingThing">
-                <h3><a class="link" href="#DescribingThing" title="#DescribingThing">#</a> Describing thing
-                    <span class="subhead">class</span>
+                <h3><a href="#DescribingThing" title="#DescribingThing">Describing thing
+                    </a>
                 </h3>
+                <span class="subhead">CLASS</span>
                 
                 <p>A thing that provides a description.</p>
                 
@@ -135,7 +130,14 @@
 
             <article class="objectproperty" id="describedBy">
 
-                <h3><a class="link" href="#describedBy" title="#describedBy">#</a> Described by <span class="subhead">object property</span></h3>
+                
+
+
+                <h3><a href="#describedBy" title="#describedBy">Described by
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
 
                 
 
@@ -163,54 +165,36 @@
         
         <section id="namespaces">
         <h2>Namespaces</h2>
-        <table>
+        <dl>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">xml</td>
-                    <td style="width:80%;">http://www.w3.org/XML/1998/namespace</td>
-                </tr>
+                    <dt>xml</dt>
+                    <dd>http://www.w3.org/XML/1998/namespace</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">rdf</td>
-                    <td style="width:80%;">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
-                </tr>
+                    <dt>rdf</dt>
+                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">rdfs</td>
-                    <td style="width:80%;">http://www.w3.org/2000/01/rdf-schema#</td>
-                </tr>
+                    <dt>rdfs</dt>
+                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">xsd</td>
-                    <td style="width:80%;">http://www.w3.org/2001/XMLSchema#</td>
-                </tr>
+                    <dt>xsd</dt>
+                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">pdes</td>
-                    <td style="width:80%;">http://parliament.uk/ontologies/description/</td>
-                </tr>
+                    <dt>pdes</dt>
+                    <dd>http://parliament.uk/ontologies/description/</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">dcterms</td>
-                    <td style="width:80%;">http://purl.org/dc/terms/</td>
-                </tr>
+                    <dt>dcterms</dt>
+                    <dd>http://purl.org/dc/terms/</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">owl</td>
-                    <td style="width:80%;">http://www.w3.org/2002/07/owl#</td>
-                </tr>
+                    <dt>owl</dt>
+                    <dd>http://www.w3.org/2002/07/owl#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">skos</td>
-                    <td style="width:80%;">http://www.w3.org/2004/02/skos/core#</td>
-                </tr>
+                    <dt>skos</dt>
+                    <dd>http://www.w3.org/2004/02/skos/core#</dd>
                 
-                <tr>
-                    <td style="width:20%;padding:0.5rem;">foaf</td>
-                    <td style="width:80%;">http://xmlns.com/foaf/0.1/</td>
-                </tr>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
                 
-        </table>
+            </dl>
         </section>  
         
 
@@ -227,11 +211,11 @@
             Made by
             
             
-            &middot; Anya Somerville
-            
-            
-            
             &middot; <a href="http://smethur.st/" title="http://smethur.st/">Michael Smethurst</a>
+            
+            
+            
+            &middot; Anya Somerville
             
             
             
