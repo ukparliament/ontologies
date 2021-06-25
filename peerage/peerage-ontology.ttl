@@ -125,6 +125,13 @@ ppeer:isOf rdf:type owl:ObjectProperty ;
 	rdfs:range ppeer:Peerage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
+ppeer:ofKingdom rdf:type owl:DatatypeProperty ;
+	rdfs:label "Of kingdom"@en ;
+	rdfs:comment "Relates a peerage to the kingdom in which the peerage was created."@en ;
+	rdfs:domain ppeer:Peerage ;
+	rdfs:domain ppeer:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
 ppeer:hasPeerageHolding rdf:type owl:ObjectProperty ;
 	rdfs:label "Has peerage holding"@en ;
 	rdfs:comment "Relates a person to a peerage holding. A person may have one or more peerage holdings, or none. A peerage holding is by one person."@en ;
