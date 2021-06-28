@@ -24,6 +24,8 @@ env.filters["slash2wbr"] = slash2wbr
 
 env.filters["ttlpath2ontologyname"] = ttlpath2ontologyname
 
+env.globals['now'] = datetime.utcnow().strftime("%Y-%m-%d")
+
 template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
