@@ -18,6 +18,8 @@ drop table if exists house_seat_end_reasons;
 drop table if exists house_seat_incumbency_end_reasons;
 drop table if exists houses;
 drop table if exists rank_labels;
+drop table if exists bishopric_incumbencies;
+drop table if exists bishopric_parliamentary_seniority_incumbencies;
 drop table if exists people;
 drop table if exists peerage_ranks;
 drop table if exists parliamentary_bloc_affiliation_types;
@@ -29,8 +31,6 @@ drop table if exists letters_patent_times;
 drop table if exists constituency_groups;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
-drop table if exists bishopric_incumbencies;
-drop table if exists bishopric_parliamentary_seniority_incumbencies;
 drop table if exists bishoprics;
 
 create type change_types as enum ('insert', 'update', 'delete');
@@ -220,6 +220,7 @@ create table constituency_groups (
 );
 create table bishopric_parliamentary_seniorities (
 	id serial,
+	rank int not null,
 	primary key (id)
 );
 create table house_seats (
@@ -251,10 +252,22 @@ create table winning_candidates (
 );
 create table bishopric_incumbencies (
 	id serial,
+	start_on date not null,
+	end_on date,
+	bishopric_id int not null,
+	person_id int not null,
+	constraint fk_bishopric foreign key (bishopric_id) references bishoprics(id),
+	constraint fk_person foreign key (person_id) references people(id),
 	primary key (id)
 );
 create table bishopric_parliamentary_seniority_incumbencies (
 	id serial,
+	start_on date not null,
+	end_on date,
+	bishopric_parliamentary_seniority_id int not null,
+	person_id int not null,
+	constraint fk_bishopric_parliamentary_seniority foreign key (bishopric_parliamentary_seniority_id) references bishopric_parliamentary_seniorities(id),
+	constraint fk_person foreign key (person_id) references people(id),
 	primary key (id)
 );
 create table house_seat_incumbencies (
