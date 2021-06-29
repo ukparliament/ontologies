@@ -56,19 +56,19 @@ pt:ParliamentPeriod rdf:type owl:Class ;
 	
 pt:DissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "DissolutionPeriod"@en ;
+	rdfs:label "Dissolution period"@en ;
 	rdfs:comment "The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses. A proclamation to dissolve Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PreElectionDissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "PreElectionDissolutionPeriod"@en ;
+	rdfs:label "Pre-election dissolution period"@en ;
 	rdfs:comment "The period between the end of a Parliament period and the results of all constituency elections being announced. During this time there are no Members of the House of Commons."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PostElectionDissolutionPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "PostElectionDissolutionPeriod"@en ;
+	rdfs:label "Post-election dissolution period"@en ;
 	rdfs:comment "The period between the results of all constituency elections being announced and the next Parliament period. During this period, successful candidates are Members even though Parliament is dissolved."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
@@ -80,7 +80,7 @@ pt:Session rdf:type owl:Class ;
 	
 pt:ProrogationPeriod rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "ProrogationPeriod"@en ;
+	rdfs:label "Prorogation period"@en ;
 	rdfs:comment "The time period between a prorogation and either dissolution or the start of the subsequent session. A prorogation period is within a Parliament period. Parliamentary business does not take place during a prorogation period. A prorogation period is the same across both Houses. A proclamation to prorogue Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
@@ -95,45 +95,54 @@ pt:Recess rdf:type owl:Class ;
 	rdfs:label "Recess"@en ;
 	rdfs:comment "A 'periodic adjournment' during a session, when one or both Houses have adjourned to a day other than the next expected sitting day. A periodic adjournment ends with prorogation, dissolution or a new term."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-	
-							# edited to here
 
 pt:SittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "SittingDay"@en ;
-	rdfs:comment "A day on which a House is sitting. Sitting days are not the same across both Houses. A sitting day may continue after midnight and therefore cross more than one calendar day, but it is known by the day on which it started."@en ;
+	rdfs:label "Sitting day"@en ;
+	rdfs:comment "A sitting day in a House is a day during which that House considers business, with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the Monarch as a component part of Parliament. Sitting days are determined by each House separately. Parliament considers that a sitting day may continue beyond midnight to include more than one calendar day: such a sitting day is called by the date of the calendar day on which it begins. Except in the case of the European Union (Withdrawal) Act 2018, Sch. 7 para. 17(11), which uses the above definition, legislation assumes one calendar day to be one sitting day."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:HybridSittingDay rdf:type owl:Class ;
+	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:label "Hybrid sitting day"@en ;
+	rdfs:comment "A hybrid sitting day in a House is a day during which that House considers business, with a quorum of Members, including both those present in the Chamber and those attending remotely, and in the presence of the Mace. Hybrid sitting days are determined by each House separately. Parliament considers that a hybrid sitting day may continue beyond midnight to include more than one calendar day: such a hybrid sitting day is called by the date of the calendar day on which it begins."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:VirtualSittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Virtual sitting day"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A virtual sitting day in a House is a day during which that House considers business with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions are put to the House when not sitting virtually."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:AdjournmentDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
 	rdfs:label "Adjournment day"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A day on which a House is adjourned, being outside a recess period for that House, for example: a 'non-sitting Friday', a day on a weekend, a Bank Holiday."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:House rdf:type owl:Class ;
+	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+	
+	
+									# edited to here
 	
 pt:TablingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "TablingDay"@en ;
-	rdfs:comment "A day on which a Member of a House may table a question. In the House of Commons questions are tabled on sitting days. In the House of Lords questions are tabled on sitting days and  on selected recess days."@en ;
+	rdfs:label "Tabling day"@en ;
+	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PrintingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "PrintingDay"@en ;
+	rdfs:label "Printing day"@en ;
 	rdfs:comment "In the House of Commons, a printing day is a non-sitting day during an adjournment (not including a non-sitting Friday) on which any parliamentary questions or amendments to Bills tabled since the last sitting day are published. The parliamentary questions so published are not officially tabled until the next sitting day, but under House of Commons Standing Order No. 64 (retrieved at 17/04/2018), amendments to Bills received before 16h30 on the last business day of the period are treated as if that day were a sitting day."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:House rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
-	rdfs:label "House"@en ;
-	rdfs:comment "A parliamentary House e.g. the House of Lords."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
 
 
 				
@@ -186,6 +195,13 @@ pt:hasSittingDay rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a term to a sitting day."@en ;
 	rdfs:domain pt:Term ;
 	rdfs:range pt:SittingDay ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:hasHybridSittingDay rdf:type owl:ObjectProperty ;
+	rdfs:label "Has hybrid sitting day"@en ;
+	rdfs:comment "Relates a term to a hybrid sitting day."@en ;
+	rdfs:domain pt:Term ;
+	rdfs:range pt:HybridSittingDay ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:hasVirtualSittingDay rdf:type owl:ObjectProperty ;
