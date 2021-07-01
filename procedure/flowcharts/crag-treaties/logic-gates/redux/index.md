@@ -1,5 +1,7 @@
 # Logic for CRaG treaty motions and statements
 
+[Logical map](redux.pdf)
+
 ## Assumptions
 
 In period A, one House resolving against ratification does not stop the other House from acting.
