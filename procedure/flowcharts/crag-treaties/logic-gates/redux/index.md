@@ -4,15 +4,15 @@
 
 ## Assumptions
 
-In period A, one House resolving against ratification does not stop the other House from acting.
+In period A, one House resolving against ratification does not stop the other House from putting the question on a motion to not ratify.
 
-In any given period, in any given House, more than one motion against ratification can be tabled. Ony allowing one motion per period per House would simplify matters, but MH implies Members could table "reasoned" motions.
+In any given period, in any given House, more than one motion against ratification may be tabled. Purely from a mapping and parsing perspective, one motion per period per House would simplify matters. MH suggests Members may wish to table "reasoned" motions so this logic allows for multiple motions in parallel,
 
 ## A question may be put
 
 In a given period, in a given House, a question is ALLOWED be put if ...
 
-... the SUM of motions being withdrawn, having lapsed, being not moved and being not called ...
+... the SUM of motions being withdrawn, lapsed, not moved and not called ...
 
 ... does NOT EQUAL the number of motions tabled.
 
@@ -34,17 +34,17 @@ A motion that the treaty should not be ratified is ALLOWED to be tabled in the H
 
 ... AND NEITHER period A NOR extended period A have ended ...
 
-... AND a motion that the treaty should not be ratifed has NOT been approved in the Lords.
+... AND a motion that the treaty should not be ratified has NOT been approved in the Lords.
 
 ## Statements reponding to resolution in period A
 
 Statements that the treaty should nonetheless be ratified, triggering a new period B.
 
-It is not yet clear which House or Houses a statement will appear in if one or both Houses resolve against ratifiaction.
+It is not yet clear in which House - or Houses - a statement will be given if one or both Houses resolve against ratification.
 
 ### Joint statement
 
-A statement responding to both Houses having resolved against in period A is ALLOWED to be made if ...
+A statement responding to both Houses having resolved against ratification in period A is ALLOWED to be made if ...
 
 ... period B has NOT yet started ...
 
@@ -54,7 +54,7 @@ A statement responding to both Houses having resolved against in period A is ALL
 
 ## Commons only statement
 
-A statement responding to the Commons only having resolved against in period A is ALLOWED to be made if ...
+A statement responding to the Commons only having resolved against ratification in period A is ALLOWED to be made if ...
 
 ... period B has NOT yet started ...
 
@@ -66,7 +66,7 @@ A statement responding to the Commons only having resolved against in period A i
 
 ## Lords only statement
 
-A statement responding to the Lords only having resolved against in period A is ALLOWED to be made if ...
+A statement responding to the Lords only having resolved against ratification in period A is ALLOWED to be made if ...
 
 ... period B has NOT yet started ...
 
@@ -88,11 +88,11 @@ The Government have made a statement that the treaty should nonetheless be ratif
 
 ... OR (
 
-The Government have made a statement that the treaty should nonetheless be ratified resulting from both Houses resolving against in period A ...
+The Government have made a statement that the treaty should nonetheless be ratified resulting from both Houses resolving against ratification in period A ...
 
-... OR Government have made a statement that the treaty should nonetheless be ratified resulting from the Commons only resolving against in period A ...
+... OR Government have made a statement that the treaty should nonetheless be ratified resulting from the Commons only resolving against ratification in period A ...
 
-... OR Government have made a statement that the treaty should nonetheless be ratified resulting from the Lords only resolving against in period A ...
+... OR Government have made a statement that the treaty should nonetheless be ratified resulting from the Lords only resolving against ratification in period A ...
 
 )
 
@@ -108,11 +108,11 @@ A motion that the treaty should not be ratified is ALLOWED to be tabled in the H
 
 The treaty has been laid into the Commons ...
 
-... AND the treaty has been NEITHER withdrawn NOR has section 22 invoked ...
+... AND the treaty has been NEITHER withdrawn NOR has CRaG section 22 been invoked ...
 
 ... AND NEITHER period A NOR extended period A have ended ...
 
-... AND a motion that the treaty should not be ratifed has NOT been approved in the Commons.
+... AND a motion that the treaty should not be ratified has NOT been approved in the Commons.
 
 ) ...
 
@@ -131,21 +131,21 @@ The treaty has NOT been withdrawn from the House of Commons ...
 ... EITHER (
 The Lords have NOT resolved against the treaty being ratified ...
 
+... AND the number of times the Commons have resolved against the treaty being ratified is EQUAL to the number of times period B has started.
+
+) ...
+
+... OR (
+
+The Government have made a statement in response to both Houses resolving against ratification in period A ...
+
 ... AND the number of times the Commons have resolved against the treaty is EQUAL to the number of times period B has started.
 
 ) ...
 
 ... OR (
 
-The Government have made a statement in response to both Houses resolving against in period A ...
-
-... AND the number of times the Commons have resolved against the treaty is EQUAL to the number of times period B has started.
-
-) ...
-
-... OR (
-
-The Government have made a statement in response to the Lords resolving against in period A ...
+The Government have made a statement in response to the Lords resolving against ratification in period A ...
 
 AND the number of times the Commons have resolved against ratification PLUS ONE is EQUAL to the  number of times period B has started.
 
@@ -162,23 +162,24 @@ Statement that the treaty should nonetheless be ratified, triggering a new perio
 A statement responding to the Commons having resolved against in period B is ALLOWED to be made if ...
 
 ... NEITHER (
-The Lords have NOT resolved against the treaty being ratified ...
 
-... AND the number of times the Commons have resolved against the treaty is EQUAL to the number of times period B has started.
+The Lords have NOT resolved against ratification ...
 
-) ...
-
-... NOR (
-
-The Government have made a statement in response to both Houses resolving against in period A ...
-
-... AND the number of times the Commons have resolved against the treaty is EQUAL to the number of times period B has started.
+... AND the number of times the Commons have resolved against ratification is EQUAL to the number of times period B has started.
 
 ) ...
 
 ... NOR (
 
-The Government have made a statement in response to the Lords resolving against in period A ...
+The Government have made a statement in response to both Houses resolving against ratification in period A ...
+
+... AND the number of times the Commons have resolved against ratification is EQUAL to the number of times period B has started.
+
+) ...
+
+... NOR (
+
+The Government have made a statement in response to the Lords resolving against ratification in period A ...
 
 AND the number of times the Commons have resolved against ratification PLUS ONE is EQUAL to the  number of times period B has started.
 
