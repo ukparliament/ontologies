@@ -30,7 +30,7 @@ Anya, Robert and Michael continued to carve out [spiritual space](https://en.wik
 
 ## [Forming like Voltron](https://www.youtube.com/watch?v=2kkJDHRYxWM)
 
-On Friday, our team of crack librarians assembled in person for the first time since we all got locked down. Or at least a sizeable portion did. Librarians Anya, Jayne, [Claire](https://twitter.com/tinysprite) and Steve all headed into Westminster. Since lockdown, we have also acquired a brand new pair of librarians in the shape of [Ayesha](https://twitter.com/askalibrarylady) and Anna. Ayesha turning up sight unseen after her camera failed at interview stage. And none of us have ever met either of them via any medium other than pixels. So security passes were picked up and six librarians set off on a tour of our beloved palace, some of our other, less beloved  offices, followed by a jaunt around St James's Park and the requisite trip to the pub. Welcome Ayesha and Anna.
+On Friday, our team of crack librarians assembled in person for the first time since we all got locked down. Or at least a sizeable portion did. Librarians Anya, Jayne, [Claire](https://twitter.com/tinysprite) and Steve all headed into Westminster. Since lockdown, we have also acquired a brand new pair of librarians in the shape of [Ayesha](https://twitter.com/askalibrarylady) and Anna. Ayesha turning up sight unseen after her camera failed at interview stage. And none of us have ever met either of them via any medium other than pixels. So security passes were picked up and six librarians set off on a tour of our beloved palace and some of our other, less beloved  offices, followed by a jaunt around St James's Park and the requisite trip to the pub. Welcome Ayesha and Anna.
 
 
 
