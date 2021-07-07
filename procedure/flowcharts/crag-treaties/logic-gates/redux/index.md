@@ -1,4 +1,4 @@
-# Logic for CRaG treaty motions and statements
+# Logic for CRaG treaty procedure
 
 [Logical map](redux.pdf)
 
