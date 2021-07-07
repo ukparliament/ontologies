@@ -10,9 +10,9 @@ In any given period, in any given House, more than one motion against ratificati
 
 In a given period, in a given House, a question is ALLOWED be put if ...
 
-... the SUM of motions having the question put, being withdrawn, lapsed, not moved and not called ...
+	... the SUM of motions having the question put, being withdrawn, lapsed, not moved and not called ...
 
-... does NOT EQUAL the number of motions tabled.
+	... does NOT EQUAL the number of motions tabled.
 
 At the end of any period, all extant motions - those not having had the question put - will be placed into one four states: being withdrawn, lapsed, not moved and not called.
 
@@ -28,33 +28,33 @@ A motion being approved in a period in a House, any extant motions being not wit
 
 A motion that the treaty should not be ratified is ALLOWED to be tabled in the House of Lords if ...
 
-... the treaty has been laid into the Lords ...
+	... the treaty has been laid into the Lords ...
 
-... AND NEITHER section 22 has been invoked NOR has the treaty been withdrawn from the Lords ...
+	... AND NEITHER section 22 has been invoked NOR has the treaty been withdrawn from the Lords ...
 
-... AND NEITHER period A NOR extended period A have ended ...
+	... AND NEITHER period A NOR extended period A have ended ...
 
-... AND a motion that the treaty should not be ratified has NOT been approved in the Lords.
+	... AND a motion that the treaty should not be ratified has NOT been approved in the Lords.
 
 ### ... a question can be put
 
 A question on a motion the treaty should not be ratified is ALLOWED to be put in the House of Lords if ...
 
-... if there is an extant motion - see above ...
+	... there is an extant motion - see above ...
 
-... AND NEITHER section 22 has been invoked NOR has the treaty been withdrawn from the LORDs ...
+	... AND NEITHER section 22 has been invoked NOR has the treaty been withdrawn from the LORDs ...
 
-... AND NEITHER period A NOR extended period A have ended ...
+	... AND NEITHER period A NOR extended period A have ended ...
 
-... AND a motion that the treaty should not be ratified has NOT been approved in the Lords.
+	... AND a motion that the treaty should not be ratified has NOT been approved in the Lords.
 
 ### ... the Government can make a statement
 
 The Government is ALLOWED to make a statement that the treaty should nonetheless be ratified if ...
 
-... a motion to not ratify the treaty has been approved in that House ...
+	... a motion to not ratify the treaty has been approved in that House ...
 
-... AND the Government have not already made such a statement.
+	... AND the Government have not already made such a statement.
 
 ## In the House of Commons ...
 
@@ -62,75 +62,69 @@ The Government is ALLOWED to make a statement that the treaty should nonetheless
 
 A motion that the treaty should not be ratified is ALLOWED to be tabled in the House of Commons if ...
 
-EITHER (
+	EITHER (
 
-#### In period A
+		#### In period A
 
-The treaty has been laid into the Commons ...
+		The treaty has been laid into the Commons ...
 
-... AND section 22 has not been invoked ...
+		... AND section 22 has not been invoked ...
 
-... AND NEITHER period A NOR extended period A have ended ...
+		... AND NEITHER period A NOR extended period A have ended ...
 
-... AND a motion that the treaty should not be ratified has NOT been approved in the Commons.
+		... AND a motion that the treaty should not be ratified has NOT been approved in the Commons.
 
-)
+	)
 
-OR (
+	OR (
 
-#### In a period B
+		#### In a period B
 
-(
+		(
 
-The number of times period B has started does NOT EQUAL the number of times period B has ended.
+			The number of times period B has started does NOT EQUAL the number of times period B has ended ...
 
-)
+			... AND the number of times period B has started EQUALS the number of times a motion that the treaty should not be ratified has been approved in the Commons INCREMENTED by one.
 
-AND (
+	)
 
-The number of times period B has started EQUALS the number of times a motion that the treaty should not be ratified has been approved in the Commons INCREMENTED by one.
-
-)
-
-)
-
-... AND the treaty has not been withdrawn.
+	AND the treaty has not been withdrawn.
 
 ### ... a question can be put
 
 A question on a motion the treaty should not be ratified is ALLOWED to be put in the House of Commons if ...
 
-... if there is an extant motion - see above ...
+	... there is an extant motion - see above ...
 
-... AND the treaty been withdrawn from the Commons ...
+	... AND the treaty been withdrawn from the Commons ...
 
-... AND EITHER (
+	... AND EITHER (
 
-#### In period A
+		#### In period A
 
-NEITHER period A NOR extended period A have ended ...
+		NEITHER period A NOR extended period A have ended ...
 
-... AND NEITHER section 22 has been invoked ...
+		... AND NEITHER section 22 has been invoked ...
 
-... NOR has a motion that the treaty should not be ratified been approved in the Commons.
+		... NOR has a motion that the treaty should not be ratified been approved in the Commons.
 
-)
+	)
 
-OR (
+	OR (
 
-#### In a period B
+		#### In a period B
 
-The number of times period B has started does NOT EQUAL the number of times period B has ended ...
+		The number of times period B has started does NOT EQUAL the number of times period B has ended ...
 
-... AND the number of times period B has started does NOT EQUAL the number of times a motion that the treaty should not be ratified has been approved in the Commons INCREMENTED by one ...
-
-)
+		... AND the number of times period B has started does NOT EQUAL the number of times a motion that the treaty should not be ratified has been approved in the Commons INCREMENTED by one ...
+		
+	)
 
 ### ... the Government can make a statement
 
 The Government is ALLOWED to make a statement that the treaty should nonetheless be ratified if ...
 
-... the number of time the Government has made such a statement does NOT EQUAL the number of times the House has approved a motion that the treaty should not be ratified .
+	... the number of time the Government has made such a statement does NOT EQUAL the number of times the House has approved a motion that the treaty should not be ratified .
 
 ## In either House ...
 
@@ -138,9 +132,9 @@ The Government is ALLOWED to make a statement that the treaty should nonetheless
 
 A motion can be resolved - approved or rejected - if ...
 
-... the SUM of the number of times a motion has been approved in that House and the number of times a motion has been rejected in that House ...
+	... the SUM of the number of times a motion has been approved in that House and the number of times a motion has been rejected in that House ...
 
-... does NOT EQUAL the number of times a question has been put in that House.
+	... does NOT EQUAL the number of times a question has been put in that House.
 
 ## Period B
 
@@ -148,13 +142,13 @@ A motion can be resolved - approved or rejected - if ...
 
 Period B starts if ...
 
-... the number of times the Government has made a statement that the treaty should nonetheless be ratified in the Commons is NOT EQUAL to the number of time period B has started.
+	... the number of times the Government has made a statement that the treaty should nonetheless be ratified in the Commons is NOT EQUAL to the number of time period B has started.
 
 ### Period B ends
 
 Period B ends if ...
 
-... the number of times period B has started is NOT EQUAL to the number of time period B has ended.
+	... the number of times period B has started is NOT EQUAL to the number of time period B has ended.
 
 ## Procedure concluded
 
@@ -168,38 +162,45 @@ The Government may make a statement that the treaty should nonetheless be ratifi
 
 The Government may ratify the treaty if ...
 
-EITHER (
+	EITHER (
 
-Section 22 is invoked.
+		Section 22 is invoked.
 
-)
+	)
 
-OR (
+	OR (
+		
+		#### Period A
 
-EITHER period A OR extended period A have ended ...
+		EITHER period A OR extended period A have ended ...
 
-... AND a motion that the treaty should not be ratified has NOT been approved in the Commons.
+		... AND a motion that the treaty should not be ratified has NOT been approved in the Commons.
 
-... AND EITHER (
+		... AND EITHER (
 
-the Government have made a statement that the treaty should nonetheless be ratified in the Lords ...
+			the Government have made a statement that the treaty should nonetheless be ratified in the Lords ...
 
-)
+		)
 
-... OR (
+		OR (
 
-A motion that the treaty should not be ratified has NOT been approved in the Lords.
+			A motion that the treaty should not be ratified has NOT been approved in the Lords.
 
-)
+		)
+		
+	)
+	
+	OR (
+		
+		#### Period B
 
-)
+		The number of times period B has ended EQUALS the number of times a motion that the treaty should not be ratified has been approved in the Commons ...
 
-OR (
+		... and period B has started at least once ...
 
+		... and the number of times that period B has started EQUALs the number of times that period B has ended.
 
->>>>>>> HERE FOR PERIOD B
-
-)
+	)
 
 
 
