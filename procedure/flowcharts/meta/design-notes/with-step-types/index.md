@@ -301,14 +301,24 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 			<td>1</td>
 		</tr>
 		<tr>
-			<th>Arithmetic PLUS</th>
+			<th>Arithmetic SUM</th>
 			<td>2</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<th>Arithmetic INCREMENT</th>
+			<td>1</td>
 			<td>1</td>
 		</tr>
 		<tr>
 			<th>Arithmetic EQUALS</th>
 			<td>2</td>
 			<td>1</td>
+		</tr>
+		<tr>
+			<th>SIGNPOST/th>
+			<td>1</td>
+			<td>1 or more than 1</td>
 		</tr>
 	</tbody>
 </table>
