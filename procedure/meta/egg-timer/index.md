@@ -2,7 +2,7 @@ Procedure | Current | Typical day count | Caveats
 Legislative Reform Order scrutiny period | t	| | t
 Localism Order scrutiny period | t	| | t
 Proposed Negative Statutory Instrument committee sifting period | t | 10 | f
-Public Bodies Order scrutiny period	| f	| | 
+Public Bodies Order scrutiny period	| f	| |  t
 Negative Statutory Instrument praying period (Commons only)	| t | 40 | f
 Negative Statutory Instrument praying period (Commons and Lords) | t	| 40 | f
 Made affirmative approval period (Commons only) | t | | t
