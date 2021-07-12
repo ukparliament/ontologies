@@ -189,13 +189,21 @@ A NULL value entering a logic step renders that step 'transparent':
 
 #### Arithmetic steps
 
-An arithmetic step is either a PLUS step or an EQUALS step.
+An arithmetic step is either a SUM step, an INCREMENT step or an EQUALS step.
 
-A business step outputs a count of the number of actualisations of that step by business items having a date of today or in the past.
+A business step outputs a count of the number of actualisations of that step by business items having a date of today or in the past. Arithmetic steps take those counts, process them and - via an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step or a logic step.
 
-A PLUS step directly follows either a business step or another PLUS step, having no intervening steps. A PLUS step takes two input routes from two business steps and sums the two counts. The summed count is emitted on the outbound route of the PLUS step. The target of the outbound route from an PLUS step is an arithmetic step.
+A SUM step directly follows either a business step, another SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route from a SUM step is another arithmetic step.
 
-An EQUALS step takes two input routes from either a business step or a PLUS step and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route from an EQUALS step is a business step, decision step or logic step.
+An INCREMENT step directly follows either a business step, a SUM step or another INCREMENT step, having no intervening steps. An INCREMENT step takes one input route and adds one to the count. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route from an INCREMENT step is another arithmetic step.
+
+An EQUALS step takes two input routes from either a business step, a SUM step or an INCREMENT step and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route from an EQUALS step is a business step, decision step or logic step.
+
+#### Signpost steps
+
+Signpost steps take one input. Unlike logic steps, they have one *or more* outputs. They allow us to wrap up a set of arithmetic and logical steps into one reusable package so - once we’ve worked out a logical package - we can reuse it from any other part of the map. The description of a logical step is taken to imply, 'if the input to this step is true, this description is true.'
+
+Signpost steps are transparent. They take the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emit the same values on all outbound routes.
 
 ### Parsing work packages
 
