@@ -104,5 +104,11 @@ kingdom_id | integer | true | fk:kingdoms(id) | Should be not null
 previous_kingdom_id | integer | true | fk:kingdoms(id) |
 reign_id | integer | true | fk:reigns(id) |
 
+## monarchs
 
-
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+name | varchar(255) | false | |
+date_of_birth | date | true | |
+date_of_death | date | true | |
+wikidata_id | varchar(20) | true | |
