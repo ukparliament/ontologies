@@ -112,3 +112,14 @@ name | varchar(255) | false | |
 date_of_birth | date | true | |
 date_of_death | date | true | |
 wikidata_id | varchar(20) | true | |
+
+## peerage_holdings
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+ordinality | integer | false | |
+start_on | date | true | |
+end_on | date | true | |
+notes | varchar(2000) | true | |
+person_id | integer | false | fk:people(id) |
+peerage_id | integer | false | fk:peerages(id) |
