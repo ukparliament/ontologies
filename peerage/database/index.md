@@ -124,3 +124,42 @@ notes | varchar(2000) | true | |
 introduced_on | date | true | |
 person_id | integer | false | fk:people(id) |
 peerage_id | integer | false | fk:peerages(id) |
+
+## peerage_types
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+name | text | true | | Should be not null
+
+## peerages
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+of_title | boolean | false | |
+title | text | true | | Should be not null
+territorial_designation | text | true | | 
+extinct_on | date | true | | 
+last_number | integer | true | | 
+notes | text | true | | 
+wikidata_id | varchar(20) | true | | 
+peerage_type_id | integer | true | fk:peerage_types(id) | Should be not null
+rank_id | integer | true | fk:ranks(id) | Should be not null
+special_remainder_id | integer | true |  | Should be fk to special_remainders(id)
+letters_patent_id | integer | true |  | Should be not null. Should be fk to letters_patents(id)
+kingdom_id | integer | true |  | Should be not null. Should be fk to kingdoms(id)
+letter_id | integer | true |  | Should be not null. Should be fk to letters(id)
+
+## people
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+forenames | varchar(200) | false | |
+surname | varchar(100) | true | |
+date_of_birth | date | true | |
+date_of_death | date | true | |
+notes | text | true | |
+wikidata_id | varchar(20) | true | |
+mnis_id | varchar(20) | true | |
+rush_id | varchar(20) | true | |
+letter_id | integer | true | fk:letters(id) | Should be not null
+gender_id | integer | true | fk:genders(id) | Should be not null
