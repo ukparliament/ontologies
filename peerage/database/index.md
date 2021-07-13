@@ -71,6 +71,12 @@ appointment_london_gazette_page | integer | true | |
 peerage_id | integer | | fk:peerages_id | Should be not null
 jurisdiction_id | integer | |  | Should be not null. Should be fk to jurisdictions(id)
 
+## letters
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+letter | varchar(100) | false | |
+url_key | char(1) | false | |
 
 
 
