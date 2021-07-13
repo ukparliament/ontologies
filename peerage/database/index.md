@@ -121,5 +121,6 @@ ordinality | integer | false | |
 start_on | date | true | |
 end_on | date | true | |
 notes | varchar(2000) | true | |
+introduced_on | date | true | |
 person_id | integer | false | fk:people(id) |
 peerage_id | integer | false | fk:peerages(id) |
