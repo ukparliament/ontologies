@@ -51,7 +51,7 @@ kingdom_id | integer | false | fk:kingdoms_id |
 Column | Type | Nullable | Key | Comments
 id | integer | false | primary |
 name | varchar(255) | false | | 
-start_on | date | true | | Should this be not null Ned?
+start_on | date | true | | 
 end_on   | date | false | |
 
 
