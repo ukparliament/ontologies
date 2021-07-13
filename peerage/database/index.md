@@ -27,5 +27,24 @@ notes | text | true | |
 announcement_type_id | integer | true | fk:announcement_types(id) |
 administration_id | integer | true | | Should be fk to administrations(id)
 
+## genders
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+label | varchar(10) | false | |
+
+## jurisdictions
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+label | varchar(100) | false | |
+
+## kingdom_ranks
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+rank_id | integer | false | fk:ranks_id |
+kingdom_id | integer | false | fk:kingdoms_id |
+
 
 
