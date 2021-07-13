@@ -163,3 +163,44 @@ mnis_id | varchar(20) | true | |
 rush_id | varchar(20) | true | |
 letter_id | integer | true | fk:letters(id) | Should be not null
 gender_id | integer | true | fk:genders(id) | Should be not null
+
+## rank_labels
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+label | varchar(100) | false | |
+rank_id | integer | false | fk:genders(id) |
+gender_id | integer | false | fk:ranks(id) |
+
+## ranks
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+label | varchar(100) | true | | Should be not null
+degree | integer | true | | Should be not null
+is_peerage_rank | boolean | false | |
+
+## reigning_monarchs
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+reign_id | integer | false | fk:reigns(id) | 
+monarch_id | integer | false | fk:monarchs(id) | 
+
+## reigns
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+title | varchar(255) | false | | 
+start_on | date | true | | Should this be not null Ned?
+end_on | date | true | |
+kingdom_id | integer | false | fk:kingdoms(id) |
+
+## special_remainders
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+description | varchar(500) | false | | 
+
+
+
