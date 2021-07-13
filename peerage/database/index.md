@@ -78,6 +78,10 @@ id | integer | false | primary |
 letter | varchar(100) | false | |
 url_key | char(1) | false | |
 
+## letters_patent_times
 
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+label | varchar(20) | false | |
 
 
