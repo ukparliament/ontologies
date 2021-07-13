@@ -84,4 +84,25 @@ Column | Type | Nullable | Key | Comments
 id | integer | false | primary |
 label | varchar(20) | false | |
 
+## letters_patents
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+label | varchar(20) | false | |
+patent_on | date | false | |
+person_prefix | varchar(20) | true | | 
+person_suffix | varchar(20) | true | | 
+previous_of_title | boolean | false | | 
+previous_title | varchar(255) | true | |
+previous_rank | varchar(255) | true | |
+ordinality_on_date | integer | true | |
+citations | text | true | |
+announcement_id |integer | true | fk:announcements(id)
+letters_patent_time_id | integer | true | fk:letters_patent_times(id) |
+person_id | integer | true | fk:people(id) | Should be not null
+kingdom_id | integer | true | fk:kingdoms(id) | Should be not null
+previous_kingdom_id | integer | true | fk:kingdoms(id) |
+reign_id | integer | true | fk:reigns(id) |
+
+
 
