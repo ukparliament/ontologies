@@ -54,5 +54,24 @@ name | varchar(255) | false | |
 start_on | date | true | | 
 end_on   | date | false | |
 
+## law_lord_incumbencies
+
+Column | Type | Nullable | Key | Comments
+id | integer | false | primary |
+appointed_on | date | false | |
+end_on_ | date | true | |
+vice | text | true | |
+old_office_ | text | true | |
+notes | text | true | |
+annuity_from | date | true | |
+annuity_london_gazette_issue | integer | true | |
+annuity_london_gazette_page | integer | true | |
+appointment_london_gazette_issue | integer | true | |
+appointment_london_gazette_page | integer | true | |
+peerage_id | integer | | fk:peerages_id | Should be not null
+jurisdiction_id | integer | |  | Should be not null. Should be fk to jurisdictions(id)
+
+
+
 
 
