@@ -32,6 +32,8 @@ drop table if exists constituency_groups;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
+drop table if exists counties;
+drop table if exists regions;
 
 create type change_types as enum ('insert', 'update', 'delete');
 create table change_events (
@@ -40,6 +42,19 @@ create table change_events (
 	row_id int not null,
 	change_type change_types not null,
 	change_at timestamp not null,
+	primary key (id)
+);
+create table regions (
+	id serial,
+	name varchar(255) not null,
+	primary key (id)
+);
+create table counties (
+	id serial,
+	name varchar(255) not null,
+	is_palatine boolean default false,
+	region_id int not null,
+	constraint fk_region foreign key (region_id) references regions(id),
 	primary key (id)
 );
 create table bishoprics (
