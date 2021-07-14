@@ -88,7 +88,6 @@ label | varchar(20) | false | |
 
 Column | Type | Nullable | Key | Comments
 id | integer | false | primary |
-label | varchar(20) | false | |
 patent_on | date | false | |
 person_prefix | varchar(20) | true | | 
 person_suffix | varchar(20) | true | | 
