@@ -191,7 +191,7 @@ monarch_id | integer | false | fk:monarchs(id) |
 Column | Type | Nullable | Key | Comments
 id | integer | false | primary |
 title | varchar(255) | false | | 
-start_on | date | true | | Should this be not null Ned?
+start_on | date | true | | Should be not null
 end_on | date | true | |
 kingdom_id | integer | false | fk:kingdoms(id) |
 
