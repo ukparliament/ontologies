@@ -6,7 +6,7 @@ Column | Type | Nullable | Key | Comments
 id | integer | false | primary | 
 number | integer | true | | Should be non-null
 prime_minister | text | false | | Should be non-null
-start_date | date | true | |  Should be non-null
+start_date | date | true | |  
 end_date | date | true | |
 colour_code | text | true | |
 
