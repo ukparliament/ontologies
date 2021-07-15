@@ -24,7 +24,7 @@ announced_on | date | false | |
 in_gazette | boolean | true | | Should be default false
 gazette_url | varchar(255) | true | |
 notes | text | true | |
-announcement_type_id | integer | true | fk:announcement_types(id) |
+announcement_type_id | integer | true | fk:announcement_types(id) | Should be not null
 administration_id | integer | true | | Should be fk to administrations(id)
 
 ## genders
