@@ -55,6 +55,14 @@ To search from a certain point add the following to the query:
 To search within a certain range add the following to the query:
 
     FILTER (str(?itemDate) > '2020-01-01' && str(?itemDate) < '2020-02-28')
+	
+## Secondary Legislation Scrutiny Committee further scrutiny 
+
+The Secondary Legislation Scrutiny Committee has the power to invite Ministers to oral evidence sessions before or after the Committee has considered an instrument. The Committee also has the power to make further comment or provide additional information after they've considered an instrument. The following queries find instruments where either step has been added: 
+
+* [Further information published by the Secondary Legislation Scrutiny Committee](https://api.parliament.uk/s/89728457)
+
+* [Secondary Legislation Scrutiny Committee oral evidence sessions](https://api.parliament.uk/s/8ae1b8bb)
 
 
 ## Secondary Legislation Scrutiny Committee's scrutiny of coronavirus legislation
