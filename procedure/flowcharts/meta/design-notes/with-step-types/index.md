@@ -324,7 +324,7 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 			<td>1</td>
 		</tr>
 		<tr>
-			<th>SIGNPOST/th>
+			<th>SIGNPOST</th>
 			<td>1</td>
 			<td>1 or more than 1</td>
 		</tr>
