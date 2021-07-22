@@ -4,7 +4,7 @@
  
 We are in the process of redesigning the [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) to use typed steps rather than route types.
  
-The step can be a business step, a decision step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of PLUS or EQUALS. 
+The step can be a business step, a decision step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of SUM, INCREMENT or EQUALS. 
 
 Labels for non-business steps are not in themselves meaningful. The labels facilitate conversations about the routes between steps, for example ‘the step AA NOT is linked to BA AND’.
 
@@ -191,13 +191,13 @@ A NULL value entering a logic step renders that step 'transparent':
 
 An arithmetic step is either a SUM step, an INCREMENT step or an EQUALS step.
 
-A business step outputs a count of the number of actualisations of that step by business items having a date of today or in the past. Arithmetic steps take those counts, process them and - via an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step or a logic step.
+A business step outputs a count of the number of actualisations of that step by business items having a date of today or in the past. Arithmetic steps take those counts, process them and - via an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a signpost step.
 
-A SUM step directly follows either a business step, another SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route from a SUM step is another arithmetic step.
+A SUM step directly follows either a business step, another SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route from a SUM step is another arithmetic step or a signpost step.
 
-An INCREMENT step directly follows either a business step, a SUM step or another INCREMENT step, having no intervening steps. An INCREMENT step takes one input route and adds one to the count. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route from an INCREMENT step is another arithmetic step.
+An INCREMENT step directly follows either a business step, a SUM step or another INCREMENT step, having no intervening steps. An INCREMENT step takes one input route and adds one to the count. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route from an INCREMENT step is another arithmetic step or a signpost step.
 
-An EQUALS step takes two input routes from either a business step, a SUM step or an INCREMENT step and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route from an EQUALS step is a business step, decision step or logic step.
+An EQUALS step takes two input routes from either a business step, a SUM step or an INCREMENT step and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route from an EQUALS step is a business step, decision step, logic step or signpost step.
 
 #### Signpost steps
 
