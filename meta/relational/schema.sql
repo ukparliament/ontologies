@@ -28,7 +28,7 @@ drop table if exists political_parties;
 drop table if exists kingdoms;
 drop table if exists genders;
 drop table if exists letters_patent_times;
-drop table if exists constituency_groups;
+drop table if exists constituencies;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
@@ -229,8 +229,13 @@ create table house_seat_end_reasons (
 	label varchar(255) not null,
 	primary key (id)
 );
-create table constituency_groups (
+
+create table constituencies (
 	id serial,
+	name varchar(255) not null,
+	start_on date,
+	end_on date,
+	has_geographic_extent boolean default false,
 	primary key (id)
 );
 create table bishopric_parliamentary_seniorities (
@@ -244,13 +249,13 @@ create table house_seats (
 	end_on date not null,
 	house_seat_end_reason_id int null,
 	house_id int not null,
-	constituency_group_id int,
+	constituency_id int,
 	bishopric_id int,
 	bishopric_parliamentary_seniority_id int,
 	peerage_id int null,
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_house_seat_end_reason foreign key (house_seat_end_reason_id) references house_seat_end_reasons(id),
-	constraint fk_contituency_group foreign key (constituency_group_id) references constituency_groups(id),
+	constraint fk_contituency foreign key (constituency_id) references constituencies(id),
 	constraint fk_bishopric foreign key (bishopric_id) references bishoprics(id),
 	constraint fk_bishopric_parliamentary_seniority foreign key (bishopric_parliamentary_seniority_id) references bishopric_parliamentary_seniorities(id),
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
