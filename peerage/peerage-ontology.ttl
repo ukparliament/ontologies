@@ -283,6 +283,20 @@ ppeer:during rdf:type owl:ObjectProperty ;
 	
 #######  Data properties ##### 
 
+ppeer:holdingStartOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Peerage holding start on"@en ;
+	rdfs:comment "Relates a peerage holding to the date on which that peerage holding starts - being the date the peerage is granted to the first holder, the date a hereditary peerage is inherited or the date on which a writ of acceleration is granted."@en ;
+	rdfs:domain ppeer:PeerageHolding ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:holdingEndOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Peerage holding end on"@en ;
+	rdfs:comment "Relates a peerage holding to the date on which that holding ceases - being the date of death of the holder of the peerage, the date on which the holder is deprived of their title under the Titles Deprivation Act 1917, the date on which the holder is attainted or the date on which the peerage merges into the Crown."@en ;
+	rdfs:domain ppeer:PeerageHolding ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
 ppeer:ofTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Of title"@en ;
 	rdfs:comment "Relates a peerage to a flag indicating if the peerage has an 'of' between the rank and the title. For a peerage such as Earl of Plymouth, this flag is true. For a peerage such as Earl Nelson, this flag is false."@en ;
