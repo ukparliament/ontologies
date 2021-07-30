@@ -25,284 +25,296 @@
 
 #######  Classes #####
 
-pt:TimePeriod rdf:type owl:Class ;
-	rdfs:label "Time period"@en ;
-	rdfs:comment "A period of time, having a name. An interval rather than a single point in time."@en ;
+pt:TemporalThing rdf:type owl:Class ;
+	rdfs:label "Temporal thing"@en ;
+	rdfs:comment "An interval between two points in time, having a name."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:Kingdom rdf:type owl:Class ;
+	rdfs:subClassOf pt:TemporalThing ;
+	rdfs:label "Kingdom"@en ;
+	rdfs:comment "A Kingdom is a period of time between the establishment of a Kingdom and the disestablishment of that Kingdom, for example: the United Kingdom existing from 1st January 1801."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:GovernmentAdministrationPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Government administration period"@en ;
 	rdfs:comment "A period of a single government, under a single Prime Minister, bounded by general elections, for example: Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:PremiershipPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Premiership period"@en ;
 	rdfs:comment "A continuous period of government under a single Prime Minister, spanning general elections, for example: Thatcher administration 1979-1990."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Reign rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Reign"@en ;
 	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:ParliamentPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Parliament period"@en ;
 	rdfs:comment "The time period of a Parliament between the date of its first assembly after a general election and the dissolution of that Parliament. We use the term Parliament period in this ontology to distinguish between a Parliament being a named period of time and Parliament as an institution. A Parliament period comprises contiguous periods while Parliament is either in session or prorogued. A Parliament period applies to both Houses. Proclamations naming dates for the assembly and dissolution of Parliaments are issued by the monarch. Before the passing of the Fixed-term Parliaments Act 2011, a dissolution proclamation named the date on which Parliament reassembled. After the passing of the Fixed-term Parliaments Act 2011, a Parliament begins on the date named in a proclamation issued following dissolution. The start date of a Parliament may be changed by subsequent proclamations. Before the passing of the Fixed-term Parliaments Act 2011, a dissolution proclamation named the date on which Parliament dissolved. After the passing of the Fixed-term Parliaments Act 2011, the date of dissolution is determined according to that Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:DissolutionPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Dissolution period"@en ;
 	rdfs:comment "The period during which Parliament is dissolved. During this time no parliamentary business can take place. From the time of dissolution until the returning of a result for a constituency in a general election, that constituency has no Member sitting in the House of Commons. Winners returned for a constituency in a general election are Members from the time of being returned, even if Parliament is dissolved. Members of the House of Lords retain their memberships during a dissolution period. A dissolution period applies to both Houses. A proclamation to dissolve Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PreElectionDissolutionPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Pre-election dissolution period"@en ;
 	rdfs:comment "The period between the end of a Parliament period and the results of all constituency elections being announced. During this time there are no Members of the House of Commons."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PostElectionDissolutionPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Post-election dissolution period"@en ;
 	rdfs:comment "The period between the results of all constituency elections being announced and the next Parliament period. During this period, successful candidates are Members even though Parliament is dissolved."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Session rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Session"@en ;
 	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:ProrogationPeriod rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Prorogation period"@en ;
 	rdfs:comment "The time period between a prorogation and either dissolution or the start of the subsequent session. A prorogation period is within a Parliament period. Parliamentary business does not take place during a prorogation period. A prorogation period is the same across both Houses. A proclamation to prorogue Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:Term rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Term"@en ;
 	rdfs:comment "A period between recess periods during which a House may be sitting. Term periods are not necessarily the same across both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:Recess rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Recess"@en ;
 	rdfs:comment "A 'periodic adjournment' during a session, when one or both Houses have adjourned to a day other than the next expected sitting day. A periodic adjournment ends with prorogation, dissolution or a new term."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:SittingDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Sitting day"@en ;
 	rdfs:comment "A sitting day in a House is a day during which that House considers business, with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the Monarch as a component part of Parliament. Sitting days are determined by each House separately. Parliament considers that a sitting day may continue beyond midnight to include more than one calendar day: such a sitting day is called by the date of the calendar day on which it begins. Except in the case of the European Union (Withdrawal) Act 2018, Sch. 7 para. 17(11), which uses the above definition, legislation assumes one calendar day to be one sitting day."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:HybridSittingDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Hybrid sitting day"@en ;
 	rdfs:comment "A hybrid sitting day in a House is a day during which that House considers business, with a quorum of Members, including both those present in the Chamber and those attending remotely, and in the presence of the Mace. Hybrid sitting days are determined by each House separately. Parliament considers that a hybrid sitting day may continue beyond midnight to include more than one calendar day: such a hybrid sitting day is called by the date of the calendar day on which it begins."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:VirtualSittingDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Virtual sitting day"@en ;
 	rdfs:comment "A virtual sitting day in a House is a day during which that House considers business with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions are put to the House when not sitting virtually."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:AdjournmentDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Adjournment day"@en ;
 	rdfs:comment "A day on which a House is adjourned, being outside a recess period for that House, for example: a 'non-sitting Friday', a day on a weekend, a Bank Holiday."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:House rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:TableOfficeNonSittingTablingDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Table Office non-sitting tabling day"@en ;
 	rdfs:comment "A day other than a sitting day on which a Member of a House may give notice of a question, motion or amendment to a motion to the Table Office of that House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:PublicBillOfficeNonSittingTablingDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Public Bill Office non-sitting tabling day"@en ;
 	rdfs:comment "A day other than a sitting day on which a Member of a House may give notice of an amendment, new clause or new schedule to a Bill to the Public Bill Office of that House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:PrintingDay rdf:type owl:Class ;
-	rdfs:subClassOf pt:TimePeriod ;
+	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Printing day"@en ;
 	rdfs:comment "In the House of Commons, a printing day is the day on which the Table Office publishes notices of questions, motions and amendments to motions received since the most recent sitting day. A printing day falls on the same day as the final weekday of a recess other than a bank holiday."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-# edited to here
 
 
-				
 #######  Object properties ##### 
-	
-pt:hasSession rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSession"@en ;
-	rdfs:comment "Relates a Parliament period to a session."@en ;
+
+pt:parliamentPeriodInKingdom rdf:type owl:ObjectProperty ;
+	rdfs:label "Parliament period in kingdom"@en ;
+	rdfs:comment "Relates a Parliament period to the kingdom in which that Parliament period takes place."@en ;
 	rdfs:domain pt:ParliamentPeriod ;
+	rdfs:range pt:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
+pt:dissolutionPeriodInKingdom rdf:type owl:ObjectProperty ;
+	rdfs:label "Dissolution period in kingdom"@en ;
+	rdfs:comment "Relates a dissolution period to the kingdom in which that dissolution period takes place."@en ;
+	rdfs:domain pt:DissolutionPeriod ;
+	rdfs:range pt:Kingdom ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:sessionInParliamentPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "Session in Parliament period"@en ;
+	rdfs:comment "Relates a session to the Parliament period in which that session takes place."@en ;
+	rdfs:domain pt:Session ;
+	rdfs:range pt:ParliamentPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:prorogationInParliamentPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "Prorogation in Parliament period"@en ;
+	rdfs:comment "Relates a prorogation period to the Parliament period in which that prorogation period takes place."@en ;
+	rdfs:domain pt:ProrogationPeriod ;
+	rdfs:range pt:ParliamentPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
+pt:preElectionDissolutionPeriodInDissolutionPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "Pre-election dissolution period in dissolution period"@en ;
+	rdfs:comment "Relates a pre-election dissolution period to the dissolution period in which that pre-election dissolution period takes place."@en ;
+	rdfs:domain pt:PreElectionDissolutionPeriod ;
+	rdfs:range pt:DissolutionPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:postElectionDissolutionPeriodInDissolutionPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "Post-election dissolution period in dissolution period"@en ;
+	rdfs:comment "Relates a post-election dissolution period to the dissolution period in which that post-election dissolution period takes place."@en ;
+	rdfs:domain pt:PostElectionDissolutionPeriod ;
+	rdfs:range pt:DissolutionPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:termInSession rdf:type owl:ObjectProperty ;
+	rdfs:label "Term in session"@en ;
+	rdfs:comment "Relates a term to the session in which that term takes place."@en ;
+	rdfs:domain pt:Term ;
 	rdfs:range pt:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:hasProrogationPeriod rdf:type owl:ObjectProperty ;
-	rdfs:label "hasProrogationPeriod"@en ;
-	rdfs:comment "Relates a Parliament period to a prorogation period."@en ;
-	rdfs:domain pt:ParliamentPeriod ;
-	rdfs:range pt:ProrogationPeriod ;
+pt:recessInSession rdf:type owl:ObjectProperty ;
+	rdfs:label "Recess in session"@en ;
+	rdfs:comment "Relates a recess to the session in which that recess takes place."@en ;
+	rdfs:domain pt:Recess ;
+	rdfs:range pt:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:termInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Term in House"@en ;
+	rdfs:comment "Relates a term to the House in which that term takes place."@en ;
+	rdfs:domain pt:Term ;
+	rdfs:range pt:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:recessInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Recess in House"@en ;
+	rdfs:comment "Relates a recess to the House in which that recess takes place."@en ;
+	rdfs:domain pt:Recess ;
+	rdfs:range pt:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:sittingDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Sitting day in term"@en ;
+	rdfs:comment "Relates a sitting day to the term in which that sitting day takes place."@en ;
+	rdfs:domain pt:SittingDay ;
+	rdfs:range pt:Term ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:hasTerm rdf:type owl:ObjectProperty ;
-	rdfs:label "hasTerm"@en ;
-	rdfs:comment "Relates a session to a term."@en ;
-	rdfs:domain pt:Session ;
+pt:hyrbridSittingDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Hybrid sitting day in term"@en ;
+	rdfs:comment "Relates a hybrid sitting day to the term in which that hybrid sitting day takes place."@en ;
+	rdfs:domain pt:HybridSittingDay ;
 	rdfs:range pt:Term ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:hasRecess rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRecess"@en ;
-	rdfs:comment "Relates a session to a recess."@en ;
-	rdfs:domain pt:Session ;
-	rdfs:range pt:Recess ;
+pt:virtualSittingDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Virtual sitting day in term"@en ;
+	rdfs:comment "Relates a virtual sitting day to the term in which that virtual sitting day takes place."@en ;
+	rdfs:domain pt:VirtualSittingDay ;
+	rdfs:range pt:Term ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:houseHasTerm rdf:type owl:ObjectProperty ;
-	rdfs:label "houseHasTerm"@en ;
-	rdfs:comment "Relates a House to a term. Allows for different term periods in different Houses."@en ;
-	rdfs:domain pt:House ;
+pt:adjournmentDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Adjournment day in term"@en ;
+	rdfs:comment "Relates an adjournment day to the term in which that adjournment day takes place."@en ;
+	rdfs:domain pt:AdjournmentDay ;
+	rdfs:range pt:Term ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+pt:tableOfficeNonSittingTablingDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Table Office non-sitting tabling day in term"@en ;
+	rdfs:comment "Relates a Table Office non-sitting tabling day to the term in which that Table Office non-sitting tabling day takes place."@en ;
+	rdfs:domain pt:TableOfficeNonSittingTablingDay ;
 	rdfs:range pt:Term ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:houseHasRecess rdf:type owl:ObjectProperty ;
-	rdfs:label "houseHasRecess"@en ;
-	rdfs:comment "Relates a House to a recess. Allows for different recess periods in different Houses."@en ;
-	rdfs:domain pt:House ;
+pt:tableOfficeNonSittingTablingDayInRecess rdf:type owl:ObjectProperty ;
+	rdfs:label "Table Office non-sitting tabling day in recess"@en ;
+	rdfs:comment "Relates a Table Office non-sitting tabling day to the recess in which that Table Office non-sitting tabling day takes place."@en ;
+	rdfs:domain pt:TableOfficeNonSittingTablingDay ;
 	rdfs:range pt:Recess ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasSittingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasSittingDay"@en ;
-	rdfs:comment "Relates a term to a sitting day."@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:SittingDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasHybridSittingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "Has hybrid sitting day"@en ;
-	rdfs:comment "Relates a term to a hybrid sitting day."@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:HybridSittingDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasVirtualSittingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "Has virtual sitting day"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:VirtualSittingDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasAdjournmentDay rdf:type owl:ObjectProperty ;
-	rdfs:label "Has adjournment day"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:AdjournmentDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasTableOfficeNonSittingTablingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasTableOfficeNonSittingTablingDay"@en ;
-	rdfs:comment "Relates a term to a Table Office non-sitting tabling day."@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:TableOfficeNonSittingTablingDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasRecessTableOfficeNonSittingTablingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRecessTableOfficeNonSittingTablingDay"@en ;
-	rdfs:comment "Relates a recess to a Table Office non-sitting tabling day."@en ;
-	rdfs:domain pt:Recess ;
-	rdfs:range pt:TableOfficeNonSittingTablingDay ;
+
+pt:publicBillOfficeNonSittingTablingDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Public Bill Office non-sitting tabling day in term"@en ;
+	rdfs:comment "Relates a Public Bill Office non-sitting tabling day to the term in which that Public Bill Office non-sitting tabling day takes place."@en ;
+	rdfs:domain pt:PublicBillOfficeNonSittingTablingDay ;
+	rdfs:range pt:Term ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:hasPublicBillOfficeNonSittingTablingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPublicBillOfficeNonSittingTablingDay"@en ;
-	rdfs:comment "Relates a term to a Public Bill Office non-sitting tabling day."@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:PublicBillOfficeNonSittingTablingDay ;
+pt:publicBillOfficeNonSittingTablingDayInRecess rdf:type owl:ObjectProperty ;
+	rdfs:label "Public Bill Office non-sitting tabling day in recess"@en ;
+	rdfs:comment "Relates a Public Bill Office non-sitting tabling day to the recess in which that Public Bill Office non-sitting tabling day takes place."@en ;
+	rdfs:domain pt:PublicBillOfficeNonSittingTablingDay ;
+	rdfs:range pt:Recess ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
-pt:hasPublicBillOfficeNonSittingTablingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPublicBillOfficeNonSittingTablingDay"@en ;
-	rdfs:comment "Relates a recess to a Public Bill Office non-sitting tabling day."@en ;
-	rdfs:domain pt:Recess ;
-	rdfs:range pt:PublicBillOfficeNonSittingTablingDay ;
+pt:printingDayInTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Printing day in term"@en ;
+	rdfs:comment "Relates a printing day to the term in which that printing day takes place."@en ;
+	rdfs:domain pt:PrintingDay ;
+	rdfs:range pt:Term ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-	
-	
-	
-	
-	
-	
-pt:hasPrintingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPrintingDay"@en ;
-	rdfs:comment "Relates a term to a printing day."@en ;
-	rdfs:domain pt:Term ;
-	rdfs:range pt:PrintingDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-
-pt:hasRecessPrintingDay rdf:type owl:ObjectProperty ;
-	rdfs:label "hasRecessPrintingDay"@en ;
-	rdfs:comment "Relates a recess to a printing day. Allows for printing days to happen in a recess period."@en ;
-	rdfs:domain pt:Recess ;
-	rdfs:range pt:PrintingDay ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasPreElectionDissolutionPeriod rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPreElectionDissolutionPeriod"@en ;
-	rdfs:comment "Relates a dissolution period to a pre-election dissolution period."@en ;
-	rdfs:domain pt:DissolutionPeriod ;
-	rdfs:range pt:PreElectionDissolutionPeriod ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:hasPostElectionDissolutionPeriod rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPostElectionDissolutionPeriod"@en ;
-	rdfs:comment "Relates a dissolution period to a post-election dissolution period."@en ;
-	rdfs:domain pt:DissolutionPeriod ;
-	rdfs:range pt:PostElectionDissolutionPeriod ;
+pt:printingDayInRecess rdf:type owl:ObjectProperty ;
+	rdfs:label "Printing day in recess"@en ;
+	rdfs:comment "Relates a printing day to the recess in which that printing day takes place."@en ;
+	rdfs:domain pt:PrintingDay ;
+	rdfs:range pt:Recess ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 	
 	
 #######  Data properties ##### 
 
+pt:ordinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality"@en ;
+	rdfs:comment "Relates a temporal thing to its ordinality within a wider temporal thing."@en ;
+	rdfs:domain pt:TemporalThing ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
 pt:proposedStartDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "proposedStartDate"@en ;
-	rdfs:comment "Time period has a proposed start date."@en ;
-	rdfs:domain pt:TimePeriod ;
+	rdfs:label "Proposed start date"@en ;
+	rdfs:comment "Relates a temporal thing to its proposed start date."@en ;
+	rdfs:domain pt:TemporalThing ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:proposedEndDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "proposedEndDate"@en ;
-	rdfs:comment "Time period has a proposed end date."@en ;
-	rdfs:domain pt:TimePeriod ;
+	rdfs:label "Proposed end date"@en ;
+	rdfs:comment "Relates a temporal thing to its proposed end date."@en ;
+	rdfs:domain pt:TemporalThing ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:parliamentNumber rdf:type owl:DatatypeProperty ;
-	rdfs:label "parliamentNumber"@en ;
-	rdfs:comment "Parliament period has an ordinal number. Numbered from the Act of Union 1800. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
-	rdfs:domain pt:ParliamentPeriod ;
-	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
