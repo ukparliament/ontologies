@@ -30,8 +30,9 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
+ttlfiles = list(Path(".").rglob("*.ttl"))
 
-for ttlpath in list(Path(".").rglob("*.ttl")):
+for ttlpath in ttlfiles:
 
     g = rdflib.Graph()
 
