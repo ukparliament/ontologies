@@ -30,7 +30,7 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-ttlfiles = list(Path(".").rglob("*.ttl"))
+ttlfiles = list(Path(".").rglob("*-ontology.ttl"))
 
 # print(ttlfiles)
 
@@ -106,7 +106,7 @@ for ttlpath in ttlfiles:
         )
 
     for s, p, o in g.triples((None, RDF.type, OWL.Ontology)):
-        title = g.value(s, DCTERMS.title) or ""
+        title = g.value(s, DCTERMS.title)
         description = g.value(s, DCTERMS.description)
         created = g.value(s, DCTERMS.created)
         rights = g.value(s, DCTERMS.rights)
@@ -195,7 +195,7 @@ for ttlpath in ttlfiles:
         htmlfile.write(
             template.render(
                 htmlpath=htmlpath.lstrip("."),
-                title=Markup(title),
+                title=Markup(title) or "",
                 created=Markup(created),
                 rights=Markup(rights),
                 description=Markup(description),
