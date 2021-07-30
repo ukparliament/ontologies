@@ -40,8 +40,6 @@ for ttlpath in ttlfiles:
     result = g.parse(data=ttlfile.read(), format="turtle")
 
     classes = []
-    
-    
 
     for s, p, o in g.triples((None, RDF.type, OWL.Class)):
 
@@ -115,6 +113,7 @@ for ttlpath in ttlfiles:
         foafmakerids.append(maker)
         makerobject = {}
         for s, p, o in g.triples((maker, None, None)):
+            print(s)
             makerobject["id"] = str(s)
             makerobject["name"] = str(g.value(s, FOAF.name))
             makerobject["homepage"] = str(g.value(s, FOAF.homepage))
