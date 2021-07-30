@@ -36,7 +36,12 @@ for ttlpath in ttlfiles:
 
     g = rdflib.Graph()
 
-    ttlfile = open(ttlpath, "r")
+    try:
+        ttlfile = open(ttlpath, "r")
+    except OSError as e:
+        print(e.errno)
+
+    # ttlfile = open(ttlpath, "r")
     result = g.parse(data=ttlfile.read(), format="turtle")
 
     classes = []
@@ -109,7 +114,7 @@ for ttlpath in ttlfiles:
 
     makerobjects = []
 
-    for maker in g.objects(s, FOAF.maker):
+    for maker in g.objects(None, FOAF.maker):
         foafmakerids.append(maker)
         makerobject = {}
         for s, p, o in g.triples((maker, None, None)):
