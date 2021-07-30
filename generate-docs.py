@@ -32,6 +32,8 @@ htmldir = "./meta/html/"
 
 ttlfiles = list(Path(".").rglob("*.ttl"))
 
+# print(ttlfiles)
+
 for ttlpath in ttlfiles:
 
     g = rdflib.Graph()
@@ -118,7 +120,6 @@ for ttlpath in ttlfiles:
         foafmakerids.append(maker)
         makerobject = {}
         for s, p, o in g.triples((maker, None, None)):
-            print(s)
             makerobject["id"] = str(s)
             makerobject["name"] = str(g.value(s, FOAF.name))
             makerobject["homepage"] = str(g.value(s, FOAF.homepage))
