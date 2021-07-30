@@ -106,7 +106,7 @@ for ttlpath in ttlfiles:
         )
 
     for s, p, o in g.triples((None, RDF.type, OWL.Ontology)):
-        title = g.value(s, DCTERMS.title)
+        title = g.value(s, DCTERMS.title) or ""
         description = g.value(s, DCTERMS.description)
         created = g.value(s, DCTERMS.created)
         rights = g.value(s, DCTERMS.rights)
