@@ -223,13 +223,13 @@ An EQUALS step takes two input routes - each route from a business step, a SUM s
 
 ### Signpost steps
 
+A signpost step 'points backwards' at the routes leading to it, describing a condition that may be reached depending on the actualisation state of preceding business steps, routes traversed and operations of logical or arithmetic steps encountered.
+ 
+The description of a signpost step describes a condition that is true if the input route to that step is TRUE.
+
 Signpost steps take one input and have one or more outputs.
 
-Signpost steps combine any set of arithmetic or logical steps into a package which can be reused in any other part of the map. 
-
-The description of a signpost step implies that if the input to the signpost step is true, then the description of that step is true.
-
-Signpost steps are ‘transparent’, taking the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emitting the same values on all outbound routes.
+Signpost steps are 'transparent', taking the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emitting the same values on all outbound routes.
 
 ### Routes to business steps
 
