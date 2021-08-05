@@ -2,7 +2,7 @@
  
 We are in the process of redesigning the [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) to use typed steps rather than route types.
  
-The step can be a business step, a decision step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of SUM, INCREMENT or EQUALS. 
+The step can be a business step, a decision step, a summation step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of SUM, INCREMENT or EQUALS. 
 
 Labels for non-business steps are not in themselves meaningful. The labels facilitate conversations about the routes between steps, for example 'the step AA NOT is linked to BA AND'.
 
@@ -72,7 +72,7 @@ The truth table for a decision step is:
 	</tbody>
 </table>
 
-It is expected that decision steps will output a route directly into a business step without any intervening logic or arithmetic steps: these will never have an input with a value of ALLOWS.
+It is expected that decision steps will output a route directly into a business step without any intervening logic, arithmetic or summation steps: these will never have an input with a value of ALLOWS.
 
 A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE, NULL or UNTRAVERSABLE, is neither allowed nor caused to happen.
 
@@ -213,23 +213,23 @@ A NULL value entering a logic step renders that step 'transparent':
 
 An arithmetic step is a SUM step, an INCREMENT step or an EQUALS step.
 
-Arithmetic steps take the actualisation counts from business steps and - by means of an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a signpost step.
+Arithmetic steps take the actualisation counts from business steps and - by means of an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a summation step.
 
-A SUM step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is an arithmetic step or a signpost step.
+A SUM step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is an arithmetic step or a summation step.
 
-An INCREMENT step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. An INCREMENT step takes one input route and adds one to the count. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route of an INCREMENT step is an arithmetic step or a signpost step.
+An INCREMENT step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. An INCREMENT step takes one input route and adds one to the count. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route of an INCREMENT step is an arithmetic step or a summation step.
 
-An EQUALS step takes two input routes - each route from a business step, a SUM step or an INCREMENT step - and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route of an EQUALS step is a business step, a decision step, a logic step or a signpost step.
+An EQUALS step takes two input routes - each route from a business step, a SUM step or an INCREMENT step - and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route of an EQUALS step is a business step, a decision step, a logic step or a summation step.
 
-### Signpost steps
+### Summation steps
 
-A signpost step 'points backwards' at the routes leading to it, describing a condition that may be reached depending on the actualisation state of preceding business steps, routes traversed and operations of logical or arithmetic steps encountered.
+A summation step 'points backwards' at the routes leading to it, describing a condition that may be reached depending on the actualisation state of preceding business steps, routes traversed and operations of logical or arithmetic steps encountered.
  
-The description of a signpost step describes a condition that is true if the input route to that step is TRUE.
+The description of a summation step describes a condition that is true if the input route to that step is TRUE.
 
-Signpost steps take one input and have one or more outputs.
+Summation steps take one input and have one or more outputs.
 
-Signpost steps are 'transparent', taking the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emitting the same values on all outbound routes.
+Summation steps are 'transparent', taking the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emitting the same values on all outbound routes.
 
 ### Routes to business steps
 
@@ -273,11 +273,11 @@ It is possible to show or hide a set of **routes** which share the same state, f
 
 * Hiding the set of routes which have a value of UNTRAVERSABLE - routes that can only be traversed by crossing a non-current route - for example: routes from EVEL certification.
 
-* Hiding the set of business steps which have a value of NOT YET ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
+* Hiding the set of business steps which have a value of NOT CURRENTLY ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
 
 * Hiding the set of routes which have a value of NULL or FALSE - any routes that cannot yet be traversed - for example: routes to the question being put on an approval motion where no such motion has yet been tabled.
 
-* Hiding the set of business steps which have a value of NOT NOW ACTUALISABLE - steps that cannot yet be reached - for example: steps describing the putting of a question on an approval motion where no such motion has yet been tabled, regardless of whether those steps have already been actualised.
+* Hiding the set of business steps which have a value of NOT YET ACTUALISABLE - steps that cannot yet be reached - for example: steps describing the putting of a question on an approval motion where no such motion has yet been tabled, regardless of whether those steps have already been actualised.
 
 
 ## Validating inputs and outputs to steps
@@ -334,7 +334,7 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 			<td>1</td>
 		</tr>
 		<tr>
-			<th>SIGNPOST</th>
+			<th>Summation</th>
 			<td>1</td>
 			<td>1 or more than 1</td>
 		</tr>
