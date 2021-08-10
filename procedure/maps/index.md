@@ -1,17 +1,17 @@
 # Procedure maps
 
-## Statutory instruments
+## Statutory instrument procedures
 
 ### Negative procedures
 
-#### [Draft negative](statutory-instruments/negative-procedures/draft/hand-drawn.svg)
+#### [Draft negative](statutory-instruments/negative-procedures/draft/draft-negative.pdf)
 
-Dot file: [dot]() * [svg]()
+Dot file: [dot]() / [svg]()
 
-#### [Made negative](statutory-instruments/negative-procedures/made/hand-drawn.svg)
+#### [Made negative](statutory-instruments/negative-procedures/made/made-negative.pdf)
 
-Dot file: [dot]() * [svg]()
+Dot file: [dot]() / [svg]()
 
 
 
-## CRaG treaties
+## CRaG treaty procedure
