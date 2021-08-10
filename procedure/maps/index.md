@@ -14,4 +14,6 @@ Dot file: [dot]() / [svg]()
 
 
 
-## CRaG treaty procedure
+## [CRaG treaty procedure](crag-treaties/crag-treaties.pdf)
+
+Dot file: [dot]() / [svg]()
