@@ -6,7 +6,7 @@
 
 #### [Draft negative](statutory-instruments/negative-procedures/draft/hand-drawn.svg)
 
-Dot file: .dot | .svg
+Dot file: [dot] * [svg]
 
 
 
