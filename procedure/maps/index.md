@@ -1,8 +1,12 @@
 # Procedure maps
 
-## [Published drafts under the European Withdrawal Act](published-drafts-under-euwa/published-drafts-under-euwa.pdf)
+## [Published drafts under the European Withdrawal Act procedure](published-drafts-under-euwa/published-drafts-under-euwa.pdf)
 
 Dot file: [dot](published-drafts-under-euwa/dot.dot) / [svg](published-drafts-under-euwa/dot.svg)
+
+## [Proposed negative statutory instrument procedure](proposed-negative-sis/proposed-negative-sis.pdf)
+
+Dot file: [dot](proposed-negative-sis/dot.dot) / [svg](proposed-negative-sis/dot.dot)
 
 ## Statutory instrument procedures
 
