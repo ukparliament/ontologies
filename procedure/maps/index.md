@@ -8,27 +8,29 @@ Dot file: [dot](published-drafts-under-euwa/dot.dot) / [svg](published-drafts-un
 
 Dot file: [dot](proposed-negative-sis/dot.dot) / [svg](proposed-negative-sis/dot.dot)
 
-## Statutory instrument procedures
+## Secondary legislation procedures
 
-### Negative procedures
+### Statutory instrument procedures
 
-#### [Draft negative](statutory-instruments/negative-procedures/draft/draft-negative.pdf)
+#### Negative procedures
 
-Dot file: [dot](statutory-instruments/negative-procedures/draft/dot.dot) / [svg](statutory-instruments/negative-procedures/draft/dot.svg)
+##### [Draft negative](secondary-legislation/statutory-instruments/negative-procedures/draft/draft-negative.pdf)
 
-#### [Made negative](statutory-instruments/negative-procedures/made/made-negative.pdf)
+Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/draft/dot.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/draft/dot.svg)
 
-Dot file: [dot](statutory-instruments/negative-procedures/made/dot.dot) / [svg](statutory-instruments/negative-procedures/made/dot.svg)
+##### [Made negative](secondary-legislation/statutory-instruments/negative-procedures/made/made-negative.pdf)
 
-### Affirmative procedures
+Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/made/dot.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/made/dot.svg)
 
-#### [Draft affirmative](statutory-instruments/affirmative-procedures/draft/draft-affirmative.pdf)
+#### Affirmative procedures
 
-Dot file: [dot](statutory-instruments/affirmative-procedures/draft/dot.dot) / [svg](statutory-instruments/affirmative-procedures/draft/dot.svg)
+##### [Draft affirmative](secondary-legislation/statutory-instruments/affirmative-procedures/draft/draft-affirmative.pdf)
 
-#### [Made affirmative](statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
+Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/draft/dot.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/draft/dot.svg)
 
-Dot file: [dot](statutory-instruments/affirmative-procedures/made/dot.dot) / [svg](statutory-instruments/affirmative-procedures/made/dot.svg)
+##### [Made affirmative](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
+
+Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/dot.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/dot.svg)
 
 ## [CRaG treaty procedure](crag-treaties/crag-treaties.pdf)
 
