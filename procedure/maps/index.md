@@ -1,5 +1,9 @@
 # Procedure maps
 
+## [Published drafts under the European Withdrawal Act](published-drafts-under-euwa/published-drafts-under-euwa.pdf)
+
+Dot file: [dot](published-drafts-under-euwa/dot.dot) / [svg](published-drafts-under-euwa/dot.svg)
+
 ## Statutory instrument procedures
 
 ### Negative procedures
