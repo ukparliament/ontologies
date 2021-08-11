@@ -17,3 +17,7 @@ Dot file: [dot](statutory-instruments/negative-procedures/made/dot.dot) / [svg](
 Dot file: [dot](crag-treaties/dot.dot) / [svg](crag-treaties/dot.svg)
 
 ## Component procedures
+
+### [EVEL certification procedure](components/evel-certification/evel-certification.pdf)
+
+Dot file: [dot](components/evel-certification/dot.dot) / [svg](components/evel-certification/dot.svg)
