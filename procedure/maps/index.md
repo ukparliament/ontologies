@@ -14,21 +14,21 @@ Dot file: [dot](secondary-legislation/proposed-negative-sis/dot.dot) / [svg](sec
 
 #### Negative procedures
 
-##### [Draft negative](secondary-legislation/statutory-instruments/negative-procedures/draft/draft-negative.pdf)
+##### [Draft negative procedure](secondary-legislation/statutory-instruments/negative-procedures/draft/draft-negative.pdf)
 
 Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/draft/dot.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/draft/dot.svg)
 
-##### [Made negative](secondary-legislation/statutory-instruments/negative-procedures/made/made-negative.pdf)
+##### [Made negative procedure](secondary-legislation/statutory-instruments/negative-procedures/made/made-negative.pdf)
 
 Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/made/dot.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/made/dot.svg)
 
 #### Affirmative procedures
 
-##### [Draft affirmative](secondary-legislation/statutory-instruments/affirmative-procedures/draft/draft-affirmative.pdf)
+##### [Draft affirmative procedure](secondary-legislation/statutory-instruments/affirmative-procedures/draft/draft-affirmative.pdf)
 
 Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/draft/dot.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/draft/dot.svg)
 
-##### [Made affirmative](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
+##### [Made affirmative procedure](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
 
 Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/dot.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/dot.svg)
 
