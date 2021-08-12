@@ -42,6 +42,22 @@ Dot file: [dot](crag-treaties/dot.dot) / [svg](crag-treaties/dot.svg)
 
 Dot file: [dot](crag-treaties/components/efra/dot.dot) / [svg](crag-treaties/components/efra/dot.svg)
 
+#### [International Agreements Committee procedure](crag-treaties/components/iac/iac.pdf)
+
+Dot file: [dot](crag-treaties/components/iac/dot.dot) / [svg](crag-treaties/components/iac/dot.svg)
+
+#### [International Trade Committee procedure](crag-treaties/components/itc/itc.pdf)
+
+Dot file: [dot](crag-treaties/components/itc/dot.dot) / [svg](crag-treaties/components/itc/dot.svg)
+
+#### [Joint Committee on Human Rights procedure](crag-treaties/components/jchr/jchr.pdf)
+
+Dot file: [dot](crag-treaties/components/jchr/dot.dot) / [svg](crag-treaties/components/jchr/dot.svg)
+
+#### [Lords' Committees procedure](crag-treaties/components/lords-committees/lords-committees.pdf)
+
+Dot file: [dot](crag-treaties/components/lords-committees/dot.dot) / [svg](crag-treaties/components/lords-committees/dot.svg)
+
 ## Component procedures
 
 ### [EVEL certification procedure](components/evel-certification/evel-certification.pdf)
