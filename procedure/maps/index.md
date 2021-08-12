@@ -36,6 +36,10 @@ Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedur
 
 Dot file: [dot](crag-treaties/dot.dot) / [svg](crag-treaties/dot.svg)
 
+### CRaG treaty procedure components
+
+#### [Environment, Food and Rural Affairs Committee procedure](crag-treaties/components/efra/efra.pdf)
+
 ## Component procedures
 
 ### [EVEL certification procedure](components/evel-certification/evel-certification.pdf)
