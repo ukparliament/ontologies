@@ -32,6 +32,12 @@ Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedur
 
 Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.svg)
 
+### Secondary legislation component procedures
+
+#### [Secondary Legislation Scrutiny Committee procedure](secondary-legislation/components/slsc/slsc.pdf)
+
+Dot file: [dot](secondary-legislation/components/slsc/slsc.dot) / [svg](secondary-legislation/components/slsc/slsc.svg)
+
 ## [CRaG treaty procedure](crag-treaties/crag-treaties.pdf)
 
 Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-treaties.svg)
