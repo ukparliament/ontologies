@@ -32,6 +32,20 @@ Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedur
 
 Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.svg)
 
+#### Statutory instrument component procedures
+
+##### [Joint Committee on Statutory Instruments procedure](secondary-legislation/statutory-instruments/components/jcsi/jcsi.pdf)
+
+Dot file: [dot](secondary-legislation/statutory-instruments/components/jcsi/jcsi.dot) / [svg](secondary-legislation/statutory-instruments/components/jcsi/jcsi.svg)
+
+##### [Local government finance report procedure](secondary-legislation/statutory-instruments/components/local-government-finance-report/local-government-finance-report.pdf)
+
+Dot file: [dot](secondary-legislation/statutory-instruments/components/local-government-finance-report/local-government-finance-report.dot) / [svg](secondary-legislation/statutory-instruments/components/local-government-finance-report/local-government-finance-report.svg)
+
+##### [Select Committee on statutory instruments procedure](secondary-legislation/statutory-instruments/components/scsi/scsi.pdf)
+
+Dot file: [dot](secondary-legislation/statutory-instruments/components/scsi/scsi.dot) / [svg](secondary-legislation/statutory-instruments/components/scsi/scsi.svg)
+
 ### Secondary legislation component procedures
 
 #### [Secondary Legislation Scrutiny Committee procedure](secondary-legislation/components/slsc/slsc.pdf)
