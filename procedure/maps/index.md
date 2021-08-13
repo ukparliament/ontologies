@@ -4,11 +4,11 @@
 
 ### [Published drafts under the European Withdrawal Act procedure](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.pdf)
 
-Dot file: [dot](secondary-legislation/published-drafts-under-euwa/dot.dot) / [svg](secondary-legislation/published-drafts-under-euwa/dot.svg)
+Dot file: [dot](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.dot) / [svg](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.svg)
 
 ### [Proposed negative statutory instrument procedure](secondary-legislation/proposed-negative-sis/proposed-negative-sis.pdf)
 
-Dot file: [dot](secondary-legislation/proposed-negative-sis/dot.dot) / [svg](secondary-legislation/proposed-negative-sis/dot.dot)
+Dot file: [dot](secondary-legislation/proposed-negative-sis/proposed-negative-sis.dot) / [svg](secondary-legislation/proposed-negative-sis/proposed-negative-sis.svg)
 
 ### Statutory instrument procedures
 
@@ -16,50 +16,50 @@ Dot file: [dot](secondary-legislation/proposed-negative-sis/dot.dot) / [svg](sec
 
 ##### [Draft negative procedure](secondary-legislation/statutory-instruments/negative-procedures/draft/draft-negative.pdf)
 
-Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/draft/dot.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/draft/dot.svg)
+Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/draft/draft-negative.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/draft/draft-negative.svg)
 
 ##### [Made negative procedure](secondary-legislation/statutory-instruments/negative-procedures/made/made-negative.pdf)
 
-Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/made/dot.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/made/dot.svg)
+Dot file: [dot](secondary-legislation/statutory-instruments/negative-procedures/made/made-negative.dot) / [svg](secondary-legislation/statutory-instruments/negative-procedures/made/made-negative.svg)
 
 #### Affirmative procedures
 
 ##### [Draft affirmative procedure](secondary-legislation/statutory-instruments/affirmative-procedures/draft/draft-affirmative.pdf)
 
-Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/draft/dot.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/draft/dot.svg)
+Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/draft/draft-affirmative.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/draft/draft-affirmative.svg)
 
 ##### [Made affirmative procedure](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
 
-Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/dot.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/dot.svg)
+Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.svg)
 
 ## [CRaG treaty procedure](crag-treaties/crag-treaties.pdf)
 
-Dot file: [dot](crag-treaties/dot.dot) / [svg](crag-treaties/dot.svg)
+Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-treaties.svg)
 
 ### CRaG treaty component procedures
 
 #### [Environment, Food and Rural Affairs Committee procedure](crag-treaties/components/efra/efra.pdf)
 
-Dot file: [dot](crag-treaties/components/efra/dot.dot) / [svg](crag-treaties/components/efra/dot.svg)
+Dot file: [dot](crag-treaties/components/efra/efra.dot) / [svg](crag-treaties/components/efra/efra.svg)
 
 #### [International Agreements Committee procedure](crag-treaties/components/iac/iac.pdf)
 
-Dot file: [dot](crag-treaties/components/iac/dot.dot) / [svg](crag-treaties/components/iac/dot.svg)
+Dot file: [dot](crag-treaties/components/iac/iac.dot) / [svg](crag-treaties/components/iac/iac.svg)
 
 #### [International Trade Committee procedure](crag-treaties/components/itc/itc.pdf)
 
-Dot file: [dot](crag-treaties/components/itc/dot.dot) / [svg](crag-treaties/components/itc/dot.svg)
+Dot file: [dot](crag-treaties/components/itc/itc.dot) / [svg](crag-treaties/components/itc/itc.svg)
 
 #### [Joint Committee on Human Rights procedure](crag-treaties/components/jchr/jchr.pdf)
 
-Dot file: [dot](crag-treaties/components/jchr/dot.dot) / [svg](crag-treaties/components/jchr/dot.svg)
+Dot file: [dot](crag-treaties/components/jchr/jchr.dot) / [svg](crag-treaties/components/jchr/jchr.svg)
 
 #### [Lords' Committees procedure](crag-treaties/components/lords-committees/lords-committees.pdf)
 
-Dot file: [dot](crag-treaties/components/lords-committees/dot.dot) / [svg](crag-treaties/components/lords-committees/dot.svg)
+Dot file: [dot](crag-treaties/components/lords-committees/lords-committees.dot) / [svg](crag-treaties/components/lords-committees/lords-committees.svg)
 
 ## Component procedures
 
 ### [EVEL certification procedure](components/evel-certification/evel-certification.pdf)
 
-Dot file: [dot](components/evel-certification/dot.dot) / [svg](components/evel-certification/dot.svg)
+Dot file: [dot](components/evel-certification/evel-certification.dot) / [svg](components/evel-certification/evel-certification.svg)
