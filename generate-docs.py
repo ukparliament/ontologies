@@ -30,7 +30,7 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-ttlfiles = list(Path(".").rglob("*-ontology.ttl"))
+ttlfiles = list(Path(".").rglob("*.ttl"))
 
 # print(ttlfiles)
 

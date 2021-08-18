@@ -186,7 +186,7 @@
                 {% for import in imports|sort %}
 
                 {% if import.netloc == 'ukparliament.github.io' %}
-                <li>{{ import.path|ttlpath2ontologyname }}</li>
+                <li>{{ import.path|ttlpath2ontologyname }}: {{ import.path }}</li>
                 {% else %}
 
                 <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
