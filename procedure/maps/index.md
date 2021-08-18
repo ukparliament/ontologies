@@ -2,7 +2,7 @@
 
 ## Secondary legislation procedures
 
-### [Published drafts under the European Withdrawal Act procedure](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.pdf)
+### [Published drafts under the European Withdrawal Act procedure [PDF]](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.pdf)
 
 Dot file: [dot](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.dot) / [svg](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.svg)
 
