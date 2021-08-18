@@ -193,11 +193,14 @@ for ttlpath in ttlfiles:
 
     relcanonical = "https://ukparliament.github.io/ontologies/meta/html/" + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
 
+    csv_url = "https://ukparliament.github.io/ontologies/meta/html/" + str(ttlpath.parent) + "/" + ttlpath.stem + ".csv"
+
     with open(htmlpath, "w") as htmlfile:
         print("  Writing " + htmlpath)
         htmlfile.write(
             template.render(
                 relcanonical=relcanonical,
+                csv_url=csv_url,
                 htmlpath=htmlpath.lstrip("."),
                 title=Markup(title) or "",
                 created=Markup(created),
