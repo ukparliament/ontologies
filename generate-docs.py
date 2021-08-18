@@ -190,10 +190,14 @@ for ttlpath in ttlfiles:
             triple_writer.writerow([s, p, o])
 
     htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
+
+    relcanonical = "https://ukparliament.github.io/ontologies/meta/html/" + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
+
     with open(htmlpath, "w") as htmlfile:
         print("  Writing " + htmlpath)
         htmlfile.write(
             template.render(
+                relcanonical=relcanonical,
                 htmlpath=htmlpath.lstrip("."),
                 title=Markup(title) or "",
                 created=Markup(created),
