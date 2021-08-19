@@ -19,13 +19,13 @@ def ttlpath2ontologyname(value):
 
 def ttlpath2htmlpath(ttlpath):
     ttlpathparts = ttlpath.split('/')
-    htmlpath = ''.join(["https://ukparliament.github.io/ontologies/meta/html/", ttlpathparts[2], ttlpathparts[3].replace('.ttl','.html')])
+    htmlpath = ''.join(["https://ukparliament.github.io/ontologies/meta/html/", ttlpathparts[2], "/", ttlpathparts[3].replace('.ttl','.html')])
 
     return htmlpath
     
 
 
-env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
+env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape(), cache_size=0, trim_blocks=True, lstrip_blocks=True)
 
 env.filters["slash2wbr"] = slash2wbr
 
