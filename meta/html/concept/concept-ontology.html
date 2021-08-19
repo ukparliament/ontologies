@@ -70,114 +70,78 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-            
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
 
 
     </nav>
-        
         <section id="description">Concept ontology for UK Parliament. Deprecated in favour of SKOS.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="Agent">
                 <h3><a href="#Agent">Agent
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A person or group. In this context a librarian or machine subject indexing annotatable things.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="AnnotatableThing">
                 <h3><a href="#AnnotatableThing">AnnotatableThing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A thing which can be annotated with a concept or free text tag. e.g. a debate or petition or answer.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Annotation">
                 <h3><a href="#Annotation">Annotation
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A relationship between an annotatable thing and a concept or free-text tag. e.g. an act of subject indexing.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Concept">
                 <h3><a href="#Concept">Concept
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A concept. Similar to a SKOS concept / a library subject term.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="ConceptScheme">
                 <h3><a href="#ConceptScheme">ConceptScheme
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A concept scheme. Provides an arbitrary way to group concepts e.g. Commons Library to Lords Library.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Thing">
                 <h3><a href="#Thing">Thing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A thing. Anything at all.</p>
-                
 
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="annotatedBy">
 
@@ -190,16 +154,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an annotation to a agent.</p>
-                
 
                 <p><strong>Annotation</strong> &mdash; annotatedBy &mdash; <strong>Agent</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasAnnotation">
 
@@ -212,16 +172,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an annotatable thing to an annotation.</p>
-                
 
                 <p><strong>AnnotatableThing</strong> &mdash; hasAnnotation &mdash; <strong>Annotation</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasBroaderConcept">
 
@@ -234,16 +190,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a concept to a broader concept.</p>
-                
 
                 <p><strong>Concept</strong> &mdash; hasBroaderConcept &mdash; <strong>Concept</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasConcept">
 
@@ -256,16 +208,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an annotation to a concept.</p>
-                
 
                 <p><strong>Annotation</strong> &mdash; hasConcept &mdash; <strong>Concept</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasFocus">
 
@@ -278,16 +226,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a concept to a real world thing that is its focus e.g. The concept / library subject term Winston Churchill to the person Winston Churchill.</p>
-                
 
                 <p><strong>Concept</strong> &mdash; hasFocus &mdash; <strong>Thing</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasRelatedConcept">
 
@@ -300,16 +244,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a concept to another concept.</p>
-                
 
                 <p><strong>Concept</strong> &mdash; hasRelatedConcept &mdash; <strong>Concept</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="inConceptScheme">
 
@@ -322,24 +262,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a concept to a concept scheme.</p>
-                
 
                 <p><strong>Concept</strong> &mdash; inConceptScheme &mdash; <strong>ConceptScheme</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="alternativeLabel">
                 
@@ -355,7 +288,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="annotatedAt">
                 
@@ -371,7 +303,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="historyNote">
                 
@@ -387,7 +318,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="indexerNote">
                 
@@ -403,7 +333,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="scopeNote">
                 
@@ -419,7 +348,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="uncontrolledTag">
                 
@@ -435,48 +363,33 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>pco</dt>
                     <dd>http://parliament.uk/ontologies/concept/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -486,13 +399,10 @@
         <p>Ontology created &middot; <time id="created">2016-10-22</time></p>
         
        
-        
 
-        <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/concept/concept-ontology.csv">CSV</a></p>
+        <p>This HTML page was generated on 2021-08-19 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/concept/concept-ontology.csv">CSV</a>.</p>
         
         <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/concept/concept-ontology.ttl">visualdataweb.de/webvowl</a></p>
-
-        <p>Page last modified &middot; 2021-08-19 </p>
 
     </footer>
 </body>
