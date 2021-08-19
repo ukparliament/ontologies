@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="">
-    <link rel="index" href="https://ukparliament.github.io/ontologies">
-    <link rel="alternate" href="{{ ttldir }}{{ ttlpath }}" type="text/turtle" title="Turtle source file">
-    <link rel="alternate" href="" type="text/csv" title="CSV file">
+    <link rel="canonical" href="{{ relcanonical }}">
+    <link rel="index" href="{{ root_url }}">
+    <link rel="alternate" href="{{ ttldir }}{{ ttlpath }}" type="text/turtle" title="{{ title }}: Turtle source">
+    <link rel="alternate" href="{{ csv_url }}" type="text/csv" title="{{ title }}: CSV">
     <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>{{ title }}</title>
     <style>
@@ -16,10 +16,8 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem 0.5rem;
+            margin: auto;
             padding: 0.5rem;
-            color:black;
-            background-color: white;
         }
 
         span.subhead {
@@ -182,19 +180,23 @@
         <section id="importedontologies">
             <h2>Imported ontologies</h2>
 
-            <ul>
+            <ol>
                 {% for import in imports|sort %}
+               
 
                 {% if import.netloc == 'ukparliament.github.io' %}
-                <li>{{ import.path|ttlpath2ontologyname }}</li>
+                <li>
+                <a href="{{ import.path|ttlpath2htmlpath }}">{{ import.path|ttlpath2ontologyname }}</a> 
+              
+            </li>
                 {% else %}
 
                 <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
 
                 {% endif %}
-
+            
                 {% endfor %}
-            </ul>
+        </ol>
         </section>
         {% endif %}
 
@@ -260,7 +262,7 @@
         </p>
         {% endif %}
 
-        <p>Source Turtle file &middot; <a href="{{ ttldir }}{{ ttlpath }}">github.com/ukparliament</a></p>
+        <p>Source Turtle file &middot; <a href="{{ ttldir }}{{ ttlpath }}">github.com/ukparliament</a> &middot <a href="{{ csv_url }}">CSV</a></p>
         
         <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri={{ ttldir }}{{ ttlpath }}">visualdataweb.de/webvowl</a></p>
 
