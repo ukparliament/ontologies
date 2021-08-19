@@ -70,287 +70,194 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-             &middot; <a href="#subclasses">Subclasses</a>
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
             &middot; <a href="https://ukparliament.github.io/ontologies/question-and-answer/question-and-answer.png">Depiction</a>
-    
 
 
     </nav>
-        
         <section id="description">Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House. Note that the handling of questions as calendar business events, any ministerial statements acting as corrections to answers and tabling events will be dealt with elsewhere.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="AllocatedAnsweringBody">
                 <h3><a href="#AllocatedAnsweringBody">AllocatedAnsweringBody
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The answering body to which a question is directed, either at tabling or when asked in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Answer">
                 <h3><a href="#Answer">Answer
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>An answer to a question provided by a Member, usually a Minister, on behalf of an answering body.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; PursuableThing
-                
 
             </p>
-                
 
             </article>
-            
             <article class="class" id="AnswerExpectedAs">
                 <h3><a href="#AnswerExpectedAs">AnswerExpectedAs
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the question will receive a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="AnsweringBody">
                 <h3><a href="#AnsweringBody">AnsweringBody
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A body of whom Members can ask questions. In the House of Commons this may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners. In the House of Lords, questions are addressed to Her Majesty&#39;s Government rather than to a specific department or body. For written and private notice questions in the House of Lords, data exists to map questions to specific answering bodies; for oral questions it doesn&#39;t.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="AnswerType">
                 <h3><a href="#AnswerType">AnswerType
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The type of a given answer e.g. holding answer, substantive answer or substantive answer as corrected. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="ArmsLengthBody">
                 <h3><a href="#ArmsLengthBody">ArmsLengthBody
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>An organisation operating at arm&#39;s length from the government e.g. UK Statistics Authority.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="BusinessQuestion">
                 <h3><a href="#BusinessQuestion">BusinessQuestion
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Business questions allow Members to ask the Leader of the House about forthcoming business in the House of Commons. Unlike tabled parliamentary questions, the text of a business question will be spoken in the Chamber. The answer will also always be oral.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; Question
-                
 
             </p>
-                
 
             </article>
-            
             <article class="class" id="DelegatedAnswer">
                 <h3><a href="#DelegatedAnswer">DelegatedAnswer
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Part of a written answer provided by an arm&#39;s length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Document">
                 <h3><a href="#Document">Document
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A document.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="LibraryDeposit">
                 <h3><a href="#LibraryDeposit">LibraryDeposit
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A paper or set of papers placed by a Minister, or the Speaker, or the Lord Speaker, in the Library of either House. Usually deposits are made into both Libraries but sometimes only one.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Member">
                 <h3><a href="#Member">Member
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A current or former Member of a House.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="ParliamentaryQuestion">
                 <h3><a href="#ParliamentaryQuestion">ParliamentaryQuestion
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Parliamentary questions (often referred to as PQs) allow Members to seek information from an answering body or to press a Secretary of State to take a particular action. Usually this is to a Minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and private notice questions, which are applied for to the Speaker or Lord Speaker privately, parliamentary questions are tabled with the Lords or Commons Table Offices.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; Question
-                
 
             </p>
-                
 
             </article>
-            
             <article class="class" id="PursuableThing">
                 <h3><a href="#PursuableThing">PursuableThing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A piece of parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing e.g. in pursuant to a written or oral answer, a ministerial statement.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Question">
                 <h3><a href="#Question">Question
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Questions might be parliamentary questions (oral or written), urgent (or private notice) questions or business questions, asked by a Member of a House of an answering body or bodies. Note that the same question text adressed to multiple answering bodies, tabled by the same Member on the same day, count as one question.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="RoundRobin">
                 <h3><a href="#RoundRobin">RoundRobin
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The round robin class provides a way to group two or more very similar questions asked of multiple answering bodies by a single Member. Sometimes round robins are used as a way for a Member to intentionally ask the same question of multiple answering bodies. Occasionally they&#39;re used where departmental responsibility for a given policy area is not clearly defined. Note that the definition of a round robin is fuzzy; the question text might vary slightly. Identifying round robins is a judgement call.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Transferral">
                 <h3><a href="#Transferral">Transferral
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The act of one answering body transferring responsibility for answering a question to another answering body.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="UrgentQuestion">
                 <h3><a href="#UrgentQuestion">UrgentQuestion
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Urgent questions allow Members of the House of Commons to ask a Minister about matters of an urgent character and relating to matters of public importance. In the House of Lords, such questions are referred to as private notice questions. Unlike parliamentary questions, the text of an urgent question or a private notice question does not appear on the schedule; it will be read in the Chamber. The answer will also always be oral. Urgent questions and private notice questions are not tabled with the Lords or Commons Table Offices; they are applied for to the Speaker or the Lord Speaker privately.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; Question
-                
 
             </p>
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="allocatedTo">
 
@@ -363,16 +270,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Allows an allocation at a point in time to an answering body.</p>
-                
 
                 <p><strong>AllocatedAnsweringBody</strong> &mdash; allocatedTo &mdash; <strong>AnsweringBody</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="allocation">
 
@@ -385,16 +288,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Allows a question to be assigned to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. Note that this would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly (e.g. when referring to the gender of the answering member), treating a round robin as a single question is not yet possible.</p>
-                
 
                 <p><strong>Question</strong> &mdash; allocation &mdash; <strong>AllocatedAnsweringBody</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="answerExpectedAs">
 
@@ -407,16 +306,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a question to a time-bound means of capturing the format of the answer expected (either oral or written).</p>
-                
 
                 <p><strong>Question</strong> &mdash; answerExpectedAs &mdash; <strong>AnswerExpectedAs</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="answeringBody">
 
@@ -429,16 +324,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; answeringBody &mdash; <strong>AnsweringBody</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="answeringMember">
 
@@ -451,16 +342,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to the Member who provided it. In practice this will usually be a Minister in a government department or a person occupying a government position in a non-departmental answering body.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; answeringMember &mdash; <strong>Member</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="answerTo">
 
@@ -473,16 +360,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; answerTo &mdash; <strong>Question</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="asks">
 
@@ -495,16 +378,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a Member to a question they have asked. Note that in the House of Lords the Member who tabled the question may on occasion delegate another Member to be present in the Chamber to receive the answer. Note also that whilst parliamentary questions have to be tabled with the Lords or Commons Table Offices, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately. </p>
-                
 
                 <p><strong>Member</strong> &mdash; asks &mdash; <strong>Question</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="delegatedAnswer">
 
@@ -517,16 +396,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to a delegated answer provided by an arm&#39;s length body. The delegated answer may provide part or all of the full answer.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; delegatedAnswer &mdash; <strong>DelegatedAnswer</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="delegatedTo">
 
@@ -539,16 +414,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a delegated answer to the arm&#39;s length body that provided it.</p>
-                
 
                 <p><strong>DelegatedAnswer</strong> &mdash; delegatedTo &mdash; <strong>ArmsLengthBody</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasAnswerType">
 
@@ -561,16 +432,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to its type i.e. a holding answer, substantive answer or corrected substantive answer.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; hasAnswerType &mdash; <strong>AnswerType</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="inPursuantTo">
 
@@ -583,16 +450,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a question to a piece of parliamentary business cited by the question.</p>
-                
 
                 <p><strong>Question</strong> &mdash; inPursuantTo &mdash; <strong>PursuableThing</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="partOfRoundRobin">
 
@@ -605,16 +468,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a question to the round robin grouping it is deemed to be part of.</p>
-                
 
                 <p><strong>Question</strong> &mdash; partOfRoundRobin &mdash; <strong>RoundRobin</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="refersToDocument">
 
@@ -627,16 +486,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a written answer to a document provided by the answering body. This may be provided as an attachment to the answer text. The document might form part or all of the answer.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; refersToDocument &mdash; <strong>Document</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="refersToLibraryDeposit">
 
@@ -649,16 +504,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to a Library deposit i.e. the answer to a question may include a commitment to deposit papers in the Libraries of either House.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; refersToLibraryDeposit &mdash; <strong>LibraryDeposit</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="refersToPreviousAnswer">
 
@@ -671,16 +522,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to a previous answer that answers the question in whole or in part e.g. &#39;I refer the honourable X to the answer given...&#39;</p>
-                
 
                 <p><strong>Answer</strong> &mdash; refersToPreviousAnswer &mdash; <strong>Answer</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="replacesAnswer">
 
@@ -693,16 +540,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an answer to a subsequent answer given to the same question e.g. a holding answer to a substantive answer, or a substantive answer to a corrected answer, a corrected answer to a further corrected answer. Substantive answers replace holding answers in whole, whereas corrected answers may replace a previous answer in whole or in part.</p>
-                
 
                 <p><strong>Answer</strong> &mdash; replacesAnswer &mdash; <strong>Answer</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="transferredFrom">
 
@@ -715,16 +558,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Allows a transferral to specify the answering body to which the question was formerly allocated.</p>
-                
 
                 <p><strong>Transferral</strong> &mdash; transferredFrom &mdash; <strong>AllocatedAnsweringBody</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="transferredTo">
 
@@ -737,24 +576,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Allows a transferral to specify the answering body to which the question is subsequently allocated.</p>
-                
 
                 <p><strong>Transferral</strong> &mdash; transferredTo &mdash; <strong>AllocatedAnsweringBody</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="answerText">
                 
@@ -770,7 +602,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="dateForAnswer">
                 
@@ -786,7 +617,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="heading">
                 
@@ -802,7 +632,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="isAnswerOral">
                 
@@ -818,7 +647,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="isDateForAnswerNamed">
                 
@@ -834,7 +662,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="isOralAnswerExpected">
                 
@@ -850,7 +677,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="isQuestionSubstantive">
                 
@@ -866,7 +692,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="oralUnreachedAt">
                 
@@ -882,7 +707,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="questionText">
                 
@@ -898,7 +722,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="unstarredAt">
                 
@@ -914,78 +737,56 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
         <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>ParliamentaryQuestion</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
                 </tr>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>UrgentQuestion</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
                 </tr>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>BusinessQuestion</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
                 </tr>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Answer</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>PursuableThing</td>
                 </tr>
-                
         </table>
         </section>  
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>pqa</dt>
                     <dd>http://parliament.uk/ontologies/question-and-answer/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
                     <dt>foaf</dt>
                     <dd>http://xmlns.com/foaf/0.1/</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -995,7 +796,6 @@
         <p>Ontology created &middot; <time id="created">2016-10-10</time></p>
         
        
-        
 
         <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv">CSV</a></p>
         

@@ -70,181 +70,124 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-            
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
             &middot; <a href="https://ukparliament.github.io/ontologies/procedure/procedure.png">Depiction</a>
-    
 
 
     </nav>
-        
         <section id="description">A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="BusinessItem">
                 <h3><a href="#BusinessItem">Business item
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Citation">
                 <h3><a href="#Citation">Citation
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A citation of a document. A citation may be from a procedure, for example: the proposed negative statutory instrument procedure citing Schedule 7 to the European Union (Withdrawal) Act 2018. A citation may be from a step in a procedure, for example: the step &#39;CF - AND&#39; in the made negative statutory instrument procedure citing Section 4(1) of the Statutory Instrument Act 1946. A citation may be from a step without reference to a particular procedure, for example: the step &#39;Considered for English votes for English laws (EVEL) certification&#39; citing House of Commons public Standing Order 83P. A citation may be from a route in a procedure, for example: the route from &#39;Considered by the Joint Committee on Statutory Instruments&#39; to &#39;Motion to approve the instrument tabled by the Government (House of Lords)&#39; in both affirmative procedures citing House of Lords public Standing Order 72.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="DocumentType">
                 <h3><a href="#DocumentType">Document type
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The type of a document being cited, for example: a standing order or a section of legislation.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="House">
                 <h3><a href="#House">House
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A parliamentary House, for example: the House of Lords.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Procedure">
                 <h3><a href="#Procedure">Procedure
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Route">
                 <h3><a href="#Route">Route
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Step">
                 <h3><a href="#Step">Step
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="StepCollection">
                 <h3><a href="#StepCollection">Step collection
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A collection of steps in a procedure. A step collection may belong to one House, or none. A step collection is always within one procedure. A step collection may group one or more steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="StepType">
                 <h3><a href="#StepType">Step type
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A step has one type: a business step type, a decision step type, a logical NOT step type, a logical AND step type or a logical OR step type. Business step: a step that can be actualised by a business item. Decision step: a step that is used to describe the requirement for a decision to be made before the subsequent route can be followed. Routes including a decision step indicate that the target step is allowed and not caused: a route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised by means of a decision step indicates that actualisation of the step may happen in the future, being an allowed relationship. Logical step: a step that describes logical operations performed over routes. Inputs and outputs of a logic gate are either TRUE or FALSE. The output from a business step which has been actualised by a business item with a date in the past is TRUE. The output from a business step which has not been actualised, or which has been actualised with a business item with a date in the future, is neither TRUE nor FALSE: this is recorded as NULL. A NULL route entering a logic step acts as a bypass to that step: a logic gate with a NULL input outputs the other given input, or NULL if there is no other input.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="WorkPackage">
                 <h3><a href="#WorkPackage">Work package
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="WorkPackageableThing">
                 <h3><a href="#WorkPackageableThing">Work packageable thing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department.</p>
-                
 
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="actualises">
 
@@ -257,16 +200,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion.</p>
-                
 
                 <p><strong>BusinessItem</strong> &mdash; Actualises &mdash; <strong>Step</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="focus">
 
@@ -279,16 +218,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a work package to its focus, this being a work packageable thing.</p>
-                
 
                 <p><strong>WorkPackage</strong> &mdash; Focus &mdash; <strong>WorkPackageableThing</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="followsRoute">
 
@@ -301,16 +236,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between &#39;Considered for English votes for English laws (EVEL) certification&#39; to &#39;Certified as England only under the English votes for English laws (EVEL) process&#39; appears in the draft negative, made negative, draft affirmative and made affirmative procedures.</p>
-                
 
                 <p><strong>Procedure</strong> &mdash; Follows route &mdash; <strong>Route</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="formsPartOf">
 
@@ -323,16 +254,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
-                
 
                 <p><strong>BusinessItem</strong> &mdash; Forms part of &mdash; <strong>WorkPackage</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="fromStep">
 
@@ -345,16 +272,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a route to its input step.</p>
-                
 
                 <p><strong>Route</strong> &mdash; From step &mdash; <strong>Step</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasDocumentType">
 
@@ -367,16 +290,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a citation to the type of the document being cited.</p>
-                
 
                 <p><strong>Citation</strong> &mdash; Has document type &mdash; <strong>DocumentType</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasProcedure">
 
@@ -389,16 +308,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a step collection to a procedure. A step collection has one procedure. A procedure may have one or more step collections, or none.</p>
-                
 
                 <p><strong>StepCollection</strong> &mdash; Has procedure &mdash; <strong>Procedure</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasStepType">
 
@@ -411,16 +326,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none.</p>
-                
 
                 <p><strong>Step</strong> &mdash; Has step type &mdash; <strong>StepType</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="isCollectedBy">
 
@@ -433,16 +344,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a step to a step collection the step is collected by. A step collection collects one or more steps. A step may be collected by one or more step collections, or none.</p>
-                
 
                 <p><strong>Step</strong> &mdash; Is collected by &mdash; <strong>StepCollection</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="procedureHasCitation">
 
@@ -455,16 +362,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a procedure to a citation. A procedure may have more than one citation, or none.</p>
-                
 
                 <p><strong>Procedure</strong> &mdash; Procedure has citation &mdash; <strong>Citation</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="routeHasCitation">
 
@@ -477,16 +380,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a route to a citation. A route may have more than one citation, or none.</p>
-                
 
                 <p><strong>Route</strong> &mdash; Route has citation &mdash; <strong>Citation</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="stepCollectionInHouse">
 
@@ -499,16 +398,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a step collection to one House, or none.</p>
-                
 
                 <p><strong>StepCollection</strong> &mdash; Step collection in House &mdash; <strong>House</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="stepHasCitation">
 
@@ -521,16 +416,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a step to a citation. A step may have more than one citation, or none.</p>
-                
 
                 <p><strong>Step</strong> &mdash; Step has citation &mdash; <strong>Citation</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="stepInHouse">
 
@@ -543,16 +434,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
-                
 
                 <p><strong>Step</strong> &mdash; Step in House &mdash; <strong>House</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="subjectTo">
 
@@ -565,16 +452,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a work package to the procedure it is subject to. A work package is only subject to one procedure.</p>
-                
 
                 <p><strong>WorkPackage</strong> &mdash; Subject to &mdash; <strong>Procedure</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="toStep">
 
@@ -587,24 +470,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a route to its output step.</p>
-                
 
                 <p><strong>Route</strong> &mdash; To step &mdash; <strong>Step</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="stepDescription">
                 
@@ -620,7 +496,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="title">
                 
@@ -636,7 +511,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="uri">
                 
@@ -652,51 +526,35 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>ppr</dt>
                     <dd>http://parliament.uk/ontologies/procedure/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
                     <dt>foaf</dt>
                     <dd>http://xmlns.com/foaf/0.1/</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -706,68 +564,23 @@
         <p>Ontology created &middot; <time id="created">2018-02-20</time></p>
         
        
-        
         <p id="makers">
             Made by
-            
-            
             &middot; Chris Alcock
-            
-            
-            
             &middot; David Beamish
-            
-            
-            
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
             &middot; Gordon Clarke
-            
-            
-            
             &middot; Jack Dent
-            
-            
-            
             &middot; Samu Lang
-            
-            
-            
             &middot; Silver Oliver
-            
-            
-            
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
             &middot; Anya Somerville
-            
-            
-            
             &middot; Dominic Stockbridge
-            
-            
-            
             &middot; Jayne Sunley
-            
-            
-            
             &middot; James Vinter
-            
-            
-            
             &middot; Jane White
-            
-            
-            
             &middot; Ben Woodhams
-            
-            
         </p>
-        
 
         <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a></p>
         

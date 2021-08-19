@@ -70,129 +70,88 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-            
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
             &middot; <a href="https://ukparliament.github.io/ontologies/utility/utility.png">Depiction</a>
-    
 
 
     </nav>
-        
         <section id="description">Provides a set of common properties for reuse by other models.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="Identifier">
                 <h3><a href="#Identifier">Identifier
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>An identifier from an external system. Might be another Parliament system or an external system such as Wikidata.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="IdentifierSource">
                 <h3><a href="#IdentifierSource">IdentifierSource
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>An identifier source. The system or website from which the identifier originates.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Label">
                 <h3><a href="#Label">Label
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Allows a thing to have different labels at different time periods. e.g. a Government Department, Select Committee, Bill or inquiry might change its name during its lifetime. Reuses preferredLabel, abbreviationLabel, sortLabel, startDate and endDate from Thing.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Thing">
                 <h3><a href="#Thing">Thing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A thing. Anything. At all. Provides a set of properties for reuse by any other model.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="WebLink">
                 <h3><a href="#WebLink">WebLink
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A web link with a source, type and URL.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="WebLinkSource">
                 <h3><a href="#WebLinkSource">WebLinkSource
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The publisher of the URL identified by the web link e.g. The Daily Mail, personal website, Facebook, Wikipedia.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="WebLinkType">
                 <h3><a href="#WebLinkType">WebLinkType
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A link type e.g. personal homepage, obituary.</p>
-                
 
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="hasIdentifier">
 
@@ -205,16 +164,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a thing to an identifier.</p>
-                
 
                 <p><strong>Thing</strong> &mdash; hasIdentifier &mdash; <strong>Identifier</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasIdentifierSource">
 
@@ -227,16 +182,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an identifier to its source.</p>
-                
 
                 <p><strong>Identifier</strong> &mdash; hasIdentifierSource &mdash; <strong>IdentifierSource</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasLabel">
 
@@ -249,16 +200,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a thing to a label during a time period.</p>
-                
 
                 <p><strong>Thing</strong> &mdash; hasLabel &mdash; <strong>Label</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasWebLink">
 
@@ -271,16 +218,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a thing to a web link. e.g. Person to a twitter account.</p>
-                
 
                 <p><strong>Thing</strong> &mdash; hasWebLink &mdash; <strong>WebLink</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasWebLinkSource">
 
@@ -293,16 +236,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a web link to a link source.</p>
-                
 
                 <p><strong>WebLink</strong> &mdash; hasWebLinkScource &mdash; <strong>WebLinkSource</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasWebLinkType">
 
@@ -315,16 +254,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a link to a weblink type.</p>
-                
 
                 <p><strong>WebLink</strong> &mdash; hasWebLinkType &mdash; <strong>WebLinkType</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="precededBy">
 
@@ -337,24 +272,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class.</p>
-                
 
                 <p><strong>Thing</strong> &mdash; precededBy &mdash; <strong>Thing</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="abbreviationLabel">
                 
@@ -370,7 +298,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="createdAt">
                 
@@ -386,7 +313,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="description">
                 
@@ -402,7 +328,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="endOn">
                 
@@ -418,7 +343,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="identifierValue">
                 
@@ -434,7 +358,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="preferredLabel">
                 
@@ -450,7 +373,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="recordedEndAt">
                 
@@ -466,7 +388,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="recordedStartAt">
                 
@@ -482,7 +403,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="sameAs">
                 
@@ -498,7 +418,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="scheduledEndAt">
                 
@@ -514,7 +433,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="scheduledStartAt">
                 
@@ -530,7 +448,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="sortLabel">
                 
@@ -546,7 +463,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="sortOrder">
                 
@@ -562,7 +478,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="startOn">
                 
@@ -578,7 +493,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="updatedAt">
                 
@@ -594,7 +508,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="url">
                 
@@ -610,51 +523,35 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>putil</dt>
                     <dd>http://parliament.uk/ontologies/utility/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
                     <dt>foaf</dt>
                     <dd>http://xmlns.com/foaf/0.1/</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -664,28 +561,13 @@
         <p>Ontology created &middot; <time id="created">2016-10-05</time></p>
         
        
-        
         <p id="makers">
             Made by
-            
-            
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
             &middot; Silver Oliver
-            
-            
-            
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
             &middot; Anya Somerville
-            
-            
         </p>
-        
 
         <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/utility/utility-ontology.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/utility/utility-ontology.csv">CSV</a></p>
         

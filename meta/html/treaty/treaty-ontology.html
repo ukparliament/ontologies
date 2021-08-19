@@ -70,129 +70,88 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-            
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
             &middot; <a href="https://ukparliament.github.io/ontologies/treaty/treaty.png">Depiction</a>
-    
 
 
     </nav>
-        
         <section id="description">A model describing the form of treaties considered by Parliament, treaty membership of an FCO series and the relationship of a treaty to legislation required to be passed in order for the UK to comply with treaty obligations.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="Bill">
                 <h3><a href="#Bill">Bill
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A bill presented to Parliament.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">
                 <h3><a href="#DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">Draft and made statutory instrument subject to parliamentary procedure
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The National Archives classify made instruments as legislation - and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by TNA. Parliament includes draft instruments in its description of statutory instruments, which are modelled here together.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="GovernmentOrganisation">
                 <h3><a href="#GovernmentOrganisation">Government organisation
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A government department, agency or public body with responsibility for a sector of public administration.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Treaty">
                 <h3><a href="#Treaty">Treaty
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A treaty is a written agreement between states - or between states and international organisations - which is binding under international law.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="TreatyAsLaid">
                 <h3><a href="#TreatyAsLaid">Treaty as laid
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="TreatySeries">
                 <h3><a href="#TreatySeries">Treaty series
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A series of which a treaty is an item by means of a treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="TreatySeriesItem">
                 <h3><a href="#TreatySeriesItem">Treaty series item
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A treaty is published in a treaty series as a treaty series item. At any time, a treaty series item is always in a treaty series. A treaty may be placed in a new treaty series by means of a new treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. If Parliament does not object to ratification of the treaty, the treaty becomes available to the government to ratify and then may come into force. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK.</p>
-                
 
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="asSeriesItem">
 
@@ -205,16 +164,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a treaty as laid before Parliament to a treaty series item. A treaty series item places a treaty in the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item</p>
-                
 
                 <p><strong>TreatyAsLaid</strong> &mdash; As series item &mdash; <strong>TreatySeriesItem</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasLeadDepartment">
 
@@ -227,16 +182,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department.</p>
-                
 
                 <p><strong>Treaty</strong> &mdash; Has lead department &mdash; <strong>GovernmentOrganisation</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="inSeries">
 
@@ -249,16 +200,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a treaty series item to the treaty series in which it appears. A treaty series item is listed in a single treaty series.</p>
-                
 
                 <p><strong>TreatySeriesItem</strong> &mdash; In series &mdash; <strong>TreatySeries</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="laidAs">
 
@@ -271,16 +218,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>The &#39;Laid as&#39; property relates a treaty to the form in which it is laid. Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure. </p>
-                
 
                 <p><strong>Treaty</strong> &mdash; Laid as &mdash; <strong>TreatyAsLaid</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">
 
@@ -293,16 +236,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a treaty to the required passage of one or more statutory instruments in order to enable the satisfaction of treaty obligations.</p>
-                
 
                 <p><strong>Treaty</strong> &mdash; Requires passage of a draft or made Statutory Instrument subject to parliamentary procedure &mdash; <strong>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="requiresPassageOfBill">
 
@@ -315,24 +254,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a treaty to the required passage of one or more bills in order to enable the satisfaction of treaty obligations.</p>
-                
 
                 <p><strong>Treaty</strong> &mdash; Requires passage of bill &mdash; <strong>Bill</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="commandPaperNumber">
                 
@@ -348,7 +280,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="commandPaperPrefix">
                 
@@ -364,7 +295,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="seriesItemCitation">
                 
@@ -380,7 +310,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="ukComingIntoForceDate">
                 
@@ -396,7 +325,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="ukComingIntoForceNote">
                 
@@ -412,7 +340,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="ukRatificationDate">
                 
@@ -428,51 +355,35 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>ptr</dt>
                     <dd>http://parliament.uk/ontologies/treaty/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
                     <dt>foaf</dt>
                     <dd>http://xmlns.com/foaf/0.1/</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -482,40 +393,16 @@
         <p>Ontology created &middot; <time id="created">2019-01-16</time></p>
         
        
-        
         <p id="makers">
             Made by
-            
-            
             &middot; David Beamish
-            
-            
-            
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
             &middot; Jack Dent
-            
-            
-            
             &middot; Arabella Lang
-            
-            
-            
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
             &middot; Anya Somerville
-            
-            
-            
             &middot; Jane White
-            
-            
         </p>
-        
 
         <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/treaty/treaty-ontology.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/treaty/treaty-ontology.csv">CSV</a></p>
         
