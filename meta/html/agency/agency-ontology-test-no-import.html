@@ -70,121 +70,82 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-             &middot; <a href="#subclasses">Subclasses</a>
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
             &middot; <a href="https://ukparliament.github.io/ontologies/agency/agency.png">Depiction</a>
-    
 
 
     </nav>
-        
         <section id="description">A model describing people and groups of people with agency. The model also describes a person’s membership of and positions in groups.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="core#Concept">
                 <h3><a href="#core#Concept">Concept
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Group">
                 <h3><a href="#Group">Group
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A group of people. Groups may contain other groups or be empty.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; Agent
-                
 
             </p>
-                
 
             </article>
-            
             <article class="class" id="GroupInclusion">
                 <h3><a href="#GroupInclusion">Group inclusion
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The inclusion of a person or group in another group over a period of time, for example: a membership of a committee or a whipping to a party.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Incumbency">
                 <h3><a href="#Incumbency">Incumbency
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Place">
                 <h3><a href="#Place">Place
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A place named in a geography.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Position">
                 <h3><a href="#Position">Position
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A named post within a group. A position may be held by one or more people over time or at the same time, or have no holder at a particular time: for example, the post of Minister of Food, having existed in the past and having had eight successive incumbents; or a Member of the House of Commons and a Member of the House of Lords both serving as Co-Chairs of the Joint Committee on the Palace of Westminster.</p>
-                
 
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="hasExpertiseIn">
 
@@ -197,16 +158,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an agent to a concept to express an area of expertise. An agent may have one or more areas of expertise, or none.</p>
-                
 
                 <p><strong>Agent</strong> &mdash; Has expertise in &mdash; <strong>core#Concept</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasGroupInclusion">
 
@@ -219,16 +176,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an agent to a group inclusion. An agent may have one or more group inclusions, or none. A group inclusion is to a single agent.</p>
-                
 
                 <p><strong>Agent</strong> &mdash; Has group inclusion &mdash; <strong>GroupInclusion</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasIncumbency">
 
@@ -241,16 +194,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a person to an incumbency. A person may have one or more incumbencies, or none. An incumbency is to a single person.</p>
-                
 
                 <p><strong>Person</strong> &mdash; Has incumbency &mdash; <strong>Incumbency</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasInterestIn">
 
@@ -263,16 +212,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an agent to a concept to express an area of interest. An agent may have one or more areas of interest, or none.</p>
-                
 
                 <p><strong>Agent</strong> &mdash; Has interest in &mdash; <strong>core#Concept</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasPosition">
 
@@ -285,16 +230,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an incumbency to a position. An incumbency is to a single position. A position may have one or more incumbencies, or none.</p>
-                
 
                 <p><strong>Incumbency</strong> &mdash; Has position &mdash; <strong>Position</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="inGroup">
 
@@ -307,16 +248,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a group inclusion to a group. A group inclusion is in a single group. A group may have one or more group inclusions, or none.</p>
-                
 
                 <p><strong>GroupInclusion</strong> &mdash; In group &mdash; <strong>Group</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="placeOfBirth">
 
@@ -329,16 +266,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a person to their place of birth.</p>
-                
 
                 <p><strong>Person</strong> &mdash; Place of birth &mdash; <strong>Place</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="positionIn">
 
@@ -351,24 +284,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a position to a group. A position is in a single group. A group may have one or more positions, or none.</p>
-                
 
                 <p><strong>Position</strong> &mdash; Position in &mdash; <strong>Group</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="dateOfBirth">
                 
@@ -384,7 +310,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="dateOfDeath">
                 
@@ -400,7 +325,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="familyName">
                 
@@ -416,7 +340,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="givenName">
                 
@@ -432,7 +355,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="otherNames">
                 
@@ -448,7 +370,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="title">
                 
@@ -464,69 +385,48 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
         <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>agency/<wbr>Group</td>
                     <td>/<wbr>ontologies/<wbr>common/<wbr>Agent</td>
                 </tr>
-                
         </table>
         </section>  
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>pcommon</dt>
                     <dd>http://parliament.uk/ontologies/common/</dd>
-                
                     <dt>pa</dt>
                     <dd>http://parliament.uk/ontologies/agency/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
                     <dt>skos</dt>
                     <dd>http://www.w3.org/2004/02/skos/core#</dd>
-                
                     <dt>foaf</dt>
                     <dd>http://xmlns.com/foaf/0.1/</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -536,28 +436,13 @@
         <p>Ontology created &middot; <time id="created">2016-10-05</time></p>
         
        
-        
         <p id="makers">
             Made by
-            
-            
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-            
-            
-            
             &middot; Silver Oliver
-            
-            
-            
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-            
-            
-            
             &middot; Anya Somerville
-            
-            
         </p>
-        
 
         <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/agency/agency-ontology-test-no-import.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/agency/agency-ontology-test-no-import.csv">CSV</a></p>
         

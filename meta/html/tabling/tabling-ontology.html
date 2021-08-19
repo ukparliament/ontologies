@@ -70,167 +70,113 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-             &middot; <a href="#dataproperties">Data properties</a>
-            
-            
-             &middot; <a href="#subclasses">Subclasses</a>
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            
 
 
     </nav>
-        
         <section id="description">Ontology to describe the activity of members tabling parliamentary questions, motions, amendments and nominations.</section>
-        
 
         
 
-        
         <section id="classes">
             <h2>Classes</h2>
 
-            
             <article class="class" id="House">
                 <h3><a href="#House">House
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A parliamentary House e.g. the House of Lords.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Member">
                 <h3><a href="#Member">Member
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A current or former Member of a House.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Session">
                 <h3><a href="#Session">Session
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="TabledThing">
                 <h3><a href="#TabledThing">TabledThing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Any item of business which has been tabled e.g. a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled e.g. manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Tabling">
                 <h3><a href="#Tabling">Tabling
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; TablingOrWithdrawal
-                
 
             </p>
-                
 
             </article>
-            
             <article class="class" id="TablingOrWithdrawal">
                 <h3><a href="#TablingOrWithdrawal">TablingOrWithdrawal
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The act of tabling into, or withdrawing a tabled thing from, a House.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="Withdrawal">
                 <h3><a href="#Withdrawal">Withdrawal
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>The act of withdrawing a tabled thing from a House.</p>
-                
 
-                
                 <p>Superclasses
-                
                 &middot; TablingOrWithdrawal
-                
 
             </p>
-                
 
             </article>
-            
             <article class="class" id="WithdrawnThing">
                 <h3><a href="#WithdrawnThing">WithdrawnThing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>A tabled thing which has subsequently been withdrawn.</p>
-                
 
-                
 
             </article>
-            
             <article class="class" id="WrittenNotice">
                 <h3><a href="#WrittenNotice">WrittenNotice
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                
                 <p>Official notice of an item of future business.</p>
-                
 
-                
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="objectproperties">
             <h2>Object properties</h2>
 
-            
 
             <article class="objectproperty" id="givesNotice">
 
@@ -243,16 +189,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an act of tabling to a written notice.</p>
-                
 
                 <p><strong>Tabling</strong> &mdash; givesNotice &mdash; <strong>WrittenNotice</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="hasHouse">
 
@@ -265,16 +207,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
-                
 
                 <p><strong>TablingOrWithdrawal</strong> &mdash; hasHouse &mdash; <strong>House</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="inSession">
 
@@ -287,16 +225,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
-                
 
                 <p><strong>TablingOrWithdrawal</strong> &mdash; inSession &mdash; <strong>Session</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="replaces">
 
@@ -309,16 +243,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
-                
 
                 <p><strong>TabledThing</strong> &mdash; replaces &mdash; <strong>WithdrawnThing</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="requests">
 
@@ -331,16 +261,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates a Member to an act of tabling.</p>
-                
 
                 <p><strong>Member</strong> &mdash; requests &mdash; <strong>Tabling</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="tables">
 
@@ -353,16 +279,12 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an act of tabling to the business item which it tables.</p>
-                
 
                 <p><strong>Tabling</strong> &mdash; tables &mdash; <strong>TabledThing</strong></p>
 
             </article>
-            
 
             <article class="objectproperty" id="withdraws">
 
@@ -375,24 +297,17 @@
             <span class="subhead">OBJECT PROPERTY</span>
 
 
-                
 
-                
                 <p>Relates an act of withdrawal to the business item which it withdraws.</p>
-                
 
                 <p><strong>Withdrawal</strong> &mdash; withdraws &mdash; <strong>WithdrawnThing</strong></p>
 
             </article>
-            
         </section>
-        
 
-        
 
         <section id="dataproperties">
             <h2>Data properties</h2>
-            
 
             <article class="dataproperty" id="isInterestDeclared">
                 
@@ -408,7 +323,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="tabledOn">
                 
@@ -424,7 +338,6 @@
 
 
             </article>
-            
 
             <article class="dataproperty" id="withdrawnOn">
                 
@@ -440,65 +353,46 @@
 
 
             </article>
-            
         </section>
 
-        
 
 
-        
 
 
-        
 
-        
         <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>tabling/<wbr>Tabling</td>
                     <td>/<wbr>ontologies/<wbr>tabling/<wbr>TablingOrWithdrawal</td>
                 </tr>
-                
                 <tr>
                     <td>/<wbr>ontologies/<wbr>tabling/<wbr>Withdrawal</td>
                     <td>/<wbr>ontologies/<wbr>tabling/<wbr>TablingOrWithdrawal</td>
                 </tr>
-                
         </table>
         </section>  
-        
 
-        
         <section id="namespaces">
         <h2>Namespaces</h2>
         <dl>
-                
                     <dt>xml</dt>
                     <dd>http://www.w3.org/XML/1998/namespace</dd>
-                
                     <dt>rdf</dt>
                     <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                
                     <dt>rdfs</dt>
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                
                     <dt>pt</dt>
                     <dd>http://parliament.uk/ontologies/tabling/</dd>
-                
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
-                
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
-                
             </dl>
         </section>  
-        
 
 
     </main>
@@ -508,7 +402,6 @@
         <p>Ontology created &middot; <time id="created">2017-12-01</time></p>
         
        
-        
 
         <p>Source Turtle file &middot; <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">github.com/ukparliament</a> &middot <a href="https://ukparliament.github.io/ontologies/meta/html/tabling/tabling-ontology.csv">CSV</a></p>
         
