@@ -17,12 +17,21 @@ def slash2wbr(value):
 def ttlpath2ontologyname(value):
     return Markup(Path(value).stem.replace("-", " ").title())
 
+def ttlpath2htmlpath(ttlpath):
+    ttlpathparts = ttlpath.split('/')
+    htmlpath = ''.join(["https://ukparliament.github.io/ontologies/meta/html/", ttlpathparts[2], ttlpathparts[3].replace('.ttl','.html')])
+
+    return htmlpath
+    
+
 
 env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
 
 env.filters["slash2wbr"] = slash2wbr
 
 env.filters["ttlpath2ontologyname"] = ttlpath2ontologyname
+
+env.filters["ttlpath2htmlpath"] = ttlpath2htmlpath
 
 env.globals['now'] = datetime.utcnow().strftime("%Y-%m-%d")
 

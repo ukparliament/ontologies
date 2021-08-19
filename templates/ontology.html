@@ -16,10 +16,8 @@
         body {
             font-family: system-ui;
             max-width: 42rem;
-            margin: 1rem 0.5rem;
+            margin: auto;
             padding: 0.5rem;
-            color:black;
-            background-color: white;
         }
 
         span.subhead {
@@ -182,19 +180,21 @@
         <section id="importedontologies">
             <h2>Imported ontologies</h2>
 
-            <ul>
+            <table>
                 {% for import in imports|sort %}
+                <tr>
 
                 {% if import.netloc == 'ukparliament.github.io' %}
-                <li>{{ import.path|ttlpath2ontologyname }}: {{ import.path }}</li>
+                <td>{{ import.path|ttlpath2ontologyname }}</td> 
+                <td>{{ import.path|ttlpath2htmlpath }}</td>
                 {% else %}
 
-                <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
+                <td>&lt;{{ import.netloc }}{{ import.path }}&gt;</td>
 
                 {% endif %}
-
+            </tr>
                 {% endfor %}
-            </ul>
+            </table>
         </section>
         {% endif %}
 
