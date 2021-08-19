@@ -180,21 +180,23 @@
         <section id="importedontologies">
             <h2>Imported ontologies</h2>
 
-            <table>
+            <ol>
                 {% for import in imports|sort %}
-                <tr>
+               
 
                 {% if import.netloc == 'ukparliament.github.io' %}
-                <td>{{ import.path|ttlpath2ontologyname }}</td> 
-                <td>{{ import.path|ttlpath2htmlpath }}</td>
+                <li>
+                <a href="{{ import.path|ttlpath2htmlpath }}">{{ import.path|ttlpath2ontologyname }}</a> 
+              
+            </li>
                 {% else %}
 
-                <td>&lt;{{ import.netloc }}{{ import.path }}&gt;</td>
+                <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
 
                 {% endif %}
-            </tr>
+            
                 {% endfor %}
-            </table>
+        </ol>
         </section>
         {% endif %}
 
