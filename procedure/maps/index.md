@@ -1,5 +1,11 @@
 # Procedure maps
 
+## Primary legislation procedures
+
+### [Public bills [PDF]](primary-legislation/public-bills/public-bills.pdf)
+
+Dot file: [dot](primary-legislation/public-bills/public-bills.dot) / [svg](primary-legislation/public-bills/public-bills.svg)
+
 ## Secondary legislation procedures
 
 ### [Published drafts under the European Withdrawal Act procedure [PDF]](secondary-legislation/published-drafts-under-euwa/published-drafts-under-euwa.pdf)
