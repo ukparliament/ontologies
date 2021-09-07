@@ -6,11 +6,13 @@
 
 Dot file: [dot](primary-legislation/public-bills/public-bills.dot) / [svg](primary-legislation/public-bills/public-bills.svg)
 
-### Secondary legislation component procedures
+### Primary legislation component procedures
 
 #### Legislative consent motions
 
 ##### [Northern Ireland Assembly Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf)
+
+Dot file: [dot](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.dot) / [svg](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.svg)
 
 
 
