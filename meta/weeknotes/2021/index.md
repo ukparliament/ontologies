@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2021
 
+* [Week 36](36)
 * [Week 35](35)
 * [Week 33](33)
 * [Week 32](32)
