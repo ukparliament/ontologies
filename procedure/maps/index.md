@@ -28,6 +28,10 @@ Dot file: [dot](primary-legislation/components/prerogative-consent/queens-consen
 
 Dot file: [dot](primary-legislation/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.dot) / [svg](primary-legislation/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.svg)
 
+##### [Grand Steward of Scotland's consent](primary-legislation/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.pdf)
+
+Dot file: [dot](primary-legislation/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.dot) / [svg](primary-legislation/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.svg)
+
 
 ## Secondary legislation procedures
 
