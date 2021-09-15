@@ -24,6 +24,10 @@ Dot file: [dot](primary-legislation/components/devolved-legislature-consent/wels
 
 Dot file: [dot](primary-legislation/components/prerogative-consent/queens-consent/queens-consent.dot) / [svg](primary-legislation/components/prerogative-consent/queens-consent/queens-consent.svg)
 
+##### [Prince of Wales's consent](primary-legislation/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.pdf)
+
+Dot file: [dot](primary-legislation/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.dot) / [svg](primary-legislation/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.svg)
+
 
 ## Secondary legislation procedures
 
