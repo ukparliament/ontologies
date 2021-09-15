@@ -18,6 +18,11 @@ Dot file: [dot](primary-legislation/components/devolved-legislature-consent/nort
 
 Dot file: [dot](primary-legislation/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.dot) / [svg](primary-legislation/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.svg)
 
+#### Prerogative consent
+
+##### [Queen's consent](primary-legislation/components/prerogative-consent/queens-consent/queens-consent.pdf)
+
+Dot file: [dot](primary-legislation/components/prerogative-consent/queens-consent/queens-consent.dot) / [svg](primary-legislation/components/prerogative-consent/queens-consent/queens-consent.svg)
 
 
 ## Secondary legislation procedures
