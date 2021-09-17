@@ -99,6 +99,13 @@ Some instruments, usually to do with financial or tax matters, are laid before t
 
 As of August 2020 there were no draft negative instruments laid before the House of Commons only. 
 
+## Affirmative instruments laid under Paragraph 14(6) of Schedule 8 of the European Union (Withdrawal) Act 2018
+
+[Paragraph 14 of Schedule 8 of the EU Withdrawal Act 2018](https://www.legislation.gov.uk/ukpga/2018/16/schedule/8) sets out an enhanced procedure whereby a published draft of an instrument must be published 28 days on Gov.uk before the instrument is laid before Parliament. Under 14(6) there is an allowance for Government to bypass this procedure fby reason of urgency and lay an instrument. They have agreed to provide a written statement to Parliament setting out why they have bypassed the procedure. We are in the process of adding [Published drafts](https://trello.com/b/6Tv4O13K/published-drafts) to Parliament's Statutory Instrument Service. In the meantime, you can find statutory instruments that have bypassed that procedure under Paragragh 14(6) below:
+
+* [Affirmative instruments laid under Paragraph 14(6) of Schedule 8 of the European Union (Withdrawal) Act 2018](https://api.parliament.uk/s/8326c906)
+
+
 ## Made affirmative instruments under paragraph 5(3) of Schedule 7 to the Local Government Finance Act 1988
 
 Made affirmative instruments made under [paragraph 5(3) of Schedule 7 to the Local Government Finance Act 1988](https://www.legislation.gov.uk/ukpga/1988/41/schedule/7) are laid before the House of Commons only and do not follow the usual approval period of the made affirmative procedure. Instead the approval period end date is determined by the Local Government Finance (England) report being approved by the House of Commons or before 1st March (the deadline for local authority budgets), whichever is earlier. The made affirmative instrument sets out the non-domestic rates for the next financial year. It is made and approved before the report is published and remains law if the report is approved. If the House of Commons does not approve the report the instrument stops being law, likewise if the report is not published/approved by 1st March then the instrument lapses and, again, stops being law. 
