@@ -14,6 +14,10 @@ Dot file: [dot](primary-legislation/public-bills/public-bills.dot) / [svg](prima
 
 Dot file: [dot](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.dot) / [svg](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.svg)
 
+##### [Scottish Parliament Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf)
+
+Dot file: [dot](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent..dot) / [svg](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent..svg)
+
 ##### [Welsh Parliament Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.pdf)
 
 Dot file: [dot](primary-legislation/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.dot) / [svg](primary-legislation/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.svg)
