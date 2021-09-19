@@ -16,7 +16,7 @@ Dot file: [dot](primary-legislation/components/devolved-legislature-consent/nort
 
 ##### [Scottish Parliament Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf)
 
-Dot file: [dot](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent..dot) / [svg](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent..svg)
+Dot file: [dot](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.dot) / [svg](primary-legislation/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.svg)
 
 ##### [Welsh Parliament Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.pdf)
 
