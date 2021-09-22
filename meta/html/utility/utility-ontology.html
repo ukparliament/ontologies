@@ -70,9 +70,9 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
- &middot; <a href="#dataproperties">Data properties</a>            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            &middot; <a href="https://ukparliament.github.io/ontologies/utility/utility.png">Depiction</a>
+            &middot; <a href="https://ukparliament.github.io/ontologies/utility/utility.svg">Depiction</a>
 
 
     </nav>
@@ -93,7 +93,7 @@
 
             </article>
             <article class="class" id="IdentifierSource">
-                <h3><a href="#IdentifierSource">IdentifierSource
+                <h3><a href="#IdentifierSource">Identifier source
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -110,6 +110,19 @@
 
 
             </article>
+            <article class="class" id="TemporalThing">
+                <h3><a href="#TemporalThing">Temporal thing
+                    </a>
+                </h3>
+                <span class="subhead">CLASS</span>
+                <p>An interval between two points in time, having a name.</p>
+
+                <p>Superclasses
+                &middot; Thing
+
+            </p>
+
+            </article>
             <article class="class" id="Thing">
                 <h3><a href="#Thing">Thing
                     </a>
@@ -120,7 +133,7 @@
 
             </article>
             <article class="class" id="WebLink">
-                <h3><a href="#WebLink">WebLink
+                <h3><a href="#WebLink">Web link
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -129,7 +142,7 @@
 
             </article>
             <article class="class" id="WebLinkSource">
-                <h3><a href="#WebLinkSource">WebLinkSource
+                <h3><a href="#WebLinkSource">Web link source
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -138,7 +151,7 @@
 
             </article>
             <article class="class" id="WebLinkType">
-                <h3><a href="#WebLinkType">WebLinkType
+                <h3><a href="#WebLinkType">Web link type
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -158,7 +171,7 @@
                 
 
 
-                <h3><a href="#hasIdentifier">hasIdentifier
+                <h3><a href="#hasIdentifier">Has identifier
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -167,7 +180,7 @@
 
                 <p>Relates a thing to an identifier.</p>
 
-                <p><strong>Thing</strong> &mdash; hasIdentifier &mdash; <strong>Identifier</strong></p>
+                <p><strong>Thing</strong> &mdash; Has identifier &mdash; <strong>Identifier</strong></p>
 
             </article>
 
@@ -176,7 +189,7 @@
                 
 
 
-                <h3><a href="#hasIdentifierSource">hasIdentifierSource
+                <h3><a href="#hasIdentifierSource">Has identifier source
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -185,7 +198,7 @@
 
                 <p>Relates an identifier to its source.</p>
 
-                <p><strong>Identifier</strong> &mdash; hasIdentifierSource &mdash; <strong>IdentifierSource</strong></p>
+                <p><strong>Identifier</strong> &mdash; Has identifier source &mdash; <strong>IdentifierSource</strong></p>
 
             </article>
 
@@ -194,7 +207,7 @@
                 
 
 
-                <h3><a href="#hasLabel">hasLabel
+                <h3><a href="#hasLabel">Has label
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -203,7 +216,7 @@
 
                 <p>Relates a thing to a label during a time period.</p>
 
-                <p><strong>Thing</strong> &mdash; hasLabel &mdash; <strong>Label</strong></p>
+                <p><strong>Thing</strong> &mdash; Has label &mdash; <strong>Label</strong></p>
 
             </article>
 
@@ -212,7 +225,7 @@
                 
 
 
-                <h3><a href="#hasWebLink">hasWebLink
+                <h3><a href="#hasWebLink">Has web link
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -221,7 +234,7 @@
 
                 <p>Relates a thing to a web link. e.g. Person to a twitter account.</p>
 
-                <p><strong>Thing</strong> &mdash; hasWebLink &mdash; <strong>WebLink</strong></p>
+                <p><strong>Thing</strong> &mdash; Has web link &mdash; <strong>WebLink</strong></p>
 
             </article>
 
@@ -230,7 +243,7 @@
                 
 
 
-                <h3><a href="#hasWebLinkSource">hasWebLinkScource
+                <h3><a href="#hasWebLinkSource">Has web link source
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -239,7 +252,7 @@
 
                 <p>Relates a web link to a link source.</p>
 
-                <p><strong>WebLink</strong> &mdash; hasWebLinkScource &mdash; <strong>WebLinkSource</strong></p>
+                <p><strong>WebLink</strong> &mdash; Has web link source &mdash; <strong>WebLinkSource</strong></p>
 
             </article>
 
@@ -248,7 +261,7 @@
                 
 
 
-                <h3><a href="#hasWebLinkType">hasWebLinkType
+                <h3><a href="#hasWebLinkType">Has web link type
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -257,7 +270,7 @@
 
                 <p>Relates a link to a weblink type.</p>
 
-                <p><strong>WebLink</strong> &mdash; hasWebLinkType &mdash; <strong>WebLinkType</strong></p>
+                <p><strong>WebLink</strong> &mdash; Has web link type &mdash; <strong>WebLinkType</strong></p>
 
             </article>
 
@@ -266,7 +279,7 @@
                 
 
 
-                <h3><a href="#precededBy">precededBy
+                <h3><a href="#precededBy">Preceded by
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -275,261 +288,25 @@
 
                 <p>Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class.</p>
 
-                <p><strong>Thing</strong> &mdash; precededBy &mdash; <strong>Thing</strong></p>
+                <p><strong>Thing</strong> &mdash; Preceded by &mdash; <strong>Thing</strong></p>
 
             </article>
         </section>
 
 
-        <section id="dataproperties">
-            <h2>Data properties</h2>
 
-            <article class="dataproperty" id="abbreviationLabel">
-                
 
-                <h3><a href="#abbreviationLabel">abbreviationLabel
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
 
-                <p>Relates a thing to an abbreviation label.</p>
 
-                <p><strong>Thing</strong> &mdash; abbreviationLabel &mdash; <strong>langString</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="createdAt">
-                
-
-                <h3><a href="#createdAt">createdAt
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to a created at date / time.</p>
-
-                <p><strong>Thing</strong> &mdash; createdAt &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="description">
-                
-
-                <h3><a href="#description">description
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to its textual description.</p>
-
-                <p><strong>Thing</strong> &mdash; description &mdash; <strong>langString</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="endOn">
-                
-
-                <h3><a href="#endOn">endOn
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to an end date.</p>
-
-                <p><strong>Thing</strong> &mdash; endOn &mdash; <strong>date</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="identifierValue">
-                
-
-                <h3><a href="#identifierValue">identifierValue
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates an identifier to its value.</p>
-
-                <p><strong>Identifier</strong> &mdash; identifierValue &mdash; <strong>Literal</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="preferredLabel">
-                
-
-                <h3><a href="#preferredLabel">preferredLabel
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to its preferred label.</p>
-
-                <p><strong>Thing</strong> &mdash; preferredLabel &mdash; <strong>langString</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="recordedEndAt">
-                
-
-                <h3><a href="#recordedEndAt">Recorded end at
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to its recorded end time.</p>
-
-                <p><strong>Thing</strong> &mdash; Recorded end at &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="recordedStartAt">
-                
-
-                <h3><a href="#recordedStartAt">Recorded start at
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to its recorded start time.</p>
-
-                <p><strong>Thing</strong> &mdash; Recorded start at &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="sameAs">
-                
-
-                <h3><a href="#sameAs">sameAs
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs.</p>
-
-                <p><strong>Thing</strong> &mdash; sameAs &mdash; <strong>Literal</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="scheduledEndAt">
-                
-
-                <h3><a href="#scheduledEndAt">Scheduled end at
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to its scheduled end time.</p>
-
-                <p><strong>Thing</strong> &mdash; Scheduled end at &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="scheduledStartAt">
-                
-
-                <h3><a href="#scheduledStartAt">Scheduled start at
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to its scheduled start time.</p>
-
-                <p><strong>Thing</strong> &mdash; Scheduled start at &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="sortLabel">
-                
-
-                <h3><a href="#sortLabel">sortLabel
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to a sort label e.g. Churchill, Winston.</p>
-
-                <p><strong>Thing</strong> &mdash; sortLabel &mdash; <strong>langString</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="sortOrder">
-                
-
-                <h3><a href="#sortOrder">sortOrder
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to a sort order.</p>
-
-                <p><strong>Thing</strong> &mdash; sortOrder &mdash; <strong>integer</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="startOn">
-                
-
-                <h3><a href="#startOn">startOn
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to a start date.</p>
-
-                <p><strong>Thing</strong> &mdash; startOn &mdash; <strong>date</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="updatedAt">
-                
-
-                <h3><a href="#updatedAt">updatedAt
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a thing to an updated at date / time.</p>
-
-                <p><strong>Thing</strong> &mdash; updatedAt &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty" id="url">
-                
-
-                <h3><a href="#url">url
-                </a>
-            </h3>
-            <span class="subhead">DATA PROPERTY</span>
-
-                <p>Relates a web link to a url.</p>
-
-                <p><strong>WebLink</strong> &mdash; url &mdash; <strong>Literal</strong></p>
-
-
-            </article>
-        </section>
-
-
-
-
-
-
+        <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>utility/<wbr>TemporalThing</td>
+                    <td>/<wbr>ontologies/<wbr>utility/<wbr>Thing</td>
+                </tr>
+        </table>
+        </section>  
 
         <section id="namespaces">
         <h2>Namespaces</h2>
