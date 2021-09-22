@@ -12,7 +12,7 @@
     dcterms:created "2016-10-05"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
     dcterms:description "Provides a set of common properties for reuse by other models."@en ;
-	foaf:depiction <https://ukparliament.github.io/ontologies/utility/utility.png> ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/utility/utility.svg> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Silver Oliver" ],
@@ -27,6 +27,12 @@ putil:Thing rdf:type owl:Class ;
 	rdfs:label "Thing"@en ;
 	rdfs:comment "A thing. Anything. At all. Provides a set of properties for reuse by any other model."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+	
+putil:TemporalThing rdf:type owl:Class ;
+	rdfs:subClassOf putil:Thing ;
+	rdfs:label "Temporal thing"@en ;
+	rdfs:comment "An interval between two points in time, having a name."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 
 putil:Identifier rdf:type owl:Class ;
 	rdfs:label "Identifier"@en ;
@@ -34,22 +40,22 @@ putil:Identifier rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:IdentifierSource rdf:type owl:Class ;
-	rdfs:label "IdentifierSource"@en ;
+	rdfs:label "Identifier source"@en ;
 	rdfs:comment "An identifier source. The system or website from which the identifier originates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 
 putil:WebLink rdf:type owl:Class ;
-	rdfs:label "WebLink"@en ;
+	rdfs:label "Web link"@en ;
 	rdfs:comment "A web link with a source, type and URL."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .			
 	
 putil:WebLinkSource rdf:type owl:Class ;
-	rdfs:label "WebLinkSource"@en ;
+	rdfs:label "Web link source"@en ;
 	rdfs:comment "The publisher of the URL identified by the web link e.g. The Daily Mail, personal website, Facebook, Wikipedia."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 	
 putil:WebLinkType rdf:type owl:Class ;
-	rdfs:label "WebLinkType"@en ;
+	rdfs:label "Web link type"@en ;
 	rdfs:comment "A link type e.g. personal homepage, obituary."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
@@ -61,166 +67,181 @@ putil:Label rdf:type owl:Class ;
 #######  Object properties ##### 
 
 putil:hasIdentifier rdf:type owl:ObjectProperty ;
-	rdfs:label "hasIdentifier"@en ;
+	rdfs:label "Has identifier"@en ;
 	rdfs:comment "Relates a thing to an identifier."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range putil:Identifier ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 
 putil:hasIdentifierSource rdf:type owl:ObjectProperty ;
-	rdfs:label "hasIdentifierSource"@en ;
+	rdfs:label "Has identifier source"@en ;
 	rdfs:comment "Relates an identifier to its source."@en ;
 	rdfs:domain putil:Identifier ;
 	rdfs:range putil:IdentifierSource ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:hasWebLink rdf:type owl:ObjectProperty ;
-	rdfs:label "hasWebLink"@en ;
+	rdfs:label "Has web link"@en ;
 	rdfs:comment "Relates a thing to a web link. e.g. Person to a twitter account."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range putil:WebLink ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:hasWebLinkSource rdf:type owl:ObjectProperty ;
-	rdfs:label "hasWebLinkScource"@en ;
+	rdfs:label "Has web link source"@en ;
 	rdfs:comment "Relates a web link to a link source."@en ;
 	rdfs:domain putil:WebLink ;
 	rdfs:range putil:WebLinkSource ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 	
 putil:hasWebLinkType rdf:type owl:ObjectProperty ;
-	rdfs:label "hasWebLinkType"@en ;
+	rdfs:label "Has web link type"@en ;
 	rdfs:comment "Relates a link to a weblink type."@en ;
 	rdfs:domain putil:WebLink ;
 	rdfs:range putil:WebLinkType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .		
 	
 putil:hasLabel rdf:type owl:ObjectProperty ;
-	rdfs:label "hasLabel"@en ;
+	rdfs:label "Has label"@en ;
 	rdfs:comment "Relates a thing to a label during a time period."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range putil:Label ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .		
 	
 putil:precededBy rdf:type owl:ObjectProperty ;
-	rdfs:label "precededBy"@en ;
+	rdfs:label "Preceded by"@en ;
 	rdfs:comment "Relates a thing to its predecessor. Usually the thing and its preceding thing will be of the same class."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range putil:Thing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .				
 		
 
-#######  Data properties ##### 
+#######  Data properties #####
 
-
+putil:proposedStartOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Proposed start on"@en ;
+	rdfs:comment "Relates a temporal thing to its proposed start date."@en ;
+	rdfs:domain putil:TemporalThing ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+	
+putil:proposedEndOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Proposed end on"@en ;
+	rdfs:comment "Relates a temporal thing to its proposed end date."@en ;
+	rdfs:domain putil:TemporalThing ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+	
 putil:startOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "startOn"@en ;
-	rdfs:comment "Relates a thing to a start date."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:label "Start on"@en ;
+	rdfs:comment "Relates a thing to its start date."@en ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 	
 putil:endOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "endOn"@en ;
-	rdfs:comment "Relates a thing to an end date."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:label "End on"@en ;
+	rdfs:comment "Relates a thing to its end date."@en ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:scheduledStartAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Scheduled start at"@en ;
 	rdfs:comment "Relates a thing to its scheduled start time."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 
 putil:scheduledEndAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Scheduled end at"@en ;
 	rdfs:comment "Relates a thing to its scheduled end time."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
-
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+	
 putil:recordedStartAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded start at"@en ;
 	rdfs:comment "Relates a thing to its recorded start time."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 
 putil:recordedEndAt rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded end at"@en ;
 	rdfs:comment "Relates a thing to its recorded end time."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 	
 putil:createdAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "createdAt"@en ;
-	rdfs:comment "Relates a thing to a created at date / time."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:label "Created at"@en ;
+	rdfs:comment "Relates a thing to its date of creation."@en ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 
 putil:updatedAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "updatedAt"@en ;
-	rdfs:comment "Relates a thing to an updated at date / time."@en ;
-	rdfs:domain putil:Thing ;
+	rdfs:label "Updated at"@en ;
+	rdfs:comment "Relates a thing to the date of its most recent update."@en ;
+	rdfs:domain putil:TemporalThing ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:preferredLabel rdf:type owl:DatatypeProperty ;
-	rdfs:label "preferredLabel"@en ;
+	rdfs:label "Preferred label"@en ;
 	rdfs:comment "Relates a thing to its preferred label."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 		
 putil:sortLabel rdf:type owl:DatatypeProperty ;
-	rdfs:label "sortLabel"@en ;
+	rdfs:label "Sort label"@en ;
 	rdfs:comment "Relates a thing to a sort label e.g. Churchill, Winston."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:abbreviationLabel rdf:type owl:DatatypeProperty ;
-	rdfs:label "abbreviationLabel"@en ;
+	rdfs:label "Abbreviation label"@en ;
 	rdfs:comment "Relates a thing to an abbreviation label."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
-	
-putil:sortOrder rdf:type owl:DatatypeProperty ;
-	rdfs:label "sortOrder"@en ;
-	rdfs:comment "Relates a thing to a sort order."@en ;
-	rdfs:domain putil:Thing ;
-	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:description rdf:type owl:DatatypeProperty ;
-	rdfs:label "description"@en ;
+	rdfs:label "Description"@en ;
 	rdfs:comment "Relates a thing to its textual description."@en ;
 	rdfs:domain putil:Thing ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
-
+	
+putil:sameAs rdf:type owl:DatatypeProperty ;
+	rdfs:label "Same as"@en ;
+	rdfs:comment "Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata non-information resource URIs."@en ;
+	rdfs:domain putil:Thing ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+	
+putil:ordinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality"@en ;
+	rdfs:comment "Relates a thing to its ordinality within a wider set of things."@en ;
+	rdfs:domain pt:Thing ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+		
 putil:identifierValue rdf:type owl:DatatypeProperty ;
-	rdfs:label "identifierValue"@en ;
+	rdfs:label "Identifier value"@en ;
 	rdfs:comment "Relates an identifier to its value."@en ;
 	rdfs:domain putil:Identifier ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:url rdf:type owl:DatatypeProperty ;
-	rdfs:label "url"@en ;
-	rdfs:comment "Relates a web link to a url."@en ;
+	rdfs:label "URL"@en ;
+	rdfs:comment "Relates a web link to a URL."@en ;
 	rdfs:domain putil:WebLink ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 
-putil:sameAs rdf:type owl:DatatypeProperty ;
-	rdfs:label "sameAs"@en ;
-	rdfs:comment "Relates a thing to the same thing described elsewhere on the web. Initially intended for wikidata NIR URIs."@en ;
-	rdfs:domain putil:Thing ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+
