@@ -4,7 +4,7 @@ Given [accurate maps of procedures](https://ukparliament.github.io/ontologies/pr
 
 This is a list of SPARQL queries used by the House of Commons Library to check and report on their work. Feedback and requests always welcome. Please email [RIIDMSMailbox@parliament.uk](mailto:RIIDMSMailbox@parliament.uk).
 
-## Queries by Enabling thing
+## Queries by [Enabling thing](https://ukparliament.github.io/ontologies/legislation/legislation-ontology.html#d4e144)
 
 * [Public Acts](enabling-things/public-acts)
 
