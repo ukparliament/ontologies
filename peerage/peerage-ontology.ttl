@@ -320,7 +320,14 @@ ppeer:territorialDesignation rdf:type owl:DatatypeProperty ;
 
 ppeer:extinctOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Extinct on"@en ;
-	rdfs:comment "Relates a peerage to the date on which that peerage became extinct, being the date of death of the last holder or the date on which the peerage merged into the Crown. For a life peerage, the first holder being the last holder."@en ;
+	rdfs:comment "Relates a peerage to the date on which that peerage became extinct, being the date of death of the last holder. For a life peerage, the first holder being the last holder."@en ;
+	rdfs:domain ppeer:Peerage ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:mergedIntoTheCrownOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Merged into the Crown on"@en ;
+	rdfs:comment "Relates a peerage to the date on which that peerage merged into the Crown. Any peerages held by an heir to the throne will be merged into the Crown when that heir succeeds."@en ;
 	rdfs:domain ppeer:Peerage ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
@@ -346,13 +353,6 @@ ppeer:description rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-ppeer:introducedOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "Introduced on"@en ;
-	rdfs:comment "Relates a peerage holding to the date on which the holder of that peerage was introduced into the House of Lords, after being summoned. Not all peers are summoned, or introduced. For a hereditary peerage, only the first holder will be introduced, unless the peerage has a special remainder, in which case subsequent holders are also introduced."@en ;
-	rdfs:domain ppeer:PeerageHolding ;
-	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
-	
 ppeer:ordinality rdf:type owl:DatatypeProperty ;
 	rdfs:label "Ordinality"@en ;
 	rdfs:comment "Relates a peerage holding to the number of the holder in line of succession of that peerage, for example: the '1'st, '2'nd and '3'rd Earls of Onslow."@en ;
@@ -363,13 +363,6 @@ ppeer:ordinality rdf:type owl:DatatypeProperty ;
 ppeer:appointedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Appointed on"@en ;
 	rdfs:comment "Relates a Law Lord incumbency to the date on which that Law Lord was appointed."@en ;
-	rdfs:domain ppeer:LawLordIncumbency ;
-	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
-	
-ppeer:endOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "End on"@en ;
-	rdfs:comment "Relates a Law Lord incumbency to the date on which that incumbency ended. This may be on the death, resignation or retirement of the incumbent."@en ;
 	rdfs:domain ppeer:LawLordIncumbency ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
