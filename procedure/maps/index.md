@@ -99,9 +99,9 @@ Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-trea
 
 Dot file: [dot](crag-treaties/components/efra/efra.dot) / [svg](crag-treaties/components/efra/efra.svg)
 
-#### [International Agreements Committee procedure [PDF]](crag-treaties/components/iac/iac.pdf)
+#### [International Agreements Committee and European Affairs Committee procedure [PDF]](crag-treaties/components/iac+eac/iac+eac.pdf)
 
-Dot file: [dot](crag-treaties/components/iac/iac.dot) / [svg](crag-treaties/components/iac/iac.svg)
+Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) / [svg](crag-treaties/components/iac+eac/iac+eac.svg)
 
 #### [International Trade Committee procedure [PDF]](crag-treaties/components/itc/itc.pdf)
 
