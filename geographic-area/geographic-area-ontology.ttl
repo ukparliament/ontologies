@@ -1,0 +1,65 @@
+@prefix parea: <http://parliament.uk/ontologies/geographic-area/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/geographic-area/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Geographic area ontology"@en ;
+    dcterms:created "2021-09-28"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/geographic-area/geographic-area-period.svg> ;
+	foaf:maker
+		[ foaf:name "Carl Baker" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Mark Sandford" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ] .
+
+
+#######  Classes #####
+
+parea:GeographicArea rdf:type owl:Class ;
+	rdfs:label "Geographic area"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:ConstituencyArea rdf:type owl:Class ;
+	rdfs:subClassOf pt:GeographicArea ;
+	rdfs:label "Constituency area"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+
+
+
+#######  Object properties ##### 
+
+parea:whollyContainedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Wholly contained by"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain parea:GeographicArea ;
+	rdfs:range parea:GeographicArea ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+
+parea:partiallyContainedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Partially contained by"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain parea:GeographicArea ;
+	rdfs:range parea:GeographicArea ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+				
+
+
+#######  Data properties ##### 
+
+parea:ons_code rdf:type owl:DatatypeProperty ;
+	rdfs:label "ONS code"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea:GeographicArea ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
