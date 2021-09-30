@@ -89,18 +89,6 @@
                 </h3>
                 <span class="subhead">CLASS</span>
 
-                <p>Superclasses
-                &middot; GeographicArea
-
-            </p>
-
-            </article>
-            <article class="class" id="ThingThatIsBroughtIntoBeing">
-                <h3><a href="#ThingThatIsBroughtIntoBeing">Boundary set
-                    </a>
-                </h3>
-                <span class="subhead">CLASS</span>
-
 
             </article>
             <article class="class" id="CombinedAuthority">
@@ -110,8 +98,7 @@
                 <span class="subhead">CLASS</span>
 
                 <p>Superclasses
-                &middot; GeographicArea
-                &middot; ThingThatIsBroughtIntoBeing
+                &middot; GeographicAreaEstablishedByStatute
 
             </p>
 
@@ -123,7 +110,7 @@
                 <span class="subhead">CLASS</span>
 
                 <p>Superclasses
-                &middot; GeographicArea
+                &middot; GeographicAreaEstablishedByStatute
 
             </p>
 
@@ -135,7 +122,7 @@
                 <span class="subhead">CLASS</span>
 
                 <p>Superclasses
-                &middot; ThingThatIsBroughtIntoBeing
+                &middot; GeographicArea
 
             </p>
 
@@ -156,6 +143,18 @@
 
 
             </article>
+            <article class="class" id="GeographicAreaEstablishedByStatute">
+                <h3><a href="#GeographicAreaEstablishedByStatute">Geographic area established by statute
+                    </a>
+                </h3>
+                <span class="subhead">CLASS</span>
+
+                <p>Superclasses
+                &middot; GeographicArea
+
+            </p>
+
+            </article>
             <article class="class" id="LowerTierLocalAuthority">
                 <h3><a href="#LowerTierLocalAuthority">Lower tier local authority
                     </a>
@@ -163,8 +162,7 @@
                 <span class="subhead">CLASS</span>
 
                 <p>Superclasses
-                &middot; GeographicArea
-                &middot; ThingThatIsBroughtIntoBeing
+                &middot; GeographicAreaEstablishedByStatute
 
             </p>
 
@@ -188,8 +186,7 @@
                 <span class="subhead">CLASS</span>
 
                 <p>Superclasses
-                &middot; GeographicArea
-                &middot; ThingThatIsBroughtIntoBeing
+                &middot; GeographicAreaEstablishedByStatute
 
             </p>
 
@@ -201,12 +198,12 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="broughtIntoBeingBy">
+            <article class="objectproperty" id="boundarySetEstablishedBy">
 
                 
 
 
-                <h3><a href="#broughtIntoBeingBy">Brought into being by
+                <h3><a href="#boundarySetEstablishedBy">Boundary set established by
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -215,16 +212,16 @@
 
                 <p>.</p>
 
-                <p><strong>ThingThatIsBroughtIntoBeing</strong> &mdash; Brought into being by &mdash; <strong>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</strong></p>
+                <p><strong>BoundarySet</strong> &mdash; Boundary set established by &mdash; <strong>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</strong></p>
 
             </article>
 
-            <article class="objectproperty" id="partOf">
+            <article class="objectproperty" id="definedBy">
 
                 
 
 
-                <h3><a href="#partOf">Part of
+                <h3><a href="#definedBy">Defined by
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -233,7 +230,25 @@
 
                 <p>.</p>
 
-                <p><strong>ConstituencyArea</strong> &mdash; Part of &mdash; <strong>BoundarySet</strong></p>
+                <p><strong>ConstituencyArea</strong> &mdash; Defined by &mdash; <strong>BoundarySet</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="establishedBy">
+
+                
+
+
+                <h3><a href="#establishedBy">Established by
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
+
+
+                <p>.</p>
+
+                <p><strong>GeographicAreaEstablishedByStatute</strong> &mdash; Established by &mdash; <strong>DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</strong></p>
 
             </article>
 
@@ -333,19 +348,7 @@
         <h2>Subclasses</h2>
         <table>
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ConstituencyArea</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
-                </tr>
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>UpperTierLocalAuthority</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
-                </tr>
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>LowerTierLocalAuthority</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
-                </tr>
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>CombinedAuthority</td>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
                     <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
                 </tr>
                 <tr>
@@ -353,24 +356,24 @@
                     <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
                 </tr>
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>BoundarySet</td>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>Country</td>
                     <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
                 </tr>
                 <tr>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ConstituencyArea</td>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
+                </tr>
+                <tr>
                     <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>UpperTierLocalAuthority</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ThingThatIsBroughtIntoBeing</td>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
                 </tr>
                 <tr>
                     <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>LowerTierLocalAuthority</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ThingThatIsBroughtIntoBeing</td>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
                 </tr>
                 <tr>
                     <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>CombinedAuthority</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ThingThatIsBroughtIntoBeing</td>
-                </tr>
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>Country</td>
-                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ThingThatIsBroughtIntoBeing</td>
+                    <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
                 </tr>
         </table>
         </section>  
@@ -415,7 +418,7 @@
             &middot; Anya Somerville
         </p>
 
-        <p>This HTML page was generated on 2021-09-29 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/geographic-area/geographic-area-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/geographic-area/geographic-area-ontology.csv">CSV</a>.</p>
+        <p>This HTML page was generated on 2021-09-30 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/geographic-area/geographic-area-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/geographic-area/geographic-area-ontology.csv">CSV</a>.</p>
         
         <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/geographic-area/geographic-area-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
