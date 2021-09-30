@@ -119,9 +119,16 @@ parea:boundarySetEstablishedBy rdf:type owl:ObjectProperty ;
 	rdfs:domain parea:BoundarySet ;
 	rdfs:range parea:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
-				
 
-
+parea:isUpperTierLocalAuthority rdf:type owl:ObjectProperty ;
+	rdfs:label "Is upper tier local authority"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain parea:LowerTierLocalAuthority ;
+	rdfs:range parea:UpperTierLocalAuthority ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+	
+	
 #######  Data properties ##### 
 
 parea:ons_code rdf:type owl:DatatypeProperty ;
