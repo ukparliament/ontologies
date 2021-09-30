@@ -29,29 +29,32 @@ parea:GeographicArea rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
-parea:ConstituencyArea rdf:type owl:Class ;
+parea:GeographicAreaEstablishedByStatute rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicArea ;
+	rdfs:label "Geographic area established by statute"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:ConstituencyArea rdf:type owl:Class ;
+	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Constituency area"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:UpperTierLocalAuthority rdf:type owl:Class ;
-	rdfs:subClassOf parea:GeographicArea ;
-	rdfs:subClassOf parea:ThingThatIsBroughtIntoBeing ;
+	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Upper tier local authority"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:LowerTierLocalAuthority rdf:type owl:Class ;
-	rdfs:subClassOf parea:GeographicArea ;
-	rdfs:subClassOf parea:ThingThatIsBroughtIntoBeing ;
+	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Lower tier local authority"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:CombinedAuthority rdf:type owl:Class ;
-	rdfs:subClassOf parea:GeographicArea ;
-	rdfs:subClassOf parea:ThingThatIsBroughtIntoBeing ;
+	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Combined authority"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
@@ -63,18 +66,12 @@ parea:Region rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:Country rdf:type owl:Class ;
-	rdfs:subClassOf parea:ThingThatIsBroughtIntoBeing ;
+	rdfs:subClassOf parea:GeographicArea ;
 	rdfs:label "Country"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:BoundarySet rdf:type owl:Class ;
-	rdfs:subClassOf parea:GeographicArea ;
-	rdfs:label "Boundary set"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
-
-parea:ThingThatIsBroughtIntoBeing rdf:type owl:Class ;
 	rdfs:label "Boundary set"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
@@ -102,17 +99,24 @@ parea:partiallyContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:range parea:GeographicArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
-parea:partOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Part of"@en ;
+parea:definedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Defined by"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain parea:ConstituencyArea ;
 	rdfs:range parea:BoundarySet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
-parea:broughtIntoBeingBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Brought into being by"@en ;
+parea:establishedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Established by"@en ;
 	rdfs:comment "."@en ;
-	rdfs:domain parea:ThingThatIsBroughtIntoBeing ;
+	rdfs:domain parea:GeographicAreaEstablishedByStatute ;
+	rdfs:range parea:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:boundarySetEstablishedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Boundary set established by"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain parea:BoundarySet ;
 	rdfs:range parea:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 				
