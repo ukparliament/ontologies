@@ -2,7 +2,7 @@
 
 ## Career opportunities
 
-If you read no further, [please read this](https://housesofparliament.tal.net/vx/mobile-0/appcentre-HouseOfCommons/brand-2/candidate/so/pm/3/pl/14/opp/2586-Data-science-lead/en-GB). The House of Commons Library - home department of our crack team of librarians and spiritual home of our computational "experts" are on the lookout for a Data Science Lead. Important work. Nice people. If computational statistics is your bag of spanners, please do consider.
+If you read no further, [please read this](https://housesofparliament.tal.net/vx/mobile-0/appcentre-HouseOfCommons/brand-2/candidate/so/pm/3/pl/14/opp/2586-Data-science-lead/en-GB). The House of Commons Library - home department of our crack team of librarians and spiritual home of our computational "experts" - are on the lookout for a Data Science Lead. Important work. Nice people. If computational statistics is your bag of spanners, please do consider.
 
 ## On matters ontological
 
