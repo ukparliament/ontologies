@@ -1,9 +1,7 @@
 # Queries
 
-## [MNIS API](https://data.parliament.uk/membersdataplatform/memberquery.aspx)
 
-## [Current Members whipped to Conservatives with no current incumbency in a Government position who are currently eligible to sit](https://data.parliament.uk/membersdataplatform/services/mnis/members/query/party=Conservative%7Chouse=Commons%7Choldsgovernmentpost=false%7CIsEligible=true/)
 
-## XML to CSV converter
+## [Current eligible Members of the House of Commons whipped to the Conservative Party with no current incumbency in a Government position](https://mnis-prodder.herokuapp.com/parse?filter=house=commons|iseligible=true|partyid=4|holdsgovernmentpost=false&include=)
 
-[ConvertCSV](https://www.convertcsv.com/xml-to-csv.htm)
+## [MNIS Prodder](https://mnis-prodder.herokuapp.com/)
