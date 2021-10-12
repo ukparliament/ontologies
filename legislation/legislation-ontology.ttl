@@ -31,12 +31,18 @@
 
 #######  Classes #####
 
+plg:StatutoryThing rdf:type owl:Class ;
+	rdfs:label "Statutory thing"@en ;
+	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made Statutory Instrument."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
 plg:EnablingThing rdf:type owl:Class ;
 	rdfs:label "Enabling thing"@en ;
 	rdfs:comment "A thing that enables the exercise of a power."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:ActOfParliament rdf:type owl:Class ;
+	rdfs:subClassOf plg:StatutoryThing ;
 	rdfs:subClassOf plg:EnablingThing ;
 	rdfs:label "Act of Parliament"@en ;
 	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book."@en ;
@@ -71,6 +77,7 @@ plg:DraftStatutoryInstrument rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
 plg:MadeStatutoryInstrument rdf:type owl:Class ;
+	rdfs:subClassOf plg:StatutoryThing ;
 	rdfs:label "Made statutory instrument"@en ;
 	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
