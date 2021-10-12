@@ -11,7 +11,7 @@
     dcterms:title "Geographic area ontology"@en ;
     dcterms:created "2021-09-28"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing geographic areas in the UK - being constituency areas, local authority areas, countries, and statistical regions within England - and the containment relationships between such areas."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/geographic-area/geographic-area-period.svg> ;
 	foaf:maker
 		[ foaf:name "Carl Baker" ],
@@ -26,60 +26,63 @@
 
 parea:GeographicArea rdf:type owl:Class ;
 	rdfs:label "Geographic area"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A named area of geography."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:GeographicAreaEstablishedByStatute rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicArea ;
 	rdfs:label "Geographic area established by statute"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A geographic area established by an Act of Parliament or a made statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:ConstituencyArea rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Constituency area"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The geographic area of a UK Parliament constituency."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:UpperTierLocalAuthorityArea rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Upper tier local authority area"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The geographic area in which an upper tier local authority may exercise its powers."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:LowerTierLocalAuthorityArea rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Lower tier local authority area"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The geographic area in which a lower tier local authority may exercise its powers."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:CombinedAuthorityArea rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicAreaEstablishedByStatute ;
 	rdfs:label "Combined authority area"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The geographic area in which a combined authority may exercise its powers."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:Region rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicArea ;
 	rdfs:label "Region"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A statistical region in England corresponding to a NUTS level 1 region."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:Country rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicArea ;
 	rdfs:label "Country"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A country in the United Kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:BoundarySet rdf:type owl:Class ;
 	rdfs:label "Boundary set"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A boundary set for UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commission and established by statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
 	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+	
+### edited to here
 
 
 
