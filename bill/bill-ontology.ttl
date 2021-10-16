@@ -126,3 +126,45 @@ pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
 	rdfs:domain pbill:ParliamentActProcedureInvoked ;
 	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:isIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Is in"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .	
+
+pbill:explains rdf:type owl:ObjectProperty ;
+	rdfs:label "Explains"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:ExplanatoryNote ;
+	rdfs:range pbill:Bill ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:hasSponsoringDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Has sponsoring department"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:DepartmentalSponsorship ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:hasSponsoringMember rdf:type owl:ObjectProperty ;
+	rdfs:label "Has sponsoring Member"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:MemberSponsorship ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:sponsorshipByGovernmentOrganisation rdf:type owl:ObjectProperty ;
+	rdfs:label "Sponsorship by government organisation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:DepartmentalSponsorship ;
+	rdfs:range pbill:GovernmentOrganisation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
+	rdfs:label "Sponsorship by incumbency"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:MemberSponsorship ;
+	rdfs:range pbill:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
