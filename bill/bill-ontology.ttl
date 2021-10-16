@@ -1,0 +1,96 @@
+@prefix pbill: <http://parliament.uk/ontologies/bill/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/bill/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Bill ontology"@en ;
+    dcterms:created "2019-06-10"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/agency/agency.svg> ;
+	foaf:maker
+	    [ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Graeme Cowie" ],
+		[ foaf:name "Richard Kelly" ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Claire Searle" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+
+pbill:Bill rdf:type owl:Class ;
+	rdfs:label "Bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:DraftBill rdf:type owl:Class ;
+	rdfs:label "Draft Bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:ActOfParliament rdf:type owl:Class ;
+	rdfs:label "Act of Parliament"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:CarryOver rdf:type owl:Class ;
+	rdfs:label "Carry over"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:ParliamentActProcedureInvoked rdf:type owl:Class ;
+	rdfs:label "Parliament Act procedure invoked"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:ExplanatoryNote rdf:type owl:Class ;
+	rdfs:label "Explanatory note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:DepartmentalSponsorship rdf:type owl:Class ;
+	rdfs:label "Departmental sponsorship"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:GovernmentOrganisation rdf:type owl:Class ;
+	rdfs:label "Government Organisation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:MemberSponsorship rdf:type owl:Class ;
+	rdfs:label "Member sponsorship"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+
+	
+				
+
+#######  Object properties ##### 
+	
+
+
+	
+	
+#######  Data properties ##### 
+
+
