@@ -82,15 +82,47 @@ pbill:Incumbency rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 
-	
-				
 
 #######  Object properties ##### 
 	
-
-
+pbill:precededBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Preceded by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:DraftBill ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
+pbill:gainsRoyalAssent rdf:type owl:ObjectProperty ;
+	rdfs:label "Gains Royal Assent"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:ActOfParliament ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-#######  Data properties ##### 
+pbill:carryOverFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Carry over from"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:CarryOver ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:carryOverTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Carry over to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:CarryOver ;
+	rdfs:range pbill:Bill ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:parliamentActInvokedFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Parliament Act invoked from"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:Bill ;
+	rdfs:range pbill:ParliamentActProcedureInvoked ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
-
+pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Parliament Act invoked to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:ParliamentActProcedureInvoked ;
+	rdfs:range pbill:Bill ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
