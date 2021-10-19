@@ -1,6 +1,9 @@
 @prefix pqa: <http://parliament.uk/ontologies/question-and-answer/> .
 @prefix pt: <http://parliament.uk/ontologies/tabling/> . 
-@prefix putil: <http://parliament.uk/ontologies/utility/> . 
+@prefix putil: <http://parliament.uk/ontologies/utility/> .
+@prefix ptime: <http://parliament.uk/ontologies/time-period/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix pa: <http://parliament.uk/ontologies/agent/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -9,6 +12,40 @@
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 
+
+
+# Tidy in tabling model.
+# Should this be person or person with hat? Currently hat.
+<http://id.parliament.uk/12345686> rdf:type phm:SeatIncumbency ;
+	pt:requests <http://id.parliament.uk/12345683> ;
+	phm:hasIncumbent <http://id.parliament.uk/12345687> .
+	
+<http://id.parliament.uk/12345687> rdf:type pa:Person ;
+	putil:preferredLabel "Dave Bloke"@en ;
+	putil:hasIdentifier <http://id.parliament.uk/12345688> .
+	
+<http://id.parliament.uk/12345688> rdf:type putil:Identifier ;
+	putil:hasIdentifierSource <http://id.parliament.uk/12345689> ;
+	putil:identifierValue "374" .
+	
+<http://id.parliament.uk/12345689> rdf:type putil:IdentifierSource ;
+	putil:preferredLabel "Members' Names Information Service"@en ;
+	putil:abbreviationLabel "MNIS" .
+
+<http://id.parliament.uk/12345683> rdf:type pt:Tabling ;
+	pt:tables <http://id.parliament.uk/12345678> ;
+	pt:tabledOn "2021-10-18"^^xsd:date ;
+	pt:inSession <http://id.parliament.uk/12345684> .
+	
+<http://id.parliament.uk/12345684> rdf:type ptime:Session ;
+	putil:preferredLabel "2021-22"@en ;
+	putil:ordinality "2"^^xsd:integer ;
+	ptime:sessionInParliamentPeriod <http://id.parliament.uk/12345685> .
+
+<http://id.parliament.uk/12345685> rdf:type ptime:ParliamentPeriod ;
+	putil:preferredLabel "58"@en ;
+	putil:ordinality "58"^^xsd:integer .
+
 <http://id.parliament.uk/12345678> rdf:type pqa:ParliamentaryQuestion ;
 	pqa:heading "A heading"@en ;
 	pqa:questionText "This is a question?"@en ;
@@ -16,9 +53,7 @@
 	pqa:isNamedDay "false"^^xsd:boolean ;
 	pqa:isQuestionSubstantive "true"^^xsd:boolean ;
 	pqa:answerExpectedAs <http://id.parliament.uk/12345679> ;
-	pt:tabledOn "2021-10-18"^^xsd:date ;
-	pqa:allocation <http://id.parliament.uk/12345680> ;
-	pqa:inPursuantTo <http://id.parliament.uk/12345682> .
+	pqa:allocation <http://id.parliament.uk/12345680> .
 	
 <http://id.parliament.uk/12345679> rdf:type pqa:AnswerExpectedAs ;
 	pqa:isOralAnswerExpected "false"^^xsd:boolean ;
@@ -29,8 +64,5 @@
 	pqa:allocatedTo <http://id.parliament.uk/12345681> .
 	
 <http://id.parliament.uk/12345681> rdf:type pqa:AnsweringBody ;
-	putil:preferredLabel "CabinetOffice"@en .
-	
-<http://id.parliament.uk/12345682> rdf:type pqa:Answer ;
-	pqa:isOralAnswer "true"^^xsd:boolean ;
-	pqa:answerText "This is an earlier answer to an oral question."@en .
+	putil:preferredLabel "Cabinet Office"@en .
+
