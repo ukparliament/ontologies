@@ -1,0 +1,36 @@
+@prefix pqa: <http://parliament.uk/ontologies/question-and-answer/> .
+@prefix pt: <http://parliament.uk/ontologies/tabling/> . 
+@prefix putil: <http://parliament.uk/ontologies/utility/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+
+<http://id.parliament.uk/12345678> rdf:type pqa:ParliamentaryQuestion ;
+	pqa:heading "A heading"@en ;
+	pqa:questionText "This is a question?"@en ;
+	pqa:dateForAnswer "2021-12-25"^^xsd:date ;
+	pqa:isNamedDay "false"^^xsd:boolean ;
+	pqa:isQuestionSubstantive "true"^^xsd:boolean ;
+	pqa:answerExpectedAs <http://id.parliament.uk/12345679> ;
+	pt:tabledOn "2021-10-18"^^xsd:date ;
+	pqa:allocation <http://id.parliament.uk/12345680> ;
+	pqa:inPursuantTo <http://id.parliament.uk/12345682> .
+	
+<http://id.parliament.uk/12345679> rdf:type pqa:AnswerExpectedAs ;
+	pqa:isOralAnswerExpected "false"^^xsd:boolean ;
+	putil:startOn "2021-10-18"^^xsd:date .
+	
+<http://id.parliament.uk/12345680> rdf:type pqa:AllocatedAnsweringBody ;
+	putil:startOn "2021-10-18"^^xsd:date ;
+	pqa:allocatedTo <http://id.parliament.uk/12345681> .
+	
+<http://id.parliament.uk/12345681> rdf:type pqa:AnsweringBody ;
+	putil:preferredLabel "CabinetOffice"@en .
+	
+<http://id.parliament.uk/12345682> rdf:type pqa:Answer ;
+	pqa:isOralAnswer "true"^^xsd:boolean ;
+	pqa:answerText "This is an earlier answer to an oral question."@en .
