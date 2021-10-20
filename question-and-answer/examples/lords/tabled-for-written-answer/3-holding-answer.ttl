@@ -1,0 +1,260 @@
+@prefix pqa: <http://parliament.uk/ontologies/question-and-answer/> .
+@prefix ptable: <http://parliament.uk/ontologies/tabling/> . 
+@prefix putil: <http://parliament.uk/ontologies/utility/> .
+@prefix ptime: <http://parliament.uk/ontologies/time-period/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix pa: <http://parliament.uk/ontologies/agent/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+
+
+# There is a tabling ...
+<http://id.parliament.uk/12345683> rdf:type ptable:Tabling ;
+
+	# ... in a House ...
+	ptable:hasHouse <http://id.parliament.uk/12345682> ;
+	
+	# ... on a date ...
+	ptable:tabledOn "2021-10-18"^^xsd:date ;
+	# Should this be date or point at tabling day? Superclass of Sitting Day, Virtual Sitting Day, Hybrid Sitting Day and TableOffice NonSitting TablingDay.
+	
+	# ... in a session ...
+	ptable:inSession <http://id.parliament.uk/12345684> ;
+	
+	# ... by (a person in) a seat incumbency ...
+	ptable:tabledBy <http://id.parliament.uk/12345686> ;
+	
+	# ... of a Parliamentary question.
+	ptable:tables <http://id.parliament.uk/12345678> .
+	
+	
+	
+# There is a House ...
+<http://id.parliament.uk/12345682> rdf:type phm:House ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "House of Commons"@en .
+
+
+# There is a session ...
+<http://id.parliament.uk/12345684> rdf:type ptime:Session ;
+	
+	# ... with a preferred label ...
+	putil:preferredLabel "2021-22"@en ;
+	
+	# ... with an ordinality ...
+	putil:ordinality "2"^^xsd:integer ;
+	
+	# ... in a Parliament period.
+	ptime:sessionInParliamentPeriod <http://id.parliament.uk/12345685> .
+
+
+
+# There is a Parliament period ....
+<http://id.parliament.uk/12345685> rdf:type ptime:ParliamentPeriod ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "58"@en ;
+	
+	# ... with an ordinality in Parliaments of the United Kingdom.
+	putil:ordinality "58"^^xsd:integer .
+
+
+
+
+# There is a seat incumbency ...
+<http://id.parliament.uk/12345686> rdf:type phm:SeatIncumbency ;
+
+	# with a person incumbent.
+	phm:hasIncumbent <http://id.parliament.uk/12345687> .
+
+
+
+# There is a person ...
+<http://id.parliament.uk/12345687> rdf:type pa:Person ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "John Prescott"@en ;
+	
+	# ... with an identifier.
+	putil:hasIdentifier <http://id.parliament.uk/12345688> .
+	
+	
+	
+# There is an identifier ...
+<http://id.parliament.uk/12345688> rdf:type putil:Identifier ;
+
+	# ... with a value ...
+	putil:identifierValue "374" ;
+	
+	# ... from an identifier source.
+	putil:hasIdentifierSource <http://id.parliament.uk/12345689> .
+
+
+
+# There is an identifier source ...	
+<http://id.parliament.uk/12345689> rdf:type putil:IdentifierSource ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Members' Names Information Service"@en ;
+	
+	# ... with an abbreiviation label.
+	putil:abbreviationLabel "MNIS" .
+	
+
+
+
+# There is a Parliamentary Question ...
+<http://id.parliament.uk/12345678> rdf:type pqa:ParliamentaryQuestion ;
+	
+	# ... with an answer expected as ...
+	pqa:answerExpectedAs <http://id.parliament.uk/12345679> ;
+
+	# ... with an allocation to an answering body ...
+	pqa:allocation <http://id.parliament.uk/12345680> ;
+	
+	# ... with an allocation to a second answering body ...
+	pqa:allocation <http://id.parliament.uk/12345680> ;
+	
+	# ... with a date for answer ...
+	pqa:dateForAnswer "2021-12-25"^^xsd:date ;
+	
+	# ... which is not a named day ...
+	pqa:isNamedDay "false"^^xsd:boolean ;
+	
+	# ... which is a substantive question ...
+	pqa:isQuestionSubstantive "true"^^xsd:boolean ;
+	
+	# ... with heading text ...
+	pqa:heading "A heading"@en ;
+	
+	# ... with question text ...
+	pqa:questionText "This is a question?"@en .
+
+
+
+# There is an answer expected as ...
+<http://id.parliament.uk/12345679> rdf:type pqa:AnswerExpectedAs ;
+
+	# ... which is not expected as an oral answer ...
+	pqa:isOralAnswerExpected "false"^^xsd:boolean ;
+	
+	# ... which has been expected since a date.
+	putil:startOn "2021-10-18"^^xsd:date .
+	
+	
+	
+# There is an allocated answering body ...
+<http://id.parliament.uk/12345680> rdf:type pqa:AllocatedAnsweringBody ;
+
+	# ... which is allocated to an answering body ...
+	pqa:allocatedTo <http://id.parliament.uk/12345681> ;
+	
+	# ... which was allocated since a date.
+	putil:startOn "2021-10-18"^^xsd:date ;
+	
+	# ... which stopped being allocated on a date.
+	putil:endOn "2021-10-19"^^xsd:date .
+	
+	
+	
+	
+# There is a second allocated answering body ...
+<http://id.parliament.uk/12345690> rdf:type pqa:AllocatedAnsweringBody ;
+
+	# ... which is allocated to a different answering body ...
+	pqa:allocatedTo <http://id.parliament.uk/12345691> ;
+
+	# ... which has been allocated since a date.
+	putil:startOn "2021-10-19"^^xsd:date .
+	
+	
+
+# There is an answering body ...
+<http://id.parliament.uk/12345681> rdf:type pqa:AnsweringBody ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Cabinet Office"@en .
+	
+	
+	
+# There is a second answering body ...
+<http://id.parliament.uk/12345691> rdf:type pqa:AnsweringBody ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Chancellor of the Duchy of Lancashire"@en .
+	
+	
+	
+# There is a transferral ...
+<http://id.parliament.uk/12345692> rdf:type pqa:Transferral ;
+
+	# ... from the first allocation ...
+	pqa:transferredFrom <http://id.parliament.uk/12345680> ;
+	
+	# ... to the second allocation ...
+	pqa:transferredTo <http://id.parliament.uk/12345690> ;
+
+	# ... which was created at a time.
+	putil:createdAt "2021-10-19T10:37:04"^^xsd:dateTime .
+	
+	
+	
+# There is an answer ...
+<http://id.parliament.uk/12345693> rdf:type pqa:Answer ;
+
+	# ... with some holding text ...
+	pqa:answerText "This is some holding text"@en ;
+
+	# ... which was created at a time ...
+	putil:createdAt "2021-10-21T17:37:04"^^xsd:dateTime ;
+
+	# ... which is not an oral answer ...
+	pqa:isOralAnswer "false"^^xsd:boolean ;
+
+	# ... from the second answering body ...
+	pqa:answeringBody <http://id.parliament.uk/12345691> ;
+
+	# ... from (a person in) a seat incumbency ...
+	pqa:answeringMember <http://id.parliament.uk/12345695> ;
+
+	# ... to the Parliamentary question ...
+	pqa:answerTo <http://id.parliament.uk/12345678> ;
+
+	# ... with an answer type ...
+	pqa:hasAnswerType <http://id.parliament.uk/12345694> .
+	
+
+
+# There is answer type ...
+<http://id.parliament.uk/12345694> rdf:type pqa:AnswerType ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Holding answer"@en .
+	
+
+
+# There is an answering person ...
+<http://id.parliament.uk/12345695> rdf:type pa:Person ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Stephen Barclay"@en ;
+
+	# ... with an identifier.
+	putil:hasIdentifier <http://id.parliament.uk/12345696> .
+
+
+
+# There is an identifier ...
+<http://id.parliament.uk/12345696> rdf:type putil:Identifier ;
+
+	# ... with a value ...
+	putil:identifierValue "4095" ;
+
+	# ... from an identifier source.
+	putil:hasIdentifierSource <http://id.parliament.uk/12345689> .
