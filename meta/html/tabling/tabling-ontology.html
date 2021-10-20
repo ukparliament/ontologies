@@ -72,6 +72,7 @@
             &middot; <a href="#objectproperties">Object properties</a>
  &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
+            &middot; <a href="https://ukparliament.github.io/ontologies/tabling/tabling.svg">Depiction</a>
 
 
     </nav>
@@ -91,12 +92,12 @@
 
 
             </article>
-            <article class="class" id="Member">
-                <h3><a href="#Member">Member
+            <article class="class" id="SeatIncumbency">
+                <h3><a href="#SeatIncumbency">Seat incumbency
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                <p>A current or former Member of a House.</p>
+                <p>The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member.</p>
 
 
             </article>
@@ -110,7 +111,7 @@
 
             </article>
             <article class="class" id="TabledThing">
-                <h3><a href="#TabledThing">TabledThing
+                <h3><a href="#TabledThing">Tabled thing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -132,7 +133,7 @@
 
             </article>
             <article class="class" id="TablingOrWithdrawal">
-                <h3><a href="#TablingOrWithdrawal">TablingOrWithdrawal
+                <h3><a href="#TablingOrWithdrawal">Tabling or withdrawal
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -154,7 +155,7 @@
 
             </article>
             <article class="class" id="WithdrawnThing">
-                <h3><a href="#WithdrawnThing">WithdrawnThing
+                <h3><a href="#WithdrawnThing">Withdrawn thing
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -163,7 +164,7 @@
 
             </article>
             <article class="class" id="WrittenNotice">
-                <h3><a href="#WrittenNotice">WrittenNotice
+                <h3><a href="#WrittenNotice">Written notice
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
@@ -183,7 +184,7 @@
                 
 
 
-                <h3><a href="#givesNotice">givesNotice
+                <h3><a href="#givesNotice">Gives notice
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -192,7 +193,7 @@
 
                 <p>Relates an act of tabling to a written notice.</p>
 
-                <p><strong>Tabling</strong> &mdash; givesNotice &mdash; <strong>WrittenNotice</strong></p>
+                <p><strong>Tabling</strong> &mdash; Gives notice &mdash; <strong>WrittenNotice</strong></p>
 
             </article>
 
@@ -201,7 +202,7 @@
                 
 
 
-                <h3><a href="#hasHouse">hasHouse
+                <h3><a href="#hasHouse">Has House
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -210,7 +211,7 @@
 
                 <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
 
-                <p><strong>TablingOrWithdrawal</strong> &mdash; hasHouse &mdash; <strong>House</strong></p>
+                <p><strong>TablingOrWithdrawal</strong> &mdash; Has House &mdash; <strong>House</strong></p>
 
             </article>
 
@@ -219,7 +220,7 @@
                 
 
 
-                <h3><a href="#inSession">inSession
+                <h3><a href="#inSession">In session
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -228,7 +229,7 @@
 
                 <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
 
-                <p><strong>TablingOrWithdrawal</strong> &mdash; inSession &mdash; <strong>Session</strong></p>
+                <p><strong>TablingOrWithdrawal</strong> &mdash; In session &mdash; <strong>Session</strong></p>
 
             </article>
 
@@ -237,7 +238,7 @@
                 
 
 
-                <h3><a href="#replaces">replaces
+                <h3><a href="#replaces">Replaces
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -246,25 +247,25 @@
 
                 <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
 
-                <p><strong>TabledThing</strong> &mdash; replaces &mdash; <strong>WithdrawnThing</strong></p>
+                <p><strong>TabledThing</strong> &mdash; Replaces &mdash; <strong>WithdrawnThing</strong></p>
 
             </article>
 
-            <article class="objectproperty" id="requests">
+            <article class="objectproperty" id="tabledBy">
 
                 
 
 
-                <h3><a href="#requests">requests
+                <h3><a href="#tabledBy">Tabled by
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
 
 
 
-                <p>Relates a Member to an act of tabling.</p>
+                <p>Relates a tabling to the seat incumbency of the Member tabling.</p>
 
-                <p><strong>Member</strong> &mdash; requests &mdash; <strong>Tabling</strong></p>
+                <p><strong>Tabling</strong> &mdash; Tabled by &mdash; <strong>SeatIncumbency</strong></p>
 
             </article>
 
@@ -273,7 +274,7 @@
                 
 
 
-                <h3><a href="#tables">tables
+                <h3><a href="#tables">Tables
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -282,7 +283,7 @@
 
                 <p>Relates an act of tabling to the business item which it tables.</p>
 
-                <p><strong>Tabling</strong> &mdash; tables &mdash; <strong>TabledThing</strong></p>
+                <p><strong>Tabling</strong> &mdash; Tables &mdash; <strong>TabledThing</strong></p>
 
             </article>
 
@@ -291,7 +292,7 @@
                 
 
 
-                <h3><a href="#withdraws">withdraws
+                <h3><a href="#withdraws">Withdraws
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -300,7 +301,7 @@
 
                 <p>Relates an act of withdrawal to the business item which it withdraws.</p>
 
-                <p><strong>Withdrawal</strong> &mdash; withdraws &mdash; <strong>WithdrawnThing</strong></p>
+                <p><strong>Withdrawal</strong> &mdash; Withdraws &mdash; <strong>WithdrawnThing</strong></p>
 
             </article>
         </section>
@@ -312,14 +313,14 @@
             <article class="dataproperty" id="isInterestDeclared">
                 
 
-                <h3><a href="#isInterestDeclared">isInterestDeclared
+                <h3><a href="#isInterestDeclared">Is interest declared
                 </a>
             </h3>
             <span class="subhead">DATA PROPERTY</span>
 
                 <p>Relates an act of tabling to whether or not the Member doing the tabling declared an interest at the time it was tabled. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared against a tabling may or may not relate to an interest registered on the Register of Members&#39; Financial Interests.</p>
 
-                <p><strong>Tabling</strong> &mdash; isInterestDeclared &mdash; <strong>boolean</strong></p>
+                <p><strong>Tabling</strong> &mdash; Is interest declared &mdash; <strong>boolean</strong></p>
 
 
             </article>
@@ -327,14 +328,14 @@
             <article class="dataproperty" id="tabledOn">
                 
 
-                <h3><a href="#tabledOn">tabledOn
+                <h3><a href="#tabledOn">Tabled on
                 </a>
             </h3>
             <span class="subhead">DATA PROPERTY</span>
 
                 <p>Relates an act of tabling to the date on which it happened.</p>
 
-                <p><strong>Tabling</strong> &mdash; tabledOn &mdash; <strong>date</strong></p>
+                <p><strong>Tabling</strong> &mdash; Tabled on &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -342,14 +343,14 @@
             <article class="dataproperty" id="withdrawnOn">
                 
 
-                <h3><a href="#withdrawnOn">withdrawnOn
+                <h3><a href="#withdrawnOn">Withdrawn on
                 </a>
             </h3>
             <span class="subhead">DATA PROPERTY</span>
 
                 <p>Relates an act of withdrawal to the date on which it happened.</p>
 
-                <p><strong>Withdrawal</strong> &mdash; withdrawnOn &mdash; <strong>date</strong></p>
+                <p><strong>Withdrawal</strong> &mdash; Withdrawn on &mdash; <strong>date</strong></p>
 
 
             </article>
@@ -385,12 +386,14 @@
                     <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
                     <dt>xsd</dt>
                     <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                    <dt>pt</dt>
+                    <dt>ptable</dt>
                     <dd>http://parliament.uk/ontologies/tabling/</dd>
                     <dt>dcterms</dt>
                     <dd>http://purl.org/dc/terms/</dd>
                     <dt>owl</dt>
                     <dd>http://www.w3.org/2002/07/owl#</dd>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
             </dl>
         </section>  
 
@@ -402,6 +405,12 @@
         <p>Ontology created &middot; <time id="created">2017-12-01</time></p>
         
        
+        <p id="makers">
+            Made by
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            &middot; Anya Somerville
+        </p>
 
         <p>This HTML page was generated on 2021-10-20 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/tabling/tabling-ontology.csv">CSV</a>.</p>
         
