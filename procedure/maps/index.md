@@ -89,31 +89,33 @@ Dot file: [dot](secondary-legislation/statutory-instruments/components/scsi/scsi
 
 Dot file: [dot](secondary-legislation/components/slsc/slsc.dot) / [svg](secondary-legislation/components/slsc/slsc.svg)
 
-## [CRaG treaty procedure [PDF]](crag-treaties/crag-treaties.pdf)
+## Treaties
 
-Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-treaties.svg)
+### [CRaG treaty procedure [PDF]](treaties/crag-treaties/crag-treaties.pdf)
 
-### CRaG treaty component procedures
+Dot file: [dot](treaties/crag-treaties/crag-treaties.dot) / [svg](treaties/crag-treaties/crag-treaties.svg)
 
-#### [Environment, Food and Rural Affairs Committee procedure [PDF]](crag-treaties/components/efra/efra.pdf)
+#### CRaG treaty component procedures
 
-Dot file: [dot](crag-treaties/components/efra/efra.dot) / [svg](crag-treaties/components/efra/efra.svg)
+##### [Environment, Food and Rural Affairs Committee procedure [PDF]](treaties/crag-treaties/components/efra/efra.pdf)
 
-#### [International Agreements Committee and European Affairs Committee procedure [PDF]](crag-treaties/components/iac+eac/iac+eac.pdf)
+Dot file: [dot](treaties/crag-treaties/components/efra/efra.dot) / [svg](treaties/crag-treaties/components/efra/efra.svg)
 
-Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) / [svg](crag-treaties/components/iac+eac/iac+eac.svg)
+##### [International Agreements Committee and European Affairs Committee procedure [PDF]](treaties/crag-treaties/components/iac+eac/iac+eac.pdf)
 
-#### [International Trade Committee procedure [PDF]](crag-treaties/components/itc/itc.pdf)
+Dot file: [dot](treaties/crag-treaties/components/iac+eac/iac+eac.dot) / [svg](treaties/crag-treaties/components/iac+eac/iac+eac.svg)
 
-Dot file: [dot](crag-treaties/components/itc/itc.dot) / [svg](crag-treaties/components/itc/itc.svg)
+##### [International Trade Committee procedure [PDF]](treaties/crag-treaties/components/itc/itc.pdf)
 
-#### [Joint Committee on Human Rights procedure [PDF]](crag-treaties/components/jchr/jchr.pdf)
+Dot file: [dot](treaties/crag-treaties/components/itc/itc.dot) / [svg](treaties/crag-treaties/components/itc/itc.svg)
 
-Dot file: [dot](crag-treaties/components/jchr/jchr.dot) / [svg](crag-treaties/components/jchr/jchr.svg)
+##### [Joint Committee on Human Rights procedure [PDF]](treaties/crag-treaties/components/jchr/jchr.pdf)
 
-#### [Lords' Committees procedure [PDF]](crag-treaties/components/lords-committees/lords-committees.pdf)
+Dot file: [dot](treaties/crag-treaties/components/jchr/jchr.dot) / [svg](treaties/crag-treaties/components/jchr/jchr.svg)
 
-Dot file: [dot](crag-treaties/components/lords-committees/lords-committees.dot) / [svg](crag-treaties/components/lords-committees/lords-committees.svg)
+##### [Lords' Committees procedure [PDF]](treaties/crag-treaties/components/lords-committees/lords-committees.pdf)
+
+Dot file: [dot](treaties/crag-treaties/components/lords-committees/lords-committees.dot) / [svg](treaties/crag-treaties/components/lords-committees/lords-committees.svg)
 
 ## Component procedures
 
