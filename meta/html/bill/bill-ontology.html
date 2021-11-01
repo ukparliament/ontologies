@@ -70,7 +70,7 @@
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
-            &middot; <a href="#namespaces">Namespaces</a>
+ &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
             &middot; <a href="https://ukparliament.github.io/ontologies/agency/agency.svg">Depiction</a>
 
@@ -89,6 +89,15 @@
                 </h3>
                 <span class="subhead">CLASS</span>
                 <p>An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book.</p>
+
+
+            </article>
+            <article class="class" id="Bill">
+                <h3><a href="#Bill">Bill
+                    </a>
+                </h3>
+                <span class="subhead">CLASS</span>
+                <p>A proposal for a new law or a proposal to significantly change an existing law.</p>
 
 
             </article>
@@ -124,7 +133,7 @@
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                <p>Documents explaining the purpose of a Bill. All Government Bills and some Private Members&#39; Bills have accompanying documents.</p>
+                <p>Documents explaining the purpose of a Bill. All Government Bills and some Private Members&#39; Bills have accompanying documents. Explanatory memoranda provided alongside a Private Bill are also included in this class.</p>
 
 
             </article>
@@ -160,8 +169,21 @@
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                <p>The Parliament Acts of 1911 and 1949 limit the power of the House of Lords in relation to the House of Commons. They replaced the Lords&#39; right to veto Commons Bills with a right only to delay them and put into law the Commons&#39; exclusive powers to pass Bills on public tax and spending. In circumstances where a bill is passed by the House of Commons and rejected by the House of Lords in the same session, it is possible for the Government to introduce a similar bill in the following session. If the House of Commons chooses to invoke the Parliament Act, the House of Lords has one month to agree to the bill, otherwise the Commons may pass the bill unilaterally. The similarity of a bill being introduced in a following session is not made explicit until the Speaker certifies the bill as being subject to the Parliament Act.</p>
+                <p>The Parliament Acts of 1911 and 1949 limit the power of the House of Lords in relation to the House of Commons. They replaced the Lords&#39; right to veto Commons Public Bills with a right only to delay them and put into law the Commons&#39; exclusive powers to pass Bills on public tax and spending. In circumstances where a bill is passed by the House of Commons and rejected by the House of Lords in the same session, it is possible for the Government to introduce a similar bill in the following session. If the House of Commons chooses to invoke the Parliament Act, the House of Lords has one month to agree to the bill, otherwise the Commons may pass the bill unilaterally. The similarity of a bill being introduced in a following session is not made explicit until the Speaker certifies the bill as being subject to the Parliament Act.</p>
 
+
+            </article>
+            <article class="class" id="PrivateBill">
+                <h3><a href="#PrivateBill">Private Bill
+                    </a>
+                </h3>
+                <span class="subhead">CLASS</span>
+                <p>A proposal for a new law or a proposal to significantly change an existing law affecting particular groups, people or places.</p>
+
+                <p>Superclasses
+                &middot; Bill
+
+            </p>
 
             </article>
             <article class="class" id="PublicBill">
@@ -171,6 +193,10 @@
                 <span class="subhead">CLASS</span>
                 <p>A proposal for a new law or a proposal to significantly change an existing law affecting the population as a whole. A Public Bill is either a Government Bill or a Private Members&#39; Bill.</p>
 
+                <p>Superclasses
+                &middot; Bill
+
+            </p>
 
             </article>
             <article class="class" id="Session">
@@ -201,8 +227,9 @@
 
 
 
+                <p>Relates a bill to the act of being carried over into the subsequent session.</p>
 
-                <p><strong>PublicBill</strong> &mdash; Carry over from &mdash; <strong>CarryOver</strong></p>
+                <p><strong>Bill</strong> &mdash; Carry over from &mdash; <strong>CarryOver</strong></p>
 
             </article>
 
@@ -219,7 +246,25 @@
 
 
 
-                <p><strong>CarryOver</strong> &mdash; Carry over to &mdash; <strong>PublicBill</strong></p>
+                <p><strong>CarryOver</strong> &mdash; Carry over to &mdash; <strong>Bill</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="enactedAs">
+
+                
+
+
+                <h3><a href="#enactedAs">Enacted as
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
+
+
+                <p>Relates a bill to the Act of Parliament the bill becomes upon being passed by Parliament and receiving Royal Assent.</p>
+
+                <p><strong>Bill</strong> &mdash; Enacted as &mdash; <strong>ActOfParliament</strong></p>
 
             </article>
 
@@ -236,24 +281,7 @@
 
 
 
-                <p><strong>ExplanatoryNote</strong> &mdash; Explains &mdash; <strong>PublicBill</strong></p>
-
-            </article>
-
-            <article class="objectproperty" id="gainsRoyalAssent">
-
-                
-
-
-                <h3><a href="#gainsRoyalAssent">Gains Royal Assent
-                </a>
-            </h3>
-            <span class="subhead">OBJECT PROPERTY</span>
-
-
-
-
-                <p><strong>PublicBill</strong> &mdash; Gains Royal Assent &mdash; <strong>ActOfParliament</strong></p>
+                <p><strong>ExplanatoryNote</strong> &mdash; Explains &mdash; <strong>Bill</strong></p>
 
             </article>
 
@@ -270,7 +298,7 @@
 
 
 
-                <p><strong>PublicBill</strong> &mdash; Has sponsoring department &mdash; <strong>DepartmentalSponsorship</strong></p>
+                <p><strong>Bill</strong> &mdash; Has sponsoring department &mdash; <strong>DepartmentalSponsorship</strong></p>
 
             </article>
 
@@ -287,7 +315,7 @@
 
 
 
-                <p><strong>PublicBill</strong> &mdash; Has sponsoring Member &mdash; <strong>MemberSponsorship</strong></p>
+                <p><strong>Bill</strong> &mdash; Has sponsoring Member &mdash; <strong>MemberSponsorship</strong></p>
 
             </article>
 
@@ -304,7 +332,7 @@
 
 
 
-                <p><strong>PublicBill</strong> &mdash; Is in &mdash; <strong>Session</strong></p>
+                <p><strong>Bill</strong> &mdash; Is in &mdash; <strong>Session</strong></p>
 
             </article>
 
@@ -354,6 +382,7 @@
 
 
 
+                <p>Relates a Public Bill to the Draft Bill which preceded it. A Public Bill may be preceded by one draft bill, or none.</p>
 
                 <p><strong>PublicBill</strong> &mdash; Preceded by &mdash; <strong>DraftBill</strong></p>
 
@@ -399,6 +428,19 @@
 
 
 
+        <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>bill/<wbr>PublicBill</td>
+                    <td>/<wbr>ontologies/<wbr>bill/<wbr>Bill</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>bill/<wbr>PrivateBill</td>
+                    <td>/<wbr>ontologies/<wbr>bill/<wbr>Bill</td>
+                </tr>
+        </table>
+        </section>  
 
         <section id="namespaces">
         <h2>Namespaces</h2>
