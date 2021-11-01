@@ -26,9 +26,21 @@
 
 #######  Classes #####
 
+pbill:Bill rdf:type owl:Class ;
+	rdfs:label "Bill"@en ;
+	rdfs:comment "A proposal for a new law or a proposal to significantly change an existing law."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
 pbill:PublicBill rdf:type owl:Class ;
+	rdfs:subClassOf pbill:Bill ;
 	rdfs:label "Public Bill"@en ;
 	rdfs:comment "A proposal for a new law or a proposal to significantly change an existing law affecting the population as a whole. A Public Bill is either a Government Bill or a Private Members' Bill."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:PrivateBill rdf:type owl:Class ;
+	rdfs:subClassOf pbill:Bill ;
+	rdfs:label "Private Bill"@en ;
+	rdfs:comment "A proposal for a new law or a proposal to significantly change an existing law affecting particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:DraftBill rdf:type owl:Class ;
@@ -48,7 +60,7 @@ pbill:CarryOver rdf:type owl:Class ;
 
 pbill:ParliamentActProcedureInvoked rdf:type owl:Class ;
 	rdfs:label "Parliament Act procedure invoked"@en ;
-	rdfs:comment "The Parliament Acts of 1911 and 1949 limit the power of the House of Lords in relation to the House of Commons. They replaced the Lords' right to veto Commons Bills with a right only to delay them and put into law the Commons' exclusive powers to pass Bills on public tax and spending. In circumstances where a bill is passed by the House of Commons and rejected by the House of Lords in the same session, it is possible for the Government to introduce a similar bill in the following session. If the House of Commons chooses to invoke the Parliament Act, the House of Lords has one month to agree to the bill, otherwise the Commons may pass the bill unilaterally. The similarity of a bill being introduced in a following session is not made explicit until the Speaker certifies the bill as being subject to the Parliament Act."@en ;
+	rdfs:comment "The Parliament Acts of 1911 and 1949 limit the power of the House of Lords in relation to the House of Commons. They replaced the Lords' right to veto Commons Public Bills with a right only to delay them and put into law the Commons' exclusive powers to pass Bills on public tax and spending. In circumstances where a bill is passed by the House of Commons and rejected by the House of Lords in the same session, it is possible for the Government to introduce a similar bill in the following session. If the House of Commons chooses to invoke the Parliament Act, the House of Lords has one month to agree to the bill, otherwise the Commons may pass the bill unilaterally. The similarity of a bill being introduced in a following session is not made explicit until the Speaker certifies the bill as being subject to the Parliament Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:Session rdf:type owl:Class ;
@@ -58,7 +70,7 @@ pbill:Session rdf:type owl:Class ;
 	
 pbill:ExplanatoryNote rdf:type owl:Class ;
 	rdfs:label "Explanatory note"@en ;
-	rdfs:comment "Documents explaining the purpose of a Bill. All Government Bills and some Private Members' Bills have accompanying documents."@en ;
+	rdfs:comment "Documents explaining the purpose of a Bill. All Government Bills and some Private Members' Bills have accompanying documents. Explanatory memoranda provided alongside a Private Bill are also included in this class."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:DepartmentalSponsorship rdf:type owl:Class ;
@@ -85,27 +97,26 @@ pbill:Incumbency rdf:type owl:Class ;
 
 # edited to here
 
-
 #######  Object properties ##### 
 	
 pbill:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Public Bill to the Draft Bill which preceded it. A Public Bill may be preceded by one draft bill, or none."@en ;
 	rdfs:domain pbill:PublicBill ;
 	rdfs:range pbill:DraftBill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:gainsRoyalAssent rdf:type owl:ObjectProperty ;
-	rdfs:label "Gains Royal Assent"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pbill:PublicBill ;
+pbill:enactedAs rdf:type owl:ObjectProperty ;
+	rdfs:label "Enacted as"@en ;
+	rdfs:comment "Relates a bill to the Act of Parliament the bill becomes upon being passed by Parliament and receiving Royal Assent."@en ;
+	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:ActOfParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:carryOverFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Carry over from"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:comment "Relates a bill to the act of being carried over into the subsequent session."@en ;
+	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:CarryOver ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
@@ -113,7 +124,7 @@ pbill:carryOverTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Carry over to"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pbill:CarryOver ;
-	rdfs:range pbill:PublicBill ;
+	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:parliamentActInvokedFrom rdf:type owl:ObjectProperty ;
@@ -133,7 +144,7 @@ pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
 pbill:isIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Is in"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .	
 
@@ -141,20 +152,20 @@ pbill:explains rdf:type owl:ObjectProperty ;
 	rdfs:label "Explains"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pbill:ExplanatoryNote ;
-	rdfs:range pbill:PublicBill ;
+	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasSponsoringDepartment rdf:type owl:ObjectProperty ;
 	rdfs:label "Has sponsoring department"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:DepartmentalSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasSponsoringMember rdf:type owl:ObjectProperty ;
 	rdfs:label "Has sponsoring Member"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:MemberSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
