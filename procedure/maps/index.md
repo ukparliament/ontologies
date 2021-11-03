@@ -8,6 +8,10 @@ Dot file: [dot](primary-legislation/public-bills/public-bills.dot) / [svg](prima
 
 ### Primary legislation component procedures
 
+#### Commons stages
+
+##### [First reading](primary-legislation/components/commons/first-reading/first-reading.pdf)
+
 #### Legislative consent motions
 
 ##### [Northern Ireland Assembly Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf)
