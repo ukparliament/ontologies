@@ -12,6 +12,8 @@ Dot file: [dot](primary-legislation/public-bills/public-bills.dot) / [svg](prima
 
 ##### [First reading](primary-legislation/components/commons/first-reading/first-reading.pdf)
 
+Dot file: [dot](primary-legislation/components/commons/first-reading/first-reading.dot) / [svg](primary-legislation/components/commons/first-reading/first-reading.svg)
+
 #### Legislative consent motions
 
 ##### [Northern Ireland Assembly Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf)
