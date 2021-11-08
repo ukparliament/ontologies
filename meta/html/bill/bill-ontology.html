@@ -146,6 +146,18 @@
 
 
             </article>
+            <article class="class" id="HybridBill">
+                <h3><a href="#HybridBill">Hybrid Bill
+                    </a>
+                </h3>
+                <span class="subhead">CLASS</span>
+
+                <p>Superclasses
+                &middot; PublicBill
+
+            </p>
+
+            </article>
             <article class="class" id="Incumbency">
                 <h3><a href="#Incumbency">Incumbency
                     </a>
@@ -215,38 +227,39 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="carryOverFrom">
+            <article class="objectproperty" id="carriedOverFrom">
 
                 
 
 
-                <h3><a href="#carryOverFrom">Carry over from
+                <h3><a href="#carriedOverFrom">Carried over from
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
 
 
 
-                <p>Relates a bill to the act of being carried over into the subsequent session.</p>
+                <p>Relates the act of being carried over to the bill in the preceding session.</p>
 
-                <p><strong>Bill</strong> &mdash; Carry over from &mdash; <strong>CarryOver</strong></p>
+                <p><strong>CarryOver</strong> &mdash; Carried over from &mdash; <strong>Bill</strong></p>
 
             </article>
 
-            <article class="objectproperty" id="carryOverTo">
+            <article class="objectproperty" id="carriedOverTo">
 
                 
 
 
-                <h3><a href="#carryOverTo">Carry over to
+                <h3><a href="#carriedOverTo">Carried over to
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
 
 
 
+                <p>Relates the act of being carried over to the bill in the new session.</p>
 
-                <p><strong>CarryOver</strong> &mdash; Carry over to &mdash; <strong>Bill</strong></p>
+                <p><strong>CarryOver</strong> &mdash; Carried over to &mdash; <strong>Bill</strong></p>
 
             </article>
 
@@ -262,7 +275,7 @@
 
 
 
-                <p>Relates a bill to the Act of Parliament the bill becomes upon being passed by Parliament and receiving Royal Assent.</p>
+                <p>Relates a bill to the Act of Parliament the bill is enacted as after receiving Royal Assent.</p>
 
                 <p><strong>Bill</strong> &mdash; Enacted as &mdash; <strong>ActOfParliament</strong></p>
 
@@ -280,17 +293,18 @@
 
 
 
+                <p>Relates an explanatory note to the bill whose purpose it explains.</p>
 
                 <p><strong>ExplanatoryNote</strong> &mdash; Explains &mdash; <strong>Bill</strong></p>
 
             </article>
 
-            <article class="objectproperty" id="hasSponsoringDepartment">
+            <article class="objectproperty" id="hasDepartmentalSponsorship">
 
                 
 
 
-                <h3><a href="#hasSponsoringDepartment">Has sponsoring department
+                <h3><a href="#hasDepartmentalSponsorship">Has departmental sponsorship
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -298,16 +312,16 @@
 
 
 
-                <p><strong>Bill</strong> &mdash; Has sponsoring department &mdash; <strong>DepartmentalSponsorship</strong></p>
+                <p><strong>PublicBill</strong> &mdash; Has departmental sponsorship &mdash; <strong>DepartmentalSponsorship</strong></p>
 
             </article>
 
-            <article class="objectproperty" id="hasSponsoringMember">
+            <article class="objectproperty" id="hasMemberSponsorship">
 
                 
 
 
-                <h3><a href="#hasSponsoringMember">Has sponsoring Member
+                <h3><a href="#hasMemberSponsorship">Has Member sponsorship
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
@@ -315,7 +329,7 @@
 
 
 
-                <p><strong>Bill</strong> &mdash; Has sponsoring Member &mdash; <strong>MemberSponsorship</strong></p>
+                <p><strong>PublicBill</strong> &mdash; Has Member sponsorship &mdash; <strong>MemberSponsorship</strong></p>
 
             </article>
 
@@ -331,6 +345,7 @@
 
 
 
+                <p>Relates a bill to the session in which it was presented. A bill will always be in one session.</p>
 
                 <p><strong>Bill</strong> &mdash; Is in &mdash; <strong>Session</strong></p>
 
@@ -348,8 +363,9 @@
 
 
 
+                <p>Relates an invocation of the Parliament Act to a Public Bill in the preceding session.</p>
 
-                <p><strong>PublicBill</strong> &mdash; Parliament Act invoked from &mdash; <strong>ParliamentActProcedureInvocation</strong></p>
+                <p><strong>ParliamentActProcedureInvocation</strong> &mdash; Parliament Act invoked from &mdash; <strong>PublicBill</strong></p>
 
             </article>
 
@@ -365,6 +381,7 @@
 
 
 
+                <p>Relates an invocation of the Parliament Act to a Public Bill in the new session.</p>
 
                 <p><strong>ParliamentActProcedureInvocation</strong> &mdash; Parliament Act invoked to &mdash; <strong>PublicBill</strong></p>
 
@@ -438,6 +455,10 @@
                 <tr>
                     <td>/<wbr>ontologies/<wbr>bill/<wbr>PrivateBill</td>
                     <td>/<wbr>ontologies/<wbr>bill/<wbr>Bill</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>bill/<wbr>HybridBill</td>
+                    <td>/<wbr>ontologies/<wbr>bill/<wbr>PublicBill</td>
                 </tr>
         </table>
         </section>  
