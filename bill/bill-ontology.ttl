@@ -43,6 +43,12 @@ pbill:PrivateBill rdf:type owl:Class ;
 	rdfs:label "Private Bill"@en ;
 	rdfs:comment "A proposal for a new Act of Parliament affecting particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:HybridBill rdf:type owl:Class ;
+	rdfs:subClassOf pbill:PublicBill ;
+	rdfs:label "Hybrid Bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:DraftBill rdf:type owl:Class ;
 	rdfs:label "Draft Bill"@en ;
@@ -93,11 +99,6 @@ pbill:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
 	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-	
-							# edited to here
-
-
 
 
 
@@ -112,64 +113,66 @@ pbill:precededBy rdf:type owl:ObjectProperty ;
 	
 pbill:enactedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Enacted as"@en ;
-	rdfs:comment "Relates a bill to the Act of Parliament the bill becomes upon being passed by Parliament and receiving Royal Assent."@en ;
+	rdfs:comment "Relates a bill to the Act of Parliament the bill is enacted as after receiving Royal Assent."@en ;
 	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:ActOfParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:carryOverFrom rdf:type owl:ObjectProperty ;
-	rdfs:label "Carry over from"@en ;
-	rdfs:comment "Relates a bill to the act of being carried over into the subsequent session."@en ;
-	rdfs:domain pbill:Bill ;
-	rdfs:range pbill:CarryOver ;
+pbill:carriedOverFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Carried over from"@en ;
+	rdfs:comment "Relates the act of being carried over to the bill in the preceding session."@en ;
+	rdfs:domain pbill:CarryOver ;
+	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:carryOverTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Carry over to"@en ;
-	rdfs:comment ""@en ;
+pbill:carriedOverTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Carried over to"@en ;
+	rdfs:comment "Relates the act of being carried over to the bill in the new session."@en ;
 	rdfs:domain pbill:CarryOver ;
 	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:parliamentActInvokedFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliament Act invoked from"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pbill:PublicBill ;
-	rdfs:range pbill:ParliamentActProcedureInvocation ;
+	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the preceding session."@en ;
+	rdfs:domain pbill:ParliamentActProcedureInvocation ;
+	rdfs:range pbill:PublicBill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliament Act invoked to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the new session."@en ;
 	rdfs:domain pbill:ParliamentActProcedureInvocation ;
 	rdfs:range pbill:PublicBill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:isIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Is in"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a bill to the session in which it was presented. A bill will always be in one session."@en ;
 	rdfs:domain pbill:Bill ;
 	rdfs:range pbill:Session ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:explains rdf:type owl:ObjectProperty ;
 	rdfs:label "Explains"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an explanatory note to the bill whose purpose it explains."@en ;
 	rdfs:domain pbill:ExplanatoryNote ;
 	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:hasSponsoringDepartment rdf:type owl:ObjectProperty ;
-	rdfs:label "Has sponsoring department"@en ;
+													# edited to here 
+	
+pbill:hasDepartmentalSponsorship rdf:type owl:ObjectProperty ;
+	rdfs:label "Has departmental sponsorship"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain pbill:Bill ;
+	rdfs:domain pbill:PublicBill ;
 	rdfs:range pbill:DepartmentalSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:hasSponsoringMember rdf:type owl:ObjectProperty ;
-	rdfs:label "Has sponsoring Member"@en ;
+pbill:hasMemberSponsorship rdf:type owl:ObjectProperty ;
+	rdfs:label "Has Member sponsorship"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain pbill:Bill ;
+	rdfs:domain pbill:PublicBill ;
 	rdfs:range pbill:MemberSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
