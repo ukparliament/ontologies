@@ -97,7 +97,7 @@
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                <p>The geographic area in which a combined authority may exercise its powers.</p>
+                <p>The geographic area in which a combined authority may exercise its powers. A combined authority may be created in England under powers set out in the Local Democracy, Economic Development and Construction Act 2009.</p>
 
                 <p>Superclasses
                 &middot; GeographicAreaEstablishedByStatute
@@ -220,7 +220,7 @@
 
 
 
-                <p>.</p>
+                <p>Relates a boundary set to the statutory thing it was established by.</p>
 
                 <p><strong>BoundarySet</strong> &mdash; Boundary set established by &mdash; <strong>StatutoryThing</strong></p>
 
@@ -238,7 +238,7 @@
 
 
 
-                <p>.</p>
+                <p>Relates a constituency area to the boundary set it was defined by.</p>
 
                 <p><strong>ConstituencyArea</strong> &mdash; Defined by &mdash; <strong>BoundarySet</strong></p>
 
@@ -256,27 +256,27 @@
 
 
 
-                <p>.</p>
+                <p>Relates a geographic area established by statute to the statutory thing it was established by.</p>
 
                 <p><strong>GeographicAreaEstablishedByStatute</strong> &mdash; Established by &mdash; <strong>StatutoryThing</strong></p>
 
             </article>
 
-            <article class="objectproperty" id="isUpperTierLocalAuthority">
+            <article class="objectproperty" id="isAlsoUpperTierLocalAuthorityArea">
 
                 
 
 
-                <h3><a href="#isUpperTierLocalAuthority">Is upper tier local authority
+                <h3><a href="#isAlsoUpperTierLocalAuthorityArea">Is also upper tier local authority area
                 </a>
             </h3>
             <span class="subhead">OBJECT PROPERTY</span>
 
 
 
-                <p>.</p>
+                <p>Relates a lower tier local authority area to an upper tier local authority area where the lower tier local authority area is also the upper tier local authority area.</p>
 
-                <p><strong>LowerTierLocalAuthorityArea</strong> &mdash; Is upper tier local authority &mdash; <strong>UpperTierLocalAuthorityArea</strong></p>
+                <p><strong>LowerTierLocalAuthorityArea</strong> &mdash; Is also upper tier local authority area &mdash; <strong>UpperTierLocalAuthorityArea</strong></p>
 
             </article>
 
@@ -292,7 +292,7 @@
 
 
 
-                <p>Relates a geographic area to the geographic area it is partly contained by. A constituency area may be partly contained by an upper tier local authority area. A constituency area may be partly contained by a lower tier local authority area. A lower tier local authority area may be partly contained by a constituency area. An upper tier local authority area may be partly contained by a constituency area. An upper tier local authority area may be partly contained by a combined authority area, though - as at October 2021 - this has not happened in practice.</p>
+                <p>Relates a geographic area to a geographic area it is partly contained by. A constituency area may be partly contained by a lower tier local authority area, by an upper tier local authority area, or by neither. A lower tier local authority area or an upper tier local authority area may be partly contained by a constituency area. The Local Democracy, Economic Development and Construction Act 2009 does not preclude an upper tier local authority area being partly contained by a combined authority area. As at November 2021, no upper tier local authority area is partly contained by a combined authority area.</p>
 
                 <p><strong>GeographicArea</strong> &mdash; Partly contained by &mdash; <strong>GeographicArea</strong></p>
 
@@ -310,7 +310,7 @@
 
 
 
-                <p>Relates a geographic area to the geographic area it is wholly contained by. A constituency area may be wholly contained by an upper tier local authority area. A constituency area may be wholly contained by a lower tier local authority area. A constituency area is wholly contained by a country. A constituency area in England is wholly contained by an English region. A lower tier local authority area may be wholly contained by a constituency area. A lower tier local authority area is wholly contained by an upper tier local authority area, except where the lower tier local authority area is the upper tier local authority area. An upper tier local authority area may be wholly contained by a constituency area. As at October 2021, an upper tier local authority area is wholly contained by a combined authority area, where such a combined authority area exists. An upper tier local authority area is wholly contained by a country. An upper tier local authority area in England is wholly contained by an English region. A combined authority area is wholly contained by the country of England. A combined authority area may be wholly contained by an English region. An English region is wholly contained by the country of England.</p>
+                <p>Relates a geographic area to the geographic area it is wholly contained by. A constituency area may be wholly contained by a lower tier local authority area or by an upper tier local authority area. A constituency area in England is wholly contained by an English region. A constituency area is wholly contained by a country. A lower tier local authority area may be wholly contained by a constituency area. A lower tier local authority area is wholly contained by an upper tier local authority area, except where the lower tier local authority area is also the upper tier local authority area. An upper tier local authority area may be wholly contained by a constituency area. As at November 2021, an upper tier local authority area is wholly contained by a combined authority area, where a combined authority area exists.An upper tier local authority area in England is wholly contained by an English region. An upper tier local authority area is wholly contained by a country. A combined authority area may be wholly contained by an English region. A combined authority area is wholly contained by the country of England. An English region is wholly contained by the country of England.</p>
 
                 <p><strong>GeographicArea</strong> &mdash; Wholly contained by &mdash; <strong>GeographicArea</strong></p>
 
@@ -329,7 +329,7 @@
             </h3>
             <span class="subhead">DATA PROPERTY</span>
 
-                <p></p>
+                <p>Relates a boundary set to the date that boundary set applies from.</p>
 
                 <p><strong>BoundarySet</strong> &mdash; Applies from &mdash; <strong>date</strong></p>
 
@@ -344,7 +344,7 @@
             </h3>
             <span class="subhead">DATA PROPERTY</span>
 
-                <p></p>
+                <p>Relates a geographic area to the geometry describing the boundaries of that area.</p>
 
                 <p><strong>GeographicArea</strong> &mdash; Geometry &mdash; <strong>Literal</strong></p>
 
@@ -359,7 +359,7 @@
             </h3>
             <span class="subhead">DATA PROPERTY</span>
 
-                <p></p>
+                <p>Relates a geographic area to its code as assigned by the Office of National Statistics.</p>
 
                 <p><strong>GeographicArea</strong> &mdash; ONS code &mdash; <strong>Literal</strong></p>
 
