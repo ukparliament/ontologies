@@ -82,7 +82,7 @@ pbill:ExplanatoryNote rdf:type owl:Class ;
 	
 pbill:DepartmentalSponsorship rdf:type owl:Class ;
 	rdfs:label "Departmental sponsorship"@en ;
-	rdfs:comment "The sponsorship of a bill by a government organisation. If the machinery of Government changes during the passage of a bill, it is possible for the sponsorship of that bill to pass to a different government organisation."@en ;
+	rdfs:comment "The sponsorship of a Public Bill by a Government organisation. If the machinery of Government changes during the passage of a bill, it is possible for the sponsorship of that bill to pass to a different Government organisation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:GovernmentOrganisation rdf:type owl:Class ;
@@ -92,7 +92,12 @@ pbill:GovernmentOrganisation rdf:type owl:Class ;
 
 pbill:MemberSponsorship rdf:type owl:Class ;
 	rdfs:label "Member sponsorship"@en ;
-	rdfs:comment "The sponsorship of a bill by a Member. It is possible for the sponsorship of a bill to pass to a different Member, for example: if a Member is elevated to the House of Lords."@en ;
+	rdfs:comment "The sponsorship of a Public Bill by a Member. It is possible for the sponsorship of a Public Bill to pass to a different Member, for example: if a Member is elevated to the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:MemberLeadership rdf:type owl:Class ;
+	rdfs:label "Member leadership"@en ;
+	rdfs:comment "The leadership of a Public Bill by a Member. It is possible for the leadership of a Public Bill to pass to a different Member, for example: if a Member is elevated to the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:Incumbency rdf:type owl:Class ;
