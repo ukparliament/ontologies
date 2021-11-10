@@ -35,19 +35,19 @@ pbill:Bill rdf:type owl:Class ;
 pbill:PublicBill rdf:type owl:Class ;
 	rdfs:subClassOf pbill:Bill ;
 	rdfs:label "Public Bill"@en ;
-	rdfs:comment "A proposal for a new Act of Parliament whose effect is not limited to particular groups, people or places. A Public Bill is either a Government Bill or a Private Members' Bill."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:PrivateBill rdf:type owl:Class ;
-	rdfs:subClassOf pbill:Bill ;
-	rdfs:label "Private Bill"@en ;
-	rdfs:comment "A proposal for a new Act of Parliament affecting particular groups, people or places."@en ;
+	rdfs:comment "A proposal for a new Act of Parliament with general application across the whole population, without that application being limited to particular groups, people or places. A Public Bill is either a Government Bill or a Private Members' Bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:HybridBill rdf:type owl:Class ;
 	rdfs:subClassOf pbill:PublicBill ;
 	rdfs:label "Hybrid Bill"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A hybrid bill is a public bill having general application across the whole population, whilst also having been examined and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:PrivateBill rdf:type owl:Class ;
+	rdfs:subClassOf pbill:Bill ;
+	rdfs:label "Private Bill"@en ;
+	rdfs:comment "A proposal for a new Act of Parliament differently affecting the interests of particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:DraftBill rdf:type owl:Class ;
@@ -160,32 +160,44 @@ pbill:explains rdf:type owl:ObjectProperty ;
 	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-													# edited to here 
-	
 pbill:hasDepartmentalSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has departmental sponsorship"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Public Bill to a sponsorship by a Government department at a point in time. A Public Bill may have one or more departmental sponsorships over time, or none in the case of a Private Members' Bill."@en ;
 	rdfs:domain pbill:PublicBill ;
 	rdfs:range pbill:DepartmentalSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasMemberSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Member sponsorship"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Public Bill to a sponsorship by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time, or none in the case of a Government Bill."@en ;
 	rdfs:domain pbill:PublicBill ;
 	rdfs:range pbill:MemberSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
+pbill:hasMemberLeadership rdf:type owl:ObjectProperty ;
+	rdfs:label "Has Member leadership"@en ;
+	rdfs:comment "Relates a Public Bill to a leadership by a Member at a point in time. A Public Bill may have one or more leading Members, or none in the case of a Private Members' Bill."@en ;
+	rdfs:domain pbill:PublicBill ;
+	rdfs:range pbill:MemberLeadership ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
 pbill:sponsorshipByGovernmentOrganisation rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsorship by government organisation"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a departmental sponsorship to the Government organisation sponsoring a Public Bill at a point in time."@en ;
 	rdfs:domain pbill:DepartmentalSponsorship ;
 	rdfs:range pbill:GovernmentOrganisation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsorship by incumbency"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a Member sponsorship to the House seat incumbency of a Member sponsoring a Public Bill at a point in time."@en ;
 	rdfs:domain pbill:MemberSponsorship ;
+	rdfs:range pbill:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:leadershipByIncumbency rdf:type owl:ObjectProperty ;
+	rdfs:label "Leadership by incumbency"@en ;
+	rdfs:comment "Relates a Member leadership to the incumbency of a Member in a Government position leading a Public Bill at a point in time."@en ;
+	rdfs:domain pbill:MemberLeadership ;
 	rdfs:range pbill:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
