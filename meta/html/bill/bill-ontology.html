@@ -151,6 +151,7 @@
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
+                <p>A hybrid bill is a public bill having general application across the whole population, whilst also having been examined and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure.</p>
 
                 <p>Superclasses
                 &middot; PublicBill
@@ -190,7 +191,7 @@
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                <p>A proposal for a new Act of Parliament affecting particular groups, people or places.</p>
+                <p>A proposal for a new Act of Parliament differently affecting the interests of particular groups, people or places.</p>
 
                 <p>Superclasses
                 &middot; Bill
@@ -203,7 +204,7 @@
                     </a>
                 </h3>
                 <span class="subhead">CLASS</span>
-                <p>A proposal for a new Act of Parliament whose effect is not limited to particular groups, people or places. A Public Bill is either a Government Bill or a Private Members&#39; Bill.</p>
+                <p>A proposal for a new Act of Parliament with general application across the whole population, without that application being limited to particular groups, people or places. A Public Bill is either a Government Bill or a Private Members&#39; Bill.</p>
 
                 <p>Superclasses
                 &middot; Bill
@@ -311,8 +312,27 @@
 
 
 
+                <p>Relates a Public Bill to a sponsorship by a Government department at a point in time. A Public Bill may have one or more departmental sponsorships over time, or none in the case of a Private Members&#39; Bill.</p>
 
                 <p><strong>PublicBill</strong> &mdash; Has departmental sponsorship &mdash; <strong>DepartmentalSponsorship</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasMemberLeadership">
+
+                
+
+
+                <h3><a href="#hasMemberLeadership">Has Member leadership
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
+
+
+                <p>Relates a Public Bill to a leadership by a Member at a point in time. A Public Bill may have one or more leading Members, or none in the case of a Private Members&#39; Bill.</p>
+
+                <p><strong>PublicBill</strong> &mdash; Has Member leadership &mdash; <strong>MemberLeadership</strong></p>
 
             </article>
 
@@ -328,6 +348,7 @@
 
 
 
+                <p>Relates a Public Bill to a sponsorship by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time, or none in the case of a Government Bill.</p>
 
                 <p><strong>PublicBill</strong> &mdash; Has Member sponsorship &mdash; <strong>MemberSponsorship</strong></p>
 
@@ -348,6 +369,24 @@
                 <p>Relates a bill to the session in which it was presented. A bill will always be in one session.</p>
 
                 <p><strong>Bill</strong> &mdash; Is in &mdash; <strong>Session</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="leadershipByIncumbency">
+
+                
+
+
+                <h3><a href="#leadershipByIncumbency">Leadership by incumbency
+                </a>
+            </h3>
+            <span class="subhead">OBJECT PROPERTY</span>
+
+
+
+                <p>Relates a Member leadership to the incumbency of a Member in a Government position leading a Public Bill at a point in time.</p>
+
+                <p><strong>MemberLeadership</strong> &mdash; Leadership by incumbency &mdash; <strong>Incumbency</strong></p>
 
             </article>
 
@@ -417,6 +456,7 @@
 
 
 
+                <p>Relates a departmental sponsorship to the Government organisation sponsoring a Public Bill at a point in time.</p>
 
                 <p><strong>DepartmentalSponsorship</strong> &mdash; Sponsorship by government organisation &mdash; <strong>GovernmentOrganisation</strong></p>
 
@@ -434,6 +474,7 @@
 
 
 
+                <p>Relates a Member sponsorship to the House seat incumbency of a Member sponsoring a Public Bill at a point in time.</p>
 
                 <p><strong>MemberSponsorship</strong> &mdash; Sponsorship by incumbency &mdash; <strong>Incumbency</strong></p>
 
@@ -507,7 +548,7 @@
             &middot; Anya Somerville
         </p>
 
-        <p>This HTML page was generated on 2021-11-09 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/bill/bill-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/bill/bill-ontology.csv">CSV</a>.</p>
+        <p>This HTML page was generated on 2021-11-10 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/bill/bill-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/bill/bill-ontology.csv">CSV</a>.</p>
         
         <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/bill/bill-ontology.ttl">visualdataweb.de/webvowl</a></p>
 
