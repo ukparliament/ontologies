@@ -62,7 +62,7 @@ parea:CombinedAuthorityArea rdf:type owl:Class ;
 parea:Region rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicArea ;
 	rdfs:label "Region"@en ;
-	rdfs:comment "A statistical region in England corresponding to a NUTS level 1 region."@en ;
+	rdfs:comment "A statistical region in England being a UK International Territorial Level (ITL)."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:Country rdf:type owl:Class ;
@@ -87,7 +87,7 @@ parea:StatutoryThing rdf:type owl:Class ;
 
 parea:whollyContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Wholly contained by"@en ;
-	rdfs:comment "Relates a geographic area to the geographic area it is wholly contained by. A constituency area may be wholly contained by a lower tier local authority area or by an upper tier local authority area. A constituency area in England is wholly contained by an English region. A constituency area is wholly contained by a country. A lower tier local authority area may be wholly contained by a constituency area. A lower tier local authority area is wholly contained by an upper tier local authority area, except where the lower tier local authority area is also the upper tier local authority area. An upper tier local authority area may be wholly contained by a constituency area. As at November 2021, an upper tier local authority area is wholly contained by a combined authority area, where a combined authority area exists.An upper tier local authority area in England is wholly contained by an English region. An upper tier local authority area is wholly contained by a country. A combined authority area may be wholly contained by an English region. A combined authority area is wholly contained by the country of England. An English region is wholly contained by the country of England."@en ;
+	rdfs:comment "Relates a geographic area to the geographic area it is wholly contained by. A constituency area may be wholly contained by a lower tier local authority area, by an upper tier local authority area, or by neither. A constituency area in England is wholly contained by an English region. A constituency area is wholly contained by a country. A lower tier local authority area may be wholly contained by a constituency area. A lower tier local authority area is wholly contained by an upper tier local authority area, except where the lower tier local authority area is also the upper tier local authority area. An upper tier local authority area may be wholly contained by a constituency area. As at November 2021, an upper tier local authority area is wholly contained by a combined authority area, where a combined authority area exists.An upper tier local authority area in England is wholly contained by an English region. An upper tier local authority area is wholly contained by a country. A combined authority area may be wholly contained by an English region. A combined authority area is wholly contained by the country of England. An English region is wholly contained by the country of England."@en ;
 	rdfs:domain parea:GeographicArea ;
 	rdfs:range parea:GeographicArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
