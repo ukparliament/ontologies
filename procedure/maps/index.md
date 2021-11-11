@@ -10,6 +10,10 @@ Dot file: [dot](primary-legislation/public-bills/public-bills.dot) / [svg](prima
 
 #### Commons stages
 
+##### [Ten minute rule](primary-legislation/components/commons/ten-minute-rule/ten-minute-rule.pdf)
+
+Dot file: [dot](primary-legislation/components/commons/ten-minute-rule/ten-minute-rule.dot) / [svg](primary-legislation/components/commons/ten-minute-rule/ten-minute-rule.svg)
+
 ##### [First reading](primary-legislation/components/commons/first-reading/first-reading.pdf)
 
 Dot file: [dot](primary-legislation/components/commons/first-reading/first-reading.dot) / [svg](primary-legislation/components/commons/first-reading/first-reading.svg)
