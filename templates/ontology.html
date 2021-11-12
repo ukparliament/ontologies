@@ -48,7 +48,7 @@
             <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
-            <article class="class" id="{{ class.idString }}">
+            <article class="class py-2" id="{{ class.idString }}">
                 <h3><a href="#{{ class.idString }}">{{ class.label }}
                     </a>
                 </h3>
@@ -78,7 +78,7 @@
 
             {% for objectproperty in objectproperties|sort(attribute='label') %}
 
-            <article class="objectproperty" id="{{ objectproperty.idString }}">
+            <article class="objectproperty py-2" id="{{ objectproperty.idString }}">
 
                 
 
@@ -111,7 +111,7 @@
             <h2>Data properties</h2>
             {% for dataproperty in dataproperties|sort(attribute='label') %}
 
-            <article class="dataproperty" id="{{ dataproperty.idString }}">
+            <article class="dataproperty py-2" id="{{ dataproperty.idString }}">
                 
 
                 <h3><a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}
