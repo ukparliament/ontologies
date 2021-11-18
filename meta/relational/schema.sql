@@ -32,8 +32,10 @@ drop table if exists constituencies;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
-drop table if exists counties;
-drop table if exists regions;
+drop table if exists constituency_areas;
+drop table if exists english_regions;
+drop table if exists countries;
+drop table if exists boundary_sets;
 
 create type change_types as enum ('insert', 'update', 'delete');
 create table change_events (
@@ -44,17 +46,44 @@ create table change_events (
 	change_at timestamp not null,
 	primary key (id)
 );
-create table regions (
+create table boundary_sets (
 	id serial,
 	name varchar(255) not null,
+	applies_from date not null,
+	end_on date,
+	brought_into_being_by varchar(255) not null,
 	primary key (id)
 );
-create table counties (
+create table countries (
+	id serial,
+	name_en varchar(255),
+	name_cy varchar(255),
+	ons_code varchar(255) not null,
+	geometry text,
+	primary key (id)
+);
+create table english_regions (
 	id serial,
 	name varchar(255) not null,
-	is_palatine boolean default false,
-	region_id int not null,
-	constraint fk_region foreign key (region_id) references regions(id),
+	start_on date not null,
+	end_on date,
+	ons_code varchar(255) not null,
+	geometry text,
+	country_id int not null,
+	constraint fk_country foreign key (country_id) references countries(id),
+	primary key (id)
+);
+create table constituency_areas (
+	id serial,
+	name varchar(255) not null,
+	ons_code varchar(255) not null,
+	geometry text,
+	english_region_id int,
+	country_id int not null,
+	boundary_set_id int not null,
+	constraint fk_english_region foreign key (english_region_id) references english_regions(id),
+	constraint fk_country foreign key (country_id) references countries(id),
+	constraint fk_boundary_set foreign key (boundary_set_id) references boundary_sets(id),
 	primary key (id)
 );
 create table bishoprics (
