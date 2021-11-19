@@ -79,6 +79,22 @@ Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedur
 
 Dot file: [dot](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.dot) / [svg](secondary-legislation/statutory-instruments/affirmative-procedures/made/made-affirmative.svg)
 
+#### Super affirmative procedures
+
+##### Remedial orders
+
+###### [Proposed remedial order](secondary-legislation/statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-remedial-order/proposed-remedial-order.pdf)
+
+Dot file: [dot](secondary-legislation/statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-remedial-order/proposed-remedial-order.dot) / [svg](secondary-legislation/statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-remedial-order/proposed-remedial-order.svg)
+
+
+
+
+
+
+
+
+
 #### Statutory instrument component procedures
 
 ##### [Joint Committee on Statutory Instruments procedure [PDF]](secondary-legislation/statutory-instruments/components/jcsi/jcsi.pdf)
