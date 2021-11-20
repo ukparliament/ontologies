@@ -278,16 +278,18 @@ create table house_seats (
 	end_on date not null,
 	house_seat_end_reason_id int null,
 	house_id int not null,
-	constituency_id int,
+	constituency_group_id int,
 	bishopric_id int,
 	bishopric_parliamentary_seniority_id int,
 	peerage_id int null,
+	royal_office_holder_position_id int,
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_house_seat_end_reason foreign key (house_seat_end_reason_id) references house_seat_end_reasons(id),
-	constraint fk_contituency foreign key (constituency_id) references constituencies(id),
+	/*constraint fk_contituency_group foreign key (constituency_group_id) references constituency_groups(id),*/
 	constraint fk_bishopric foreign key (bishopric_id) references bishoprics(id),
 	constraint fk_bishopric_parliamentary_seniority foreign key (bishopric_parliamentary_seniority_id) references bishopric_parliamentary_seniorities(id),
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
+	/*constraint fk_royal_office_holder_position foreign key (royal_office_holder_position_id) references royal_office_holder_positions(id),*/
 	primary key (id)
 );
 create table house_seat_incumbency_end_reasons (
@@ -330,6 +332,7 @@ create table house_seat_incumbencies (
 	bishopric_incumbency_id int,
 	bishopric_parliamentary_seniority_incumbency_id int,
 	peerage_holding_id int,
+	royal_office_holding_incumency_id int,
 	constraint fk_house_seat_incumbency_end_reason foreign key (house_seat_incumbency_end_reason_id) references house_seat_incumbency_end_reasons(id),
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
@@ -337,6 +340,7 @@ create table house_seat_incumbencies (
 	constraint fk_bishopric_incumbency foreign key (bishopric_incumbency_id) references bishopric_incumbencies(id),
 	constraint fk_bishopric_parliamentary_seniority_incumbency foreign key (bishopric_parliamentary_seniority_incumbency_id) references bishopric_parliamentary_seniority_incumbencies(id),
 	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
+	constraint fk_royal_office_holder_incumbency foreign key (royal_office_holder_incumbency_id) references royal_office_holder_incumbencies(id),
 	primary key (id)
 );
 create table authority_owners (
