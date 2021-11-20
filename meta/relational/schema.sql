@@ -270,7 +270,8 @@ create table constituency_groups (
 	name varchar(255) not null,
 	start_on date,
 	end_on date,
-	has_geographic_extent boolean default false,
+	constituency_area_id int,
+	constraint fk_constituency_area foreign key (constituency_area_id) references constituency_areas(id),
 	primary key (id)
 );
 create table bishopric_parliamentary_seniorities (
