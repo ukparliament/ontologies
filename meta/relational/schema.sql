@@ -8,6 +8,7 @@ drop table if exists house_seat_incumbencies;
 drop table if exists peerage_holdings;
 drop table if exists house_seats;
 drop table if exists law_lord_incumbencies;
+drop table if exists royal_office_holder_incumbencies;
 drop table if exists peerages;
 drop table if exists jurisdictions;
 drop table if exists peerage_types;
@@ -28,10 +29,11 @@ drop table if exists political_parties;
 drop table if exists kingdoms;
 drop table if exists genders;
 drop table if exists letters_patent_times;
-drop table if exists constituencies;
+drop table if exists constituency_groups;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
+drop table if exists royal_office_holder_positions;
 drop table if exists constituency_areas;
 drop table if exists english_regions;
 drop table if exists countries;
@@ -84,6 +86,11 @@ create table constituency_areas (
 	constraint fk_english_region foreign key (english_region_id) references english_regions(id),
 	constraint fk_country foreign key (country_id) references countries(id),
 	constraint fk_boundary_set foreign key (boundary_set_id) references boundary_sets(id),
+	primary key (id)
+);
+create table royal_office_holder_positions (
+	id serial,
+	name varchar(255) not null,
 	primary key (id)
 );
 create table bishoprics (
@@ -258,8 +265,7 @@ create table house_seat_end_reasons (
 	label varchar(255) not null,
 	primary key (id)
 );
-
-create table constituencies (
+create table constituency_groups (
 	id serial,
 	name varchar(255) not null,
 	start_on date,
@@ -285,11 +291,11 @@ create table house_seats (
 	royal_office_holder_position_id int,
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_house_seat_end_reason foreign key (house_seat_end_reason_id) references house_seat_end_reasons(id),
-	/*constraint fk_contituency_group foreign key (constituency_group_id) references constituency_groups(id),*/
+	constraint fk_contituency_group foreign key (constituency_group_id) references constituency_groups(id),
 	constraint fk_bishopric foreign key (bishopric_id) references bishoprics(id),
 	constraint fk_bishopric_parliamentary_seniority foreign key (bishopric_parliamentary_seniority_id) references bishopric_parliamentary_seniorities(id),
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
-	/*constraint fk_royal_office_holder_position foreign key (royal_office_holder_position_id) references royal_office_holder_positions(id),*/
+	constraint fk_royal_office_holder_position foreign key (royal_office_holder_position_id) references royal_office_holder_positions(id),
 	primary key (id)
 );
 create table house_seat_incumbency_end_reasons (
@@ -321,6 +327,16 @@ create table bishopric_parliamentary_seniority_incumbencies (
 	constraint fk_person foreign key (person_id) references people(id),
 	primary key (id)
 );
+create table royal_office_holder_incumbencies (
+	id serial,
+	start_on date not null,
+	end_on date not null,
+	royal_office_holder_position_id int not null,
+	person_id int not null,
+	constraint fk_royal_office_holder_position foreign key (royal_office_holder_position_id) references royal_office_holder_positions(id),
+	constraint fk_person foreign key (person_id) references people(id),
+	primary key (id)
+);
 create table house_seat_incumbencies (
 	id serial,
 	start_on date not null,
@@ -332,7 +348,7 @@ create table house_seat_incumbencies (
 	bishopric_incumbency_id int,
 	bishopric_parliamentary_seniority_incumbency_id int,
 	peerage_holding_id int,
-	royal_office_holding_incumency_id int,
+	royal_office_holder_incumbency_id int,
 	constraint fk_house_seat_incumbency_end_reason foreign key (house_seat_incumbency_end_reason_id) references house_seat_incumbency_end_reasons(id),
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
