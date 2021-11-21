@@ -6,6 +6,6 @@
 
 # Entity relationship diagram
 
-![ERD](schema.png)
+![ERD](schema.svg)
 
 [Also available as a PDF](schema.pdf).
