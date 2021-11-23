@@ -34,8 +34,11 @@ drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
 drop table if exists royal_office_holder_positions;
+drop table if exists upper_tier_local_authority_areas;
 drop table if exists constituency_areas;
+drop table if exists combined_authority_area_english_regions;
 drop table if exists english_regions;
+drop table if exists combined_authority_areas;
 drop table if exists countries;
 drop table if exists boundary_sets;
 
@@ -60,8 +63,18 @@ create table countries (
 	id serial,
 	name_en varchar(255),
 	name_cy varchar(255),
-	ons_code varchar(255) not null,
 	geometry text,
+	primary key (id)
+);
+create table combined_authority_areas (
+	id serial,
+	name varchar(255),
+	start_on date not null,
+	end_on date,
+	geometry text,
+	brought_into_being_by varchar(255) not null,
+	country_id int not null,
+	constraint fk_country foreign key (country_id) references countries(id),
 	primary key (id)
 );
 create table english_regions (
@@ -69,16 +82,23 @@ create table english_regions (
 	name varchar(255) not null,
 	start_on date not null,
 	end_on date,
-	ons_code varchar(255) not null,
 	geometry text,
 	country_id int not null,
 	constraint fk_country foreign key (country_id) references countries(id),
 	primary key (id)
 );
+create table combined_authority_area_english_regions (
+	id serial,
+	combined_authority_area_id int not null,
+	english_region_id int not null,
+	combined_authority_area_is_wholly_contained_by_english_region boolean default false,
+	constraint fk_combined_authority_area_id foreign key (combined_authority_area_id) references combined_authority_areas(id),
+	constraint fk_english_region_id foreign key (english_region_id) references english_regions(id),
+	primary key (id)
+);
 create table constituency_areas (
 	id serial,
 	name varchar(255) not null,
-	ons_code varchar(255) not null,
 	geometry text,
 	english_region_id int,
 	country_id int not null,
@@ -86,6 +106,22 @@ create table constituency_areas (
 	constraint fk_english_region foreign key (english_region_id) references english_regions(id),
 	constraint fk_country foreign key (country_id) references countries(id),
 	constraint fk_boundary_set foreign key (boundary_set_id) references boundary_sets(id),
+	primary key (id)
+);
+create table upper_tier_local_authority_areas (
+	id serial,
+	name_en varchar(255),
+	name_cy varchar(255),
+	start_on date not null,
+	end_on date,
+	geometry text,
+	brought_into_being_by varchar(255) not null,
+	country_id int not null,
+	english_region_id int,
+	combined_authority_area_id int,
+	constraint fk_english_region foreign key (english_region_id) references english_regions(id),
+	constraint fk_country foreign key (country_id) references countries(id),
+	constraint fk_combined_authority_area foreign key (combined_authority_area_id) references combined_authority_areas(id),
 	primary key (id)
 );
 create table royal_office_holder_positions (
