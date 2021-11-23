@@ -34,6 +34,9 @@ drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
 drop table if exists royal_office_holder_positions;
+drop table if exists constituency_area_lower_tier_local_authority_areas;
+drop table if exists constituency_area_upper_tier_local_authority_areas;
+drop table if exists lower_tier_local_authority_areas;
 drop table if exists upper_tier_local_authority_areas;
 drop table if exists constituency_areas;
 drop table if exists combined_authority_area_english_regions;
@@ -122,6 +125,40 @@ create table upper_tier_local_authority_areas (
 	constraint fk_english_region foreign key (english_region_id) references english_regions(id),
 	constraint fk_country foreign key (country_id) references countries(id),
 	constraint fk_combined_authority_area foreign key (combined_authority_area_id) references combined_authority_areas(id),
+	primary key (id)
+);
+create table lower_tier_local_authority_areas (
+	id serial,
+	name_en varchar(255),
+	name_cy varchar(255),
+	start_on date not null,
+	end_on date,
+	geometry text,
+	brought_into_being_by varchar(255) not null,
+	contained_by_upper_tier_local_authority_area_id int,
+	is_upper_tier_local_authority_area_id int,
+	constraint fk_contained_by_upper_tier_local_authority_area foreign key (contained_by_upper_tier_local_authority_area_id) references upper_tier_local_authority_areas(id),
+	constraint fk_is_upper_tier_local_authority_area foreign key (is_upper_tier_local_authority_area_id) references upper_tier_local_authority_areas(id),
+	primary key (id)
+);
+create table constituency_area_upper_tier_local_authority_areas (
+	id serial,
+	constituency_area_id int not null,
+	upper_tier_local_authority_area_id int not null,
+	constituency_is_wholly_contained_by_upper_tier_local_authority boolean default false,
+	upper_tier_local_authority_is_fully_contained_by_constituency boolean default false,
+	constraint fk_constituency_area foreign key (constituency_area_id) references constituency_areas(id),
+	constraint fk_upper_tier_local_authority_area foreign key (upper_tier_local_authority_area_id) references upper_tier_local_authority_areas(id),
+	primary key (id)
+);
+create table constituency_area_lower_tier_local_authority_areas (
+	id serial,
+	constituency_area_id int not null,
+	lower_tier_local_authority_area_id int not null,
+	constituency_is_wholly_contained_by_lower_tier_local_authority boolean default false,
+	lower_tier_local_authority_is_fully_contained_by_constituency boolean default false,
+	constraint fk_constituency_area foreign key (constituency_area_id) references constituency_areas(id),
+	constraint fk_lower_tier_local_authority_area foreign key (lower_tier_local_authority_area_id) references lower_tier_local_authority_areas(id),
 	primary key (id)
 );
 create table royal_office_holder_positions (
