@@ -18,6 +18,10 @@ Dot file: [dot](primary-legislation/components/commons/ten-minute-rule/ten-minut
 
 Dot file: [dot](primary-legislation/components/commons/first-reading/first-reading.dot) / [svg](primary-legislation/components/commons/first-reading/first-reading.svg)
 
+##### [Seond reading](primary-legislation/components/commons/second-reading/second-reading.pdf)
+
+Dot file: [dot](primary-legislation/components/commons/second-reading/second-reading.dot) / [svg](primary-legislation/components/commons/second-reading/second-reading.svg)
+
 #### Legislative consent motions
 
 ##### [Northern Ireland Assembly Legislative Consent Motion](primary-legislation/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf)
