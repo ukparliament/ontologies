@@ -1,5 +1,7 @@
 # Procedure modelling weeknotes 2021
 
+* [Week 47](47)
+* [Week 45](45)
 * [Week 44](44)
 * [Week 42](42)
 * [Week 41](41)
