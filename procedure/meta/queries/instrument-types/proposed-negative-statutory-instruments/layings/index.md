@@ -4,8 +4,6 @@ Proposed negative statutory instruments will be laid before Parliament by a layi
 
 The following queries provide a list of all proposed negative statutory instruments laid before Parliament by laying body. The data in these queries goes back to the beginning of the 2017-19 session. 
 
-Queries have also been provided for Machinery of Government changes where Departments were merged, split and created (where they take on new responsibilities from another Department). 
-
 ## Queries by laying body
 
 * [Cabinet Office](https://api.parliament.uk/s/4769aa47)
