@@ -52,15 +52,20 @@ Or if you want to only see treaties before/after a certain point use the followi
 
     FILTER ( str(?itemDate) > '2019-12-13')
 
-## Treaties by lead department 
+## Treaties by lead organisation
 
-Treaties can also be broken down by their lead department. The lead department is the department with overall responsibility for the policy of the treaty, while the Foreign and Commonwealth Office is responsible for the laying of all treaties and for policy relating to the UK's relations with other countries/parties. For example, the following query looks for all treaties with Department for Transport as the lead department: 
+Treaties can also be broken down by their lead organisation. The lead organisation is the department with overall responsibility for the policy of the treaty, while the Foreign and Commonwealth Office is responsible for the laying of all treaties and for policy relating to the UK's relations with other countries/parties. 
 
-* <a href="https://api.parliament.uk/s/5ab44356">Department for Transport treaties</a>
+[Treaties by lead organisation](lead-organisations)
 
-The above query can then be amended to suit whichever department is of interest using the following in row 20:
+Note that any treaty query can be amended to include lead organisation filter. To do this add the following strings to the query:
 
-    FILTER regex (?LeadOrg, "Department for Transport")
+?Treaty :treatyHasLeadGovernmentOrganisation ?LeadOrg .
+  ?LeadOrg :name ?LeadOrgName. 
+  FILTER (?LeadOrg in (id:BRTNQywN))
+  
+A list of lead organisations can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FGovernmentOrganisation). 
+
 
 ## Committee consideration
 
