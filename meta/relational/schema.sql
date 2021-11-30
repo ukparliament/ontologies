@@ -5,10 +5,10 @@ drop table if exists external_identifiers;
 drop table if exists external_identifier_authorities;
 drop table if exists authority_owners;
 drop table if exists house_seat_incumbencies;
+drop table if exists house_of_lords_act_1999_named_excepted_office_incumbencies;
 drop table if exists peerage_holdings;
 drop table if exists house_seats;
 drop table if exists law_lord_incumbencies;
-drop table if exists royal_office_holder_incumbencies;
 drop table if exists peerages;
 drop table if exists jurisdictions;
 drop table if exists peerage_types;
@@ -33,7 +33,6 @@ drop table if exists constituency_groups;
 drop table if exists bishopric_parliamentary_seniorities;
 drop table if exists winning_candidates;
 drop table if exists bishoprics;
-drop table if exists royal_office_holder_positions;
 drop table if exists constituency_area_lower_tier_local_authority_areas;
 drop table if exists constituency_area_upper_tier_local_authority_areas;
 drop table if exists lower_tier_local_authority_areas;
@@ -44,6 +43,7 @@ drop table if exists english_regions;
 drop table if exists combined_authority_areas;
 drop table if exists countries;
 drop table if exists boundary_sets;
+drop table if exists house_of_lords_act_1999_named_excepted_offices;
 
 create type change_types as enum ('insert', 'update', 'delete');
 create table change_events (
@@ -52,6 +52,11 @@ create table change_events (
 	row_id int not null,
 	change_type change_types not null,
 	change_at timestamp not null,
+	primary key (id)
+);
+create table house_of_lords_act_1999_named_excepted_offices (
+	id serial,
+	name varchar(255) not null,
 	primary key (id)
 );
 create table boundary_sets (
@@ -146,7 +151,7 @@ create table constituency_area_upper_tier_local_authority_areas (
 	constituency_area_id int not null,
 	upper_tier_local_authority_area_id int not null,
 	constituency_is_wholly_contained_by_upper_tier_local_authority boolean default false,
-	upper_tier_local_authority_is_fully_contained_by_constituency boolean default false,
+	upper_tier_local_authority_is_wholly_contained_by_constituency boolean default false,
 	constraint fk_constituency_area foreign key (constituency_area_id) references constituency_areas(id),
 	constraint fk_upper_tier_local_authority_area foreign key (upper_tier_local_authority_area_id) references upper_tier_local_authority_areas(id),
 	primary key (id)
@@ -156,14 +161,9 @@ create table constituency_area_lower_tier_local_authority_areas (
 	constituency_area_id int not null,
 	lower_tier_local_authority_area_id int not null,
 	constituency_is_wholly_contained_by_lower_tier_local_authority boolean default false,
-	lower_tier_local_authority_is_fully_contained_by_constituency boolean default false,
+	lower_tier_local_authority_is_wholly_contained_by_constituency boolean default false,
 	constraint fk_constituency_area foreign key (constituency_area_id) references constituency_areas(id),
 	constraint fk_lower_tier_local_authority_area foreign key (lower_tier_local_authority_area_id) references lower_tier_local_authority_areas(id),
-	primary key (id)
-);
-create table royal_office_holder_positions (
-	id serial,
-	name varchar(255) not null,
 	primary key (id)
 );
 create table bishoprics (
@@ -204,6 +204,16 @@ create table people (
 	day_of_death smallint null,
 	gender_id int,
 	constraint fk_gender foreign key (gender_id) references genders(id),
+	primary key (id)
+);
+create table house_of_lords_act_1999_named_excepted_office_incumbencies (
+	id serial,
+	start_on date not null,
+	end_on date,
+	house_of_lords_act_1999_named_excepted_office_id int not null,
+	person_id int not null,
+	constraint fk_house_of_lords_act_1999_named_excepted_office foreign key (house_of_lords_act_1999_named_excepted_office_id) references house_of_lords_act_1999_named_excepted_offices(id),
+	constraint fk_person foreign key (person_id) references people(id),
 	primary key (id)
 );
 create table letters_patents (
@@ -362,14 +372,14 @@ create table house_seats (
 	bishopric_id int,
 	bishopric_parliamentary_seniority_id int,
 	peerage_id int null,
-	royal_office_holder_position_id int,
+	house_of_lords_act_1999_named_excepted_office_id int,
 	constraint fk_house foreign key (house_id) references houses(id),
 	constraint fk_house_seat_end_reason foreign key (house_seat_end_reason_id) references house_seat_end_reasons(id),
 	constraint fk_contituency_group foreign key (constituency_group_id) references constituency_groups(id),
 	constraint fk_bishopric foreign key (bishopric_id) references bishoprics(id),
 	constraint fk_bishopric_parliamentary_seniority foreign key (bishopric_parliamentary_seniority_id) references bishopric_parliamentary_seniorities(id),
 	constraint fk_peerage foreign key (peerage_id) references peerages(id),
-	constraint fk_royal_office_holder_position foreign key (royal_office_holder_position_id) references royal_office_holder_positions(id),
+	constraint fk_house_of_lords_act_1999_named_excepted_office foreign key (house_of_lords_act_1999_named_excepted_office_id) references house_of_lords_act_1999_named_excepted_offices(id),
 	primary key (id)
 );
 create table house_seat_incumbency_end_reasons (
@@ -401,16 +411,6 @@ create table bishopric_parliamentary_seniority_incumbencies (
 	constraint fk_person foreign key (person_id) references people(id),
 	primary key (id)
 );
-create table royal_office_holder_incumbencies (
-	id serial,
-	start_on date not null,
-	end_on date not null,
-	royal_office_holder_position_id int not null,
-	person_id int not null,
-	constraint fk_royal_office_holder_position foreign key (royal_office_holder_position_id) references royal_office_holder_positions(id),
-	constraint fk_person foreign key (person_id) references people(id),
-	primary key (id)
-);
 create table house_seat_incumbencies (
 	id serial,
 	start_on date not null,
@@ -422,7 +422,7 @@ create table house_seat_incumbencies (
 	bishopric_incumbency_id int,
 	bishopric_parliamentary_seniority_incumbency_id int,
 	peerage_holding_id int,
-	royal_office_holder_incumbency_id int,
+	house_of_lords_act_1999_named_excepted_office_incumbency_id int,
 	constraint fk_house_seat_incumbency_end_reason foreign key (house_seat_incumbency_end_reason_id) references house_seat_incumbency_end_reasons(id),
 	constraint fk_person foreign key (person_id) references people(id),
 	constraint fk_house_seat foreign key (house_seat_id) references house_seats(id),
@@ -430,7 +430,7 @@ create table house_seat_incumbencies (
 	constraint fk_bishopric_incumbency foreign key (bishopric_incumbency_id) references bishopric_incumbencies(id),
 	constraint fk_bishopric_parliamentary_seniority_incumbency foreign key (bishopric_parliamentary_seniority_incumbency_id) references bishopric_parliamentary_seniority_incumbencies(id),
 	constraint fk_peerage_holding foreign key (peerage_holding_id) references peerage_holdings(id),
-	constraint fk_royal_office_holder_incumbency foreign key (royal_office_holder_incumbency_id) references royal_office_holder_incumbencies(id),
+	constraint fk_house_of_lords_act_1999_named_excepted_office_incumbency foreign key (house_of_lords_act_1999_named_excepted_office_incumbency_id) references house_of_lords_act_1999_named_excepted_office_incumbencies(id),
 	primary key (id)
 );
 create table authority_owners (
