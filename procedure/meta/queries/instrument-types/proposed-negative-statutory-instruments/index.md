@@ -47,14 +47,23 @@ Or if you want to only see proposed negative statutory instruments before/after 
 	
 ## Proposed negative statutory instruments by laying department 
 
-Results can be narrowed down further by laying department. For example, the following query looks for all proposed negative statutory instruments laid by the Department for Envrionment, Food and Rural Affairs
+[Proposed negative instruments by laying department](layings) 
 
-* <a href="https://api.parliament.uk/sparql#query=%23+This+query+uses+classes+from+UK+Parliament's+procedure+ontology%3A+https%3A%2F%2Fukparliament.github.io%2Fontologies%2Fprocedure%2Fprocedure-ontology.html.%0A%0A%23+This+query+looks+for+all+proposed+negative+statutory+instruments+laid+by+the+Department+for+Environment%2C+Food+and+Rural+Affairs.+%0A%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0A%23+The+above+rows+describe+where+the+datasets+that+this+query+is+built+on+come+from.+%0A%0Aselect+distinct+%3FPNSI+%3FPNSIname+%3FlayingBodyName+%3FworkPackage+%3FLink+%3FLaidDate++where+%7B+%0A%23+The+select+row+is+identifying+what+information+to+return+from+the+query.+These+are+all+variables+from+the+query+below.+%0A++%0A++%23+SPARQL+variables+start+with+a+%3F+and+can+match+any+node+(resource+or+literal)+in+the+RDF+dataset.++%0A++%0A+%3FPNSI+a+%3AProposedNegativeStatutoryInstrumentPaper+.+++%0A+++++%23+A+PNSI+is+considered+a+workpackageable+thing+which+is+the+focus+of+a+workpackage%0A+++++%3FPNSI+rdfs%3Alabel+%3FPNSIname+%3B+%0A+++++++++++%0A+++++%3AlaidThingHasLaying%2F%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.%0A++++++%23+A+PNSI+is+a+laid+thing+so+will+always+have+a+laying+body.+%0A++FILTER+regex+(%3FlayingBodyName%2C+%22Department+for+Environment%2C+Food+and+Rural+Affairs%22)%0A++%23+This+filter+limits+the+results+to+PNSIs+only+laid+by+the+Department+for+Environment%2C+Food+and+Rural+Affairs.+%0A++%0A+%3FPNSI+%3AlaidThingHasLaying%2F%3AlayingDate+%3FLaidDate.%0A++%23+The+layingDate+is+the+date+the+proposed+negative+statutory+instrument+was+laid+before+Parliament.+PNSIs+are+always+laid+before+both+Houses.%0A++%0A++OPTIONAL+%7B++%3FPNSI+%3AworkPackagedThingHasWorkPackagedThingWebLink+%3FLink.+%7D%0A++%23+The+workpackageable+thing%2C+in+this+case+the+PNSI%2C+should+always+be+linked+to+the+instrument+on+gov.uk.+It+is+useful+to+be+able+to+have+queries+that+allow+information+to+be+added+to+the+solution+where+the+information+is+available%2C+but+do+not+reject+the+solution+because+some+part+of+the+query+pattern+does+not+match.+The+use+of+OPTIONAL+below+allows+this%2C+if+the+data+does+not+exist+then+it+will+still+include+the+PNSI+in+the+results.%0A%0A+++%3FPNSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A+++%23+A+workpackage+is+a+group+of+business+items+under+a+procedure+or+as+determined+by+a+committee%2C+for+example%3A+business+items+considered+during+the+passage+of+a+particular+Statutory+Instrument.%0A++%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=PNSIs+laid+by+DEFRA&headers=%7B%7D&outputFormat=table">PNSIs laid by Department for Environment, Food and Rural Affairs</a> 
+Note that any query can be amended to include laying body filter. To do this add the following strings in your query (if laying hasn't already been queried):
 
-To do this add the following string (changing the name of the department to suit your query) to row 14 in the query:
+?SI :laidThingHasLaying ?laying.
 
-    FILTER regex (?layingBodyName, "Department for Environment, Food and Rural Affairs") 
+  ?laying :businessItemHasProcedureStep id:cspzmb6w .
 
+  ?laying :date ?laidDate.
+
+  ?laying :layingHasLayingBody ?layingBody.
+
+  ?layingBody :name ?layingBodyName. 
+
+  FILTER (?layingBody IN (id:fpWTqVKh))
+ 
+A list of laying bodies can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FLayingBody). 
 
 ## Committee consideration
 
