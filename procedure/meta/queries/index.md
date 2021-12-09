@@ -16,6 +16,8 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 * [Proposed Negative Statutory Instruments](instrument-types/proposed-negative-statutory-instruments)
 
+* [Published drafts under Schedule 8 to the European Union (Withdrawal) Act 2018](instrument-types/published-drafts-under-euwa)
+
 * [Statutory Instruments](instrument-types/statutory-instruments)
 
 * [Treaties](instrument-types/treaties)

@@ -207,6 +207,12 @@ Once a [proposed negative instrument](https://ukparliament.github.io/ontologies/
 
 * [Statutory instruments with preceding proposed negative statutory instruments](https://api.parliament.uk/s/48fcd7a6)
 
+## Statutory Instruments and their preceding published drafts 
+
+Once a [published draft under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/published-drafts-under-euwa/)) has completed its 28 day scrutiny period the Government can then lay a following Statutory Instrument under one of the affirmative procedures. The following query shows all instruments that were preceded by a published draft:
+
+* [Statutory instruments with preceding published drafts](https://api.parliament.uk/s/762d1529)
+
 
 ## Revoked Statutory Instruments
 
