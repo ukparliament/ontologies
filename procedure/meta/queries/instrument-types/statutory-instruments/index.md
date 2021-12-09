@@ -205,7 +205,7 @@ Once draft instruments reach the end of parliamentary procedure there is the pot
 
 Once a [proposed negative instrument](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/proposed-negative-statutory-instruments/) has been considered by the European Statutory Instruments Committee and the Secondary Legislation Scrutiny Committee the Government can then lay a following Statutory Instrument. The following query shows all instruments that were preceded by a proposed negative statutory instrument:
 
-* [Statutory instruments with preceding proposed negative statutory instruments](https://api.parliament.uk/s/48fcd7a6)
+* [Statutory instruments with preceding proposed negative statutory instruments](https://api.parliament.uk/s/a7b80c46)
 
 ## Statutory Instruments and their preceding published drafts 
 
