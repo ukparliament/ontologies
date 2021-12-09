@@ -12,6 +12,8 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 
 * [Proposed negative statutory instruments](https://api.parliament.uk/s/4ef9dfb1)
 
+* [Published drafts under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018](https://api.parliament.uk/s/fbb2a382)
+
 * [Treaties - Objection Period A](https://api.parliament.uk/s/37c89edc) 
 
-* [Treaties - Objection Period B (As of May 2021 this step has not been actualised)](https://api.parliament.uk/s/aa9e7080)
+* [Treaties - Objection Period B (As of December 2021 this step has not been actualised)](https://api.parliament.uk/s/aa9e7080)
