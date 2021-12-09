@@ -10,6 +10,8 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 ## Queries by procedural step
 
+* [All Enabled things](procedural-steps/enabled-things)
+
 * [All instrument types](procedural-steps/work-packaged-things)
 
 ## Queries by instrument type
