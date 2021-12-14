@@ -277,15 +277,15 @@ Business steps are in one of four potential states:
 
 ### Parse passes
 
-Before parsing, all routes are marked as UNPARSED. Following parsing all routes must be either TRUE, FALSE of UNTRAVERSABLE.
+Before parsing, all routes are marked as UNPARSED. Following parsing all routes must be either TRUE, FALSE or UNTRAVERSABLE.
 
 The parsing code will always make a parse pass along any route it encounters regardless of whether all inbound routes to its source step have been completely parsed. This processing leads to a distinction between a route having been subject to a parse pass and a route being completely parsed.
 
 A route is only available to be completely parsed when all inbound routes to the source step of that route have been completely parsed.
 
-AND steps, OR steps and SUM steps have two inbound routes: both are required to be completely parsed before the outbound route can be completely parsed. 
+AND steps, OR steps and SUM steps have two inbound routes: both are required to be completely parsed before the outbound route can be completely parsed.
 
-Multiple parse passes are required in order to completely parse a route whose source is an AND step, an OR step or an EQUALS step. 
+Multiple parse passes are required in order to completely parse a route whose source is an AND step, an OR step or an EQUALS step.
 
 ## Visualising a work package
 
@@ -309,7 +309,7 @@ It is possible to show or hide a set of **routes** which share the same state, f
 
 * Hiding the set of business steps which have a value of NOT CURRENTLY ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
 
-* Hiding the set of routes which have a value of NULL or FALSE - any routes that cannot yet be traversed - for example: routes to the question being put on an approval motion where no such motion has yet been tabled.
+* Hiding the set of routes which have a value of FALSE - any routes that cannot yet be traversed - for example: routes to the question being put on an approval motion where no such motion has yet been tabled.
 
 * Hiding the set of business steps which have a value of NOT YET ACTUALISABLE - steps that cannot yet be reached - for example: steps describing the putting of a question on an approval motion where no such motion has yet been tabled, regardless of whether those steps have already been actualised.
 
@@ -386,8 +386,3 @@ This latter step exists because the website does not yet display future possible
 ## Procedure conclusion
 
 Procedure conclusion steps can only be brought into play by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
-
-
-
-
-
