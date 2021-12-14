@@ -46,7 +46,22 @@ If you have a specified time period you're interested in then you can amend the 
 Or if you want to only see treaties before/after a certain point use the following (just remember to change the less-than/greater-than sign depending on your need for before/after):
 
     FILTER ( str(?itemDate) > '2019-12-13')
+	
+## Enabled Thing by laying department
 
+[Enabled thing by laying department](layings)	
+
+Note that any query can be amended to include a laying filter. To do this add the following strings in your query (if laying hasn't already been queried):
+
+ ?Paper :laidThingHasLaying ?laying.
+ ?laying :businessItemHasProcedureStep ?procStep.
+  filter (?procStep in (id:cspzmb6w, id:isWn7s3K)) .
+  ?laying :date ?laidDate.
+  ?laying :layingHasLayingBody ?layingBody.
+  ?layingBody :name ?layingBodyName. 
+    FILTER (?layingBody IN (id:BnJUNszl))
+	
+A list of laying bodies can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FLayingBody). 
 
 ## Committee consideration
 
