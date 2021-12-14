@@ -69,9 +69,9 @@ Queries have also been provided for Machinery of Government changes where Depart
 
 ## Queries for Machinery of Government changes
 
-* [SIs laid by Department for Communities and Local Government, Ministry of Housing, Communities and Local Government or Department for Levelling Up, Housing and Communities](https://api.parliament.uk/s/3da66b28) 
+* [Enabled things laid by Department for Communities and Local Government, Ministry of Housing, Communities and Local Government or Department for Levelling Up, Housing and Communities](https://api.parliament.uk/s/3da66b28) 
 
-* [SIs laid by Department of Health or Department of Health and Social Care](https://api.parliament.uk/s/c940228d)
+* [Enabled things laid by Department of Health or Department of Health and Social Care](https://api.parliament.uk/s/c940228d)
 
-* [SIs laid by Foreign and Commonwealth Office, Department for International Development or Foreign, Commonwealth and Development Office](https://api.parliament.uk/s/1bf37866)
+* [Enabled things laid by Foreign and Commonwealth Office, Department for International Development or Foreign, Commonwealth and Development Office](https://api.parliament.uk/s/1bf37866)
 
