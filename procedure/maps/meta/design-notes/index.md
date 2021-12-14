@@ -32,13 +32,13 @@ Work packages have a **focus**, a work packageable thing. For example: a topic a
 
 Work packages - rather than particular instruments or papers - are **subject to procedure**, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the procedure set out by the [Constitutional Reform and Governance Act 2010](http://www.legislation.gov.uk/ukpga/2010/25/contents) - and once following ratification, when no work package is triggered.
 
-Work packages contain business items, some taking place in Parliament, some outside. A business item is said to [actualise](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e308) a procedural step.
+Work packages contain business items, some taking place in Parliament, some outside. A business item is said to actualise a procedural step.
 
 ## Why are some routes not recorded?
 
 The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts. Parsing rules determine out how a machine should traverse routes from steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
 
-It may appear that some routes are missing: for example, a common outcome for [a motion](https://github.com/ukparliament/ontologies/blob/master/procedure/flowcharts/meta/motions/motion.pdf) is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the beg leave to withdraw step is still **in play** at the point of the debate and there is no need for a separate route.
+It may appear that some routes are missing: for example, a common outcome for a motion is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the beg leave to withdraw step is still **in play** at the point of the debate and there is no need for a separate route.
 
 In deciding between making the maps parseable by machines as state diagrams and making them legible by people as flowcharts, we’ve decided to err on the side of machine parsability.
 
