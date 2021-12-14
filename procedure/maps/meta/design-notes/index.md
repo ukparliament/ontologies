@@ -214,7 +214,6 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<td> </td>
 			<td>TRUE</td>
 			<td>FALSE</td>
-			<td>NULL</td>
 			<td>UNTRAVERSABLE</td>
 		</tr>
 	</thead>
@@ -224,43 +223,29 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<td>TRUE</td>
 			<td>TRUE</td>
 			<td>TRUE</td>
-			<td>TRUE</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
-			<td>FALSE</td>
 			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
-			<th>NULL</th>
+			<th>UNTRAVERSABLE</th>
 			<td>TRUE</td>
-			<td>FALSE</td>
-			<td>NULL</td>
-			<td>UNTRAVERSABLE</td>
-		</tr>
-		<tr>
-			<th>untraversable</th>
-			<td>TRUE</td>
-			<td>UNTRAVERSABLE</td>
 			<td>UNTRAVERSABLE</td>
 			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
 
-A NULL value entering a logic step renders that step 'transparent':
-
-* A NOT step with an input value of NULL will output a NULL.
-
-* An AND step or an OR step with one input value of NULL will output the value of the second input - be that TRUE, FALSE, NULL or UNTRAVERSABLE.
-
 ### Arithmetic steps
+
+Arithmetic steps operate on actualisation counts from business steps, being the number of business items actualising a business step with a date of today or with a date in the past
 
 An arithmetic step is a SUM step, an INCREMENT step or an EQUALS step.
 
-Arithmetic steps take the actualisation counts from business steps and - by means of an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a summation step.
+Arithmetic steps take the actualisation count and - by means of an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a summation step.
 
 A SUM step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is an arithmetic step or a summation step.
 
@@ -284,13 +269,15 @@ Business steps are in one of four potential states:
 
 * Not currently actualisable, with a business step having an input of UNTRAVERSABLE. This covers cases where procedural rules would be required to change before the step could be actualised, for example: the Speaker cannot certify under the English Votes for English Laws procedure unless and until the EVEL standing orders are reinstated.
 
-* Not yet actualisable, with a business step having an input of either FALSE or NULL. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
+* Not yet actualisable, with a business step having an input of either FALSE. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
 
 * Caused to be actualised, with a business step having an input of TRUE, not through a decision step. Such a step must be actualised at some point in the future.
 
 * Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
 
 ### Parse passes
+
+Before parsing, all routes are marked as UNPARSED. Following parsing all routes must be either TRUE, FALSE of UNTRAVERSABLE.
 
 The parsing code will always make a parse pass along any route it encounters regardless of whether all inbound routes to its source step have been completely parsed. This processing leads to a distinction between a route having been subject to a parse pass and a route being completely parsed.
 
