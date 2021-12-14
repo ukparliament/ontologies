@@ -195,12 +195,6 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
-			<th>NULL</th>
-			<td>TRUE</td>
-			<td>FALSE</td>
-			<td>UNTRAVERSABLE</td>
-		</tr>
-		<tr>
 			<th>UNTRAVERSABLE</th>
 			<td>UNTRAVERSABLE</td>
 			<td>UNTRAVERSABLE</td>
