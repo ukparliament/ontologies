@@ -54,7 +54,7 @@ Where explicit changes to procedure are not made, Members may combine accepted p
 
 There are occasions when one or both Houses make a mistake and do not follow procedure. For example, a House of Commons only instrument might be considered by the Joint Committee on Statutory Instruments because Lords Members of that committee are not told to leave when Commons only business is scheduled. Our procedure maps say that only instruments laid before both Houses are considered by the JCSI and this is procedurally true. Where procedure is accidentally not followed we do not update the procedure maps, which might lead to visualisations that at least appear to be broken.
 
-## Parsing procedure maps
+## Parsing work packages subject to a procedure
  
 The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) uses typed steps. A step can be a business step, a decision step, a summation step, a type of logic step or a type of arithmetic step. Logic steps have a type of NOT, AND or OR. Arithmetic steps have a type of SUM, INCREMENT or EQUALS. 
 
@@ -76,7 +76,7 @@ In reality, the Government would almost certainly not table such a motion within
 
 In time, we hope to gather enough data about enough instruments following a particular procedure to apply that data to a work package subject to the same procedure and plot 'cowpaths' through the possibility space. Whilst some route is possible, we can flag to users that few - if any - feet have ever trod it. Why a particular path might not be trodden would remain in the world of politics and any advice about direction remains in the hands of the procedural offices.
 
-### Parsing work packages
+### Parsing code
 
 [Ruby code for the parsing of a work package](https://api.parliament.uk/procedures/meta/comments) is here.
 
