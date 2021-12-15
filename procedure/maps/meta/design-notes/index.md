@@ -92,6 +92,14 @@ Business steps are in one of three current states:
 
 * Actualised one or more times, with no business item having a date: this only applies to 'coming into force steps', where the instrument specifies a condition as a text string rather than a date.
 
+### Untraversability
+
+Routes may be marked with a start date and / or an end date. Routes having a start date in the future or an end date in the past are not current and their status attribute is marked as UNTRAVERSABLE. Routes with no start and end date, a start date in the past and no end date, an end date in the future and no start date or a start date in the past and an end date in the future are current.
+
+An UNTRAVERSABLE route being inbound to a step may propagate to the outbound routes of that step according to the logic below. This is to ensure that business steps sitting downstream of an UNTRAVERSABLE route are marked as not currently actualisable. For example, the route into EVEL consideration has an end date in the past since the standing orders governing EVEL were first suspended and then removed. This means the bridge into EVEL is UNTRAVERSABLE. By propagating untraversability into following routes in the EVEL procedure, we taint the roads off the bridge by marking those routes as UNTRAVERSABLE. This allows us to flag that subsequent business steps are also not currently actualisable.
+
+We aim to expand the procedure model to include availability periods for routes. This would allow us to say a route was closed and then re-opened.
+
 ### Routes from business steps
 
 A business step with an input being UNTRAVERSABLE has all outputs being UNTRAVERSABLE.
