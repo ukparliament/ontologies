@@ -263,18 +263,6 @@ Summation steps take one input and have one or more outputs.
 
 Summation steps are 'transparent', taking the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emitting the same values on all outbound routes.
 
-### Potential states of a business step
-
-Routes in a fully parsed work package have one of four potential statuses: TRUE, FALSE, ALLOWS or UNTRANVERSABLE. Depending on the status of their inbound route, business steps are in one of four *potential* states:
-
-* Caused to be actualised, with a business step having an input of TRUE, not through a decision step. Such a step must be actualised at some point in the future.
-
-* Not yet actualisable, with a business step having an input of either FALSE. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
-
-* Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
-
-* Not currently actualisable, with a business step having an input of UNTRAVERSABLE. This covers cases where procedural rules would be required to change before the step could be actualised, for example: the Speaker cannot certify under the English Votes for English Laws procedure unless and until the EVEL standing orders are reinstated.
-
 ### Parse passes
 
 Before parsing, all routes are marked as UNPARSED. Following parsing all routes must be either TRUE, FALSE or UNTRAVERSABLE.
@@ -286,6 +274,18 @@ A route is only available to be completely parsed when all inbound routes to the
 AND steps, OR steps and SUM steps have two inbound routes: both are required to be completely parsed before the outbound route can be completely parsed.
 
 Multiple parse passes are required in order to completely parse a route whose source is an AND step, an OR step or an EQUALS step.
+
+### Potential states of a business step
+
+Routes in a fully parsed work package have one of four potential statuses: TRUE, FALSE, ALLOWS or UNTRANVERSABLE. Depending on the status of their inbound route, business steps are in one of four *potential* states:
+
+* Caused to be actualised, with a business step having an input of TRUE, not through a decision step. Such a step must be actualised at some point in the future.
+
+* Not yet actualisable, with a business step having an input of either FALSE. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
+
+* Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
+
+* Not currently actualisable, with a business step having an input of UNTRAVERSABLE. This covers cases where procedural rules would be required to change before the step could be actualised, for example: the Speaker cannot certify under the English Votes for English Laws procedure unless and until the EVEL standing orders are reinstated.
 
 ## Visualising a work package
 
