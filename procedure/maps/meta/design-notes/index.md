@@ -112,40 +112,6 @@ A business step without an input being UNTRAVERSABLE ...
 
 * ... emits a TRUE if that business step has been actualised by one or more business items with a date of today or with a date in the past, together with a count of the number of those actualisations.
 
-### Decision steps
-
-Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to table an approval motion.
-
-A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
-
-The truth table for a decision step is:
-
-<table>
-	<thead>
-		<tr>
-			<td colspan="2" id="truth-table-decision">Decision step</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>TRUE</th>
-			<td>ALLOWS</td>
-		</tr>
-		<tr>
-			<th>FALSE</th>
-			<td>FALSE</td>
-		</tr>
-		<tr>
-			<th>UNTRAVERSABLE</th>
-			<td>UNTRAVERSABLE</td>
-		</tr>
-	</tbody>
-</table>
-
-It is expected that decision steps will output a route directly into a business step without any intervening logic, arithmetic or summation steps: these will never have an input with a value of ALLOWS.
-
-A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE or UNTRAVERSABLE, is neither allowed nor caused to happen.
-
 ### Logic steps
  
 The logic steps take one input or two inputs and emit one output. A value is called TRUE, FALSE or UNTRAVERSABLE. Truth tables for the logic steps are:
@@ -271,9 +237,43 @@ Summation steps take one input and have one or more outputs.
 
 Summation steps are 'transparent', taking the 'current', 'status', 'parsed' and 'actualisation count' attributes of the inbound route and emitting the same values on all outbound routes.
 
+### Decision steps
+
+Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to table an approval motion.
+
+A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
+
+The truth table for a decision step is:
+
+<table>
+	<thead>
+		<tr>
+			<td colspan="2" id="truth-table-decision">Decision step</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>TRUE</th>
+			<td>ALLOWS</td>
+		</tr>
+		<tr>
+			<th>FALSE</th>
+			<td>FALSE</td>
+		</tr>
+		<tr>
+			<th>UNTRAVERSABLE</th>
+			<td>UNTRAVERSABLE</td>
+		</tr>
+	</tbody>
+</table>
+
+It is expected that decision steps will output a route directly into a business step without any intervening logic, arithmetic or summation steps: these will never have an input with a value of ALLOWS.
+
+A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE or UNTRAVERSABLE, is neither allowed nor caused to happen.
+
 ### Parse passes
 
-Before parsing, all routes are marked as UNPARSED. Following parsing all routes must be either TRUE, FALSE or UNTRAVERSABLE.
+Before parsing, all routes are marked as UNPARSED. Following parsing all routes must be either TRUE, FALSE, ALLOWS or UNTRAVERSABLE.
 
 The parsing code will always make a parse pass along any route it encounters regardless of whether all inbound routes to its source step have been completely parsed. This processing leads to a distinction between a route having been subject to a parse pass and a route being completely parsed.
 
