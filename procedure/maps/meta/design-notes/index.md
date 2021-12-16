@@ -2,43 +2,42 @@
 
 ## What are procedure maps?
 
-Procedure maps are diagrams showing procedures as a set of routes between steps. A route may belong to one or more procedures, thereby allowing for component procedures to be reused. Routes are directed, connecting one step to another. Steps are typed as being business steps, logic steps, arithmetic steps or summation steps. The combination of routes, logic and arithmetic determine which business steps should, may and should not be taken in a work package subject to a parliamentary procedure.
+Procedure maps are diagrams showing procedures as a set of routes between steps. A route may belong to one or more procedures, allowing for component procedures to be reused. A route is directed and connects two steps. 
 
-The maps condense rulesets taken from a number of sources:
+Steps are typed as being business steps, logic steps, arithmetic steps or summation steps. The combination of business steps being actualised, routes, logic and arithmetic determine which business steps should, may or should not be taken in a particular work package subject to a parliamentary procedure.
+
+The maps describe rules taken from a number of sources:
 
 * set out in statute: for example, in the [Statutory Instruments Act 1946](http://www.legislation.gov.uk/ukpga/Geo6/9-10/36)
 
 * determined by resolutions of the House
 
-* set out in [Standing Orders](http://standing-orders.herokuapp.com/): for example, public Standing Order 73 in the House of Lords describes scrutiny reserve preventing the government from tabling an approval motion for an affirmative statutory instrument until the Joint Committee on Statutory Instruments has reported
+* set out in [Standing Orders](https://api.parliament.uk/standing-orders): for example, public Standing Order 73 in the House of Lords describing scrutiny reserve preventing the Government from tabling an approval motion for an affirmative statutory instrument until the Joint Committee on Statutory Instruments has reported
 
 * determined by precedent of custom and practice
 
 * set out in rulings made by the Speaker
 
-* by improvising from first principles < doesn't belong here?
-
-A diagram showing [hierarchies of things informing procedure](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/informing/informing.png), as applying to each House, is linked.
-
+A diagram showing hierarchies of things informing procedure](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/informing/informing.png), as applying to each House, is linked.
 Steps happening only in the House of Commons appear in the left hand bubble. Steps happening only in the House of Lords appear in the right hand bubble. Bicameral steps, such as joint committees, are shown in the intersection between the two bubbles.
 
-Procedure maps may show steps that happen outside Parliament: for example, the making of an SI by a government minister. These steps are shown outside the two bubbles, as is time, in the sense of procedural clocks.
+Procedure maps may show steps that happen outside Parliament: for example, the making of an SI by a government minister. These steps are shown outside the two bubbles - as is time, in the sense of procedural clocks.
 
 ## What is a work package?
 
-A work package is **a number of business items** undertaken by one or both Houses of Parliament. It may be subject to procedure: for example, a package of work to scrutinise, amend and pass or reject a bill. It may not be subject to a procedure: for example, a select committee inquiry following no procedural path.
+A work package is a set of business items undertaken by one or both Houses of Parliament. It may be subject to procedure: for example, a package of work to scrutinise, amend and pass or reject a bill - or it may not be subject to a procedure: for example, a select committee inquiry following no procedural path.
 
-Work packages have a **focus**, a work packageable thing. For example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, secondary - or delegated - legislation, or a treaty.
+Work packages have a focus: a work packageable thing, for example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, secondary - or delegated - legislation, or a treaty.
 
-Work packages - rather than particular instruments or papers - are **subject to procedure**, because some instruments or papers are laid multiple times and only initiate a work package in one context. For example: a treaty might be laid once before ratification - which may trigger a work package subject to the procedure set out by the [Constitutional Reform and Governance Act 2010](http://www.legislation.gov.uk/ukpga/2010/25/contents) - and once following ratification, when no work package is triggered.
+Work packages - rather than particular instruments or papers - are subject to procedure because some instruments or papers are laid multiple times and only initiate a work package in one context, for example: a treaty might be laid once before ratification - which may trigger a work package subject to the procedure set out by the [Constitutional Reform and Governance Act 2010](http://www.legislation.gov.uk/ukpga/2010/25/contents) - and once following ratification, when no work package is triggered.
 
-Work packages contain business items, some taking place in Parliament, some outside. A business item is said to actualise a procedural step.
+Work packages contain business items, some taking place in Parliament and some outside. A business item is said to actualise a procedural step.
 
 ## Why are some routes not recorded?
 
 The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts. Parsing rules determine out how a machine should traverse routes from steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
 
-It may appear that some routes are missing: for example, a common outcome for a motion is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the beg leave to withdraw step is still **in play** at the point of the debate and there is no need for a separate route.
+It may appear that some routes are missing: for example, a common outcome for a motion is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the begging of leave to withdraw step is still in play* at the point of the debate and there is no need for a separate route.
 
 In deciding between making the maps parseable by machines as state diagrams and making them legible by people as flowcharts, we’ve decided to err on the side of machine parsability.
 
@@ -48,11 +47,11 @@ Routes are not added where they would be redundant when encountered by a machine
 
 Procedure maps are not intended to be considered as being finished.
 
-Procedure cannot be completely described using a set of rules. How Parliament conducts business is decided by the Members of each House. Rules set out in statute may be changed. Procedure is necessarily open to adaptation and evolution.
+Procedure cannot be completely described using a set of rules. How Parliament conducts business is decided by the Members of each House. Rules set out in statute may be changed. Procedure is necessarily open to adaptation.
 
 Where explicit changes to procedure are not made, Members may combine accepted parts of procedure in ways not previously described.
 
-There are occasions when one or both Houses make a mistake and do not follow procedure. For example, a House of Commons only instrument might be considered by the Joint Committee on Statutory Instruments because Lords Members of that committee are not told to leave when Commons only business is scheduled. Our procedure maps say that only instruments laid before both Houses are considered by the JCSI and this is procedurally true. Where procedure is accidentally not followed we do not update the procedure maps, which might lead to visualisations that at least appear to be broken.
+There are occasions when one or both Houses do not follow procedure. For example, a House of Commons only instrument might be considered by the Joint Committee on Statutory Instruments because Lords Members of that committee are not told to leave when Commons only business is scheduled. Our procedure maps say that only instruments laid before both Houses are considered by the JCSI and this is procedurally true. Where procedure is not followed we do not update the procedure maps, which might lead to visualisations that at least appear to be broken.
 
 ## Parsing work packages subject to a procedure
  
@@ -60,21 +59,19 @@ The [Procedure Ontology](https://ukparliament.github.io/ontologies/procedure/pro
 
 Labels for non-business steps are not in themselves meaningful. The labels facilitate conversations about the routes between steps, for example 'the step AA NOT is linked to BA AND'.
 
-Business steps in a work package are in one of four current states and in one of four potential states. Current states are determined by actualisation and potential states as a result of parsing.
+Business steps in a work package are in one of [four current states](#current-states-of-a-business-step) and in one of [four potential states](#potential-states-of-a-business-step). Current states are determined by actualisation and potential states as a result of parsing.
 
 Any combination of one current state and one potential state is possible.
 
-### Conservative on output, liberal on input
+### Liberal on input, conservative on output
 
-Whilst a work package in the context of a procedure can be parsed to determine future possibilities, this parsing is only taken into account on output. It may be used to signify that a step is not now possible. The parsing code is not used on input. Whilst the parsing code may say a step is not now possible, this does not preclude us from actualising that step. Given Parliament is a complex, adaptive system and given that both rules and the interpretation of rules may change over time, we always ensure that we are able to document what has happened, rather than what the parsed procedure happen says may happen.
+Whilst a work package in the context of a procedure can be parsed to determine future possibilities, the results of parsing are only taken into account on output. It may be used to signify that a step is not now possible. The parsing code is not used on input. Whilst the parsing code may say a step is not now possible, this does not preclude us from actualising that step. Given Parliament is a complex, adaptive system and that rules and their interpretation may change over time, we always ensure that we are able to document what has happened, rather than what the parsed procedure says may happen.
 
 ### What may happen is often not what does happen
 
-Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what may happen, what is possible according to the rule sets and what is possible in a political context may not be the same. For example, it is possible for the Government to table an approval motion for a made affirmative remedial order in the first 60 days of scrutiny even though it is not possible to move that motion until the second 60 days approval period is entered.
+Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what may happen but what is possible according to the rule sets and what is possible in a political context may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
 
-In reality, the Government would almost certainly not table such a motion within the first 60 days because they'd want to see what Joint Committee on Human Rights would say about the instrument and the JCHR report would criticise them for not waiting before tabling the motion.
-
-In time, we hope to gather enough data about enough instruments following a particular procedure to apply that data to a work package subject to the same procedure and plot 'cowpaths' through the possibility space. Whilst some route is possible, we can flag to users that few - if any - feet have ever trod it. Why a particular path might not be trodden would remain in the world of politics and any advice about direction remains in the hands of the procedural offices.
+In time, we hope to gather enough data about enough instruments following a particular procedure to apply that data to a work package subject to the same procedure and plot ‘cowpaths’ through the possibility space. Whilst some route is possible, we can show that few - if any - feet have ever trod it. Why a particular path might not be trodden would remain in the world of politics and any advice about direction remains in the hands of the procedural offices.
 
 ### Parsing code
 
@@ -82,21 +79,29 @@ In time, we hope to gather enough data about enough instruments following a part
 
 ### Current states of a business step
 
-Business steps are in one of three current states:
+Business steps are in one of four current states:
 
 * Not actualised.
 
 * Actualised one or more times, with all associated business items having dates in the future.
 
 * Actualised one or more times, with at least one associated business item having a date in the past or a date of today.
-
-* Actualised one or more times, with no business item having a date: this only applies to 'coming into force steps', where the instrument specifies a condition as a text string rather than a date.
+* Actualised one or more times, with business items that have no date. This only applies to ‘coming into force steps’, where the instrument specifies a condition as a text string rather than a date.
 
 ### Route currentness and untraversability
 
-Routes may be marked with a start date and / or an end date. Routes having a start date in the future or an end date in the past are not current and their status attribute is marked as UNTRAVERSABLE. Routes with no start and end date, a start date in the past and no end date, an end date in the future and no start date or a start date in the past and an end date in the future are current.
+Routes may be marked with a start date and / or an end date. Routes having a start date in the future or an end date in the past are not current and their status attribute is marked as UNTRAVERSABLE.
 
-An UNTRAVERSABLE route being inbound to a step may propagate to the outbound routes of that step according to the logic below. This is to ensure that business steps sitting downstream of an UNTRAVERSABLE route are marked as not currently actualisable. For example, the route into EVEL consideration has an end date in the past since the standing orders governing EVEL were first suspended and then removed. This means the bridge into EVEL is UNTRAVERSABLE. By propagating untraversability into following routes in the EVEL procedure, we taint the roads off the closed bridge as also being closed by marking those routes as UNTRAVERSABLE. This allows us to flag that subsequent business steps are also not currently actualisable.
+Routes are current when having:
+
+* no start date and no end date
+
+* a start date in the past and no end date
+
+* no start date and an end date in the future
+* a start date in the past and an end date in the future
+
+An UNTRAVERSABLE route being inbound to a step may propagate to the outbound routes of that step according to the logic below, even where those routes are current. This ensures that business steps sitting downstream of an UNTRAVERSABLE route are marked as not currently actualisable, for example: the route into English Votes for English Laws consideration has an end date in the past since the standing orders governing EVEL were first suspended and then removed. This means the bridge into EVEL is UNTRAVERSABLE. By propagating untraversability into following routes in the EVEL procedure, we taint the roads off the closed bridge as also being closed by marking those routes as UNTRAVERSABLE. This allows us to flag that subsequent business steps are also not currently actualisable.
 
 We aim to expand the procedure model to include availability periods for routes. This would allow us to say a route was closed and then re-opened.
 
@@ -104,13 +109,18 @@ We aim to expand the procedure model to include availability periods for routes.
 
 A business step with an input being UNTRAVERSABLE has all outputs being UNTRAVERSABLE.
 
-A business step without an input being UNTRAVERSABLE ...
+A business step which does not have an input which is UNTRAVERSABLE:
 
-* ... emits a FALSE if that business step has not been actualised.
+* emits a FALSE if that business step has not been actualised
 
-* ... emits a FALSE if that business step has been actualised by a business item or items only having dates in the future or having no date.
+* emits a FALSE if that business step has been actualised by a business item or items having dates in the future
 
-* ... emits a TRUE if that business step has been actualised by one or more business items with a date of today or with a date in the past, together with a count of the number of those actualisations.
+* emits a FALSE if that business step has been actualised by a business item or items having no date
+ 
+* emits a TRUE if that business step has been actualised by one or more business items with a date of today or with a date in the past - together with a count of the number of those actualisations
+
+<!-- edited to here -->
+
 
 ### Logic steps
  
