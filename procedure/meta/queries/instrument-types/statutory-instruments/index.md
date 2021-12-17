@@ -69,17 +69,17 @@ Or if you want to only see proposed negative statutory instruments before/after 
 
 Note that any query can be amended to include laying body filter. To do this add the following strings in your query (if laying hasn't already been queried):
 
-?SI :laidThingHasLaying ?laying.
-
-  ?laying :businessItemHasProcedureStep id:cspzmb6w .
-
-  ?laying :date ?laidDate.
-
-  ?laying :layingHasLayingBody ?layingBody.
-
-  ?layingBody :name ?layingBodyName. 
-
-  FILTER (?layingBody IN (id:fpWTqVKh))
+	?SI :laidThingHasLaying ?laying.
+	
+	?laying :businessItemHasProcedureStep id:cspzmb6w .
+	
+	?laying :date ?laidDate.
+	
+	?laying :layingHasLayingBody ?layingBody.
+	
+	?layingBody :name ?layingBodyName. 
+	
+	FILTER (?layingBody IN (id:fpWTqVKh))
  
 A list of laying bodies can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FLayingBody). 
 
