@@ -54,11 +54,17 @@ Or if you want to only see treaties before/after a certain point use the followi
 Note that any query can be amended to include a laying filter. To do this add the following strings in your query (if laying hasn't already been queried):
 
 { ?Paper:laidThingHasLaying/:layingHasLayingBody ?layingBody.
+	
     ?layingBody :name ?layingBodyName.
+	
     FILTER (?layingBody IN (id:BnJUNszl, id:UIV7W27r, id:g8hByIik))}
+	
                   union
+				  
                 { ?Paper :treatyHasLeadGovernmentOrganisation ?LeadOrg .
+					
     ?LeadOrg :name ?LeadOrgName.
+	
     FILTER (?LeadOrg in (id:BnJUNszl, id:UIV7W27r, id:g8hByIik))}
 	
 A list of laying bodies can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FLayingBody). 
