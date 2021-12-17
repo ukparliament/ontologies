@@ -60,9 +60,11 @@ Treaties can also be broken down by their lead organisation. The lead organisati
 
 Note that any treaty query can be amended to include lead organisation filter. To do this add the following strings to the query:
 
-?Treaty :treatyHasLeadGovernmentOrganisation ?LeadOrg .
-  ?LeadOrg :name ?LeadOrgName. 
-  FILTER (?LeadOrg in (id:BRTNQywN))
+	?Treaty :treatyHasLeadGovernmentOrganisation ?LeadOrg .
+	
+	?LeadOrg :name ?LeadOrgName. 
+	
+	FILTER (?LeadOrg in (id:BRTNQywN))
   
 A list of lead organisations can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FGovernmentOrganisation). 
 
