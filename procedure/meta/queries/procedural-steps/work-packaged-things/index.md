@@ -49,16 +49,20 @@ Or if you want to only see treaties before/after a certain point use the followi
 
 ## Work packaged things by department
 
-Statutory instruments and proposed negative statutory instruments are laid by the department that leads on the instrument. Treaties are rarely laid by the department that leads on the instrument; they are primarily laid by the Foreign, Commonwealth and Development Office (previously FCO). The query below returns SIs, PNSIs and published drafts laid by a particular department, and treaties led by that department. 
+[Work packged things by laying department](layings)	
 
-* <a href="https://api.parliament.uk/s/c066b299">Department for Transport instruments</a>
+Note that any query can be amended to include a laying filter. To do this add the following strings in your query (if laying hasn't already been queried):
 
-The query can be amended to suit whichever department is of interest by editing 13 and 16:
-
-	FILTER (?layingBodyName IN ("Department for Transport"))
-    FILTER regex (?LeadOrg, "Department for Transport")
+{ ?Paper:laidThingHasLaying/:layingHasLayingBody ?layingBody.
+    ?layingBody :name ?layingBodyName.
+    FILTER (?layingBody IN (id:BnJUNszl, id:UIV7W27r, id:g8hByIik))}
+                  union
+                { ?Paper :treatyHasLeadGovernmentOrganisation ?LeadOrg .
+    ?LeadOrg :name ?LeadOrgName.
+    FILTER (?LeadOrg in (id:BnJUNszl, id:UIV7W27r, id:g8hByIik))}
 	
-You can also search by multiple departments.
+A list of laying bodies can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FLayingBody). 
+
 
 ## Committee consideration
 
