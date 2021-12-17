@@ -53,6 +53,7 @@ Or if you want to only see treaties before/after a certain point use the followi
 
 Note that any query can be amended to include a laying filter. To do this add the following strings in your query (if laying hasn't already been queried):
 
+
 { ?Paper:laidThingHasLaying/:layingHasLayingBody ?layingBody.
 	
     ?layingBody :name ?layingBodyName.
