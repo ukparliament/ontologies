@@ -303,9 +303,11 @@ Routes in a fully parsed work package have one of four potential statuses: TRUE,
 
 Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what may happen, what is possible according to the rule sets and what is possible in a political context may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
 
-Having parsed a work package, we use data gathered from previous work packages subject to the same procedure to determine the likelihood of a step being taken. The likelihood of a step - having been parsed and found to be allowed - happening, is determined by the number of concluded work packages subject to the same procedure having a business item actualising that step divided by the total number of concluded work packages subject to that procedure. We only take account of concluded work packages because we don't want the likelihood calculation to miss steps that haven't happened yet.
+We can use data gathered from concluded work packages subject to a procedure to calculate the likelihood of a step being taken in future in that procedure: the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure.
 
-Taking precedence from previous concluded work packages we are able to plot ‘cowpaths’ through the possibility space. Whilst some step is possible, we can show that few - if any - feet have ever trod it. Why a particular path might not be trodden would remain in the world of politics and any advice about direction remains in the hands of the procedural offices.
+We take account of concluded work packages because we don’t want the likelihood calculation to miss steps that haven’t happened yet.
+
+Looking at precedence in this way, we can plot ‘cowpaths’ through the possibility space. Why a particular path is taken frequently and others are taken less often belongs to the world of politics; any advice about direction remains in the hands of the procedural offices.
 
 ## Visualising a work package
 
