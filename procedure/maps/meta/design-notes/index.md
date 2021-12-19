@@ -67,12 +67,6 @@ Any combination of one current state and one potential state is possible.
 
 Whilst a work package in the context of a procedure can be parsed to determine future possibilities, the results of parsing are only taken into account on output. It may be used to signify that a step is not now possible. The parsing code is not used on input. Whilst the parsing code may say a step is not now possible, this does not preclude us from actualising that step. Given Parliament is a complex, adaptive system and that rules and their interpretation may change over time, we always ensure that we are able to document what has happened, rather than what the parsed procedure says may happen.
 
-### What may happen is often not what does happen
-
-Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what may happen but what is possible according to the rule sets and what is possible in a political context may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
-
-In time, we hope to gather enough data about enough instruments following a particular procedure to apply that data to a work package subject to the same procedure and plot ‘cowpaths’ through the possibility space. Whilst some route is possible, we can show that few - if any - feet have ever trod it. Why a particular path might not be trodden would remain in the world of politics and any advice about direction remains in the hands of the procedural offices.
-
 ### Parsing code
 
 [Ruby code for the parsing of a work package](https://api.parliament.uk/procedures/meta/comments) is here.
@@ -304,6 +298,14 @@ Routes in a fully parsed work package have one of four potential statuses: TRUE,
 * Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
 
 * Not currently actualisable, with a business step having an input of UNTRAVERSABLE. This covers cases where procedural rules would be required to change before the step could be actualised, for example: the Speaker cannot certify under the English Votes for English Laws procedure unless and until the EVEL standing orders are reinstated.
+
+## What may happen is often not what does happen
+
+Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what may happen, what is possible according to the rule sets and what is possible in a political context may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
+
+Having parsed a work package, we use data gathered from previous work packages subject to the same procedure to determine the likelihood of a step being taken. The likelihood of a step - having been parsed and found to be allowed - happening, is determined by the number of concluded work packages subject to the same procedure having a business item actualising that step divided by the total number of concluded work packages subject to that procedure. We only take account of concluded work packages because we don't want the likelihood calculation to miss steps that haven't happened yet.
+
+Taking precedence from previous concluded work packages we are able to plot ‘cowpaths’ through the possibility space. Whilst some step is possible, we can show that few - if any - feet have ever trod it. Why a particular path might not be trodden would remain in the world of politics and any advice about direction remains in the hands of the procedural offices.
 
 ## Visualising a work package
 
