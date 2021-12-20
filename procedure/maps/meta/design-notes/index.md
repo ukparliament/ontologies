@@ -219,11 +219,13 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 
 ### Arithmetic steps
 
-Arithmetic steps operate on actualisation counts from business steps, being the number of business items actualising a business step with a date of today or with a date in the past
+Arithmetic steps operate on actualisation counts from business steps, being the number of business items actualising a business step with a date of today or with a date in the past.
 
 An arithmetic step is a SUM step, an INCREMENT step or an EQUALS step.
 
 Arithmetic steps take the actualisation count and - by means of an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a summation step.
+
+An arithmetic step with an input of UNTRAVERSABLE always outputs UNTRAVERSABLE. Where no input to an arithmetic step has a status of UNTRAVERSABLE, the following rules apply:
 
 A SUM step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is an arithmetic step or a summation step.
 
@@ -243,7 +245,7 @@ Summation steps are 'transparent', taking the 'current', 'status', 'parsed' and 
 
 ### Decision steps
 
-Decision steps modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to table an approval motion.
+Decision steps are used to indicate that a decision is required elsewhere. They modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to table an approval motion.
 
 A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
 
@@ -271,9 +273,10 @@ The truth table for a decision step is:
 	</tbody>
 </table>
 
-It is expected that decision steps will output a route directly into a business step without any intervening logic, arithmetic or summation steps: these will never have an input with a value of ALLOWS.
+A decision step will output a route directly into a business step without any intervening logic, arithmetic or summation steps: these will never have an input with a value of ALLOWS.
 
-A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE or UNTRAVERSABLE, is neither allowed nor caused to happen.
+A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE or UNTRAVERSABLE, is precluded.
+
 
 ### Parse passes
 
@@ -283,9 +286,7 @@ The parsing code will always make a parse pass along any route it encounters reg
 
 A route is only available to be completely parsed when all inbound routes to the source step of that route have been completely parsed.
 
-AND steps, OR steps and SUM steps have two inbound routes: both are required to be completely parsed before the outbound route can be completely parsed.
-
-Multiple parse passes are required in order to completely parse a route whose source is an AND step, an OR step or an EQUALS step.
+AND steps, OR steps and SUM steps have two inbound routes: both are required to be completely parsed before the outbound route can be completely parsed. Multiple parse passes are required in order to completely parse a route whose source is an AND step, an OR step or an EQUALS step.
 
 ### Potential states of a business step
 
@@ -293,21 +294,21 @@ Routes in a fully parsed work package have one of four potential statuses: TRUE,
 
 * Caused to be actualised, with a business step having an input of TRUE, not through a decision step. Such a step must be actualised at some point in the future.
 
-* Not yet actualisable, with a business step having an input of either FALSE. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
+* Not yet actualisable, with a business step having an input of FALSE. This covers cases where a thing which has to happen before this step is actualised has not yet happened, for example: a step describing the putting of a question on an approval motion cannot happen if the approval motion has not yet been tabled.
 
 * Allowed to be actualised, with a business step having an input of ALLOWS, through a decision step. Such a step may be actualised, depending on a decision made elsewhere.
 
 * Not currently actualisable, with a business step having an input of UNTRAVERSABLE. This covers cases where procedural rules would be required to change before the step could be actualised, for example: the Speaker cannot certify under the English Votes for English Laws procedure unless and until the EVEL standing orders are reinstated.
 
-## What may happen is often not what does happen
+## What is possible and what is plausible
 
-Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what may happen, what is possible according to the rule sets and what is possible in a political context may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
+Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what is allowed to happen, what is possible according to the rule sets and what is plausible may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
 
-We can use data gathered from concluded work packages subject to a procedure to calculate the likelihood of a step being taken in future in that procedure: the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure.
+We use data gathered from concluded work packages subject to a procedure, to calculate the plausibility of a step being taken in future in that procedure: the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure.
 
-We take account of concluded work packages because we don’t want the likelihood calculation to miss steps that haven’t happened yet.
+We take account of concluded work packages because we don’t want the plausibility calculation to miss steps that haven’t happened yet.
 
-Looking at precedence in this way, we can plot ‘cowpaths’ through the possibility space. Why a particular path is taken frequently and others are taken less often belongs to the world of politics; any advice about direction remains in the hands of the procedural offices.
+Looking at precedence in this way, we can plot ‘cowpaths’ through the possibility space. 
 
 ## Visualising a work package
 
@@ -321,13 +322,13 @@ Parsing a work package assigns values to routes and potential states to steps. B
 
 It is possible to show or hide a set of **business steps** which share the same current or potential states, for example: 'show all business steps which have the state ALLOW TO BE ACTUALISED'.
 
-It is possible to show or hide a set of **non-business steps** which share an input route or routes with the same values, for example: 'hide all AND steps with one or both input routes having a value of NULL'.
+It is possible to show or hide a set of **non-business steps** which share an input route or routes with the same values, for example: 'hide all AND steps with one or both input routes having a value of FALSE'.
 
 It is possible to show or hide a set of **routes** which share the same state, for example: 'show all routes which have the value TRUE'.
 
 ### Examples of visibility control
 
-* Hiding the set of routes which have a value of UNTRAVERSABLE - routes that can only be traversed by crossing a non-current route - for example: routes from EVEL certification.
+* Hiding the set of routes which have a value of UNTRAVERSABLE - routes that are non-current or that can only be traversed by crossing a non-current route - for example: routes into and from EVEL certification.
 
 * Hiding the set of business steps which have a value of NOT CURRENTLY ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
 
@@ -407,4 +408,4 @@ This latter step exists because the website does not yet display future possible
 
 ## Procedure conclusion
 
-Procedure conclusion steps can only be brought into play by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps should not be brought into play by steps happening outside of Parliament, for example: an 'Instrument remains law' step.
+Procedure conclusion steps are only given a potential state of CAUSED or ALLOWED by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps are not given a potential state of CAUSED or ALLOWED by steps happening outside Parliament, for example: an ‘Instrument remains law’ step.
