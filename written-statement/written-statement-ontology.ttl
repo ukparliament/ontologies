@@ -1,0 +1,139 @@
+@prefix pws: <http://parliament.uk/ontologies/written-statement/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/written-statement/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Written statement ontology"@en ;
+    dcterms:created "2021-12-20"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/written-statement/written-statement.svg> ;
+	foaf:maker
+		[ foaf:name "Emma Bainbridge" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ] .
+
+
+#######  Classes #####
+
+pws:WrittenStatementWork rdf:type owl:Class ;
+	rdfs:label "Written statement work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:CorrectedThing rdf:type owl:Class ;
+	rdfs:label "Corrected thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:Document rdf:type owl:Class ;
+	rdfs:label "Document"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:LibraryDeposit rdf:type owl:Class ;
+	rdfs:label "Library deposit"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:AnnouncedThing rdf:type owl:Class ;
+	rdfs:label "Announced thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:WrittenStatementExpression rdf:type owl:Class ;
+	rdfs:label "Written statement expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+				
+
+#######  Object properties ##### 
+
+pws:follows rdf:type owl:ObjectProperty ;
+	rdfs:label "Follows"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range pws:WrittenStatementWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:expressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
+	rdfs:range pws:WrittenStatementWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+
+				
+	
+##### Data properties ####	
+	
+prec:scope rdf:type owl:DatatypeProperty ;
+	rdfs:label "Scope"@en ;
+	rdfs:comment "The scope of a work, for example: the scope of a POST briefing."@en ;
+	rdfs:domain prec:Work ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+
+prec:referenceNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reference number"@en ;
+	rdfs:comment "The reference number of a work."@en ;
+	rdfs:domain prec:Work ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+prec:minimumReadingAge rdf:type owl:DatatypeProperty ;
+	rdfs:label "Minimum reading age"@en ;
+	rdfs:comment "The minimum reading age for a manifestation of a work."@en ;
+	rdfs:domain prec:Manifestation ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+prec:publishedAt rdf:type owl:DatatypeProperty ;
+	rdfs:label "Published at"@en ;
+	rdfs:comment "The date and time of the publication of a manifestation."@en ;
+	rdfs:domain prec:Manifestation ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+prec:mediaType rdf:type owl:DatatypeProperty ;
+	rdfs:label "Media type"@en ;
+	rdfs:comment "The media type of a file."@en ;
+	rdfs:domain prec:File ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	
+prec:hasRevisionDescription rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has revision description"@en ;
+	rdfs:comment "The description of a revision, for example: “updated to include recent legislation”."@en ;
+	rdfs:domain prec:Revision ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
