@@ -91,6 +91,55 @@ pws:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:range pws:WrittenStatementWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
+pws:inSession rdf:type owl:ObjectProperty ;
+	rdfs:label "In session"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range pws:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:corrects rdf:type owl:ObjectProperty ;
+	rdfs:label "Corrects"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range pws:CorrectedThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:refersToDocument rdf:type owl:ObjectProperty ;
+	rdfs:label "Refers to document"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range pws:Document ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+
+pws:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
+	rdfs:label "Refers to Library deposit"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range pws:LibraryDeposit ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+
+pws:announces rdf:type owl:ObjectProperty ;
+	rdfs:label "Announces"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range pws:AnnouncedThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+
+pws:madeBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Made by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
+	rdfs:range pws:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:madeInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Made in House"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
+	rdfs:range pws:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
 
 				
 	
@@ -99,6 +148,27 @@ pws:expressionOf rdf:type owl:ObjectProperty ;
 pws:statementText rdf:type owl:DatatypeProperty ;
 	rdfs:label "Statement text"@en ;
 	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:madeOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Made on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+
+pws:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "Title"@en ;
+	rdfs:comment ""@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+pws:uin rdf:type owl:DatatypeProperty ;
+	rdfs:label "UIN"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
