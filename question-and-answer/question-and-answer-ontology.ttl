@@ -17,9 +17,9 @@
 
 #######  Classes ##### 	
 
-pqa:SeatIncumbency rdf:type owl:Class ;
-	rdfs:label "Seat incumbency"@en ;
-	rdfs:comment "The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member."@en ;
+pqa:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:ParliamentaryQuestion rdf:type owl:Class ;
@@ -61,7 +61,13 @@ pqa:Answer rdf:type owl:Class ;
 	rdfs:comment "An answer to a question provided by a Member, usually a Minister, on behalf of an answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
+pqa:OrganisationAccountableToParliament rdf:type owl:Class ;
+	rdfs:label "Organisation accountable to Parliament"@en ;
+	rdfs:comment "An organisation that is accountable to Parliament, be that a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
 pqa:AnsweringBody rdf:type owl:Class ;
+    rdfs:subClassOf pqa:OrganisationAccountableToParliament ;
 	rdfs:label "AnsweringBody"@en ;
 	rdfs:comment "A body of whom Members can ask questions. In the House of Commons this may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners. In the House of Lords, questions are addressed to Her Majesty's Government rather than to a specific department or body. For written and private notice questions in the House of Lords, data exists to map questions to specific answering bodies; for oral questions it doesn't."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -158,11 +164,11 @@ pqa:answeringBody rdf:type owl:ObjectProperty ;
 	rdfs:range pqa:AnsweringBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:asks rdf:type owl:ObjectProperty ;
-	rdfs:label "asks"@en ;
-	rdfs:comment "Relates a Member, being a person incumbent in a House seat, to the question they asked. In the House of Lords the Member who tabled the question may on occasion delegate another Member to be present in the Chamber to receive the answer. Whilst parliamentary questions have to be tabled with the Lords or Commons Table Offices, urgent and private notice questions are applied for to the Speaker or Lord Speaker privately. "@en ;
-	rdfs:domain pqa:SeatIncumbency ;
-	rdfs:range pqa:Question ;
+pqa:askedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Asked by"@en ;
+	rdfs:comment "Relates a question to an incumbency of the person asking the question. This may be an incumbency in a House seat or an incumbency in another position. In the House of Lords the Member who tabled a question in expectation of an oral answer may delegate another Member to be present in the Chamber to receive the answer. Parliamentary questions are tabled with the Lords or Commons Table Offices; urgent and private notice questions are applied for to the Speaker or Lord Speaker privately."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range pqa:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:inPursuantTo rdf:type owl:ObjectProperty ;
@@ -172,11 +178,11 @@ pqa:inPursuantTo rdf:type owl:ObjectProperty ;
 	rdfs:range pqa:PursuableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:answeringMember rdf:type owl:ObjectProperty ;
-	rdfs:label "answeringMember"@en ;
-	rdfs:comment "Relates an answer to the Member who provided it, being a person incumbent in a House seat. In practice this will usually be a Minister in a government department or a person occupying a government position in a non-departmental answering body. For questions in receipt of an oral answer in the House of Lords, this may be a Government whip."@en ;
+pqa:answeredBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Answered by"@en ;
+	rdfs:comment "Relates an answer to an incumbency of the person who provided the answer. This may be an incumbency in a House seat or an incumbency in another position. In practice this will usually be a Minister in a government department or a person occupying a position in a non-departmental answering body. For questions in receipt of an oral answer in the House of Lords, this may be a Government whip."@en ;
 	rdfs:domain pqa:Answer ;
-	rdfs:range pqa:SeatIncumbency ;
+	rdfs:range pqa:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:hasAnswerType rdf:type owl:ObjectProperty ;
@@ -285,11 +291,18 @@ pqa:questionText rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a question to the actual text of the question as asked by the Member."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:interestsDeclared rdf:type owl:DatatypeProperty ;
+	rdfs:label "Interests declared"@en ;
+	rdfs:comment "Indicates whether the Member asking the question has declared they have interests which may be relevant to the subject matter of the question."@en ;
+	rdfs:domain pqa:Question ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
 	rdfs:label "isQuestionSubstantive"@en ;
-	rdfs:comment "Determines if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister's appointments (respectively topical questions and Prime Minister's questions in the House of Commons). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons. The process for topical questions in the House of Lords differs slightly from that in the House of Commons, in that all questions tabled are substantive. Here topical refers to the shorter notice period allowed when tabling a question."@en ;
+	rdfs:comment "Indicates if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister's appointments (respectively topical questions and Prime Minister's questions in the House of Commons). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons. The process for topical questions in the House of Lords differs slightly from that in the House of Commons, in that all questions tabled are substantive. Here topical refers to the shorter notice period allowed when tabling a question."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
