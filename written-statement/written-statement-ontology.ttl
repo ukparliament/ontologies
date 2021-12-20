@@ -96,44 +96,9 @@ pws:expressionOf rdf:type owl:ObjectProperty ;
 	
 ##### Data properties ####	
 	
-prec:scope rdf:type owl:DatatypeProperty ;
-	rdfs:label "Scope"@en ;
-	rdfs:comment "The scope of a work, for example: the scope of a POST briefing."@en ;
-	rdfs:domain prec:Work ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-
-prec:referenceNumber rdf:type owl:DatatypeProperty ;
-	rdfs:label "Reference number"@en ;
-	rdfs:comment "The reference number of a work."@en ;
-	rdfs:domain prec:Work ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-	
-prec:minimumReadingAge rdf:type owl:DatatypeProperty ;
-	rdfs:label "Minimum reading age"@en ;
-	rdfs:comment "The minimum reading age for a manifestation of a work."@en ;
-	rdfs:domain prec:Manifestation ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-	
-prec:publishedAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "Published at"@en ;
-	rdfs:comment "The date and time of the publication of a manifestation."@en ;
-	rdfs:domain prec:Manifestation ;
-	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-	
-prec:mediaType rdf:type owl:DatatypeProperty ;
-	rdfs:label "Media type"@en ;
-	rdfs:comment "The media type of a file."@en ;
-	rdfs:domain prec:File ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
-	
-prec:hasRevisionDescription rdf:type owl:DatatypeProperty ;
-	rdfs:label "Has revision description"@en ;
-	rdfs:comment "The description of a revision, for example: “updated to include recent legislation”."@en ;
-	rdfs:domain prec:Revision ;
+pws:statementText rdf:type owl:DatatypeProperty ;
+	rdfs:label "Statement text"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/record/> .
