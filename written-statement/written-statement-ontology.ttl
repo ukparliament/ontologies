@@ -11,7 +11,7 @@
     dcterms:title "Written statement ontology"@en ;
     dcterms:created "2021-12-20"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing written statements made to Parliament as works and expressions of those works."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/written-statement/written-statement.svg> ;
 	foaf:maker
 		[ foaf:name "Emma Bainbridge" ],
@@ -25,7 +25,7 @@
 
 pws:WrittenStatementWork rdf:type owl:Class ;
 	rdfs:label "Written statement work"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A written statement made to Parliament as realised in an expression made to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:Session rdf:type owl:Class ;
@@ -35,7 +35,7 @@ pws:Session rdf:type owl:Class ;
 	
 pws:CorrectedThing rdf:type owl:Class ;
 	rdfs:label "Corrected thing"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A thing being corrected by the making of a written statement to Parliament, for example: a preceding written statement or a written answer."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:Document rdf:type owl:Class ;
@@ -50,12 +50,12 @@ pws:LibraryDeposit rdf:type owl:Class ;
 	
 pws:AnnouncedThing rdf:type owl:Class ;
 	rdfs:label "Announced thing"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A thing being announced by the making of a written statement to Parliament, for example: the laying of a paper."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:WrittenStatementExpression rdf:type owl:Class ;
 	rdfs:label "Written statement expression"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The expression of a written statement as made to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:Incumbency rdf:type owl:Class ;
@@ -74,66 +74,69 @@ pws:House rdf:type owl:Class ;
 
 pws:follows rdf:type owl:ObjectProperty ;
 	rdfs:label "Follows"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement work to the written statement work it follows, for example: a written statement announcing the publication of a review follows a written statement announcing that review."@en ;
 	rdfs:domain pws:WrittenStatementWork ;
 	rdfs:range pws:WrittenStatementWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Expression of"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement expression to the written statement work realised by that expression. A written statement work has one written statement expression when a statement is made to one House. A written statement work has two written statement expressions when a statement is made to both Houses. A written statement expression realises one written statement work."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range pws:WrittenStatementWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:inSession rdf:type owl:ObjectProperty ;
 	rdfs:label "In session"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement work to the session that statement is made in."@en ;
 	rdfs:domain pws:WrittenStatementWork ;
 	rdfs:range pws:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:corrects rdf:type owl:ObjectProperty ;
 	rdfs:label "Corrects"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement work to the thing it corrects."@en ;
 	rdfs:domain pws:WrittenStatementWork ;
 	rdfs:range pws:CorrectedThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:refersToDocument rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to document"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement work to a document to which the statement refers. A written statement may refer to more than one document."@en ;
 	rdfs:domain pws:WrittenStatementWork ;
 	rdfs:range pws:Document ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 
 pws:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to Library deposit"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement work to a library deposit."@en ;
 	rdfs:domain pws:WrittenStatementWork ;
 	rdfs:range pws:LibraryDeposit ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 
 pws:announces rdf:type owl:ObjectProperty ;
 	rdfs:label "Announces"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement work to a thing which the statement announces. A written statement may announce more than one thing."@en ;
 	rdfs:domain pws:WrittenStatementWork ;
 	rdfs:range pws:AnnouncedThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 
 pws:madeBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Made by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement expression to the incumbency of the person making the statement, for example: an incumbency in a ministerial position or an incumbency as Speaker or Lord Speaker."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range pws:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:madeInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Made in House"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement expression to the House in which the written statement is made."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range pws:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
+	
+	
+	# edited to here
 	
 
 				
