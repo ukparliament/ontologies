@@ -29,6 +29,11 @@ ptr:Bill rdf:type owl:Class ;
 	rdfs:label "Bill"@en ;
 	rdfs:comment "A bill presented to Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:FreeTradeAgreementScrutinyDocument rdf:type owl:Class ;
+	rdfs:label "Free trade agreement scrutiny document"@en ;
+	rdfs:comment "A draft of the text of a free trade agreement which may be shared with Parliament shortly after signature. Should a 'scrutiny document' be laid, it would be laid as an unnumbered Command Paper, rather than being numbered in the Treaty series. The 'scrutiny document' may be accompanied by any explanatory material the Department wishes to provide."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
@@ -104,6 +109,13 @@ ptr:hasLeadDepartment rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department."@en ;
 	rdfs:domain ptr:Treaty ;
 	rdfs:range ptr:GovernmentOrganisation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+ptr:precededBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Preceded by"@en ;
+	rdfs:comment "Relates a treaty to a free trade agreement scrutiny document which may precede it."@en ;
+	rdfs:domain ptr:Treaty ;
+	rdfs:range ptr:FreeTradeAgreementScrutinyDocument ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 
