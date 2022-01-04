@@ -42,6 +42,8 @@ The [Non-contentious Probate (Fees) Order 2018](https://statutoryinstruments.par
 
 ## Statutory instruments by calendar year
 
+* [2022](https://api.parliament.uk/s/4df0756f)
+
 * [2021](https://api.parliament.uk/s/c4d8715a)
 
 * [2020](https://api.parliament.uk/s/5a3bb826)
