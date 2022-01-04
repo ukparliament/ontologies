@@ -46,6 +46,6 @@ Dot file: [dot](public-bills/components/devolved-legislature-consent/northern-ir
 
 Dot file: [dot](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.svg)
 
-##### [Welsh Parliament Legislative Consent Motion](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.pdf)
+##### [Senedd Cymru Legislative Consent Motion](public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.pdf)
 
-Dot file: [dot](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.svg)
+Dot file: [dot](public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.svg)
