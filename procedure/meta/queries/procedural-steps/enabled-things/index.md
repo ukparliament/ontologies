@@ -27,6 +27,8 @@ This query will show you all enabled things laid before Parliament or that Parli
 
 ## Enabled things by calendar year
 
+* <a href="https://api.parliament.uk/s/c599939c">2022</a>
+
 * <a href="https://api.parliament.uk/s/2453a1a8">2021</a>
 
 * <a href="https://api.parliament.uk/s/b5ae6e8d">2020</a>
