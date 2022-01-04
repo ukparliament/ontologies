@@ -20,20 +20,6 @@ Dot file: [dot](public-bills/components/commons/first-reading/first-reading.dot)
 
 Dot file: [dot](public-bills/components/commons/second-reading/second-reading.dot) / [svg](public-bills/components/commons/second-reading/second-reading.svg)
 
-#### Legislative consent motions
-
-##### [Northern Ireland Assembly Legislative Consent Motion](public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf)
-
-Dot file: [dot](public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.svg)
-
-##### [Scottish Parliament Legislative Consent Motion](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf)
-
-Dot file: [dot](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.svg)
-
-##### [Welsh Parliament Legislative Consent Motion](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.pdf)
-
-Dot file: [dot](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.svg)
-
 #### Prerogative consent
 
 ##### [Queen's consent](public-bills/components/prerogative-consent/queens-consent/queens-consent.pdf)
@@ -47,3 +33,19 @@ Dot file: [dot](public-bills/components/prerogative-consent/prince-of-wales-cons
 ##### [Grand Steward of Scotland's consent](public-bills/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.pdf)
 
 Dot file: [dot](public-bills/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.dot) / [svg](public-bills/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.svg)
+
+#### Legislative consent motions (unused)
+
+Legislative consent motions appear on the Order Paper if consent is required and given. There is no public record of consent being requested but not given.
+
+##### [Northern Ireland Assembly Legislative Consent Motion](public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf)
+
+Dot file: [dot](public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.svg)
+
+##### [Scottish Parliament Legislative Consent Motion](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf)
+
+Dot file: [dot](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.svg)
+
+##### [Welsh Parliament Legislative Consent Motion](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.pdf)
+
+Dot file: [dot](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.dot) / [svg](public-bills/components/devolved-legislature-consent/welsh-parliament/welsh-parliament-consent.svg)
