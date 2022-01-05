@@ -135,38 +135,34 @@ pws:madeInHouse rdf:type owl:ObjectProperty ;
 	rdfs:range pws:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
-	
-	# edited to here
-	
 
-				
-	
+					
 ##### Data properties ####	
 	
 pws:statementText rdf:type owl:DatatypeProperty ;
 	rdfs:label "Statement text"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain pws:WrittenStatementWork ;
+	rdfs:comment "Relates a written statement expression to the text of that expression."@en ;
+	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:madeOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement expression to the date on which that expression was made."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 
 pws:title rdf:type owl:DatatypeProperty ;
 	rdfs:label "Title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement expression to the title of that expression."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:uin rdf:type owl:DatatypeProperty ;
 	rdfs:label "UIN"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a written statement expression to the UIN of that expression. A UIN is an alphanumeric identifier."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
