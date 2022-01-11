@@ -65,9 +65,9 @@ putil:Label rdf:type owl:Class ;
 	rdfs:comment "Allows a thing to have different labels at different time periods. e.g. a Government Department, Select Committee, Bill or inquiry might change its name during its lifetime. Reuses preferredLabel, abbreviationLabel, sortLabel, startDate and endDate from Thing."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
-putil:Annotation rdf:type owl:Class ;
-	rdfs:label "Annotation"@en ;
-	rdfs:comment "The act of annotating a thing."@en ;
+putil:ConceptAnnotation rdf:type owl:Class ;
+	rdfs:label "Concept annotation"@en ;
+	rdfs:comment "The annotation of a thing with a SKOS concept, used to refer to that thing in a subject index."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .	
 
 #######  Object properties ##### 
@@ -121,17 +121,17 @@ putil:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:range putil:Thing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 
-putil:hasAnnotation rdf:type owl:ObjectProperty ;
-	rdfs:label "Has annotation"@en ;
-	rdfs:comment "Relates a thing to an annotation of that thing. A thing may have one or more annotations, or none. An annotation always annotates one thing."@en ;
+putil:hasConceptAnnotation rdf:type owl:ObjectProperty ;
+	rdfs:label "Has concept annotation"@en ;
+	rdfs:comment "Relates a thing to a annotation of that thing with a concept. A thing may have one or more concept annotations, or none. An annotation always annotates one thing."@en ;
 	rdfs:domain putil:Thing ;
-	rdfs:range putil:Annotation ;
+	rdfs:range putil:ConceptAnnotation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 			
 putil:hasConcept rdf:type owl:ObjectProperty ;
 	rdfs:label "Has concept"@en ;
-	rdfs:comment "Relates an annotation to a SKOS concept, being the subject of the thing being annotated. A SKOS concept may be referenced by one or more annotations, or none. An annotation always references one concept, or none."@en ;
-	rdfs:domain putil:Annotation ;
+	rdfs:comment "Relates a concept annotation to a SKOS concept, being the subject of the thing being annotated. A SKOS concept may be referenced by one or more annotations, or none. An annotation always references one concept."@en ;
+	rdfs:domain putil:ConceptAnnotation ;
 	rdfs:range skos:Concept ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .				
 		
