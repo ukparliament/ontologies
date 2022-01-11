@@ -95,18 +95,18 @@ phm:hasSeatIncumbencyInterruption rdf:type owl:ObjectProperty ;
 	rdfs:range phm:SeatIncumbencyInterruption ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
 
-phm:hasHouseSeat rdf:type owl:ObjectProperty ;
-	rdfs:label "Has House seat"@en ;
-	rdfs:comment "Relates a House to a seat in that House."@en ;
-	rdfs:domain phm:House ;
-	rdfs:range phm:HouseSeat ;
+phm:inHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "In House"@en ;
+	rdfs:comment "Relates a seat in a House to the House that seat is in."@en ;
+	rdfs:domain phm:HouseSeat;
+	rdfs:range phm:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
-phm:hasSeatIncumbency rdf:type owl:ObjectProperty ;
-	rdfs:label "Has seat incumbency"@en ;
-	rdfs:comment "Relates a seat in a House to an incumbency for that seat."@en ;
-	rdfs:domain phm:HouseSeat ;
-	rdfs:range phm:SeatIncumbency ;
+phm:inHouseSeat rdf:type owl:ObjectProperty ;
+	rdfs:label "In House seat"@en ;
+	rdfs:comment "Relates a seat incumbency to the House seat that incumbency is in."@en ;
+	rdfs:domain phm:SeatIncumbency ;
+	rdfs:range phm:HouseSeat ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:hasIncumbent rdf:type owl:ObjectProperty ;
