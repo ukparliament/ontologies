@@ -38,15 +38,6 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class py-2" id="AllocatedAnsweringBody">
-                <h3><a href="#AllocatedAnsweringBody">Allocated answering body
-                    </a>
-                </h3>
-                <span class="badge bg-info text-dark">Class</span>
-                <p>The answering body to which a question is directed, either at tabling or when asked in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology.</p>
-
-
-            </article>
             <article class="class py-2" id="Answer">
                 <h3><a href="#Answer">Answer
                     </a>
@@ -89,6 +80,15 @@
                 &middot; OrganisationAccountableToParliament
 
             </p>
+
+            </article>
+            <article class="class py-2" id="AnsweringBodyAllocation">
+                <h3><a href="#AnsweringBodyAllocation">Answering body allocation
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An allocation to an answering body to which a question is directed, either at tabling or when asked in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. Allocated answering bodies are time bound. This would use startOn and endOn properties from the Utility ontology.</p>
+
 
             </article>
             <article class="class py-2" id="ArmsLengthBody">
@@ -239,9 +239,9 @@
 
 
 
-                <p>Allows an allocation at a point in time to an answering body.</p>
+                <p>Relates an answering body allocation to an answering body.</p>
 
-                <p><strong>AllocatedAnsweringBody</strong> &mdash; Allocated to &mdash; <strong>AnsweringBody</strong></p>
+                <p><strong>AnsweringBodyAllocation</strong> &mdash; Allocated to &mdash; <strong>AnsweringBody</strong></p>
 
             </article>
 
@@ -257,9 +257,9 @@
 
 
 
-                <p>Allows a question to be assigned to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. Note that this would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly (e.g. when referring to the gender of the answering member), treating a round robin as a single question is not yet possible.</p>
+                <p>Relates a question to an allocation to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. This would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly - for example, when referring to the gender of the answering member - treating a round robin as a single question is not yet possible.</p>
 
-                <p><strong>Question</strong> &mdash; Allocation &mdash; <strong>AllocatedAnsweringBody</strong></p>
+                <p><strong>Question</strong> &mdash; Allocation &mdash; <strong>AnsweringBodyAllocation</strong></p>
 
             </article>
 
@@ -527,9 +527,9 @@
 
 
 
-                <p>Allows a transferral to specify the answering body to which the question was formerly allocated.</p>
+                <p>Relates an act of transferral to the answering body allocation the question was formerly allocated to.</p>
 
-                <p><strong>Transferral</strong> &mdash; Transferred from &mdash; <strong>AllocatedAnsweringBody</strong></p>
+                <p><strong>Transferral</strong> &mdash; Transferred from &mdash; <strong>AnsweringBodyAllocation</strong></p>
 
             </article>
 
@@ -545,9 +545,9 @@
 
 
 
-                <p>Allows a transferral to specify the answering body to which the question is subsequently allocated.</p>
+                <p>Relates an act of transferral to the answering body allocation the question was subsequently allocated to.</p>
 
-                <p><strong>Transferral</strong> &mdash; Transferred to &mdash; <strong>AllocatedAnsweringBody</strong></p>
+                <p><strong>Transferral</strong> &mdash; Transferred to &mdash; <strong>AnsweringBodyAllocation</strong></p>
 
             </article>
         </section>
