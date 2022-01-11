@@ -72,9 +72,9 @@ pqa:AnsweringBody rdf:type owl:Class ;
 	rdfs:comment "A body of whom Members can ask questions. In the House of Commons this may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners. In the House of Lords, questions are addressed to Her Majesty's Government rather than to a specific department or body. For written and private notice questions in the House of Lords, data exists to map questions to specific answering bodies; for oral questions it doesn't."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:AllocatedAnsweringBody rdf:type owl:Class ;
-	rdfs:label "Allocated answering body"@en ;
-	rdfs:comment "The answering body to which a question is directed, either at tabling or when asked in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. So allocated answering bodies are time bound. This would use startAt and endAt properties from the Core ontology."@en ;
+pqa:AnsweringBodyAllocation rdf:type owl:Class ;
+	rdfs:label "Answering body allocation"@en ;
+	rdfs:comment "An allocation to an answering body to which a question is directed, either at tabling or when asked in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. Allocated answering bodies are time bound. This would use startOn and endOn properties from the Utility ontology."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Transferral rdf:type owl:Class ;
@@ -124,30 +124,30 @@ pqa:partOfRoundRobin rdf:type owl:ObjectProperty ;
 
 pqa:allocation rdf:type owl:ObjectProperty ;
 	rdfs:label "Allocation"@en ;
-	rdfs:comment "Allows a question to be assigned to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. Note that this would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly (e.g. when referring to the gender of the answering member), treating a round robin as a single question is not yet possible."@en ;
+	rdfs:comment "Relates a question to an allocation to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. This would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly - for example, when referring to the gender of the answering member - treating a round robin as a single question is not yet possible."@en ;
 	rdfs:domain pqa:Question ;
-	rdfs:range pqa:AllocatedAnsweringBody ;
+	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:allocatedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Allocated to"@en ;
-	rdfs:comment "Allows an allocation at a point in time to an answering body."@en ;
-	rdfs:domain pqa:AllocatedAnsweringBody ;
+	rdfs:comment "Relates an answering body allocation to an answering body."@en ;
+	rdfs:domain pqa:AnsweringBodyAllocation ;
 	rdfs:range pqa:AnsweringBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:transferredFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Transferred from"@en ;
-	rdfs:comment "Allows a transferral to specify the answering body to which the question was formerly allocated."@en ;
+	rdfs:comment "Relates an act of transferral to the answering body allocation the question was formerly allocated to."@en ;
 	rdfs:domain pqa:Transferral ;
-	rdfs:range pqa:AllocatedAnsweringBody ;
+	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:transferredTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Transferred to"@en ;
-	rdfs:comment "Allows a transferral to specify the answering body to which the question is subsequently allocated."@en ;
+	rdfs:comment "Relates an act of transferral to the answering body allocation the question was subsequently allocated to."@en ;
 	rdfs:domain pqa:Transferral ;
-	rdfs:range pqa:AllocatedAnsweringBody ;
+	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:answerTo rdf:type owl:ObjectProperty ;
