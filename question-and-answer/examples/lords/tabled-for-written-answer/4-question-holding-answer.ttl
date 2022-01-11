@@ -1,5 +1,4 @@
 @prefix pqa: <http://parliament.uk/ontologies/question-and-answer/> .
-@prefix pws: <http://parliament.uk/ontologies/written-statement> .
 @prefix ptable: <http://parliament.uk/ontologies/tabling/> . 
 @prefix putil: <http://parliament.uk/ontologies/utility/> .
 @prefix ptime: <http://parliament.uk/ontologies/time-period/> .
@@ -45,7 +44,6 @@
 	putil:preferredLabel "House of Commons"@en .
 
 
-
 # There is a session ...
 <http://id.parliament.uk/session-1> rdf:type ptime:Session ;
 	
@@ -71,25 +69,12 @@
 
 
 
+
 # There is a seat incumbency ...
 <http://id.parliament.uk/seat-incumbecy-1> rdf:type phm:SeatIncumbency ;
 
-	# ... in a House seat ...
-	phm:inHouseSeat <http://id.parliament.uk/house-seat-1>  ;
-
-	# ... with a person incumbent.
+	# with a person incumbent.
 	phm:hasIncumbent <http://id.parliament.uk/person-1> .
-
-
-
-# There is a House seat ...
-<http://id.parliament.uk/house-seat-1> rdf:type phm:HouseSeat ;
-
-	# ... in a House ...
-	phm:inHouse <http://id.parliament.uk/house-1> ;
-
-	# ... with a preferred label.
-	putil:preferredLabel "Seat for the Life Peerage of John Prescott"@en .
 
 
 
@@ -98,7 +83,6 @@
 
 	# ... with a preferred label ...
 	putil:preferredLabel "John Prescott"@en ;
-	# Without knowing the future shape of MNIS, dealing with names and titles is left as an exercise for the reader.
 	
 	# ... with an identifier.
 	putil:hasIdentifier <http://id.parliament.uk/identifier-1> .
@@ -127,17 +111,13 @@
 	
 
 
+
 # There is a Parliamentary Question ...
 <http://id.parliament.uk/parliamentary-question-1> rdf:type pqa:ParliamentaryQuestion ;
 	
-	# ... which is a substantive question ...
-	pqa:isQuestionSubstantive "true"^^xsd:boolean ;
-	
-	# ... being asked by a (person with a seat) incumbency ...
-	pqa:askedBy <seat-incumbecy-1> ;
-	
 	# ... with an answer expected as ...
-	pqa:answerExpectedAs <http://id.parliament.uk/answer-expected-as-1> ;
+	# redo all this
+	pqa:answerExpectedAs <http://id.parliament.uk/12345679> ;
 
 	# ... with an allocation to an answering body ...
 	pqa:allocation <http://id.parliament.uk/allocation-1> ;
@@ -148,19 +128,21 @@
 	# ... which is not a named day ...
 	pqa:isNamedDay "false"^^xsd:boolean ;
 	
-	# ... with question text.
+	# ... which is a substantive question ...
+	pqa:isQuestionSubstantive "true"^^xsd:boolean ;
+	
+	# ... with question text ...
 	pqa:questionText "This is a question?"@en .
 
 
 
-# There is an answer expected as ...
-<http://id.parliament.uk/answer-expected-as-1> rdf:type pqa:AnswerExpectedAs .
-# TODO: Complete all this to (revised?) model.
+
+# do answer expected as here.
 	
 	
 	
 # There is an allocatation to an answering body ...
-<http://id.parliament.uk/allocation-1> rdf:type pqa:AnsweringBodyAllocation ;
+<http://id.parliament.uk/allocation-1> rdf:type pqa:AllocatedAnsweringBody ;
 
 	# ... which is allocated to an answering body ...
 	pqa:allocatedTo <http://id.parliament.uk/answering-body-1> ;
