@@ -52,7 +52,22 @@ pqa:RoundRobin rdf:type owl:Class ;
 	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
 	rdfs:label "Answer expected as"@en ;
-	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the question will receive a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member."@en ;
+	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or 'unstar' it. Unstarring has the effect of removing the question from the schedule and requesting a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:FormOfAnswer rdf:type owl:Class ;
+	rdfs:label "Form of answer"@en ;
+	rdfs:comment "The potential forms in which an answer may be given, being either oral or written."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:AnswerExpectedAsChange rdf:type owl:Class ;
+	rdfs:label "Answer expected as change"@en ;
+	rdfs:comment "The act of indicating a change from an expectation of an oral answer to a written answer."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:AnswerExpectedAsChangeReason rdf:type owl:Class ;
+	rdfs:label "Answer expected as change reason"@en ;
+	rdfs:comment "The potential reasons for a change to the form of answer expected, being either 'unstarred' or 'unreached'."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Answer rdf:type owl:Class ;
@@ -240,30 +255,37 @@ pqa:answerExpectedAs rdf:type owl:ObjectProperty ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:AnswerExpectedAs ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:answerExpectedInForm rdf:type owl:ObjectProperty ;
+	rdfs:label "Answer expected in form"@en ;
+	rdfs:comment "Relates an answer being expected at at a point in time to the form the answer is expected in."@en ;
+	rdfs:domain pqa:AnswerExpectedAs ;
+	rdfs:range pqa:FormOfAnswer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:changedFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Changed from"@en ;
+	rdfs:comment "Relates a change in the form of answer expected to the expectation prior to that change."@en ;
+	rdfs:domain pqa:AnswerExpectedAsChange ;
+	rdfs:range pqa:AnswerExpectedAs ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:changedTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Changed to"@en ;
+	rdfs:comment "Relates a change in the form of answer expected to the expectation subsequent to that change."@en ;
+	rdfs:domain pqa:AnswerExpectedAsChange ;
+	rdfs:range pqa:AnswerExpectedAs ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
+pqa:hasChangeReason rdf:type owl:ObjectProperty ;
+	rdfs:label "Has change reason"@en ;
+	rdfs:comment "Relates a change in the form of answer expected to the reason for that change."@en ;
+	rdfs:domain pqa:AnswerExpectedAsChange ;
+	rdfs:range pqa:AnswerExpectedAsChangeReason ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 		
 
 #######  Data properties ##### 
-
-pqa:isOralAnswerExpected rdf:type owl:DatatypeProperty ;
-	rdfs:label "Is oral answer expected"@en ;
-	rdfs:comment "True if the answer expected (at that period in time) is oral. False if the answer expected (at that period in time) is written."@en ;
-	rdfs:domain pqa:AnswerExpectedAs ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
-pqa:unstarredAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "Unstarred at"@en ;
-	rdfs:comment "The point in time at which a Member who has tabled a question for oral question time declares they are unable to attend the Chamber and would like a written answer to their question. The question is removed from the schedule. The unstarred at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has been unstarred."@en ;
-	rdfs:domain pqa:AnswerExpectedAs ;
-	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
-pqa:oralUnreachedAt rdf:type owl:DatatypeProperty ;
-	rdfs:label "Oral unreached at"@en ;
-	rdfs:comment "Not all questions scheduled for answer during oral question time are reached during the allocated time. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given to the question. This property records the point in time at which this happens. The oral unreached at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has not been reached."@en ;
-	rdfs:domain pqa:AnswerExpectedAs ;
-	rdfs:range xsd:dateTime ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:dateForAnswer rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date for answer"@en ;
