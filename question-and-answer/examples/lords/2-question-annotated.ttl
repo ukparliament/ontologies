@@ -1,6 +1,279 @@
-annotation to skos with focus
+# Question as enriched by IDMS,.
 
-in pusuant to
 
-title
 
+# Question and answer model.
+@prefix pqa: <http://parliament.uk/ontologies/question-and-answer/> .
+
+# Written statement model.
+@prefix pws: <http://parliament.uk/ontologies/written-statement> .
+
+# Tabling model.
+@prefix ptable: <http://parliament.uk/ontologies/tabling/> . 
+
+# Utility model.
+@prefix putil: <http://parliament.uk/ontologies/utility/> .
+
+# Time period model.
+@prefix ptime: <http://parliament.uk/ontologies/time-period/> .
+
+# House membership model.
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+
+# Agency model.
+@prefix pa: <http://parliament.uk/ontologies/agent/> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+
+
+
+# There is a tabling ...
+<http://id.parliament.uk/tabling-1> rdf:type ptable:Tabling ;
+
+	# ... of a Parliamentary question ...
+	ptable:tables <http://id.parliament.uk/parliamentary-question-1> ;
+
+	# ... in a House ...
+	ptable:hasHouse <http://id.parliament.uk/house-1> ;
+	
+	# ... on a date ...
+	ptable:tabledOn "2021-10-18"^^xsd:date ;
+	# Should this be date or point at tabling day? Superclass of Sitting Day, Virtual Sitting Day, Hybrid Sitting Day and Table Office Non Sitting Tabling Day.
+	
+	# ... in a session ...
+	ptable:inSession <http://id.parliament.uk/session-1> ;
+	
+	# ... by (a person in) a seat incumbency ...
+	ptable:tabledBy <http://id.parliament.uk/seat-incumbency-1> ;
+	
+	# ... declaring an interest.
+	putil:isInterestDeclared "true"^^xsd:boolean .
+	
+	
+	
+# There is a Parliamentary Question ...
+<http://id.parliament.uk/parliamentary-question-1> rdf:type pqa:ParliamentaryQuestion ;
+
+	# ... in pursuant to a previous written statement expression (added by IDMS) ...
+	pqa:inPursuantTo <http://id.parliament.uk/written-statement-1> ;
+
+	# ... which is a substantive question ...
+	pqa:isQuestionSubstantive "true"^^xsd:boolean ;
+	
+	# ... requesting stats (added by IDMS) ...
+	putil:includesRequestForStatistics "true"^^xsd:boolean ;
+
+	# ... being asked by a (person with a seat) incumbency ...
+	pqa:askedBy <seat-incumbency-1> ;
+
+	# ... with an answer expected as ...
+	pqa:answerExpectedAs <http://id.parliament.uk/answer-expected-as-1> ;
+
+	# ... with an allocation to an answering body ...
+	pqa:allocation <http://id.parliament.uk/allocation-1> ;
+
+	# ... with a date for answer ...
+	pqa:dateForAnswer "2021-12-25"^^xsd:date ;
+
+	# ... which is not a named day ...
+	pqa:isNamedDay "false"^^xsd:boolean ;
+
+	# ... with heading text (added by IDMS) ...
+	pqa:heading "This is heading text added by IDMS"@en ;
+
+	# ... with question text.
+	pqa:questionText "This is a question?"@en ;
+	
+	# ... with a concept annotation (added by IDMS) ...
+	putil:hasConceptAnnotation <http://id.parliament.uk/concept-annotation-1> .
+	
+	
+	
+# There is a seat incumbency ...
+<http://id.parliament.uk/seat-incumbecy-1> rdf:type phm:SeatIncumbency ;
+
+	# ... in a House seat ...
+	phm:inHouseSeat <http://id.parliament.uk/house-seat-1>  ;
+
+	# ... with a person incumbent.
+	phm:hasIncumbent <http://id.parliament.uk/person-1> .
+
+
+
+# There is a House seat ...
+<http://id.parliament.uk/house-seat-1> rdf:type phm:HouseSeat ;
+
+	# ... in a House ...
+	phm:inHouse <http://id.parliament.uk/house-1> ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Seat for the Life Peerage of Lord Prescott"@en .
+
+
+
+# There is a person ...
+<http://id.parliament.uk/person-1> rdf:type pa:Person ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Lord Prescott"@en ;
+	# Without knowing the future shape of MNIS, dealing with names and titles is left as an exercise for the reader.
+
+	# ... with an identifier.
+	putil:hasIdentifier <http://id.parliament.uk/identifier-1> .
+	
+	
+	
+# There is an identifier ...
+<http://id.parliament.uk/identifier-1> rdf:type putil:Identifier ;
+
+	# ... with a value ...
+	putil:identifierValue "374" ;
+
+	# ... from an identifier source.
+	putil:hasIdentifierSource <http://id.parliament.uk/identifier-source-1> .
+
+
+
+# There is an identifier source ...	
+<http://id.parliament.uk/identifier-source-1> rdf:type putil:IdentifierSource ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Members' Names Information Service"@en ;
+
+	# ... with an abbreiviation label.
+	putil:abbreviationLabel "MNIS" .
+
+
+
+# There is a House ...
+<http://id.parliament.uk/house-1> rdf:type phm:House ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "House of Commons"@en .
+	
+	
+
+# There is an answer expected as ...
+<http://id.parliament.uk/answer-expected-as-1> rdf:type pqa:AnswerExpectedAs ;
+
+	# ... with a start date ...
+	putil:startOn "2021-10-18"^^xsd:date ;
+	
+	# ...with a form of answer.
+	pqa:answerExpectedInForm <http://id.parliament.uk/form-of-answer-1> .
+	
+	
+	
+# There is a form of answer ...
+<http://id.parliament.uk/form-of-answer-1> rdf:type pqa:FormOfAnswer ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Written"@en .
+	
+	
+	
+# There is an allocatation to an answering body ...
+<http://id.parliament.uk/allocation-1> rdf:type pqa:AnsweringBodyAllocation ;
+
+	# ... which is allocated to an answering body ...
+	pqa:allocatedTo <http://id.parliament.uk/answering-body-1> ;
+
+	# ... which has been allocated since a date.
+	putil:startOn "2021-10-18"^^xsd:date .
+
+
+
+# There is an answering body ...
+<http://id.parliament.uk/answering-body-1> rdf:type pqa:AnsweringBody ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Cabinet Office"@en .
+
+
+
+
+# There is a session ...
+<http://id.parliament.uk/session-1> rdf:type ptime:Session ;
+	
+	# ... with a preferred label ...
+	putil:preferredLabel "2021-22"@en ;
+	
+	# ... with an ordinality ...
+	putil:ordinality "2"^^xsd:integer ;
+	
+	# ... in a Parliament period.
+	ptime:sessionInParliamentPeriod <http://id.parliament.uk/parliament-period-1> .
+
+
+
+# There is a Parliament period ....
+<http://id.parliament.uk/parliament-period-1> rdf:type ptime:ParliamentPeriod ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "58"@en ;
+	
+	# ... with an ordinality in Parliaments of the United Kingdom.
+	putil:ordinality "58"^^xsd:integer .
+	
+	
+
+# There is a previous written statment expression ....
+<http://id.parliament.uk/written-statement-1> rdf:type pws:WrittenStatementExpression ;
+
+	# ... which is an expression of a written statement work ...
+	pws:expressionOf <http://id.parliament.uk/written-statement-work-1> ;
+
+	# ... made in a House ...
+	pws:madeIn <http://id.parliament.uk/house-1> ;
+
+	# ... on a date ...
+	pws:madeOn "2019-04-11"^^xsd:date ;
+
+	# ... by (a person in) a an incumbency (in a government position) ...
+	pws:madeOn <http://id.parliament.uk/incumbency-1> ;
+
+	# ... with a UIN ...
+	pws:uin "balaha78jajajaj" ;
+
+	# ... with a title ...
+	pws:title "The is the title of an old written statment"@en ;
+
+	# ... with statement text ...
+	pws:statementText "The is the text of an old written statment as made to a House."@en .
+	
+
+
+# There is a previous written statement work.
+<http://id.parliament.uk/written-statement-work-1> rdf:type pws:WrittenStatementWork .
+# The written statement the question is in pursuant to is left undescribed here. A written statement correcting an answer to the question will be described later.
+
+
+
+# There is an incumbency (in a government position).
+<http://id.parliament.uk/incumbency-1> rdf:type pa:Incumbency .
+# The government position incumbency making the previous written statement is left undescribed here.
+
+
+
+# There is a concept annotation ...
+<http://id.parliament.uk/concept-annotation-1> rdf:type putil:ConceptAnnotation ;
+
+	# ... created at a time on the day following tabling ...
+	putil:createdAt "2019-04-12T10:42:02"^^xsd:datetime .
+	
+	# ... which has a concept ...
+	putil:hasConcept <http://id.parliament.uk/concept-1> .
+	
+	
+	
+# There is a concept (in the IDMS thesaurus) ...
+<http://id.parliament.uk/concept-1> rdf:type skos:Concept;
+
+	# ... with a preferred label ...
+	skos:prefLabel "Horse"@en ;
+
+	# ... with an alternative label ...
+	skos:altLabel "Dobbin"@en .
+	
