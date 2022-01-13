@@ -17,15 +17,28 @@ def slash2wbr(value):
 def ttlpath2ontologyname(value):
     return Markup(Path(value).stem.replace("-", " ").title())
 
+
 def ttlpath2htmlpath(ttlpath):
-    ttlpathparts = ttlpath.split('/')
-    htmlpath = ''.join(["https://ukparliament.github.io/ontologies/meta/html/", ttlpathparts[2], "/", ttlpathparts[3].replace('.ttl','.html')])
+    ttlpathparts = ttlpath.split("/")
+    htmlpath = "".join(
+        [
+            "https://ukparliament.github.io/ontologies/meta/html/",
+            ttlpathparts[2],
+            "/",
+            ttlpathparts[3].replace(".ttl", ".html"),
+        ]
+    )
 
     return htmlpath
-    
 
 
-env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape(), cache_size=0, trim_blocks=True, lstrip_blocks=True)
+env = Environment(
+    loader=FileSystemLoader("templates"),
+    autoescape=select_autoescape(),
+    cache_size=0,
+    trim_blocks=True,
+    lstrip_blocks=True,
+)
 
 env.filters["slash2wbr"] = slash2wbr
 
@@ -33,19 +46,20 @@ env.filters["ttlpath2ontologyname"] = ttlpath2ontologyname
 
 env.filters["ttlpath2htmlpath"] = ttlpath2htmlpath
 
-env.globals['now'] = datetime.utcnow().strftime("%Y-%m-%d")
+env.globals["now"] = datetime.utcnow().strftime("%Y-%m-%d")
 
 template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-ttlfiles = list(Path(".").rglob("*.ttl"))
+ttlfiles = list(Path(".").glob("*/*.ttl"))
 
 for ttlpath in ttlfiles:
     if str(ttlpath.parent) != "examples":
 
         g = rdflib.Graph()
 
+        ttlfile = ""
         try:
             ttlfile = open(ttlpath, "r")
         except OSError as e:
@@ -114,7 +128,7 @@ for ttlpath in ttlfiles:
             )
 
         for s, p, o in g.triples((None, RDF.type, OWL.Ontology)):
-            title = g.value(s, DCTERMS.title)
+            title = g.value(s, DCTERMS.title) or ""
             description = g.value(s, DCTERMS.description)
             created = g.value(s, DCTERMS.created)
             rights = g.value(s, DCTERMS.rights)
@@ -141,32 +155,26 @@ for ttlpath in ttlfiles:
 
         imports = []
 
-        for object in g.objects(None, OWL.imports):
-            imports.append(urlparse(object))
+        for gobject in g.objects(None, OWL.imports):
+            imports.append(urlparse(gobject))
 
         equivalentClasses = []
 
         for s, p, o in g.triples((None, OWL.equivalentClass, None)):
-            equivalentClassObject = {}
-            equivalentClassObject["s"] = urlparse(s).path
-            equivalentClassObject["o"] = urlparse(o).path
+            equivalentClassObject = {"s": urlparse(s).path, "o": urlparse(o).path}
             equivalentClasses.append(equivalentClassObject)
 
         subClasses = []
 
         for s, p, o in g.triples((None, RDFS.subClassOf, None)):
 
-            subClassObject = {}
-            subClassObject["s"] = urlparse(s).path
-            subClassObject["o"] = urlparse(o).path
+            subClassObject = {"s": urlparse(s).path, "o": urlparse(o).path}
             subClasses.append(subClassObject)
 
         namespaces = []
 
         for p, n in g.namespaces():
-            namespaceObject = {}
-            namespaceObject["p"] = p
-            namespaceObject["n"] = n
+            namespaceObject = {"p": p, "n": n}
             namespaces.append(namespaceObject)
 
         try:
@@ -174,16 +182,15 @@ for ttlpath in ttlfiles:
             print(" Made dir " + htmldir + str(ttlpath.parent))
         except FileExistsError:
             pass
-        
+
         # dotpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".dot"
-        
+
         # dotlines = []
-        
+
         # for s, p, o in g.triples((None, None, None)):
         #     dotlines.append(f'"{s}" -> "{o}"[label="{p}"];')
         # tripleslist = '\n'.join(dotlines)
-        
-        
+
         # with open(dotpath, "w+") as dotfile:
         #     print("  Writing " + dotpath)
         #     dotfile.write("digraph { node [shape=box];" + tripleslist + "}")
@@ -193,15 +200,27 @@ for ttlpath in ttlfiles:
         with open(csvpath, "w") as csvfile:
             print("  Writing " + csvpath)
             triple_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-            triple_writer.writerow(['Subject', 'Predicate', 'Object'])
+            triple_writer.writerow(["Subject", "Predicate", "Object"])
             for s, p, o in g.triples((None, None, None)):
                 triple_writer.writerow([s, p, o])
 
         htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
 
-        relcanonical = "https://ukparliament.github.io/ontologies/meta/html/" + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
+        relcanonical = (
+            "https://ukparliament.github.io/ontologies/meta/html/"
+            + str(ttlpath.parent)
+            + "/"
+            + ttlpath.stem
+            + ".html"
+        )
 
-        csv_url = "https://ukparliament.github.io/ontologies/meta/html/" + str(ttlpath.parent) + "/" + ttlpath.stem + ".csv"
+        csv_url = (
+            "https://ukparliament.github.io/ontologies/meta/html/"
+            + str(ttlpath.parent)
+            + "/"
+            + ttlpath.stem
+            + ".csv"
+        )
 
         with open(htmlpath, "w") as htmlfile:
             print("  Writing " + htmlpath)
