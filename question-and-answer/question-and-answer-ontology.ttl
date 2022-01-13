@@ -108,6 +108,7 @@ pqa:AnswerType rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:DelegatedAnswer rdf:type owl:Class ;
+    rdfs:subClassOf pqa:Answer ;
 	rdfs:label "Delegated answer"@en ;
 	rdfs:comment "Part of a written answer provided by an arm's length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -219,13 +220,6 @@ pqa:refersToPreviousAnswer rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an answer to a previous answer that answers the question in whole or in part e.g. 'I refer the honourable X to the answer given...'"@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Answer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
-pqa:delegatedAnswer rdf:type owl:ObjectProperty ;
-	rdfs:label "Delegated answer"@en ;
-	rdfs:comment "Relates an answer to a delegated answer provided by an arm's length body. The delegated answer may provide part or all of the full answer."@en ;
-	rdfs:domain pqa:Answer ;
-	rdfs:range pqa:DelegatedAnswer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:delegatedTo rdf:type owl:ObjectProperty ;
