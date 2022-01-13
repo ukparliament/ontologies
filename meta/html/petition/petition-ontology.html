@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/petition/petition-ontology.html">
+    <link rel="index" href="https://ukparliament.github.io/ontologies/">
+    <link rel="alternate" href="https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl" type="text/turtle" title="Petition ontology: Turtle source">
+    <link rel="alternate" href="https://ukparliament.github.io/ontologies/meta/html/petition/petition-ontology.csv" type="text/csv" title="Petition ontology: CSV">
+    <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
+    <title>Petition ontology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <div class="row p-2">
+    <div class="col justify-content-md-center col-md-8">
+        <header class="py-2">
+            <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
+        <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
+    </header>
+
+    <main class="py-4">
+        <h1>Petition ontology</h1>
+        <nav>  
+            <a href="#classes">Classes</a>
+            &middot; <a href="#objectproperties">Object properties</a>
+ &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
+
+
+
+    </nav>
+        <section id="description">Petition ontology for UK Parliament. Covers the public surface area of petitions.</section>
+
+        
+
+        <section id="classes">
+            <h2>Classes</h2>
+
+            <article class="class py-2" id="Approval">
+                <h3><a href="#Approval">Approval
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Explicit moderation option for when a petition is approved.</p>
+
+                <p>Superclasses
+                &middot; ModerationOption
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="Debate">
+                <h3><a href="#Debate">Debate
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A Parliamentary debate.</p>
+
+
+            </article>
+            <article class="class py-2" id="GovernmentResponse">
+                <h3><a href="#GovernmentResponse">GovernmentResponse
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A response from the Government.</p>
+
+
+            </article>
+            <article class="class py-2" id="LocatedSignatureCount">
+                <h3><a href="#LocatedSignatureCount">LocatedSignatureCount
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The number of signatures on a petition from a given place.</p>
+
+
+            </article>
+            <article class="class py-2" id="Moderation">
+                <h3><a href="#Moderation">Moderation
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published.</p>
+
+
+            </article>
+            <article class="class py-2" id="ModerationOption">
+                <h3><a href="#ModerationOption">ModerationOption
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The available moderation options for a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published.</p>
+
+
+            </article>
+            <article class="class py-2" id="Person">
+                <h3><a href="#Person">Person
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A person.</p>
+
+
+            </article>
+            <article class="class py-2" id="Petition">
+                <h3><a href="#Petition">Petition
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An online Parliamentary petition.</p>
+
+
+            </article>
+            <article class="class py-2" id="Place">
+                <h3><a href="#Place">Place
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A place. Any kind of place.</p>
+
+
+            </article>
+            <article class="class py-2" id="Rejection">
+                <h3><a href="#Rejection">Rejection
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Explicit moderation option for when a petition is rejected.</p>
+
+                <p>Superclasses
+                &middot; ModerationOption
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="Threshold">
+                <h3><a href="#Threshold">Threshold
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A type of threshold. Might be moderation threshold, government response threshold or debate threshold.</p>
+
+
+            </article>
+            <article class="class py-2" id="ThresholdAttainment">
+                <h3><a href="#ThresholdAttainment">ThresholdAttainment
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The threshold attainment levels a petition might pass through from moderation threshold to government response threshold to debate threshold.</p>
+
+
+            </article>
+        </section>
+
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+
+            <article class="objectproperty py-2" id="fromPlace">
+
+                
+
+
+                <h3><a href="#fromPlace">fromPlace
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a located signature count to the place the signatures came from.</p>
+
+                <p><strong>LocatedSignatureCount</strong> &mdash; fromPlace &mdash; <strong>Place</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasCreator">
+
+                
+
+
+                <h3><a href="#hasCreator">hasCreator
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a petition to the person who created it.</p>
+
+                <p><strong>Petition</strong> &mdash; hasCreator &mdash; <strong>Person</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasDebate">
+
+                
+
+
+                <h3><a href="#hasDebate">hasDebate
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a petition to a debate.</p>
+
+                <p><strong>Petition</strong> &mdash; hasDebate &mdash; <strong>Debate</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasGovernmentResponse">
+
+                
+
+
+                <h3><a href="#hasGovernmentResponse">hasGovernmentResponse
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a petition to a Government response.</p>
+
+                <p><strong>Petition</strong> &mdash; hasGovernmentResponse &mdash; <strong>GovernmentResponse</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasLocatedSignatureCount">
+
+                
+
+
+                <h3><a href="#hasLocatedSignatureCount">hasLocatedSignatureCount
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a petition to a located signature count.</p>
+
+                <p><strong>Petition</strong> &mdash; hasLocatedSignatureCount &mdash; <strong>LocatedSignatureCount</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasModeration">
+
+                
+
+
+                <h3><a href="#hasModeration">hasModeration
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a petition to its moderation states.</p>
+
+                <p><strong>Petition</strong> &mdash; hasModeration &mdash; <strong>Moderation</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasModerationOption">
+
+                
+
+
+                <h3><a href="#hasModerationOption">hasModerationOption
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a moderation to its moderation option.</p>
+
+                <p><strong>Moderation</strong> &mdash; hasModerationOption &mdash; <strong>ModerationOption</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasThreshold">
+
+                
+
+
+                <h3><a href="#hasThreshold">hasThreshold
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a threshold attainment to a threshold.</p>
+
+                <p><strong>ThresholdAttainment</strong> &mdash; hasThreshold &mdash; <strong>Threshold</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasThresholdAttainment">
+
+                
+
+
+                <h3><a href="#hasThresholdAttainment">hasThresholdAttainment
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a petition to a threshold attainment.</p>
+
+                <p><strong>Petition</strong> &mdash; hasThresholdAttainment &mdash; <strong>ThresholdAttainment</strong></p>
+
+            </article>
+        </section>
+
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+
+            <article class="dataproperty py-2" id="action">
+                
+
+                <h3><a href="#action">action
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The action text (title) of the petition entered by the petition creator.</p>
+
+                <p><strong>Petition</strong> &mdash; action &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="additionalDetails">
+                
+
+                <h3><a href="#additionalDetails">additionalDetails
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Additional text to justify the petition entered by the petition creator.</p>
+
+                <p><strong>Petition</strong> &mdash; additionalDetails &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="background">
+                
+
+                <h3><a href="#background">background
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>A background explanation of why the petition was created entered by the petition creator.</p>
+
+                <p><strong>Petition</strong> &mdash; background &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="closedAt">
+                
+
+                <h3><a href="#closedAt">closedAt
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Date time at which the petition was closed.</p>
+
+                <p><strong>Petition</strong> &mdash; closedAt &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="rejectionCode">
+                
+
+                <h3><a href="#rejectionCode">rejectionCode
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>A number identifying a specific rejection code.</p>
+
+                <p><strong>Rejection</strong> &mdash; rejectionCode &mdash; <strong>integer</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="rejectionDetails">
+                
+
+                <h3><a href="#rejectionDetails">rejectionDetails
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Written explanation of why a petition was rejected.</p>
+
+                <p><strong>Rejection</strong> &mdash; rejectionDetails &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="signatureCount">
+                
+
+                <h3><a href="#signatureCount">signatureCount
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Number of signatures on a located signature count.</p>
+
+                <p><strong>LocatedSignatureCount</strong> &mdash; signatureCount &mdash; <strong>integer</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="signatureCountRetrievedAt">
+                
+
+                <h3><a href="#signatureCountRetrievedAt">signatureCountRetrievedAt
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Date time at which a located signature count was retrieved from the petitions API.</p>
+
+                <p><strong>LocatedSignatureCount</strong> &mdash; signatureCountRetrievedAt &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="thresholdAttainmentAt">
+                
+
+                <h3><a href="#thresholdAttainmentAt">thresholdAttainmentAt
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Date time at which a threshold is met.</p>
+
+                <p><strong>ThresholdAttainment</strong> &mdash; thresholdAttainmentAt &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="thresholdSignatureNumber">
+                
+
+                <h3><a href="#thresholdSignatureNumber">thresholdSignatureNumber
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The number of signatures required to meet a threshold.</p>
+
+                <p><strong>Threshold</strong> &mdash; thresholdSignatureNumber &mdash; <strong>integer</strong></p>
+
+
+            </article>
+        </section>
+
+
+
+
+
+
+        <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>petition/<wbr>Rejection</td>
+                    <td>/<wbr>ontologies/<wbr>petition/<wbr>ModerationOption</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>petition/<wbr>Approval</td>
+                    <td>/<wbr>ontologies/<wbr>petition/<wbr>ModerationOption</td>
+                </tr>
+        </table>
+        </section>  
+
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+                    <dt>brick</dt>
+                    <dd>https://brickschema.org/schema/Brick#</dd>
+                    <dt>csvw</dt>
+                    <dd>http://www.w3.org/ns/csvw#</dd>
+                    <dt>dc</dt>
+                    <dd>http://purl.org/dc/elements/1.1/</dd>
+                    <dt>dcat</dt>
+                    <dd>http://www.w3.org/ns/dcat#</dd>
+                    <dt>dcmitype</dt>
+                    <dd>http://purl.org/dc/dcmitype/</dd>
+                    <dt>dcterms</dt>
+                    <dd>http://purl.org/dc/terms/</dd>
+                    <dt>dcam</dt>
+                    <dd>http://purl.org/dc/dcam/</dd>
+                    <dt>doap</dt>
+                    <dd>http://usefulinc.com/ns/doap#</dd>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
+                    <dt>odrl</dt>
+                    <dd>http://www.w3.org/ns/odrl/2/</dd>
+                    <dt>org</dt>
+                    <dd>http://www.w3.org/ns/org#</dd>
+                    <dt>owl</dt>
+                    <dd>http://www.w3.org/2002/07/owl#</dd>
+                    <dt>prof</dt>
+                    <dd>http://www.w3.org/ns/dx/prof/</dd>
+                    <dt>prov</dt>
+                    <dd>http://www.w3.org/ns/prov#</dd>
+                    <dt>qb</dt>
+                    <dd>http://purl.org/linked-data/cube#</dd>
+                    <dt>rdf</dt>
+                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+                    <dt>rdfs</dt>
+                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+                    <dt>schema</dt>
+                    <dd>https://schema.org/</dd>
+                    <dt>sh</dt>
+                    <dd>http://www.w3.org/ns/shacl#</dd>
+                    <dt>skos</dt>
+                    <dd>http://www.w3.org/2004/02/skos/core#</dd>
+                    <dt>sosa</dt>
+                    <dd>http://www.w3.org/ns/sosa/</dd>
+                    <dt>ssn</dt>
+                    <dd>http://www.w3.org/ns/ssn/</dd>
+                    <dt>time</dt>
+                    <dd>http://www.w3.org/2006/time#</dd>
+                    <dt>vann</dt>
+                    <dd>http://purl.org/vocab/vann/</dd>
+                    <dt>void</dt>
+                    <dd>http://rdfs.org/ns/void#</dd>
+                    <dt>xsd</dt>
+                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
+                    <dt>xml</dt>
+                    <dd>http://www.w3.org/XML/1998/namespace</dd>
+                    <dt>ppt</dt>
+                    <dd>http://parliament.uk/ontologies/petition/</dd>
+            </dl>
+        </section>  
+
+
+    </main>
+
+    <footer class="py-2">
+
+        <p>Ontology created &middot; <time id="created">2017-02-22</time></p>
+        
+       
+
+        <p>This HTML page was generated on 2022-01-13 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/petition/petition-ontology.csv">CSV</a>.</p>
+        
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/petition/petition-ontology.ttl">visualdataweb.de/webvowl</a></p>
+
+    </footer>
+</body>
+
+</html>
