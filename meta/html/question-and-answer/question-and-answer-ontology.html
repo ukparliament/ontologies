@@ -56,7 +56,25 @@
                     </a>
                 </h3>
                 <span class="badge bg-info text-dark">Class</span>
-                <p>A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or unstar it (remove it from the schedule), meaning the question will receive a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member.</p>
+                <p>A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or &#39;unstar&#39; it. Unstarring has the effect of removing the question from the schedule and requesting a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member.</p>
+
+
+            </article>
+            <article class="class py-2" id="AnswerExpectedAsChange">
+                <h3><a href="#AnswerExpectedAsChange">Answer expected as change
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The act of indicating a change from an expectation of an oral answer to a written answer.</p>
+
+
+            </article>
+            <article class="class py-2" id="AnswerExpectedAsChangeReason">
+                <h3><a href="#AnswerExpectedAsChangeReason">Answer expected as change reason
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The potential reasons for a change to the form of answer expected, being either &#39;unstarred&#39; or &#39;unreached&#39;.</p>
 
 
             </article>
@@ -87,7 +105,7 @@
                     </a>
                 </h3>
                 <span class="badge bg-info text-dark">Class</span>
-                <p>An allocation to an answering body to which a question is directed, either at tabling or when asked in the House. Note that the allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body. Allocated answering bodies are time bound. This would use startOn and endOn properties from the Utility ontology.</p>
+                <p>An allocation to the answering body to which a question is directed, either at tabling or when asked in the House. Allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body.</p>
 
 
             </article>
@@ -120,6 +138,10 @@
                 <span class="badge bg-info text-dark">Class</span>
                 <p>Part of a written answer provided by an arm&#39;s length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer.</p>
 
+                <p>Superclasses
+                &middot; Answer
+
+            </p>
 
             </article>
             <article class="class py-2" id="Document">
@@ -128,6 +150,15 @@
                 </h3>
                 <span class="badge bg-info text-dark">Class</span>
                 <p>A document.</p>
+
+
+            </article>
+            <article class="class py-2" id="FormOfAnswer">
+                <h3><a href="#FormOfAnswer">Form of answer
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The potential forms in which an answer may be given, being either oral or written.</p>
 
 
             </article>
@@ -281,6 +312,24 @@
 
             </article>
 
+            <article class="objectproperty py-2" id="answerExpectedInForm">
+
+                
+
+
+                <h3><a href="#answerExpectedInForm">Answer expected in form
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer being expected at at a point in time to the form the answer is expected in.</p>
+
+                <p><strong>AnswerExpectedAs</strong> &mdash; Answer expected in form &mdash; <strong>FormOfAnswer</strong></p>
+
+            </article>
+
             <article class="objectproperty py-2" id="answerTo">
 
                 
@@ -353,21 +402,39 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="delegatedAnswer">
+            <article class="objectproperty py-2" id="changedFrom">
 
                 
 
 
-                <h3><a href="#delegatedAnswer">Delegated answer
+                <h3><a href="#changedFrom">Changed from
                 </a>
             </h3>
             <span class="badge bg-info text-dark">Object property</span>
 
 
 
-                <p>Relates an answer to a delegated answer provided by an arm&#39;s length body. The delegated answer may provide part or all of the full answer.</p>
+                <p>Relates a change in the form of answer expected to the expectation prior to that change.</p>
 
-                <p><strong>Answer</strong> &mdash; Delegated answer &mdash; <strong>DelegatedAnswer</strong></p>
+                <p><strong>AnswerExpectedAsChange</strong> &mdash; Changed from &mdash; <strong>AnswerExpectedAs</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="changedTo">
+
+                
+
+
+                <h3><a href="#changedTo">Changed to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a change in the form of answer expected to the expectation subsequent to that change.</p>
+
+                <p><strong>AnswerExpectedAsChange</strong> &mdash; Changed to &mdash; <strong>AnswerExpectedAs</strong></p>
 
             </article>
 
@@ -407,21 +474,21 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="inPursuantTo">
+            <article class="objectproperty py-2" id="hasChangeReason">
 
                 
 
 
-                <h3><a href="#inPursuantTo">In pursuant to
+                <h3><a href="#hasChangeReason">Has change reason
                 </a>
             </h3>
             <span class="badge bg-info text-dark">Object property</span>
 
 
 
-                <p>Relates a question to a piece of parliamentary business cited by the question.</p>
+                <p>Relates a change in the form of answer expected to the reason for that change.</p>
 
-                <p><strong>Question</strong> &mdash; In pursuant to &mdash; <strong>PursuableThing</strong></p>
+                <p><strong>AnswerExpectedAsChange</strong> &mdash; Has change reason &mdash; <strong>AnswerExpectedAsChangeReason</strong></p>
 
             </article>
 
@@ -440,6 +507,24 @@
                 <p>Relates a question to the round robin grouping it is deemed to be part of.</p>
 
                 <p><strong>Question</strong> &mdash; Part of round robin &mdash; <strong>RoundRobin</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="pursuantTo">
+
+                
+
+
+                <h3><a href="#pursuantTo">Pursuant to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a question to a piece of parliamentary business cited by the question.</p>
+
+                <p><strong>Question</strong> &mdash; Pursuant to &mdash; <strong>PursuableThing</strong></p>
 
             </article>
 
@@ -646,21 +731,6 @@
 
             </article>
 
-            <article class="dataproperty py-2" id="isOralAnswerExpected">
-                
-
-                <h3><a href="#isOralAnswerExpected">Is oral answer expected
-                </a>
-            </h3>
-            <span class="badge bg-info text-dark">Data property</span>
-
-                <p>True if the answer expected (at that period in time) is oral. False if the answer expected (at that period in time) is written.</p>
-
-                <p><strong>AnswerExpectedAs</strong> &mdash; Is oral answer expected &mdash; <strong>boolean</strong></p>
-
-
-            </article>
-
             <article class="dataproperty py-2" id="isQuestionSubstantive">
                 
 
@@ -676,21 +746,6 @@
 
             </article>
 
-            <article class="dataproperty py-2" id="oralUnreachedAt">
-                
-
-                <h3><a href="#oralUnreachedAt">Oral unreached at
-                </a>
-            </h3>
-            <span class="badge bg-info text-dark">Data property</span>
-
-                <p>Not all questions scheduled for answer during oral question time are reached during the allocated time. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given to the question. This property records the point in time at which this happens. The oral unreached at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has not been reached.</p>
-
-                <p><strong>AnswerExpectedAs</strong> &mdash; Oral unreached at &mdash; <strong>dateTime</strong></p>
-
-
-            </article>
-
             <article class="dataproperty py-2" id="questionText">
                 
 
@@ -702,21 +757,6 @@
                 <p>Relates a question to the actual text of the question as asked by the Member.</p>
 
                 <p><strong>Question</strong> &mdash; Question text &mdash; <strong>langString</strong></p>
-
-
-            </article>
-
-            <article class="dataproperty py-2" id="unstarredAt">
-                
-
-                <h3><a href="#unstarredAt">Unstarred at
-                </a>
-            </h3>
-            <span class="badge bg-info text-dark">Data property</span>
-
-                <p>The point in time at which a Member who has tabled a question for oral question time declares they are unable to attend the Chamber and would like a written answer to their question. The question is removed from the schedule. The unstarred at property should only ever hang off an Answer Expected As class when the answer expected is oral, because this item on the schedule has been unstarred.</p>
-
-                <p><strong>AnswerExpectedAs</strong> &mdash; Unstarred at &mdash; <strong>dateTime</strong></p>
 
 
             </article>
@@ -749,6 +789,10 @@
                 <tr>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>AnsweringBody</td>
                     <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>OrganisationAccountableToParliament</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>DelegatedAnswer</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Answer</td>
                 </tr>
         </table>
         </section>  
@@ -824,11 +868,13 @@
         
        
 
-        <p>This HTML page was generated on 2022-01-11 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv">CSV</a>.</p>
-        
+        <p>This HTML page was generated on 2022-01-13 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv">CSV</a>.</p>
+        <!--
         <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">visualdataweb.de/webvowl</a></p>
-
+-->
     </footer>
+    </div>
+    </div>
 </body>
 
 </html>
