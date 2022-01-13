@@ -199,6 +199,20 @@
 
 	# ... which has been allocated since a time.
 	putil:startAt "2021-10-24T10:30:03"^^xsd:datetime .
+	
+	
+	
+# There is a transferral (of allocation) ...
+<http://id.parliament.uk/transferral-1> rdf:type pqa:Transferral ;
+
+	# ...which happened at a time ...
+	putil:createdAt "2021-10-24T10:30:03"^^xsd:datetime ;
+	
+	# ... from the first allocation ...
+	pqa:transferredFrom  <http://id.parliament.uk/allocation-1> ;
+	
+	# ... to the second allocation ...
+	pqa:transferredTo  <http://id.parliament.uk/allocation-2> .
 
 
 
