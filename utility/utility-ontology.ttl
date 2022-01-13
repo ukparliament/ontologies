@@ -16,6 +16,7 @@
 	foaf:depiction <https://ukparliament.github.io/ontologies/utility/utility.svg> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ].
@@ -272,14 +273,14 @@ putil:url rdf:type owl:DatatypeProperty ;
 	
 putil:isInterestDeclared rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is interest declared"@en ;
-	rdfs:comment "Relates an item of Member activity to whether or not the Member declared an interest. Note that this is a boolean and does not describe or link to any definition of the nature of the interest. The interest declared may or may not relate to an interest registered on the Register of Members' Financial Interests."@en ;
+	rdfs:comment "Determines if an item of Member activity includes a declaration of interest by that Member, without describing the nature of the interest. The interest declared may or may not relate to an interest registered in the Register of Members' Financial Interests."@en ;
 	rdfs:domain putil:MemberActivityThing ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
 	
 putil:includesRequestForStatistics rdf:type owl:DatatypeProperty ;
 	rdfs:label "Includes request for statistics"@en ;
-	rdfs:comment "Relates an item of Member activity to whether or not statistical information was requested by the Member."@en ;
+	rdfs:comment "Determines if an item of Member activity includes a request for statistical information."@en ;
 	rdfs:domain putil:MemberActivityThing ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
