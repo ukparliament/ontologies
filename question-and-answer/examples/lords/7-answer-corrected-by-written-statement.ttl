@@ -1,4 +1,4 @@
-# Correcting statement arrives.
+# Correcting statement arrives unlinked.
 
 
 
@@ -86,10 +86,10 @@
 	# ... with heading text (added by IDMS) ...
 	pqa:heading "This is heading text added by IDMS"@en ;
 
-	# ... with question text.
+	# ... with question text ...
 	pqa:questionText "This is a question?"@en ;
 	
-	# ... with a concept annotation (added by IDMS) ...
+	# ... with a concept annotation (added by IDMS).
 	putil:hasConceptAnnotation <http://id.parliament.uk/concept-annotation-1> .
 	
 	
@@ -461,9 +461,6 @@
 # There is a second written statement expression ....
 <http://id.parliament.uk/written-statement-expression-2> rdf:type pws:WrittenStatmementExpression ;
 
-	# ... which is an expression of a second written statement work ...
-	pws:expressionOf <http://id.parliament.uk/written-statement-work-2> ;
-
 	# ... that was made by a person incumbent in a government position ...
 	pws:madeBy <http://id.parliament.uk/incumbency-2> ;
 
@@ -481,14 +478,3 @@
 	
 	# ... and some statement text.
 	pws:title "Really sorry. There was a big oops."@en .
-	
-	
-
-# There is a second written statement work ....
-<http://id.parliament.uk/written-statement-work-2> rdf:type pws:WrittenStatmementWork ;
-
-	# ... that was made in a session ...
-	pws:inSession <http://id.parliament.uk/session-1> ;
-
-	# ... which corrects the correcting answer.
-	pws:corrects <http://id.parliament.uk/answer-3> .
