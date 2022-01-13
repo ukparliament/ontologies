@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/contact-point/contact-point-ontology.html">
+    <link rel="index" href="https://ukparliament.github.io/ontologies/">
+    <link rel="alternate" href="https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl" type="text/turtle" title="Contact point ontology: Turtle source">
+    <link rel="alternate" href="https://ukparliament.github.io/ontologies/meta/html/contact-point/contact-point-ontology.csv" type="text/csv" title="Contact point ontology: CSV">
+    <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
+    <title>Contact point ontology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <div class="row p-2">
+    <div class="col justify-content-md-center col-md-8">
+        <header class="py-2">
+            <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
+        <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
+    </header>
+
+    <main class="py-4">
+        <h1>Contact point ontology</h1>
+        <nav>  
+            <a href="#classes">Classes</a>
+            &middot; <a href="#objectproperties">Object properties</a>
+ &middot; <a href="#dataproperties">Data properties</a>            &middot; <a href="#namespaces">Namespaces</a>
+
+
+
+    </nav>
+        <section id="description">Contact point ontology for UK Parliament</section>
+
+        
+
+        <section id="classes">
+            <h2>Classes</h2>
+
+            <article class="class py-2" id="ContactableThing">
+                <h3><a href="#ContactableThing">ContactableThing
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A thing that can be contacted. Might be a person or a person in the context of a role or a group.</p>
+
+
+            </article>
+            <article class="class py-2" id="ContactPoint">
+                <h3><a href="#ContactPoint">ContactPoint
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A postal address or other contact details.</p>
+
+
+            </article>
+            <article class="class py-2" id="PostalAddress">
+                <h3><a href="#PostalAddress">PostalAddress
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A postal address.</p>
+
+
+            </article>
+        </section>
+
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+
+            <article class="objectproperty py-2" id="hasContactPoint">
+
+                
+
+
+                <h3><a href="#hasContactPoint">hasContactPoint
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a contactable thing (a person, group or position etc) to a contact point.</p>
+
+                <p><strong>ContactableThing</strong> &mdash; hasContactPoint &mdash; <strong>ContactPoint</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasPostalAddress">
+
+                
+
+
+                <h3><a href="#hasPostalAddress">hasPostalAddress
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a contact point to its postal address.</p>
+
+                <p><strong>ContactPoint</strong> &mdash; hasPostalAddress &mdash; <strong>PostalAddress</strong></p>
+
+            </article>
+        </section>
+
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+
+            <article class="dataproperty py-2" id="addressLine1">
+                
+
+                <h3><a href="#addressLine1">addressLine1
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The first line of a postal address.</p>
+
+                <p><strong>PostalAddress</strong> &mdash; addressLine1 &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="addressLine2">
+                
+
+                <h3><a href="#addressLine2">addressLine2
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The second line of a postal address.</p>
+
+                <p><strong>PostalAddress</strong> &mdash; addressLine2 &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="addressLine3">
+                
+
+                <h3><a href="#addressLine3">addressLine3
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The third line of a postal address.</p>
+
+                <p><strong>PostalAddress</strong> &mdash; addressLine3 &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="addressLine4">
+                
+
+                <h3><a href="#addressLine4">addressLine4
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The fourth line of a postal address.</p>
+
+                <p><strong>PostalAddress</strong> &mdash; addressLine4 &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="addressLine5">
+                
+
+                <h3><a href="#addressLine5">addressLine5
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>The fifth line of a postal address.</p>
+
+                <p><strong>PostalAddress</strong> &mdash; addressLine5 &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="availabilityNote">
+                
+
+                <h3><a href="#availabilityNote">availabilityNote
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Temporal availability note for a contact point. Used for constituency office opening days and hours.</p>
+
+                <p><strong>ContactPoint</strong> &mdash; availabilityNote &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="contactForm">
+                
+
+                <h3><a href="#contactForm">contactForm
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses.</p>
+
+                <p><strong>ContactPoint</strong> &mdash; contactForm &mdash; <strong>Literal</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="email">
+                
+
+                <h3><a href="#email">email
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Contact point has an email address.</p>
+
+                <p><strong>ContactPoint</strong> &mdash; email &mdash; <strong>Literal</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="faxNumber">
+                
+
+                <h3><a href="#faxNumber">faxNumber
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Contact point has a fax number.</p>
+
+                <p><strong>ContactPoint</strong> &mdash; faxNumber &mdash; <strong>Literal</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="phoneNumber">
+                
+
+                <h3><a href="#phoneNumber">phoneNumber
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Contact point has a phone number.</p>
+
+                <p><strong>ContactPoint</strong> &mdash; phoneNumber &mdash; <strong>Literal</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="postcode">
+                
+
+                <h3><a href="#postcode">postcode
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Postal address has a postcode.</p>
+
+                <p><strong>PostalAddress</strong> &mdash; postcode &mdash; <strong>Literal</strong></p>
+
+
+            </article>
+        </section>
+
+
+
+
+
+
+
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+                    <dt>brick</dt>
+                    <dd>https://brickschema.org/schema/Brick#</dd>
+                    <dt>csvw</dt>
+                    <dd>http://www.w3.org/ns/csvw#</dd>
+                    <dt>dc</dt>
+                    <dd>http://purl.org/dc/elements/1.1/</dd>
+                    <dt>dcat</dt>
+                    <dd>http://www.w3.org/ns/dcat#</dd>
+                    <dt>dcmitype</dt>
+                    <dd>http://purl.org/dc/dcmitype/</dd>
+                    <dt>dcterms</dt>
+                    <dd>http://purl.org/dc/terms/</dd>
+                    <dt>dcam</dt>
+                    <dd>http://purl.org/dc/dcam/</dd>
+                    <dt>doap</dt>
+                    <dd>http://usefulinc.com/ns/doap#</dd>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
+                    <dt>odrl</dt>
+                    <dd>http://www.w3.org/ns/odrl/2/</dd>
+                    <dt>org</dt>
+                    <dd>http://www.w3.org/ns/org#</dd>
+                    <dt>owl</dt>
+                    <dd>http://www.w3.org/2002/07/owl#</dd>
+                    <dt>prof</dt>
+                    <dd>http://www.w3.org/ns/dx/prof/</dd>
+                    <dt>prov</dt>
+                    <dd>http://www.w3.org/ns/prov#</dd>
+                    <dt>qb</dt>
+                    <dd>http://purl.org/linked-data/cube#</dd>
+                    <dt>rdf</dt>
+                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+                    <dt>rdfs</dt>
+                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+                    <dt>schema</dt>
+                    <dd>https://schema.org/</dd>
+                    <dt>sh</dt>
+                    <dd>http://www.w3.org/ns/shacl#</dd>
+                    <dt>skos</dt>
+                    <dd>http://www.w3.org/2004/02/skos/core#</dd>
+                    <dt>sosa</dt>
+                    <dd>http://www.w3.org/ns/sosa/</dd>
+                    <dt>ssn</dt>
+                    <dd>http://www.w3.org/ns/ssn/</dd>
+                    <dt>time</dt>
+                    <dd>http://www.w3.org/2006/time#</dd>
+                    <dt>vann</dt>
+                    <dd>http://purl.org/vocab/vann/</dd>
+                    <dt>void</dt>
+                    <dd>http://rdfs.org/ns/void#</dd>
+                    <dt>xsd</dt>
+                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
+                    <dt>xml</dt>
+                    <dd>http://www.w3.org/XML/1998/namespace</dd>
+                    <dt>pcp</dt>
+                    <dd>http://parliament.uk/ontologies/contact-point/</dd>
+            </dl>
+        </section>  
+
+
+    </main>
+
+    <footer class="py-2">
+
+        <p>Ontology created &middot; <time id="created">2017-01-27</time></p>
+        
+       
+
+        <p>This HTML page was generated on 2022-01-13 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/contact-point/contact-point-ontology.csv">CSV</a>.</p>
+        <!--
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/contact-point/contact-point-ontology.ttl">visualdataweb.de/webvowl</a></p>
+-->
+    </footer>
+    </div>
+    </div>
+</body>
+
+</html>

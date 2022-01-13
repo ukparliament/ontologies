@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.html">
+    <link rel="index" href="https://ukparliament.github.io/ontologies/">
+    <link rel="alternate" href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl" type="text/turtle" title="Question and answer ontology: Turtle source">
+    <link rel="alternate" href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv" type="text/csv" title="Question and answer ontology: CSV">
+    <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
+    <title>Question and answer ontology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <div class="row p-2">
+    <div class="col justify-content-md-center col-md-8">
+        <header class="py-2">
+            <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
+        <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
+    </header>
+
+    <main class="py-4">
+        <h1>Question and answer ontology</h1>
+        <nav>  
+            <a href="#classes">Classes</a>
+            &middot; <a href="#objectproperties">Object properties</a>
+ &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
+
+            &middot; <a href="https://ukparliament.github.io/ontologies/question-and-answer/question-and-answer.png">Depiction</a>
+
+
+    </nav>
+        <section id="description">Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House. Note that the handling of questions as calendar business events, any ministerial statements acting as corrections to answers and tabling events will be dealt with elsewhere.</section>
+
+        
+
+        <section id="classes">
+            <h2>Classes</h2>
+
+            <article class="class py-2" id="Answer">
+                <h3><a href="#Answer">Answer
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An answer to a question provided by a Member, usually a Minister, on behalf of an answering body.</p>
+
+                <p>Superclasses
+                &middot; PursuableThing
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="AnswerExpectedAs">
+                <h3><a href="#AnswerExpectedAs">Answer expected as
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or &#39;unstar&#39; it. Unstarring has the effect of removing the question from the schedule and requesting a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member.</p>
+
+
+            </article>
+            <article class="class py-2" id="AnswerExpectedAsChange">
+                <h3><a href="#AnswerExpectedAsChange">Answer expected as change
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The act of indicating a change from an expectation of an oral answer to a written answer.</p>
+
+
+            </article>
+            <article class="class py-2" id="AnswerExpectedAsChangeReason">
+                <h3><a href="#AnswerExpectedAsChangeReason">Answer expected as change reason
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The potential reasons for a change to the form of answer expected, being either &#39;unstarred&#39; or &#39;unreached&#39;.</p>
+
+
+            </article>
+            <article class="class py-2" id="AnswerType">
+                <h3><a href="#AnswerType">Answer type
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The type of a given answer e.g. holding answer, substantive answer or substantive answer as corrected. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation.</p>
+
+
+            </article>
+            <article class="class py-2" id="AnsweringBody">
+                <h3><a href="#AnsweringBody">Answering body
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A body of whom Members can ask questions. In the House of Commons this may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners. In the House of Lords, questions are addressed to Her Majesty&#39;s Government rather than to a specific department or body. For written and private notice questions in the House of Lords, data exists to map questions to specific answering bodies; for oral questions it doesn&#39;t.</p>
+
+                <p>Superclasses
+                &middot; OrganisationAccountableToParliament
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="AnsweringBodyAllocation">
+                <h3><a href="#AnsweringBodyAllocation">Answering body allocation
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An allocation to the answering body to which a question is directed, either at tabling or when asked in the House. Allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body.</p>
+
+
+            </article>
+            <article class="class py-2" id="ArmsLengthBody">
+                <h3><a href="#ArmsLengthBody">Arms length body
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An organisation operating at arm&#39;s length from the government e.g. UK Statistics Authority.</p>
+
+
+            </article>
+            <article class="class py-2" id="BusinessQuestion">
+                <h3><a href="#BusinessQuestion">Business question
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Business questions allow Members to ask the Leader of the House about forthcoming business in the House of Commons. Unlike tabled parliamentary questions, the text of a business question will be spoken in the Chamber. The answer will also always be oral.</p>
+
+                <p>Superclasses
+                &middot; Question
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="DelegatedAnswer">
+                <h3><a href="#DelegatedAnswer">Delegated answer
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Part of a written answer provided by an arm&#39;s length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer.</p>
+
+                <p>Superclasses
+                &middot; Answer
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="Document">
+                <h3><a href="#Document">Document
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A document.</p>
+
+
+            </article>
+            <article class="class py-2" id="FormOfAnswer">
+                <h3><a href="#FormOfAnswer">Form of answer
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The potential forms in which an answer may be given, being either oral or written.</p>
+
+
+            </article>
+            <article class="class py-2" id="Incumbency">
+                <h3><a href="#Incumbency">Incumbency
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
+
+
+            </article>
+            <article class="class py-2" id="LibraryDeposit">
+                <h3><a href="#LibraryDeposit">Library deposit
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A paper or set of papers placed by a Minister, or the Speaker, or the Lord Speaker, in the Library of either House. Usually deposits are made into both Libraries but sometimes only one.</p>
+
+
+            </article>
+            <article class="class py-2" id="OrganisationAccountableToParliament">
+                <h3><a href="#OrganisationAccountableToParliament">Organisation accountable to Parliament
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An organisation that is accountable to Parliament, be that a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers.</p>
+
+
+            </article>
+            <article class="class py-2" id="ParliamentaryQuestion">
+                <h3><a href="#ParliamentaryQuestion">Parliamentary question
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Parliamentary questions (often referred to as PQs) allow Members to seek information from an answering body or to press a Secretary of State to take a particular action. Usually this is to a Minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and private notice questions, which are applied for to the Speaker or Lord Speaker privately, parliamentary questions are tabled with the Lords or Commons Table Offices.</p>
+
+                <p>Superclasses
+                &middot; Question
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="PursuableThing">
+                <h3><a href="#PursuableThing">Pursuable thing
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A piece of parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing e.g. in pursuant to a written or oral answer, a ministerial statement.</p>
+
+
+            </article>
+            <article class="class py-2" id="Question">
+                <h3><a href="#Question">Question
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Questions might be parliamentary questions (oral or written), urgent (or private notice) questions or business questions, asked by a Member of a House of an answering body or bodies. Note that the same question text adressed to multiple answering bodies, tabled by the same Member on the same day, count as one question.</p>
+
+
+            </article>
+            <article class="class py-2" id="RoundRobin">
+                <h3><a href="#RoundRobin">Round robin
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The round robin class provides a way to group two or more very similar questions asked of multiple answering bodies by a single Member. Sometimes round robins are used as a way for a Member to intentionally ask the same question of multiple answering bodies. Occasionally they&#39;re used where departmental responsibility for a given policy area is not clearly defined. Note that the definition of a round robin is fuzzy; the question text might vary slightly. Identifying round robins is a judgement call.</p>
+
+
+            </article>
+            <article class="class py-2" id="Transferral">
+                <h3><a href="#Transferral">Transferral
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The act of one answering body transferring responsibility for answering a question to another answering body.</p>
+
+
+            </article>
+            <article class="class py-2" id="UrgentQuestion">
+                <h3><a href="#UrgentQuestion">Urgent question
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Urgent questions allow Members of the House of Commons to ask a Minister about matters of an urgent character and relating to matters of public importance. In the House of Lords, such questions are referred to as private notice questions. Unlike parliamentary questions, the text of an urgent question or a private notice question does not appear on the schedule; it will be read in the Chamber. The answer will also always be oral. Urgent questions and private notice questions are not tabled with the Lords or Commons Table Offices; they are applied for to the Speaker or the Lord Speaker privately.</p>
+
+                <p>Superclasses
+                &middot; Question
+
+            </p>
+
+            </article>
+        </section>
+
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+
+            <article class="objectproperty py-2" id="allocatedTo">
+
+                
+
+
+                <h3><a href="#allocatedTo">Allocated to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answering body allocation to an answering body.</p>
+
+                <p><strong>AnsweringBodyAllocation</strong> &mdash; Allocated to &mdash; <strong>AnsweringBody</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="allocation">
+
+                
+
+
+                <h3><a href="#allocation">Allocation
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a question to an allocation to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. This would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly - for example, when referring to the gender of the answering member - treating a round robin as a single question is not yet possible.</p>
+
+                <p><strong>Question</strong> &mdash; Allocation &mdash; <strong>AnsweringBodyAllocation</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="answerExpectedAs">
+
+                
+
+
+                <h3><a href="#answerExpectedAs">Answer expected as
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a question to a time-bound means of capturing the format of the answer expected (either oral or written).</p>
+
+                <p><strong>Question</strong> &mdash; Answer expected as &mdash; <strong>AnswerExpectedAs</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="answerExpectedInForm">
+
+                
+
+
+                <h3><a href="#answerExpectedInForm">Answer expected in form
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer being expected at at a point in time to the form the answer is expected in.</p>
+
+                <p><strong>AnswerExpectedAs</strong> &mdash; Answer expected in form &mdash; <strong>FormOfAnswer</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="answerTo">
+
+                
+
+
+                <h3><a href="#answerTo">Answer to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question.</p>
+
+                <p><strong>Answer</strong> &mdash; Answer to &mdash; <strong>Question</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="answeredBy">
+
+                
+
+
+                <h3><a href="#answeredBy">Answered by
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer to an incumbency of the person who provided the answer. This may be an incumbency in a House seat or an incumbency in another position. In practice this will usually be a Minister in a government department or a person occupying a position in a non-departmental answering body. For questions in receipt of an oral answer in the House of Lords, this may be a Government whip.</p>
+
+                <p><strong>Answer</strong> &mdash; Answered by &mdash; <strong>Incumbency</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="answeringBody">
+
+                
+
+
+                <h3><a href="#answeringBody">Answering body
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body.</p>
+
+                <p><strong>Answer</strong> &mdash; Answering body &mdash; <strong>AnsweringBody</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="askedBy">
+
+                
+
+
+                <h3><a href="#askedBy">Asked by
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a question to an incumbency of the person asking the question. This may be an incumbency in a House seat or an incumbency in another position. In the House of Lords the Member who tabled a question in expectation of an oral answer may delegate another Member to be present in the Chamber to receive the answer. Parliamentary questions are tabled with the Lords or Commons Table Offices; urgent and private notice questions are applied for to the Speaker or Lord Speaker privately.</p>
+
+                <p><strong>Question</strong> &mdash; Asked by &mdash; <strong>Incumbency</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="changedFrom">
+
+                
+
+
+                <h3><a href="#changedFrom">Changed from
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a change in the form of answer expected to the expectation prior to that change.</p>
+
+                <p><strong>AnswerExpectedAsChange</strong> &mdash; Changed from &mdash; <strong>AnswerExpectedAs</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="changedTo">
+
+                
+
+
+                <h3><a href="#changedTo">Changed to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a change in the form of answer expected to the expectation subsequent to that change.</p>
+
+                <p><strong>AnswerExpectedAsChange</strong> &mdash; Changed to &mdash; <strong>AnswerExpectedAs</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="delegatedTo">
+
+                
+
+
+                <h3><a href="#delegatedTo">Delegated to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a delegated answer to the arm&#39;s length body that provided it.</p>
+
+                <p><strong>DelegatedAnswer</strong> &mdash; Delegated to &mdash; <strong>ArmsLengthBody</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasAnswerType">
+
+                
+
+
+                <h3><a href="#hasAnswerType">Has answer type
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer to its type i.e. a holding answer, substantive answer or corrected substantive answer.</p>
+
+                <p><strong>Answer</strong> &mdash; Has answer type &mdash; <strong>AnswerType</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasChangeReason">
+
+                
+
+
+                <h3><a href="#hasChangeReason">Has change reason
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a change in the form of answer expected to the reason for that change.</p>
+
+                <p><strong>AnswerExpectedAsChange</strong> &mdash; Has change reason &mdash; <strong>AnswerExpectedAsChangeReason</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="partOfRoundRobin">
+
+                
+
+
+                <h3><a href="#partOfRoundRobin">Part of round robin
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a question to the round robin grouping it is deemed to be part of.</p>
+
+                <p><strong>Question</strong> &mdash; Part of round robin &mdash; <strong>RoundRobin</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="pursuantTo">
+
+                
+
+
+                <h3><a href="#pursuantTo">Pursuant to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a question to a piece of parliamentary business cited by the question.</p>
+
+                <p><strong>Question</strong> &mdash; Pursuant to &mdash; <strong>PursuableThing</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="refersToDocument">
+
+                
+
+
+                <h3><a href="#refersToDocument">Refers to document
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a written answer to a document provided by the answering body. This may be provided as an attachment to the answer text. The document might form part or all of the answer.</p>
+
+                <p><strong>Answer</strong> &mdash; Refers to document &mdash; <strong>Document</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="refersToLibraryDeposit">
+
+                
+
+
+                <h3><a href="#refersToLibraryDeposit">Refers to Library deposit
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer to a Library deposit i.e. the answer to a question may include a commitment to deposit papers in the Libraries of either House.</p>
+
+                <p><strong>Answer</strong> &mdash; Refers to Library deposit &mdash; <strong>LibraryDeposit</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="refersToPreviousAnswer">
+
+                
+
+
+                <h3><a href="#refersToPreviousAnswer">Refers to previous answer
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer to a previous answer that answers the question in whole or in part e.g. &#39;I refer the honourable X to the answer given...&#39;</p>
+
+                <p><strong>Answer</strong> &mdash; Refers to previous answer &mdash; <strong>Answer</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="replacesAnswer">
+
+                
+
+
+                <h3><a href="#replacesAnswer">Replaces answer
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an answer to a subsequent answer given to the same question e.g. a holding answer to a substantive answer, or a substantive answer to a corrected answer, a corrected answer to a further corrected answer. Substantive answers replace holding answers in whole, whereas corrected answers may replace a previous answer in whole or in part.</p>
+
+                <p><strong>Answer</strong> &mdash; Replaces answer &mdash; <strong>Answer</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="transferredFrom">
+
+                
+
+
+                <h3><a href="#transferredFrom">Transferred from
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an act of transferral to the answering body allocation the question was formerly allocated to.</p>
+
+                <p><strong>Transferral</strong> &mdash; Transferred from &mdash; <strong>AnsweringBodyAllocation</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="transferredTo">
+
+                
+
+
+                <h3><a href="#transferredTo">Transferred to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an act of transferral to the answering body allocation the question was subsequently allocated to.</p>
+
+                <p><strong>Transferral</strong> &mdash; Transferred to &mdash; <strong>AnsweringBodyAllocation</strong></p>
+
+            </article>
+        </section>
+
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+
+            <article class="dataproperty py-2" id="answerText">
+                
+
+                <h3><a href="#answerText">Answer text
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates an answer to the actual text of the answer as supplied by the answering body.</p>
+
+                <p><strong>Answer</strong> &mdash; Answer text &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="dateForAnswer">
+                
+
+                <h3><a href="#dateForAnswer">Date for answer
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a Parliamentary Question to a date for answer. For an ordinary written question this is expected to be within 7 days of tabling. If the Member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed.</p>
+
+                <p><strong>ParliamentaryQuestion</strong> &mdash; Date for answer &mdash; <strong>date</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="heading">
+                
+
+                <h3><a href="#heading">Heading
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For oral parliamentary questions, the headings are supplied by Lords or Commons Hansard.</p>
+
+                <p><strong>Question</strong> &mdash; Heading &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="interestsDeclared">
+                
+
+                <h3><a href="#interestsDeclared">Interests declared
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Indicates whether the Member asking the question has declared they have interests which may be relevant to the subject matter of the question.</p>
+
+                <p><strong>Question</strong> &mdash; Interests declared &mdash; <strong>boolean</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="isAnswerOral">
+                
+
+                <h3><a href="#isAnswerOral">Is answer oral
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Determines if the answer is given orally in the Chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to parliamentary questions. All other answers are always oral.</p>
+
+                <p><strong>Answer</strong> &mdash; Is answer oral &mdash; <strong>boolean</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="isDateForAnswerNamed">
+                
+
+                <h3><a href="#isDateForAnswerNamed">Is date for answer named
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Determines if the Member tabling a written parliamentary question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are ordinary and the value here is false. By convention a Member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response.</p>
+
+                <p><strong>ParliamentaryQuestion</strong> &mdash; Is date for answer named &mdash; <strong>boolean</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="isQuestionSubstantive">
+                
+
+                <h3><a href="#isQuestionSubstantive">Is question substantive
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Indicates if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister&#39;s appointments (respectively topical questions and Prime Minister&#39;s questions in the House of Commons). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons. The process for topical questions in the House of Lords differs slightly from that in the House of Commons, in that all questions tabled are substantive. Here topical refers to the shorter notice period allowed when tabling a question.</p>
+
+                <p><strong>ParliamentaryQuestion</strong> &mdash; Is question substantive &mdash; <strong>boolean</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="questionText">
+                
+
+                <h3><a href="#questionText">Question text
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a question to the actual text of the question as asked by the Member.</p>
+
+                <p><strong>Question</strong> &mdash; Question text &mdash; <strong>langString</strong></p>
+
+
+            </article>
+        </section>
+
+
+
+
+
+
+        <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>ParliamentaryQuestion</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>UrgentQuestion</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>BusinessQuestion</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Question</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Answer</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>PursuableThing</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>AnsweringBody</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>OrganisationAccountableToParliament</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>DelegatedAnswer</td>
+                    <td>/<wbr>ontologies/<wbr>question-and-answer/<wbr>Answer</td>
+                </tr>
+        </table>
+        </section>  
+
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+                    <dt>brick</dt>
+                    <dd>https://brickschema.org/schema/Brick#</dd>
+                    <dt>csvw</dt>
+                    <dd>http://www.w3.org/ns/csvw#</dd>
+                    <dt>dc</dt>
+                    <dd>http://purl.org/dc/elements/1.1/</dd>
+                    <dt>dcat</dt>
+                    <dd>http://www.w3.org/ns/dcat#</dd>
+                    <dt>dcmitype</dt>
+                    <dd>http://purl.org/dc/dcmitype/</dd>
+                    <dt>dcterms</dt>
+                    <dd>http://purl.org/dc/terms/</dd>
+                    <dt>dcam</dt>
+                    <dd>http://purl.org/dc/dcam/</dd>
+                    <dt>doap</dt>
+                    <dd>http://usefulinc.com/ns/doap#</dd>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
+                    <dt>odrl</dt>
+                    <dd>http://www.w3.org/ns/odrl/2/</dd>
+                    <dt>org</dt>
+                    <dd>http://www.w3.org/ns/org#</dd>
+                    <dt>owl</dt>
+                    <dd>http://www.w3.org/2002/07/owl#</dd>
+                    <dt>prof</dt>
+                    <dd>http://www.w3.org/ns/dx/prof/</dd>
+                    <dt>prov</dt>
+                    <dd>http://www.w3.org/ns/prov#</dd>
+                    <dt>qb</dt>
+                    <dd>http://purl.org/linked-data/cube#</dd>
+                    <dt>rdf</dt>
+                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+                    <dt>rdfs</dt>
+                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+                    <dt>schema</dt>
+                    <dd>https://schema.org/</dd>
+                    <dt>sh</dt>
+                    <dd>http://www.w3.org/ns/shacl#</dd>
+                    <dt>skos</dt>
+                    <dd>http://www.w3.org/2004/02/skos/core#</dd>
+                    <dt>sosa</dt>
+                    <dd>http://www.w3.org/ns/sosa/</dd>
+                    <dt>ssn</dt>
+                    <dd>http://www.w3.org/ns/ssn/</dd>
+                    <dt>time</dt>
+                    <dd>http://www.w3.org/2006/time#</dd>
+                    <dt>vann</dt>
+                    <dd>http://purl.org/vocab/vann/</dd>
+                    <dt>void</dt>
+                    <dd>http://rdfs.org/ns/void#</dd>
+                    <dt>xsd</dt>
+                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
+                    <dt>xml</dt>
+                    <dd>http://www.w3.org/XML/1998/namespace</dd>
+                    <dt>pqa</dt>
+                    <dd>http://parliament.uk/ontologies/question-and-answer/</dd>
+            </dl>
+        </section>  
+
+
+    </main>
+
+    <footer class="py-2">
+
+        <p>Ontology created &middot; <time id="created">2016-10-10</time></p>
+        
+       
+
+        <p>This HTML page was generated on 2022-01-13 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv">CSV</a>.</p>
+        <!--
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">visualdataweb.de/webvowl</a></p>
+-->
+    </footer>
+    </div>
+    </div>
+</body>
+
+</html>
