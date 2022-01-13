@@ -161,12 +161,9 @@
 # There is an answer expected as ...
 <http://id.parliament.uk/answer-expected-as-1> rdf:type pqa:AnswerExpectedAs ;
 
-	# ... with a start date ...
-	putil:startOn "2021-10-18"^^xsd:date ;
+	# ... with a start time ...
+	putil:startAt "2021-10-18T10:42:02"^^xsd:datetime ;
 
-	# ... with a end date ...
-	putil:endOn "2021-10-22"^^xsd:date ;
-	
 	# ...with a form of answer.
 	pqa:answerExpectedInForm <http://id.parliament.uk/form-of-answer-1> .
 	
@@ -186,13 +183,13 @@
 	# ... which is allocated to an answering body ...
 	pqa:allocatedTo <http://id.parliament.uk/answering-body-1> ;
 
-	# ... which has been allocated since a date ...
-	putil:startOn "2021-10-18"^^xsd:date ;
+	# ... which has been allocated since a time ...
+	putil:startAt "2021-10-18T10:42:02"^^xsd:datetime ;
 
-	# ... and stopped being allocated on a date ...
-	putil:startOn "2021-10-23"^^xsd:date .
-	
-	
+	# ... and stopped being allocated at a time ...
+	putil:endAt "2021-10-24T10:30:02"^^xsd:datetime .
+
+
 
 # There is a second allocation to an answering body ...
 <http://id.parliament.uk/allocation-2> rdf:type pqa:AnsweringBodyAllocation ;
@@ -200,8 +197,8 @@
 	# ... which is allocated to a second answering body ...
 	pqa:allocatedTo <http://id.parliament.uk/answering-body-2> ;
 
-	# ... which has been allocated since a date.
-	putil:startOn "2021-10-24"^^xsd:date .
+	# ... which has been allocated since a time.
+	putil:startAt "2021-10-24T10:30:03"^^xsd:datetime .
 
 
 
