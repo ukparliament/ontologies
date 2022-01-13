@@ -155,8 +155,8 @@ for ttlpath in ttlfiles:
 
         imports = []
 
-        for object in g.objects(None, OWL.imports):
-            imports.append(urlparse(object))
+        for gobject in g.objects(None, OWL.imports):
+            imports.append(urlparse(gobject))
 
         equivalentClasses = []
 
