@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/record-review/record-review-ontology.html">
+    <link rel="index" href="https://ukparliament.github.io/ontologies/">
+    <link rel="alternate" href="https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl" type="text/turtle" title="Record reviews ontology: Turtle source">
+    <link rel="alternate" href="https://ukparliament.github.io/ontologies/meta/html/record-review/record-review-ontology.csv" type="text/csv" title="Record reviews ontology: CSV">
+    <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
+    <title>Record reviews ontology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <div class="row p-2">
+    <div class="col justify-content-md-center col-md-8">
+        <header class="py-2">
+            <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
+        <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
+    </header>
+
+    <main class="py-4">
+        <h1>Record reviews ontology</h1>
+        <nav>  
+            <a href="#classes">Classes</a>
+            &middot; <a href="#objectproperties">Object properties</a>
+ &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
+
+            &middot; <a href="https://ukparliament.github.io/ontologies/record-review/record-review.png">Depiction</a>
+
+
+    </nav>
+        <section id="description">A model describing editorial reviews of records and actions taken following review.</section>
+
+        
+
+        <section id="classes">
+            <h2>Classes</h2>
+
+            <article class="class py-2" id="Agent">
+                <h3><a href="#Agent">Agent
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
+
+
+            </article>
+            <article class="class py-2" id="Archiving">
+                <h3><a href="#Archiving">Archiving
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The action of archiving a work, indicating that no further revisions are intended to take place. Manifestations of the work which have not been withdrawn remain available, marked with an indication that no further updates are anticipated.</p>
+
+                <p>Superclasses
+                &middot; EditorialAction
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="EditorialAction">
+                <h3><a href="#EditorialAction">Editorial action
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>An editorial action is an action taken on a manifestation or a work, for example: archiving a work, reviewing a manifestation, revising a manifestation or withdrawing a manifestation.</p>
+
+
+            </article>
+            <article class="class py-2" id="EditorialReview">
+                <h3><a href="#EditorialReview">Editorial review
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A review of a manifestation. A decision to review may be triggered by an external event, for example: a change in Government policy, the availability of new data, external work in the same area or the output of parliamentary business; a change in user needs, for example: a new type of enquiry; or a change to library policy or practice, for example: in presentation, citation style, method of acknowledgement, change of portfolio or change of specialist.</p>
+
+                <p>Superclasses
+                &middot; EditorialAction
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="Feedback">
+                <h3><a href="#Feedback">Feedback
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>Feedback on a record, provided in a submission. An instance of the feedback class may contain the text of the feedback, or a pointer to the substance of the feedback in a separate system.</p>
+
+
+            </article>
+            <article class="class py-2" id="Manifestation">
+                <h3><a href="#Manifestation">Manifestation
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode.</p>
+
+
+            </article>
+            <article class="class py-2" id="ReviewCycle">
+                <h3><a href="#ReviewCycle">Review cycle
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A review cycle describes the period between reviews of a work.</p>
+
+
+            </article>
+            <article class="class py-2" id="Revision">
+                <h3><a href="#Revision">Revision
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The action of revising an existing manifestation, resulting in a new manifestation. The existing manifestation remains unchanged.</p>
+
+                <p>Superclasses
+                &middot; EditorialAction
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="RevisionType">
+                <h3><a href="#RevisionType">Revision type
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The type of a revision, for example: a major or minor edit.</p>
+
+
+            </article>
+            <article class="class py-2" id="Withdrawal">
+                <h3><a href="#Withdrawal">Withdrawal
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The action of withdrawing a manifestation. A manifestation may be withdrawn for a period and reinstated, or permanently withdrawn.</p>
+
+                <p>Superclasses
+                &middot; EditorialAction
+
+            </p>
+
+            </article>
+            <article class="class py-2" id="Work">
+                <h3><a href="#Work">Work
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>A distinct intellectual creation, similar to a work as defined in FRBR.</p>
+
+
+            </article>
+        </section>
+
+
+        <section id="objectproperties">
+            <h2>Object properties</h2>
+
+
+            <article class="objectproperty py-2" id="archivingOf">
+
+                
+
+
+                <h3><a href="#archivingOf">Archiving of
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an archiving action to the work being archived.</p>
+
+                <p><strong>Archiving</strong> &mdash; Archiving of &mdash; <strong>Work</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="by">
+
+                
+
+
+                <h3><a href="#by">By
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an editorial action to the person or group performing that action.</p>
+
+                <p><strong>EditorialAction</strong> &mdash; By &mdash; <strong>Agent</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="feedbackLeadsTo">
+
+                
+
+
+                <h3><a href="#feedbackLeadsTo">Feedback leads to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.</p>
+
+                <p><strong>Feedback</strong> &mdash; Feedback leads to &mdash; <strong>EditorialReview</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="fromManifestation">
+
+                
+
+
+                <h3><a href="#fromManifestation">From manifestation
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an act of revision to an existing manifestation to be revised.</p>
+
+                <p><strong>Revision</strong> &mdash; From manifestation &mdash; <strong>Manifestation</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasReviewCycle">
+
+                
+
+
+                <h3><a href="#hasReviewCycle">Has review cycle
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a work to the review cycle of that work. A work has a single review cycle, or none.</p>
+
+                <p><strong>Work</strong> &mdash; Has review cycle &mdash; <strong>ReviewCycle</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="hasRevisionType">
+
+                
+
+
+                <h3><a href="#hasRevisionType">Has revision type
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an action of revision to the type of that revision.</p>
+
+                <p><strong>Revision</strong> &mdash; Has revision type &mdash; <strong>RevisionType</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="leadsTo">
+
+                
+
+
+                <h3><a href="#leadsTo">Leads to
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.</p>
+
+                <p><strong>EditorialAction</strong> &mdash; Leads to &mdash; <strong>EditorialAction</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="leadsToNew">
+
+                
+
+
+                <h3><a href="#leadsToNew">Leads to new
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an editorial review to the creation of a new work.</p>
+
+                <p><strong>EditorialReview</strong> &mdash; Leads to new &mdash; <strong>Work</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="submits">
+
+                
+
+
+                <h3><a href="#submits">Makes
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an agent to the feedback submitted by that agent.</p>
+
+                <p><strong>Agent</strong> &mdash; Makes &mdash; <strong>Feedback</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="resultsIn">
+
+                
+
+
+                <h3><a href="#resultsIn">Results in
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a review cycle to resulting editorial reviews.</p>
+
+                <p><strong>ReviewCycle</strong> &mdash; Results in &mdash; <strong>EditorialReview</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="reviewOf">
+
+                
+
+
+                <h3><a href="#reviewOf">Review of
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an editorial review to the manifestation being reviewed.</p>
+
+                <p><strong>EditorialReview</strong> &mdash; Review of &mdash; <strong>Manifestation</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="supersedes">
+
+                
+
+
+                <h3><a href="#supersedes">Supersedes
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.</p>
+
+                <p><strong>Work</strong> &mdash; Supersedes &mdash; <strong>Work</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="toManifestation">
+
+                
+
+
+                <h3><a href="#toManifestation">To manifestation
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates an act of revision to a new manifestation resulting from the revision.</p>
+
+                <p><strong>Revision</strong> &mdash; To manifestation &mdash; <strong>Manifestation</strong></p>
+
+            </article>
+
+            <article class="objectproperty py-2" id="withdrawnBy">
+
+                
+
+
+                <h3><a href="#withdrawnBy">Withdrawn by
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a manifestation to the action of withdrawing that manifestation.</p>
+
+                <p><strong>Manifestation</strong> &mdash; Withdrawn by &mdash; <strong>Withdrawal</strong></p>
+
+            </article>
+        </section>
+
+
+        <section id="dataproperties">
+            <h2>Data properties</h2>
+
+            <article class="dataproperty py-2" id="at">
+                
+
+                <h3><a href="#at">At
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates an editorial action to the time at which the action was taken.</p>
+
+                <p><strong>EditorialAction</strong> &mdash; At &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="feedbackText">
+                
+
+                <h3><a href="#feedbackText">Feedback text
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates an item of feedback to the text of that feedback.</p>
+
+                <p><strong>Feedback</strong> &mdash; Feedback text &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="hasRevisionDescription">
+                
+
+                <h3><a href="#hasRevisionDescription">Has revision description
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.</p>
+
+                <p><strong>Revision</strong> &mdash; Has revision description &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="hasRevisionTypeDescription">
+                
+
+                <h3><a href="#hasRevisionTypeDescription">Has revision type description
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a revision type to a textual description of that type.</p>
+
+                <p><strong>RevisionType</strong> &mdash; Has revision type description &mdash; <strong>langString</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="publishedAt">
+                
+
+                <h3><a href="#publishedAt">Published at
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a manifestation to the time at which it was published.</p>
+
+                <p><strong>Manifestation</strong> &mdash; Published at &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="receivedAt">
+                
+
+                <h3><a href="#receivedAt">Received at
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates an item of feedback to the time at which the feedback was received.</p>
+
+                <p><strong>Feedback</strong> &mdash; Received at &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="reinstatedAt">
+                
+
+                <h3><a href="#reinstatedAt">Reinstated at
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates a withdrawal of a manifestation to the time at which it was withdrawn.</p>
+
+                <p><strong>Withdrawal</strong> &mdash; Reinstated at &mdash; <strong>dateTime</strong></p>
+
+
+            </article>
+
+            <article class="dataproperty py-2" id="reviewedOn">
+                
+
+                <h3><a href="#reviewedOn">Reviewed on
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Data property</span>
+
+                <p>Relates an editorial review of a manifestation to the date on which the review took place.</p>
+
+                <p><strong>EditorialReview</strong> &mdash; Reviewed on &mdash; <strong>date</strong></p>
+
+
+            </article>
+        </section>
+
+
+
+
+
+
+        <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialReview</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Archiving</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Withdrawal</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>Revision</td>
+                    <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+                </tr>
+        </table>
+        </section>  
+
+        <section id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+                    <dt>brick</dt>
+                    <dd>https://brickschema.org/schema/Brick#</dd>
+                    <dt>csvw</dt>
+                    <dd>http://www.w3.org/ns/csvw#</dd>
+                    <dt>dc</dt>
+                    <dd>http://purl.org/dc/elements/1.1/</dd>
+                    <dt>dcat</dt>
+                    <dd>http://www.w3.org/ns/dcat#</dd>
+                    <dt>dcmitype</dt>
+                    <dd>http://purl.org/dc/dcmitype/</dd>
+                    <dt>dcterms</dt>
+                    <dd>http://purl.org/dc/terms/</dd>
+                    <dt>dcam</dt>
+                    <dd>http://purl.org/dc/dcam/</dd>
+                    <dt>doap</dt>
+                    <dd>http://usefulinc.com/ns/doap#</dd>
+                    <dt>foaf</dt>
+                    <dd>http://xmlns.com/foaf/0.1/</dd>
+                    <dt>odrl</dt>
+                    <dd>http://www.w3.org/ns/odrl/2/</dd>
+                    <dt>org</dt>
+                    <dd>http://www.w3.org/ns/org#</dd>
+                    <dt>owl</dt>
+                    <dd>http://www.w3.org/2002/07/owl#</dd>
+                    <dt>prof</dt>
+                    <dd>http://www.w3.org/ns/dx/prof/</dd>
+                    <dt>prov</dt>
+                    <dd>http://www.w3.org/ns/prov#</dd>
+                    <dt>qb</dt>
+                    <dd>http://purl.org/linked-data/cube#</dd>
+                    <dt>rdf</dt>
+                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+                    <dt>rdfs</dt>
+                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+                    <dt>schema</dt>
+                    <dd>https://schema.org/</dd>
+                    <dt>sh</dt>
+                    <dd>http://www.w3.org/ns/shacl#</dd>
+                    <dt>skos</dt>
+                    <dd>http://www.w3.org/2004/02/skos/core#</dd>
+                    <dt>sosa</dt>
+                    <dd>http://www.w3.org/ns/sosa/</dd>
+                    <dt>ssn</dt>
+                    <dd>http://www.w3.org/ns/ssn/</dd>
+                    <dt>time</dt>
+                    <dd>http://www.w3.org/2006/time#</dd>
+                    <dt>vann</dt>
+                    <dd>http://purl.org/vocab/vann/</dd>
+                    <dt>void</dt>
+                    <dd>http://rdfs.org/ns/void#</dd>
+                    <dt>xsd</dt>
+                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
+                    <dt>xml</dt>
+                    <dd>http://www.w3.org/XML/1998/namespace</dd>
+                    <dt>precr</dt>
+                    <dd>http://parliament.uk/ontologies/record-review/</dd>
+            </dl>
+        </section>  
+
+
+    </main>
+
+    <footer class="py-2">
+
+        <p>Ontology created &middot; <time id="created">2020-12-18</time></p>
+        
+       
+        <p id="makers">
+            Made by
+            &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+            &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+            &middot; Anya Somerville
+        </p>
+
+        <p>This HTML page was generated on 2022-01-13 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/record-review/record-review-ontology.csv">CSV</a>.</p>
+        <!--
+        <p>Visualization &middot; <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/record-review/record-review-ontology.ttl">visualdataweb.de/webvowl</a></p>
+-->
+    </footer>
+    </div>
+    </div>
+</body>
+
+</html>
