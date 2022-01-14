@@ -30,6 +30,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 
 
@@ -552,8 +553,11 @@
 	# ... which corrects the correcting answer ...
 	pws:corrects <http://id.parliament.uk/answer-3> ;
 	
-	# ... with a second concept annotation (added by IDMS).
-	putil:hasConceptAnnotation <http://id.parliament.uk/concept-annotation-2> .
+	# ... with a second concept annotation (added by IDMS) ...
+	putil:hasConceptAnnotation <http://id.parliament.uk/concept-annotation-2> ;
+	
+	# ... with a third concept annotation (added by IDMS).
+	putil:hasConceptAnnotation <http://id.parliament.uk/concept-annotation-3> .
 	
 	
 	
@@ -566,4 +570,30 @@
 
 	# ... which has a concept.
 	putil:hasConcept <http://id.parliament.uk/concept-1> .
+	
+
+
+# There is a third concept annotation ...
+# ... that would not normally be added but is here to question whether we index purely with skos:Concepts or with Things where we have those Things ...
+<http://id.parliament.uk/concept-annotation-3> rdf:type putil:ConceptAnnotation ;
+
+	# ... created at a time on the day following the making of the statement ...
+	putil:createdAt "2021-11-05T10:47:03"^^xsd:datetime ;
+
+	# ... which has a second concept.
+	putil:hasConcept <http://id.parliament.uk/concept-2> .
+	
+	
+	
+# There is a concept (in the IDMS thesaurus) ...
+<http://id.parliament.uk/concept-2> rdf:type skos:Concept;
+
+	# ... with a preferred label ...
+	skos:prefLabel "Michael Fabricant"@en ;
+
+	# ... with an alternative label ...
+	skos:altLabel "Mike Fabricant"@en ;
+	
+	# ... with a focus on the Michael Fabricant Thing.
+	foaf:focus <http://id.parliament.uk/person-1> .
 	
