@@ -89,10 +89,10 @@
 	# ... with heading text (added by IDMS) ...
 	pqa:heading "This is heading text added by IDMS"@en ;
 
-	# ... with question text.
+	# ... with question text ...
 	pqa:questionText "This is a question?"@en ;
 	
-	# ... with a concept annotation (added by IDMS) ...
+	# ... with a concept annotation (added by IDMS).
 	putil:hasConceptAnnotation <http://id.parliament.uk/concept-annotation-1> .
 	
 	
@@ -170,7 +170,7 @@
 	# ... and an end time ...
 	putil:endAt "2021-10-22T10:42:02"^^xsd:datetime ;
 	
-	# ...with a form of answer.
+	# ... with a form of answer.
 	pqa:answerExpectedInForm <http://id.parliament.uk/form-of-answer-1> .
 	
 	
@@ -181,7 +181,7 @@
 	# ... with a start time ...
 	putil:startAt "2021-10-22T10:42:02"^^xsd:datetime ;
 
-	# ...with a form of answer.
+	# ... with a form of answer.
 	pqa:answerExpectedInForm <http://id.parliament.uk/form-of-answer-2> .
 	
 	
@@ -258,13 +258,13 @@
 # There is a transferral (of allocation) ...
 <http://id.parliament.uk/transferral-1> rdf:type pqa:Transferral ;
 
-	# ...which happened at a time ...
+	# ... which happened at a time ...
 	putil:createdAt "2021-10-24T10:30:03"^^xsd:datetime ;
 
 	# ... from the first allocation ...
 	pqa:transferredFrom  <http://id.parliament.uk/allocation-1> ;
 
-	# ... to the second allocation ...
+	# ... to the second allocation.
 	pqa:transferredTo  <http://id.parliament.uk/allocation-2> .
 
 
@@ -299,7 +299,7 @@
 
 
 
-# There is a Parliament period ....
+# There is a Parliament period ...
 <http://id.parliament.uk/parliament-period-1> rdf:type ptime:ParliamentPeriod ;
 
 	# ... with a preferred label ...
@@ -310,7 +310,7 @@
 	
 	
 
-# There is a previous written statement expression ....
+# There is a previous written statement expression ...
 <http://id.parliament.uk/written-statement-1> rdf:type pws:WrittenStatementExpression ;
 
 	# ... which is an expression of a written statement work ...
@@ -331,7 +331,7 @@
 	# ... with a title ...
 	pws:title "The is the title of an old written statement"@en ;
 
-	# ... with statement text ...
+	# ... with statement text.
 	pws:statementText "The is the text of an old written statement as made to a House."@en .
 	
 
@@ -354,7 +354,7 @@
 	# ... created at a time on the day following tabling ...
 	putil:createdAt "2019-04-12T10:42:02"^^xsd:datetime ;
 	
-	# ... which has a concept ...
+	# ... which has a concept.
 	putil:hasConcept <http://id.parliament.uk/concept-1> .
 	
 	
@@ -365,7 +365,7 @@
 	# ... with a preferred label ...
 	skos:prefLabel "Horse"@en ;
 
-	# ... with an alternative label ...
+	# ... with an alternative label.
 	skos:altLabel "Dobbin"@en .
 	
 	
@@ -391,7 +391,7 @@
 	# ... which is not an oral answer ...
 	pqa:isOralAnswer  "false"^^xsd:boolean ;
 
-	# ... with some answer text ...
+	# ... with some answer text.
 	pqa:answerText "This is some boilerplate text explaining we're busy right now but we will get back to you."@en .
 
 
@@ -399,7 +399,7 @@
 # There is an answer type ...
 <http://id.parliament.uk/answer-1> rdf:type pqa:Answer;
 
-	# ... with a preferred label ...
+	# ... with a preferred label.
 	putil:preferredLabel "Holding answer"@en .
 	
 	
@@ -418,20 +418,20 @@
 # There is a position ...
 <http://id.parliament.uk/position-1> rdf:type pa:Position;
 
-	# ... which in a government department ...
+	# ... which is in a government department ...
 	pa:positionIn <http://id.parliament.uk/answering-body-2> ;
 
 	# ... with a preferred label.
 	putil:preferredLabel "Home Secretary"@en .
 
 
-# There is a second person ....
+# There is a second person ...
 <http://id.parliament.uk/person-2> rdf:type pa:Person;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Priti Patel"@en ;
 	# Without knowing the future shape of MNIS, dealing with names and titles is left as an exercise for the reader.
 	
-	# ... who has an incumbency (in a government position) ...
+	# ... who has an incumbency (in a government position).
 	pa:hasIncumbency <http://id.parliament.uk/incumbency-2> .
 	
