@@ -15,14 +15,20 @@ jobs:
 
     steps:
       # - uses: actions/checkout@v2
+      
+      - name: add prolog ppa
+        run: sudo add-apt-repository ppa:swi-prolog/stable
 
-      - name: download janet
-        run: curl -L https://github.com/janet-lang/janet/archive/refs/heads/master.zip --output janet.zip
+      - name: update
+        run: sudo apt-get update
         
-      - name: install janet
-        run: unzip janet.zip; cd janet-master; sudo make install; janet -v
+      - name: install prolog
+        run: sudo apt-get install swi-prolog
 
-
+      - name: show prolog version
+        run: swipl --version
+        
+    # ; swipl; use_module(library(semweb/rdf_db)).
 
 
 
