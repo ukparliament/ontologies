@@ -11,8 +11,13 @@
     dcterms:title "Question and answer ontology"@en ;
     dcterms:created "2016-10-10"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Question and answer ontology for UK Parliament. This model only deals with questions that have been successfully tabled or raised as urgent, private notice or business questions in either House. Note that the handling of questions as calendar business events, any ministerial statements acting as corrections to answers and tabling events will be dealt with elsewhere."@en ;
-	foaf:depiction <https://ukparliament.github.io/ontologies/question-and-answer/question-and-answer.png> .
+    dcterms:description "A model describing questions and answers in Parliament, types and forms of answers expected - and allocations to answering bodies."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/question-and-answer/question-and-answer.svg> .
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
 
 
 #######  Classes ##### 	
@@ -25,30 +30,29 @@ pqa:Incumbency rdf:type owl:Class ;
 pqa:ParliamentaryQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "Parliamentary question"@en ;
-	rdfs:comment "Parliamentary questions (often referred to as PQs) allow Members to seek information from an answering body or to press a Secretary of State to take a particular action. Usually this is to a Minister in a government department but sometimes questions can be asked of non-departmental bodies. e.g. Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer (one spoken by a Member in the Chamber). Unlike urgent and private notice questions, which are applied for to the Speaker or Lord Speaker privately, parliamentary questions are tabled with the Lords or Commons Table Offices."@en ;
+	rdfs:comment "Parliamentary questions - often referred to as PQs - are a means by which Members may seek information from an answering body, or ask a Secretary of State to take a particular action. They are usually asked of a Minister in a Government department, though questions can be asked of Members representing non-departmental bodies, for example: Church Commissioners. Parliamentary questions can be asked in expectation of either a written or an oral answer, spoken by a Member in the Chamber. Parliamentary questions are tabled in the Table Office of the Lords or the Commons."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:UrgentQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "Urgent question"@en ;
-	rdfs:comment "Urgent questions allow Members of the House of Commons to ask a Minister about matters of an urgent character and relating to matters of public importance. In the House of Lords, such questions are referred to as private notice questions. Unlike parliamentary questions, the text of an urgent question or a private notice question does not appear on the schedule; it will be read in the Chamber. The answer will also always be oral. Urgent questions and private notice questions are not tabled with the Lords or Commons Table Offices; they are applied for to the Speaker or the Lord Speaker privately."@en ;
+	rdfs:comment "Urgent questions are a means by which Members of the House of Commons may ask a Minister a question which the Member considers requires an immediate answer. In the House of Lords such questions are referred to as private notice questions. Urgent questions and private notice questions are applied for to the Speaker or the Lord Speaker rather than being tabled in the Table Office: the text of an urgent question or a private notice question does not appear on the Order Paper. A debate in the Chamber takes place if an application is granted."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:BusinessQuestion rdf:type owl:Class ;
     rdfs:subClassOf pqa:Question ;
 	rdfs:label "Business question"@en ;
-	rdfs:comment "Business questions allow Members to ask the Leader of the House about forthcoming business in the House of Commons. Unlike tabled parliamentary questions, the text of a business question will be spoken in the Chamber. The answer will also always be oral."@en ;
+	rdfs:comment "Business questions are a means by which Members of the House of Commons may ask the Leader of the House about forthcoming business. Both question and answer will be spoken in the Chamber."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Question rdf:type owl:Class ;
 	rdfs:label "Question"@en ;
-	rdfs:comment "Questions might be parliamentary questions (oral or written), urgent (or private notice) questions or business questions, asked by a Member of a House of an answering body or bodies. Note that the same question text adressed to multiple answering bodies, tabled by the same Member on the same day, count as one question."@en ;
+	rdfs:comment "A question may be an oral or written parliamentary question, an urgent  - or private notice - question or a business question. A question is asked by a Member of a House of an answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:RoundRobin rdf:type owl:Class ;
-	rdfs:label "Round robin"@en ;
-	rdfs:comment "The round robin class provides a way to group two or more very similar questions asked of multiple answering bodies by a single Member. Sometimes round robins are used as a way for a Member to intentionally ask the same question of multiple answering bodies. Occasionally they're used where departmental responsibility for a given policy area is not clearly defined. Note that the definition of a round robin is fuzzy; the question text might vary slightly. Identifying round robins is a judgement call."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+		# edited to here
+	
+
 	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
 	rdfs:label "Answer expected as"@en ;
@@ -277,6 +281,11 @@ pqa:hasChangeReason rdf:type owl:ObjectProperty ;
 	rdfs:domain pqa:AnswerExpectedAsChange ;
 	rdfs:range pqa:AnswerExpectedAsChangeReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+pqa:RoundRobin rdf:type owl:Class ;
+		rdfs:label "Round robin"@en ;
+		rdfs:comment "The round robin class provides a way to group two or more very similar questions asked of multiple answering bodies by a single Member. Sometimes round robins are used as a way for a Member to intentionally ask the same question of multiple answering bodies. Occasionally they're used where departmental responsibility for a given policy area is not clearly defined. Note that the definition of a round robin is fuzzy; the question text might vary slightly. Identifying round robins is a judgement call."@en ;
+		rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 		
 
 #######  Data properties ##### 
