@@ -208,6 +208,20 @@ ppr:hasDocumentType rdf:type owl:ObjectProperty ;
 	rdfs:domain ppr:Citation ;
 	rdfs:range ppr:DocumentType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:forStep rdf:type owl:ObjectProperty ;
+	rdfs:label "For step"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:StepDisplayDepthInProcedure ;
+	rdfs:range ppr:Step ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:inProcedure rdf:type owl:ObjectProperty ;
+	rdfs:label "In procedure"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:StepDisplayDepthInProcedure ;
+	rdfs:range ppr:Procedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 				
 
 #######  Data properties ##### 
@@ -224,4 +238,11 @@ ppr:uri rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a citation to the URI of the document being cited."@en ;
 	rdfs:domain ppr:Citation ;
 	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:displayDepthValue rdf:type owl:DatatypeProperty ;
+	rdfs:label "Display depth value"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:StepDisplayDepthInProcedure ;
+	rdfs:range xsd:float ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
