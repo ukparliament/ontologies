@@ -17,3 +17,11 @@ This is a list of queries used by the House of Commons Library to return lists o
 ## [Female Members of the House of Commons elected at the 2005 General Election](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/membership=all%7Cgender=F%7Chouse*commons%7Creturnedatelection=2005%20general%20election/)
 
 ## [Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/House=Lords|IsEligible=true/PreferredNames)
+
+## [Current Members of the House of Commons respresenting constituencies in England](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=England&include=)
+
+## [Current Members of the House of Commons respresenting constituencies in Northern Ireland](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=Northern%20Ireland&include=)
+
+## [Current Members of the House of Commons respresenting constituencies in Scotland](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=Scotland&include=)
+
+## [Current Members of the House of Commons respresenting constituencies in Wales](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=Wales&include=)
