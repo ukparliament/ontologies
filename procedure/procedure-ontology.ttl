@@ -88,6 +88,11 @@ ppr:DocumentType rdf:type owl:Class ;
 	rdfs:comment "The type of a document being cited, for example: a standing order or a section of legislation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
+	rdfs:label "Step display depth in procedure"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 
 
 #######  Object properties ##### 
@@ -220,11 +225,3 @@ ppr:uri rdf:type owl:DatatypeProperty ;
 	rdfs:domain ppr:Citation ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:stepDescription rdf:type owl:DatatypeProperty ;
-	rdfs:label "Step description"@en ;
-	rdfs:comment "Relates a step to its description."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
