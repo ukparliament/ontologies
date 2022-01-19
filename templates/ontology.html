@@ -112,13 +112,10 @@
             <h2>Data properties</h2>
             {% for dataproperty in dataproperties|sort(attribute='label') %}
 
-            <article class="dataproperty py-2" id="{{ dataproperty.idString }}">
-                
-
+            <article class="dataproperty" id="{{ dataproperty.idString }}">
                 <h3><a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}
-                </a>
+                </a> data property
             </h3>
-            <span class="badge bg-info text-dark">Data property</span>
 
                 <p>{{ dataproperty.comment }}</p>
 
