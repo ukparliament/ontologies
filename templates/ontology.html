@@ -53,11 +53,11 @@
             <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
-            <article class="class py-2" id="{{ class.idString }}">
+            <article class="class" id="{{ class.idString }}">
                 <h3><a href="#{{ class.idString }}">{{ class.label }}
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 {% if class.comment %}
                 <p>{{ class.comment }}</p>
                 {% endif %}
