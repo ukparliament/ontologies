@@ -83,15 +83,11 @@
 
             {% for objectproperty in objectproperties|sort(attribute='label') %}
 
-            <article class="objectproperty py-2" id="{{ objectproperty.idString }}">
-
-                
-
+            <article class="objectproperty" id="{{ objectproperty.idString }}">
 
                 <h3><a href="#{{ objectproperty.idString }}">{{ objectproperty.label }}
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
                 {% if objectproperty.superproperty %}
