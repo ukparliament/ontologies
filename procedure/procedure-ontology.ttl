@@ -73,9 +73,14 @@ ppr:WorkPackageableThing rdf:type owl:Class ;
 	rdfs:comment "A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
+ppr:StepCollectionMembership rdf:type owl:Class ;
+	rdfs:label "Step collection membership"@en ;
+	rdfs:comment "The membership of a step in a step collection."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
 ppr:StepCollection rdf:type owl:Class ;
 	rdfs:label "Step collection"@en ;
-	rdfs:comment "A collection of steps in a procedure. A step collection may belong to one House, or none. A step collection is always within one procedure. A step collection may group one or more steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Key steps' collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named 'Member action steps' collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps."@en ;
+	rdfs:comment "A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Key steps' collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named 'Member action steps' collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Citation rdf:type owl:Class ;
@@ -90,7 +95,7 @@ ppr:DocumentType rdf:type owl:Class ;
 	
 ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:label "Step display depth in procedure"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes ‘procedural sense’, for example: we may show 'procedure concluded' before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 
@@ -160,25 +165,32 @@ ppr:focus rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:WorkPackageableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:stepCollectionInHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "Step collection in House"@en ;
-	rdfs:comment "Relates a step collection to one House, or none."@en ;
-	rdfs:domain ppr:StepCollection ;
-	rdfs:range ppr:House ;
+ppr:hasMembership rdf:type owl:ObjectProperty ;
+	rdfs:label "Has membership"@en ;
+	rdfs:comment "Relates a step to the membership of that step in a step collection. A step collection membership is of one step. A step may have one or more step collection memberships, or none."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:StepCollectionMembership ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:isCollectedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Is collected by"@en ;
-	rdfs:comment "Relates a step to a step collection the step is collected by. A step collection collects one or more steps. A step may be collected by one or more step collections, or none."@en ;
-	rdfs:domain ppr:Step ;
+ppr:ofStepCollection rdf:type owl:ObjectProperty ;
+	rdfs:label "Of step collection"@en ;
+	rdfs:comment "Relates a step collection membership to the collection it is part of. A step collection membership is part of one collection. A step collection may have one or more step collection memberships, or none."@en ;
+	rdfs:domain ppr:StepCollectionMembership ;
 	rdfs:range ppr:StepCollection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasProcedure rdf:type owl:ObjectProperty ;
 	rdfs:label "Has procedure"@en ;
-	rdfs:comment "Relates a step collection to a procedure. A step collection has one procedure. A procedure may have one or more step collections, or none."@en ;
+	rdfs:comment "Relates a step collection to a procedure. A step collection has one procedure, or none. A procedure may have one or more step collections, or none."@en ;
 	rdfs:domain ppr:StepCollection ;
 	rdfs:range ppr:Procedure ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:stepCollectionInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Step collection in House"@en ;
+	rdfs:comment "Relates a step collection to one House, or none. A House may have one or more step collections, or none."@en ;
+	rdfs:domain ppr:StepCollection ;
+	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepHasCitation rdf:type owl:ObjectProperty ;
@@ -211,14 +223,14 @@ ppr:hasDocumentType rdf:type owl:ObjectProperty ;
 	
 ppr:forStep rdf:type owl:ObjectProperty ;
 	rdfs:label "For step"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:inProcedure rdf:type owl:ObjectProperty ;
 	rdfs:label "In procedure"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -242,7 +254,7 @@ ppr:uri rdf:type owl:DatatypeProperty ;
 	
 ppr:displayDepthValue rdf:type owl:DatatypeProperty ;
 	rdfs:label "Display depth value"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range xsd:float ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
