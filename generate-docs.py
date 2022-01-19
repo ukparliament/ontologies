@@ -54,6 +54,8 @@ htmldir = "./meta/html/"
 
 ttlfiles = list(Path(".").glob("*/*.ttl"))
 
+print(ttlfiles)
+
 for ttlpath in ttlfiles:
     if str(ttlpath.parent) != "examples":
 
@@ -67,6 +69,9 @@ for ttlpath in ttlfiles:
 
         # ttlfile = open(ttlpath, "r")
         result = g.parse(data=ttlfile.read(), format="turtle")
+
+        if (None, RDF.type, OWL.Ontology) in g:
+            print("This graph is an ontology.")
 
         classes = []
 
