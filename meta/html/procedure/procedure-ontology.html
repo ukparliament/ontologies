@@ -106,7 +106,16 @@
                     </a>
                 </h3>
                 <span class="badge bg-info text-dark">Class</span>
-                <p>A collection of steps in a procedure. A step collection may belong to one House, or none. A step collection is always within one procedure. A step collection may group one or more steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
+                <p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
+
+
+            </article>
+            <article class="class py-2" id="StepCollectionMembership">
+                <h3><a href="#StepCollectionMembership">Step collection membership
+                    </a>
+                </h3>
+                <span class="badge bg-info text-dark">Class</span>
+                <p>The membership of a step in a step collection.</p>
 
 
             </article>
@@ -115,6 +124,7 @@
                     </a>
                 </h3>
                 <span class="badge bg-info text-dark">Class</span>
+                <p>The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes ‘procedural sense’, for example: we may show &#39;procedure concluded&#39; before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening.</p>
 
 
             </article>
@@ -218,6 +228,7 @@
 
 
 
+                <p>Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures.</p>
 
                 <p><strong>StepDisplayDepthInProcedure</strong> &mdash; For step &mdash; <strong>Step</strong></p>
 
@@ -277,6 +288,24 @@
 
             </article>
 
+            <article class="objectproperty py-2" id="hasMembership">
+
+                
+
+
+                <h3><a href="#hasMembership">Has membership
+                </a>
+            </h3>
+            <span class="badge bg-info text-dark">Object property</span>
+
+
+
+                <p>Relates a step to the membership of that step in a step collection. A step collection membership is of one step. A step may have one or more step collection memberships, or none.</p>
+
+                <p><strong>Step</strong> &mdash; Has membership &mdash; <strong>StepCollectionMembership</strong></p>
+
+            </article>
+
             <article class="objectproperty py-2" id="hasProcedure">
 
                 
@@ -289,7 +318,7 @@
 
 
 
-                <p>Relates a step collection to a procedure. A step collection has one procedure. A procedure may have one or more step collections, or none.</p>
+                <p>Relates a step collection to a procedure. A step collection has one procedure, or none. A procedure may have one or more step collections, or none.</p>
 
                 <p><strong>StepCollection</strong> &mdash; Has procedure &mdash; <strong>Procedure</strong></p>
 
@@ -325,26 +354,27 @@
 
 
 
+                <p>Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps.</p>
 
                 <p><strong>StepDisplayDepthInProcedure</strong> &mdash; In procedure &mdash; <strong>Procedure</strong></p>
 
             </article>
 
-            <article class="objectproperty py-2" id="isCollectedBy">
+            <article class="objectproperty py-2" id="ofStepCollection">
 
                 
 
 
-                <h3><a href="#isCollectedBy">Is collected by
+                <h3><a href="#ofStepCollection">Of step collection
                 </a>
             </h3>
             <span class="badge bg-info text-dark">Object property</span>
 
 
 
-                <p>Relates a step to a step collection the step is collected by. A step collection collects one or more steps. A step may be collected by one or more step collections, or none.</p>
+                <p>Relates a step collection membership to the collection it is part of. A step collection membership is part of one collection. A step collection may have one or more step collection memberships, or none.</p>
 
-                <p><strong>Step</strong> &mdash; Is collected by &mdash; <strong>StepCollection</strong></p>
+                <p><strong>StepCollectionMembership</strong> &mdash; Of step collection &mdash; <strong>StepCollection</strong></p>
 
             </article>
 
@@ -396,7 +426,7 @@
 
 
 
-                <p>Relates a step collection to one House, or none.</p>
+                <p>Relates a step collection to one House, or none. A House may have one or more step collections, or none.</p>
 
                 <p><strong>StepCollection</strong> &mdash; Step collection in House &mdash; <strong>House</strong></p>
 
@@ -487,7 +517,7 @@
             </h3>
             <span class="badge bg-info text-dark">Data property</span>
 
-                <p></p>
+                <p>Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3.</p>
 
                 <p><strong>StepDisplayDepthInProcedure</strong> &mdash; Display depth value &mdash; <strong>float</strong></p>
 
@@ -619,7 +649,7 @@
             &middot; Ben Woodhams
         </p>
 
-        <p>This HTML page was generated on 2022-01-18 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a>.</p>
+        <p>This HTML page was generated on 2022-01-19 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a>.</p>
         
         <p>Visualization &middot; <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">api.parliament.uk/webvowl</a></p>
     </footer>
