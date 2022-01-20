@@ -52,7 +52,7 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-// ttlfiles = list(Path(".").glob("*/*.ttl"))
+# ttlfiles = list(Path(".").glob("*/*.ttl"))
 ttlfiles = list(Path(".").glob("**/*.ttl"))
 
 print(ttlfiles)
