@@ -59,7 +59,7 @@ ttlfiles = list(Path(".").glob("**/*.ttl"))
 
 for ttlpath in ttlfiles:
 
-    print("Considering " + ttlpath)
+    print("Considering " + str(ttlpath))
     
     g = rdflib.Graph()
 
