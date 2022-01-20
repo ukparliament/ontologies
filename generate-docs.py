@@ -55,9 +55,12 @@ htmldir = "./meta/html/"
 # ttlfiles = list(Path(".").glob("*/*.ttl"))
 ttlfiles = list(Path(".").glob("**/*.ttl"))
 
-print(ttlfiles)
+# print(ttlfiles)
 
 for ttlpath in ttlfiles:
+
+    print("Considering " + ttlpath)
+    
     g = rdflib.Graph()
 
     ttlfile = ""
