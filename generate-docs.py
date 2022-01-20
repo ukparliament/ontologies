@@ -58,21 +58,19 @@ ttlfiles = list(Path(".").glob("**/*.ttl"))
 print(ttlfiles)
 
 for ttlpath in ttlfiles:
-    if str(ttlpath.parent) != "examples":
+    g = rdflib.Graph()
 
-        g = rdflib.Graph()
+    ttlfile = ""
+    try:
+        ttlfile = open(ttlpath, "r")
+    except OSError as e:
+        print(e.errno)
 
-        ttlfile = ""
-        try:
-            ttlfile = open(ttlpath, "r")
-        except OSError as e:
-            print(e.errno)
+    # ttlfile = open(ttlpath, "r")
+    result = g.parse(data=ttlfile.read(), format="turtle")
 
-        # ttlfile = open(ttlpath, "r")
-        result = g.parse(data=ttlfile.read(), format="turtle")
-
-        if (None, RDF.type, OWL.Ontology) in g:
-            print("This graph is an ontology.")
+    if (None, RDF.type, OWL.Ontology) in g:
+        print("This graph is an ontology.")
 
         classes = []
 
