@@ -73,7 +73,8 @@ for ttlpath in ttlfiles:
     result = g.parse(data=ttlfile.read(), format="turtle")
 
     if (None, RDF.type, OWL.Ontology) in g:
-        print("This graph is an ontology.")
+
+        print("Found an ontology: " + str(ttlpath))
 
         classes = []
 
@@ -255,3 +256,6 @@ for ttlpath in ttlfiles:
                     dataproperties=dataproperties,
                 )
             )
+    else:
+        print("Not an ontology: " + str(ttlpath))
+
