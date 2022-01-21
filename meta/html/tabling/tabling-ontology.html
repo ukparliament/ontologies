@@ -9,19 +9,22 @@
     <link rel="alternate" href="https://ukparliament.github.io/ontologies/meta/html/tabling/tabling-ontology.csv" type="text/csv" title="Tabling ontology: CSV">
     <link rel="license" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Tabling ontology</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>body {font-family: sans-serif;line-height:1.4;max-width:40rem;padding:1rem;margin:1rem auto;}
+        section {padding-top:2rem;}</style>
 </head>
 
-<body class="container">
-    <div class="row p-2">
-    <div class="col justify-content-md-center col-md-8">
-        <header class="py-2">
+<body>
+   
+        <header>
             <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
-        <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
+
+            <p>Generated 2022-01-20 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/tabling/tabling-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">api.parliament.uk/webvowl</a></p>
+
     </header>
 
-    <main class="py-4">
-        <h1>Tabling ontology</h1>
+    <main>
+        <h1 id="title">Tabling ontology</h1>
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
@@ -38,47 +41,47 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class py-2" id="House">
+            <article class="class" id="House">
                 <h3><a href="#House">House
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>A parliamentary House, for example: the House of Lords.</p>
 
 
             </article>
-            <article class="class py-2" id="SeatIncumbency">
+            <article class="class" id="SeatIncumbency">
                 <h3><a href="#SeatIncumbency">Seat incumbency
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member.</p>
 
 
             </article>
-            <article class="class py-2" id="Session">
+            <article class="class" id="Session">
                 <h3><a href="#Session">Session
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.</p>
 
 
             </article>
-            <article class="class py-2" id="TabledThing">
+            <article class="class" id="TabledThing">
                 <h3><a href="#TabledThing">Tabled thing
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>Any item of business which has been tabled, for example: a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled, for example: manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
 
 
             </article>
-            <article class="class py-2" id="Tabling">
+            <article class="class" id="Tabling">
                 <h3><a href="#Tabling">Tabling
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
 
                 <p>Superclasses
@@ -87,20 +90,20 @@
             </p>
 
             </article>
-            <article class="class py-2" id="TablingOrWithdrawal">
+            <article class="class" id="TablingOrWithdrawal">
                 <h3><a href="#TablingOrWithdrawal">Tabling or withdrawal
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>The act of tabling into, or withdrawing a tabled thing from, a House.</p>
 
 
             </article>
-            <article class="class py-2" id="Withdrawal">
+            <article class="class" id="Withdrawal">
                 <h3><a href="#Withdrawal">Withdrawal
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>The act of withdrawing a tabled thing from a House.</p>
 
                 <p>Superclasses
@@ -109,20 +112,20 @@
             </p>
 
             </article>
-            <article class="class py-2" id="WithdrawnThing">
+            <article class="class" id="WithdrawnThing">
                 <h3><a href="#WithdrawnThing">Withdrawn thing
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>A tabled thing which has subsequently been withdrawn.</p>
 
 
             </article>
-            <article class="class py-2" id="WrittenNotice">
+            <article class="class" id="WrittenNotice">
                 <h3><a href="#WrittenNotice">Written notice
-                    </a>
+                    </a> class
                 </h3>
-                <span class="badge bg-info text-dark">Class</span>
+
                 <p>Official notice of an item of future business.</p>
 
 
@@ -134,15 +137,11 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty py-2" id="givesNotice">
-
-                
-
+            <article class="objectproperty" id="givesNotice">
 
                 <h3><a href="#givesNotice">Gives notice
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -152,15 +151,11 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="hasHouse">
-
-                
-
+            <article class="objectproperty" id="hasHouse">
 
                 <h3><a href="#hasHouse">Has House
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -170,15 +165,11 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="inSession">
-
-                
-
+            <article class="objectproperty" id="inSession">
 
                 <h3><a href="#inSession">In session
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -188,15 +179,11 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="replaces">
-
-                
-
+            <article class="objectproperty" id="replaces">
 
                 <h3><a href="#replaces">Replaces
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -206,15 +193,11 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="tabledBy">
-
-                
-
+            <article class="objectproperty" id="tabledBy">
 
                 <h3><a href="#tabledBy">Tabled by
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -224,15 +207,11 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="tables">
-
-                
-
+            <article class="objectproperty" id="tables">
 
                 <h3><a href="#tables">Tables
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -242,15 +221,11 @@
 
             </article>
 
-            <article class="objectproperty py-2" id="withdraws">
-
-                
-
+            <article class="objectproperty" id="withdraws">
 
                 <h3><a href="#withdraws">Withdraws
-                </a>
+                </a> object property
             </h3>
-            <span class="badge bg-info text-dark">Object property</span>
 
 
 
@@ -265,13 +240,10 @@
         <section id="dataproperties">
             <h2>Data properties</h2>
 
-            <article class="dataproperty py-2" id="tabledOn">
-                
-
+            <article class="dataproperty" id="tabledOn">
                 <h3><a href="#tabledOn">Tabled on
-                </a>
+                </a> data property
             </h3>
-            <span class="badge bg-info text-dark">Data property</span>
 
                 <p>Relates an act of tabling to the date on which it happened.</p>
 
@@ -280,13 +252,10 @@
 
             </article>
 
-            <article class="dataproperty py-2" id="withdrawnOn">
-                
-
+            <article class="dataproperty" id="withdrawnOn">
                 <h3><a href="#withdrawnOn">Withdrawn on
-                </a>
+                </a> data property
             </h3>
-            <span class="badge bg-info text-dark">Data property</span>
 
                 <p>Relates an act of withdrawal to the date on which it happened.</p>
 
@@ -315,72 +284,79 @@
         </table>
         </section>  
 
+
+        
+
         <section id="namespaces">
-        <h2>Namespaces</h2>
-        <dl>
-                    <dt>brick</dt>
-                    <dd>https://brickschema.org/schema/Brick#</dd>
-                    <dt>csvw</dt>
-                    <dd>http://www.w3.org/ns/csvw#</dd>
-                    <dt>dc</dt>
-                    <dd>http://purl.org/dc/elements/1.1/</dd>
-                    <dt>dcat</dt>
-                    <dd>http://www.w3.org/ns/dcat#</dd>
-                    <dt>dcmitype</dt>
-                    <dd>http://purl.org/dc/dcmitype/</dd>
-                    <dt>dcterms</dt>
-                    <dd>http://purl.org/dc/terms/</dd>
-                    <dt>dcam</dt>
-                    <dd>http://purl.org/dc/dcam/</dd>
-                    <dt>doap</dt>
-                    <dd>http://usefulinc.com/ns/doap#</dd>
-                    <dt>foaf</dt>
-                    <dd>http://xmlns.com/foaf/0.1/</dd>
-                    <dt>odrl</dt>
-                    <dd>http://www.w3.org/ns/odrl/2/</dd>
-                    <dt>org</dt>
-                    <dd>http://www.w3.org/ns/org#</dd>
-                    <dt>owl</dt>
-                    <dd>http://www.w3.org/2002/07/owl#</dd>
-                    <dt>prof</dt>
-                    <dd>http://www.w3.org/ns/dx/prof/</dd>
-                    <dt>prov</dt>
-                    <dd>http://www.w3.org/ns/prov#</dd>
-                    <dt>qb</dt>
-                    <dd>http://purl.org/linked-data/cube#</dd>
-                    <dt>rdf</dt>
-                    <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                    <dt>rdfs</dt>
-                    <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                    <dt>schema</dt>
-                    <dd>https://schema.org/</dd>
-                    <dt>sh</dt>
-                    <dd>http://www.w3.org/ns/shacl#</dd>
-                    <dt>skos</dt>
-                    <dd>http://www.w3.org/2004/02/skos/core#</dd>
-                    <dt>sosa</dt>
-                    <dd>http://www.w3.org/ns/sosa/</dd>
-                    <dt>ssn</dt>
-                    <dd>http://www.w3.org/ns/ssn/</dd>
-                    <dt>time</dt>
-                    <dd>http://www.w3.org/2006/time#</dd>
-                    <dt>vann</dt>
-                    <dd>http://purl.org/vocab/vann/</dd>
-                    <dt>void</dt>
-                    <dd>http://rdfs.org/ns/void#</dd>
-                    <dt>xsd</dt>
-                    <dd>http://www.w3.org/2001/XMLSchema#</dd>
-                    <dt>xml</dt>
-                    <dd>http://www.w3.org/XML/1998/namespace</dd>
-                    <dt>ptable</dt>
-                    <dd>http://parliament.uk/ontologies/tabling/</dd>
-            </dl>
+            <h2>Namespaces</h2>
+            <details>
+                <summary>Namespace list</summary>
+                <dl>
+                        <dt>brick</dt>
+                        <dd>https://brickschema.org/schema/Brick#</dd>
+                        <dt>csvw</dt>
+                        <dd>http://www.w3.org/ns/csvw#</dd>
+                        <dt>dc</dt>
+                        <dd>http://purl.org/dc/elements/1.1/</dd>
+                        <dt>dcat</dt>
+                        <dd>http://www.w3.org/ns/dcat#</dd>
+                        <dt>dcmitype</dt>
+                        <dd>http://purl.org/dc/dcmitype/</dd>
+                        <dt>dcterms</dt>
+                        <dd>http://purl.org/dc/terms/</dd>
+                        <dt>dcam</dt>
+                        <dd>http://purl.org/dc/dcam/</dd>
+                        <dt>doap</dt>
+                        <dd>http://usefulinc.com/ns/doap#</dd>
+                        <dt>foaf</dt>
+                        <dd>http://xmlns.com/foaf/0.1/</dd>
+                        <dt>odrl</dt>
+                        <dd>http://www.w3.org/ns/odrl/2/</dd>
+                        <dt>org</dt>
+                        <dd>http://www.w3.org/ns/org#</dd>
+                        <dt>owl</dt>
+                        <dd>http://www.w3.org/2002/07/owl#</dd>
+                        <dt>prof</dt>
+                        <dd>http://www.w3.org/ns/dx/prof/</dd>
+                        <dt>prov</dt>
+                        <dd>http://www.w3.org/ns/prov#</dd>
+                        <dt>qb</dt>
+                        <dd>http://purl.org/linked-data/cube#</dd>
+                        <dt>rdf</dt>
+                        <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+                        <dt>rdfs</dt>
+                        <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+                        <dt>schema</dt>
+                        <dd>https://schema.org/</dd>
+                        <dt>sh</dt>
+                        <dd>http://www.w3.org/ns/shacl#</dd>
+                        <dt>skos</dt>
+                        <dd>http://www.w3.org/2004/02/skos/core#</dd>
+                        <dt>sosa</dt>
+                        <dd>http://www.w3.org/ns/sosa/</dd>
+                        <dt>ssn</dt>
+                        <dd>http://www.w3.org/ns/ssn/</dd>
+                        <dt>time</dt>
+                        <dd>http://www.w3.org/2006/time#</dd>
+                        <dt>vann</dt>
+                        <dd>http://purl.org/vocab/vann/</dd>
+                        <dt>void</dt>
+                        <dd>http://rdfs.org/ns/void#</dd>
+                        <dt>xsd</dt>
+                        <dd>http://www.w3.org/2001/XMLSchema#</dd>
+                        <dt>xml</dt>
+                        <dd>http://www.w3.org/XML/1998/namespace</dd>
+                        <dt>ptable</dt>
+                        <dd>http://parliament.uk/ontologies/tabling/</dd>
+                </dl>
+        </details>
+
         </section>  
 
 
     </main>
 
-    <footer class="py-2">
+    <footer>
 
         <p>Ontology created &middot; <time id="created">2017-12-01</time></p>
         
@@ -393,12 +369,11 @@
             &middot; Anya Somerville
         </p>
 
-        <p>This HTML page was generated on 2022-01-19 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">Turtle file</a>. The Turtle triples are available in <a href="https://ukparliament.github.io/ontologies/meta/html/tabling/tabling-ontology.csv">CSV</a>.</p>
-        
-        <p>Visualization &middot; <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/tabling/tabling-ontology.ttl">api.parliament.uk/webvowl</a></p>
+        <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
+
     </footer>
-    </div>
-    </div>
+
+
 </body>
 
 </html>

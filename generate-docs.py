@@ -52,21 +52,29 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-ttlfiles = list(Path(".").glob("*/*.ttl"))
+# ttlfiles = list(Path(".").glob("*/*.ttl"))
+ttlfiles = list(Path(".").glob("**/*.ttl"))
+
+# print(ttlfiles)
 
 for ttlpath in ttlfiles:
-    if str(ttlpath.parent) != "examples":
 
-        g = rdflib.Graph()
+    print("Considering " + str(ttlpath))
+    
+    g = rdflib.Graph()
 
-        ttlfile = ""
-        try:
-            ttlfile = open(ttlpath, "r")
-        except OSError as e:
-            print(e.errno)
+    ttlfile = ""
+    try:
+        ttlfile = open(ttlpath, "r")
+    except OSError as e:
+        print(e.errno)
 
-        # ttlfile = open(ttlpath, "r")
-        result = g.parse(data=ttlfile.read(), format="turtle")
+    # ttlfile = open(ttlpath, "r")
+    result = g.parse(data=ttlfile.read(), format="turtle")
+
+    if (None, RDF.type, OWL.Ontology) in g:
+
+        print("Found an ontology: " + str(ttlpath))
 
         classes = []
 
@@ -248,3 +256,6 @@ for ttlpath in ttlfiles:
                     dataproperties=dataproperties,
                 )
             )
+    else:
+        print("Not an ontology: " + str(ttlpath))
+
