@@ -21,8 +21,8 @@
 
 #######  Classes ##### 	
 
-ppsa:BusinessStep rdf:type owl:Class ;
-	rdfs:label "Business step"@en ;
+ppsa:Step rdf:type owl:Class ;
+	rdfs:label "A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step."@en ;
 	rdfs:comment "A business step is a step that can be actualised by a business item."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
@@ -40,14 +40,14 @@ ppsa:Publication rdf:type owl:Class ;
 
 ppsa:actualiseWith rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualise with"@en ;
-	rdfs:comment "Relates a business step to a business step where steps may be actualised together."@en ;
+	rdfs:comment "Relates a step to a step where steps may be actualised together."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range ppsa:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 
 ppsa:source rdf:type owl:ObjectProperty ;
 	rdfs:label "Source"@en ;
-	rdfs:comment "Relates a business step to the publication which is the source of information for that step."@en ;
+	rdfs:comment "Relates a step to the publication which is the source of information for that step."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range ppsa:Publication ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
@@ -59,22 +59,22 @@ ppsa:source rdf:type owl:ObjectProperty ;
 
 ppsa:scopeNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Scope note"@en ;
-	rdfs:comment "A note that describes the rules for actualising a business step."@en ;
-	rdfs:domain ppsa:BusinessStep ;
+	rdfs:comment "A note that describes the rules for actualising a step."@en ;
+	rdfs:domain ppsa:Step ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 ppsa:linkNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Link note"@en ;
-	rdfs:comment "A note that describes where a business item should link to in a publication."@en ;
-	rdfs:domain ppsa:BusinessStep ;
+	rdfs:comment "A note that describes where a business item, actualising a step, should link to in a publication."@en ;
+	rdfs:domain ppsa:Step ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 ppsa:dateNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date note"@en ;
-	rdfs:comment "A note that describes the date to use when actualising a business step."@en ;
-	rdfs:domain ppsa:BusinessStep ;
+	rdfs:comment "A note that describes the date to use when actualising a step."@en ;
+	rdfs:domain ppsa:Step ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 						
