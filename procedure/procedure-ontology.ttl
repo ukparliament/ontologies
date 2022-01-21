@@ -98,6 +98,21 @@ ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:comment "The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes ‘procedural sense’, for example: we may show 'procedure concluded' before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:RouteAvailability rdf:type owl:Class ;
+	rdfs:label "Route availability"@en ;
+	rdfs:comment "The availability of a route over time. A route may be open or closed. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:RouteAvailabilityStatus rdf:type owl:Class ;
+	rdfs:label "Route availability status"@en ;
+	rdfs:comment "The status of a route’s availability, being either open or closed."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:Legislature rdf:type owl:Class ;
+	rdfs:label "Legislature"@en ;
+	rdfs:comment "A legislature, being either the UK Parliament or a devolved legislature."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 
 
 #######  Object properties ##### 
@@ -156,6 +171,20 @@ ppr:stepInHouse rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament."@en ;
 	rdfs:domain ppr:Step ;
 	rdfs:range ppr:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:stepInLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "Step in legislature"@en ;
+	rdfs:comment "Relates a step to the devolved legislature in which that step takes place, for example: a legislative consent motion being tabled in the Scottish Parliament."@en ;
+	rdfs:domain ppr:Step ;
+	rdfs:range ppr:Legislature ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:inLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "In legislature"@en ;
+	rdfs:comment "Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral."@en ;
+	rdfs:domain ppr:House ;
+	rdfs:range ppr:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 		
 ppr:focus rdf:type owl:ObjectProperty ;
@@ -234,6 +263,28 @@ ppr:inProcedure rdf:type owl:ObjectProperty ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasAvailability rdf:type owl:ObjectProperty ;
+	rdfs:label "Has availability"@en ;
+	rdfs:comment "Relates a route to its availability over a period of time. A route may have a different availability at different times, but only one availability at any one time. Routes with no defined availability are taken to be open."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:RouteAvailability ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasAvailabilityStatus rdf:type owl:ObjectProperty ;
+	rdfs:label "Has availability status"@en ;
+	rdfs:comment "Relates a route availability over a period of time to the status of that availability. A route availability has one route availability status."@en ;
+	rdfs:domain ppr:RouteAvailability ;
+	rdfs:range ppr:RouteAvailabilityStatus ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:routeAvailabilityHasCitation rdf:type owl:ObjectProperty ;
+	rdfs:label "Route availability has citation"@en ;
+	rdfs:comment "Relates the availability of a route to a citation setting out that availability: this may be by means of a proceeding in Parliament, or by means of legislation. A route availability may have one or more citations, or none."@en ;
+	rdfs:domain ppr:RouteAvailability ;
+	rdfs:range ppr:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+				
 				
 
 #######  Data properties ##### 
