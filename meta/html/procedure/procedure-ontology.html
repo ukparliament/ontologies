@@ -19,7 +19,7 @@
         <header>
             <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
 
-            <p>Generated 2022-01-20 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">api.parliament.uk/webvowl</a></p>
+            <p>Generated 2022-01-21 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">api.parliament.uk/webvowl</a></p>
 
     </header>
 
@@ -77,6 +77,15 @@
 
 
             </article>
+            <article class="class" id="Legislature">
+                <h3><a href="#Legislature">Legislature
+                    </a> class
+                </h3>
+
+                <p>A legislature, being either the UK Parliament or a devolved legislature.</p>
+
+
+            </article>
             <article class="class" id="Procedure">
                 <h3><a href="#Procedure">Procedure
                     </a> class
@@ -92,6 +101,24 @@
                 </h3>
 
                 <p>A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
+
+
+            </article>
+            <article class="class" id="RouteAvailability">
+                <h3><a href="#RouteAvailability">Route availability
+                    </a> class
+                </h3>
+
+                <p>The availability of a route over time. A route may be open or closed. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
+
+
+            </article>
+            <article class="class" id="RouteAvailabilityStatus">
+                <h3><a href="#RouteAvailabilityStatus">Route availability status
+                    </a> class
+                </h3>
+
+                <p>The status of a route’s availability, being either open or closed.</p>
 
 
             </article>
@@ -249,6 +276,34 @@
 
             </article>
 
+            <article class="objectproperty" id="hasAvailability">
+
+                <h3><a href="#hasAvailability">Has availability
+                </a> object property
+            </h3>
+
+
+
+                <p>Relates a route to its availability over a period of time. A route may have a different availability at different times, but only one availability at any one time. Routes with no defined availability are taken to be open.</p>
+
+                <p><strong>Route</strong> &mdash; Has availability &mdash; <strong>RouteAvailability</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasAvailabilityStatus">
+
+                <h3><a href="#hasAvailabilityStatus">Has availability status
+                </a> object property
+            </h3>
+
+
+
+                <p>Relates a route availability over a period of time to the status of that availability. A route availability has one route availability status.</p>
+
+                <p><strong>RouteAvailability</strong> &mdash; Has availability status &mdash; <strong>RouteAvailabilityStatus</strong></p>
+
+            </article>
+
             <article class="objectproperty" id="hasDocumentType">
 
                 <h3><a href="#hasDocumentType">Has document type
@@ -305,6 +360,20 @@
 
             </article>
 
+            <article class="objectproperty" id="inLegislature">
+
+                <h3><a href="#inLegislature">In legislature
+                </a> object property
+            </h3>
+
+
+
+                <p>Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral.</p>
+
+                <p><strong>House</strong> &mdash; In legislature &mdash; <strong>Legislature</strong></p>
+
+            </article>
+
             <article class="objectproperty" id="inProcedure">
 
                 <h3><a href="#inProcedure">In procedure
@@ -344,6 +413,20 @@
                 <p>Relates a procedure to a citation. A procedure may have more than one citation, or none.</p>
 
                 <p><strong>Procedure</strong> &mdash; Procedure has citation &mdash; <strong>Citation</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="routeAvailabilityHasCitation">
+
+                <h3><a href="#routeAvailabilityHasCitation">Route availability has citation
+                </a> object property
+            </h3>
+
+
+
+                <p>Relates the availability of a route to a citation setting out that availability: this may be by means of a proceeding in Parliament, or by means of legislation. A route availability may have one or more citations, or none.</p>
+
+                <p><strong>RouteAvailability</strong> &mdash; Route availability has citation &mdash; <strong>Citation</strong></p>
 
             </article>
 
@@ -400,6 +483,20 @@
                 <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
 
                 <p><strong>Step</strong> &mdash; Step in House &mdash; <strong>House</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="stepInLegislature">
+
+                <h3><a href="#stepInLegislature">Step in legislature
+                </a> object property
+            </h3>
+
+
+
+                <p>Relates a step to the devolved legislature in which that step takes place, for example: a legislative consent motion being tabled in the Scottish Parliament.</p>
+
+                <p><strong>Step</strong> &mdash; Step in legislature &mdash; <strong>Legislature</strong></p>
 
             </article>
 
