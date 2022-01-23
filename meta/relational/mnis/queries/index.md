@@ -9,23 +9,23 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Female Members of the House of Commons elected at the 2005 General Election](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/membership=all%7Cgender=F%7Chouse*commons%7Creturnedatelection=2005%20general%20election/)
 
-[Current Members of the House of Commons, representing constituencies in England](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=England&include=)
+[Current Members of the House of Commons, representing constituencies in England](https://mnis-prodder.herokuapp.com/parse?filter=house=both%7Cconstituencyinarea=England&include=)
 
-[Current Members of the House of Commons, representing constituencies in Northern Ireland](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=Northern%20Ireland&include=)
+[Current Members of the House of Commons, representing constituencies in Northern Ireland](https://mnis-prodder.herokuapp.com/parse?filter=house=both%7Cconstituencyinarea=Northern%20Ireland&include=)
 
-[Current Members of the House of Commons, representing constituencies in Scotland](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=Scotland&include=)
+[Current Members of the House of Commons, representing constituencies in Scotland](https://mnis-prodder.herokuapp.com/parse?filter=house=both%7Cconstituencyinarea=Scotland&include=)
 
-[Current Members of the House of Commons, representing constituencies in Wales](https://mnis-prodder.herokuapp.com/parse?filter=house=both|constituencyinarea=Wales&include=)
+[Current Members of the House of Commons, representing constituencies in Wales](https://mnis-prodder.herokuapp.com/parse?filter=house=both%7Cconstituencyinarea=Wales&include=)
 
-[Current and former Members of the House of Commons, including Members subsequently elevated to the House of Lords](https://mnis-prodder.herokuapp.com/parse?filter=membership=all|house*commons&include=)
+[Current and former Members of the House of Commons, including Members subsequently elevated to the House of Lords](https://mnis-prodder.herokuapp.com/parse?filter=membership=all%7Chouse*commons&include=)
 
-[Current eligible Members of the House of Commons whipped to the Conservative Party with no current incumbency in a Government position](https://mnis-prodder.herokuapp.com/parse?filter=house=commons|iseligible=true|partyid=4|holdsgovernmentpost=false&include=)
+[Current eligible Members of the House of Commons whipped to the Conservative Party with no current incumbency in a Government position](https://mnis-prodder.herokuapp.com/parse?filter=house=commons%7Ciseligible=true%7Cpartyid=4%7Choldsgovernmentpost=false&include=)
 
 ## House of Lords
 
-[Current and former Members of the House of Lords](https://mnis-prodder.herokuapp.com/parse?filter=membership=all|house*lords&include=)
+[Current and former Members of the House of Lords](https://mnis-prodder.herokuapp.com/parse?filter=membership=all%7Chouse*lords&include=)
 
-[Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/House=Lords|IsEligible=true/PreferredNames)
+[Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/House=Lords%7CIsEligible=true/PreferredNames)
 
 ## House of Commons and House of Lords
 
