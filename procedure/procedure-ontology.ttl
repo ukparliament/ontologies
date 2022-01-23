@@ -95,7 +95,7 @@ ppr:DocumentType rdf:type owl:Class ;
 	
 ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:label "Step display depth in procedure"@en ;
-	rdfs:comment "The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes ‘procedural sense’, for example: we may show 'procedure concluded' before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening."@en ;
+	rdfs:comment "The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes 'procedural sense', for example: we may show 'procedure concluded' before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:RouteAvailability rdf:type owl:Class ;
@@ -105,7 +105,7 @@ ppr:RouteAvailability rdf:type owl:Class ;
 	
 ppr:RouteAvailabilityStatus rdf:type owl:Class ;
 	rdfs:label "Route availability status"@en ;
-	rdfs:comment "The status of a route’s availability, being either open or closed."@en ;
+	rdfs:comment "The status of a route's availability, being either open or closed."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:Legislature rdf:type owl:Class ;
