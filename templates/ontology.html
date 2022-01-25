@@ -46,16 +46,14 @@
         <section id="description">{{ description }}</section>
         {% endif %}
 
-        
-
         {% if classes %}
         <section id="classes">
             <h2>Classes</h2>
 
             {% for class in classes|sort(attribute='label') %}
             <article class="class" id="{{ class.idString }}">
-                <h3><a href="#{{ class.idString }}">{{ class.label }}
-                    </a> class
+                <h3>
+                    <a href="#{{ class.idString }}">{{ class.label }}</a> class
                 </h3>
 
                 {% if class.comment %}
@@ -85,8 +83,8 @@
 
             <article class="objectproperty" id="{{ objectproperty.idString }}">
 
-                <h3><a href="#{{ objectproperty.idString }}">{{ objectproperty.label }}
-                </a> object property
+                <h3>
+                    <a href="#{{ objectproperty.idString }}">{{ objectproperty.label }}</a> object property
             </h3>
 
 
@@ -113,8 +111,8 @@
             {% for dataproperty in dataproperties|sort(attribute='label') %}
 
             <article class="dataproperty" id="{{ dataproperty.idString }}">
-                <h3><a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}
-                </a> data property
+                <h3>
+                    <a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}</a> data property
             </h3>
 
                 <p>{{ dataproperty.comment }}</p>
@@ -183,8 +181,6 @@
         {% endif %}
 
         {% if namespaces %}
-
-        
 
         <section id="namespaces">
             <h2>Namespaces</h2>
