@@ -8,7 +8,7 @@ FILTER ( str(?itemDate) <= '2020-02-06')
  
 * [Negative SIs](https://api.parliament.uk/s/ba610ba2)
  
-* [Made affirmative SIs](https://api.parliament.uk/s/38e30908)
+* [Made affirmative SIs](https://api.parliament.uk/s/86be829e)
 
 * [Proposed negative statutory instruments](https://api.parliament.uk/s/4ef9dfb1)
 
