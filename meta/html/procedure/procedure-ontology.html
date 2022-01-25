@@ -38,14 +38,12 @@
     </nav>
         <section id="description">A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure.</section>
 
-        
-
         <section id="classes">
             <h2>Classes</h2>
 
             <article class="class" id="BusinessItem">
-                <h3><a href="#BusinessItem">Business item
-                    </a> class
+                <h3>
+                    <a href="#BusinessItem">Business item</a> class
                 </h3>
 
                 <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
@@ -53,8 +51,8 @@
 
             </article>
             <article class="class" id="Citation">
-                <h3><a href="#Citation">Citation
-                    </a> class
+                <h3>
+                    <a href="#Citation">Citation</a> class
                 </h3>
 
                 <p>A citation of a document. A citation may be from a procedure, for example: the proposed negative statutory instrument procedure citing Schedule 7 to the European Union (Withdrawal) Act 2018. A citation may be from a step in a procedure, for example: the step &#39;CF - AND&#39; in the made negative statutory instrument procedure citing Section 4(1) of the Statutory Instrument Act 1946. A citation may be from a step without reference to a particular procedure, for example: the step &#39;Considered for English votes for English laws (EVEL) certification&#39; citing House of Commons public Standing Order 83P. A citation may be from a route in a procedure, for example: the route from &#39;Considered by the Joint Committee on Statutory Instruments&#39; to &#39;Motion to approve the instrument tabled by the Government (House of Lords)&#39; in both affirmative procedures citing House of Lords public Standing Order 72.</p>
@@ -62,8 +60,8 @@
 
             </article>
             <article class="class" id="DocumentType">
-                <h3><a href="#DocumentType">Document type
-                    </a> class
+                <h3>
+                    <a href="#DocumentType">Document type</a> class
                 </h3>
 
                 <p>The type of a document being cited, for example: a standing order or a section of legislation.</p>
@@ -71,8 +69,8 @@
 
             </article>
             <article class="class" id="House">
-                <h3><a href="#House">House
-                    </a> class
+                <h3>
+                    <a href="#House">House</a> class
                 </h3>
 
                 <p>A parliamentary House, for example: the House of Lords.</p>
@@ -80,8 +78,8 @@
 
             </article>
             <article class="class" id="Legislature">
-                <h3><a href="#Legislature">Legislature
-                    </a> class
+                <h3>
+                    <a href="#Legislature">Legislature</a> class
                 </h3>
 
                 <p>A legislature, being either the UK Parliament or a devolved legislature.</p>
@@ -89,8 +87,8 @@
 
             </article>
             <article class="class" id="Procedure">
-                <h3><a href="#Procedure">Procedure
-                    </a> class
+                <h3>
+                    <a href="#Procedure">Procedure</a> class
                 </h3>
 
                 <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
@@ -98,8 +96,8 @@
 
             </article>
             <article class="class" id="Route">
-                <h3><a href="#Route">Route
-                    </a> class
+                <h3>
+                    <a href="#Route">Route</a> class
                 </h3>
 
                 <p>A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
@@ -107,8 +105,8 @@
 
             </article>
             <article class="class" id="RouteAvailability">
-                <h3><a href="#RouteAvailability">Route availability
-                    </a> class
+                <h3>
+                    <a href="#RouteAvailability">Route availability</a> class
                 </h3>
 
                 <p>The availability of a route over time. A route may be open or closed. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
@@ -116,8 +114,8 @@
 
             </article>
             <article class="class" id="RouteAvailabilityStatus">
-                <h3><a href="#RouteAvailabilityStatus">Route availability status
-                    </a> class
+                <h3>
+                    <a href="#RouteAvailabilityStatus">Route availability status</a> class
                 </h3>
 
                 <p>The status of a route&#39;s availability, being either open or closed.</p>
@@ -125,8 +123,8 @@
 
             </article>
             <article class="class" id="Step">
-                <h3><a href="#Step">Step
-                    </a> class
+                <h3>
+                    <a href="#Step">Step</a> class
                 </h3>
 
                 <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
@@ -134,8 +132,8 @@
 
             </article>
             <article class="class" id="StepCollection">
-                <h3><a href="#StepCollection">Step collection
-                    </a> class
+                <h3>
+                    <a href="#StepCollection">Step collection</a> class
                 </h3>
 
                 <p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
@@ -143,8 +141,8 @@
 
             </article>
             <article class="class" id="StepCollectionMembership">
-                <h3><a href="#StepCollectionMembership">Step collection membership
-                    </a> class
+                <h3>
+                    <a href="#StepCollectionMembership">Step collection membership</a> class
                 </h3>
 
                 <p>The membership of a step in a step collection.</p>
@@ -152,8 +150,8 @@
 
             </article>
             <article class="class" id="StepDisplayDepthInProcedure">
-                <h3><a href="#StepDisplayDepthInProcedure">Step display depth in procedure
-                    </a> class
+                <h3>
+                    <a href="#StepDisplayDepthInProcedure">Step display depth in procedure</a> class
                 </h3>
 
                 <p>The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes &#39;procedural sense&#39;, for example: we may show &#39;procedure concluded&#39; before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening.</p>
@@ -161,8 +159,8 @@
 
             </article>
             <article class="class" id="StepType">
-                <h3><a href="#StepType">Step type
-                    </a> class
+                <h3>
+                    <a href="#StepType">Step type</a> class
                 </h3>
 
                 <p>A step has one type. The type of a step is a business step, decision step, logical NOT step, logical AND step, logical OR step, arithmetic SUM step, arithmetic INCREMENT step, arithmetic EQUALS step, or summation step.</p>
@@ -170,8 +168,8 @@
 
             </article>
             <article class="class" id="WorkPackage">
-                <h3><a href="#WorkPackage">Work package
-                    </a> class
+                <h3>
+                    <a href="#WorkPackage">Work package</a> class
                 </h3>
 
                 <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
@@ -179,8 +177,8 @@
 
             </article>
             <article class="class" id="WorkPackageableThing">
-                <h3><a href="#WorkPackageableThing">Work packageable thing
-                    </a> class
+                <h3>
+                    <a href="#WorkPackageableThing">Work packageable thing</a> class
                 </h3>
 
                 <p>A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department.</p>
@@ -196,8 +194,8 @@
 
             <article class="objectproperty" id="actualises">
 
-                <h3><a href="#actualises">Actualises
-                </a> object property
+                <h3>
+                    <a href="#actualises">Actualises</a> object property
             </h3>
 
 
@@ -210,8 +208,8 @@
 
             <article class="objectproperty" id="focus">
 
-                <h3><a href="#focus">Focus
-                </a> object property
+                <h3>
+                    <a href="#focus">Focus</a> object property
             </h3>
 
 
@@ -224,8 +222,8 @@
 
             <article class="objectproperty" id="followsRoute">
 
-                <h3><a href="#followsRoute">Follows route
-                </a> object property
+                <h3>
+                    <a href="#followsRoute">Follows route</a> object property
             </h3>
 
 
@@ -238,8 +236,8 @@
 
             <article class="objectproperty" id="forStep">
 
-                <h3><a href="#forStep">For step
-                </a> object property
+                <h3>
+                    <a href="#forStep">For step</a> object property
             </h3>
 
 
@@ -252,8 +250,8 @@
 
             <article class="objectproperty" id="formsPartOf">
 
-                <h3><a href="#formsPartOf">Forms part of
-                </a> object property
+                <h3>
+                    <a href="#formsPartOf">Forms part of</a> object property
             </h3>
 
 
@@ -266,8 +264,8 @@
 
             <article class="objectproperty" id="fromStep">
 
-                <h3><a href="#fromStep">From step
-                </a> object property
+                <h3>
+                    <a href="#fromStep">From step</a> object property
             </h3>
 
 
@@ -280,8 +278,8 @@
 
             <article class="objectproperty" id="hasAvailability">
 
-                <h3><a href="#hasAvailability">Has availability
-                </a> object property
+                <h3>
+                    <a href="#hasAvailability">Has availability</a> object property
             </h3>
 
 
@@ -294,8 +292,8 @@
 
             <article class="objectproperty" id="hasAvailabilityStatus">
 
-                <h3><a href="#hasAvailabilityStatus">Has availability status
-                </a> object property
+                <h3>
+                    <a href="#hasAvailabilityStatus">Has availability status</a> object property
             </h3>
 
 
@@ -308,8 +306,8 @@
 
             <article class="objectproperty" id="hasDocumentType">
 
-                <h3><a href="#hasDocumentType">Has document type
-                </a> object property
+                <h3>
+                    <a href="#hasDocumentType">Has document type</a> object property
             </h3>
 
 
@@ -322,8 +320,8 @@
 
             <article class="objectproperty" id="hasMembership">
 
-                <h3><a href="#hasMembership">Has membership
-                </a> object property
+                <h3>
+                    <a href="#hasMembership">Has membership</a> object property
             </h3>
 
 
@@ -336,8 +334,8 @@
 
             <article class="objectproperty" id="hasProcedure">
 
-                <h3><a href="#hasProcedure">Has procedure
-                </a> object property
+                <h3>
+                    <a href="#hasProcedure">Has procedure</a> object property
             </h3>
 
 
@@ -350,8 +348,8 @@
 
             <article class="objectproperty" id="hasStepType">
 
-                <h3><a href="#hasStepType">Has step type
-                </a> object property
+                <h3>
+                    <a href="#hasStepType">Has step type</a> object property
             </h3>
 
 
@@ -364,8 +362,8 @@
 
             <article class="objectproperty" id="inLegislature">
 
-                <h3><a href="#inLegislature">In legislature
-                </a> object property
+                <h3>
+                    <a href="#inLegislature">In legislature</a> object property
             </h3>
 
 
@@ -378,8 +376,8 @@
 
             <article class="objectproperty" id="inProcedure">
 
-                <h3><a href="#inProcedure">In procedure
-                </a> object property
+                <h3>
+                    <a href="#inProcedure">In procedure</a> object property
             </h3>
 
 
@@ -392,8 +390,8 @@
 
             <article class="objectproperty" id="ofStepCollection">
 
-                <h3><a href="#ofStepCollection">Of step collection
-                </a> object property
+                <h3>
+                    <a href="#ofStepCollection">Of step collection</a> object property
             </h3>
 
 
@@ -406,8 +404,8 @@
 
             <article class="objectproperty" id="procedureHasCitation">
 
-                <h3><a href="#procedureHasCitation">Procedure has citation
-                </a> object property
+                <h3>
+                    <a href="#procedureHasCitation">Procedure has citation</a> object property
             </h3>
 
 
@@ -420,8 +418,8 @@
 
             <article class="objectproperty" id="routeAvailabilityHasCitation">
 
-                <h3><a href="#routeAvailabilityHasCitation">Route availability has citation
-                </a> object property
+                <h3>
+                    <a href="#routeAvailabilityHasCitation">Route availability has citation</a> object property
             </h3>
 
 
@@ -434,8 +432,8 @@
 
             <article class="objectproperty" id="routeHasCitation">
 
-                <h3><a href="#routeHasCitation">Route has citation
-                </a> object property
+                <h3>
+                    <a href="#routeHasCitation">Route has citation</a> object property
             </h3>
 
 
@@ -448,8 +446,8 @@
 
             <article class="objectproperty" id="stepCollectionInHouse">
 
-                <h3><a href="#stepCollectionInHouse">Step collection in House
-                </a> object property
+                <h3>
+                    <a href="#stepCollectionInHouse">Step collection in House</a> object property
             </h3>
 
 
@@ -462,8 +460,8 @@
 
             <article class="objectproperty" id="stepHasCitation">
 
-                <h3><a href="#stepHasCitation">Step has citation
-                </a> object property
+                <h3>
+                    <a href="#stepHasCitation">Step has citation</a> object property
             </h3>
 
 
@@ -476,8 +474,8 @@
 
             <article class="objectproperty" id="stepInHouse">
 
-                <h3><a href="#stepInHouse">Step in House
-                </a> object property
+                <h3>
+                    <a href="#stepInHouse">Step in House</a> object property
             </h3>
 
 
@@ -490,8 +488,8 @@
 
             <article class="objectproperty" id="stepInLegislature">
 
-                <h3><a href="#stepInLegislature">Step in legislature
-                </a> object property
+                <h3>
+                    <a href="#stepInLegislature">Step in legislature</a> object property
             </h3>
 
 
@@ -504,8 +502,8 @@
 
             <article class="objectproperty" id="subjectTo">
 
-                <h3><a href="#subjectTo">Subject to
-                </a> object property
+                <h3>
+                    <a href="#subjectTo">Subject to</a> object property
             </h3>
 
 
@@ -518,8 +516,8 @@
 
             <article class="objectproperty" id="toStep">
 
-                <h3><a href="#toStep">To step
-                </a> object property
+                <h3>
+                    <a href="#toStep">To step</a> object property
             </h3>
 
 
@@ -536,8 +534,8 @@
             <h2>Data properties</h2>
 
             <article class="dataproperty" id="displayDepthValue">
-                <h3><a href="#displayDepthValue">Display depth value
-                </a> data property
+                <h3>
+                    <a href="#displayDepthValue">Display depth value</a> data property
             </h3>
 
                 <p>Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3.</p>
@@ -548,8 +546,8 @@
             </article>
 
             <article class="dataproperty" id="title">
-                <h3><a href="#title">Title
-                </a> data property
+                <h3>
+                    <a href="#title">Title</a> data property
             </h3>
 
                 <p>Relates a citation to the title of the document being cited.</p>
@@ -560,8 +558,8 @@
             </article>
 
             <article class="dataproperty" id="uri">
-                <h3><a href="#uri">URI
-                </a> data property
+                <h3>
+                    <a href="#uri">URI</a> data property
             </h3>
 
                 <p>Relates a citation to the URI of the document being cited.</p>
@@ -578,8 +576,6 @@
 
 
 
-
-        
 
         <section id="namespaces">
             <h2>Namespaces</h2>
