@@ -21,7 +21,7 @@
         <header>
             <p><a href="https://ukparliament.github.io/ontologies/meta/html/interface/interface.html">Interface ontology</a></p>
 
-            <p>Generated {{ now }} from a <a href="{{ ttldir }}{{ ttlpath }}">Turtle file</a>. Triples in <a href="{{ csv_url }}">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri={{ ttldir }}{{ ttlpath }}">api.parliament.uk/webvowl</a></p>
+            
 
     </header>
 
@@ -201,11 +201,6 @@
         </section>  
         {% endif %}
 
-
-    </main>
-
-    <footer>
-
         <p>Ontology created &middot; <time id="created">{{ created }}</time></p>
         
        
@@ -221,6 +216,15 @@
             {% endfor %}
         </p>
         {% endif %}
+
+
+    </main>
+
+    <footer>
+
+        
+
+        <p>Generated {{ now }} from a <a href="{{ ttldir }}{{ ttlpath }}">Turtle file</a>. Triples in <a href="{{ csv_url }}">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri={{ ttldir }}{{ ttlpath }}">api.parliament.uk/webvowl</a></p>
 
         <p>Material on the <a href="{{ root_url }}">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">{{ rights|e }}</a>.</p>
 
