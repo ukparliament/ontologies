@@ -19,6 +19,12 @@ template = env.get_template("ontologies-index.html")
 
 htmlfiles = list(Path(".").glob("./meta/html/*/*.html"))
 
-for htmlpath in htmlfiles:
+indexpath = "./meta/html/index.html"
 
-    print("Considering " + str(htmlpath))
+with open(indexpath, "w") as indexfile:
+    print("  Writing " + indexpath)
+    indexfile.write(
+        template.render(
+            htmlfiles = htmlfiles,
+        )
+    )
