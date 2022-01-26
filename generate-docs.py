@@ -52,10 +52,7 @@ template = env.get_template("ontology.html")
 
 htmldir = "./meta/html/"
 
-# ttlfiles = list(Path(".").glob("*/*.ttl"))
 ttlfiles = list(Path(".").glob("**/*.ttl"))
-
-# print(ttlfiles)
 
 for ttlpath in ttlfiles:
 
@@ -69,7 +66,6 @@ for ttlpath in ttlfiles:
     except OSError as e:
         print(e.errno)
 
-    # ttlfile = open(ttlpath, "r")
     result = g.parse(data=ttlfile.read(), format="turtle")
 
     if (None, RDF.type, OWL.Ontology) in g:
