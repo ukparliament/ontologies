@@ -272,7 +272,7 @@
 
                 <p>Relates an answering body allocation to an answering body.</p>
 
-                <p><strong>AnsweringBodyAllocation</strong> &mdash; Allocated to &mdash; <strong>AnsweringBody</strong></p>
+                <p>AnsweringBodyAllocation &harr; Allocated to &harr; AnsweringBody</p>
 
             </article>
 
@@ -286,7 +286,7 @@
 
                 <p>Relates a question to an allocation to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. This would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly - for example, when referring to the gender of the answering member - treating a round robin as a single question is not yet possible.</p>
 
-                <p><strong>Question</strong> &mdash; Allocation &mdash; <strong>AnsweringBodyAllocation</strong></p>
+                <p>Question &harr; Allocation &harr; AnsweringBodyAllocation</p>
 
             </article>
 
@@ -300,7 +300,7 @@
 
                 <p>Relates a question to a time-bound means of capturing the format of the answer expected (either oral or written).</p>
 
-                <p><strong>Question</strong> &mdash; Answer expected as &mdash; <strong>AnswerExpectedAs</strong></p>
+                <p>Question &harr; Answer expected as &harr; AnswerExpectedAs</p>
 
             </article>
 
@@ -314,7 +314,7 @@
 
                 <p>Relates an answer being expected at at a point in time to the form the answer is expected in.</p>
 
-                <p><strong>AnswerExpectedAs</strong> &mdash; Answer expected in form &mdash; <strong>FormOfAnswer</strong></p>
+                <p>AnswerExpectedAs &harr; Answer expected in form &harr; FormOfAnswer</p>
 
             </article>
 
@@ -328,7 +328,7 @@
 
                 <p>Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question.</p>
 
-                <p><strong>Answer</strong> &mdash; Answer to &mdash; <strong>Question</strong></p>
+                <p>Answer &harr; Answer to &harr; Question</p>
 
             </article>
 
@@ -342,7 +342,7 @@
 
                 <p>Relates an answer to an incumbency of the person who provided the answer. This may be an incumbency in a House seat or an incumbency in another position. In practice this will usually be a Minister in a government department or a person occupying a position in a non-departmental answering body. For questions in receipt of an oral answer in the House of Lords, this may be a Government whip.</p>
 
-                <p><strong>Answer</strong> &mdash; Answered by &mdash; <strong>Incumbency</strong></p>
+                <p>Answer &harr; Answered by &harr; Incumbency</p>
 
             </article>
 
@@ -356,7 +356,7 @@
 
                 <p>Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body.</p>
 
-                <p><strong>Answer</strong> &mdash; Answering body &mdash; <strong>AnsweringBody</strong></p>
+                <p>Answer &harr; Answering body &harr; AnsweringBody</p>
 
             </article>
 
@@ -370,7 +370,7 @@
 
                 <p>Relates a question to an incumbency of the person asking the question. This may be an incumbency in a House seat or an incumbency in another position. In the House of Lords the Member who tabled a question in expectation of an oral answer may delegate another Member to be present in the Chamber to receive the answer. Parliamentary questions are tabled with the Lords or Commons Table Offices; urgent and private notice questions are applied for to the Speaker or Lord Speaker privately.</p>
 
-                <p><strong>Question</strong> &mdash; Asked by &mdash; <strong>Incumbency</strong></p>
+                <p>Question &harr; Asked by &harr; Incumbency</p>
 
             </article>
 
@@ -384,7 +384,7 @@
 
                 <p>Relates a change in the form of answer expected to the expectation prior to that change.</p>
 
-                <p><strong>AnswerExpectedAsChange</strong> &mdash; Changed from &mdash; <strong>AnswerExpectedAs</strong></p>
+                <p>AnswerExpectedAsChange &harr; Changed from &harr; AnswerExpectedAs</p>
 
             </article>
 
@@ -398,7 +398,7 @@
 
                 <p>Relates a change in the form of answer expected to the expectation subsequent to that change.</p>
 
-                <p><strong>AnswerExpectedAsChange</strong> &mdash; Changed to &mdash; <strong>AnswerExpectedAs</strong></p>
+                <p>AnswerExpectedAsChange &harr; Changed to &harr; AnswerExpectedAs</p>
 
             </article>
 
@@ -412,7 +412,7 @@
 
                 <p>Relates a delegated answer to the arm&#39;s length body that provided it.</p>
 
-                <p><strong>DelegatedAnswer</strong> &mdash; Delegated to &mdash; <strong>ArmsLengthBody</strong></p>
+                <p>DelegatedAnswer &harr; Delegated to &harr; ArmsLengthBody</p>
 
             </article>
 
@@ -426,7 +426,7 @@
 
                 <p>Relates an answer to its type i.e. a holding answer, substantive answer or corrected substantive answer.</p>
 
-                <p><strong>Answer</strong> &mdash; Has answer type &mdash; <strong>AnswerType</strong></p>
+                <p>Answer &harr; Has answer type &harr; AnswerType</p>
 
             </article>
 
@@ -440,7 +440,7 @@
 
                 <p>Relates a change in the form of answer expected to the reason for that change.</p>
 
-                <p><strong>AnswerExpectedAsChange</strong> &mdash; Has change reason &mdash; <strong>AnswerExpectedAsChangeReason</strong></p>
+                <p>AnswerExpectedAsChange &harr; Has change reason &harr; AnswerExpectedAsChangeReason</p>
 
             </article>
 
@@ -454,7 +454,7 @@
 
                 <p>Relates a question to a piece of parliamentary business cited by the question.</p>
 
-                <p><strong>Question</strong> &mdash; Pursuant to &mdash; <strong>PursuableThing</strong></p>
+                <p>Question &harr; Pursuant to &harr; PursuableThing</p>
 
             </article>
 
@@ -468,7 +468,7 @@
 
                 <p>Relates a written answer to a document provided by the answering body. This may be provided as an attachment to the answer text. The document might form part or all of the answer.</p>
 
-                <p><strong>Answer</strong> &mdash; Refers to document &mdash; <strong>Document</strong></p>
+                <p>Answer &harr; Refers to document &harr; Document</p>
 
             </article>
 
@@ -482,7 +482,7 @@
 
                 <p>Relates an answer to a Library deposit i.e. the answer to a question may include a commitment to deposit papers in the Libraries of either House.</p>
 
-                <p><strong>Answer</strong> &mdash; Refers to Library deposit &mdash; <strong>LibraryDeposit</strong></p>
+                <p>Answer &harr; Refers to Library deposit &harr; LibraryDeposit</p>
 
             </article>
 
@@ -496,7 +496,7 @@
 
                 <p>Relates an answer to a previous answer that answers the question in whole or in part e.g. &#39;I refer the honourable X to the answer given...&#39;</p>
 
-                <p><strong>Answer</strong> &mdash; Refers to previous answer &mdash; <strong>Answer</strong></p>
+                <p>Answer &harr; Refers to previous answer &harr; Answer</p>
 
             </article>
 
@@ -510,7 +510,7 @@
 
                 <p>Relates an answer to a subsequent answer given to the same question e.g. a holding answer to a substantive answer, or a substantive answer to a corrected answer, a corrected answer to a further corrected answer. Substantive answers replace holding answers in whole, whereas corrected answers may replace a previous answer in whole or in part.</p>
 
-                <p><strong>Answer</strong> &mdash; Replaces answer &mdash; <strong>Answer</strong></p>
+                <p>Answer &harr; Replaces answer &harr; Answer</p>
 
             </article>
 
@@ -524,7 +524,7 @@
 
                 <p>Relates an act of transferral to the answering body allocation the question was formerly allocated to.</p>
 
-                <p><strong>Transferral</strong> &mdash; Transferred from &mdash; <strong>AnsweringBodyAllocation</strong></p>
+                <p>Transferral &harr; Transferred from &harr; AnsweringBodyAllocation</p>
 
             </article>
 
@@ -538,7 +538,7 @@
 
                 <p>Relates an act of transferral to the answering body allocation the question was subsequently allocated to.</p>
 
-                <p><strong>Transferral</strong> &mdash; Transferred to &mdash; <strong>AnsweringBodyAllocation</strong></p>
+                <p>Transferral &harr; Transferred to &harr; AnsweringBodyAllocation</p>
 
             </article>
         </section>
