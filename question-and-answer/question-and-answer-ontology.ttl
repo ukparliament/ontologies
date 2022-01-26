@@ -50,50 +50,46 @@ pqa:Question rdf:type owl:Class ;
 	rdfs:comment "A question may be an oral or written parliamentary question, an urgent  - or private notice - question or a business question. A question is asked by a Member of a House of an answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-		# edited to here
-	
-
-	
 pqa:AnswerExpectedAs rdf:type owl:Class ;
 	rdfs:label "Answer expected as"@en ;
-	rdfs:comment "A time-bound means of defining the form of answer (oral or written) expected for a question. Sometimes a question in pursuit of an oral answer will be scheduled to be asked in the Chamber, but the Member intending to ask the question will be unable to attend the Chamber at that time. At this point the Member may either withdraw the question or 'unstar' it. Unstarring has the effect of removing the question from the schedule and requesting a written answer. Sometimes a question may be scheduled in the Chamber but may not be reached because the allocated time runs out. Unless the Member subsequently indicates that they wish to withdraw the question, a written answer will be given. In either scenario, such questions would have two Answer Expected As relationships: one for the initial period when the form of answer expected is oral and one for the second period when the form of answer expected is written. Note that the rules regarding unstarred and unreached questions only apply in the House of Commons. In oral question time in the House of Lords, a Member may ask a question on behalf of another Member."@en ;
+	rdfs:comment "A time-bound means of defining the form of answer expected for a question, being oral or written. In the House of Commons, a question tabled in expectation of an oral answer may change to a question in expectation of a written answer - and would have two Answer Expected As relationships: one for the first period when the form of answer expected is oral and one for the second period when the form of answer expected is written."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:FormOfAnswer rdf:type owl:Class ;
 	rdfs:label "Form of answer"@en ;
-	rdfs:comment "The potential forms in which an answer may be given, being either oral or written."@en ;
+	rdfs:comment "The form in which an answer is given, being either oral or written."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnswerExpectedAsChange rdf:type owl:Class ;
 	rdfs:label "Answer expected as change"@en ;
-	rdfs:comment "The act of indicating a change from an expectation of an oral answer to a written answer."@en ;
+	rdfs:comment "In the House of Commons, the change from an expectation of an oral answer to an expectation of a written answer. The change of expectation may be because the Member tabling the question is unable to attend the Chamber at the time the question was due to be answered, or because a question may be due in the Chamber but may not be reached because the allocated time runs out. In the case of a Member not being present, they may either withdraw or unstar the question. Unstarring removes the question from the Order Paper and changes the form of the answer expected to written. When a question is not reached, the question is given a written answer unless the Member withdraws the question. In the House of Lords, a different Member attends the Chamber and asks the question on the tabling Member’s behalf when the tabling Member cannot attend. There is no requirement for unstarring. In the House of Lords, questions tabled in expectation of an oral answer are always reached. There is no requirement for handling questions not reached."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnswerExpectedAsChangeReason rdf:type owl:Class ;
 	rdfs:label "Answer expected as change reason"@en ;
-	rdfs:comment "The potential reasons for a change to the form of answer expected, being either 'unstarred' or 'unreached'."@en ;
+	rdfs:comment "The reason, being either unstarred or not reached, for a change in the expected form of an answer."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Answer rdf:type owl:Class ;
     rdfs:subClassOf pqa:PursuableThing ;
 	rdfs:label "Answer"@en ;
-	rdfs:comment "An answer to a question provided by a Member, usually a Minister, on behalf of an answering body."@en ;
+	rdfs:comment "An answer to a question given by a Member, usually a Minister, on behalf of an answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:OrganisationAccountableToParliament rdf:type owl:Class ;
 	rdfs:label "Organisation accountable to Parliament"@en ;
-	rdfs:comment "An organisation that is accountable to Parliament, be that a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers."@en ;
+	rdfs:comment "An organisation accountable to Parliament: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnsweringBody rdf:type owl:Class ;
     rdfs:subClassOf pqa:OrganisationAccountableToParliament ;
 	rdfs:label "Answering body"@en ;
-	rdfs:comment "A body of whom Members can ask questions. In the House of Commons this may be a government department but sometimes other bodies either Parliamentary or external to Parliament e.g. House of Commons Commission, Church Commissioners. In the House of Lords, questions are addressed to Her Majesty's Government rather than to a specific department or body. For written and private notice questions in the House of Lords, data exists to map questions to specific answering bodies; for oral questions it doesn't."@en ;
+	rdfs:comment "A body of whom Members can ask questions. In the House of Commons this may be a government department, a Parliamentary body or a body external to Parliament, for example: the House of Commons Commission or Church Commissioners. In the House of Lords, questions are addressed to Her Majesty's Government rather than to a department or body. In the House of Lords, the Table Office assigns written and private notice questions to an answering body. For questions in expectation of an oral answer, no assignment takes place."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnsweringBodyAllocation rdf:type owl:Class ;
 	rdfs:label "Answering body allocation"@en ;
-	rdfs:comment "An allocation to the answering body to which a question is directed, either at tabling or when asked in the House. Allocated answering body can change over time, as answering bodies may transfer responsibility to another answering body."@en ;
+	rdfs:comment "An allocation to the answering body to which a question is directed, either at tabling or when asked in the House. The allocation to an answering body may change over time, if an answering body transfers responsibility to another answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Transferral rdf:type owl:Class ;
@@ -103,13 +99,16 @@ pqa:Transferral rdf:type owl:Class ;
 	
 pqa:PursuableThing rdf:type owl:Class ;
 	rdfs:label "Pursuable thing"@en ;
-	rdfs:comment "A piece of parliamentary business cited in a question. The question is asked as a follow up to the pursuable thing e.g. in pursuant to a written or oral answer, a ministerial statement."@en ;
+	rdfs:comment "A thing being cited in a question. The question is asked as a follow up to the pursuable thing, for example: pursuant to a previous answer or a ministerial statement."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:AnswerType rdf:type owl:Class ;
 	rdfs:label "Answer type"@en ;
-	rdfs:comment "The type of a given answer e.g. holding answer, substantive answer or substantive answer as corrected. If a question is asked toward the end of a session, and Parliament is prorogued before it can be answered, a prorogation answer may be provided. The answer will state that there was not time to answer the question before prorogation."@en ;
+	rdfs:comment "The type of a given answer - being a dissolution answer, a prorogation answer, a holding answer, a substantive answer or a substantive answer as corrected."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+	
+								# edited to here
 	
 pqa:DelegatedAnswer rdf:type owl:Class ;
     rdfs:subClassOf pqa:Answer ;
