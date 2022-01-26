@@ -113,6 +113,11 @@ ppr:Legislature rdf:type owl:Class ;
 	rdfs:comment "A legislature, being either the UK Parliament or a devolved legislature."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:Actualisation rdf:type owl:Class ;
+	rdfs:label "Actualisation"@en ;
+	rdfs:comment "An actualisation, being the act of relating a business item to a procedural step."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 
 
 #######  Object properties ##### 
@@ -133,11 +138,18 @@ ppr:subjectTo rdf:type owl:ObjectProperty ;
 	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
-	rdfs:comment "Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion."@en ;
-	rdfs:domain ppr:BusinessItem ;
+	rdfs:comment "Relates an actualisation to the procedural step being actualised. An actualisation may be of more than one step, for example: the step for the putting of a question and the step for the outcome may be actualised together. A step may be actualised one or more times by business items in separate work packages."@en ;
+	rdfs:domain ppr:Actualisation ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
+ppr:hasBusinessItem rdf:type owl:ObjectProperty ;
+	rdfs:label "Has business item"@en ;
+	rdfs:comment "Relates an actualisation of a step or steps to a business item. An actualisation has one business item. A business item is actualised only once."@en ;
+	rdfs:domain ppr:Actualisation ;
+	rdfs:range ppr:BusinesItem ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:hasStepType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has step type"@en ;
 	rdfs:comment "Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none."@en ;
@@ -159,11 +171,11 @@ ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:followsRoute rdf:type owl:ObjectProperty ;
-	rdfs:label "Follows route"@en ;
-	rdfs:comment "Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between 'Considered for English votes for English laws (EVEL) certification' to 'Certified as England only under the English votes for English laws (EVEL) process' appears in the draft negative, made negative, draft affirmative and made affirmative procedures."@en ;
-	rdfs:domain ppr:Procedure ;
-	rdfs:range ppr:Route ;
+ppr:appearsInProcedure rdf:type owl:ObjectProperty ;
+	rdfs:label "Appears in procedure"@en ;
+	rdfs:comment "Relates a route to the procedure that route appears in. A route appears in one procedure. A procedure may have one or more routes, or none. A procedure having a component procedure allows the routes in the 'child' procedure to be shared with the 'parent' procedure."@en ;
+	rdfs:domain ppr:Route ;
+	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepInHouse rdf:type owl:ObjectProperty ;
@@ -257,8 +269,8 @@ ppr:forStep rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:inProcedure rdf:type owl:ObjectProperty ;
-	rdfs:label "In procedure"@en ;
+ppr:depthInProcedure rdf:type owl:ObjectProperty ;
+	rdfs:label "Depth In procedure"@en ;
 	rdfs:comment "Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range ppr:Procedure ;
@@ -283,6 +295,13 @@ ppr:routeAvailabilityHasCitation rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates the availability of a route to a citation setting out that availability: this may be by means of a proceeding in Parliament, or by means of legislation. A route availability may have one or more citations, or none."@en ;
 	rdfs:domain ppr:RouteAvailability ;
 	rdfs:range ppr:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:componentOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Component of"@en ;
+	rdfs:comment "Relates a procedure to another procedure. A procedure forming a component of another procedure has all the routes in the 'child' procedure appearing as routes in the 'parent' procedure. A procedure may be composed of one or more other procedures, or none. A procedure may be a component of one or more other procedures, or none. A procedure cannot be a component of itself."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 				
 				
