@@ -19,4 +19,6 @@ template = env.get_template("ontologies-index.html")
 
 htmlfiles = list(Path(".").glob("./meta/html/*/*.html"))
 
-print(htmlfiles)
+for htmlpath in htmlfiles:
+
+    print("Considering " + str(htmlpath))
