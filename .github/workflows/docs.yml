@@ -24,7 +24,10 @@ jobs:
         
       - name: python3 generate-docs.py
         run: python3 generate-docs.py
-      
+        
+      - name: python3 generate-docs-index.py
+        run: python3 generate-docs-index.py
+        
       - name: commit html files
         run: |
           git config --global user.name "Robert Brook"
