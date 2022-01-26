@@ -51,6 +51,15 @@
         <section id="classes">
             <h2>Classes</h2>
 
+            <article class="class" id="Actualisation">
+                <h3>
+                    <a href="#Actualisation">Actualisation</a> class
+                </h3>
+
+                <p>An actualisation, being the act of relating a business item to a procedural step.</p>
+
+
+            </article>
             <article class="class" id="BusinessItem">
                 <h3>
                     <a href="#BusinessItem">Business item</a> class
@@ -210,9 +219,51 @@
 
 
 
-                <p>Relates a business item to a step in a procedure by means of a route. For example, relating the second reading of a public bill to the second reading step in the procedure. A step may be actualised by more than one business item in different work packages. A business item may actualise one or more steps. For example, a business item appearing in the Order Paper including a debate on several motions may actualise steps relating to each motion.</p>
+                <p>Relates an actualisation to the procedural step being actualised. An actualisation may be of more than one step, for example: the step for the putting of a question and the step for the outcome may be actualised together. A step may be actualised one or more times by business items in separate work packages.</p>
 
-                <p><strong>BusinessItem</strong> &mdash; Actualises &mdash; <strong>Step</strong></p>
+                <p><strong>Actualisation</strong> &mdash; Actualises &mdash; <strong>Step</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="appearsInProcedure">
+
+                <h3>
+                    <a href="#appearsInProcedure">Appears in procedure</a> object property
+            </h3>
+
+
+
+                <p>Relates a route to the procedure that route appears in. A route appears in one procedure. A procedure may have one or more routes, or none. A procedure having a component procedure allows the routes in the &#39;child&#39; procedure to be shared with the &#39;parent&#39; procedure.</p>
+
+                <p><strong>Route</strong> &mdash; Appears in procedure &mdash; <strong>Procedure</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="componentOf">
+
+                <h3>
+                    <a href="#componentOf">Component of</a> object property
+            </h3>
+
+
+
+                <p>Relates a procedure to another procedure. A procedure forming a component of another procedure has all the routes in the &#39;child&#39; procedure appearing as routes in the &#39;parent&#39; procedure. A procedure may be composed of one or more other procedures, or none. A procedure may be a component of one or more other procedures, or none. A procedure cannot be a component of itself.</p>
+
+                <p><strong>Procedure</strong> &mdash; Component of &mdash; <strong>Procedure</strong></p>
+
+            </article>
+
+            <article class="objectproperty" id="depthInProcedure">
+
+                <h3>
+                    <a href="#depthInProcedure">Depth In procedure</a> object property
+            </h3>
+
+
+
+                <p>Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps.</p>
+
+                <p><strong>StepDisplayDepthInProcedure</strong> &mdash; Depth In procedure &mdash; <strong>Procedure</strong></p>
 
             </article>
 
@@ -227,20 +278,6 @@
                 <p>Relates a work package to its focus, this being a work packageable thing.</p>
 
                 <p><strong>WorkPackage</strong> &mdash; Focus &mdash; <strong>WorkPackageableThing</strong></p>
-
-            </article>
-
-            <article class="objectproperty" id="followsRoute">
-
-                <h3>
-                    <a href="#followsRoute">Follows route</a> object property
-            </h3>
-
-
-
-                <p>Relates a procedure to a route. A route may appear in one or more procedures. For example, the route between &#39;Considered for English votes for English laws (EVEL) certification&#39; to &#39;Certified as England only under the English votes for English laws (EVEL) process&#39; appears in the draft negative, made negative, draft affirmative and made affirmative procedures.</p>
-
-                <p><strong>Procedure</strong> &mdash; Follows route &mdash; <strong>Route</strong></p>
 
             </article>
 
@@ -314,6 +351,20 @@
 
             </article>
 
+            <article class="objectproperty" id="hasBusinessItem">
+
+                <h3>
+                    <a href="#hasBusinessItem">Has business item</a> object property
+            </h3>
+
+
+
+                <p>Relates an actualisation of a step or steps to a business item. An actualisation has one business item. A business item is actualised only once.</p>
+
+                <p><strong>Actualisation</strong> &mdash; Has business item &mdash; <strong>BusinesItem</strong></p>
+
+            </article>
+
             <article class="objectproperty" id="hasDocumentType">
 
                 <h3>
@@ -381,20 +432,6 @@
                 <p>Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral.</p>
 
                 <p><strong>House</strong> &mdash; In legislature &mdash; <strong>Legislature</strong></p>
-
-            </article>
-
-            <article class="objectproperty" id="inProcedure">
-
-                <h3>
-                    <a href="#inProcedure">In procedure</a> object property
-            </h3>
-
-
-
-                <p>Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps.</p>
-
-                <p><strong>StepDisplayDepthInProcedure</strong> &mdash; In procedure &mdash; <strong>Procedure</strong></p>
 
             </article>
 
@@ -681,7 +718,7 @@
 
         
 
-        <p>Generated 2022-01-25 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">api.parliament.uk/webvowl</a></p>
+        <p>Generated 2022-01-26 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/procedure/procedure-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/procedure/procedure-ontology.ttl">api.parliament.uk/webvowl</a></p>
 
         <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
 
