@@ -44,6 +44,10 @@ Dot file: [dot](statutory-instruments/super-affirmative-procedures/remedial-orde
 
 Dot file: [dot](statutory-instruments/super-affirmative-procedures/remedial-orders/draft-affirmative/draft-affirmative.dot) / [svg](statutory-instruments/super-affirmative-procedures/remedial-orders/draft-affirmative/draft-affirmative.svg)
 
+##### [Made affirmative remedial order](statutory-instruments/super-affirmative-procedures/remedial-orders/made-affirmative/made-affirmative.pdf)
+
+Dot file: [dot](statutory-instruments/super-affirmative-procedures/remedial-orders/made-affirmative/made-affirmative.dot) / [svg](statutory-instruments/super-affirmative-procedures/remedial-orders/made-affirmative/made-affirmative.svg)
+
 ### Statutory instrument component procedures
 
 #### [Joint Committee on Statutory Instruments procedure [PDF]](statutory-instruments/components/jcsi/jcsi.pdf)
