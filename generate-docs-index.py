@@ -7,8 +7,9 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 from urllib.parse import urlparse
 
-def fileonly(value):
-    return Markup(value.split("/")[-1])
+
+def stemonly(pathvalue):
+    return Markup(pathvalue.stem)
 
 env = Environment(
     loader=FileSystemLoader("templates"),
@@ -18,7 +19,7 @@ env = Environment(
     lstrip_blocks=True,
 )
 
-env.filters["fileonly"] = fileonly
+env.filters["stemonly"] = stemonly
 
 
 template = env.get_template("ontologies-index.html")
