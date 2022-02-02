@@ -94,7 +94,7 @@
             <article class="objectproperty" id="{{ objectproperty.idString }}">
 
                 <h3>
-                    <a href="#{{ objectproperty.idString }}">{{ objectproperty.label }}</a> object property
+                    Object property <a href="#{{ objectproperty.idString }}">{{ objectproperty.label }}</a>
             </h3>
 
 
@@ -107,7 +107,7 @@
                 <p>{{ objectproperty.comment }}</p>
                 {% endif %}
 
-                <p>{{ objectproperty.domain }} &rarr; {{ objectproperty.label }} &rarr; {{ objectproperty.range }}</p>
+                <p>{{ objectproperty.domain }} &mdash; {{ objectproperty.label }} &mdash; {{ objectproperty.range }}</p>
 
             </article>
             {% endfor %}
@@ -122,12 +122,12 @@
 
             <article class="dataproperty" id="{{ dataproperty.idString }}">
                 <h3>
-                    <a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}</a> data property
+                    Data property <a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}</a>
             </h3>
 
                 <p>{{ dataproperty.comment }}</p>
 
-                <p><strong>{{ dataproperty.domain }}</strong> &mdash; {{ dataproperty.label }} &mdash; <strong>{{ dataproperty.range }}</strong></p>
+                <p>{{ dataproperty.domain }} &mdash; {{ dataproperty.label }} &mdash; {{ dataproperty.range }}</p>
 
 
             </article>
