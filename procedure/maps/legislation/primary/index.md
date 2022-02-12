@@ -6,6 +6,20 @@ Dot file: [dot](public-bills/public-bills.dot) / [svg](public-bills/public-bills
 
 ### Public bill component procedures
 
+#### Resolutions
+
+##### [Regency bill resolutions](public-bills/components/resolutions/regency/regency.pdf)
+
+Dot file: [dot](public-bills/components/resolutions/regency/regency.dot) / [svg](public-bills/components/resolutions/regency/regency.svg)
+
+
+
+
+
+
+
+
+
 #### Commons stages
 
 ##### [Ten minute rule](public-bills/components/commons/ten-minute-rule/ten-minute-rule.pdf)
