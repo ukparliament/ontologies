@@ -8,17 +8,17 @@ Dot file: [dot](public-bills/public-bills.dot) / [svg](public-bills/public-bills
 
 #### Resolutions
 
-##### [Regency bill resolutions](public-bills/components/resolutions/regency/regency.pdf)
+##### [Regency Bill resolutions](public-bills/components/resolutions/regency/regency.pdf)
 
-Dot file: [dot](public-bills/components/resolutions/regency/regency.dot) / [svg](public-bills/components/resolutions/regency/regency.svg)
+<!-- Dot file: [dot](public-bills/components/resolutions/regency/regency.dot) / [svg](public-bills/components/resolutions/regency/regency.svg) -->
 
+##### [Sovereign Grant Bill resolutions](public-bills/components/resolutions/sovereign-grant/sovereign-grant.pdf)
 
+<!-- Dot file: [dot](public-bills/components/resolutions/sovereign-grant/sovereign-grant.dot) / [svg](public-bills/components/resolutions/sovereign-grant/sovereign-grant.svg) -->
 
+##### [Supply and Appropriation Bill resolutions](public-bills/components/resolutions/supply-and-appropriation/supply-and-appropriation.pdf)
 
-
-
-
-
+<!-- Dot file: [dot](public-bills/components/resolutions/supply-and-appropriation/supply-and-appropriation.dot) / [svg](public-bills/components/resolutions/supply-and-appropriation/supply-and-appropriation.svg) -->
 
 #### Commons stages
 
