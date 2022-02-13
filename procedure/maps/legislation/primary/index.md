@@ -44,9 +44,9 @@ Dot file: [dot](public-bills/components/prerogative-consent/queens-consent/queen
 
 Dot file: [dot](public-bills/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.dot) / [svg](public-bills/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.svg)
 
-##### [Grand Steward of Scotland's consent](public-bills/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.pdf)
+##### [Great Steward of Scotland's consent](public-bills/components/prerogative-consent/great-steward-of-scotlands-consent/great-steward-of-scotlands-consent.pdf)
 
-Dot file: [dot](public-bills/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.dot) / [svg](public-bills/components/prerogative-consent/grand-steward-of-scotlands-consent/grand-steward-of-scotlands-consent.svg)
+Dot file: [dot](public-bills/components/prerogative-consent/great-steward-of-scotlands-consent/great-steward-of-scotlands-consent.dot) / [svg](public-bills/components/prerogative-consent/great-steward-of-scotlands-consent/great-steward-of-scotlands-consent.svg)
 
 #### Legislative consent motions (unused)
 
