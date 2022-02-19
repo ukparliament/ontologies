@@ -14,6 +14,8 @@
 
 * How often should the refresh script run? Daily?
 
+* Do we want a manual tigger for the refresh?
+
 ## Proposed process flows
 
 ### [Proposed indexing flow](indexing-flow/indexing-flow.svg)
