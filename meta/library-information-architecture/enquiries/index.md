@@ -15,3 +15,5 @@
 ## Proposed pocess flows
 
 ### [Proposed indexing flow](indexing-flow/indexing-flow.svg)
+
+### [Proposed periodic refresh flow](periodic-refresh-flow/periodic-refresh-flow.svg)
