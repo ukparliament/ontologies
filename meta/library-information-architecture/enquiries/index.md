@@ -12,6 +12,8 @@
 
 * How does Illumi handle stemming?
 
+* How often should the refresh script run? Daily?
+
 ## Proposed process flows
 
 ### [Proposed indexing flow](indexing-flow/indexing-flow.svg)
