@@ -12,7 +12,7 @@
 
 * How does Illumi handle stemming?
 
-## Proposed pocess flows
+## Proposed process flows
 
 ### [Proposed indexing flow](indexing-flow/indexing-flow.svg)
 
