@@ -4,9 +4,9 @@ A [list of requirements is given here](https://docs.google.com/spreadsheets/d/1N
 
 ## Questions for search
 
-* How does Illumi handle search? Is it AND or OR combinations?
+* How does Illumin handle search? Is it AND or OR combinations?
 
-* How does Illumi handle stemming?
+* How does Illumin handle stemming?
 
 ## Questions for integration
 
