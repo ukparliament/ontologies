@@ -107,60 +107,60 @@ pqa:AnswerType rdf:type owl:Class ;
 	rdfs:comment "The type of a given answer - being a dissolution answer, a prorogation answer, a holding answer, a substantive answer or a substantive answer as corrected."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-	
-								# edited to here
-	
 pqa:DelegatedAnswer rdf:type owl:Class ;
     rdfs:subClassOf pqa:Answer ;
 	rdfs:label "Delegated answer"@en ;
-	rdfs:comment "Part of a written answer provided by an arm's length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer."@en ;
+	rdfs:comment "A written answer containing material contributed by an arm’s length body to which the answering body delegates responsibility for the provision of information necessary to answer the question, for example: an answer provided by the Cabinet Office, containing material contributed by the UK Statistics Authority."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:ArmsLengthBody rdf:type owl:Class ;
 	rdfs:label "Arms length body"@en ;
-	rdfs:comment "An organisation operating at arm's length from the government e.g. UK Statistics Authority."@en ;
+	rdfs:comment "An organisation operating at arm's length from the government, for example: the UK Statistics Authority."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:LibraryDeposit rdf:type owl:Class ;
 	rdfs:label "Library deposit"@en ;
-	rdfs:comment "A paper or set of papers placed by a Minister, or the Speaker, or the Lord Speaker, in the Library of either House. Usually deposits are made into both Libraries but sometimes only one."@en ;
+	rdfs:comment "A paper or set of papers placed by a Minister, or the Speaker, or the Lord Speaker, in the Library of either House, or in both."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:Document rdf:type owl:Class ;
 	rdfs:label "Document"@en ;
 	rdfs:comment "A document."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+
 	
 
 #######  Object properties ##### 
 
 pqa:allocation rdf:type owl:ObjectProperty ;
 	rdfs:label "Allocation"@en ;
-	rdfs:comment "Relates a question to an allocation to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. This would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly - for example, when referring to the gender of the answering member - treating a round robin as a single question is not yet possible."@en ;
+	rdfs:comment "Relates a question to the allocation of that question to an answering body. A question will have one allocation at any one time but may have more than one allocation over time. An allocation is always of one question."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:allocatedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Allocated to"@en ;
-	rdfs:comment "Relates an answering body allocation to an answering body."@en ;
+	rdfs:comment "Relates the allocation of a question to an answering body to that answering body. An allocation is always to one answering body. An answering body may have many allocations."@en ;
 	rdfs:domain pqa:AnsweringBodyAllocation ;
 	rdfs:range pqa:AnsweringBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
-pqa:transferredFrom rdf:type owl:ObjectProperty ;
-	rdfs:label "Transferred from"@en ;
-	rdfs:comment "Relates an act of transferral to the answering body allocation the question was formerly allocated to."@en ;
+pqa:startsAllocation rdf:type owl:ObjectProperty ;
+	rdfs:label "Starts allocation"@en ;
+	rdfs:comment "Relates an act of transferral to the answering body allocation started by that transferral. A transferral always starts one allocation. An allocation may be started by one transferral, or none."@en ;
 	rdfs:domain pqa:Transferral ;
 	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
-pqa:transferredTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Transferred to"@en ;
-	rdfs:comment "Relates an act of transferral to the answering body allocation the question was subsequently allocated to."@en ;
+pqa:endsAllocation rdf:type owl:ObjectProperty ;
+	rdfs:label "Ends allocation"@en ;
+	rdfs:comment "Relates an act of transferral to the answering body allocation ended by that transferral. A transferral always ends one allocation. An allocation may be ended by one transferral, or none."@en ;
 	rdfs:domain pqa:Transferral ;
 	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+																# edited to here
 
 pqa:answerTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Answer to"@en ;
