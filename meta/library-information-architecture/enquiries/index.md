@@ -1,22 +1,20 @@
 # Requirements
 
-* A keyword search must return enquiries indexed with a concept having that keyword as either a preferred label or a non-preferred label.
-
-* A keyword search must return enquiries indexed with a concept being an ancestor of a concept having that keyword as either a preferred label or a non-preferred label.
-
-* A report must be available in the form of a CSV listing all enquiries and all concepts used to index those concepts. Enquiries will be duplicated over rows wherever an enquiry has been indexed with multiple concepts. The CSV must include the ID of the enquiry and the ID and preferred label of the concept. This will be used to reindex when concepts are removed from the taxonomy.
-
 A [full list of requirements is given here](https://docs.google.com/spreadsheets/d/1NEsWG8lNUEofQehiz26d8NT3j8EEHPE51zHMvFhDwEc/edit?usp=sharing).
 
-## Questions
+## Questions for search
 
 * How does Illumi handle search? Is it AND or OR combinations?
 
 * How does Illumi handle stemming?
 
+## Questions for integration
+
 * How often should the refresh script run? Daily?
 
 * Do we want a manual tigger for the refresh?
+
+* How do we handle concepts deleted from the Thesaurus? How do we handle the splitting and merging of concepts?
 
 ## Proposed process flows
 
