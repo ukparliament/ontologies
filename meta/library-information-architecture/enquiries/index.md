@@ -6,6 +6,8 @@
 
 * A report must be available in the form of a CSV listing all enquiries and all concepts used to index those concepts. Enquiries will be duplicated over rows wherever an enquiry has been indexed with multiple concepts. The CSV must include the ID of the enquiry and the ID and preferred label of the concept. This will be used to reindex when concepts are removed from the taxonomy.
 
+A [full list of requirements is given here](https://docs.google.com/spreadsheets/d/1NEsWG8lNUEofQehiz26d8NT3j8EEHPE51zHMvFhDwEc/edit?usp=sharing).
+
 ## Questions
 
 * How does Illumi handle search? Is it AND or OR combinations?
