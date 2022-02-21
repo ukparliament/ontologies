@@ -127,7 +127,7 @@
                     Class <a href="#ArmsLengthBody">Arms length body</a>
                 </h3>
 
-                <p>An organisation operating at arm&#39;s length from the government e.g. UK Statistics Authority.</p>
+                <p>An organisation operating at arm&#39;s length from the government, for example: the UK Statistics Authority.</p>
 
 
             </article>
@@ -149,7 +149,7 @@
                     Class <a href="#DelegatedAnswer">Delegated answer</a>
                 </h3>
 
-                <p>Part of a written answer provided by an arm&#39;s length body rather than an answering body e.g. a government department might ask the UK Statistics Authority to provide part or all of a written answer.</p>
+                <p>A written answer containing material contributed by an arm’s length body to which the answering body delegates responsibility for the provision of information necessary to answer the question, for example: an answer provided by the Cabinet Office, containing material contributed by the UK Statistics Authority.</p>
 
                 <p>Superclasses
                 &middot; Answer
@@ -189,7 +189,7 @@
                     Class <a href="#LibraryDeposit">Library deposit</a>
                 </h3>
 
-                <p>A paper or set of papers placed by a Minister, or the Speaker, or the Lord Speaker, in the Library of either House. Usually deposits are made into both Libraries but sometimes only one.</p>
+                <p>A paper or set of papers placed by a Minister, or the Speaker, or the Lord Speaker, in the Library of either House, or in both.</p>
 
 
             </article>
@@ -270,7 +270,7 @@
 
 
 
-                <p>Relates an answering body allocation to an answering body.</p>
+                <p>Relates the allocation of a question to an answering body to that answering body. An allocation is always to one answering body. An answering body may have many allocations.</p>
 
                 <p><a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a> &mdash; Allocated to &mdash; <a href="#AnsweringBody">AnsweringBody</a></p>
 
@@ -284,7 +284,7 @@
 
 
 
-                <p>Relates a question to an allocation to an answering body. In theory, allocation allows a single question to be assigned to multiple answering bodies. This would be a major change from existing practice where the same question, when asked of different answering bodies, is considered to be a set of different questions. A question intended for multiple answering bodies is sometimes referred to as a round robin question. Because round robins are loosely defined and because the question text might vary slightly - for example, when referring to the gender of the answering member - treating a round robin as a single question is not yet possible.</p>
+                <p>Relates a question to the allocation of that question to an answering body. A question will have one allocation at any one time but may have more than one allocation over time. An allocation is always of one question.</p>
 
                 <p><a href="#Question">Question</a> &mdash; Allocation &mdash; <a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a></p>
 
@@ -416,6 +416,20 @@
 
             </article>
 
+            <article class="objectproperty" id="endsAllocation">
+
+                <h3>
+                    Object property <a href="#endsAllocation">Ends allocation</a>
+            </h3>
+
+
+
+                <p>Relates an act of transferral to the answering body allocation ended by that transferral. A transferral always ends one allocation. An allocation may be ended by one transferral, or none.</p>
+
+                <p><a href="#Transferral">Transferral</a> &mdash; Ends allocation &mdash; <a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a></p>
+
+            </article>
+
             <article class="objectproperty" id="hasAnswerType">
 
                 <h3>
@@ -514,31 +528,17 @@
 
             </article>
 
-            <article class="objectproperty" id="transferredFrom">
+            <article class="objectproperty" id="startsAllocation">
 
                 <h3>
-                    Object property <a href="#transferredFrom">Transferred from</a>
+                    Object property <a href="#startsAllocation">Starts allocation</a>
             </h3>
 
 
 
-                <p>Relates an act of transferral to the answering body allocation the question was formerly allocated to.</p>
+                <p>Relates an act of transferral to the answering body allocation started by that transferral. A transferral always starts one allocation. An allocation may be started by one transferral, or none.</p>
 
-                <p><a href="#Transferral">Transferral</a> &mdash; Transferred from &mdash; <a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="transferredTo">
-
-                <h3>
-                    Object property <a href="#transferredTo">Transferred to</a>
-            </h3>
-
-
-
-                <p>Relates an act of transferral to the answering body allocation the question was subsequently allocated to.</p>
-
-                <p><a href="#Transferral">Transferral</a> &mdash; Transferred to &mdash; <a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a></p>
+                <p><a href="#Transferral">Transferral</a> &mdash; Starts allocation &mdash; <a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a></p>
 
             </article>
         </section>
