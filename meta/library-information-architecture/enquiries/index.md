@@ -1,6 +1,6 @@
 # Requirements
 
-A [full list of requirements is given here](https://docs.google.com/spreadsheets/d/1NEsWG8lNUEofQehiz26d8NT3j8EEHPE51zHMvFhDwEc/edit?usp=sharing).
+A [list of requirements is given here](https://docs.google.com/spreadsheets/d/1NEsWG8lNUEofQehiz26d8NT3j8EEHPE51zHMvFhDwEc/edit?usp=sharing).
 
 ## Questions for search
 
