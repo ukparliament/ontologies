@@ -36,9 +36,9 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 #### Remedial orders
 
-##### [Proposed remedial order](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-remedial-order/proposed-remedial-order.pdf)
+##### [Proposed draft remedial order](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-draft-remedial-order/proposed-draft-remedial-order.pdf)
 
-Dot file: [dot](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-remedial-order/proposed-remedial-order.dot) / [svg](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-remedial-order/proposed-remedial-order.svg)
+Dot file: [dot](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-draft-remedial-order/proposed-draft-remedial-order.dot) / [svg](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-draft-remedial-order/proposed-draft-remedial-order.svg)
 
 ##### [Draft affirmative remedial order](statutory-instruments/super-affirmative-procedures/remedial-orders/draft-affirmative/draft-affirmative.pdf)
 
