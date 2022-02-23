@@ -22,34 +22,10 @@ The [taxonomy API is here](https://api.parliament.uk/ses/). An API key is requir
 
 The straw-man proposal below requires three calls:
 
-<table>
-	<thead>
-		<tr>
-			<td>Name</td>
-			<td>Client sends</td>
-			<td>Server returns</td>
-			<td>URL</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Partial string match</td>
-			<td>A string as entered by the user of Illumin</td>
-			<td>All concepts partially matching the string. For each concept an ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain.</td>
-			<td>https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.json&SERVICE=search&QUERY=Dogs%20in%20crime</td>
-			<td><a href="ses/string-match-response.json">Sample response</a></td>
-		</tr>
-		<tr>
-			<td>ID lookup</td>
-			<td>The ID of a concept</td>
-			<td>The concept having that ID with the ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain.</td>
-			<td>https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.xml&SERVICE=term&ID=408172</td>
-		</tr>
-		<tr>
-			<td>ID lookup on presence in taxonomy</td>
-			<td>The ID of a concept/td>
-			<td>Whether or not the concept still exists in the taxonomy. If the concept does exist, returns the ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain.</td>
-			<td>https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.xml&SERVICE=term&ID=408172</td>
+Name | Client sends | Server returns | URL
+Partial string match | A string as entered by the user of Illumin | All concepts partially matching the string. For each concept an ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain. | https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.json&SERVICE=search&QUERY=Dogs%20in%20crime</td>
+ID lookup | The ID of a concept | The concept having that ID with the ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain. | https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.xml&SERVICE=term&ID=408172
+ID lookup on presence in taxonomy | The ID of a concept | Whether or not the concept still exists in the taxonomy. If the concept does exist, returns the ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain. | https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.xml&SERVICE=term&ID=408172
 
 
 ### Sample response
