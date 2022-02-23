@@ -50,9 +50,7 @@ The straw-man proposal below requires three calls:
 			<td>The ID of a concept/td>
 			<td>Whether or not the concept still exists in the taxonomy. If the concept does exist, returns the ID, a preferred label, all non-preferred labels and a scope note. Plus all these values for all concepts in the ancestor chain.</td>
 			<td>https://api.parliament.uk/ses/select.exe?TBDB=disp_taxonomy&TEMPLATE=service.xml&SERVICE=term&ID=408172</td>
-		</tr>
-	</tbody>
-</table>
+
 
 ### Sample response
 
