@@ -122,15 +122,6 @@
 
 
             </article>
-            <article class="class" id="ArmsLengthBody">
-                <h3>
-                    Class <a href="#ArmsLengthBody">Arm&#39;s length body</a>
-                </h3>
-
-                <p>A government organisation that may provide an answering body with information necessary to answer a question allocated to that answering body.</p>
-
-
-            </article>
             <article class="class" id="BusinessQuestion">
                 <h3>
                     Class <a href="#BusinessQuestion">Business question</a>
@@ -149,12 +140,21 @@
                     Class <a href="#DelegatedAnswer">Delegated answer</a>
                 </h3>
 
-                <p>A written answer containing material contributed by an arm&#39;s length body to which the answering body delegates responsibility for the provision of information necessary to answer the question, for example: an answer provided by the Cabinet Office, containing material contributed by the UK Statistics Authority.</p>
+                <p>A written answer containing material contributed by an organisation to which the answering body delegates responsibility for the provision of information necessary to answer the question, for example: an answer provided by the Cabinet Office, containing material contributed by the UK Statistics Authority.</p>
 
                 <p>Superclasses
                 &middot; Answer
 
             </p>
+
+            </article>
+            <article class="class" id="DelegatedAnswerBody">
+                <h3>
+                    Class <a href="#DelegatedAnswerBody">Delegated answer body</a>
+                </h3>
+
+                <p>An organisation that may provide an answering body with information necessary to answer a question allocated to that answering body.</p>
+
 
             </article>
             <article class="class" id="Document">
@@ -326,7 +326,7 @@
 
 
 
-                <p>Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question.</p>
+                <p>Relates an answer to the question or questions it answers. An answering body may group questions for answer, in order to provide one answer in response to that group of questions. A question may have one or more answers provided over time, for example: a holding answer may be replaced by a substantive answer which may then be in receipt of a correcting answer.</p>
 
                 <p><a href="#Answer">Answer</a> &mdash; Answer to &mdash; <a href="#Question">Question</a></p>
 
@@ -340,23 +340,9 @@
 
 
 
-                <p>Relates an answer to an incumbency of the person who provided the answer. This may be an incumbency in a House seat or an incumbency in another position. In practice this will usually be a Minister in a government department or a person occupying a position in a non-departmental answering body. For questions in receipt of an oral answer in the House of Lords, this may be a Government whip.</p>
+                <p>Relates an answer to an incumbency of the person providing the answer. Answers are provided by a person incumbent in a position in government or in a non-departmental answering body with a duty to answer parliamentary questions. For questions in receipt of an oral answer in the House of Lords, this may be the incumbency held by a person in a position as a government whip. [February 2022] Data for questions and answers identifies the Member providing the answer, but not the incumbency in a position with a duty to provide an answer. For this reason, we may need to fall back on pointing to a House seat incumbency.</p>
 
                 <p><a href="#Answer">Answer</a> &mdash; Answered by &mdash; <a href="#Incumbency">Incumbency</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="answeringBody">
-
-                <h3>
-                    Object property <a href="#answeringBody">Answering body</a>
-            </h3>
-
-
-
-                <p>Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body.</p>
-
-                <p><a href="#Answer">Answer</a> &mdash; Answering body &mdash; <a href="#AnsweringBody">AnsweringBody</a></p>
 
             </article>
 
@@ -368,7 +354,7 @@
 
 
 
-                <p>Relates a question to an incumbency of the person asking the question. This may be an incumbency in a House seat or an incumbency in another position. In the House of Lords the Member who tabled a question in expectation of an oral answer may delegate another Member to be present in the Chamber to receive the answer. Parliamentary questions are tabled with the Lords or Commons Table Offices; urgent and private notice questions are applied for to the Speaker or Lord Speaker privately.</p>
+                <p>Relates a question to an incumbency of the person asking the question. A Member in the House of Lords tabling a question in expectation of an oral answer may nominate another Member to be present in the Chamber to receive the answer.</p>
 
                 <p><a href="#Question">Question</a> &mdash; Asked by &mdash; <a href="#Incumbency">Incumbency</a></p>
 
@@ -412,7 +398,7 @@
 
                 <p>Relates a delegated answer to the arm&#39;s length body that provided it.</p>
 
-                <p><a href="#DelegatedAnswer">DelegatedAnswer</a> &mdash; Delegated to &mdash; <a href="#ArmsLengthBody">ArmsLengthBody</a></p>
+                <p><a href="#DelegatedAnswer">DelegatedAnswer</a> &mdash; Delegated to &mdash; <a href="#DelegatedAnswerBody">DelegatedAnswerBody</a></p>
 
             </article>
 
@@ -427,6 +413,20 @@
                 <p>Relates an act of transferral to the answering body allocation ended by that transferral. A transferral always ends one allocation. An allocation may be ended by one transferral, or none.</p>
 
                 <p><a href="#Transferral">Transferral</a> &mdash; Ends allocation &mdash; <a href="#AnsweringBodyAllocation">AnsweringBodyAllocation</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="fromAnsweringBody">
+
+                <h3>
+                    Object property <a href="#fromAnsweringBody">From answering body</a>
+            </h3>
+
+
+
+                <p>Relates an answer to the answering body that provided it. An answer is provided by one answering body.</p>
+
+                <p><a href="#Answer">Answer</a> &mdash; From answering body &mdash; <a href="#AnsweringBody">AnsweringBody</a></p>
 
             </article>
 
@@ -466,7 +466,7 @@
 
 
 
-                <p>Relates a question to a piece of parliamentary business cited by the question.</p>
+                <p>Relates a question to an item of parliamentary business cited in that question.</p>
 
                 <p><a href="#Question">Question</a> &mdash; Pursuant to &mdash; <a href="#PursuableThing">PursuableThing</a></p>
 
@@ -764,7 +764,7 @@
 
         
 
-        <p>Generated 2022-02-23 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">api.parliament.uk/webvowl</a></p>
+        <p>Generated 2022-02-24 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/question-and-answer/question-and-answer-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl">api.parliament.uk/webvowl</a></p>
 
         <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
 
