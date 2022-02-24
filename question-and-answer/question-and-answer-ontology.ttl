@@ -110,12 +110,12 @@ pqa:AnswerType rdf:type owl:Class ;
 pqa:DelegatedAnswer rdf:type owl:Class ;
     rdfs:subClassOf pqa:Answer ;
 	rdfs:label "Delegated answer"@en ;
-	rdfs:comment "A written answer containing material contributed by an arm's length body to which the answering body delegates responsibility for the provision of information necessary to answer the question, for example: an answer provided by the Cabinet Office, containing material contributed by the UK Statistics Authority."@en ;
+	rdfs:comment "A written answer containing material contributed by an organisation to which the answering body delegates responsibility for the provision of information necessary to answer the question, for example: an answer provided by the Cabinet Office, containing material contributed by the UK Statistics Authority."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:ArmsLengthBody rdf:type owl:Class ;
-	rdfs:label "Arm's length body"@en ;
-	rdfs:comment "A government organisation that may provide an answering body with information necessary to answer a question allocated to that answering body."@en ;
+pqa:DelegatedAnswerBody rdf:type owl:Class ;
+	rdfs:label "Delegated answer body"@en ;
+	rdfs:comment "An organisation that may provide an answering body with information necessary to answer a question allocated to that answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:LibraryDeposit rdf:type owl:Class ;
@@ -159,43 +159,43 @@ pqa:endsAllocation rdf:type owl:ObjectProperty ;
 	rdfs:domain pqa:Transferral ;
 	rdfs:range pqa:AnsweringBodyAllocation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-	
-																# edited to here
 
 pqa:answerTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Answer to"@en ;
-	rdfs:comment "Allows an answer to be associated with one or more questions. This replicates more precisely the current functionality around grouped questions. In other words, a group of questions tabled by a single Member in receipt of the same answer. There is some debate as to whether the same text given in answer to questions from multiple Members can be considered one, or the same, answer. This also allows a single question to have many answers. Sometimes there will be multiple answers from a single answering body at different points in time (holding answer, substantive answer, corrected substantive answer). Sometimes different answers from different answering bodies to the same question e.g. answers to a round robin question. Note that this is a major change to current data models, where a single question can have one and only one answer, and a single answer can be to one and only one question."@en ;
+	rdfs:comment "Relates an answer to the question or questions it answers. An answering body may group questions for answer, in order to provide one answer in response to that group of questions. A question may have one or more answers provided over time, for example: a holding answer may be replaced by a substantive answer which may then be in receipt of a correcting answer."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Question ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:answeringBody rdf:type owl:ObjectProperty ;
-	rdfs:label "Answering body"@en ;
-	rdfs:comment "Relates an answer to the answering body that provided it. A single answer can only be provided by one answering body."@en ;
+pqa:fromAnsweringBody rdf:type owl:ObjectProperty ;
+	rdfs:label "From answering body"@en ;
+	rdfs:comment "Relates an answer to the answering body that provided it. An answer is provided by one answering body."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:AnsweringBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:askedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Asked by"@en ;
-	rdfs:comment "Relates a question to an incumbency of the person asking the question. This may be an incumbency in a House seat or an incumbency in another position. In the House of Lords the Member who tabled a question in expectation of an oral answer may delegate another Member to be present in the Chamber to receive the answer. Parliamentary questions are tabled with the Lords or Commons Table Offices; urgent and private notice questions are applied for to the Speaker or Lord Speaker privately."@en ;
+	rdfs:comment "Relates a question to an incumbency of the person asking the question. A Member in the House of Lords tabling a question in expectation of an oral answer may nominate another Member to be present in the Chamber to receive the answer."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:pursuantTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Pursuant to"@en ;
-	rdfs:comment "Relates a question to a piece of parliamentary business cited by the question."@en ;
+	rdfs:comment "Relates a question to an item of parliamentary business cited in that question."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:PursuableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:answeredBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Answered by"@en ;
-	rdfs:comment "Relates an answer to an incumbency of the person who provided the answer. This may be an incumbency in a House seat or an incumbency in another position. In practice this will usually be a Minister in a government department or a person occupying a position in a non-departmental answering body. For questions in receipt of an oral answer in the House of Lords, this may be a Government whip."@en ;
+	rdfs:comment "Relates an answer to an incumbency of the person providing the answer. Answers are provided by a person incumbent in a position in government or in a non-departmental answering body with a duty to answer parliamentary questions. For questions in receipt of an oral answer in the House of Lords, this may be the incumbency held by a person in a position as a government whip. [February 2022] Data for questions and answers identifies the Member providing the answer, but not the incumbency in a position with a duty to provide an answer. For this reason, we may need to fall back on pointing to a House seat incumbency."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+									# edited to here
 	
 pqa:hasAnswerType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has answer type"@en ;
@@ -222,7 +222,7 @@ pqa:delegatedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Delegated to"@en ;
 	rdfs:comment "Relates a delegated answer to the arm's length body that provided it."@en ;
 	rdfs:domain pqa:DelegatedAnswer ;
-	rdfs:range pqa:ArmsLengthBody ;
+	rdfs:range pqa:DelegatedAnswerBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
