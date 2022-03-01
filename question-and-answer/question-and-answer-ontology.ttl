@@ -195,56 +195,57 @@ pqa:answeredBy rdf:type owl:ObjectProperty ;
 	rdfs:range pqa:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-									# edited to here
-	
 pqa:hasAnswerType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has answer type"@en ;
-	rdfs:comment "Relates an answer to its type i.e. a holding answer, substantive answer or corrected substantive answer."@en ;
+	rdfs:comment "Relates an answer to its type - being a holding answer, a substantive answer, a corrected answer, a prorogation answer or a dissolution answer. An answer has one answer type."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:AnswerType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:replacesAnswer rdf:type owl:ObjectProperty ;
 	rdfs:label "Replaces answer"@en ;
-	rdfs:comment "Relates an answer to a subsequent answer given to the same question e.g. a holding answer to a substantive answer, or a substantive answer to a corrected answer, a corrected answer to a further corrected answer. Substantive answers replace holding answers in whole, whereas corrected answers may replace a previous answer in whole or in part."@en ;
+	rdfs:comment "Relates an answer to an answer given earlier to the same question, for example: a substantive answer replacing a holding answer, a corrected answer replacing a substantive answer or a further corrected answer replacing an earlier corrected answer. An answer is replaced by one answer, or none. A replacing answer replaces one answer."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Answer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:refersToPreviousAnswer rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to previous answer"@en ;
-	rdfs:comment "Relates an answer to a previous answer that answers the question in whole or in part e.g. 'I refer the honourable X to the answer given...'"@en ;
+	rdfs:comment "Relates an answer to an answer given earlier. The reference may be given in the form: 'I refer the honourable X to the answer given ...' An answer may refer to one or more answers given earlier, or none. An answer given earlier may be referred to by one or more subsequent answers, or none."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Answer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:delegatedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Delegated to"@en ;
-	rdfs:comment "Relates a delegated answer to the delegated answer body that provided it."@en ;
+	rdfs:comment "Relates a delegated answer to the delegated answer body that contributed material to that answer. An answer is delegated to one delegated answer body, or none."@en ;
 	rdfs:domain pqa:DelegatedAnswer ;
 	rdfs:range pqa:DelegatedAnswerBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to Library deposit"@en ;
-	rdfs:comment "Relates an answer to a Library deposit i.e. the answer to a question may include a commitment to deposit papers in the Libraries of either House."@en ;
+	rdfs:comment "Relates an answer to a Library deposit, where that answer includes a statement that papers have been or will be deposited in the Library of either House. An answer may refer to one or more Library deposits, or none. A Library deposit may be referred to by one or more questions, or none."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:LibraryDeposit ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:refersToDocument rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to document"@en ;
-	rdfs:comment "Relates a written answer to a document provided by the answering body. This may be provided as an attachment to the answer text. The document might form part or all of the answer."@en ;
+	rdfs:comment "Relates a written answer to a published document. A written answer may refer to one or more documents, or none."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range pqa:Document ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:answerExpectedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Answer expected as"@en ;
-	rdfs:comment "Relates a question to a time-bound means of capturing the format of the answer expected (either oral or written)."@en ;
+	rdfs:comment "Relates a question to the expectation of the form of answer to that question, over a period of time, being oral or written. In the House of Lords, a question has one form of answer expected.In the House of Commons, a question being tabled in expectation of a written answer has one form of answer expected.In the House of Commons, a question being tabled in expectation of an oral answer may have two forms of answer expected over different periods of time, should the question be unstarred or not reached."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range pqa:AnswerExpectedAs ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+	
+																# edited to here
 	
 pqa:answerExpectedInForm rdf:type owl:ObjectProperty ;
 	rdfs:label "Answer expected in form"@en ;
