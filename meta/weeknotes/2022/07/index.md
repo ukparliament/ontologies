@@ -2,7 +2,7 @@
 
 ## Keeping up appearances
 
-We can't really say our heart's in it, but some quick notes nonetheless:
+We can't really say our hearts are in it, but some quick notes nonetheless:
 
 * On the [public bill procedure mapping](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/public-bills.pdf) front, we were delighted to be joined by Mhairi and Gael of Scottish Parliament fame. For once, we had done our homework having combed through assorted committee reports in search of all things [legislative consent motion](https://www.parliament.uk/site-information/glossary/legislative-consent/) related. Or at least Librarian Jayne had. An hour later - give or take some tidying time - and we are now in possession of the [first fairly comprehensive legislative consent motion procedure map](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf) known to woman. Or at least we think we are. Though we did say similar last week. It only remains to add our usual sprinkling of standing order citations and our homework will be ready for marking.
 
