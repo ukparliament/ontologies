@@ -183,6 +183,8 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 
 #### OR steps
 
+In addition to the logic step inputs and outputs of TRUE, FALSE and UNTRAVERSABLE, an OR step may also have one or both inputs accepting a value of ALLOWS - and may output a value of ALLOWS. This permits target business steps to be allowed by one set of conditions and caused by another set of conditions.
+
 <table>
 	<thead>
 		<tr>
@@ -238,9 +240,13 @@ Arithmetic steps take the actualisation count and - by means of an EQUALS step -
 
 An arithmetic step with an input of UNTRAVERSABLE always outputs UNTRAVERSABLE. Where no input to an arithmetic step has a status of UNTRAVERSABLE, the following rules apply:
 
-A SUM step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. A SUM step takes two input routes and sums the two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is an arithmetic step or a summation step.
+A SUM step directly follows a business step, a SUM step or an INCREMENT step, with no intervening steps. A SUM step takes two input routes and sums their two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is another arithmetic step.
 
-An INCREMENT step directly follows a business step, a SUM step or an INCREMENT step, having no intervening steps. An INCREMENT step takes one input route and adds one to the count. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route of an INCREMENT step is an arithmetic step or a summation step.
+When both input routes into a SUM step have been completely parsed, the step outputs a parsed status of TRUE.
+
+An INCREMENT step directly follows a business step, a SUM step or an INCREMENT step, with no intervening steps. An INCREMENT step takes one input route and adds one to the count given by the input route. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route of an INCREMENT step is another arithmetic step.
+
+When the input route into an INCREMENT step has been completely parsed, the step outputs a parsed status of TRUE.
 
 An EQUALS step takes two input routes - each route from a business step, a SUM step or an INCREMENT step - and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route of an EQUALS step is a business step, a decision step, a logic step or a summation step.
 
@@ -256,7 +262,7 @@ Summation steps are 'transparent', taking the 'current', 'status', 'parsed' and 
 
 ### Decision steps
 
-Decision steps are used to indicate that a decision is required elsewhere. They modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to table an approval motion.
+Decision steps are used to indicate that a decision is required elsewhere. They modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to move an approval motion.
 
 A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
 
@@ -284,9 +290,9 @@ The truth table for a decision step is:
 	</tbody>
 </table>
 
-A decision step will output a route directly into a business step without any intervening logic, arithmetic or summation steps: these will never have an input with a value of ALLOWS.
+A decision step outputs a route either directly into a business step - without any intervening logic, arithmetic or summation steps - or into an OR step.
 
-A business step with an input value of TRUE is caused to happen. A business step with an input value of ALLOWS is allowed to happen. A business step with an input value of FALSE or UNTRAVERSABLE, is precluded.
+A route with a value of ALLOWS is not input into a NOT step, AND step, arithmetic step or summation step.
 
 
 ### Parse passes
