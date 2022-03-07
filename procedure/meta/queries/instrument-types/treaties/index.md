@@ -130,11 +130,11 @@ In both Houses there is the potential for a Member to table a motion against a t
 
 Treaties can be debated in either House if a motion has been tabled or additionally in the Commons if a Select Committee recommends a general debate. In the Commons the treaty will either be debated on the floor of the House or referred to a Delegated Legislation Committee. In the Lords treaties will only be debated on the floor of the House. 
 
-* <a href="https://api.parliament.uk/s/9422731b">All treaty debates</a>
+* <a href="https://api.parliament.uk/s/e108ea83">All treaty debates</a>
 
 * <a href="https://api.parliament.uk/s/8a42c808">Commons debates</a>
 
-* <a href="https://api.parliament.uk/s/c9bae71e">Lords debates</a> 
+* <a href="https://api.parliament.uk/s/f5d302fb">Lords debates</a> 
 
 ## Withdrawn treaties
 
