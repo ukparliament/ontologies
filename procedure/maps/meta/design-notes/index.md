@@ -191,6 +191,7 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 		<tr>
 			<td> </td>
 			<td>TRUE</td>
+			<td>ALLOWS</td>
 			<td>FALSE</td>
 			<td>UNTRAVERSABLE</td>
 		</tr>
@@ -201,16 +202,26 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<td>TRUE</td>
 			<td>TRUE</td>
 			<td>TRUE</td>
+			<td>TRUE</td>
+		</tr>
+		<tr>
+			<th>ALLOWS</th>
+			<td>TRUE</td>
+			<td>ALLOWS</td>
+			<td>ALLOWS</td>
+			<td>ALLOWS</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>TRUE</td>
+			<td>ALLOWS</td>
 			<td>FALSE</td>
 			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
 			<th>UNTRAVERSABLE</th>
 			<td>TRUE</td>
+			<td>ALLOWS</td>
 			<td>UNTRAVERSABLE</td>
 			<td>UNTRAVERSABLE</td>
 		</tr>
