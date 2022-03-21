@@ -319,13 +319,17 @@ Routes in a fully parsed work package have one of four potential statuses: TRUE,
 
 ## What is possible and what is plausible
 
-Whilst the procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what is allowed to happen, what is possible according to the rule sets and what is plausible may not be the same, for example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. In reality, unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
+The procedure maps take account of legislation, standing orders, speaker rulings and precedence to determine what is allowed to happen. The set of things being possible have varying degrees of 'plausibility', being calculated from the frequency with which those events have occurred in the past.
 
-We use data gathered from concluded work packages subject to a procedure, to calculate the plausibility of a step being taken in future in that procedure: the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure.
+For example: it is possible for a Member of the House of Commons to table a fatal prayer against a negative statutory instrument, which may be referred to and debated in a Delegated Legislation Committee. Once debated, it is also possible for the question to be put on that prayer in the Chamber. Unless the Opposition finds time, it is unlikely that the motion will ever have the question put.
 
-We take account of concluded work packages because we don’t want the plausibility calculation to miss steps that haven’t happened yet.
+For steps happening in the House of Commons, the occurrence score of a step in a procedure is the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure. 
 
-Looking at precedence in this way, we can plot ‘cowpaths’ through the possibility space. 
+For steps happening in the House of Lords, or jointly between both Houses, the occurrence score is the number of concluded work packages subject to a procedure having a business item actualising that step divided by the total number of concluded work packages subject to that procedure having the 'Laid before the House of Lords' business step actualised.
+
+In both cases, the occurence score calculation only includes steps that have already happened. 
+
+What has happened in past work packages does not determine what happens in current work packages. Considering precedence in this way allows us to plot 'cowpaths' through the possibility space: this provides 'odds' of a thing happening, rather than a guarantee of future events.
 
 ## Visualising a work package
 
