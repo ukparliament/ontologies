@@ -60,6 +60,15 @@
 
 
             </article>
+            <article class="class" id="Incumbency">
+                <h3>
+                    Class <a href="#Incumbency">Incumbency</a>
+                </h3>
+
+                <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
+
+
+            </article>
             <article class="class" id="LaidPaper">
                 <h3>
                     Class <a href="#LaidPaper">Laid paper</a>
@@ -67,6 +76,10 @@
 
                 <p>A paper having been laid before a House. Papers and supporting documents may be laid as a bundle.</p>
 
+                <p>Superclasses
+                &middot; ParliamentaryPaper
+
+            </p>
 
             </article>
             <article class="class" id="Laying">
@@ -100,15 +113,6 @@
 
 
             </article>
-            <article class="class" id="LayingDuty">
-                <h3>
-                    Class <a href="#LayingDuty">Laying duty</a>
-                </h3>
-
-                <p>The duty of a body to lay papers before a House as imposed by an Act of Parliament.</p>
-
-
-            </article>
             <article class="class" id="LayingOrWithdrawal">
                 <h3>
                     Class <a href="#LayingOrWithdrawal">Laying or withdrawal</a>
@@ -118,12 +122,30 @@
 
 
             </article>
-            <article class="class" id="Person">
+            <article class="class" id="PaperSeries">
                 <h3>
-                    Class <a href="#Person">Person</a>
+                    Class <a href="#PaperSeries">Paper series</a>
                 </h3>
 
-                <p>A person.</p>
+                <p>A series of papers, for example: the House of Commons paper series or the Command paper series.</p>
+
+
+            </article>
+            <article class="class" id="PaperSeriesItem">
+                <h3>
+                    Class <a href="#PaperSeriesItem">Paper series item</a>
+                </h3>
+
+                <p>A paper as an item in a paper series. The Parliamentary Papers Act 1840 confers parliamentary privilege to the publication of a paper which is an item in the House of Commons paper series.</p>
+
+
+            </article>
+            <article class="class" id="ParliamentaryPaper">
+                <h3>
+                    Class <a href="#ParliamentaryPaper">Parliamentary paper</a>
+                </h3>
+
+                <p>Papers laid into or published under the authority of Parliament.</p>
 
 
             </article>
@@ -164,6 +186,20 @@
         <section id="objectproperties">
             <h2>Object properties</h2>
 
+
+            <article class="objectproperty" id="asPaperSeriesItem">
+
+                <h3>
+                    Object property <a href="#asPaperSeriesItem">As paper series item</a>
+            </h3>
+
+
+
+                <p>Relates a parliamentary paper to a paper series item. A paper series item places a paper in the paper series. Each paper series item refers to one paper. A paper appears as one paper series item.</p>
+
+                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; As paper series item &mdash; <a href="#PaperSeriesItem">PaperSeriesItem</a></p>
+
+            </article>
 
             <article class="objectproperty" id="hasHouse">
 
@@ -207,34 +243,6 @@
 
             </article>
 
-            <article class="objectproperty" id="hasLayingDuty">
-
-                <h3>
-                    Object property <a href="#hasLayingDuty">Has laying duty</a>
-            </h3>
-
-
-
-                <p>Relates an act of laying a paper to a duty to lay papers under an Act.</p>
-
-                <p><a href="#Laying">Laying</a> &mdash; Has laying duty &mdash; <a href="#LayingDuty">LayingDuty</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasLayingPerson">
-
-                <h3>
-                    Object property <a href="#hasLayingPerson">Has laying person</a>
-            </h3>
-
-
-
-                <p>Relates an act of laying a paper to the person laying it.</p>
-
-                <p><a href="#Laying">Laying</a> &mdash; Has laying person &mdash; <a href="#Person">Person</a></p>
-
-            </article>
-
             <article class="objectproperty" id="hasSession">
 
                 <h3>
@@ -246,6 +254,34 @@
                 <p>Relates an act of laying or withdrawing a paper to the session which the paper is laid into or withdrawn from. Papers laid during a prorogation period are considered laid into the session which has been prorogued.</p>
 
                 <p><a href="#LayingOrWithdrawal">LayingOrWithdrawal</a> &mdash; Has session &mdash; <a href="#Session">Session</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="inPaperSeries">
+
+                <h3>
+                    Object property <a href="#inPaperSeries">In paper series</a>
+            </h3>
+
+
+
+                <p>Relates a paper series item to the paper series in which the item appears. A paper series item is listed in a single paper series.</p>
+
+                <p><a href="#PaperSeriesItem">PaperSeriesItem</a> &mdash; In paper series &mdash; <a href="#PaperSeries">PaperSeries</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="laidBy">
+
+                <h3>
+                    Object property <a href="#laidBy">Laid by</a>
+            </h3>
+
+
+
+                <p>Relates a laying to an incumbency of the person laying the paper.</p>
+
+                <p><a href="#Laying">Laying</a> &mdash; Laid by &mdash; <a href="#Incumbency">Incumbency</a></p>
 
             </article>
 
@@ -336,6 +372,10 @@
                 <tr>
                     <td>/<wbr>ontologies/<wbr>laying/<wbr>Withdrawal</td>
                     <td>/<wbr>ontologies/<wbr>laying/<wbr>LayingOrWithdrawal</td>
+                </tr>
+                <tr>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>LaidPaper</td>
+                    <td>/<wbr>ontologies/<wbr>laying/<wbr>ParliamentaryPaper</td>
                 </tr>
         </table>
         </section>  
