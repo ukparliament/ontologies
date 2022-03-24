@@ -183,19 +183,30 @@ Once draft instruments reach the end of parliamentary procedure there is the pot
 
 
 
-## Statutory Instruments and their preceding proposed negative instruments
+## Statutory Instruments and their preceding papers 
+
+Statutory instruments can be preceded by a number of different paper types (as detailed below). This query looks for all statutory instruments that were preceded in Parliament by another paper. 
+
+* [Statutory instruments with a preceding paper](https://api.parliament.uk/s/b204da96)
+
+
+### Statutory Instruments and their preceding proposed negative instruments
 
 Once a [proposed negative instrument](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/proposed-negative-statutory-instruments/) has been considered by the European Statutory Instruments Committee and the Secondary Legislation Scrutiny Committee the Government can then lay a following Statutory Instrument. The following query shows all instruments that were preceded by a proposed negative statutory instrument:
 
-* [Statutory instruments with preceding proposed negative statutory instruments](https://api.parliament.uk/s/a7b80c46)
+* [Statutory instruments with preceding proposed negative statutory instruments](https://api.parliament.uk/s/890265ef)
 
-## Statutory Instruments and their preceding published drafts 
+### Statutory Instruments and their preceding published drafts 
 
 Once a [published draft under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/published-drafts-under-euwa/)) has completed its 28 day scrutiny period the Government can then lay a following Statutory Instrument under one of the affirmative procedures. The following query shows all instruments that were preceded by a published draft:
 
 * [Statutory instruments with preceding published drafts](https://api.parliament.uk/s/762d1529)
 
+### Remedial Orders and their preceding proposed draft remedial orders
 
+Once a proposed draft remedial order has been before Parliament for 60 days then Government can then lay a following Statutory Instrument. The following query shows all instruments that were preceded by a proposed draft remedial order. Generally it will most likely be a draft affirmative remedial order that will have such a relationship but occasionally the Government may lay a made affirmative remedial order if the Joint Committee on Human Rights has recommended such action when considering the proposed draft remedial order. 
+
+* [Remedial Orders with preceding proposed draft remedial orders](https://api.parliament.uk/s/6c99d7e7)
 
 ## Revoked Statutory Instruments
 
