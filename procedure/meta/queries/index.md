@@ -20,6 +20,8 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 * [Published drafts under Schedule 8 to the European Union (Withdrawal) Act 2018](instrument-types/published-drafts-under-euwa)
 
+* [Remedial orders and proposed draft remedial orders](instrument-types/remedial-orders)
+
 * [Statutory Instruments](instrument-types/statutory-instruments)
 
 * [Treaties](instrument-types/treaties)
