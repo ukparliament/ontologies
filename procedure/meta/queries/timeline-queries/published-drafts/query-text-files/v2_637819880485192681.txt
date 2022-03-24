@@ -1,0 +1,160 @@
+# ****** Tracing system comments start **** 
+# Current date and time 04 March 2022 10:54:08
+
+# parameter fromstep=https://id.parliament.uk/uOTlocVd
+# parameter tostep=https://id.parliament.uk/Lx8caKG8
+# parameter procedure=https://id.parliament.uk/jaKY87jt
+
+# ****** Tracing system comments end **** 
+PREFIX : <https://id.parliament.uk/schema/>
+PREFIX id: <https://id.parliament.uk/>
+
+
+SELECT ?flag 
+WHERE {
+  {
+    SELECT (count(*) as ?flag)
+	  WHERE {
+		 ?x a :House.
+		  FILTER EXISTS {
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+			  }
+
+			  union
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+			  }
+
+			  union
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route3.
+				?route3 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+				?route3 :procedureRouteHasProcedure ?procedure.
+			  }  
+	  }
+      {
+		  BIND (<https://id.parliament.uk/uOTlocVd> as ?fromstep)
+		  BIND (<https://id.parliament.uk/Lx8caKG8> as ?tostep)
+		  BIND (<https://id.parliament.uk/jaKY87jt> as ?procedure)
+      }
+    }
+  }
+  UNION
+    {
+    SELECT (count(*) as ?flag)
+	  WHERE {
+		 ?x a :House.
+		  FILTER EXISTS {
+			  {
+				?fromstep :procedureStepIsFromProcedureRoute ?route1.
+				?route1 (:allowedProcedureRouteIsAllowedByProcedureStep|:causedProcedureRouteIsCausedByProcedureStep)/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route3.
+				?route3 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+				?route3 :procedureRouteHasProcedure ?procedure.
+			  }  
+
+			  union
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep/:procedureStepIsFromProcedureRoute ?route3.
+				?route3 :allowedProcedureRouteIsAllowedByProcedureStep|:causedProcedureRouteIsCausedByProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+				?route3 :procedureRouteHasProcedure ?procedure.
+			  }  
+	  }
+      {
+		  BIND (<https://id.parliament.uk/uOTlocVd> as ?fromstep)
+		  BIND (<https://id.parliament.uk/Lx8caKG8> as ?tostep)
+		  BIND (<https://id.parliament.uk/jaKY87jt> as ?procedure)
+      }
+    }
+  }
+  UNION
+  {
+    SELECT (count(*) as ?flag)
+	  WHERE {
+		 ?x a :House.
+		  FILTER EXISTS {
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+			  }
+
+			  union
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+			  }
+
+			  union
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route3.
+				?route3 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+				?route3 :procedureRouteHasProcedure ?procedure.
+			  }  
+	  }
+      {
+		  BIND (<https://id.parliament.uk/uOTlocVd> as ?tostep)
+		  BIND (<https://id.parliament.uk/Lx8caKG8> as ?fromstep)
+		  BIND (<https://id.parliament.uk/jaKY87jt> as ?procedure)
+      }
+    }
+  }
+  UNION
+    {
+    SELECT (count(*) as ?flag)
+	  WHERE {
+		 ?x a :House.
+		  FILTER EXISTS {
+			  {
+				?fromstep :procedureStepIsFromProcedureRoute ?route1.
+				?route1 (:allowedProcedureRouteIsAllowedByProcedureStep|:causedProcedureRouteIsCausedByProcedureStep)/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route3.
+				?route3 :procedureRouteIsToProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+				?route3 :procedureRouteHasProcedure ?procedure.
+			  }  
+
+			  union
+			  {
+				?fromstep :procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute ?route1.
+				?route1 :procedureRouteIsToProcedureStep/(:procedureStepAllowsAllowedProcedureRoute|:procedureStepCausesCausedProcedureRoute) ?route2.
+				?route2 :procedureRouteIsToProcedureStep/:procedureStepIsFromProcedureRoute ?route3.
+				?route3 :allowedProcedureRouteIsAllowedByProcedureStep|:causedProcedureRouteIsCausedByProcedureStep ?tostep.
+				?route1 :procedureRouteHasProcedure ?procedure.
+				?route2 :procedureRouteHasProcedure ?procedure.
+				?route3 :procedureRouteHasProcedure ?procedure.
+			  }  
+	  }
+      {
+		  BIND (<https://id.parliament.uk/uOTlocVd> as ?tostep)
+		  BIND (<https://id.parliament.uk/Lx8caKG8> as ?fromstep)
+		  BIND (<https://id.parliament.uk/jaKY87jt> as ?procedure)
+      }
+    }
+  }
+}
