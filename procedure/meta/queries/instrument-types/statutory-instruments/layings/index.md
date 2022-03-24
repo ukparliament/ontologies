@@ -2,7 +2,7 @@
 
 Statutory instruments will be laid before Parliament by a laying body. The duty of a body to lay papers before a House is imposed by an Act of Parliament. 
 
-The following queries provide a list of all statutory instruments, subject to the four main SI procedures, laid before Parliament by laying body. The data in these queries goes back to the beginning of the 2017-19 session. 
+The following queries provide a list of all statutory instruments laid before Parliament by laying body. The data in these queries goes back to the beginning of the 2017-19 session. 
 
 Queries have also been provided for Machinery of Government changes where Departments were merged, split and created (where they take on new responsibilities from another Department). 
 
