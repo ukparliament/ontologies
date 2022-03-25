@@ -1,6 +1,6 @@
 # Work Packaged Things
 
-The following queries will show all Work Packaged Things laid before Parliament that are available in the [Treaty Tracker](https://treaties.parliament.uk) and [Statutory Instrument Service](https://statutoryinstruments.parliament.uk/). A Work Packaged Thing is a thing, such as a paper, that is the focus of a work package. For these queries a Work Packaged Thing will be treaties, statutory instruments, proposed negative statutory instruments and published drafts under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018. Queries on these specific types can be found [here](https://ukparliament.github.io/ontologies/procedure/meta/queries/). The queries will be looking at Work Packaged Things that have specific procedural steps added.
+The following queries will show all Work Packaged Things laid before Parliament that are available in the [Treaty Tracker](https://treaties.parliament.uk) and [Statutory Instrument Service](https://statutoryinstruments.parliament.uk/). A Work Packaged Thing is a thing, such as a paper, that is the focus of a work package. For these queries a Work Packaged Thing will be treaties, statutory instruments (including remedial orders), proposed draft remedial orders, proposed negative statutory instruments and published drafts under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018. Queries on these specific types can be found [here](https://ukparliament.github.io/ontologies/procedure/meta/queries/). The queries will be looking at Work Packaged Things that have specific procedural steps added.
 
 This data goes back to the beginning of the 2017-19 session. The aim of these queries is to show instances of procedural steps used across different types of procedure.
 
@@ -9,35 +9,35 @@ This data goes back to the beginning of the 2017-19 session. The aim of these qu
 
 This query will show you all workpackaged things laid before Parliament since the Treaty Tracker and Statutory Instrument Service began:
 
-* <a href="https://api.parliament.uk/s/cbea02e0">All work packaged things laid since June 2017</a>
+* <a href="https://api.parliament.uk/s/1d9f60f7">All work packaged things laid since June 2017</a>
 
 ## Work packaged things currently before Parliament
 
-* [Work packaged things](https://api.parliament.uk/s/61ea2e4e)  
+* [Work packaged things](https://api.parliament.uk/s/99468e66)  
 
 ## Work packaged things by session
 
-* <a href="https://api.parliament.uk/s/678addc1">2021-22</a>
+* <a href="https://api.parliament.uk/s/7a019443">2021-22</a>
 
-* <a href="https://api.parliament.uk/s/0e601291">2019-21</a>
+* <a href="https://api.parliament.uk/s/782abafd">2019-21</a>
 
-* <a href="https://api.parliament.uk/s/81727187">2019</a>
+* <a href="https://api.parliament.uk/s/0ef43b28">2019</a>
 
-* <a href="https://api.parliament.uk/s/57fb64d3">2017-19</a>
+* <a href="https://api.parliament.uk/s/031dbae0">2017-19</a>
 
 ## Work packaged things by calendar year
 
-* <a href="https://api.parliament.uk/s/f12ad952">2022</a>
+* <a href="https://api.parliament.uk/s/9986ccd4">2022</a>
 
-* <a href="https://api.parliament.uk/s/19224f0a">2021</a>
+* <a href="https://api.parliament.uk/s/91bb8f95">2021</a>
 
-* <a href="https://api.parliament.uk/s/c48a5f3c">2020</a>
+* <a href="https://api.parliament.uk/s/a4503bad">2020</a>
 
-* <a href="https://api.parliament.uk/s/46569fbf">2019</a>
+* <a href="https://api.parliament.uk/s/fe695777">2019</a>
 
-* <a href="https://api.parliament.uk/s/d5222955">2018</a>
+* <a href="https://api.parliament.uk/s/2157f561">2018</a>
 
-* <a href="https://api.parliament.uk/s/ed8bb1bc">2017</a>
+* <a href="https://api.parliament.uk/s/c4f04c2f">2017</a>
 
 ## Filtering by time period
 
@@ -76,11 +76,11 @@ A list of laying bodies can be found [here](https://api.parliament.uk/query/reso
 
 ## Committee consideration
 
-All workpackaged things will be considered by a committee(s) once they are laid before Parliament. Committees, dependent on their terms of reference, can then make a decision on whether to not report or to draw special attention to the House. The following queries will show all workpackaged things considered by committee. Note in the results that some workpackaged things may appear twice, this is because some get considered by multiple committees such as all SIs laid before both Houses will be considered by the Secondary Legislation Scrutiny Committee (SLSC) and the Joint Committee on Statutory Instruments (JCSI). There is also a specific query for the SLSC as they are the only committee to consider all types of papers. 
+All workpackaged things will be considered by a committee(s) once they are laid before Parliament. Committees, dependent on their terms of reference, can then make a decision on whether to not report or to draw special attention to the House. The following queries will show all workpackaged things considered by committee. Note in the results that some workpackaged things may appear twice, this is because some get considered by multiple committees such as most SIs laid before both Houses will be considered by the Secondary Legislation Scrutiny Committee (SLSC) and the Joint Committee on Statutory Instruments (JCSI). There is also a specific query for the SLSC as they are the only committee to consider all types of papers. 
 
-* <a href="https://api.parliament.uk/s/86ca0733">All workpackaged things considered by a committee(s)</a>
+* <a href="https://api.parliament.uk/s/510b7ce1">All workpackaged things considered by a committee(s)</a>
 
-* <a href="https://api.parliament.uk/s/5c918f33">All workpackaged things raised for concern (including PNSIs upgraded to the affirmative procedure and published drafts where the SLSC made recommendations)</a>
+* <a href="https://api.parliament.uk/s/af6b3741">All workpackaged things raised for concern (including PNSIs upgraded to the affirmative procedure, proposed draft remedial orders where the JCHR has made recommendations and published drafts where the SLSC made recommendations)</a>
 
 * <a href="https://api.parliament.uk/s/bb1c1c3f">All workpackaged things considered by the Secondary Legislation Scrutiny Committee (SLSC)</a>
 
@@ -88,25 +88,25 @@ All workpackaged things will be considered by a committee(s) once they are laid 
 
 Members in both Houses can table prayer motions in order to object or raise an issue with a workpackaged thing. This applies to all statutory instruments and treaties, but not proposed negative statutory instruments or published drafts. Prayers can be fatal or non-fatal. 
 
-* <a href="https://api.parliament.uk/s/06f2f2b9">All prayers tabled against a workpackaged thing</a>
+* <a href="https://api.parliament.uk/s/bcd04d9c">All prayers tabled against a workpackaged thing</a>
 
-* <a href="https://api.parliament.uk/s/45855274">All prayers tabled in the House of Commons against a workpackaged thing</a>
+* <a href="https://api.parliament.uk/s/1aac6f35">All prayers tabled in the House of Commons against a workpackaged thing</a>
 
-* <a href="https://api.parliament.uk/s/c7c9a430">All prayers tabled in the House of Lords against a workpackaged thing</a>
+* <a href="https://api.parliament.uk/s/818bdb26">All prayers tabled in the House of Lords against a workpackaged thing</a>
 
 ## Debates 
 
-Treaties and statutory instruments can both be debated in either House. Treaties and statutory instruments under the negative procedures can only be debated if a motion has been tabled against them and the Government gives time for such a debate. Statutory instruments under the affirmative procedures will be debated in both Houses, or just the House of Commons if it's a Commons only instrument. Proposed negative statutory instruments and published drafts cannot be debated. 
+Treaties and statutory instruments can both be debated in either House. Treaties and statutory instruments under the negative procedures can only be debated if a motion has been tabled against them and the Government gives time for such a debate. Statutory instruments under the affirmative procedures (including remedial orders) will be debated in both Houses, or just the House of Commons if it's a Commons only instrument. Proposed negative statutory instruments, proposed draft remedial orders and published drafts cannot be debated. 
 
-* <a href="https://api.parliament.uk/s/1e0e1c8e">All debates"</a>
+* <a href="hhttps://api.parliament.uk/s/04952f3d">All debates"</a>
 
-* <a href="https://api.parliament.uk/s/18872032">House of Commons debates</a>
+* <a href="https://api.parliament.uk/s/e69e4c1a">House of Commons debates</a>
 
-* <a href="https://api.parliament.uk/s/315cb74f">House of Lords debates</a>
+* <a href="https://api.parliament.uk/s/497a9567">House of Lords debates</a>
 
 
 ## Withdrawn 
 
 The following query looks for all workpackaged things withdrawn from the House of Commons and House of Lords. Note that published drafts cannot be withdrawn.
 
-* <a href="https://api.parliament.uk/s/cca03850">Withdrawn workpackaged things</a>
+* <a href="https://api.parliament.uk/s/e00bf4b6">Withdrawn workpackaged things</a>
