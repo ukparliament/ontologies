@@ -4,7 +4,7 @@
 
 Procedure maps are diagrams showing procedures as a set of routes between steps. A route may belong to one or more procedures, allowing for component procedures to be reused. A route is directed and connects two steps. 
 
-Steps are typed as being business steps, logic steps, arithmetic steps or summation steps. The combination of business steps being actualised, routes, logic and arithmetic determine which business steps should, may or should not be taken in a particular work package subject to a parliamentary procedure.
+Steps are typed as being business steps, decision steps, logic steps, arithmetic steps or summation steps. The combination of business steps being actualised, routes, logic and arithmetic determine which business steps should, may or should not be taken in a particular work package subject to a parliamentary procedure.
 
 The maps describe rules taken from a number of sources:
 
@@ -12,32 +12,31 @@ The maps describe rules taken from a number of sources:
 
 * determined by resolutions of the House
 
-* set out in [Standing Orders](https://api.parliament.uk/standing-orders): for example, public Standing Order 73 in the House of Lords describing scrutiny reserve preventing the Government from tabling an approval motion for an affirmative statutory instrument until the Joint Committee on Statutory Instruments has reported
+* set out in [Standing Orders](https://api.parliament.uk/standing-orders): for example, public Standing Order 73 in the House of Lords describing scrutiny reserve preventing the Government from moving an approval motion for an affirmative statutory instrument until the Joint Committee on Statutory Instruments has reported
 
 * determined by precedent of custom and practice
 
 * set out in rulings made by the Speaker
 
 A diagram showing [hierarchies of things informing procedure](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/informing/informing.png), as applying to each House, is linked.
-Steps happening only in the House of Commons appear in the left hand bubble. Steps happening only in the House of Lords appear in the right hand bubble. Bicameral steps, such as joint committees, are shown in the intersection between the two bubbles.
 
-Procedure maps may show steps that happen outside Parliament: for example, the making of an SI by a government minister. These steps are shown outside the two bubbles - as is time, in the sense of procedural clocks.
+Procedure maps may show steps that happen outside Parliament: for example, the making of an SI by a government minister.
 
 ## What is a work package?
 
 A work package is a set of business items undertaken by one or both Houses of Parliament. It may be subject to procedure: for example, a package of work to scrutinise, amend and pass or reject a bill - or it may not be subject to a procedure: for example, a select committee inquiry following no procedural path.
 
-Work packages have a focus: a work packageable thing, for example: a topic area in the context of a select committee inquiry, or a paper made available to Parliament in the case of the passage of primary legislation, secondary - or delegated - legislation, or a treaty.
+Work packages have a focus - a work packageable thing - for example: a topic area in the context of a select committee inquiry, or bills and papers made available to Parliament in the case of the passage of primary legislation, secondary - or delegated - legislation, or a treaty.
 
 Work packages - rather than particular instruments or papers - are subject to procedure because some instruments or papers are laid multiple times and only initiate a work package in one context, for example: a treaty might be laid once before ratification - which may trigger a work package subject to the procedure set out by the [Constitutional Reform and Governance Act 2010](http://www.legislation.gov.uk/ukpga/2010/25/contents) - and once following ratification, when no work package is triggered.
 
-Work packages contain business items, some taking place in Parliament and some outside. A business item is said to actualise a procedural step.
+Work packages contain business items, some taking place in Parliament and some outside. A business item actualises a procedural step.
 
 ## Why are some routes not recorded?
 
-The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts. Parsing rules determine out how a machine should traverse routes from steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
+The procedure maps are designed to be parsed as state diagrams rather than read as flowcharts. Parsing rules set out how a machine should traverse routes from steps to determine what is allowed to happen next, what is caused to happen next and what is precluded from happening.
 
-It may appear that some routes are missing: for example, a common outcome for a motion is to be moved, proposed, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the proposal step and not precluded by the debate step. This means the begging of leave to withdraw step is still in play* at the point of the debate and there is no need for a separate route.
+It may appear that some routes are missing, for example: a common outcome for a motion is to be moved, debated and withdrawn before the question is put. This suggests that a debate step should allow for a begging leave to withdraw step, but the begging leave to withdraw step is allowed from the moving step and not precluded by the debate step. This means the begging of leave to withdraw step is still in play at the point of the debate and there is no need for a separate route.
 
 In deciding between making the maps parseable by machines as state diagrams and making them legible by people as flowcharts, we’ve decided to err on the side of machine parsability.
 
@@ -65,7 +64,9 @@ Any combination of one current state and one potential state is possible.
 
 ### Liberal on input, conservative on output
 
-Whilst a work package in the context of a procedure can be parsed to determine future possibilities, the results of parsing are only taken into account on output. It may be used to signify that a step is not now possible. The parsing code is not used on input. Whilst the parsing code may say a step is not now possible, this does not preclude us from actualising that step. Given Parliament is a complex, adaptive system and that rules and their interpretation may change over time, we always ensure that we are able to document what has happened, rather than what the parsed procedure says may happen.
+Whilst a work package in the context of a procedure can be parsed to determine future possibilities, the results of parsing are only taken into account on output. Whilst the parsing code may say a step is not now possible, this does not preclude us from actualising that step.
+
+Given Parliament is a complex, adaptive system and that rules and their interpretation may change over time, we always ensure that we are able to document what has happened, rather than what the parsed procedure says may happen.
 
 ### Parsing code
 
@@ -80,11 +81,12 @@ Business steps are in one of four current states:
 * Actualised one or more times, with all associated business items having dates in the future.
 
 * Actualised one or more times, with at least one associated business item having a date in the past or a date of today.
-* Actualised one or more times, with business items that have no date. This only applies to ‘coming into force steps’, where the instrument specifies a condition as a text string rather than a date.
+
+* Actualised one or more times, with business items that have no date. This only applies to 'coming into force steps', where the instrument specifies a condition as a text string rather than a date.
 
 ### Route currentness and untraversability
 
-Routes may be marked with a start date and / or an end date. Routes having a start date in the future or an end date in the past are not current and their status attribute is marked as UNTRAVERSABLE.
+Routes with a target of a business step may be marked with a start date and / or an end date. Routes having a start date in the future or an end date in the past are not current and their status attribute is marked as UNTRAVERSABLE.
 
 Routes are current when having:
 
@@ -93,17 +95,14 @@ Routes are current when having:
 * a start date in the past and no end date
 
 * no start date and an end date in the future
-* a start date in the past and an end date in the future
 
-An UNTRAVERSABLE route being inbound to a step may propagate to the outbound routes of that step according to the logic below, even where those routes are current. This ensures that business steps sitting downstream of an UNTRAVERSABLE route are marked as not currently actualisable, for example: the route into English Votes for English Laws consideration has an end date in the past since the standing orders governing EVEL were first suspended and then removed. This means the bridge into EVEL is UNTRAVERSABLE. By propagating untraversability into following routes in the EVEL procedure, we taint the roads off the closed bridge as also being closed by marking those routes as UNTRAVERSABLE. This allows us to flag that subsequent business steps are also not currently actualisable.
+* a start date in the past and an end date in the future
 
 We aim to expand the procedure model to include availability periods for routes. This would allow us to say a route was closed and then re-opened.
 
 ### Routes from business steps
 
-A business step with an input being UNTRAVERSABLE has all outputs being UNTRAVERSABLE.
-
-A business step which does not have an input which is UNTRAVERSABLE:
+A business step:
 
 * emits a FALSE if that business step has not been actualised
 
@@ -113,12 +112,9 @@ A business step which does not have an input which is UNTRAVERSABLE:
  
 * emits a TRUE if that business step has been actualised by one or more business items with a date of today or with a date in the past - together with a count of the number of those actualisations
 
-<!-- edited to here -->
-
-
 ### Logic steps
  
-The logic steps take one input or two inputs and emit one output. A value is called TRUE, FALSE or UNTRAVERSABLE. Truth tables for the logic steps are:
+The logic steps take one input route or two input routes and emit one output. An input value is called TRUE or FALSE. Truth tables for the logic steps are:
  
 #### NOT steps
 
@@ -137,10 +133,6 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<th>FALSE</th>
 			<td>TRUE</td>
 		</tr>
-		<tr>
-			<th>UNTRAVERSABLE</th>
-			<td>UNTRAVERSABLE</td>
-		</tr>
 	</tbody>
 </table>
 
@@ -156,7 +148,6 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<td> </td>
 			<td>TRUE</td>
 			<td>FALSE</td>
-			<td>UNTRAVERSABLE</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -164,26 +155,18 @@ The logic steps take one input or two inputs and emit one output. A value is cal
 			<th>TRUE</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
-			<td>UNTRAVERSABLE</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>FALSE</td>
 			<td>FALSE</td>
-			<td>UNTRAVERSABLE</td>
-		</tr>
-		<tr>
-			<th>UNTRAVERSABLE</th>
-			<td>UNTRAVERSABLE</td>
-			<td>UNTRAVERSABLE</td>
-			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
 
 #### OR steps
 
-In addition to the logic step inputs and outputs of TRUE, FALSE and UNTRAVERSABLE, an OR step may also have one or both inputs accepting a value of ALLOWS - and may output a value of ALLOWS. This permits target business steps to be allowed by one set of conditions and caused by another set of conditions.
+In addition to the logic step inputs and outputs of TRUE and FALSE, an OR step may also have one or both inputs accepting a value of ALLOWS - and may output a value of ALLOWS. This permits target business steps to be allowed by one set of conditions and caused by another set of conditions.
 
 <table>
 	<thead>
@@ -195,13 +178,11 @@ In addition to the logic step inputs and outputs of TRUE, FALSE and UNTRAVERSABL
 			<td>TRUE</td>
 			<td>ALLOWS</td>
 			<td>FALSE</td>
-			<td>UNTRAVERSABLE</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<th>TRUE</th>
-			<td>TRUE</td>
 			<td>TRUE</td>
 			<td>TRUE</td>
 			<td>TRUE</td>
@@ -211,24 +192,17 @@ In addition to the logic step inputs and outputs of TRUE, FALSE and UNTRAVERSABL
 			<td>TRUE</td>
 			<td>ALLOWS</td>
 			<td>ALLOWS</td>
-			<td>ALLOWS</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>TRUE</td>
 			<td>ALLOWS</td>
 			<td>FALSE</td>
-			<td>UNTRAVERSABLE</td>
-		</tr>
-		<tr>
-			<th>UNTRAVERSABLE</th>
-			<td>TRUE</td>
-			<td>ALLOWS</td>
-			<td>UNTRAVERSABLE</td>
-			<td>UNTRAVERSABLE</td>
 		</tr>
 	</tbody>
 </table>
+
+<!-- edited to here --->
 
 ### Arithmetic steps
 
