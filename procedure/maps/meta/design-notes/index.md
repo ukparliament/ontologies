@@ -121,13 +121,13 @@ The logic steps take one input route or two input routes and emit one output. An
 <table>
 	<thead>
 		<tr>
-			<th>TRUE</th>
-			<th>FALSE</th>
+			<td>TRUE</td>
+			<td>FALSE</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<th>FALSE</th>
+			<td>FALSE</td>
 			<td>TRUE</td>
 		</tr>
 	</tbody>
