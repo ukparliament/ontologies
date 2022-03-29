@@ -202,8 +202,6 @@ In addition to the logic step inputs and outputs of TRUE and FALSE, an OR step m
 	</tbody>
 </table>
 
-<!-- edited to here --->
-
 ### Arithmetic steps
 
 Arithmetic steps operate on actualisation counts from business steps, being the number of business items actualising a business step with a date of today or with a date in the past.
@@ -212,17 +210,13 @@ An arithmetic step is a SUM step, an INCREMENT step or an EQUALS step.
 
 Arithmetic steps take the actualisation count and - by means of an EQUALS step - output a TRUE or FALSE as an input to a business step, a decision step, a logic step or a summation step.
 
-An arithmetic step with an input of UNTRAVERSABLE always outputs UNTRAVERSABLE. Where no input to an arithmetic step has a status of UNTRAVERSABLE, the following rules apply:
+The following rules apply:
 
-A SUM step directly follows a business step, a SUM step or an INCREMENT step, with no intervening steps. A SUM step takes two input routes and sums their two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is another arithmetic step.
+* A SUM step directly follows a business step, a SUM step or an INCREMENT step, with no intervening steps. A SUM step takes two input routes and sums their two counts. The summed count is emitted on the outbound route of the SUM step. The target of the outbound route of a SUM step is another arithmetic step. When both input routes into a SUM step have been completely parsed, the step outputs a parsed status of TRUE.
 
-When both input routes into a SUM step have been completely parsed, the step outputs a parsed status of TRUE.
+* An INCREMENT step directly follows a business step, a SUM step or an INCREMENT step, with no intervening steps. An INCREMENT step takes one input route and adds one to the count given by the input route. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route of an INCREMENT step is another arithmetic step. When the input route into an INCREMENT step has been completely parsed, the step outputs a parsed status of TRUE.
 
-An INCREMENT step directly follows a business step, a SUM step or an INCREMENT step, with no intervening steps. An INCREMENT step takes one input route and adds one to the count given by the input route. The incremented count is emitted on the outbound route of the INCREMENT step. The target of the outbound route of an INCREMENT step is another arithmetic step.
-
-When the input route into an INCREMENT step has been completely parsed, the step outputs a parsed status of TRUE.
-
-An EQUALS step takes two input routes - each route from a business step, a SUM step or an INCREMENT step - and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route of an EQUALS step is a business step, a decision step, a logic step or a summation step.
+* An EQUALS step takes two input routes - each route from a business step, a SUM step or an INCREMENT step - and evaluates whether the two counts are equal. If the two counts are equal, the EQUALS step emits a TRUE. If the two counts are not equal, the EQUALS step emits a FALSE. The target of the outbound route of an EQUALS step is a business step, a decision step, a logic step or a summation step.
 
 ### Summation steps
 
