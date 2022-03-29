@@ -121,14 +121,11 @@ The logic steps take one input route or two input routes and emit one output. An
 <table>
 	<thead>
 		<tr>
-			<td colspan="2" id="truth-table-not">NOT</td>
+			<th>TRUE</th>
+			<th>FALSE</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<th>TRUE</th>
-			<td>FALSE</td>
-		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>TRUE</td>
@@ -142,12 +139,9 @@ The logic steps take one input route or two input routes and emit one output. An
 <table>
 	<thead>
 		<tr>
-			<td colspan="5" id="truth-table-and">AND</td>
-		</tr>
-		<tr>
-			<td> </td>
-			<td>TRUE</td>
-			<td>FALSE</td>
+			<th> </th>
+			<th>TRUE</th>
+			<th>FALSE</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -171,13 +165,10 @@ In addition to the logic step inputs and outputs of TRUE and FALSE, an OR step m
 <table>
 	<thead>
 		<tr>
-			<td colspan="5" id="truth-table-or">OR</td>
-		</tr>
-		<tr>
-			<td> </td>
-			<td>TRUE</td>
-			<td>ALLOWS</td>
-			<td>FALSE</td>
+			<th> </th>
+			<th>TRUE</th>
+			<th>ALLOWS</th>
+			<th>FALSE</th>
 		</tr>
 	</thead>
 	<tbody>
