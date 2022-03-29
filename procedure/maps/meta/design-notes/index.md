@@ -232,7 +232,7 @@ Summation steps are 'transparent', taking the 'current', 'status', 'parsed' and 
 
 Decision steps are used to indicate that a decision is required elsewhere. They modify routes to distinguish between target business steps that are allowed to be actualised and those that are caused to be actualised, for example: a statutory instrument being laid into the House of Commons and the House of Lords will cause the Joint Committee on Statutory Instruments to consider that instrument. The JCSI having considered the instrument, or scrutiny reserve for the JCSI being dispensed with, allows the Government to move an approval motion.
 
-A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of FALSE or UNTRAVERSABLE, will act as transparent - the output being the same as the input.
+A decision step with an input value of TRUE will output a value of ALLOWS. A decision step with an input value of FALSE will act as transparent - the output being the same as the input.
 
 The truth table for a decision step is:
 
@@ -251,17 +251,12 @@ The truth table for a decision step is:
 			<th>FALSE</th>
 			<td>FALSE</td>
 		</tr>
-		<tr>
-			<th>UNTRAVERSABLE</th>
-			<td>UNTRAVERSABLE</td>
-		</tr>
 	</tbody>
 </table>
 
 A decision step outputs a route either directly into a business step - without any intervening logic, arithmetic or summation steps - or into an OR step.
 
 A route with a value of ALLOWS is not input into a NOT step, AND step, arithmetic step or summation step.
-
 
 ### Parse passes
 
