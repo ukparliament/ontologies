@@ -270,7 +270,7 @@ AND steps, OR steps and SUM steps have two inbound routes: both are required to 
 
 ### Potential states of a business step
 
-Routes in a fully parsed work package have one of four potential statuses: TRUE, FALSE, ALLOWS or UNTRANVERSABLE. Depending on the status of their inbound route, business steps are in one of four *potential* states:
+Routes in a fully parsed work package have one of four potential statuses: TRUE, FALSE, ALLOWS or UNTRAVERSABLE. Depending on the status of their inbound route, business steps are in one of four *potential* states:
 
 * Caused to be actualised, with a business step having an input of TRUE, not through a decision step. Such a step must be actualised at some point in the future.
 
@@ -288,9 +288,9 @@ For example: it is possible for a Member of the House of Commons to table a fata
 
 For steps happening in the House of Commons, the occurrence score of a step in a procedure is the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure. 
 
-For steps happening in the House of Lords, or jointly between both Houses, the occurrence score is the number of concluded work packages subject to a procedure having a business item actualising that step divided by the total number of concluded work packages subject to that procedure having the 'Laid before the House of Lords' business step actualised.
+For steps happening in the House of Lords, or jointly between both Houses, the occurrence score is the number of concluded work packages subject to a procedure having a business item actualising that step, divided by the total number of concluded work packages subject to that procedure having the 'Laid before the House of Lords' business step actualised.
 
-In both cases, the occurence score calculation only includes steps that have already happened. 
+In both cases, the occurence score calculation only includes steps that have been actualised by at least one business item having a date of today or in the past. 
 
 What has happened in past work packages does not determine what happens in current work packages. Considering precedence in this way allows us to plot 'cowpaths' through the possibility space: this provides 'odds' of a thing happening, rather than a guarantee of future events.
 
@@ -312,9 +312,9 @@ It is possible to show or hide a set of **routes** which share the same state, f
 
 ### Examples of visibility control
 
-* Hiding the set of routes which have a value of UNTRAVERSABLE - routes that are non-current or that can only be traversed by crossing a non-current route - for example: routes into and from EVEL certification.
+* Hiding the set of routes which have a value of UNTRAVERSABLE - routes that are not current - for example: the route into EVEL certification.
 
-* Hiding the set of business steps which have a value of NOT CURRENTLY ACTUALISABLE - steps that can only be reached by crossing a non-current route - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
+* Hiding the set of business steps which have a value of NOT CURRENTLY ACTUALISABLE - steps whose input route has a value of UNTRAVERSABLE - for example: steps describing the outcomes of EVEL certification, regardless of whether those steps have already been actualised.
 
 * Hiding the set of routes which have a value of FALSE - any routes that cannot yet be traversed - for example: routes to the question being put on an approval motion where no such motion has yet been tabled.
 
@@ -328,9 +328,9 @@ Each type of step has a fixed number of inputs and a fixed number of outputs.
 <table>
 	<thead>
 		<tr>
-			<td>Step type</td>
-			<td>Input count</td>
-			<td>Output count</td>
+			<th>Step type</th>
+			<th>Input count</th>
+			<th>Output count</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -392,4 +392,4 @@ This latter step exists because the website does not yet display future possible
 
 ## Procedure conclusion
 
-Procedure conclusion steps are only given a potential state of CAUSED or ALLOWED by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps are not given a potential state of CAUSED or ALLOWED by steps happening outside Parliament, for example: an ‘Instrument remains law’ step.
+Procedure conclusion steps are only given a potential state of CAUSED by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps are not given a potential state of CAUSED by steps happening outside Parliament, for example: an ‘Instrument remains law’ step.
