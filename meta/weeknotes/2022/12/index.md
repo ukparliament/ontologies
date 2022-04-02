@@ -4,7 +4,7 @@
 
 Librarians [Anya](https://twitter.com/bitten_), [Silver](https://twitter.com/silveroliver), Ned and [Phil](https://twitter.com/philbgorman) continue to prod away at providing House of Commons Library researchers, front of house librarians, Members and their staff with a single-subject view of Library inputs, processes and outputs. The better to gather all relevant material pertinent to an enquiry in one place. The current state of things is, erm, well, somewhat messy. Let's just leave it at somewhat messy.
 
-Enquiries - the bread and butter of Library services - are not subject indexed at all. Occasionally, a librarian or researcher may attach a free-text tag or two. But there's process that one might describe as systematic in place. [Research Briefings](https://researchbriefings.parliament.uk/), on the other hand, get subject indexed three times against three different vocabularies. First time by the authors against a short list of topic terms derived from - but forked from - the [Parliament Thesaurus](https://explore.data.parliament.uk/?endpoint=terms). The second time is not really an indexing, more a munging of topic terms into a new shape to make the [Wordpress website category pages](https://commonslibrary.parliament.uk/research/). And the third time when team:Anya take out fine toothcombs and index everything against the Thesaurus proper.
+Enquiries - the bread and butter of Library services - are not subject indexed at all. Occasionally, a librarian or researcher may attach a free-text tag or two. But there's no process that one might describe as systematic in place. [Research Briefings](https://researchbriefings.parliament.uk/), on the other hand, get subject indexed three times against three different vocabularies. First time by the authors against a short list of topic terms derived from - but forked from - the [Parliament Thesaurus](https://explore.data.parliament.uk/?endpoint=terms). The second time is not really an indexing, more a munging of topic terms into a new shape to make the [Wordpress website category pages](https://commonslibrary.parliament.uk/research/). And the third time when team:Anya take out fine toothcombs and index everything against the Thesaurus proper.
 
 Over in the world of the physical book collection, a team once managed by our Phil also subject index acquisitions, again against the full Parliament Thesaurus. Elsewhere, another team scour the web for useful articles and subject index them with free text terms.
 
@@ -18,46 +18,20 @@ Our crack team of librarians have spent the last few months busying themselves w
 
 ## Return to bill mountain
 
-https://trello.com/c/mM4zp8gw/30-scottish-parliament-lcm
-
-## Parsing procedure
-
-https://trello.com/c/QVKp6GUK/285-bug-in-procedure-parsing-code
-
-https://trello.com/c/33VywVWo/286-change-the-behaviour-of-an-or-step-to-allow-an-input-with-status-allows
-
-https://trello.com/c/tVUYsJ59/266-make-sum-and-increment-steps-output-a-status-of-true
-
-https://trello.com/c/MNZB06tO/38-update-procedure-editor-application-route-listing-to-not-show-route-type
-
-https://trello.com/c/FCKlTU56/37-update-procedure-editor-application-route-crud-to-not-include-route-type
-
-untraversability
-
-Rewrote design notes jayne / robert
-
-
-
-
-
-
-
-
+Keeping heads firmly down for fear of catching taxonomic shrapnel, Librarian Jayne and her computational helpmate [Michael](https://twitter.com/fantasticlife), once more left bill mountain basecamp for another assault on [legislative consent motions](https://en.wikipedia.org/wiki/Legislative_consent_motion). The [LCM procedure for the Scottish Parliament](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf) is now safely inside the machines. Once more, the machines have been kind enough to [draw it back to us](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.svg). We cannot say their penmanship improves any. In fairness, it feels fairly safe to assume that no machine has ever tried to draw a legislative consent motion procedure map before, so there really isn't much in way of prior art for the poor machines to draw upon. They do their best. As do we all.
 
 ## Prodding procedural parsing
 
+In [last week's breaking news](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/11/#prodding-procedural-parsing) we reported on a suspected bug in our C# procedure parsing code. The machines having tipped past the point of trying hard to the point of trying rather too hard. Procedural [routes](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e164) that had been [fully parsed](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#parse-passes) continued to be parsed. If not to infinity, to a reasonable approximation thereof. Which led to all kinds of procedural [steps](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e175) appearing in quite the wrong future possibility buckets. [Our Jianhan](https://twitter.com/jianhanzhu) has now [fixed this](https://trello.com/c/QVKp6GUK/285-bug-in-procedure-parsing-code) and all appears to be [working as expected](https://procedures.azurewebsites.net/WorkPackages/526/stepreport).
 
+Whilst Jianhan's head was buried in parsing code, he took the opportunity to make another tweak to our logic. We'd always said that [decision steps](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#decision-steps) - designed to modify behaviour from [a business step being caused to a business step being allowed](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#potential-states-of-a-business-step) - would only ever sit directly in front of said business step. Which had the unfortunate effect of preventing us from saying that a step may be caused in some circumstances and allowed in others. To put this into some sort of procedural context, the laying of a statutory instrument into both Houses causes the [Joint Committee on Statutory Instruments](https://committees.parliament.uk/committee/148/statutory-instruments-joint-committee/) to consider that instrument. If the instrument is subsequently withdrawn before the JCSI have considered it, the JCSI are still allowed to consider it - who, after all, would stop them - but the relationship is no longer causal. So we've updated our design notes to say an [OR step](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#or-steps) can now accept an input with status ALLOWS and updated both our [Ruby](https://parliamentary-procedures.herokuapp.com/meta/comments) and C# parsing code to [do likewise](https://trello.com/c/33VywVWo/286-change-the-behaviour-of-an-or-step-to-allow-an-input-with-status-allows).
 
+In the meantime, a new bug as emerged around the propagation of [untraversability](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#route-currentness-and-untraversability). Jayne, young Robert and Michael combined brains for yet another full rewrite of both [design notes](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/) and Ruby parsing code. A new ticket has been created with the memorable title of [Untraversability of cancelled deferred divisions is polluting routes to motion agreed, disagreed and deferred in draft affirmative procedure](https://trello.com/c/n7LVS0TI/281-untraversability-of-cancelled-deferred-divisions-is-polluting-routes-to-motion-agreed-disagreed-and-deferred-in-draft-affirmativ). If you have an abiding passion for how one parses a procedure where standing orders have since been rescinded, please tune in next week. Though we can fully appreciate why even our regular reader might pass up this opportunity.
 
 ## More rants about cardinality
 
+If you've been following along from home you'll know by now that young Robert and Michael have been attempting to scrape data from the [Foreign, Commonwealth and Development Office treaty website](https://treaties.fcdo.gov.uk/responsive/app/consolidatedSearch/). Only distracted by occasional [whines into weeknotes](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/11/#more-rants-about-cardinality) about the state of the information model and the state of the information management. Reader, our whining is over. We have no further whines for the week. If you'd like to peruse the results of our efforts please [click here](https://uk-treaties.herokuapp.com/). As they say. Feedback much more than welcome.
 
 ## Fettling Rush
 
-https://trello.com/c/H1ZDLHTJ/71-alternative-names-surname-type
-
-https://trello.com/c/XAQUB6V0/70-alternative-names-title
-
-
-
-
+Librarian Anna continues to make steady progress on tidying up the [Rush database](https://membersafter1832.historyofparliamentonline.org/) reference data. Computational expert [James](https://twitter.com/jamesjefferies) following in her wake to normalise newly tidied data into new tables. Which means this week we have newly normalised [titles](https://membersafter1832.historyofparliamentonline.org/honorifics) and  [surname types](https://membersafter1832.historyofparliamentonline.org/surname_types) for Members' alternative names. Lovely stuff.
