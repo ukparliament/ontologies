@@ -1,6 +1,6 @@
 # 2022 - Week 12
 
-## A single subject view of The Library. Or toward an information architecture for the House of Commons Library
+## A single subject view of The Library. Or toward an information architecture
 
 Librarians [Anya](https://twitter.com/bitten_), [Silver](https://twitter.com/silveroliver), Ned and [Phil](https://twitter.com/philbgorman) continue to prod away at providing House of Commons Library researchers, front of house librarians, Members and their staff with a single-subject view of Library inputs, processes and outputs. The better to gather all relevant material pertinent to an enquiry in one place. The current state of things is, erm, well, somewhat messy. Let's just leave it at somewhat messy.
 
@@ -16,6 +16,26 @@ Not that fixing the railways was a trivial matter. If someone wanted to build th
 
 Our crack team of librarians have spent the last few months busying themselves with building a prototype that integrates the many and varied taxonomies and brings much of the information together. Ned has been churning out spreadsheets to index specialists with concepts from the Parliament Thesaurus, Silver has been hand indexing a sample set of enquiries against the same vocabulary and Anya has been squeezing indexed Research Briefings out of Parliamentary Search. All of which has found a home in a nifty little data integration tool that Silver's colleagues at [Data Language](https://datalanguage.com/) have put together. The team are now inching toward the conclusion of the project, presenting findings and heading into report writing territory. Unfortunately, we can't share the report with you yet. Because (a) it isn't finished and (b) no one's read it yet. We can, however, [share some slides](https://docs.google.com/presentation/d/1i1kaZCFS1D3ngV0M86bqQxDBzAyapSaMbCPSNTTviqU/edit?usp=sharing) and end on the usual note that feedback is always welcome.
 
+## Return to bill mountain
+
+https://trello.com/c/mM4zp8gw/30-scottish-parliament-lcm
+
+## Parsing procedure
+
+https://trello.com/c/QVKp6GUK/285-bug-in-procedure-parsing-code
+
+https://trello.com/c/33VywVWo/286-change-the-behaviour-of-an-or-step-to-allow-an-input-with-status-allows
+
+https://trello.com/c/tVUYsJ59/266-make-sum-and-increment-steps-output-a-status-of-true
+
+https://trello.com/c/MNZB06tO/38-update-procedure-editor-application-route-listing-to-not-show-route-type
+
+https://trello.com/c/FCKlTU56/37-update-procedure-editor-application-route-crud-to-not-include-route-type
+
+untraversability
+
+Rewrote design notes jayne / robert
+
 
 
 
@@ -30,5 +50,14 @@ Our crack team of librarians have spent the last few months busying themselves w
 
 
 ## More rants about cardinality
+
+
+## Fettling Rush
+
+https://trello.com/c/H1ZDLHTJ/71-alternative-names-surname-type
+
+https://trello.com/c/XAQUB6V0/70-alternative-names-title
+
+
 
 
