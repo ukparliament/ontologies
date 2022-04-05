@@ -48,7 +48,7 @@ Dot file: [dot](public-bills/components/prerogative-consent/prince-of-wales-cons
 
 Dot file: [dot](public-bills/components/prerogative-consent/great-steward-of-scotlands-consent/great-steward-of-scotlands-consent.dot) / [svg](public-bills/components/prerogative-consent/great-steward-of-scotlands-consent/great-steward-of-scotlands-consent.svg)
 
-#### Legislative consent motions (unused)
+#### Legislative consent motions
 
 Legislative consent motions appear on the Order Paper if consent is required and given. There is no public record of consent being requested but not given.
 
