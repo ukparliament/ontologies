@@ -169,7 +169,7 @@ In addition to the logic step inputs and outputs of TRUE and FALSE, an AND step 
 		<tr>
 			<th>ALLOWS</th>
 			<td>ALLOWS</td>
-			<td>ALLOWS</td>
+			<td>FALSE</td>
 			<td>ALLOWS</td>
 		</tr>
 	</tbody>
