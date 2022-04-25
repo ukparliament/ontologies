@@ -139,6 +139,8 @@ The logic steps take one input route or two input routes and emit one output. An
 
 #### AND steps
 
+In addition to the logic step inputs and outputs of TRUE and FALSE, an AND step may also have one or both inputs accepting a value of ALLOWS - and may output a value of ALLOWS. This permits target business steps to be allowed by one set of conditions and caused by another set of conditions.
+
 <table>
 	<thead>
 		<tr>
@@ -148,6 +150,7 @@ The logic steps take one input route or two input routes and emit one output. An
 			<th> </th>
 			<th>TRUE</th>
 			<th>FALSE</th>
+			<th>ALLOWS</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -155,11 +158,19 @@ The logic steps take one input route or two input routes and emit one output. An
 			<th>TRUE</th>
 			<td>TRUE</td>
 			<td>FALSE</td>
+			<td>ALLOWS</td>
 		</tr>
 		<tr>
 			<th>FALSE</th>
 			<td>FALSE</td>
 			<td>FALSE</td>
+			<td>FALSE</td>
+		</tr>
+		<tr>
+			<th>ALLOWS</th>
+			<td>ALLOWS</td>
+			<td>ALLOWS</td>
+			<td>ALLOWS</td>
 		</tr>
 	</tbody>
 </table>
@@ -254,9 +265,9 @@ The truth table for a decision step is:
 	</tbody>
 </table>
 
-A decision step outputs a route either directly into a business step - without any intervening logic, arithmetic or summation steps - or into an OR step.
+A decision step outputs a route either directly into a business step - without any intervening logic, arithmetic or summation steps - or into an OR or AND step.
 
-A route with a value of ALLOWS is not input into a NOT step, AND step, arithmetic step or summation step.
+A route with a value of ALLOWS is not input into a NOT step, arithmetic step or summation step.
 
 ### Parse passes
 
