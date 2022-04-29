@@ -23,7 +23,9 @@ The following query will show all proposed draft remedial orders and remedial or
 
 ## Proposed draft remedial orders and remedial orders by session
 
-* <a href="https://api.parliament.uk/s/48b1ed21">2021-22</a>
+* <a href="https://api.parliament.uk/s/08922ad5">2022-23</a>
+
+* <a href="https://api.parliament.uk/s/d987eecc">2021-22</a>
 
 * <a href="https://api.parliament.uk/s/3c7f5e9e">2019-21</a>
 
