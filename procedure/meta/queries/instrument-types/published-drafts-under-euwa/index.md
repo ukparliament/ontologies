@@ -18,7 +18,9 @@ This query shows all published drafts currently before Parliament:
 
 ## Published drafts by session
 
-* [2021-22](https://api.parliament.uk/s/f44563e2)
+* [2022-23](https://api.parliament.uk/s/f87d0353)
+
+* [2021-22](https://api.parliament.uk/s/ad8c55b9)
 
 ## Published drafts by calendar year
 
