@@ -17,7 +17,9 @@ This query will show you all enabled things laid before Parliament or that Parli
 
 ## Enabled things by session
 
-* <a href="https://api.parliament.uk/s/54e7300b">2021-22</a>
+* <a href="https://api.parliament.uk/s/0dec063e">2022-23</a>
+
+* <a href="https://api.parliament.uk/s/e32926e3">2021-22</a>
 
 * <a href="https://api.parliament.uk/s/db648fb5">2019-21</a>
 
