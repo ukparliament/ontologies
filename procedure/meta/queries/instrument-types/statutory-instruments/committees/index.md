@@ -49,7 +49,9 @@ The following queries look at all instruments considered by committees in given 
 
 ### Session
 
-* <a href="https://api.parliament.uk/s/7f443881">2021-22</a>
+* <a href="https://api.parliament.uk/s/9a55e01f">2022-23</a>
+
+* <a href="https://api.parliament.uk/s/8722bdb7">2021-22</a>
 
 * <a href="https://api.parliament.uk/s/c272bc7d">2019-21</a>
 
