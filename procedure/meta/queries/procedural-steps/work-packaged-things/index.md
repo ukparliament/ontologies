@@ -17,7 +17,9 @@ This query will show you all workpackaged things laid before Parliament since th
 
 ## Work packaged things by session
 
-* <a href="https://api.parliament.uk/s/7a019443">2021-22</a>
+* <a href="https://api.parliament.uk/s/365c9d13">2022-23</a>
+
+* <a href="https://api.parliament.uk/s/1f9304b9">2021-22</a>
 
 * <a href="https://api.parliament.uk/s/782abafd">2019-21</a>
 
