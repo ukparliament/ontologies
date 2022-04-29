@@ -122,6 +122,8 @@ In both Houses there is the potential for a Member to table a motion against a t
 
 * <a href="https://api.parliament.uk/s/9811e157">All prayers lapsed at the end of sessions</a>
 
+* <a href="https://api.parliament.uk/s/cd0b6c4c">Prayers lapsed at the end of the 2021-22 session</a>
+
 * <a href="https://api.parliament.uk/s/59c8e3e2">Prayers lapsed at the end of the 2019-21 session</a>
 
 * <a href="https://api.parliament.uk/s/343c6693">Prayers lapsed at the end of the 2019 session</a>
