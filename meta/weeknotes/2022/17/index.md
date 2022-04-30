@@ -8,13 +8,13 @@ Our regular reader will of course be aware of - and indeed following, one hopes 
 
 * [@DITAnswers](https://twitter.com/DITAnswers) for the [Department for International Trade](https://www.gov.uk/government/organisations/department-for-international-trade)
 
-* [@FCDOAnswers](https://twitter.com/FCDOAnswers) for [Foreign, Commonwealth & Development Office](https://www.gov.uk/government/organisations/foreign-commonwealth-development-office)
+* [@FCDOAnswers](https://twitter.com/FCDOAnswers) for the [Foreign, Commonwealth & Development Office](https://www.gov.uk/government/organisations/foreign-commonwealth-development-office)
 
 * [@GEO_Answers](https://twitter.com/GEO_Answers) for the [Government Equalities Office](https://www.gov.uk/government/organisations/government-equalities-office)
 
 * [@LUHCAnswers](https://twitter.com/LUHCAnswers) for the [Department for Levelling Up, Housing & Communities](https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities)
 
-[A thread](https://twitter.com/bitten_/status/1519058552098377735) from [Anya](https://twitter.com/bitten_) explains more and comes complete with a [call for interest](https://twitter.com/bitten_/status/1519059922893352960) in other [answering bodies](https://written-questions.herokuapp.com/answering-bodies) our users might like to see botified. [David](https://twitter.com/dkernohan) was the first - and indeed only - reader to [join the queue](https://twitter.com/dkernohan/status/1519073675005288449), which means, by late Friday we'd added [@DFEAnswers](https://twitter.com/DFEAnswers) for all your educational needs.
+[A thread](https://twitter.com/bitten_/status/1519058552098377735) from [Anya](https://twitter.com/bitten_) explains more and comes complete with a [call for interest](https://twitter.com/bitten_/status/1519059922893352960) in other [answering bodies](https://written-questions.herokuapp.com/answering-bodies) our readers might like to see botified. [David](https://twitter.com/dkernohan) was the first - and indeed only - reader to [join the queue](https://twitter.com/dkernohan/status/1519073675005288449), which means, by late Friday we'd added [@DFEAnswers](https://twitter.com/DFEAnswers) for all your educational needs.
 
 As your correspondents type, @FCDOAnswers has already gained 67 followers. Including at least two [APPG](https://www.parliament.uk/about/mps-and-lords/members/apg/)s and a small number of people who seem to work for the FCDO. Which is not bad for a set of accounts launched in a pub on Tuesday.
 
