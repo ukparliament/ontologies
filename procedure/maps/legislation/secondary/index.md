@@ -34,17 +34,17 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 ### Super affirmative procedures
 
-#### [Legislative reform order](statutory-instruments/super-affirmative-procedures/legislative-reform-order/legislative-reform-order.pdf)
+#### [Legislative reform order](statutory-instruments/super-affirmative-procedures/legislative-reform-orders/legislative-reform-order.pdf)
 
-Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-order/legislative-reform-order.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-order/legislative-reform-order.svg)
+Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-orders/legislative-reform-order.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-orders/legislative-reform-order.svg)
 
 ##### Legislative reform order component procedures
 
 ###### Lords
 
-[Procedure determination](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.pdf)
+[Procedure determination](statutory-instruments/super-affirmative-procedures/legislative-reform-orders/components/lords/procedure-determination/procedure-determination.pdf)
 
-Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.svg)
+Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-orders/components/lords/procedure-determination/procedure-determination.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-orders/components/lords/procedure-determination/procedure-determination.svg)
 
 #### Remedial orders
 
