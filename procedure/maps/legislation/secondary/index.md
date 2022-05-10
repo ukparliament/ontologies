@@ -34,6 +34,18 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 ### Super affirmative procedures
 
+#### [Legislative reform order](statutory-instruments/super-affirmative-procedures/legislative-reform-order/legislative-reform-order.pdf)
+
+Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-order/legislative-reform-order.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-order/legislative-reform-order.svg)
+
+##### Legislative reform order component procedures
+
+####### Lords
+
+####### [Procedure determination](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.pdf)
+
+Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.svg)
+
 #### Remedial orders
 
 ##### [Proposed draft remedial order](statutory-instruments/super-affirmative-procedures/remedial-orders/proposed-draft-remedial-order/proposed-draft-remedial-order.pdf)
