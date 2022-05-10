@@ -40,9 +40,9 @@ Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-r
 
 ##### Legislative reform order component procedures
 
-####### Lords
+###### Lords
 
-####### [Procedure determination](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.pdf)
+[Procedure determination](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.pdf)
 
 Dot file: [dot](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.dot) / [svg](statutory-instruments/super-affirmative-procedures/legislative-reform-order/components/lords/procedure-determination/procedure-determination.svg)
 
