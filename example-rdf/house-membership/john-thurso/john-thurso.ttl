@@ -1,0 +1,341 @@
+# # Example RDF for John Thurso (Viscount Thurso).
+# Thurso served as an hereditary peer in the House of Lords before serving as a Member of the House of Commons before returning to the House of Lords as an excepted hereditary peer.
+
+# We reference the ontologies we're using.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pa: <http://parliament.uk/ontologies/agency/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix ppr: <http://parliament.uk/ontologies/procedure/> .
+@prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> .
+@prefix pt: <http://parliament.uk/ontologies/time-period/> .
+@prefix putil: <http://parliament.uk/ontologies/utility/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ## General set up for John Thurso and the two Houses.
+
+# There is a person ...
+<http://id.parliament.uk/people/1> rdf:type phm:Person ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Viscount Thurso"@en ;
+	
+	# ... with a given name ...
+	pa:givenName "John" ;
+	
+	# ... with other names ...
+	pa:otherNames "Archibald" ;
+	
+	# ... with family name ...
+	pa:familyName "Sinclair" ;
+	
+	# ... a date of birth ...
+	pa:dateOfBirth  "1953-09-10"^^xsd:date ;
+	
+	# ... and a whipping.
+	ppb:accepts <http://id.parliament.uk/whippings/1> .
+	
+	# TODO: time bound people names.
+	# TODO: sex and gender?
+	
+# There is a legislature ...
+<http://id.parliament.uk/legislature/1> rdf:type ppr:Legislature ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Parliament of the United Kingdom"@en .
+	
+# There is the House of Lords ...
+<http://id.parliament.uk/houses/1> rdf:type phm:House ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "House of Lords"@en ;
+	
+	# ... which is in the legislature of the UK Parliament.
+	ppr:inLegislature <http://id.parliament.uk/legislature/1> .
+	
+# There is the House of Commons ...
+<http://id.parliament.uk/houses/2> rdf:type phm:House ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "House of Commons"@en ;
+
+	# ... which is in the legislature of the UK Parliament.
+	ppr:inLegislature <http://id.parliament.uk/legislature/1> .
+	
+
+
+# ## John Thurso's first membership of the House of Lords as an hereditary peer.
+	
+# There is a house seat type of hereditary peerage seat ...
+<http://id.parliament.uk/house-seat-types/1> rdf:type phm:HouseSeatType ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Hereditary peerage seat."@en .
+	
+# There is a house seat for Viscountcy Thurso ...
+<http://id.parliament.uk/house-seats/1> rdf:type phm:HouseSeat ;
+
+	# ... in the House of Lords ...
+	phm:inHouse <http://id.parliament.uk/houses/1> ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Seat for the Viscountcy Thurso"@en ;
+	
+	# ... with a start date ...
+	putil:startOn "1952-06-11"^^xsd:date ;
+	
+	# ... an end date ...
+	putil:endOn "1999-11-11"^^xsd:date ;
+	
+	# ... and a type.
+	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/1> .
+	
+	# TODO: end reasons for House seats.
+	
+# There is a house seat incumbency end reason ...
+<http://id.parliament.uk/end-reasons/1> rdf:type phm:EndReason ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Abolition of hereditary peerage seats under the House of Lords Act 1999."@en .
+
+
+# Members of the House of Lords being considered Members during dissolution.
+# There is a single incumbency by John in the hereditary house seat ...
+<http://id.parliament.uk/seat-incumbencies/1> rdf:type phm:SeatIncumbency ;
+
+	# ... with a start date - the date when John Thurso succeeded to the peerage and took his seat in the Lords ...
+	putil:startOn "1995-10-31"^^xsd:date ;
+
+	# ... an end date - the date when hereditary peerage seats were abolished ...
+	putil:endOn "1999-11-11"^^xsd:date ;
+	
+	# ... an end reason ...
+	phm:hasEndReason <http://id.parliament.uk/end-reasons/1> ;
+	
+	# ... in the hereditary seat ...
+	phm:inHouseSeat <http://id.parliament.uk/house-seats/1> ;
+	
+	# ... with John Thurso incumbent.
+	phm:hasIncumbent <http://id.parliament.uk/people/1> .
+	
+# There is a political party ...
+<http://id.parliament.uk/political-parties/1> rdf:type ppb:PoliticalParty ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Liberal Democrats"@en ;
+	
+	# ... with a start date.
+	putil:startOn "1988-03-03"^^xsd:date .
+	
+# There is a parliamentary party ...
+<http://id.parliament.uk/parliamentary-parties/1> rdf:type ppb:ParliamentaryParty ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Liberal Democrats parliamentary party"@en ;
+	
+	# ... with an association to the Liberal Democrat political party.
+	ppb:hasAssociation <http://id.parliament.uk/political-parties/1> .
+	
+# There is a whipping ...
+<http://id.parliament.uk/whippings/1> rdf:type ppb:MemberWhipping ;
+
+	# ... to the Liberal Democrat parliamentary party.
+	ppb:whippedTo <http://id.parliament.uk/parliamentary-parties/1> .
+	
+	
+	
+# ## John Thurso's membership of the House of Commons.
+
+# A Member of the House of Commons is not a Member during dissolution periods.
+# Therefore, we need to define the parliament periods during which John Thurso sat in the Commons.
+
+# There is a parliament period for the 53rd Parliament ...
+<http://id.parliament.uk/parliament-periods/1> rdf:type pt:ParliamentPeriod ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "The 53rd Parliament of the United Kingdom"@en ;
+	
+	# ... with a start date ...
+	putil:startOn "2001-06-13"^^xsd:date ;
+	
+	# ... and an end date.
+	putil:endOn "2005-04-11"^^xsd:date .
+	
+# There is a parliament period for the 54th Parliament ...
+<http://id.parliament.uk/parliament-periods/2> rdf:type pt:ParliamentPeriod ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "The 54th Parliament of the United Kingdom"@en ;
+
+	# ... with a start date ...
+	putil:startOn "2005-05-11"^^xsd:date ;
+
+	# ... and an end date.
+	putil:endOn "2010-04-12"^^xsd:date .
+	
+# There is a parliament period for the 55th Parliament ...
+<http://id.parliament.uk/parliament-periods/3> rdf:type pt:ParliamentPeriod ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "The 55th Parliament of the United Kingdom"@en ;
+
+	# ... with a start date ...
+	putil:startOn "2010-05-18"^^xsd:date ;
+
+	# ... and an end date.
+	putil:endOn "2015-03-30"^^xsd:date .
+
+# There is a house seat type of elected Commons ...
+<http://id.parliament.uk/house-seat-types/2> rdf:type phm:HouseSeatType ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Elected Commons."@en .
+	
+# There is a constituency group pre-2005 boundary change ...
+<http://id.parliament.uk/constituency-groups/1> rdf:type phm:ConstituencyGroup ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Caithness, Sutherland & Easter Ross constituency group"@en ;
+
+	# ... and an end date.
+	putil:endOn "2005-05-05"^^xsd:date .
+	
+# There is a constituency group post-2005 boundary change ...
+<http://id.parliament.uk/constituency-groups/2> rdf:type phm:ConstituencyGroup ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Caithness, Sutherland & Easter Ross constituency group"@en ;
+
+	# ... and a start date.
+	putil:startOn "2005-05-05"^^xsd:date .
+	
+# There is a house seat for Caithness, Sutherland & Easter Ross pre-2005 boundary change ...
+<http://id.parliament.uk/house-seats/2> rdf:type phm:HouseSeat ;
+
+	# ... in the House of Commons ...
+	phm:inHouse <http://id.parliament.uk/houses/2> ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Seat for the Caithness, Sutherland & Easter Ross"@en ;
+
+	# ... an end date ...
+	putil:endOn "2005-05-05"^^xsd:date ;
+
+	# ... a type ...
+	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/2> ;
+	
+	# ... and a representation of a constituency group.
+	phm:representsConstituencyGroup <http://id.parliament.uk/constituency-groups/1> .
+	
+# There is a house seat for Caithness, Sutherland & Easter Ross post-2005 boundary change ...
+<http://id.parliament.uk/house-seats/3> rdf:type phm:HouseSeat ;
+
+	# ... in the House of Commons ...
+	phm:inHouse <http://id.parliament.uk/houses/2> ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Seat for the Caithness, Sutherland & Easter Ross"@en ;
+
+	# ... a start date ...
+	putil:startOn "2005-05-05"^^xsd:date ;
+
+	# ... a type ...
+	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/2> ;
+	
+	# ... and a representation of a constituency group.
+	phm:representsConstituencyGroup <http://id.parliament.uk/constituency-groups/2> .
+	
+# There is a house seat incumbency end reason ...
+<http://id.parliament.uk/end-reasons/2> rdf:type phm:EndReason ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Dissolution"@en .
+	
+# There is an incumbency by John Thurso in the Caithness constituency seat pre-2005 ...
+<http://id.parliament.uk/seat-incumbencies/2> rdf:type phm:SeatIncumbency ;
+
+	# ... with a start date ...
+	putil:startOn "2001-06-07"^^xsd:date ;
+
+	# ... an end date ...
+	putil:endOn "2005-04-11"^^xsd:date ;
+
+	# ... and an end reason of dissolution ...
+	phm:hasEndReason <http://id.parliament.uk/end-reasons/2> ;
+	
+	# ... in the Caithness pre-2005 seat ...
+	phm:inHouseSeat <http://id.parliament.uk/house-seats/2> ;
+	
+	# ... with John Thurso incumbent ...
+	phm:hasIncumbent <http://id.parliament.uk/people/1> ;
+	
+	# ... in the 53rd Parliament.
+	phm:inParliamentPeriod <http://id.parliament.uk/parliament-periods/1> .
+	
+# There is an incumbency by John Thurso in the Caithness constituency seat post-2005 in the 54th Parliament ...
+<http://id.parliament.uk/seat-incumbencies/3> rdf:type phm:SeatIncumbency ;
+
+	# ... with a start date ...
+	putil:startOn "2005-05-11"^^xsd:date ;
+
+	# ... and an end date ...
+	putil:endOn "2010-04-12"^^xsd:date ;
+
+	# ... and an end reason of dissolution ...
+	phm:hasEndReason <http://id.parliament.uk/end-reasons/2> ;
+
+	# ... in the Caithness post-2005 seat ...
+	phm:inHouseSeat <http://id.parliament.uk/house-seats/3> ;
+
+	# ... with John Thurso incumbent ...
+	phm:hasIncumbent <http://id.parliament.uk/people/1> ;
+
+	# ... in the 54th Parliament.
+	phm:inParliamentPeriod <http://id.parliament.uk/parliament-periods/2> .
+	
+# There is an incumbency by John Thurso in the Caithness constituency seat post-2005 in the 55th Parliament ...
+<http://id.parliament.uk/seat-incumbencies/3> rdf:type phm:SeatIncumbency ;
+
+	# ... with a start date ...
+	putil:startOn "2010-05-18"^^xsd:date ;
+
+	# ... and an end date ...
+	putil:endOn "2015-03-30"^^xsd:date ;
+
+	# ... and an end reason of dissolution ...
+	phm:hasEndReason <http://id.parliament.uk/end-reasons/2> ;
+
+	# ... in the Caithness post-2005 seat ...
+	phm:inHouseSeat <http://id.parliament.uk/house-seats/3> ;
+
+	# ... with John Thurso incumbent ...
+	phm:hasIncumbent <http://id.parliament.uk/people/1> ;
+
+	# ... in the 55th Parliament.
+	phm:inParliamentPeriod <http://id.parliament.uk/parliament-periods/3> .
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+# TODO:
+
+# lid dem whippings in commons
+# seat and incumbency end reasons (ontology change)
+# commons membership(s?) 7 June 2001 - 7 May 2015
+# constituency: Caithness, Sutherland & Easter Ross
+# lords as excepted hered
+
+# peerage
+# election to commons
+# election to excepted hered
+
+	
+	
+	
+	
+	
