@@ -18,44 +18,22 @@ And finally, we do not write much code. It's not in our job descriptions and we 
 
 With [remedial order](https://www.parliament.uk/site-information/glossary/remedial-orders/) [procedure maps](https://ukparliament.github.io/ontologies/procedure/maps/legislation/secondary/statutory-instruments/super-affirmative-procedures/#remedial-orders), data and [actualisations](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e334) safely in the bag, Jayne and Michael thought it was finally time to turn their attentions to [legislative reform orders](https://www.parliament.uk/site-information/glossary/legislative-reform-orders/). [Background reading](https://trello.com/c/nauc1Bnz/441-legislative-reform-orders-background-reading) is now complete and they've moved on to map work. So far, there's an [outline map for the procedural in general](https://ukparliament.github.io/ontologies/procedure/maps/legislation/secondary/statutory-instruments/super-affirmative-procedures/legislative-reform-orders/legislative-reform-order.pdf) - which still needs its clocks plugging into the withdrawal logic - and a [procedure determination maps for the House of Lords](https://ukparliament.github.io/ontologies/procedure/maps/legislation/secondary/statutory-instruments/super-affirmative-procedures/legislative-reform-orders/components/lords/procedure-determination/procedure-determination.pdf). The latter meriting a well-deserved wave of thanks to JO Philipp. Next week, attentions will turn to a, hopefully, not dissimilar procedure determination map for the House of Commons. In the meantime, thanks Philipp. A pleasure doing business.
 
-
-
-
-
-
-
-
 ## Return to public bill mountain
 
-
-
-https://trello.com/c/MNNPQWkv/38-hy-fast-track-second-reading-motions
-
-
+Not all of this week's public bill mapping work was outside the old Westminster Village. We've also been hard at work mapping [House of Commons fast tracking of second reading motions](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/commons/fast-track-second-reading/fast-track-second-reading.pdf). Motions that can, apparently, take one of two forms. Being either an allocation of time motion if provisions are limited to the timing of stages or a Business of House motion if more procedural provisions are required. Back in undocumented week 18, we were delighted to be joined by Legislation Office Huw who dissected our map and came back with many useful comments. Hence the generous scattering of blue blobs. Huw has promised to investigate which potential provisions cover matters of House timing in general and which cover things that may impact on the flow of procedure through the map. Thanks Huw.
 
 ## Step depth preparations
 
-https://trello.com/c/mDFeTGH6/91-preparing-for-step-depth-in-procedure-live
+This week our colleagues in Software Engineering [went live with the new SPARQL queries](https://trello.com/c/b8geZ7XE/284-se-deploy-new-sparql-query) for ordering timelines on both the [statutory instruments](https://statutoryinstruments.parliament.uk/) and [treaty tracking](https://treaties.parliament.uk/) websites. Which goes a very short way to tidying the ordering of steps taking place on the same day. Or at least does not make it worse.
 
-https://trello.com/c/b8geZ7XE/284-se-deploy-new-sparql-query
+Step ordering has been a long term bugbear - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/17/#step-depth-preparations) - and we know we have to do work to fix it. That work is planned and - now the new queries are live and once some tidying has taken place at our end - we have a clean slate to start from. [Our Jianhan](https://twitter.com/jianhanzhu) has already [finished the preparatory work](https://trello.com/c/mDFeTGH6/91-preparing-for-step-depth-in-procedure-live) for step depth in the procedure editor. So we're hoping to see more progress soon.
 
+## Prodding the pocedure parser
 
-## Procedure parsing
+Jianhan has also been tinkering with our procedure parsing code, translating work young Robert and Michael did in our [Ruby version](https://parliamentary-procedures.herokuapp.com/meta/comments) into production ready C#. That work being [a change to the behaviour of all steps to no longer propagate untraversability](https://trello.com/c/lp0qM7Dw/83-change-the-behaviour-of-all-steps-to-no-longer-propagate-untraversability) and [a tweak to the behaviour of AND steps to allow inputs with a status of ALLOWS](https://trello.com/c/lp0qM7Dw/83-change-the-behaviour-of-all-steps-to-no-longer-propagate-untraversability). Work that we've [already described at some considerable length](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/16/#problematic-procedure-parsing---or-the-impenetrable-bit-in-the-middle) when changes were made to the Ruby code and which we'll skip over here.
 
-https://trello.com/c/lp0qM7Dw/83-change-the-behaviour-of-all-steps-to-no-longer-propagate-untraversability
-
-https://trello.com/c/6FFah63T/87-change-the-behaviour-of-an-and-step-to-allow-inputs-and-outputs-with-status-of-allows
-
-occurence scores
-
-https://trello.com/c/1AsjCPEY/271-double-check-the-occurrence-counts-scores
-
-
+In other procedure parsing news, [some time back](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/05/#procedure-parsing-progress) Jayne, young Robert and Michael turned their attentions to what we used to call parsing for plausibility, but that we now call [occurence scores](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#what-is-possible-and-what-is-plausible). Code was written to grab all [steps](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e175) connected by [routes](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e164) in a [procedure](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e153) and, for each step, calculate how many [concluded](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#procedure-conclusion) [work packages](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html#d4e222) that step had been actualised in. Then divide that by the total number of concluded work packages subject to that procedure to determine an occurence score. At the time, our trio were pleased with their efforts but JO Jane expressed reservations. This week we finally sat down to compare and contrast the numbers in the [data platform](https://api.parliament.uk/) against the numbers in [Michael's database](https://parliamentary-procedures.herokuapp.com/procedures). Jayne took out her [SPARQL](https://en.wikipedia.org/wiki/SPARQL) spanner, Michael did likewise with a dab of SQL, and - lo! - the numbers all agreed. Which means we now think we've covered off a little more of the probability [light cone](https://en.wikipedia.org/wiki/Light_cone) of parsed procedures. Unfortunately, our subsequent email to JO Jane was not our finest worded effort, so extreme confusion set in extremely quickly. A meeting is probably required to iron out misunderstandings. Should our reader be interested in procedural occurence scores, those for the [draft affirmative procedure are given here](https://parliamentary-procedures.herokuapp.com/procedures/3/steps). If you'd prefer to look at a different procedure, find your favourite from the [procedure list](https://parliamentary-procedures.herokuapp.com/procedures) and click on the number next to the words 'Business steps'. All will be revealed.
 
 ## People data
 
-sample rdf
-
-
-
-## Fettling Rush
+Robert and Michael's boss bloke Ian has requested some sample [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) data for a selection of Members and their memberships. Starting out with one of the more interesting examples, we now have the start of [some mocked-up RDF and an accompanying picture for Viscount Thurso](https://github.com/ukparliament/ontologies/tree/master/example-rdf/house-membership/john-thurso). An interesting example because his parliamentary career started as [an hereditary peer in the House of Lords](https://github.com/ukparliament/ontologies/blob/master/example-rdf/house-membership/john-thurso/john-thurso.ttl#L66), leaving under the [House of Lords Act 1999](https://www.legislation.gov.uk/ukpga/1999/34/contents) before [representing Caithness, Sutherland & Easter Ross in the Commons](https://github.com/ukparliament/ontologies/blob/master/example-rdf/house-membership/john-thurso/john-thurso.ttl#L146), losing his seat and rejoining the Lords as an excepted hereditary peer. All made more tricky by the Lords considering Members to be Members during dissolution and the Commons disagreeing for obvious reasons. And by the fact that a boundary change happened part way through his Commons' membership meaning - in strict terms - he represented [two](https://github.com/ukparliament/ontologies/blob/master/example-rdf/house-membership/john-thurso/john-thurso.ttl#L193) [different](https://github.com/ukparliament/ontologies/blob/master/example-rdf/house-membership/john-thurso/john-thurso.ttl#L202) constituencies albeit with the same name. Next week, we're planning to add descriptors for his time as an excepted hereditary and from there outwards and onwards. We suspect we'll probably never get around to generating example data for [all the ways in which a Member might move between different types of memberships](https://github.com/ukparliament/ontologies/blob/master/house-membership/transubstantiations/transubstantiations.pdf), but a bishop or two is definitely on the cards. Stay tuned for bishopric RDF.
