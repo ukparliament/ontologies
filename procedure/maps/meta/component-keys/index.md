@@ -123,15 +123,15 @@
 		</tr>
 		<tr>
 			<td>TREATY ITC</td>
-			<td>International Trade Committee/td>
+			<td>International Trade Committee</td>
 		</tr>
 		<tr>
 			<td>TREATY JCHR</td>
-			<td>Joint Committee on Human Rights/td>
+			<td>Joint Committee on Human Rights</td>
 		</tr>
 		<tr>
 			<td>TREATY lords</td>
-			<td>Lord's Committees/td>
+			<td>Lord's Committees</td>
 		</tr>
 	</tbody>
 </table>
