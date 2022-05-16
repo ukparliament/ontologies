@@ -105,11 +105,11 @@ ppb:hasAssociation rdf:type owl:ObjectProperty ;
 	rdfs:range ppb:PoliticalParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
-ppb:hasAffiliation rdf:type owl:ObjectProperty ;
-	rdfs:label "Has affiliation"@en ;
-	rdfs:comment "The relationship between an affiliation of a Member and a parliamentary bloc, for example: between a affiliation of a Crossbencher and the Crossbenchers in the House of Lords."@en ;
-	rdfs:domain ppb:ParliamentaryBloc ;
-	rdfs:range ppb:Affiliation ;
+ppb:toParliamentaryBloc rdf:type owl:ObjectProperty ;
+	rdfs:label "To parliamentary bloc"@en ;
+	rdfs:comment "The relationship between an affiliation of a Member and a parliamentary bloc, for example: between an affiliation of a Crossbencher and the Crossbenchers in the House of Lords."@en ;
+	rdfs:domain ppb:Affiliation ;
+	rdfs:range ppb:ParliamentaryBloc ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:whippedTo rdf:type owl:ObjectProperty ;
@@ -119,11 +119,11 @@ ppb:whippedTo rdf:type owl:ObjectProperty ;
 	rdfs:range ppb:ParliamentaryParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
-ppb:accepts rdf:type owl:ObjectProperty ;
-	rdfs:label "Accepts"@en ;
-	rdfs:comment "The relationship between a person as a Member and a whipping of that person: the acceptance of a whip by a Member."@en ;
-	rdfs:domain ppb:Person ;
-	rdfs:range ppb:MemberWhipping ;
+ppb:acceptedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Accepted by"@en ;
+	rdfs:comment "The relationship between a whipping of a person and that person: the acceptance of a whip by a Member."@en ;
+	rdfs:domain ppb:MemberWhipping ;
+	rdfs:range ppb:Person ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 				
 	
