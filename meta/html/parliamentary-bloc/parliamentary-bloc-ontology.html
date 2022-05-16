@@ -147,31 +147,17 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="accepts">
+            <article class="objectproperty" id="acceptedBy">
 
                 <h3>
-                    Object property <a href="#accepts">Accepts</a>
+                    Object property <a href="#acceptedBy">Accepted by</a>
             </h3>
 
 
 
-                <p>The relationship between a person as a Member and a whipping of that person: the acceptance of a whip by a Member.</p>
+                <p>The relationship between a whipping of a person and that person: the acceptance of a whip by a Member.</p>
 
-                <p><a href="#Person">Person</a> &mdash; Accepts &mdash; <a href="#MemberWhipping">MemberWhipping</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasAffiliation">
-
-                <h3>
-                    Object property <a href="#hasAffiliation">Has affiliation</a>
-            </h3>
-
-
-
-                <p>The relationship between an affiliation of a Member and a parliamentary bloc, for example: between a affiliation of a Crossbencher and the Crossbenchers in the House of Lords.</p>
-
-                <p><a href="#ParliamentaryBloc">ParliamentaryBloc</a> &mdash; Has affiliation &mdash; <a href="#Affiliation">Affiliation</a></p>
+                <p><a href="#MemberWhipping">MemberWhipping</a> &mdash; Accepted by &mdash; <a href="#Person">Person</a></p>
 
             </article>
 
@@ -228,6 +214,20 @@
                 <p>The relationship between a political party and the participation of that party within a sistership.</p>
 
                 <p><a href="#PoliticalParty">PoliticalParty</a> &mdash; Has sistership &mdash; <a href="#Sistership">Sistership</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="toParliamentaryBloc">
+
+                <h3>
+                    Object property <a href="#toParliamentaryBloc">To parliamentary bloc</a>
+            </h3>
+
+
+
+                <p>The relationship between an affiliation of a Member and a parliamentary bloc, for example: between an affiliation of a Crossbencher and the Crossbenchers in the House of Lords.</p>
+
+                <p><a href="#Affiliation">Affiliation</a> &mdash; To parliamentary bloc &mdash; <a href="#ParliamentaryBloc">ParliamentaryBloc</a></p>
 
             </article>
 
@@ -353,7 +353,7 @@
 
         
 
-        <p>Generated 2022-05-15 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/parliamentary-bloc/parliamentary-bloc-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/parliamentary-bloc/parliamentary-bloc-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/parliamentary-bloc/parliamentary-bloc-ontology.ttl">api.parliament.uk/webvowl</a></p>
+        <p>Generated 2022-05-16 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/parliamentary-bloc/parliamentary-bloc-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/parliamentary-bloc/parliamentary-bloc-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/parliamentary-bloc/parliamentary-bloc-ontology.ttl">api.parliament.uk/webvowl</a></p>
 
         <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
 
