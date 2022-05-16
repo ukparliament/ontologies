@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2022
 
+* [Week 19](19)
 * [Week 17](17)
 * [Week 16](16)
 * [Week 12](12)
