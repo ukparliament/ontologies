@@ -70,7 +70,7 @@ phm:DisqualificationType rdf:type owl:Class ;
 	
 phm:EndReason rdf:type owl:Class ;
 	rdfs:label "End reason"@en ;
-	rdfs:comment "A reason for the ending of a seat incumbency, for example: a Member may leave a House following an election loss, by standing down, by retirement, or death."@en ;
+	rdfs:comment "A reason for the ending of a seat incumbency, or of a House seat. A Member may end their incumbency and leave a House following an election loss, by standing down, by retirement, upon death - or due to changes in the make up of a House, such as the expulsion of hereditary peers following the passage of the House of Lords Act 1999. In the House of Commons, a seat may end by means of a constituency boundary change. In the House of Lords, a hereditary peerage seat ended with the extinction of the associated peerage. All but two hereditary seats ended with the passage of the House of Lords Act 1999."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
 	
 phm:SeatIncumbencyInterruption rdf:type owl:Class ;
@@ -130,10 +130,17 @@ phm:representsConstituencyGroup rdf:type owl:ObjectProperty ;
 	rdfs:range phm:ConstituencyGroup ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
-phm:hasEndReason rdf:type owl:ObjectProperty ;
-	rdfs:label "Has end reason"@en ;
+phm:seatIncumbencyEndReason rdf:type owl:ObjectProperty ;
+	rdfs:label "Seat incumbency end reason"@en ;
 	rdfs:comment "Relates a seat incumbency to the reason for that incumbency ending."@en ;
 	rdfs:domain phm:SeatIncumbency ;
+	rdfs:range phm:EndReason ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	
+phm:houseSeatEndReason rdf:type owl:ObjectProperty ;
+	rdfs:label "House seat end reason"@en ;
+	rdfs:comment "Relates a House seat to the reason for that seat ending."@en ;
+	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:EndReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
