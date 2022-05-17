@@ -68,6 +68,12 @@
 	# ... with a preferred label.
 	putil:preferredLabel "Hereditary peerage seat."@en .
 	
+# There is an end reason of hereditary peerages being abolished ...
+<http://id.parliament.uk/end-reasons/1> rdf:type phm:EndReason ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Abolition of hereditary peerage seats under the House of Lords Act 1999."@en .
+	
 # There is a house seat for Viscountcy Thurso ...
 <http://id.parliament.uk/house-seats/1> rdf:type phm:HouseSeat ;
 
@@ -83,16 +89,11 @@
 	# ... an end date ...
 	putil:endOn "1999-11-11"^^xsd:date ;
 	
+	# ... an end reason ...
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/end-reasons/1> ;
+	
 	# ... and a type.
 	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/1> .
-	
-	# TODO: end reasons for House seats.
-	
-# There is a house seat incumbency end reason ...
-<http://id.parliament.uk/end-reasons/1> rdf:type phm:EndReason ;
-
-	# ... with a preferred label.
-	putil:preferredLabel "Abolition of hereditary peerage seats under the House of Lords Act 1999."@en .
 
 
 # Members of the House of Lords being considered Members during dissolution.
@@ -106,7 +107,7 @@
 	putil:endOn "1999-11-11"^^xsd:date ;
 	
 	# ... an end reason ...
-	phm:hasEndReason <http://id.parliament.uk/end-reasons/1> ;
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/end-reasons/1> ;
 	
 	# ... in the hereditary seat ...
 	phm:inHouseSeat <http://id.parliament.uk/house-seats/1> ;
@@ -196,14 +197,29 @@
 	# ... with a preferred label.
 	putil:preferredLabel "Elected Commons."@en .
 	
+# There is an end reason of dissolution ...
+<http://id.parliament.uk/end-reasons/2> rdf:type phm:EndReason ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Dissolution"@en .
+	
+# There is an end reason of boundary change ...
+<http://id.parliament.uk/end-reasons/3> rdf:type phm:EndReason ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Boundary change"@en .
+		
 # There is a constituency group pre-2005 boundary change ...
 <http://id.parliament.uk/constituency-groups/1> rdf:type phm:ConstituencyGroup ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Caithness, Sutherland & Easter Ross constituency group"@en ;
 
-	# ... and an end date.
+	# ... and an end date ...
 	putil:endOn "2005-05-05"^^xsd:date .
+	
+	# ... and an end reason of boundary change.
+	phm:houseSeatEndReason <http://id.parliament.uk/end-reasons/3> .
 	
 # There is a constituency group post-2005 boundary change ...
 <http://id.parliament.uk/constituency-groups/2> rdf:type phm:ConstituencyGroup ;
@@ -213,6 +229,8 @@
 
 	# ... and a start date.
 	putil:startOn "2005-05-05"^^xsd:date .
+	
+
 	
 # There is a house seat for Caithness, Sutherland & Easter Ross pre-2005 boundary change ...
 <http://id.parliament.uk/house-seats/2> rdf:type phm:HouseSeat ;
@@ -225,6 +243,9 @@
 
 	# ... an end date ...
 	putil:endOn "2005-05-05"^^xsd:date ;
+
+	# ... and an end reason of boundary change ...
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/end-reasons/2> ;
 
 	# ... a type ...
 	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/2> ;
@@ -250,12 +271,6 @@
 	# ... and a representation of a constituency group.
 	phm:representsConstituencyGroup <http://id.parliament.uk/constituency-groups/2> .
 	
-# There is a house seat incumbency end reason ...
-<http://id.parliament.uk/end-reasons/2> rdf:type phm:EndReason ;
-
-	# ... with a preferred label.
-	putil:preferredLabel "Dissolution"@en .
-	
 # There is an incumbency by John Thurso in the Caithness constituency seat pre-2005 ...
 <http://id.parliament.uk/seat-incumbencies/2> rdf:type phm:SeatIncumbency ;
 
@@ -266,13 +281,13 @@
 	putil:endOn "2005-04-11"^^xsd:date ;
 
 	# ... and an end reason of dissolution ...
-	phm:hasEndReason <http://id.parliament.uk/end-reasons/2> ;
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/end-reasons/2> ;
 	
 	# ... in the Caithness pre-2005 seat ...
-	phm:inHouseSeat <http://id.parliament.uk/house-seats/2> ;
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/house-seats/2> ;
 	
 	# ... with John Thurso incumbent ...
-	phm:hasIncumbent <http://id.parliament.uk/people/1> ;
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/people/1> ;
 	
 	# ... in the 53rd Parliament.
 	phm:inParliamentPeriod <http://id.parliament.uk/parliament-periods/1> .
@@ -287,7 +302,7 @@
 	putil:endOn "2010-04-12"^^xsd:date ;
 
 	# ... and an end reason of dissolution ...
-	phm:hasEndReason <http://id.parliament.uk/end-reasons/2> ;
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/end-reasons/2> ;
 
 	# ... in the Caithness post-2005 seat ...
 	phm:inHouseSeat <http://id.parliament.uk/house-seats/3> ;
@@ -308,7 +323,7 @@
 	putil:endOn "2015-03-30"^^xsd:date ;
 
 	# ... and an end reason of dissolution ...
-	phm:hasEndReason <http://id.parliament.uk/end-reasons/2> ;
+	phm:seatIncumbencyEndReason <http://id.parliament.uk/end-reasons/2> ;
 
 	# ... in the Caithness post-2005 seat ...
 	phm:inHouseSeat <http://id.parliament.uk/house-seats/3> ;
@@ -419,7 +434,7 @@
 
 
 # tweak represents from seat to constituency group (ontology change)
-# seat and incumbency end reasons (ontology change)
+
 
 
 # lords as excepted hered
