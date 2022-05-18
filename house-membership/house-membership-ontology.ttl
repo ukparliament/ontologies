@@ -39,11 +39,6 @@ phm:SeatIncumbency rdf:type owl:Class ;
 	rdfs:label "Seat incumbency"@en ;
 	rdfs:comment "The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
-	
-phm:ConstituencyGroup rdf:type owl:Class ;
-	rdfs:label "Constituency group"@en ;
-	rdfs:comment "A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 		
 phm:Suspension rdf:type owl:Class ;
 	rdfs:subClassOf phm:SeatIncumbencyInterruption ;
@@ -121,14 +116,7 @@ phm:hasHouseSeatType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a seat in a House to a seat type."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:HouseSeatType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
-
-phm:representsConstituencyGroup rdf:type owl:ObjectProperty ;
-	rdfs:label "Represents constituency group"@en ;
-	rdfs:comment "Relates a seat in a House to a constituency group."@en ;
-	rdfs:domain phm:HouseSeat ;
-	rdfs:range phm:ConstituencyGroup ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
 	
 phm:seatIncumbencyEndReason rdf:type owl:ObjectProperty ;
 	rdfs:label "Seat incumbency end reason"@en ;
