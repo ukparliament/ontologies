@@ -7,12 +7,14 @@
 		<tr>
 			<td>Key</td>
 			<td>Component</td>
+			<td>Depth</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>EVEL</td>
 			<td>EVEL certification</td>
+			<td>10</td>
 		</tr>
 	</tbody>
 </table>
@@ -61,44 +63,54 @@
 		<tr>
 			<td>Key</td>
 			<td>Component</td>
+			<td>Depth</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>SLSC</td>
 			<td>Secondary Legislation Scrutiny Committee</td>
+			<td>6</td>
 		</tr>
 		<tr>
 			<td>JCSI</td>
 			<td>Joint Committee on Statutory Instruments</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td>LGFR</td>
 			<td>Local government finance report</td>
+			<td>17</td>
 		</tr>
 		<tr>
 			<td>LROCPD</td>
 			<td>LRO Commons procedure determination</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>SCSI</td>
 			<td>Select Committee on Statutory Instruments</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td>LROLPD</td>
 			<td>LRO Lords procedure determination</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>LRONEG</td>
 			<td>LRO negative</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>LROAFF</td>
 			<td>LRO affirmative</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>LROSUP</td>
 			<td>LRO super affirmative</td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
