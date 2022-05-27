@@ -12,6 +12,12 @@ Dot file: [dot](legislative-reform-orders/legislative-reform-order.dot) / [svg](
 
 Dot file: [dot](legislative-reform-orders/components/lords/procedure-determination/procedure-determination.dot) / [svg](legislative-reform-orders/components/lords/procedure-determination/procedure-determination.svg)
 
+#### Commons
+
+##### [Procedure determination](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.dot) / [svg](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.svg)
+
 ## Remedial orders
 
 ### [Proposed draft remedial order](remedial-orders/proposed-draft-remedial-order/proposed-draft-remedial-order.pdf)
