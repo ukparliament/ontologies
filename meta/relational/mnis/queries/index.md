@@ -19,18 +19,18 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Current eligible Members of the House of Commons whipped to the Conservative Party with no current incumbency in a Government position](https://api.parliament.uk/mnis-prodder/parse?filter=house=commons%7Ciseligible=true%7Cpartyid=4%7Choldsgovernmentpost=false&include=)
 
-[Female Members of the House of Commons elected at the 2005 General Election](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all|gender=F|house*commons|returnedatelection=2005%20general%20election&include=)
+[Female Members of the House of Commons elected at the 2005 General Election](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Cgender=F%7Chouse*commons%7Creturnedatelection=2005%20general%20election&include=)
 
 ## House of Lords
 
 [Current and former Members of the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Chouse*lords&include=)
 
-[Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords|iseligible=true/PreferredNames/)
+[Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords%7Ciseligible=true/PreferredNames/)
 
 ## House of Commons and House of Lords
 
 [Current Members of the House of Commons and the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=house=both&include=)
 
-[Current female Members of the House of Lords and the House of Commons](https://api.parliament.uk/mnis-prodder/parse?filter=gender=F|house=both/)
+[Current female Members of the House of Lords and the House of Commons](https://api.parliament.uk/mnis-prodder/parse?filter=gender=F%7Chouse=both/)
 
 [Former Members of the House of Commons and the House of Lords that left either House within the last 31 days](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Cleftdays=31%7Chouse=both&include=)
