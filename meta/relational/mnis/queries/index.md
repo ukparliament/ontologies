@@ -31,6 +31,6 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Current Members of the House of Commons and the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=house=both&include=)
 
-[Current female Members of the House of Lords and the House of Commons](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/gender=F%7Chouse=both/)
+[Current female Members of the House of Lords and the House of Commons](https://api.parliament.uk/mnis-prodder/parse?filter=gender=F|house=both/)
 
 [Former Members of the House of Commons and the House of Lords that left either House within the last 31 days](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Cleftdays=31%7Chouse=both&include=)
