@@ -7,8 +7,6 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 ## House of Commons
 
-[Female Members of the House of Commons elected at the 2005 General Election](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all|gender=F|house*commons|returnedatelection=2005%20general%20election&include=)
-
 [Current Members of the House of Commons, representing constituencies in England](https://api.parliament.uk/mnis-prodder/parse?filter=house=both%7Cconstituencyinarea=England&include=)
 
 [Current Members of the House of Commons, representing constituencies in Northern Ireland](https://api.parliament.uk/mnis-prodder/parse?filter=house=both%7Cconstituencyinarea=Northern%20Ireland&include=)
@@ -21,11 +19,13 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Current eligible Members of the House of Commons whipped to the Conservative Party with no current incumbency in a Government position](https://api.parliament.uk/mnis-prodder/parse?filter=house=commons%7Ciseligible=true%7Cpartyid=4%7Choldsgovernmentpost=false&include=)
 
+[Female Members of the House of Commons elected at the 2005 General Election](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all|gender=F|house*commons|returnedatelection=2005%20general%20election&include=)
+
 ## House of Lords
 
 [Current and former Members of the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Chouse*lords&include=)
 
-[Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/House=Lords%7CIsEligible=true/PreferredNames)
+[Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords|iseligible=true/PreferredNames/)
 
 ## House of Commons and House of Lords
 
