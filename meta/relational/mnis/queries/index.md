@@ -23,14 +23,14 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 ## House of Lords
 
-[Current and former Members of the House of Lords](https://mnis-prodder.herokuapp.com/parse?filter=membership=all%7Chouse*lords&include=)
+[Current and former Members of the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Chouse*lords&include=)
 
 [Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/House=Lords%7CIsEligible=true/PreferredNames)
 
 ## House of Commons and House of Lords
 
-[Current Members of the House of Commons and the House of Lords](https://mnis-prodder.herokuapp.com/parse?filter=house=both&include=)
+[Current Members of the House of Commons and the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=house=both&include=)
 
 [Current female Members of the House of Lords and the House of Commons](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/gender=F%7Chouse=both/)
 
-[Former Members of the House of Commons and the House of Lords that left either House within the last 31 days](https://mnis-prodder.herokuapp.com/parse?filter=membership=all%7Cleftdays=31%7Chouse=both&include=)
+[Former Members of the House of Commons and the House of Lords that left either House within the last 31 days](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Cleftdays=31%7Chouse=both&include=)
