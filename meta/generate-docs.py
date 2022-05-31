@@ -33,7 +33,7 @@ def ttlpath2htmlpath(ttlpath):
 
 
 env = Environment(
-    loader=FileSystemLoader("/meta/templates"),
+    loader=FileSystemLoader("./meta/templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
