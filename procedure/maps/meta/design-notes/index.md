@@ -84,6 +84,19 @@ Business steps are in one of four current states:
 
 * Actualised one or more times, with business items that have no date. This only applies to 'coming into force steps', where the instrument specifies a condition as a text string rather than a date.
 
+
+### Business items, actualisation and step depths
+
+In a work package, a business step may be actualised by a business item.
+
+A business item may have one or no links and one or no dates. The presence of a date allows for the ordering of business items in a work package, grouped by that date. 
+
+For business items taking place on the same date, ordering in a way that is true to procedure is not possible - for example: the website may list the outcome of committee consideration before the act of consideration.
+
+To allow for the ordering of business steps to follow procedure, steps are given depths. Step depths are determined for each procedure, because a step may appear in more than one procedure. In the case of committee consideration, consideration may be given a step depth of 10.0, whilst the potential outcomes of that consideration may be given a step depth of 10.1. 
+
+This allows for the business items for display to be ordered and grouped by date - where present - then ordered by step depth.
+
 ### Route currentness and untraversability
 
 Routes with a target of a business step may be marked with a start date and / or an end date. Routes having a start date in the future or an end date in the past are not current and their status attribute is marked as UNTRAVERSABLE.
