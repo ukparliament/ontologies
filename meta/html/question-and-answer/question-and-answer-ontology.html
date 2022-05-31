@@ -64,15 +64,6 @@
             </p>
 
             </article>
-            <article class="class" id="AnswerExpectedAs">
-                <h3>
-                    Class <a href="#AnswerExpectedAs">Answer expected as</a>
-                </h3>
-
-                <p>A time-bound means of defining the form of answer expected for a question, being oral or written. In the House of Commons, a question tabled in expectation of an oral answer may change to a question in expectation of a written answer - and would have two Answer Expected As relationships: one for the first period when the form of answer expected is oral and one for the second period when the form of answer expected is written.</p>
-
-
-            </article>
             <article class="class" id="AnswerExpectedAsChange">
                 <h3>
                     Class <a href="#AnswerExpectedAsChange">Answer expected as change</a>
@@ -88,6 +79,15 @@
                 </h3>
 
                 <p>The reason, being either unstarred or not reached, for a change in the expected form of an answer.</p>
+
+
+            </article>
+            <article class="class" id="AnswerExpectedWithForm">
+                <h3>
+                    Class <a href="#AnswerExpectedWithForm">Answer expected with form</a>
+                </h3>
+
+                <p>A time-bound means of defining the form of answer expected for a question, being oral or written. In the House of Commons, a question tabled in expectation of an oral answer may change to a question in expectation of a written answer - and would have two Answer Expected As relationships: one for the first period when the form of answer expected is oral and one for the second period when the form of answer expected is written.</p>
 
 
             </article>
@@ -300,21 +300,7 @@
 
                 <p>Relates a question to the expectation of the form of answer to that question, over a period of time, being oral or written. In the House of Lords, a question has one form of answer expected.In the House of Commons, a question being tabled in expectation of a written answer has one form of answer expected.In the House of Commons, a question being tabled in expectation of an oral answer may have two forms of answer expected over different periods of time, should the question be unstarred or not reached.</p>
 
-                <p><a href="#Question">Question</a> &mdash; Answer expected as &mdash; <a href="#AnswerExpectedAs">AnswerExpectedAs</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="answerExpectedInForm">
-
-                <h3>
-                    Object property <a href="#answerExpectedInForm">Answer expected in form</a>
-            </h3>
-
-
-
-                <p>Relates an answer being expected at at a point in time to the form the answer is expected in.</p>
-
-                <p><a href="#AnswerExpectedAs">AnswerExpectedAs</a> &mdash; Answer expected in form &mdash; <a href="#FormOfAnswer">FormOfAnswer</a></p>
+                <p><a href="#Question">Question</a> &mdash; Answer expected as &mdash; <a href="#AnswerExpectedWithForm">AnswerExpectedWithForm</a></p>
 
             </article>
 
@@ -370,7 +356,7 @@
 
                 <p>Relates a change in the form of answer expected to the expectation prior to that change.</p>
 
-                <p><a href="#AnswerExpectedAsChange">AnswerExpectedAsChange</a> &mdash; Changed from &mdash; <a href="#AnswerExpectedAs">AnswerExpectedAs</a></p>
+                <p><a href="#AnswerExpectedAsChange">AnswerExpectedAsChange</a> &mdash; Changed from &mdash; <a href="#AnswerExpectedWithForm">AnswerExpectedWithForm</a></p>
 
             </article>
 
@@ -384,7 +370,7 @@
 
                 <p>Relates a change in the form of answer expected to the expectation subsequent to that change.</p>
 
-                <p><a href="#AnswerExpectedAsChange">AnswerExpectedAsChange</a> &mdash; Changed to &mdash; <a href="#AnswerExpectedAs">AnswerExpectedAs</a></p>
+                <p><a href="#AnswerExpectedAsChange">AnswerExpectedAsChange</a> &mdash; Changed to &mdash; <a href="#AnswerExpectedWithForm">AnswerExpectedWithForm</a></p>
 
             </article>
 
@@ -455,6 +441,20 @@
                 <p>Relates a change in the form of answer expected to the reason for that change.</p>
 
                 <p><a href="#AnswerExpectedAsChange">AnswerExpectedAsChange</a> &mdash; Has change reason &mdash; <a href="#AnswerExpectedAsChangeReason">AnswerExpectedAsChangeReason</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasFormOfAnswer">
+
+                <h3>
+                    Object property <a href="#hasFormOfAnswer">Has form of answer</a>
+            </h3>
+
+
+
+                <p>Relates the form an answer is expected to take - from a date - to the name of that form.</p>
+
+                <p><a href="#AnswerExpectedWithForm">AnswerExpectedWithForm</a> &mdash; Has form of answer &mdash; <a href="#FormOfAnswer">FormOfAnswer</a></p>
 
             </article>
 
@@ -564,33 +564,21 @@
                     Data property <a href="#dateForAnswer">Date for answer</a>
             </h3>
 
-                <p>Relates a Parliamentary Question to a date for answer. For an ordinary written question this is expected to be within 7 days of tabling. If the Member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed.</p>
+                <p>Relates a  to the date by which an answer is expected. Ordinary written questions are expected to be answered within seven working days of tabling. A Member may table a named day question in order to have that question answered by that particular day.</p>
 
                 <p>ParliamentaryQuestion &mdash; Date for answer &mdash; date</p>
 
 
             </article>
 
-            <article class="dataproperty" id="heading">
+            <article class="dataproperty" id="headingText">
                 <h3>
-                    Data property <a href="#heading">Heading</a>
+                    Data property <a href="#headingText">Heading text</a>
             </h3>
 
-                <p>Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For oral parliamentary questions, the headings are supplied by Lords or Commons Hansard.</p>
+                <p>Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For an oral parliamentary question this is supplied by Lords or Commons Hansard.</p>
 
-                <p>Question &mdash; Heading &mdash; langString</p>
-
-
-            </article>
-
-            <article class="dataproperty" id="interestsDeclared">
-                <h3>
-                    Data property <a href="#interestsDeclared">Interests declared</a>
-            </h3>
-
-                <p>Indicates whether the Member asking the question has declared they have interests which may be relevant to the subject matter of the question.</p>
-
-                <p>Question &mdash; Interests declared &mdash; boolean</p>
+                <p>Question &mdash; Heading text &mdash; langString</p>
 
 
             </article>
@@ -612,9 +600,21 @@
                     Data property <a href="#isDateForAnswerNamed">Is date for answer named</a>
             </h3>
 
-                <p>Determines if the Member tabling a written parliamentary question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are ordinary and the value here is false. By convention a Member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response.</p>
+                <p>Used to record whether the date for answer was named by the Member when the question was tabled. Named day questions are only tabled in the House of Commons. The date named must be at least three days after the tabling date.</p>
 
                 <p>ParliamentaryQuestion &mdash; Is date for answer named &mdash; boolean</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="isInterestDeclared">
+                <h3>
+                    Data property <a href="#isInterestDeclared">Is interest declared</a>
+            </h3>
+
+                <p>Used to record whether a Member asking a question has declared that they have an interest which they consider relevant to the subject matter of that question.</p>
+
+                <p>Question &mdash; Is interest declared &mdash; boolean</p>
 
 
             </article>
@@ -636,7 +636,7 @@
                     Data property <a href="#questionText">Question text</a>
             </h3>
 
-                <p>Relates a question to the actual text of the question as asked by the Member.</p>
+                <p>Relates a question to its text.</p>
 
                 <p>Question &mdash; Question text &mdash; langString</p>
 
