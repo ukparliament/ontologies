@@ -1,4 +1,3 @@
-
 import os
 
 from datetime import datetime
@@ -11,8 +10,9 @@ from urllib.parse import urlparse
 def stemonly(pathvalue):
     return Markup(pathvalue.stem)
 
+
 env = Environment(
-    loader=FileSystemLoader("templates"),
+    loader=FileSystemLoader("./templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
@@ -32,6 +32,6 @@ with open(indexpath, "w") as indexfile:
     print("  Writing " + indexpath)
     indexfile.write(
         template.render(
-            htmlfiles = htmlfiles,
+            htmlfiles=htmlfiles,
         )
     )

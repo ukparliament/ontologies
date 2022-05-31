@@ -33,7 +33,7 @@ def ttlpath2htmlpath(ttlpath):
 
 
 env = Environment(
-    loader=FileSystemLoader("templates"),
+    loader=FileSystemLoader("./templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
@@ -57,7 +57,7 @@ ttlfiles = list(Path(".").glob("**/*.ttl"))
 for ttlpath in ttlfiles:
 
     print("Considering " + str(ttlpath))
-    
+
     g = rdflib.Graph()
 
     ttlfile = ""
@@ -254,4 +254,3 @@ for ttlpath in ttlfiles:
             )
     else:
         print("Not an ontology: " + str(ttlpath))
-
