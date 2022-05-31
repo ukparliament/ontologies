@@ -22,11 +22,11 @@ jobs:
       - name: pip3 install Jinja2
         run: pip3 install Jinja2
         
-      - name: python3 generate-docs.py
-        run: python3 generate-docs.py
+      - name: python3 meta/generate-docs.py
+        run: python3 meta/generate-docs.py
         
-      - name: python3 generate-docs-index.py
-        run: python3 generate-docs-index.py
+      - name: python3 meta/generate-docs-index.py
+        run: python3 meta/generate-docs-index.py
         
       - name: commit html files
         run: |
