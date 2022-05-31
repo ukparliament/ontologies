@@ -12,7 +12,7 @@ def stemonly(pathvalue):
 
 
 env = Environment(
-    loader=FileSystemLoader("./templates"),
+    loader=FileSystemLoader("/meta/templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
