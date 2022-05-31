@@ -50,8 +50,8 @@ pqa:Question rdf:type owl:Class ;
 	rdfs:comment "A question may be an oral or written parliamentary question, an urgent  - or private notice - question or a business question. A question is asked by a Member of a House of an answering body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:AnswerExpectedAs rdf:type owl:Class ;
-	rdfs:label "Answer expected as"@en ;
+pqa:AnswerExpectedWithForm rdf:type owl:Class ;
+	rdfs:label "Answer expected with form"@en ;
 	rdfs:comment "A time-bound means of defining the form of answer expected for a question, being oral or written. In the House of Commons, a question tabled in expectation of an oral answer may change to a question in expectation of a written answer - and would have two Answer Expected As relationships: one for the first period when the form of answer expected is oral and one for the second period when the form of answer expected is written."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
@@ -241,16 +241,13 @@ pqa:answerExpectedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Answer expected as"@en ;
 	rdfs:comment "Relates a question to the expectation of the form of answer to that question, over a period of time, being oral or written. In the House of Lords, a question has one form of answer expected.In the House of Commons, a question being tabled in expectation of a written answer has one form of answer expected.In the House of Commons, a question being tabled in expectation of an oral answer may have two forms of answer expected over different periods of time, should the question be unstarred or not reached."@en ;
 	rdfs:domain pqa:Question ;
-	rdfs:range pqa:AnswerExpectedAs ;
+	rdfs:range pqa:AnswerExpectedWithForm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-	
-																# edited to here
-	
-pqa:answerExpectedInForm rdf:type owl:ObjectProperty ;
-	rdfs:label "Answer expected in form"@en ;
-	rdfs:comment "Relates an answer being expected at at a point in time to the form the answer is expected in."@en ;
-	rdfs:domain pqa:AnswerExpectedAs ;
+pqa:hasFormOfAnswer rdf:type owl:ObjectProperty ;
+	rdfs:label "Has form of answer"@en ;
+	rdfs:comment "Relates the form an answer is expected to take - from a date - to the name of that form."@en ;
+	rdfs:domain pqa:AnswerExpectedWithForm ;
 	rdfs:range pqa:FormOfAnswer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
@@ -258,14 +255,14 @@ pqa:changedFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Changed from"@en ;
 	rdfs:comment "Relates a change in the form of answer expected to the expectation prior to that change."@en ;
 	rdfs:domain pqa:AnswerExpectedAsChange ;
-	rdfs:range pqa:AnswerExpectedAs ;
+	rdfs:range pqa:AnswerExpectedWithForm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:changedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Changed to"@en ;
 	rdfs:comment "Relates a change in the form of answer expected to the expectation subsequent to that change."@en ;
 	rdfs:domain pqa:AnswerExpectedAsChange ;
-	rdfs:range pqa:AnswerExpectedAs ;
+	rdfs:range pqa:AnswerExpectedWithForm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 
 pqa:hasChangeReason rdf:type owl:ObjectProperty ;
@@ -274,44 +271,48 @@ pqa:hasChangeReason rdf:type owl:ObjectProperty ;
 	rdfs:domain pqa:AnswerExpectedAsChange ;
 	rdfs:range pqa:AnswerExpectedAsChangeReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
-		
+
+
 
 #######  Data properties ##### 
 	
 pqa:dateForAnswer rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date for answer"@en ;
-	rdfs:comment "Relates a Parliamentary Question to a date for answer. For an ordinary written question this is expected to be within 7 days of tabling. If the Member requests an earlier answer they must raise it as a named day question. See isDateForAnswerNamed."@en ;
+	rdfs:comment "Relates a  to the date by which an answer is expected. Ordinary written questions are expected to be answered within seven working days of tabling. A Member may table a named day question in order to have that question answered by that particular day."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:isDateForAnswerNamed rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is date for answer named"@en ;
-	rdfs:comment "Determines if the Member tabling a written parliamentary question has requested that it be answered by a named day. Note that named day questions can only be tabled in the House of Commons. Most written questions are ordinary and the value here is false. By convention a Member can expect such questions to be answered within 7 days of tabling. Named day questions are used to elicit a faster response."@en ;
+	rdfs:comment "Used to record whether the date for answer was named by the Member when the question was tabled. Named day questions are only tabled in the House of Commons. The date named must be at least three days after the tabling date."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:heading rdf:type owl:DatatypeProperty ;
-	rdfs:label "Heading"@en ;
-	rdfs:comment "Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For oral parliamentary questions, the headings are supplied by Lords or Commons Hansard."@en ;
+pqa:headingText rdf:type owl:DatatypeProperty ;
+	rdfs:label "Heading text"@en ;
+	rdfs:comment "Relates a question to its heading text. For a written parliamentary question this is supplied by the Indexing and Data Management Section in the House of Commons Library. For an oral parliamentary question this is supplied by Lords or Commons Hansard."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:questionText rdf:type owl:DatatypeProperty ;
 	rdfs:label "Question text"@en ;
-	rdfs:comment "Relates a question to the actual text of the question as asked by the Member."@en ;
+	rdfs:comment "Relates a question to its text."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:interestsDeclared rdf:type owl:DatatypeProperty ;
-	rdfs:label "Interests declared"@en ;
-	rdfs:comment "Indicates whether the Member asking the question has declared they have interests which may be relevant to the subject matter of the question."@en ;
+pqa:isInterestDeclared rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is interest declared"@en ;
+	rdfs:comment "Used to record whether a Member asking a question has declared that they have an interest which they consider relevant to the subject matter of that question."@en ;
 	rdfs:domain pqa:Question ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
+	
+	
+								# edited to here
 	
 pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is question substantive"@en ;
