@@ -218,7 +218,7 @@ pqa:refersToPreviousAnswer rdf:type owl:ObjectProperty ;
 	
 pqa:delegatedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Delegated to"@en ;
-	rdfs:comment "Relates a delegated answer to the delegated answer body that contributed material to that answer. An answer is delegated to one delegated answer body, or none."@en ;
+	rdfs:comment "Relates a delegated answer to the delegated answer body that contributed material to that answer. An answer is delegated to one or more delegated answer bodies, or none."@en ;
 	rdfs:domain pqa:DelegatedAnswer ;
 	rdfs:range pqa:DelegatedAnswerBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
@@ -230,11 +230,11 @@ pqa:refersToLibraryDeposit rdf:type owl:ObjectProperty ;
 	rdfs:range pqa:LibraryDeposit ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-pqa:refersToDocument rdf:type owl:ObjectProperty ;
-	rdfs:label "Refers to document"@en ;
-	rdfs:comment "Relates a written answer to a published document. A written answer may refer to one or more documents, or none."@en ;
-	rdfs:domain pqa:Answer ;
-	rdfs:range pqa:Document ;
+pqa:attachedTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Attached to"@en ;
+	rdfs:comment "Relates a document to the written answer the document is attached to. A written answer may have one or more attached documents, or none."@en ;
+	rdfs:domain pqa:Document ;
+	rdfs:range pqa:Answer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
 pqa:answerExpectedAs rdf:type owl:ObjectProperty ;
