@@ -76,7 +76,17 @@ phm:SeatIncumbencyInterruption rdf:type owl:Class ;
 phm:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:label "Parliament period"@en ;
 	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+
+phm:HouseSeatEnablingThing rdf:type owl:Class ;
+	rdfs:label "House seat enabling thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	
+phm:SeatIncumbencyEnablingThing rdf:type owl:Class ;
+	rdfs:label "Seat incumbency enabling thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 	
 	
@@ -144,7 +154,21 @@ phm:hasDisqualificationType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a disqualification to a disqualification type."@en ;
 	rdfs:domain phm:Disqualification ;
 	rdfs:range phm:DisqualificationType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+
+phm:houseSeatEnabledBy rdf:type owl:ObjectProperty ;
+	rdfs:label "House seat enabled by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain phm:HouseSeat ;
+	rdfs:range phm:HouseSeatEnablingThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+
+phm:seatIncumbencyEnabledBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Seat incumbency enabled by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain phm:SeatIncumbency ;
+	rdfs:range phm:SeatIncumbencyEnablingThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 				
 	
 ##### Data properties ####	
