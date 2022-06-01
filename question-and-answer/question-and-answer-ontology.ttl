@@ -311,26 +311,25 @@ pqa:isInterestDeclared rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
 	
-	
-								# edited to here
-	
+# revisit	
 pqa:isQuestionSubstantive rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is question substantive"@en ;
-	rdfs:comment "Indicates if a question is substantive. If true the question text will be meaningful and constitute the actual question that the Member wished to ask. If false the question text will be boilerplate text asking about a government department or the Prime Minister's appointments (respectively topical questions and Prime Minister's questions in the House of Commons). This will be answered in the Chamber, after which the asking Member will ask a supplementary question. This is a device to enable Members to ask supplementary questions on any topical subject without notice. It only applies to parliamentary questions expecting an oral answer and only applies in the House of Commons. The process for topical questions in the House of Lords differs slightly from that in the House of Commons, in that all questions tabled are substantive. Here topical refers to the shorter notice period allowed when tabling a question."@en ;
+	rdfs:comment "Used to record if a question tabled in expectation of an oral answer is substantive. A question tabled for the Prime Minister or as a topical question in the House of Commons may not be substantive - for example: “If he will list his official engagements for Wednesday 8 June” - after which the asking Member may ask a supplementary question. A question which is not substantive is a means by which a Member may ask supplementary questions on a topical subject, without notice."@en ;
 	rdfs:domain pqa:ParliamentaryQuestion ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
+# revisit	
 	
 pqa:answerText rdf:type owl:DatatypeProperty ;
 	rdfs:label "Answer text"@en ;
-	rdfs:comment "Relates an answer to the actual text of the answer as supplied by the answering body."@en ;
+	rdfs:comment "Relates an answer to its text."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .	
 	
 pqa:isAnswerOral rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is answer oral"@en ;
-	rdfs:comment "Determines if the answer is given orally in the Chamber. If true the answer is oral. If false the answer is written. The distinction only applies to answers to parliamentary questions. All other answers are always oral."@en ;
+	rdfs:comment "Used to record if the answer is given orally in the Chamber of either House. If true, the answer is oral. If false, the answer is written. The distinction between oral and written answers applies to those given to parliamentary questions. All other answers - for example: to business questions - are oral."@en ;
 	rdfs:domain pqa:Answer ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/question-and-answer/> .
