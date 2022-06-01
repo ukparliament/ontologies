@@ -4,13 +4,21 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <http://parliament.uk/ontologies/house-membership/> 
     rdf:type owl:Ontology ;
     dcterms:title "House membership ontology"@en ;
     dcterms:created "2016-11-08"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing a person occupying a seat in a House, by means of an incumbency over a period of time."@en .
+    dcterms:description "A model describing a person occupying a seat in a House, by means of an incumbency over a period of time."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/house-membership/house-membership.svg> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Anna Murphy" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
 
 
 #######  Classes ##### 	
