@@ -11,7 +11,7 @@
     dcterms:title "House membership ontology"@en ;
     dcterms:created "2016-11-08"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing a person occupying a seat in a House, by means of an incumbency over a period of time."@en ;
+    dcterms:description "A model describing the occupation by a person of a seat in a House, by means of an incumbency over a period of time."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/house-membership/house-membership.svg> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -30,12 +30,12 @@ phm:House rdf:type owl:Class ;
 	
 phm:HouseSeat rdf:type owl:Class ;
 	rdfs:label "House seat"@en ;
-	rdfs:comment "A seat as a position in a House - rather than a physical seat or constituency - which may be allocated to a Member, for example: a seat in the House of Commons associated with a constituency - or a seat in the House of Lords allocated to the Archbishop of Canterbury, inherited by a hereditary peer or granted to a life peer."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:comment "A seat as a position in a House, rather than a physical seat or constituency.  A seat in the House of Commons is allocated to a Member and has an associated constituency. A seat in the House of Lords is allocated to a Member of the House of Lords, for example: allocated to the Archbishop of Canterbury, inherited by a hereditary peer or granted to a life peer."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:HouseSeatType rdf:type owl:Class ;
 	rdfs:label "House seat type"@en ;
-	rdfs:comment "The type of a House seat, for example: seats in the House of Commons allocated by means of the first past the post electoral system, seats in the House of Lords allocated to hereditary peers, life peers, excepted hereditary peers or Lords Spiritual. The Lords Spiritual are a group of the bishops of five named dioceses as ex-officio Members, together with the 21 longest serving English diocesan bishops not in that group - eligibility for which includes criteria set out in the Lords Spiritual (Women) Act 2015."@en ;
+	rdfs:comment "The type of a House seat, for example: seats in the House of Commons allocated by means of the first past the post electoral system, seats in the House of Lords allocated to hereditary peers, life peers, excepted hereditary peers or Lords Spiritual."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:Person rdf:type owl:Class ;
@@ -45,25 +45,25 @@ phm:Person rdf:type owl:Class ;
 
 phm:SeatIncumbency rdf:type owl:Class ;
 	rdfs:label "Seat incumbency"@en ;
-	rdfs:comment "The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member."@en ;
+	rdfs:comment "The occupation of a seat in a House by a person, for a period of time. A person may have more than one incumbency over time. Only one person can be an incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future, or which has no end date, is a current Member. A person having a seat incumbency with an end date in the past and no current incumbency is an ex-Member."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 		
 phm:Suspension rdf:type owl:Class ;
 	rdfs:subClassOf phm:SeatIncumbencyInterruption ;
 	rdfs:label "Suspension"@en ;
 	rdfs:comment "A period of exclusion of a Member during which the Member is not authorised to sit in a House."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:LeaveOfAbsence rdf:type owl:Class ;
 	rdfs:subClassOf  phm:SeatIncumbencyInterruption ;
 	rdfs:label "Leave of absence"@en ;
 	rdfs:comment "A period during which a Member of the House of Lords is authorised to not attend sittings."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:Disqualification rdf:type owl:Class ;
 	rdfs:subClassOf  phm:SeatIncumbencyInterruption ;
 	rdfs:label "Disqualification"@en ;
-	rdfs:comment "Disqualification is the period of time for which a Member was disqualified from sitting or voting in a House."@en ;
+	rdfs:comment "A period of time during which a Member is disqualified from sitting or voting in a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 phm:DisqualificationType rdf:type owl:Class ;
@@ -73,18 +73,21 @@ phm:DisqualificationType rdf:type owl:Class ;
 	
 phm:EndReason rdf:type owl:Class ;
 	rdfs:label "End reason"@en ;
-	rdfs:comment "A reason for the ending of a seat incumbency, or of a House seat. A Member may end their incumbency and leave a House following an election loss, by standing down, by retirement, upon death - or due to changes in the make up of a House, such as the expulsion of hereditary peers following the passage of the House of Lords Act 1999. In the House of Commons, a seat may end by means of a constituency boundary change. In the House of Lords, a hereditary peerage seat ended with the extinction of the associated peerage. All but two hereditary seats ended with the passage of the House of Lords Act 1999."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
+	rdfs:comment "A reason for the ending of a seat incumbency, or of a House seat. The incumbency of a Member may end following an election loss, by standing down, on retirement, on death - or due to changes in the makeup of a House, for example: the expulsion of hereditary peers following the passage of the House of Lords Act 1999. Two hereditary seats remain after the passage of the House of Lords Act 1999. In the House of Lords, hereditary peerage seats ended with the extinction of the associated peerages. In the House of Commons, a seat may end by means of a constituency boundary change."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:SeatIncumbencyInterruption rdf:type owl:Class ;
 	rdfs:label "Seat incumbency interruption"@en ;
 	rdfs:comment "A period of interruption to a seat incumbency, for example: by suspension, leave of absence or disqualification."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .		
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:label "Parliament period"@en ;
-	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
+	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	
+	
+											# edited to here
 
 phm:HouseSeatEnablingThing rdf:type owl:Class ;
 	rdfs:label "House seat enabling thing"@en ;
