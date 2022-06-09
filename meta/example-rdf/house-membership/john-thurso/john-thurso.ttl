@@ -456,6 +456,37 @@
 	
 # ## John Thurso's peerage.
 
+# There is a monarch ...
+<http://id.parliament.uk/monarch/1> rdf:type ppeer:Monarch ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Elizabeth II"@en ;
+	
+	# ... a date of birth.
+	pa:dateOfBirth  "1926-04-21"^^xsd:date .
+	
+# There is a kingdom ...
+<http://id.parliament.uk/kingdom/1> rdf:type ppeer:Kingdom ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "United Kingdom"@en ;
+	
+	# ... with a start date.
+	putil:startOn "1801-01-01"^^xsd:date .
+
+# There is a reign ...
+<http://id.parliament.uk/reign/1> rdf:type ppeer:Reign ;
+
+	# ... of a monarch ...
+	ppeer:reignOf <http://id.parliament.uk/monarch/1> ;
+	
+	# ... in a kingdom ...
+	ppeer:reignIn <http://id.parliament.uk/kingdom/1> ;
+	
+	# ... with a start date.
+	putil:startOn "1952-02-06"^^xsd:date .
+
+
 # There is a peerage type ...
 <http://id.parliament.uk/peerage-type/1> rdf:type ppeer:PeerageType ;
 
@@ -471,22 +502,23 @@
 	# ... applying to a gender (sex?).
 	ppeer:appliesTo <http://id.parliament.uk/gender/1> .
 
-
-
-
-
-	
 # There is a peerage rank ...
 <http://id.parliament.uk/peerage-rank/1> rdf:type ppeer:PeerageRank ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Viscountcy"@en ;
 	
-	# ... and a degree.
-	ppeer:degree 4.
+	# ... and a degree ...
+	ppeer:degree 4 ;
+	
+	# ... in a kingdom.
+	ppeer:inKingdom <http://id.parliament.uk/kingdom/1> .
 
 # There is a peerage ...
 <http://id.parliament.uk/peerage/1> rdf:type ppeer:Peerage ;
+
+	# ... in a kingdom ...
+	ppeer:ofKingdom <http://id.parliament.uk/kingdom/1> ;
 
 	# ... with a rank ...
 	ppeer:hasRank <http://id.parliament.uk/peerage-rank/1> ;
@@ -514,6 +546,21 @@
 	
 	# ... with a start date.
 	ppeer:holdingStartOn "1995-04-29"^^xsd:date.
+	
+# There is a letters patent ...
+<http://id.parliament.uk/letters-patent/1> rdf:type ppeer:LettersPatent ;
+
+	# ... of a kingdom ...
+	ppeer:hasKingdom <http://id.parliament.uk/kingdom/1> ;
+
+	# ... affirming the creation of the peerage ...
+	ppeer:affirmsCreationOf <http://id.parliament.uk/peerage/1> ;
+	
+	# ... which was presented on ...
+	ppeer:presentedOn "1952-04-10"^^xsd:date ;
+	
+	# ... with an ordinality on that date ...
+	ppeer:OrdinatlityOnDate 1 .
 	
 	
 	
