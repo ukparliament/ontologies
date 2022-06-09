@@ -91,6 +91,9 @@
 # There is a house seat for Viscountcy Thurso ...
 <http://id.parliament.uk/house-seats/1> rdf:type phm:HouseSeat ;
 
+	# ... enabled by the existence of a peerage ...
+	phm:houseSeatEnabledBy <http://id.parliament.uk/peerage/1> ;
+
 	# ... in the House of Lords ...
 	phm:inHouse <http://id.parliament.uk/houses/1> ;
 
@@ -113,6 +116,9 @@
 # Members of the House of Lords being considered Members during dissolution.
 # There is a single incumbency by John in the hereditary house seat ...
 <http://id.parliament.uk/seat-incumbencies/1> rdf:type phm:SeatIncumbency ;
+
+	# ... enabledBy John Thurso holding a peerage ...
+	phm:seatIncumbencyEnabledBy <http://id.parliament.uk/peerage-holding/1> ;
 
 	# ... with a start date - the date when John Thurso succeeded to the peerage and took his seat in the Lords ...
 	putil:startOn "1995-10-31"^^xsd:date ;
