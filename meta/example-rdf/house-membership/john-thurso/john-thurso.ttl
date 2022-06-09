@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix ppeer: <http://parliament.uk/ontologies/peerage/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> .
 @prefix pt: <http://parliament.uk/ontologies/time-period/> .
@@ -13,8 +14,18 @@
 
 # ## General set up for John Thurso and the two Houses.
 
+# There is a gender ...
+# NOTE: should this be sex?
+<http://id.parliament.uk/gender/1> rdf:type ppeer:Gender ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Male"@en .
+
 # There is a person ...
 <http://id.parliament.uk/people/1> rdf:type phm:Person ;
+
+	# ... with a gender ...
+	putil:hasGender <http://id.parliament.uk/gender/1> ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Viscount Thurso"@en ;
@@ -27,6 +38,9 @@
 	
 	# ... with family name ...
 	pa:familyName "Sinclair" ;
+	
+	# ... with a peerage holding ...
+	ppeer:hasPeerageHolding <http://id.parliament.uk/peerage-holding/1> ;
 	
 	# ... a date of birth.
 	pa:dateOfBirth  "1953-09-10"^^xsd:date .
@@ -440,6 +454,66 @@
 	# ... to the Liberal Democrat parliamentary party.
 	ppb:whippedTo <http://id.parliament.uk/parliamentary-parties/1> .
 	
+# ## John Thurso's peerage.
+
+# There is a peerage type ...
+<http://id.parliament.uk/peerage-type/1> rdf:type ppeer:PeerageType ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Hereditary peerage"@en .
+	
+# There is a rank label ...
+<http://id.parliament.uk/rank-label/1> rdf:type ppeer:RankLabel ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Viscount"@en ;
+	
+	# ... applying to a gender (sex?).
+	ppeer:appliesTo <http://id.parliament.uk/gender/1> .
+
+
+
+
+
+	
+# There is a peerage rank ...
+<http://id.parliament.uk/peerage-rank/1> rdf:type ppeer:PeerageRank ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Viscountcy"@en ;
+	
+	# ... and a degree.
+	ppeer:degree 4.
+
+# There is a peerage ...
+<http://id.parliament.uk/peerage/1> rdf:type ppeer:Peerage ;
+
+	# ... with a rank ...
+	ppeer:hasRank <http://id.parliament.uk/peerage-rank/1> ;
+
+	# ... of a type ...
+	ppeer:hasPeerageType <http://id.parliament.uk/peerage-type/1> ;
+	
+	# ... with no 'of title' ...
+	ppeer:ofTitle false ;
+	
+	# ... with a title of Thurso ...
+	ppeer:title  "Thurso"@en ;
+	
+	# ... with a territorial designation ...
+	ppeer:territorialDesignation "of Ulbster in the County of Caithness"@en .
+	
+# There is a peerage holding ...
+<http://id.parliament.uk/peerage-holding/1> rdf:type ppeer:PeerageHolding ;
+
+	# ... of peerage ...
+	ppeer:isOf <http://id.parliament.uk/peerage/1> ;
+	
+	# ... with an ordinality ...
+	ppeer:ordinality 3 ;
+	
+	# ... with a start date.
+	ppeer:holdingStartOn "1995-04-29"^^xsd:date.
 	
 	
 	
