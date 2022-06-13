@@ -4,6 +4,7 @@
 # We reference the ontologies we're using.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
+@prefix pe: <http://parliament.uk/ontologies/election/> . 
 @prefix phm: <http://parliament.uk/ontologies/house-membership/> .
 @prefix ppeer: <http://parliament.uk/ontologies/peerage/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
@@ -567,6 +568,56 @@
 	
 	# ... with an ordinality on that date ...
 	ppeer:OrdinatlityOnDate 1 .
+	
+	
+# ## John Thurso's first Commons membership.
+
+# There is a general election ...
+<http://id.parliament.uk/general-election/1> rdf:type pe:GeneralElection ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "2001 general election"@en ;
+	
+	# ... on a date.
+	putil:isOn "2001-06-07"^^xsd:date .
+	
+# There is a Parliament period ...
+<http://id.parliament.uk/parliament-period/1> rdf:type pe:ParliamentPeriod ;
+	
+	# ... with an ordinality ...
+	putil:ordinality "53"^^xsd:integer ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Parliament 53 of the United Kingdom"@en ;
+
+	# ... with a start date ...
+	putil:startOn "2001-06-13"^^xsd:date ;
+	
+	# ... and an end date.
+	putil:endOn "2005-04-11"^^xsd:date .
+	
+# There is an election ...
+<http://id.parliament.uk/election/1> rdf:type pe:Election ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Election for the Caithness constituency on 7th June 2001"@en ;
+
+	# ... into a Parliament period ...
+	pe:intoParliamentPeriod <http://id.parliament.uk/parliament-period/1> ;
+	
+	# ... being part of a general election ...
+	pe:isPartOfGeneralElection <http://id.parliament.uk/general-election/1> ;
+	
+	# ... with a count of total votes cast ...
+	pe:totalVotesCast ""^^xsd:integer ; # not known
+	
+	# ... with a count of ballots spoiled ...
+	pe:ballotsSpoiled ""^^xsd:integer ; # not known
+	
+	# ... and a declaration time.
+	pe:declarationTime ""^^xsd:dateTime ; # not known
+	
+	
 	
 	
 	
