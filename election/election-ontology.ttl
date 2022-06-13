@@ -125,11 +125,11 @@ pe:boundedBy rdf:type owl:ObjectProperty ;
 	rdfs:range pe:ConstituencyArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:hasCandidacy rdf:type owl:ObjectProperty ;
-	rdfs:label "Has candidacy"@en ;
-	rdfs:comment "Relates an election to a candidacy within that election."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range pe:Candidacy  ;
+pe:inElection rdf:type owl:ObjectProperty ;
+	rdfs:label "In election"@en ;
+	rdfs:comment "Relates a candidacy to the election that candidacy is in."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range pe:Election  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCertification rdf:type owl:ObjectProperty ;
