@@ -145,6 +145,13 @@ putil:hasConcept rdf:type owl:ObjectProperty ;
 
 #######  Data properties #####
 
+putil:isOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is on"@en ;
+	rdfs:comment "Relates a temporal thing to its date."@en ;
+	rdfs:domain putil:TemporalThing ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+	
 putil:proposedStartOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Proposed start on"@en ;
 	rdfs:comment "Relates a temporal thing to its proposed start date."@en ;
