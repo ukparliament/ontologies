@@ -78,27 +78,9 @@
 
 
             </article>
-            <article class="class" id="ConstituencyArea">
+            <article class="class" id="Constituency">
                 <h3>
-                    Class <a href="#ConstituencyArea">Constituency area</a>
-                </h3>
-
-                <p>A geographic bounding of a constituency group.</p>
-
-
-            </article>
-            <article class="class" id="ConstituencyAreaType">
-                <h3>
-                    Class <a href="#ConstituencyAreaType">Constituency area type</a>
-                </h3>
-
-                <p>The type of constituency area, for example: a borough or a county.</p>
-
-
-            </article>
-            <article class="class" id="ConstituencyGroup">
-                <h3>
-                    Class <a href="#ConstituencyGroup">Constituency group</a>
+                    Class <a href="#Constituency">Constituency</a>
                 </h3>
 
                 <p>A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election.</p>
@@ -109,21 +91,21 @@
             </p>
 
             </article>
+            <article class="class" id="ConstituencyArea">
+                <h3>
+                    Class <a href="#ConstituencyArea">Constituency area</a>
+                </h3>
+
+                <p>A geographic bounding of a constituency group.</p>
+
+
+            </article>
             <article class="class" id="Election">
                 <h3>
                     Class <a href="#Election">Election</a>
                 </h3>
 
                 <p>An election to elect a candidate or candidates to a seat or position.</p>
-
-
-            </article>
-            <article class="class" id="ElectoralIncumbency">
-                <h3>
-                    Class <a href="#ElectoralIncumbency">Electoral incumbency</a>
-                </h3>
-
-                <p>An incumbency in a position or parliamentary seat decided by the result of an election.</p>
 
 
             </article>
@@ -219,6 +201,20 @@
 
             </article>
 
+            <article class="objectproperty" id="boundedBy">
+
+                <h3>
+                    Object property <a href="#boundedBy">Bounded by</a>
+            </h3>
+
+
+
+                <p>Relates a constituency to its geographic area.</p>
+
+                <p><a href="#Constituency">Constituency</a> &mdash; Bounded by &mdash; <a href="#ConstituencyArea">ConstituencyArea</a></p>
+
+            </article>
+
             <article class="objectproperty" id="eligibleToVoteIn">
 
                 <h3>
@@ -230,20 +226,6 @@
                 <p>Relates a group of people - who at the time of an election are eligible to vote - to that election.</p>
 
                 <p><a href="#Electorate">Electorate</a> &mdash; Eligible to vote in &mdash; <a href="#Election">Election</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="establishesIncumbency">
-
-                <h3>
-                    Object property <a href="#establishesIncumbency">Establishes incumbency</a>
-            </h3>
-
-
-
-                <p>Relates a winning candidacy result to an electoral incumbency.</p>
-
-                <p><a href="#WinningCandidacyResult">WinningCandidacyResult</a> &mdash; Establishes incumbency &mdash; <a href="#ElectoralIncumbency">ElectoralIncumbency</a></p>
 
             </article>
 
@@ -303,34 +285,6 @@
 
             </article>
 
-            <article class="objectproperty" id="hasConstituencyAreaType">
-
-                <h3>
-                    Object property <a href="#hasConstituencyAreaType">Has constituency area type</a>
-            </h3>
-
-
-
-                <p>Relates a constituency area to a constituency area type.</p>
-
-                <p><a href="#ConstituencyArea">ConstituencyArea</a> &mdash; Has constituency area type &mdash; <a href="#ConstituencyAreaType">ConstituencyAreaType</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasConstituencyGroup">
-
-                <h3>
-                    Object property <a href="#hasConstituencyGroup">Has constituency group</a>
-            </h3>
-
-
-
-                <p>Relates a geographic area to its population.</p>
-
-                <p><a href="#ConstituencyArea">ConstituencyArea</a> &mdash; Has constituency group &mdash; <a href="#ConstituencyGroup">ConstituencyGroup</a></p>
-
-            </article>
-
             <article class="objectproperty" id="hasElectorate">
 
                 <h3>
@@ -339,9 +293,9 @@
 
 
 
-                <p>Relates a geographic area to a group of people who at the time of an election are eligible to vote in the election for that area.</p>
+                <p>Relates a constituency to a group of people who at the time of an election are eligible to vote in the election for that group.</p>
 
-                <p><a href="#ConstituencyArea">ConstituencyArea</a> &mdash; Has electorate &mdash; <a href="#Electorate">Electorate</a></p>
+                <p><a href="#Constituency">Constituency</a> &mdash; Has electorate &mdash; <a href="#Electorate">Electorate</a></p>
 
             </article>
 
@@ -526,7 +480,7 @@
                     <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
                 </tr>
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
+                    <td>/<wbr>ontologies/<wbr>election/<wbr>Constituency</td>
                     <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
                 </tr>
                 <tr>
