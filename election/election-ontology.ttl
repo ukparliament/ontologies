@@ -167,7 +167,14 @@ pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
 	rdfs:range pe:CandidacyResult  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
-#######  Data properties ##### 
+#######  Data properties #####
+
+pe:candidateName rdf:type owl:DatatypeProperty ;
+	rdfs:label "Candidate name"@en ;
+	rdfs:comment "The name of the candidate as it appears on the ballot."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote count"@en ;
