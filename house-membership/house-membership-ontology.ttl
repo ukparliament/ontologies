@@ -147,35 +147,35 @@ phm:seatIncumbencyEndReason rdf:type owl:ObjectProperty ;
 	
 phm:houseSeatEndReason rdf:type owl:ObjectProperty ;
 	rdfs:label "House seat end reason"@en ;
-	rdfs:comment "Relates a House seat to the reason for that seat ending."@en ;
+	rdfs:comment "Relates a House seat to the reason for that seat ending. A House seat may have one end reason, or none."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:EndReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:inParliamentPeriod rdf:type owl:ObjectProperty ;
 	rdfs:label "In Parliament period"@en ;
-	rdfs:comment "Relates a seat incumbency to the Parliament period the incumbency is contained by."@en ;
+	rdfs:comment "Relates a seat incumbency to the Parliament period the incumbency is contained by. Seat incumbencies in the House of Commons are related to one Parliament period. In the House of Lords, Members are considered to be Members across dissolution periods. Seat incumbencies in the House of Lords are not related to a Parliament period."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:ParliamentPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:hasDisqualificationType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has disqualification type"@en ;
-	rdfs:comment "Relates a disqualification to a disqualification type."@en ;
+	rdfs:comment "Relates a disqualification to the type of that disqualification. Disqualifications are of one type."@en ;
 	rdfs:domain phm:Disqualification ;
 	rdfs:range phm:DisqualificationType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 phm:houseSeatEnabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "House seat enabled by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a House seat to the thing enabling the existence of that seat, for example: a peerage, a constituency or a named bishopric."@en ;
 	rdfs:domain phm:HouseSeat ;
 	rdfs:range phm:HouseSeatEnablingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 phm:seatIncumbencyEnabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Seat incumbency enabled by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a seat incumbency to the thing enabling the existence of that incumbency, for example: the holding of a peerage, the winning of a constituency election or an incumbency in a named bishopric."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:SeatIncumbencyEnablingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
@@ -192,7 +192,7 @@ phm:swearingInOrder rdf:type owl:DatatypeProperty ;
 	
 phm:intendsToStandDown rdf:type owl:DatatypeProperty ;
 	rdfs:label "Intends to stand down"@en ;
-	rdfs:comment "Denotes that a Member of the House of Commons has announced that they intend to stand down at the next election."@en ;
+	rdfs:comment "Used to record if a Member of the House of Commons has announced that they intend to stand down at the next election."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
