@@ -56,6 +56,60 @@
 	</tbody>
 </table>
 
+## Secondary legislation
+
+<table>
+	<thead>
+		<tr>
+			<td>Key</td>
+			<td>Component</td>
+			<td>Depth</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>DN</td>
+			<td>Draft negative</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MN</td>
+			<td>Made negative</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>DA</td>
+			<td>Draft affirmative</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MA</td>
+			<td>Made affirmative</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>PRO</td>
+			<td>Proposed draft remedial order</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>DARO</td>
+			<td>Draft affirmative remedial order</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MARO</td>
+			<td>Made affirmative remedial order</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>LRO</td>
+			<td>Legislative reform order</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
 ## Secondary legislation components
 
 <table>
