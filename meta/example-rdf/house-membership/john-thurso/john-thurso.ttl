@@ -6,6 +6,7 @@
 @prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix pe: <http://parliament.uk/ontologies/election/> . 
 @prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> .
 @prefix ppeer: <http://parliament.uk/ontologies/peerage/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> .
@@ -377,6 +378,9 @@
 	# ... with a preferred label ...
 	putil:preferredLabel "Liberal Democrats"@en ;
 
+	# ... with an abbreviation label ...
+	putil:preferredLabel "Lib Dems"@en ;
+
 	# ... with a start date.
 	putil:startOn "1988-03-03"^^xsd:date .
 
@@ -571,6 +575,7 @@
 	
 	
 # ## John Thurso's first Commons membership.
+# Note that the first election pre-dates MNIS. Some things are unknown. Some things taken from Wikipedia.
 
 # There is a general election ...
 <http://id.parliament.uk/general-election/1> rdf:type pe:GeneralElection ;
@@ -609,26 +614,115 @@
 	pe:isPartOfGeneralElection <http://id.parliament.uk/general-election/1> ;
 	
 	# ... with a count of total votes cast ...
-	pe:totalVotesCast ""^^xsd:integer ; # not known
+	pe:totalVotesCast ""^^xsd:integer ; # Not known. Predates MNIS.
 	
 	# ... with a count of ballots spoiled ...
-	pe:ballotsSpoiled ""^^xsd:integer ; # not known
+	pe:ballotsSpoiled ""^^xsd:integer ; # Not known. Predates MNIS.
 	
 	# ... and a declaration time.
-	pe:declarationTime ""^^xsd:dateTime . # not known
+	pe:declarationTime ""^^xsd:dateTime . # Not known. Predates MNIS.
+
+# There is a certification ...
+<http://id.parliament.uk/certification/1> rdf:type pe:Certification ;
+
+	# ... to a party ...
+	pe:toParty <http://id.parliament.uk/political-parties/1> ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "John Thurso's certification by the Liberal Democrats in the 2001 election"@en .
+
+	# There is nothing else to say about the certification because we don't know when the parties certify candidates for election. This class exists to allow a person to stand for election as a Labour / Co-op candidate.
+	
+# There is a winning candidacy result ...
+<http://id.parliament.uk/winning-candidacy-result/1> rdf:type pe:WinningCandidacyResult ;
+
+	# ... with a vote count ...
+	pe:voteCount "9041"^^xsd:integer ;
+
+	# ... with a result position ...
+	pe:resultPosition "1"^^xsd:integer ;
+
+	# ... with a vote share ...
+	pe:voteShare "36.4"^^xsd:decimal ;
+
+	# ... which the party did not gain ...
+	pe:partyGained false .
+	
+# There is a candidacy ...
+<http://id.parliament.uk/candidacy/1> rdf:type pe:Candidacy ;
+
+	# ... in an election ...
+	pe:inElection <http://id.parliament.uk/election/1> ;
+
+	# ... with a candidate name ...
+	pe:candidateName "John Thurso"@en ;
+	
+	# ... with a candidate who is John Thurso ...
+	pe:hasCandidate <http://id.parliament.uk/people/1> ;
+	
+	# ... with a certification to a party ...
+	pe:hasCertification <http://id.parliament.uk/certification/1> ;
+	
+	# ... with a candidacy result.
+	pe:hasCandidacyResult <http://id.parliament.uk/winning-candidacy-result/1> .
+	
+# In this election, John Thurso stood against five candidates. This example only describes one because describing more adds nothing.
+
+# There is a candidacy result ...
+<http://id.parliament.uk/candidacy-result/1> rdf:type pe:CandidacyResult ;
+
+	# ... with a vote count ...
+	pe:voteCount "199"^^xsd:integer ;
+
+	# ... with a result position ...
+	pe:resultPosition "6"^^xsd:integer ;
+
+	# ... with a vote share ...
+	pe:voteShare "0.8"^^xsd:decimal .
+	
+# Gordon Campbell stood as an independent. Therefore, his candidacy has no link to a certification.
+# Despite being a person, we cannot reliably identify Gordon Campbell. Therefore, his candidacy has no link to a declared person. There is no "real names" policy applied by the Electoral Commission, no guarantee of uniqueness and no guarantee that recognised names are not shared, Count Binface being "played" by many people in different elections.
+# There is a second candidacy ...
+<http://id.parliament.uk/candidacy/1> rdf:type pe:Candidacy ;
+
+	# ... in an election ...
+	pe:inElection <http://id.parliament.uk/election/1> ;
+
+	# ... with a candidate name ...
+	pe:candidateName "Gordon Campbell"@en ;
+	
+	# ... with a candidacy result.
+	pe:hasCandidacyResult <http://id.parliament.uk/candidacy-result/1> .
+	
+# There is an electorate ...
+<http://id.parliament.uk/electorate/1> rdf:type pe:Electorate ;
+
+	# ... who were eligible to vote in the election ...
+	pe:eligibleToVoteIn <http://id.parliament.uk/election/1> ;
+	
+	# ... with a preferred label.
+	putil:preferredLabel "The electorate of Caithness at the time of the 2001 general election, up to the following boundary change."@en .
+	
+	# The size of the electorate around the time of the 2001 general election is not known so left out here.
 	
 	
 	
+
 	
+# John Thurso stood successfully at three general elections. We skip over the other two because the patterns are repeated.
 	
-# TODO:
 
 
-
-
-# election to commons
-# lords as excepted hered
+# 2001 constituency
+# 2001 geographies
+# why seat exists
+# why incumbency exists
+# 1997 failed general election candidacy
 # election to excepted hered
+# identifiers
+# contact points
+# shadowings
+# committee memberships
 
 	
 	
