@@ -1,6 +1,6 @@
 # 2022 - Week 24
 
-Last time out we threatened - promised? - those notes [may well be our last](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/21/#voices-off---a-crisis-of-weeknoting-confidence). Imagine our surprise when our regular reader got in touch with a heartfelt plea we continue. Touched we were. Quite touched. Also, it's just too hot to do any real work and typing nonsense with ice cream to hand just so much easier. So here we are again. It's good to be back.
+Last time out we threatened - promised? - those notes [may well be our last](https://ukparliament.github.io/ontologies/meta/weeknotes/2022/21/#voices-off---a-crisis-of-weeknoting-confidence). Imagine our surprise when our regular reader got in touch with a heartfelt plea we continue. Touched we were. Quite touched. Also, it's just too hot to do any real work and typing nonsense with ice cream to hand just so much easier. So here we are again. It's [good to be back](https://www.youtube.com/watch?v=1Msnt4lLm-g&t=105s).
 
 ## On matters of mapping
 
