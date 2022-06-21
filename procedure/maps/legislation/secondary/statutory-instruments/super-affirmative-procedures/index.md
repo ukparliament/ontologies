@@ -6,11 +6,19 @@ Dot file: [dot](legislative-reform-orders/legislative-reform-order.dot) / [svg](
 
 ### Legislative reform order component procedures
 
+#### [Draft-negative](legislative-reform-orders/components/draft-negative/draft-negative.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/draft-negative/draft-negative.dot) / [svg](legislative-reform-orders/components/draft-negative/draft-negative.svg)
+
 #### Lords
 
 ##### [Procedure determination](legislative-reform-orders/components/lords/procedure-determination/procedure-determination.pdf)
 
 Dot file: [dot](legislative-reform-orders/components/lords/procedure-determination/procedure-determination.dot) / [svg](legislative-reform-orders/components/lords/procedure-determination/procedure-determination.svg)
+
+##### [Committee consideration](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.dot) / [svg](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.svg)
 
 #### Commons
 
