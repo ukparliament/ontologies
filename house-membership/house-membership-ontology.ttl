@@ -102,7 +102,7 @@ phm:SeatIncumbencyEnablingThing rdf:type owl:Class ;
 
 phm:hasSeatIncumbencyInterruption rdf:type owl:ObjectProperty ;
 	rdfs:label "Has seat incumbency interruption"@en ;
-	rdfs:comment "Relates a seat incumbency to an interruption of that incumbency. An incumbency may be interrupted one or more times, or none. A seat incumbency interruption is to one seat incumbency."@en ;
+	rdfs:comment "Relates a seat incumbency to an interruption of that incumbency. An incumbency may be interrupted one or more times, or none. A seat incumbency interruption is of one seat incumbency."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:SeatIncumbencyInterruption ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .	
@@ -142,9 +142,6 @@ phm:seatIncumbencyEndReason rdf:type owl:ObjectProperty ;
 	rdfs:range phm:EndReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
-	
-											# edited to here	
-	
 phm:houseSeatEndReason rdf:type owl:ObjectProperty ;
 	rdfs:label "House seat end reason"@en ;
 	rdfs:comment "Relates a House seat to the reason for that seat ending. A House seat may have one end reason, or none."@en ;
@@ -154,14 +151,14 @@ phm:houseSeatEndReason rdf:type owl:ObjectProperty ;
 	
 phm:inParliamentPeriod rdf:type owl:ObjectProperty ;
 	rdfs:label "In Parliament period"@en ;
-	rdfs:comment "Relates a seat incumbency to the Parliament period the incumbency is contained by. Seat incumbencies in the House of Commons are related to one Parliament period. In the House of Lords, Members are considered to be Members across dissolution periods. Seat incumbencies in the House of Lords are not related to a Parliament period."@en ;
+	rdfs:comment "Relates a seat incumbency in the House of Commons to the Parliament period containing that incumbency. Seat incumbencies in the House of Commons are related to one Parliament period. Seat incumbencies in the House of Lords are not related to a Parliament period: Members of the Lords are considered to be Members across dissolution periods."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range phm:ParliamentPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:hasDisqualificationType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has disqualification type"@en ;
-	rdfs:comment "Relates a disqualification to the type of that disqualification. Disqualifications are of one type."@en ;
+	rdfs:comment "Relates a disqualification to the type of that disqualification. A disqualification is of one type."@en ;
 	rdfs:domain phm:Disqualification ;
 	rdfs:range phm:DisqualificationType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
@@ -185,7 +182,7 @@ phm:seatIncumbencyEnabledBy rdf:type owl:ObjectProperty ;
 			
 phm:swearingInOrder rdf:type owl:DatatypeProperty ;
 	rdfs:label "Swearing in order"@en ;
-	rdfs:comment "The order in which Members take an oath or make an affirmation at the beginning of a new Parliament or following a by-election. Swearing in order may be used in determining the longest serving member of a House, known as the Father or Mother of the House."@en ;
+	rdfs:comment "Used to record the place in the order in which Members take an oath or make an affirmation at the beginning of a new Parliament or following a by-election. Swearing in order may be used in determining the longest serving member of a House, known as the Father or Mother of the House."@en ;
 	rdfs:domain phm:SeatIncumbency ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
