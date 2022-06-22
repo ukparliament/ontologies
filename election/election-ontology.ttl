@@ -11,8 +11,15 @@
     dcterms:title "Election ontology"@en ;
     dcterms:created "2016-10-06"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing incumbencies resulting from general elections and by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election process, rather than the process by which an election has been conducted: election returns by the “first past the post” system and those which follow other methods are included. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard."@en ;
-	foaf:depiction  <https://ukparliament.github.io/ontologies/election/election.svg> .
+    dcterms:description "A model describing incumbencies resulting from general elections, by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election regardless of the process by which that election has been conducted, and covers election returns by the 'first past the post' system and those which follow other methods. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard."@en ;
+	foaf:depiction  <https://ukparliament.github.io/ontologies/election/election.svg> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Oli Hawkins"; foaf:homepage <https://olihawkins.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Sym Roe"; foaf:homepage <http://symroe.co.uk/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Anya Somerville" ].
 	
 
 
@@ -25,12 +32,12 @@ pe:Election rdf:type owl:Class ;
 	
 pe:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:label "Parliament period"@en ;
-	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods: during a parliament period Parliament is either in session or prorogued. Until 2015, the dissolution proclamation named the date for Parliament to reassemble. After 2015, a Parliament begins on the date named in the proclamation issued after a dissolution. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. Until 2015 the date of dissolution was indeterminate and fixed by proclamation. After 2015 the date of dissolution is determined by the Fixed Term Parliament Act 2011, or is named in a proclamation after Parliament has voted for an early general election. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
+	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:GeneralElection rdf:type owl:Class ;
 	rdfs:label "General election"@en ;
-	rdfs:comment "A set of elections to seats in the House of Commons held in all UK constituencies concurrently."@en ;
+	rdfs:comment "A set of elections to seats in the House of Commons held in all constituencies concurrently."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Population rdf:type owl:Class ;
@@ -43,6 +50,9 @@ pe:Electorate rdf:type owl:Class ;
 	rdfs:label "Electorate"@en ;
 	rdfs:comment "A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+	
+				# edited to here
 	
 pe:Constituency rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
