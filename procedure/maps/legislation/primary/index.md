@@ -30,9 +30,9 @@ Dot file: [dot](public-bills/components/commons/ten-minute-rule/ten-minute-rule.
 
 Dot file: [dot](public-bills/components/commons/first-reading/first-reading.dot) / [svg](public-bills/components/commons/first-reading/first-reading.svg)
 
-##### [Fast track second reading](public-bills/components/commons/fast-track-second-reading/fast-track-second-reading.pdf)
+##### [Fast tracking](public-bills/components/commons/fast-tracking/fast-tracking.pdf)
 
-Dot file: [dot](public-bills/components/commons/fast-track-second-reading/fast-track-second-reading.dot) / [svg](public-bills/components/commons/fast-track-second-reading/fast-track-second-reading.svg)
+Dot file: [dot](public-bills/components/commons/fast-tracking/fast-tracking.dot) / [svg](public-bills/components/commons/fast-tracking/fast-tracking.svg)
 
 ##### [Examination and Standing Orders Committee](public-bills/components/commons/examination-and-standing-orders-committee/examination-and-standing-orders-committee.pdf)
 
