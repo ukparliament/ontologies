@@ -137,14 +137,15 @@
 			<td>17</td>
 		</tr>
 		<tr>
-			<td>LROCPD</td>
-			<td>LRO Commons procedure determination</td>
-			<td></td>
-		</tr>
-		<tr>
 			<td>SCSI</td>
 			<td>Select Committee on Statutory Instruments</td>
 			<td>4</td>
+		</tr>
+
+		<tr>
+			<td>LROCPD</td>
+			<td>LRO Commons procedure determination</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>LROLPD</td>
@@ -164,6 +165,16 @@
 		<tr>
 			<td>LROSUP</td>
 			<td>LRO super affirmative</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>LROCCC</td>
+			<td>LRO Commons committee consideration</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>LROLCC</td>
+			<td>LRO Lords committee consideration</td>
 			<td></td>
 		</tr>
 	</tbody>
