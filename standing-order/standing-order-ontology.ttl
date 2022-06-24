@@ -12,7 +12,7 @@
     dcterms:created "2020-12-07"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
     dcterms:description "A model describing standing orders for both Houses of Parliament, establishing persistent identification of orders and fragments of orders."@en;
-	foaf:depiction <https://ukparliament.github.io/ontologies/standing-order/standing-order.png> ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/standing-order/standing-order.svg> ;
 	foaf:maker
 		[ foaf:name "David Beamish" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -129,13 +129,6 @@ pso:orderedBy rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an order to the House by which it was ordered."@en ;
 	rdfs:domain pso:Order ;
 	rdfs:range pso:House ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
-pso:orderCoversBusinessExtent rdf:type owl:ObjectProperty ;
-	rdfs:label "Order covers business extent"@en ;
-	rdfs:comment "Relates an order to the business extent it covers."@en ;
-	rdfs:domain pso:Order ;
-	rdfs:range pso:BusinessExtent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:versionOfOrder rdf:type owl:ObjectProperty ;
