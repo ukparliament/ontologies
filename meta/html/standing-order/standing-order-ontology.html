@@ -87,6 +87,15 @@
 
 
             </article>
+            <article class="class" id="Legislature">
+                <h3>
+                    Class <a href="#Legislature">Legislature</a>
+                </h3>
+
+                <p>A legislature, being either the UK Parliament or a devolved legislature.</p>
+
+
+            </article>
             <article class="class" id="Order">
                 <h3>
                     Class <a href="#Order">Order</a>
@@ -101,7 +110,7 @@
                     Class <a href="#OrderVersion">Order version</a>
                 </h3>
 
-                <p>A version of an order contained by a revision set.</p>
+                <p>A version of an order contained by a section of a revision set.</p>
 
 
             </article>
@@ -119,7 +128,16 @@
                     Class <a href="#RevisionSet">Revision set</a>
                 </h3>
 
-                <p>A set of orders as they exist at the time of revision of one or more orders.</p>
+                <p>A set of sections, containing orders, as they exist at the time of revision of one or more orders.</p>
+
+
+            </article>
+            <article class="class" id="RevisionSetSection">
+                <h3>
+                    Class <a href="#RevisionSetSection">Revision set section</a>
+                </h3>
+
+                <p>A grouping of orders in a revision set.</p>
 
 
             </article>
@@ -167,6 +185,20 @@
 
             </article>
 
+            <article class="objectproperty" id="inLegislature">
+
+                <h3>
+                    Object property <a href="#inLegislature">In legislature</a>
+            </h3>
+
+
+
+                <p>Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral.</p>
+
+                <p><a href="#House">House</a> &mdash; In legislature &mdash; <a href="#Legislature">Legislature</a></p>
+
+            </article>
+
             <article class="objectproperty" id="issuedBy">
 
                 <h3>
@@ -189,23 +221,37 @@
 
 
 
-                <p>Relates an order version to the revision set it is contained by.</p>
+                <p>Relates an order version to the section of a revision set it is contained by.</p>
 
-                <p><a href="#OrderVersion">OrderVersion</a> &mdash; Order version contained by &mdash; <a href="#RevisionSet">RevisionSet</a></p>
+                <p><a href="#OrderVersion">OrderVersion</a> &mdash; Order version contained by &mdash; <a href="#RevisionSetSection">RevisionSetSection</a></p>
 
             </article>
 
-            <article class="objectproperty" id="orderedBy">
+            <article class="objectproperty" id="orderedByHouse">
 
                 <h3>
-                    Object property <a href="#orderedBy">Ordered by</a>
+                    Object property <a href="#orderedByHouse">Ordered by House</a>
             </h3>
 
 
 
                 <p>Relates an order to the House by which it was ordered.</p>
 
-                <p><a href="#Order">Order</a> &mdash; Ordered by &mdash; <a href="#House">House</a></p>
+                <p><a href="#Order">Order</a> &mdash; Ordered by House &mdash; <a href="#House">House</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="orderedByLegislature">
+
+                <h3>
+                    Object property <a href="#orderedByLegislature">Ordered by legislature</a>
+            </h3>
+
+
+
+                <p>Relates an order to the legislature by which it was ordered.</p>
+
+                <p><a href="#Order">Order</a> &mdash; Ordered by legislature &mdash; <a href="#Legislature">Legislature</a></p>
 
             </article>
 
@@ -234,6 +280,20 @@
                 <p>Relates a revision set to the business extent which that set covers.</p>
 
                 <p><a href="#RevisionSet">RevisionSet</a> &mdash; Revision set covers business extent &mdash; <a href="#BusinessExtent">BusinessExtent</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="revisionSetSectionContainedBy">
+
+                <h3>
+                    Object property <a href="#revisionSetSectionContainedBy">Revision set section contained by</a>
+            </h3>
+
+
+
+                <p>Relates a revision set section to the revision set it is contained by.</p>
+
+                <p><a href="#RevisionSetSection">RevisionSetSection</a> &mdash; Revision set section contained by &mdash; <a href="#RevisionSet">RevisionSet</a></p>
 
             </article>
 
@@ -348,6 +408,18 @@
 
             </article>
 
+            <article class="dataproperty" id="orderTitle">
+                <h3>
+                    Data property <a href="#orderTitle">Order title</a>
+            </h3>
+
+                <p>Relates an order version to its title.</p>
+
+                <p>OrderVersion &mdash; Order title &mdash; langString</p>
+
+
+            </article>
+
             <article class="dataproperty" id="orderVersionOrdinality">
                 <h3>
                     Data property <a href="#orderVersionOrdinality">Order version ordinality</a>
@@ -380,6 +452,18 @@
                 <p>Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day.</p>
 
                 <p>RevisionSet &mdash; Revision set ordinality &mdash; integer</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="sectionTitle">
+                <h3>
+                    Data property <a href="#sectionTitle">Section title</a>
+            </h3>
+
+                <p>Relates a revision set section to its title.</p>
+
+                <p>RevisionSetSection &mdash; Section title &mdash; langString</p>
 
 
             </article>
