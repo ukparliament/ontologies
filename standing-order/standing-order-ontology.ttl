@@ -26,6 +26,11 @@
 
 #######  Classes #####
 
+pso:Legislature rdf:type owl:Class ;
+	rdfs:label "Legislature"@en ;
+	rdfs:comment "A legislature, being either the UK Parliament or a devolved legislature."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
 pso:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
@@ -38,12 +43,17 @@ pso:BusinessExtent rdf:type owl:Class ;
 	
 pso:RevisionSet rdf:type owl:Class ;
 	rdfs:label "Revision set"@en ;
-	rdfs:comment "A set of orders as they exist at the time of revision of one or more orders."@en ;
+	rdfs:comment "A set of sections, containing orders, as they exist at the time of revision of one or more orders."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:RevisionSetSection rdf:type owl:Class ;
+	rdfs:label "Revision set section"@en ;
+	rdfs:comment "A grouping of orders in a revision set."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:OrderVersion rdf:type owl:Class ;
 	rdfs:label "Order version"@en ;
-	rdfs:comment "A version of an order contained by a revision set."@en ;
+	rdfs:comment "A version of an order contained by a section of a revision set."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:Order rdf:type owl:Class ;
@@ -75,6 +85,13 @@ pso:SuspensionPeriod rdf:type owl:Class ;
 
 #######  Object properties ##### 
 
+pso:inLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "In legislature"@en ;
+	rdfs:comment "Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral."@en ;
+	rdfs:domain pso:House ;
+	rdfs:range pso:Legislature ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+
 pso:issuedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Issued by"@en ;
 	rdfs:comment "Relates a revision set to the House it is issued by."@en ;
@@ -89,11 +106,18 @@ pso:revisionSetCoversBusinessExtent rdf:type owl:ObjectProperty ;
 	rdfs:range pso:BusinessExtent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
+pso:revisionSetSectionContainedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Revision set section contained by"@en ;
+	rdfs:comment "Relates a revision set section to the revision set it is contained by."@en ;
+	rdfs:domain pso:RevisionSetSection ;
+	rdfs:range pso:RevisionSet ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
 pso:orderVersionContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Order version contained by"@en ;
-	rdfs:comment "Relates an order version to the revision set it is contained by."@en ;
+	rdfs:comment "Relates an order version to the section of a revision set it is contained by."@en ;
 	rdfs:domain pso:OrderVersion ;
-	rdfs:range pso:RevisionSet ;
+	rdfs:range pso:RevisionSetSection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:fragmentVersionContainedBy rdf:type owl:ObjectProperty ;
@@ -124,11 +148,18 @@ pso:revisionTo rdf:type owl:ObjectProperty ;
 	rdfs:range pso:FragmentVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
-pso:orderedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Ordered by"@en ;
+pso:orderedByHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Ordered by House"@en ;
 	rdfs:comment "Relates an order to the House by which it was ordered."@en ;
 	rdfs:domain pso:Order ;
 	rdfs:range pso:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:orderedByLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "Ordered by legislature"@en ;
+	rdfs:comment "Relates an order to the legislature by which it was ordered."@en ;
+	rdfs:domain pso:Order ;
+	rdfs:range pso:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:versionOfOrder rdf:type owl:ObjectProperty ;
@@ -175,6 +206,20 @@ pso:revisionSetOrdinality rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:sectionTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "Section title"@en ;
+	rdfs:comment "Relates a revision set section to its title."@en ;
+	rdfs:domain pso:RevisionSetSection ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:orderTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "Order title"@en ;
+	rdfs:comment "Relates an order version to its title."@en ;
+	rdfs:domain pso:OrderVersion ;
+	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:text rdf:type owl:DatatypeProperty ;
