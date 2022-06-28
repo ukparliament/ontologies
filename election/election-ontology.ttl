@@ -51,44 +51,41 @@ pe:Electorate rdf:type owl:Class ;
 	rdfs:comment "A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-	
-				# edited to here
-	
-pe:Constituency rdf:type owl:Class ;
+pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
-	rdfs:label "Constituency"@en ;
-	rdfs:comment "A group of people represented by a person who has won an election, including people other than those eligible to vote at the time of election."@en ;
+	rdfs:label "Constituency group"@en ;
+	rdfs:comment "A group of people represented by an election winner."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:ConstituencyArea rdf:type owl:Class ;
 	rdfs:label "Constituency area"@en ;
-	rdfs:comment "A geographic bounding of a constituency group."@en ;
+	rdfs:comment "An area within which members of a constituency group reside. Constituency areas bounding constituency groups represented in the House of Commons are set out by the Boundary Commissions and approved by Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:Candidacy rdf:type owl:Class ;
 	rdfs:label "Candidacy"@en ;
-	rdfs:comment "A person standing as a candidate in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
+	rdfs:comment "A candidacy of a person standing in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:CandidacyResult rdf:type owl:Class ;
 	rdfs:label "Candidacy result"@en ;
-	rdfs:comment "The result of a person’s candidacy in an election."@en ;
+	rdfs:comment "The result of a candidacy in an election, for example: Phillip Hammond's win as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:WinningCandidacyResult rdf:type owl:Class ;
 	rdfs:subClassOf pe:CandidacyResult ;
 	rdfs:label "Winning candidacy result"@en ;
-	rdfs:comment "Identifies a winning candidacy in an election."@en ;
+	rdfs:comment "Used to record the winning candidacy in an election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Certification rdf:type owl:Class ;
 	rdfs:label "Certification"@en ;
-	rdfs:comment "A certification of a candidate by a political party, registered by the Electoral Commission, to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party."@en ;
+	rdfs:comment "A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:PoliticalParty rdf:type owl:Class ;
 	rdfs:label "Political party"@en ;
-	rdfs:comment "A group registered with the Electoral Commission as a political party."@en ;
+	rdfs:comment "An organisation registered with the Electoral Commission as a political party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:Person rdf:type owl:Class ;
@@ -102,36 +99,36 @@ pe:Person rdf:type owl:Class ;
 
 pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
 	rdfs:label "Into Parliament period"@en ;
-	rdfs:comment "Relates an election to the Parliament period within which any resulting incumbency will take place."@en ;
+	rdfs:comment "Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:ParliamentPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:isPartOfGeneralElection rdf:type owl:ObjectProperty ;
 	rdfs:label "Is part of general election"@en ;
-	rdfs:comment "Relates a constituency election to the general election of which it forms part."@en ;
+	rdfs:comment "Relates a constituency election held as part of a general election to that general election."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:GeneralElection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:eligibleToVoteIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Eligible to vote in"@en ;
-	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote - to that election."@en ;
+	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote in that election - to that election."@en ;
 	rdfs:domain pe:Electorate ;
 	rdfs:range pe:Election ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasElectorate rdf:type owl:ObjectProperty ;
 	rdfs:label "Has electorate"@en ;
-	rdfs:comment "Relates a constituency to a group of people who at the time of an election are eligible to vote in the election for that group."@en ;
-	rdfs:domain pe:Constituency ;
+	rdfs:comment "Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not."@en ;
+	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:Electorate  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:boundedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Bounded by"@en ;
-	rdfs:comment "Relates a constituency to its geographic area."@en ;
-	rdfs:domain pe:Constituency ;
+	rdfs:comment "Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group."@en ;
+	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:ConstituencyArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
@@ -141,6 +138,8 @@ pe:inElection rdf:type owl:ObjectProperty ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:Election  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+																# edited to here
 	
 pe:hasCertification rdf:type owl:ObjectProperty ;
 	rdfs:label "Has certification"@en ;
@@ -156,10 +155,17 @@ pe:adjunctTo rdf:type owl:ObjectProperty ;
 	rdfs:range pe:Certification  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:toParty rdf:type owl:ObjectProperty ;
-	rdfs:label "To party"@en ;
+pe:toPoliticalParty rdf:type owl:ObjectProperty ;
+	rdfs:label "To political party"@en ;
 	rdfs:comment "Relates a certification of a candidate to the party issuing the certification."@en ;
 	rdfs:domain pe:Certification ;
+	rdfs:range pe:PoliticalParty  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:hasPoliticalParty rdf:type owl:ObjectProperty ;
+	rdfs:label "Has political party"@en ;
+	rdfs:comment "Relates a candidacy to a political party."@en ;
+	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:PoliticalParty  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
