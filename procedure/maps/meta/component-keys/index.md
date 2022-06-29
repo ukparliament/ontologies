@@ -141,7 +141,6 @@
 			<td>Select Committee on Statutory Instruments</td>
 			<td>4</td>
 		</tr>
-
 		<tr>
 			<td>LROCPD</td>
 			<td>LRO Commons procedure determination</td>
