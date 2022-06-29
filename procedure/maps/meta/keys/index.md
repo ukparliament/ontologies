@@ -1,4 +1,21 @@
-# Component keys
+# Keys
+
+## Legislation maps
+
+<table>
+	<thead>
+		<tr>
+			<td>Key</td>
+			<td>Map</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>???</td>
+			<td>Public bills</td>
+		</tr>
+	</tbody>
+</table>
 
 ## Legislation common components
 
