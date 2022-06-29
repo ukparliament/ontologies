@@ -1,6 +1,27 @@
 # Keys
 
-## Legislation maps
+## Legislation
+
+### Legislation common components
+
+<table>
+	<thead>
+		<tr>
+			<td>Key</td>
+			<td>Map</td>
+			<td>Depth</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>EVEL</td>
+			<td>EVEL certification</td>
+			<td>10</td>
+		</tr>
+	</tbody>
+</table>
+
+### Primary legislation
 
 <table>
 	<thead>
@@ -17,124 +38,102 @@
 	</tbody>
 </table>
 
-## Legislation common components
+#### Primary legislation components
 
 <table>
 	<thead>
 		<tr>
 			<td>Key</td>
-			<td>Component</td>
+			<td>Map</td>
 			<td>Depth</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>EVEL</td>
-			<td>EVEL certification</td>
-			<td>10</td>
-		</tr>
-	</tbody>
-</table>
-
-## Primary legislation components
-
-<table>
-	<thead>
-		<tr>
-			<td>Key</td>
-			<td>Component</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>QC</td>
 			<td>Queen's consent</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>PWC</td>
 			<td>Prince of Wales's consent</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>GSSC</td>
 			<td>Great Steward of Scotland's consent</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>SP</td>
 			<td>Legislative consent motion Scottish Parliament</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>CTM</td>
 			<td>Commons ten minute rule bill</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>CFR</td>
 			<td>Commons first reading</td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
 
-## Secondary legislation
+### Secondary legislation
 
 <table>
 	<thead>
 		<tr>
 			<td>Key</td>
-			<td>Component</td>
-			<td>Depth</td>
+			<td>Map</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>DN</td>
 			<td>Draft negative</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>MN</td>
 			<td>Made negative</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>DA</td>
 			<td>Draft affirmative</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>MA</td>
 			<td>Made affirmative</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>PRO</td>
 			<td>Proposed draft remedial order</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>DARO</td>
 			<td>Draft affirmative remedial order</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>MARO</td>
 			<td>Made affirmative remedial order</td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>LRO</td>
 			<td>Legislative reform order</td>
-			<td></td>
 		</tr>
 	</tbody>
 </table>
 
-## Secondary legislation components
+#### Secondary legislation components
 
 <table>
 	<thead>
 		<tr>
 			<td>Key</td>
-			<td>Component</td>
-			<td>Depth</td>
+			<td>Map</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -196,35 +195,60 @@
 	</tbody>
 </table>
 
-## CRaG treaty components
+## Treaties
+
+### CRaG treaty
 
 <table>
 	<thead>
 		<tr>
 			<td>Key</td>
-			<td>Component</td>
+			<td>Map</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>???</td>
+			<td>CRaG treaty/td>
+		</tr>
+	</tbody>
+</table>
+
+#### CRaG treaty components
+
+<table>
+	<thead>
+		<tr>
+			<td>Key</td>
+			<td>Map</td>
+			<td>Depth</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>TREATY EFRA</td>
 			<td>Environment, Food and Rural Affairs Committee</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>TREATY IAC+EAC</td>
 			<td>International Agreements Committee and European Affairs Committee</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>TREATY ITC</td>
 			<td>International Trade Committee</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>TREATY JCHR</td>
 			<td>Joint Committee on Human Rights</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>TREATY lords</td>
 			<td>Lord's Committees</td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
