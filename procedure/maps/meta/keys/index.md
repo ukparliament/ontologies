@@ -70,6 +70,11 @@
 			<td></td>
 		</tr>
 		<tr>
+			<td>SC</td>
+			<td>Legislative consent motion Senedd Cymru</td>
+			<td></td>
+		</tr>
+		<tr>
 			<td>CTM</td>
 			<td>Commons ten minute rule bill</td>
 			<td></td>
@@ -208,7 +213,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td></td>
+			<td>CT</td>
 			<td>CRaG treaty</td>
 		</tr>
 	</tbody>
