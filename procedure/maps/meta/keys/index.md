@@ -209,7 +209,7 @@
 	<tbody>
 		<tr>
 			<td>???</td>
-			<td>CRaG treaty/td>
+			<td>CRaG treaty</td>
 		</tr>
 	</tbody>
 </table>
