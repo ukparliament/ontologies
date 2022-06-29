@@ -213,7 +213,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td></td>
+			<td>CT</td>
 			<td>CRaG treaty</td>
 		</tr>
 	</tbody>
