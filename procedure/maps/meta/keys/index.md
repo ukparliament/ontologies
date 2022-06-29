@@ -208,7 +208,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>???</td>
+			<td></td>
 			<td>CRaG treaty</td>
 		</tr>
 	</tbody>
