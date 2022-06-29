@@ -32,7 +32,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>???</td>
+			<td>PB</td>
 			<td>Public bills</td>
 		</tr>
 	</tbody>
