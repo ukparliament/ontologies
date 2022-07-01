@@ -91,6 +91,8 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/7a32083c">Commons consideration of treaties</a>  
 
+* <a href="https://api.parliament.uk/s/0e4df82a">International Trade Committee oral evidence sessions</a>
+
 ### Lords committees
 
 * <a href="https://api.parliament.uk/s/f1f0e4ea">Lords consideration of treaties</a>
