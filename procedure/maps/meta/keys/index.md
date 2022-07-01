@@ -75,6 +75,11 @@
 			<td></td>
 		</tr>
 		<tr>
+			<td>NIA</td>
+			<td>Legislative consent motion Northern Ireland Assembly</td>
+			<td></td>
+		</tr>
+		<tr>
 			<td>CTM</td>
 			<td>Commons ten minute rule bill</td>
 			<td></td>
