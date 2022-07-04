@@ -167,6 +167,15 @@
 
 
             </article>
+            <article class="class" id="PopulationSize">
+                <h3>
+                    Class <a href="#PopulationSize">Population size</a>
+                </h3>
+
+                <p>The recording of the size of a population on a date.</p>
+
+
+            </article>
             <article class="class" id="WinningCandidacyResult">
                 <h3>
                     Class <a href="#WinningCandidacyResult">Winning candidacy result</a>
@@ -195,7 +204,7 @@
 
 
 
-                <p>Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
+                <p>Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
 
                 <p><a href="#Certification">Certification</a> &mdash; Adjunct to &mdash; <a href="#Certification">Certification</a></p>
 
@@ -209,7 +218,7 @@
 
 
 
-                <p>Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group.</p>
+                <p>Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group.</p>
 
                 <p><a href="#ConstituencyGroup">ConstituencyGroup</a> &mdash; Bounded by &mdash; <a href="#ConstituencyArea">ConstituencyArea</a></p>
 
@@ -223,7 +232,7 @@
 
 
 
-                <p>Relates a group of people - who at the time of an election are eligible to vote in that election - to that election.</p>
+                <p>Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections.</p>
 
                 <p><a href="#Electorate">Electorate</a> &mdash; Eligible to vote in &mdash; <a href="#Election">Election</a></p>
 
@@ -237,7 +246,7 @@
 
 
 
-                <p>Relates a candidacy to the result of that candidacy in an election.</p>
+                <p>Relates a candidacy in an election to the result of that candidacy. A candidacy has one candidacy result. A candidacy result is for one candidacy.</p>
 
                 <p><a href="#Candidacy">Candidacy</a> &mdash; Has candidacy result &mdash; <a href="#CandidacyResult">CandidacyResult</a></p>
 
@@ -251,7 +260,7 @@
 
 
 
-                <p>Relates a candidacy to a person being a candidate.</p>
+                <p>Relates a candidacy to a person being a candidate. A candidacy is of one person.</p>
 
                 <p><a href="#Candidacy">Candidacy</a> &mdash; Has candidate &mdash; <a href="#Person">Person</a></p>
 
@@ -265,7 +274,7 @@
 
 
 
-                <p>Relates a candidacy to a certification of the candidate by a political party.</p>
+                <p>Relates a candidacy to a certification by a political party of that candidacy. A candidacy has one or more certifications, or none. A certification is of one candidacy.</p>
 
                 <p><a href="#Candidacy">Candidacy</a> &mdash; Has certification &mdash; <a href="#Certification">Certification</a></p>
 
@@ -279,7 +288,7 @@
 
 
 
-                <p>Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not.</p>
+                <p>Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group.</p>
 
                 <p><a href="#ConstituencyGroup">ConstituencyGroup</a> &mdash; Has electorate &mdash; <a href="#Electorate">Electorate</a></p>
 
@@ -307,7 +316,7 @@
 
 
 
-                <p>Relates a candidacy to the election that candidacy is in.</p>
+                <p>Relates a candidacy to the election that candidacy is in. A candidacy is in one election.</p>
 
                 <p><a href="#Candidacy">Candidacy</a> &mdash; In election &mdash; <a href="#Election">Election</a></p>
 
@@ -321,7 +330,7 @@
 
 
 
-                <p>Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place.</p>
+                <p>Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place. An election to the House of Commons is related to one Parliament period.</p>
 
                 <p><a href="#Election">Election</a> &mdash; Into Parliament period &mdash; <a href="#ParliamentPeriod">ParliamentPeriod</a></p>
 
@@ -335,23 +344,37 @@
 
 
 
-                <p>Relates a constituency election held as part of a general election to that general election.</p>
+                <p>Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none.</p>
 
                 <p><a href="#Election">Election</a> &mdash; Is part of general election &mdash; <a href="#GeneralElection">GeneralElection</a></p>
 
             </article>
 
-            <article class="objectproperty" id="toPoliticalParty">
+            <article class="objectproperty" id="issuedBy">
 
                 <h3>
-                    Object property <a href="#toPoliticalParty">To political party</a>
+                    Object property <a href="#issuedBy">Issued by</a>
             </h3>
 
 
 
-                <p>Relates a certification of a candidate to the party issuing the certification.</p>
+                <p>Relates a certification of a candidacy to the party issuing that certification. A certification is issued by one political party.</p>
 
-                <p><a href="#Certification">Certification</a> &mdash; To political party &mdash; <a href="#PoliticalParty">PoliticalParty</a></p>
+                <p><a href="#Certification">Certification</a> &mdash; Issued by &mdash; <a href="#PoliticalParty">PoliticalParty</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="ofPopulation">
+
+                <h3>
+                    Object property <a href="#ofPopulation">Of population</a>
+            </h3>
+
+
+
+                <p>Relates a population size as recorded on a date to that population. A population size is related to one population.</p>
+
+                <p><a href="#PopulationSize">PopulationSize</a> &mdash; Of population &mdash; <a href="#Population">Population</a></p>
 
             </article>
         </section>
@@ -408,18 +431,6 @@
 
             </article>
 
-            <article class="dataproperty" id="populationSize">
-                <h3>
-                    Data property <a href="#populationSize">Population size</a>
-            </h3>
-
-                <p>The size of a population, for example: an electorate or constituency group.</p>
-
-                <p>Population &mdash; Population size &mdash; integer</p>
-
-
-            </article>
-
             <article class="dataproperty" id="recordedDate">
                 <h3>
                     Data property <a href="#recordedDate">Recorded date</a>
@@ -427,7 +438,19 @@
 
                 <p>The date on which a population size was recorded.</p>
 
-                <p>Population &mdash; Recorded date &mdash; date</p>
+                <p>PopulationSize &mdash; Recorded date &mdash; date</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="recordedSize">
+                <h3>
+                    Data property <a href="#recordedSize">Recorded size</a>
+            </h3>
+
+                <p>The size of a population, for example: an electorate or constituency group.</p>
+
+                <p>PopulationSize &mdash; Recorded size &mdash; integer</p>
 
 
             </article>
@@ -437,7 +460,7 @@
                     Data property <a href="#resultPosition">Result position</a>
             </h3>
 
-                <p>The relative position of the result of the candidacy in an election.</p>
+                <p>The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2.</p>
 
                 <p>CandidacyResult &mdash; Result position &mdash; integer</p>
 
@@ -485,7 +508,7 @@
                     Data property <a href="#voteShare">Vote share</a>
             </h3>
 
-                <p>The share of a vote won in an election by a candidate as a fraction of the accepted votes.</p>
+                <p>The share of a vote won in an election by a candidate as a fraction of the total accepted votes.</p>
 
                 <p>CandidacyResult &mdash; Vote share &mdash; decimal</p>
 
@@ -603,7 +626,7 @@
 
         
 
-        <p>Generated 2022-07-02 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/election/election-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/election/election-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/election/election-ontology.ttl">api.parliament.uk/webvowl</a></p>
+        <p>Generated 2022-07-04 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/election/election-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/election/election-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/election/election-ontology.ttl">api.parliament.uk/webvowl</a></p>
 
         <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
 
