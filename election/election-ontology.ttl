@@ -44,6 +44,11 @@ pe:Population rdf:type owl:Class ;
 	rdfs:label "Population"@en ;
 	rdfs:comment "A set of people."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:PopulationSize rdf:type owl:Class ;
+	rdfs:label "Population size"@en ;
+	rdfs:comment "The recording of the size of a population on a date."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:Electorate rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
@@ -99,65 +104,63 @@ pe:Person rdf:type owl:Class ;
 
 pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
 	rdfs:label "Into Parliament period"@en ;
-	rdfs:comment "Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place."@en ;
+	rdfs:comment "Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place. An election to the House of Commons is related to one Parliament period."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:ParliamentPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:isPartOfGeneralElection rdf:type owl:ObjectProperty ;
 	rdfs:label "Is part of general election"@en ;
-	rdfs:comment "Relates a constituency election held as part of a general election to that general election."@en ;
+	rdfs:comment "Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:GeneralElection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:eligibleToVoteIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Eligible to vote in"@en ;
-	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote in that election - to that election."@en ;
+	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections."@en ;
 	rdfs:domain pe:Electorate ;
 	rdfs:range pe:Election ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasElectorate rdf:type owl:ObjectProperty ;
 	rdfs:label "Has electorate"@en ;
-	rdfs:comment "Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not."@en ;
+	rdfs:comment "Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group."@en ;
 	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:Electorate  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:boundedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Bounded by"@en ;
-	rdfs:comment "Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group."@en ;
+	rdfs:comment "Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group."@en ;
 	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:ConstituencyArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:inElection rdf:type owl:ObjectProperty ;
 	rdfs:label "In election"@en ;
-	rdfs:comment "Relates a candidacy to the election that candidacy is in."@en ;
+	rdfs:comment "Relates a candidacy to the election that candidacy is in. A candidacy is in one election."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:Election  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-																# edited to here
-	
 pe:hasCertification rdf:type owl:ObjectProperty ;
 	rdfs:label "Has certification"@en ;
-	rdfs:comment "Relates a candidacy to a certification of the candidate by a political party."@en ;
+	rdfs:comment "Relates a candidacy to a certification by a political party of that candidacy. A candidacy has one or more certifications, or none. A certification is of one candidacy."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:Certification  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:adjunctTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Adjunct to"@en ;
-	rdfs:comment "Relates an adjunct certification to a certification, for example: relating a Co-operative Party certification to a Labour Party certification."@en ;
+	rdfs:comment "Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a Labour Party certification."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:Certification  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:toPoliticalParty rdf:type owl:ObjectProperty ;
-	rdfs:label "To political party"@en ;
-	rdfs:comment "Relates a certification of a candidate to the party issuing the certification."@en ;
+pe:issuedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Issued by"@en ;
+	rdfs:comment "Relates a certification of a candidacy to the party issuing that certification. A certification is issued by one political party."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:PoliticalParty  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -171,17 +174,26 @@ pe:hasPoliticalParty rdf:type owl:ObjectProperty ;
 	
 pe:hasCandidate rdf:type owl:ObjectProperty ;
 	rdfs:label "Has candidate"@en ;
-	rdfs:comment "Relates a candidacy to a person being a candidate."@en ;
+	rdfs:comment "Relates a candidacy to a person being a candidate. A candidacy is of one person."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:Person  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
 	rdfs:label "Has candidacy result"@en ;
-	rdfs:comment "Relates a candidacy to the result of that candidacy in an election."@en ;
+	rdfs:comment "Relates a candidacy in an election to the result of that candidacy. A candidacy has one candidacy result. A candidacy result is for one candidacy."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range pe:CandidacyResult  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:ofPopulation rdf:type owl:ObjectProperty ;
+	rdfs:label "Of population"@en ;
+	rdfs:comment "Relates a population size as recorded on a date to that population. A population size is related to one population."@en ;
+	rdfs:domain pe:PopulationSize ;
+	rdfs:range pe:Population  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+	
 
 #######  Data properties #####
 
@@ -201,29 +213,31 @@ pe:voteCount rdf:type owl:DatatypeProperty ;
 
 pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote share"@en ;
-	rdfs:comment "The share of a vote won in an election by a candidate as a fraction of the accepted votes."@en ;
+	rdfs:comment "The share of a vote won in an election by a candidate as a fraction of the total accepted votes."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "Result position"@en ;
-	rdfs:comment "The relative position of the result of the candidacy in an election."@en ;
+	rdfs:comment "The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:populationSize rdf:type owl:DatatypeProperty ;
-	rdfs:label "Population size"@en ;
+											# edited to here
+	
+pe:recordedSize rdf:type owl:DatatypeProperty ;
+	rdfs:label "Recorded size"@en ;
 	rdfs:comment "The size of a population, for example: an electorate or constituency group."@en ;
-	rdfs:domain pe:Population ;
+	rdfs:domain pe:PopulationSize ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:recordedDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded date"@en ;
 	rdfs:comment "The date on which a population size was recorded."@en ;
-	rdfs:domain pe:Population ;
+	rdfs:domain pe:PopulationSize ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
 	
