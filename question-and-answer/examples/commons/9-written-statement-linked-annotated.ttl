@@ -74,10 +74,10 @@
 	pqa:askedBy <http://id.parliament.uk/seat-incumbency-1> ;
 
 	# ... with an answer expected as ...
-	pqa:answerExpectedAs <http://id.parliament.uk/answer-expected-as-1> ;
+	pqa:AnswerExpectedWithForm <http://id.parliament.uk/answer-expected-as-1> ;
 
 	# ... with a second answer expected as ...
-	pqa:answerExpectedAs <http://id.parliament.uk/answer-expected-as-2> ;
+	pqa:AnswerExpectedWithForm <http://id.parliament.uk/answer-expected-as-2> ;
 
 	# ... with an allocation to an answering body ...
 	pqa:allocation <http://id.parliament.uk/allocation-1> ;
@@ -92,7 +92,7 @@
 	pqa:isDateForAnswerNamed "false"^^xsd:boolean ;
 
 	# ... with heading text (added by IDMS) ...
-	pqa:heading "This is heading text added by IDMS"@en ;
+	pqa:headingText "This is heading text added by IDMS"@en ;
 
 	# ... with question text ...
 	pqa:questionText "This is a question?"@en ;
@@ -167,7 +167,7 @@
 	
 
 # There is an answer expected as ...
-<http://id.parliament.uk/answer-expected-as-1> rdf:type pqa:AnswerExpectedAs ;
+<http://id.parliament.uk/answer-expected-as-1> rdf:type pqa:AnswerExpectedWithForm ;
 
 	# ... with a start time ...
 	putil:startAt "2021-10-18T10:42:02"^^xsd:datetime ;
@@ -176,18 +176,27 @@
 	putil:endAt "2021-10-22T10:42:02"^^xsd:datetime ;
 	
 	# ... with a form of answer.
-	pqa:answerExpectedInForm <http://id.parliament.uk/form-of-answer-1> .
+	pqa:hasFormOfAnswer <http://id.parliament.uk/form-of-answer-1> .
 	
 	
 
 # There is a second answer expected as ...
-<http://id.parliament.uk/answer-expected-as-2> rdf:type pqa:AnswerExpectedAs ;
+<http://id.parliament.uk/answer-expected-as-2> rdf:type pqa:AnswerExpectedWithForm ;
 
 	# ... with a start time ...
 	putil:startAt "2021-10-22T10:42:02"^^xsd:datetime ;
 
 	# ... with a form of answer.
-	pqa:answerExpectedInForm <http://id.parliament.uk/form-of-answer-2> .
+	pqa:hasFormOfAnswer <http://id.parliament.uk/form-of-answer-2> .
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
