@@ -70,6 +70,12 @@ Note that any treaty query can be amended to include lead organisation filter. T
   
 A list of lead organisations can be found [here](https://api.parliament.uk/query/resource?uri=https%3A%2F%2Fid.parliament.uk%2Fschema%2FGovernmentOrganisation). 
 
+## Section 22 of the Constitutional Reform and Governance Act 2010 invoked
+
+[Section 22 of the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/section/22) allows a Minister to certify that a treaty can be ratified although it has not met the requirements of [section 20](https://www.legislation.gov.uk/ukpga/2010/25/section/20) of that Act. It applies in exceptional circumstances. These are not defined. The only restriction on a Minister using the power under section 22 is if either House has already resolved that the treaty should not be ratified. 
+
+* [Section 22 of the Constitutional Reform and Governance Act 2010 invoked](https://api.parliament.uk/s/25128ba0)
+
 
 ## Committee consideration
 
