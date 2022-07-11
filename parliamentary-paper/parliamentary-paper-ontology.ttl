@@ -1,0 +1,132 @@
+@prefix ppaper: <http://parliament.uk/ontologies/parliamentary-paper/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/parliamentary-paper/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Parliamentary paper ontology"@en ;
+    dcterms:created "2022-07-11"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "A model describing"@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/parliamentary-paper/parliamentary-paper.svg> ;
+	foaf:maker
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+#######  Classes ##### 	
+
+ppaper:ParliamentaryPaperWork rdf:type owl:Class ;
+	rdfs:label "Parliamentary paper work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:ParliamentaryPaper rdf:type owl:Class ;
+	rdfs:label "Parliamentary paper"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:PaperBundle rdf:type owl:Class ;
+	rdfs:label "Paper bundle"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:PaperType rdf:type owl:Class ;
+	rdfs:label "Paper type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:PaperSeriesItem rdf:type owl:Class ;
+	rdfs:label "Paper series item"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:PaperSeries rdf:type owl:Class ;
+	rdfs:label "Paper series"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+				
+
+#######  Object properties ##### 
+	
+ppaper:expressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range ppaper:ParliamentaryPaperWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:formsPartOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Forms part of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range ppaper:PaperBundle ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:hasType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range ppaper:PaperType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:paperTypeParent rdf:type owl:ObjectProperty ;
+	rdfs:label "Paper type parent"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:PaperType ;
+	rdfs:range ppaper:PaperType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:positionsParliamentaryPaper rdf:type owl:ObjectProperty ;
+	rdfs:label "Positions parliamentary paper"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:PaperSeriesItem ;
+	rdfs:range ppaper:ParliamentaryPaper ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:inSeries rdf:type owl:ObjectProperty ;
+	rdfs:label "In series"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:PaperSeriesItem ;
+	rdfs:range ppaper:PaperSeries ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:paperSeriesParent rdf:type owl:ObjectProperty ;
+	rdfs:label "Paper series parent"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:PaperSeries ;
+	rdfs:range ppaper:PaperSeries ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:paperSeriesFollows rdf:type owl:ObjectProperty ;
+	rdfs:label "Paper series follows"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:PaperSeries ;
+	rdfs:range ppaper:PaperSeries ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+ppaper:belongsTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Belongs to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppaper:PaperSeries ;
+	rdfs:range ppaper:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+
+	
+	
+#######  Data properties ##### 
+
+
