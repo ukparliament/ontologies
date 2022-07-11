@@ -225,11 +225,9 @@ pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-											# edited to here
-	
 pe:recordedSize rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded size"@en ;
-	rdfs:comment "The size of a population, for example: an electorate or constituency group."@en ;
+	rdfs:comment "The size of a population, for example: the size of an electorate or of a constituency group."@en ;
 	rdfs:domain pe:PopulationSize ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -239,39 +237,39 @@ pe:recordedDate rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The date on which a population size was recorded."@en ;
 	rdfs:domain pe:PopulationSize ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:partyGained rdf:type owl:DatatypeProperty ;
 	rdfs:label "Party gained"@en ;
-	rdfs:comment "Whether the party certification of the winning candidate at an election differs from the party certification of the winning candidate at the preceding election."@en ;
+	rdfs:comment "Used to record whether the party of the winning candidate at an election differs from the party of the winning candidate at the preceding election."@en ;
 	rdfs:domain pe:WinningCandidacyResult ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:totalVotesCast rdf:type owl:DatatypeProperty ;
 	rdfs:label "Total votes cast"@en ;
-	rdfs:comment "The total number of votes cast across all candidacies in an election, including spoiled ballots. Turnout is defined by the House of Commons Library as the total number of votes cast and not spoiled, divided by the size of the electorate. This definition conforms to the generally accepted academic usage. Turnout is generally defined by Returning Officers as the total number of votes cast divided by the size of the electorate."@en ;
+	rdfs:comment "The total number of votes cast across all candidacies in an election, including spoiled ballots."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 		
 pe:ballotsSpoiled rdf:type owl:DatatypeProperty ;
 	rdfs:label "Ballots spoiled"@en ;
-	rdfs:comment "The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or void for uncertainty."@en ;
+	rdfs:comment "The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or where a mark does not sufficiently identify the vote. The number of spoiled ballots may be included in a calculation of turnout. Turnout as calculated by the House of Commons Library - and generally in academic usage - is the total number of votes cast and not spoiled, divided by the size of the electorate. Turnout as calculated by Returning Officers is the total number of votes cast, divided by the size of the electorate."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:round rdf:type owl:DatatypeProperty ;
 	rdfs:label "Round"@en ;
-	rdfs:comment "The number of the round in an election having more than one round of voting."@en ;
+	rdfs:comment "The ordinal position of the round in an election having more than one round of voting, for example: 1st or 2nd, recorded as 1 or 2."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:declarationTime rdf:type owl:DatatypeProperty ;
 	rdfs:label "Declaration time"@en ;
-	rdfs:comment "The date and time at which results were declared for an election, for example: the declaration of the results in a constituency election, by the Returning Officer."@en ;
+	rdfs:comment "The date and time at which results were declared for an election, for example: the date and time of the declaration of the results in a constituency election, by the Returning Officer."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
