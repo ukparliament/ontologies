@@ -25,37 +25,37 @@
 
 ppaper:ParliamentaryPaperWork rdf:type owl:Class ;
 	rdfs:label "Parliamentary paper work"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A parliamentary paper made available to Parliament as realised in an expression made available to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:ParliamentaryPaper rdf:type owl:Class ;
 	rdfs:label "Parliamentary paper"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The expression of a parliamentary paper work as made available to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:PaperBundle rdf:type owl:Class ;
 	rdfs:label "Paper bundle"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A bundle of related parliamentary papers, for example: a bundle containing a statutory instrument paper and its related explanatory memorandum."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:PaperType rdf:type owl:Class ;
 	rdfs:label "Paper type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The type of a paper, for example: a bill, a statutory instrument, a petition, a written statement or a set of annual accounts."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:PaperSeriesItem rdf:type owl:Class ;
 	rdfs:label "Paper series item"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A parliamentary paper as it exists as part of a paper series. A parliamentary paper forming part of a series may result in the paper being 'numbered' as part of that series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:PaperSeries rdf:type owl:Class ;
 	rdfs:label "Paper series"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A series of parliamentary papers, for example: the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 				
@@ -64,63 +64,63 @@ ppaper:Session rdf:type owl:Class ;
 	
 ppaper:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Expression of"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a parliamentary paper to the work the paper is an expression of. A parliamentary paper is an expression of one work. A parliamentary paper work may be expressed by one or more parliamentary papers."@en ;
 	rdfs:domain ppaper:ParliamentaryPaper ;
 	rdfs:range ppaper:ParliamentaryPaperWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Forms part of"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a parliamentary paper to the paper bundle it forms part of. A parliamentary paper may belong to one or more paper bundles, or none."@en ;
 	rdfs:domain ppaper:ParliamentaryPaper ;
 	rdfs:range ppaper:PaperBundle ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:hasType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a parliamentary paper to its type. A parliamentary paper may have one or more types."@en ;
 	rdfs:domain ppaper:ParliamentaryPaper ;
 	rdfs:range ppaper:PaperType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:paperTypeParent rdf:type owl:ObjectProperty ;
 	rdfs:label "Paper type parent"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a paper type to its parent paper type. A paper type may have one or more parent paper types, or none.  A paper type may have one or more child paper types, or none."@en ;
 	rdfs:domain ppaper:PaperType ;
 	rdfs:range ppaper:PaperType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:positionsParliamentaryPaper rdf:type owl:ObjectProperty ;
 	rdfs:label "Positions parliamentary paper"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates the existence of a parliamentary paper in a series to that parliamentary paper. A paper series item refers to one parliamentary paper."@en ;
 	rdfs:domain ppaper:PaperSeriesItem ;
 	rdfs:range ppaper:ParliamentaryPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates the existence of a parliamentary paper in a series to the series it forms part of. A paper series item forms part of one paper series."@en ;
 	rdfs:domain ppaper:PaperSeriesItem ;
 	rdfs:range ppaper:PaperSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:paperSeriesParent rdf:type owl:ObjectProperty ;
 	rdfs:label "Paper series parent"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none. For example: the Treaty Series of in force treaties forms part of the overarching series grouping all treaties."@en ;
 	rdfs:domain ppaper:PaperSeries ;
 	rdfs:range ppaper:PaperSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:paperSeriesFollows rdf:type owl:ObjectProperty ;
 	rdfs:label "Paper series follows"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a paper series to its predecessor series. A paper series may follow one series, or none."@en ;
 	rdfs:domain ppaper:PaperSeries ;
 	rdfs:range ppaper:PaperSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:belongsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Belongs to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a paper series to the session that series belongs to. A paper series may belong to one session, or none."@en ;
 	rdfs:domain ppaper:PaperSeries ;
 	rdfs:range ppaper:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
@@ -128,5 +128,19 @@ ppaper:belongsTo rdf:type owl:ObjectProperty ;
 	
 	
 #######  Data properties ##### 
+
+ppaper:paperSeriesPrefix rdf:type owl:DatatypeProperty ;
+	rdfs:label "Paper series prefix"@en ;
+	rdfs:comment "Relates a paper series to the prefix forming part of the 'number' of a parliamentary paper being part of that series."@en ;
+	rdfs:domain ppaper:PaperSeries ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:confersPrivilege rdf:type owl:DatatypeProperty ;
+	rdfs:label "Confers privilege"@en ;
+	rdfs:comment "Used to record if membership of a series confers parliamentary privilige."@en ;
+	rdfs:domain ppaper:PaperSeries ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 
