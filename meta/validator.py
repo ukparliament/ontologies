@@ -10,8 +10,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 # from pyshacl import validate
 
-
-
 ttlpath = "../meta/example-rdf/question-and-answer/commons/full-flow/1-question-tabled.ttl"
 
 ttlfile = open(ttlpath, "r")
@@ -34,5 +32,9 @@ for namespace in g.namespaces():
 	if namespace[1].startswith("http://parliament.uk/ontologies/"):
 		g = rdflib.Graph()
 		g.parse(namespace_uri_ref_to_local_path(namespace[1]))
-		for s, p, o in g.triples((None, None, None)):
-			print(p)
+		for s in g.subjects():
+			try:
+				print(namespace[0] + ":" + s.split("/")[5])
+			except:
+				print("MMMMMMMMMMMMMMM")
+				
