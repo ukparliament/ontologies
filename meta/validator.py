@@ -1,40 +1,32 @@
-import rdflib
-# import csv
-import os
+import re
+import glob
 
-from datetime import datetime
-from pathlib import Path
-# from jinja2 import Environment, FileSystemLoader, select_autoescape
-# from rdflib.namespace import RDF, FOAF, OWL, RDFS, DCTERMS
-# from markupsafe import Markup
-from urllib.parse import urlparse
-# from pyshacl import validate
+# only search in ontologies!
+turtles = glob.glob('../**/*.ttl', recursive=True)
 
 ttlpath = "../meta/example-rdf/question-and-answer/commons/full-flow/1-question-tabled.ttl"
 
-ttlfile = open(ttlpath, "r")
-g = rdflib.Graph()
-# g.parse("https://raw.githubusercontent.com/ukparliament/ontologies/master/question-and-answer/question-and-answer-ontology.ttl")
+def file_to_colons(thisfile):
+	colonlist = []
+	with open(thisfile,'r') as data_file:
+		for line in data_file:
+			words = line.split()
+			for word in words:
+				mymatch = re.match("(\w+):(\w+)",word)
+				if mymatch:
+					if mymatch.groups()[0] not in ["rdf", "foaf", "owl", "dcterms", "rdfs", "xsd", "skos"]:
+						colonlist.append(':'.join(mymatch.groups()))
+	return colonlist
 
-g.parse(ttlfile)
-# for s, p, o in g:
-#     if not (s, p, o) in g:
-#         raise Exception("Iterator / Container Protocols are Broken!!")
-# 
-# for s, p, o in g.triples((None, None, None)):
-#     print(p)
+allcolons = []
 
-def namespace_uri_ref_to_local_path(namespace_uri_ref):
-	topic = namespace_uri_ref.split("/")[4]
-	return f"../{topic}/{topic}-ontology.ttl"
+for turtle in turtles:
+	if "ontology" not in turtle:
+		allcolons.append(file_to_colons(turtle))
+	
+flat_list = [element for sublist in allcolons for element in sublist]
+	
+print(sorted(list(set(flat_list))))
+			
 
-for namespace in g.namespaces():
-	if namespace[1].startswith("http://parliament.uk/ontologies/"):
-		g = rdflib.Graph()
-		g.parse(namespace_uri_ref_to_local_path(namespace[1]))
-		for s in g.subjects():
-			try:
-				print(namespace[0] + ":" + s.split("/")[5])
-			except:
-				print("MMMMMMMMMMMMMMM")
 				
