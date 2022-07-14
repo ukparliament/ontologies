@@ -21,12 +21,22 @@ def file_to_colons(thisfile):
 allcolons = []
 
 for turtle in turtles:
-	if "ontology" not in turtle:
+	if "ontology" in turtle:
 		allcolons.append(file_to_colons(turtle))
 	
 flat_list = [element for sublist in allcolons for element in sublist]
 	
-print(sorted(list(set(flat_list))))
+sorted_flat_list = sorted(list(set(flat_list)))
+
+print(sorted_flat_list)
+
+for colon in file_to_colons(ttlpath):
+	print(colon)
+	if colon in sorted_flat_list:
+		print("found", colon)
+	else:
+		print("not found", colon)
+	
 			
 
 				
