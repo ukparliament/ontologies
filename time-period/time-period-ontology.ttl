@@ -111,13 +111,17 @@ pt:House rdf:type owl:Class ;
 pt:ParliamentarySittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Parliamentary sitting day"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A sitting day in a House is a day during which that House considers business. Sitting days are determined by each House separately. Parliament considers that a sitting day may continue beyond midnight to include more than one calendar day: such a sitting day is called by the date of the calendar day on which it begins. Except in the case of the European Union (Withdrawal) Act 2018, Sch. 7 para. 17(11), which uses the above definition, legislation assumes one calendar day to be one sitting day."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:ParliamentarySittingDayType rdf:type owl:Class ;
 	rdfs:label "Parliamentary sitting day type"@en ;
-	rdfs:comment "COMBINED COMMENT FROM OLD CLASSES: A sitting day in a House is a day during which that House considers business, with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the Monarch as a component part of Parliament. Sitting days are determined by each House separately. Parliament considers that a sitting day may continue beyond midnight to include more than one calendar day: such a sitting day is called by the date of the calendar day on which it begins. Except in the case of the European Union (Withdrawal) Act 2018, Sch. 7 para. 17(11), which uses the above definition, legislation assumes one calendar day to be one sitting day. ///// A hybrid sitting day in a House is a day during which that House considers business, with a quorum of Members, including both those present in the Chamber and those attending remotely, and in the presence of the Mace. Hybrid sitting days are determined by each House separately. Parliament considers that a hybrid sitting day may continue beyond midnight to include more than one calendar day: such a hybrid sitting day is called by the date of the calendar day on which it begins. //// A virtual sitting day in a House is a day during which that House considers business with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions are put to the House when not sitting virtually."@en ;
+	rdfs:comment "COMBINED COMMENT FROM OLD CLASSES: A sitting day in a House is a day during which that House considers business, with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the Monarch as a component part of Parliament.  //// A virtual sitting day in a House is a day during which that House considers business with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions are put to the House when not sitting virtually."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+# Drop comment on hybrid sitting days? We don't make this distinction in egg timer.
+
+# A hybrid sitting day in a House is a day during which that House considers business, with a quorum of Members, including both those present in the Chamber and those attending remotely, and in the presence of the Mace. Hybrid sitting days are determined by each House separately. Parliament considers that a hybrid sitting day may continue beyond midnight to include more than one calendar day: such a hybrid sitting day is called by the date of the calendar day on which it begins.
 
 
 
