@@ -106,9 +106,9 @@ When a proposed draft remedial order is laid before Parliament it can occasional
 
 All proposed draft remedial orders and remedial orders will be considered by the Joint Committee on Human Rights (JCHR). For proposed draft remedial orders the Committee considers whether the procedure is appropriate, the content is appropriate or if primary legislation is more appropriate. For the remedial orders the Committee considers whether the House(s) should approve the order. The following queries break down committee consideration:
 
-* [All paper types](https://api.parliament.uk/s/069471b1)
+* [All paper types](https://api.parliament.uk/s/9ee277f9)
 
-* [Proposed draft remedial orders](https://api.parliament.uk/s/6a0b022a)
+* [Proposed draft remedial orders](https://api.parliament.uk/s/c537ad44)
 
 * [Affirmative remedial orders](https://api.parliament.uk/s/008bdd20)
 
