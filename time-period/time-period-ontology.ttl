@@ -89,17 +89,17 @@ pt:ProrogationPeriod rdf:type owl:Class ;
 	rdfs:label "Prorogation period"@en ;
 	rdfs:comment "The time period between a prorogation and either dissolution or the start of the subsequent session. A prorogation period is within a Parliament period. Parliamentary business does not take place during a prorogation period. A prorogation period is the same across both Houses. A proclamation to prorogue Parliament is made under a prerogative power of the Crown."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-
-pt:Recess rdf:type owl:Class ;
-	rdfs:subClassOf pt:TemporalThing ;
-	rdfs:label "Recess"@en ;
-	rdfs:comment "A 'periodic adjournment' during a session, when one or both Houses have adjourned to a day other than the next expected sitting day. A periodic adjournment ends with prorogation, dissolution or a new term."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:AdjournmentDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Adjournment day"@en ;
-	rdfs:comment "A day on which a House is adjourned, for example: a 'non-sitting Friday', a day on a weekend, a Bank Holiday."@en ;
+	rdfs:comment "A day on which a House is adjourned, for example: a 'non-sitting Friday', a day on a weekend, a Bank Holiday. Adjournment days are determined by each House separately."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
+pt:Recess rdf:type owl:Class ;
+	rdfs:subClassOf pt:TemporalThing ;
+	rdfs:label "Recess"@en ;
+	rdfs:comment "A grouping of adjournment days in a House, given a name."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:House rdf:type owl:Class ;
@@ -111,17 +111,13 @@ pt:House rdf:type owl:Class ;
 pt:ParliamentarySittingDay rdf:type owl:Class ;
 	rdfs:subClassOf pt:TemporalThing ;
 	rdfs:label "Parliamentary sitting day"@en ;
-	rdfs:comment "A sitting day in a House is a day during which that House considers business. Sitting days are determined by each House separately. Parliament considers that a sitting day may continue beyond midnight to include more than one calendar day: such a sitting day is called by the date of the calendar day on which it begins. Except in the case of the European Union (Withdrawal) Act 2018, Sch. 7 para. 17(11), which uses the above definition, legislation assumes one calendar day to be one sitting day."@en ;
+	rdfs:comment "A day during which a House considers business. Sitting days are determined by each House separately. A sitting day can continue beyond midnight to include more than one calendar day. A sitting day is called by the date of the calendar day on which the sitting day begins. In legislation, one sitting day is considered as one calendar day, except in the case of the European Union (Withdrawal) Act 2018, Schedule 7 paragraph 17(11), which follows parliamentary practice."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:ParliamentarySittingDayType rdf:type owl:Class ;
 	rdfs:label "Parliamentary sitting day type"@en ;
-	rdfs:comment "COMBINED COMMENT FROM OLD CLASSES: A sitting day in a House is a day during which that House considers business, with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the Monarch as a component part of Parliament.  //// A virtual sitting day in a House is a day during which that House considers business with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions are put to the House when not sitting virtually."@en ;
+	rdfs:comment "A parliamentary sitting day has a type of sitting day, or virtual sitting day. A sitting day in a House is a day with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the authority of the Monarch, as a component part of Parliament. A virtual sitting day in a House is a day with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions cannot be put to the House when sitting virtually."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-# Drop comment on hybrid sitting days? We don't make this distinction in egg timer.
-
-# A hybrid sitting day in a House is a day during which that House considers business, with a quorum of Members, including both those present in the Chamber and those attending remotely, and in the presence of the Mace. Hybrid sitting days are determined by each House separately. Parliament considers that a hybrid sitting day may continue beyond midnight to include more than one calendar day: such a hybrid sitting day is called by the date of the calendar day on which it begins.
 
 
 
@@ -204,9 +200,9 @@ pt:hasParliamentarySittingDayType rdf:type owl:ObjectProperty ;
 	rdfs:range pt:ParliamentarySittingDayType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-pt:groupedInto rdf:type owl:ObjectProperty ;
-	rdfs:label "Grouped into"@en ;
-	rdfs:comment "Relates an adjournment day to the recess of which it forms part."@en ;
+pt:groupedAs rdf:type owl:ObjectProperty ;
+	rdfs:label "Grouped as"@en ;
+	rdfs:comment "Relates an adjournment day to the recess into which it is grouped."@en ;
 	rdfs:domain pt:AdjournmentDay ;
 	rdfs:range pt:Recess ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
@@ -217,28 +213,21 @@ pt:groupedInto rdf:type owl:ObjectProperty ;
 
 pt:isTableOfficeTablingDay rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is Table Office tabling day"@en ;
-	rdfs:comment "MUNGED: Used to record if an adjournment day is a Table Office tabling day. A day other than a sitting day on which a Member of a House may give notice of a question, motion or amendment to a motion to the Table Office of that House."@en ;
+	rdfs:comment "Used to record if a day is a Table Office tabling day, being an adjournment day on which a Member of a House may give notice of a question, motion or amendment to a motion to the Table Office of that House."@en ;
 	rdfs:domain pt:AdjournmentDay ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 pt:isBillOfficeTablingDay rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is Bill Office tabling day"@en ;
-	rdfs:comment "MUNGED: Used to record if an adjournment day is a Bill Office tabling day. A day other than a sitting day on which a Member of a House may give notice of an amendment, new clause or new schedule to a Bill to the Public Bill Office of that House."@en ;
+	rdfs:comment "Used to record if a day is a Bill Office tabling day, being an adjournment day on which a Member of a House may give notice of an amendment, new clause or new schedule to a Bill."@en ;
 	rdfs:domain pt:AdjournmentDay ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 pt:isPrintingDay rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is printing day"@en ;
-	rdfs:comment "MUNGED: Used to record if an adjournment day is a printing day. In the House of Commons, a printing day is the day on which the Table Office publishes notices of questions, motions and amendments to motions received since the most recent sitting day. A printing day falls on the same day as the final weekday of a recess other than a bank holiday."@en ;
-	rdfs:domain pt:AdjournmentDay ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-	
-pt:isDraftLayingDay rdf:type owl:DatatypeProperty ;
-	rdfs:label "Is draft laying day"@en ;
-	rdfs:comment "Used to record if an adjournment day is a day on which draft instruments may be laid."@en ;
+	rdfs:comment "Used to record if a day is a printing day, being a day in the House of Commons on which notices of questions, motions and amendments to motions received since the most recent sitting day are published. A printing day is the final weekday of a recess, unless that day is a bank holiday."@en ;
 	rdfs:domain pt:AdjournmentDay ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
