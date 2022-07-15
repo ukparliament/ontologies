@@ -35,7 +35,7 @@
     <main>
         <h1 id="title">Parliamentary paper ontology</h1>
 
-        <p id="description">A model describing parliamentary papers, their types and their presence in bundles and series.</p>
+        <p id="description">A model describing parliamentary papers, their types and their presence in bundles and in series.</p>
 
         <nav>  
             <a href="#classes">Classes</a>
@@ -56,7 +56,7 @@
                     Class <a href="#PaperBundle">Paper bundle</a>
                 </h3>
 
-                <p>A bundle of related parliamentary papers, for example: a bundle containing a statutory instrument paper and its related explanatory memorandum.</p>
+                <p>A group of related parliamentary papers, called a bundle, for example: a bundle containing a statutory instrument paper and a related explanatory memorandum.</p>
 
 
             </article>
@@ -74,7 +74,7 @@
                     Class <a href="#PaperSeriesItem">Paper series item</a>
                 </h3>
 
-                <p>A parliamentary paper as it exists as part of a paper series. A parliamentary paper forming part of a series may result in the paper being &#39;numbered&#39; as part of that series.</p>
+                <p>A parliamentary paper, as it exists as part of a paper series. A parliamentary paper forming part of a series has a number within that series.</p>
 
 
             </article>
@@ -83,7 +83,7 @@
                     Class <a href="#PaperType">Paper type</a>
                 </h3>
 
-                <p>The type of a paper, for example: a bill, a statutory instrument, a petition, a written statement or a set of annual accounts.</p>
+                <p>The type of a paper, for example: bill, statutory instrument, petition, written statement or statement of annual accounts.</p>
 
 
             </article>
@@ -92,7 +92,7 @@
                     Class <a href="#ParliamentaryPaper">Parliamentary paper</a>
                 </h3>
 
-                <p>The expression of a parliamentary paper work as made available to a House.</p>
+                <p>A parliamentary paper made available to a House.</p>
 
 
             </article>
@@ -101,7 +101,7 @@
                     Class <a href="#ParliamentaryPaperWork">Parliamentary paper work</a>
                 </h3>
 
-                <p>A parliamentary paper made available to Parliament as realised in an expression made available to a House.</p>
+                <p>A parliamentary paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
 
 
             </article>
@@ -120,6 +120,20 @@
         <section id="objectproperties">
             <h2>Object properties</h2>
 
+
+            <article class="objectproperty" id="asSeriesitem">
+
+                <h3>
+                    Object property <a href="#asSeriesitem">As series item</a>
+            </h3>
+
+
+
+                <p>Relates a parliamentary paper to the existence of that paper in a series. A paper series item refers to one parliamentary paper. A parliamentary paper may exist as an item in one or more series, or none.</p>
+
+                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; As series item &mdash; <a href="#PaperSeriesItem">PaperSeriesItem</a></p>
+
+            </article>
 
             <article class="objectproperty" id="belongsTo">
 
@@ -143,7 +157,7 @@
 
 
 
-                <p>Relates a parliamentary paper to the work the paper is an expression of. A parliamentary paper is an expression of one work. A parliamentary paper work may be expressed by one or more parliamentary papers.</p>
+                <p>Relates a parliamentary paper to the work that paper is an expression of. A parliamentary paper is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers.</p>
 
                 <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; Expression of &mdash; <a href="#ParliamentaryPaperWork">ParliamentaryPaperWork</a></p>
 
@@ -157,7 +171,7 @@
 
 
 
-                <p>Relates a parliamentary paper to the paper bundle it forms part of. A parliamentary paper may belong to one or more paper bundles, or none.</p>
+                <p>Relates a parliamentary paper to the paper bundle it forms part of. A parliamentary paper may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle.</p>
 
                 <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; Forms part of &mdash; <a href="#PaperBundle">PaperBundle</a></p>
 
@@ -171,7 +185,7 @@
 
 
 
-                <p>Relates a parliamentary paper to its type. A parliamentary paper may have one or more types.</p>
+                <p>Relates a parliamentary paper to the type of that paper. A parliamentary paper may have one or more types.</p>
 
                 <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; Has type &mdash; <a href="#PaperType">PaperType</a></p>
 
@@ -213,7 +227,7 @@
 
 
 
-                <p>Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none. For example: the Treaty Series of in force treaties forms part of the overarching series grouping all treaties.</p>
+                <p>Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none. For example: the Treaty Series of in force treaties forms part of the paper series of Command papers.</p>
 
                 <p><a href="#PaperSeries">PaperSeries</a> &mdash; Paper series parent &mdash; <a href="#PaperSeries">PaperSeries</a></p>
 
@@ -227,23 +241,9 @@
 
 
 
-                <p>Relates a paper type to its parent paper type. A paper type may have one or more parent paper types, or none.  A paper type may have one or more child paper types, or none.</p>
+                <p>Relates one paper type to another in a parent-child relationship. A paper type may have one or more parent paper types, or none. A paper type may have one or more child paper types, or none.</p>
 
                 <p><a href="#PaperType">PaperType</a> &mdash; Paper type parent &mdash; <a href="#PaperType">PaperType</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="positionsParliamentaryPaper">
-
-                <h3>
-                    Object property <a href="#positionsParliamentaryPaper">Positions parliamentary paper</a>
-            </h3>
-
-
-
-                <p>Relates the existence of a parliamentary paper in a series to that parliamentary paper. A paper series item refers to one parliamentary paper.</p>
-
-                <p><a href="#PaperSeriesItem">PaperSeriesItem</a> &mdash; Positions parliamentary paper &mdash; <a href="#ParliamentaryPaper">ParliamentaryPaper</a></p>
 
             </article>
         </section>
@@ -252,26 +252,26 @@
         <section id="dataproperties">
             <h2>Data properties</h2>
 
-            <article class="dataproperty" id="confersPrivilege">
+            <article class="dataproperty" id="hasPrivilege">
                 <h3>
-                    Data property <a href="#confersPrivilege">Confers privilege</a>
+                    Data property <a href="#hasPrivilege">Has privilege</a>
             </h3>
 
                 <p>Used to record if membership of a series confers parliamentary privilige.</p>
 
-                <p>PaperSeries &mdash; Confers privilege &mdash; boolean</p>
+                <p>PaperSeries &mdash; Has privilege &mdash; boolean</p>
 
 
             </article>
 
-            <article class="dataproperty" id="paperSeriesPrefix">
+            <article class="dataproperty" id="prefix">
                 <h3>
-                    Data property <a href="#paperSeriesPrefix">Paper series prefix</a>
+                    Data property <a href="#prefix">Prefix</a>
             </h3>
 
                 <p>Relates a paper series to the prefix forming part of the &#39;number&#39; of a parliamentary paper being part of that series.</p>
 
-                <p>PaperSeries &mdash; Paper series prefix &mdash; Literal</p>
+                <p>PaperSeries &mdash; Prefix &mdash; Literal</p>
 
 
             </article>
