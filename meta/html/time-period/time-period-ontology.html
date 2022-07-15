@@ -56,7 +56,7 @@
                     Class <a href="#AdjournmentDay">Adjournment day</a>
                 </h3>
 
-                <p>A day on which a House is adjourned, for example: a &#39;non-sitting Friday&#39;, a day on a weekend, a Bank Holiday.</p>
+                <p>A day on which a House is adjourned, for example: a &#39;non-sitting Friday&#39;, a day on a weekend, a Bank Holiday. Adjournment days are determined by each House separately.</p>
 
                 <p>Superclasses
                 &middot; TemporalThing
@@ -134,7 +134,7 @@
                     Class <a href="#ParliamentarySittingDay">Parliamentary sitting day</a>
                 </h3>
 
-                <p>A sitting day in a House is a day during which that House considers business. Sitting days are determined by each House separately. Parliament considers that a sitting day may continue beyond midnight to include more than one calendar day: such a sitting day is called by the date of the calendar day on which it begins. Except in the case of the European Union (Withdrawal) Act 2018, Sch. 7 para. 17(11), which uses the above definition, legislation assumes one calendar day to be one sitting day.</p>
+                <p>A day during which a House considers business. Sitting days are determined by each House separately. A sitting day can continue beyond midnight to include more than one calendar day. A sitting day is called by the date of the calendar day on which the sitting day begins. In legislation, one sitting day is considered as one calendar day, except in the case of the European Union (Withdrawal) Act 2018, Schedule 7 paragraph 17(11), which follows parliamentary practice.</p>
 
                 <p>Superclasses
                 &middot; TemporalThing
@@ -147,7 +147,7 @@
                     Class <a href="#ParliamentarySittingDayType">Parliamentary sitting day type</a>
                 </h3>
 
-                <p>COMBINED COMMENT FROM OLD CLASSES: A sitting day in a House is a day during which that House considers business, with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the Monarch as a component part of Parliament.  //// A virtual sitting day in a House is a day during which that House considers business with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions are put to the House when not sitting virtually.</p>
+                <p>A parliamentary sitting day has a type of sitting day, or virtual sitting day. A sitting day in a House is a day with Members being quorate in the Chamber of that House and in the presence of the Mace. The Mace signifies the authority of the Monarch, as a component part of Parliament. A virtual sitting day in a House is a day with a quorum of Members attending remotely, without the presence of the Mace. During a virtual sitting day, a House can conduct a debate but cannot put a question for decision. Questions cannot be put to the House when sitting virtually.</p>
 
 
             </article>
@@ -208,7 +208,7 @@
                     Class <a href="#Recess">Recess</a>
                 </h3>
 
-                <p>A &#39;periodic adjournment&#39; during a session, when one or both Houses have adjourned to a day other than the next expected sitting day. A periodic adjournment ends with prorogation, dissolution or a new term.</p>
+                <p>A grouping of adjournment days in a House, given a name.</p>
 
                 <p>Superclasses
                 &middot; TemporalThing
@@ -300,17 +300,17 @@
 
             </article>
 
-            <article class="objectproperty" id="groupedInto">
+            <article class="objectproperty" id="groupedAs">
 
                 <h3>
-                    Object property <a href="#groupedInto">Grouped into</a>
+                    Object property <a href="#groupedAs">Grouped as</a>
             </h3>
 
 
 
-                <p>Relates an adjournment day to the recess of which it forms part.</p>
+                <p>Relates an adjournment day to the recess into which it is grouped.</p>
 
-                <p><a href="#AdjournmentDay">AdjournmentDay</a> &mdash; Grouped into &mdash; <a href="#Recess">Recess</a></p>
+                <p><a href="#AdjournmentDay">AdjournmentDay</a> &mdash; Grouped as &mdash; <a href="#Recess">Recess</a></p>
 
             </article>
 
@@ -436,21 +436,9 @@
                     Data property <a href="#isBillOfficeTablingDay">Is Bill Office tabling day</a>
             </h3>
 
-                <p>MUNGED: Used to record if an adjournment day is a Bill Office tabling day. A day other than a sitting day on which a Member of a House may give notice of an amendment, new clause or new schedule to a Bill to the Public Bill Office of that House.</p>
+                <p>Used to record if a day is a Bill Office tabling day, being an adjournment day on which a Member of a House may give notice of an amendment, new clause or new schedule to a Bill.</p>
 
                 <p>AdjournmentDay &mdash; Is Bill Office tabling day &mdash; boolean</p>
-
-
-            </article>
-
-            <article class="dataproperty" id="isDraftLayingDay">
-                <h3>
-                    Data property <a href="#isDraftLayingDay">Is draft laying day</a>
-            </h3>
-
-                <p>Used to record if an adjournment day is a day on which draft instruments may be laid.</p>
-
-                <p>AdjournmentDay &mdash; Is draft laying day &mdash; boolean</p>
 
 
             </article>
@@ -460,7 +448,7 @@
                     Data property <a href="#isPrintingDay">Is printing day</a>
             </h3>
 
-                <p>MUNGED: Used to record if an adjournment day is a printing day. In the House of Commons, a printing day is the day on which the Table Office publishes notices of questions, motions and amendments to motions received since the most recent sitting day. A printing day falls on the same day as the final weekday of a recess other than a bank holiday.</p>
+                <p>Used to record if a day is a printing day, being a day in the House of Commons on which notices of questions, motions and amendments to motions received since the most recent sitting day are published. A printing day is the final weekday of a recess, unless that day is a bank holiday.</p>
 
                 <p>AdjournmentDay &mdash; Is printing day &mdash; boolean</p>
 
@@ -472,7 +460,7 @@
                     Data property <a href="#isTableOfficeTablingDay">Is Table Office tabling day</a>
             </h3>
 
-                <p>MUNGED: Used to record if an adjournment day is a Table Office tabling day. A day other than a sitting day on which a Member of a House may give notice of a question, motion or amendment to a motion to the Table Office of that House.</p>
+                <p>Used to record if a day is a Table Office tabling day, being an adjournment day on which a Member of a House may give notice of a question, motion or amendment to a motion to the Table Office of that House.</p>
 
                 <p>AdjournmentDay &mdash; Is Table Office tabling day &mdash; boolean</p>
 
@@ -529,11 +517,11 @@
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
                 </tr>
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
                 </tr>
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>AdjournmentDay</td>
+                    <td>/<wbr>ontologies/<wbr>time-period/<wbr>Recess</td>
                     <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
                 </tr>
                 <tr>
