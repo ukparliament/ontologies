@@ -1,12 +1,10 @@
 import re
 import glob
+# import rdflib
 
-# only search in ontologies!
 turtles = glob.glob("../**/*.ttl", recursive=True)
 
-ttlpath = (
-    "../meta/example-rdf/question-and-answer/commons/full-flow/1-question-tabled.ttl"
-)
+targets = glob.glob("../meta/example-rdf/**/*.ttl", recursive=True)
 
 
 def file_to_colons(thisfile):
@@ -40,8 +38,7 @@ flat_list = [element for sublist in allcolons for element in sublist]
 
 sorted_flat_list = sorted(list(set(flat_list)))
 
-# print(sorted_flat_list)
-
-for colon in file_to_colons(ttlpath):
-    if colon not in sorted_flat_list:
-        print("not found", colon)
+for target in targets:
+	for colon in file_to_colons(target):
+		if colon not in sorted_flat_list:
+			print(f"{colon} unrecognised namepace in {target}\n")
