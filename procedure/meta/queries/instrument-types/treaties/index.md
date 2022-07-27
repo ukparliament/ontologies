@@ -146,6 +146,12 @@ Treaties can be debated in either House if a motion has been tabled or additiona
 
 * <a href="https://api.parliament.uk/s/f5d302fb">Lords debates</a> 
 
+## Urgent questions on treaties
+
+If an urgent or important matter arises which an MP believes requires an immediate answer from a government minister, they may apply to ask an urgent question. If the Speaker is satisfied that the question is urgent and of public importance it is then granted. The relevant Minister has to come to the Chamber to explain what the government is doing on the issue raised. Treaties can be the subject of an urgent question. There has been one example since treaty data started being tracked in 2017-19.
+
+* <a href="https://api.parliament.uk/s/f30f27d2">Urgent questions on treaties</a>
+
 ## Withdrawn treaties
 
 The following query looks for all treaties withdrawn from the House of Commons and House of Lords:
