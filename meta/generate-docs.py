@@ -72,13 +72,14 @@ for ttlpath in ttlfiles:
         result = g.parse(data=ttlfile.read(), format="turtle")
 
         if (None, RDF.type, OWL.Ontology) in g:
+            
 
             print("Found an ontology: " + str(ttlpath))
 
             classes = []
 
             for s, p, o in g.triples((None, RDF.type, OWL.Class)):
-
+                
                 superclasses = []
 
                 superclassobjects = g.objects(s, RDFS.subClassOf)
@@ -87,7 +88,7 @@ for ttlpath in ttlfiles:
 
                 #             h3id = g.label(s).lower().replace(" ", "-")
                 #         classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
-
+                
                 classes.append(
                     {
                         "label": g.label(s),
