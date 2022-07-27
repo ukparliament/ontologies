@@ -91,7 +91,8 @@ for ttlpath in ttlfiles:
                 
                 classes.append(
                     {
-                        "label": g.label(s),
+#                         "label": g.label(s),
+                        "label": "LABEL PLACEHOLDER",
                         "idString": s.split("/")[-1],
                         "comment": g.value(s, RDFS.comment),
                         "isDefinedBy": g.value(s, RDFS.isDefinedBy),
