@@ -33,7 +33,7 @@ def ttlpath2htmlpath(ttlpath):
 
 
 env = Environment(
-    loader=FileSystemLoader("./meta/templates"),
+    loader=FileSystemLoader("../meta/templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
@@ -186,18 +186,6 @@ for ttlpath in ttlfiles:
             print(" Made dir " + htmldir + str(ttlpath.parent))
         except FileExistsError:
             pass
-
-        # dotpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".dot"
-
-        # dotlines = []
-
-        # for s, p, o in g.triples((None, None, None)):
-        #     dotlines.append(f'"{s}" -> "{o}"[label="{p}"];')
-        # tripleslist = '\n'.join(dotlines)
-
-        # with open(dotpath, "w+") as dotfile:
-        #     print("  Writing " + dotpath)
-        #     dotfile.write("digraph { node [shape=box];" + tripleslist + "}")
 
         csvpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".csv"
 
