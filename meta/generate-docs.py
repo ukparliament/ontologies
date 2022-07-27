@@ -84,6 +84,7 @@ for ttlpath in ttlfiles:
 
             #             h3id = g.label(s).lower().replace(" ", "-")
             # 		  classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
+
             classes.append(
                 {
                     "label": g.label(s),
