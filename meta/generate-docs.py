@@ -116,7 +116,7 @@ for ttlpath in ttlfiles:
             objectproperties = []
 
             for s, p, o in g.triples((None, RDF.type, OWL.ObjectProperty)):
-                h3id = g.label(s).lower().replace(" ", "-")
+#                 h3id = g.label(s).lower().replace(" ", "-")
                 domainstub = g.value(s, RDFS.domain).split("/")[-1]
                 rangestub = g.value(s, RDFS.range).split("/")[-1]
                 superpropertyv = g.value(s, RDFS.subPropertyOf)
