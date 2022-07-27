@@ -105,7 +105,8 @@ for ttlpath in ttlfiles:
             for s, p, o in g.triples((None, RDF.type, OWL.DatatypeProperty)):
                 dataproperties.append(
                     {
-                        "label": g.label(s),
+                        "label": "LABEL PLACEHOLDER",
+#                         "label": g.label(s),
                         "idString": s.split("/")[-1],
                         "comment": g.value(s, RDFS.comment),
                         "domain": g.value(s, RDFS.domain).split("/")[-1],
