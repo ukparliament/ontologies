@@ -84,7 +84,7 @@ for ttlpath in ttlfiles:
 
             #             h3id = g.label(s).lower().replace(" ", "-")
             # 		  classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
-
+            print(s)
             classes.append(
                 {
                     "label": g.label(s),
@@ -188,14 +188,6 @@ for ttlpath in ttlfiles:
         except FileExistsError:
             pass
 
-        csvpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".csv"
-
-        with open(csvpath, "w") as csvfile:
-            print("  Writing " + csvpath)
-            triple_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-            triple_writer.writerow(["Subject", "Predicate", "Object"])
-            for s, p, o in g.triples((None, None, None)):
-                triple_writer.writerow([s, p, o])
 
         htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
 
@@ -207,20 +199,11 @@ for ttlpath in ttlfiles:
             + ".html"
         )
 
-        csv_url = (
-            "https://ukparliament.github.io/ontologies/meta/html/"
-            + str(ttlpath.parent)
-            + "/"
-            + ttlpath.stem
-            + ".csv"
-        )
-
         with open(htmlpath, "w") as htmlfile:
             print("  Writing " + htmlpath)
             htmlfile.write(
                 template.render(
                     relcanonical=relcanonical,
-                    csv_url=csv_url,
                     htmlpath=htmlpath.lstrip("."),
                     title=Markup(title),
                     created=Markup(created),
