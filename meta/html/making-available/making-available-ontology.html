@@ -35,14 +35,14 @@
     <main>
         <h1 id="title">Making available ontology</h1>
 
-        <p id="description">A model describing the means of making material available to a House, for example: by presenting, laying or depositing.</p>
+        <p id="description">A model describing the act of making material available to a House and any subsequent withdrawal.</p>
 
         <nav>  
             <a href="#classes">Classes</a>
             &middot; <a href="#objectproperties">Object properties</a>
  &middot; <a href="#dataproperties">Data properties</a> &middot; <a href="#subclasses">Subclasses</a>            &middot; <a href="#namespaces">Namespaces</a>
 
-            &middot; <a href="https://ukparliament.github.io/ontologies/making-available/making-available.png">Depiction</a>
+            &middot; <a href="https://ukparliament.github.io/ontologies/making-available/making-available.svg">Depiction</a>
 
 
     </nav>
@@ -51,19 +51,6 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class" id="Depositing">
-                <h3>
-                    Class <a href="#Depositing">Depositing</a>
-                </h3>
-
-                <p>The act of depositing materials into the library of a House.</p>
-
-                <p>Superclasses
-                &middot; MakingAvailable
-
-            </p>
-
-            </article>
             <article class="class" id="House">
                 <h3>
                     Class <a href="#House">House</a>
@@ -73,17 +60,22 @@
 
 
             </article>
-            <article class="class" id="Laying">
+            <article class="class" id="Incumbency">
                 <h3>
-                    Class <a href="#Laying">Laying</a>
+                    Class <a href="#Incumbency">Incumbency</a>
                 </h3>
 
-                <p>The act of presenting a paper and supporting documents into either House. Papers may be laid in both Houses on the same day.</p>
+                <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
 
-                <p>Superclasses
-                &middot; MakingAvailable
 
-            </p>
+            </article>
+            <article class="class" id="MadeAvailableThing">
+                <h3>
+                    Class <a href="#MadeAvailableThing">Made available thing</a>
+                </h3>
+
+                <p>A thing made available to a House or to a House by means of its Library.</p>
+
 
             </article>
             <article class="class" id="MakingAvailable">
@@ -91,21 +83,17 @@
                     Class <a href="#MakingAvailable">Making available</a>
                 </h3>
 
-                <p>The act of making materials available to a House or to a House by means of its library.</p>
+                <p>The act of making materials available to a House or to a House by means of its Library.</p>
 
 
             </article>
-            <article class="class" id="Presenting">
+            <article class="class" id="OrganisationAccountableToParliament">
                 <h3>
-                    Class <a href="#Presenting">Presenting</a>
+                    Class <a href="#OrganisationAccountableToParliament">Organisation accountable to Parliament</a>
                 </h3>
 
-                <p>The act of presenting materials to a House.</p>
+                <p>An organisation accountable to Parliament: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers.</p>
 
-                <p>Superclasses
-                &middot; MakingAvailable
-
-            </p>
 
             </article>
             <article class="class" id="Session">
@@ -113,8 +101,30 @@
                     Class <a href="#Session">Session</a>
                 </h3>
 
-                <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. A session typically lasts for one year. Session periods are the same across both Houses.</p>
+                <p>A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
 
+
+            </article>
+            <article class="class" id="Withdrawal">
+                <h3>
+                    Class <a href="#Withdrawal">Withdrawal</a>
+                </h3>
+
+                <p>The act of withdrawing a thing previously made available to a House or to a House by means of its Library.</p>
+
+
+            </article>
+            <article class="class" id="WithdrawnThing">
+                <h3>
+                    Class <a href="#WithdrawnThing">Withdrawn thing</a>
+                </h3>
+
+                <p>A thing having been withdrawn from a House.</p>
+
+                <p>Superclasses
+                &middot; MadeAvailableThing
+
+            </p>
 
             </article>
         </section>
@@ -124,17 +134,87 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="inSession">
+            <article class="objectproperty" id="duringSession">
 
                 <h3>
-                    Object property <a href="#inSession">In session</a>
+                    Object property <a href="#duringSession">During session</a>
             </h3>
 
 
 
                 <p>Relates an act of making materials available to a House, to the session in which they are made available.</p>
 
-                <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; In session &mdash; <a href="#Session">Session</a></p>
+                <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; During session &mdash; <a href="#Session">Session</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="intoSession">
+
+                <h3>
+                    Object property <a href="#intoSession">Into session</a>
+            </h3>
+
+
+
+                <p>Relates an act of making materials available to a House, to the session into which they are made available. Material laid during a prorogation is considered laid into the following session.</p>
+
+                <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; Into session &mdash; <a href="#Session">Session</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="madeAvailableBy">
+
+                <h3>
+                    Object property <a href="#madeAvailableBy">Made available by</a>
+            </h3>
+
+
+
+                <p>Relates an act of making materials available to a House, to incumbency of a person in a position making those materials available.</p>
+
+                <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; Made available by &mdash; <a href="#Incumbency">Incumbency</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="madeAvailableFrom">
+
+                <h3>
+                    Object property <a href="#madeAvailableFrom">Made available from</a>
+            </h3>
+
+
+
+                <p>Relates an act of making materials available to the organisation making those materials available.</p>
+
+                <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; Made available from &mdash; <a href="#OrganisationAccountableToParliament">OrganisationAccountableToParliament</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="makesAvailable">
+
+                <h3>
+                    Object property <a href="#makesAvailable">Makes available</a>
+            </h3>
+
+
+
+                <p>Relates an act of making materials available to the thing made available.</p>
+
+                <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; Makes available &mdash; <a href="#MadeAvailableThing">MadeAvailableThing</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="resultsIn">
+
+                <h3>
+                    Object property <a href="#resultsIn">Results in</a>
+            </h3>
+
+
+
+                <p>Relates an act of withdrawal to the thing having been withdrawn.</p>
+
+                <p><a href="#Withdrawal">Withdrawal</a> &mdash; Results in &mdash; <a href="#WithdrawnThing">WithdrawnThing</a></p>
 
             </article>
 
@@ -149,6 +229,48 @@
                 <p>Relates an act of making materials available to a House, to the House in which they are made available.</p>
 
                 <p><a href="#MakingAvailable">MakingAvailable</a> &mdash; To House &mdash; <a href="#House">House</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="withdrawnByIncumbency">
+
+                <h3>
+                    Object property <a href="#withdrawnByIncumbency">Withdrawn by incumbency</a>
+            </h3>
+
+
+
+                <p>Relates an act of withdrawal to the incumbency of a person in a position performing the withdrawal.</p>
+
+                <p><a href="#Withdrawal">Withdrawal</a> &mdash; Withdrawn by incumbency &mdash; <a href="#Incumbency">Incumbency</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="withdrawnByOrganisation">
+
+                <h3>
+                    Object property <a href="#withdrawnByOrganisation">Withdrawn by organisation</a>
+            </h3>
+
+
+
+                <p>Relates an act of withdrawal to the organisation performing the withdrawal.</p>
+
+                <p><a href="#Withdrawal">Withdrawal</a> &mdash; Withdrawn by organisation &mdash; <a href="#OrganisationAccountableToParliament">OrganisationAccountableToParliament</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="withdraws">
+
+                <h3>
+                    Object property <a href="#withdraws">Withdraws</a>
+            </h3>
+
+
+
+                <p>Relates an act of withdrawal to the made available thing being withdrawn.</p>
+
+                <p><a href="#Withdrawal">Withdrawal</a> &mdash; Withdraws &mdash; <a href="#MadeAvailableThing">MadeAvailableThing</a></p>
 
             </article>
         </section>
@@ -168,6 +290,18 @@
 
 
             </article>
+
+            <article class="dataproperty" id="withdrawnOn">
+                <h3>
+                    Data property <a href="#withdrawnOn">Withdrawn on</a>
+            </h3>
+
+                <p>Relates an act of withdrawal, to the date on which the thing is withdrawn.</p>
+
+                <p>Withdrawal &mdash; Withdrawn on &mdash; date</p>
+
+
+            </article>
         </section>
 
 
@@ -179,16 +313,8 @@
         <h2>Subclasses</h2>
         <table>
                 <tr>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Laying</td>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>MakingAvailable</td>
-                </tr>
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Depositing</td>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>MakingAvailable</td>
-                </tr>
-                <tr>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>Presenting</td>
-                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>MakingAvailable</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>WithdrawnThing</td>
+                    <td>/<wbr>ontologies/<wbr>making-available/<wbr>MadeAvailableThing</td>
                 </tr>
         </table>
         </section>  
@@ -265,8 +391,12 @@
        
         <p id="makers">
             Made by
+            &middot; Jayne Bosworth
             &middot; <a href="https://robert-brook.com/">Robert Brook</a>
             &middot; Jack Dent
+            &middot; Mike Hennessy
+            &middot; Matt Korris
+            &middot; Ned Morrell
             &middot; <a href="http://smethur.st/">Michael Smethurst</a>
             &middot; Anya Somerville
         </p>
@@ -278,7 +408,7 @@
 
         
 
-        <p>Generated 2022-07-26 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/making-available/making-available-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/making-available/making-available-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/making-available/making-available-ontology.ttl">api.parliament.uk/webvowl</a></p>
+        <p>Generated 2022-07-27 from a <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/making-available/making-available-ontology.ttl">Turtle file</a>. Triples in <a href="https://ukparliament.github.io/ontologies/meta/html/making-available/making-available-ontology.csv">CSV</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/making-available/making-available-ontology.ttl">api.parliament.uk/webvowl</a></p>
 
         <p>Material on the <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">Open Parliament Licence v3.0</a>.</p>
 

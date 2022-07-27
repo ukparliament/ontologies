@@ -82,7 +82,7 @@ for ttlpath in ttlfiles:
             for superclassobject in superclassobjects:
                 superclasses.append(superclassobject.split("/")[-1])
 
-            h3id = g.label(s).lower().replace(" ", "-")
+            #             h3id = g.label(s).lower().replace(" ", "-")
             # 		  classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
             classes.append(
                 {
