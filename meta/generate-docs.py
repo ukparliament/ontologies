@@ -128,7 +128,8 @@ for ttlpath in ttlfiles:
                 #       properties.append(f'<article class="property"><h3 id="{h3id}">{g.label(s)}</h3><ul><li>{domainstub} (domain) &rarr; {g.label(s)} (property) &rarr; {rangestub} (range)</li></ul><p>{g.value(s, RDFS.comment)}</p></article>')
                 objectproperties.append(
                     {
-                        "label": g.label(s),
+                        "label": "LABEL PLACEHOLDER",
+#                         "label": g.label(s),
                         "idString": s.split("/")[-1],
                         "domain": domainstub,
                         "range": rangestub,
