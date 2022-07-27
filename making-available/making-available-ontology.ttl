@@ -11,53 +11,87 @@
     dcterms:title "Making available ontology"@en ;
     dcterms:created "2018-12-09"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing the means of making material available to a House, for example: by presenting, laying or depositing."@en;
-	foaf:depiction <https://ukparliament.github.io/ontologies/making-available/making-available.png> ;
+    dcterms:description "A model describing the act of making material available to a House and any subsequent withdrawal."@en;
+	foaf:depiction <https://ukparliament.github.io/ontologies/making-available/making-available.svg> ;
 	foaf:maker
+		[ foaf:name "Jayne Bosworth" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Jack Dent" ],
+		[ foaf:name "Mike Hennessy" ],
+		[ foaf:name "Matt Korris" ],
+		[ foaf:name "Ned Morrell" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
-	    [ foaf:name "Anya Somerville" ].
+		[ foaf:name "Anya Somerville" ].
 
 
 #######  Classes #####
-
-pma:House rdf:type owl:Class ;
-	rdfs:label "House"@en ;
-	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment "The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day given in a subsequent prorogation proclamation. Subsequent sessions within the parliament begin and end on dates given in prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. A session typically lasts for one year. Session periods are the same across both Houses."@en ;
+	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:MakingAvailable rdf:type owl:Class ;
 	rdfs:label "Making available"@en ;
-	rdfs:comment "The act of making materials available to a House or to a House by means of its library."@en ;
+	rdfs:comment "The act of making materials available to a House or to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
-pma:Laying rdf:type owl:Class ;
-	rdfs:subClassOf pma:MakingAvailable ;
-	rdfs:label "Laying"@en ;
-	rdfs:comment "The act of presenting a paper and supporting documents into either House. Papers may be laid in both Houses on the same day."@en ;
+pma:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
-pma:Depositing rdf:type owl:Class ;
-	rdfs:subClassOf pma:MakingAvailable ;
-	rdfs:label "Depositing"@en ;
-	rdfs:comment "The act of depositing materials into the library of a House."@en ;
+pma:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-	
-pma:Presenting rdf:type owl:Class ;
-	rdfs:subClassOf pma:MakingAvailable ;
-	rdfs:label "Presenting"@en ;
-	rdfs:comment "The act of presenting materials to a House."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-	
-	
 
-#######  Object properties ##### 
+pma:OrganisationAccountableToParliament rdf:type owl:Class ;
+	rdfs:label "Organisation accountable to Parliament"@en ;
+	rdfs:comment "An organisation accountable to Parliament: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:MadeAvailableThing rdf:type owl:Class ;
+	rdfs:label "Made available thing"@en ;
+	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+
+pma:Withdrawal rdf:type owl:Class ;
+	rdfs:label "Withdrawal"@en ;
+	rdfs:comment "The act of withdrawing a thing previously made available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:WithdrawnThing rdf:type owl:Class ;
+	rdfs:subClassOf pma:MadeAvailableThing ;
+	rdfs:label "Withdrawn thing"@en ;
+	rdfs:comment "A thing having been withdrawn from a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+	
+	
+	
+#######  Object properties #####
+
+pma:duringSession rdf:type owl:ObjectProperty ;
+	rdfs:label "During session"@en ;
+	rdfs:comment "Relates an act of making materials available to a House, to the session in which they are made available."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:intoSession rdf:type owl:ObjectProperty ;
+	rdfs:label "Into session"@en ;
+	rdfs:comment "Relates an act of making materials available to a House, to the session into which they are made available. Material laid during a prorogation is considered laid into the following session."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:madeAvailableBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Made available by"@en ;
+	rdfs:comment "Relates an act of making materials available to a House, to incumbency of a person in a position making those materials available."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 
 pma:toHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "To House"@en ;
@@ -65,13 +99,50 @@ pma:toHouse rdf:type owl:ObjectProperty ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-	
-pma:inSession rdf:type owl:ObjectProperty ;
-	rdfs:label "In session"@en ;
-	rdfs:comment "Relates an act of making materials available to a House, to the session in which they are made available."@en ;
+
+pma:madeAvailableFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Made available from"@en ;
+	rdfs:comment "Relates an act of making materials available to the organisation making those materials available."@en ;
 	rdfs:domain pma:MakingAvailable ;
-	rdfs:range pma:Session ;
+	rdfs:range pma:OrganisationAccountableToParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:makesAvailable rdf:type owl:ObjectProperty ;
+	rdfs:label "Makes available"@en ;
+	rdfs:comment "Relates an act of making materials available to the thing made available."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:MadeAvailableThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:withdraws rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdraws"@en ;
+	rdfs:comment "Relates an act of withdrawal to the made available thing being withdrawn."@en ;
+	rdfs:domain pma:Withdrawal ;
+	rdfs:range pma:MadeAvailableThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:resultsIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in"@en ;
+	rdfs:comment "Relates an act of withdrawal to the thing having been withdrawn."@en ;
+	rdfs:domain pma:Withdrawal ;
+	rdfs:range pma:WithdrawnThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:withdrawnByIncumbency rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn by incumbency"@en ;
+	rdfs:comment "Relates an act of withdrawal to the incumbency of a person in a position performing the withdrawal."@en ;
+	rdfs:domain pma:Withdrawal ;
+	rdfs:range pma:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+
+pma:withdrawnByOrganisation rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn by organisation"@en ;
+	rdfs:comment "Relates an act of withdrawal to the organisation performing the withdrawal."@en ;
+	rdfs:domain pma:Withdrawal ;
+	rdfs:range pma:OrganisationAccountableToParliament ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+
 				
 
 #######  Data properties ##### 
@@ -80,5 +151,12 @@ pma:madeAvailableOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made available on"@en ;
 	rdfs:comment "Relates an act of making materials available to a House, to the date on which they are made available."@en ;
 	rdfs:domain pma:MakingAvailable ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+
+pma:withdrawnOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Withdrawn on"@en ;
+	rdfs:comment "Relates an act of withdrawal, to the date on which the thing is withdrawn."@en ;
+	rdfs:domain pma:Withdrawal ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
