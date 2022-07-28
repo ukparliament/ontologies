@@ -1,0 +1,58 @@
+import dominate
+from dominate.tags import (
+    h2,
+    h1,
+    h4,
+    style,
+    link,
+    meta,
+    script,
+    p,
+    dl,
+    strong,
+    a,
+    span,
+    sup,
+    tr,
+    td,
+    ul,
+    li,
+    code,
+    table,
+    h3,
+    div,
+    dt,
+    dd,
+)
+
+from pylode import OntDoc
+
+css = """
+body {font-family:sans-serif;padding:1rem;line-height:1.4;margin:1rem 
+auto;max-width:42rem;}
+h1, h2 {font-weight:normal;}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+div.property {border-top:2pt solid lightgray;}
+th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
+"""
+
+class myOntDoc(OntDoc):
+            
+    def _make_head(self, *args, **kwargs):
+        with self.doc.head:
+            meta(name="viewport", content="width=device-width")
+            meta(charset="charset=utf-8")
+            style(css)
+
+
+od = myOntDoc(ontology="../making-available/making-available-ontology.ttl")
+
+# produce HTML
+# html = od.make_html()
+
+# or save HTML to a file
+od.make_html(destination="some-resulting-html-file.html")
