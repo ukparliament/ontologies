@@ -6,7 +6,21 @@ We begin, once again, with apologies. We are well aware that our regular reader 
 
 ## All the right steps, not necessarily in the right order
 
-![Tux, the Linux mascot](/eric-morecambe.gif)
+![Eric Morecambe](/eric-morecambe.gif)
+
+Our regular reader - well, JO Jane at least, it's not like anyone else is paying attention - will be well aware of the issues we've had with step ordering on both the statutory instrument and treaty tracking websites. Whilst Parliament may be very good at reporting what happened on a day, what time those things happened at could not be considered a core strength. Both SI and treaty procedure regularly see a number of procedural steps happening on the same day. But with no timing information available, the website code has no clue what order they happened in and no clue how to order them on for display. With nothing to go on and no clues given, our timeline pages have been - to be quite frank - risible, steps being ordered at random in a fashion that matches neither procedural nor common sense.
+
+
+![Wonky](/wonky.png)
+
+
+In the past we'd tried to fix this problem by taking a mathematical approach and spanning the procedure map tree. But a graph is not a tree, so that didn't work. In recent weeks, we changed tack, stopped treating the problem as some sums and started to treat it as yet more information management. Librarian Jayne and her computational hand maidens, Young Robert and Michael, added a new concept of step depth to our procedure model and procedure editor schema. Our Jianhan added new functionality to the procedure editor application, database and triple store. Jayne added step depths to both maps and data. Jianhan chipped back in with a new SPARQL query to order timelines through a combination of dates and step depths. Colleagues in Software Engineering deployed Jianhan's new query to their Q/A environment. And - following a wee bit of [additional tinkering](https://trello.com/c/NxYe57Nb/113-error-in-orchestrations) - testing revealed the new model, data and query worked. Perfectly. Quite a first for us.
+
+Since then, Jianhan has done all the same work in live, Librarian Jayne has added step depths to the rest of our procedures and Software Engineering have deployed the code to live. Which means our timelines now look like this:
+
+![Not wonky](/not-wonky.png)
+
+Much less ridiculous, as we're sure you'll agree. And yet more proof - as if proof were needed - that putting domain knowledge, modelling, mapping and information management in the same place is the only reasonable approach to making things with computers. It is at this point that we smile sweetly at JO Jane and suggest a pint. Perhaps.
 
 ## On matters of mapping
 
@@ -31,10 +45,6 @@ Over in treaty land, ongoing scrutiny of the Australia free trade deal lead to m
 Absolutely finally, Ellie and Lucinda got in touch requesting a new step to cover occasions on which the JCHR might wish to recommend the Government reconsider the drafting of a proposed draft remedial order. An [eventuality that occurred](https://publications.parliament.uk/pa/jt5803/jtselect/jtrights/280/summary.html) in their scrutiny of the draft State Immunity Act 1978 (Remedial) Order 2022. That step is now both added and actualised.
 
 ## On matters of modelling
-
-Our reader - well, JO Jane at least, it's not like anyone else is paying attention - will be delighted to learn that colleagues in Software Engineering have now deployed our Jianhan's new query to their Q/A environment. This to finally fix the longstanding bug with the ordering of steps taking place on a single day. Which - to be quite frank - is currently risible, steps being ordered at random in a fashion that matches neither procedural nor common sense. Following a wee bit of [additional tinkering](https://trello.com/c/NxYe57Nb/113-error-in-orchestrations), testing revealed the new query worked. Perfectly. Quite a first for us.
-
-Jianhan has since done all the same work in live and Librarian Jayne has added step depths to both maps and data in our draft negative, made affirmative and treaty procedures. Over in Library land, it only remains to add step depths to our remaining seven procedures. Something of a slog, but all worthwhile. At some point - fairly soon, we hope - colleagues in Software Engineering will [deploy the new SPARQL query into their live environment](https://trello.com/c/0xL3mcH4/322-se-deploy-new-step-ordering-queries-in-live-environments-and-test) and timeline pages on both the SI and treaty websites should no longer look ridiculous. At which point, we shall smile sweetly at JO Jane and suggest a pint. Perhaps.
 
 It's not every week we have a new model to announce. Luckily you tuned in on the just the right week. Our curtain rises with our brand new parliamentary paper model standing shyly in the spotlight. It's based on the bottom half of the relational laid papers schema that librarians Anya, Jayne and Ned and computational "experts" Robert and Michael have been cobbling together with much needed help from librarian Corie, House of Lords Kath, House of Commons Robi and TNA's very own Helen. We'd like to thank them all very much. What's there in the model probably doesn't make complete sense without some semblance of how the papers got their. Next week we hope to have a rejigged making available model and - once that's done - a revised laying model to glue the two halves together. Stay tuned.
 
