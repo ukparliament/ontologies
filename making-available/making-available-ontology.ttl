@@ -33,7 +33,7 @@ pma:Session rdf:type owl:Class ;
 	
 pma:MakingAvailable rdf:type owl:Class ;
 	rdfs:label "Making available"@en ;
-	rdfs:comment "The act of making materials available to a House or to a House by means of its Library."@en ;
+	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Incumbency rdf:type owl:Class ;
@@ -64,48 +64,51 @@ pma:Withdrawal rdf:type owl:Class ;
 pma:WithdrawnThing rdf:type owl:Class ;
 	rdfs:subClassOf pma:MadeAvailableThing ;
 	rdfs:label "Withdrawn thing"@en ;
-	rdfs:comment "A thing having been withdrawn from a House."@en ;
+	rdfs:comment "A thing withdrawn from a House, having previously been made available to that House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
-	
+
 	
 	
 #######  Object properties #####
 
 pma:duringSession rdf:type owl:ObjectProperty ;
 	rdfs:label "During session"@en ;
-	rdfs:comment "Relates an act of making materials available to a House, to the session in which they are made available."@en ;
+	rdfs:comment "Relates an act of making a thing available to the session during which that thing is made available. A thing made available during prorogation is during no session. An act of making available is during one session, or none."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:intoSession rdf:type owl:ObjectProperty ;
 	rdfs:label "Into session"@en ;
-	rdfs:comment "Relates an act of making materials available to a House, to the session into which they are made available. Material laid during a prorogation is considered laid into the following session."@en ;
+	rdfs:comment "Relates an act of making a thing available to the session into which that thing is made available. A thing made available during a prorogation is considered to be made available into the following session. An act of making available is into one session."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:madeAvailableBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Made available by"@en ;
-	rdfs:comment "Relates an act of making materials available to a House, to incumbency of a person in a position making those materials available."@en ;
+	rdfs:comment "Relates an act of making a thing available to the incumbency of the person in a position who makes that thing available, for example: the depositing of a paper by Philip Hammond as Foreign Secretary. An act of making available is by one person incumbent in one position."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 
 pma:toHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "To House"@en ;
-	rdfs:comment "Relates an act of making materials available to a House, to the House in which they are made available."@en ;
+	rdfs:comment "Relates an act of making a thing available to the House in which that thing is made available. An act of making available is to one House. A thing may be made available to both Houses by means of two acts of making available."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 
-pma:madeAvailableFrom rdf:type owl:ObjectProperty ;
-	rdfs:label "Made available from"@en ;
-	rdfs:comment "Relates an act of making materials available to the organisation making those materials available."@en ;
-	rdfs:domain pma:MakingAvailable ;
+pma:providedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Provided by"@en ;
+	rdfs:comment "Relates a thing made available to the organisation providing that thing. A thing made available is provided by one or more organisations, or none."@en ;
+	rdfs:domain pma:MadeAvailableThing ;
 	rdfs:range pma:OrganisationAccountableToParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+	
+				# edited to here
 	
 pma:makesAvailable rdf:type owl:ObjectProperty ;
 	rdfs:label "Makes available"@en ;
