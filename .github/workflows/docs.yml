@@ -28,6 +28,9 @@ jobs:
       - name: meta/generate-docs-index.py
         run: python3 meta/generate-docs-index.py
         
+      - name: try pyloder
+        run: cd meta; ./pyloder.py
+        
       - name: Commit files
         run: |
           echo ${{ github.ref }}
@@ -43,7 +46,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: echo github folder
+      - name: echo lode github folder
         run: echo "https://github.com/ukparliament/ontologies/tree/master/meta/lode"
 
           
