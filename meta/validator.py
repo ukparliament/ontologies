@@ -54,13 +54,18 @@ flat_list = [element for sublist in allcolons for element in sublist]
 sorted_flat_list = sorted(list(set(flat_list)))
 
 for target in targets:
+    clean = True
     g = Graph()
     g.parse(target)
-    print("\n\n++++++++++++++++++++++++++++++++++++++++++++++")
-    print(f"Namespaces found in\n{target}\n")
-    for namespace in g.namespaces():
-        if "parliament.uk" in namespace[1]:
-            print(namespace[0], ":", namespace[1])
+    
     for colon in file_to_colons(target):
         if colon not in sorted_flat_list:
+            clean = False
             print(f"\n{colon}\nnot recognised in\n{target}")
+    if not clean:
+        print(f"\n*** Namespaces found in\n{target}\n")
+        for namespace in g.namespaces():
+            if "parliament.uk" in namespace[1]:
+                print(namespace[0], ":", namespace[1])
+    else:
+        print(f"\n*** {target}\nlooks okay")
