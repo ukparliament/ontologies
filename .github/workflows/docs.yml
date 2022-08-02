@@ -15,9 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
-      - name: meta/pylode.py
-        run: meta/pylode.py
         
       - name: install rdflib
         run: pip3 install rdflib
@@ -45,6 +42,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
 
           
