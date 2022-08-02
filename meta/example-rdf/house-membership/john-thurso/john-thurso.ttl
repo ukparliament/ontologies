@@ -10,7 +10,7 @@
 @prefix ppeer: <http://parliament.uk/ontologies/peerage/> .
 @prefix ppr: <http://parliament.uk/ontologies/procedure/> .
 @prefix ppb: <http://parliament.uk/ontologies/parliamentary-bloc/> .
-@prefix pt: <http://parliament.uk/ontologies/time-period/> .
+@prefix ptime: <http://parliament.uk/ontologies/time-period/> .
 @prefix putil: <http://parliament.uk/ontologies/utility/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -27,7 +27,7 @@
 <http://id.parliament.uk/people/1> rdf:type phm:Person ;
 
 	# ... with a gender ...
-	putil:hasGender <http://id.parliament.uk/gender/1> ;
+	ppeer:hasGender <http://id.parliament.uk/gender/1> ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Viscount Thurso"@en ;
@@ -143,7 +143,7 @@
 # Therefore, we need to define the parliament periods during which John Thurso sat in the Commons.
 
 # There is a parliament period for the 53rd Parliament ...
-<http://id.parliament.uk/parliament-periods/1> rdf:type pt:ParliamentPeriod ;
+<http://id.parliament.uk/parliament-periods/1> rdf:type ptime:ParliamentPeriod ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "The 53rd Parliament of the United Kingdom"@en ;
@@ -155,7 +155,7 @@
 	putil:endOn "2005-04-11"^^xsd:date .
 	
 # There is a parliament period for the 54th Parliament ...
-<http://id.parliament.uk/parliament-periods/2> rdf:type pt:ParliamentPeriod ;
+<http://id.parliament.uk/parliament-periods/2> rdf:type ptime:ParliamentPeriod ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "The 54th Parliament of the United Kingdom"@en ;
@@ -167,7 +167,7 @@
 	putil:endOn "2010-04-12"^^xsd:date .
 	
 # There is a parliament period for the 55th Parliament ...
-<http://id.parliament.uk/parliament-periods/3> rdf:type pt:ParliamentPeriod ;
+<http://id.parliament.uk/parliament-periods/3> rdf:type ptime:ParliamentPeriod ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "The 55th Parliament of the United Kingdom"@en ;
@@ -197,7 +197,7 @@
 	putil:preferredLabel "Boundary change"@en .
 		
 # There is a constituency group pre-2005 boundary change ...
-<http://id.parliament.uk/constituency-groups/1> rdf:type phm:ConstituencyGroup ;
+<http://id.parliament.uk/constituency-groups/1> rdf:type pe:ConstituencyGroup ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Caithness, Sutherland & Easter Ross constituency group"@en ;
@@ -209,7 +209,7 @@
 	phm:houseSeatEndReason <http://id.parliament.uk/end-reasons/3> .
 	
 # There is a constituency group post-2005 boundary change ...
-<http://id.parliament.uk/constituency-groups/2> rdf:type phm:ConstituencyGroup ;
+<http://id.parliament.uk/constituency-groups/2> rdf:type pe:ConstituencyGroup ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Caithness, Sutherland & Easter Ross constituency group"@en ;
@@ -235,8 +235,8 @@
 	# ... a type ...
 	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/2> ;
 	
-	# ... and a representation of a constituency group.
-	phm:representsConstituencyGroup <http://id.parliament.uk/constituency-groups/1> .
+	# ... and a thing that enables that House seat.
+	phm:houseSeatEnabledBy <http://id.parliament.uk/constituency-groups/1> .
 	
 # There is a house seat for Caithness, Sutherland & Easter Ross post-2005 boundary change ...
 <http://id.parliament.uk/house-seats/3> rdf:type phm:HouseSeat ;
@@ -253,8 +253,8 @@
 	# ... a type ...
 	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/2> ;
 	
-	# ... and a representation of a constituency group.
-	phm:representsConstituencyGroup <http://id.parliament.uk/constituency-groups/2> .
+	# ... and a thing that enables that House seat.
+	phm:houseSeatEnabledBy <http://id.parliament.uk/constituency-groups/2> .
 	
 # There is an incumbency by John Thurso in the Caithness constituency seat pre-2005 ...
 <http://id.parliament.uk/seat-incumbencies/2> rdf:type phm:SeatIncumbency ;
@@ -330,7 +330,7 @@
 	putil:preferredLabel "Elected excepted hereditary peerage seat."@en .
 	
 # There is a constituency group of Liberal Democrat peers entitled to vote in an election for a elected excepted hereditary peer ...
-<http://id.parliament.uk/constituency-groups/3> rdf:type phm:ConstituencyGroup ;
+<http://id.parliament.uk/constituency-groups/3> rdf:type pe:ConstituencyGroup ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Liberal Democrat peers entitled to vote in an election for a elected excepted hereditary peer"@en ;
@@ -353,8 +353,8 @@
 	# ... a type ...
 	phm:hasHouseSeatType <http://id.parliament.uk/house-seat-types/3> ;
 	
-	# ... a relationship to a constituency group.
-	phm:representsConstituencyGroup <http://id.parliament.uk/constituency-groups/3> .
+	# ... and a thing that enables that House seat.
+	phm:houseSeatEnabledBy <http://id.parliament.uk/constituency-groups/3> .
 	
 # Members of the House of Lords being considered Members during dissolution.
 # There is a single incumbency by John Thurso in the elected excepted Liberal Democrat hereditary house seat ...
@@ -514,7 +514,7 @@
 	ppeer:appliesTo <http://id.parliament.uk/gender/1> .
 
 # There is a peerage rank ...
-<http://id.parliament.uk/peerage-rank/1> rdf:type ppeer:PeerageRank ;
+<http://id.parliament.uk/peerage-rank/1> rdf:type ppeer:Rank ;
 
 	# ... with a preferred label ...
 	putil:preferredLabel "Viscountcy"@en ;
@@ -571,7 +571,7 @@
 	ppeer:presentedOn "1952-04-10"^^xsd:date ;
 	
 	# ... with an ordinality on that date ...
-	ppeer:OrdinatlityOnDate 1 .
+	ppeer:ordinalityOnDate 1 .
 	
 	
 # ## John Thurso's first Commons membership.
