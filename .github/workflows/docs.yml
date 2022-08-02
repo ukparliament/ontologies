@@ -16,17 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: install rdflib
-        run: pip3 install rdflib
-
-      - name: install Jinja2
-        run: pip3 install Jinja2
-        
-      - name: install dominate
-        run: pip3 install dominate
-        
-      - name: install pylode
-        run: pip3 install pylode
+      - name: install requirements
+        run: pip3 install -r requirements.txt
         
       - name: meta/generate-docs.py
         run: python3 meta/generate-docs.py
