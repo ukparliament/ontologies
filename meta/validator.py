@@ -56,12 +56,8 @@ sorted_flat_list = sorted(list(set(flat_list)))
 for target in targets:
     g = Graph()
     g.parse(target)
-#     for subj, pred, obj in g:
-#         if (subj, pred, obj) not in g:
-#             print("problem with graph in {target}\n")
-#     print(f"{len(g)} statements in {target}.\n")
-#     if g.connected():
-#         print("All nodes visited.\n")
+    print("\n\n++++++++++++++++++++++++++++++++++++++++++++++")
+    print(f"Namespaces found in\n{target}\n")
     for namespace in g.namespaces():
         if "parliament.uk" in namespace[1]:
             print(namespace[0], ":", namespace[1])
