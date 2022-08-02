@@ -34,15 +34,11 @@ If approval motion extant
 
 AND
 
-if the instrument has NOT been revoked
-
-AND
-
 if the clock has NOT run out
 
 AND
 
-IF there has NOT been a debate
+if there has NOT been a debate
 
 AND
 
@@ -55,10 +51,6 @@ if the instrument has NOT already been rejected (either House)
 #### Question can be put
 
 If approval motion extant
-
-AND
-
-if the instrument has NOT been revoked
 
 AND
 
@@ -106,10 +98,6 @@ If approval motion extant
 
 AND
 
-if the instrument has NOT been revoked
-
-AND
-
 if the clock has NOT run out
 
 AND
@@ -134,10 +122,6 @@ If approval motion extant
 
 AND
 
-if the instrument has NOT been revoked
-
-AND
-
 if the clock has NOT run out
 
 AND
@@ -146,7 +130,7 @@ if there's NOT an approval motion agreed
 
 AND
 
-if there has been a debate
+if there has been a Chamber debate
 
 AND
 
@@ -166,10 +150,6 @@ if there is no non-fatal amendment extant
 
 If an approval motion is extant
 
-AND
-
-if the instrument has NOT been revoked
-
 AND 
 
 if the clock has NOT run out
@@ -180,15 +160,7 @@ if the instrument has NOT already been rejected (either House)
 
 #### Can be debated
 
-If approval motion extant
-
-AND
-
-if fatal amendment to approval motion extant
-
-AND
-
-if the instrument has NOT been revoked
+If fatal amendment to approval motion extant
 
 AND
 
@@ -208,15 +180,7 @@ JCSI scrutiny reserve condition has been met
 
 #### Question can be put
 
-If approval motion extant
-
-AND
-
-if fatal amendment to approval motion extant
-
-AND
-
-if the instrument has NOT been revoked
+If fatal amendment to approval motion extant
 
 AND
 
@@ -224,7 +188,7 @@ if the clock has NOT run out
 
 AND
 
-if there has been a debate
+if there has been a Chamber debate
 
 AND
 
@@ -236,10 +200,6 @@ if the instrument has NOT already been rejected (either House)
 
 If an approval motion is extant
 
-AND
-
-if the instrument has NOT been revoked
-
 AND 
 
 if the clock has NOT run out
@@ -250,15 +210,7 @@ if the instrument has NOT already been rejected (either House)
 
 #### Can be debated
 
-If approval motion extant
-
-AND
-
-if non-fatal amendment to approval motion extant
-
-AND
-
-if the instrument has NOT been revoked
+If non-fatal amendment to approval motion extant
 
 AND
 
@@ -278,15 +230,7 @@ JCSI scrutiny reserve condition has been met
 
 #### Question can be put
 
-If approval motion extant
-
-AND
-
-if non-fatal amendment to approval motion extant
-
-AND
-
-if the instrument has NOT been revoked
+If non-fatal amendment to approval motion extant
 
 AND
 
@@ -294,7 +238,7 @@ if the clock has NOT run out
 
 AND
 
-if there has been a debate
+if there has been a Chamber debate
 
 AND
 
