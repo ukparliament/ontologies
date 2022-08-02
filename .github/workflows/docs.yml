@@ -28,12 +28,6 @@ jobs:
       - name: python3 meta/generate-docs-index.py
         run: python3 meta/generate-docs-index.py
         
-      - name: commit html files
-        run: |
-          git config --global user.name "Robert Brook"
-          git config --global user.email "robertbrook@fastmail.fm"
-          git add .
-          git commit -m "Generated HTML."
-          git push
+
 
           
