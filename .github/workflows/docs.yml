@@ -15,6 +15,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: meta/pylode.py
+        run: meta/pylode.py
         
       - name: install rdflib
         run: pip3 install rdflib
