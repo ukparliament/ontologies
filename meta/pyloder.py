@@ -57,7 +57,8 @@ turtles = glob.glob("../**/*.ttl", recursive=True)
 
 for turtle in turtles:
     if "ontology" in turtle:
-        ttlpath = Path(turtle)
-        print(ttlpath, ttlpath.stem)
-        od = myOntDoc(ontology=turtle)
-        od.make_html(destination="./lode/" + ttlpath.stem + ".html")
+        if "odds-and-sods" not in turtle:
+            ttlpath = Path(turtle)
+            print(ttlpath, ttlpath.stem)
+            od = myOntDoc(ontology=turtle)
+            od.make_html(destination="./lode/" + ttlpath.stem + ".html")
