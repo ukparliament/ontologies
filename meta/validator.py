@@ -63,17 +63,9 @@ for target in targets:
             clean = False
             print(f"\n{colon}\nnot recognised in\n{target}")
     if not clean:
-<<<<<<< HEAD
-        print(f"*** Namespaces found in\n{target}\n")
-=======
         print(f"\n*** Namespaces found in\n{target}\n")
->>>>>>> 0212db9350935390a4135b18443176bde6f0504b
         for namespace in g.namespaces():
             if "parliament.uk" in namespace[1]:
                 print(namespace[0], ":", namespace[1])
     else:
-<<<<<<< HEAD
-        print(f"*** {target}\nlooks okay")
-=======
         print(f"\n*** {target}\nlooks okay")
->>>>>>> 0212db9350935390a4135b18443176bde6f0504b
