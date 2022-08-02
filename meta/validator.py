@@ -67,4 +67,4 @@ for target in targets:
 #             print(namespace[0], ":", namespace[1])
     for colon in file_to_colons(target):
         if colon not in sorted_flat_list:
-            print(f"\n*** {colon} not recognised in {target}\n")
+            print(f"{colon} not recognised in {target}\n")
