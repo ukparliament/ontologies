@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-
+from pathlib import Path
 import dominate
+import glob
 from dominate.tags import (
     h2,
     h1,
@@ -52,11 +53,11 @@ class myOntDoc(OntDoc):
             meta(charset="charset=utf-8")
             style(css)
 
+turtles = glob.glob("../**/*.ttl", recursive=True)
 
-od = myOntDoc(ontology="../making-available/making-available-ontology.ttl")
-
-# produce HTML
-# html = od.make_html()
-
-# or save HTML to a file
-od.make_html(destination="./lode/some-resulting-html-file.html")
+for turtle in turtles:
+    if "ontology" in turtle:
+        ttlpath = Path(turtle)
+        print(ttlpath.stem)
+        od = myOntDoc(ontology=turtle)
+        od.make_html(destination="./lode/" + ttlpath.stem + ".html")
