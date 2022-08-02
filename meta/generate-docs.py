@@ -72,14 +72,13 @@ for ttlpath in ttlfiles:
         result = g.parse(data=ttlfile.read(), format="turtle")
 
         if (None, RDF.type, OWL.Ontology) in g:
-            
 
             print("Found an ontology: " + str(ttlpath))
 
             classes = []
 
             for s, p, o in g.triples((None, RDF.type, OWL.Class)):
-                
+
                 superclasses = []
 
                 superclassobjects = g.objects(s, RDFS.subClassOf)
@@ -88,10 +87,10 @@ for ttlpath in ttlfiles:
 
                 #             h3id = g.label(s).lower().replace(" ", "-")
                 #         classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
-                
+
                 classes.append(
                     {
-#                         "label": g.label(s),
+                        #                         "label": g.label(s),
                         "label": "LABEL PLACEHOLDER",
                         "idString": s.split("/")[-1],
                         "comment": g.value(s, RDFS.comment),
@@ -106,7 +105,7 @@ for ttlpath in ttlfiles:
                 dataproperties.append(
                     {
                         "label": "LABEL PLACEHOLDER",
-#                         "label": g.label(s),
+                        #                         "label": g.label(s),
                         "idString": s.split("/")[-1],
                         "comment": g.value(s, RDFS.comment),
                         "domain": g.value(s, RDFS.domain).split("/")[-1],
@@ -117,7 +116,7 @@ for ttlpath in ttlfiles:
             objectproperties = []
 
             for s, p, o in g.triples((None, RDF.type, OWL.ObjectProperty)):
-#                 h3id = g.label(s).lower().replace(" ", "-")
+                #                 h3id = g.label(s).lower().replace(" ", "-")
                 domainstub = g.value(s, RDFS.domain).split("/")[-1]
                 rangestub = g.value(s, RDFS.range).split("/")[-1]
                 superpropertyv = g.value(s, RDFS.subPropertyOf)
@@ -130,7 +129,7 @@ for ttlpath in ttlfiles:
                 objectproperties.append(
                     {
                         "label": "LABEL PLACEHOLDER",
-#                         "label": g.label(s),
+                        #                         "label": g.label(s),
                         "idString": s.split("/")[-1],
                         "domain": domainstub,
                         "range": rangestub,
