@@ -57,7 +57,6 @@ for target in targets:
     clean = True
     g = Graph()
     g.parse(target)
-    
     for colon in file_to_colons(target):
         if colon not in sorted_flat_list:
             clean = False

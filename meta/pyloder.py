@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import dominate
 from dominate.tags import (
     h2,
@@ -31,17 +34,18 @@ css = """
 body {font-family:sans-serif;padding:1rem;line-height:1.4;margin:1rem 
 auto;max-width:42rem;}
 h1, h2 {font-weight:normal;}
+h3 {border-bottom:2pt solid lightgrey;}
 table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 }
-div.property {border-top:2pt solid lightgray;}
+code {font-weight:bold;}
 th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
 """
 
+
 class myOntDoc(OntDoc):
-            
     def _make_head(self, *args, **kwargs):
         with self.doc.head:
             meta(name="viewport", content="width=device-width")
@@ -55,4 +59,4 @@ od = myOntDoc(ontology="../making-available/making-available-ontology.ttl")
 # html = od.make_html()
 
 # or save HTML to a file
-od.make_html(destination="some-resulting-html-file.html")
+od.make_html(destination="./lode/some-resulting-html-file.html")
