@@ -42,3 +42,14 @@ pcite:DocumentType rdf:type owl:Class ;
 	rdfs:label "DocumentType"@en ;
 	rdfs:comment "The type of a document."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
+	
+	
+	
+#######  Object properties ##### 
+
+pcite:hasCitation rdf:type owl:ObjectProperty ;
+	rdfs:label "Has citation"@en ;
+	rdfs:comment "Relates a citing thing to a citation. A citing thing may have one or more citations. A citation belongs to one citing thing."@en ;
+	rdfs:domain pcite:CitingThing ;
+	rdfs:range pcite:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
