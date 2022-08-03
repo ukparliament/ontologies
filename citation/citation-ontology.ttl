@@ -1,0 +1,29 @@
+@prefix pcite: <http://parliament.uk/ontologies/citation/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/citation/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Citation ontology"@en ;
+    dcterms:created "2022-08-03"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "A model describing citations."@en;
+	foaf:depiction <https://ukparliament.github.io/ontologies/citation/citation.svg> ;
+	foaf:maker 
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+	
+pcite:CitingThing rdf:type owl:Class ;
+	rdfs:label "Citing thing"@en ;
+	rdfs:comment "A thing citing another thing."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
