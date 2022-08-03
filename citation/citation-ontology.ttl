@@ -67,3 +67,21 @@ pcite:hasDocumentType rdf:type owl:ObjectProperty ;
 	rdfs:domain pcite:Citation ;
 	rdfs:range pcite:DocumentType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
+	
+	
+
+#######  Data properties #####
+
+pcite:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "Title"@en ;
+	rdfs:comment "The title of the thing being cited."@en ;
+	rdfs:domain pcite:Citation ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
+	
+pcite:uri rdf:type owl:DatatypeProperty ;
+	rdfs:label "URI"@en ;
+	rdfs:comment "The URI of the thing being cited."@en ;
+	rdfs:domain pcite:Citation ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
