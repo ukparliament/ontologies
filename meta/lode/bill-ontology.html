@@ -60,6 +60,44 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="Presentedpaper">
+          <h3>Presented paper
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/bill/PresentedPaper</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/bill/">pbill:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>Papers laid into or published under the authority of Parliament.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Bill">pbill:Bill</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Bill">
           <h3>Bill
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -87,23 +125,24 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Presentedpaper">pbill:PresentedPaper</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#enactedAs">pbill:enactedAs</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isIn">pbill:isIn</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="#enactedAs">pbill:enactedAs</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -503,44 +542,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                     </span>
                   </li>
                 </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Session">
-          <h3>Session
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/bill/Session</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/bill/">pbill:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isIn">pbill:isIn</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
               </td>
             </tr>
           </table>
@@ -1113,55 +1114,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="isIn">
-          <h3>Is in
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/bill/isIn</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/bill/">pbill:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>Relates a bill to the session in which it was presented. A bill will always be in one session.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Bill">pbill:Bill</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Session">pbill:Session</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="explains">
           <h3>Explains
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -1577,6 +1529,9 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
           </h4>
           <ul class="second">
             <li>
+              <a href="#Presentedpaper">Presented paper</a>
+            </li>
+            <li>
               <a href="#Bill">Bill</a>
             </li>
             <li>
@@ -1599,9 +1554,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </li>
             <li>
               <a href="#ParliamentActprocedureinvocation">Parliament Act procedure invocation</a>
-            </li>
-            <li>
-              <a href="#Session">Session</a>
             </li>
             <li>
               <a href="#Explanatorynote">Explanatory note</a>
@@ -1645,9 +1597,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </li>
             <li>
               <a href="#parliamentActInvokedTo">Parliament Act invoked to</a>
-            </li>
-            <li>
-              <a href="#isIn">Is in</a>
             </li>
             <li>
               <a href="#explains">Explains</a>
