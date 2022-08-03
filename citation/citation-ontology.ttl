@@ -53,3 +53,17 @@ pcite:hasCitation rdf:type owl:ObjectProperty ;
 	rdfs:domain pcite:CitingThing ;
 	rdfs:range pcite:Citation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
+
+pcite:refersTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Refers to"@en ;
+	rdfs:comment "Relates a citation to cited thing. A cited thing may have one or more citations. A citation is to one cited thing."@en ;
+	rdfs:domain pcite:Citation ;
+	rdfs:range pcite:CitedThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
+
+pcite:hasDocumentType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has document type"@en ;
+	rdfs:comment "Relates a citation to the document type of the thing at the URI being cited. A citation has one document type, or none."@en ;
+	rdfs:domain pcite:Citation ;
+	rdfs:range pcite:DocumentType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
