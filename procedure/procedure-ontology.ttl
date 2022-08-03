@@ -83,16 +83,6 @@ ppr:StepCollection rdf:type owl:Class ;
 	rdfs:comment "A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Key steps' collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named 'Member action steps' collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:Citation rdf:type owl:Class ;
-	rdfs:label "Citation"@en ;
-	rdfs:comment "A citation of a document. A citation may be from a procedure, for example: the proposed negative statutory instrument procedure citing Schedule 7 to the European Union (Withdrawal) Act 2018. A citation may be from a step in a procedure, for example: the step 'CF - AND' in the made negative statutory instrument procedure citing Section 4(1) of the Statutory Instrument Act 1946. A citation may be from a step without reference to a particular procedure, for example: the step 'Considered for English votes for English laws (EVEL) certification' citing House of Commons public Standing Order 83P. A citation may be from a route in a procedure, for example: the route from 'Considered by the Joint Committee on Statutory Instruments' to 'Motion to approve the instrument tabled by the Government (House of Lords)' in both affirmative procedures citing House of Lords public Standing Order 72."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:DocumentType rdf:type owl:Class ;
-	rdfs:label "Document type"@en ;
-	rdfs:comment "The type of a document being cited, for example: a standing order or a section of legislation."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:label "Step display depth in procedure"@en ;
 	rdfs:comment "The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes 'procedural sense', for example: we may show 'procedure concluded' before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening."@en ;
@@ -234,34 +224,6 @@ ppr:stepCollectionInHouse rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:stepHasCitation rdf:type owl:ObjectProperty ;
-	rdfs:label "Step has citation"@en ;
-	rdfs:comment "Relates a step to a citation. A step may have more than one citation, or none."@en ;
-	rdfs:domain ppr:Step ;
-	rdfs:range ppr:Citation ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:routeHasCitation rdf:type owl:ObjectProperty ;
-	rdfs:label "Route has citation"@en ;
-	rdfs:comment "Relates a route to a citation. A route may have more than one citation, or none."@en ;
-	rdfs:domain ppr:Route ;
-	rdfs:range ppr:Citation ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:procedureHasCitation rdf:type owl:ObjectProperty ;
-	rdfs:label "Procedure has citation"@en ;
-	rdfs:comment "Relates a procedure to a citation. A procedure may have more than one citation, or none."@en ;
-	rdfs:domain ppr:Procedure ;
-	rdfs:range ppr:Citation ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:hasDocumentType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has document type"@en ;
-	rdfs:comment "Relates a citation to the type of the document being cited."@en ;
-	rdfs:domain ppr:Citation ;
-	rdfs:range ppr:DocumentType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:forStep rdf:type owl:ObjectProperty ;
 	rdfs:label "For step"@en ;
 	rdfs:comment "Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures."@en ;
@@ -290,13 +252,6 @@ ppr:hasAvailabilityStatus rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:RouteAvailabilityStatus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:routeAvailabilityHasCitation rdf:type owl:ObjectProperty ;
-	rdfs:label "Route availability has citation"@en ;
-	rdfs:comment "Relates the availability of a route to a citation setting out that availability: this may be by means of a proceeding in Parliament, or by means of legislation. A route availability may have one or more citations, or none."@en ;
-	rdfs:domain ppr:RouteAvailability ;
-	rdfs:range ppr:Citation ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
 ppr:componentOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Component of"@en ;
 	rdfs:comment "Relates a procedure to another procedure. A procedure forming a component of another procedure has all the routes in the 'child' procedure appearing as routes in the 'parent' procedure. A procedure may be composed of one or more other procedures, or none. A procedure may be a component of one or more other procedures, or none. A procedure cannot be a component of itself."@en ;
@@ -307,20 +262,6 @@ ppr:componentOf rdf:type owl:ObjectProperty ;
 				
 
 #######  Data properties ##### 
-
-ppr:title rdf:type owl:DatatypeProperty ;
-	rdfs:label "Title"@en ;
-	rdfs:comment "Relates a citation to the title of the document being cited."@en ;
-	rdfs:domain ppr:Citation ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:uri rdf:type owl:DatatypeProperty ;
-	rdfs:label "URI"@en ;
-	rdfs:comment "Relates a citation to the URI of the document being cited."@en ;
-	rdfs:domain ppr:Citation ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:displayDepthValue rdf:type owl:DatatypeProperty ;
 	rdfs:label "Display depth value"@en ;
