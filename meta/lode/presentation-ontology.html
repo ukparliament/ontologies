@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Presentation ontology</title>
+    <meta content="width=device-width" name="viewport">
+    <meta charset="charset=utf-8">
+    <style>
+body {font-family:sans-serif;padding:1rem;line-height:1.4;margin:1rem 
+auto;max-width:42rem;}
+h1, h2 {font-weight:normal;}
+h3 {border-bottom:2pt solid lightgrey;}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+code {font-weight:bold;}
+th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
+</style>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section" id="metadata">
+        <h1>Presentation ontology</h1>
+        <h2>Metadata</h2>
+        <dl>
+          <div>
+            <dt>
+              <strong>IRI</strong>
+            </dt>
+            <dd>
+              <code>http://parliament.uk/ontologies/presentation/</code>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="None. Defined in None">Title</a>
+            </dt>
+            <dd><p>Presentation ontology</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/created" title="None. Defined in None">Created</a>
+            </dt>
+            <dd><p>2022-08-03</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/rights" title="None. Defined in None">Rights</a>
+            </dt>
+            <dd><p>Open Parliament Licence v3.0</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+            </dt>
+            <dd><p>A model describing the presentation of papers into a House.</p></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="section" id="classes">
+        <h2>Classes</h2>
+        <div class="property entity" id="Makingavailable">
+          <h3>Making available
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/presentation/MakingAvailable</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/presentation/">ppresent:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>The act of making a thing available to a House or to a House by means of its Library.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Presentation">ppresent:Presentation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Presentation">
+          <h3>Presentation
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/presentation/Presentation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/presentation/">ppresent:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>The act of presenting a paper to a House.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Makingavailable">ppresent:MakingAvailable</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#presents">ppresent:presents</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Parliamentarypaper">
+          <h3>Parliamentary paper
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/presentation/ParliamentaryPaper</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/presentation/">ppresent:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>Papers laid into or published under the authority of Parliament.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#PresentedPaper">ppresent:PresentedPaper</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Madeavailablething">
+          <h3>Made available thing
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/presentation/MadeAvailableThing</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/presentation/">ppresent:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A thing made available to a House or to a House by means of its Library.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#PresentedPaper">ppresent:PresentedPaper</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="PresentedPaper">
+          <h3>Presented paper
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/presentation/PresentedPaper</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/presentation/">ppresent:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A paper having been presented to a House.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#Parliamentarypaper">ppresent:ParliamentaryPaper</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Madeavailablething">ppresent:MadeAvailableThing</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#presents">ppresent:presents</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="objectproperties">
+        <h2>Object Properties</h2>
+        <div class="property entity" id="presents">
+          <h3>Presents
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/presentation/presents</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/presentation/">ppresent:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>Relates an act of presenting a paper to the paper having been presented.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Presentation">ppresent:Presentation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#PresentedPaper">ppresent:PresentedPaper</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="foaf">foaf</dt>
+          <dd>
+            <code>http://xmlns.com/foaf/0.1/</code>
+          </dd>
+          <dt id="owl">owl</dt>
+          <dd>
+            <code>http://www.w3.org/2002/07/owl#</code>
+          </dd>
+          <dt id="ppresent">ppresent</dt>
+          <dd>
+            <code>http://parliament.uk/ontologies/presentation/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr>
+            <td>
+              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+            </td>
+            <td>Classes</td>
+          </tr>
+          <tr>
+            <td>
+              <sup class="sup-op" title="OWL Object Property">op</sup>
+            </td>
+            <td>Object Properties</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>made by 
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.0.1" id="version">3.0.1</a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#metadata">Metadata</a>
+          </h4>
+        </li>
+        <li>
+          <h4>
+            <a href="#classes">Classes</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#Makingavailable">Making available</a>
+            </li>
+            <li>
+              <a href="#Presentation">Presentation</a>
+            </li>
+            <li>
+              <a href="#Parliamentarypaper">Parliamentary paper</a>
+            </li>
+            <li>
+              <a href="#Madeavailablething">Made available thing</a>
+            </li>
+            <li>
+              <a href="#PresentedPaper">Presented paper</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#objectproperties">Object Properties</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#presents">Presents</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#foaf">foaf</a>
+            </li>
+            <li>
+              <a href="#owl">owl</a>
+            </li>
+            <li>
+              <a href="#ppresent">ppresent</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second"></ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
