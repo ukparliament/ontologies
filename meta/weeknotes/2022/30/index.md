@@ -2,7 +2,7 @@
 
 ## Apologies
 
-We begin with apologies. We are well aware that our regular reader starts to worry when we go missing for a week. Four weeks is altogether too long. We can only note that a brief warm spell and vacation season got in our way a little. Please rest assured, our combined noses are once more pressed to the proverbial grindstone and we are - as a great man once said - [fit and working again](https://www.youtube.com/watch?v=lsBoajapOOk). And [Michael's](https://twitter.com/fantasticlife)'s scuba-diving trips to St Lucia won't pay for themselves.
+We begin with apologies. We are well aware that our regular reader starts to worry when we go missing for a week. Four weeks is altogether too long. We can only note that a brief warm spell and vacation season got in our way a little. Please rest assured, our combined noses are once more pressed to the proverbial grindstone and we are - as a great man once said - [fit and working again](https://www.youtube.com/watch?v=lsBoajapOOk). After all, [Michael's](https://twitter.com/fantasticlife)'s scuba-diving trips to St Lucia won't pay for themselves.
 
 ## All the right steps, not necessarily in the right order
 
