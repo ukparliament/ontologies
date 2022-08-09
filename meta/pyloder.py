@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from itertools import chain
+from collections import defaultdict
 from pathlib import Path
 import dominate
 import glob
@@ -27,6 +29,20 @@ from dominate.tags import (
     div,
     dt,
     dd,
+    section,
+)
+from rdflib.namespace import (
+    DC,
+    DCTERMS,
+    FOAF,
+    ORG,
+    OWL,
+    PROF,
+    PROV,
+    RDF,
+    RDFS,
+    SDO,
+    SKOS,
 )
 
 from pylode import OntDoc
@@ -53,6 +69,35 @@ class myOntDoc(OntDoc):
             meta(charset="charset=utf-8")
             style(css)
 
+    def _make_namespaces(self):
+        # get only namespaces used in ont
+        nses = {}
+        for n in chain(self.ont.subjects(), self.ont.predicates(), self.ont.objects()):
+            for prefix, ns in self.ont.namespaces():
+                if str(n).startswith(ns):
+                    nses[prefix] = ns
+
+        with self.content:
+            with section(id="namespaces"):
+                h2("Namespaces")
+                with ul():
+                    if self.toc.get("namespaces") is None:
+                        self.toc["namespaces"] = []
+                    for prefix, ns in sorted(nses.items()):
+                        with li():
+                            p_ = prefix if prefix != "" else ":"
+                            span(p_, className=p_)
+                            span(ns, className="namespace-url")
+                            self.toc["namespaces"].append(("#" + prefix, prefix))
+
+    def _make_body(self):
+        self._make_metadata()
+        self._make_main_sections()
+        self._make_namespaces()
+        self._make_legend()
+        self._make_toc()
+
+
 turtles = glob.glob("../**/*.ttl", recursive=True)
 
 for turtle in turtles:
@@ -61,4 +106,6 @@ for turtle in turtles:
             print(f"{turtle}\n   looks like an ontology")
             ttlpath = Path(turtle)
             od = myOntDoc(ontology=turtle)
-            od.make_html(destination="./lode/" + ttlpath.stem + ".html")
+            htmlpath = "./lode/" + ttlpath.stem + ".html"
+            od.make_html(destination=htmlpath)
+            print(f"   writing {htmlpath}")
