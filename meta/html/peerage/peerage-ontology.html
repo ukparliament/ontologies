@@ -95,12 +95,12 @@
 
 
             </article>
-            <article class="class" id="Gender">
+            <article class="class" id="RankLabelSet">
                 <h3>
-                    Class <a href="#Gender">LABEL PLACEHOLDER</a>
+                    Class <a href="#RankLabelSet">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>The gender of a person, for example: male.</p>
+                <p>The set of rank labels applied to a person, for example: a set formed of - Duchess, Marchioness, Countess, Viscountess, Baroness and Lady.</p>
 
 
             </article>
@@ -109,7 +109,7 @@
                     Class <a href="#RankLabel">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>The label of a rank, determined by the gender of the person holding a peerage.</p>
+                <p>A label of a particular rank, for example: Earl or Countess.</p>
 
 
             </article>
@@ -275,31 +275,31 @@
 
             </article>
 
-            <article class="objectproperty" id="hasGender">
+            <article class="objectproperty" id="usesRankLabelSet">
 
                 <h3>
-                    Object property <a href="#hasGender">LABEL PLACEHOLDER</a>
+                    Object property <a href="#usesRankLabelSet">LABEL PLACEHOLDER</a>
             </h3>
 
 
 
-                <p>Relates a person to their gender.</p>
+                <p>Relates a person to the set of rank labels that person uses.</p>
 
-                <p><a href="#Person">Person</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Gender">Gender</a></p>
+                <p><a href="#Person">Person</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#RankLabelSet">RankLabelSet</a></p>
 
             </article>
 
-            <article class="objectproperty" id="appliesTo">
+            <article class="objectproperty" id="formsPartOfSet">
 
                 <h3>
-                    Object property <a href="#appliesTo">LABEL PLACEHOLDER</a>
+                    Object property <a href="#formsPartOfSet">LABEL PLACEHOLDER</a>
             </h3>
 
 
 
-                <p>Relates a rank label to the gender it applies to. A rank label applies to one gender, for example: a female person holding an Earldom has the rank label Countess. A gender has more than one rank label according to the rank of the peerage, for example: a female person holding a peerage in the Kingdom of Scotland may be a Lady, Viscountess, Countess, Marchioness or Duchess.</p>
+                <p>Relates a rank label to the set of rank labels of which it forms part. A rank label applies to one rank label set, for example: the rank label Countess forms part of one rank label set, and the rank label Earl forms part of another rank label set. A rank label set has more than one rank label according to the rank of the peerage, for example: the rank label set formed of the rank labels Duchess, Marchioness, Countess, Viscountess, Baroness and Lady.</p>
 
-                <p><a href="#RankLabel">RankLabel</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Gender">Gender</a></p>
+                <p><a href="#RankLabel">RankLabel</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#RankLabelSet">RankLabelSet</a></p>
 
             </article>
 
@@ -311,7 +311,7 @@
 
 
 
-                <p>Relates a rank to a rank label. A rank has one of two rank labels in accordance with the gender of a person holding a peerage of that rank, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank.</p>
+                <p>Relates a rank to a rank label. A rank has one of two rank labels, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank.</p>
 
                 <p><a href="#Rank">Rank</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#RankLabel">RankLabel</a></p>
 

@@ -386,7 +386,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                   </li>
                   <li>
                     <span>
-                      <a href="#hasGender">ppeer:hasGender</a>
+                      <a href="#usesRankLabelSet">ppeer:usesRankLabelSet</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -395,15 +395,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Gender">
-          <h3>Gender
+        <div class="property entity" id="Ranklabelset">
+          <h3>Rank label set
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/peerage/Gender</code>
+                <code>http://parliament.uk/ontologies/peerage/RankLabelSet</code>
               </td>
             </tr>
             <tr>
@@ -418,7 +418,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>The gender of a person, for example: male.</p></td>
+              <td><p>The set of rank labels applied to a person, for example: a set formed of - Duchess, Marchioness, Countess, Viscountess, Baroness and Lady.</p></td>
             </tr>
             <tr>
               <th>
@@ -428,13 +428,13 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <ul>
                   <li>
                     <span>
-                      <a href="#hasGender">ppeer:hasGender</a>
+                      <a href="#usesRankLabelSet">ppeer:usesRankLabelSet</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#appliesTo">ppeer:appliesTo</a>
+                      <a href="#formsPartOfSet">ppeer:formsPartOfSet</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -466,7 +466,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>The label of a rank, determined by the gender of the person holding a peerage.</p></td>
+              <td><p>A label of a particular rank, for example: Earl or Countess.</p></td>
             </tr>
             <tr>
               <th>
@@ -474,7 +474,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               </th>
               <td>
                 <span>
-                  <a href="#appliesTo">ppeer:appliesTo</a>
+                  <a href="#formsPartOfSet">ppeer:formsPartOfSet</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -1313,15 +1313,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasGender">
-          <h3>Has gender
+        <div class="property entity" id="usesRankLabelSet">
+          <h3>Uses rank label set
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/peerage/hasGender</code>
+                <code>http://parliament.uk/ontologies/peerage/usesRankLabelSet</code>
               </td>
             </tr>
             <tr>
@@ -1336,7 +1336,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a person to their gender.</p></td>
+              <td><p>Relates a person to the set of rank labels that person uses.</p></td>
             </tr>
             <tr>
               <th>
@@ -1355,22 +1355,22 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               </th>
               <td>
                 <span>
-                  <a href="#Gender">ppeer:Gender</a>
+                  <a href="#Ranklabelset">ppeer:RankLabelSet</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="appliesTo">
-          <h3>Applies to
+        <div class="property entity" id="formsPartOfSet">
+          <h3>Forms part of set
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/peerage/appliesTo</code>
+                <code>http://parliament.uk/ontologies/peerage/formsPartOfSet</code>
               </td>
             </tr>
             <tr>
@@ -1385,7 +1385,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a rank label to the gender it applies to. A rank label applies to one gender, for example: a female person holding an Earldom has the rank label Countess. A gender has more than one rank label according to the rank of the peerage, for example: a female person holding a peerage in the Kingdom of Scotland may be a Lady, Viscountess, Countess, Marchioness or Duchess.</p></td>
+              <td><p>Relates a rank label to the set of rank labels of which it forms part. A rank label applies to one rank label set, for example: the rank label Countess forms part of one rank label set, and the rank label Earl forms part of another rank label set. A rank label set has more than one rank label according to the rank of the peerage, for example: the rank label set formed of the rank labels Duchess, Marchioness, Countess, Viscountess, Baroness and Lady.</p></td>
             </tr>
             <tr>
               <th>
@@ -1404,7 +1404,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               </th>
               <td>
                 <span>
-                  <a href="#Gender">ppeer:Gender</a>
+                  <a href="#Ranklabelset">ppeer:RankLabelSet</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1434,7 +1434,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a rank to a rank label. A rank has one of two rank labels in accordance with the gender of a person holding a peerage of that rank, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank.</p></td>
+              <td><p>Relates a rank to a rank label. A rank has one of two rank labels, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank.</p></td>
             </tr>
             <tr>
               <th>
@@ -3208,7 +3208,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#Person">Person</a>
             </li>
             <li>
-              <a href="#Gender">Gender</a>
+              <a href="#Ranklabelset">Rank label set</a>
             </li>
             <li>
               <a href="#Ranklabel">Rank label</a>
@@ -3266,10 +3266,10 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#receives">Receives</a>
             </li>
             <li>
-              <a href="#hasGender">Has gender</a>
+              <a href="#usesRankLabelSet">Uses rank label set</a>
             </li>
             <li>
-              <a href="#appliesTo">Applies to</a>
+              <a href="#formsPartOfSet">Forms part of set</a>
             </li>
             <li>
               <a href="#hasRankLabel">Has rank label</a>
