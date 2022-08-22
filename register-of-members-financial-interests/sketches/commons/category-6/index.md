@@ -10,6 +10,8 @@ what is a portfolio in this context?
 
 #### ii)alone or together with other properties owned by the Member, provides rental income of more than £10,000 in a calendar year.
 
+do we capture income
+
 ## 50.Members are required to provide the following information:
 
 ### a)The type of property; e.g. whether business or residential, and if land, the type of use to which it is put; and
