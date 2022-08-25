@@ -20,7 +20,7 @@ is nature a controlled list?
 
 ### d)The status of the donor (whether an individual, building society, friendly society, LLP, registered party (other than the Member’s own party), trade union, unincorporated association or company, in which case the company registration number is required);
 
-are these examples or full list?
+are these examples or full list? examples
 
 same set as in category 2?
 

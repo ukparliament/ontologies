@@ -11,6 +11,8 @@
 
 ### a)Financial support and sponsorship;
 
+sponsorship?
+
 ### b)Loans and credit arrangements;
 
 ### c)Support in kind, including any of the following, if provided either free or at concessionary rates: advice or information services; receptions and events; training or development for the Member or his or her staff; the services of staff or interns; the provision of office space or equipment; hospitality or travel benefits such as season tickets or parking; (A concessionary rate should be valued by reference to the nearest equivalent commercial rate.)
@@ -28,8 +30,6 @@ Private address or private individual?
 
 Need to flag for privacy?
 
-Whose head is this on?
-
 #### b)The amount of the donation, or its nature and value if it is a donation in kind; (When registering a donation from a fundraising event, for example a fundraising dinner for which an individual has bought a ticket, Members should deduct the costs of the individual’s dinner to arrive at the value of their donation. They should register it if it exceeds the relevant financial threshold for donations. Where funds are raised for more than one Member, each should register as if he or she was the sole beneficiary.)
 
 sole beneficiary flag?
@@ -40,13 +40,13 @@ flag to show benefit in kind?
 
 #### c)Category 2(b) only: the dates of receipt (Subscriptions, memberships and staff secondments are generally regarded as received on their start dates.) and acceptance;
 
-dates of receipt and acceptance may be different?
+
 
 
 
 #### d)The status of the donor (whether an individual, building society, friendly society, LLP, registered party (other than the Member’s own party), trade union, unincorporated association or company, in which case the company registration number is required);
 
-is this a full list or examples?
+is this a full list or examples? examples...
 
 #### e)If the donor is a trust, the name and address of the person who created the trust; if created after 27 July 1999, the names and addresses of all others who have transferred property to the trust, or, if created before 27 July 1999, the date it was created;
 
