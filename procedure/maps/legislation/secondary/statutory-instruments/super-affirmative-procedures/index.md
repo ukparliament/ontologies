@@ -10,7 +10,11 @@ Dot file: [dot](legislative-reform-orders/legislative-reform-order.dot) / [svg](
 
 Dot file: [dot](legislative-reform-orders/components/draft-negative/draft-negative.dot) / [svg](legislative-reform-orders/components/draft-negative/draft-negative.svg)
 
-#### Lords
+#### [Draft-affirmative](legislative-reform-orders/components/draft-affirmative/draft-affirmative.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/draft-affirmative/draft-affirmative.dot) / [svg](legislative-reform-orders/components/draft-affirmative/draft-affirmative.svg)
+
+#### House of Lords
 
 ##### [Procedure determination](legislative-reform-orders/components/lords/procedure-determination/procedure-determination.pdf)
 
@@ -20,11 +24,15 @@ Dot file: [dot](legislative-reform-orders/components/lords/procedure-determinati
 
 Dot file: [dot](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.dot) / [svg](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.svg)
 
-#### Commons
+#### House of Commons
 
 ##### [Procedure determination](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.pdf)
 
 Dot file: [dot](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.dot) / [svg](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.svg)
+
+##### [Committee consideration](legislative-reform-orders/components/commons/committee-consideration/committee-consideration.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/commons/committee-consideration/committee-consideration.dot) / [svg](legislative-reform-orders/components/commons/committee-consideration/committee-consideration.svg)
 
 ## Remedial orders
 
