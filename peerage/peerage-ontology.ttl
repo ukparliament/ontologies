@@ -49,14 +49,14 @@ ppeer:Person rdf:type owl:Class ;
 	rdfs:comment "A person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
-ppeer:Gender rdf:type owl:Class ;
-	rdfs:label "Gender"@en ;
-	rdfs:comment "The gender of a person, for example: male."@en ;
+ppeer:RankLabelSet rdf:type owl:Class ;
+	rdfs:label "Rank label set"@en ;
+	rdfs:comment "The set of rank labels applied to a person, for example: a set formed of - Duchess, Marchioness, Countess, Viscountess, Baroness and Lady."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:RankLabel rdf:type owl:Class ;
 	rdfs:label "Rank label"@en ;
-	rdfs:comment "The label of a rank, determined by the gender of the person holding a peerage."@en ;
+	rdfs:comment "A label of a particular rank, for example: Earl or Countess."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 ppeer:Kingdom rdf:type owl:Class ;
@@ -146,23 +146,23 @@ ppeer:receives rdf:type owl:ObjectProperty ;
 	rdfs:range ppeer:LettersPatent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
-ppeer:hasGender rdf:type owl:ObjectProperty ;
-	rdfs:label "Has gender"@en ;
-	rdfs:comment "Relates a person to their gender."@en ;
+ppeer:usesRankLabelSet rdf:type owl:ObjectProperty ;
+	rdfs:label "Uses rank label set"@en ;
+	rdfs:comment "Relates a person to the set of rank labels that person uses."@en ;
 	rdfs:domain ppeer:Person ;
-	rdfs:range ppeer:Gender ;
+	rdfs:range ppeer:RankLabelSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
-ppeer:appliesTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Applies to"@en ;
-	rdfs:comment "Relates a rank label to the gender it applies to. A rank label applies to one gender, for example: a female person holding an Earldom has the rank label Countess. A gender has more than one rank label according to the rank of the peerage, for example: a female person holding a peerage in the Kingdom of Scotland may be a Lady, Viscountess, Countess, Marchioness or Duchess."@en ;
+ppeer:formsPartOfSet rdf:type owl:ObjectProperty ;
+	rdfs:label "Forms part of set"@en ;
+	rdfs:comment "Relates a rank label to the set of rank labels of which it forms part. A rank label applies to one rank label set, for example: the rank label Countess forms part of one rank label set, and the rank label Earl forms part of another rank label set. A rank label set has more than one rank label according to the rank of the peerage, for example: the rank label set formed of the rank labels Duchess, Marchioness, Countess, Viscountess, Baroness and Lady."@en ;
 	rdfs:domain ppeer:RankLabel ;
-	rdfs:range ppeer:Gender ;
+	rdfs:range ppeer:RankLabelSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:hasRankLabel rdf:type owl:ObjectProperty ;
 	rdfs:label "Has rank label"@en ;
-	rdfs:comment "Relates a rank to a rank label. A rank has one of two rank labels in accordance with the gender of a person holding a peerage of that rank, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank."@en ;
+	rdfs:comment "Relates a rank to a rank label. A rank has one of two rank labels, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank."@en ;
 	rdfs:domain ppeer:Rank ;
 	rdfs:range ppeer:RankLabel ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
