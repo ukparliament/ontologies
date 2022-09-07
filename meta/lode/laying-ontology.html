@@ -311,6 +311,65 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Layingauthoritytype">
+          <h3>Laying authority type
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/laying/LayingAuthorityType</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/laying/">pl:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>The type of an authority under which a paper is laid. A paper may be laid under prerogative powers and said to be laid 'by command'. A paper laid in order to comply with legislation may be said to be laid 'by Act'. A paper may be laid in order to comply with standing orders, or with an opposed or unopposed return motion.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#parentLayingAuthorityType">pl:parentLayingAuthorityType</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#hasLayingAuthorityType">pl:hasLayingAuthorityType</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#parentLayingAuthorityType">pl:parentLayingAuthorityType</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="section" id="objectproperties">
         <h2>Object Properties</h2>
@@ -404,12 +463,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
-                <a href="#LayingAuthorityType">pl:LayingAuthorityType</a>
+                <span>
+                  <a href="#Layingauthoritytype">pl:LayingAuthorityType</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Parentlayingauthoritytype">
+        <div class="property entity" id="parentLayingAuthorityType">
           <h3>Parent laying authority type
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -439,7 +501,10 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
-                <a href="#LayingAuthorityType">pl:LayingAuthorityType</a>
+                <span>
+                  <a href="#Layingauthoritytype">pl:LayingAuthorityType</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -447,7 +512,10 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
-                <a href="#LayingAuthorityType">pl:LayingAuthorityType</a>
+                <span>
+                  <a href="#Layingauthoritytype">pl:LayingAuthorityType</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -636,6 +704,9 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             <li>
               <a href="#Layingauthority">Laying authority</a>
             </li>
+            <li>
+              <a href="#Layingauthoritytype">Laying authority type</a>
+            </li>
           </ul>
         </li>
         <li>
@@ -650,7 +721,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#hasLayingAuthorityType">Has laying authority type</a>
             </li>
             <li>
-              <a href="#Parentlayingauthoritytype">Parent laying authority type</a>
+              <a href="#parentLayingAuthorityType">Parent laying authority type</a>
             </li>
             <li>
               <a href="#resultsIn">Results in</a>
