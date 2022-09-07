@@ -54,7 +54,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
             </dt>
-            <dd><p>A model describing the laying of papers into a House and the authorities papers are laid under.</p></dd>
+            <dd><p>A model describing the laying of papers into a House and the authorities those papers are laid under.</p></dd>
           </div>
         </dl>
       </div>
@@ -98,6 +98,44 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Madeavailablething">
+          <h3>Made available thing
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/laying/MadeAvailableThing</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/laying/">pl:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A thing made available to a House or to a House by means of its Library.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#LaidPaper">pl:LaidPaper</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Laying">
           <h3>Laying
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -121,7 +159,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>The act of making available a paper into a House. Papers may be laid before both Houses on the same day.</p></td>
+              <td><p>The act of making a paper available to a House under a laying authority. Papers are made available to a House on being accepted by the Journal Office of that House.</p></td>
             </tr>
             <tr>
               <th>
@@ -157,6 +195,76 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
+        <div class="property entity" id="LaidPaper">
+          <h3>Laid paper
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/laying/LaidPaper</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/laying/">pl:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A paper having been laid before a House.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#ParliamentaryPaper">pl:ParliamentaryPaper</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Madeavailablething">pl:MadeAvailableThing</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isAuditorCertified">pl:isAuditorCertified</a>
+                  <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#resultsIn">pl:resultsIn</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Layingauthority">
           <h3>Laying authority
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -180,7 +288,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td></td>
+              <td><p>The authority under which a paper is laid. The authority for laying may cite a section of legislation, standing order or resolution giving authorisation for that laying.</p></td>
             </tr>
             <tr>
               <th>
@@ -229,7 +337,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>The type of an authority under which a paper is laid before a House. Legislation may impose a duty on a body to lay papers before a House, these are laid 'by Act'. Command papers are laid in a House by the government and are laid 'by Command'.</p></td>
+              <td><p>The type of an authority under which a paper is laid. A paper may be laid under prerogative powers and said to be laid 'by command'. A paper laid in order to comply with legislation may be said to be laid 'by Act'. A paper may be laid in order to comply with standing orders, or with an opposed or unopposed return motion.</p></td>
             </tr>
             <tr>
               <th>
@@ -265,7 +373,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Parliamentarypaper">
+        <div class="property entity" id="ParliamentaryPaper">
           <h3>Parliamentary paper
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
@@ -288,7 +396,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Papers laid into or published under the authority of Parliament.</p></td>
+              <td><p>Papers made available to or published under the authority of Parliament.</p></td>
             </tr>
             <tr>
               <th>
@@ -298,114 +406,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <span>
                   <a href="#LaidPaper">pl:LaidPaper</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Madeavailablething">
-          <h3>Made available thing
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/laying/MadeAvailableThing</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/laying/">pl:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A thing made available to a House or to a House by means of its Library.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#LaidPaper">pl:LaidPaper</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="LaidPaper">
-          <h3>Laid paper
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/laying/LaidPaper</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/laying/">pl:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A paper having been laid before a House.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#Parliamentarypaper">pl:ParliamentaryPaper</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#Madeavailablething">pl:MadeAvailableThing</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isAuditorCertified">pl:isAuditorCertified</a>
-                  <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#resultsIn">pl:resultsIn</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
             </tr>
@@ -734,7 +734,13 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#Makingavailable">Making available</a>
             </li>
             <li>
+              <a href="#Madeavailablething">Made available thing</a>
+            </li>
+            <li>
               <a href="#Laying">Laying</a>
+            </li>
+            <li>
+              <a href="#LaidPaper">Laid paper</a>
             </li>
             <li>
               <a href="#Layingauthority">Laying authority</a>
@@ -743,13 +749,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#Layingauthoritytype">Laying authority type</a>
             </li>
             <li>
-              <a href="#Parliamentarypaper">Parliamentary paper</a>
-            </li>
-            <li>
-              <a href="#Madeavailablething">Made available thing</a>
-            </li>
-            <li>
-              <a href="#LaidPaper">Laid paper</a>
+              <a href="#ParliamentaryPaper">Parliamentary paper</a>
             </li>
           </ul>
         </li>
