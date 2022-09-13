@@ -26,17 +26,15 @@ sponsorship?
 
 #### a)The name and address of the donor and (if the donation was received indirectly) of the organisation acting as intermediary; (Private addresses will not be published.)
 
-Private address or private individual?
-
-Need to flag for privacy?
+Private individual?
 
 #### b)The amount of the donation, or its nature and value if it is a donation in kind; (When registering a donation from a fundraising event, for example a fundraising dinner for which an individual has bought a ticket, Members should deduct the costs of the individual’s dinner to arrive at the value of their donation. They should register it if it exceeds the relevant financial threshold for donations. Where funds are raised for more than one Member, each should register as if he or she was the sole beneficiary.)
 
-sole beneficiary flag?
+sole beneficiary flag? no says thomas
 
-float + currency?
+float + currency? always gbp
 
-flag to show benefit in kind?
+flag to show benefit in kind? yes
 
 #### c)Category 2(b) only: the dates of receipt (Subscriptions, memberships and staff secondments are generally regarded as received on their start dates.) and acceptance;
 
@@ -46,7 +44,7 @@ flag to show benefit in kind?
 
 #### d)The status of the donor (whether an individual, building society, friendly society, LLP, registered party (other than the Member’s own party), trade union, unincorporated association or company, in which case the company registration number is required);
 
-is this a full list or examples? examples...
+is this a full list or examples? examples... < full list + other
 
 #### e)If the donor is a trust, the name and address of the person who created the trust; if created after 27 July 1999, the names and addresses of all others who have transferred property to the trust, or, if created before 27 July 1999, the date it was created;
 
