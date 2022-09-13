@@ -27,5 +27,3 @@ as above + others?
 form says approved by IPSA. Is there a reference list?
 
 ### d)Whether they work part time.
-
-form also has working patterns!
