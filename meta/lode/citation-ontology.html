@@ -54,7 +54,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
             </dt>
-            <dd><p>A model describing citations.</p></dd>
+            <dd><p>A model describing the relationship between a thing having a citation and the thing or URI being cited.</p></dd>
           </div>
         </dl>
       </div>
@@ -121,7 +121,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A citation.</p></td>
+              <td><p>A citation from a thing to either a thing or a document at a URI.</p></td>
             </tr>
             <tr>
               <th>
@@ -143,13 +143,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                   </li>
                   <li>
                     <span>
-                      <a href="#title">pcite:title</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#uri">pcite:uri</a>
+                      <a href="#hasUri">pcite:hasUri</a>
                       <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
                     </span>
                   </li>
@@ -192,7 +186,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A thing being cited.</p></td>
+              <td><p>A thing being cited which is an instance of a class in the Parliament data store, for example: a standing order or a Speaker's ruling.</p></td>
             </tr>
             <tr>
               <th>
@@ -230,7 +224,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>The type of a document.</p></td>
+              <td><p>The type of the document being cited, for example: a standing order or a section of legislation.</p></td>
             </tr>
             <tr>
               <th>
@@ -271,7 +265,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a citing thing to a citation. A citing thing may have one or more citations. A citation belongs to one citing thing.</p></td>
+              <td><p>Relates a citing thing to a citation. A citing thing includes one or more citations. A citation is included in one citing thing.</p></td>
             </tr>
             <tr>
               <th>
@@ -398,61 +392,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
       </div>
       <div class="section" id="datatypeproperties">
         <h2>Datatype Properties</h2>
-        <div class="property entity" id="title">
-          <h3>Title
+        <div class="property entity" id="hasUri">
+          <h3>Has URI
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/citation/title</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/citation/">pcite:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>The title of the thing being cited.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Citation">pcite:Citation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="uri">
-          <h3>URI
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/citation/uri</code>
+                <code>http://parliament.uk/ontologies/citation/hasUri</code>
               </td>
             </tr>
             <tr>
@@ -593,10 +541,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
           </h4>
           <ul class="second">
             <li>
-              <a href="#title">Title</a>
-            </li>
-            <li>
-              <a href="#uri">URI</a>
+              <a href="#hasUri">Has URI</a>
             </li>
           </ul>
         </li>

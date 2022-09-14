@@ -34,7 +34,7 @@
     <main>
         <h1 id="title">Citation ontology</h1>
 
-        <p id="description">A model describing citations.</p>
+        <p id="description">A model describing the relationship between a thing having a citation and the thing or URI being cited.</p>
 
         <nav>  
             <a href="#classes">Classes</a>
@@ -64,7 +64,7 @@
                     Class <a href="#Citation">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>A citation.</p>
+                <p>A citation from a thing to either a thing or a document at a URI.</p>
 
 
             </article>
@@ -73,7 +73,7 @@
                     Class <a href="#CitedThing">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>A thing being cited.</p>
+                <p>A thing being cited which is an instance of a class in the Parliament data store, for example: a standing order or a Speaker&#39;s ruling.</p>
 
 
             </article>
@@ -82,7 +82,7 @@
                     Class <a href="#DocumentType">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>The type of a document.</p>
+                <p>The type of the document being cited, for example: a standing order or a section of legislation.</p>
 
 
             </article>
@@ -101,7 +101,7 @@
 
 
 
-                <p>Relates a citing thing to a citation. A citing thing may have one or more citations. A citation belongs to one citing thing.</p>
+                <p>Relates a citing thing to a citation. A citing thing includes one or more citations. A citation is included in one citing thing.</p>
 
                 <p><a href="#CitingThing">CitingThing</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Citation">Citation</a></p>
 
@@ -140,21 +140,9 @@
         <section id="dataproperties">
             <h2>Data properties</h2>
 
-            <article class="dataproperty" id="title">
+            <article class="dataproperty" id="hasUri">
                 <h3>
-                    Data property <a href="#title">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>The title of the thing being cited.</p>
-
-                <p>Citation &mdash; LABEL PLACEHOLDER &mdash; langString</p>
-
-
-            </article>
-
-            <article class="dataproperty" id="uri">
-                <h3>
-                    Data property <a href="#uri">LABEL PLACEHOLDER</a>
+                    Data property <a href="#hasUri">LABEL PLACEHOLDER</a>
             </h3>
 
                 <p>The URI of the thing being cited.</p>
