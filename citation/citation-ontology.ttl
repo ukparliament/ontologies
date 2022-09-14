@@ -11,7 +11,7 @@
     dcterms:title "Citation ontology"@en ;
     dcterms:created "2022-08-03"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing citations."@en;
+    dcterms:description "A model describing the relationship between a thing having a citation and the thing or URI being cited."@en;
 	foaf:depiction <https://ukparliament.github.io/ontologies/citation/citation.svg> ;
 	foaf:maker 
 		[ foaf:name "Jayne Bosworth" ],
@@ -30,29 +30,32 @@ pcite:CitingThing rdf:type owl:Class ;
 	
 pcite:Citation rdf:type owl:Class ;
 	rdfs:label "Citation"@en ;
-	rdfs:comment "A citation."@en ;
+	rdfs:comment "A citation from a thing to either a thing or a document at a URI."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
 	
 pcite:CitedThing rdf:type owl:Class ;
 	rdfs:label "Cited thing"@en ;
-	rdfs:comment "A thing being cited."@en ;
+	rdfs:comment "A thing being cited which is an instance of a class in the Parliament data store, for example: a standing order or a Speaker's ruling."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
 	
 pcite:DocumentType rdf:type owl:Class ;
 	rdfs:label "DocumentType"@en ;
-	rdfs:comment "The type of a document."@en ;
+	rdfs:comment "The type of the document being cited, for example: a standing order or a section of legislation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
 	
-	
+
 	
 #######  Object properties ##### 
 
 pcite:hasCitation rdf:type owl:ObjectProperty ;
 	rdfs:label "Has citation"@en ;
-	rdfs:comment "Relates a citing thing to a citation. A citing thing may have one or more citations. A citation belongs to one citing thing."@en ;
+	rdfs:comment "Relates a citing thing to a citation. A citing thing includes one or more citations. A citation is included in one citing thing."@en ;
 	rdfs:domain pcite:CitingThing ;
 	rdfs:range pcite:Citation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
+	
+	
+					#### edited to here
 
 pcite:refersTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to"@en ;
@@ -72,15 +75,8 @@ pcite:hasDocumentType rdf:type owl:ObjectProperty ;
 
 #######  Data properties #####
 
-pcite:title rdf:type owl:DatatypeProperty ;
-	rdfs:label "Title"@en ;
-	rdfs:comment "The title of the thing being cited."@en ;
-	rdfs:domain pcite:Citation ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
-	
-pcite:uri rdf:type owl:DatatypeProperty ;
-	rdfs:label "URI"@en ;
+pcite:hasUri rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has URI"@en ;
 	rdfs:comment "The URI of the thing being cited."@en ;
 	rdfs:domain pcite:Citation ;
 	rdfs:range rdfs:Literal ;
