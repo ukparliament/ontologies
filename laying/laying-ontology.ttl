@@ -65,46 +65,41 @@ pl:LayingAuthorityType rdf:type owl:Class ;
 	rdfs:comment "The type of an authority under which a paper is laid. A paper may be laid under prerogative powers and said to be laid 'by command'. A paper laid in order to comply with legislation may be said to be laid 'by Act'. A paper may be laid in order to comply with standing orders, or with an opposed or unopposed return motion."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
-
-	
-	
-	
-						#### edited to here
-	
 	
 
 #######  Object properties ##### 
 	
 pl:hasLayingAuthority rdf:type owl:ObjectProperty ;
 	rdfs:label "Has laying authority"@en ;
-	rdfs:comment "Relates an act of laying a paper to a laying authority."@en ;
+	rdfs:comment "Relates an act of laying a paper to the authority under which that paper is laid. A paper is laid under one authority."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:LayingAuthority ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:hasLayingAuthorityType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has laying authority type"@en ;
-	rdfs:comment "Relates a laying authority to its type."@en ;
+	rdfs:comment "Relates a laying authority to the type of that laying authority. A laying authority is of one type."@en ;
 	rdfs:domain pl:LayingAuthority ;
 	rdfs:range pl:LayingAuthorityType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:parentLayingAuthorityType rdf:type owl:ObjectProperty ;
 	rdfs:label "Parent laying authority type"@en ;
-	rdfs:comment "Relates a laying authority type to its parent."@en ;
+	rdfs:comment "Relates a laying authority type to the parent of that laying authority type, for example: a laying authority type of 'by Act' having a parent laying authority type of 'by Statute'. A laying authority type may have one parent laying authority type, or none. A laying authority type may have one or more child laying authority types, or none."@en ;
 	rdfs:domain pl:LayingAuthorityType ;
 	rdfs:range pl:LayingAuthorityType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in"@en ;
-	rdfs:comment "Relates an act of laying a paper to the paper having been laid."@en ;
+	rdfs:comment "Relates an act of laying a paper to that paper having been laid. An act of laying is of one laid paper. A laid paper is the result of one act of laying."@en ;
 	rdfs:domain pl:Laying ;
 	rdfs:range pl:LaidPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
+
 				
 
-#######  Data properties ##### 
+#######  Data properties #####
 
 pl:isAuditorCertified rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is auditor certified"@en ;
