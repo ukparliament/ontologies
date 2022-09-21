@@ -53,13 +53,10 @@ pcite:hasCitation rdf:type owl:ObjectProperty ;
 	rdfs:domain pcite:CitingThing ;
 	rdfs:range pcite:Citation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
-	
-	
-					#### edited to here
 
 pcite:refersTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Refers to"@en ;
-	rdfs:comment "Relates a citation to cited thing. A cited thing may have one or more citations. A citation is to one cited thing."@en ;
+	rdfs:comment "Relates a citation to the thing being cited. A cited thing may have one or more citations. A citation is to one cited thing."@en ;
 	rdfs:domain pcite:Citation ;
 	rdfs:range pcite:CitedThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
@@ -77,7 +74,7 @@ pcite:hasDocumentType rdf:type owl:ObjectProperty ;
 
 pcite:hasUri rdf:type owl:DatatypeProperty ;
 	rdfs:label "Has URI"@en ;
-	rdfs:comment "The URI of the thing being cited."@en ;
+	rdfs:comment "Relates a citation to the URI of the thing being cited."@en ;
 	rdfs:domain pcite:Citation ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/citation/> .
