@@ -1,4 +1,8 @@
+
 # 2022 - Week 39
+
+
+Once again, we must apologise, our so-called "week"notes slipping into a pattern of every other month. At best. For this, we can only blame deployment pipelines. Eager as we were to bring exciting news of step order success, we kept putting off the typing part. Only to spend several weeks in logistical limbo. Nevertheless, it is good to be back and even better to announce that all our steps are now in all the right order. Read on, dear reader, read on.
 
 ## All the right steps, not necessarily in the right order
 
