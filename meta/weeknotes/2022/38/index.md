@@ -46,4 +46,4 @@ In other team:Phil news, the work to tidy up contact detail information stored i
 
 Usually we have the pleasure of introducing a brand new data model. This week we welcome a box fresh 'brarian to our flock. If flock is indeed the collective noun for a group of 'brarians. Other options have been suggested, a "stack of 'brarians" being one favoured variant. With that, we welcome Deanne as the latest addition to our crack team. Whether she'd prefer to join a flock or a stack, we leave as a matter for her. Welcome Deanne.
 
-We also welcome back Librarian Claire from her short but refreshing career break. Lovely to have you back [Librarian Claire](https://twitter.com/tinysprite).
+We also welcome back [Librarian Claire](https://twitter.com/tinysprite) from her short but refreshing career break. Lovely to have you back [Librarian Claire](https://twitter.com/tinysprite).
