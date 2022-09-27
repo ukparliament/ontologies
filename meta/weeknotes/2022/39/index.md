@@ -1,8 +1,6 @@
-
 # 2022 - Week 39
 
-
-Once again, we must apologise, our so-called "week"notes slipping into a pattern of every other month. At best. For this, we can only blame deployment pipelines. Eager as we were to bring exciting news of step order success, we kept putting off the typing part. Only to spend several weeks in logistical limbo. Nevertheless, it is good to be back and even better to announce that all our steps are now in all the right order. Read on, dear reader, read on.
+Two editions of weeknotes in two weeks! Truly miracles do happen.
 
 ## All the right steps, not necessarily in the right order
 
@@ -19,4 +17,53 @@ Since then, Jianhan has done all the same work in live, Librarian Jayne has adde
 ![A non-wonky timeline as described above](/not-wonky.png)
 
 Much less ridiculous, as we're sure you'll agree. And yet more proof - as if proof were needed - that putting domain knowledge, modelling, mapping and information management in the same place is the only reasonable approach to making things with computers. It is at this point that we smile sweetly at JO Jane and suggest a pint. Perhaps.
+
+## Breaking egg timer news
+
+If you tuned in last week, you'll already know that Michael has been on a mission to protect his purse from further Heroku-induced costs. To that end, Jianhan and Robert were roped in, applying computational spanners to give Azure a firm thwacking. Librarian Jayne has now tested their efforts and declared herself happy. Which means our beloved egg timer has a new home:
+
+* [https://api.parliament.uk/egg-timer](https://api.parliament.uk/egg-timer)
+
+If you happen to be an egg timer user, please update bookmarks and documentation accordingly. At some point soon, Heroku will stop offering a free to use tier and, quite frankly, paying for compute in dollars never looked less attractive. For that reason, the redirect from the old website will stop working on the 31st October so if bookmarks aren't updated, you may well lose your egg timing capabilities forever.
+
+Whilst saving Michael's purse may be a worthwhile endeavour, no amount of pennies skimped will save on librarian labour. As we found to our cost with recent sitting day changes. The problem we have
+
+
+
+
+> Egg timer into procedure model
+
+## Teaching the machines about legislative reform orders
+
+> lro talk thru with JO Jane and Philipp
+
+A large and laborious part of the week saw Librarian Ayesha and her computational bedfellow Michael continuing with the long, slow grind of adding LRO procedure routes to the machines. The machine being good enough to spit of DOT files - and not hairballs - in return.
+
+## On matters of consent
+
+> check thru nia map with Christine
+
+> liam and tom chat on tracking LCMs
+
+
+## On matters of modelling
+
+> rmfi
+
+
+
+## On matters of information management
+
+> catch up with anya and claire on standing orders
+
+> spreadsheet on paper types.
+
+> rush with anna
+
+## Always be learning
+
+> Devolved but denied? Regulations and consent beyond Westminster < thursday
+
+
+
 
