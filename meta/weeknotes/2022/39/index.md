@@ -10,9 +10,7 @@ Our regular reader - well, JO Jane at least - will be well aware of the issues w
 
 ![A wonky timeline as described above](/wonky.png)
 
-Early attempts to fix this problem saw us taking a mathematical approach and spanning the procedure map tree. But [a graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is not a tree, so that didn't work. In recent weeks, we changed tack, stopped treating the problem as some sums and started to treat it as yet more information management. Librarian Jayne and her computational handmaidens, Young Robert and Michael, added a new concept of [step depth](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e289) to our [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology) and [procedure editor schema](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/editor/schema.svg). [Our Jianhan](https://twitter.com/jianhanzhu) added new functionality to the procedure editor application, database and triple store. Jayne added step depths to both [maps](https://ukparliament.github.io/ontologies/procedure/maps/) and data. Jianhan chipped back in with a new SPARQL query to order timelines through a combination of dates and step depths. Colleagues in Software Engineering deployed Jianhan's new query to their Q/A environment. And, following a wee bit of additional tinkering - quite a lot of additional tinkering to be honest, testing revealed the new model, data and query worked. Perfectly.
-
-Since then, Jianhan has done all the same work in live, Librarian Jayne has added step depths to the rest of our procedures and Software Engineering have deployed the new query to live. Which means the timeline for the instrument mentioned above now has a debate taking place before the question on the non-fatal amendment being put, before the non-fatal amendment to the motion is rejected, before the question on the approval motion is put, before the approval motion is approved.
+Early attempts to fix this problem saw us taking a mathematical approach and spanning the procedure map tree. But [a graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is not a tree, so that didn't work. In recent weeks, we changed tack, stopped treating the problem as some sums and started to treat it as yet more information management. Librarian Jayne and her computational handmaidens, Young Robert and Michael, added a new concept of [step depth](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e289) to our [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology) and [procedure editor schema](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/editor/schema.svg). [Our Jianhan](https://twitter.com/jianhanzhu) added new functionality to the procedure editor application, database and triple store. Jayne added step depths to both [maps](https://ukparliament.github.io/ontologies/procedure/maps/) and data. Jianhan chipped back in with a new SPARQL query to order timelines through a combination of dates and step depths. Colleagues in Software Engineering deployed Jianhan's new query and, following a wee bit of additional tinkering - quite a lot of additional tinkering to be honest - testing revealed the new model, data and query worked. Perfectly. Which means the timeline for the instrument mentioned above now has a debate taking place before the question on the non-fatal amendment being put, before the non-fatal amendment to the motion is rejected, before the question on the approval motion is put, before the approval motion is approved.
 
 ![A non-wonky timeline as described above](/not-wonky.png)
 
@@ -24,45 +22,47 @@ If you tuned in last week, you'll already know that Michael has been on a missio
 
 * [https://api.parliament.uk/egg-timer](https://api.parliament.uk/egg-timer)
 
-If you happen to be an egg timer user, please update bookmarks and documentation accordingly. At some point soon, Heroku will stop offering a free to use tier and, quite frankly, paying for compute in dollars never looked less attractive. For that reason, the redirect from the old website will stop working on the 31st October so if bookmarks aren't updated, you may well lose your egg timing capabilities forever.
+If you happen to be an egg timer enthusiast, please update bookmarks and documentation accordingly. At some point soon, Heroku will stop offering a free to use tier and, quite frankly, paying for compute in dollars never looked less attractive. For that reason, the redirect from the old website will stop working on the 31st October so if bookmarks aren't updated, you may well lose your egg timing capabilities forever.
 
-Whilst saving Michael's purse may be a worthwhile endeavour, no amount of pennies skimped will save on librarian labour. As we found to our cost with recent sitting day changes. The problem we have
+## Losing a librarian from the loop
 
+Whilst saving Michael's purse may be a worthwhile endeavour, no amount of pennies skimped will save on librarian labour. As we found to our cost with recent sitting day changes. The problem being we have our lovely procedure model in one place and our beloved egg timer in another. And the two systems are barely on speaking terms.
 
+Our current workflow sees our crack team of librarians create a work package per instrument, add business items to said work package and actualise procedural steps with those business items. Whenever a clock is encountered, the duty librarain fires up the egg timer, plugs in the type of days to count, the number of days to count and the start date. Then takes the date the egg timer spits out and creates a new business step with that date actualising the clock end step. Which is all well. And all good. At least until sitting days change, as sitting days are wont to do. At which point, whichever poor librarian has copped the short straw has to go into every instrument currently before Parliament and update every clock end step. Last time out, Librarian Martin picked up the shortest of straws and ended up updating clocks for over 100 instruments. Not a pleasant task.
 
-
-> Egg timer into procedure model
+All of which led Lead Librarian Anya to suggest - perhaps unsurprisingly, in a pub if memory serves correctly - that it may well be time to take our plan to integrate procedural data with egg timer calculations off the back burner. A suggestion that led to Librarians Anya and Jayne and computational pen-pusher Michael meeting in pixels on Friday afternoon and scribbling a sketch of what such an integration might look like. For now, it's a hand-wavy, fag packet sketch but, as we've no doubt said before, if a model doesn't fit on a fag packet, it probably can't be built, anything much larger than a fag packet teetering on the brink of enterprise architecture. Not a thing that sparks joy. We still have at least one outstanding question around whether a single procedure with multiple clocks might ever use different styles of calculation per clock. But with both JO Jane and Philipp taking much needed vacations, that's more chummer for next week.
 
 ## Teaching the machines about legislative reform orders
 
-> lro talk thru with JO Jane and Philipp
+Speaking of the JO twosome, Jayne, Ayesha and Michael spent part of Thursday in the very pleasant company of JO Jane and her hound Indiana Bones. JO Philipp was supposed to come along but unfortunately couldn't make it. Packing his trunks we assume. The purpose of the meeting was a homework marking exercise, always a thing that brings JO Jane's ex-teacher skills to the fore. Assorted LRO maps were opened, steps described and routes traced. No gold stars were awarded but we think we got a pretty strong 8/10 for our efforts. That said, it looks more than likely that the maps may well need yet another damned clock. So we're up to five now. You can see why Anya is keen to plumb in the egg timer.
 
-A large and laborious part of the week saw Librarian Ayesha and her computational bedfellow Michael continuing with the long, slow grind of adding LRO procedure routes to the machines. The machine being good enough to spit of DOT files - and not hairballs - in return.
+A large and laborious part of the week saw Librarian Ayesha and her computational bedfellow Michael continuing with the long, slow grind of adding LRO procedure routes to the machines. The machine being good enough to spit out DOT files - and not hairballs - in return. There's not much to show for their effort and, if there was, very few people would want to look. Still, it's all progress.
 
 ## On matters of consent
 
-> check thru nia map with Christine
+Thursday afternoon took on a slight Sewel flavour as attentions turned to matters of consent in the context of devolution. First up, Jayne and Michael popped along to [Devolved but denied? Regulations and consent beyond Westminster](https://www.hansardsociety.org.uk/events/webinars/devolved-denied-regulations-beyond-westminster), an online event hosted by the [Hansard Society](https://www.hansardsociety.org.uk/). We've given quite a lot of thought and time to mapping legislation consent motions in the primary legislation context - weeknotes passim - but not so much in our more usual stomping ground of secondary legislation. Jayne made many notes. We may well need to act on them. Thanks be to [Ruth](https://twitter.com/RuthFox01) and colleagues.
 
-> liam and tom chat on tracking LCMs
+Not being the types to put our hands up in meetings - and chat being deactivated anyway - now might be a good time to mention that Jayne has cobbled together a couple of handy queries dealing with [affirmative instruments under Section 10 of the United Kingdom Internal Market Act 2020](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/statutory-instrument-flavours/#affirmative-instruments-under-section-10-of-the-united-kingdom-internal-market-act-2020). Which may well be of use to fans of devolution, and indeed consent.
 
+Meeting two saw Jayne, Claire and Michael joined in pixels by the Northern Ireland Assembly's very own Christine who kindly donated her time to idiot check our legislative consent motion map for the NIA. Again no gold stars but again a pretty solid 8/10. That said, the addition of yet another new clock seems to be necessary. At this point, we are literally drowning in clocks. Thanks for the hook up Legislation Office Liam.
 
-## On matters of modelling
+The third and final consent meeting of the afternoon saw a cast of crack librarians joined by the very same Legislation Office Liam and soon to be Legislation Office Tom. We have a longterm plan to map out the full public bill procedure but, when we say longterm, we really mean it. Given the complications and complexity it looks like we'll be mapping until death or retirement. Whichever comes first. In meantime, we have two and half fully mapped legislative consent motion procedures done in collaboration with colleagues in the devolved legislatures. And when we next meet Christine in a week or two, we should have all three. We also have the work that our Jianhan's doing to make our procedure model unicameral compliant. Which means we're wondering if we can use the meantime to put the bits we do have to some use. A plan was planned to get something rough and ready in place to track LCMs by the far side of Christmas. As ever, it may all come to naught, but if you don't research, you don't develop.
 
-> rmfi
+## Interests financial and otherwise
 
+With Young Robert on vacation, modelling matters of an ontological nature climbed into the back seat and fell fast asleep. Michael continued his newly indentured life in the service of the Register of Members' Financial Interests. In collaboration with Registrars Thomas and James, and in the company of Tom, we now have 'as is' models for 9 of the 10 Commons categories. One more meeting and a tad more fettling should put paid to phase one. It should be noted that 'as is' in this context does not mean documentation of the current data model. The current data model being pretty much a single string and some timestamps, there wouldn't be much value in that. 'As is' here refers to a model that conforms to the current ruleset with the very tiniest hint of the tightening of spanners. How tight those spanners can tighten being the subject of another chat with Stuart.
 
+In the meantime, and as we said last week, we're somewhat lacking in our competency questions. Or things the new system *might* be expected to be able to answer. Or at least we were. This week, Librarians Anna, Ayesha and Deanne have been casting keen eyes over written and oral evidence and decanting all bits pertinent to competency into a brand new spreadsheet. Top work librarians. And not just that. Steve has also been fingering his rolodex, pulling out contacts and pinging them in search of more questions for more competencies. Which means our [competency question Google doc is now full to bursting](https://docs.google.com/document/d/1xlXxWpouTtDvFxk9xOQGvD8sUaS3t0UgClC7TrFvPvU/edit?usp=sharing). Thanks Steve. Really helpful. Really really helpful.
+
+Finally dear reader, if you're the kind of person who might take an interest in the RMFI - or you know someone who is - and would like to contribute, please do get in touch. We cannot, of course, promise to design a system that answers everyone's questions, but the more we know, the betters we'll do.
 
 ## On matters of information management
 
-> catch up with anya and claire on standing orders
+A couple of months ago - is it only that long? - our regular will recall we had our heads buried in our shiny new [parliamentary paper model](https://ukparliament.github.io/ontologies/parliamentary-paper/parliamentary-paper-ontology). Part of that model provides a [polyhierarchical](https://ukparliament.github.io/ontologies/parliamentary-paper/parliamentary-paper-ontology#d4e231) - we don't mess around - taxonomy of [paper types](https://ukparliament.github.io/ontologies/parliamentary-paper/parliamentary-paper-ontology#d4e140). What this taxonomy should contain being a matter for later. Well, later has arrived and we can put it off no longer. Anya, Jayne and Michael have put together a spreadsheet of candidate terms and hatched a plan. At some point, in a recess not too far off, we hope to get our crack team of librarians rifling through old papers, attempting to index them and seeing which candidate terms work, which don't and what's missing.
 
-> spreadsheet on paper types.
+Until next time ....
 
-> rush with anna
 
-## Always be learning
-
-> Devolved but denied? Regulations and consent beyond Westminster < thursday
 
 
 
