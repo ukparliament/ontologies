@@ -56,7 +56,7 @@ In the meantime, and as we said last week, we're somewhat lacking in our compete
 
 Next steps involve politely asking our crack team of librarians to also index the competency questions provided by Steve. Then ?someone? has to sit down with the data models and work out which ones we might hope to be able to answer, which ones are 'maybe' and which ones definitely sit outside the bounds of the current ruleset. At first glance, it would appear many more may well end up in the last bucket than the first. But that is merely a first glance. We should know soon enough.
 
-Finally dear reader, if you're the kind of person who might take an interest in the RMFI - or you know someone who is - and would like to contribute, please do get in touch. We cannot, of course, promise to design a system that answers everyone's questions, but the more we know, the betters we'll do.
+Finally dear reader, if you're the kind of person who might take an interest in the RMFI - or you know someone who is - and would like to contribute, please do get in touch. We cannot, of course, promise to design a system that answers everyone's questions, but the more we know, the better we'll do.
 
 ## On matters of information management
 
