@@ -7,6 +7,10 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 ## House of Commons
 
+[Current Members of the House of Commons](https://api.parliament.uk/mnis-prodder/parse?filter=house=commons&include=)
+
+[Current and former Members of the House of Commons](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all|house=commons&include=)
+
 [Current Members of the House of Commons, representing constituencies in England](https://api.parliament.uk/mnis-prodder/parse?filter=house=both%7Cconstituencyinarea=England&include=)
 
 [Current Members of the House of Commons, representing constituencies in Northern Ireland](https://api.parliament.uk/mnis-prodder/parse?filter=house=both%7Cconstituencyinarea=Northern%20Ireland&include=)
@@ -23,9 +27,13 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 ## House of Lords
 
+[Current Members of the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords&include=)
+
 [Current and former Members of the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Chouse*lords&include=)
 
 [Current Members of the House of Lords who are eligible to sit, including full details on how to correctly write their title and rank](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords%7Ciseligible=true/PreferredNames/)
+
+[Current Members of the House of Lords who hold a government position](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords|holdsgovernmentpost=true&include=)
 
 ## House of Commons and House of Lords
 
