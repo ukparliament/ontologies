@@ -12,7 +12,7 @@
 
 [Ruleset](https://publications.parliament.uk/pa/cm201719/cmcode/1882/188204.htm)
 
-[Standing order 150](https://api.parliament.uk/standing-orders/fragments/966)
+[Standing order 150a](https://api.parliament.uk/standing-orders/fragments/966)
 
 ### Categories
 
