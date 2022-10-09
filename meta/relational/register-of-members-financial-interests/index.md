@@ -2,9 +2,13 @@
 
 [Sketch](sketch.svg)
 
+[Competency questions](https://docs.google.com/spreadsheets/d/1iRsQBRPChMVFitSGBtNJFGNBvFT8XGKQYYqu40zy_OM/edit?usp=sharing)
+
 ## House of Commons
 
 [Ruleset](https://publications.parliament.uk/pa/cm201719/cmcode/1882/188204.htm)
+
+[Standards Committee report](https://committees.parliament.uk/publications/22338/documents/165774/default/)
 
 ### Categories
 
