@@ -185,6 +185,24 @@
 
 
             </article>
+            <article class="class" id="CalculationStyle">
+                <h3>
+                    Class <a href="#CalculationStyle">LABEL PLACEHOLDER</a>
+                </h3>
+
+                <p>A calculation style is used to record the form of a calculation based on the sitting days counted by a clock, for example: either House being sitting or adjourned for less than four days, both Houses sitting or being adjourned for less than four days, or the House of Commons sitting or being adjourned for less than four days. A calculation style may set out the definition of the first day to be counted.</p>
+
+
+            </article>
+            <article class="class" id="Clock">
+                <h3>
+                    Class <a href="#Clock">LABEL PLACEHOLDER</a>
+                </h3>
+
+                <p>A clock sets out a number of days to be counted between a start step and an end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the business item actualising a start step and the date of the business item actualising an end step. The start date of a clock is the date of the business item which actualises the start step of that clock. The end date of a clock is the date of the business item which actualises the end step of that clock. In a work package, the period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. Calculation styles are dependent on sitting days in one or both Houses. End dates of clocks in work packages currently before Parliament may change if sitting days change.</p>
+
+
+            </article>
         </section>
 
 
@@ -485,6 +503,73 @@
                 <p><a href="#Procedure">Procedure</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Procedure">Procedure</a></p>
 
             </article>
+
+            <article class="objectproperty" id="procedureHasCalculationStyle">
+
+                <h3>
+                    Object property <a href="#procedureHasCalculationStyle">LABEL PLACEHOLDER</a>
+            </h3>
+
+
+
+                <p>Relates a procedure to the calculation styles applicable for work packages subject to that procedure. A calculation style may apply to one or more procedures. A procedure may have one or more calculation styles, or none. For example, depending on enabling legislation: a made affirmative statutory instrument may count days when both Houses are sitting or adjourned for fewer than five days, when either House is sitting or adjourned for fewer than five days or when the House of Commons is sitting or adjourned for fewer than five days.</p>
+
+                <p><a href="#Procedure">Procedure</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CalculationStyle">CalculationStyle</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="workPackageHasCalculationStyle">
+
+                <h3>
+                    Object property <a href="#workPackageHasCalculationStyle">LABEL PLACEHOLDER</a>
+            </h3>
+
+
+
+                <p>Relates a work package to the calculation style used by that work package. A work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to.</p>
+
+                <p><a href="#WorkPackage">WorkPackage</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CalculationStyle">CalculationStyle</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="startStep">
+
+                <h3>
+                    Object property <a href="#startStep">LABEL PLACEHOLDER</a>
+            </h3>
+
+
+
+
+                <p><a href="#Clock">Clock</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Step">Step</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="endStep">
+
+                <h3>
+                    Object property <a href="#endStep">LABEL PLACEHOLDER</a>
+            </h3>
+
+
+
+
+                <p><a href="#Clock">Clock</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Step">Step</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="formsPartOfProcedure">
+
+                <h3>
+                    Object property <a href="#formsPartOfProcedure">LABEL PLACEHOLDER</a>
+            </h3>
+
+
+
+
+                <p><a href="#Clock">Clock</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Procedure">Procedure</a></p>
+
+            </article>
         </section>
 
 
@@ -499,6 +584,42 @@
                 <p>Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3.</p>
 
                 <p>StepDisplayDepthInProcedure &mdash; LABEL PLACEHOLDER &mdash; float</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="isClockFrozen">
+                <h3>
+                    Data property <a href="#isClockFrozen">LABEL PLACEHOLDER</a>
+            </h3>
+
+                <p></p>
+
+                <p>WorkPackage &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="workPackageDayCount">
+                <h3>
+                    Data property <a href="#workPackageDayCount">LABEL PLACEHOLDER</a>
+            </h3>
+
+                <p></p>
+
+                <p>WorkPackage &mdash; LABEL PLACEHOLDER &mdash; integer</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="clockDayCount">
+                <h3>
+                    Data property <a href="#clockDayCount">LABEL PLACEHOLDER</a>
+            </h3>
+
+                <p></p>
+
+                <p>Clock &mdash; LABEL PLACEHOLDER &mdash; integer</p>
 
 
             </article>
