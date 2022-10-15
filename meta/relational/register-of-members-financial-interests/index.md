@@ -1,6 +1,12 @@
 # Register of Members' Financial Interests
 
-![sketch](sketch.svg)
+[![sketch](sketch.svg)](sketch.svg)
+
+## Schema
+
+[![schema](schema.svg)](schema.svg)
+
+## Competency questions
 
 [Competency questions](https://docs.google.com/spreadsheets/d/1iRsQBRPChMVFitSGBtNJFGNBvFT8XGKQYYqu40zy_OM/edit?usp=sharing)
 
