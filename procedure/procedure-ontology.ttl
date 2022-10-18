@@ -285,21 +285,21 @@ ppr:workPackageHasCalculationStyle rdf:type owl:ObjectProperty ;
 
 ppr:startStep rdf:type owl:ObjectProperty ;
 	rdfs:label "Start step"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a clock to the business step whose actualisation starts that clock. For example: the business step 'Instrument made' is the start step for the approval period clock in the made affirmative procedure. A clock has one start step. A step may be the start step for one or more clocks, or none."@en ;
 	rdfs:domain ppr:Clock ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:endStep rdf:type owl:ObjectProperty ;
 	rdfs:label "End step"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a clock to the business step whose actualisation ends that clock. For example: the business step 'Approval period ends' is the end step for the approval period clock in the made affirmative procedure. A clock has one end step. A step may be the end step for one clock, or none."@en ;
 	rdfs:domain ppr:Clock ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:formsPartOfProcedure rdf:type owl:ObjectProperty ;
 	rdfs:label "Forms part of procedure"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a clock to the procedure the clock forms part of. For example: the clock with the start step 'Instrument made' and the end step 'Approval period ends' forms part of the made affirmative procedure. A clock forms part of one procedure. A procedure may have one or more clocks, or none."@en ;
 	rdfs:domain ppr:Clock ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -317,21 +317,21 @@ ppr:displayDepthValue rdf:type owl:DatatypeProperty ;
 
 ppr:isClockFrozen rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is clock frozen"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Used to record whether the clocks in the procedure a work package is subject to are frozen. A work package marked as frozen will not have the dates of business items actualising clock end steps automatically updated when sitting days change. For example: the treaty procedure set out in the Constitutional Reform and Governance Act 2010 specifies no limitation on the length of any extension to objection period A. Should a Government minister choose to extend period A, dates on any business items actualising clock end steps cannot be automatically updated. The work package is marked as frozen and any changes to dates are manually updated."@en ;
 	rdfs:domain ppr:WorkPackage ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:workPackageDayCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Work package day count"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a work package to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by any clock in the procedure the work package is subject to. Where a work package day count is set, its value overrides the day counts set on clocks in the procedure that work package is subject to."@en ;
 	rdfs:domain ppr:WorkPackage ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:clockDayCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Clock day count"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a clock to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by that clock. The day count of a clock may be overridden by the day count set on a work package. Clock day counts in the made affirmative procedure are not set, day counts being set on the work package."@en ;
 	rdfs:domain ppr:Clock ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
