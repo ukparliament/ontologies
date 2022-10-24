@@ -122,21 +122,12 @@
 
 
             </article>
-            <article class="class" id="StepCollectionMembership">
-                <h3>
-                    Class <a href="#StepCollectionMembership">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>The membership of a step in a step collection.</p>
-
-
-            </article>
             <article class="class" id="StepCollection">
                 <h3>
                     Class <a href="#StepCollection">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Key steps&#39; collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named &#39;Member action steps&#39; collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
+                <p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Website visible steps&#39; collects steps which are intended to be visible on a website work package page once actualised by a business item in that work package. A procedure may have one or more steps described as website visible. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Member action steps&#39; collects steps which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
 
 
             </article>
@@ -378,43 +369,29 @@
 
             </article>
 
-            <article class="objectproperty" id="hasMembership">
+            <article class="objectproperty" id="memberOf">
 
                 <h3>
-                    Object property <a href="#hasMembership">LABEL PLACEHOLDER</a>
+                    Object property <a href="#memberOf">LABEL PLACEHOLDER</a>
             </h3>
 
 
 
-                <p>Relates a step to the membership of that step in a step collection. A step collection membership is of one step. A step may have one or more step collection memberships, or none.</p>
+                <p>Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none.</p>
 
-                <p><a href="#Step">Step</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#StepCollectionMembership">StepCollectionMembership</a></p>
+                <p><a href="#Step">Step</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#StepCollection">StepCollection</a></p>
 
             </article>
 
-            <article class="objectproperty" id="ofStepCollection">
+            <article class="objectproperty" id="stepCollectionInProcedure">
 
                 <h3>
-                    Object property <a href="#ofStepCollection">LABEL PLACEHOLDER</a>
+                    Object property <a href="#stepCollectionInProcedure">LABEL PLACEHOLDER</a>
             </h3>
 
 
 
-                <p>Relates a step collection membership to the collection it is part of. A step collection membership is part of one collection. A step collection may have one or more step collection memberships, or none.</p>
-
-                <p><a href="#StepCollectionMembership">StepCollectionMembership</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#StepCollection">StepCollection</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasProcedure">
-
-                <h3>
-                    Object property <a href="#hasProcedure">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a step collection to a procedure. A step collection has one procedure, or none. A procedure may have one or more step collections, or none.</p>
+                <p>Relates a step collection to a procedure. A step collection has one procedure, or none.  For example: a step collection named &#39;Second reading&#39;, related to the public bill procedure, collects steps forming that stage of public bill procedure.  A procedure may have one or more step collections, or none.</p>
 
                 <p><a href="#StepCollection">StepCollection</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Procedure">Procedure</a></p>
 
@@ -428,7 +405,7 @@
 
 
 
-                <p>Relates a step collection to one House, or none. A House may have one or more step collections, or none.</p>
+                <p>Relates a step collection to one House, or none. For example: a step collection named &#39;Second reading&#39;, related to the House of Commons, collects steps forming that stage of public bill procedure in that House. A House may have one or more step collections, or none.</p>
 
                 <p><a href="#StepCollection">StepCollection</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#House">House</a></p>
 
