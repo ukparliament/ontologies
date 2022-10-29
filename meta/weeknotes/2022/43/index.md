@@ -2,7 +2,7 @@
 
 ## A gentle reminder to our egg timing audience
 
-A gentle reminder that, by the time this issues drops into your Twitter hole or your inbox, the old [Heroku](https://en.wikipedia.org/wiki/Heroku) version of our beloved egg timer will have been turned off. [Michael](https://twitter.com/fantasticlife)'s badly battered purse being close on twenty pounds a month heavier as a result. Thanks to [our Jianhan](https://twitter.com/jianhanzhu), the new home of the egg timer is:
+A gentle reminder that - by the time this issue drops into your Twitter hole or your inbox - the old [Heroku](https://en.wikipedia.org/wiki/Heroku) version of our beloved egg timer will have been turned off. [Michael](https://twitter.com/fantasticlife)'s badly battered purse being close on twenty pounds a month heavier as a result. Thanks to [our Jianhan](https://twitter.com/jianhanzhu), the new home of the egg timer is:
 
 * [https://api.parliament.uk/egg-timer](https://api.parliament.uk/egg-timer)
 
@@ -62,7 +62,7 @@ A second meeting with colleagues from the Northern Ireland Assembly saw the addi
 
 In Anya's absence, we managed to purloin a handful of librarians to index both [oral evidence sessions](https://committees.parliament.uk/work/1670/code-of-conduct-consultation/publications/oral-evidence/) and [written evidence](https://committees.parliament.uk/work/1670/code-of-conduct-consultation/publications/written-evidence/) submitted to the [Standards Committee](https://committees.parliament.uk/committee/290/committee-on-standards/) as part of their [Code of Conduct consultation](https://committees.parliament.uk/work/1670/code-of-conduct-consultation/publications/). The same team of crack librarians also indexed the [additional questions](https://github.com/ukparliament/ontologies/blob/master/meta/relational/register-of-members-financial-interests/competency-question.md) crowdsourced by [Steve](https://twitter.com/SteveJGoodrich). Thanks Librarians Ayesha, Anna and Deanne. User researcher Venyah also leant a hand, indexing questions in the research performed as part of the discovery phase.
 
-We ended up with [218 competency questions](https://docs.google.com/spreadsheets/d/1iRsQBRPChMVFitSGBtNJFGNBvFT8XGKQYYqu40zy_OM/edit?usp=sharing), 58 taken from oral evidence, 79 from written evidence, 48 from the crowdsourced material and 41 from the user research. Of these, James, Thomas and Michael have compared against the model and marked:
+We ended up with [218 competency questions](https://docs.google.com/spreadsheets/d/1iRsQBRPChMVFitSGBtNJFGNBvFT8XGKQYYqu40zy_OM/edit?usp=sharing), 58 taken from oral evidence, 79 from written evidence, 48 from the crowdsourced material and 41 from the user research. Of the 218, James, Thomas and Michael have marked 73 as duplicates. Of the remaining 145, they've compared against the model and marked:
 
 * 45 the model can answer
 
