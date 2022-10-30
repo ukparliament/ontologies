@@ -2,7 +2,7 @@
 
 ## A gentle reminder to our egg timing audience
 
-A gentle reminder that - by the time this issue drops into your Twitter hole or your inbox - the old [Heroku](https://en.wikipedia.org/wiki/Heroku) version of our beloved egg timer will have been turned off. [Michael](https://twitter.com/fantasticlife)'s badly battered purse being close on twenty pounds a month heavier as a result. Thanks to [our Jianhan](https://twitter.com/jianhanzhu), the new home of the egg timer is:
+A gentle reminder that by the time this issue drops into your Twitter hole or your inbox, the old [Heroku](https://en.wikipedia.org/wiki/Heroku) version of our beloved egg timer will have been turned off. [Michael](https://twitter.com/fantasticlife)'s badly battered purse being close on twenty pounds a month heavier as a result. Thanks to [our Jianhan](https://twitter.com/jianhanzhu), the new home of the egg timer is:
 
 * [https://api.parliament.uk/egg-timer](https://api.parliament.uk/egg-timer)
 
