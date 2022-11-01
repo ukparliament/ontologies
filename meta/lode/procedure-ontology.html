@@ -126,7 +126,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                   </li>
                   <li>
                     <span>
-                      <a href="#hasProcedure">ppr:hasProcedure</a>
+                      <a href="#stepCollectionInProcedure">ppr:stepCollectionInProcedure</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -264,7 +264,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                   </li>
                   <li>
                     <span>
-                      <a href="#hasMembership">ppr:hasMembership</a>
+                      <a href="#memberOf">ppr:memberOf</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -579,55 +579,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Stepcollectionmembership">
-          <h3>Step collection membership
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/procedure/StepCollectionMembership</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/procedure/">ppr:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>The membership of a step in a step collection.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#ofStepCollection">ppr:ofStepCollection</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#hasMembership">ppr:hasMembership</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="Stepcollection">
           <h3>Step collection
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -651,7 +602,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, key steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps in a procedure which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Key steps' collects steps in a procedure which are considered to be key to that procedure. A procedure may have one or more steps described as key steps. A step collection named 'Member action steps' collects steps in a procedure which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p></td>
+              <td><p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Website visible steps' collects steps which are intended to be visible on a website work package page once actualised by a business item in that work package. A procedure may have one or more steps described as website visible. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Member action steps' collects steps which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p></td>
             </tr>
             <tr>
               <th>
@@ -661,7 +612,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <ul>
                   <li>
                     <span>
-                      <a href="#hasProcedure">ppr:hasProcedure</a>
+                      <a href="#stepCollectionInProcedure">ppr:stepCollectionInProcedure</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -680,7 +631,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               </th>
               <td>
                 <span>
-                  <a href="#ofStepCollection">ppr:ofStepCollection</a>
+                  <a href="#memberOf">ppr:memberOf</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -1623,15 +1574,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasMembership">
-          <h3>Has membership
+        <div class="property entity" id="memberOf">
+          <h3>Member of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/procedure/hasMembership</code>
+                <code>http://parliament.uk/ontologies/procedure/memberOf</code>
               </td>
             </tr>
             <tr>
@@ -1646,7 +1597,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a step to the membership of that step in a step collection. A step collection membership is of one step. A step may have one or more step collection memberships, or none.</p></td>
+              <td><p>Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none.</p></td>
             </tr>
             <tr>
               <th>
@@ -1665,55 +1616,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               </th>
               <td>
                 <span>
-                  <a href="#Stepcollectionmembership">ppr:StepCollectionMembership</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="ofStepCollection">
-          <h3>Of step collection
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/procedure/ofStepCollection</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/procedure/">ppr:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>Relates a step collection membership to the collection it is part of. A step collection membership is part of one collection. A step collection may have one or more step collection memberships, or none.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Stepcollectionmembership">ppr:StepCollectionMembership</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
-              </th>
-              <td>
-                <span>
                   <a href="#Stepcollection">ppr:StepCollection</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
@@ -1721,15 +1623,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasProcedure">
-          <h3>Has procedure
+        <div class="property entity" id="stepCollectionInProcedure">
+          <h3>Step collection in procedure
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/procedure/hasProcedure</code>
+                <code>http://parliament.uk/ontologies/procedure/stepCollectionInProcedure</code>
               </td>
             </tr>
             <tr>
@@ -1744,7 +1646,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a step collection to a procedure. A step collection has one procedure, or none. A procedure may have one or more step collections, or none.</p></td>
+              <td><p>Relates a step collection to a procedure. A step collection has one procedure, or none.  For example: a step collection named 'Second reading', related to the public bill procedure, collects steps forming that stage of public bill procedure.  A procedure may have one or more step collections, or none.</p></td>
             </tr>
             <tr>
               <th>
@@ -1793,7 +1695,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a step collection to one House, or none. A House may have one or more step collections, or none.</p></td>
+              <td><p>Relates a step collection to one House, or none. For example: a step collection named 'Second reading', related to the House of Commons, collects steps forming that stage of public bill procedure in that House. A House may have one or more step collections, or none.</p></td>
             </tr>
             <tr>
               <th>
@@ -2592,9 +2494,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#Workpackageablething">Work packageable thing</a>
             </li>
             <li>
-              <a href="#Stepcollectionmembership">Step collection membership</a>
-            </li>
-            <li>
               <a href="#Stepcollection">Step collection</a>
             </li>
             <li>
@@ -2662,13 +2561,10 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#focus">Focus</a>
             </li>
             <li>
-              <a href="#hasMembership">Has membership</a>
+              <a href="#memberOf">Member of</a>
             </li>
             <li>
-              <a href="#ofStepCollection">Of step collection</a>
-            </li>
-            <li>
-              <a href="#hasProcedure">Has procedure</a>
+              <a href="#stepCollectionInProcedure">Step collection in procedure</a>
             </li>
             <li>
               <a href="#stepCollectionInHouse">Step collection in House</a>
