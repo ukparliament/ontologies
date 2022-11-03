@@ -99,6 +99,12 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                   </li>
                   <li>
                     <span>
+                      <a href="#issuedByLegislature">pso:issuedByLegislature</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="#orderedByLegislature">pso:orderedByLegislature</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -152,7 +158,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <ul>
                   <li>
                     <span>
-                      <a href="#issuedBy">pso:issuedBy</a>
+                      <a href="#issuedByHouse">pso:issuedByHouse</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -238,7 +244,13 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <ul>
                   <li>
                     <span>
-                      <a href="#issuedBy">pso:issuedBy</a>
+                      <a href="#issuedByHouse">pso:issuedByHouse</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#issuedByLegislature">pso:issuedByLegislature</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -780,15 +792,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="issuedBy">
-          <h3>Issued by
+        <div class="property entity" id="issuedByHouse">
+          <h3>Issued by House
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/standing-order/issuedBy</code>
+                <code>http://parliament.uk/ontologies/standing-order/issuedByHouse</code>
               </td>
             </tr>
             <tr>
@@ -803,7 +815,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>Relates a revision set to the House it is issued by.</p></td>
+              <td><p>Relates a revision set to the House it is issued by. A revision set may be issued by one House, or none.</p></td>
             </tr>
             <tr>
               <th>
@@ -823,6 +835,55 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <td>
                 <span>
                   <a href="#House">pso:House</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="issuedByLegislature">
+          <h3>Issued by legislature
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/standing-order/issuedByLegislature</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/standing-order/">pso:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>Relates a revision set to the legislature it is issued by. A revision set may be issued by one legislature, or none.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Revisionset">pso:RevisionSet</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Legislature">pso:Legislature</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1998,7 +2059,10 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#inLegislature">In legislature</a>
             </li>
             <li>
-              <a href="#issuedBy">Issued by</a>
+              <a href="#issuedByHouse">Issued by House</a>
+            </li>
+            <li>
+              <a href="#issuedByLegislature">Issued by legislature</a>
             </li>
             <li>
               <a href="#revisionSetCoversBusinessExtent">Revision set covers business extent</a>
