@@ -2,8 +2,6 @@
 
 [![flow](flow.svg)](flow.svg)
 
-[PDF](flow.pdf)
-
 ## Reference
 
 [Standards Committee report](https://committees.parliament.uk/publications/22338/documents/165774/default/)
