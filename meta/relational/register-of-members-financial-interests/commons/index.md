@@ -10,9 +10,9 @@
 
 [Standing order 150a](https://api.parliament.uk/standing-orders/fragments/966)
 
-### Categories
+## Categories
 
-#### Category 1: Employment and earnings
+### Category 1: Employment and earnings
 
 [Rules with notes](categories/category-1)
 
@@ -22,7 +22,7 @@
 
 [ERD](categories/category-1/category-1.svg)
 
-#### Category 2: Donations and other support for activities as a Member of Parliament
+### Category 2: Donations and other support for activities as a Member of Parliament
 
 [Rules with notes](categories/category-2)
 
@@ -30,7 +30,7 @@
 
 [ERD](categories/category-2/category-2.svg)
 
-#### Category 3: Gifts, benefits and hospitality from UK sources
+### Category 3: Gifts, benefits and hospitality from UK sources
 
 [Rules with notes](categories/category-3)
 
@@ -38,7 +38,7 @@
 
 [ERD](categories/category-3/category-3.svg)
 
-#### Category 4: Visits outside the UK
+### Category 4: Visits outside the UK
 
 [Rules with notes](categories/category-4)
 
@@ -46,7 +46,7 @@
 
 [ERD](categories/category-4/category-4.svg)
 
-#### Category 5: Gifts and benefits from sources outside the UK
+### Category 5: Gifts and benefits from sources outside the UK
 
 [Rules with notes](categories/category-5)
 
@@ -54,7 +54,7 @@
 
 [ERD](categories/category-5/category-5.svg)
 
-#### Category 6: Land and property
+### Category 6: Land and property
 
 [Rules with notes](categories/category-6)
 
@@ -62,7 +62,7 @@
 
 [ERD](categories/category-6/category-6.svg)
 
-#### Category 7: Shareholdings
+### Category 7: Shareholdings
 
 [Rules with notes](categories/category-7)
 
@@ -70,7 +70,7 @@
 
 [ERD](categories/category-7/category-7.svg)
 
-#### Category 8: Miscellaneous
+### Category 8: Miscellaneous
 
 [Rules with notes](categories/category-8)
 
@@ -78,7 +78,7 @@
 
 [ERD](categories/category-8/category-8.svg)
 
-#### Category 9: Family members employed
+### Category 9: Family members employed
 
 [Rules with notes](categories/category-9)
 
@@ -86,7 +86,7 @@
 
 [ERD](categories/category-9/category-9.svg)
 
-#### Category 10: Family members engaged in lobbying
+### Category 10: Family members engaged in lobbying
 
 [Rules with notes](categories/category-10)
 
