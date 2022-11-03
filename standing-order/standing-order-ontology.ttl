@@ -92,11 +92,18 @@ pso:inLegislature rdf:type owl:ObjectProperty ;
 	rdfs:range pso:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
-pso:issuedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Issued by"@en ;
-	rdfs:comment "Relates a revision set to the House it is issued by."@en ;
+pso:issuedByHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Issued by House"@en ;
+	rdfs:comment "Relates a revision set to the House it is issued by. A revision set may be issued by one House, or none."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range pso:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
+pso:issuedByLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "Issued by legislature"@en ;
+	rdfs:comment "Relates a revision set to the legislature it is issued by. A revision set may be issued by one legislature, or none."@en ;
+	rdfs:domain pso:RevisionSet ;
+	rdfs:range pso:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:revisionSetCoversBusinessExtent rdf:type owl:ObjectProperty ;
