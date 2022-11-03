@@ -1,0 +1,5 @@
+# Category 6: Sponsorship
+
+Any form of financial or material support received as a member of the House of Lords, the value of which amounts to more than £500, from a single source, whether as a single donation, multiple donations or services in kind.
+
+84. This category covers sponsorship or other forms of support by companies, trade unions, professional bodies, trade associations, charities, universities, other organisations and individuals. It covers any support from which the member receives financial or material benefit in his or her role as a member of the House of Lords. The types of support which should be registered include the services of a research assistant or secretary whose salary, in whole or in part, is met by an outside organisation or individual; and the provision of accommodation.
