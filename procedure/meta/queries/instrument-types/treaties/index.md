@@ -87,7 +87,7 @@ As of January 2021 this changed again when the [International Agreements Committ
 
 Later in 2021 it changed again with treaty consideration being shared between the International Agreements Committee and the Lords [European Affairs Committee](https://committees.parliament.uk/committee/516/european-affairs-committee/). 
 
-In the Commons any select committee can open an inquiry into a treaty and report on it if they feel it fits into their remit. 
+In the Commons any select committee can open an inquiry into a treaty and report on it if they feel it fits into their remit. As of November 2022, treaties have been scrutinised in some way by the International Trade Committee, the Environment, Food and Rural Affairs Committee and the Northern Ireland Affairs Committee. 
 
 The Joint Committee on Human Rights can also consider treaties but as of 2021 there have been no inquiries/reports. 
 
@@ -97,7 +97,7 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/03b4dba6">Commons consideration of treaties</a>  
 
-* <a href="https://api.parliament.uk/s/5dba132d">Commons committee oral evidence sessions</a>
+* <a href="https://api.parliament.uk/s/11c9c81c">Commons committee oral evidence sessions</a>
 
 ### Lords committees
 
