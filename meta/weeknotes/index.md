@@ -1,5 +1,7 @@
 # Procedure modelling weeknotes
 
+<p>Weekly-ish notes from <a href="https://mastodon.me.uk/@anyaso" rel="me">Anya</a> and <a href="https://mastodon.me.uk/@fantasticlife" rel="me">Michael.</p>
+
 * [Models and maps](https://ukparliament.github.io/ontologies/)
 * [RSS](feed.rss)
 
