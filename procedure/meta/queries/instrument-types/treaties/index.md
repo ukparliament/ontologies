@@ -76,7 +76,7 @@ A list of lead organisations can be found [here](https://api.parliament.uk/query
 
 * [Section 22 of the Constitutional Reform and Governance Act 2010 invoked](https://api.parliament.uk/s/25128ba0)
 
-# Business about a (prospective) treaty before it’s signed or before it’s laid before Parliament
+## Business about a (prospective) treaty before it’s signed or before it’s laid before Parliament
 
 In November 2022 we made the decision to add business steps about a treaty that occurred before a treaty is signed or laid before Parliament.
 
