@@ -76,6 +76,14 @@ A list of lead organisations can be found [here](https://api.parliament.uk/query
 
 * [Section 22 of the Constitutional Reform and Governance Act 2010 invoked](https://api.parliament.uk/s/25128ba0)
 
+## Business about a (prospective) treaty before it’s signed or before it’s laid before Parliament
+
+In November 2022 we made the decision to add business steps about a treaty that occurred before a treaty is signed or laid before Parliament.
+
+The government has precedent for engaging with Parliament via ministerial statements during the negotiation stage of a treaty or at the point a treaty has been signed but the treaty has not been laid before Parliament under the Constitutional Reform and Governance Act 2010. Committees can also open inquiries and take evidence on a treaty before it’s laid as well.
+
+[Business about a treaty before signed or laid before Parliament](pre-laying-scrutiny)
+
 
 ## Committee consideration
 
