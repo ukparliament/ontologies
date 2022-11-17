@@ -295,10 +295,20 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
-                <span>
-                  <a href="#isOf">ppeer:isOf</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#isOf">ppeer:isOf</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#endReason">ppeer:endReason</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
             <tr>
@@ -1065,6 +1075,44 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <td>
                 <span>
                   <a href="#during">ppeer:during</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Peerageholdingendreason">
+          <h3>Peerage holding end reason
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/peerage/PeerageHoldingEndReason</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/peerage/">ppeer:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>The reason for a peerage holding being ended - being the holder's death, merged in the Crown, disclaimed under the Peerage Act 1963, lost under the Titles Deprivation Act 1917, forfeiture, or resignation of a Scottish peerage.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#endReason">ppeer:endReason</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -2201,6 +2249,55 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
+        <div class="property entity" id="endReason">
+          <h3>End reason
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://parliament.uk/ontologies/peerage/endReason</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="None. Defined in None">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://parliament.uk/ontologies/peerage/">ppeer:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>Relates a peerage holding to the reason for that peerage holding being ended. A peerage holding may have one end reason, or none.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Peerageholding">ppeer:PeerageHolding</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Peerageholdingendreason">ppeer:PeerageHoldingEndReason</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="section" id="datatypeproperties">
         <h2>Datatype Properties</h2>
@@ -2973,6 +3070,9 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             <li>
               <a href="#Governmentadministrationperiod">Government administration period</a>
             </li>
+            <li>
+              <a href="#Peerageholdingendreason">Peerage holding end reason</a>
+            </li>
           </ul>
         </li>
         <li>
@@ -3048,6 +3148,9 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </li>
             <li>
               <a href="#during">During</a>
+            </li>
+            <li>
+              <a href="#endReason">End reason</a>
             </li>
           </ul>
         </li>
