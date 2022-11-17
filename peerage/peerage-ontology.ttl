@@ -114,6 +114,11 @@ ppeer:GovernmentAdministrationPeriod rdf:type owl:Class ;
 	rdfs:comment "A period of a single government, under a single Prime Minister, bounded by general elections, for example: Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
+ppeer:PeerageHoldingEndReason rdf:type owl:Class ;
+	rdfs:label "Peerage holding end reason"@en ;
+	rdfs:comment "The reason for a peerage holding being ended - being the holder's death, merged in the Crown, disclaimed under the Peerage Act 1963, lost under the Titles Deprivation Act 1917, forfeiture, or resignation of a Scottish peerage."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
 				
 
 #######  Object properties ##### 
@@ -277,6 +282,13 @@ ppeer:during rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an announcement to the government administration period during which that announcement was made."@en ;
 	rdfs:domain ppeer:Announcement ;
 	rdfs:range ppeer:GovernmentAdministrationPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:endReason rdf:type owl:ObjectProperty ;
+	rdfs:label "End reason"@en ;
+	rdfs:comment "Relates a peerage holding to the reason for that peerage holding being ended. A peerage holding may have one end reason, or none."@en ;
+	rdfs:domain ppeer:PeerageHolding ;
+	rdfs:range ppeer:PeerageHoldingEndReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 
 	
