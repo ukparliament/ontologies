@@ -2,7 +2,7 @@
 
 ## We came, we showed and we told
 
-For some time, we've been threatening people with a show and tell. An actual show and tell. On Wednesday, it finally happened. Boss 'brarian [Anya](https://mastodon.me.uk/@anyaso), Librarian Jayne, [Young Robert](https://mastodon.me.uk/@robertbrook) and boss boss 'brarian [Bryn](https://twitter.com/brynmrgn) were joined by [Tom](https://twitter.com/tomgfleming) and [James](https://mastodon.me.uk/@jamesjefferies) for a romp through the [ParlRules](https://parlrulesdata.org/) work, [how we've adapted it for librarian purposes](https://docs.google.com/presentation/d/1q9Kf2Drd4-D4ehpZdgZooX_oVFWXAqZTtqbxQ8CUYag/edit?usp=sharing) and how it's being wrapped up in a shiny new standing orders application by James.
+For some time, we've been threatening people with a show and tell. An actual show and tell. On Wednesday, it finally happened. Boss 'brarian [Anya](https://mastodon.me.uk/@anyaso), Librarian Jayne, [Young Robert](https://mastodon.me.uk/@robertbrook) and boss boss 'brarian [Bryn](https://twitter.com/brynmrgn) were joined by [Tom](https://twitter.com/tomgfleming) and [James](https://mastodon.me.uk/@jamesjefferies) for a romp through the [ParlRules](https://parlrulesdata.org/) work on House of Commons public standing orders, [how we've adapted it for librarian purposes](https://docs.google.com/presentation/d/1q9Kf2Drd4-D4ehpZdgZooX_oVFWXAqZTtqbxQ8CUYag/edit?usp=sharing) and how it's being wrapped up in a shiny new application by James.
 
 It would be difficult to deny there weren't teething troubles. Ever amenable to Modern Times, we declared the event to be a 'hybrid' one. Off we marched to Victoria Street, where the guest registration could not be found, the room booking system had not booked the room, the chap who was supposed to set up the A/V equipment had gone to lunch, the 'soundbar' system failed to work and the room lacked working plug sockets. All plug and no play.
 
@@ -22,7 +22,7 @@ To that list we'd like to add a third problem - to what extent does a thing need
 
 Going forward - as Young Robert might say - we're working on the assumption that some changes to standing orders will clearly be new things. And that some changes to standing orders will clearly be edits to existing things. And that between those two piers, there may be muddy water. We're not overly worried though, as we do not work alone - we do and will defer to our Journal Office colleagues on all muddy water matters.
 
-Now that the showing and telling bug has bitten, Anya seems quite keen to do more. There's rumours of a '[why parliamentary procedure should be machine parseable](https://smethur.st/posts/176135869)' outing on the horizon. She'll be making us do discoveries next. And stand ups. Though if she thinks she's getting Young Robert and [Michael](https://mastodon.me.uk/@fantasticlife) to stand up, she has another thing coming. Not at their age. Not with their knees.
+Now that the showing and telling bug has bitten, Anya seems quite keen to do more. There's rumours of a '[why parliamentary procedure should be machine parseable](https://smethur.st/posts/176135869)' outing on the horizon. She'll be making us do discoveries next. And stand ups. Though if she thinks she's getting Young Robert and [Michael](https://mastodon.me.uk/@fantasticlife) to stand up, she has another think coming. Not at their age. Not with their knees.
 
 ## Sometimes, things break
 
@@ -52,7 +52,7 @@ With things and people either smouldering or snuffling, we didn't have much time
 
 ## On matters of Member data management
 
-A couple of recent enquiries to our [Members' biogs](mailto:membersbiogs@parliament.uk) inbox turned up a couple of additional customers of our MNIS data. We now know that the [UK Parliament Week website](https://www.ukparliamentweek.org/en/) ingests Member data from [data.parliament.uk](https://lda.data.parliament.uk/members.json), whilst a government department express a preference for [members-api.parliament.uk](https://members-api.parliament.uk/index.html). We're confused. They're confused. We're all confused here. But it's all learning. Or learnings as we say these days.
+A couple of recent enquiries to our [Members' biogs](mailto:membersbiogs@parliament.uk) inbox turned up a couple of additional customers of our MNIS data. We now know that the [UK Parliament Week website](https://www.ukparliamentweek.org/en/) ingests Member data from [data.parliament.uk](https://lda.data.parliament.uk/members.json), whilst a government department expresses a preference for [members-api.parliament.uk](https://members-api.parliament.uk/index.html). We're confused. They're confused. We're all confused here. But it's all learning. Or learnings as we say these days.
 
 ## Uncle Frank Says Turn It Down
 
