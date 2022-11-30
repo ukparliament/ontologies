@@ -1,3 +1,7 @@
+# Written answer bot accounts
+
+Bot accounts posting status updates whenever an answering body provides a witten answer - or a witten correction to an earlier written answer - to a parliamentary question.
+
 MNIS answering body ID | Answering body name | Twitter | Mastodon
 88 | Attorney General | |
 53 | Cabinet Office | |
