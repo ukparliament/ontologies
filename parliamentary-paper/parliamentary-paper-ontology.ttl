@@ -147,3 +147,31 @@ ppaper:hasPrivilege rdf:type owl:DatatypeProperty ;
 	rdfs:domain ppaper:PaperSeries ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:authoredOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Authored on"@en ;
+	rdfs:comment "Relates a parliamentary paper to the date that parliamentary paper was authored on."@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:copyrightStatement rdf:type owl:DatatypeProperty ;
+	rdfs:label "Copyright statement"@en ;
+	rdfs:comment "Relates a parliamentary paper to a statement containing the copyright description for that parliamentary paper."@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:pageCount rdf:type owl:DatatypeProperty ;
+	rdfs:label "Page count"@en ;
+	rdfs:comment "Relates a parliamentary paper to its page count."@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+	
+ppaper:containsStatistics rdf:type owl:DatatypeProperty ;
+	rdfs:label "Contains statistics"@en ;
+	rdfs:comment "Used to record if a parliamentary paper contains statistics."@en ;
+	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
