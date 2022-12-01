@@ -1,0 +1,169 @@
+@prefix pdep: <http://parliament.uk/ontologies/depositing/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/depositing/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Depositing ontology"@en ;
+    dcterms:created "2022-12-01"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "A model describing the depositing of papers into the Library of a House."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/laying/laying.svg> ;
+	foaf:maker 
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Karen Cox" ],
+		[ foaf:name "Andrew Dommett" ],
+		[ foaf:name "John Greenhead" ],
+		[ foaf:name "Ann Reilly" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+
+
+#######  Classes #####
+	
+pdep:MakingAvailable rdf:type owl:Class ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:MadeAvailableThing rdf:type owl:Class ;
+	rdfs:label "Made available thing"@en ;
+	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:ParliamentaryPaper rdf:type owl:Class ;
+	rdfs:label "Parliamentary paper"@en ;
+	rdfs:comment "Papers made available to or published under the authority of Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:Deposit rdf:type owl:Class ;
+	rdfs:subClassOf pl:MakingAvailable ;
+	rdfs:label "Deposit"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:DepositedPaper rdf:type owl:Class ;
+	rdfs:subClassOf pl:ParliamentaryPaper ;
+	rdfs:subClassOf pl:MadeAvailableThing ;
+	rdfs:label "Deposited paper"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:CreditedContribution rdf:type owl:Class ;
+	rdfs:label "Credited contribution"@en ;
+	rdfs:comment "'Will write'"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:CommittingThing rdf:type owl:Class ;
+	rdfs:label "Committing thing"@en ;
+	rdfs:comment "proceeding / business item, letter, standing commitment, written statement"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:CommittingThing rdf:type owl:Class ;
+	rdfs:label "Committing thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:Commitment rdf:type owl:Class ;
+	rdfs:label "Commitment"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:ParliamentaryPeriod rdf:type owl:Class ;
+	rdfs:label "Parliamentary period"@en ;
+	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+pdep:Visibility rdf:type owl:Class ;
+	rdfs:label "Visibility"@en ;
+	rdfs:comment "Public / Public redacted / Members only"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+	
+
+#######  Object properties ##### 
+	
+pdep:leadsTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Leads to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:CreditedContribution ;
+	rdfs:range pdep:CommittingThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:makesCommitment rdf:type owl:ObjectProperty ;
+	rdfs:label "Makes commitment"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:CommittingThing ;
+	rdfs:range pdep:Commitment ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:madeBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Made by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:Commitment ;
+	rdfs:range pdep:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:madeDuring rdf:type owl:ObjectProperty ;
+	rdfs:label "Made during"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:Commitment ;
+	rdfs:range pdep:ParliamentaryPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:resultsFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Results from"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:Deposit ;
+	rdfs:range pdep:Commitment ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:resultsIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:Deposit ;
+	rdfs:range pdep:DepositedPaper ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:corrects rdf:type owl:ObjectProperty ;
+	rdfs:label "Corrects"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:DepositedPaper ;
+	rdfs:range pdep:DepositedPaper ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:hasVisibility rdf:type owl:ObjectProperty ;
+	rdfs:label "Has visibility"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:DepositedPaper ;
+	rdfs:range pdep:Visability ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+
+				
+
+#######  Data properties #####
+
+pdep:madeOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Made on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:Commitment ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:isArtefact rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is artefact"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pdep:DepositedPaper ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
