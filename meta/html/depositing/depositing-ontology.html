@@ -34,7 +34,7 @@
     <main>
         <h1 id="title">Depositing ontology</h1>
 
-        <p id="description">A model describing the depositing of papers into the Library of a House.</p>
+        <p id="description">A model describing the depositing of papers into a House by means of its Library.</p>
 
         <nav>  
             <a href="#classes">Classes</a>
@@ -82,6 +82,7 @@
                     Class <a href="#Deposit">LABEL PLACEHOLDER</a>
                 </h3>
 
+                <p>The act of making a paper available to a House by means of its Library.</p>
 
                 <p>Superclasses
                 &middot; MakingAvailable
@@ -94,6 +95,7 @@
                     Class <a href="#DepositedPaper">LABEL PLACEHOLDER</a>
                 </h3>
 
+                <p>A paper having been deposited in a Library of a House.</p>
 
                 <p>Superclasses
                 &middot; ParliamentaryPaper
@@ -107,7 +109,7 @@
                     Class <a href="#CreditedContribution">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>&#39;Will write&#39;</p>
+                <p>An oral contribution by a Member to a parliamentary proceeding.</p>
 
 
             </article>
@@ -116,7 +118,7 @@
                     Class <a href="#CommittingThing">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>proceeding / business item, letter, standing commitment, written statement</p>
+                <p>A thing including a commitment to deposit, for example: an oral contribution to a parliamentary proceeding, a letter to a Library or a written statment.</p>
 
 
             </article>
@@ -125,6 +127,7 @@
                     Class <a href="#Commitment">LABEL PLACEHOLDER</a>
                 </h3>
 
+                <p>A commitment to deposit a paper in a Library or Libraries.</p>
 
 
             </article>
@@ -151,7 +154,7 @@
                     Class <a href="#Visibility">LABEL PLACEHOLDER</a>
                 </h3>
 
-                <p>Public / Public redacted / Members only</p>
+                <p>The visibility of a deposited paper, being either publicly visible, publicly visible in a redacted form or available to Members only.</p>
 
 
             </article>
@@ -170,6 +173,7 @@
 
 
 
+                <p>Relates a credited contribution to a committing thing. Credited contributions may include the phrase, &#39;I will write to the Library&#39; commonly known as &#39;will writes&#39;. Such a contribution should lead to one committing thing in the form of a letter to the Library. A letter of commitment may result from one contribution, or none.</p>
 
                 <p><a href="#CreditedContribution">CreditedContribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CommittingThing">CommittingThing</a></p>
 
@@ -183,6 +187,7 @@
 
 
 
+                <p>Relates a committing thing to the commitment it makes. A committing thing includes one or more commitments. A commitment is included in one committing thing.</p>
 
                 <p><a href="#CommittingThing">CommittingThing</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Commitment">Commitment</a></p>
 
@@ -196,6 +201,7 @@
 
 
 
+                <p>Relates a commitment to the incumbency of a person in a position making that commitment. A commitment is made by one incumbency.</p>
 
                 <p><a href="#Commitment">Commitment</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Incumbency">Incumbency</a></p>
 
@@ -209,6 +215,7 @@
 
 
 
+                <p>Relates a commitment to the parliamentary period during which the commitment was made. A commitment is made during one parliamentary period.</p>
 
                 <p><a href="#Commitment">Commitment</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#ParliamentaryPeriod">ParliamentaryPeriod</a></p>
 
@@ -222,6 +229,7 @@
 
 
 
+                <p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, a team in the House of Lords Library contact the person who made the commitment asking for the deposit.</p>
 
                 <p><a href="#Deposit">Deposit</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Commitment">Commitment</a></p>
 
@@ -235,6 +243,7 @@
 
 
 
+                <p>Relates a deposit to the paper it deposits. A deposit may result in one or more deposited papers.</p>
 
                 <p><a href="#Deposit">Deposit</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#DepositedPaper">DepositedPaper</a></p>
 
@@ -248,6 +257,7 @@
 
 
 
+                <p>Relates a deposited paper to the deposited paper it corrects. A deposited paper may correct one deposited paper, or none. A deposited paper may be corrected by one deposited paper, or none.</p>
 
                 <p><a href="#DepositedPaper">DepositedPaper</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#DepositedPaper">DepositedPaper</a></p>
 
@@ -261,6 +271,7 @@
 
 
 
+                <p>Relates a deposited paper to the visibility of that deposited paper. A deposited paper has one visibility assigned.</p>
 
                 <p><a href="#DepositedPaper">DepositedPaper</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Visibility">Visibility</a></p>
 
@@ -276,9 +287,21 @@
                     Data property <a href="#madeOn">LABEL PLACEHOLDER</a>
             </h3>
 
-                <p></p>
+                <p>Relates a commitment to the date on which that commitment was made.</p>
 
                 <p>Commitment &mdash; LABEL PLACEHOLDER &mdash; date</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="isStanding">
+                <h3>
+                    Data property <a href="#isStanding">LABEL PLACEHOLDER</a>
+            </h3>
+
+                <p>Used to record whether a commitment is standing. A standing commitment leads to more than one deposit over time.</p>
+
+                <p>Commitment &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
 
 
             </article>
@@ -288,7 +311,7 @@
                     Data property <a href="#isArtefact">LABEL PLACEHOLDER</a>
             </h3>
 
-                <p></p>
+                <p>Used to record whether the deposited paper is an artefact, for example: a deposit of a breathalyzer would be recorded as an artefact.</p>
 
                 <p>DepositedPaper &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
 
