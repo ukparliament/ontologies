@@ -11,7 +11,7 @@
     dcterms:title "Depositing ontology"@en ;
     dcterms:created "2022-12-01"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing the depositing of papers into the Library of a House."@en ;
+    dcterms:description "A model describing the depositing of papers into a House by means of its Library."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/laying/laying.svg> ;
 	foaf:maker 
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -45,34 +45,29 @@ pdep:ParliamentaryPaper rdf:type owl:Class ;
 pdep:Deposit rdf:type owl:Class ;
 	rdfs:subClassOf pdep:MakingAvailable ;
 	rdfs:label "Deposit"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The act of making a paper available to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:DepositedPaper rdf:type owl:Class ;
 	rdfs:subClassOf pdep:ParliamentaryPaper ;
 	rdfs:subClassOf pdep:MadeAvailableThing ;
 	rdfs:label "Deposited paper"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A paper having been deposited in a Library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:CreditedContribution rdf:type owl:Class ;
 	rdfs:label "Credited contribution"@en ;
-	rdfs:comment "'Will write'"@en ;
+	rdfs:comment "An oral contribution by a Member to a parliamentary proceeding."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:CommittingThing rdf:type owl:Class ;
 	rdfs:label "Committing thing"@en ;
-	rdfs:comment "proceeding / business item, letter, standing commitment, written statement"@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
-
-pdep:CommittingThing rdf:type owl:Class ;
-	rdfs:label "Committing thing"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A thing including a commitment to deposit, for example: an oral contribution to a parliamentary proceeding, a letter to a Library or a written statment."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:Commitment rdf:type owl:Class ;
 	rdfs:label "Commitment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A commitment to deposit a paper in a Library or Libraries."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:Incumbency rdf:type owl:Class ;
@@ -87,7 +82,7 @@ pdep:ParliamentaryPeriod rdf:type owl:Class ;
 
 pdep:Visibility rdf:type owl:Class ;
 	rdfs:label "Visibility"@en ;
-	rdfs:comment "Public / Public redacted / Members only"@en ;
+	rdfs:comment "The visibility of a deposited paper, being either publicly visible, publicly visible in a redacted form or available to Members only."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 	
@@ -96,56 +91,56 @@ pdep:Visibility rdf:type owl:Class ;
 	
 pdep:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Leads to"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a credited contribution to a committing thing. Credited contributions may include the phrase, 'I will write to the Library' commonly known as 'will writes'. Such a contribution should lead to one committing thing in the form of a letter to the Library. A letter of commitment may result from one contribution, or none."@en ;
 	rdfs:domain pdep:CreditedContribution ;
 	rdfs:range pdep:CommittingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:makesCommitment rdf:type owl:ObjectProperty ;
 	rdfs:label "Makes commitment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a committing thing to the commitment it makes. A committing thing includes one or more commitments. A commitment is included in one committing thing."@en ;
 	rdfs:domain pdep:CommittingThing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:madeBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Made by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a commitment to the incumbency of a person in a position making that commitment. A commitment is made by one incumbency."@en ;
 	rdfs:domain pdep:Commitment ;
 	rdfs:range pdep:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:madeDuring rdf:type owl:ObjectProperty ;
 	rdfs:label "Made during"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a commitment to the parliamentary period during which the commitment was made. A commitment is made during one parliamentary period."@en ;
 	rdfs:domain pdep:Commitment ;
 	rdfs:range pdep:ParliamentaryPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:resultsFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Results from"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, a team in the House of Lords Library contact the person who made the commitment asking for the deposit."@en ;
 	rdfs:domain pdep:Deposit ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a deposit to the paper it deposits. A deposit may result in one or more deposited papers."@en ;
 	rdfs:domain pdep:Deposit ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:corrects rdf:type owl:ObjectProperty ;
 	rdfs:label "Corrects"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a deposited paper to the deposited paper it corrects. A deposited paper may correct one deposited paper, or none. A deposited paper may be corrected by one deposited paper, or none."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:hasVisibility rdf:type owl:ObjectProperty ;
 	rdfs:label "Has visibility"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a deposited paper to the visibility of that deposited paper. A deposited paper has one visibility assigned."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range pdep:Visibility ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
@@ -156,14 +151,21 @@ pdep:hasVisibility rdf:type owl:ObjectProperty ;
 
 pdep:madeOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made on"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a commitment to the date on which that commitment was made."@en ;
 	rdfs:domain pdep:Commitment ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
+pdep:isStanding rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is standing"@en ;
+	rdfs:comment "Used to record whether a commitment is standing. A standing commitment leads to more than one deposit over time."@en ;
+	rdfs:domain pdep:Commitment ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
 pdep:isArtefact rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is artefact"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Used to record whether the deposited paper is an artefact, for example: a deposit of a breathalyzer would be recorded as an artefact."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
