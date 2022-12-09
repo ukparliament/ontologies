@@ -227,7 +227,7 @@ The following query looks at made affirmative instruments (including remedial or
 
 The following query looks for all made affirmative and made negative instruments that were made void by Government after being signed into law. An instrument can be made void when it has been made/published by mistake. This is an extremely rare occurence, the normal procedure for such instances would be for the instrument to be revoked. When an instrument is void the procedure concludes and the instrument is removed from legislation.gov.uk as if it was never signed into law. 
 
-* [Void instruments](https//api.parliament.uk/s/d850d6cf) 
+* [Void instruments](https://api.parliament.uk/s/d850d6cf) 
 
 ## Withdrawn Statutory Instruments
 
