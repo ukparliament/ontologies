@@ -125,6 +125,16 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/53e68777">Consideration by the International Agreements Sub-Committee (IAC)</a>
 
+### Government responses to committee reports
+
+* <a href="https://api.parliament.uk/s/b2259e9d"> All government responses</a>
+
+* <a href="https://api.parliament.uk/s/780b4198"> Government responses to Commons reports</a>
+
+    * <a href="https://api.parliament.uk/s/d0db2900"> Committee replies to a government response</a>
+
+* <a href="https://api.parliament.uk/s/f0f63b9c"> Government responses to Lords reports</a>	
+
 
 ## Prayers against Treaties 
 
