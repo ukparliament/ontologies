@@ -1,8 +1,10 @@
 # Remedial Orders
 
-[Proposed negative statutory instruments](https://ukparliament.github.io/ontologies/procedure/procedure-ontology.html) (PNSIs) are laid before Parliament where a decision is taken on whether the instrument should be laid under the negative procedure or upgraded to the affirmative procedure. 
+Remedial orders are made by a minister under the [Human Rights Act 1998](https://www.legislation.gov.uk/ukpga/1998/42/schedule/2) to amend legislation which has been found incompatible with the European Convention on Human Rights. Remedial orders can be used to amend both primary and secondary legislation, and they may do anything necessary to fix the incompatibility with the Convention rights. 
 
-The following queries provide data for all proposed negative statutory instruments going back to July 2018 when these types of papers started to be laid before Parliament.
+A minister formally presents a proposal for a draft remedial order which Parliament, including the Joint Committee on Human Rights, has 60 days to scrutinise. At the end of the period, the minister can lay a draft remedial order. In some more urgent cases, the minister may lay a made remedial order. 
+
+More information on the procedure can be found [here](https://guidetoprocedure.parliament.uk/articles/Htt2atZR/remedial-orders).
 
 ## All proposed draft remedial orders and remedial orders laid before Parliament
 
