@@ -24,6 +24,11 @@ Dot file: [dot](legislative-reform-orders/components/lords/procedure-determinati
 
 Dot file: [dot](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.dot) / [svg](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.svg)
 
+##### [Lords debates](legislative-reform-orders/components/lords/debates/debates.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/lords/debates/debates.dot) / [svg](legislative-reform-orders/components/lords/debates/debates.svg)
+
+
 #### House of Commons
 
 ##### [Procedure determination](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.pdf)
