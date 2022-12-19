@@ -6,11 +6,11 @@ More information on the procedure can be found [here](https://guidetoprocedure.p
 
 The following queries provide data for all legislative reform orders going back to June 2017 when the 2017-19 session began. Note that much of the procedure steps possible in the [Legislative Reform Order procedure](https://ukparliament.github.io/ontologies/procedure/maps/legislation/secondary/statutory-instruments/super-affirmative-procedures/#legislative-reform-order) have not occurred since 2017 so many of these queries will show no results. They will update as and when the procedure steps are actualised. 
 
-## All legislative reforms laid before Parliament
+## All legislative reform ordera laid before Parliament
 
 This query will show you all legislative reform orders laid before Parliament since the Statutory Instrument Service began. The query also includes the procedure the minister recommended upon laying. 
 
-* [All Legislaive reform orders laid since June 2017](https://api.parliament.uk/s/4b9b4716) 
+* [All Legislative reform orders laid since June 2017](https://api.parliament.uk/s/4b9b4716) 
 
 ## Legislative reform orders currently before Parliament
 
