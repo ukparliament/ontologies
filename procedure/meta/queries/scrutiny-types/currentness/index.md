@@ -14,6 +14,12 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 
 * [Published drafts under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018](https://api.parliament.uk/s/fbb2a382)
 
+* Legislative reform orders
+	* [Legislative reform order procedure determination](https://api.parliament.uk/s/9b8368ca)	
+    * [Legislative reform orders under the negative procedure objection period](https://api.parliament.uk/s/32d5796e)
+	* [Legislative reform orders under the affirmative procedure pre-approval period](https://api.parliament.uk/s/6013e1cf)(Note that this means the affirmative can now be approved by both Houses - it does not mean the instrument cannot be made)
+	* [Legislative reform orders under the super-affirmative procedure pre-approval period](https://api.parliament.uk/s/c3aadf49)(Note that this means the affirmative can now be approved by both Houses - it does not mean the instrument cannot be made)
+
 * Remedial orders
     * [Proposals for remedial orders](https://api.parliament.uk/s/ae61c54d)
 	* [Draft affirmative remedial orders](https://api.parliament.uk/s/ef99a590) (Note that this means that the draft affirmative can now be approved by both Houses - it does not mean the instrument cannot be made)
