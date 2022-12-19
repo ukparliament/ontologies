@@ -10,6 +10,12 @@ All statutory instruments subject to the modelled procedures must be considered 
 
 * [Joint Committee on Human Rights (JCHR)](https://committees.parliament.uk/committee/93/human-rights-joint-committee/) - considers all remedial orders laid before both Houses
 
+* [Delegated Powers and Regulatory Reform Committee](https://committees.parliament.uk/committee/173/delegated-powers-and-regulatory-reform-committee/) - considers all legislative reform orders laid before the House of Lords
+
+* [Business, Energy and Industrial Strategy Committee](https://committees.parliament.uk/committee/365/business-energy-and-industrial-strategy-committee/) - considers all legislative reform orders laid before the House of Commons
+
+* [Regulatory Reform Committee](https://committees.parliament.uk/committee/131/regulatory-reform) - considered all legislative reform orders laid before the House of Commons until 2021. 
+
 ## All instruments
 
 The following queries will show all instruments considered by the committees and their outcome. There is also a sub query that shows all instruments that should have been considered or are due to be considered by the committee. The Secondary Legislation Scrutiny Committee aims to consider all bicameral instruments within three weeks of laying (not including recesses) while the Joint Committee on Statutory Instruments/Select Committee on Statutory Instruments aim to consider all instruments within five weeks of laying (not including recesses). Affirmative instruments tend to take priority. 
@@ -28,6 +34,12 @@ The following queries will show all instruments considered by the committees and
 * [Secondary Legislation Scrutiny Committee (SLSC)](https://api.parliament.uk/sparql#query=%23+This+query+uses+classes+from+UK+Parliament's+procedure+ontology%3A+https%3A%2F%2Fukparliament.github.io%2Fontologies%2Fprocedure%2Fprocedure-ontology.html.%0A%0A%23+This+query+looks+at+all+statutory+instruments+considered+by+the+Statutory+Instrument+Select+Committee+(SCSI)+which+looks+at+instruments+laid+before+the+House+of+Commons+only.+%0A%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0A%23+The+above+rows+describe+where+the+datasets+that+this+query+is+built+on+come+from.+%0A%0Aselect+%3Fsi+%3FsiName+%3FworkPackage+%3FprocedureName+%3FstepName+%3Fdate+%3FLink+where+%7B%0A++%23+The+select+row+is+identifying+what+information+to+return+from+the+query.+These+are+all+variables+from+the+query+below.%0A+++%0A++%23+SPARQL+variables+start+with+a+%3F+and+can+match+any+node+(resource+or+literal)+in+the+RDF+dataset.+%0A%0A++%3Fsi+a+%3AStatutoryInstrumentPaper%3B%0A++++++%3AstatutoryInstrumentPaperName+%3FsiName%3B%0A++++++++++++++++++%3AworkPackagedThingHasWorkPackage+%3FworkPackage.%0A++%23+An+SI+is+considered+a+workpackageable+thing+which+is+the+focus+of+a+workpackage.+A+workpackage+is+a+group+of+business+items+under+a+procedure+or+as+determined+by+a+committee%2C+for+example%3A+business+items+considered+during+the+passage+of+a+particular+Statutory+Instrument.%0A%0A++%3FworkPackage+%3AworkPackageHasProcedure+%3Fprocedure%3B%0A++++++%3AworkPackageHasBusinessItem+%3Fbi.%0A+++++%23+A+business+item+is+an+item+of+business+conducted+either+within+or+outside+Parliament.+For+example%3A+the+tabling+of+an+early+day+motion%2C+a+laying+of+a+paper%2C+the+making+of+a+statutory+instrument+by+a+government+minister.%0A%0A++%3Fprocedure+%3AprocedureName+%3FprocedureName.+%0A++%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FstepId%3B%0A++++++++++++++++++%3AbusinessItemHasProcedureStep+id%3AJcCYkCt7%3B%0A++++++%3AbusinessItemDate+%3Fdate.%0A+++++%23+All+business+items+will+have+one+or+more+procedure+steps+attached.+All+procedure+steps+will+have+a+name+and+ID%2C+we+use+the+ID+to+search+for+the+step+as+it+is+constant+whereas+the+name+could+change.+The+ID+JcCYkCt7+is+for+the+%22Decision+made+by+the+Secondary+Legislation+Scrutiny+Committee+(SLSC)%22.+%0A%0A++OPTIONAL+%7B+%3Fbi+%3AbusinessItemHasBusinessItemWebLink+%3FLink.+%7D%0A++%0A++%3FstepId+%3AprocedureStepName+%3FstepName.%0A++FILTER+(%3FstepId+in+(id%3ADxba45JM%2C+id%3A2Etk3rF5%2C+id%3AKn7FknDd))%0A+++%23+As+above+this+filter+is+looking+for+the+decisions+made+by+the+SLSC+so+when+an+instrument+has+been+drawn+to+the+special+attention+of+the+House+or+not%2C+or+if+it's+been+noted+as+an+instrument+of+interest.+++++++++++++++++++++++++++++%0A%0A%7D%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=SLSC+consideration+(ALL)&headers=%7B%7D&outputFormat=table)
 
     * [Instruments not considered by the Secondary Legislation Scrutiny Committee (SLSC)](https://api.parliament.uk/s/7a01226b)
+	
+* [Delegated Powers and Regulatory Reform Committee (DPRRC)](https://api.parliament.uk/s/6dee4679)
+
+* [Regulatory Reform Committee](https://api.parliament.uk/s/7e0afc37)
+
+* [Business, Energy and Industrial Strategy Committee](https://api.parliament.uk/s/5d4d989f)	
 
 ## Instruments laid before Commons only or bicameral
 
@@ -49,15 +61,15 @@ The following queries look at all instruments considered by committees in given 
 
 ### Session
 
-* <a href="https://api.parliament.uk/s/9a55e01f">2022-23</a>
+* <a href="https://api.parliament.uk/s/19234a1c">2022-23</a>
 
-* <a href="https://api.parliament.uk/s/8722bdb7">2021-22</a>
+* <a href="https://api.parliament.uk/s/bd610e47">2021-22</a>
 
-* <a href="https://api.parliament.uk/s/c272bc7d">2019-21</a>
+* <a href="https://api.parliament.uk/s/2ea5fcc5">2019-21</a>
 
-* <a href="https://api.parliament.uk/sparql#query=%23+This+query+uses+classes+from+UK+Parliament's+procedure+ontology%3A+https%3A%2F%2Fukparliament.github.io%2Fontologies%2Fprocedure%2Fprocedure-ontology.html.%0A%0A%23+This+query+looks+at+all+statutory+instruments+considered+by+a+committee+since+the+beginning+of+the+2019+session.+%0A%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0A%23+The+above+rows+describe+where+the+datasets+that+this+query+is+built+on+come+from.+%0A%0Aselect+%3Fsi+%3FsiName+%3FworkPackage+%3FprocedureName+%3FcommitteeName+%3Fdate+%3FLink+where+%7B%0A++++%23+The+select+row+is+identifying+what+information+to+return+from+the+query.+These+are+all+variables+from+the+query+below.%0A+%0A++%23+SPARQL+variables+start+with+a+%3F+and+can+match+any+node+(resource+or+literal)+in+the+RDF+dataset.+%0A%0A++%3Fsi+a+%3AStatutoryInstrumentPaper%3B%0A++++++%3AstatutoryInstrumentPaperName+%3FsiName%3B%0A++++++++++++++++++%3AworkPackagedThingHasWorkPackage+%3FworkPackage.%0A++%23+An+SI+is+considered+a+workpackageable+thing+which+is+the+focus+of+a+workpackage.+A+workpackage+is+a+group+of+business+items+under+a+procedure+or+as+determined+by+a+committee%2C+for+example%3A+business+items+considered+during+the+passage+of+a+particular+Statutory+Instrument.%0A%0A++%3FworkPackage+%3AworkPackageHasProcedure+%3Fprocedure.%0A++%3Fprocedure+%3AprocedureName+%3FprocedureName.%0A+++%3FworkPackage++%3AworkPackageHasBusinessItem+%3Fbi.%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3Fcommittee.%0A+++%23+A+business+item+is+an+item+of+business+conducted+either+within+or+outside+Parliament.+For+example%3A+the+tabling+of+an+early+day+motion%2C+a+laying+of+a+paper%2C+the+making+of+a+statutory+instrument+by+a+government+minister.%0A%0A++FILTER+(%3Fcommittee+in+(id%3A9ouoghbQ%2C+id%3AqGFQ35jt%2C+id%3AJcCYkCt7))%0A+++++%23+All+business+items+will+have+one+or+more+procedure+steps+attached.+All+procedure+steps+will+have+a+name+and+ID%2C+we+use+the+ID+to+search+for+the+step+as+it+is+constant+whereas+the+name+could+change.+The+step+ids+above+are+looking+for+the+decision+steps+for+the+Statutory+Instrument+Select+Committee+(SCSI)%2C+Joint+Committee+on+Statutory+Instruments+(JCSI)+and+Secondary+Legislation+Scrutiny+Committee+(SLSC).+%0A%0A+++%3Fbi+++%3AbusinessItemDate+%3Fdate.+%0A++OPTIONAL+%7B+%3Fbi+%3AbusinessItemHasBusinessItemWebLink+%3FLink.%7D%0A++%23+This+optional+filter+ensures+that+any+business+items+that+do+not+have+a+link+still+appear+in+the+results.+There+may+be+occasions+when+a+committee+has+considered+an+instrument+but+it+has+been+missed+in+the+published+report+therefore+there+is+no+link.+For+more+information+on+such+results+please+contact+RIIDMSMailbox%40parliament.uk.%0A++%0A++%3Fcommittee+%3AprocedureStepName+%3FcommitteeName.%0A++++FILTER+(+str(%3Fdate)+%3E+'2019-10-10'+%26%26+str(%3Fdate)+%3C+'2019-11-06')%0A++%23+This+filter+limits+the+results+to+only+look+for+instruments+considered+during+the+2019+session.+%0A+%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Committee+consideration+2019&headers=%7B%7D&outputFormat=table">2019</a>
+* <a href="https://api.parliament.uk/s/1f03be43">2019</a>
 
-* <a href="https://api.parliament.uk/s/4fc9f4bc">2017-19</a>
+* <a href="https://api.parliament.uk/s/1b96215a">2017-19</a>
 
 ### Amending the query
 
