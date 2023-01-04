@@ -29,6 +29,8 @@ The following query will show all PNSIs currently before Parliament which are wa
 
 ## Proposed negative statutory instruments by calendar year
 
+* [2023](https://api.parliament.uk/s/e3c2f9a8)
+
 * <a href="https://api.parliament.uk/s/e0640974">2022</a>
 
 * <a href="https://api.parliament.uk/s/36d7d905">2021</a>

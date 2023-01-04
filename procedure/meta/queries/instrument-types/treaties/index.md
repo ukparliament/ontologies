@@ -22,7 +22,9 @@ This query will show you all treaties laid before Parliament since the Treaty Tr
 
 ## Treaties by session
 
-* <a href="https://api.parliament.uk/s/f3a93566">2021-22</a>
+* <a href="https://api.parliament.uk/s/a3977a81">2022-23</a>
+
+* <a href="https://api.parliament.uk/s/586a31d3">2021-22</a>
 
 * <a href="https://api.parliament.uk/s/73462af9">2019-21</a>
 
@@ -31,6 +33,8 @@ This query will show you all treaties laid before Parliament since the Treaty Tr
 * <a href="https://api.parliament.uk/s/fdfdb374">2017-19</a>
 
 ## Treaties by calendar year
+
+* <a href="https://api.parliament.uk/s/5a9ce63b">2023</a>
 
 * <a href="https://api.parliament.uk/s/ac68683d">2022</a>
 
