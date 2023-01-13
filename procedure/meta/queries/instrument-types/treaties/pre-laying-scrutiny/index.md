@@ -8,6 +8,8 @@ The following queries detail all pre-laying business on treaties since June 2017
 
 ## Treaties with scrutiny ongoing yet to be laid before Parliament
 
+Currently, this query will provide no results. We're in the process of updating Parliament's [Treaty Tracker](https://treaties.parliament.uk/) to allow us to add treaties that have said to be laid. Once this work has been completed we will add all treaties currenty being negotiated before being laid under the CRaG procedure. 
+
 * [Treaties yet to be laid before Parliament](https://api.parliament.uk/s/1d94b67b)
 
 ## Treaties brought to the attention of Parliament before they were signed
@@ -41,6 +43,13 @@ Ministers can make many different statements to the House before a treaty is lai
 Informational copies of treaties made be laid in both Houses at the point the treaty is signed. The purpose of this is to allow parliamentary scrutiny to begin, particularly for the benefit of committee inquiries and evidence sessions. As the copies are informational it means that [CRaG](https://www.legislation.gov.uk/ukpga/2010/25/part/2) is not yet invoked so the objection period has not yet started. 
 
 * [Informational copies of treaties laid](https://api.parliament.uk/s/0d66c8ba)
+
+## Trade and Agriculture Commission advice to the Secretary of State for International Trade
+
+The Trade and Agriculture Commission's purpose is to provide advice under section 42 of the Agriculture Act 2020 (see below). In preparing a report relating to free trade agreements under that section, the Secretary of State must request advice from the Commission and lay before Parliament any such advice received in response to said requests. Generally, the advice should be published before any report but there has been one instance where the report was laid first. The Trade and Agriculture Commission's role is outlined under [Part 3 of the Trade Act 2021](https://www.legislation.gov.uk/ukpga/2021/10/part/3/enacted). 
+
+* [Trade and Agriculture Commission advice to the Secretary of State for International Trade laid before Parliament](https://api.parliament.uk/s/f93cd44c)
+
 
 ## Publication of a report pursuant to Section 42 of the Agriculture Act 2020 on a free trade agreement laid before the House of Commons/House of Lords
 
