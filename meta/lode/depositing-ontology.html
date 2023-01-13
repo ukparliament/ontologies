@@ -54,7 +54,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
             </dt>
-            <dd><p>A model describing the depositing of papers into a House by means of its Library.</p></dd>
+            <dd><p>A model describing commitments to deposit and the resulting deposits into a House, by means of its Library.</p></dd>
           </div>
         </dl>
       </div>
@@ -91,7 +91,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               </th>
               <td>
                 <span>
-                  <a href="#Deposit">pdep:Deposit</a>
+                  <a href="#Depositing">pdep:Depositing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -174,15 +174,15 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Deposit">
-          <h3>Deposit
+        <div class="property entity" id="Depositing">
+          <h3>Depositing
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://parliament.uk/ontologies/depositing/Deposit</code>
+                <code>http://parliament.uk/ontologies/depositing/Depositing</code>
               </td>
             </tr>
             <tr>
@@ -197,7 +197,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The act of making a paper available to a House by means of its Library.</p></td>
+              <td><p>The act of making information available to a House by means of its Library.</p></td>
             </tr>
             <tr>
               <th>
@@ -208,27 +208,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                   <a href="#Makingavailable">pdep:MakingAvailable</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#resultsFrom">pdep:resultsFrom</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#resultsIn">pdep:resultsIn</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
               </td>
             </tr>
           </table>
@@ -256,7 +235,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>A paper having been deposited in a Library of a House.</p></td>
+              <td><p>A paper deposited in a Library of a House.</p></td>
             </tr>
             <tr>
               <th>
@@ -329,44 +308,6 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Creditedcontribution">
-          <h3>Credited contribution
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://parliament.uk/ontologies/depositing/CreditedContribution</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://parliament.uk/ontologies/depositing/">pdep:</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>An oral contribution by a Member to a parliamentary proceeding.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#leadsTo">pdep:leadsTo</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="Committingthing">
           <h3>Committing thing
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -390,7 +331,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>A thing including a commitment to deposit, for example: an oral contribution to a parliamentary proceeding, a letter to a Library or a written statement.</p></td>
+              <td><p>A thing in which a commitment to deposit is made, for example: an oral contribution to a parliamentary proceeding, a letter to a Library or a written statement.</p></td>
             </tr>
             <tr>
               <th>
@@ -439,7 +380,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>A commitment to deposit a paper in a Library or Libraries.</p></td>
+              <td><p>A commitment to deposit information in a Library or Libraries.</p></td>
             </tr>
             <tr>
               <th>
@@ -637,17 +578,14 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>Relates a credited contribution to a committing thing. Credited contributions may include the phrase, 'I will write to the Library' commonly known as 'will writes'. Such a contribution should lead to one committing thing in the form of a letter to the Library. A letter of commitment may result from one contribution, or none.</p></td>
+              <td><p>Relates a credited contribution in which the intention to make a commitment is made to a committing thing. Credited contributions may include the phrase, 'I will write to the Library'. These are known as 'will writes'. Such a contribution should lead to one committing thing in the form of a letter of commitment to the Library. A letter of commitment may result from one credited contribution, or none.</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <span>
-                  <a href="#Creditedcontribution">pdep:CreditedContribution</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="#CreditedContribution">pdep:CreditedContribution</a>
               </td>
             </tr>
             <tr>
@@ -686,7 +624,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>Relates a committing thing to the commitment it makes. A committing thing includes one or more commitments. A commitment is included in one committing thing.</p></td>
+              <td><p>Relates a committing thing to the commitment made. A committing thing includes one commitment. A commitment is included in one committing thing.</p></td>
             </tr>
             <tr>
               <th>
@@ -833,17 +771,14 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, a team in the House of Lords Library contact the person who made the commitment asking for the deposit.</p></td>
+              <td><p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, the House of Lords Library contacts the person who made the commitment.</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <span>
-                  <a href="#Deposit">pdep:Deposit</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="#Deposit">pdep:Deposit</a>
               </td>
             </tr>
             <tr>
@@ -889,10 +824,7 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <span>
-                  <a href="#Deposit">pdep:Deposit</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="#Deposit">pdep:Deposit</a>
               </td>
             </tr>
             <tr>
@@ -1228,13 +1160,10 @@ th {vertical-align: top;text-align:left;width:30%;font-weight:normal;}
               <a href="#Parliamentarypaper">Parliamentary paper</a>
             </li>
             <li>
-              <a href="#Deposit">Deposit</a>
+              <a href="#Depositing">Depositing</a>
             </li>
             <li>
               <a href="#DepositedPaper">Deposited paper</a>
-            </li>
-            <li>
-              <a href="#Creditedcontribution">Credited contribution</a>
             </li>
             <li>
               <a href="#Committingthing">Committing thing</a>
