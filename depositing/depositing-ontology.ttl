@@ -115,14 +115,14 @@ pdep:madeDuring rdf:type owl:ObjectProperty ;
 pdep:resultsFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Results from"@en ;
 	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, the House of Lords Library contacts the person who made the commitment."@en ;
-	rdfs:domain pdep:Deposit ;
+	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in"@en ;
 	rdfs:comment "Relates a deposit to the paper it deposits. A deposit may result in one or more deposited papers."@en ;
-	rdfs:domain pdep:Deposit ;
+	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
