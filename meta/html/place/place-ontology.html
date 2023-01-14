@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Place ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -51,7 +51,7 @@
 
             <article class="class" id="Geometry">
                 <h3>
-                    Class <a href="#Geometry">LABEL PLACEHOLDER</a>
+                    Class <a href="#Geometry">Geometry</a>
                 </h3>
 
                 <p>A geographic extent expressed as a point, box or polygon.</p>
@@ -60,7 +60,7 @@
             </article>
             <article class="class" id="Place">
                 <h3>
-                    Class <a href="#Place">LABEL PLACEHOLDER</a>
+                    Class <a href="#Place">Place</a>
                 </h3>
 
                 <p>A geographic place.</p>
@@ -69,7 +69,7 @@
             </article>
             <article class="class" id="PlaceType">
                 <h3>
-                    Class <a href="#PlaceType">LABEL PLACEHOLDER</a>
+                    Class <a href="#PlaceType">Place type</a>
                 </h3>
 
                 <p>A place type, for example: a town, constituency, county or country.</p>
@@ -83,45 +83,45 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="hasGeometry">
-
-                <h3>
-                    Object property <a href="#hasGeometry">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a place to its geometric representation.</p>
-
-                <p><a href="#Place">Place</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Geometry">Geometry</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasPlaceType">
-
-                <h3>
-                    Object property <a href="#hasPlaceType">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a place to a place type.</p>
-
-                <p><a href="#Place">Place</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PlaceType">PlaceType</a></p>
-
-            </article>
-
             <article class="objectproperty" id="containedByPlace">
 
                 <h3>
-                    Object property <a href="#containedByPlace">LABEL PLACEHOLDER</a>
+                    Object property <a href="#containedByPlace">containedByPlace</a>
             </h3>
 
 
 
                 <p>Relates a place to a place it is contained by e.g. town in constituency in county in country.</p>
 
-                <p><a href="#Place">Place</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Place">Place</a></p>
+                <p><a href="#Place">Place</a> &mdash; containedByPlace &mdash; <a href="#Place">Place</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasGeometry">
+
+                <h3>
+                    Object property <a href="#hasGeometry">hasGeometry</a>
+            </h3>
+
+
+
+                <p>Relates a place to its geometric representation.</p>
+
+                <p><a href="#Place">Place</a> &mdash; hasGeometry &mdash; <a href="#Geometry">Geometry</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasPlaceType">
+
+                <h3>
+                    Object property <a href="#hasPlaceType">hasPlaceType</a>
+            </h3>
+
+
+
+                <p>Relates a place to a place type.</p>
+
+                <p><a href="#Place">Place</a> &mdash; hasPlaceType &mdash; <a href="#PlaceType">PlaceType</a></p>
 
             </article>
         </section>

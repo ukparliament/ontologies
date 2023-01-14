@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Parliamentary paper ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -50,63 +50,63 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class" id="ParliamentaryPaperWork">
-                <h3>
-                    Class <a href="#ParliamentaryPaperWork">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A parliamentary paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
-
-
-            </article>
-            <article class="class" id="ParliamentaryPaper">
-                <h3>
-                    Class <a href="#ParliamentaryPaper">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A parliamentary paper made available to a House.</p>
-
-
-            </article>
             <article class="class" id="PaperBundle">
                 <h3>
-                    Class <a href="#PaperBundle">LABEL PLACEHOLDER</a>
+                    Class <a href="#PaperBundle">Paper bundle</a>
                 </h3>
 
                 <p>A group of related parliamentary papers, called a bundle, for example: a bundle containing a statutory instrument paper and a related explanatory memorandum.</p>
 
 
             </article>
-            <article class="class" id="PaperType">
-                <h3>
-                    Class <a href="#PaperType">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>The type of a paper, for example: bill, statutory instrument, petition or statement of annual accounts.</p>
-
-
-            </article>
-            <article class="class" id="PaperSeriesItem">
-                <h3>
-                    Class <a href="#PaperSeriesItem">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A parliamentary paper, as it exists as part of a paper series. A parliamentary paper forming part of a series has a number within that series.</p>
-
-
-            </article>
             <article class="class" id="PaperSeries">
                 <h3>
-                    Class <a href="#PaperSeries">LABEL PLACEHOLDER</a>
+                    Class <a href="#PaperSeries">Paper series</a>
                 </h3>
 
                 <p>A series of parliamentary papers, for example: the Treaty Series.</p>
 
 
             </article>
+            <article class="class" id="PaperSeriesItem">
+                <h3>
+                    Class <a href="#PaperSeriesItem">Paper series item</a>
+                </h3>
+
+                <p>A parliamentary paper, as it exists as part of a paper series. A parliamentary paper forming part of a series has a number within that series.</p>
+
+
+            </article>
+            <article class="class" id="PaperType">
+                <h3>
+                    Class <a href="#PaperType">Paper type</a>
+                </h3>
+
+                <p>The type of a paper, for example: bill, statutory instrument, petition or statement of annual accounts.</p>
+
+
+            </article>
+            <article class="class" id="ParliamentaryPaper">
+                <h3>
+                    Class <a href="#ParliamentaryPaper">Parliamentary paper</a>
+                </h3>
+
+                <p>A parliamentary paper made available to a House.</p>
+
+
+            </article>
+            <article class="class" id="ParliamentaryPaperWork">
+                <h3>
+                    Class <a href="#ParliamentaryPaperWork">Parliamentary paper work</a>
+                </h3>
+
+                <p>A parliamentary paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
+
+
+            </article>
             <article class="class" id="Session">
                 <h3>
-                    Class <a href="#Session">LABEL PLACEHOLDER</a>
+                    Class <a href="#Session">Session</a>
                 </h3>
 
                 <p>A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
@@ -120,129 +120,129 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="expressionOf">
-
-                <h3>
-                    Object property <a href="#expressionOf">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a parliamentary paper to the work that paper is an expression of. A parliamentary paper is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers.</p>
-
-                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#ParliamentaryPaperWork">ParliamentaryPaperWork</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="formsPartOf">
-
-                <h3>
-                    Object property <a href="#formsPartOf">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a parliamentary paper to the paper bundle it forms part of. A parliamentary paper may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle.</p>
-
-                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperBundle">PaperBundle</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasType">
-
-                <h3>
-                    Object property <a href="#hasType">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a parliamentary paper to the type of that paper. A parliamentary paper may have one or more types.</p>
-
-                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperType">PaperType</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="paperTypeParent">
-
-                <h3>
-                    Object property <a href="#paperTypeParent">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates one paper type to another in a parent-child relationship. A paper type may have one or more parent paper types, or none. A paper type may have one or more child paper types, or none.</p>
-
-                <p><a href="#PaperType">PaperType</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperType">PaperType</a></p>
-
-            </article>
-
             <article class="objectproperty" id="asSeriesitem">
 
                 <h3>
-                    Object property <a href="#asSeriesitem">LABEL PLACEHOLDER</a>
+                    Object property <a href="#asSeriesitem">As series item</a>
             </h3>
 
 
 
                 <p>Relates a parliamentary paper to the existence of that paper in a series. A paper series item refers to one parliamentary paper. A parliamentary paper may exist as an item in one or more series, or none.</p>
 
-                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperSeriesItem">PaperSeriesItem</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="inSeries">
-
-                <h3>
-                    Object property <a href="#inSeries">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates the existence of a parliamentary paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series.</p>
-
-                <p><a href="#PaperSeriesItem">PaperSeriesItem</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperSeries">PaperSeries</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="paperSeriesParent">
-
-                <h3>
-                    Object property <a href="#paperSeriesParent">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none, for example: the Treaty Series of in force treaties is a child series of the Command Papers series.</p>
-
-                <p><a href="#PaperSeries">PaperSeries</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperSeries">PaperSeries</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="paperSeriesFollows">
-
-                <h3>
-                    Object property <a href="#paperSeriesFollows">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a paper series to its preceding series. A paper series may follow one series, or none. A paper series may be followed by one series, or none, for example: the series of statutory instruments made in 2022 follows the series of statutory instruments made in 2021.</p>
-
-                <p><a href="#PaperSeries">PaperSeries</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#PaperSeries">PaperSeries</a></p>
+                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; As series item &mdash; <a href="#PaperSeriesItem">PaperSeriesItem</a></p>
 
             </article>
 
             <article class="objectproperty" id="belongsTo">
 
                 <h3>
-                    Object property <a href="#belongsTo">LABEL PLACEHOLDER</a>
+                    Object property <a href="#belongsTo">Belongs to</a>
             </h3>
 
 
 
                 <p>Relates a paper series to the session that series belongs to. A paper series may belong to one session, or none, for example: the series of House of Commons papers belonging to the session in which papers in that series are made available.</p>
 
-                <p><a href="#PaperSeries">PaperSeries</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Session">Session</a></p>
+                <p><a href="#PaperSeries">PaperSeries</a> &mdash; Belongs to &mdash; <a href="#Session">Session</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="expressionOf">
+
+                <h3>
+                    Object property <a href="#expressionOf">Expression of</a>
+            </h3>
+
+
+
+                <p>Relates a parliamentary paper to the work that paper is an expression of. A parliamentary paper is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers.</p>
+
+                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; Expression of &mdash; <a href="#ParliamentaryPaperWork">ParliamentaryPaperWork</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="formsPartOf">
+
+                <h3>
+                    Object property <a href="#formsPartOf">Forms part of</a>
+            </h3>
+
+
+
+                <p>Relates a parliamentary paper to the paper bundle it forms part of. A parliamentary paper may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle.</p>
+
+                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; Forms part of &mdash; <a href="#PaperBundle">PaperBundle</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasType">
+
+                <h3>
+                    Object property <a href="#hasType">Has type</a>
+            </h3>
+
+
+
+                <p>Relates a parliamentary paper to the type of that paper. A parliamentary paper may have one or more types.</p>
+
+                <p><a href="#ParliamentaryPaper">ParliamentaryPaper</a> &mdash; Has type &mdash; <a href="#PaperType">PaperType</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="inSeries">
+
+                <h3>
+                    Object property <a href="#inSeries">In series</a>
+            </h3>
+
+
+
+                <p>Relates the existence of a parliamentary paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series.</p>
+
+                <p><a href="#PaperSeriesItem">PaperSeriesItem</a> &mdash; In series &mdash; <a href="#PaperSeries">PaperSeries</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="paperSeriesFollows">
+
+                <h3>
+                    Object property <a href="#paperSeriesFollows">Paper series follows</a>
+            </h3>
+
+
+
+                <p>Relates a paper series to its preceding series. A paper series may follow one series, or none. A paper series may be followed by one series, or none, for example: the series of statutory instruments made in 2022 follows the series of statutory instruments made in 2021.</p>
+
+                <p><a href="#PaperSeries">PaperSeries</a> &mdash; Paper series follows &mdash; <a href="#PaperSeries">PaperSeries</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="paperSeriesParent">
+
+                <h3>
+                    Object property <a href="#paperSeriesParent">Paper series parent</a>
+            </h3>
+
+
+
+                <p>Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none, for example: the Treaty Series of in force treaties is a child series of the Command Papers series.</p>
+
+                <p><a href="#PaperSeries">PaperSeries</a> &mdash; Paper series parent &mdash; <a href="#PaperSeries">PaperSeries</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="paperTypeParent">
+
+                <h3>
+                    Object property <a href="#paperTypeParent">Paper type parent</a>
+            </h3>
+
+
+
+                <p>Relates one paper type to another in a parent-child relationship. A paper type may have one or more parent paper types, or none. A paper type may have one or more child paper types, or none.</p>
+
+                <p><a href="#PaperType">PaperType</a> &mdash; Paper type parent &mdash; <a href="#PaperType">PaperType</a></p>
 
             </article>
         </section>
@@ -251,74 +251,74 @@
         <section id="dataproperties">
             <h2>Data properties</h2>
 
-            <article class="dataproperty" id="prefix">
-                <h3>
-                    Data property <a href="#prefix">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>Relates a paper series to the prefix which is combined with a paper series item identifier to form the &#39;number&#39; of a parliamentary paper as an item in that series.</p>
-
-                <p>PaperSeries &mdash; LABEL PLACEHOLDER &mdash; Literal</p>
-
-
-            </article>
-
-            <article class="dataproperty" id="hasPrivilege">
-                <h3>
-                    Data property <a href="#hasPrivilege">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>Used to record if parliamentary papers being items in a series indicates that those papers have parliamentary privilege.</p>
-
-                <p>PaperSeries &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
-
-
-            </article>
-
             <article class="dataproperty" id="authoredOn">
                 <h3>
-                    Data property <a href="#authoredOn">LABEL PLACEHOLDER</a>
+                    Data property <a href="#authoredOn">Authored on</a>
             </h3>
 
                 <p>Relates a parliamentary paper to the date that parliamentary paper was authored on.</p>
 
-                <p>ParliamentaryPaper &mdash; LABEL PLACEHOLDER &mdash; date</p>
-
-
-            </article>
-
-            <article class="dataproperty" id="copyrightStatement">
-                <h3>
-                    Data property <a href="#copyrightStatement">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>Relates a parliamentary paper to a statement containing the copyright description for that parliamentary paper.</p>
-
-                <p>ParliamentaryPaper &mdash; LABEL PLACEHOLDER &mdash; langString</p>
-
-
-            </article>
-
-            <article class="dataproperty" id="pageCount">
-                <h3>
-                    Data property <a href="#pageCount">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>Relates a parliamentary paper to its page count.</p>
-
-                <p>ParliamentaryPaper &mdash; LABEL PLACEHOLDER &mdash; integer</p>
+                <p>ParliamentaryPaper &mdash; Authored on &mdash; date</p>
 
 
             </article>
 
             <article class="dataproperty" id="containsStatistics">
                 <h3>
-                    Data property <a href="#containsStatistics">LABEL PLACEHOLDER</a>
+                    Data property <a href="#containsStatistics">Contains statistics</a>
             </h3>
 
                 <p>Used to record if a parliamentary paper contains statistics.</p>
 
-                <p>ParliamentaryPaper &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
+                <p>ParliamentaryPaper &mdash; Contains statistics &mdash; boolean</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="copyrightStatement">
+                <h3>
+                    Data property <a href="#copyrightStatement">Copyright statement</a>
+            </h3>
+
+                <p>Relates a parliamentary paper to a statement containing the copyright description for that parliamentary paper.</p>
+
+                <p>ParliamentaryPaper &mdash; Copyright statement &mdash; langString</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="hasPrivilege">
+                <h3>
+                    Data property <a href="#hasPrivilege">Has privilege</a>
+            </h3>
+
+                <p>Used to record if parliamentary papers being items in a series indicates that those papers have parliamentary privilege.</p>
+
+                <p>PaperSeries &mdash; Has privilege &mdash; boolean</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="pageCount">
+                <h3>
+                    Data property <a href="#pageCount">Page count</a>
+            </h3>
+
+                <p>Relates a parliamentary paper to its page count.</p>
+
+                <p>ParliamentaryPaper &mdash; Page count &mdash; integer</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="prefix">
+                <h3>
+                    Data property <a href="#prefix">Prefix</a>
+            </h3>
+
+                <p>Relates a paper series to the prefix which is combined with a paper series item identifier to form the &#39;number&#39; of a parliamentary paper as an item in that series.</p>
+
+                <p>PaperSeries &mdash; Prefix &mdash; Literal</p>
 
 
             </article>

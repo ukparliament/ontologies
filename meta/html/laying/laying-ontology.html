@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Laying ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -50,49 +50,9 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class" id="MakingAvailable">
-                <h3>
-                    Class <a href="#MakingAvailable">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>The act of making a thing available to a House or to a House by means of its Library.</p>
-
-
-            </article>
-            <article class="class" id="MadeAvailableThing">
-                <h3>
-                    Class <a href="#MadeAvailableThing">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A thing made available to a House or to a House by means of its Library.</p>
-
-
-            </article>
-            <article class="class" id="ParliamentaryPaper">
-                <h3>
-                    Class <a href="#ParliamentaryPaper">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>Papers made available to or published under the authority of Parliament.</p>
-
-
-            </article>
-            <article class="class" id="Laying">
-                <h3>
-                    Class <a href="#Laying">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>The act of making a paper available to a House under a laying authority. Papers are made available to a House on being accepted by the Journal Office of that House.</p>
-
-                <p>Superclasses
-                &middot; MakingAvailable
-
-            </p>
-
-            </article>
             <article class="class" id="LaidPaper">
                 <h3>
-                    Class <a href="#LaidPaper">LABEL PLACEHOLDER</a>
+                    Class <a href="#LaidPaper">Laid paper</a>
                 </h3>
 
                 <p>A paper having been laid before a House.</p>
@@ -104,9 +64,22 @@
             </p>
 
             </article>
+            <article class="class" id="Laying">
+                <h3>
+                    Class <a href="#Laying">Laying</a>
+                </h3>
+
+                <p>The act of making a paper available to a House under a laying authority. Papers are made available to a House on being accepted by the Journal Office of that House.</p>
+
+                <p>Superclasses
+                &middot; MakingAvailable
+
+            </p>
+
+            </article>
             <article class="class" id="LayingAuthority">
                 <h3>
-                    Class <a href="#LayingAuthority">LABEL PLACEHOLDER</a>
+                    Class <a href="#LayingAuthority">Laying authority</a>
                 </h3>
 
                 <p>The authority under which a paper is laid. The authority for laying may cite a section of legislation, standing order or resolution giving authorisation for that laying.</p>
@@ -115,10 +88,37 @@
             </article>
             <article class="class" id="LayingAuthorityType">
                 <h3>
-                    Class <a href="#LayingAuthorityType">LABEL PLACEHOLDER</a>
+                    Class <a href="#LayingAuthorityType">Laying authority type</a>
                 </h3>
 
                 <p>The type of an authority under which a paper is laid. A paper may be laid under prerogative powers and said to be laid &#39;by command&#39;. A paper laid in order to comply with legislation may be said to be laid &#39;by Act&#39;. A paper may be laid in order to comply with standing orders, or with an opposed or unopposed return motion.</p>
+
+
+            </article>
+            <article class="class" id="MadeAvailableThing">
+                <h3>
+                    Class <a href="#MadeAvailableThing">Made available thing</a>
+                </h3>
+
+                <p>A thing made available to a House or to a House by means of its Library.</p>
+
+
+            </article>
+            <article class="class" id="MakingAvailable">
+                <h3>
+                    Class <a href="#MakingAvailable">Making available</a>
+                </h3>
+
+                <p>The act of making a thing available to a House or to a House by means of its Library.</p>
+
+
+            </article>
+            <article class="class" id="ParliamentaryPaper">
+                <h3>
+                    Class <a href="#ParliamentaryPaper">Parliamentary paper</a>
+                </h3>
+
+                <p>Papers made available to or published under the authority of Parliament.</p>
 
 
             </article>
@@ -132,56 +132,56 @@
             <article class="objectproperty" id="hasLayingAuthority">
 
                 <h3>
-                    Object property <a href="#hasLayingAuthority">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasLayingAuthority">Has laying authority</a>
             </h3>
 
 
 
                 <p>Relates an act of laying a paper to the authority under which that paper is laid. A paper is laid under one authority.</p>
 
-                <p><a href="#Laying">Laying</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#LayingAuthority">LayingAuthority</a></p>
+                <p><a href="#Laying">Laying</a> &mdash; Has laying authority &mdash; <a href="#LayingAuthority">LayingAuthority</a></p>
 
             </article>
 
             <article class="objectproperty" id="hasLayingAuthorityType">
 
                 <h3>
-                    Object property <a href="#hasLayingAuthorityType">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasLayingAuthorityType">Has laying authority type</a>
             </h3>
 
 
 
                 <p>Relates a laying authority to the type of that laying authority. A laying authority is of one type.</p>
 
-                <p><a href="#LayingAuthority">LayingAuthority</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#LayingAuthorityType">LayingAuthorityType</a></p>
+                <p><a href="#LayingAuthority">LayingAuthority</a> &mdash; Has laying authority type &mdash; <a href="#LayingAuthorityType">LayingAuthorityType</a></p>
 
             </article>
 
             <article class="objectproperty" id="parentLayingAuthorityType">
 
                 <h3>
-                    Object property <a href="#parentLayingAuthorityType">LABEL PLACEHOLDER</a>
+                    Object property <a href="#parentLayingAuthorityType">Parent laying authority type</a>
             </h3>
 
 
 
                 <p>Relates a laying authority type to the parent of that laying authority type, for example: a laying authority type of &#39;by Act&#39; having a parent laying authority type of &#39;by Statute&#39;. A laying authority type may have one parent laying authority type, or none. A laying authority type may have one or more child laying authority types, or none.</p>
 
-                <p><a href="#LayingAuthorityType">LayingAuthorityType</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#LayingAuthorityType">LayingAuthorityType</a></p>
+                <p><a href="#LayingAuthorityType">LayingAuthorityType</a> &mdash; Parent laying authority type &mdash; <a href="#LayingAuthorityType">LayingAuthorityType</a></p>
 
             </article>
 
             <article class="objectproperty" id="resultsIn">
 
                 <h3>
-                    Object property <a href="#resultsIn">LABEL PLACEHOLDER</a>
+                    Object property <a href="#resultsIn">Results in</a>
             </h3>
 
 
 
                 <p>Relates an act of laying a paper to that paper having been laid. An act of laying is of one or more laid papers. A laid paper is the result of one act of laying.</p>
 
-                <p><a href="#Laying">Laying</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#LaidPaper">LaidPaper</a></p>
+                <p><a href="#Laying">Laying</a> &mdash; Results in &mdash; <a href="#LaidPaper">LaidPaper</a></p>
 
             </article>
         </section>
@@ -192,12 +192,12 @@
 
             <article class="dataproperty" id="isAuditorCertified">
                 <h3>
-                    Data property <a href="#isAuditorCertified">LABEL PLACEHOLDER</a>
+                    Data property <a href="#isAuditorCertified">Is auditor certified</a>
             </h3>
 
                 <p>Used to record whether a laid paper has been certified by an auditor.</p>
 
-                <p>LaidPaper &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
+                <p>LaidPaper &mdash; Is auditor certified &mdash; boolean</p>
 
 
             </article>

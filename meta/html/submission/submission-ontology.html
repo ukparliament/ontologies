@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Submission ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -49,18 +49,9 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class" id="Event">
-                <h3>
-                    Class <a href="#Event">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>An event. A thing that happens over a time interval.</p>
-
-
-            </article>
             <article class="class" id="CalendarEvent">
                 <h3>
-                    Class <a href="#CalendarEvent">LABEL PLACEHOLDER</a>
+                    Class <a href="#CalendarEvent">CalendarEvent</a>
                 </h3>
 
                 <p>A planned or arranged event in a place.</p>
@@ -69,7 +60,7 @@
             </article>
             <article class="class" id="Call">
                 <h3>
-                    Class <a href="#Call">LABEL PLACEHOLDER</a>
+                    Class <a href="#Call">Call</a>
                 </h3>
 
                 <p>A call by a committee or committees conducting an inquiry for written evidence, oral evidence, papers or records.</p>
@@ -80,9 +71,22 @@
             </p>
 
             </article>
+            <article class="class" id="CallForEvidence">
+                <h3>
+                    Class <a href="#CallForEvidence">CallForEvidence</a>
+                </h3>
+
+                <p>An open call by a committee or committees conducting an inquiry for members of the public or organisations to provide written evidence. Sometimes referred to as a call for written submissions.</p>
+
+                <p>Superclasses
+                &middot; Call
+
+            </p>
+
+            </article>
             <article class="class" id="CallForOralEvidence">
                 <h3>
-                    Class <a href="#CallForOralEvidence">LABEL PLACEHOLDER</a>
+                    Class <a href="#CallForOralEvidence">CallForOralEvidence</a>
                 </h3>
 
                 <p>A call by a committee or committees conducting an inquiry for a named witness to provide oral evidence.</p>
@@ -93,22 +97,9 @@
             </p>
 
             </article>
-            <article class="class" id="Compelled">
-                <h3>
-                    Class <a href="#Compelled">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A call by a committee or committees conducting an inquiry compelling a named witness to provide oral evidence.</p>
-
-                <p>Superclasses
-                &middot; CallForOralEvidence
-
-            </p>
-
-            </article>
             <article class="class" id="CallForPapers">
                 <h3>
-                    Class <a href="#CallForPapers">LABEL PLACEHOLDER</a>
+                    Class <a href="#CallForPapers">CallForPapers</a>
                 </h3>
 
                 <p>A call by a committee or committees conducting an inquiry for a named individual or organisation to provide papers. Papers are understood to be documents that the individual or organisation are unlikely to possess but would be able to compile.</p>
@@ -121,7 +112,7 @@
             </article>
             <article class="class" id="CallForRecords">
                 <h3>
-                    Class <a href="#CallForRecords">LABEL PLACEHOLDER</a>
+                    Class <a href="#CallForRecords">CallForRecords</a>
                 </h3>
 
                 <p>A call by a committee or committees conducting an inquiry for a named individual or organisation to provide records. Records are understood to be documents that the individual or organisation are known to possess.</p>
@@ -132,49 +123,49 @@
             </p>
 
             </article>
-            <article class="class" id="CallForEvidence">
+            <article class="class" id="Compelled">
                 <h3>
-                    Class <a href="#CallForEvidence">LABEL PLACEHOLDER</a>
+                    Class <a href="#Compelled">Compelled</a>
                 </h3>
 
-                <p>An open call by a committee or committees conducting an inquiry for members of the public or organisations to provide written evidence. Sometimes referred to as a call for written submissions.</p>
+                <p>A call by a committee or committees conducting an inquiry compelling a named witness to provide oral evidence.</p>
 
                 <p>Superclasses
-                &middot; Call
+                &middot; CallForOralEvidence
 
             </p>
 
             </article>
             <article class="class" id="Contribution">
                 <h3>
-                    Class <a href="#Contribution">LABEL PLACEHOLDER</a>
+                    Class <a href="#Contribution">Contribution</a>
                 </h3>
 
                 <p>A contribution by an individual or organisation to a committee inquiry. This might be in the form of written evidence, oral evidence, papers or records.</p>
 
 
             </article>
-            <article class="class" id="Person">
-                <h3>
-                    Class <a href="#Person">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A person.</p>
-
-
-            </article>
             <article class="class" id="Document">
                 <h3>
-                    Class <a href="#Document">LABEL PLACEHOLDER</a>
+                    Class <a href="#Document">Document</a>
                 </h3>
 
                 <p>A document.</p>
 
 
             </article>
+            <article class="class" id="Event">
+                <h3>
+                    Class <a href="#Event">Event</a>
+                </h3>
+
+                <p>An event. A thing that happens over a time interval.</p>
+
+
+            </article>
             <article class="class" id="Focus">
                 <h3>
-                    Class <a href="#Focus">LABEL PLACEHOLDER</a>
+                    Class <a href="#Focus">Focus</a>
                 </h3>
 
                 <p>A focus area for a contribution. Borrowed from the formal body ontology to identify the subject area or areas covered by a contribution.</p>
@@ -183,10 +174,19 @@
             </article>
             <article class="class" id="Incumbency">
                 <h3>
-                    Class <a href="#Incumbency">LABEL PLACEHOLDER</a>
+                    Class <a href="#Incumbency">Incumbency</a>
                 </h3>
 
                 <p>A position held by a person for a period of time e.g. Philip Hammond occupying the position of Foreign Secretary between two dates.</p>
+
+
+            </article>
+            <article class="class" id="Person">
+                <h3>
+                    Class <a href="#Person">Person</a>
+                </h3>
+
+                <p>A person.</p>
 
 
             </article>
@@ -197,129 +197,129 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="compelledToAttend">
-
-                <h3>
-                    Object property <a href="#compelledToAttend">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a compelled call for oral evidence to a calendar event where the witness is expected to be heard.</p>
-
-                <p><a href="#Compelled">Compelled</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CalendarEvent">CalendarEvent</a></p>
-
-            </article>
-
             <article class="objectproperty" id="callForOralEvidence">
 
                 <h3>
-                    Object property <a href="#callForOralEvidence">LABEL PLACEHOLDER</a>
+                    Object property <a href="#callForOralEvidence">callForOralEvidence</a>
             </h3>
 
 
 
                 <p>Relates a call for oral evidence to a contribution made in response to that call.</p>
 
-                <p><a href="#CallForOralEvidence">CallForOralEvidence</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Contribution">Contribution</a></p>
+                <p><a href="#CallForOralEvidence">CallForOralEvidence</a> &mdash; callForOralEvidence &mdash; <a href="#Contribution">Contribution</a></p>
 
             </article>
 
             <article class="objectproperty" id="callForPapers">
 
                 <h3>
-                    Object property <a href="#callForPapers">LABEL PLACEHOLDER</a>
+                    Object property <a href="#callForPapers">callForPapers</a>
             </h3>
 
 
 
                 <p>Relates a call for papers to a contribution made in response to that call.</p>
 
-                <p><a href="#CallForPapers">CallForPapers</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Contribution">Contribution</a></p>
+                <p><a href="#CallForPapers">CallForPapers</a> &mdash; callForPapers &mdash; <a href="#Contribution">Contribution</a></p>
 
             </article>
 
             <article class="objectproperty" id="callForRecords">
 
                 <h3>
-                    Object property <a href="#callForRecords">LABEL PLACEHOLDER</a>
+                    Object property <a href="#callForRecords">callForRecords</a>
             </h3>
 
 
 
                 <p>Relates a call for records to a contribution made in response to that call.</p>
 
-                <p><a href="#CallForRecords">CallForRecords</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Contribution">Contribution</a></p>
+                <p><a href="#CallForRecords">CallForRecords</a> &mdash; callForRecords &mdash; <a href="#Contribution">Contribution</a></p>
 
             </article>
 
-            <article class="objectproperty" id="respondsToCall">
+            <article class="objectproperty" id="compelledToAttend">
 
                 <h3>
-                    Object property <a href="#respondsToCall">LABEL PLACEHOLDER</a>
+                    Object property <a href="#compelledToAttend">compelledToAttend</a>
             </h3>
 
 
 
-                <p>Relates any type of contribution to the call it is submitted in response to.</p>
+                <p>Relates a compelled call for oral evidence to a calendar event where the witness is expected to be heard.</p>
 
-                <p><a href="#Contribution">Contribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Call">Call</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="makesContribution">
-
-                <h3>
-                    Object property <a href="#makesContribution">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a person making a contribution to their contribution.</p>
-
-                <p><a href="#Person">Person</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Contribution">Contribution</a></p>
+                <p><a href="#Compelled">Compelled</a> &mdash; compelledToAttend &mdash; <a href="#CalendarEvent">CalendarEvent</a></p>
 
             </article>
 
             <article class="objectproperty" id="contributes">
 
                 <h3>
-                    Object property <a href="#contributes">LABEL PLACEHOLDER</a>
+                    Object property <a href="#contributes">contributes</a>
             </h3>
 
 
 
                 <p>Relates a contribution to a document contributed.</p>
 
-                <p><a href="#Contribution">Contribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Document">Document</a></p>
+                <p><a href="#Contribution">Contribution</a> &mdash; contributes &mdash; <a href="#Document">Document</a></p>
 
             </article>
 
             <article class="objectproperty" id="focusOfContribution">
 
                 <h3>
-                    Object property <a href="#focusOfContribution">LABEL PLACEHOLDER</a>
+                    Object property <a href="#focusOfContribution">focusOfContribution</a>
             </h3>
 
 
 
                 <p>Relates a contribution to its focus (subject) area(s).</p>
 
-                <p><a href="#Contribution">Contribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Focus">Focus</a></p>
+                <p><a href="#Contribution">Contribution</a> &mdash; focusOfContribution &mdash; <a href="#Focus">Focus</a></p>
 
             </article>
 
             <article class="objectproperty" id="inCapacity">
 
                 <h3>
-                    Object property <a href="#inCapacity">LABEL PLACEHOLDER</a>
+                    Object property <a href="#inCapacity">inCapacity</a>
             </h3>
 
 
 
                 <p>Relates a contribution to the incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation.</p>
 
-                <p><a href="#Contribution">Contribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Incumbency">Incumbency</a></p>
+                <p><a href="#Contribution">Contribution</a> &mdash; inCapacity &mdash; <a href="#Incumbency">Incumbency</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="makesContribution">
+
+                <h3>
+                    Object property <a href="#makesContribution">makesContribution</a>
+            </h3>
+
+
+
+                <p>Relates a person making a contribution to their contribution.</p>
+
+                <p><a href="#Person">Person</a> &mdash; makesContribution &mdash; <a href="#Contribution">Contribution</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="respondsToCall">
+
+                <h3>
+                    Object property <a href="#respondsToCall">respondsToCall</a>
+            </h3>
+
+
+
+                <p>Relates any type of contribution to the call it is submitted in response to.</p>
+
+                <p><a href="#Contribution">Contribution</a> &mdash; respondsToCall &mdash; <a href="#Call">Call</a></p>
 
             </article>
         </section>
@@ -330,36 +330,36 @@
 
             <article class="dataproperty" id="callDescription">
                 <h3>
-                    Data property <a href="#callDescription">LABEL PLACEHOLDER</a>
+                    Data property <a href="#callDescription">callDescription</a>
             </h3>
 
                 <p>Relates any type of call to its descriptive text.</p>
 
-                <p>Call &mdash; LABEL PLACEHOLDER &mdash; langString</p>
+                <p>Call &mdash; callDescription &mdash; langString</p>
 
 
             </article>
 
             <article class="dataproperty" id="calledAt">
                 <h3>
-                    Data property <a href="#calledAt">LABEL PLACEHOLDER</a>
+                    Data property <a href="#calledAt">calledAt</a>
             </h3>
 
                 <p>The date time at which a call is made.</p>
 
-                <p>Call &mdash; LABEL PLACEHOLDER &mdash; dateTime</p>
+                <p>Call &mdash; calledAt &mdash; dateTime</p>
 
 
             </article>
 
             <article class="dataproperty" id="callEnds">
                 <h3>
-                    Data property <a href="#callEnds">LABEL PLACEHOLDER</a>
+                    Data property <a href="#callEnds">callEnds</a>
             </h3>
 
                 <p>The date time at which a call ends.</p>
 
-                <p>Call &mdash; LABEL PLACEHOLDER &mdash; dateTime</p>
+                <p>Call &mdash; callEnds &mdash; dateTime</p>
 
 
             </article>

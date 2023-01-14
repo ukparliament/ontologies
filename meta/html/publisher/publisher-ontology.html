@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Publisher ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -52,42 +52,25 @@
 
             <article class="class" id="Agent">
                 <h3>
-                    Class <a href="#Agent">LABEL PLACEHOLDER</a>
+                    Class <a href="#Agent">Agent</a>
                 </h3>
 
                 <p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
 
 
             </article>
-            <article class="class" id="Group">
+            <article class="class" id="Concept">
                 <h3>
-                    Class <a href="#Group">LABEL PLACEHOLDER</a>
+                    Class <a href="#Concept">Concept</a>
                 </h3>
 
-                <p>A group of people. Groups may contain other groups or be empty.</p>
+                <p>A SKOS Concept, for example: a library subject term.</p>
 
-                <p>Superclasses
-                &middot; Agent
-
-            </p>
-
-            </article>
-            <article class="class" id="Publisher">
-                <h3>
-                    Class <a href="#Publisher">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>An entity responsible for making a resource available.</p>
-
-                <p>Superclasses
-                &middot; Agent
-
-            </p>
 
             </article>
             <article class="class" id="EditorialBoard">
                 <h3>
-                    Class <a href="#EditorialBoard">LABEL PLACEHOLDER</a>
+                    Class <a href="#EditorialBoard">Editorial board</a>
                 </h3>
 
                 <p>A group overseeing a publisher, for example: the board of POST, made up of Members of Parliament, considering and approving areas of research.</p>
@@ -98,9 +81,22 @@
             </p>
 
             </article>
+            <article class="class" id="Group">
+                <h3>
+                    Class <a href="#Group">Group</a>
+                </h3>
+
+                <p>A group of people. Groups may contain other groups or be empty.</p>
+
+                <p>Superclasses
+                &middot; Agent
+
+            </p>
+
+            </article>
             <article class="class" id="House">
                 <h3>
-                    Class <a href="#House">LABEL PLACEHOLDER</a>
+                    Class <a href="#House">House</a>
                 </h3>
 
                 <p>A parliamentary House, for example: the House of Lords.</p>
@@ -111,22 +107,22 @@
             </p>
 
             </article>
-            <article class="class" id="ResearchService">
+            <article class="class" id="Publisher">
                 <h3>
-                    Class <a href="#ResearchService">LABEL PLACEHOLDER</a>
+                    Class <a href="#Publisher">Publisher</a>
                 </h3>
 
-                <p>A group of researchers, for example: in the Library of the House of Commons, in the Library of the House of Lords or the Parliamentary Office of Science and Technology.</p>
+                <p>An entity responsible for making a resource available.</p>
 
                 <p>Superclasses
-                &middot; Publisher
+                &middot; Agent
 
             </p>
 
             </article>
             <article class="class" id="ResearchSection">
                 <h3>
-                    Class <a href="#ResearchSection">LABEL PLACEHOLDER</a>
+                    Class <a href="#ResearchSection">Research section</a>
                 </h3>
 
                 <p>A group of researchers within the Library of the House of Commons having a particular focus, for example: the Parliament and Constitution Centre.</p>
@@ -137,18 +133,22 @@
             </p>
 
             </article>
-            <article class="class" id="Concept">
+            <article class="class" id="ResearchService">
                 <h3>
-                    Class <a href="#Concept">LABEL PLACEHOLDER</a>
+                    Class <a href="#ResearchService">Research service</a>
                 </h3>
 
-                <p>A SKOS Concept, for example: a library subject term.</p>
+                <p>A group of researchers, for example: in the Library of the House of Commons, in the Library of the House of Lords or the Parliamentary Office of Science and Technology.</p>
 
+                <p>Superclasses
+                &middot; Publisher
+
+            </p>
 
             </article>
             <article class="class" id="ThingHavingPublisher">
                 <h3>
-                    Class <a href="#ThingHavingPublisher">LABEL PLACEHOLDER</a>
+                    Class <a href="#ThingHavingPublisher">Thing having a publisher</a>
                 </h3>
 
                 <p>A published thing, which has a publisher.</p>
@@ -165,70 +165,70 @@
             <article class="objectproperty" id="hasEditorialBoard">
 
                 <h3>
-                    Object property <a href="#hasEditorialBoard">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasEditorialBoard">Has editorial board</a>
             </h3>
 
 
 
                 <p>Relates a publisher to its editorial board.</p>
 
-                <p><a href="#Publisher">Publisher</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#EditorialBoard">EditorialBoard</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasResearchService">
-
-                <h3>
-                    Object property <a href="#hasResearchService">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office.</p>
-
-                <p><a href="#House">House</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#ResearchService">ResearchService</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasResearchSection">
-
-                <h3>
-                    Object property <a href="#hasResearchSection">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a research service to a research section within that service.</p>
-
-                <p><a href="#ResearchService">ResearchService</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#ResearchSection">ResearchSection</a></p>
+                <p><a href="#Publisher">Publisher</a> &mdash; Has editorial board &mdash; <a href="#EditorialBoard">EditorialBoard</a></p>
 
             </article>
 
             <article class="objectproperty" id="hasFocus">
 
                 <h3>
-                    Object property <a href="#hasFocus">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasFocus">Has focus</a>
             </h3>
 
 
 
                 <p>Relates a publisher to one or more policy areas, policy areas being represented as SKOS concepts.</p>
 
-                <p><a href="#Publisher">Publisher</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Concept">Concept</a></p>
+                <p><a href="#Publisher">Publisher</a> &mdash; Has focus &mdash; <a href="#Concept">Concept</a></p>
 
             </article>
 
             <article class="objectproperty" id="hasPublisher">
 
                 <h3>
-                    Object property <a href="#hasPublisher">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasPublisher">Has publisher</a>
             </h3>
 
 
 
                 <p>Relates a thing, which has a publisher, to the publisher of the thing.</p>
 
-                <p><a href="#ThingHavingPublisher">ThingHavingPublisher</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Publisher">Publisher</a></p>
+                <p><a href="#ThingHavingPublisher">ThingHavingPublisher</a> &mdash; Has publisher &mdash; <a href="#Publisher">Publisher</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasResearchService">
+
+                <h3>
+                    Object property <a href="#hasResearchService">Has research service</a>
+            </h3>
+
+
+
+                <p>Relates a House to a research service. A research service may belong to one House or both, for example: the Parliamentary Office of Science and Technology, a bicameral office.</p>
+
+                <p><a href="#House">House</a> &mdash; Has research service &mdash; <a href="#ResearchService">ResearchService</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasResearchSection">
+
+                <h3>
+                    Object property <a href="#hasResearchSection">Has section</a>
+            </h3>
+
+
+
+                <p>Relates a research service to a research section within that service.</p>
+
+                <p><a href="#ResearchService">ResearchService</a> &mdash; Has section &mdash; <a href="#ResearchSection">ResearchSection</a></p>
 
             </article>
         </section>

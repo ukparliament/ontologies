@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Citation ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -50,18 +50,9 @@
         <section id="classes">
             <h2>Classes</h2>
 
-            <article class="class" id="CitingThing">
-                <h3>
-                    Class <a href="#CitingThing">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A thing citing another thing.</p>
-
-
-            </article>
             <article class="class" id="Citation">
                 <h3>
-                    Class <a href="#Citation">LABEL PLACEHOLDER</a>
+                    Class <a href="#Citation">Citation</a>
                 </h3>
 
                 <p>A citation from a thing to either a thing or a document at a URI.</p>
@@ -70,16 +61,25 @@
             </article>
             <article class="class" id="CitedThing">
                 <h3>
-                    Class <a href="#CitedThing">LABEL PLACEHOLDER</a>
+                    Class <a href="#CitedThing">Cited thing</a>
                 </h3>
 
                 <p>A thing being cited which is an instance of a class in the Parliament data store, for example: a standing order or a Speaker&#39;s ruling.</p>
 
 
             </article>
+            <article class="class" id="CitingThing">
+                <h3>
+                    Class <a href="#CitingThing">Citing thing</a>
+                </h3>
+
+                <p>A thing citing another thing.</p>
+
+
+            </article>
             <article class="class" id="DocumentType">
                 <h3>
-                    Class <a href="#DocumentType">LABEL PLACEHOLDER</a>
+                    Class <a href="#DocumentType">DocumentType</a>
                 </h3>
 
                 <p>The type of the document being cited, for example: a standing order or a section of legislation.</p>
@@ -96,42 +96,42 @@
             <article class="objectproperty" id="hasCitation">
 
                 <h3>
-                    Object property <a href="#hasCitation">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasCitation">Has citation</a>
             </h3>
 
 
 
                 <p>Relates a citing thing to a citation. A citing thing includes one or more citations. A citation is included in one citing thing.</p>
 
-                <p><a href="#CitingThing">CitingThing</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Citation">Citation</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="refersTo">
-
-                <h3>
-                    Object property <a href="#refersTo">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a citation to the thing being cited. A cited thing may have one or more citations. A citation is to one cited thing.</p>
-
-                <p><a href="#Citation">Citation</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CitedThing">CitedThing</a></p>
+                <p><a href="#CitingThing">CitingThing</a> &mdash; Has citation &mdash; <a href="#Citation">Citation</a></p>
 
             </article>
 
             <article class="objectproperty" id="hasDocumentType">
 
                 <h3>
-                    Object property <a href="#hasDocumentType">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasDocumentType">Has document type</a>
             </h3>
 
 
 
                 <p>Relates a citation to the document type of the thing at the URI being cited. A citation has one document type, or none.</p>
 
-                <p><a href="#Citation">Citation</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#DocumentType">DocumentType</a></p>
+                <p><a href="#Citation">Citation</a> &mdash; Has document type &mdash; <a href="#DocumentType">DocumentType</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="refersTo">
+
+                <h3>
+                    Object property <a href="#refersTo">Refers to</a>
+            </h3>
+
+
+
+                <p>Relates a citation to the thing being cited. A cited thing may have one or more citations. A citation is to one cited thing.</p>
+
+                <p><a href="#Citation">Citation</a> &mdash; Refers to &mdash; <a href="#CitedThing">CitedThing</a></p>
 
             </article>
         </section>
@@ -142,12 +142,12 @@
 
             <article class="dataproperty" id="hasUri">
                 <h3>
-                    Data property <a href="#hasUri">LABEL PLACEHOLDER</a>
+                    Data property <a href="#hasUri">Has URI</a>
             </h3>
 
                 <p>Relates a citation to the URI of the thing being cited.</p>
 
-                <p>Citation &mdash; LABEL PLACEHOLDER &mdash; Literal</p>
+                <p>Citation &mdash; Has URI &mdash; Literal</p>
 
 
             </article>

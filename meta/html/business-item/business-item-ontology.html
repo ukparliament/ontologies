@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Business item ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -52,7 +52,7 @@
 
             <article class="class" id="BusinessItem">
                 <h3>
-                    Class <a href="#BusinessItem">LABEL PLACEHOLDER</a>
+                    Class <a href="#BusinessItem">Business item</a>
                 </h3>
 
                 <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
@@ -61,7 +61,7 @@
             </article>
             <article class="class" id="BusinessItemSeries">
                 <h3>
-                    Class <a href="#BusinessItemSeries">LABEL PLACEHOLDER</a>
+                    Class <a href="#BusinessItemSeries">Business item series</a>
                 </h3>
 
                 <p>A series of regularly recurring business items. For example: questions to the Department of Health and Social Care.</p>
@@ -70,34 +70,34 @@
             </article>
             <article class="class" id="BusinessItemType">
                 <h3>
-                    Class <a href="#BusinessItemType">LABEL PLACEHOLDER</a>
+                    Class <a href="#BusinessItemType">Business item type</a>
                 </h3>
 
                 <p>The type of a business item. For example: a committee visit, a committee evidence session or a chamber debate.</p>
 
 
             </article>
-            <article class="class" id="Document">
-                <h3>
-                    Class <a href="#Document">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A document being a FRBR work.</p>
-
-
-            </article>
             <article class="class" id="CalendaredEvent">
                 <h3>
-                    Class <a href="#CalendaredEvent">LABEL PLACEHOLDER</a>
+                    Class <a href="#CalendaredEvent">Calendared event</a>
                 </h3>
 
                 <p>An event during which business items happen.</p>
 
 
             </article>
+            <article class="class" id="Document">
+                <h3>
+                    Class <a href="#Document">Document</a>
+                </h3>
+
+                <p>A document being a FRBR work.</p>
+
+
+            </article>
             <article class="class" id="Place">
                 <h3>
-                    Class <a href="#Place">LABEL PLACEHOLDER</a>
+                    Class <a href="#Place">Place</a>
                 </h3>
 
                 <p>A place named in a geography.</p>
@@ -111,101 +111,101 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="partOfSeries">
-
-                <h3>
-                    Object property <a href="#partOfSeries">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a business item to a business item series it is part of.</p>
-
-                <p><a href="#BusinessItem">BusinessItem</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#BusinessItemSeries">BusinessItemSeries</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="containsBusinessItem">
-
-                <h3>
-                    Object property <a href="#containsBusinessItem">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit.</p>
-
-                <p><a href="#BusinessItem">BusinessItem</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#BusinessItem">BusinessItem</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="hasBusinessItemType">
-
-                <h3>
-                    Object property <a href="#hasBusinessItemType">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a business item to its type.</p>
-
-                <p><a href="#BusinessItem">BusinessItem</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#BusinessItemType">BusinessItemType</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="recordOf">
-
-                <h3>
-                    Object property <a href="#recordOf">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a document to the calendared event it records.</p>
-
-                <p><a href="#Document">Document</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CalendaredEvent">CalendaredEvent</a></p>
-
-            </article>
-
             <article class="objectproperty" id="calendarisation">
 
                 <h3>
-                    Object property <a href="#calendarisation">LABEL PLACEHOLDER</a>
+                    Object property <a href="#calendarisation">Calendarisation</a>
             </h3>
 
 
 
                 <p>Describes the process of setting a time or date at which a business item is expected to take place.</p>
 
-                <p><a href="#BusinessItem">BusinessItem</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CalendaredEvent">CalendaredEvent</a></p>
+                <p><a href="#BusinessItem">BusinessItem</a> &mdash; Calendarisation &mdash; <a href="#CalendaredEvent">CalendaredEvent</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="containsBusinessItem">
+
+                <h3>
+                    Object property <a href="#containsBusinessItem">Contains business item</a>
+            </h3>
+
+
+
+                <p>Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit.</p>
+
+                <p><a href="#BusinessItem">BusinessItem</a> &mdash; Contains business item &mdash; <a href="#BusinessItem">BusinessItem</a></p>
 
             </article>
 
             <article class="objectproperty" id="followedBy">
 
                 <h3>
-                    Object property <a href="#followedBy">LABEL PLACEHOLDER</a>
+                    Object property <a href="#followedBy">Followed by</a>
             </h3>
 
 
 
                 <p>Relates a calendared event to a subsequent calendared event</p>
 
-                <p><a href="#CalendaredEvent">CalendaredEvent</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#CalendaredEvent">CalendaredEvent</a></p>
+                <p><a href="#CalendaredEvent">CalendaredEvent</a> &mdash; Followed by &mdash; <a href="#CalendaredEvent">CalendaredEvent</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="hasBusinessItemType">
+
+                <h3>
+                    Object property <a href="#hasBusinessItemType">Has business item type</a>
+            </h3>
+
+
+
+                <p>Relates a business item to its type.</p>
+
+                <p><a href="#BusinessItem">BusinessItem</a> &mdash; Has business item type &mdash; <a href="#BusinessItemType">BusinessItemType</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="partOfSeries">
+
+                <h3>
+                    Object property <a href="#partOfSeries">Part of series</a>
+            </h3>
+
+
+
+                <p>Relates a business item to a business item series it is part of.</p>
+
+                <p><a href="#BusinessItem">BusinessItem</a> &mdash; Part of series &mdash; <a href="#BusinessItemSeries">BusinessItemSeries</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="recordOf">
+
+                <h3>
+                    Object property <a href="#recordOf">Record of</a>
+            </h3>
+
+
+
+                <p>Relates a document to the calendared event it records.</p>
+
+                <p><a href="#Document">Document</a> &mdash; Record of &mdash; <a href="#CalendaredEvent">CalendaredEvent</a></p>
 
             </article>
 
             <article class="objectproperty" id="takesPlaceIn">
 
                 <h3>
-                    Object property <a href="#takesPlaceIn">LABEL PLACEHOLDER</a>
+                    Object property <a href="#takesPlaceIn">Takes place in</a>
             </h3>
 
 
 
                 <p>Relates a calendared event to the place it occurs.</p>
 
-                <p><a href="#CalendaredEvent">CalendaredEvent</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Place">Place</a></p>
+                <p><a href="#CalendaredEvent">CalendaredEvent</a> &mdash; Takes place in &mdash; <a href="#Place">Place</a></p>
 
             </article>
         </section>
@@ -214,38 +214,38 @@
         <section id="dataproperties">
             <h2>Data properties</h2>
 
-            <article class="dataproperty" id="notReached">
-                <h3>
-                    Data property <a href="#notReached">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>A boolean which is true when a calendared event was not reached or became unavailable for disposal.</p>
-
-                <p>CalendaredEvent &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
-
-
-            </article>
-
             <article class="dataproperty" id="cancelledAt">
                 <h3>
-                    Data property <a href="#cancelledAt">LABEL PLACEHOLDER</a>
+                    Data property <a href="#cancelledAt">Cancelled at</a>
             </h3>
 
                 <p>The time at which a calendared event was cancelled.</p>
 
-                <p>CalendaredEvent &mdash; LABEL PLACEHOLDER &mdash; dateTime</p>
+                <p>CalendaredEvent &mdash; Cancelled at &mdash; dateTime</p>
 
 
             </article>
 
             <article class="dataproperty" id="disposedOfAt">
                 <h3>
-                    Data property <a href="#disposedOfAt">LABEL PLACEHOLDER</a>
+                    Data property <a href="#disposedOfAt">Disposed of at</a>
             </h3>
 
                 <p>The time at which an agenda item was completed.</p>
 
-                <p>CalendaredEvent &mdash; LABEL PLACEHOLDER &mdash; dateTime</p>
+                <p>CalendaredEvent &mdash; Disposed of at &mdash; dateTime</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="notReached">
+                <h3>
+                    Data property <a href="#notReached">Not reached</a>
+            </h3>
+
+                <p>A boolean which is true when a calendared event was not reached or became unavailable for disposal.</p>
+
+                <p>CalendaredEvent &mdash; Not reached &mdash; boolean</p>
 
 
             </article>

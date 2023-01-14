@@ -87,11 +87,10 @@ for ttlpath in ttlfiles:
 
                 #             h3id = g.label(s).lower().replace(" ", "-")
                 #         classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
-
+                
                 classes.append(
                     {
-                        #                         "label": g.label(s),
-                        "label": "LABEL PLACEHOLDER",
+                        "label": g.value(s, RDFS.label),
                         "idString": s.split("/")[-1],
                         "comment": g.value(s, RDFS.comment),
                         "isDefinedBy": g.value(s, RDFS.isDefinedBy),
@@ -104,8 +103,7 @@ for ttlpath in ttlfiles:
             for s, p, o in g.triples((None, RDF.type, OWL.DatatypeProperty)):
                 dataproperties.append(
                     {
-                        "label": "LABEL PLACEHOLDER",
-                        #                         "label": g.label(s),
+                        "label": g.value(s, RDFS.label),
                         "idString": s.split("/")[-1],
                         "comment": g.value(s, RDFS.comment),
                         "domain": g.value(s, RDFS.domain).split("/")[-1],
@@ -128,8 +126,7 @@ for ttlpath in ttlfiles:
                 #       properties.append(f'<article class="property"><h3 id="{h3id}">{g.label(s)}</h3><ul><li>{domainstub} (domain) &rarr; {g.label(s)} (property) &rarr; {rangestub} (range)</li></ul><p>{g.value(s, RDFS.comment)}</p></article>')
                 objectproperties.append(
                     {
-                        "label": "LABEL PLACEHOLDER",
-                        #                         "label": g.label(s),
+                        "label": g.value(s, RDFS.label),
                         "idString": s.split("/")[-1],
                         "domain": domainstub,
                         "range": rangestub,

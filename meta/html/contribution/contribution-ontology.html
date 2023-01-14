@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Contribution ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -52,7 +52,7 @@
 
             <article class="class" id="Agent">
                 <h3>
-                    Class <a href="#Agent">LABEL PLACEHOLDER</a>
+                    Class <a href="#Agent">Agent</a>
                 </h3>
 
                 <p>An agent. The superset of all people and all groups of people.</p>
@@ -61,7 +61,7 @@
             </article>
             <article class="class" id="Contribution">
                 <h3>
-                    Class <a href="#Contribution">LABEL PLACEHOLDER</a>
+                    Class <a href="#Contribution">Contribution</a>
                 </h3>
 
                 <p>A contribution by an individual or organisation to a document or committee inquiry etc.</p>
@@ -70,7 +70,7 @@
             </article>
             <article class="class" id="ContributionRole">
                 <h3>
-                    Class <a href="#ContributionRole">LABEL PLACEHOLDER</a>
+                    Class <a href="#ContributionRole">ContributionRole</a>
                 </h3>
 
                 <p>The type of contribution made. Might be as an author or reviewer or inquiry witness etc.</p>
@@ -79,7 +79,7 @@
             </article>
             <article class="class" id="Incumbency">
                 <h3>
-                    Class <a href="#Incumbency">LABEL PLACEHOLDER</a>
+                    Class <a href="#Incumbency">Incumbency</a>
                 </h3>
 
                 <p>A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates.</p>
@@ -93,45 +93,45 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="makesContribution">
-
-                <h3>
-                    Object property <a href="#makesContribution">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a person or group to a contribution they&#39;ve made.</p>
-
-                <p><a href="#Agent">Agent</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Contribution">Contribution</a></p>
-
-            </article>
-
             <article class="objectproperty" id="hasContributionRole">
 
                 <h3>
-                    Object property <a href="#hasContributionRole">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasContributionRole">hasContributionRole</a>
             </h3>
 
 
 
                 <p>Relates a contribution to the type of contribution made.</p>
 
-                <p><a href="#Contribution">Contribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#ContributionRole">ContributionRole</a></p>
+                <p><a href="#Contribution">Contribution</a> &mdash; hasContributionRole &mdash; <a href="#ContributionRole">ContributionRole</a></p>
 
             </article>
 
             <article class="objectproperty" id="inCapacity">
 
                 <h3>
-                    Object property <a href="#inCapacity">LABEL PLACEHOLDER</a>
+                    Object property <a href="#inCapacity">inCapacity</a>
             </h3>
 
 
 
                 <p>Relates a contribution to an incumbency of the person making the contribution e.g. a person making a contribution in their capacity of holding a CEO position of an organisation.</p>
 
-                <p><a href="#Contribution">Contribution</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Incumbency">Incumbency</a></p>
+                <p><a href="#Contribution">Contribution</a> &mdash; inCapacity &mdash; <a href="#Incumbency">Incumbency</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="makesContribution">
+
+                <h3>
+                    Object property <a href="#makesContribution">makesContribution</a>
+            </h3>
+
+
+
+                <p>Relates a person or group to a contribution they&#39;ve made.</p>
+
+                <p><a href="#Agent">Agent</a> &mdash; makesContribution &mdash; <a href="#Contribution">Contribution</a></p>
 
             </article>
         </section>
@@ -140,26 +140,26 @@
         <section id="dataproperties">
             <h2>Data properties</h2>
 
-            <article class="dataproperty" id="isPublic">
-                <h3>
-                    Data property <a href="#isPublic">LABEL PLACEHOLDER</a>
-            </h3>
-
-                <p>Relates a contribution to whether not that contribution is made public. The is public flag will by necessity not be public.</p>
-
-                <p>Contribution &mdash; LABEL PLACEHOLDER &mdash; boolean</p>
-
-
-            </article>
-
             <article class="dataproperty" id="displayOrder">
                 <h3>
-                    Data property <a href="#displayOrder">LABEL PLACEHOLDER</a>
+                    Data property <a href="#displayOrder">Display order</a>
             </h3>
 
                 <p>Relates a contribution type to its display order.</p>
 
-                <p>ContributionType &mdash; LABEL PLACEHOLDER &mdash; integer</p>
+                <p>ContributionType &mdash; Display order &mdash; integer</p>
+
+
+            </article>
+
+            <article class="dataproperty" id="isPublic">
+                <h3>
+                    Data property <a href="#isPublic">Is public</a>
+            </h3>
+
+                <p>Relates a contribution to whether not that contribution is made public. The is public flag will by necessity not be public.</p>
+
+                <p>Contribution &mdash; Is public &mdash; boolean</p>
 
 
             </article>

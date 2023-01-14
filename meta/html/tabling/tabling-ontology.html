@@ -9,7 +9,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Tabling ontology</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -52,34 +52,43 @@
 
             <article class="class" id="House">
                 <h3>
-                    Class <a href="#House">LABEL PLACEHOLDER</a>
+                    Class <a href="#House">House</a>
                 </h3>
 
                 <p>A parliamentary House, for example: the House of Lords.</p>
 
 
             </article>
-            <article class="class" id="TablingOrWithdrawal">
+            <article class="class" id="SeatIncumbency">
                 <h3>
-                    Class <a href="#TablingOrWithdrawal">LABEL PLACEHOLDER</a>
+                    Class <a href="#SeatIncumbency">Seat incumbency</a>
                 </h3>
 
-                <p>The act of tabling into, or withdrawing a tabled thing from, a House.</p>
+                <p>The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member.</p>
 
 
             </article>
             <article class="class" id="Session">
                 <h3>
-                    Class <a href="#Session">LABEL PLACEHOLDER</a>
+                    Class <a href="#Session">Session</a>
                 </h3>
 
                 <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.</p>
 
 
             </article>
+            <article class="class" id="TabledThing">
+                <h3>
+                    Class <a href="#TabledThing">Tabled thing</a>
+                </h3>
+
+                <p>Any item of business which has been tabled, for example: a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled, for example: manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
+
+
+            </article>
             <article class="class" id="Tabling">
                 <h3>
-                    Class <a href="#Tabling">LABEL PLACEHOLDER</a>
+                    Class <a href="#Tabling">Tabling</a>
                 </h3>
 
                 <p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
@@ -90,9 +99,18 @@
             </p>
 
             </article>
+            <article class="class" id="TablingOrWithdrawal">
+                <h3>
+                    Class <a href="#TablingOrWithdrawal">Tabling or withdrawal</a>
+                </h3>
+
+                <p>The act of tabling into, or withdrawing a tabled thing from, a House.</p>
+
+
+            </article>
             <article class="class" id="Withdrawal">
                 <h3>
-                    Class <a href="#Withdrawal">LABEL PLACEHOLDER</a>
+                    Class <a href="#Withdrawal">Withdrawal</a>
                 </h3>
 
                 <p>The act of withdrawing a tabled thing from a House.</p>
@@ -103,39 +121,21 @@
             </p>
 
             </article>
-            <article class="class" id="SeatIncumbency">
+            <article class="class" id="WithdrawnThing">
                 <h3>
-                    Class <a href="#SeatIncumbency">LABEL PLACEHOLDER</a>
+                    Class <a href="#WithdrawnThing">Withdrawn thing</a>
                 </h3>
 
-                <p>The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member.</p>
+                <p>A tabled thing which has subsequently been withdrawn.</p>
 
 
             </article>
             <article class="class" id="WrittenNotice">
                 <h3>
-                    Class <a href="#WrittenNotice">LABEL PLACEHOLDER</a>
+                    Class <a href="#WrittenNotice">Written notice</a>
                 </h3>
 
                 <p>Official notice of an item of future business.</p>
-
-
-            </article>
-            <article class="class" id="TabledThing">
-                <h3>
-                    Class <a href="#TabledThing">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>Any item of business which has been tabled, for example: a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled, for example: manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
-
-
-            </article>
-            <article class="class" id="WithdrawnThing">
-                <h3>
-                    Class <a href="#WithdrawnThing">LABEL PLACEHOLDER</a>
-                </h3>
-
-                <p>A tabled thing which has subsequently been withdrawn.</p>
 
 
             </article>
@@ -146,101 +146,101 @@
             <h2>Object properties</h2>
 
 
-            <article class="objectproperty" id="hasHouse">
-
-                <h3>
-                    Object property <a href="#hasHouse">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
-
-                <p><a href="#TablingOrWithdrawal">TablingOrWithdrawal</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#House">House</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="inSession">
-
-                <h3>
-                    Object property <a href="#inSession">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
-
-                <p><a href="#TablingOrWithdrawal">TablingOrWithdrawal</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#Session">Session</a></p>
-
-            </article>
-
-            <article class="objectproperty" id="tabledBy">
-
-                <h3>
-                    Object property <a href="#tabledBy">LABEL PLACEHOLDER</a>
-            </h3>
-
-
-
-                <p>Relates a tabling to the seat incumbency of the Member tabling.</p>
-
-                <p><a href="#Tabling">Tabling</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#SeatIncumbency">SeatIncumbency</a></p>
-
-            </article>
-
             <article class="objectproperty" id="givesNotice">
 
                 <h3>
-                    Object property <a href="#givesNotice">LABEL PLACEHOLDER</a>
+                    Object property <a href="#givesNotice">Gives notice</a>
             </h3>
 
 
 
                 <p>Relates an act of tabling to a written notice.</p>
 
-                <p><a href="#Tabling">Tabling</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#WrittenNotice">WrittenNotice</a></p>
+                <p><a href="#Tabling">Tabling</a> &mdash; Gives notice &mdash; <a href="#WrittenNotice">WrittenNotice</a></p>
 
             </article>
 
-            <article class="objectproperty" id="tables">
+            <article class="objectproperty" id="hasHouse">
 
                 <h3>
-                    Object property <a href="#tables">LABEL PLACEHOLDER</a>
+                    Object property <a href="#hasHouse">Has House</a>
             </h3>
 
 
 
-                <p>Relates an act of tabling to the business item which it tables.</p>
+                <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
 
-                <p><a href="#Tabling">Tabling</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#TabledThing">TabledThing</a></p>
+                <p><a href="#TablingOrWithdrawal">TablingOrWithdrawal</a> &mdash; Has House &mdash; <a href="#House">House</a></p>
 
             </article>
 
-            <article class="objectproperty" id="withdraws">
+            <article class="objectproperty" id="inSession">
 
                 <h3>
-                    Object property <a href="#withdraws">LABEL PLACEHOLDER</a>
+                    Object property <a href="#inSession">In session</a>
             </h3>
 
 
 
-                <p>Relates an act of withdrawal to the business item which it withdraws.</p>
+                <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
 
-                <p><a href="#Withdrawal">Withdrawal</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#WithdrawnThing">WithdrawnThing</a></p>
+                <p><a href="#TablingOrWithdrawal">TablingOrWithdrawal</a> &mdash; In session &mdash; <a href="#Session">Session</a></p>
 
             </article>
 
             <article class="objectproperty" id="replaces">
 
                 <h3>
-                    Object property <a href="#replaces">LABEL PLACEHOLDER</a>
+                    Object property <a href="#replaces">Replaces</a>
             </h3>
 
 
 
                 <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
 
-                <p><a href="#TabledThing">TabledThing</a> &mdash; LABEL PLACEHOLDER &mdash; <a href="#WithdrawnThing">WithdrawnThing</a></p>
+                <p><a href="#TabledThing">TabledThing</a> &mdash; Replaces &mdash; <a href="#WithdrawnThing">WithdrawnThing</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="tabledBy">
+
+                <h3>
+                    Object property <a href="#tabledBy">Tabled by</a>
+            </h3>
+
+
+
+                <p>Relates a tabling to the seat incumbency of the Member tabling.</p>
+
+                <p><a href="#Tabling">Tabling</a> &mdash; Tabled by &mdash; <a href="#SeatIncumbency">SeatIncumbency</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="tables">
+
+                <h3>
+                    Object property <a href="#tables">Tables</a>
+            </h3>
+
+
+
+                <p>Relates an act of tabling to the business item which it tables.</p>
+
+                <p><a href="#Tabling">Tabling</a> &mdash; Tables &mdash; <a href="#TabledThing">TabledThing</a></p>
+
+            </article>
+
+            <article class="objectproperty" id="withdraws">
+
+                <h3>
+                    Object property <a href="#withdraws">Withdraws</a>
+            </h3>
+
+
+
+                <p>Relates an act of withdrawal to the business item which it withdraws.</p>
+
+                <p><a href="#Withdrawal">Withdrawal</a> &mdash; Withdraws &mdash; <a href="#WithdrawnThing">WithdrawnThing</a></p>
 
             </article>
         </section>
@@ -251,24 +251,24 @@
 
             <article class="dataproperty" id="tabledOn">
                 <h3>
-                    Data property <a href="#tabledOn">LABEL PLACEHOLDER</a>
+                    Data property <a href="#tabledOn">Tabled on</a>
             </h3>
 
                 <p>Relates an act of tabling to the date on which it happened.</p>
 
-                <p>Tabling &mdash; LABEL PLACEHOLDER &mdash; date</p>
+                <p>Tabling &mdash; Tabled on &mdash; date</p>
 
 
             </article>
 
             <article class="dataproperty" id="withdrawnOn">
                 <h3>
-                    Data property <a href="#withdrawnOn">LABEL PLACEHOLDER</a>
+                    Data property <a href="#withdrawnOn">Withdrawn on</a>
             </h3>
 
                 <p>Relates an act of withdrawal to the date on which it happened.</p>
 
-                <p>Withdrawal &mdash; LABEL PLACEHOLDER &mdash; date</p>
+                <p>Withdrawal &mdash; Withdrawn on &mdash; date</p>
 
 
             </article>
