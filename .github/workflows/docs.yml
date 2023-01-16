@@ -15,18 +15,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: cd meta
+        run: cd meta
         
       - name: install requirements
-        run: pip3 install -r meta/requirements.txt
+        run: pip3 install -r requirements.txt
         
-      - name: meta/generate-docs.py
-        run: python3 meta/generate-docs.py
+      - name: generate-docs.py
+        run: python3 generate-docs.py
         
-      - name: meta/generate-docs-index.py
-        run: python3 meta/generate-docs-index.py
-        
-      - name: try pyloder
-        run: cd meta; ./pyloder.py
+      - name: generate-docs-index.py
+        run: python3 generate-docs-index.py
         
       - name: Commit files
         run: |
@@ -43,7 +43,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: echo lode github folder
-        run: echo "https://github.com/ukparliament/ontologies/tree/master/meta/lode"
+      - name: echo index github folder
+        run: echo "https://ukparliament.github.io/ontologies/meta/html/"
 
           
