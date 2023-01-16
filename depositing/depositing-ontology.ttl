@@ -11,7 +11,7 @@
     dcterms:title "Depositing ontology"@en ;
     dcterms:created "2022-12-01"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing commitments to deposit and the resulting deposits into a House, by means of its Library."@en ;
+    dcterms:description "A model describing the commitment to make and the making of a deposit in the Library of either House."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/depositing/depositing.svg> ;
 	foaf:maker 
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -40,29 +40,29 @@ pdep:MadeAvailableThing rdf:type owl:Class ;
 pdep:ParliamentaryPaper rdf:type owl:Class ;
 	rdfs:label "Parliamentary paper"@en ;
 	rdfs:comment "Papers made available to or published under the authority of Parliament."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .	
 	
 pdep:Depositing rdf:type owl:Class ;
 	rdfs:subClassOf pdep:MakingAvailable ;
 	rdfs:label "Depositing"@en ;
-	rdfs:comment "The act of making information available to a House by means of its Library."@en ;
+	rdfs:comment "The act of placing information in the Library of either House, resulting from a commitment to make a deposit of that information, by a Member permitted to do so."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:DepositedPaper rdf:type owl:Class ;
 	rdfs:subClassOf pdep:ParliamentaryPaper ;
 	rdfs:subClassOf pdep:MadeAvailableThing ;
 	rdfs:label "Deposited paper"@en ;
-	rdfs:comment "A paper deposited in a Library of a House."@en ;
+	rdfs:comment "An item deposited in a Library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:CommittingThing rdf:type owl:Class ;
 	rdfs:label "Committing thing"@en ;
-	rdfs:comment "A thing in which a commitment to deposit is made, for example: an oral contribution to a parliamentary proceeding, a letter to a Library or a written statement."@en ;
+	rdfs:comment "A thing by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:Commitment rdf:type owl:Class ;
 	rdfs:label "Commitment"@en ;
-	rdfs:comment "A commitment to deposit information in a Library or Libraries."@en ;
+	rdfs:comment "A commitment to make a deposit in a Library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:Incumbency rdf:type owl:Class ;
@@ -75,9 +75,9 @@ pdep:ParliamentaryPeriod rdf:type owl:Class ;
 	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
-pdep:Visibility rdf:type owl:Class ;
-	rdfs:label "Visibility"@en ;
-	rdfs:comment "The visibility of a deposited paper, being either publicly visible, publicly visible in a redacted form or available to Members only."@en ;
+pdep:Availability rdf:type owl:Class ;
+	rdfs:label "Availability"@en ;
+	rdfs:comment "The type of availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 	
@@ -86,10 +86,13 @@ pdep:Visibility rdf:type owl:Class ;
 	
 pdep:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Leads to"@en ;
-	rdfs:comment "Relates a credited contribution in which the intention to make a commitment is made to a committing thing. Credited contributions may include the phrase, 'I will write to the Library'. These are known as 'will writes'. Such a contribution should lead to one committing thing in the form of a letter of commitment to the Library. A letter of commitment may result from one credited contribution, or none."@en ;
+	rdfs:comment "Relates a credited contribution in which the intention to make a commitment is recorded to the thing in which that commitment is made. Credited contributions may include the phrase, 'I will write'. A 'will write' is a contribution intended to lead to a letter of commitment to the Library, that letter being the committing thing. A letter of commitment may result from one credited contribution, or none."@en ;
 	rdfs:domain pdep:CreditedContribution ;
 	rdfs:range pdep:CommittingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+	
+						# edited to here
 	
 pdep:makesCommitment rdf:type owl:ObjectProperty ;
 	rdfs:label "Makes commitment"@en ;
@@ -133,11 +136,11 @@ pdep:corrects rdf:type owl:ObjectProperty ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
-pdep:hasVisibility rdf:type owl:ObjectProperty ;
-	rdfs:label "Has visibility"@en ;
-	rdfs:comment "Relates a deposited paper to the visibility of that deposited paper. A deposited paper has one visibility assigned."@en ;
+pdep:hasAvailability rdf:type owl:ObjectProperty ;
+	rdfs:label "Has availability"@en ;
+	rdfs:comment "Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability assigned."@en ;
 	rdfs:domain pdep:DepositedPaper ;
-	rdfs:range pdep:Visibility ;
+	rdfs:range pdep:Availability ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 				
