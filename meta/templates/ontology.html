@@ -1,241 +1,247 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="{{ relcanonical }}">
-    <link rel="index" href="{{ root_url }}">
-    <link rel="alternate" href="{{ ttldir }}{{ ttlpath }}" type="text/turtle" title="{{ title }}: Turtle source">
-    <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="{{ relcanonical }}" />
+    <link rel="index" href="{{ root_url }}" />
+    <link
+      rel="alternate"
+      href="{{ ttldir }}{{ ttlpath }}"
+      type="text/turtle"
+      title="{{ title }}: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
     <title>{{ title }}</title>
     <style>
-        body {font-family: system-ui;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
-        section {padding-top:2rem;} 
-        article {padding-top:0.25rem;}
-        h1 {font-weight: normal;}
-        h2 {font-weight: normal;}
-        </style>
-</head>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
 
-<body>
-   
+  <body>
     <header>
-
-            <nav>
-                <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> 
-                &rarr;
-                <a href="https://ukparliament.github.io/ontologies/meta/html/index.html">Ontologies index</a>
-                &rarr;
-                {{title}}
-            </nav>
-
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; {{title}}
+      </nav>
     </header>
 
     <main>
-        <h1 id="title">{{ title }}</h1>
+      <h1 id="title">{{ title }}</h1>
 
-        {% if description != "None" %}
-        <p id="description">{{ description }}</p>
+      {% if description != "None" %}
+      <p id="description">{{ description }}</p>
+      {% endif %}
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a> {% if
+        dataproperties %} &middot;
+        <a href="#dataproperties">Data properties</a>{% endif %} {% if imports
+        %} &middot; <a href="#importedontologies">Imported ontologies</a>{%
+        endif %} {% if equivalentclasses %} &middot;
+        <a href="#equivalentclasses">Equivalent classes</a>{% endif %} {% if
+        subClasses %} &middot; <a href="#subclasses">Subclasses</a>{% endif %}
+        &middot; <a href="#namespaces">Namespaces</a>
+
+        {% if depiction %} &middot; <a href="{{ depiction }}">Depiction</a>
         {% endif %}
+      </nav>
 
-        <nav>  
-            <a href="#classes">Classes</a>
-            &middot; <a href="#objectproperties">Object properties</a>
-            {% if dataproperties %} &middot; <a href="#dataproperties">Data properties</a>{% endif %}
-            {% if imports %} &middot; <a href="#importedontologies">Imported ontologies</a>{% endif %}
-            {% if equivalentclasses %} &middot; <a href="#equivalentclasses">Equivalent classes</a>{% endif %}
-            {% if subClasses %} &middot; <a href="#subclasses">Subclasses</a>{% endif %}
-            &middot; <a href="#namespaces">Namespaces</a>
+      {% if classes %}
+      <section id="classes">
+        <h2>Classes</h2>
 
-            {% if depiction %}
-            &middot; <a href="{{ depiction }}">Depiction</a>
-    {% endif %}
+        {% for class in classes|sort(attribute='label') %}
+        <article class="class" id="{{ class.idString }}">
+          <h3>Class <a href="#{{ class.idString }}">{{ class.label }}</a></h3>
 
+          {% if class.comment %}
+          <p>{{ class.comment }}</p>
+          {% endif %} {% if class.superclasses %}
+          <p>
+            Superclasses {% for superclass in class.superclasses %} &middot; {{
+            superclass }} {% endfor %}
+          </p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </section>
+      {% endif %} {% if objectproperties %}
 
-    </nav>
-        
+      <section id="objectproperties">
+        <h2>Object properties</h2>
 
-        {% if classes %}
-        <section id="classes">
-            <h2>Classes</h2>
+        {% for objectproperty in objectproperties|sort(attribute='label') %}
 
-            {% for class in classes|sort(attribute='label') %}
-            <article class="class" id="{{ class.idString }}">
-                <h3>
-                    Class <a href="#{{ class.idString }}">{{ class.label }}</a>
-                </h3>
+        <article class="objectproperty" id="{{ objectproperty.idString }}">
+          <h3>
+            Object property
+            <a href="#{{ objectproperty.idString }}"
+              >{{ objectproperty.label }}</a
+            >
+          </h3>
 
-                {% if class.comment %}
-                <p>{{ class.comment }}</p>
-                {% endif %}
+          {% if objectproperty.superproperty %}
+          <p>
+            Object property <strong>{{ objectproperty.label }}</strong> &rarr;
+            is a subproperty of &rarr; Object property
+            <strong>{{ objectproperty.superproperty }}</strong>
+          </p>
+          {% endif %} {% if objectproperty.comment %}
+          <p>{{ objectproperty.comment }}</p>
+          {% endif %}
 
-                {% if class.superclasses %}
-                <p>Superclasses
-                {% for superclass in class.superclasses %}
-                &middot; {{ superclass }}
-                {% endfor %}
+          <p>
+            <a href="#{{ objectproperty.domain }}"
+              >{{ objectproperty.domain }}</a
+            >
+            &mdash; {{ objectproperty.label }} &mdash;
+            <a href="#{{ objectproperty.range }}">{{ objectproperty.range }}</a>
+          </p>
+        </article>
+        {% endfor %}
+      </section>
+      {% endif %} {% if dataproperties %}
 
-            </p>
-                {% endif %}
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+        {% for dataproperty in dataproperties|sort(attribute='label') %}
 
-            </article>
-            {% endfor %}
-        </section>
-        {% endif %}
+        <article class="dataproperty" id="{{ dataproperty.idString }}">
+          <h3>
+            Data property
+            <a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}</a>
+          </h3>
 
-        {% if objectproperties %}
+          <p>{{ dataproperty.comment }}</p>
 
-        <section id="objectproperties">
-            <h2>Object properties</h2>
+          <p>
+            {{ dataproperty.domain }} &mdash; {{ dataproperty.label }} &mdash;
+            {{ dataproperty.range }}
+          </p>
+        </article>
+        {% endfor %}
+      </section>
 
-            {% for objectproperty in objectproperties|sort(attribute='label') %}
+      {% endif %} {% if imports %}
+      <section id="importedontologies">
+        <h2>Imported ontologies</h2>
 
-            <article class="objectproperty" id="{{ objectproperty.idString }}">
+        <ol>
+          {% for import in imports|sort %} {% if import.netloc ==
+          'ukparliament.github.io' %}
+          <li>
+            <a href="{{ import.path|ttlpath2htmlpath }}"
+              >{{ import.path|ttlpath2ontologyname }}</a
+            >
+          </li>
+          {% else %}
 
-                <h3>
-                    Object property <a href="#{{ objectproperty.idString }}">{{ objectproperty.label }}</a>
-            </h3>
+          <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
 
-
-                {% if objectproperty.superproperty %}
-                <p>Object property <strong>{{ objectproperty.label }}</strong> &rarr; is a subproperty of &rarr; Object
-                    property <strong>{{ objectproperty.superproperty }}</strong></p>
-                {% endif %}
-
-                {% if objectproperty.comment %}
-                <p>{{ objectproperty.comment }}</p>
-                {% endif %}
-
-                <p><a href="#{{ objectproperty.domain }}">{{ objectproperty.domain }}</a> &mdash; {{ objectproperty.label }} &mdash; <a href="#{{ objectproperty.range }}">{{ objectproperty.range }}</a></p>
-
-            </article>
-            {% endfor %}
-        </section>
-        {% endif %}
-
-        {% if dataproperties %}
-
-        <section id="dataproperties">
-            <h2>Data properties</h2>
-            {% for dataproperty in dataproperties|sort(attribute='label') %}
-
-            <article class="dataproperty" id="{{ dataproperty.idString }}">
-                <h3>
-                    Data property <a href="#{{ dataproperty.idString }}">{{ dataproperty.label }}</a>
-            </h3>
-
-                <p>{{ dataproperty.comment }}</p>
-
-                <p>{{ dataproperty.domain }} &mdash; {{ dataproperty.label }} &mdash; {{ dataproperty.range }}</p>
-
-
-            </article>
-            {% endfor %}
-        </section>
-
-        {% endif %}
-
-
-        {% if imports %}
-        <section id="importedontologies">
-            <h2>Imported ontologies</h2>
-
-            <ol>
-                {% for import in imports|sort %}
-               
-
-                {% if import.netloc == 'ukparliament.github.io' %}
-                <li>
-                <a href="{{ import.path|ttlpath2htmlpath }}">{{ import.path|ttlpath2ontologyname }}</a> 
-              
-            </li>
-                {% else %}
-
-                <li>&lt;{{ import.netloc }}{{ import.path }}&gt;</li>
-
-                {% endif %}
-            
-                {% endfor %}
+          {% endif %} {% endfor %}
         </ol>
-        </section>
-        {% endif %}
-
-
-        {% if equivalentClasses %}
-        <section id="equivalentclasses">
+      </section>
+      {% endif %} {% if equivalentClasses %}
+      <section id="equivalentclasses">
         <h2>Equivalent classes</h2>
         <table>
-                {% for equivalentClass in equivalentClasses %}
-                <tr>
-                    <td>{{ equivalentClass.s|slash2wbr }}</td>
-                    <td>{{ equivalentClass.o|slash2wbr }}</td>
-                </tr>
-                {% endfor %}
+          {% for equivalentClass in equivalentClasses %}
+          <tr>
+            <td>{{ equivalentClass.s|slash2wbr }}</td>
+            <td>{{ equivalentClass.o|slash2wbr }}</td>
+          </tr>
+          {% endfor %}
         </table>
-        </section>  
-        {% endif %}
-
-        {% if subClasses %}
-        <section id="subclasses">
+      </section>
+      {% endif %} {% if subClasses %}
+      <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
-                {% for subClass in subClasses %}
-                <tr>
-                    <td>{{ subClass.s|slash2wbr }}</td>
-                    <td>{{ subClass.o|slash2wbr }}</td>
-                </tr>
-                {% endfor %}
+          {% for subClass in subClasses %}
+          <tr>
+            <td>{{ subClass.s|slash2wbr }}</td>
+            <td>{{ subClass.o|slash2wbr }}</td>
+          </tr>
+          {% endfor %}
         </table>
-        </section>  
-        {% endif %}
+      </section>
+      {% endif %} {% if namespaces %}
 
-        {% if namespaces %}
-
-        <section id="namespaces">
-            <h2>Namespaces</h2>
-            <details>
-                <summary>Namespace list</summary>
-                <dl>
-                    {% for namespace in namespaces %}
-                        <dt>{{ namespace.p }}</dt>
-                        <dd>{{ namespace.n }}</dd>
-                    {% endfor %}
-                </dl>
-        </details>
-
-        </section>  
-        {% endif %}
-
-        <p>Ontology created &middot; <time id="created">{{ created }}</time></p>
-        
-       
-        {% if makers %}
-        <p id="makers">
-            Made by
-            {% for maker in makers %}
-            {% if maker.homepage|e != "None" %}
-            &middot; <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
-            {% else %}
-            &middot; {{ maker.name|e }}
-            {% endif %}
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            {% for namespace in namespaces %}
+            <dt>{{ namespace.p }}</dt>
+            <dd>{{ namespace.n }}</dd>
             {% endfor %}
-        </p>
-        {% endif %}
+          </dl>
+        </details>
+      </section>
+      {% endif %}
 
+      <p>Ontology created &middot; <time id="created">{{ created }}</time></p>
 
+      {% if makers %}
+      <p id="makers">
+        Made by {% for maker in makers %} {% if maker.homepage|e != "None" %}
+        &middot; <a href="{{ maker.homepage|e }}">{{ maker.name|e }}</a>
+        {% else %} &middot; {{ maker.name|e }} {% endif %} {% endfor %}
+      </p>
+      {% endif %}
     </main>
 
     <footer>
+      <p>
+        Generated {{ now }} from a
+        <a href="{{ ttldir }}{{ ttlpath }}">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri={{ ttldir }}{{ ttlpath }}"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
 
-        
-
-        <p>Generated {{ now }} from a <a href="{{ ttldir }}{{ ttlpath }}">Turtle file</a>. Visualization: <a href="https://api.parliament.uk/webvowl/#iri={{ ttldir }}{{ ttlpath }}">api.parliament.uk/webvowl</a></p>
-
-        <p>Material on the <a href="{{ root_url }}">UK Parliament ontologies</a> site is made available under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">{{ rights|e }}</a>.</p>
-
+      <p>
+        Material on the
+        <a href="{{ root_url }}">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >{{ rights|e }}</a
+        >.
+      </p>
     </footer>
-
-
-</body>
-
+  </body>
 </html>
