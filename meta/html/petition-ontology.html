@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../petition/petition-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../petition/petition-ontology.ttl"
+      type="text/turtle"
+      title="Petition ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Petition ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Petition ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Petition ontology</h1>
+
+      <p id="description">Petition ontology for UK Parliament. Covers the public surface area of petitions.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Approval">
+          <h3>Class <a href="#Approval">Approval</a></h3>
+
+          <p>Explicit moderation option for when a petition is approved.</p>
+           <p>
+            Superclasses  &middot; ModerationOption           </p>
+        </article>
+        <article class="class" id="Debate">
+          <h3>Class <a href="#Debate">Debate</a></h3>
+
+          <p>A Parliamentary debate.</p>
+         </article>
+        <article class="class" id="GovernmentResponse">
+          <h3>Class <a href="#GovernmentResponse">GovernmentResponse</a></h3>
+
+          <p>A response from the Government.</p>
+         </article>
+        <article class="class" id="LocatedSignatureCount">
+          <h3>Class <a href="#LocatedSignatureCount">LocatedSignatureCount</a></h3>
+
+          <p>The number of signatures on a petition from a given place.</p>
+         </article>
+        <article class="class" id="Moderation">
+          <h3>Class <a href="#Moderation">Moderation</a></h3>
+
+          <p>The moderation state of a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published.</p>
+         </article>
+        <article class="class" id="ModerationOption">
+          <h3>Class <a href="#ModerationOption">ModerationOption</a></h3>
+
+          <p>The available moderation options for a petition. Might be awaiting moderation, rejected and unpublished, rejected and published or accepted and published.</p>
+         </article>
+        <article class="class" id="Person">
+          <h3>Class <a href="#Person">Person</a></h3>
+
+          <p>A person.</p>
+         </article>
+        <article class="class" id="Petition">
+          <h3>Class <a href="#Petition">Petition</a></h3>
+
+          <p>An online Parliamentary petition.</p>
+         </article>
+        <article class="class" id="Place">
+          <h3>Class <a href="#Place">Place</a></h3>
+
+          <p>A place. Any kind of place.</p>
+         </article>
+        <article class="class" id="Rejection">
+          <h3>Class <a href="#Rejection">Rejection</a></h3>
+
+          <p>Explicit moderation option for when a petition is rejected.</p>
+           <p>
+            Superclasses  &middot; ModerationOption           </p>
+        </article>
+        <article class="class" id="Threshold">
+          <h3>Class <a href="#Threshold">Threshold</a></h3>
+
+          <p>A type of threshold. Might be moderation threshold, government response threshold or debate threshold.</p>
+         </article>
+        <article class="class" id="ThresholdAttainment">
+          <h3>Class <a href="#ThresholdAttainment">ThresholdAttainment</a></h3>
+
+          <p>The threshold attainment levels a petition might pass through from moderation threshold to government response threshold to debate threshold.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="fromPlace">
+          <h3>
+            Object property
+            <a href="#fromPlace"
+              >fromPlace</a
+            >
+          </h3>
+
+           <p>Relates a located signature count to the place the signatures came from.</p>
+
+          <p>
+            <a href="#LocatedSignatureCount"
+              >LocatedSignatureCount</a
+            >
+            &mdash; fromPlace &mdash;
+            <a href="#Place">Place</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasCreator">
+          <h3>
+            Object property
+            <a href="#hasCreator"
+              >hasCreator</a
+            >
+          </h3>
+
+           <p>Relates a petition to the person who created it.</p>
+
+          <p>
+            <a href="#Petition"
+              >Petition</a
+            >
+            &mdash; hasCreator &mdash;
+            <a href="#Person">Person</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasDebate">
+          <h3>
+            Object property
+            <a href="#hasDebate"
+              >hasDebate</a
+            >
+          </h3>
+
+           <p>Relates a petition to a debate.</p>
+
+          <p>
+            <a href="#Petition"
+              >Petition</a
+            >
+            &mdash; hasDebate &mdash;
+            <a href="#Debate">Debate</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasGovernmentResponse">
+          <h3>
+            Object property
+            <a href="#hasGovernmentResponse"
+              >hasGovernmentResponse</a
+            >
+          </h3>
+
+           <p>Relates a petition to a Government response.</p>
+
+          <p>
+            <a href="#Petition"
+              >Petition</a
+            >
+            &mdash; hasGovernmentResponse &mdash;
+            <a href="#GovernmentResponse">GovernmentResponse</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasLocatedSignatureCount">
+          <h3>
+            Object property
+            <a href="#hasLocatedSignatureCount"
+              >hasLocatedSignatureCount</a
+            >
+          </h3>
+
+           <p>Relates a petition to a located signature count.</p>
+
+          <p>
+            <a href="#Petition"
+              >Petition</a
+            >
+            &mdash; hasLocatedSignatureCount &mdash;
+            <a href="#LocatedSignatureCount">LocatedSignatureCount</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasModeration">
+          <h3>
+            Object property
+            <a href="#hasModeration"
+              >hasModeration</a
+            >
+          </h3>
+
+           <p>Relates a petition to its moderation states.</p>
+
+          <p>
+            <a href="#Petition"
+              >Petition</a
+            >
+            &mdash; hasModeration &mdash;
+            <a href="#Moderation">Moderation</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasModerationOption">
+          <h3>
+            Object property
+            <a href="#hasModerationOption"
+              >hasModerationOption</a
+            >
+          </h3>
+
+           <p>Relates a moderation to its moderation option.</p>
+
+          <p>
+            <a href="#Moderation"
+              >Moderation</a
+            >
+            &mdash; hasModerationOption &mdash;
+            <a href="#ModerationOption">ModerationOption</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasThreshold">
+          <h3>
+            Object property
+            <a href="#hasThreshold"
+              >hasThreshold</a
+            >
+          </h3>
+
+           <p>Relates a threshold attainment to a threshold.</p>
+
+          <p>
+            <a href="#ThresholdAttainment"
+              >ThresholdAttainment</a
+            >
+            &mdash; hasThreshold &mdash;
+            <a href="#Threshold">Threshold</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasThresholdAttainment">
+          <h3>
+            Object property
+            <a href="#hasThresholdAttainment"
+              >hasThresholdAttainment</a
+            >
+          </h3>
+
+           <p>Relates a petition to a threshold attainment.</p>
+
+          <p>
+            <a href="#Petition"
+              >Petition</a
+            >
+            &mdash; hasThresholdAttainment &mdash;
+            <a href="#ThresholdAttainment">ThresholdAttainment</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="action">
+          <h3>
+            Data property
+            <a href="#action">action</a>
+          </h3>
+
+          <p>The action text (title) of the petition entered by the petition creator.</p>
+
+          <p>
+            Petition &mdash; action &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="additionalDetails">
+          <h3>
+            Data property
+            <a href="#additionalDetails">additionalDetails</a>
+          </h3>
+
+          <p>Additional text to justify the petition entered by the petition creator.</p>
+
+          <p>
+            Petition &mdash; additionalDetails &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="background">
+          <h3>
+            Data property
+            <a href="#background">background</a>
+          </h3>
+
+          <p>A background explanation of why the petition was created entered by the petition creator.</p>
+
+          <p>
+            Petition &mdash; background &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="closedAt">
+          <h3>
+            Data property
+            <a href="#closedAt">closedAt</a>
+          </h3>
+
+          <p>Date time at which the petition was closed.</p>
+
+          <p>
+            Petition &mdash; closedAt &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="rejectionCode">
+          <h3>
+            Data property
+            <a href="#rejectionCode">rejectionCode</a>
+          </h3>
+
+          <p>A number identifying a specific rejection code.</p>
+
+          <p>
+            Rejection &mdash; rejectionCode &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="rejectionDetails">
+          <h3>
+            Data property
+            <a href="#rejectionDetails">rejectionDetails</a>
+          </h3>
+
+          <p>Written explanation of why a petition was rejected.</p>
+
+          <p>
+            Rejection &mdash; rejectionDetails &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="signatureCount">
+          <h3>
+            Data property
+            <a href="#signatureCount">signatureCount</a>
+          </h3>
+
+          <p>Number of signatures on a located signature count.</p>
+
+          <p>
+            LocatedSignatureCount &mdash; signatureCount &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="signatureCountRetrievedAt">
+          <h3>
+            Data property
+            <a href="#signatureCountRetrievedAt">signatureCountRetrievedAt</a>
+          </h3>
+
+          <p>Date time at which a located signature count was retrieved from the petitions API.</p>
+
+          <p>
+            LocatedSignatureCount &mdash; signatureCountRetrievedAt &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="thresholdAttainmentAt">
+          <h3>
+            Data property
+            <a href="#thresholdAttainmentAt">thresholdAttainmentAt</a>
+          </h3>
+
+          <p>Date time at which a threshold is met.</p>
+
+          <p>
+            ThresholdAttainment &mdash; thresholdAttainmentAt &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="thresholdSignatureNumber">
+          <h3>
+            Data property
+            <a href="#thresholdSignatureNumber">thresholdSignatureNumber</a>
+          </h3>
+
+          <p>The number of signatures required to meet a threshold.</p>
+
+          <p>
+            Threshold &mdash; thresholdSignatureNumber &mdash;
+            integer
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>petition/<wbr>Rejection</td>
+            <td>/<wbr>ontologies/<wbr>petition/<wbr>ModerationOption</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>petition/<wbr>Approval</td>
+            <td>/<wbr>ontologies/<wbr>petition/<wbr>ModerationOption</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>ppt</dt>
+            <dd>http://parliament.uk/ontologies/petition/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2017-02-22</time></p>
+
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../petition/petition-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../petition/petition-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

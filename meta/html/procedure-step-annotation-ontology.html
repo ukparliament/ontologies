@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../procedure-step-annotation/procedure-step-annotation-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl"
+      type="text/turtle"
+      title="Procedure step ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Procedure step ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Procedure step ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Procedure step ontology</h1>
+
+      <p id="description">A model describing annotations added to procedure steps by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a procedure step is actualised.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Publication">
+          <h3>Class <a href="#Publication">Publication</a></h3>
+
+          <p>A publication.</p>
+         </article>
+        <article class="class" id="Step">
+          <h3>Class <a href="#Step">Step</a></h3>
+
+          <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="actualiseWith">
+          <h3>
+            Object property
+            <a href="#actualiseWith"
+              >Actualise with</a
+            >
+          </h3>
+
+           <p>Relates a step to a step where steps may be actualised together.</p>
+
+          <p>
+            <a href="#Step"
+              >Step</a
+            >
+            &mdash; Actualise with &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="source">
+          <h3>
+            Object property
+            <a href="#source"
+              >Source</a
+            >
+          </h3>
+
+           <p>Relates a step to the publication which is the source of information for that step.</p>
+
+          <p>
+            <a href="#Step"
+              >Step</a
+            >
+            &mdash; Source &mdash;
+            <a href="#Publication">Publication</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="dateNote">
+          <h3>
+            Data property
+            <a href="#dateNote">Date note</a>
+          </h3>
+
+          <p>A note that describes the date to use when actualising a step.</p>
+
+          <p>
+            Step &mdash; Date note &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="linkNote">
+          <h3>
+            Data property
+            <a href="#linkNote">Link note</a>
+          </h3>
+
+          <p>A note that describes where a business item, actualising a step, should link to in a publication.</p>
+
+          <p>
+            Step &mdash; Link note &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="scopeNote">
+          <h3>
+            Data property
+            <a href="#scopeNote">Scope note</a>
+          </h3>
+
+          <p>A note that describes the rules for actualising a step.</p>
+
+          <p>
+            Step &mdash; Scope note &mdash;
+            langString
+          </p>
+        </article>
+      </section>
+
+    
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>ppsa</dt>
+            <dd>http://parliament.uk/ontologies/procedure-step-annotation/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2019-04-16</time></p>
+
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

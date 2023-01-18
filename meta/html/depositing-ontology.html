@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../depositing/depositing-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl"
+      type="text/turtle"
+      title="Depositing ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Depositing ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Depositing ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Depositing ontology</h1>
+
+      <p id="description">A model describing the commitment to make and the making of a deposit in the Library of either House.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/depositing/depositing.svg">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Availability">
+          <h3>Class <a href="#Availability">Availability</a></h3>
+
+          <p>The type of availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members.</p>
+         </article>
+        <article class="class" id="Commitment">
+          <h3>Class <a href="#Commitment">Commitment</a></h3>
+
+          <p>A commitment to make a deposit in a Library of a House.</p>
+         </article>
+        <article class="class" id="CommittingThing">
+          <h3>Class <a href="#CommittingThing">Committing thing</a></h3>
+
+          <p>A thing by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement.</p>
+         </article>
+        <article class="class" id="DepositedPaper">
+          <h3>Class <a href="#DepositedPaper">Deposited paper</a></h3>
+
+          <p>An item deposited in a Library of a House.</p>
+           <p>
+            Superclasses  &middot; ParliamentaryPaperExpression  &middot; MadeAvailableThing           </p>
+        </article>
+        <article class="class" id="Depositing">
+          <h3>Class <a href="#Depositing">Depositing</a></h3>
+
+          <p>The act of placing information in the Library of either House, resulting from a commitment to make a deposit of that information, by a Member permitted to do so.</p>
+           <p>
+            Superclasses  &middot; MakingAvailable           </p>
+        </article>
+        <article class="class" id="Incumbency">
+          <h3>Class <a href="#Incumbency">Incumbency</a></h3>
+
+          <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
+         </article>
+        <article class="class" id="MadeAvailableThing">
+          <h3>Class <a href="#MadeAvailableThing">Made available thing</a></h3>
+
+          <p>A thing made available to a House or to a House by means of its Library.</p>
+         </article>
+        <article class="class" id="MakingAvailable">
+          <h3>Class <a href="#MakingAvailable">Making available</a></h3>
+
+          <p>The act of making a thing available to a House or to a House by means of its Library.</p>
+         </article>
+        <article class="class" id="ParliamentaryPaperExpression">
+          <h3>Class <a href="#ParliamentaryPaperExpression">Parliamentary paper expression</a></h3>
+
+          <p>A parliamentary paper made available to a House, being an expression of parliamentary paper work.</p>
+         </article>
+        <article class="class" id="ParliamentaryPeriod">
+          <h3>Class <a href="#ParliamentaryPeriod">Parliamentary period</a></h3>
+
+          <p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="corrects">
+          <h3>
+            Object property
+            <a href="#corrects"
+              >Corrects</a
+            >
+          </h3>
+
+           <p>Relates a deposited paper to the deposited paper it corrects. A deposited paper may correct one deposited paper, or none. A deposited paper may be corrected by one deposited paper, or none.</p>
+
+          <p>
+            <a href="#DepositedPaper"
+              >DepositedPaper</a
+            >
+            &mdash; Corrects &mdash;
+            <a href="#DepositedPaper">DepositedPaper</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasAvailability">
+          <h3>
+            Object property
+            <a href="#hasAvailability"
+              >Has availability</a
+            >
+          </h3>
+
+           <p>Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability assigned.</p>
+
+          <p>
+            <a href="#DepositedPaper"
+              >DepositedPaper</a
+            >
+            &mdash; Has availability &mdash;
+            <a href="#Availability">Availability</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="leadsTo">
+          <h3>
+            Object property
+            <a href="#leadsTo"
+              >Leads to</a
+            >
+          </h3>
+
+           <p>Relates a credited contribution in which the intention to make a commitment is recorded to the thing in which that commitment is made. Credited contributions may include the phrase, &#39;I will write&#39;. A &#39;will write&#39; is a contribution intended to lead to a letter of commitment to the Library, that letter being the committing thing. A letter of commitment may result from one credited contribution, or none.</p>
+
+          <p>
+            <a href="#CreditedContribution"
+              >CreditedContribution</a
+            >
+            &mdash; Leads to &mdash;
+            <a href="#CommittingThing">CommittingThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="madeBy">
+          <h3>
+            Object property
+            <a href="#madeBy"
+              >Made by</a
+            >
+          </h3>
+
+           <p>Relates a commitment to the incumbency of a person in a position making that commitment. A commitment is made by one incumbency.</p>
+
+          <p>
+            <a href="#Commitment"
+              >Commitment</a
+            >
+            &mdash; Made by &mdash;
+            <a href="#Incumbency">Incumbency</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="madeDuring">
+          <h3>
+            Object property
+            <a href="#madeDuring"
+              >Made during</a
+            >
+          </h3>
+
+           <p>Relates a commitment to the parliamentary period during which the commitment was made. A commitment is made during one parliamentary period.</p>
+
+          <p>
+            <a href="#Commitment"
+              >Commitment</a
+            >
+            &mdash; Made during &mdash;
+            <a href="#ParliamentaryPeriod">ParliamentaryPeriod</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="makesCommitment">
+          <h3>
+            Object property
+            <a href="#makesCommitment"
+              >Makes commitment</a
+            >
+          </h3>
+
+           <p>Relates a committing thing to the commitment made. A committing thing includes one commitment. A commitment is included in one committing thing.</p>
+
+          <p>
+            <a href="#CommittingThing"
+              >CommittingThing</a
+            >
+            &mdash; Makes commitment &mdash;
+            <a href="#Commitment">Commitment</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="resultsFrom">
+          <h3>
+            Object property
+            <a href="#resultsFrom"
+              >Results from</a
+            >
+          </h3>
+
+           <p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, the House of Lords Library contacts the person who made the commitment.</p>
+
+          <p>
+            <a href="#Depositing"
+              >Depositing</a
+            >
+            &mdash; Results from &mdash;
+            <a href="#Commitment">Commitment</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="resultsIn">
+          <h3>
+            Object property
+            <a href="#resultsIn"
+              >Results in</a
+            >
+          </h3>
+
+           <p>Relates an act of depositing to the paper or papers it deposits. An act of depositing may result in one or more deposited papers.</p>
+
+          <p>
+            <a href="#Depositing"
+              >Depositing</a
+            >
+            &mdash; Results in &mdash;
+            <a href="#DepositedPaper">DepositedPaper</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="isArtefact">
+          <h3>
+            Data property
+            <a href="#isArtefact">Is artefact</a>
+          </h3>
+
+          <p>Used to record whether the deposited paper is an artefact, for example: a deposit of a breathalyzer would be recorded as an artefact.</p>
+
+          <p>
+            DepositedPaper &mdash; Is artefact &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="isStanding">
+          <h3>
+            Data property
+            <a href="#isStanding">Is standing</a>
+          </h3>
+
+          <p>Used to record whether a commitment is standing. A standing commitment leads to more than one deposit over time.</p>
+
+          <p>
+            Commitment &mdash; Is standing &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="madeOn">
+          <h3>
+            Data property
+            <a href="#madeOn">Made on</a>
+          </h3>
+
+          <p>Relates a commitment to the date on which that commitment was made.</p>
+
+          <p>
+            Commitment &mdash; Made on &mdash;
+            date
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>Depositing</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>MakingAvailable</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedPaper</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>ParliamentaryPaperExpression</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedPaper</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>MadeAvailableThing</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>pdep</dt>
+            <dd>http://parliament.uk/ontologies/depositing/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2022-12-01</time></p>
+
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Karen Cox    &middot; Andrew Dommett    &middot; John Greenhead    &middot; Ann Reilly           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

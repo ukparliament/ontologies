@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../procedure/procedure-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"
+      type="text/turtle"
+      title="Procedure ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Procedure ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Procedure ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Procedure ontology</h1>
+
+      <p id="description">A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/procedure/procedure.svg">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Actualisation">
+          <h3>Class <a href="#Actualisation">Actualisation</a></h3>
+
+          <p>An actualisation, being the act of relating a business item to a procedural step.</p>
+         </article>
+        <article class="class" id="BusinessItem">
+          <h3>Class <a href="#BusinessItem">Business item</a></h3>
+
+          <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
+         </article>
+        <article class="class" id="CalculationStyle">
+          <h3>Class <a href="#CalculationStyle">Calculation style</a></h3>
+
+          <p>A calculation style is used to record the form of a calculation based on the sitting days counted by a clock, for example: either House being sitting or adjourned for less than four days, both Houses sitting or being adjourned for less than four days, or the House of Commons sitting or being adjourned for less than four days. A calculation style may set out the definition of the first day to be counted.</p>
+         </article>
+        <article class="class" id="Clock">
+          <h3>Class <a href="#Clock">Clock</a></h3>
+
+          <p>A clock sets out a number of days to be counted between a start step and an end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the business item actualising a start step and the date of the business item actualising an end step. The start date of a clock is the date of the business item which actualises the start step of that clock. The end date of a clock is the date of the business item which actualises the end step of that clock. In a work package, the period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. Calculation styles are dependent on sitting days in one or both Houses. End dates of clocks in work packages currently before Parliament may change if sitting days change.</p>
+         </article>
+        <article class="class" id="House">
+          <h3>Class <a href="#House">House</a></h3>
+
+          <p>A parliamentary House, for example: the House of Lords.</p>
+         </article>
+        <article class="class" id="Legislature">
+          <h3>Class <a href="#Legislature">Legislature</a></h3>
+
+          <p>A legislature, being either the UK Parliament or a devolved legislature.</p>
+         </article>
+        <article class="class" id="Procedure">
+          <h3>Class <a href="#Procedure">Procedure</a></h3>
+
+          <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
+         </article>
+        <article class="class" id="Route">
+          <h3>Class <a href="#Route">Route</a></h3>
+
+          <p>A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
+         </article>
+        <article class="class" id="RouteAvailability">
+          <h3>Class <a href="#RouteAvailability">Route availability</a></h3>
+
+          <p>The availability of a route over time. A route may be open or closed. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
+         </article>
+        <article class="class" id="RouteAvailabilityStatus">
+          <h3>Class <a href="#RouteAvailabilityStatus">Route availability status</a></h3>
+
+          <p>The status of a route&#39;s availability, being either open or closed.</p>
+         </article>
+        <article class="class" id="Step">
+          <h3>Class <a href="#Step">Step</a></h3>
+
+          <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
+         </article>
+        <article class="class" id="StepCollection">
+          <h3>Class <a href="#StepCollection">Step collection</a></h3>
+
+          <p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Website visible steps&#39; collects steps which are intended to be visible on a website work package page once actualised by a business item in that work package. A procedure may have one or more steps described as website visible. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Member action steps&#39; collects steps which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
+         </article>
+        <article class="class" id="StepDisplayDepthInProcedure">
+          <h3>Class <a href="#StepDisplayDepthInProcedure">Step display depth in procedure</a></h3>
+
+          <p>The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes &#39;procedural sense&#39;, for example: we may show &#39;procedure concluded&#39; before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening.</p>
+         </article>
+        <article class="class" id="StepType">
+          <h3>Class <a href="#StepType">Step type</a></h3>
+
+          <p>A step has one type. The type of a step is a business step, decision step, logical NOT step, logical AND step, logical OR step, arithmetic SUM step, arithmetic INCREMENT step, arithmetic EQUALS step, or summation step.</p>
+         </article>
+        <article class="class" id="WorkPackage">
+          <h3>Class <a href="#WorkPackage">Work package</a></h3>
+
+          <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
+         </article>
+        <article class="class" id="WorkPackageableThing">
+          <h3>Class <a href="#WorkPackageableThing">Work packageable thing</a></h3>
+
+          <p>A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="actualises">
+          <h3>
+            Object property
+            <a href="#actualises"
+              >Actualises</a
+            >
+          </h3>
+
+           <p>Relates an actualisation to the procedural step being actualised. An actualisation may be of more than one step, for example: the step for the putting of a question and the step for the outcome may be actualised together. A step may be actualised one or more times by business items in separate work packages.</p>
+
+          <p>
+            <a href="#Actualisation"
+              >Actualisation</a
+            >
+            &mdash; Actualises &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="appearsInProcedure">
+          <h3>
+            Object property
+            <a href="#appearsInProcedure"
+              >Appears in procedure</a
+            >
+          </h3>
+
+           <p>Relates a route to the procedure that route appears in. A route appears in one procedure. A procedure may have one or more routes, or none. A procedure having a component procedure allows the routes in the &#39;child&#39; procedure to be shared with the &#39;parent&#39; procedure.</p>
+
+          <p>
+            <a href="#Route"
+              >Route</a
+            >
+            &mdash; Appears in procedure &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="componentOf">
+          <h3>
+            Object property
+            <a href="#componentOf"
+              >Component of</a
+            >
+          </h3>
+
+           <p>Relates a procedure to another procedure. A procedure forming a component of another procedure has all the routes in the &#39;child&#39; procedure appearing as routes in the &#39;parent&#39; procedure. A procedure may be composed of one or more other procedures, or none. A procedure may be a component of one or more other procedures, or none. A procedure cannot be a component of itself.</p>
+
+          <p>
+            <a href="#Procedure"
+              >Procedure</a
+            >
+            &mdash; Component of &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="depthInProcedure">
+          <h3>
+            Object property
+            <a href="#depthInProcedure"
+              >Depth In procedure</a
+            >
+          </h3>
+
+           <p>Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps.</p>
+
+          <p>
+            <a href="#StepDisplayDepthInProcedure"
+              >StepDisplayDepthInProcedure</a
+            >
+            &mdash; Depth In procedure &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="endStep">
+          <h3>
+            Object property
+            <a href="#endStep"
+              >End step</a
+            >
+          </h3>
+
+           <p>Relates a clock to the business step whose actualisation ends that clock. For example: the business step &#39;Approval period ends&#39; is the end step for the approval period clock in the made affirmative procedure. A clock has one end step. A step may be the end step for one clock, or none.</p>
+
+          <p>
+            <a href="#Clock"
+              >Clock</a
+            >
+            &mdash; End step &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="focus">
+          <h3>
+            Object property
+            <a href="#focus"
+              >Focus</a
+            >
+          </h3>
+
+           <p>Relates a work package to its focus, this being a work packageable thing.</p>
+
+          <p>
+            <a href="#WorkPackage"
+              >WorkPackage</a
+            >
+            &mdash; Focus &mdash;
+            <a href="#WorkPackageableThing">WorkPackageableThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="forStep">
+          <h3>
+            Object property
+            <a href="#forStep"
+              >For step</a
+            >
+          </h3>
+
+           <p>Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures.</p>
+
+          <p>
+            <a href="#StepDisplayDepthInProcedure"
+              >StepDisplayDepthInProcedure</a
+            >
+            &mdash; For step &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="formsPartOf">
+          <h3>
+            Object property
+            <a href="#formsPartOf"
+              >Forms part of</a
+            >
+          </h3>
+
+           <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
+
+          <p>
+            <a href="#BusinessItem"
+              >BusinessItem</a
+            >
+            &mdash; Forms part of &mdash;
+            <a href="#WorkPackage">WorkPackage</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="formsPartOfProcedure">
+          <h3>
+            Object property
+            <a href="#formsPartOfProcedure"
+              >Forms part of procedure</a
+            >
+          </h3>
+
+           <p>Relates a clock to the procedure the clock forms part of. For example: the clock with the start step &#39;Instrument made&#39; and the end step &#39;Approval period ends&#39; forms part of the made affirmative procedure. A clock forms part of one procedure. A procedure may have one or more clocks, or none.</p>
+
+          <p>
+            <a href="#Clock"
+              >Clock</a
+            >
+            &mdash; Forms part of procedure &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="fromStep">
+          <h3>
+            Object property
+            <a href="#fromStep"
+              >From step</a
+            >
+          </h3>
+
+           <p>Relates a route to its input step.</p>
+
+          <p>
+            <a href="#Route"
+              >Route</a
+            >
+            &mdash; From step &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasAvailability">
+          <h3>
+            Object property
+            <a href="#hasAvailability"
+              >Has availability</a
+            >
+          </h3>
+
+           <p>Relates a route to its availability over a period of time. A route may have a different availability at different times, but only one availability at any one time. Routes with no defined availability are taken to be open.</p>
+
+          <p>
+            <a href="#Route"
+              >Route</a
+            >
+            &mdash; Has availability &mdash;
+            <a href="#RouteAvailability">RouteAvailability</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasAvailabilityStatus">
+          <h3>
+            Object property
+            <a href="#hasAvailabilityStatus"
+              >Has availability status</a
+            >
+          </h3>
+
+           <p>Relates a route availability over a period of time to the status of that availability. A route availability has one route availability status.</p>
+
+          <p>
+            <a href="#RouteAvailability"
+              >RouteAvailability</a
+            >
+            &mdash; Has availability status &mdash;
+            <a href="#RouteAvailabilityStatus">RouteAvailabilityStatus</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasBusinessItem">
+          <h3>
+            Object property
+            <a href="#hasBusinessItem"
+              >Has business item</a
+            >
+          </h3>
+
+           <p>Relates an actualisation of a step or steps to a business item. An actualisation has one business item. A business item is actualised only once.</p>
+
+          <p>
+            <a href="#Actualisation"
+              >Actualisation</a
+            >
+            &mdash; Has business item &mdash;
+            <a href="#BusinessItem">BusinessItem</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasStepType">
+          <h3>
+            Object property
+            <a href="#hasStepType"
+              >Has step type</a
+            >
+          </h3>
+
+           <p>Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none.</p>
+
+          <p>
+            <a href="#Step"
+              >Step</a
+            >
+            &mdash; Has step type &mdash;
+            <a href="#StepType">StepType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inLegislature">
+          <h3>
+            Object property
+            <a href="#inLegislature"
+              >In legislature</a
+            >
+          </h3>
+
+           <p>Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral.</p>
+
+          <p>
+            <a href="#House"
+              >House</a
+            >
+            &mdash; In legislature &mdash;
+            <a href="#Legislature">Legislature</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="memberOf">
+          <h3>
+            Object property
+            <a href="#memberOf"
+              >Member of</a
+            >
+          </h3>
+
+           <p>Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none.</p>
+
+          <p>
+            <a href="#Step"
+              >Step</a
+            >
+            &mdash; Member of &mdash;
+            <a href="#StepCollection">StepCollection</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="procedureHasCalculationStyle">
+          <h3>
+            Object property
+            <a href="#procedureHasCalculationStyle"
+              >Procedure has calculation style</a
+            >
+          </h3>
+
+           <p>Relates a procedure to the calculation styles applicable for work packages subject to that procedure. A calculation style may apply to one or more procedures. A procedure may have one or more calculation styles, or none. For example, depending on enabling legislation: a made affirmative statutory instrument may count days when both Houses are sitting or adjourned for fewer than five days, when either House is sitting or adjourned for fewer than five days or when the House of Commons is sitting or adjourned for fewer than five days.</p>
+
+          <p>
+            <a href="#Procedure"
+              >Procedure</a
+            >
+            &mdash; Procedure has calculation style &mdash;
+            <a href="#CalculationStyle">CalculationStyle</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="startStep">
+          <h3>
+            Object property
+            <a href="#startStep"
+              >Start step</a
+            >
+          </h3>
+
+           <p>Relates a clock to the business step whose actualisation starts that clock. For example: the business step &#39;Instrument made&#39; is the start step for the approval period clock in the made affirmative procedure. A clock has one start step. A step may be the start step for one or more clocks, or none.</p>
+
+          <p>
+            <a href="#Clock"
+              >Clock</a
+            >
+            &mdash; Start step &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="stepCollectionInHouse">
+          <h3>
+            Object property
+            <a href="#stepCollectionInHouse"
+              >Step collection in House</a
+            >
+          </h3>
+
+           <p>Relates a step collection to one House, or none. For example: a step collection named &#39;Second reading&#39;, related to the House of Commons, collects steps forming that stage of public bill procedure in that House. A House may have one or more step collections, or none.</p>
+
+          <p>
+            <a href="#StepCollection"
+              >StepCollection</a
+            >
+            &mdash; Step collection in House &mdash;
+            <a href="#House">House</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="stepCollectionInProcedure">
+          <h3>
+            Object property
+            <a href="#stepCollectionInProcedure"
+              >Step collection in procedure</a
+            >
+          </h3>
+
+           <p>Relates a step collection to a procedure. A step collection has one procedure, or none.  For example: a step collection named &#39;Second reading&#39;, related to the public bill procedure, collects steps forming that stage of public bill procedure.  A procedure may have one or more step collections, or none.</p>
+
+          <p>
+            <a href="#StepCollection"
+              >StepCollection</a
+            >
+            &mdash; Step collection in procedure &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="stepInHouse">
+          <h3>
+            Object property
+            <a href="#stepInHouse"
+              >Step in House</a
+            >
+          </h3>
+
+           <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
+
+          <p>
+            <a href="#Step"
+              >Step</a
+            >
+            &mdash; Step in House &mdash;
+            <a href="#House">House</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="stepInLegislature">
+          <h3>
+            Object property
+            <a href="#stepInLegislature"
+              >Step in legislature</a
+            >
+          </h3>
+
+           <p>Relates a step to the devolved legislature in which that step takes place, for example: a legislative consent motion being tabled in the Scottish Parliament.</p>
+
+          <p>
+            <a href="#Step"
+              >Step</a
+            >
+            &mdash; Step in legislature &mdash;
+            <a href="#Legislature">Legislature</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="subjectTo">
+          <h3>
+            Object property
+            <a href="#subjectTo"
+              >Subject to</a
+            >
+          </h3>
+
+           <p>Relates a work package to the procedure it is subject to. A work package is only subject to one procedure.</p>
+
+          <p>
+            <a href="#WorkPackage"
+              >WorkPackage</a
+            >
+            &mdash; Subject to &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="toStep">
+          <h3>
+            Object property
+            <a href="#toStep"
+              >To step</a
+            >
+          </h3>
+
+           <p>Relates a route to its output step.</p>
+
+          <p>
+            <a href="#Route"
+              >Route</a
+            >
+            &mdash; To step &mdash;
+            <a href="#Step">Step</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="workPackageHasCalculationStyle">
+          <h3>
+            Object property
+            <a href="#workPackageHasCalculationStyle"
+              >Work package has calculation style</a
+            >
+          </h3>
+
+           <p>Relates a work package to the calculation style used by that work package. A work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to.</p>
+
+          <p>
+            <a href="#WorkPackage"
+              >WorkPackage</a
+            >
+            &mdash; Work package has calculation style &mdash;
+            <a href="#CalculationStyle">CalculationStyle</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="clockDayCount">
+          <h3>
+            Data property
+            <a href="#clockDayCount">Clock day count</a>
+          </h3>
+
+          <p>Relates a clock to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by that clock. The day count of a clock may be overridden by the day count set on a work package. Clock day counts in the made affirmative procedure are not set, day counts being set on the work package.</p>
+
+          <p>
+            Clock &mdash; Clock day count &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="displayDepthValue">
+          <h3>
+            Data property
+            <a href="#displayDepthValue">Display depth value</a>
+          </h3>
+
+          <p>Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3.</p>
+
+          <p>
+            StepDisplayDepthInProcedure &mdash; Display depth value &mdash;
+            float
+          </p>
+        </article>
+
+        <article class="dataproperty" id="isClockFrozen">
+          <h3>
+            Data property
+            <a href="#isClockFrozen">Is clock frozen</a>
+          </h3>
+
+          <p>Used to record whether the clocks in the procedure a work package is subject to are frozen. A work package marked as frozen will not have the dates of business items actualising clock end steps automatically updated when sitting days change. For example: the treaty procedure set out in the Constitutional Reform and Governance Act 2010 specifies no limitation on the length of any extension to objection period A. Should a Government minister choose to extend period A, dates on any business items actualising clock end steps cannot be automatically updated. The work package is marked as frozen and any changes to dates are manually updated.</p>
+
+          <p>
+            WorkPackage &mdash; Is clock frozen &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="workPackageDayCount">
+          <h3>
+            Data property
+            <a href="#workPackageDayCount">Work package day count</a>
+          </h3>
+
+          <p>Relates a work package to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by any clock in the procedure the work package is subject to. Where a work package day count is set, its value overrides the day counts set on clocks in the procedure that work package is subject to.</p>
+
+          <p>
+            WorkPackage &mdash; Work package day count &mdash;
+            integer
+          </p>
+        </article>
+      </section>
+
+    
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>ppr</dt>
+            <dd>http://parliament.uk/ontologies/procedure/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2018-02-20</time></p>
+
+      <p id="makers">
+        Made by   &middot; Chris Alcock    &middot; David Beamish           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Gordon Clarke    &middot; Jack Dent    &middot; Samu Lang    &middot; Silver Oliver           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville    &middot; Dominic Stockbridge    &middot; Jayne Sunley    &middot; James Vinter    &middot; Jane White    &middot; Ben Woodhams        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

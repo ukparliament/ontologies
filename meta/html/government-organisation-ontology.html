@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../government-organisation/government-organisation-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../government-organisation/government-organisation-ontology.ttl"
+      type="text/turtle"
+      title="Government organisation ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Government organisation ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Government organisation ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Government organisation ontology</h1>
+
+      <p id="description">Government organisation ontology for UK Parliament</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="AttendsCabinet">
+          <h3>Class <a href="#AttendsCabinet">AttendsCabinet</a></h3>
+
+          <p>Used to determine if the person incumbent in a government position is able to attend cabinet. Possible values are always, never and when required.</p>
+         </article>
+        <article class="class" id="GovernmentIncumbency">
+          <h3>Class <a href="#GovernmentIncumbency">GovernmentIncumbency</a></h3>
+
+          <p>An incumbency of a person in a government position. This is a specialisation of an incumbency from the agency ontology.</p>
+           <p>
+            Superclasses  &middot; Incumbency           </p>
+        </article>
+        <article class="class" id="GovernmentOrganisation">
+          <h3>Class <a href="#GovernmentOrganisation">GovernmentOrganisation</a></h3>
+
+          <p>Government departments, agencies and public bodies which have responsibility for a specific sector of public administration. Is a specialised type of group.</p>
+           <p>
+            Superclasses  &middot; Group           </p>
+        </article>
+        <article class="class" id="GovernmentPosition">
+          <h3>Class <a href="#GovernmentPosition">GovernmentPosition</a></h3>
+
+          <p>A position (job) in a government organisation. Note that not all government positions are in government organisations. e.g. Minister without Portfolio is a position outside any department, agency or public body. This is a specialisation of a position from the agency ontology.</p>
+           <p>
+            Superclasses  &middot; Position           </p>
+        </article>
+        <article class="class" id="GovernmentRank">
+          <h3>Class <a href="#GovernmentRank">GovernmentRank</a></h3>
+
+          <p>A packaging of ways to describe the rank of a government position. Different bodies have different ways to describe these.</p>
+         </article>
+        <article class="class" id="Group">
+          <h3>Class <a href="#Group">Group</a></h3>
+
+          <p>A group of people or a group of groups or a group of people and groups.</p>
+         </article>
+        <article class="class" id="Incumbency">
+          <h3>Class <a href="#Incumbency">Incumbency</a></h3>
+
+          <p>A position held by a person for a period of time. e.g. Philip Hammond occupying the position of Foreign Secretary between two dates.</p>
+         </article>
+        <article class="class" id="Position">
+          <h3>Class <a href="#Position">Position</a></h3>
+
+          <p>A position in a group that persists over time which can be occupied by different people at different times e.g. many people have been Foreign Secretary.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="attendsCabinet">
+          <h3>
+            Object property
+            <a href="#attendsCabinet"
+              >attendsCabinet</a
+            >
+          </h3>
+
+           <p>Relates a government position to cabinet attendance.</p>
+
+          <p>
+            <a href="#GovernmentPosition"
+              >GovernmentPosition</a
+            >
+            &mdash; attendsCabinet &mdash;
+            <a href="#AttendsCabinet">AttendsCabinet</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasRank">
+          <h3>
+            Object property
+            <a href="#hasRank"
+              >hasRank</a
+            >
+          </h3>
+
+           <p>Relates a government position to assorted ways of describing rank.</p>
+
+          <p>
+            <a href="#GovernmentPosition"
+              >GovernmentPosition</a
+            >
+            &mdash; hasRank &mdash;
+            <a href="#GovernmentRank">GovernmentRank</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="cabinetRank">
+          <h3>
+            Data property
+            <a href="#cabinetRank">cabinetRank</a>
+          </h3>
+
+          <p>Used to capture how the government ranks assorted positions in the cabinet. e.g. whether the Foreign Secretary is ranked above or below the Health Secretary.</p>
+
+          <p>
+            GovernmentPosition &mdash; cabinetRank &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="clerksRank">
+          <h3>
+            Data property
+            <a href="#clerksRank">clerksRank</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            GovernmentRank &mdash; clerksRank &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="governmentSortOrder">
+          <h3>
+            Data property
+            <a href="#governmentSortOrder">governmentSortOrder</a>
+          </h3>
+
+          <p>Used to determine how the government chooses to order government organisations. e.g. whether they choose to rank the Foreign Office higher than the Department of Health.</p>
+
+          <p>
+            GovernmentOrganisation &mdash; governmentSortOrder &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="isLayingPosition">
+          <h3>
+            Data property
+            <a href="#isLayingPosition">isLayingPosition</a>
+          </h3>
+
+          <p>Used to determine if a government position has the authority to lay papers into Parliament.</p>
+
+          <p>
+            GovernmentPosition &mdash; isLayingPosition &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="isPaid">
+          <h3>
+            Data property
+            <a href="#isPaid">isPaid</a>
+          </h3>
+
+          <p>Used to describe whether an incumbency is paid or not.</p>
+
+          <p>
+            GovernmentIncumbency &mdash; isPaid &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="ministerialRank">
+          <h3>
+            Data property
+            <a href="#ministerialRank">ministerialRank</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            GovernmentRank &mdash; ministerialRank &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="oppositionSortOrder">
+          <h3>
+            Data property
+            <a href="#oppositionSortOrder">oppositionSortOrder</a>
+          </h3>
+
+          <p>Used to determine how the official opposition chooses to order government organisations. e.g. whether they choose to rank the Foreign Office higher than the Department of Health.</p>
+
+          <p>
+            GovernmentOrganisation &mdash; oppositionSortOrder &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="orderRank">
+          <h3>
+            Data property
+            <a href="#orderRank">orderRank</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            GovernmentRank &mdash; orderRank &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="paidToAttendCabinet">
+          <h3>
+            Data property
+            <a href="#paidToAttendCabinet">paidToAttendCabinet</a>
+          </h3>
+
+          <p>Used to determine whether a government position is paid to attend cabinet or not.</p>
+
+          <p>
+            GovernmentPosition &mdash; paidToAttendCabinet &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="statsRank">
+          <h3>
+            Data property
+            <a href="#statsRank">statsRank</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            GovernmentRank &mdash; statsRank &mdash;
+            langString
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentIncumbency</td>
+            <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Incumbency</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentPosition</td>
+            <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Position</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>GovernmentOrganisation</td>
+            <td>/<wbr>ontologies/<wbr>government-organisation/<wbr>Group</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>pgo</dt>
+            <dd>http://parliament.uk/ontologies/government-organisation/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2017-09-29</time></p>
+
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../government-organisation/government-organisation-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../government-organisation/government-organisation-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

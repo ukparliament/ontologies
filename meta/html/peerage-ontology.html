@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../peerage/peerage-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../peerage/peerage-ontology.ttl"
+      type="text/turtle"
+      title="Peerage ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Peerage ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Peerage ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Peerage ontology</h1>
+
+      <p id="description">A model describing peerages, the holding of peerage by a person, Letters Patent affirming the creation of a peerage - and kingdoms, monarchs and reigns as they apply to peerages.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/peerage/peerage.svg">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Announcement">
+          <h3>Class <a href="#Announcement">Announcement</a></h3>
+
+          <p>An announcement of the creation of a peerage - or peerages - for one or more people. An announcement is followed by the issuing of a Letters Patent.</p>
+         </article>
+        <article class="class" id="AnnouncementType">
+          <h3>Class <a href="#AnnouncementType">Announcement type</a></h3>
+
+          <p>The type of an announcement, for example: a Dissolution Honours List, initial peerages created under the Life Peerages Act 1958, or a Times report.</p>
+         </article>
+        <article class="class" id="GovernmentAdministrationPeriod">
+          <h3>Class <a href="#GovernmentAdministrationPeriod">Government administration period</a></h3>
+
+          <p>A period of a single government, under a single Prime Minister, bounded by general elections, for example: Thatcher administration 1979-1983, Thatcher administration 1983-1987, Thatcher administration 1987-1990.</p>
+         </article>
+        <article class="class" id="Jurisdiction">
+          <h3>Class <a href="#Jurisdiction">Jurisdiction</a></h3>
+
+          <p>The jurisdiction of a Law Lord, being England and Wales, Ireland, Northern Ireland or Scotland.</p>
+         </article>
+        <article class="class" id="Kingdom">
+          <h3>Class <a href="#Kingdom">Kingdom</a></h3>
+
+          <p>The kingdom within which a peerage is created. After 1801, the name of the division within the peerage of the United Kingdom. Kingdom is used in this model to denote what is usually known as the peerage of a kingdom, for example: the Kingdom of Scotland denotes the Peerage of the Kingdom of Scotland. We avoid using the word peerage because this is already used to describe a single title, for example: the peerage of the Earldom of Plymouth.</p>
+         </article>
+        <article class="class" id="LawLordIncumbency">
+          <h3>Class <a href="#LawLordIncumbency">Law Lord incumbency</a></h3>
+
+          <p>An incumbency period for a peerage held by a person appointed to the role of a Law Lord.</p>
+         </article>
+        <article class="class" id="LettersPatent">
+          <h3>Class <a href="#LettersPatent">Letters Patent</a></h3>
+
+          <p>The document affirming that the monarch has created a peerage for a person.</p>
+         </article>
+        <article class="class" id="LettersPatentTime">
+          <h3>Class <a href="#LettersPatentTime">Letters Patent time</a></h3>
+
+          <p>The time of day of a meeting of the Privy Council at which the Letters Patent was presented, as recorded in the Gazette. This may be morning or afternoon or a given hour.</p>
+         </article>
+        <article class="class" id="Monarch">
+          <h3>Class <a href="#Monarch">Monarch</a></h3>
+
+          <p>A person reigning within a kingdom.</p>
+         </article>
+        <article class="class" id="Peerage">
+          <h3>Class <a href="#Peerage">Peerage</a></h3>
+
+          <p>A specific named title of nobility held within the system of peerages of the United Kingdom and nations.</p>
+         </article>
+        <article class="class" id="PeerageHolding">
+          <h3>Class <a href="#PeerageHolding">Peerage holding</a></h3>
+
+          <p>The holding of a peerage by a person between two dates. A life peerage will have a single peerage holding. A hereditary peerage may have more than one peerage holding over time.</p>
+         </article>
+        <article class="class" id="PeerageHoldingEndReason">
+          <h3>Class <a href="#PeerageHoldingEndReason">Peerage holding end reason</a></h3>
+
+          <p>The reason for a peerage holding being ended - being the holder&#39;s death, merged in the Crown, disclaimed under the Peerage Act 1963, lost under the Titles Deprivation Act 1917, forfeiture, or resignation of a Scottish peerage.</p>
+         </article>
+        <article class="class" id="PeerageType">
+          <h3>Class <a href="#PeerageType">Peerage type</a></h3>
+
+          <p>The type of a peerage, for example: a hereditary peerage, or a life peerage.</p>
+         </article>
+        <article class="class" id="Person">
+          <h3>Class <a href="#Person">Person</a></h3>
+
+          <p>A person.</p>
+         </article>
+        <article class="class" id="Rank">
+          <h3>Class <a href="#Rank">Rank</a></h3>
+
+          <p>The rank of a peerage. Ranks vary between kingdoms, for example: in the Kingdom of Scotland the lowest rank is Lordship, whilst in the Kingdoms of England, Ireland, Great Britain and the United Kingdom, the lowest rank is Barony.</p>
+         </article>
+        <article class="class" id="RankLabel">
+          <h3>Class <a href="#RankLabel">Rank label</a></h3>
+
+          <p>A label of a particular rank, for example: Earl or Countess.</p>
+         </article>
+        <article class="class" id="RankLabelSet">
+          <h3>Class <a href="#RankLabelSet">Rank label set</a></h3>
+
+          <p>The set of rank labels applied to a person, for example: a set formed of - Duchess, Marchioness, Countess, Viscountess, Baroness and Lady.</p>
+         </article>
+        <article class="class" id="Reign">
+          <h3>Class <a href="#Reign">Reign</a></h3>
+
+          <p>A period of time during which a monarch has a reign in a kingdom.</p>
+         </article>
+        <article class="class" id="SpecialRemainder">
+          <h3>Class <a href="#SpecialRemainder">Special remainder</a></h3>
+
+          <p>A hereditary peerage is created with rules governing who might inherit, known as a remainder. In the United Kingdom the default remainder allows inheritance by direct male descendants only, whereas in the Kingdom of Scotland both male and female direct descendants may inherit. Peerages are created with special remainders wherever default rules do not apply.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="affirmsCreationOf">
+          <h3>
+            Object property
+            <a href="#affirmsCreationOf"
+              >Affirms creation of</a
+            >
+          </h3>
+
+           <p>Relates a Letters Patent to a peerage it affirms the creation of. A Letters Patent may affirm the creation of one or more peerages, always for the same person. The creation of a peerage is affirmed by one Letters Patent, or none.</p>
+
+          <p>
+            <a href="#LettersPatent"
+              >LettersPatent</a
+            >
+            &mdash; Affirms creation of &mdash;
+            <a href="#Peerage">Peerage</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="announces">
+          <h3>
+            Object property
+            <a href="#announces"
+              >Announces</a
+            >
+          </h3>
+
+           <p>Relates an announcement to the Letters Patent - and the peerages whose creation that Letters Patent affirms - being announced. An announcement may announce more than one Letters Patent. A Letters Patent is the subject of one announcement.</p>
+
+          <p>
+            <a href="#Announcement"
+              >Announcement</a
+            >
+            &mdash; Announces &mdash;
+            <a href="#LettersPatent">LettersPatent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="during">
+          <h3>
+            Object property
+            <a href="#during"
+              >During</a
+            >
+          </h3>
+
+           <p>Relates an announcement to the government administration period during which that announcement was made.</p>
+
+          <p>
+            <a href="#Announcement"
+              >Announcement</a
+            >
+            &mdash; During &mdash;
+            <a href="#GovernmentAdministrationPeriod">GovernmentAdministrationPeriod</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="endReason">
+          <h3>
+            Object property
+            <a href="#endReason"
+              >End reason</a
+            >
+          </h3>
+
+           <p>Relates a peerage holding to the reason for that peerage holding being ended. A peerage holding may have one end reason, or none.</p>
+
+          <p>
+            <a href="#PeerageHolding"
+              >PeerageHolding</a
+            >
+            &mdash; End reason &mdash;
+            <a href="#PeerageHoldingEndReason">PeerageHoldingEndReason</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="formsPartOfSet">
+          <h3>
+            Object property
+            <a href="#formsPartOfSet"
+              >Forms part of set</a
+            >
+          </h3>
+
+           <p>Relates a rank label to the set of rank labels of which it forms part. A rank label applies to one rank label set, for example: the rank label Countess forms part of one rank label set, and the rank label Earl forms part of another rank label set. A rank label set has more than one rank label according to the rank of the peerage, for example: the rank label set formed of the rank labels Duchess, Marchioness, Countess, Viscountess, Baroness and Lady.</p>
+
+          <p>
+            <a href="#RankLabel"
+              >RankLabel</a
+            >
+            &mdash; Forms part of set &mdash;
+            <a href="#RankLabelSet">RankLabelSet</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasAnnouncementType">
+          <h3>
+            Object property
+            <a href="#hasAnnouncementType"
+              >Has announcement type</a
+            >
+          </h3>
+
+           <p>Relates an announcement to the type of that announcement. An announcement is of one type.</p>
+
+          <p>
+            <a href="#Announcement"
+              >Announcement</a
+            >
+            &mdash; Has announcement type &mdash;
+            <a href="#AnnouncementType">AnnouncementType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasKingdom">
+          <h3>
+            Object property
+            <a href="#hasKingdom"
+              >Has Kingdom</a
+            >
+          </h3>
+
+           <p>Relates a Letters Patent to the kingdom in which that Letters Patent was issued. A Letters Patent belongs to one kingdom. A kingdom may have more than one Letters Patent.</p>
+
+          <p>
+            <a href="#LettersPatent"
+              >LettersPatent</a
+            >
+            &mdash; Has Kingdom &mdash;
+            <a href="#Kingdom">Kingdom</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasLawLordIncumbency">
+          <h3>
+            Object property
+            <a href="#hasLawLordIncumbency"
+              >Has Law Lord incumbency</a
+            >
+          </h3>
+
+           <p>Relates a peerage to an incumbency as a Law Lord. A Law Lord incumbency is for one peerage. A peerage may have one or more Law Lord incumbencies, or none - it being possible for a Law Lord to resign and be reappointed.</p>
+
+          <p>
+            <a href="#Peerage"
+              >Peerage</a
+            >
+            &mdash; Has Law Lord incumbency &mdash;
+            <a href="#LawLordIncumbency">LawLordIncumbency</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasPeerageHolding">
+          <h3>
+            Object property
+            <a href="#hasPeerageHolding"
+              >Has peerage holding</a
+            >
+          </h3>
+
+           <p>Relates a person to a peerage holding. A person may have one or more peerage holdings, or none. A peerage holding is by one person.</p>
+
+          <p>
+            <a href="#Person"
+              >Person</a
+            >
+            &mdash; Has peerage holding &mdash;
+            <a href="#PeerageHolding">PeerageHolding</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasPeerageType">
+          <h3>
+            Object property
+            <a href="#hasPeerageType"
+              >Has peerage type</a
+            >
+          </h3>
+
+           <p>Relates a peerage to its type. A peerage is of one type. A type has more than one peerage. </p>
+
+          <p>
+            <a href="#Peerage"
+              >Peerage</a
+            >
+            &mdash; Has peerage type &mdash;
+            <a href="#PeerageType">PeerageType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasRank">
+          <h3>
+            Object property
+            <a href="#hasRank"
+              >Has rank</a
+            >
+          </h3>
+
+           <p>Relates a peerage to the rank of that peerage. A peerage has one rank. A rank may apply to more than one peerage.</p>
+
+          <p>
+            <a href="#Peerage"
+              >Peerage</a
+            >
+            &mdash; Has rank &mdash;
+            <a href="#Rank">Rank</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasRankLabel">
+          <h3>
+            Object property
+            <a href="#hasRankLabel"
+              >Has rank label</a
+            >
+          </h3>
+
+           <p>Relates a rank to a rank label. A rank has one of two rank labels, for example: a person holding a peerage with the rank of Earldom has the rank label Earl or Countess. A rank label belongs to one rank.</p>
+
+          <p>
+            <a href="#Rank"
+              >Rank</a
+            >
+            &mdash; Has rank label &mdash;
+            <a href="#RankLabel">RankLabel</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasSpecialRemainder">
+          <h3>
+            Object property
+            <a href="#hasSpecialRemainder"
+              >Has special remainder</a
+            >
+          </h3>
+
+           <p>Relates a peerage to any special remainder applying to that peerage. Where a peerage has a special remainder, it has only one. Types of special remainder may apply to more than one peerage.</p>
+
+          <p>
+            <a href="#Peerage"
+              >Peerage</a
+            >
+            &mdash; Has special remainder &mdash;
+            <a href="#SpecialRemainder">SpecialRemainder</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inJurisdiction">
+          <h3>
+            Object property
+            <a href="#inJurisdiction"
+              >In jurisdiction</a
+            >
+          </h3>
+
+           <p>Relates a Law Lord incumbency to the jurisdiction in which the appointee held office or practised. A Law Lord incumbency is in one jurisdiction. A jurisdiction may have more than one incumbent Law Lord.</p>
+
+          <p>
+            <a href="#LawLordIncumbency"
+              >LawLordIncumbency</a
+            >
+            &mdash; In jurisdiction &mdash;
+            <a href="#Jurisdiction">Jurisdiction</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inKingdom">
+          <h3>
+            Object property
+            <a href="#inKingdom"
+              >In Kingdom</a
+            >
+          </h3>
+
+           <p>Relates a rank to a kingdom in which a peerage of that rank may be created. A kingdom has peerages of more than one rank. A rank may be found in one or more kingdoms.</p>
+
+          <p>
+            <a href="#Rank"
+              >Rank</a
+            >
+            &mdash; In Kingdom &mdash;
+            <a href="#Kingdom">Kingdom</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="isOf">
+          <h3>
+            Object property
+            <a href="#isOf"
+              >Is of</a
+            >
+          </h3>
+
+           <p>Relates a peerage holding to the peerage the holding is of. A peerage holding is of one peerage. A peerage may have one or more peerage holdings.</p>
+
+          <p>
+            <a href="#PeerageHolding"
+              >PeerageHolding</a
+            >
+            &mdash; Is of &mdash;
+            <a href="#Peerage">Peerage</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="issuedIn">
+          <h3>
+            Object property
+            <a href="#issuedIn"
+              >Issued in</a
+            >
+          </h3>
+
+           <p>Relates a Letters Patent to the reign in which that Letters Patent was issued. A Letters Patent is issued in one reign. One or more Letters Patent may be issued in a reign.</p>
+
+          <p>
+            <a href="#LettersPatent"
+              >LettersPatent</a
+            >
+            &mdash; Issued in &mdash;
+            <a href="#Reign">Reign</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="ofKingdom">
+          <h3>
+            Object property
+            <a href="#ofKingdom"
+              >Of kingdom</a
+            >
+          </h3>
+
+           <p>Relates a peerage to the kingdom in which the peerage was created.</p>
+
+          <p>
+            <a href="#Peerage"
+              >Peerage</a
+            >
+            &mdash; Of kingdom &mdash;
+            <a href="#Kingdom">Kingdom</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="presentedAt">
+          <h3>
+            Object property
+            <a href="#presentedAt"
+              >Presented at</a
+            >
+          </h3>
+
+           <p>Relates a Letters Patent to the recorded time of day at which it was presented at a meeting of the Privy Council. A Letters Patent may only have one recorded time in a day. A recorded time in a day may refer to more than one Letters Patent, issued across different days, for example: &#39;10 am&#39;, referring to any number of Letters Patent issued at that time on different days. A recorded time may only have one Letters Patent on one day.</p>
+
+          <p>
+            <a href="#LettersPatent"
+              >LettersPatent</a
+            >
+            &mdash; Presented at &mdash;
+            <a href="#LettersPatentTime">LettersPatentTime</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="previousTitleHasKingdom">
+          <h3>
+            Object property
+            <a href="#previousTitleHasKingdom"
+              >Previous title has kingdom</a
+            >
+          </h3>
+
+           <p>Relates a Letters Patent to the kingdom of the previous title borne by its recipient, as it appeared on the Letters Patent. Where a Letters Patent has a previous title with a kingdom, it has only one.</p>
+
+          <p>
+            <a href="#LettersPatent"
+              >LettersPatent</a
+            >
+            &mdash; Previous title has kingdom &mdash;
+            <a href="#Kingdom">Kingdom</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="receives">
+          <h3>
+            Object property
+            <a href="#receives"
+              >Receives</a
+            >
+          </h3>
+
+           <p>Relates a person to a Letters Patent that person is in receipt of, affirming the creation of a peerage for that person. A person may receive one or more Letters Patent, or none. A Letters Patent is received by one person.</p>
+
+          <p>
+            <a href="#Person"
+              >Person</a
+            >
+            &mdash; Receives &mdash;
+            <a href="#LettersPatent">LettersPatent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="reignIn">
+          <h3>
+            Object property
+            <a href="#reignIn"
+              >Reign in</a
+            >
+          </h3>
+
+           <p>Relates a reign to a kingdom the reign is in. A reign has one kingdom. A kingdom may have more than one reign over time, but only one reign at one time.</p>
+
+          <p>
+            <a href="#Reign"
+              >Reign</a
+            >
+            &mdash; Reign in &mdash;
+            <a href="#Kingdom">Kingdom</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="reignOf">
+          <h3>
+            Object property
+            <a href="#reignOf"
+              >Reign of</a
+            >
+          </h3>
+
+           <p>Relates a reign to a monarch during that reign. The reign of William and Mary is considered as a joint reign. A monarch may have more than one reign in more than one kingdom, for example: the reigns of George III in Great Britain, in Ireland and later in the United Kingdom.</p>
+
+          <p>
+            <a href="#Reign"
+              >Reign</a
+            >
+            &mdash; Reign of &mdash;
+            <a href="#Monarch">Monarch</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="usesRankLabelSet">
+          <h3>
+            Object property
+            <a href="#usesRankLabelSet"
+              >Uses rank label set</a
+            >
+          </h3>
+
+           <p>Relates a person to the set of rank labels that person uses.</p>
+
+          <p>
+            <a href="#Person"
+              >Person</a
+            >
+            &mdash; Uses rank label set &mdash;
+            <a href="#RankLabelSet">RankLabelSet</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="announcedOn">
+          <h3>
+            Data property
+            <a href="#announcedOn">Announced on</a>
+          </h3>
+
+          <p>Relates an announcement of a peerage to the date on which that announcement was made.</p>
+
+          <p>
+            Announcement &mdash; Announced on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="degree">
+          <h3>
+            Data property
+            <a href="#degree">Degree</a>
+          </h3>
+
+          <p>Relates a rank to a number representing the degree of that rank in the hierarchy of peerages. The lower the number the higher the degree of the rank, for example: the rank of Barony has a degree of 5, whilst the rank of Dukedom has a degree of 1. Included in the dataset are records for Princes of Wales which are not peerages and given a rank of 0.</p>
+
+          <p>
+            Rank &mdash; Degree &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="extinctOn">
+          <h3>
+            Data property
+            <a href="#extinctOn">Extinct on</a>
+          </h3>
+
+          <p>Relates a peerage to the date on which that peerage became extinct, being the date of death of the last holder. For a life peerage, the first holder being the last holder.</p>
+
+          <p>
+            Peerage &mdash; Extinct on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="isCreatedByWrit">
+          <h3>
+            Data property
+            <a href="#isCreatedByWrit">Is created by writ</a>
+          </h3>
+
+          <p>Used to record if a peerage was created &#39;by writ&#39;. When a person has sat in the House of Lords after receiving a writ of summons as the holder of a peerage whose creation is not known to be affirmed by Letters Patent, it is determined that a barony of that title has been created &#39;by writ&#39;. For example: Edmund Braye was summoned to the House of Lords in 1529 as Lord Braye, the creation of that peerage not having been affirmed by Letters Patent.</p>
+
+          <p>
+            Peerage &mdash; Is created by writ &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="mergedIntoTheCrownOn">
+          <h3>
+            Data property
+            <a href="#mergedIntoTheCrownOn">Merged into the Crown on</a>
+          </h3>
+
+          <p>Relates a peerage to the date on which that peerage merged into the Crown. Any peerages held by an heir to the throne will be merged into the Crown when that heir succeeds.</p>
+
+          <p>
+            Peerage &mdash; Merged into the Crown on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="numberOfLastHolder">
+          <h3>
+            Data property
+            <a href="#numberOfLastHolder">Number of last holder</a>
+          </h3>
+
+          <p>Relates a peerage to the ordinality in line of succession of the last holder of that peerage, for example: a peerage becoming extinct with the 11th holder, will have the value 11.</p>
+
+          <p>
+            Peerage &mdash; Number of last holder &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="ofTitle">
+          <h3>
+            Data property
+            <a href="#ofTitle">Of title</a>
+          </h3>
+
+          <p>Relates a peerage to a flag indicating if the peerage has an &#39;of&#39; between the rank and the title. For a peerage such as Earl of Plymouth, this flag is true. For a peerage such as Earl Nelson, this flag is false.</p>
+
+          <p>
+            Peerage &mdash; Of title &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="ordinalityOnDate">
+          <h3>
+            Data property
+            <a href="#ordinalityOnDate">Ordinality on date</a>
+          </h3>
+
+          <p>Relates a Letters Patent to its ordinality on the date of presentation. This is used as a proxy for precedence. A peerage of a higher rank will have a lower ordinality - and greater precedence - than a peerage of a lower rank whose Letters Patent are presented on the same day. For peerages of the same rank presented on the same day, precedence is determined by the time of day at which the Letters Patent was presented. A peerage whose Letters Patent is presented earlier in the day is determined to have a greater precedence - and lower ordinality - than a peerage of the same rank whose Letters Patent is presented later in that day.</p>
+
+          <p>
+            LettersPatent &mdash; Ordinality on date &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="presentedOn">
+          <h3>
+            Data property
+            <a href="#presentedOn">Presented on</a>
+          </h3>
+
+          <p>Relates a Letters Patent to the date on which it was presented at a meeting of the Privy Council.</p>
+
+          <p>
+            LettersPatent &mdash; Presented on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="previousOfTitle">
+          <h3>
+            Data property
+            <a href="#previousOfTitle">Previous of title</a>
+          </h3>
+
+          <p>Relates a Letters Patent to a flag indicating if the title previously borne by the recipient, as it appeared on the Letters Patent, has an &#39;of&#39; between the rank and the title. For a title such as Earl of Plymouth, this flag is true. For a title such as Earl Nelson, this flag is false.</p>
+
+          <p>
+            LettersPatent &mdash; Previous of title &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="previousRank">
+          <h3>
+            Data property
+            <a href="#previousRank">Previous rank</a>
+          </h3>
+
+          <p>Relates a Letters Patent to the rank of the previous title borne by its recipient, as it appeared on the Letters Patent.</p>
+
+          <p>
+            LettersPatent &mdash; Previous rank &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="previousTitle">
+          <h3>
+            Data property
+            <a href="#previousTitle">Previous title</a>
+          </h3>
+
+          <p>Relates a Letters Patent to that part of the title previously borne by the recipient other than rank, &#39;of&#39; and any territorial designation, for example: &#39;Plymouth&#39; being the title for &#39;Earl of Plymouth, in the County of Devon&#39;.</p>
+
+          <p>
+            LettersPatent &mdash; Previous title &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="territorialDesignation">
+          <h3>
+            Data property
+            <a href="#territorialDesignation">Territorial designation</a>
+          </h3>
+
+          <p>Relates a peerage to the territorial designation of that peerage, for example: &#39;in the County of Devon&#39; being the territorial designation for &#39;Earl of Plymouth, in the County of Devon&#39;.</p>
+
+          <p>
+            Peerage &mdash; Territorial designation &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="title">
+          <h3>
+            Data property
+            <a href="#title">Title</a>
+          </h3>
+
+          <p>Relates a peerage to the title of the peerage, being the part of the peerage name other than rank, &#39;of&#39; and territorial designation. For example: &#39;Plymouth&#39; being the title for &#39;Earl of Plymouth, in the County of Devon&#39;.</p>
+
+          <p>
+            Peerage &mdash; Title &mdash;
+            langString
+          </p>
+        </article>
+      </section>
+
+    
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>ppeer</dt>
+            <dd>http://parliament.uk/ontologies/peerage/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2021-05-06</time></p>
+
+      <p id="makers">
+        Made by   &middot; Grant Bavister    &middot; David Beamish           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Edward McCarthy    &middot; Ned Morrell           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+       </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../peerage/peerage-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../peerage/peerage-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

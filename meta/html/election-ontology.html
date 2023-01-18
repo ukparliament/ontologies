@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../election/election-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
+      type="text/turtle"
+      title="Election ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Election ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Election ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Election ontology</h1>
+
+      <p id="description">A model describing incumbencies resulting from general elections, by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election regardless of the process by which that election has been conducted, and covers election returns by the 'first past the post' system and those which follow other methods. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/election/election.svg">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Candidacy">
+          <h3>Class <a href="#Candidacy">Candidacy</a></h3>
+
+          <p>A candidacy of a person standing in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
+         </article>
+        <article class="class" id="CandidacyResult">
+          <h3>Class <a href="#CandidacyResult">Candidacy result</a></h3>
+
+          <p>The result of a candidacy in an election, for example: Phillip Hammond&#39;s win as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
+         </article>
+        <article class="class" id="Certification">
+          <h3>Class <a href="#Certification">Certification</a></h3>
+
+          <p>A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party.</p>
+         </article>
+        <article class="class" id="ConstituencyArea">
+          <h3>Class <a href="#ConstituencyArea">Constituency area</a></h3>
+
+          <p>An area within which members of a constituency group reside. Constituency areas bounding constituency groups represented in the House of Commons are set out by the Boundary Commissions and approved by Parliament.</p>
+         </article>
+        <article class="class" id="ConstituencyGroup">
+          <h3>Class <a href="#ConstituencyGroup">Constituency group</a></h3>
+
+          <p>A group of people represented by an election winner.</p>
+           <p>
+            Superclasses  &middot; Population           </p>
+        </article>
+        <article class="class" id="Election">
+          <h3>Class <a href="#Election">Election</a></h3>
+
+          <p>An election to elect a candidate or candidates to a seat or position.</p>
+         </article>
+        <article class="class" id="Electorate">
+          <h3>Class <a href="#Electorate">Electorate</a></h3>
+
+          <p>A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker.</p>
+           <p>
+            Superclasses  &middot; Population           </p>
+        </article>
+        <article class="class" id="GeneralElection">
+          <h3>Class <a href="#GeneralElection">General election</a></h3>
+
+          <p>A set of elections to seats in the House of Commons held in all constituencies concurrently.</p>
+         </article>
+        <article class="class" id="ParliamentPeriod">
+          <h3>Class <a href="#ParliamentPeriod">Parliament period</a></h3>
+
+          <p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
+         </article>
+        <article class="class" id="Person">
+          <h3>Class <a href="#Person">Person</a></h3>
+
+          <p>A person.</p>
+         </article>
+        <article class="class" id="PoliticalParty">
+          <h3>Class <a href="#PoliticalParty">Political party</a></h3>
+
+          <p>An organisation registered with the Electoral Commission as a political party.</p>
+         </article>
+        <article class="class" id="Population">
+          <h3>Class <a href="#Population">Population</a></h3>
+
+          <p>A set of people.</p>
+         </article>
+        <article class="class" id="PopulationSize">
+          <h3>Class <a href="#PopulationSize">Population size</a></h3>
+
+          <p>The recording of the size of a population on a date.</p>
+         </article>
+        <article class="class" id="WinningCandidacyResult">
+          <h3>Class <a href="#WinningCandidacyResult">Winning candidacy result</a></h3>
+
+          <p>Used to record the winning candidacy in an election.</p>
+           <p>
+            Superclasses  &middot; CandidacyResult           </p>
+        </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="adjunctTo">
+          <h3>
+            Object property
+            <a href="#adjunctTo"
+              >Adjunct to</a
+            >
+          </h3>
+
+           <p>Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
+
+          <p>
+            <a href="#Certification"
+              >Certification</a
+            >
+            &mdash; Adjunct to &mdash;
+            <a href="#Certification">Certification</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="boundedBy">
+          <h3>
+            Object property
+            <a href="#boundedBy"
+              >Bounded by</a
+            >
+          </h3>
+
+           <p>Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group.</p>
+
+          <p>
+            <a href="#ConstituencyGroup"
+              >ConstituencyGroup</a
+            >
+            &mdash; Bounded by &mdash;
+            <a href="#ConstituencyArea">ConstituencyArea</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="eligibleToVoteIn">
+          <h3>
+            Object property
+            <a href="#eligibleToVoteIn"
+              >Eligible to vote in</a
+            >
+          </h3>
+
+           <p>Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections.</p>
+
+          <p>
+            <a href="#Electorate"
+              >Electorate</a
+            >
+            &mdash; Eligible to vote in &mdash;
+            <a href="#Election">Election</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasCandidacyResult">
+          <h3>
+            Object property
+            <a href="#hasCandidacyResult"
+              >Has candidacy result</a
+            >
+          </h3>
+
+           <p>Relates a candidacy in an election to the result of that candidacy. A candidacy has one candidacy result. A candidacy result is for one candidacy.</p>
+
+          <p>
+            <a href="#Candidacy"
+              >Candidacy</a
+            >
+            &mdash; Has candidacy result &mdash;
+            <a href="#CandidacyResult">CandidacyResult</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasCandidate">
+          <h3>
+            Object property
+            <a href="#hasCandidate"
+              >Has candidate</a
+            >
+          </h3>
+
+           <p>Relates a candidacy to a person being a candidate. A candidacy is of one person.</p>
+
+          <p>
+            <a href="#Candidacy"
+              >Candidacy</a
+            >
+            &mdash; Has candidate &mdash;
+            <a href="#Person">Person</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasCertification">
+          <h3>
+            Object property
+            <a href="#hasCertification"
+              >Has certification</a
+            >
+          </h3>
+
+           <p>Relates a candidacy to a certification by a political party of that candidacy. A candidacy has one or more certifications, or none. A certification is of one candidacy.</p>
+
+          <p>
+            <a href="#Candidacy"
+              >Candidacy</a
+            >
+            &mdash; Has certification &mdash;
+            <a href="#Certification">Certification</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasElectorate">
+          <h3>
+            Object property
+            <a href="#hasElectorate"
+              >Has electorate</a
+            >
+          </h3>
+
+           <p>Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group.</p>
+
+          <p>
+            <a href="#ConstituencyGroup"
+              >ConstituencyGroup</a
+            >
+            &mdash; Has electorate &mdash;
+            <a href="#Electorate">Electorate</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasPoliticalParty">
+          <h3>
+            Object property
+            <a href="#hasPoliticalParty"
+              >Has political party</a
+            >
+          </h3>
+
+           <p>Relates a candidacy to a political party.</p>
+
+          <p>
+            <a href="#Candidacy"
+              >Candidacy</a
+            >
+            &mdash; Has political party &mdash;
+            <a href="#PoliticalParty">PoliticalParty</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inElection">
+          <h3>
+            Object property
+            <a href="#inElection"
+              >In election</a
+            >
+          </h3>
+
+           <p>Relates a candidacy to the election that candidacy is in. A candidacy is in one election.</p>
+
+          <p>
+            <a href="#Candidacy"
+              >Candidacy</a
+            >
+            &mdash; In election &mdash;
+            <a href="#Election">Election</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="intoParliamentPeriod">
+          <h3>
+            Object property
+            <a href="#intoParliamentPeriod"
+              >Into Parliament period</a
+            >
+          </h3>
+
+           <p>Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place. An election to the House of Commons is related to one Parliament period.</p>
+
+          <p>
+            <a href="#Election"
+              >Election</a
+            >
+            &mdash; Into Parliament period &mdash;
+            <a href="#ParliamentPeriod">ParliamentPeriod</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="isPartOfGeneralElection">
+          <h3>
+            Object property
+            <a href="#isPartOfGeneralElection"
+              >Is part of general election</a
+            >
+          </h3>
+
+           <p>Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none.</p>
+
+          <p>
+            <a href="#Election"
+              >Election</a
+            >
+            &mdash; Is part of general election &mdash;
+            <a href="#GeneralElection">GeneralElection</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="issuedBy">
+          <h3>
+            Object property
+            <a href="#issuedBy"
+              >Issued by</a
+            >
+          </h3>
+
+           <p>Relates a certification of a candidacy to the party issuing that certification. A certification is issued by one political party.</p>
+
+          <p>
+            <a href="#Certification"
+              >Certification</a
+            >
+            &mdash; Issued by &mdash;
+            <a href="#PoliticalParty">PoliticalParty</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="ofPopulation">
+          <h3>
+            Object property
+            <a href="#ofPopulation"
+              >Of population</a
+            >
+          </h3>
+
+           <p>Relates a population size as recorded on a date to that population. A population size is related to one population.</p>
+
+          <p>
+            <a href="#PopulationSize"
+              >PopulationSize</a
+            >
+            &mdash; Of population &mdash;
+            <a href="#Population">Population</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="ballotsSpoiled">
+          <h3>
+            Data property
+            <a href="#ballotsSpoiled">Ballots spoiled</a>
+          </h3>
+
+          <p>The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or where a mark does not sufficiently identify the vote. The number of spoiled ballots may be included in a calculation of turnout. Turnout as calculated by the House of Commons Library - and generally in academic usage - is the total number of votes cast and not spoiled, divided by the size of the electorate. Turnout as calculated by Returning Officers is the total number of votes cast, divided by the size of the electorate.</p>
+
+          <p>
+            Election &mdash; Ballots spoiled &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="candidateName">
+          <h3>
+            Data property
+            <a href="#candidateName">Candidate name</a>
+          </h3>
+
+          <p>The name of the candidate as it appears on the ballot.</p>
+
+          <p>
+            Candidacy &mdash; Candidate name &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="declarationTime">
+          <h3>
+            Data property
+            <a href="#declarationTime">Declaration time</a>
+          </h3>
+
+          <p>The date and time at which results were declared for an election, for example: the date and time of the declaration of the results in a constituency election, by the Returning Officer.</p>
+
+          <p>
+            Election &mdash; Declaration time &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="partyGained">
+          <h3>
+            Data property
+            <a href="#partyGained">Party gained</a>
+          </h3>
+
+          <p>Used to record whether the party of the winning candidate at an election differs from the party of the winning candidate at the preceding election.</p>
+
+          <p>
+            WinningCandidacyResult &mdash; Party gained &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="recordedDate">
+          <h3>
+            Data property
+            <a href="#recordedDate">Recorded date</a>
+          </h3>
+
+          <p>The date on which a population size was recorded.</p>
+
+          <p>
+            PopulationSize &mdash; Recorded date &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="recordedSize">
+          <h3>
+            Data property
+            <a href="#recordedSize">Recorded size</a>
+          </h3>
+
+          <p>The size of a population, for example: the size of an electorate or of a constituency group.</p>
+
+          <p>
+            PopulationSize &mdash; Recorded size &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="resultPosition">
+          <h3>
+            Data property
+            <a href="#resultPosition">Result position</a>
+          </h3>
+
+          <p>The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2.</p>
+
+          <p>
+            CandidacyResult &mdash; Result position &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="round">
+          <h3>
+            Data property
+            <a href="#round">Round</a>
+          </h3>
+
+          <p>The ordinal position of the round in an election having more than one round of voting, for example: 1st or 2nd, recorded as 1 or 2.</p>
+
+          <p>
+            Election &mdash; Round &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="totalVotesCast">
+          <h3>
+            Data property
+            <a href="#totalVotesCast">Total votes cast</a>
+          </h3>
+
+          <p>The total number of votes cast across all candidacies in an election, including spoiled ballots.</p>
+
+          <p>
+            Election &mdash; Total votes cast &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="voteCount">
+          <h3>
+            Data property
+            <a href="#voteCount">Vote count</a>
+          </h3>
+
+          <p>The number of accepted votes recorded for a candidacy.</p>
+
+          <p>
+            CandidacyResult &mdash; Vote count &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="voteShare">
+          <h3>
+            Data property
+            <a href="#voteShare">Vote share</a>
+          </h3>
+
+          <p>The share of a vote won in an election by a candidate as a fraction of the total accepted votes.</p>
+
+          <p>
+            CandidacyResult &mdash; Vote share &mdash;
+            decimal
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>Electorate</td>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>WinningCandidacyResult</td>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>CandidacyResult</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>pe</dt>
+            <dd>http://parliament.uk/ontologies/election/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2016-10-06</time></p>
+
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+          &middot; <a href="https://olihawkins.com/">Oli Hawkins</a>
+   &middot; Ned Morrell           &middot; <a href="http://symroe.co.uk/">Sym Roe</a>
+          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

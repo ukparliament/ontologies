@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../record-review/record-review-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../record-review/record-review-ontology.ttl"
+      type="text/turtle"
+      title="Record reviews ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Record reviews ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Record reviews ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Record reviews ontology</h1>
+
+      <p id="description">A model describing editorial reviews of records and actions taken following review.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/record-review/record-review.png">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Agent">
+          <h3>Class <a href="#Agent">Agent</a></h3>
+
+          <p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
+         </article>
+        <article class="class" id="Archiving">
+          <h3>Class <a href="#Archiving">Archiving</a></h3>
+
+          <p>The action of archiving a work, indicating that no further revisions are intended to take place. Manifestations of the work which have not been withdrawn remain available, marked with an indication that no further updates are anticipated.</p>
+           <p>
+            Superclasses  &middot; EditorialAction           </p>
+        </article>
+        <article class="class" id="EditorialAction">
+          <h3>Class <a href="#EditorialAction">Editorial action</a></h3>
+
+          <p>An editorial action is an action taken on a manifestation or a work, for example: archiving a work, reviewing a manifestation, revising a manifestation or withdrawing a manifestation.</p>
+         </article>
+        <article class="class" id="EditorialReview">
+          <h3>Class <a href="#EditorialReview">Editorial review</a></h3>
+
+          <p>A review of a manifestation. A decision to review may be triggered by an external event, for example: a change in Government policy, the availability of new data, external work in the same area or the output of parliamentary business; a change in user needs, for example: a new type of enquiry; or a change to library policy or practice, for example: in presentation, citation style, method of acknowledgement, change of portfolio or change of specialist.</p>
+           <p>
+            Superclasses  &middot; EditorialAction           </p>
+        </article>
+        <article class="class" id="Feedback">
+          <h3>Class <a href="#Feedback">Feedback</a></h3>
+
+          <p>Feedback on a record, provided in a submission. An instance of the feedback class may contain the text of the feedback, or a pointer to the substance of the feedback in a separate system.</p>
+         </article>
+        <article class="class" id="Manifestation">
+          <h3>Class <a href="#Manifestation">Manifestation</a></h3>
+
+          <p>A manifestation of an expression of a work, allowing for multiple versions of an expression over time, for example: an edition of a book, or a remastered audio file of a podcast episode.</p>
+         </article>
+        <article class="class" id="ReviewCycle">
+          <h3>Class <a href="#ReviewCycle">Review cycle</a></h3>
+
+          <p>A review cycle describes the period between reviews of a work.</p>
+         </article>
+        <article class="class" id="Revision">
+          <h3>Class <a href="#Revision">Revision</a></h3>
+
+          <p>The action of revising an existing manifestation, resulting in a new manifestation. The existing manifestation remains unchanged.</p>
+           <p>
+            Superclasses  &middot; EditorialAction           </p>
+        </article>
+        <article class="class" id="RevisionType">
+          <h3>Class <a href="#RevisionType">Revision type</a></h3>
+
+          <p>The type of a revision, for example: a major or minor edit.</p>
+         </article>
+        <article class="class" id="Withdrawal">
+          <h3>Class <a href="#Withdrawal">Withdrawal</a></h3>
+
+          <p>The action of withdrawing a manifestation. A manifestation may be withdrawn for a period and reinstated, or permanently withdrawn.</p>
+           <p>
+            Superclasses  &middot; EditorialAction           </p>
+        </article>
+        <article class="class" id="Work">
+          <h3>Class <a href="#Work">Work</a></h3>
+
+          <p>A distinct intellectual creation, similar to a work as defined in FRBR.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="archivingOf">
+          <h3>
+            Object property
+            <a href="#archivingOf"
+              >Archiving of</a
+            >
+          </h3>
+
+           <p>Relates an archiving action to the work being archived.</p>
+
+          <p>
+            <a href="#Archiving"
+              >Archiving</a
+            >
+            &mdash; Archiving of &mdash;
+            <a href="#Work">Work</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="by">
+          <h3>
+            Object property
+            <a href="#by"
+              >By</a
+            >
+          </h3>
+
+           <p>Relates an editorial action to the person or group performing that action.</p>
+
+          <p>
+            <a href="#EditorialAction"
+              >EditorialAction</a
+            >
+            &mdash; By &mdash;
+            <a href="#Agent">Agent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="feedbackLeadsTo">
+          <h3>
+            Object property
+            <a href="#feedbackLeadsTo"
+              >Feedback leads to</a
+            >
+          </h3>
+
+           <p>Relates feedback to a resulting editorial review. An editorial review may be triggered by one or more items of feedback. The acceptance of feedback does not necessitate an editorial review. Feedback may result in more than one editorial review, or none.</p>
+
+          <p>
+            <a href="#Feedback"
+              >Feedback</a
+            >
+            &mdash; Feedback leads to &mdash;
+            <a href="#EditorialReview">EditorialReview</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="fromManifestation">
+          <h3>
+            Object property
+            <a href="#fromManifestation"
+              >From manifestation</a
+            >
+          </h3>
+
+           <p>Relates an act of revision to an existing manifestation to be revised.</p>
+
+          <p>
+            <a href="#Revision"
+              >Revision</a
+            >
+            &mdash; From manifestation &mdash;
+            <a href="#Manifestation">Manifestation</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasReviewCycle">
+          <h3>
+            Object property
+            <a href="#hasReviewCycle"
+              >Has review cycle</a
+            >
+          </h3>
+
+           <p>Relates a work to the review cycle of that work. A work has a single review cycle, or none.</p>
+
+          <p>
+            <a href="#Work"
+              >Work</a
+            >
+            &mdash; Has review cycle &mdash;
+            <a href="#ReviewCycle">ReviewCycle</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasRevisionType">
+          <h3>
+            Object property
+            <a href="#hasRevisionType"
+              >Has revision type</a
+            >
+          </h3>
+
+           <p>Relates an action of revision to the type of that revision.</p>
+
+          <p>
+            <a href="#Revision"
+              >Revision</a
+            >
+            &mdash; Has revision type &mdash;
+            <a href="#RevisionType">RevisionType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="leadsTo">
+          <h3>
+            Object property
+            <a href="#leadsTo"
+              >Leads to</a
+            >
+          </h3>
+
+           <p>Relates an editorial action to a resulting editorial action, for example: an editorial review leading to a revision of a manifestation.</p>
+
+          <p>
+            <a href="#EditorialAction"
+              >EditorialAction</a
+            >
+            &mdash; Leads to &mdash;
+            <a href="#EditorialAction">EditorialAction</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="leadsToNew">
+          <h3>
+            Object property
+            <a href="#leadsToNew"
+              >Leads to new</a
+            >
+          </h3>
+
+           <p>Relates an editorial review to the creation of a new work.</p>
+
+          <p>
+            <a href="#EditorialReview"
+              >EditorialReview</a
+            >
+            &mdash; Leads to new &mdash;
+            <a href="#Work">Work</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="submits">
+          <h3>
+            Object property
+            <a href="#submits"
+              >Makes</a
+            >
+          </h3>
+
+           <p>Relates an agent to the feedback submitted by that agent.</p>
+
+          <p>
+            <a href="#Agent"
+              >Agent</a
+            >
+            &mdash; Makes &mdash;
+            <a href="#Feedback">Feedback</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="resultsIn">
+          <h3>
+            Object property
+            <a href="#resultsIn"
+              >Results in</a
+            >
+          </h3>
+
+           <p>Relates a review cycle to resulting editorial reviews.</p>
+
+          <p>
+            <a href="#ReviewCycle"
+              >ReviewCycle</a
+            >
+            &mdash; Results in &mdash;
+            <a href="#EditorialReview">EditorialReview</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="reviewOf">
+          <h3>
+            Object property
+            <a href="#reviewOf"
+              >Review of</a
+            >
+          </h3>
+
+           <p>Relates an editorial review to the manifestation being reviewed.</p>
+
+          <p>
+            <a href="#EditorialReview"
+              >EditorialReview</a
+            >
+            &mdash; Review of &mdash;
+            <a href="#Manifestation">Manifestation</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="supersedes">
+          <h3>
+            Object property
+            <a href="#supersedes"
+              >Supersedes</a
+            >
+          </h3>
+
+           <p>Relates a work to a work that supersedes it: used to point from an archived work to its replacement. A work may be superseded by more than one work. A work may supersede more than one work.</p>
+
+          <p>
+            <a href="#Work"
+              >Work</a
+            >
+            &mdash; Supersedes &mdash;
+            <a href="#Work">Work</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="toManifestation">
+          <h3>
+            Object property
+            <a href="#toManifestation"
+              >To manifestation</a
+            >
+          </h3>
+
+           <p>Relates an act of revision to a new manifestation resulting from the revision.</p>
+
+          <p>
+            <a href="#Revision"
+              >Revision</a
+            >
+            &mdash; To manifestation &mdash;
+            <a href="#Manifestation">Manifestation</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="withdrawnBy">
+          <h3>
+            Object property
+            <a href="#withdrawnBy"
+              >Withdrawn by</a
+            >
+          </h3>
+
+           <p>Relates a manifestation to the action of withdrawing that manifestation.</p>
+
+          <p>
+            <a href="#Manifestation"
+              >Manifestation</a
+            >
+            &mdash; Withdrawn by &mdash;
+            <a href="#Withdrawal">Withdrawal</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="at">
+          <h3>
+            Data property
+            <a href="#at">At</a>
+          </h3>
+
+          <p>Relates an editorial action to the time at which the action was taken.</p>
+
+          <p>
+            EditorialAction &mdash; At &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="feedbackText">
+          <h3>
+            Data property
+            <a href="#feedbackText">Feedback text</a>
+          </h3>
+
+          <p>Relates an item of feedback to the text of that feedback.</p>
+
+          <p>
+            Feedback &mdash; Feedback text &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="hasRevisionDescription">
+          <h3>
+            Data property
+            <a href="#hasRevisionDescription">Has revision description</a>
+          </h3>
+
+          <p>Relates a revision - from an existing manifestation to a new manifestation - to a textual description of that revision. This is used to describe why the revision was made and is analogous to a git commit message.</p>
+
+          <p>
+            Revision &mdash; Has revision description &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="hasRevisionTypeDescription">
+          <h3>
+            Data property
+            <a href="#hasRevisionTypeDescription">Has revision type description</a>
+          </h3>
+
+          <p>Relates a revision type to a textual description of that type.</p>
+
+          <p>
+            RevisionType &mdash; Has revision type description &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="publishedAt">
+          <h3>
+            Data property
+            <a href="#publishedAt">Published at</a>
+          </h3>
+
+          <p>Relates a manifestation to the time at which it was published.</p>
+
+          <p>
+            Manifestation &mdash; Published at &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="receivedAt">
+          <h3>
+            Data property
+            <a href="#receivedAt">Received at</a>
+          </h3>
+
+          <p>Relates an item of feedback to the time at which the feedback was received.</p>
+
+          <p>
+            Feedback &mdash; Received at &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="reinstatedAt">
+          <h3>
+            Data property
+            <a href="#reinstatedAt">Reinstated at</a>
+          </h3>
+
+          <p>Relates a withdrawal of a manifestation to the time at which it was withdrawn.</p>
+
+          <p>
+            Withdrawal &mdash; Reinstated at &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="reviewedOn">
+          <h3>
+            Data property
+            <a href="#reviewedOn">Reviewed on</a>
+          </h3>
+
+          <p>Relates an editorial review of a manifestation to the date on which the review took place.</p>
+
+          <p>
+            EditorialReview &mdash; Reviewed on &mdash;
+            date
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialReview</td>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>Archiving</td>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>Withdrawal</td>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>Revision</td>
+            <td>/<wbr>ontologies/<wbr>record-review/<wbr>EditorialAction</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>precr</dt>
+            <dd>http://parliament.uk/ontologies/record-review/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2020-12-18</time></p>
+
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../record-review/record-review-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../record-review/record-review-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

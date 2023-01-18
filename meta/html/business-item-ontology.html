@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../business-item/business-item-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../business-item/business-item-ontology.ttl"
+      type="text/turtle"
+      title="Business item ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Business item ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Business item ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Business item ontology</h1>
+
+      <p id="description">A model describing items of business taking place in Parliament or outside Parliament - as part of a process involving Parliament - and their scheduling.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/business-item/business-item.png">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="BusinessItem">
+          <h3>Class <a href="#BusinessItem">Business item</a></h3>
+
+          <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
+         </article>
+        <article class="class" id="BusinessItemSeries">
+          <h3>Class <a href="#BusinessItemSeries">Business item series</a></h3>
+
+          <p>A series of regularly recurring business items. For example: questions to the Department of Health and Social Care.</p>
+         </article>
+        <article class="class" id="BusinessItemType">
+          <h3>Class <a href="#BusinessItemType">Business item type</a></h3>
+
+          <p>The type of a business item. For example: a committee visit, a committee evidence session or a chamber debate.</p>
+         </article>
+        <article class="class" id="CalendaredEvent">
+          <h3>Class <a href="#CalendaredEvent">Calendared event</a></h3>
+
+          <p>An event during which business items happen.</p>
+         </article>
+        <article class="class" id="Document">
+          <h3>Class <a href="#Document">Document</a></h3>
+
+          <p>A document being a FRBR work.</p>
+         </article>
+        <article class="class" id="Place">
+          <h3>Class <a href="#Place">Place</a></h3>
+
+          <p>A place named in a geography.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="calendarisation">
+          <h3>
+            Object property
+            <a href="#calendarisation"
+              >Calendarisation</a
+            >
+          </h3>
+
+           <p>Describes the process of setting a time or date at which a business item is expected to take place.</p>
+
+          <p>
+            <a href="#BusinessItem"
+              >BusinessItem</a
+            >
+            &mdash; Calendarisation &mdash;
+            <a href="#CalendaredEvent">CalendaredEvent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="containsBusinessItem">
+          <h3>
+            Object property
+            <a href="#containsBusinessItem"
+              >Contains business item</a
+            >
+          </h3>
+
+           <p>Allows a business item to be nested inside another business item. For example, a committee meeting during a committee visit.</p>
+
+          <p>
+            <a href="#BusinessItem"
+              >BusinessItem</a
+            >
+            &mdash; Contains business item &mdash;
+            <a href="#BusinessItem">BusinessItem</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="followedBy">
+          <h3>
+            Object property
+            <a href="#followedBy"
+              >Followed by</a
+            >
+          </h3>
+
+           <p>Relates a calendared event to a subsequent calendared event</p>
+
+          <p>
+            <a href="#CalendaredEvent"
+              >CalendaredEvent</a
+            >
+            &mdash; Followed by &mdash;
+            <a href="#CalendaredEvent">CalendaredEvent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasBusinessItemType">
+          <h3>
+            Object property
+            <a href="#hasBusinessItemType"
+              >Has business item type</a
+            >
+          </h3>
+
+           <p>Relates a business item to its type.</p>
+
+          <p>
+            <a href="#BusinessItem"
+              >BusinessItem</a
+            >
+            &mdash; Has business item type &mdash;
+            <a href="#BusinessItemType">BusinessItemType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="partOfSeries">
+          <h3>
+            Object property
+            <a href="#partOfSeries"
+              >Part of series</a
+            >
+          </h3>
+
+           <p>Relates a business item to a business item series it is part of.</p>
+
+          <p>
+            <a href="#BusinessItem"
+              >BusinessItem</a
+            >
+            &mdash; Part of series &mdash;
+            <a href="#BusinessItemSeries">BusinessItemSeries</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="recordOf">
+          <h3>
+            Object property
+            <a href="#recordOf"
+              >Record of</a
+            >
+          </h3>
+
+           <p>Relates a document to the calendared event it records.</p>
+
+          <p>
+            <a href="#Document"
+              >Document</a
+            >
+            &mdash; Record of &mdash;
+            <a href="#CalendaredEvent">CalendaredEvent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="takesPlaceIn">
+          <h3>
+            Object property
+            <a href="#takesPlaceIn"
+              >Takes place in</a
+            >
+          </h3>
+
+           <p>Relates a calendared event to the place it occurs.</p>
+
+          <p>
+            <a href="#CalendaredEvent"
+              >CalendaredEvent</a
+            >
+            &mdash; Takes place in &mdash;
+            <a href="#Place">Place</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="cancelledAt">
+          <h3>
+            Data property
+            <a href="#cancelledAt">Cancelled at</a>
+          </h3>
+
+          <p>The time at which a calendared event was cancelled.</p>
+
+          <p>
+            CalendaredEvent &mdash; Cancelled at &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="disposedOfAt">
+          <h3>
+            Data property
+            <a href="#disposedOfAt">Disposed of at</a>
+          </h3>
+
+          <p>The time at which an agenda item was completed.</p>
+
+          <p>
+            CalendaredEvent &mdash; Disposed of at &mdash;
+            dateTime
+          </p>
+        </article>
+
+        <article class="dataproperty" id="notReached">
+          <h3>
+            Data property
+            <a href="#notReached">Not reached</a>
+          </h3>
+
+          <p>A boolean which is true when a calendared event was not reached or became unavailable for disposal.</p>
+
+          <p>
+            CalendaredEvent &mdash; Not reached &mdash;
+            boolean
+          </p>
+        </article>
+      </section>
+
+    
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>pbi</dt>
+            <dd>http://parliament.uk/ontologies/business-item/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2018-10-13</time></p>
+
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Silver Oliver           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../business-item/business-item-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../business-item/business-item-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

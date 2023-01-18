@@ -17,9 +17,9 @@ def ttlpath2ontologyname(value):
     return Markup(Path(value).stem.replace("-", " ").title())
 
 
-def ttlpath2htmlpath(ttlpath):
-    ttlpathparts = ttlpath.split("/")
-    htmlpath = "".join(
+def ttlpath2htmlpath(this_ttl_path):
+    ttlpathparts = this_ttl_path.split("/")
+    this_html_path: str = "".join(
         [
             "https://ukparliament.github.io/ontologies/meta/html/",
             ttlpathparts[2],
@@ -28,11 +28,11 @@ def ttlpath2htmlpath(ttlpath):
         ]
     )
 
-    return htmlpath
+    return this_html_path
 
 
 env = Environment(
-    loader=FileSystemLoader("./meta/templates"),
+    loader=FileSystemLoader("./templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
@@ -49,15 +49,17 @@ env.globals["now"] = datetime.utcnow().strftime("%Y-%m-%d")
 
 template = env.get_template("ontology.html")
 
-htmldir = "./meta/html/"
+htmldir = "./html/"
 
-ttlfiles = list(Path(".").glob("**/*.ttl"))
+ttlfiles = list(Path("..").glob("**/*.ttl"))
+
 
 for ttlpath in ttlfiles:
+    print(str(ttlpath))
     if "odds-and-sods" in str(ttlpath):
-        print("skipping " + str(ttlpath))
+        # print("skipping " + str(ttlpath))
+        print()
     else:
-
         print("Considering " + str(ttlpath))
 
         g = rdflib.Graph()
@@ -84,8 +86,9 @@ for ttlpath in ttlfiles:
                 for superclassobject in superclassobjects:
                     superclasses.append(superclassobject.split("/")[-1])
 
-                #             h3id = g.label(s).lower().replace(" ", "-")
-                #         classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3> {subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
+    # h3id = g.label(s).lower().replace(" ", "-")
+    # classes.append(f'<article class="class"><h3 id="{h3id}">{g.label(s)}</h3>')
+    # classes.append(f'{subClassNote}<p>{g.value(s, RDFS.comment)}</p></article>')
                 
                 classes.append(
                     {
@@ -176,6 +179,7 @@ for ttlpath in ttlfiles:
             for s, p, o in g.triples((None, RDFS.subClassOf, None)):
 
                 subClassObject = {"s": urlparse(s).path, "o": urlparse(o).path}
+                subClassObject = {"s": urlparse(s).path, "o": urlparse(o).path}
                 subClasses.append(subClassObject)
 
             namespaces = []
@@ -190,9 +194,9 @@ for ttlpath in ttlfiles:
             except FileExistsError:
                 pass
 
-            htmlpath = htmldir + str(ttlpath.parent) + "/" + ttlpath.stem + ".html"
-
-            relcanonical = (
+            htmlpath = htmldir + ttlpath.stem + ".html"
+            print(htmlpath)
+            rel_canonical = (
                 "https://ukparliament.github.io/ontologies/meta/html/"
                 + str(ttlpath.parent)
                 + "/"
@@ -204,7 +208,7 @@ for ttlpath in ttlfiles:
                 print("  Writing " + htmlpath)
                 htmlfile.write(
                     template.render(
-                        relcanonical=relcanonical,
+                        relcanonical=rel_canonical,
                         htmlpath=htmlpath.lstrip("."),
                         title=Markup(title),
                         created=Markup(created),

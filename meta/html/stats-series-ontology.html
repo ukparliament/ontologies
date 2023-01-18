@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../stats-series/stats-series-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../stats-series/stats-series-ontology.ttl"
+      type="text/turtle"
+      title="Stats series ontology - deprecated: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Stats series ontology - deprecated</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Stats series ontology - deprecated
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="title">Stats series ontology - deprecated</h1>
+
+      <p id="description">Statistical series ontology for UK Parliament. Primarily aimed at modelling statistical information around places. Deprecated in favour of RDF Data Cube.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="AverageType">
+          <h3>Class <a href="#AverageType">AverageType</a></h3>
+
+          <p>Used to express the method of averaging used for data set releases covering a time period rather than a point in time (date).</p>
+         </article>
+        <article class="class" id="Businesses">
+          <h3>Class <a href="#Businesses">Businesses</a></h3>
+
+          <p>A population of businesses in a place. This might be all registered businesses or business in a certain industrial sector.</p>
+           <p>
+            Superclasses  &middot; Population           </p>
+        </article>
+        <article class="class" id="DataPoint">
+          <h3>Class <a href="#DataPoint">DataPoint</a></h3>
+
+          <p>A specific data point in a statistics release version. A measure for a given population at a point in time or averaged over an interval.</p>
+         </article>
+        <article class="class" id="DataSet">
+          <h3>Class <a href="#DataSet">DataSet</a></h3>
+
+          <p>A data set e.g. age profiles by constituency over time.</p>
+         </article>
+        <article class="class" id="DataSetRelease">
+          <h3>Class <a href="#DataSetRelease">DataSetRelease</a></h3>
+
+          <p>A release of a data set. Different versions may be published over time to correct mistakes.</p>
+         </article>
+        <article class="class" id="DataSetReleaseVersion">
+          <h3>Class <a href="#DataSetReleaseVersion">DataSetReleaseVersion</a></h3>
+
+          <p>A version of a release of a data set. Different versions may be released over time to correct miscalculations etc.</p>
+         </article>
+        <article class="class" id="People">
+          <h3>Class <a href="#People">People</a></h3>
+
+          <p>A population of people in a place. This might be all people resident or over 70s resident or people in receipt of Universal Credit etc.</p>
+           <p>
+            Superclasses  &middot; Population           </p>
+        </article>
+        <article class="class" id="Period">
+          <h3>Class <a href="#Period">Period</a></h3>
+
+          <p>The period over which a measurement is counted e.g. wages per week.</p>
+         </article>
+        <article class="class" id="Place">
+          <h3>Class <a href="#Place">Place</a></h3>
+
+          <p>A place. Any geographical extent. In the case of parliamentary demographic statistics we&#39;ll usually be dealing with a constituency area but other places may be needed in the future e.g. local authority areas.</p>
+         </article>
+        <article class="class" id="Population">
+          <h3>Class <a href="#Population">Population</a></h3>
+
+          <p>A set of things bounded by a geographical extent. Might be a population of residents, a population of those eligible to vote, a population of small businesses, a population of static caravans, in a constituency etc.</p>
+         </article>
+        <article class="class" id="Residences">
+          <h3>Class <a href="#Residences">Residences</a></h3>
+
+          <p>A population of residences in a place. This might be all residences or local authority owned residences etc.</p>
+           <p>
+            Superclasses  &middot; Population           </p>
+        </article>
+        <article class="class" id="Source">
+          <h3>Class <a href="#Source">Source</a></h3>
+
+          <p>The source organisation for a given subset of a data set release. Much of the data published by the House of Commons Library originates with the Office of National Statistics but often originates with other organisations for the devolved nations e.g. Northern Ireland Statistics and Research Agency for Northern Ireland. Other data sets originate in government departments.</p>
+         </article>
+        <article class="class" id="TemporalCoverage">
+          <h3>Class <a href="#TemporalCoverage">TemporalCoverage</a></h3>
+
+          <p>The period or point in time (date) covered by a statistics release e.g. quarter 1 of 2018 or April 2016. Allows period coverage to vary between releases.</p>
+         </article>
+        <article class="class" id="TerritorialApplicability">
+          <h3>Class <a href="#TerritorialApplicability">TerritorialApplicability</a></h3>
+
+          <p>The territorial applicability of a data set release. Allows us to say that a given release of a data set contains data from a given source (organisation) for a given place e.g. a constituency. Sources may change between releases.</p>
+         </article>
+        <article class="class" id="Unit">
+          <h3>Class <a href="#Unit">Unit</a></h3>
+
+          <p>The unit of measurement for all data points in a stats series e.g. GBP.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="averagedOverPeriodAs">
+          <h3>
+            Object property
+            <a href="#averagedOverPeriodAs"
+              >averagedOverPeriodAs</a
+            >
+          </h3>
+
+           <p>Relates a temporal coverage to any means of averaging employed on the data.</p>
+
+          <p>
+            <a href="#TemporalCoverage"
+              >TemporalCoverage</a
+            >
+            &mdash; averagedOverPeriodAs &mdash;
+            <a href="#AverageType">AverageType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="boundBy">
+          <h3>
+            Object property
+            <a href="#boundBy"
+              >boundBy</a
+            >
+          </h3>
+
+           <p>Relates a population (of people, residences, businesses etc) to a geographic area.</p>
+
+          <p>
+            <a href="#Population"
+              >Population</a
+            >
+            &mdash; boundBy &mdash;
+            <a href="#Place">Place</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="countPer">
+          <h3>
+            Object property
+            <a href="#countPer"
+              >countPer</a
+            >
+          </h3>
+
+           <p>Relates a data set to the period over which the data points in the data set are counted e.g. average wage per week.</p>
+
+          <p>
+            <a href="#DataSet"
+              >DataSet</a
+            >
+            &mdash; countPer &mdash;
+            <a href="#Period">Period</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="fromSource">
+          <h3>
+            Object property
+            <a href="#fromSource"
+              >fromSource</a
+            >
+          </h3>
+
+           <p>Relates territorial applicability to a data source organisation.</p>
+
+          <p>
+            <a href="#TerritorialApplicability"
+              >TerritorialApplicability</a
+            >
+            &mdash; fromSource &mdash;
+            <a href="#Source">Source</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasTerritorialApplicability">
+          <h3>
+            Object property
+            <a href="#hasTerritorialApplicability"
+              >hasTerritorialApplicability</a
+            >
+          </h3>
+
+           <p>Relates a data set release to it&#39;s territorial applicability.</p>
+
+          <p>
+            <a href="#DataSetRelease"
+              >DataSetRelease</a
+            >
+            &mdash; hasTerritorialApplicability &mdash;
+            <a href="#TerritorialApplicability">TerritorialApplicability</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasUnit">
+          <h3>
+            Object property
+            <a href="#hasUnit"
+              >hasUnit</a
+            >
+          </h3>
+
+           <p>Relates a data set to the unit in which the data is counted e.g. GBP.</p>
+
+          <p>
+            <a href="#DataSet"
+              >DataSet</a
+            >
+            &mdash; hasUnit &mdash;
+            <a href="#Unit">Unit</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inDataSetReleaseVersion">
+          <h3>
+            Object property
+            <a href="#inDataSetReleaseVersion"
+              >inDataSetReleaseVersion</a
+            >
+          </h3>
+
+           <p>Relates a data point to the data set release version it forms part of.</p>
+
+          <p>
+            <a href="#DataPoint"
+              >DataPoint</a
+            >
+            &mdash; inDataSetReleaseVersion &mdash;
+            <a href="#DataSetReleaseVersion">DataSetReleaseVersion</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inPlace">
+          <h3>
+            Object property
+            <a href="#inPlace"
+              >inPlace</a
+            >
+          </h3>
+
+           <p>Relates territorial applicability to a geographic area.</p>
+
+          <p>
+            <a href="#TerritorialApplicability"
+              >TerritorialApplicability</a
+            >
+            &mdash; inPlace &mdash;
+            <a href="#Place">Place</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="measureOf">
+          <h3>
+            Object property
+            <a href="#measureOf"
+              >measureOf</a
+            >
+          </h3>
+
+           <p>Relates a data point to a given population.</p>
+
+          <p>
+            <a href="#DataPoint"
+              >DataPoint</a
+            >
+            &mdash; measureOf &mdash;
+            <a href="#Population">Population</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="releaseOf">
+          <h3>
+            Object property
+            <a href="#releaseOf"
+              >releaseOf</a
+            >
+          </h3>
+
+           <p>Relates a data set release to a data set it forms part of.</p>
+
+          <p>
+            <a href="#DataSetRelease"
+              >DataSetRelease</a
+            >
+            &mdash; releaseOf &mdash;
+            <a href="#DataSet">DataSet</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="releaseVersionOf">
+          <h3>
+            Object property
+            <a href="#releaseVersionOf"
+              >releaseVersionOf</a
+            >
+          </h3>
+
+           <p>Relates a data set release version to a data set release.</p>
+
+          <p>
+            <a href="#DataSetReleaseVersion"
+              >DataSetReleaseVersion</a
+            >
+            &mdash; releaseVersionOf &mdash;
+            <a href="#DataSetRelease">DataSetRelease</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="temporalCoverage">
+          <h3>
+            Object property
+            <a href="#temporalCoverage"
+              >temporalCoverage</a
+            >
+          </h3>
+
+           <p>Relates a data set release to the time period or point in time the data was gathered.</p>
+
+          <p>
+            <a href="#DataSetRelease"
+              >DataSetRelease</a
+            >
+            &mdash; temporalCoverage &mdash;
+            <a href="#TemporalCoverage">TemporalCoverage</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="caveatText">
+          <h3>
+            Data property
+            <a href="#caveatText">caveatText</a>
+          </h3>
+
+          <p>Relates a data set to any caveat text accompanying it.</p>
+
+          <p>
+            DataSet &mdash; caveatText &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="endOn">
+          <h3>
+            Data property
+            <a href="#endOn">endOn</a>
+          </h3>
+
+          <p>Relates a temporal coverage of a period to the end date of that period.</p>
+
+          <p>
+            TemporalCoverage &mdash; endOn &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="onDate">
+          <h3>
+            Data property
+            <a href="#onDate">onDate</a>
+          </h3>
+
+          <p>Relates a temporal coverage of a day to that date.</p>
+
+          <p>
+            TemporalCoverage &mdash; onDate &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="releasedOn">
+          <h3>
+            Data property
+            <a href="#releasedOn">releasedOn</a>
+          </h3>
+
+          <p>Relates a data set release version to the date on which it was released.</p>
+
+          <p>
+            DataPoint &mdash; releasedOn &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="releaseNotes">
+          <h3>
+            Data property
+            <a href="#releaseNotes">releaseNotes</a>
+          </h3>
+
+          <p>Relates a data set release to explanatory notes.</p>
+
+          <p>
+            DataSetRelease &mdash; releaseNotes &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="releaseVersionNotes">
+          <h3>
+            Data property
+            <a href="#releaseVersionNotes">releaseVersionNotes</a>
+          </h3>
+
+          <p>Relates a data set release version to explanatory notes.</p>
+
+          <p>
+            DataSetReleaseVersion &mdash; releaseVersionNotes &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="startOn">
+          <h3>
+            Data property
+            <a href="#startOn">startOn</a>
+          </h3>
+
+          <p>Relates a temporal coverage of a period to the start date of that period.</p>
+
+          <p>
+            TemporalCoverage &mdash; startOn &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="updateFrequency">
+          <h3>
+            Data property
+            <a href="#updateFrequency">updateFrequency</a>
+          </h3>
+
+          <p>Relates a data set to any textual account of its update frequency.</p>
+
+          <p>
+            DataSet &mdash; updateFrequency &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="value">
+          <h3>
+            Data property
+            <a href="#value">value</a>
+          </h3>
+
+          <p>Relates a data point to it&#39;s value as an integer.</p>
+
+          <p>
+            DataPoint &mdash; value &mdash;
+            integer
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>stats-series/<wbr>People</td>
+            <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Residences</td>
+            <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Businesses</td>
+            <td>/<wbr>ontologies/<wbr>stats-series/<wbr>Population</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>pss</dt>
+            <dd>http://parliament.uk/ontologies/stats-series/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2018-03-08</time></p>
+
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-18 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../stats-series/stats-series-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../stats-series/stats-series-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
