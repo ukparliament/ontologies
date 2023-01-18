@@ -33,11 +33,11 @@ jobs:
       - name: git status
         run: git status
         
+      - name: git add .
+        run: git add .
+        
       - name: Commit files
         run: |
-          echo ${{ github.ref }}
-          echo ${{ github.sha }}
-          git add .
           git config --local user.email "robertbrook@fastmail.fm"
           git config --local user.name "Robert Brook"
           git commit -m "Automated build push" -a | exit 0
