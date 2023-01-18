@@ -33,9 +33,9 @@ ppaper:ParliamentaryPaperWork rdf:type owl:Class ;
 	rdfs:comment "A parliamentary paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
-ppaper:ParliamentaryPaper rdf:type owl:Class ;
-	rdfs:label "Parliamentary paper"@en ;
-	rdfs:comment "A parliamentary paper made available to a House."@en ;
+ppaper:ParliamentaryPaperExpression rdf:type owl:Class ;
+	rdfs:label "Parliamentary paper expression"@en ;
+	rdfs:comment "A parliamentary paper made available to a House, being an expression of parliamentary paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:PaperBundle rdf:type owl:Class ;
@@ -69,22 +69,22 @@ ppaper:Session rdf:type owl:Class ;
 	
 ppaper:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Expression of"@en ;
-	rdfs:comment "Relates a parliamentary paper to the work that paper is an expression of. A parliamentary paper is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to the work that paper is an expression of. A parliamentary paper expression is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range ppaper:ParliamentaryPaperWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Forms part of"@en ;
-	rdfs:comment "Relates a parliamentary paper to the paper bundle it forms part of. A parliamentary paper may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to the paper bundle it forms part of. A parliamentary paper expression may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range ppaper:PaperBundle ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
 ppaper:hasType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has type"@en ;
-	rdfs:comment "Relates a parliamentary paper to the type of that paper. A parliamentary paper may have one or more types."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to the type of that paper. A parliamentary paper expression may have one or more types, or none."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range ppaper:PaperType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
@@ -97,8 +97,8 @@ ppaper:paperTypeParent rdf:type owl:ObjectProperty ;
 
 ppaper:asSeriesitem rdf:type owl:ObjectProperty ;
 	rdfs:label "As series item"@en ;
-	rdfs:comment "Relates a parliamentary paper to the existence of that paper in a series. A paper series item refers to one parliamentary paper. A parliamentary paper may exist as an item in one or more series, or none."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to the existence of that paper in a series. A paper series item refers to one parliamentary paper expression. A parliamentary paper expression may exist as an item in one or more series, or none."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range ppaper:PaperSeriesItem ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 
@@ -150,28 +150,28 @@ ppaper:hasPrivilege rdf:type owl:DatatypeProperty ;
 	
 ppaper:authoredOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Authored on"@en ;
-	rdfs:comment "Relates a parliamentary paper to the date that parliamentary paper was authored on."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to the date that paper was authored on."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:copyrightStatement rdf:type owl:DatatypeProperty ;
 	rdfs:label "Copyright statement"@en ;
-	rdfs:comment "Relates a parliamentary paper to a statement containing the copyright description for that parliamentary paper."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to a statement containing the copyright description for that paper."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:pageCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Page count"@en ;
-	rdfs:comment "Relates a parliamentary paper to its page count."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Relates a parliamentary paper expression to its page count."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
 	
 ppaper:containsStatistics rdf:type owl:DatatypeProperty ;
 	rdfs:label "Contains statistics"@en ;
-	rdfs:comment "Used to record if a parliamentary paper contains statistics."@en ;
-	rdfs:domain ppaper:ParliamentaryPaper ;
+	rdfs:comment "Used to record if a parliamentary paper expression contains statistics."@en ;
+	rdfs:domain ppaper:ParliamentaryPaperExpression ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
