@@ -45,7 +45,8 @@ env.filters["ttlpath2ontologyname"] = ttlpath2ontologyname
 
 env.filters["ttlpath2htmlpath"] = ttlpath2htmlpath
 
-env.globals["now"] = datetime.utcnow().strftime("%Y-%m-%d")
+# env.globals["now"] = datetime.utcnow().strftime("%Y-%m-%d")
+env.globals["now"] = datetime.utcnow()
 
 template = env.get_template("ontology.html")
 
