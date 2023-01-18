@@ -30,6 +30,9 @@ jobs:
       - name: generate-docs-index.py
         run: python3 generate-docs-index.py
         
+      - name: git status
+        run: git status
+        
       - name: Commit files
         run: |
           echo ${{ github.ref }}
