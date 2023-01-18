@@ -27,13 +27,7 @@
 
 #######  Classes #####
 
-pbill:PresentedPaper rdf:type owl:Class ;
-	rdfs:label "Presented paper"@en ;
-	rdfs:comment "Papers laid into or published under the authority of Parliament."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-
 pbill:Bill rdf:type owl:Class ;
-	rdfs:subClassOf pbill:PresentedPaper ;
 	rdfs:label "Bill"@en ;
 	rdfs:comment "A proposal for a new Act of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
@@ -74,11 +68,6 @@ pbill:CarryOver rdf:type owl:Class ;
 pbill:ParliamentActProcedureInvocation rdf:type owl:Class ;
 	rdfs:label "Parliament Act procedure invocation"@en ;
 	rdfs:comment "The Parliament Acts of 1911 and 1949 limit the power of the House of Lords in relation to the House of Commons. The Acts removed the rights of the Lords to pass bills on public tax and spending, to veto or to indefinitely delay the progress of Public Bills. Where a bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Government may introduce a similar bill in the following session. If the House of Commons invokes the Parliament Act, the House of Lords has one month to agree to the bill, otherwise the Commons may pass the bill unilaterally. The similarity of a bill being introduced in a following session is not made explicit until the Speaker certifies the bill as being subject to the Parliament Act."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:ExplanatoryNote rdf:type owl:Class ;
-	rdfs:label "Explanatory note"@en ;
-	rdfs:comment "A document explaining the purpose of a bill. All Government Bills and some Private Members' Bills have explanatory notes. Explanatory memoranda provided alongside a Private Bill are also included in this class."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:DepartmentalSponsorship rdf:type owl:Class ;
@@ -150,13 +139,6 @@ pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the new session."@en ;
 	rdfs:domain pbill:ParliamentActProcedureInvocation ;
 	rdfs:range pbill:PublicBill ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-
-pbill:explains rdf:type owl:ObjectProperty ;
-	rdfs:label "Explains"@en ;
-	rdfs:comment "Relates an explanatory note to the bill whose purpose it explains."@en ;
-	rdfs:domain pbill:ExplanatoryNote ;
-	rdfs:range pbill:Bill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasDepartmentalSponsorship rdf:type owl:ObjectProperty ;
