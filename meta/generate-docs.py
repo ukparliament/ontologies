@@ -188,11 +188,11 @@ for ttlpath in ttlfiles:
                 namespaceObject = {"p": p, "n": n}
                 namespaces.append(namespaceObject)
 
-            try:
-                os.makedirs(htmldir + str(ttlpath.parent))
-                print(" Made dir " + htmldir + str(ttlpath.parent))
-            except FileExistsError:
-                pass
+            # try:
+            #     os.makedirs(htmldir + str(ttlpath.parent))
+            #     print(" Made dir " + htmldir + str(ttlpath.parent))
+            # except FileExistsError:
+            #     pass
 
             htmlpath = htmldir + ttlpath.stem + ".html"
             print(htmlpath)

@@ -12,7 +12,7 @@ def stemonly(pathvalue):
 
 
 env = Environment(
-    loader=FileSystemLoader("./meta/templates"),
+    loader=FileSystemLoader("./templates"),
     autoescape=select_autoescape(),
     cache_size=0,
     trim_blocks=True,
@@ -21,12 +21,11 @@ env = Environment(
 
 env.filters["stemonly"] = stemonly
 
-
 template = env.get_template("ontologies-index.html")
 
-htmlfiles = list(Path(".").glob("./meta/html/*/*.html"))
+htmlfiles = list(Path(".").glob("./html/*.html"))
 
-indexpath = "./meta/html/index.html"
+indexpath = "./html/index.html"
 
 with open(indexpath, "w") as indexfile:
     print("  Writing " + indexpath)
