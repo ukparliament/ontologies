@@ -181,3 +181,9 @@ If an urgent or important matter arises which an MP believes requires an immedia
 The following query looks for all treaties withdrawn from the House of Commons and House of Lords:
 
 * <a href="https://api.parliament.uk/s/e8d555ae">Withdrawn treaties</a>
+
+## Statement announcing treaty entered into force
+
+A minister can make a statement to the House(s) in the form of an oral statement or written statement to inform the House that a treaty has entered into force, following the completion of the necessary domestic procedures. 
+
+* <a href="https://api.parliament.uk/s/18ce1f1e">Ministerial statement announcing treaty entered into force</a>
