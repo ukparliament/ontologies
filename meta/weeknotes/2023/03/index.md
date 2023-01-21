@@ -56,7 +56,7 @@ The [biggest problem](https://democracyclub.org.uk/blog/2018/06/29/why-we-cant-r
 
 We now have [domain models](https://ukparliament.github.io/ontologies/meta/relational/register-of-members-financial-interests/) for all ten House of Commons' Register of Members' Financial Interests categories and for eight and a half of the ten Lords' categories. We had hoped to complete the other one and half before Christmas. But then Michael's computer exploded. We live in hope.
 
-Registrar's James and Thomas, House of Lords Ben, Young Robert and Michael have also been working with [Stuart](https://mastodon.me.uk/@slowe) and [Giles](https://mastodon.me.uk/@gilesdring) from [Open Innovations](https://open-innovations.org/) on their [register of interests competency question answerability dashboard](https://open-innovations.github.io/register-of-members-interests-proto/). Which is a very nifty tool, even if its name's quite a gobfull. Thanks Stuart. Thanks Giles. Thanks Leeds.
+Registrars James and Thomas, House of Lords' Ben, Young Robert and Michael have also been working with [Stuart](https://mastodon.me.uk/@slowe) and [Giles](https://mastodon.me.uk/@gilesdring) from [Open Innovations](https://open-innovations.org/) on their [register of interests competency question answerability dashboard](https://open-innovations.github.io/register-of-members-interests-proto/). Which is a very nifty tool, even if its name's quite a gobfull. Thanks Stuart. Thanks Giles. Thanks Leeds.
 
 ## On matters of modelling
 
