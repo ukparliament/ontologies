@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../paper/paper-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper/paper-ontology.ttl"
+      type="text/turtle"
+      title="Parliamentary paper ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Parliamentary paper ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Parliamentary paper ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1>Parliamentary paper ontology</h1>
+
+      <p id="description">A model describing parliamentary papers, their types and their presence in bundles and in series.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/parliamentary-paper/parliamentary-paper.svg">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="PaperBundle">
+          <h3>Class <a href="#PaperBundle">Paper bundle</a></h3>
+
+          <p>A group of related parliamentary papers, called a bundle, for example: a bundle containing a statutory instrument paper and a related explanatory memorandum.</p>
+         </article>
+        <article class="class" id="PaperSeries">
+          <h3>Class <a href="#PaperSeries">Paper series</a></h3>
+
+          <p>A series of parliamentary papers, for example: the Treaty Series.</p>
+         </article>
+        <article class="class" id="PaperSeriesItem">
+          <h3>Class <a href="#PaperSeriesItem">Paper series item</a></h3>
+
+          <p>A parliamentary paper, as it exists as part of a paper series. A parliamentary paper forming part of a series has a number within that series.</p>
+         </article>
+        <article class="class" id="PaperType">
+          <h3>Class <a href="#PaperType">Paper type</a></h3>
+
+          <p>The type of a paper, for example: bill, statutory instrument, petition or statement of annual accounts.</p>
+         </article>
+        <article class="class" id="ParliamentaryPaperExpression">
+          <h3>Class <a href="#ParliamentaryPaperExpression">Parliamentary paper expression</a></h3>
+
+          <p>A parliamentary paper made available to a House, being an expression of parliamentary paper work.</p>
+         </article>
+        <article class="class" id="ParliamentaryPaperWork">
+          <h3>Class <a href="#ParliamentaryPaperWork">Parliamentary paper work</a></h3>
+
+          <p>A parliamentary paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
+         </article>
+        <article class="class" id="Session">
+          <h3>Class <a href="#Session">Session</a></h3>
+
+          <p>A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
+         </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="asSeriesitem">
+          <h3>
+            Object property
+            <a href="#asSeriesitem"
+              >As series item</a
+            >
+          </h3>
+
+           <p>Relates a parliamentary paper expression to the existence of that paper in a series. A paper series item refers to one parliamentary paper expression. A parliamentary paper expression may exist as an item in one or more series, or none.</p>
+
+          <p>
+            <a href="#ParliamentaryPaperExpression"
+              >ParliamentaryPaperExpression</a
+            >
+            &mdash; As series item &mdash;
+            <a href="#PaperSeriesItem">PaperSeriesItem</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="belongsTo">
+          <h3>
+            Object property
+            <a href="#belongsTo"
+              >Belongs to</a
+            >
+          </h3>
+
+           <p>Relates a paper series to the session that series belongs to. A paper series may belong to one session, or none, for example: the series of House of Commons papers belonging to the session in which papers in that series are made available.</p>
+
+          <p>
+            <a href="#PaperSeries"
+              >PaperSeries</a
+            >
+            &mdash; Belongs to &mdash;
+            <a href="#Session">Session</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="expressionOf">
+          <h3>
+            Object property
+            <a href="#expressionOf"
+              >Expression of</a
+            >
+          </h3>
+
+           <p>Relates a parliamentary paper expression to the work that paper is an expression of. A parliamentary paper expression is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers.</p>
+
+          <p>
+            <a href="#ParliamentaryPaperExpression"
+              >ParliamentaryPaperExpression</a
+            >
+            &mdash; Expression of &mdash;
+            <a href="#ParliamentaryPaperWork">ParliamentaryPaperWork</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="formsPartOf">
+          <h3>
+            Object property
+            <a href="#formsPartOf"
+              >Forms part of</a
+            >
+          </h3>
+
+           <p>Relates a parliamentary paper expression to the paper bundle it forms part of. A parliamentary paper expression may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle.</p>
+
+          <p>
+            <a href="#ParliamentaryPaperExpression"
+              >ParliamentaryPaperExpression</a
+            >
+            &mdash; Forms part of &mdash;
+            <a href="#PaperBundle">PaperBundle</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasType">
+          <h3>
+            Object property
+            <a href="#hasType"
+              >Has type</a
+            >
+          </h3>
+
+           <p>Relates a parliamentary paper expression to the type of that paper. A parliamentary paper expression may have one or more types, or none.</p>
+
+          <p>
+            <a href="#ParliamentaryPaperExpression"
+              >ParliamentaryPaperExpression</a
+            >
+            &mdash; Has type &mdash;
+            <a href="#PaperType">PaperType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inSeries">
+          <h3>
+            Object property
+            <a href="#inSeries"
+              >In series</a
+            >
+          </h3>
+
+           <p>Relates the existence of a parliamentary paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series.</p>
+
+          <p>
+            <a href="#PaperSeriesItem"
+              >PaperSeriesItem</a
+            >
+            &mdash; In series &mdash;
+            <a href="#PaperSeries">PaperSeries</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="paperSeriesFollows">
+          <h3>
+            Object property
+            <a href="#paperSeriesFollows"
+              >Paper series follows</a
+            >
+          </h3>
+
+           <p>Relates a paper series to its preceding series. A paper series may follow one series, or none. A paper series may be followed by one series, or none, for example: the series of statutory instruments made in 2022 follows the series of statutory instruments made in 2021.</p>
+
+          <p>
+            <a href="#PaperSeries"
+              >PaperSeries</a
+            >
+            &mdash; Paper series follows &mdash;
+            <a href="#PaperSeries">PaperSeries</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="paperSeriesParent">
+          <h3>
+            Object property
+            <a href="#paperSeriesParent"
+              >Paper series parent</a
+            >
+          </h3>
+
+           <p>Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none, for example: the Treaty Series of in force treaties is a child series of the Command Papers series.</p>
+
+          <p>
+            <a href="#PaperSeries"
+              >PaperSeries</a
+            >
+            &mdash; Paper series parent &mdash;
+            <a href="#PaperSeries">PaperSeries</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="paperTypeParent">
+          <h3>
+            Object property
+            <a href="#paperTypeParent"
+              >Paper type parent</a
+            >
+          </h3>
+
+           <p>Relates one paper type to another in a parent-child relationship. A paper type may have one or more parent paper types, or none. A paper type may have one or more child paper types, or none.</p>
+
+          <p>
+            <a href="#PaperType"
+              >PaperType</a
+            >
+            &mdash; Paper type parent &mdash;
+            <a href="#PaperType">PaperType</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="authoredOn">
+          <h3>
+            Data property
+            <a href="#authoredOn">Authored on</a>
+          </h3>
+
+          <p>Relates a parliamentary paper expression to the date that paper was authored on.</p>
+
+          <p>
+            ParliamentaryPaperExpression &mdash; Authored on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="containsStatistics">
+          <h3>
+            Data property
+            <a href="#containsStatistics">Contains statistics</a>
+          </h3>
+
+          <p>Used to record if a parliamentary paper expression contains statistics.</p>
+
+          <p>
+            ParliamentaryPaperExpression &mdash; Contains statistics &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="copyrightStatement">
+          <h3>
+            Data property
+            <a href="#copyrightStatement">Copyright statement</a>
+          </h3>
+
+          <p>Relates a parliamentary paper expression to a statement containing the copyright description for that paper.</p>
+
+          <p>
+            ParliamentaryPaperExpression &mdash; Copyright statement &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="hasPrivilege">
+          <h3>
+            Data property
+            <a href="#hasPrivilege">Has privilege</a>
+          </h3>
+
+          <p>Used to record if parliamentary papers being items in a series indicates that those papers have parliamentary privilege.</p>
+
+          <p>
+            PaperSeries &mdash; Has privilege &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="pageCount">
+          <h3>
+            Data property
+            <a href="#pageCount">Page count</a>
+          </h3>
+
+          <p>Relates a parliamentary paper expression to its page count.</p>
+
+          <p>
+            ParliamentaryPaperExpression &mdash; Page count &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="prefix">
+          <h3>
+            Data property
+            <a href="#prefix">Prefix</a>
+          </h3>
+
+          <p>Relates a paper series to the prefix which is combined with a paper series item identifier to form the &#39;number&#39; of a parliamentary paper as an item in that series.</p>
+
+          <p>
+            PaperSeries &mdash; Prefix &mdash;
+            Literal
+          </p>
+        </article>
+      </section>
+
+    
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>ppaper</dt>
+            <dd>http://parliament.uk/ontologies/parliamentary-paper/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2022-07-11</time></p>
+
+      <p id="makers">
+        Made by   &middot; Jayne Bosworth           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Corie Chambers    &middot; Helen Creeke    &middot; Kath Kavanagh    &middot; Ned Morrell    &middot; Robi Quigley           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-01-22 15:00:16.262446 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper/paper-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper/paper-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
