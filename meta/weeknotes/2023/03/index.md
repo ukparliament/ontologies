@@ -12,7 +12,7 @@ Finally - yes, finally! - we've finished [mapping the legislative reform order p
 
 Not all the work is quite done. In the interests of strapping on braces and tightening belts, Librarians Jayne and [Ayseha](https://mastodon.me.uk/@askalibrarylady) are currently checking that all the right [routes](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e164) point to all the right [steps](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e175). Four component maps are now considered checked, five to go. Not a job to be envied. Poor loves.
 
-Thanks are due to both Journal Office Jane and [Table Office Matt](https://twitter.com/MattKorris). Without whom, etc.
+Thanks are due to Journal Office Jane, Legislation Office Philipp and [Table Office Matt](https://twitter.com/MattKorris). Without whom, etc.
 
 ## Collecting steps
 
