@@ -195,7 +195,7 @@ ppeer:hasKingdom rdf:type owl:ObjectProperty ;
 
 ppeer:affirmsCreationOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Affirms creation of"@en ;
-	rdfs:comment "Relates a Letters Patent to a peerage it affirms the creation of. A Letters Patent may affirm the creation of one or more peerages, always for the same person. The creation of a peerage is affirmed by one Letters Patent, or none."@en ;
+	rdfs:comment "Relates a Letters Patent to a peerage it affirms the creation of. A Letters Patent may affirm the creation of one or more peerages, always for the same person. The creation of a peerage is affirmed by one Letters Patent, or none. The creation of a peerage 'by writ' is not affirmed by Letters Patent."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range ppeer:Peerage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
@@ -349,6 +349,13 @@ ppeer:presentedOn rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a Letters Patent to the date on which it was presented at a meeting of the Privy Council."@en ;
 	rdfs:domain ppeer:LettersPatent ;
 	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+	
+ppeer:isPresentedOnUnknown rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is presented on unknown"@en ;
+	rdfs:comment "Used to record if the date of presentation of a Letters Patent is unknown."@en ;
+	rdfs:domain ppeer:LettersPatent ;
+	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
 ppeer:ordinalityOnDate rdf:type owl:DatatypeProperty ;
