@@ -55,8 +55,8 @@ pbill:PrivateBillWork rdf:type owl:Class ;
 	rdfs:comment "A proposal for a new Act of Parliament differently affecting the interests of particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
-pbill:DraftBillExpression rdf:type owl:Class ;
-	rdfs:label "Draft Bill expression"@en ;
+pbill:DraftBill rdf:type owl:Class ;
+	rdfs:label "Draft Bill"@en ;
 	rdfs:comment "A draft form of a Government bill issued before being introduced as a Public Bill to Parliament. A draft bill is available to be examined either by a Commons or Lords select committee, or by a joint committee of both Houses of Parliament created for that purpose. This process of examining the draft bill is known as 'pre-legislative scrutiny'"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
@@ -127,7 +127,7 @@ pbill:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
 	rdfs:comment "Relates a Public Bill to the Draft Bill which preceded it. A Public Bill may be preceded by one Draft Bill, or none. A Draft Bill may be followed by one Public Bill, or none."@en ;
 	rdfs:domain pbill:PublicBillWork ;
-	rdfs:range pbill:DraftBillExpression ;
+	rdfs:range pbill:DraftBill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:enactedAs rdf:type owl:ObjectProperty ;
