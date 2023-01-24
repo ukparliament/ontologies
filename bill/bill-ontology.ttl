@@ -27,31 +27,36 @@
 
 #######  Classes #####
 
-pbill:Bill rdf:type owl:Class ;
-	rdfs:label "Bill"@en ;
+pbill:BillExpression rdf:type owl:Class ;
+	rdfs:label "Bill expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:BillWork rdf:type owl:Class ;
+	rdfs:label "Bill work"@en ;
 	rdfs:comment "A proposal for a new Act of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
-pbill:PublicBill rdf:type owl:Class ;
-	rdfs:subClassOf pbill:Bill ;
-	rdfs:label "Public Bill"@en ;
+pbill:PublicBillWork rdf:type owl:Class ;
+	rdfs:subClassOf pbill:BillWork ;
+	rdfs:label "Public Bill work"@en ;
 	rdfs:comment "A proposal for a new Act of Parliament with general application across the whole population, without that application being limited to particular groups, people or places. A Public Bill is either a Government Bill or a Private Members' Bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:HybridBill rdf:type owl:Class ;
-	rdfs:subClassOf pbill:PublicBill ;
-	rdfs:label "Hybrid Bill"@en ;
+pbill:HybridBillWork rdf:type owl:Class ;
+	rdfs:subClassOf pbill:PublicBillWork ;
+	rdfs:label "Hybrid Bill work"@en ;
 	rdfs:comment "A hybrid bill is a public bill having general application across the whole population, whilst also having been examined and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:PrivateBill rdf:type owl:Class ;
-	rdfs:subClassOf pbill:Bill ;
-	rdfs:label "Private Bill"@en ;
+pbill:PrivateBillWork rdf:type owl:Class ;
+	rdfs:subClassOf pbill:BillWork ;
+	rdfs:label "Private Bill work"@en ;
 	rdfs:comment "A proposal for a new Act of Parliament differently affecting the interests of particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
-pbill:DraftBill rdf:type owl:Class ;
-	rdfs:label "Draft Bill"@en ;
+pbill:DraftBillExpression rdf:type owl:Class ;
+	rdfs:label "Draft Bill expression"@en ;
 	rdfs:comment "A draft form of a Government bill issued before being introduced as a Public Bill to Parliament. A draft bill is available to be examined either by a Commons or Lords select committee, or by a joint committee of both Houses of Parliament created for that purpose. This process of examining the draft bill is known as 'pre-legislative scrutiny'"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
@@ -94,22 +99,41 @@ pbill:Incumbency rdf:type owl:Class ;
 	rdfs:label "Incumbency"@en ;
 	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:LawCommissionBillWork rdf:type owl:Class ;
+	rdfs:subClassOf pbill:PublicBillWork ;
+	rdfs:label "Law Commission bill work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:ConsolidationBillWork rdf:type owl:Class ;
+	rdfs:subClassOf pbill:PublicBillWork ;
+	rdfs:label "Consolidation bill work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 
 
 #######  Object properties ##### 
 	
+pbill:ExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pbill:PublicBillExpression ;
+	rdfs:range pbill:PublicBillWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
 pbill:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
 	rdfs:comment "Relates a Public Bill to the Draft Bill which preceded it. A Public Bill may be preceded by one Draft Bill, or none. A Draft Bill may be followed by one Public Bill, or none."@en ;
-	rdfs:domain pbill:PublicBill ;
-	rdfs:range pbill:DraftBill ;
+	rdfs:domain pbill:PublicBillWork ;
+	rdfs:range pbill:DraftBillExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:enactedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Enacted as"@en ;
 	rdfs:comment "Relates a bill to the Act of Parliament the bill is enacted as after receiving Royal Assent."@en ;
-	rdfs:domain pbill:Bill ;
+	rdfs:domain pbill:BillWork ;
 	rdfs:range pbill:ActOfParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
@@ -117,48 +141,48 @@ pbill:carriedOverFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Carried over from"@en ;
 	rdfs:comment "Relates the act of being carried over to the bill in the preceding session."@en ;
 	rdfs:domain pbill:CarryOver ;
-	rdfs:range pbill:Bill ;
+	rdfs:range pbill:BillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:carriedOverTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Carried over to"@en ;
 	rdfs:comment "Relates the act of being carried over to the bill in the new session."@en ;
 	rdfs:domain pbill:CarryOver ;
-	rdfs:range pbill:Bill ;
+	rdfs:range pbill:BillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:parliamentActInvokedFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliament Act invoked from"@en ;
 	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the preceding session."@en ;
 	rdfs:domain pbill:ParliamentActProcedureInvocation ;
-	rdfs:range pbill:PublicBill ;
+	rdfs:range pbill:PublicBillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliament Act invoked to"@en ;
 	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the new session."@en ;
 	rdfs:domain pbill:ParliamentActProcedureInvocation ;
-	rdfs:range pbill:PublicBill ;
+	rdfs:range pbill:PublicBillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasDepartmentalSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has departmental sponsorship"@en ;
 	rdfs:comment "Relates a Public Bill to a sponsorship by a Government department at a point in time. A Public Bill may have one or more departmental sponsorships over time, or none in the case of a Private Members' Bill."@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:domain pbill:PublicBillWork ;
 	rdfs:range pbill:DepartmentalSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasMemberSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Member sponsorship"@en ;
 	rdfs:comment "Relates a Public Bill to a sponsorship by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time, or none in the case of a Government Bill."@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:domain pbill:PublicBillWork ;
 	rdfs:range pbill:MemberSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasMemberLeadership rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Member leadership"@en ;
 	rdfs:comment "Relates a Public Bill to a leadership by a Member at a point in time. A Public Bill may have one or more leading Members, or none in the case of a Private Members' Bill."@en ;
-	rdfs:domain pbill:PublicBill ;
+	rdfs:domain pbill:PublicBillWork ;
 	rdfs:range pbill:MemberLeadership ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
