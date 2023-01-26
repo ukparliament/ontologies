@@ -414,6 +414,55 @@ Preceding the decision step is a business step labelled 'Instrument can be made 
 
 This latter step exists because the website does not yet display future possible steps. If it were to do so, such steps would no longer be needed and would be removed from the procedure maps and data.
 
+## Clocks
+
+A procedure features one or more clocks, or none. A clock indicates a time period set out in legislation.
+
+A step in a procedure may be precluded from happening after the clock ends, for example: the tabling of a prayer to annul a made negative statutory instrument. 
+
+A step in a procedure may be permitted to happen once the clock has ended, for example: the putting of a motion to approve a legislative reform order determined to follow an affirmative procedure.
+
+Legislation sets out the conditions which must be met before the clock starts - and the number and types of day to count. 
+
+Conditions determining when a clock starts differ between procedures, for example: a draft negative counts from the day of laying, whilst a made affirmative counts from the day of making.
+
+The number of days to count is set on the clock. The number of days to count may be overridden for a given work package by setting the number of days to count on that work package.
+
+Different work packages subject to the same procedure may count a different number of days, for example: a made affirmative enabled by [section 42 of the Public Health (Control of Disease) Act 1984](https://www.legislation.gov.uk/ukpga/1984/22) counts 28 days, whilst a made affirmative enabled by [section 26 of the Corporate Insolvency and Governance Act 2020](https://www.legislation.gov.uk/ukpga/2020/12) counts 40 days. 
+
+The types of days to count are defined as a set of sitting days, described in the model as a calculation style.
+
+Different work packages subject to the same procedure may use different calculation styles, for example: a made affirmative enabled by [section 42 of the Public Health (Control of Disease) Act 1984](https://www.legislation.gov.uk/ukpga/1984/22) does not count days when both Houses are adjourned for more than four days, whilst a made affirmative enabled by [section 26 of the Energy Prices Act 2022](https://www.legislation.gov.uk/ukpga/2022/44) does not count days when one House is adjourned for more than four days. 
+
+### The use of the egg timer
+
+In most cases - knowing which step in a procedure triggers the clock to start, the date of the business item actualising that step, the number of days to count and the type of days to count - the egg timer may be used to find the date of the business item actualising the end step of the clock. 
+
+If sitting days change, the [egg timer](https://api.parliament.uk/egg-timer) may be used to find the date of the business item actualising the end step of the clock.
+
+A procedural step may prevent the automatic calculation of an end date, for example: a Ministerial statement extending Period A of the [Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25) treaty procedure. In such cases,the work package is marked as having its clock or clocks frozen and end dates are updated by hand.
+
+## Step collections
+
+Business steps may form part of a step collection.
+
+A step collection may relate to a single procedure, for example: the House of Commons public bill third reading step collection is related to the public bill procedure. 
+
+A step collection may relate to a single House, for example: the House of Commons public bill third reading step collection is related to the House of Commons.
+
+Step collections are used to group business steps, for example:
+
+* A set of steps from which the procedure starts. This collection is used by the procedure parsing code to determine the set of steps from which to start parsing.
+
+* A set of steps by which the procedure concludes. Concluded work packages are those with a business item actualising a step in this collection.
+
+* A set of website visible steps. This collection is used to determine which actualised business steps should display on a work package timeline page.
+
+* A set of Member action steps. This collection is used to identify steps where a Member may take action, for example: table a motion.
+
+Capturing step collection membership reduces the hardcoding of step IDs across applications.
+
+
 ## Procedure conclusion
 
 Procedure conclusion steps are only given a potential state of CAUSED by a route from a procedural step happening within Parliament. This may be a step in the House of Commons or a step in the House of Lords or a bicameral step. Procedure conclusion steps are not given a potential state of CAUSED by steps happening outside Parliament, for example: an ‘Instrument remains law’ step.
