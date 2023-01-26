@@ -462,6 +462,15 @@ Step collections are used to group business steps, for example:
 
 Capturing step collection membership reduces the hardcoding of step IDs across applications.
 
+## Business steps as part of a procedure
+
+A business step forms part of a procedure if that step is set out in legislation or standing orders.
+
+A step may also form part of a procedure if there is precedence for that step occurring in work packages subject to that procedure, for example: the debate of a take note motion in the made negative procedure.
+
+Steps may be added where the work packageable thing is the subject of the business item, for example: an urgent question on a treaty.
+
+New steps are added to maps as procedure evolves and new precedence emerges. The boundary of what forms part of a procedure and what doesn’t, is open to interpretation. 
 
 ## Procedure conclusion
 
