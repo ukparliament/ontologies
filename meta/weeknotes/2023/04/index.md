@@ -32,7 +32,7 @@ Having little left to do - for now - in the world of secondary legislation, we d
 
 Given we're in bill land and a bill is a parliamentary paper, we now have a revised version of our [papers model](https://ukparliament.github.io/ontologies/paper/paper-ontology). That said, our mental Venn of papers and parliamentary papers is still more than a little fuzzy. If you're a clerk, you see us coming down a corridor and you really don't fancy a conversation about papers, it might be best to scarper.
 
-On top of the papers model, Librarians [Claire](https://twitter.com/tinysprite) and Jayne and part-time scribe Michael have also been applying tweaks to our [bill model](https://ukparliament.github.io/ontologies/bill/bill-ontology). This time with a more FRBR-like flavour. It still needs a layer of comments before it makes much sense. And even then, your mileage may vary.
+On top of the papers model, Librarians [Claire](https://twitter.com/tinysprite) and Jayne and part-time scribe Michael have also been applying tweaks to our [bill model](https://ukparliament.github.io/ontologies/bill/bill-ontology). This time with a more [FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records)-like flavour. It still needs a layer of comments before it makes much sense. And even then, your mileage may vary.
 
 Next steps - we think - are working out what needs to change in the [procedure editor database](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/editor/schema.svg) to cope with bills and which bits of the bill procedure maps we need inside the machines for our LCM tracking use-case. More next week.
 
