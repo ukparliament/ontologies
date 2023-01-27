@@ -440,7 +440,7 @@ In most cases - knowing which step in a procedure triggers the clock to start, t
 
 If sitting days change, the [egg timer](https://api.parliament.uk/egg-timer) may be used to find the date of the business item actualising the end step of the clock.
 
-A procedural step may prevent the automatic calculation of an end date, for example: a Ministerial statement extending Period A of the [Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25) treaty procedure. In such cases,the work package is marked as having its clock or clocks frozen and end dates are updated by hand.
+A procedural step may prevent the automatic calculation of an end date, for example: a Ministerial statement extending Period A of the [Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25) treaty procedure. In such cases, the work package is marked as having its clock or clocks frozen and end dates are updated by hand.
 
 ## Step collections
 
