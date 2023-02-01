@@ -106,7 +106,7 @@ if there's NOT an approval motion agreed
 
 AND
 
-if there has been a Chamber debate
+if there has been a debate
 
 AND
 
@@ -126,10 +126,6 @@ if there is no non-fatal amendment extant
 
 If an approval motion is extant
 
-AND 
-
-if the clock has NOT run out
-
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -137,10 +133,6 @@ if the instrument has NOT already been rejected (either House)
 #### Can be debated
 
 If fatal amendment to approval motion extant
-
-AND
-
-if the clock has NOT run out
 
 AND
 
@@ -157,10 +149,6 @@ JCSI scrutiny reserve condition has been met
 #### Question can be put
 
 If fatal amendment to approval motion extant
-
-AND
-
-if the clock has NOT run out
 
 AND
 
@@ -176,10 +164,6 @@ if the instrument has NOT already been rejected (either House)
 
 If an approval motion is extant
 
-AND 
-
-if the clock has NOT run out
-
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -187,10 +171,6 @@ if the instrument has NOT already been rejected (either House)
 #### Can be debated
 
 If non-fatal amendment to approval motion extant
-
-AND
-
-if the clock has NOT run out
 
 AND
 
@@ -207,10 +187,6 @@ JCSI scrutiny reserve condition has been met
 #### Question can be put
 
 If non-fatal amendment to approval motion extant
-
-AND
-
-if the clock has NOT run out
 
 AND
 
