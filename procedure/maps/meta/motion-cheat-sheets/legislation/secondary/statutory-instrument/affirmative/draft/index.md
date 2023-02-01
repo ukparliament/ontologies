@@ -94,7 +94,7 @@ if the instrument has NOT already been rejected (either House)
 
 AND
 
-JCSI scrutiny reserve condition has been met
+scrutiny reserve condition under standing order 73 has been met
 
 #### Question can be put
 
@@ -144,7 +144,7 @@ if the instrument has NOT already been rejected (either House)
 
 AND
 
-JCSI scrutiny reserve condition has been met
+scrutiny reserve condition under standing order 73 has been met
 
 #### Question can be put
 
@@ -182,7 +182,7 @@ if the instrument has NOT already been rejected (either House)
 
 AND
 
-JCSI scrutiny reserve condition has been met
+scrutiny reserve condition under standing order 73 has been met
 
 #### Question can be put
 
