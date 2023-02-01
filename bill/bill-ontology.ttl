@@ -29,7 +29,7 @@
 
 pbill:BillExpression rdf:type owl:Class ;
 	rdfs:label "Bill expression"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An expression of a bill work at a point in time. A new expression of the bill work is created by any amendment being made to the bill, or when a bill passes from the first House to the second House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:BillWork rdf:type owl:Class ;
@@ -46,33 +46,35 @@ pbill:PublicBillWork rdf:type owl:Class ;
 pbill:HybridBillWork rdf:type owl:Class ;
 	rdfs:subClassOf pbill:PublicBillWork ;
 	rdfs:label "Hybrid Bill work"@en ;
-	rdfs:comment "A hybrid bill is a public bill having general application across the whole population, whilst also having been examined and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
+	rdfs:comment "A hybrid bill is a public bill having general application across the whole population, whilst also having been examined by the Examiners of Petitions for Private Bills and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:PrivateBillWork rdf:type owl:Class ;
 	rdfs:subClassOf pbill:BillWork ;
 	rdfs:label "Private Bill work"@en ;
-	rdfs:comment "A proposal for a new Act of Parliament differently affecting the interests of particular groups, people or places."@en ;
+	rdfs:comment "A proposal for a new Act of Parliament affecting the interests of particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:DraftBill rdf:type owl:Class ;
 	rdfs:label "Draft Bill"@en ;
-	rdfs:comment "A draft form of a Government bill issued before being introduced as a Public Bill to Parliament. A draft bill is available to be examined either by a Commons or Lords select committee, or by a joint committee of both Houses of Parliament created for that purpose. This process of examining the draft bill is known as 'pre-legislative scrutiny'"@en ;
+	rdfs:comment "A draft form of a Government bill issued before being introduced as a Public Bill to Parliament. A draft bill is available to be examined either by a Commons or Lords select committee, or by a joint committee of both Houses of Parliament created for that purpose."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:ActOfParliament rdf:type owl:Class ;
 	rdfs:label "Act of Parliament"@en ;
-	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law."@en ;
+	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill which has been passed by Parliament and given Royal Assent."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:CarryOver rdf:type owl:Class ;
 	rdfs:label "Carry over"@en ;
-	rdfs:comment "The act of carrying a bill over from a session to the following session. A bill being carried over results in the creation of a new bill in the new session, the text of the new bill being the text of the original bill as amended in the previous session. Public Bills which have not been passed by the end of the session in which they were introduced will otherwise fall. A bill being before the House of Commons, it is necessary for that House to pass a carry over motion in order for the bill to be carried over into the following session. Private Members' Bills cannot be carried over."@en ;
+	rdfs:comment "Public Bills which have not been passed by the end of the session in which they were introduced will not progress into the next session unless a carry over motion has been agreed. A bill being carried over results in the creation of a new bill in the new session, the text of the new bill being the text of the original bill as amended in the previous session. Private Members' Bills cannot be carried over."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+						#### edited to here
 
 pbill:ParliamentActProcedureInvocation rdf:type owl:Class ;
 	rdfs:label "Parliament Act procedure invocation"@en ;
-	rdfs:comment "The Parliament Acts of 1911 and 1949 limit the power of the House of Lords in relation to the House of Commons. The Acts removed the rights of the Lords to pass bills on public tax and spending, to veto or to indefinitely delay the progress of Public Bills. Where a bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Government may introduce a similar bill in the following session. If the House of Commons invokes the Parliament Act, the House of Lords has one month to agree to the bill, otherwise the Commons may pass the bill unilaterally. The similarity of a bill being introduced in a following session is not made explicit until the Speaker certifies the bill as being subject to the Parliament Act."@en ;
+	rdfs:comment "Where a public bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Commons may introduce an identical bill in the following session under the procedure set out in the Parliament Act 1911. Minor changes may exist between the bill as amended in the first session and the bill as introduced in the second session if such changes are certified by the Speaker of the Commons. If the House of Lords reject the second bill, that bill may be put forward for Royal Assent if the Speaker of the Commons certifies that the bill meets the conditions set out in section 2 of the 1911 Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:DepartmentalSponsorship rdf:type owl:Class ;
