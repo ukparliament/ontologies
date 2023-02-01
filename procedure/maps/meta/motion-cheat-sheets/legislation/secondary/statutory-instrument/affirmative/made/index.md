@@ -130,7 +130,7 @@ if there's NOT an approval motion agreed
 
 AND
 
-if there has been a Chamber debate
+if there has been a debate
 
 AND
 
