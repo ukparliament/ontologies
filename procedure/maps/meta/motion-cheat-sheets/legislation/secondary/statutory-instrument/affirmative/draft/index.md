@@ -200,5 +200,40 @@ AND
 
 if there is no fatal amendment extant
 
+### Motion to dispense
 
+#### Can be tabled
 
+If instrument laid
+
+AND
+
+if the instrument has NOT been withdrawn
+
+AND
+
+Committee has NOT considered
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Can be debated
+
+If motion to dispense extant
+
+AND
+
+if there has NOT been a debate on a motion to dispense
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If motion to dispense extant
+
+AND
+
+if the instrument has NOT already been rejected (either House)
