@@ -87,6 +87,48 @@ AND
 
 if the clock has NOT run out
 
+### Motion to refer
+
+#### Can be tabled
+
+If a non-fatal is extant
+
+OR (
+
+	if a fatal is extant
+	
+	AND
+
+	if the clock has NOT run out
+
+	AND
+
+	if the instrument has NOT already been rejected (either House)
+
+)
+
+#### Question can be put
+
+If motion to refer extant
+
+AND (
+
+	if non-fatal extant
+	
+	OR (
+		
+		if fatal extant
+		
+		AND
+		
+		if the instrument has NOT already been rejected (either House)
+
+		AND
+
+		if the clock has NOT run out
+	)
+)
+
 ## House of Lords
 
 ### Non-fatal motion
