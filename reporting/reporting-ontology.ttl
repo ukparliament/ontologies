@@ -1,0 +1,64 @@
+@prefix report: <http://parliament.uk/ontologies/reporting/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/reporting/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Reporting ontology"@en ;
+    dcterms:created "2023-02-07"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/reporting/reporting.svg> ;
+	foaf:maker 
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Gordon Clarke" ],
+		[ foaf:name "Claire Searle" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+	
+report:MakingAvailable rdf:type owl:Class ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
+
+report:MadeAvailableThing rdf:type owl:Class ;
+	rdfs:label "Made available thing"@en ;
+	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
+
+report:ParliamentaryPaperExpression rdf:type owl:Class ;
+	rdfs:label "Parliamentary paper expression"@en ;
+	rdfs:comment "A parliamentary paper made available to a House, being an expression of parliamentary paper work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
+	
+report:Reporting rdf:type owl:Class ;
+	rdfs:subClassOf report:MakingAvailable ;
+	rdfs:label "Reporting"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
+	
+report:ReportedThing rdf:type owl:Class ;
+	rdfs:subClassOf report:ParliamentaryPaperExpression ;
+	rdfs:subClassOf report:MadeAvailableThing ;
+	rdfs:label "Reported thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
+	
+	
+
+#######  Object properties ##### 
+	
+report:resultsIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain report:reporting ;
+	rdfs:range report:DepositedThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
