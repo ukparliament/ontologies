@@ -35,9 +35,9 @@ ppresent:Presentation rdf:type owl:Class ;
 	rdfs:comment "The act of presenting a paper to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
 	
-ppresent:ParliamentaryPaperExpression rdf:type owl:Class ;
-	rdfs:label "Parliamentary paper expression"@en ;
-	rdfs:comment "A parliamentary paper made available to a House, being an expression of parliamentary paper work."@en ;
+ppresent:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
 
 ppresent:MadeAvailableThing rdf:type owl:Class ;
@@ -49,21 +49,8 @@ ppresent:PresentedPaper rdf:type owl:Class ;
 	rdfs:subClassOf ppresent:ParliamentaryPaperExpression ;
 	rdfs:subClassOf ppresent:MadeAvailableThing ;
 	rdfs:label "Presented paper"@en ;
-	rdfs:comment "A paper having been presented to a House."@en ;
+	rdfs:comment "A paper having been presented to a House. Examples: bill, petition."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
-
-ppresent:BillExpression rdf:type owl:Class ;
-	rdfs:subClassOf ppresent:PresentedPaper ;
-	rdfs:label "Bill expression"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
-	
-ppresent:PetitionExpression rdf:type owl:Class ;
-	rdfs:subClassOf ppresent:PresentedPaper ;
-	rdfs:label "Petition expression"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
-
 	
 	
 #######  Object properties ##### 
