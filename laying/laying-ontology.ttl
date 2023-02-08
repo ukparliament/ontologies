@@ -37,9 +37,9 @@ pl:MadeAvailableThing rdf:type owl:Class ;
 	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
-pl:ParliamentaryPaperExpression rdf:type owl:Class ;
-	rdfs:label "Parliamentary paper expression"@en ;
-	rdfs:comment "A parliamentary paper made available to a House, being an expression of parliamentary paper work."@en ;
+pl:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:Laying rdf:type owl:Class ;
@@ -49,7 +49,7 @@ pl:Laying rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:LaidPaper rdf:type owl:Class ;
-	rdfs:subClassOf pl:ParliamentaryPaperExpression ;
+	rdfs:subClassOf pl:PaperExpression ;
 	rdfs:subClassOf pl:MadeAvailableThing ;
 	rdfs:label "Laid paper"@en ;
 	rdfs:comment "A paper having been laid before a House."@en ;
