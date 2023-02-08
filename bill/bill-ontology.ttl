@@ -69,32 +69,25 @@ pbill:CarryOver rdf:type owl:Class ;
 	rdfs:label "Carry over"@en ;
 	rdfs:comment "Public Bills which have not been passed by the end of the session in which they were introduced will not progress into the next session unless a carry over motion has been agreed. A bill being carried over results in the creation of a new bill in the new session, the text of the new bill being the text of the original bill as amended in the previous session. Private Members' Bills cannot be carried over."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-						#### edited to here
 
 pbill:ParliamentActProcedureInvocation rdf:type owl:Class ;
 	rdfs:label "Parliament Act procedure invocation"@en ;
-	rdfs:comment "Where a public bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Commons may introduce an identical bill in the following session under the procedure set out in the Parliament Act 1911. Minor changes may exist between the bill as amended in the first session and the bill as introduced in the second session if such changes are certified by the Speaker of the Commons. If the House of Lords reject the second bill, that bill may be put forward for Royal Assent if the Speaker of the Commons certifies that the bill meets the conditions set out in section 2 of the 1911 Act."@en ;
+	rdfs:comment "Where a public bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Commons may introduce an identical bill - or a bill deemed to be the same bill as the former bill having alterations certified by the Speaker of the House of Commons as being necessary - in the following session, under procedure set out in the Parliament Act 1911. If the House of Lords reject the second bill, that bill may be put forward for Royal Assent if the Speaker of the Commons certifies that the bill meets the conditions set out in section 2 of the 1911 Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:DepartmentalSponsorship rdf:type owl:Class ;
 	rdfs:label "Departmental sponsorship"@en ;
-	rdfs:comment "The sponsorship of a Public Bill by a Government organisation. If the machinery of Government changes during the passage of a bill, it is possible for the sponsorship of that bill to pass to a different Government organisation."@en ;
+	rdfs:comment "The sponsorship of a Public Bill by a Government department. If the machinery of Government changes during the passage of a bill, the sponsorship of that bill may pass to another Government department."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:GovernmentOrganisation rdf:type owl:Class ;
-	rdfs:label "Government Organisation"@en ;
-	rdfs:comment "Government departments, agencies and public bodies which have responsibility for a specific sector of public administration."@en ;
+pbill:MinisterialDepartment rdf:type owl:Class ;
+	rdfs:label "Ministerial department"@en ;
+	rdfs:comment "A ministerial department is an executive body of government, headed by a government minister having responsibility for described areas of public administration."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:MemberSponsorship rdf:type owl:Class ;
 	rdfs:label "Member sponsorship"@en ;
-	rdfs:comment "The sponsorship of a Public Bill by a Member. It is possible for the sponsorship of a Public Bill to pass to a different Member, for example: if a Member is elevated to the House of Lords."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:MemberLeadership rdf:type owl:Class ;
-	rdfs:label "Member leadership"@en ;
-	rdfs:comment "The leadership of a Public Bill by a Member. It is possible for the leadership of a Public Bill to pass to a different Member, for example: if a Member is elevated to the House of Lords."@en ;
+	rdfs:comment "The sponsorship of a Public Bill by a Member. Sponsorship of a Public Bill may pass to another Member, for example: if a Member is elevated to the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:Incumbency rdf:type owl:Class ;
@@ -102,28 +95,18 @@ pbill:Incumbency rdf:type owl:Class ;
 	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:LawCommissionBillWork rdf:type owl:Class ;
-	rdfs:subClassOf pbill:PublicBillWork ;
-	rdfs:label "Law Commission bill work"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:ConsolidationBillWork rdf:type owl:Class ;
-	rdfs:subClassOf pbill:PublicBillWork ;
-	rdfs:label "Consolidation bill work"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-
 
 
 #######  Object properties ##### 
 	
 pbill:ExpressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Expression of"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a bill expression to the bill work it is an expression of. A bill expression is an expression of one bill work. A bill work is expressed as one or more expressions."@en ;
 	rdfs:domain pbill:BillExpression ;
 	rdfs:range pbill:BillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+												#### edited to here
 
 pbill:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
@@ -181,31 +164,17 @@ pbill:hasMemberSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:range pbill:MemberSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-pbill:hasMemberLeadership rdf:type owl:ObjectProperty ;
-	rdfs:label "Has Member leadership"@en ;
-	rdfs:comment "Relates a Public Bill to a leadership by a Member at a point in time. A Public Bill may have one or more leading Members, or none in the case of a Private Members' Bill."@en ;
-	rdfs:domain pbill:PublicBillWork ;
-	rdfs:range pbill:MemberLeadership ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:sponsorshipByGovernmentOrganisation rdf:type owl:ObjectProperty ;
-	rdfs:label "Sponsorship by government organisation"@en ;
+pbill:sponsorshipByGovernmentDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Sponsorship by government department"@en ;
 	rdfs:comment "Relates a departmental sponsorship to the Government organisation sponsoring a Public Bill at a point in time."@en ;
 	rdfs:domain pbill:DepartmentalSponsorship ;
-	rdfs:range pbill:GovernmentOrganisation ;
+	rdfs:range pbill:MinisterialDepartment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsorship by incumbency"@en ;
 	rdfs:comment "Relates a Member sponsorship to the House seat incumbency of a Member sponsoring a Public Bill at a point in time."@en ;
 	rdfs:domain pbill:MemberSponsorship ;
-	rdfs:range pbill:Incumbency ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:leadershipByIncumbency rdf:type owl:ObjectProperty ;
-	rdfs:label "Leadership by incumbency"@en ;
-	rdfs:comment "Relates a Member leadership to the incumbency of a Member in a Government position leading a Public Bill at a point in time."@en ;
-	rdfs:domain pbill:MemberLeadership ;
 	rdfs:range pbill:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
