@@ -19,6 +19,16 @@ Affirmative instruments are usually debated before the Question to approve the i
 
 * [Affirmative instruments not debated in the Lords](https://api.parliament.uk/s/21f488e1)
 
+### Statement by the Chair of a DLC that there can be no further debate on the instrument 
+
+In the House of Commons a debate on a statutory instrument will either happen in a delegated legislation committee(DLC) or the Chamber. A debate will only take place once. To indicate that a debate has taken place in a DLC, there will be a motion to consider agreed or disagreed at the end of the debate. In February 2023 we saw a situation where an instrument's motion to consider was [not formally moved](https://hansard.parliament.uk/commons/2023-01-30/debates/96848969-f111-438d-88a0-11801179c9e4/EnergyBillReliefScheme(Non-StandardCases)Regulations2023EnergyBillsSupportSchemeAndAlternativeFuelPaymentPass-ThroughRequirement(NorthernIreland)Regul#contribution-008A3514-9E37-446B-8C59-9DA4C0A3FB06) at the end of debate. This should not have happened. Instead, the motion to approve the instrument that takes place in the Chamber was intended to be delayed. The motion to consider should have gone through as normal. At the end of debate the Minister indicated the instrument would be brought back to DLC for further debate. 
+
+As this contradicts the notion that an instrument will only be debated once, when the instrument was brought back to DLC the [Chair made it clear](https://hansard.parliament.uk/commons/2023-02-06/debates/7ee068b5-2e22-44e3-804d-b68f9a189bcb/EnergyBillsSupportSchemeAndAlternativeFuelPaymentPass-ThroughRequirement(NorthernIreland)Regulations2023#contribution-295C514B-3CF0-40AE-9CF2-B51284531611) that further debate would not take place and the question on the motion to consider would be put immediately. 
+
+As agreed with the Clerk of Legislation, we did not reflect this DLC as a debate. Instead we added a new step to the made affirmative map to show that a statement was made by the Chair and that the question was put immediately. 
+
+* [Statement by the Chair that there can be no further debate on the instrument](https://api.parliament.uk/s/0c158b34) 
+
 ### Type of debate
 
 The following queries break the above queries down further into type of debate so whether they took place in the chamber or in committee. 
