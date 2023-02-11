@@ -8,7 +8,7 @@ First up, [way back in November 2021](https://ukparliament.github.io/ontologies/
 
 Elsewhere, Librarian Ned has been hard at work adding [peerage holding](https://ukparliament.github.io/ontologies/peerage/peerage-ontology#d4e112) records for every current peerage holder in the House of Lords, every peer on the register for [House of Lords by-elections](https://www.parliament.uk/mps-lords-and-offices/offices/lords/house-of-lords-external-communications/by-elections/) and every peer that [MNIS](https://data.parliament.uk/membersdataplatform/) knows about, to our [lovely peerage database](https://peerages.historyofparliamentonline.org/). More marvellous stuff.
 
-It all goes to show that - if give a well-motivated librarian the right tools - there's no end to the things they can achieve. Well done Jayne. Well done Ned. Your Librarian of the Week badges and a £50 Woolies token - to be shared - are in the post.
+It all goes to show that - if you give a well-motivated librarian the right tools - there's no end to the things they can achieve. Well done Jayne. Well done Ned. Your Librarian of the Week badges and a £50 Woolies token - to be shared - are in the post.
 
 ## Spiritual Lords
 
