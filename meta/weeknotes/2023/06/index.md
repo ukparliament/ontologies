@@ -56,4 +56,4 @@ A couple of things we forgot on our last outing. First up, Librarian Jayne met n
 
 ## And finally
 
-It's not all work for our crack team of librarians. There are occasional dad jokes too. A Commons debate on [Wild Deer Management and Sustainable Food](https://hansard.parliament.uk/Commons/2023-02-02/debates/30268888-4F3E-4967-A081-152214508F74/WildDeerManagementAndSustainableFood) led to the addition of Venison as a term in our taxonomy. It's the most expensive meat explained Librarian Phil. Why, we asked. Because it's deer. My god.
+It's not all work for our crack team of librarians. There are occasional dad jokes too. A Commons debate on [Wild Deer Management and Sustainable Food](https://hansard.parliament.uk/Commons/2023-02-02/debates/30268888-4F3E-4967-A081-152214508F74/WildDeerManagementAndSustainableFood) led to the addition of Venison as a term in our taxonomy. It's the most expensive meat explained [Librarian Phil](https://mastodon.social/@Mognar). Why, we asked. Because it's deer. My god.
