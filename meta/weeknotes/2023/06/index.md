@@ -36,11 +36,7 @@ Also over in SI land, somebody - we forget quite who - had mentioned the possibi
 
 ## On the mystery of parliamentary papers
 
-Boss 'brarian [Anya](https://mastodon.me.uk/@anyaso) continues to prod ponder as to what the hell a 'parliamentary paper' is. 
-
-HERE
-
-We know there are papers in which Parliament takes an interest and are referred to as parliamentary papers. And that there are papers in which Parliament takes an interest in that are papers, but not parliamentary ones. We suspect this is an important distinction; the [second paragraph of Erskine May on the subject of impact assessments for bills is quite adamant that they're not parliamentary papers](https://erskinemay.parliament.uk/section/4986/impact-assessment/). But the boundaries are still blurred. At least to us.
+Boss 'brarian [Anya](https://mastodon.me.uk/@anyaso) continues have us ponder as to what the hell a 'parliamentary paper' is. We know there are papers in which Parliament takes an interest and are referred to as parliamentary papers. And that there are papers in which Parliament takes an interest in that are papers, but not parliamentary ones. We suspect this is an important distinction; the [second paragraph of Erskine May on the subject of impact assessments for bills is quite adamant that they're not parliamentary papers](https://erskinemay.parliament.uk/section/4986/impact-assessment/). But the boundaries are still blurred. At least to us.
 
 To that end, Thursday saw an in-pixel card-sorting exercise with Messrs. Hennessy and Korris. We think we've [found some clarity](https://github.com/ukparliament/ontologies/blob/master/paper/meta/parliamentary-papers.svg) but remain keen to see what other clerks think. Looking at you [Martyn](https://twitter.com/martynpatrick). Thanks Mike. Thanks Matt.
 
@@ -50,11 +46,7 @@ The second, paper-related clerkly meeting of the week saw everyone's top team of
 
 ## Electioneering
 
-Thursday was a busy day, meeting wise. It kicked off at 10, 
-
-HERE
-
-joined by Data Scientist Louie and Researcher [Carl](https://twitter.com/carlbaker) for more [general election planning](https://trello.com/b/owaHiYDj/mnis-general-elections). We know that if we're going to import data from [Democracy Club](https://democracyclub.org.uk/), we have work to do around matching identifiers for people, parties and constituencies. The constituency part proving trickiest with an incoming boundary change expected. Luckily, our Carl is something of an expert on geographic matters, so we feel we're in capable hands. We also know we have work to do to reshape candidate names and genders in Democracy Club to the same shape as our systems. Another chat with [Sym](https://mastodon.me.uk/@symroe) beckons.
+Thursday was a busy day, meeting wise. It kicked off at 10, with computational expert Michael summoning Librarians Anna, Anya and [Phil](https://mastodon.social/@Mognar), Data Scientist Louie and Researcher [Carl](https://twitter.com/carlbaker) for more [general election planning](https://trello.com/b/owaHiYDj/mnis-general-elections). We know that if we're going to import data from [Democracy Club](https://democracyclub.org.uk/), we have work to do around matching identifiers for people, parties and constituencies. The constituency part proving trickiest with an incoming boundary change expected. Luckily, our Carl is something of an expert on geographic matters, so we feel we're in capable hands. We also know we have work to do to reshape candidate names and genders in Democracy Club to the same shape as our systems. Another chat with [Sym](https://mastodon.me.uk/@symroe) beckons.
 
 ## Some things we forgot from week 5
 
@@ -65,4 +57,4 @@ A couple of things we forgot on our last outing. First up, Librarian Jayne met n
 ## And finally
 
 It's not always heads down for our crack team of librarians. Occasionally jokes are made. Sometimes they're terrible. A Commons debate on [Wild Deer Management and Sustainable Food](https://hansard.parliament.uk/Commons/2023-02-02/debates/30268888-4F3E-4967-A081-1
-2214508F74/WildDeerManagementAndSustainableFood) saw the subject of 'Venison' gain entry to our Thesaurus. It's the most expensive meat explained [Librarian Phil](https://mastodon.social/@Mognar). Why, we asked. Because it's deer, he said. My god.
+2214508F74/WildDeerManagementAndSustainableFood) saw the subject of 'Venison' gain entry to our Thesaurus. It's the most expensive meat, explained Librarian Phil. Why, we asked. Because it's deer, he said. My god.
