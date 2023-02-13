@@ -46,7 +46,7 @@ pbill:PublicBillWork rdf:type owl:Class ;
 pbill:HybridBillWork rdf:type owl:Class ;
 	rdfs:subClassOf pbill:PublicBillWork ;
 	rdfs:label "Hybrid Bill work"@en ;
-	rdfs:comment "A hybrid bill is a public bill having general application across the whole population, whilst also having been examined by the Examiners of Petitions for Private Bills and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
+	rdfs:comment "A hybrid bill is a  having general application across the whole population, whilst also having been examined by the Examiners of Petitions for Private Bills and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as s. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:PrivateBillWork rdf:type owl:Class ;
@@ -65,14 +65,9 @@ pbill:ActOfParliament rdf:type owl:Class ;
 	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill which has been passed by Parliament and given Royal Assent."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
-pbill:CarryOver rdf:type owl:Class ;
-	rdfs:label "Carry over"@en ;
-	rdfs:comment "Public Bills which have not been passed by the end of the session in which they were introduced will not progress into the next session unless a carry over motion has been agreed. A bill being carried over results in the creation of a new bill in the new session, the text of the new bill being the text of the original bill as amended in the previous session. Private Members' Bills cannot be carried over."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-
 pbill:ParliamentActProcedureInvocation rdf:type owl:Class ;
 	rdfs:label "Parliament Act procedure invocation"@en ;
-	rdfs:comment "Where a public bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Commons may introduce an identical bill - or a bill deemed to be the same bill as the former bill having alterations certified by the Speaker of the House of Commons as being necessary - in the following session, under procedure set out in the Parliament Act 1911. If the House of Lords reject the second bill, that bill may be put forward for Royal Assent if the Speaker of the Commons certifies that the bill meets the conditions set out in section 2 of the 1911 Act."@en ;
+	rdfs:comment "Where a Public Bill is passed by the House of Commons and rejected by the House of Lords in the same session, the Commons may introduce an identical bill - or a bill deemed to be the same bill as the former bill having alterations certified by the Speaker of the House of Commons as being necessary - in the following session, under procedure set out in the Parliament Act 1911. If the House of Lords reject the second bill, that bill may be put forward for Royal Assent if the Speaker of the Commons certifies that the bill meets the conditions set out in section 2 of the 1911 Act."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:DepartmentalSponsorship rdf:type owl:Class ;
@@ -105,8 +100,6 @@ pbill:ExpressionOf rdf:type owl:ObjectProperty ;
 	rdfs:domain pbill:BillExpression ;
 	rdfs:range pbill:BillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-												#### edited to here
 
 pbill:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
@@ -117,45 +110,33 @@ pbill:precededBy rdf:type owl:ObjectProperty ;
 	
 pbill:enactedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Enacted as"@en ;
-	rdfs:comment "Relates a bill to the Act of Parliament the bill is enacted as after receiving Royal Assent."@en ;
+	rdfs:comment "Relates a bill to the Act of Parliament the bill is enacted as after receiving Royal Assent. A bill is enacted as one Act, or none. An Act is the enactment of one bill."@en ;
 	rdfs:domain pbill:BillWork ;
 	rdfs:range pbill:ActOfParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:carriedOverFrom rdf:type owl:ObjectProperty ;
-	rdfs:label "Carried over from"@en ;
-	rdfs:comment "Relates the act of being carried over to the bill in the preceding session."@en ;
-	rdfs:domain pbill:CarryOver ;
-	rdfs:range pbill:BillWork ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:carriedOverTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Carried over to"@en ;
-	rdfs:comment "Relates the act of being carried over to the bill in the new session."@en ;
-	rdfs:domain pbill:CarryOver ;
-	rdfs:range pbill:BillWork ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
+
 pbill:parliamentActInvokedFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliament Act invoked from"@en ;
-	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the preceding session."@en ;
+	rdfs:comment "Relates an invocation of the Parliament Act 1911 and the Parliament Act 1949 to a Public Bill in the preceding session. An invocation of the Parliament Act 1911 is from one Public Bill."@en ;
 	rdfs:domain pbill:ParliamentActProcedureInvocation ;
 	rdfs:range pbill:PublicBillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:parliamentActInvokedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliament Act invoked to"@en ;
-	rdfs:comment "Relates an invocation of the Parliament Act to a Public Bill in the new session."@en ;
+	rdfs:comment "Relates an invocation of the Parliament Act 1911 and the Parliament Act 1949 to a Public Bill in the following session. An invocation of the Parliament Act 1911 is to one Public Bill."@en ;
 	rdfs:domain pbill:ParliamentActProcedureInvocation ;
 	rdfs:range pbill:PublicBillWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:hasDepartmentalSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has departmental sponsorship"@en ;
-	rdfs:comment "Relates a Public Bill to a sponsorship by a Government department at a point in time. A Public Bill may have one or more departmental sponsorships over time, or none in the case of a Private Members' Bill."@en ;
+	rdfs:comment "Relates a Public Bill to a sponsorship by a Government department at a point in time. A government bill has one or more departmental sponsorships over time. A Private Members' Bill has no departmental sponsorships."@en ;
 	rdfs:domain pbill:PublicBillWork ;
 	rdfs:range pbill:DepartmentalSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+	#### edited to here
 	
 pbill:hasMemberSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Member sponsorship"@en ;
@@ -187,18 +168,18 @@ pbill:prefix rdf:type owl:DatatypeProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain pbill:BillExpression ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:number rdf:type owl:DatatypeProperty ;
 	rdfs:label "Number"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pbill:BillExpression ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:longTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Long title"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain pbill:BillWork ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
