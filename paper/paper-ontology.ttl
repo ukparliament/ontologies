@@ -55,7 +55,7 @@ paper:PaperSeriesItem rdf:type owl:Class ;
 	
 paper:PaperSeries rdf:type owl:Class ;
 	rdfs:label "Paper series"@en ;
-	rdfs:comment "A series of parliamentary papers, for example: the Treaty Series."@en ;
+	rdfs:comment "A series of papers, for example: the Treaty Series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 	
 paper:Session rdf:type owl:Class ;
@@ -104,7 +104,7 @@ paper:asSeriesitem rdf:type owl:ObjectProperty ;
 
 paper:inSeries rdf:type owl:ObjectProperty ;
 	rdfs:label "In series"@en ;
-	rdfs:comment "Relates the existence of a parliamentary paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series."@en ;
+	rdfs:comment "Relates the existence of a paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series."@en ;
 	rdfs:domain paper:PaperSeriesItem ;
 	rdfs:range paper:PaperSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
@@ -136,14 +136,14 @@ paper:belongsTo rdf:type owl:ObjectProperty ;
 
 paper:prefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "Prefix"@en ;
-	rdfs:comment "Relates a paper series to the prefix which is combined with a paper series item identifier to form the 'number' of a parliamentary paper as an item in that series."@en ;
+	rdfs:comment "Relates a paper series to the prefix which is combined with a paper series item identifier to form the 'number' of a paper as an item in that series."@en ;
 	rdfs:domain paper:PaperSeries ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 	
 paper:hasPrivilege rdf:type owl:DatatypeProperty ;
 	rdfs:label "Has privilege"@en ;
-	rdfs:comment "Used to record if parliamentary papers being items in a series indicates that those papers have parliamentary privilege."@en ;
+	rdfs:comment "Used to record if papers being items in a series indicates that those papers have parliamentary privilege."@en ;
 	rdfs:domain paper:PaperSeries ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
