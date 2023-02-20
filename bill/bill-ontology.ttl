@@ -136,25 +136,23 @@ pbill:hasDepartmentalSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:range pbill:DepartmentalSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
-	#### edited to here
-	
 pbill:hasMemberSponsorship rdf:type owl:ObjectProperty ;
 	rdfs:label "Has Member sponsorship"@en ;
-	rdfs:comment "Relates a Public Bill to a sponsorship by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time, or none in the case of a Government Bill."@en ;
+	rdfs:comment "Relates a Public Bill to a sponsorship of that bill by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time."@en ;
 	rdfs:domain pbill:PublicBillWork ;
 	rdfs:range pbill:MemberSponsorship ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:sponsorshipByGovernmentDepartment rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsorship by government department"@en ;
-	rdfs:comment "Relates a departmental sponsorship to the Government organisation sponsoring a Public Bill at a point in time."@en ;
+	rdfs:comment "Relates a departmental sponsorship to the Ministerial Department sponsoring a Public Bill at a point in time. A departmental sponsorship is by one Ministerial Department."@en ;
 	rdfs:domain pbill:DepartmentalSponsorship ;
 	rdfs:range pbill:MinisterialDepartment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsorship by incumbency"@en ;
-	rdfs:comment "Relates a Member sponsorship to the House seat incumbency of a Member sponsoring a Public Bill at a point in time."@en ;
+	rdfs:comment "Relates a Member sponsorship to the incumbency of a Member sponsoring a Public Bill at a point in time. For a Private Members’ Bill, the incumbency is a seat incumbency. For a Government Bill, the incumbency is an incumbency in a Government position. A sponsorship by incumbency is by one incumbency."@en ;
 	rdfs:domain pbill:MemberSponsorship ;
 	rdfs:range pbill:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
@@ -163,23 +161,33 @@ pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
 
 #######  Data properties ##### 
 
+
+			#### edited to here
+
 pbill:prefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "Prefix"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The prefix part of a bill number originating in the House of Lords, for example: 'HL' in 'HL Bill 14 2022-23'. A bill originating in the House of Commons does not have a prefix."@en ;
 	rdfs:domain pbill:BillExpression ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:number rdf:type owl:DatatypeProperty ;
 	rdfs:label "Number"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The number part of a bill number, for example: '14’ in 'HL Bill 14 2022-23'."@en ;
+	rdfs:domain pbill:BillExpression ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:session rdf:type owl:DatatypeProperty ;
+	rdfs:label "Session"@en ;
+	rdfs:comment "The session part of a bill number, for example: '2022-23’ in 'HL Bill 14 2022-23'. The session label records the session in which the bill was first presented."@en ;
 	rdfs:domain pbill:BillExpression ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:longTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Long title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The long title of a Bill is the wording at the start of a Bill that begins 'A Bill to ...', followed by text describing the purposes of the Bill."@en ;
 	rdfs:domain pbill:BillWork ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
