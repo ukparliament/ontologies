@@ -1,4 +1,4 @@
-@prefix ppapertype: <http://parliament.uk/ontologies/parliamentary-paper-type/> . 
+@prefix papertype: <http://parliament.uk/ontologies/paper-type/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -6,15 +6,16 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
-<http://parliament.uk/ontologies/parliamentary-paper-type/> 
+<http://parliament.uk/ontologies/paper-type/> 
     rdf:type owl:Ontology ;
-    dcterms:title "Parliamentary paper type ontology"@en ;
+    dcterms:title "Paper type ontology"@en ;
     dcterms:created "2023-01-19"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
     dcterms:description ""@en ;
-	foaf:depiction <https://ukparliament.github.io/ontologies/parliamentary-paper-type/parliamentary-paper-type.svg> ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/paper-type/paper-type.svg> ;
 	foaf:maker
 		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Claire Searle" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 		[ foaf:name "Anya Somerville" ].
@@ -23,36 +24,54 @@
 		
 #######  Classes ##### 	
 
-ppapertype:ParliamentaryPaperWork rdf:type owl:Class ;
-	rdfs:label "Parliamentary paper work"@en ;
-	rdfs:comment "A parliamentary paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+papertype:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper Expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
+papertype:Treaty rdf:type owl:Class ;
+	rdfs:subClassOf papertype:PaperExpression ;
+	rdfs:label "Treaty"@en ;
+	rdfs:comment "A  written agreement between states - or between states and international organisations - which is binding under international law."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
+papertype:ExplanatoryMemorandumExpression rdf:type owl:Class ;
+	rdfs:subClassOf papertype:PaperExpression ;
+	rdfs:label "Explanatory memorandum expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
+papertype:ExplanatoryNoteExpression rdf:type owl:Class ;
+	rdfs:subClassOf papertype:PaperExpression ;
+	rdfs:label "Explanatory note expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
+papertype:BillExpression rdf:type owl:Class ;
+	rdfs:subClassOf papertype:PaperExpression ;
+	rdfs:label "Bill expression"@en ;
+	rdfs:comment "An expression of a bill work at a point in time. A new expression of the bill work is created by any amendment being made to the bill, or when a bill passes from the first House to the second House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
+papertype:EnabledThing rdf:type owl:Class ;
+	rdfs:subClassOf papertype:PaperExpression ;
+	rdfs:label "Enabled thing"@en ;
+	rdfs:comment "A thing which is intended to exercise a power set out in statute."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
+papertype:ImpactAssessmentExpression rdf:type owl:Class ;
+	rdfs:subClassOf papertype:PaperExpression ;
+	rdfs:label "Impact assessment expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 	
 	
-	
-	
-	
-	
-	
-				
-
 #######  Object properties ##### 
 	
-ppaper:expressionOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Expression of"@en ;
-	rdfs:comment "Relates a parliamentary paper expression to the work that paper is an expression of. A parliamentary paper expression is an expression of one parliamentary paper work. A parliamentary paper work is expressed as one or more parliamentary papers."@en ;
-	rdfs:domain ppaper:ParliamentaryPaperExpression ;
-	rdfs:range ppaper:ParliamentaryPaperWork ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
-
-	
-	
-#######  Data properties ##### 
-
-ppaper:prefix rdf:type owl:DatatypeProperty ;
-	rdfs:label "Prefix"@en ;
-	rdfs:comment "Relates a paper series to the prefix which is combined with a paper series item identifier to form the 'number' of a parliamentary paper as an item in that series."@en ;
-	rdfs:domain ppaper:PaperSeries ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-paper/> .
+ppaper:enabledThingHasImpactAssessment rdf:type owl:ObjectProperty ;
+	rdfs:label "Enabled thing has impact assessment"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain papertype:EnabledThing ;
+	rdfs:range papertype:ImpactAssessmentExpression ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
