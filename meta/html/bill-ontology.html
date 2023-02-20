@@ -208,7 +208,7 @@
             >
           </h3>
 
-           <p>Relates a Public Bill to a sponsorship by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time, or none in the case of a Government Bill.</p>
+           <p>Relates a Public Bill to a sponsorship of that bill by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time.</p>
 
           <p>
             <a href="#PublicBillWork"
@@ -284,7 +284,7 @@
             >
           </h3>
 
-           <p>Relates a departmental sponsorship to the Government organisation sponsoring a Public Bill at a point in time.</p>
+           <p>Relates a departmental sponsorship to the Ministerial Department sponsoring a Public Bill at a point in time. A departmental sponsorship is by one Ministerial Department.</p>
 
           <p>
             <a href="#DepartmentalSponsorship"
@@ -303,7 +303,7 @@
             >
           </h3>
 
-           <p>Relates a Member sponsorship to the House seat incumbency of a Member sponsoring a Public Bill at a point in time.</p>
+           <p>Relates a Member sponsorship to the incumbency of a Member sponsoring a Public Bill at a point in time. For a Private Members’ Bill, the incumbency is a seat incumbency. For a Government Bill, the incumbency is an incumbency in a Government position. A sponsorship by incumbency is by one incumbency.</p>
 
           <p>
             <a href="#MemberSponsorship"
@@ -324,7 +324,7 @@
             <a href="#longTitle">Long title</a>
           </h3>
 
-          <p></p>
+          <p>The long title of a Bill is the wording at the start of a Bill that begins &#39;A Bill to ...&#39;, followed by text describing the purposes of the Bill.</p>
 
           <p>
             BillWork &mdash; Long title &mdash;
@@ -338,7 +338,7 @@
             <a href="#number">Number</a>
           </h3>
 
-          <p></p>
+          <p>The number part of a bill number, for example: &#39;14&#39; in &#39;HL Bill 14 2022-23&#39;.</p>
 
           <p>
             BillExpression &mdash; Number &mdash;
@@ -352,10 +352,24 @@
             <a href="#prefix">Prefix</a>
           </h3>
 
-          <p></p>
+          <p>The prefix part of a bill number originating in the House of Lords, for example: &#39;HL&#39; in &#39;HL Bill 14 2022-23&#39;. A bill originating in the House of Commons does not have a prefix.</p>
 
           <p>
             BillExpression &mdash; Prefix &mdash;
+            Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="session">
+          <h3>
+            Data property
+            <a href="#session">Session</a>
+          </h3>
+
+          <p>The session part of a bill number, for example: &#39;2022-23&#39; in &#39;HL Bill 14 2022-23&#39;. The session label records the session in which the bill was first presented.</p>
+
+          <p>
+            BillExpression &mdash; Session &mdash;
             Literal
           </p>
         </article>
@@ -416,7 +430,7 @@
 
     <footer>
       <p>
-        Generated 2023-02-15 14:23:39.764909 from a
+        Generated 2023-02-20 17:07:08.303758 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../bill/bill-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../bill/bill-ontology.ttl"
