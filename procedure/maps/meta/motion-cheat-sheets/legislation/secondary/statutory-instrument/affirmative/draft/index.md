@@ -46,7 +46,45 @@ If approval motion extant
 
 AND
 
-if there's NOT an approval motion agreed
+if the instrument has NOT already been rejected (either House)
+
+### Motion to consider
+
+#### Can be tabled
+
+If approval motion extant
+
+AND
+
+if there's NOT one extant
+
+AND
+
+if there's NOT one agreed
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Can be debated
+
+If consideration motion extant
+
+AND
+
+if there has NOT been a debate
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If consideration motion extant
+
+AND
+
+if there's been a debate
 
 AND
 
@@ -99,10 +137,6 @@ scrutiny reserve condition under standing order 73 has been met
 #### Question can be put
 
 If approval motion extant
-
-AND
-
-if there's NOT an approval motion agreed
 
 AND
 
@@ -233,6 +267,48 @@ if the instrument has NOT already been rejected (either House)
 #### Question can be put
 
 If motion to dispense extant
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+### Motion to consider
+
+#### Can be tabled
+
+If approval motion extant
+
+AND
+
+if there's NOT one extant
+
+AND
+
+if there's NOT one agreed
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Can be debated
+
+If consideration motion extant
+
+AND
+
+if there has NOT been a debate
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If consideration motion extant
+
+AND
+
+if there's been a debate
 
 AND
 
