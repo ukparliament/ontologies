@@ -113,20 +113,15 @@ If motion to refer extant
 
 AND (
 
-	if non-fatal extant
-	
-	OR (
+	if fatal extant
 		
-		if fatal extant
+	AND
 		
-		AND
-		
-		if the instrument has NOT already been rejected (either House)
+	if the instrument has NOT already been rejected (either House)
 
-		AND
+	AND
 
-		if the clock has NOT run out
-	)
+	if the clock has NOT run out
 )
 
 ## House of Lords
