@@ -107,6 +107,14 @@ OR (
 
 )
 
+AND 
+
+if there is NOT one extant
+
+AND 
+
+if there is NOT one agreed
+
 #### Question can be put
 
 If motion to refer extant
