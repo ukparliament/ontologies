@@ -56,6 +56,48 @@ AND
 
 if the instrument has NOT already been rejected (either House)
 
+### Motion to consider
+
+#### Can be tabled
+
+If approval motion extant
+
+AND
+
+if there's NOT one extant
+
+AND
+
+if there's NOT one agreed
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Can be debated
+
+If consideration motion extant
+
+AND
+
+if there has NOT been a debate
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If consideration motion extant
+
+AND
+
+if there's been a debate
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
 ## House of Lords
 
 ### Motion to approve
@@ -281,3 +323,45 @@ if the instrument has NOT already been rejected (either House)
 AND
 
 if the clock has NOT run out
+
+### Motion to consider
+
+#### Can be tabled
+
+If approval motion extant
+
+AND
+
+if there's NOT one extant
+
+AND
+
+if there's NOT one agreed
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Can be debated
+
+If consideration motion extant
+
+AND
+
+if there has NOT been a debate
+
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If consideration motion extant
+
+AND
+
+if there's been a debate
+
+AND
+
+if the instrument has NOT already been rejected (either House)
