@@ -25,14 +25,14 @@
 #######  Classes ##### 	
 
 papertype:PaperExpression rdf:type owl:Class ;
-	rdfs:label "Paper Expression"@en ;
+	rdfs:label "Paper expression"@en ;
 	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
-papertype:Treaty rdf:type owl:Class ;
+papertype:TreatyExpression rdf:type owl:Class ;
 	rdfs:subClassOf papertype:PaperExpression ;
-	rdfs:label "Treaty"@en ;
-	rdfs:comment "A  written agreement between states - or between states and international organisations - which is binding under international law."@en ;
+	rdfs:label "Treaty expression"@en ;
+	rdfs:comment "A written agreement between states - or between states and international organisations - which is binding under international law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 papertype:ExplanatoryMemorandumExpression rdf:type owl:Class ;
@@ -79,7 +79,7 @@ papertype:enabledThingHasImpactAssessment rdf:type owl:ObjectProperty ;
 papertype:treatyHasExplanatoryMemorandum rdf:type owl:ObjectProperty ;
 	rdfs:label "Treaty has explanatory memorandum"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain papertype:Treaty ;
+	rdfs:domain papertype:TreatyExpression ;
 	rdfs:range papertype:ExplanatoryMemorandumExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
