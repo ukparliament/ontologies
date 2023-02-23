@@ -34,10 +34,6 @@ if there has NOT been a debate
 
 AND
 
-if there's NOT an approval motion agreed
-
-AND
-
 if the instrument has NOT already been rejected (either House)
 
 #### Question can be put
@@ -121,10 +117,6 @@ If approval motion extant
 AND
 
 if there has NOT been a Chamber debate
-
-AND
-
-if there's NOT an approval motion agreed
 
 AND
 
@@ -243,6 +235,14 @@ If instrument laid
 AND
 
 if the instrument has NOT been withdrawn
+
+AND
+
+if there is NOT a motion to dispense extant
+
+AND
+
+there has NOT been a motion to dispense agreed
 
 AND
 
