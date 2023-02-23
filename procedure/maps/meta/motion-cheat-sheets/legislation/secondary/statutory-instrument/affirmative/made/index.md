@@ -42,10 +42,6 @@ if there has NOT been a debate
 
 AND
 
-if there's NOT an approval motion agreed
-
-AND
-
 if the instrument has NOT already been rejected (either House)
 
 #### Question can be put
@@ -55,10 +51,6 @@ If approval motion extant
 AND
 
 if the clock has NOT run out
-
-AND
-
-if there's NOT an approval motion agreed
 
 AND
 
@@ -106,10 +98,6 @@ if there has NOT been a Chamber debate
 
 AND
 
-if there's NOT an approval motion agreed
-
-AND
-
 if the instrument has NOT already been rejected (either House)
 
 AND
@@ -123,10 +111,6 @@ If approval motion extant
 AND
 
 if the clock has NOT run out
-
-AND
-
-if there's NOT an approval motion agreed
 
 AND
 
