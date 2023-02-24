@@ -33,11 +33,6 @@ report:MadeAvailableThing rdf:type owl:Class ;
 	rdfs:label "Made available thing"@en ;
 	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
-
-report:PaperExpression rdf:type owl:Class ;
-	rdfs:label "Paper expression"@en ;
-	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
 	
 report:Reporting rdf:type owl:Class ;
 	rdfs:subClassOf report:MakingAvailable ;
@@ -46,7 +41,6 @@ report:Reporting rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
 	
 report:ReportedThing rdf:type owl:Class ;
-	rdfs:subClassOf report:PaperExpression ;
 	rdfs:subClassOf report:MadeAvailableThing ;
 	rdfs:label "Reported thing"@en ;
 	rdfs:comment "Examples being committee reports, evidence, correspondence"@en ;
