@@ -35,11 +35,6 @@ pdep:MakingAvailable rdf:type owl:Class ;
 pdep:MadeAvailableThing rdf:type owl:Class ;
 	rdfs:label "Made available thing"@en ;
 	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
-
-pdep:PaperExpression rdf:type owl:Class ;
-	rdfs:label "Paper expression"@en ;
-	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .	
 	
 pdep:Depositing rdf:type owl:Class ;
@@ -49,7 +44,6 @@ pdep:Depositing rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:DepositedPaper rdf:type owl:Class ;
-	rdfs:subClassOf pdep:PaperExpression ;
 	rdfs:subClassOf pdep:MadeAvailableThing ;
 	rdfs:label "Deposited paper"@en ;
 	rdfs:comment "An item deposited in a Library of a House."@en ;
