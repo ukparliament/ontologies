@@ -105,6 +105,14 @@ When a proposed draft remedial order is laid before Parliament it can occasional
 
 * [Affirmative remedial order statements](https://api.parliament.uk/s/ecb74d5d)
 
+## Joint Committee on Human Rights (JCHR) inquiries and calls for evidence
+
+As part of the Joint Committee on Human Rights scrutiny of proposed remedial orders and remedial orders they may decide to open an inquiry into the instruments as well as call for evidence. Inquiries may be opened at any time during an instrument's time before Parliament. Calls for evidence are usually made when an inquiry is opened but they can happen independently. Evidences will be sought from a wide range of groups and individuals with relevant experience and interest. 
+
+* [Inquiries opened](https://api.parliament.uk/s/ff81950d)
+
+* [Call for evidence](https://api.parliament.uk/s/be567dd0)
+
 
 ## Joint Committee on Human Rights (JCHR) consideration
 
