@@ -80,12 +80,16 @@
           <h3>Class <a href="#BillExpression">Bill expression</a></h3>
 
           <p>An expression of a bill work at a point in time. A new expression of the bill work is created by any amendment being made to the bill, or when a bill passes from the first House to the second House.</p>
-         </article>
+           <p>
+            Superclasses  &middot; PaperExpression           </p>
+        </article>
         <article class="class" id="BillWork">
           <h3>Class <a href="#BillWork">Bill work</a></h3>
 
           <p>A proposal for a new Act of Parliament.</p>
-         </article>
+           <p>
+            Superclasses  &middot; PaperWork           </p>
+        </article>
         <article class="class" id="DepartmentalSponsorship">
           <h3>Class <a href="#DepartmentalSponsorship">Departmental sponsorship</a></h3>
 
@@ -117,6 +121,16 @@
           <h3>Class <a href="#MinisterialDepartment">Ministerial department</a></h3>
 
           <p>A ministerial department is an executive body of government, headed by a government minister having responsibility for described areas of public administration.</p>
+         </article>
+        <article class="class" id="PaperExpression">
+          <h3>Class <a href="#PaperExpression">Paper expression</a></h3>
+
+          <p>A paper made available to a House, being an expression of a paper work.</p>
+         </article>
+        <article class="class" id="PaperWork">
+          <h3>Class <a href="#PaperWork">Paper work</a></h3>
+
+          <p>A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
          </article>
         <article class="class" id="ParliamentActProcedureInvocation">
           <h3>Class <a href="#ParliamentActProcedureInvocation">Parliament Act procedure invocation</a></h3>
@@ -327,50 +341,8 @@
           <p>The long title of a Bill is the wording at the start of a Bill that begins &#39;A Bill to ...&#39;, followed by text describing the purposes of the Bill.</p>
 
           <p>
-            BillWork &mdash; Long title &mdash;
+            BillExpression &mdash; Long title &mdash;
             langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="number">
-          <h3>
-            Data property
-            <a href="#number">Number</a>
-          </h3>
-
-          <p>The number part of a bill number, for example: &#39;14&#39; in &#39;HL Bill 14 2022-23&#39;.</p>
-
-          <p>
-            BillExpression &mdash; Number &mdash;
-            Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="prefix">
-          <h3>
-            Data property
-            <a href="#prefix">Prefix</a>
-          </h3>
-
-          <p>The prefix part of a bill number originating in the House of Lords, for example: &#39;HL&#39; in &#39;HL Bill 14 2022-23&#39;. A bill originating in the House of Commons does not have a prefix.</p>
-
-          <p>
-            BillExpression &mdash; Prefix &mdash;
-            Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="session">
-          <h3>
-            Data property
-            <a href="#session">Session</a>
-          </h3>
-
-          <p>The session part of a bill number, for example: &#39;2022-23&#39; in &#39;HL Bill 14 2022-23&#39;. The session label records the session in which the bill was first presented.</p>
-
-          <p>
-            BillExpression &mdash; Session &mdash;
-            Literal
           </p>
         </article>
       </section>
@@ -378,6 +350,14 @@
          <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>bill/<wbr>BillExpression</td>
+            <td>/<wbr>ontologies/<wbr>bill/<wbr>PaperExpression</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>bill/<wbr>BillWork</td>
+            <td>/<wbr>ontologies/<wbr>bill/<wbr>PaperWork</td>
+          </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>bill/<wbr>PublicBillWork</td>
             <td>/<wbr>ontologies/<wbr>bill/<wbr>BillWork</td>
@@ -430,7 +410,7 @@
 
     <footer>
       <p>
-        Generated 2023-02-27 12:54:04.863977 from a
+        Generated 2023-02-27 13:18:01.148256 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../bill/bill-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../bill/bill-ontology.ttl"
