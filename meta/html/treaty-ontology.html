@@ -65,27 +65,12 @@
         &middot; <a href="#objectproperties">Object properties</a>  &middot;
         <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
 
- &middot; <a href="https://ukparliament.github.io/ontologies/treaty/treaty.png">Depiction</a>
+ &middot; <a href="https://ukparliament.github.io/ontologies/treaty/treaty.svg">Depiction</a>
       </nav>
 
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Bill">
-          <h3>Class <a href="#Bill">Bill</a></h3>
-
-          <p>A bill presented to Parliament.</p>
-         </article>
-        <article class="class" id="DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">
-          <h3>Class <a href="#DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">Draft and made statutory instrument subject to parliamentary procedure</a></h3>
-
-          <p>The National Archives classify made instruments as legislation - and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by TNA. Parliament includes draft instruments in its description of statutory instruments, which are modelled here together.</p>
-         </article>
-        <article class="class" id="FreeTradeAgreementScrutinyDocument">
-          <h3>Class <a href="#FreeTradeAgreementScrutinyDocument">Free trade agreement scrutiny document</a></h3>
-
-          <p>A draft of the text of a free trade agreement which may be shared with Parliament shortly after signature. Should a &#39;scrutiny document&#39; be laid, it would be laid as an unnumbered Command Paper, rather than being numbered in the Treaty series. The &#39;scrutiny document&#39; may be accompanied by any explanatory material the Department wishes to provide.</p>
-         </article>
         <article class="class" id="GovernmentOrganisation">
           <h3>Class <a href="#GovernmentOrganisation">Government organisation</a></h3>
 
@@ -96,45 +81,16 @@
 
           <p>A treaty is a written agreement between states - or between states and international organisations - which is binding under international law.</p>
          </article>
-        <article class="class" id="TreatyAsLaid">
-          <h3>Class <a href="#TreatyAsLaid">Treaty as laid</a></h3>
+        <article class="class" id="TreatyExpression">
+          <h3>Class <a href="#TreatyExpression">Treaty expression</a></h3>
 
           <p>Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure.</p>
-         </article>
-        <article class="class" id="TreatySeries">
-          <h3>Class <a href="#TreatySeries">Treaty series</a></h3>
-
-          <p>A series of which a treaty is an item by means of a treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK.</p>
-         </article>
-        <article class="class" id="TreatySeriesItem">
-          <h3>Class <a href="#TreatySeriesItem">Treaty series item</a></h3>
-
-          <p>A treaty is published in a treaty series as a treaty series item. At any time, a treaty series item is always in a treaty series. A treaty may be placed in a new treaty series by means of a new treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. If Parliament does not object to ratification of the treaty, the treaty becomes available to the government to ratify and then may come into force. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK.</p>
          </article>
       </section>
  
       <section id="objectproperties">
         <h2>Object properties</h2>
 
-
-        <article class="objectproperty" id="asSeriesItem">
-          <h3>
-            Object property
-            <a href="#asSeriesItem"
-              >As series item</a
-            >
-          </h3>
-
-           <p>Relates a treaty as laid before Parliament to a treaty series item. A treaty series item places a treaty in the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item</p>
-
-          <p>
-            <a href="#TreatyAsLaid"
-              >TreatyAsLaid</a
-            >
-            &mdash; As series item &mdash;
-            <a href="#TreatySeriesItem">TreatySeriesItem</a>
-          </p>
-        </article>
 
         <article class="objectproperty" id="hasLeadDepartment">
           <h3>
@@ -155,25 +111,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="inSeries">
-          <h3>
-            Object property
-            <a href="#inSeries"
-              >In series</a
-            >
-          </h3>
-
-           <p>Relates a treaty series item to the treaty series in which it appears. A treaty series item is listed in a single treaty series.</p>
-
-          <p>
-            <a href="#TreatySeriesItem"
-              >TreatySeriesItem</a
-            >
-            &mdash; In series &mdash;
-            <a href="#TreatySeries">TreatySeries</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="laidAs">
           <h3>
             Object property
@@ -189,64 +126,7 @@
               >Treaty</a
             >
             &mdash; Laid as &mdash;
-            <a href="#TreatyAsLaid">TreatyAsLaid</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="precededBy">
-          <h3>
-            Object property
-            <a href="#precededBy"
-              >Preceded by</a
-            >
-          </h3>
-
-           <p>Relates a treaty to a free trade agreement scrutiny document which may precede it.</p>
-
-          <p>
-            <a href="#Treaty"
-              >Treaty</a
-            >
-            &mdash; Preceded by &mdash;
-            <a href="#FreeTradeAgreementScrutinyDocument">FreeTradeAgreementScrutinyDocument</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">
-          <h3>
-            Object property
-            <a href="#requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure"
-              >Requires passage of a draft or made Statutory Instrument subject to parliamentary procedure</a
-            >
-          </h3>
-
-           <p>Relates a treaty to the required passage of one or more statutory instruments in order to enable the satisfaction of treaty obligations.</p>
-
-          <p>
-            <a href="#Treaty"
-              >Treaty</a
-            >
-            &mdash; Requires passage of a draft or made Statutory Instrument subject to parliamentary procedure &mdash;
-            <a href="#DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure">DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="requiresPassageOfBill">
-          <h3>
-            Object property
-            <a href="#requiresPassageOfBill"
-              >Requires passage of bill</a
-            >
-          </h3>
-
-           <p>Relates a treaty to the required passage of one or more bills in order to enable the satisfaction of treaty obligations.</p>
-
-          <p>
-            <a href="#Treaty"
-              >Treaty</a
-            >
-            &mdash; Requires passage of bill &mdash;
-            <a href="#Bill">Bill</a>
+            <a href="#TreatyExpression">TreatyExpression</a>
           </p>
         </article>
       </section>
@@ -263,7 +143,7 @@
           <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. Within a series, Command Paper numbers start at 1 and do not exceed 9999.</p>
 
           <p>
-            TreatyAsLaid &mdash; Command Paper number &mdash;
+            TreatyExpression &mdash; Command Paper number &mdash;
             Literal
           </p>
         </article>
@@ -277,21 +157,7 @@
           <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. A series of Command Papers has a unique prefix.</p>
 
           <p>
-            TreatyAsLaid &mdash; Command Paper prefix &mdash;
-            Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="seriesItemCitation">
-          <h3>
-            Data property
-            <a href="#seriesItemCitation">Series item citation</a>
-          </h3>
-
-          <p>An item in a treaty series has a citation, in addition to a Command Paper number: for example, China No. 1 (2017).</p>
-
-          <p>
-            TreatySeriesItem &mdash; Series item citation &mdash;
+            TreatyExpression &mdash; Command Paper prefix &mdash;
             Literal
           </p>
         </article>
@@ -333,7 +199,7 @@
           <p>The date on which the treaty is ratified by the UK.</p>
 
           <p>
-            Treaty &mdash; UK ratification date &mdash;
+            TreatyExpression &mdash; UK ratification date &mdash;
             date
           </p>
         </article>
@@ -375,7 +241,7 @@
 
     <footer>
       <p>
-        Generated 2023-02-27 09:44:56.399220 from a
+        Generated 2023-02-27 10:05:19.648884 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../treaty/treaty-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../treaty/treaty-ontology.ttl"
