@@ -12,7 +12,7 @@
     dcterms:created "2019-01-16"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
     dcterms:description "A model describing the form of treaties considered by Parliament, treaty membership of an FCO series and the relationship of a treaty to legislation required to be passed in order for the UK to comply with treaty obligations."@en ;
-	foaf:depiction <https://ukparliament.github.io/ontologies/treaty/treaty.png> ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/treaty/treaty.svg> ;
 	foaf:maker
 		[ foaf:name "David Beamish" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -23,22 +23,7 @@
 		[ foaf:name "Jane White" ] .
 
 
-#######  Classes ##### 	
-
-ptr:Bill rdf:type owl:Class ;
-	rdfs:label "Bill"@en ;
-	rdfs:comment "A bill presented to Parliament."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
-ptr:FreeTradeAgreementScrutinyDocument rdf:type owl:Class ;
-	rdfs:label "Free trade agreement scrutiny document"@en ;
-	rdfs:comment "A draft of the text of a free trade agreement which may be shared with Parliament shortly after signature. Should a 'scrutiny document' be laid, it would be laid as an unnumbered Command Paper, rather than being numbered in the Treaty series. The 'scrutiny document' may be accompanied by any explanatory material the Department wishes to provide."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
-	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
-	rdfs:comment "The National Archives classify made instruments as legislation - and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by TNA. Parliament includes draft instruments in its description of statutory instruments, which are modelled here together."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+#######  Classes #####
 	
 ptr:GovernmentOrganisation rdf:type owl:Class ;
 	rdfs:label "Government organisation"@en ;
@@ -50,58 +35,20 @@ ptr:Treaty rdf:type owl:Class ;
 	rdfs:comment "A treaty is a written agreement between states - or between states and international organisations - which is binding under international law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
-ptr:TreatyAsLaid rdf:type owl:Class ;
-	rdfs:label "Treaty as laid"@en ;
+ptr:TreatyExpression rdf:type owl:Class ;
+	rdfs:label "Treaty expression"@en ;
 	rdfs:comment "Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:TreatySeriesItem rdf:type owl:Class ;
-	rdfs:label "Treaty series item"@en ;
-	rdfs:comment "A treaty is published in a treaty series as a treaty series item. At any time, a treaty series item is always in a treaty series. A treaty may be placed in a new treaty series by means of a new treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. If Parliament does not object to ratification of the treaty, the treaty becomes available to the government to ratify and then may come into force. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:TreatySeries rdf:type owl:Class ;
-	rdfs:label "Treaty series"@en ;
-	rdfs:comment "A series of which a treaty is an item by means of a treaty series item. Treaty series are defined by the Foreign and Commonwealth Office. The Country Series lists bilateral agreements which are not yet in force. The European Union Series lists multilateral agreements between member states of the European Union, or between third parties and member states of the European Union, which are not yet in force for the UK. The Miscellaneous Series lists multilateral agreements where the UK is a signatory and which are not yet in force. A treaty subject to the Constitutional Reform and Governance Act 2010 is listed in one of the Country, European Union or Miscellaneous series when first laid before Parliament. Once a treaty has entered into force it is published in the FCO Treaty Series. The Treaty Series lists agreements that have completed all necessary procedures and are now in force for the UK."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 
 	
 ##### Object properties ####
-
-ptr:requiresPassageOfBill rdf:type owl:ObjectProperty ;
-	rdfs:label "Requires passage of bill"@en ;
-	rdfs:comment "Relates a treaty to the required passage of one or more bills in order to enable the satisfaction of treaty obligations."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range ptr:Bill ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:requiresPassageOfDraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:ObjectProperty ;
-	rdfs:label "Requires passage of a draft or made Statutory Instrument subject to parliamentary procedure"@en ;
-	rdfs:comment "Relates a treaty to the required passage of one or more statutory instruments in order to enable the satisfaction of treaty obligations."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range ptr:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:laidAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Laid as"@en ;
 	rdfs:comment "The 'Laid as' property relates a treaty to the form in which it is laid. Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure. "@en ;
 	rdfs:domain ptr:Treaty ;
-	rdfs:range ptr:TreatyAsLaid ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
-ptr:asSeriesItem rdf:type owl:ObjectProperty ;
-	rdfs:label "As series item"@en ;
-	rdfs:comment "Relates a treaty as laid before Parliament to a treaty series item. A treaty series item places a treaty in the treaty series it is listed in at the time of laying. Each treaty series item refers to one treaty as laid. A treaty as laid appears as one treaty series item"@en ;
-	rdfs:domain ptr:TreatyAsLaid ;
-	rdfs:range ptr:TreatySeriesItem ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
-ptr:inSeries rdf:type owl:ObjectProperty ;
-	rdfs:label "In series"@en ;
-	rdfs:comment "Relates a treaty series item to the treaty series in which it appears. A treaty series item is listed in a single treaty series."@en ;
-	rdfs:domain ptr:TreatySeriesItem ;
-	rdfs:range ptr:TreatySeries ;
+	rdfs:range ptr:TreatyExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:hasLeadDepartment rdf:type owl:ObjectProperty ;
@@ -111,13 +58,6 @@ ptr:hasLeadDepartment rdf:type owl:ObjectProperty ;
 	rdfs:range ptr:GovernmentOrganisation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
-ptr:precededBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Preceded by"@en ;
-	rdfs:comment "Relates a treaty to a free trade agreement scrutiny document which may precede it."@en ;
-	rdfs:domain ptr:Treaty ;
-	rdfs:range ptr:FreeTradeAgreementScrutinyDocument ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
 
 	
 ##### Data properties ####
@@ -125,28 +65,21 @@ ptr:precededBy rdf:type owl:ObjectProperty ;
 ptr:commandPaperPrefix rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command Paper prefix"@en ;
 	rdfs:comment "A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. A series of Command Papers has a unique prefix."@en ;
-	rdfs:domain ptr:TreatyAsLaid ;
+	rdfs:domain ptr:TreatyExpression ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 ptr:commandPaperNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Command Paper number"@en ;
 	rdfs:comment "A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. Within a series, Command Paper numbers start at 1 and do not exceed 9999."@en ;
-	rdfs:domain ptr:TreatyAsLaid ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-
-ptr:seriesItemCitation rdf:type owl:DatatypeProperty ;
-	rdfs:label "Series item citation"@en ;
-	rdfs:comment "An item in a treaty series has a citation, in addition to a Command Paper number: for example, China No. 1 (2017)."@en ;
-	rdfs:domain ptr:TreatySeriesItem ;
+	rdfs:domain ptr:TreatyExpression ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 ptr:ukRatificationDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK ratification date"@en ;
 	rdfs:comment "The date on which the treaty is ratified by the UK."@en ;
-	rdfs:domain ptr:Treaty ;
+	rdfs:domain ptr:TreatyExpression ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
