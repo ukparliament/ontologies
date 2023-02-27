@@ -105,7 +105,9 @@ When a proposed draft remedial order is laid before Parliament it can occasional
 
 * [Affirmative remedial order statements](https://api.parliament.uk/s/ecb74d5d)
 
-## Joint Committee on Human Rights (JCHR) inquiries and calls for evidence
+## Joint Committee on Human Rights (JCHR) 
+
+### Joint Committee on Human Rights (JCHR) inquiries and calls for evidence
 
 As part of the Joint Committee on Human Rights scrutiny of proposed remedial orders and remedial orders they may decide to open an inquiry into the instruments as well as call for evidence. Inquiries may be opened at any time during an instrument's time before Parliament. Calls for evidence are usually made when an inquiry is opened but they can happen independently. Evidences will be sought from a wide range of groups and individuals with relevant experience and interest. 
 
@@ -114,7 +116,7 @@ As part of the Joint Committee on Human Rights scrutiny of proposed remedial ord
 * [Call for evidence](https://api.parliament.uk/s/be567dd0)
 
 
-## Joint Committee on Human Rights (JCHR) consideration
+### Joint Committee on Human Rights (JCHR) consideration
 
 All proposed draft remedial orders and remedial orders will be considered by the Joint Committee on Human Rights (JCHR). For proposed draft remedial orders the Committee considers whether the procedure is appropriate, the content is appropriate or if primary legislation is more appropriate. For the remedial orders the Committee considers whether the House(s) should approve the order. The following queries break down committee consideration:
 
@@ -124,7 +126,7 @@ All proposed draft remedial orders and remedial orders will be considered by the
 
 * [Affirmative remedial orders](https://api.parliament.uk/s/008bdd20)
 
-### Government responses to Joint Committee on Human Rights (JCHR) reports
+#### Government responses to Joint Committee on Human Rights (JCHR) reports
 
 The Government can respond to reports by the Joint Committee on Human Rights (JCHR) in the form of a paper laid before the House(s) or for proposed draft remedial orders as part of the following order's explanatory memorandum. 
 
