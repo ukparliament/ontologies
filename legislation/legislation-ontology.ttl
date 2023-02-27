@@ -88,16 +88,6 @@ plg:MadeStatutoryInstrument rdf:type owl:Class ;
 	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:StatutoryInstrumentSeriesItem rdf:type owl:Class ;
-	rdfs:label "Statutory instrument series item"@en ;
-	rdfs:comment "A statutory instrument series item links a draft or made statutory instrument subject to parliamentary procedure to a statutory instrument series. A statutory instrument can be included by means of an item in more than one series excepting these cases: Northern Ireland series instruments do not form part of any other series; legal series instruments do not form part of any other series; National Assembly for Wales series SIs and Scottish series instruments can be included in the commencement order series but no other. Commencement order series items may also form part of either the Welsh or Scottish series. Where an instrument appears as an item in more than one series, the citation order is formed by (1) the commencement order series and item identifier followed by (2) any other series and item identifier. Where the instrument is made by the Welsh Ministers, the 'W. / Cy.' number follows the SI number."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:StatutoryInstrumentSeries rdf:type owl:Class ;
-	rdfs:label "Statutory instrument series"@en ;
-	rdfs:comment "A statutory instrument may appear in one or more series, or in none. Series include: Welsh Instruments, corresponding to Wales Statutory Instruments; Northern Ireland Orders in Council; Commencement Orders; Appointed Day Orders; Legal Statutory Instruments; and Scottish Statutory Instruments, being United Kingdom instruments that have particular application to Scotland."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
 	
 
 ##### Object properties ####
@@ -128,20 +118,6 @@ plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to made legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure will be embodied as a single made statutory instrument, or none. A made statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
 	rdfs:range plg:MadeStatutoryInstrument ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:asSeriesItem rdf:type owl:ObjectProperty ;
-	rdfs:label "As series item"@en ;
-	rdfs:comment "Relates a made statutory instrument to a statutory instrument series item. A made statutory instrument may belong to more than one series by means of a series item. A series item is formed of a single made statutory instrument."@en ;
-	rdfs:domain plg:MadeStatutoryInstrument ;
-	rdfs:range plg:StatutoryInstrumentSeriesItem ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:inSeries rdf:type owl:ObjectProperty ;
-	rdfs:label "In series"@en ;
-	rdfs:comment "Relates a statutory instrument series item to a statutory instrument series. A series may have one or more items, or none. A series item places an instrument in a single series."@en ;
-	rdfs:domain plg:StatutoryInstrumentSeriesItem ;
-	rdfs:range plg:StatutoryInstrumentSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 					
@@ -194,13 +170,6 @@ plg:isbn rdf:type owl:DatatypeProperty ;
 	rdfs:label "ISBN"@en ;
 	rdfs:comment "An identifier conforming to the ISBN standard."@en ;
 	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:siSeriesItemIdentifier rdf:type owl:DatatypeProperty ;
-	rdfs:label "SI series item identifier"@en ;
-	rdfs:comment "The identifier of an item within a series, for example, '121' in ' SI 2018/647 (W. 121)'."@en ;
-	rdfs:domain plg:StatutoryInstrumentSeriesItem ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
