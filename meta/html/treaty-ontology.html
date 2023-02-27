@@ -63,7 +63,7 @@
       <nav>
         <a href="#classes">Classes</a>
         &middot; <a href="#objectproperties">Object properties</a>  &middot;
-        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
 
  &middot; <a href="https://ukparliament.github.io/ontologies/treaty/treaty.svg">Depiction</a>
       </nav>
@@ -76,21 +76,54 @@
 
           <p>A government department, agency or public body with responsibility for a sector of public administration.</p>
          </article>
-        <article class="class" id="Treaty">
-          <h3>Class <a href="#Treaty">Treaty</a></h3>
+        <article class="class" id="PaperExpression">
+          <h3>Class <a href="#PaperExpression">Paper expression</a></h3>
 
-          <p>A treaty is a written agreement between states - or between states and international organisations - which is binding under international law.</p>
+          <p>A paper made available to a House, being an expression of a paper work.</p>
+         </article>
+        <article class="class" id="PaperWork">
+          <h3>Class <a href="#PaperWork">Paper work</a></h3>
+
+          <p>A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
          </article>
         <article class="class" id="TreatyExpression">
           <h3>Class <a href="#TreatyExpression">Treaty expression</a></h3>
 
           <p>Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure.</p>
-         </article>
+           <p>
+            Superclasses  &middot; PaperExpression           </p>
+        </article>
+        <article class="class" id="TreatyWork">
+          <h3>Class <a href="#TreatyWork">Treaty work</a></h3>
+
+          <p>A treaty is a written agreement between states - or between states and international organisations - which is binding under international law.</p>
+           <p>
+            Superclasses  &middot; PaperWork           </p>
+        </article>
       </section>
  
       <section id="objectproperties">
         <h2>Object properties</h2>
 
+
+        <article class="objectproperty" id="expressionOf">
+          <h3>
+            Object property
+            <a href="#expressionOf"
+              >Expression of</a
+            >
+          </h3>
+
+           <p>Relates a treaty expression to the treaty work that paper is an expression of. A treaty expression is an expression of one treaty work. A treaty work is expressed as one or more papers.</p>
+
+          <p>
+            <a href="#TreatyExpression"
+              >TreatyExpression</a
+            >
+            &mdash; Expression of &mdash;
+            <a href="#TreatyWork">TreatyWork</a>
+          </p>
+        </article>
 
         <article class="objectproperty" id="hasLeadDepartment">
           <h3>
@@ -103,64 +136,17 @@
            <p>Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department.</p>
 
           <p>
-            <a href="#Treaty"
-              >Treaty</a
+            <a href="#TreatyWork"
+              >TreatyWork</a
             >
             &mdash; Has lead department &mdash;
             <a href="#GovernmentOrganisation">GovernmentOrganisation</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="laidAs">
-          <h3>
-            Object property
-            <a href="#laidAs"
-              >Laid as</a
-            >
-          </h3>
-
-           <p>The &#39;Laid as&#39; property relates a treaty to the form in which it is laid. Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure. </p>
-
-          <p>
-            <a href="#Treaty"
-              >Treaty</a
-            >
-            &mdash; Laid as &mdash;
-            <a href="#TreatyExpression">TreatyExpression</a>
           </p>
         </article>
       </section>
  
       <section id="dataproperties">
         <h2>Data properties</h2>
-
-        <article class="dataproperty" id="commandPaperNumber">
-          <h3>
-            Data property
-            <a href="#commandPaperNumber">Command Paper number</a>
-          </h3>
-
-          <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. Within a series, Command Paper numbers start at 1 and do not exceed 9999.</p>
-
-          <p>
-            TreatyExpression &mdash; Command Paper number &mdash;
-            Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="commandPaperPrefix">
-          <h3>
-            Data property
-            <a href="#commandPaperPrefix">Command Paper prefix</a>
-          </h3>
-
-          <p>A treaty is laid as a Command Paper, having a citation formed of a Command Paper prefix and Command Paper number. A series of Command Papers has a unique prefix.</p>
-
-          <p>
-            TreatyExpression &mdash; Command Paper prefix &mdash;
-            Literal
-          </p>
-        </article>
 
         <article class="dataproperty" id="ukComingIntoForceDate">
           <h3>
@@ -171,7 +157,7 @@
           <p>The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note.</p>
 
           <p>
-            Treaty &mdash; UK coming into force date &mdash;
+            TreatyWork &mdash; UK coming into force date &mdash;
             date
           </p>
         </article>
@@ -185,7 +171,7 @@
           <p>A coming into force note sets out details applying to the UK of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date.</p>
 
           <p>
-            Treaty &mdash; UK coming into force note &mdash;
+            TreatyWork &mdash; UK coming into force note &mdash;
             langString
           </p>
         </article>
@@ -199,13 +185,26 @@
           <p>The date on which the treaty is ratified by the UK.</p>
 
           <p>
-            TreatyExpression &mdash; UK ratification date &mdash;
+            TreatyWork &mdash; UK ratification date &mdash;
             date
           </p>
         </article>
       </section>
 
-    
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>treaty/<wbr>TreatyWork</td>
+            <td>/<wbr>ontologies/<wbr>treaty/<wbr>PaperWork</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>treaty/<wbr>TreatyExpression</td>
+            <td>/<wbr>ontologies/<wbr>treaty/<wbr>PaperExpression</td>
+          </tr>
+        </table>
+      </section>
+ 
       <section id="namespaces">
         <h2>Namespaces</h2>
         <details>
@@ -241,7 +240,7 @@
 
     <footer>
       <p>
-        Generated 2023-02-27 13:22:23.884607 from a
+        Generated 2023-02-27 13:46:57.083084 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../treaty/treaty-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../treaty/treaty-ontology.ttl"
