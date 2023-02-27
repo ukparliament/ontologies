@@ -58,7 +58,7 @@ pbill:PublicBillWork rdf:type owl:Class ;
 pbill:HybridBillWork rdf:type owl:Class ;
 	rdfs:subClassOf pbill:PublicBillWork ;
 	rdfs:label "Hybrid Bill work"@en ;
-	rdfs:comment "A hybrid bill is a  having general application across the whole population, whilst also having been examined by the Examiners of Petitions for Private Bills and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as s. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
+	rdfs:comment "A hybrid bill is a public bill, having general application across the whole population, whilst also having been examined by the Examiners of Petitions for Private Bills and found to differently affect the interests of particular groups, people or places. Hybrid bills are presented as public bills. If examined and found to be hybrid, they follow a procedure including parts of the private bill procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:PrivateBillWork rdf:type owl:Class ;
@@ -122,7 +122,7 @@ pbill:precededBy rdf:type owl:ObjectProperty ;
 	
 pbill:enactedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Enacted as"@en ;
-	rdfs:comment "Relates a bill to the Act of Parliament the bill is enacted as after receiving Royal Assent. A bill is enacted as one Act, or none. An Act is the enactment of one bill."@en ;
+	rdfs:comment "Relates a bill work to the Act of Parliament the bill is enacted as after receiving Royal Assent. A bill is enacted as one Act, or none. An Act is the enactment of one bill."@en ;
 	rdfs:domain pbill:BillWork ;
 	rdfs:range pbill:ActOfParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
