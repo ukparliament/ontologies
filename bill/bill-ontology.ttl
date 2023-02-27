@@ -26,13 +26,25 @@
 
 
 #######  Classes #####
+	
+pbill:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+
+pbill:PaperWork rdf:type owl:Class ;
+	rdfs:label "Paper work"@en ;
+	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:BillExpression rdf:type owl:Class ;
+	rdfs:subClassOf pl:PaperExpression ;
 	rdfs:label "Bill expression"@en ;
 	rdfs:comment "An expression of a bill work at a point in time. A new expression of the bill work is created by any amendment being made to the bill, or when a bill passes from the first House to the second House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 pbill:BillWork rdf:type owl:Class ;
+	rdfs:subClassOf pl:PaperWork ;
 	rdfs:label "Bill work"@en ;
 	rdfs:comment "A proposal for a new Act of Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
@@ -160,31 +172,10 @@ pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
 
 
 #######  Data properties #####
-
-pbill:prefix rdf:type owl:DatatypeProperty ;
-	rdfs:label "Prefix"@en ;
-	rdfs:comment "The prefix part of a bill number originating in the House of Lords, for example: 'HL' in 'HL Bill 14 2022-23'. A bill originating in the House of Commons does not have a prefix."@en ;
-	rdfs:domain pbill:BillExpression ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:number rdf:type owl:DatatypeProperty ;
-	rdfs:label "Number"@en ;
-	rdfs:comment "The number part of a bill number, for example: '14' in 'HL Bill 14 2022-23'."@en ;
-	rdfs:domain pbill:BillExpression ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
-	
-pbill:session rdf:type owl:DatatypeProperty ;
-	rdfs:label "Session"@en ;
-	rdfs:comment "The session part of a bill number, for example: '2022-23' in 'HL Bill 14 2022-23'. The session label records the session in which the bill was first presented."@en ;
-	rdfs:domain pbill:BillExpression ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
 pbill:longTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Long title"@en ;
 	rdfs:comment "The long title of a Bill is the wording at the start of a Bill that begins 'A Bill to ...', followed by text describing the purposes of the Bill."@en ;
-	rdfs:domain pbill:BillWork ;
+	rdfs:domain pbill:BillExpression ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
