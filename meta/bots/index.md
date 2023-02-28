@@ -1,3 +1,7 @@
+## Written answer bots
+
+The written answer bots post whenever an answering body provides a written answer - or a correction to a written answer - to a parliamentary question.
+
 ### Current answering bodies
 
 Name | Twitter | Mastodon | Feed
