@@ -5,7 +5,6 @@ The written answer bots post whenever an answering body provides a written answe
 ### Current answering bodies
 
 Name | Twitter | Mastodon | Feed
-
 [Department for Education](https://written-questions.herokuapp.com/answering-bodies/60) | [@DFEAnswers](https://twitter.com/DFEAnswers) | [@DFEAnswers](https://botsin.space/@DFEAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/60.rss)
 [Department for Levelling Up, Housing and Communities](https://written-questions.herokuapp.com/answering-bodies/211) | [@LUHCAnswers](https://twitter.com/LUHCAnswers) | [@LUHCAnswers](https://botsin.space/@LUHCAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/211.rss)
 [Foreign, Commonwealth and Development Office](https://written-questions.herokuapp.com/answering-bodies/208) | [@FCDOAnswers](https://twitter.com/FCDOAnswers) | [@FCDOAnswers](https://botsin.space/@FCDOAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/208.rss)
