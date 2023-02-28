@@ -1,6 +1,6 @@
 ## Made-n-laid
 
-Made-n-laid posts whenever a made statutory instrument is laid before Parliament.
+Made-n-laid posts whenever a made [statutory instrument](https://en.wikipedia.org/wiki/Statutory_instrument_(UK)) is laid before Parliament.
 
 Twitter | Mastodon | Feed
 [@madenlaid](https://twitter.com/madenlaid) | [@madenlaid](https://botsin.space/@madenlaid) | [RSS](https://api.parliament.uk/made-n-laid/rss)
