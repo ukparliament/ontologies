@@ -1,17 +1,31 @@
 ### Current answering bodies
 
-Name | Twitter | Mastodon
-[Department for Education](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=60&Expanded=True) | [@DFEAnswers](https://twitter.com/DFEAnswers) | [@DFEAnswers](https://botsin.space/@DFEAnswers)
-[Department for Levelling Up, Housing and Communities](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=211&Expanded=True) | [@LUHCAnswers](https://twitter.com/LUHCAnswers) | [@LUHCAnswers](https://botsin.space/@LUHCAnswers)
+Name | Twitter | Mastodon | Feed
+[Department for Education]( https://written-questions.herokuapp.com/answering-bodies/60 ) | [@DFEAnswers](https://twitter.com/DFEAnswers) | [@DFEAnswers](https://botsin.space/@DFEAnswers)
+
+[Department for Levelling Up, Housing and Communities]( https://written-questions.herokuapp.com/answering-bodies/211 ) | [@LUHCAnswers](https://twitter.com/LUHCAnswers) | [@LUHCAnswers](https://botsin.space/@LUHCAnswers)
+
+[Foreign, Commonwealth and Development Office]( https://written-questions.herokuapp.com/answering-bodies/208 ) | [@FCDOAnswers](https://twitter.com/FCDOAnswers) | [@FCDOAnswers](https://botsin.space/@FCDOAnswers)
+
+[Prime Minister]( https://written-questions.herokuapp.com/answering-bodies/23 ) | 
+
+[@OPM_Answers](https://twitter.com/OPM_Answers) | [@OPM_Answers](https://botsin.space/@OPM_Answers)
+
+[Women and Equalities]( https://written-questions.herokuapp.com/answering-bodies/31 ) | 
+
+[@GEO_Answers](https://twitter.com/GEO_Answers) | [@GEO_Answers](https://botsin.space/@GEO_Answers)
+
+[Attorney General]( https://written-questions.herokuapp.com/answering-bodies/88 ) | 
+
+[@AGAnswers](https://twitter.com/AGAnswers) | [@AGAnswers](https://botsin.space/@AGAnswers)
+
+[Cabinet Office]( https://written-questions.herokuapp.com/answering-bodies/53 ) | 
+
+[@COAnswers](https://twitter.com/COAnswers) | [@COAnswers](https://botsin.space/@COAnswers)
 
 
 
 
-211 |  | TRUE | LUHCAnswers | @LUHCAnswers@botsin.space 208 | Foreign, Commonwealth and Development Office | TRUE | FCDOAnswers | @FCDOAnswers@botsin.space
-23 | Prime Minister | TRUE | OPM_Answers | @OPM_Answers@botsin.space
-31 | Women and Equalities | TRUE | GEO_Answers | @GEO_Answers@botsin.space
-88 | Attorney General | TRUE | AGAnswers | @AGAnswers@botsin.space
-53 | Cabinet Office | TRUE | COAnswers | @COAnswers@botsin.space
 9 | Church Commissioners | TRUE | CCAnswers | @CCAnswers@botsin.space
 13 | Department for Environment, Food and Rural Affairs | TRUE | DEFRAAnswers | @DEFRAAnswers@botsin.space
 27 | Department for Transport | TRUE | DfTAnswers | @DfTAnswers@botsin.space
@@ -38,6 +52,7 @@ Name | Twitter | Mastodon
 
 ## Defunct answering bodies
 
-Name | Twitter | Mastodon
-[Department for Digital, Culture, Media and Sport](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=10&Expanded=True) | [DDCMSAnswers](https://twitter.com/DDCMSAnswers) | N/A
-[Department for International Trade](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=202&Expanded=True) | [DITAnswers](https://twitter.com/DITAnswers) | N/A
+Name | Twitter | Mastodon | Feed
+[Department for Digital, Culture, Media and Sport](https://written-questions.herokuapp.com/answering-bodies/10) | [DDCMSAnswers](https://twitter.com/DDCMSAnswers) | N/A | [RSS](https://written-questions.herokuapp.com/answering-bodies/10.rss)
+
+[Department for International Trade](https://written-questions.herokuapp.com/answering-bodies/202) | [DITAnswers](https://twitter.com/DITAnswers) | N/A [RSS](https://written-questions.herokuapp.com/answering-bodies/202.rss)
