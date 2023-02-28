@@ -1,3 +1,10 @@
+## Made-n-laid
+
+Made-n-laid posts whenever a made statutory instrument is laid before Parliament.
+
+Twitter | Mastodon | Feed
+[@madenlaid](https://twitter.com/madenlaid) | [@madenlaid](https://botsin.space/@madenlaid) | [RSS](https://api.parliament.uk/made-n-laid/rss)
+
 ## Written answer bots
 
 The written answer bots post whenever an answering body provides a written answer - or a correction to a written answer - to a parliamentary question.
