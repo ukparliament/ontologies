@@ -1,6 +1,3 @@
-Department MNIS ID | Department name | Department current | Twitter handle | Mastondon handle |  |  |  |  |  
-
-
 ### Current answering bodies
 
 Name | Twitter | Mastodon
