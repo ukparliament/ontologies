@@ -31,6 +31,16 @@
 
 #######  Classes #####
 
+plg:PaperWork rdf:type owl:Class ;
+	rdfs:label "Paper work"@en ;
+	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+	
+paper:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+
 plg:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
 	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
@@ -49,43 +59,76 @@ plg:ActOfParliament rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:EnabledThing rdf:type owl:Class ;
+	rdfs:subClassOf plg:PaperWork ;
 	rdfs:label "Enabled thing"@en ;
 	rdfs:comment "A thing which is intended to exercise a power set out in statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:PublishedDraftUnderEUWA rdf:type owl:Class ;
+plg:PublishedDraftUnderEUWAWork rdf:type owl:Class ;
 	rdfs:subClassOf plg:EnabledThing ;
-	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018"@en ;
+	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 work"@en ;
 	rdfs:comment "A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of any instrument which intends to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:ProposedDraftRemedialOrder rdf:type owl:Class ;
+plg:ProposedDraftRemedialOrderWork rdf:type owl:Class ;
 	rdfs:subClassOf plg:EnabledThing ;
-	rdfs:label "Proposed draft remedial order"@en ;
+	rdfs:label "Proposed draft remedial order work"@en ;
 	rdfs:comment "A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament 'a document which contains a draft of the proposed order'. This document must sit before Parliament for a period of 60 days, beginning with the day on which it was laid."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:ProposedNegativeStatutoryInstrument rdf:type owl:Class ;
+plg:ProposedNegativeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf plg:EnabledThing ;
-	rdfs:label "Proposed negative statutory instrument"@en ;
+	rdfs:label "Proposed negative statutory instrument work"@en ;
 	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure rdf:type owl:Class ;
+plg:PublishedDraftUnderEUWAExpression rdf:type owl:Class ;
+	rdfs:subClassOf plg:PaperExpression ;
+	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:ProposedDraftRemedialOrderExpression rdf:type owl:Class ;
+	rdfs:subClassOf plg:PaperExpression ;
+	rdfs:label "Proposed draft remedial order expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:ProposedNegativeStatutoryInstrumentExpression rdf:type owl:Class ;
+	rdfs:subClassOf plg:PaperExpression ;
+	rdfs:label "Proposed negative statutory instrument expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
 	rdfs:subClassOf plg:EnabledThing ;
-	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure"@en ;
+	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure work"@en ;
 	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:DraftStatutoryInstrument rdf:type owl:Class ;
-	rdfs:label "Draft statutory instrument"@en ;
+plg:DraftStatutoryInstrumentWork rdf:type owl:Class ;
+	rdfs:subClassOf plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
+	rdfs:label "Draft statutory instrument work"@en ;
 	rdfs:comment "Draft statutory instruments are laid before Parliament, and may be objected to. A draft instrument is made into secondary legislation when signed by a government minister. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
-plg:MadeStatutoryInstrument rdf:type owl:Class ;
+plg:DraftStatutoryInstrumentExpression rdf:type owl:Class ;
+	rdfs:subClassOf plg:PaperExpression ;
+	rdfs:label "Draft statutory instrument expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:MadeStatutoryInstrumentWork rdf:type owl:Class ;
+	rdfs:subClassOf plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:subClassOf plg:StatutoryThing ;
-	rdfs:label "Made statutory instrument"@en ;
+	rdfs:label "Made statutory instrument work"@en ;
 	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+
+plg:MadeStatutoryInstrumentExpression rdf:type owl:Class ;
+	rdfs:subClassOf plg:PaperExpression ;
+	rdfs:label "Made statutory instrument expression"@en ;
+	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 	
@@ -106,44 +149,44 @@ plg:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:range plg:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:embodiedAsDraftStatutoryInstrument rdf:type owl:ObjectProperty ;
-	rdfs:label "Embodied as draft statutory instrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to draft legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure is embodied as a single draft statutory instrument, or none. A draft statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
-	rdfs:range plg:DraftStatutoryInstrument ;
+plg:proposedNegativeStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Proposed negative statutory instrument expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:ProposedNegativeStatutoryInstrumentExpression ;
+	rdfs:range plg:ProposedNegativeStatutoryInstrumentWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
-plg:embodiedAsMadeStatutoryInstrument rdf:type owl:ObjectProperty ;
-	rdfs:label "Embodied as made statutory instrument"@en ;
-	rdfs:comment "Relates a draft or made statutory instrument subject to parliamentary procedure to made legislation published by The National Archives and identified by them as a FRBR work. A draft or made statutory instrument subject to parliamentary procedure will be embodied as a single made statutory instrument, or none. A made statutory instrument is related to one draft or made statutory instrument subject to parliamentary procedure, or to none."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
-	rdfs:range plg:MadeStatutoryInstrument ;
+plg:proposedDraftRemedialOrderExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Proposed draft remedial order expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:ProposedDraftRemedialOrderExpression ;
+	rdfs:range plg:ProposedDraftRemedialOrderWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:publishedDraftUnderEUWAExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Published draft under EUWA expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:ProposedDraftRemedialOrderExpression ;
+	rdfs:range plg:ProposedDraftRemedialOrderWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:draftStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Draft statutory instrument expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:DraftStatutoryInstrumentExpression ;
+	rdfs:range plg:DraftStatutoryInstrumentWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	
+plg:madeStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Made statutory instrument expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain plg:MadeStatutoryInstrumentExpression ;
+	rdfs:range plg:MadeStatutoryInstrumentWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 					
 	
-##### Data properties ####	
-
-plg:siPrefix rdf:type owl:DatatypeProperty ;
-	rdfs:label "SI prefix"@en ;
-	rdfs:comment "The prefix part of a statutory instrument number, for example, 'SI' in 'SI 1986/925'."@en ;
-	rdfs:domain plg:MadeStatutoryInstrument ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:siYear rdf:type owl:DatatypeProperty ;
-	rdfs:label "SI year"@en ;
-	rdfs:comment "The year part of a statutory instrument number, for example, '1986' in 'SI 1986/925'. The SI year is the year the instrument was laid before Parliament, except when laid in draft in one calendar year, made in a following year and having its SI year updated."@en ;
-	rdfs:domain plg:MadeStatutoryInstrument ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
-	
-plg:siIdentiferInYear rdf:type owl:DatatypeProperty ;
-	rdfs:label "SI identifer in year"@en ;
-	rdfs:comment "The identifier in year part of a statutory instrument number, for example, '925' in 'SI 1986/925'."@en ;
-	rdfs:domain plg:MadeStatutoryInstrument ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+##### Data properties ####
 	
 plg:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made date"@en ;
