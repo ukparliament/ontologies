@@ -175,3 +175,10 @@ paper:containsStatistics rdf:type owl:DatatypeProperty ;
 	rdfs:domain paper:PaperExpression ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+
+paper:isbn rdf:type owl:DatatypeProperty ;
+	rdfs:label "ISBN"@en ;
+	rdfs:comment "Relates a paper expression to its identifier, conforming to the ISBN standard."@en ;
+	rdfs:domain plg:PaperExpression ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
