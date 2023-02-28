@@ -1,27 +1,14 @@
 ### Current answering bodies
 
 Name | Twitter | Mastodon | Feed
-[Department for Education]( https://written-questions.herokuapp.com/answering-bodies/60 ) | [@DFEAnswers](https://twitter.com/DFEAnswers) | [@DFEAnswers](https://botsin.space/@DFEAnswers)
 
-[Department for Levelling Up, Housing and Communities]( https://written-questions.herokuapp.com/answering-bodies/211 ) | [@LUHCAnswers](https://twitter.com/LUHCAnswers) | [@LUHCAnswers](https://botsin.space/@LUHCAnswers)
-
-[Foreign, Commonwealth and Development Office]( https://written-questions.herokuapp.com/answering-bodies/208 ) | [@FCDOAnswers](https://twitter.com/FCDOAnswers) | [@FCDOAnswers](https://botsin.space/@FCDOAnswers)
-
-[Prime Minister]( https://written-questions.herokuapp.com/answering-bodies/23 ) | 
-
-[@OPM_Answers](https://twitter.com/OPM_Answers) | [@OPM_Answers](https://botsin.space/@OPM_Answers)
-
-[Women and Equalities]( https://written-questions.herokuapp.com/answering-bodies/31 ) | 
-
-[@GEO_Answers](https://twitter.com/GEO_Answers) | [@GEO_Answers](https://botsin.space/@GEO_Answers)
-
-[Attorney General]( https://written-questions.herokuapp.com/answering-bodies/88 ) | 
-
-[@AGAnswers](https://twitter.com/AGAnswers) | [@AGAnswers](https://botsin.space/@AGAnswers)
-
-[Cabinet Office]( https://written-questions.herokuapp.com/answering-bodies/53 ) | 
-
-[@COAnswers](https://twitter.com/COAnswers) | [@COAnswers](https://botsin.space/@COAnswers)
+[Department for Education](https://written-questions.herokuapp.com/answering-bodies/60) | [@DFEAnswers](https://twitter.com/DFEAnswers) | [@DFEAnswers](https://botsin.space/@DFEAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/60.rss)
+[Department for Levelling Up, Housing and Communities](https://written-questions.herokuapp.com/answering-bodies/211) | [@LUHCAnswers](https://twitter.com/LUHCAnswers) | [@LUHCAnswers](https://botsin.space/@LUHCAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/211.rss)
+[Foreign, Commonwealth and Development Office](https://written-questions.herokuapp.com/answering-bodies/208) | [@FCDOAnswers](https://twitter.com/FCDOAnswers) | [@FCDOAnswers](https://botsin.space/@FCDOAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/208.rss)
+[Prime Minister](https://written-questions.herokuapp.com/answering-bodies/23) | [@OPM_Answers](https://twitter.com/OPM_Answers) | [@OPM_Answers](https://botsin.space/@OPM_Answers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/23.rss)
+[Women and Equalities]( https://written-questions.herokuapp.com/answering-bodies/31 ) | [@GEO_Answers](https://twitter.com/GEO_Answers) | [@GEO_Answers](https://botsin.space/@GEO_Answers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/31.rss)
+[Attorney General]( https://written-questions.herokuapp.com/answering-bodies/88 ) | [@AGAnswers](https://twitter.com/AGAnswers) | [@AGAnswers](https://botsin.space/@AGAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/88.rss)
+[Cabinet Office]( https://written-questions.herokuapp.com/answering-bodies/53 ) | [@COAnswers](https://twitter.com/COAnswers) | [@COAnswers](https://botsin.space/@COAnswers) | [RSS](https://written-questions.herokuapp.com/answering-bodies/53.rss)
 
 
 
@@ -54,5 +41,4 @@ Name | Twitter | Mastodon | Feed
 
 Name | Twitter | Mastodon | Feed
 [Department for Digital, Culture, Media and Sport](https://written-questions.herokuapp.com/answering-bodies/10) | [DDCMSAnswers](https://twitter.com/DDCMSAnswers) | N/A | [RSS](https://written-questions.herokuapp.com/answering-bodies/10.rss)
-
-[Department for International Trade](https://written-questions.herokuapp.com/answering-bodies/202) | [DITAnswers](https://twitter.com/DITAnswers) | N/A [RSS](https://written-questions.herokuapp.com/answering-bodies/202.rss)
+[Department for International Trade](https://written-questions.herokuapp.com/answering-bodies/202) | [DITAnswers](https://twitter.com/DITAnswers) | N/A |  [RSS](https://written-questions.herokuapp.com/answering-bodies/202.rss)
