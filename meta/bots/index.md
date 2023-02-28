@@ -1,9 +1,18 @@
+# Bot accounts from the House of Commons Library
+
 ## Made-n-laid
 
 Made-n-laid posts whenever a made [statutory instrument](https://en.wikipedia.org/wiki/Statutory_instrument_(UK)) is laid before Parliament.
 
 Twitter | Mastodon | Feed
 [@madenlaid](https://twitter.com/madenlaid) | [@madenlaid](https://botsin.space/@madenlaid) | [RSS](https://api.parliament.uk/made-n-laid/rss)
+
+## Tweaty twacker
+
+Tweaty twacker posts whenever a treaty subject to the [procedure set out in the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/part/2) is laid before Parliament.
+
+Twitter | Mastodon | Feed
+[@TweatyTwacker](https://twitter.com/TweatyTwacker) | [@TweatyTwacker](https://botsin.space/@TweatyTwacker) | [RSS](https://api.parliament.uk/tweatytwacker/rss)
 
 ## Written answer bots
 
