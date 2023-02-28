@@ -3,8 +3,11 @@ Department MNIS ID | Department name | Department current | Twitter handle | Mas
 
 ### Current answering bodies
 
+Name | Twitter | Mastodon
+[Department for Education](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=60&Expanded=True). | [DFEAnswers](https://twitter.com/DFEAnswers) | [DFEAnswers](https://botsin.space/@DFEAnswers)
 
-60 | Department for Education | TRUE | DFEAnswers | @DFEAnswers@botsin.space
+
+@DFEAnswers@botsin.space
 
 211 | Department for Levelling Up, Housing and Communities | TRUE | LUHCAnswers | @LUHCAnswers@botsin.space 208 | Foreign, Commonwealth and Development Office | TRUE | FCDOAnswers | @FCDOAnswers@botsin.space
 23 | Prime Minister | TRUE | OPM_Answers | @OPM_Answers@botsin.space
@@ -38,5 +41,5 @@ Department MNIS ID | Department name | Department current | Twitter handle | Mas
 ## Defunct answering bodies
 
 Name | Twitter | Mastodon
-[Department for Digital, Culture, Media and Sport](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=10&Expanded=True). | DDCMSAnswers[https://twitter.com/DDCMSAnswers] | N/A
-[Department for International Trade](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=202&Expanded=True). | DITAnswers[https://twitter.com/DITAnswers] | N/A
+[Department for Digital, Culture, Media and Sport](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=10&Expanded=True). | [DDCMSAnswers](https://twitter.com/DDCMSAnswers) | N/A
+[Department for International Trade](https://questions-statements.parliament.uk/written-questions?House=Bicameral&AnsweringBodyId=202&Expanded=True). | [DITAnswers](https://twitter.com/DITAnswers) | N/A
