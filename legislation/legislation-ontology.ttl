@@ -191,21 +191,21 @@ plg:madeStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
 plg:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made date"@en ;
 	rdfs:comment "The date on which a statutory instrument is made by a government minister."@en ;
-	rdfs:domain plg:MadeStatutoryInstrument ;
+	rdfs:domain plg:MadeStatutoryInstrumentWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force date"@en ;
 	rdfs:comment "The date on which a statutory instrument comes into force. Schedules within an instrument may come into force on different dates. Coming into force details would be given in a coming into force note where no single coming into force date is given."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 	
 plg:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
 	rdfs:comment "A coming into force note sets out details of the commencement of provisions or effects forming part or parts of an instrument, or the instrument as a whole."@en ;
-	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedure ;
+	rdfs:domain plg:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
 
