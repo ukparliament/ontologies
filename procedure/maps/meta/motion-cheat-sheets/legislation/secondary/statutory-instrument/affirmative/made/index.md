@@ -68,7 +68,7 @@ if there's NOT one extant
 
 AND
 
-if there's NOT one agreed
+if a question has NOT been put on a consideration motion
 
 AND
 
@@ -336,7 +336,7 @@ if there's NOT one extant
 
 AND
 
-if there's NOT one agreed
+if a question has NOT been put on a consideration motion
 
 AND
 
