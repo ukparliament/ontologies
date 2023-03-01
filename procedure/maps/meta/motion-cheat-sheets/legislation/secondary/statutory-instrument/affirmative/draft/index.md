@@ -313,3 +313,89 @@ if there's been a debate
 AND
 
 if the instrument has NOT already been rejected (either House)
+
+## Cascades
+
+### Commons
+
+#### Approval motion is caused to be withdrawn
+
+If a Commons approval motion is extant
+
+AND
+
+(
+	If the instrument is withdrawn
+	
+	OR
+	
+	if Lords have rejected the instrument
+)
+
+#### Consideration motion is caused to be withdrawn
+
+If there is no Commons approval motion extant
+
+AND
+
+if there is a Commons consideration motion extant
+
+### Lords
+
+#### Approval motion is caused to be withdrawn
+
+If a Lords approval motion is extant
+
+AND
+
+(
+	if the instrument is withdrawn
+	
+	OR
+	
+	if Commons have rejected the instrument
+)
+
+#### Non-fatal amendment is caused to be withdrawn
+
+If a non-fatal is extant
+
+AND
+
+if an approval motion is NOT extant
+
+#### Fatal amendment is caused to be withdrawn
+
+If a fatal is extant
+
+AND
+
+if an approval motion is NOT extant
+
+#### Motion to dispense is caused to be withdrawn
+
+If a motion to dispense is extant
+
+AND
+
+(
+
+	if the committee has considered
+	
+	OR
+	
+	if the instrument is withdrawn
+	
+	OR
+	
+	if Commons have rejected the instrument
+	
+)
+
+#### Motion to consider is caused to be withdrawn
+
+If a motion to consider is extant
+
+AND
+
+if an approval motion is NOT extant
