@@ -132,6 +132,51 @@ AND (
 	if the clock has NOT run out
 )
 
+### Motion to consider
+
+#### Can be tabled
+
+If referral motion approved
+
+AND
+
+if there's NOT one extant
+
+AND
+
+if there's NOT one agreed
+
+> MH: Would Commons debate on a non-fatal if instrument rejected?
+AND
+
+if the instrument has NOT already been rejected (either House) 
+
+#### Can be debated
+
+If consideration motion extant
+
+AND
+
+if there has NOT been a debate
+
+> MH: Would Commons debate on a non-fatal if instrument rejected?
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If consideration motion extant
+
+AND
+
+if there's been a debate
+
+> MH: Would Commons debate on a non-fatal if instrument rejected?
+AND
+
+if the instrument has NOT already been rejected (either House)
+
 ## House of Lords
 
 ### Non-fatal motion
@@ -244,3 +289,54 @@ If take note motion extant
 AND
 
 if there has been a debate
+
+### Motion to consider
+
+#### Can be tabled
+
+(
+	If there's a non-fatal motion extant
+
+	OR
+
+	If there's a take note motion extant
+)
+
+AND
+
+If there's NOT one extant
+
+AND
+
+if there's NOT one agreed
+
+> MK: Would Lords debate on a non-fatal if instrument rejected?
+AND
+
+if the instrument has NOT already been rejected (either House)
+
+#### Can be debated
+
+If consideration motion extant
+
+AND
+
+if there has NOT been a debate
+
+AND
+
+> MK: Would Lords debate on a non-fatal if instrument rejected?
+if the instrument has NOT already been rejected (either House)
+
+#### Question can be put
+
+If consideration motion extant
+
+AND
+
+if there's been a debate
+
+AND
+
+> MK: Would Lords debate on a non-fatal if instrument rejected?
+if the instrument has NOT already been rejected (either House)
