@@ -34,42 +34,42 @@
 del:PaperWork rdf:type owl:Class ;
 	rdfs:label "Paper work"@en ;
 	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
 	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:EnablingThing rdf:type owl:Class ;
 	rdfs:label "Enabling thing"@en ;
 	rdfs:comment "A thing that enables the exercise of a power."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:ActOfParliament rdf:type owl:Class ;
 	rdfs:subClassOf del:StatutoryThing ;
 	rdfs:subClassOf del:EnablingThing ;
 	rdfs:label "Act of Parliament"@en ;
 	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:EnabledThing rdf:type owl:Class ;
 	rdfs:subClassOf del:PaperWork ;
 	rdfs:label "Enabled thing"@en ;
 	rdfs:comment "A thing which is intended to exercise a power set out in statute."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:PublishedDraftUnderEUWAWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 work"@en ;
 	rdfs:comment "A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of any instrument which intends to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:ProposedDraftRemedialOrderWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Proposed draft remedial order work"@en ;
 	rdfs:comment "A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament 'a document which contains a draft of the proposed order'. This document must sit before Parliament for a period of 60 days, beginning with the day on which it was laid."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:ProposedNegativeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
@@ -81,20 +81,20 @@ del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type 
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure work"@en ;
 	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:DraftStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:label "Draft statutory instrument work"@en ;
 	rdfs:comment "Draft statutory instruments are laid before Parliament, and may be objected to. A draft instrument is made into secondary legislation when signed by a government minister. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:MadeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:subClassOf del:StatutoryThing ;
 	rdfs:label "Made statutory instrument work"@en ;
 	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 	
 
@@ -105,14 +105,14 @@ del:madeUnder rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates an enabled thing to the enabling thing under which it was made. An enabled thing may be made under one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnablingThing ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
 	rdfs:comment "Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none."@en ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnabledThing ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 					
 	
@@ -123,39 +123,39 @@ del:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:comment "The date on which a statutory instrument is made by a government minister."@en ;
 	rdfs:domain del:MadeStatutoryInstrumentWork ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force date"@en ;
 	rdfs:comment "The date on which a statutory instrument comes into force. Schedules within an instrument may come into force on different dates. Coming into force details would be given in a coming into force note where no single coming into force date is given."@en ;
 	rdfs:domain del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
 	rdfs:comment "A coming into force note sets out details of the commencement of provisions or effects forming part or parts of an instrument, or the instrument as a whole."@en ;
 	rdfs:domain del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:chapterNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Chapter number"@en ;
 	rdfs:comment "The identifier in year part of an Act of Parliament number, for example, '12' in '1986 c. 12'."@en ;
 	rdfs:domain del:ActOfParliament ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:actYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "Act year"@en ;
 	rdfs:comment "The year part of an Act of Parliament number, for example, '1986' in '1986 c. 12'. The Act year is the year in which Royal Assent was given."@en ;
 	rdfs:domain del:ActOfParliament ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:royalAssentOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Royal Assent on"@en ;
 	rdfs:comment "The date on which Royal Assent was given, as recorded by legislation.gov.uk. This may differ from the date recorded by Parliament if Royal Assent is given after midnight on a sitting day."@en ;
 	rdfs:domain del:ActOfParliament ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/legislation/> .
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
