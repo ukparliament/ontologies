@@ -144,7 +144,7 @@ if there's NOT one extant
 
 AND
 
-if there's NOT one agreed
+if a question has NOT been put on a consideration motion
 
 > MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
@@ -308,7 +308,7 @@ If there's NOT one extant
 
 AND
 
-if there's NOT one agreed
+if a question has NOT been put on a consideration motion
 
 > MK: Would Lords debate on a non-fatal if instrument rejected?
 AND
