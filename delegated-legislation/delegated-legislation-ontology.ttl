@@ -35,43 +35,38 @@ delleg:PaperExpression rdf:type owl:Class ;
 	rdfs:label "Paper expression"@en ;
 	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
+	
+delleg:PublishedDraftUnderEUWAExpression rdf:type owl:Class ;
+	rdfs:subClassOf delleg:PaperExpression ;
+	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 expression"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 
 delleg:PublishedDraftUnderEUWAWork rdf:type owl:Class ;
 	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 work"@en ;
 	rdfs:comment "A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of any instrument which intends to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 	
-delleg:ProposedDraftRemedialOrderWork rdf:type owl:Class ;
-	rdfs:label "Proposed draft remedial order work"@en ;
-	rdfs:comment "A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament 'a document which contains a draft of the proposed order'. This document must sit before Parliament for a period of 60 days, beginning with the day on which it was laid."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
-
-delleg:ProposedNegativeStatutoryInstrumentWork rdf:type owl:Class ;
-	rdfs:label "Proposed negative statutory instrument work"@en ;
-	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
-
-delleg:PublishedDraftUnderEUWAExpression rdf:type owl:Class ;
-	rdfs:subClassOf delleg:PaperExpression ;
-	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 work"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
-
 delleg:ProposedDraftRemedialOrderExpression rdf:type owl:Class ;
 	rdfs:subClassOf delleg:PaperExpression ;
 	rdfs:label "Proposed draft remedial order expression"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
-
+	
+delleg:ProposedDraftRemedialOrderWork rdf:type owl:Class ;
+	rdfs:label "Proposed draft remedial order work"@en ;
+	rdfs:comment "A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament 'a document which contains a draft of the proposed order'. This document must sit before Parliament for a period of 60 days, beginning with the day on which it was laid."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
+	
 delleg:ProposedNegativeStatutoryInstrumentExpression rdf:type owl:Class ;
 	rdfs:subClassOf delleg:PaperExpression ;
 	rdfs:label "Proposed negative statutory instrument expression"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 
-delleg:DraftStatutoryInstrumentWork rdf:type owl:Class ;
-	rdfs:label "Draft statutory instrument work"@en ;
-	rdfs:comment "Draft statutory instruments are laid before Parliament, and may be objected to. A draft instrument is made into secondary legislation when signed by a government minister. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+delleg:ProposedNegativeStatutoryInstrumentWork rdf:type owl:Class ;
+	rdfs:label "Proposed negative statutory instrument work"@en ;
+	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 
 delleg:DraftStatutoryInstrumentExpression rdf:type owl:Class ;
@@ -80,9 +75,9 @@ delleg:DraftStatutoryInstrumentExpression rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 
-delleg:MadeStatutoryInstrumentWork rdf:type owl:Class ;
-	rdfs:label "Made statutory instrument work"@en ;
-	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+delleg:DraftStatutoryInstrumentWork rdf:type owl:Class ;
+	rdfs:label "Draft statutory instrument work"@en ;
+	rdfs:comment "Draft statutory instruments are laid before Parliament, and may be objected to. A draft instrument is made into secondary legislation when signed by a government minister. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 
 delleg:MadeStatutoryInstrumentExpression rdf:type owl:Class ;
@@ -90,30 +85,35 @@ delleg:MadeStatutoryInstrumentExpression rdf:type owl:Class ;
 	rdfs:label "Made statutory instrument expression"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
-	
+
+delleg:MadeStatutoryInstrumentWork rdf:type owl:Class ;
+	rdfs:label "Made statutory instrument work"@en ;
+	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
+
 	
 
 ##### Object properties ####
-	
-delleg:proposedNegativeStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Proposed negative statutory instrument expression of"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain delleg:ProposedNegativeStatutoryInstrumentExpression ;
-	rdfs:range delleg:ProposedNegativeStatutoryInstrumentWork ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
-	
-delleg:proposedDraftRemedialOrderExpressionOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Proposed draft remedial order expression of"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain delleg:ProposedDraftRemedialOrderExpression ;
-	rdfs:range delleg:ProposedDraftRemedialOrderWork ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 	
 delleg:publishedDraftUnderEUWAExpressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Published draft under EUWA expression of"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain delleg:PublishedDraftUnderEUWAExpression ;
 	rdfs:range delleg:PublishedDraftUnderEUWAWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
+
+delleg:proposedDraftRemedialOrderExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Proposed draft remedial order expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain delleg:ProposedDraftRemedialOrderExpression ;
+	rdfs:range delleg:ProposedDraftRemedialOrderWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
+
+delleg:proposedNegativeStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Proposed negative statutory instrument expression of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain delleg:ProposedNegativeStatutoryInstrumentExpression ;
+	rdfs:range delleg:ProposedNegativeStatutoryInstrumentWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegated-legislation/> .
 	
 delleg:draftStatutoryInstrumentExpressionOf rdf:type owl:ObjectProperty ;
