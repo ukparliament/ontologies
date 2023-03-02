@@ -93,10 +93,10 @@
 
           <p>The act of making a thing available to a House or to a House by means of its Library.</p>
          </article>
-        <article class="class" id="OrganisationAccountableToParliament">
-          <h3>Class <a href="#OrganisationAccountableToParliament">Organisation accountable to Parliament</a></h3>
+        <article class="class" id="MakingAvailableBody">
+          <h3>Class <a href="#MakingAvailableBody">Making available body</a></h3>
 
-          <p>An organisation accountable to Parliament: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers.</p>
+          <p>A body empowered to make materials available to a House: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions, an organisation with a duty to lay papers or a committee.</p>
          </article>
         <article class="class" id="PaperExpression">
           <h3>Class <a href="#PaperExpression">Paper expression</a></h3>
@@ -183,6 +183,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="madeAvailableOnBehalfOf">
+          <h3>
+            Object property
+            <a href="#madeAvailableOnBehalfOf"
+              >Made available on behalf of</a
+            >
+          </h3>
+
+           <p>Relates an act of making a thing available to the body on whose behalf that thing is made available. An act of making available is on behalf of one body.</p>
+
+          <p>
+            <a href="#MakingAvailable"
+              >MakingAvailable</a
+            >
+            &mdash; Made available on behalf of &mdash;
+            <a href="#MakingAvailableBody">MakingAvailableBody</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="makesAvailable">
           <h3>
             Object property
@@ -199,25 +218,6 @@
             >
             &mdash; Makes available &mdash;
             <a href="#MadeAvailableThing">MadeAvailableThing</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="providedBy">
-          <h3>
-            Object property
-            <a href="#providedBy"
-              >Provided by</a
-            >
-          </h3>
-
-           <p>Relates a thing made available to the organisation providing that thing. A thing made available is provided by one or more organisations, or none.</p>
-
-          <p>
-            <a href="#MadeAvailableThing"
-              >MadeAvailableThing</a
-            >
-            &mdash; Provided by &mdash;
-            <a href="#OrganisationAccountableToParliament">OrganisationAccountableToParliament</a>
           </p>
         </article>
 
@@ -259,11 +259,11 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="withdrawnByIncumbency">
+        <article class="objectproperty" id="withdrawnBy">
           <h3>
             Object property
-            <a href="#withdrawnByIncumbency"
-              >Withdrawn by incumbency</a
+            <a href="#withdrawnBy"
+              >Withdrawn by</a
             >
           </h3>
 
@@ -273,27 +273,27 @@
             <a href="#Withdrawal"
               >Withdrawal</a
             >
-            &mdash; Withdrawn by incumbency &mdash;
+            &mdash; Withdrawn by &mdash;
             <a href="#Incumbency">Incumbency</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="withdrawnByOrganisation">
+        <article class="objectproperty" id="withdrawnOnBehalfOf">
           <h3>
             Object property
-            <a href="#withdrawnByOrganisation"
-              >Withdrawn by organisation</a
+            <a href="#withdrawnOnBehalfOf"
+              >Withdrawn on behalf of</a
             >
           </h3>
 
-           <p>Relates an act of withdrawal to the organisation performing the withdrawal. An act of withdrawal is by one or more organisations, or none.</p>
+           <p>Relates an act of withdrawal to the body on whose behalf the thing being withdrawn is withdrawn. An act of withdrawal is on behalf of one body.</p>
 
           <p>
             <a href="#Withdrawal"
               >Withdrawal</a
             >
-            &mdash; Withdrawn by organisation &mdash;
-            <a href="#OrganisationAccountableToParliament">OrganisationAccountableToParliament</a>
+            &mdash; Withdrawn on behalf of &mdash;
+            <a href="#MakingAvailableBody">MakingAvailableBody</a>
           </p>
         </article>
 
@@ -398,7 +398,7 @@
 
     <footer>
       <p>
-        Generated 2023-03-02 10:54:21.207337 from a
+        Generated 2023-03-02 12:11:07.173175 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../making-available/making-available-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../making-available/making-available-ontology.ttl"
