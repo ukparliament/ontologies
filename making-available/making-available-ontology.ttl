@@ -45,10 +45,10 @@ pma:House rdf:type owl:Class ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-
-pma:OrganisationAccountableToParliament rdf:type owl:Class ;
-	rdfs:label "Organisation accountable to Parliament"@en ;
-	rdfs:comment "An organisation accountable to Parliament: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers."@en ;
+	
+pma:MakingAvailableBody rdf:type owl:Class ;
+	rdfs:label "Making available body"@en ;
+	rdfs:comment "A body empowered to make materials available to a House: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions, an organisation with a duty to lay papers or a committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 
 pma:PaperExpression rdf:type owl:Class ;
@@ -98,19 +98,19 @@ pma:madeAvailableBy rdf:type owl:ObjectProperty ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:madeAvailableOnBehalfOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Made available on behalf of"@en ;
+	rdfs:comment "Relates an act of making a thing available to the body on whose behalf that thing is made available. An act of making available is on behalf of one body."@en ;
+	rdfs:domain pma:MakingAvailable ;
+	rdfs:range pma:MakingAvailableBody ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 
 pma:toHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "To House"@en ;
 	rdfs:comment "Relates an act of making a thing available to the House in which that thing is made available. An act of making available is to one House. A thing may be made available to both Houses by means of two acts of making available."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:House ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-
-pma:providedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Provided by"@en ;
-	rdfs:comment "Relates a thing made available to the organisation providing that thing. A thing made available is provided by one or more organisations, or none."@en ;
-	rdfs:domain pma:MadeAvailableThing ;
-	rdfs:range pma:OrganisationAccountableToParliament ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:makesAvailable rdf:type owl:ObjectProperty ;
@@ -134,22 +134,21 @@ pma:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:range pma:WithdrawnThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
-pma:withdrawnByIncumbency rdf:type owl:ObjectProperty ;
-	rdfs:label "Withdrawn by incumbency"@en ;
+pma:withdrawnBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn by"@en ;
 	rdfs:comment "Relates an act of withdrawal to the incumbency of a person in a position performing the withdrawal. An act of withdrawal is performed by one incumbency."@en ;
 	rdfs:domain pma:Withdrawal ;
 	rdfs:range pma:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-
-pma:withdrawnByOrganisation rdf:type owl:ObjectProperty ;
-	rdfs:label "Withdrawn by organisation"@en ;
-	rdfs:comment "Relates an act of withdrawal to the organisation performing the withdrawal. An act of withdrawal is by one or more organisations, or none."@en ;
-	rdfs:domain pma:Withdrawal ;
-	rdfs:range pma:OrganisationAccountableToParliament ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
-
+pma:withdrawnOnBehalfOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn on behalf of"@en ;
+	rdfs:comment "Relates an act of withdrawal to the body on whose behalf the thing being withdrawn is withdrawn. An act of withdrawal is on behalf of one body."@en ;
+	rdfs:domain pma:Withdrawal ;
+	rdfs:range pma:MakingAvailableBody ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 				
+
 
 #######  Data properties ##### 
 
