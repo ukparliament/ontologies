@@ -340,3 +340,121 @@ AND
 
 > MK: Would Lords debate on a non-fatal if instrument rejected?
 if the instrument has NOT already been rejected (either House)
+
+## Cascades
+
+### Commons
+
+#### Non-fatal motion is caused to be withdrawn
+
+N/A
+
+#### Fatal motion is caused to be withdrawn
+
+If there's a fatal extant
+
+AND
+
+(
+	If the instrument is withdrawn
+
+	OR
+
+	if the Lords have rejected the instrument
+	
+	OR
+	
+	if the Commons have rejected the instrument
+)
+
+#### Referral motion is caused to be withdrawn
+
+If there's a referral motion extant
+
+AND
+
+if there is NOT a non-fatal extant
+
+AND
+
+(
+
+	if there is a fatal extant
+	
+	AND
+	
+	if the clock runs out
+	
+)
+
+#### Consideration motion is caused to be withdrawn
+
+If there is a Commons consideration motion extant
+
+AND
+
+if there is NOT a non-fatal extant
+
+AND
+
+(
+
+	if there is a fatal extant
+	
+	AND
+	
+	if the clock runs out
+	
+)
+
+### Lords
+
+#### Non-fatal motion is caused to be withdrawn
+
+N/A
+
+
+#### Take note motion is caused to be withdrawn
+
+N/A
+
+#### Fatal motion is caused to be withdrawn
+
+If there's a fatal extant
+
+AND
+
+(
+	If the instrument is withdrawn
+
+	OR
+
+	if the Lords have rejected the instrument
+	
+	OR
+	
+	if the Commons have rejected the instrument
+)
+
+#### Consideration motion is caused to be withdrawn
+
+If there is a Lords consideration motion extant
+
+AND
+
+if there is NOT a non-fatal extant
+
+AND
+
+(
+
+	if there is a fatal extant
+	
+	AND
+	
+	if the clock runs out
+	
+)
+
+
+
