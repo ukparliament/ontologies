@@ -11,7 +11,7 @@
     dcterms:title "Reporting ontology"@en ;
     dcterms:created "2023-02-07"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing the reporting to a House by a formal body."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/reporting/reporting.svg> ;
 	foaf:maker 
 		[ foaf:name "Jayne Bosworth" ],
@@ -37,13 +37,13 @@ report:MadeAvailableThing rdf:type owl:Class ;
 report:Reporting rdf:type owl:Class ;
 	rdfs:subClassOf report:MakingAvailable ;
 	rdfs:label "Reporting"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The act of reporting to a House by a formal body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
 	
 report:ReportedThing rdf:type owl:Class ;
 	rdfs:subClassOf report:MadeAvailableThing ;
 	rdfs:label "Reported thing"@en ;
-	rdfs:comment "Examples being committee reports, evidence, correspondence"@en ;
+	rdfs:comment "A thing having been reported to a House by a formal body, for example: the appointing of a chair, a committee report, an evidence session or correspondence."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
 	
 	
@@ -52,7 +52,7 @@ report:ReportedThing rdf:type owl:Class ;
 	
 report:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an act of reporting to the thing being reported. An act of reporting results in one or more reported things. A reported thing results from one act of reporting."@en ;
 	rdfs:domain report:Reporting ;
 	rdfs:range report:ReportedThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/reporting/> .
