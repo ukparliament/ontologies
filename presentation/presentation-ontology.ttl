@@ -39,9 +39,15 @@ ppresent:MadeAvailableThing rdf:type owl:Class ;
 	rdfs:label "Made available thing"@en ;
 	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
+
+ppresent:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
 	
 ppresent:PresentedPaper rdf:type owl:Class ;
 	rdfs:subClassOf ppresent:MadeAvailableThing ;
+	rdfs:subClassOf ppresent:PaperExpression ;
 	rdfs:label "Presented paper"@en ;
 	rdfs:comment "A paper having been presented to a House. Examples: bill, petition."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
