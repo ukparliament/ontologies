@@ -49,7 +49,7 @@ ppresent:PresentedPaper rdf:type owl:Class ;
 	rdfs:subClassOf ppresent:MadeAvailableThing ;
 	rdfs:subClassOf ppresent:PaperExpression ;
 	rdfs:label "Presented paper"@en ;
-	rdfs:comment "A paper having been presented to a House. Examples: bill, petition."@en ;
+	rdfs:comment "A paper which has been presented to a House, for example: a bill or a paper petition."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
 	
 	
@@ -57,7 +57,7 @@ ppresent:PresentedPaper rdf:type owl:Class ;
 	
 ppresent:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in"@en ;
-	rdfs:comment "Relates an act of presenting a paper to the paper having been presented."@en ;
+	rdfs:comment "Relates an act of presenting a paper to that paper which has been presented. An act of presenting results in one or more presented papers. A presented paper is the result of one act of presentation."@en ;
 	rdfs:domain ppresent:Presentation ;
 	rdfs:range ppresent:PresentedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
