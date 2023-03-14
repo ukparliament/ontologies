@@ -72,16 +72,16 @@ pma:WithdrawnThing rdf:type owl:Class ;
 	
 #######  Object properties #####
 
-pma:duringSession rdf:type owl:ObjectProperty ;
-	rdfs:label "During session"@en ;
-	rdfs:comment "Relates an act of making a thing available to the session during which that thing is made available. A thing made available during prorogation is during no session. An act of making available is during one session, or none."@en ;
+pma:during rdf:type owl:ObjectProperty ;
+	rdfs:label "During"@en ;
+	rdfs:comment "Relates an act of making a thing available to the session during which that thing is made available. A thing made available during prorogation is not made available during a session. An act of making available is during one session, or none."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
-pma:intoSession rdf:type owl:ObjectProperty ;
-	rdfs:label "Into session"@en ;
-	rdfs:comment "Relates an act of making a thing available to the session into which that thing is made available. A thing made available during a prorogation is considered to be made available into the following session. An act of making available is into one session."@en ;
+pma:recordedIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Recorded in"@en ;
+	rdfs:comment "Relates an act of making a thing available to the session in which that thing is recorded as having been made available. A thing made available during a prorogation is recorded as having been made available in the subsequent session. An act of making available is recorded in one session."@en ;
 	rdfs:domain pma:MakingAvailable ;
 	rdfs:range pma:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
