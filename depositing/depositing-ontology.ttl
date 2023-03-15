@@ -91,15 +91,14 @@ pdep:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:range pdep:CommittingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
-	
-						# edited to here
-	
 pdep:makesCommitment rdf:type owl:ObjectProperty ;
 	rdfs:label "Makes commitment"@en ;
-	rdfs:comment "Relates a committing thing to the commitment made. A committing thing includes one commitment. A commitment is included in one committing thing."@en ;
+	rdfs:comment "Relates a committing thing to the commitment made. A committing thing makes one commitment. A commitment is made in one committing thing."@en ;
 	rdfs:domain pdep:CommittingThing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+	Relates a committing thing to the commitment made. A committing thing makes one commitment. A commitment is made in one committing thing.
 	
 pdep:madeBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Made by"@en ;
@@ -117,28 +116,28 @@ pdep:madeDuring rdf:type owl:ObjectProperty ;
 	
 pdep:resultsFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Results from"@en ;
-	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, the House of Lords Library contacts the person who made the commitment."@en ;
+	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment is made to provide one or more deposits."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:resultsIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in"@en ;
-	rdfs:comment "Relates an act of depositing to the paper or papers it deposits. An act of depositing may result in one or more deposited papers."@en ;
+	rdfs:comment "Relates an act of depositing to the item or items having been deposited. An act of depositing results in one or more deposited items. A deposited item is the result of one deposit."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
-pdep:corrects rdf:type owl:ObjectProperty ;
-	rdfs:label "Corrects"@en ;
-	rdfs:comment "Relates a deposited paper to the deposited paper it corrects. A deposited paper may correct one deposited paper, or none. A deposited paper may be corrected by one deposited paper, or none."@en ;
+pdep:correctedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Corrected by"@en ;
+	rdfs:comment "Relates a deposited paper to the deposited paper it is corrected by. A deposited paper may be corrected by one deposited paper, or none. A deposited paper may correct one deposited paper, or none."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:hasAvailability rdf:type owl:ObjectProperty ;
 	rdfs:label "Has availability"@en ;
-	rdfs:comment "Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability assigned."@en ;
+	rdfs:comment "Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range pdep:Availability ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
@@ -163,7 +162,7 @@ pdep:isStanding rdf:type owl:DatatypeProperty ;
 	
 pdep:isArtefact rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is artefact"@en ;
-	rdfs:comment "Used to record whether the deposited paper is an artefact, for example: a deposit of a breathalyzer would be recorded as an artefact."@en ;
+	rdfs:comment "Used to record whether the deposited paper is an artefact, for example: a deposit of a breathalyser was recorded as an artefact."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
