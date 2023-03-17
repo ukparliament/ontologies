@@ -1,0 +1,54 @@
+@prefix making: <http://parliament.uk/ontologies/making/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/making/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Making ontology"@en ;
+    dcterms:created "2023-03-17"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "A model describing the reporting to a House by a formal body."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/making/making.svg> ;
+	foaf:maker 
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+	
+making:MakingAvailable rdf:type owl:Class ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making/> .
+
+making:MadeAvailableThing rdf:type owl:Class ;
+	rdfs:label "Made available thing"@en ;
+	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making/> .
+	
+making:Making rdf:type owl:Class ;
+	rdfs:subClassOf report:MakingAvailable ;
+	rdfs:label "Making"@en ;
+	rdfs:comment "The act of making a written statement available to a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making/> .
+	
+making:WrittenStatementExpression rdf:type owl:Class ;
+	rdfs:subClassOf report:MadeAvailableThing ;
+	rdfs:label "Written statement expression"@en ;
+	rdfs:comment "The expression of a written statement as made to a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making/> .
+	
+	
+
+#######  Object properties ##### 
+	
+making:resultsIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in"@en ;
+	rdfs:comment "Relates an act of making a written statement expression available to the written statement expression being made available. An act of making results in one written statement expression. A written statement expression results from one act of making."@en ;
+	rdfs:domain making:Making ;
+	rdfs:range making:WrittenStatementExpression ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making/> .
