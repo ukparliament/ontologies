@@ -1,0 +1,94 @@
+@prefix related <http://parliament.uk/ontologies/related/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/related/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Related item ontology"@en ;
+    dcterms:created "2023-03-23"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en;
+	foaf:depiction <https://ukparliament.github.io/ontologies/related/related.svg> ;
+	foaf:maker 
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+	
+related:Thing rdf:type owl:Class ;
+	rdfs:label "Thing"@en ;
+	rdfs:comment "A thing."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:Relationship rdf:type owl:Class ;
+	rdfs:label "Relationship"@en ;
+	rdfs:comment "A relationship from a thing to either a thing or a document at a URI."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:DocumentType rdf:type owl:Class ;
+	rdfs:label "DocumentType"@en ;
+	rdfs:comment "The type of the document being cited, for example: a standing order or a section of legislation."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:RelationshipType rdf:type owl:Class ;
+	rdfs:label "Relationship type"@en ;
+	rdfs:comment "The type of a relationship."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+
+	
+#######  Object properties ##### 
+
+related:relationshipFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Relationship from"@en ;
+	rdfs:comment "Relates a relationship to the thing the relationship is from."@en ;
+	rdfs:domain related:Relationship ;
+	rdfs:range related:Thing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:relationshipTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Relationship to"@en ;
+	rdfs:comment "Relates a relationship to the thing the relationship is to."@en ;
+	rdfs:domain related:Relationship ;
+	rdfs:range related:Thing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:hasDocumentType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has document type"@en ;
+	rdfs:comment "Relates a relationship to the document type of the thing at the URI being related to."@en ;
+	rdfs:domain related:Relationship ;
+	rdfs:range related:DocumentType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:hasType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has type"@en ;
+	rdfs:comment "Relates a relationship to its type."@en ;
+	rdfs:domain related:Relationship ;
+	rdfs:range related:RelationshipType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+related:inverse rdf:type owl:ObjectProperty ;
+	rdfs:label "Inverse"@en ;
+	rdfs:comment "Relates a relationship type to its inverse relationship type."@en ;
+	rdfs:domain related:RelationshipType ;
+	rdfs:range related:RelationshipType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
+	
+	
+
+#######  Data properties #####
+
+related:hasUri rdf:type owl:DatatypeProperty ;
+	rdfs:label "Has URI"@en ;
+	rdfs:comment "Relates a relationship to the URI of the thing being related to."@en ;
+	rdfs:domain related:Relationship ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/related/> .
