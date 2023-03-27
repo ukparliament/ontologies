@@ -44,6 +44,12 @@ The Government can choose to publish a comprehensive set of documents setting ou
 
 * [Government objectives in trade negotiations deposited in the House libraries](https://api.parliament.uk/s/59c7874e)
 
+### International Agreements Commitee (IAC) scrutiny report of objectives
+
+As part of the International Agreements Committee's inquiry into a potential treaty, they may wish to publish a report scrutinising the government's negotiation objectives. The government may then follow up with a response to such a report. The following query shows all scrutiny reports and where the government has responded. 
+
+* [International Agreements Committee scrutiny reports of negotiation objectives](https://api.parliament.uk/s/1db3d17c)
+
 ## Informational copies of treaties laid before Parliament
 
 Informational copies of treaties made be laid in both Houses at the point the treaty is signed. The purpose of this is to allow parliamentary scrutiny to begin, particularly for the benefit of committee inquiries and evidence sessions. As the copies are informational it means that [CRaG](https://www.legislation.gov.uk/ukpga/2010/25/part/2) is not yet invoked so the objection period has not yet started. 
