@@ -38,6 +38,12 @@ Ministers can make many different statements to the House before a treaty is lai
 
 * [Ministerial statements announcing a treaty has been signed](https://api.parliament.uk/s/2310e2c2)
 
+## Government's trade negotiation objectives
+
+The Government can choose to publish a comprehensive set of documents setting out the UK's strategic approach to free trade agreements with other partieis. Usually, in line with the government's commitment to scrutiny and transparency, they will deposit these documents in both House libraries as well as on gov.uk.
+
+* [Government objectives in trade negotiations deposited in the House libraries](https://api.parliament.uk/s/59c7874e)
+
 ## Informational copies of treaties laid before Parliament
 
 Informational copies of treaties made be laid in both Houses at the point the treaty is signed. The purpose of this is to allow parliamentary scrutiny to begin, particularly for the benefit of committee inquiries and evidence sessions. As the copies are informational it means that [CRaG](https://www.legislation.gov.uk/ukpga/2010/25/part/2) is not yet invoked so the objection period has not yet started. 
