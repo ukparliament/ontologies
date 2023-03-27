@@ -109,8 +109,9 @@ Treaties and statutory instruments can both be debated in either House. Treaties
 * <a href="https://api.parliament.uk/s/497a9567">House of Lords debates</a>
 
 
-## Withdrawn 
+## Withdrawn, revoked and lapsed 
 
-The following query looks for all workpackaged things withdrawn from the House of Commons and House of Lords. Note that published drafts cannot be withdrawn.
+The following query looks for all workpackaged things withdrawn, revoked or lapsed from the House of Commons and House of Lords. Note that published drafts cannot be withdrawn.
 
-* <a href="https://api.parliament.uk/s/e00bf4b6">Withdrawn workpackaged things</a>
+* <a href="https://api.parliament.uk/s/3e30a7e4">Withdrawn, revoked or lapsed workpackaged things</a> 
+
