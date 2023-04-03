@@ -8,6 +8,8 @@ Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-trea
 
 #### [Business and Trade Committee [PDF]](crag-treaties/components/bat/bat.pdf)
 
+Dot file: [dot](crag-treaties/components/bat/bat.dot) / [svg](crag-treaties/components/bat/bat.svg)
+
 #### [Environment, Food and Rural Affairs Committee procedure [PDF]](crag-treaties/components/efra/efra.pdf)
 
 Dot file: [dot](crag-treaties/components/efra/efra.dot) / [svg](crag-treaties/components/efra/efra.svg)
