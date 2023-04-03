@@ -105,11 +105,11 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Commons committees
 
-* <a href="https://api.parliament.uk/s/d8eb42e4">Commons committee inquiries</a>
+* <a href="https://api.parliament.uk/s/00105f48">Commons committee inquiries</a>
 
-* <a href="https://api.parliament.uk/s/03b4dba6">Commons consideration of treaties</a>  
+* <a href="https://api.parliament.uk/s/83d0a31e">Commons consideration of treaties</a>  
 
-* <a href="https://api.parliament.uk/s/11c9c81c">Commons committee oral evidence sessions</a>
+* <a href="https://api.parliament.uk/s/d1d9f4d4">Commons committee oral evidence sessions</a>
 
 ### Lords committees
 
@@ -131,9 +131,9 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Government responses to committee reports
 
-* <a href="https://api.parliament.uk/s/b2259e9d"> All government responses</a>
+* <a href="https://api.parliament.uk/s/35d9b5bd"> All government responses</a>
 
-* <a href="https://api.parliament.uk/s/780b4198"> Government responses to Commons reports</a>
+* <a href="https://api.parliament.uk/s/d753e1fd"> Government responses to Commons reports</a>
 
     * <a href="https://api.parliament.uk/s/d0db2900"> Committee replies to a government response</a>
 
