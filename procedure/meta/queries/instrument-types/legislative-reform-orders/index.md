@@ -113,7 +113,7 @@ Under the super-affirmative procedure, if after the expiry of the 60 day period,
 
 ## Committees
 
-Legislative reform orders are not considered by the usual statutory instrument committees in each House. Instead they're considered by the [Delegated Powers and Regulatory Reform Committee](https://committees.parliament.uk/committee/173/delegated-powers-and-regulatory-reform-committee/) in the House of Lords and the [Business, Energy and Industrial Strategy Committee](https://committees.parliament.uk/committee/365/business-energy-and-industrial-strategy-committee/) in the Commons (until 2021 they were considered by the [Regulatory Reform Committee](https://committees.parliament.uk/committee/131/regulatory-reform)).
+Legislative reform orders are not considered by the usual statutory instrument committees in each House. Instead they're considered by the [Delegated Powers and Regulatory Reform Committee](https://committees.parliament.uk/committee/173/delegated-powers-and-regulatory-reform-committee/) in the House of Lords and the Business and Trade Committee in the Commons. From 2021 - 2023 orders in the Commons were considered by the [Business, Energy and Industrial Strategy Committee](https://committees.parliament.uk/committee/365/business-energy-and-industrial-strategy-committee/) and until 2021 they were considered by the [Regulatory Reform Committee](https://committees.parliament.uk/committee/131/regulatory-reform)).
 
 Committees are considering two aspects of the order:
 
@@ -132,9 +132,11 @@ Committees are considering two aspects of the order:
 
 * [Business, Energy and Industrial Strategy Committee decisions on procedure](https://api.parliament.uk/s/3e2412f8)
 
+* [Business and Trade Committee decisions on procedure](https://api.parliament.uk/s/688e8294)
+
 ### Committee consideration 
 
-* [Commons and Lords consideration of orders](https://api.parliament.uk/s/89522d96) 
+* [Commons and Lords consideration of orders](https://api.parliament.uk/s/aa3a6b35) 
 
 * [Delegated Powers and Regulatory Reform Committee consideration of orders](https://api.parliament.uk/s/6dee4679)
 
@@ -143,6 +145,8 @@ Committees are considering two aspects of the order:
 * [Regulatory Reform Committee consideration of orders](https://api.parliament.uk/s/7e0afc37)
 
 * [Business, Energy and Industrial Strategy Committee consideration of orders](https://api.parliament.uk/s/5d4d989f)
+
+* [Business and Trade Committee consideration of orders](https://api.parliament.uk/s/beffdf22)
 
 
 ## Motions tabled on Legislative reform orders
