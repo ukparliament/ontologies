@@ -1,4 +1,4 @@
-@prefix ptr: <http://parliament.uk/ontologies/treaty/> . 
+@prefix treaty: <http://parliament.uk/ontologies/treaty/> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -11,10 +11,11 @@
     dcterms:title "Treaty ontology"@en ;
     dcterms:created "2019-01-16"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing the form of treaties considered by Parliament, treaty membership of an FCO series and the relationship of a treaty to legislation required to be passed in order for the UK to comply with treaty obligations."@en ;
+    dcterms:description "A model describing treaties made available to Parliament."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/treaty/treaty.svg> ;
 	foaf:maker
 		[ foaf:name "David Beamish" ],
+		[ foaf:name "Jayne Bosworth" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Jack Dent" ],
 		[ foaf:name "Arabella Lang" ],
@@ -25,72 +26,85 @@
 
 #######  Classes #####
 
-ptr:PaperWork rdf:type owl:Class ;
+treaty:PaperWork rdf:type owl:Class ;
 	rdfs:label "Paper work"@en ;
 	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:PaperExpression rdf:type owl:Class ;
+treaty:PaperExpression rdf:type owl:Class ;
 	rdfs:label "Paper expression"@en ;
 	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
-ptr:GovernmentOrganisation rdf:type owl:Class ;
-	rdfs:label "Government organisation"@en ;
-	rdfs:comment "A government department, agency or public body with responsibility for a sector of public administration."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
-ptr:TreatyWork rdf:type owl:Class ;
-	rdfs:subClassOf ptr:PaperWork ;
+treaty:TreatyWork rdf:type owl:Class ;
+	rdfs:subClassOf treaty:PaperWork ;
 	rdfs:label "Treaty work"@en ;
 	rdfs:comment "A treaty is a written agreement between states - or between states and international organisations - which is binding under international law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
-ptr:TreatyExpression rdf:type owl:Class ;
-	rdfs:subClassOf ptr:PaperExpression ;
+treaty:TreatyExpression rdf:type owl:Class ;
+	rdfs:subClassOf treaty:PaperExpression ;
 	rdfs:label "Treaty expression"@en ;
-	rdfs:comment "Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure."@en ;
+	rdfs:comment "An expression of a treaty work as laid before Parliament. Different treaty expressions may be laid before Parliament over time. Treaty works requiring ratification are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that a treaty must be laid before Parliament prior to ratification. After the treaty has been laid, it is subject to the negative procedure described in part within the 2010 Act. After a treaty has been ratified, a copy of the treaty is laid before Parliament. Treaty works which do not require ratification may have a treaty expression laid before Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
-	
+
+treaty:DepartmentalLead rdf:type owl:Class ;
+	rdfs:label "Departmental lead"@en ;
+	rdfs:comment "The Government department which has the leadership of a treaty. The Government department which has the leadership of a treaty may change following a 'machinery of Government' announcement."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+
+treaty:MinisterialDepartment rdf:type owl:Class ;
+	rdfs:label "Ministerial department"@en ;
+	rdfs:comment "A ministerial department is an executive body of government, headed by a government minister having responsibility for described areas of public administration."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 	
 ##### Object properties ####
 	
-ptr:expressionOf rdf:type owl:ObjectProperty ;
+treaty:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Expression of"@en ;
-	rdfs:comment "Relates a treaty expression to the treaty work that paper is an expression of. A treaty expression is an expression of one treaty work. A treaty work is expressed as one or more papers."@en ;
-	rdfs:domain ptr:TreatyExpression ;
-	rdfs:range ptr:TreatyWork ;
+	rdfs:comment "Relates a treaty expression to the treaty work that it is an expression of. A treaty expression is an expression of one treaty work. A treaty work has one or more expressions."@en ;
+	rdfs:domain treaty:TreatyExpression ;
+	rdfs:range treaty:TreatyWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:hasLeadDepartment rdf:type owl:ObjectProperty ;
-	rdfs:label "Has lead department"@en ;
-	rdfs:comment "Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department."@en ;
-	rdfs:domain ptr:TreatyWork ;
-	rdfs:range ptr:GovernmentOrganisation ;
+# commented to here
+	
+treaty:hasDepartmentalLead rdf:type owl:ObjectProperty ;
+	rdfs:label "Has departmental lead"@en ;
+	rdfs:comment "Relates a treaty work to its leadership by a Government department at a point in time. A treaty bill has one or more departmental leaderships over time."@en ;
+	rdfs:domain treaty:TreatyWork ;
+	rdfs:range treaty:DepartmentalLead ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
+	
+treaty:byMinisterialDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "By ministerial department"@en ;
+	rdfs:comment "Relates a leadership of a treaty to the Ministerial Department leading that treaty at a point in time. A departmental lead is by one Ministerial Department."@en ;
+	rdfs:domain treaty:DepartmentalLead ;
+	rdfs:range treaty:MinisterialDepartment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 
 	
 ##### Data properties ####
 	
-ptr:ukRatificationDate rdf:type owl:DatatypeProperty ;
+treaty:ukRatificationDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK ratification date"@en ;
 	rdfs:comment "The date on which the treaty is ratified by the UK."@en ;
-	rdfs:domain ptr:TreatyWork ;
+	rdfs:domain treaty:TreatyWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-ptr:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
+treaty:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK coming into force date"@en ;
 	rdfs:comment "The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note."@en ;
-	rdfs:domain ptr:TreatyWork ;
+	rdfs:domain treaty:TreatyWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
 
-ptr:ukComingIntoForceNote rdf:type owl:DatatypeProperty ;
+treaty:ukComingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK coming into force note"@en ;
 	rdfs:comment "A coming into force note sets out details applying to the UK of the commencement of provisions or effects forming part or parts of a treaty, or the treaty as a whole where it does not come into force on a single date."@en ;
-	rdfs:domain ptr:TreatyWork ;
+	rdfs:domain treaty:TreatyWork ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
