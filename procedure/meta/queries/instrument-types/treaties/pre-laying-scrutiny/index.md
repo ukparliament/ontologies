@@ -44,11 +44,18 @@ The Government can choose to publish a comprehensive set of documents setting ou
 
 * [Government objectives in trade negotiations deposited in the House libraries](https://api.parliament.uk/s/59c7874e)
 
+
 ### International Agreements Commitee (IAC) scrutiny report of objectives
 
 As part of the International Agreements Committee's inquiry into a potential treaty, they may wish to publish a report scrutinising the government's negotiation objectives. The government may then follow up with a response to such a report. The following query shows all scrutiny reports and where the government has responded. 
 
 * [International Agreements Committee scrutiny reports of negotiation objectives](https://api.parliament.uk/s/1db3d17c)
+
+## Consultation into a future free trade agreements
+
+The Government may choose to open a consultation into a future trade agreement. The consultations usually seek input on which aspects of current trading arrangements should be improved or amended. 
+
+* [Consultations on future free trade agreements](https://api.parliament.uk/s/b50dd870)
 
 ## Informational copies of treaties laid before Parliament
 
