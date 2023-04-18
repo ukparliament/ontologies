@@ -2,7 +2,7 @@
 
 ## Update - 18th April 2023
 
-Unfortunately, Twitter's new API strategy means we're no longer able to offer bot accounts on that platform. Updates remain available on Mastodon and by RSS.
+Unfortunately, Twitter's new API strategy means we're no longer able to offer bot accounts on that platform. Updates remain available on Mastodon and via RSS.
 
 ## Made-n-laid
 
