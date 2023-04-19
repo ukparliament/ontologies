@@ -58,7 +58,7 @@
     <main>
       <h1>Treaty ontology</h1>
 
-      <p id="description">A model describing the form of treaties considered by Parliament, treaty membership of an FCO series and the relationship of a treaty to legislation required to be passed in order for the UK to comply with treaty obligations.</p>
+      <p id="description">A model describing treaties made available to Parliament.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -71,10 +71,15 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="GovernmentOrganisation">
-          <h3>Class <a href="#GovernmentOrganisation">Government organisation</a></h3>
+        <article class="class" id="DepartmentalLead">
+          <h3>Class <a href="#DepartmentalLead">Departmental lead</a></h3>
 
-          <p>A government department, agency or public body with responsibility for a sector of public administration.</p>
+          <p>The Government department which has the leadership of a treaty. The Government department which has the leadership of a treaty may change following a &#39;machinery of Government&#39; announcement.</p>
+         </article>
+        <article class="class" id="MinisterialDepartment">
+          <h3>Class <a href="#MinisterialDepartment">Ministerial department</a></h3>
+
+          <p>A ministerial department is an executive body of government, headed by a government minister having responsibility for described areas of public administration.</p>
          </article>
         <article class="class" id="PaperExpression">
           <h3>Class <a href="#PaperExpression">Paper expression</a></h3>
@@ -89,7 +94,7 @@
         <article class="class" id="TreatyExpression">
           <h3>Class <a href="#TreatyExpression">Treaty expression</a></h3>
 
-          <p>Treaties requiring ratification - including those treaties requiring ratification to which the United Kingdom is acceding - are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that such treaties must be laid before Parliament prior to ratification and are then subject to a procedure described in part within the Act. All treaties are laid before Parliament following ratification, though this is not a requirement set out in the 2010 Act and does not trigger a parliamentary procedure.</p>
+          <p>An expression of a treaty work as laid before Parliament. Different treaty expressions may be laid before Parliament over time. Treaty works requiring ratification are subject to the Constitutional Reform and Governance Act 2010. The 2010 Act sets out that a treaty must be laid before Parliament prior to ratification. After the treaty has been laid, it is subject to the negative procedure described in part within the 2010 Act. After a treaty has been ratified, a copy of the treaty is laid before Parliament. Treaty works which do not require ratification may have a treaty expression laid before Parliament.</p>
            <p>
             Superclasses  &middot; PaperExpression           </p>
         </article>
@@ -106,6 +111,25 @@
         <h2>Object properties</h2>
 
 
+        <article class="objectproperty" id="byMinisterialDepartment">
+          <h3>
+            Object property
+            <a href="#byMinisterialDepartment"
+              >By ministerial department</a
+            >
+          </h3>
+
+           <p>Relates a leadership of a treaty to the Ministerial Department leading that treaty at a point in time. A departmental lead is by one Ministerial Department.</p>
+
+          <p>
+            <a href="#DepartmentalLead"
+              >DepartmentalLead</a
+            >
+            &mdash; By ministerial department &mdash;
+            <a href="#MinisterialDepartment">MinisterialDepartment</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="expressionOf">
           <h3>
             Object property
@@ -114,7 +138,7 @@
             >
           </h3>
 
-           <p>Relates a treaty expression to the treaty work that paper is an expression of. A treaty expression is an expression of one treaty work. A treaty work is expressed as one or more papers.</p>
+           <p>Relates a treaty expression to the treaty work that it is an expression of. A treaty expression is an expression of one treaty work. A treaty work has one or more expressions.</p>
 
           <p>
             <a href="#TreatyExpression"
@@ -125,22 +149,22 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasLeadDepartment">
+        <article class="objectproperty" id="hasDepartmentalLead">
           <h3>
             Object property
-            <a href="#hasLeadDepartment"
-              >Has lead department</a
+            <a href="#hasDepartmentalLead"
+              >Has departmental lead</a
             >
           </h3>
 
-           <p>Relates a treaty to its lead government department. Treaties are laid into Parliament by the Foreign and Commonwealth Office and may have a different assigned lead department.</p>
+           <p>Relates a treaty work to its leadership by a Government department at a point in time. A treaty bill has one or more departmental leaderships over time.</p>
 
           <p>
             <a href="#TreatyWork"
               >TreatyWork</a
             >
-            &mdash; Has lead department &mdash;
-            <a href="#GovernmentOrganisation">GovernmentOrganisation</a>
+            &mdash; Has departmental lead &mdash;
+            <a href="#DepartmentalLead">DepartmentalLead</a>
           </p>
         </article>
       </section>
@@ -210,6 +234,54 @@
         <details>
           <summary>Namespace list</summary>
           <dl>
+            <dt>brick</dt>
+            <dd>https://brickschema.org/schema/Brick#</dd>
+            <dt>csvw</dt>
+            <dd>http://www.w3.org/ns/csvw#</dd>
+            <dt>dc</dt>
+            <dd>http://purl.org/dc/elements/1.1/</dd>
+            <dt>dcat</dt>
+            <dd>http://www.w3.org/ns/dcat#</dd>
+            <dt>dcmitype</dt>
+            <dd>http://purl.org/dc/dcmitype/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>dcam</dt>
+            <dd>http://purl.org/dc/dcam/</dd>
+            <dt>doap</dt>
+            <dd>http://usefulinc.com/ns/doap#</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+            <dt>geo</dt>
+            <dd>http://www.opengis.net/ont/geosparql#</dd>
+            <dt>odrl</dt>
+            <dd>http://www.w3.org/ns/odrl/2/</dd>
+            <dt>org</dt>
+            <dd>http://www.w3.org/ns/org#</dd>
+            <dt>prof</dt>
+            <dd>http://www.w3.org/ns/dx/prof/</dd>
+            <dt>prov</dt>
+            <dd>http://www.w3.org/ns/prov#</dd>
+            <dt>qb</dt>
+            <dd>http://purl.org/linked-data/cube#</dd>
+            <dt>schema</dt>
+            <dd>https://schema.org/</dd>
+            <dt>sh</dt>
+            <dd>http://www.w3.org/ns/shacl#</dd>
+            <dt>skos</dt>
+            <dd>http://www.w3.org/2004/02/skos/core#</dd>
+            <dt>sosa</dt>
+            <dd>http://www.w3.org/ns/sosa/</dd>
+            <dt>ssn</dt>
+            <dd>http://www.w3.org/ns/ssn/</dd>
+            <dt>time</dt>
+            <dd>http://www.w3.org/2006/time#</dd>
+            <dt>vann</dt>
+            <dd>http://purl.org/vocab/vann/</dd>
+            <dt>void</dt>
+            <dd>http://rdfs.org/ns/void#</dd>
+            <dt>wgs</dt>
+            <dd>https://www.w3.org/2003/01/geo/wgs84_pos#</dd>
             <dt>owl</dt>
             <dd>http://www.w3.org/2002/07/owl#</dd>
             <dt>rdf</dt>
@@ -220,12 +292,8 @@
             <dd>http://www.w3.org/2001/XMLSchema#</dd>
             <dt>xml</dt>
             <dd>http://www.w3.org/XML/1998/namespace</dd>
-            <dt>ptr</dt>
+            <dt>treaty</dt>
             <dd>http://parliament.uk/ontologies/treaty/</dd>
-            <dt>dcterms</dt>
-            <dd>http://purl.org/dc/terms/</dd>
-            <dt>foaf</dt>
-            <dd>http://xmlns.com/foaf/0.1/</dd>
           </dl>
         </details>
       </section>
@@ -233,14 +301,14 @@
       <p>Ontology created &middot; <time id="created">2019-01-16</time></p>
 
       <p id="makers">
-        Made by   &middot; David Beamish           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+        Made by   &middot; David Beamish    &middot; Jayne Bosworth           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
    &middot; Jack Dent    &middot; Arabella Lang           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville    &middot; Jane White        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2023-03-14 16:00:51.068750 from a
+        Generated 2023-04-19 12:15:03.040796 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../treaty/treaty-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../treaty/treaty-ontology.ttl"

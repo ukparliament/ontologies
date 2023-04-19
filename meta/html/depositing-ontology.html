@@ -86,12 +86,31 @@
 
           <p>A thing by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement.</p>
          </article>
+        <article class="class" id="CreditedContribution">
+          <h3>Class <a href="#CreditedContribution">Credited contribution</a></h3>
+
+          <p>An oral contribution made by a Member during a parliamentary proceeding.</p>
+         </article>
+        <article class="class" id="DepositedArtefact">
+          <h3>Class <a href="#DepositedArtefact">Deposited artefact</a></h3>
+
+          <p>An artefact having been deposited in a Library of a House.</p>
+           <p>
+            Superclasses  &middot; DepositedThing           </p>
+        </article>
         <article class="class" id="DepositedPaper">
           <h3>Class <a href="#DepositedPaper">Deposited paper</a></h3>
 
-          <p>An item deposited in a Library of a House.</p>
+          <p>A paper having been deposited in a Library of a House.</p>
            <p>
-            Superclasses  &middot; MadeAvailableThing  &middot; PaperExpression           </p>
+            Superclasses  &middot; DepositedThing  &middot; PaperExpression           </p>
+        </article>
+        <article class="class" id="DepositedThing">
+          <h3>Class <a href="#DepositedThing">Deposited thing</a></h3>
+
+          <p>A thing having been deposited in a Library of a House.</p>
+           <p>
+            Superclasses  &middot; MadeAvailableThing           </p>
         </article>
         <article class="class" id="Depositing">
           <h3>Class <a href="#Depositing">Depositing</a></h3>
@@ -110,6 +129,11 @@
 
           <p>A thing made available to a House or to a House by means of its Library.</p>
          </article>
+        <article class="class" id="MadeStatutoryInstrumentWork">
+          <h3>Class <a href="#MadeStatutoryInstrumentWork">Made statutory instrument work</a></h3>
+
+          <p>Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work.</p>
+         </article>
         <article class="class" id="MakingAvailable">
           <h3>Class <a href="#MakingAvailable">Making available</a></h3>
 
@@ -119,6 +143,11 @@
           <h3>Class <a href="#PaperExpression">Paper expression</a></h3>
 
           <p>A paper made available to a House, being an expression of a paper work.</p>
+         </article>
+        <article class="class" id="PaperSeriesItem">
+          <h3>Class <a href="#PaperSeriesItem">Paper series item</a></h3>
+
+          <p>A paper expression or artefact, as it exists as part of a paper series. A paper expression or artefact forming part of a series has a number within that series.</p>
          </article>
         <article class="class" id="ParliamentaryPeriod">
           <h3>Class <a href="#ParliamentaryPeriod">Parliamentary period</a></h3>
@@ -131,22 +160,22 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="corrects">
+        <article class="objectproperty" id="artefactAsSeriesItem">
           <h3>
             Object property
-            <a href="#corrects"
-              >Corrects</a
+            <a href="#artefactAsSeriesItem"
+              >Artefact as series item</a
             >
           </h3>
 
-           <p>Relates a deposited paper to the deposited paper it corrects. A deposited paper may correct one deposited paper, or none. A deposited paper may be corrected by one deposited paper, or none.</p>
+           <p>Relates an artefact to the existence of that artefact in a paper series. A paper series item refers to one artefact. An artefact may exist as an item in one or more series, or none.</p>
 
           <p>
-            <a href="#DepositedPaper"
-              >DepositedPaper</a
+            <a href="#DepositedArtefact"
+              >DepositedArtefact</a
             >
-            &mdash; Corrects &mdash;
-            <a href="#DepositedPaper">DepositedPaper</a>
+            &mdash; Artefact as series item &mdash;
+            <a href="#PaperSeriesItem">PaperSeriesItem</a>
           </p>
         </article>
 
@@ -158,7 +187,7 @@
             >
           </h3>
 
-           <p>Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability assigned.</p>
+           <p>Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability.</p>
 
           <p>
             <a href="#DepositedPaper"
@@ -234,7 +263,7 @@
             >
           </h3>
 
-           <p>Relates a committing thing to the commitment made. A committing thing includes one commitment. A commitment is included in one committing thing.</p>
+           <p>Relates a committing thing to the commitment made. A committing thing makes one commitment. A commitment is made in one committing thing.</p>
 
           <p>
             <a href="#CommittingThing"
@@ -245,40 +274,78 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="resultsFrom">
+        <article class="objectproperty" id="resultsFromCommitment">
           <h3>
             Object property
-            <a href="#resultsFrom"
-              >Results from</a
+            <a href="#resultsFromCommitment"
+              >Results from commitment</a
             >
           </h3>
 
-           <p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment may result in one or more deposits, or none. Where a commitment has not yet resulted in a deposit, the House of Lords Library contacts the person who made the commitment.</p>
+           <p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment, or none. A commitment is made to provide one or more deposits.</p>
 
           <p>
             <a href="#Depositing"
               >Depositing</a
             >
-            &mdash; Results from &mdash;
+            &mdash; Results from commitment &mdash;
             <a href="#Commitment">Commitment</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="resultsIn">
+        <article class="objectproperty" id="resultsFromDutySetOutIn">
           <h3>
             Object property
-            <a href="#resultsIn"
-              >Results in</a
+            <a href="#resultsFromDutySetOutIn"
+              >Results from duty set out in</a
             >
           </h3>
 
-           <p>Relates an act of depositing to the paper or papers it deposits. An act of depositing may result in one or more deposited papers.</p>
+           <p>Relates a deposit to the made statutory instrument setting out the duty under which the deposit is made. Transport and Work Act orders are deposited under a duty set out in Rule 13 of The Transport and Works (Applications and Objections Procedure) (England and Wales) Rules 2006.</p>
 
           <p>
             <a href="#Depositing"
               >Depositing</a
             >
-            &mdash; Results in &mdash;
+            &mdash; Results from duty set out in &mdash;
+            <a href="#Commitment">Commitment</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="resultsInDepositedArtefact">
+          <h3>
+            Object property
+            <a href="#resultsInDepositedArtefact"
+              >Results in deposited artefact</a
+            >
+          </h3>
+
+           <p>Relates an act of depositing to the artefact or artefacts having been deposited. An act of depositing results in one or more deposited artefacts, or none. A deposited artefact is the result of one deposit.</p>
+
+          <p>
+            <a href="#Depositing"
+              >Depositing</a
+            >
+            &mdash; Results in deposited artefact &mdash;
+            <a href="#DepositedArtefact">DepositedArtefact</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="resultsInDepositedPaper">
+          <h3>
+            Object property
+            <a href="#resultsInDepositedPaper"
+              >Results in deposited paper</a
+            >
+          </h3>
+
+           <p>Relates an act of depositing to the paper or papers having been deposited. An act of depositing results in one or more deposited papers, or none. A deposited paper is the result of one deposit.</p>
+
+          <p>
+            <a href="#Depositing"
+              >Depositing</a
+            >
+            &mdash; Results in deposited paper &mdash;
             <a href="#DepositedPaper">DepositedPaper</a>
           </p>
         </article>
@@ -286,20 +353,6 @@
  
       <section id="dataproperties">
         <h2>Data properties</h2>
-
-        <article class="dataproperty" id="isArtefact">
-          <h3>
-            Data property
-            <a href="#isArtefact">Is artefact</a>
-          </h3>
-
-          <p>Used to record whether the deposited paper is an artefact, for example: a deposit of a breathalyzer would be recorded as an artefact.</p>
-
-          <p>
-            DepositedPaper &mdash; Is artefact &mdash;
-            boolean
-          </p>
-        </article>
 
         <article class="dataproperty" id="isStanding">
           <h3>
@@ -334,12 +387,20 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedThing</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>MadeAvailableThing</td>
+          </tr>
+          <tr>
             <td>/<wbr>ontologies/<wbr>depositing/<wbr>Depositing</td>
             <td>/<wbr>ontologies/<wbr>depositing/<wbr>MakingAvailable</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedPaper</td>
-            <td>/<wbr>ontologies/<wbr>depositing/<wbr>MadeAvailableThing</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedArtefact</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedThing</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedPaper</td>
@@ -353,6 +414,54 @@
         <details>
           <summary>Namespace list</summary>
           <dl>
+            <dt>brick</dt>
+            <dd>https://brickschema.org/schema/Brick#</dd>
+            <dt>csvw</dt>
+            <dd>http://www.w3.org/ns/csvw#</dd>
+            <dt>dc</dt>
+            <dd>http://purl.org/dc/elements/1.1/</dd>
+            <dt>dcat</dt>
+            <dd>http://www.w3.org/ns/dcat#</dd>
+            <dt>dcmitype</dt>
+            <dd>http://purl.org/dc/dcmitype/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>dcam</dt>
+            <dd>http://purl.org/dc/dcam/</dd>
+            <dt>doap</dt>
+            <dd>http://usefulinc.com/ns/doap#</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+            <dt>geo</dt>
+            <dd>http://www.opengis.net/ont/geosparql#</dd>
+            <dt>odrl</dt>
+            <dd>http://www.w3.org/ns/odrl/2/</dd>
+            <dt>org</dt>
+            <dd>http://www.w3.org/ns/org#</dd>
+            <dt>prof</dt>
+            <dd>http://www.w3.org/ns/dx/prof/</dd>
+            <dt>prov</dt>
+            <dd>http://www.w3.org/ns/prov#</dd>
+            <dt>qb</dt>
+            <dd>http://purl.org/linked-data/cube#</dd>
+            <dt>schema</dt>
+            <dd>https://schema.org/</dd>
+            <dt>sh</dt>
+            <dd>http://www.w3.org/ns/shacl#</dd>
+            <dt>skos</dt>
+            <dd>http://www.w3.org/2004/02/skos/core#</dd>
+            <dt>sosa</dt>
+            <dd>http://www.w3.org/ns/sosa/</dd>
+            <dt>ssn</dt>
+            <dd>http://www.w3.org/ns/ssn/</dd>
+            <dt>time</dt>
+            <dd>http://www.w3.org/2006/time#</dd>
+            <dt>vann</dt>
+            <dd>http://purl.org/vocab/vann/</dd>
+            <dt>void</dt>
+            <dd>http://rdfs.org/ns/void#</dd>
+            <dt>wgs</dt>
+            <dd>https://www.w3.org/2003/01/geo/wgs84_pos#</dd>
             <dt>owl</dt>
             <dd>http://www.w3.org/2002/07/owl#</dd>
             <dt>rdf</dt>
@@ -365,10 +474,6 @@
             <dd>http://www.w3.org/XML/1998/namespace</dd>
             <dt>pdep</dt>
             <dd>http://parliament.uk/ontologies/depositing/</dd>
-            <dt>dcterms</dt>
-            <dd>http://purl.org/dc/terms/</dd>
-            <dt>foaf</dt>
-            <dd>http://xmlns.com/foaf/0.1/</dd>
           </dl>
         </details>
       </section>
@@ -383,7 +488,7 @@
 
     <footer>
       <p>
-        Generated 2023-03-14 16:00:51.068750 from a
+        Generated 2023-04-19 12:15:03.040796 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl"

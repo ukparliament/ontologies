@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../reporting/reporting-ontology.html" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../written-statement-making/written-statement-making-ontology.html" />
     <link rel="index" href="https://ukparliament.github.io/ontologies/" />
     <link
       rel="alternate"
-      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../reporting/reporting-ontology.ttl"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../written-statement-making/written-statement-making-ontology.ttl"
       type="text/turtle"
-      title="Reporting ontology: Turtle source"
+      title="Written statement making ontology: Turtle source"
     />
     <link
       rel="licence"
@@ -17,7 +17,7 @@
       lang="en-GB"
       title="Open Parliament Licence"
     />
-    <title>Reporting ontology</title>
+    <title>Written statement making ontology</title>
     <style>
       body {
         font-family: system-ui;
@@ -51,20 +51,20 @@
         <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
           >Ontologies index</a
         >
-        &rarr; Reporting ontology
+        &rarr; Written statement making ontology
       </nav>
     </header>
 
     <main>
-      <h1>Reporting ontology</h1>
+      <h1>Written statement making ontology</h1>
 
-      <p id="description">A model describing the reporting to a House by a formal body.</p>
+      <p id="description">A model describing the act of making of a written statement available to a House.</p>
 
       <nav>
         <a href="#classes">Classes</a>
         &middot; <a href="#objectproperties">Object properties</a>     &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
 
- &middot; <a href="https://ukparliament.github.io/ontologies/reporting/reporting.svg">Depiction</a>
+ &middot; <a href="https://ukparliament.github.io/ontologies/written-statement-making/making.svg">Depiction</a>
       </nav>
 
       <section id="classes">
@@ -80,17 +80,17 @@
 
           <p>The act of making a thing available to a House or to a House by means of its Library.</p>
          </article>
-        <article class="class" id="ReportedThing">
-          <h3>Class <a href="#ReportedThing">Reported thing</a></h3>
+        <article class="class" id="WrittenStatementExpression">
+          <h3>Class <a href="#WrittenStatementExpression">Written statement expression</a></h3>
 
-          <p>A thing having been reported to a House by a formal body, for example: the appointing of a chair, a committee report, an evidence session or correspondence.</p>
+          <p>The expression of a written statement as made to a House.</p>
            <p>
             Superclasses  &middot; MadeAvailableThing           </p>
         </article>
-        <article class="class" id="Reporting">
-          <h3>Class <a href="#Reporting">Reporting</a></h3>
+        <article class="class" id="WrittenStatementMaking">
+          <h3>Class <a href="#WrittenStatementMaking">Written statement making</a></h3>
 
-          <p>The act of reporting to a House by a formal body.</p>
+          <p>The act of making a written statement available to a House.</p>
            <p>
             Superclasses  &middot; MakingAvailable           </p>
         </article>
@@ -108,14 +108,14 @@
             >
           </h3>
 
-           <p>Relates an act of reporting to the thing being reported. An act of reporting results in one or more reported things. A reported thing results from one act of reporting.</p>
+           <p>Relates an act of making a written statement expression available to the written statement expression being made available. An act of making results in one written statement expression. A written statement expression results from one act of making.</p>
 
           <p>
-            <a href="#Reporting"
-              >Reporting</a
+            <a href="#WrittenStatementMaking"
+              >WrittenStatementMaking</a
             >
             &mdash; Results in &mdash;
-            <a href="#ReportedThing">ReportedThing</a>
+            <a href="#WrittenStatementExpression">WrittenStatementExpression</a>
           </p>
         </article>
       </section>
@@ -123,12 +123,12 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
-            <td>/<wbr>ontologies/<wbr>reporting/<wbr>Reporting</td>
-            <td>/<wbr>ontologies/<wbr>reporting/<wbr>MakingAvailable</td>
+            <td>/<wbr>ontologies/<wbr>written-statement-making/<wbr>WrittenStatementMaking</td>
+            <td>/<wbr>ontologies/<wbr>written-statement-making/<wbr>MakingAvailable</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>reporting/<wbr>ReportedThing</td>
-            <td>/<wbr>ontologies/<wbr>reporting/<wbr>MadeAvailableThing</td>
+            <td>/<wbr>ontologies/<wbr>written-statement-making/<wbr>WrittenStatementExpression</td>
+            <td>/<wbr>ontologies/<wbr>written-statement-making/<wbr>MadeAvailableThing</td>
           </tr>
         </table>
       </section>
@@ -196,26 +196,26 @@
             <dd>http://www.w3.org/2001/XMLSchema#</dd>
             <dt>xml</dt>
             <dd>http://www.w3.org/XML/1998/namespace</dd>
-            <dt>report</dt>
-            <dd>http://parliament.uk/ontologies/reporting/</dd>
+            <dt>ws-making</dt>
+            <dd>http://parliament.uk/ontologies/written-statement-making/</dd>
           </dl>
         </details>
       </section>
 
-      <p>Ontology created &middot; <time id="created">2023-02-07</time></p>
+      <p>Ontology created &middot; <time id="created">2023-03-17</time></p>
 
       <p id="makers">
-        Made by   &middot; Jayne Bosworth           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-   &middot; Gordon Clarke    &middot; Claire Searle           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville        </p>
     </main>
 
     <footer>
       <p>
         Generated 2023-04-19 12:15:03.040796 from a
-        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../reporting/reporting-ontology.ttl">Turtle file</a>. Visualization:
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../written-statement-making/written-statement-making-ontology.ttl">Turtle file</a>. Visualization:
         <a
-          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../reporting/reporting-ontology.ttl"
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../written-statement-making/written-statement-making-ontology.ttl"
           >api.parliament.uk/webvowl</a
         >
       </p>
