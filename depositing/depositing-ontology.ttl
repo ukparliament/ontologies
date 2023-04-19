@@ -114,9 +114,9 @@ pdep:madeDuring rdf:type owl:ObjectProperty ;
 	rdfs:range pdep:ParliamentaryPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
-pdep:resultsFrom rdf:type owl:ObjectProperty ;
+pdep:resultsFromCommitment rdf:type owl:ObjectProperty ;
 	rdfs:label "Results from"@en ;
-	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment. A commitment is made to provide one or more deposits."@en ;
+	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment, or none. A commitment is made to provide one or more deposits."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
@@ -166,3 +166,7 @@ pdep:isArtefact rdf:type owl:DatatypeProperty ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+	
+	
+# https://www.legislation.gov.uk/uksi/2006/1466/article/13/made
