@@ -11,7 +11,7 @@
     dcterms:title "Delegation ontology"@en ;
     dcterms:created "2023-03-01"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing the enabling of secondary legislation."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/delegation/delegation.svg> ;
 	foaf:maker
 		[ foaf:name "David Beamish" ],
@@ -23,6 +23,7 @@
 		[ foaf:name "Silver Oliver" ],
 		[ foaf:name "John Sheridan" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Claire Searle" ],
 	    [ foaf:name "Anya Somerville" ],
 	    [ foaf:name "Jayne Sunley" ],
 	    [ foaf:name "Matthew Waddington" ],
@@ -43,20 +44,20 @@ del:StatutoryThing rdf:type owl:Class ;
 
 del:EnablingThing rdf:type owl:Class ;
 	rdfs:label "Enabling thing"@en ;
-	rdfs:comment "A thing that enables the exercise of a power."@en ;
+	rdfs:comment "A thing that enables the exercise of a statutory power."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:ActOfParliament rdf:type owl:Class ;
 	rdfs:subClassOf del:StatutoryThing ;
 	rdfs:subClassOf del:EnablingThing ;
 	rdfs:label "Act of Parliament"@en ;
-	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law also known as the statute book."@en ;
+	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:EnabledThing rdf:type owl:Class ;
 	rdfs:subClassOf del:PaperWork ;
 	rdfs:label "Enabled thing"@en ;
-	rdfs:comment "A thing which is intended to exercise a power set out in statute."@en ;
+	rdfs:comment "A thing resulting from a Minister exercising or intending to exercise a power conferred by an enabling thing."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:PublishedDraftUnderEUWAWork rdf:type owl:Class ;
@@ -74,27 +75,28 @@ del:ProposedDraftRemedialOrderWork rdf:type owl:Class ;
 del:ProposedNegativeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Proposed negative statutory instrument work"@en ;
-	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
+	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 or under schedule 5 of the Future Relationship Act 2020 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
-del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
+del:StatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
-	rdfs:label "Draft and made statutory instrument subject to parliamentary procedure work"@en ;
-	rdfs:comment "The National Archives classify made instruments as legislation and draft instruments as draft legislation. Parliament considers both made and draft instruments as part of the legislative process, distinct from a FRBR work as used by The National Archives. Parliament includes draft instruments in its description of statutory instruments which are modelled here together."@en ;
+	rdfs:label "Statutory instruments subject to parliamentary procedure according to duties set out in legislation. Statutory instruments may be enabled by legislation delegating powers without requiring consideration by Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:DraftStatutoryInstrumentWork rdf:type owl:Class ;
-	rdfs:subClassOf del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
+	rdfs:subClassOf del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:label "Draft statutory instrument work"@en ;
-	rdfs:comment "Draft statutory instruments are laid before Parliament, and may be objected to. A draft instrument is made into secondary legislation when signed by a government minister. Draft statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:comment "Draft statutory instruments are laid before Parliament subject to either a negative, affirmative or super affirmative procedure. A draft negative, having not been objected to within the scrutiny period, may be made into law. A draft affirmative or draft super affirmative, having been approved by Parliament within the approval period, may be made into law by a minister."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:MadeStatutoryInstrumentWork rdf:type owl:Class ;
-	rdfs:subClassOf del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
+	rdfs:subClassOf del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:subClassOf del:StatutoryThing ;
 	rdfs:label "Made statutory instrument work"@en ;
-	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:comment "Made statutory instruments as signed into legislation. Made statutory instruments may result from a draft laid before Parliament or may be laid as made or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament may be subject to a negative, affirmative or super affirmative procedure, or none. A made negative, having not been objected to within the scrutiny period, remains law. A made affirmative or made super affirmative, having been approved by Parliament within the approval period, remains law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
+	
+							# edited to here
 	
 	
 
@@ -128,14 +130,14 @@ del:madeDate rdf:type owl:DatatypeProperty ;
 del:comingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force date"@en ;
 	rdfs:comment "The date on which a statutory instrument comes into force. Schedules within an instrument may come into force on different dates. Coming into force details would be given in a coming into force note where no single coming into force date is given."@en ;
-	rdfs:domain del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
+	rdfs:domain del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Coming into force note"@en ;
 	rdfs:comment "A coming into force note sets out details of the commencement of provisions or effects forming part or parts of an instrument, or the instrument as a whole."@en ;
-	rdfs:domain del:DraftAndMadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
+	rdfs:domain del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
