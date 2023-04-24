@@ -32,6 +32,10 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 * [Instruments currently before Parliament](scrutiny-types/currentness)
 
+## Making available bodies
+
+* [Making available bodies](making-available-bodies)
+
 ## Procedure map meta
 
 * [Procedure steps](procedure-map-meta/steps)
