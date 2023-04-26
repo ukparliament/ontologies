@@ -51,45 +51,45 @@ pdep:DepositedThing rdf:type owl:Class ;
 pdep:Depositing rdf:type owl:Class ;
 	rdfs:subClassOf pdep:MakingAvailable ;
 	rdfs:label "Depositing"@en ;
-	rdfs:comment "The act of placing information in the Library of either House, resulting from a commitment to make a deposit of that information, by a Member permitted to do so."@en ;
+	rdfs:comment "The act of placing a thing in the Library of either House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:DepositedPaper rdf:type owl:Class ;
 	rdfs:subClassOf pdep:DepositedThing ;
 	rdfs:subClassOf pdep:PaperExpression ;
 	rdfs:label "Deposited paper"@en ;
-	rdfs:comment "A paper having been deposited in a Library of a House."@en ;
+	rdfs:comment "A paper which has been deposited in the Library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
-pdep:Availability rdf:type owl:Class ;
-	rdfs:label "Availability"@en ;
-	rdfs:comment "The type of availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members."@en ;
+pdep:AvailabilityType rdf:type owl:Class ;
+	rdfs:label "Availability type"@en ;
+	rdfs:comment "The type of the availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:DepositedArtefact rdf:type owl:Class ;
 	rdfs:subClassOf pdep:DepositedThing ;
 	rdfs:label "Deposited artefact"@en ;
-	rdfs:comment "An artefact having been deposited in a Library of a House."@en ;
+	rdfs:comment "An artefact which has been deposited in the Library of a House, for example: a breathalyser."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:PaperSeriesItem rdf:type owl:Class ;
 	rdfs:label "Paper series item"@en ;
-	rdfs:comment "A paper expression or artefact, as it exists as part of a paper series. A paper expression or artefact forming part of a series has a number within that series."@en ;
+	rdfs:comment "A paper expression or artefact, as it exists as part of a paper series. A paper expression or artefact forming part of a series has an identifying number within that series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:MadeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:label "Made statutory instrument work"@en ;
-	rdfs:comment "Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work."@en ;
+	rdfs:comment "Made statutory instruments as signed into legislation. Made statutory instruments may result from a draft laid before Parliament or may be laid as made or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament may be subject to a negative, affirmative or super affirmative procedure, or none. A made negative, having not been objected to within the scrutiny period, remains law. A made affirmative or made super affirmative, having been approved by Parliament within the approval period, remains law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:Commitment rdf:type owl:Class ;
 	rdfs:label "Commitment"@en ;
-	rdfs:comment "A commitment to make a deposit in a Library of a House."@en ;
+	rdfs:comment "A commitment to make a deposit in the Library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:CommittingThing rdf:type owl:Class ;
 	rdfs:label "Committing thing"@en ;
-	rdfs:comment "A thing by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement."@en ;
+	rdfs:comment "The means by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:Incumbency rdf:type owl:Class ;
@@ -104,7 +104,7 @@ pdep:ParliamentaryPeriod rdf:type owl:Class ;
 	
 pdep:CreditedContribution rdf:type owl:Class ;
 	rdfs:label "Credited contribution"@en ;
-	rdfs:comment "An oral contribution made by a Member during a parliamentary proceeding."@en ;
+	rdfs:comment "An oral contribution made by a known Member during a parliamentary proceeding."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 
@@ -118,9 +118,9 @@ pdep:leadsTo rdf:type owl:ObjectProperty ;
 	rdfs:range pdep:CommittingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
-pdep:makesCommitment rdf:type owl:ObjectProperty ;
-	rdfs:label "Makes commitment"@en ;
-	rdfs:comment "Relates a committing thing to the commitment made. A committing thing makes one commitment. A commitment is made in one committing thing."@en ;
+pdep:containsCommitment rdf:type owl:ObjectProperty ;
+	rdfs:label "Contains commitment"@en ;
+	rdfs:comment "Relates a committing thing to the commitment made. A committing thing contains one commitment. A commitment is contained by one committing thing."@en ;
 	rdfs:domain pdep:CommittingThing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
@@ -134,28 +134,28 @@ pdep:madeBy rdf:type owl:ObjectProperty ;
 	
 pdep:madeDuring rdf:type owl:ObjectProperty ;
 	rdfs:label "Made during"@en ;
-	rdfs:comment "Relates a commitment to the parliamentary period during which the commitment was made. A commitment is made during one parliamentary period."@en ;
+	rdfs:comment "Relates a commitment to the parliamentary period during which the commitment is made. A commitment is made during one parliamentary period."@en ;
 	rdfs:domain pdep:Commitment ;
 	rdfs:range pdep:ParliamentaryPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:resultsFromCommitment rdf:type owl:ObjectProperty ;
 	rdfs:label "Results from commitment"@en ;
-	rdfs:comment "Relates a deposit to the commitment to make that deposit. A deposit results from one commitment, or none. A commitment is made to provide one or more deposits."@en ;
+	rdfs:comment "Relates a deposit to the commitment to make that deposit. A commitment is made to provide one or more deposits. A deposit results from one commitment, or none. Where a deposit does not result from a commitment, it results from a duty set out in legislation."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:Commitment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
 pdep:resultsFromDutySetOutIn rdf:type owl:ObjectProperty ;
 	rdfs:label "Results from duty set out in"@en ;
-	rdfs:comment "Relates a deposit to the made statutory instrument setting out the duty under which the deposit is made. Transport and Work Act orders are deposited under a duty set out in Rule 13 of The Transport and Works (Applications and Objections Procedure) (England and Wales) Rules 2006."@en ;
+	rdfs:comment "Relates a deposit to the made statutory instrument setting out the duty under which that deposit is made. Transport and Works Act order applications are deposited under a duty set out in Rule 13 of The Transport and Works (Applications and Objections Procedure) (England and Wales) Rules 2006. Where a deposit does not result from a duty set out in legislation, it results from a commitment to make a deposit."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:MadeStatutoryInstrumentWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 pdep:resultsInDepositedArtefact rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in deposited artefact"@en ;
-	rdfs:comment "Relates an act of depositing to the artefact or artefacts having been deposited. An act of depositing results in one or more deposited artefacts, or none. A deposited artefact is the result of one deposit."@en ;
+	rdfs:comment "Relates an act of depositing to the artefact or artefacts which have been deposited. A deposited artefact is the result of one deposit. An act of depositing results in one or more deposited artefacts, or none.  Where an act of depositing does not result in a deposited artefact, it results in a deposited paper or papers."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:DepositedArtefact ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
@@ -169,16 +169,16 @@ pdep:artefactAsSeriesItem rdf:type owl:ObjectProperty ;
 	
 pdep:resultsInDepositedPaper rdf:type owl:ObjectProperty ;
 	rdfs:label "Results in deposited paper"@en ;
-	rdfs:comment "Relates an act of depositing to the paper or papers having been deposited. An act of depositing results in one or more deposited papers, or none. A deposited paper is the result of one deposit."@en ;
+	rdfs:comment "Relates an act of depositing to the paper or papers which have been deposited. A deposited paper is the result of one deposit. An act of depositing results in one or more deposited papers, or none.  Where an act of depositing does not result in a deposited paper, it results in a deposited artefact or artefacts."@en ;
 	rdfs:domain pdep:Depositing ;
 	rdfs:range pdep:DepositedPaper ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 	
-pdep:hasAvailability rdf:type owl:ObjectProperty ;
-	rdfs:label "Has availability"@en ;
-	rdfs:comment "Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability."@en ;
+pdep:hasAvailabilityType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has availability type"@en ;
+	rdfs:comment "Relates a deposited paper to the availability type of that deposited paper. A deposited paper has one availability type."@en ;
 	rdfs:domain pdep:DepositedPaper ;
-	rdfs:range pdep:Availability ;
+	rdfs:range pdep:AvailabilityType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 				
@@ -194,7 +194,7 @@ pdep:madeOn rdf:type owl:DatatypeProperty ;
 	
 pdep:isStanding rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is standing"@en ;
-	rdfs:comment "Used to record whether a commitment is standing. A standing commitment leads to more than one deposit over time."@en ;
+	rdfs:comment "Used to record whether a commitment is a standing commitment. A standing commitment may lead to more than one deposit."@en ;
 	rdfs:domain pdep:Commitment ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
