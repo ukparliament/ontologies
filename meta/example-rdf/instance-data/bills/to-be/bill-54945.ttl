@@ -121,14 +121,16 @@
 <http://id.parliament.uk/paper-series-item-1> rdf:type paper:PaperSeriesItem ;
 
 	# ... which is in a series ...
-	paper:inSeries <http://id.parliament.uk/paper-series-1> .
+	paper:inSeries <http://id.parliament.uk/paper-series-1> ;
+	
+	# ... which has an identifier.
+	putil:hasIdentifier <http://id.parliament.uk/identifier-1> .
 
 # There is a House ...
 <http://id.parliament.uk/house-1> rdf:type phm:House ;
 
 	# ... with a preferred label.
 	putil:preferredLabel "House of Lords"@en .
-	
 
 # There is a second House ...
 <http://id.parliament.uk/house-2> rdf:type phm:House ;
@@ -211,7 +213,7 @@
 	# ... in a House ...
 	pbill:inHouse <http://id.parliament.uk/house-1> ;
 
-	# ... by an incumbency ...
+	# ... by an incumbency.
 	pbill:sponsorshipByIncumbency <http://id.parliament.uk/incumbency-1> .
 
 # There is a second Member sponsorship ...
@@ -244,15 +246,10 @@
 
 
 
-<http://data.parliament.uk/bills/54945> ,dc-term:creator ,<http://data.parliament.uk/terms/397544> baroness williams
-
-
-<http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#member> ,<http://data.parliament.uk/terms/397544>
 
 
 
 
-<http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#uncontrolled> ,TRUE
 <http://data.parliament.uk/bills/54945> ,skos:prefLabel ,http://data.parliament.uk/bills/54945
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#department> ,<http://data.parliament.uk/terms/25060>
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#internalLocation> ,<http://oasis.parliament.uk/OasisDocument/view/54945>
@@ -296,3 +293,4 @@ _:node1gu7b0hkax28043 ,rdf:subject ,<http://data.parliament.uk/bills/54945>
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#lastModifiedBy> ,daviesmo^^xsd:string
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#humanIndexable> ,TRUE
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#published> ,TRUE
+<http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#uncontrolled> ,TRUE
