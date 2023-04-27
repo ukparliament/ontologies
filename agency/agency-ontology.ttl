@@ -89,15 +89,15 @@ pa:hasGroupInclusion rdf:type owl:ObjectProperty ;
 	rdfs:range pa:GroupInclusion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
-pa:hasIncumbency rdf:type owl:ObjectProperty ;
-	rdfs:label "Has incumbency"@en ;
-	rdfs:comment "Relates a person to an incumbency. A person may have one or more incumbencies, or none. An incumbency is to a single person."@en ;
-	rdfs:domain pa:Person ;
-	rdfs:range pa:Incumbency ;
+pa:ofPerson rdf:type owl:ObjectProperty ;
+	rdfs:label "Of person"@en ;
+	rdfs:comment "Relates a an incumbency to the person occupying that incumbency. A person may have one or more incumbencies, or none. An incumbency is of one person."@en ;
+	rdfs:domain pa:Incumbency ;
+	rdfs:range pa:Person ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/agency/> .
 	
-pa:hasPosition rdf:type owl:ObjectProperty ;
-	rdfs:label "Has position"@en ;
+pa:inPosition rdf:type owl:ObjectProperty ;
+	rdfs:label "In position"@en ;
 	rdfs:comment "Relates an incumbency to a position. An incumbency is to a single position. A position may have one or more incumbencies, or none."@en ;
 	rdfs:domain pa:Incumbency ;
 	rdfs:range pa:Position ;
