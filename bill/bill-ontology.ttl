@@ -102,6 +102,11 @@ pbill:Incumbency rdf:type owl:Class ;
 	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 	
+pbill:House rdf:type owl:Class ;
+	rdfs:label "House"@en ;
+	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-bill/> .
+	
 
 
 #######  Object properties ##### 
@@ -167,6 +172,13 @@ pbill:sponsorshipByIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a Member sponsorship to the incumbency of a Member sponsoring a Public Bill at a point in time. For a Private Members’ Bill, the incumbency is a seat incumbency. For a Government Bill, the incumbency is an incumbency in a Government position. A sponsorship by incumbency is by one incumbency."@en ;
 	rdfs:domain pbill:MemberSponsorship ;
 	rdfs:range pbill:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
+	
+pbill:inHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "In House"@en ;
+	rdfs:comment "Relates a Member sponsorship to the House that sponsorship is in. A Member sponsorship is in one House."@en ;
+	rdfs:domain pbill:MemberSponsorship ;
+	rdfs:range pbill:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/bill/> .
 
 
