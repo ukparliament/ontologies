@@ -1,3 +1,6 @@
+@prefix pa: <http://parliament.uk/ontologies/agency/> . 
+@prefix ppub: <http://parliament.uk/ontologies/publisher/> . 
+@prefix paper: <http://parliament.uk/ontologies/paper/> . 
 @prefix pbill: <http://parliament.uk/ontologies/bill/> .
 @prefix putil: <http://parliament.uk/ontologies/utility/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> .
@@ -11,32 +14,142 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-# There is a House ...
-<http://id.parliament.uk/house-1> rdf:type phm:House ;
+# There is a ministerial department ...
+<http://id.parliament.uk/ministerial-department-1> rdf:type pbill:MinisterialDepartment ;
 
-	# ... with a preferred label.
-	putil:preferredLabel "House of Lords"@en .
+	# ... with a label.
+	putil:preferredLabel "Home Office"@en .
+
+# There is a person ...
+<http://id.parliament.uk/person-1> rdf:type pa:Person ;
+
+	# ... with a label.
+	putil:preferredLabel "Baroness Williams of Trafford"@en .
 	
+# There is position ...
+<http://id.parliament.uk/position-1> rdf:type pa:Position ;
+
+	# ... with a label.
+	putil:preferredLabel "Minister of State"@en ;
+	
+	# in a ministerial department.
+	pa:positionIn <http://id.parliament.uk/ministerial-department-1> .
+	
+# There is an incumbency.
+<http://id.parliament.uk/incumbency-1> rdf:type pa:Incumbency ;
+
+	# ... with a label ...
+	putil:preferredLabel "Baroness Williams of Trafford as Minister of State"@en ;
+	
+	# ... with a start date ...
+	putil:startOn "2016-07-17"^^xsd:date ;
+	
+	# ... and an end date ...
+	putil:endOn "2022-09-06"^^xsd:date ;
+	
+	# ... of a person ...
+	pa:ofPerson <http://id.parliament.uk/person-1> ;
+	
+	# ... in a position ...
+	pa:inPosition <http://id.parliament.uk/position-1> .
+	
+# There is a second person ...
+<http://id.parliament.uk/person-2> rdf:type pa:Person ;
+
+	# ... with a label.
+	putil:preferredLabel "Priti Patel"@en .
+
+# There is second position ...
+<http://id.parliament.uk/position-2> rdf:type pa:Position ;
+
+	# ... with a label.
+	putil:preferredLabel "Home Secretary"@en ;
+
+	# in a ministerial department.
+	pa:positionIn <http://id.parliament.uk/ministerial-department-1> .
+
+# There is a second incumbency.
+<http://id.parliament.uk/incumbency-2> rdf:type pa:Incumbency ;
+
+	# ... with a label ...
+	putil:preferredLabel "Priti Patel as Home Secretary"@en ;
+
+	# ... with a start date ...
+	putil:startOn "2019-07-24"^^xsd:date ;
+
+	# ... and an end date ...
+	putil:endOn "2022-09-06"^^xsd:date ;
+
+	# ... of the second person ...
+	pa:ofPerson <http://id.parliament.uk/person-2> ;
+
+	# ... in the second position ...
+	pa:inPosition <http://id.parliament.uk/position-2> .
+
+# There is an identifier source ...
+<http://id.parliament.uk/identifier-source-1> rdf:type putil:IdentifierSource ;
+
+	# ... with a label.
+	putil:preferredLabel "House of Lords Public Bill Office"@en .
+
+# There is an identifier ...
+<http://id.parliament.uk/identifier-1> rdf:type putil:Identifier ;
+
+	# ... from a source ...
+	putil:hasIdentifierSource <http://id.parliament.uk/identifier-source-1> ;
+	
+	# ... with a value.
+	putil:identifierValue "152" .
+
+
 # There is a session ...
 <http://id.parliament.uk/session-1> rdf:type ptime:Session ;
 
 	# ... with a label.
 	putil:preferredLabel "2021-22" .
 
+# There is a paper series ...
+<http://id.parliament.uk/paper-series-1> rdf:type paper:PaperSeries ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "HL Bill"@en ;
+	
+	# ... belonging to a session.
+	paper:belongsTo <http://id.parliament.uk/session-1> .
+	
+# There is a paper series item ...
+<http://id.parliament.uk/paper-series-item-1> rdf:type paper:PaperSeriesItem ;
+
+	# ... which is in a series ...
+	paper:inSeries <http://id.parliament.uk/paper-series-1> .
+
+# There is a House ...
+<http://id.parliament.uk/house-1> rdf:type phm:House ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "House of Lords"@en .
+	
+
+# There is a second House ...
+<http://id.parliament.uk/house-2> rdf:type phm:House ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "House of Commons"@en .
+	
 # There is a bill work ...
 <http://id.parliament.uk/bill-work-1> rdf:type pbill:BillWork ;
 
 	# ... with a title.
-	putil:preferredLabel "Nationality and Borders Bill 2021-22"
+	putil:preferredLabel "Nationality and Borders Bill 2021-22"@en .
 
 # There is a bill expression ...
 <http://id.parliament.uk/bill-expression-1> rdf:type pbill:BillExpression ;
 
 	# ... of a bill work ...
-	pbill:expressionOf <http://id.parliament.uk/bill-work-1>;
+	pbill:expressionOf <http://id.parliament.uk/bill-work-1> ;
 	
 	# ... with a title.
-	putil:preferredLabel "Nationality and Borders Bill 2021-22. Lords message." .
+	putil:preferredLabel "Nationality and Borders Bill 2021-22. Lords message."@en .
 	
 # There is another bill expression ...
 <http://id.parliament.uk/bill-expression-2> rdf:type pbill:BillExpression ;
@@ -45,10 +158,16 @@
 	pbill:expressionOf <http://id.parliament.uk/bill-work-1>;
 
 	# ... with a title.
-	putil:preferredLabel "Nationality and Borders Bill 2021-22. Commons disagreement and reasons." ;
+	putil:preferredLabel "Nationality and Borders Bill 2021-22. Commons disagreement and reasons."@en ;
 	
-	# ... which follows the preceding bill expression.
-	putil:precededBy <http://id.parliament.uk/bill-expression-1> .
+	# ... which follows the preceding bill expression ...
+	putil:precededBy <http://id.parliament.uk/bill-expression-1> ;
+	
+	# ... which forms a series item.
+	paper:asSeriesItem <http://id.parliament.uk/paper-series-item-1> ;
+	
+	# ... which has publisher.
+	ppub:hasPublisher <http://id.parliament.uk/house-1> .
 	
 # There is a making available ...
 <http://id.parliament.uk/making-available-1> rdf:type pbill:MakingAvailable ;
@@ -57,7 +176,7 @@
 	pma:makesAvailable <http://id.parliament.uk/bill-expression-2> ;
 
 	# ... on a date ...
-	pma:madeAvailableOn 2022-04-25T23:00:00Z ;
+	pma:madeAvailableOn "2022-04-25"^^xsd:date ;
 	
 	# ... to a House ...
 	pma:toHouse <http://id.parliament.uk/house-1> ;
@@ -65,8 +184,53 @@
 	# ... during a session ...
 	pma:during <http://id.parliament.uk/session-1> ;
 	
-	# ... and recording in a session ...
+	# ... and recording in a session.
 	pma:recordedIn <http://id.parliament.uk/session-1> .
+	
+# There is a departmental sponsorship ...
+<http://id.parliament.uk/departmental-sponsorship-1> rdf:type pbill:DepartmentalSponsorship ;
+
+	# ... which started on ...
+	#putil:startOn NOTE: intended to account for machiney of government changes. Impossible to populate from given data.
+
+	# ... of a bill work ...
+	pbill:departmentalSponsorshipOfPublicBill <http://id.parliament.uk/bill-work-1> .
+
+	# ... by a ministerial department.
+	pbill:sponsorshipByMinisterialDepartment <http://id.parliament.uk/ministerial-department-1> .
+	
+# There is a Member sponsorship ...
+<http://id.parliament.uk/member-sponsorship-1> rdf:type pbill:MemberSponsorship ;
+
+	# ... with a start date ...
+	#putil:startOn NOTE: not possible to populate.
+
+	# ... of a bill work ....
+	pbill:memberSponsorshipOfPublicBill <http://id.parliament.uk/bill-work-1> ;
+
+	# ... in a House ...
+	pbill:inHouse <http://id.parliament.uk/house-1> ;
+
+	# ... by an incumbency ...
+	pbill:sponsorshipByIncumbency <http://id.parliament.uk/incumbency-1> .
+
+# There is a second Member sponsorship ...
+<http://id.parliament.uk/member-sponsorship-2> rdf:type pbill:MemberSponsorship ;
+
+	# ... with a start date ...
+	#putil:startOn NOTE: not possible to populate.
+
+	# ... of a bill work ....
+	pbill:memberSponsorshipOfPublicBill <http://id.parliament.uk/bill-work-1> ;
+
+	# ... in a House ...
+	pbill:inHouse <http://id.parliament.uk/house-2> ;
+
+	# ... by an incumbency.
+	pbill:sponsorshipByIncumbency <http://id.parliament.uk/incumbency-2> .
+	
+	
+
 	
 
 
@@ -78,12 +242,16 @@
 
 
 
-<http://data.parliament.uk/bills/54945> ,dc-term:identifier ,HL Bill 152 2021-22
-<http://data.parliament.uk/bills/54945> ,dc-term:publisher ,<http://data.parliament.uk/terms/25277>
 
-<http://data.parliament.uk/bills/54945> ,dc-term:creator ,<http://data.parliament.uk/terms/25060>
-<http://data.parliament.uk/bills/54945> ,dc-term:creator ,<http://data.parliament.uk/terms/397544>
+
+<http://data.parliament.uk/bills/54945> ,dc-term:creator ,<http://data.parliament.uk/terms/397544> baroness williams
+
+
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#member> ,<http://data.parliament.uk/terms/397544>
+
+
+
+
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#uncontrolled> ,TRUE
 <http://data.parliament.uk/bills/54945> ,skos:prefLabel ,http://data.parliament.uk/bills/54945
 <http://data.parliament.uk/bills/54945> ,<http://data.parliament.uk/schema/parl#department> ,<http://data.parliament.uk/terms/25060>
@@ -105,6 +273,7 @@
 <http://hansard.intranet.data.parliament.uk/Lords/2022-04-27/22042789000095> ,dc-term:relation ,<http://data.parliament.uk/bills/54945>
 <http://hansard.intranet.data.parliament.uk/Lords/2022-04-28/22042815000323> ,dc-term:relation ,<http://data.parliament.uk/bills/54945>
 <http://hansard.intranet.data.parliament.uk/Commons/2022-04-28/22042823000002> ,dc-term:relation ,<http://data.parliament.uk/bills/54945>
+
 _:node1gu7b0hkax28032 ,rdf:object ,<http://data.parliament.uk/bills/54945>
 _:node1gu7b0hkax28033 ,rdf:object ,<http://data.parliament.uk/bills/54945>
 _:node1gu7b0hkax28034 ,rdf:object ,<http://data.parliament.uk/bills/54945>
