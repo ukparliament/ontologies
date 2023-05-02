@@ -96,23 +96,28 @@ del:MadeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:label "Made statutory instrument work"@en ;
 	rdfs:comment "Made statutory instruments as signed into legislation. Made statutory instruments may result from a draft laid before Parliament or may be laid as made or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament may be subject to a negative, affirmative or super affirmative procedure, or none. A made negative, having not been objected to within the scrutiny period, remains law. A made affirmative or made super affirmative, having been approved by Parliament within the approval period, remains law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
-	
-							# edited to here
-	
-	
+
+
 
 ##### Object properties ####
 
-del:madeUnder rdf:type owl:ObjectProperty ;
-	rdfs:label "Made under"@en ;
-	rdfs:comment "Relates an enabled thing to the enabling thing under which it was made. An enabled thing may be made under one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
+del:enabledBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Enabled by"@en ;
+	rdfs:comment "Relates an enabled thing to the enabling thing under which it was made or under which it is intended to be made. An enabled thing may be enabled by one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnablingThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Preceded by"@en ;
-	rdfs:comment "Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none."@en ;
+	rdfs:comment "Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none. For example: a statutory instrument being preceded by a proposed negative statutory instrument."@en ;
+	rdfs:domain del:EnabledThing ;
+	rdfs:range del:EnabledThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
+
+del:supersedes rdf:type owl:ObjectProperty ;
+	rdfs:label "Supersedes"@en ;
+	rdfs:comment "Relates an enabled thing to the enabled thing which it supersedes. An enabled thing may be superseded by one or more enabled things, or none. An enabled thing may supersede one or more enabled things, or none. For example: a withdrawn statutory instrument being superseded by another statutory instrument."@en ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
@@ -123,7 +128,7 @@ del:precededBy rdf:type owl:ObjectProperty ;
 	
 del:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made date"@en ;
-	rdfs:comment "The date on which a statutory instrument is made by a government minister."@en ;
+	rdfs:comment "The date on which a statutory instrument is made by the person having the power to make it."@en ;
 	rdfs:domain del:MadeStatutoryInstrumentWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
@@ -144,7 +149,7 @@ del:comingIntoForceNote rdf:type owl:DatatypeProperty ;
 
 del:chapterNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Chapter number"@en ;
-	rdfs:comment "The identifier in year part of an Act of Parliament number, for example, '12' in '1986 c. 12'."@en ;
+	rdfs:comment "The identifier in a year part of an Act of Parliament number, for example, '12' in '1986 c. 12'."@en ;
 	rdfs:domain del:ActOfParliament ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
@@ -165,7 +170,7 @@ del:royalAssentOn rdf:type owl:DatatypeProperty ;
 
 del:longTitle rdf:type owl:DatatypeProperty ;
 	rdfs:label "Long title"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The title of an Act, setting out in general terms its purpose or scope."@en ;
 	rdfs:domain del:ActOfParliament ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
