@@ -1,4 +1,4 @@
-@prefix pa: <http://parliament.uk/ontologies/agency/> . 
+@prefix pa: <http://parliament.uk/ontologies/agency/> .
 @prefix ppub: <http://parliament.uk/ontologies/publisher/> . 
 @prefix paper: <http://parliament.uk/ontologies/paper/> . 
 @prefix pbill: <http://parliament.uk/ontologies/bill/> .
@@ -137,9 +137,33 @@
 
 	# ... with a preferred label.
 	putil:preferredLabel "House of Commons"@en .
+
+# There is a web link source ...
+<http://id.parliament.uk/web-link-source> rdf:type putil:WebLinkSource ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "The National Archives"@en .
+
+# There is a web link ...
+<http://id.parliament.uk/web-link> rdf:type putil:WebLink ;
+
+	# ... from a source ...
+	putil:hasWebLinkSource <http://id.parliament.uk/web-link-source> ;
+
+	# ... and a url.
+	putil:url "https://www.legislation.gov.uk/id/ukpga/2022/36" .
 	
-# There is a bill work ...
-<http://id.parliament.uk/bill-work-1> rdf:type pbill:BillWork ;
+# There is an Act of Parliament ...
+<http://id.parliament.uk/act-of-parliament> rdf:type pbill:ActOfParliament ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Nationality and Borders Act 2022"@en ;
+	
+	# ... and a web link.
+	putil:hasWebLink <http://id.parliament.uk/web-link> .
+	
+# There is a public bill work ...
+<http://id.parliament.uk/public-bill-work-1> rdf:type pbill:PublicBillWork ;
 
 	# ... with a title.
 	putil:preferredLabel "Nationality and Borders Bill 2021-22"@en .
@@ -148,16 +172,40 @@
 <http://id.parliament.uk/bill-expression-1> rdf:type pbill:BillExpression ;
 
 	# ... of a bill work ...
-	pbill:expressionOf <http://id.parliament.uk/bill-work-1> ;
+	pbill:expressionOf <http://id.parliament.uk/public-bill-work-1> ;
+	
+	# which does not contain statitics ...
+	paper:containsStatistics false ;
 	
 	# ... with a title.
 	putil:preferredLabel "Nationality and Borders Bill 2021-22. Lords message."@en .
+
+# There is a second web link source ...
+<http://id.parliament.uk/web-link-source-2> rdf:type putil:WebLinkSource ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "UK Parliament"@en .
+	
+# There is a second web link ...
+<http://id.parliament.uk/web-link-2> rdf:type putil:WebLink ;
+
+	# ... from a source ...
+	putil:hasWebLinkSource <http://id.parliament.uk/web-link-source-2> ;
+	
+	# ... and a url.
+	putil:url "https://bills.parliament.uk/publications/46276/documents/1756" .
 	
 # There is another bill expression ...
 <http://id.parliament.uk/bill-expression-2> rdf:type pbill:BillExpression ;
 
 	# ... of a bill work ...
-	pbill:expressionOf <http://id.parliament.uk/bill-work-1>;
+	pbill:expressionOf <http://id.parliament.uk/public-bill-work-1>;
+	
+	# ... which has a web link ...
+	putil:hasWebLink <http://id.parliament.uk/web-link-2> ;
+	
+	# ... which does not contain statitics ...
+	paper:containsStatistics false ;
 
 	# ... with a title.
 	putil:preferredLabel "Nationality and Borders Bill 2021-22. Commons disagreement and reasons."@en ;
@@ -171,6 +219,7 @@
 	# ... which has publisher.
 	ppub:hasPublisher <http://id.parliament.uk/house-1> .
 	
+# Note that the bill expression is made available to the House but not at first reading, so not presented.
 # There is a making available ...
 <http://id.parliament.uk/making-available-1> rdf:type pbill:MakingAvailable ;
 	
@@ -183,11 +232,16 @@
 	# ... to a House ...
 	pma:toHouse <http://id.parliament.uk/house-1> ;
 	
+	# ... on behalf of a ministerial department ...
+	pma:madeAvailableOnBehalfOf <http://id.parliament.uk/ministerial-department-1> ;
+	
 	# ... during a session ...
 	pma:during <http://id.parliament.uk/session-1> ;
 	
 	# ... and recording in a session.
 	pma:recordedIn <http://id.parliament.uk/session-1> .
+	
+	# This bill has no explanatory note, so that relationship is not described.
 	
 # There is a departmental sponsorship ...
 <http://id.parliament.uk/departmental-sponsorship-1> rdf:type pbill:DepartmentalSponsorship ;
@@ -196,7 +250,7 @@
 	#putil:startOn NOTE: intended to account for machiney of government changes. Impossible to populate from given data.
 
 	# ... of a bill work ...
-	pbill:departmentalSponsorshipOfPublicBill <http://id.parliament.uk/bill-work-1> .
+	pbill:departmentalSponsorshipOfPublicBill <http://id.parliament.uk/public-bill-work-1> .
 
 	# ... by a ministerial department.
 	pbill:sponsorshipByMinisterialDepartment <http://id.parliament.uk/ministerial-department-1> .
@@ -208,7 +262,7 @@
 	#putil:startOn NOTE: not possible to populate.
 
 	# ... of a bill work ....
-	pbill:memberSponsorshipOfPublicBill <http://id.parliament.uk/bill-work-1> ;
+	pbill:memberSponsorshipOfPublicBill <http://id.parliament.uk/public-bill-work-1> ;
 
 	# ... in a House ...
 	pbill:inHouse <http://id.parliament.uk/house-1> ;
@@ -223,10 +277,61 @@
 	#putil:startOn NOTE: not possible to populate.
 
 	# ... of a bill work ....
-	pbill:memberSponsorshipOfPublicBill <http://id.parliament.uk/bill-work-1> ;
+	pbill:memberSponsorshipOfPublicBill <http://id.parliament.uk/public-bill-work-1> ;
 
 	# ... in a House ...
 	pbill:inHouse <http://id.parliament.uk/house-2> ;
 
 	# ... by an incumbency.
 	pbill:sponsorshipByIncumbency <http://id.parliament.uk/incumbency-2> .
+
+# There is a proceeeding ...
+<http://id.parliament.uk/proceeding> rdf:type proceeding:Proceeding .
+
+# There is a second proceeeding ...
+<http://id.parliament.uk/proceeding-2> rdf:type proceeding:Proceeding .
+
+# There is a third proceeeding ...
+<http://id.parliament.uk/proceeding-3> rdf:type proceeding:Proceeding .
+
+# There is a relationship type ...
+<http://id.parliament.uk/relationship-type> rdf:type related-item:RelationshipType ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Considers" .
+	
+# There is a relationship ...
+<http://id.parliament.uk/relationship> rdf:type related-item:Relationship ;
+
+	# ... with a type ...
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type> ;
+	
+	# ... from the first proceeding.
+	related-item:relationshipFromThing <http://id.parliament.uk/proceeding> ;
+	
+	# ... to the second bill expression ...
+	related-item:relationshipToThing <http://id.parliament.uk/bill-expression-2> .
+	
+# There is a second relationship ...
+<http://id.parliament.uk/relationship-2> rdf:type related-item:Relationship ;
+
+	# ... with a type ...
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type> ;
+
+	# ... from the second proceeding.
+	related-item:relationshipFromThing <http://id.parliament.uk/proceeding-2> ;
+
+	# ... to the second bill expression ...
+	related-item:relationshipToThing <http://id.parliament.uk/bill-expression-2> .
+	
+# There is a third relationship ...
+<http://id.parliament.uk/relationship-3> rdf:type related-item:Relationship ;
+
+	# ... with a type ...
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type> ;
+
+	# ... from the third proceeding.
+	related-item:relationshipFromThing <http://id.parliament.uk/proceeding-3> ;
+
+	# ... to the second bill expression ...
+	related-item:relationshipToThing <http://id.parliament.uk/bill-expression-2> .
