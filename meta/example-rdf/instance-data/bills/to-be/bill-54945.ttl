@@ -101,7 +101,6 @@
 	# ... with a value.
 	putil:identifierValue "152" .
 
-
 # There is a session ...
 <http://id.parliament.uk/session-1> rdf:type ptime:Session ;
 
@@ -166,7 +165,10 @@
 <http://id.parliament.uk/public-bill-work-1> rdf:type pbill:PublicBillWork ;
 
 	# ... with a title.
-	putil:preferredLabel "Nationality and Borders Bill 2021-22"@en .
+	putil:preferredLabel "Nationality and Borders Bill 2021-22"@en ...
+	
+	# ... enacted as an Act of Parliament.
+	pbill:enactedAs <http://id.parliament.uk/act-of-parliament> .
 
 # There is a bill expression ...
 <http://id.parliament.uk/bill-expression-1> rdf:type pbill:BillExpression ;
