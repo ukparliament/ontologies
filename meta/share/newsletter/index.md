@@ -2,7 +2,7 @@ If your job involves following the progress of bills through Parliament, you’l
 
 The bills website provides RSS feeds of bills before Parliament and the stage each bill has reached. Unfortunately, it does not yet provide feeds of associated documents. This has long been a problem for <abbr title="Indexing and Data Managment Section">IDMS</abbr>, since we’re tasked with subject indexing some of this material for [Parliamentary Search](https://search.parliament.uk).
 
-Without a feed to monitor, there’s always the concern that we may have missed some. That problem has now been fixed by the [bill papers application](https://api.parliament.uk/bill-papers). It takes data from the bill system API and outputs a website with RSS feeds of [papers of a given type](https://api.parliament.uk/bill-papers/publication-types) and [papers for a given bill](https://api.parliament.uk/bill-papers/bills). Each [bill page has an RSS link](https://api.parliament.uk/bill-papers/bills/3453).
+Without a feed to monitor, there’s always the concern that we may have missed some. That problem has now been fixed by the [bill papers application](https://api.parliament.uk/bill-papers). It takes data from the bill system API and outputs a website with RSS feeds of [papers of a given type](https://api.parliament.uk/bill-papers/publication-types) and [papers for a given bill](https://api.parliament.uk/bill-papers/bills). Each [bill page has an RSS link](https://api.parliament.uk/bill-papers/bills/3453#papers).
 
 If you subscribe to the feed in Outlook on Windows, you’ll get an email every time a new document associated with that bill is published.
 
