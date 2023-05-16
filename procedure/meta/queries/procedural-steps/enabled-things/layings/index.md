@@ -12,7 +12,9 @@ Queries have also been provided for Machinery of Government changes where Depart
 
 * [Cabinet Office](https://api.parliament.uk/s/729fbf57)
 
-* [Department for Business, Energy and Industrial Strategy](https://api.parliament.uk/s/a19b05b9)
+* [Department for Business, Energy and Industrial Strategy](https://api.parliament.uk/s/ef9efdee)
+
+* [Department for Business and Trade]()
 
 * [Department for Communities and Local Government](https://api.parliament.uk/s/d8735d9d)
 
@@ -74,4 +76,6 @@ Queries have also been provided for Machinery of Government changes where Depart
 * [Enabled things laid by Department of Health or Department of Health and Social Care](https://api.parliament.uk/s/c940228d)
 
 * [Enabled things laid by Foreign and Commonwealth Office, Department for International Development or Foreign, Commonwealth and Development Office](https://api.parliament.uk/s/1bf37866)
+
+* [Enabled things laid by the Department for Business, Energy and Industrial Strategy, Department for International Trade and Department for Business and Trade](https://api.parliament.uk/s/839a22cd)
 
