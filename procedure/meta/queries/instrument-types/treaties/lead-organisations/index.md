@@ -6,9 +6,15 @@ The following queries provide a list of all treaties laid before Parliament by l
 
 * [Cabinet Office](https://api.parliament.uk/s/ee75bd9b)
 
+* [Department for Business and Trade](https://api.parliament.uk/s/9f4f919f)
+
 * [Department for Business, Energy and Industrial Strategy](https://api.parliament.uk/s/6745240c)
 
+* [Department for Culture, Media and Sport](https://api.parliament.uk/s/80307572)
+
 * [Department for Digital, Culture, Media and Sport](https://api.parliament.uk/s/c6112b5c)
+
+* [Department for Energy Security and Net Zero](https://api.parliament.uk/s/7f5c2e00)
 
 * [Department for Education](https://api.parliament.uk/s/dae010d9)
 
