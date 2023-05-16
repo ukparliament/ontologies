@@ -14,11 +14,17 @@ Queries have also been provided for Machinery of Government changes where Depart
 
 * [Department for Business, Energy and Industrial Strategy](https://api.parliament.uk/s/3ff9e059)
 
+* [Department for Business and Trade](https://api.parliament.uk/s/c3a60aff)
+
 * [Department for Communities and Local Government](https://api.parliament.uk/s/892e781f)
+
+* [Department for Culture, Media and Sport](https://api.parliament.uk/s/262944b3)
 
 * [Department for Digital, Culture, Media and Sport](https://api.parliament.uk/s/afc44441)
 
 * [Department for Education](https://api.parliament.uk/s/6dfb55ea)
+
+* [Department for Energy Security and Net Zero](https://api.parliament.uk/s/a038fe3b)
 
 * [Department for Environment, Food and Rural Affairs](https://api.parliament.uk/s/41295a7b)
 
@@ -69,9 +75,12 @@ Queries have also been provided for Machinery of Government changes where Depart
 
 ## Queries for Machinery of Government changes
 
-* [Enabled things laid by Department for Communities and Local Government, Ministry of Housing, Communities and Local Government or Department for Levelling Up, Housing and Communities](https://api.parliament.uk/s/33707a8c) 
+* [Work Packaged Things laid by Department for Communities and Local Government, Ministry of Housing, Communities and Local Government or Department for Levelling Up, Housing and Communities](https://api.parliament.uk/s/33707a8c) 
 
-* [Enabled things laid by Department of Health or Department of Health and Social Care](https://api.parliament.uk/s/ec25cc5a)
+* [Work Packaged Things laid by Department of Health or Department of Health and Social Care](https://api.parliament.uk/s/ec25cc5a)
 
-* [Enabled things laid by Foreign and Commonwealth Office, Department for International Development or Foreign, Commonwealth and Development Office](https://api.parliament.uk/s/7aa3be9c)
+* [Work Packaged Things laid by Foreign and Commonwealth Office, Department for International Development or Foreign, Commonwealth and Development Office](https://api.parliament.uk/s/7aa3be9c)
 
+* [Work Packaged Things laid by Department for Business, Energy and Industrial Strategy, Department for International Trade, Department for Business and Trade and Department for Energy Security and Net Zero](https://api.parliament.uk/s/00bc76f2)
+
+* [Work Packaged Things laid by Department for Culture, Music and Sport and Department for Digital, Culture, Media and Sport](https://api.parliament.uk/s/6521ff01)
