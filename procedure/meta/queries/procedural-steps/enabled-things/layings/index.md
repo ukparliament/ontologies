@@ -18,9 +18,13 @@ Queries have also been provided for Machinery of Government changes where Depart
 
 * [Department for Communities and Local Government](https://api.parliament.uk/s/d8735d9d)
 
+* [Department for Culture, Music and Sport](https://api.parliament.uk/s/eac580a7)
+
 * [Department for Digital, Culture, Media and Sport](https://api.parliament.uk/s/1acd6eda)
 
 * [Department for Education](https://api.parliament.uk/s/a127d533)
+
+* [Department for Energy Security and Net Zero](https://api.parliament.uk/s/6f3daff3)
 
 * [Department for Environment, Food and Rural Affairs](https://api.parliament.uk/s/cc5b4958)
 
@@ -77,5 +81,6 @@ Queries have also been provided for Machinery of Government changes where Depart
 
 * [Enabled things laid by Foreign and Commonwealth Office, Department for International Development or Foreign, Commonwealth and Development Office](https://api.parliament.uk/s/1bf37866)
 
-* [Enabled things laid by the Department for Business, Energy and Industrial Strategy, Department for International Trade and Department for Business and Trade](https://api.parliament.uk/s/839a22cd)
+* [Enabled things laid by the Department for Business, Energy and Industrial Strategy, Department for International Trade, Department for Energy Security and Net Zero, and Department for Business and Trade](https://api.parliament.uk/s/d509d01b)
 
+* [Enabled things laid by the Department for Digital, Media, Culture and Sport and Department for Culture, Media and Sport](https://api.parliament.uk/s/e8dbd4dd)
