@@ -1,0 +1,206 @@
+# ontology changes
+util: Thing > subject > Thing
+paper: PaperExpression > originatedOn
+
+
+
+@prefix paper: <http://parliament.uk/ontologies/paper/> .
+@prefix putil: <http://parliament.uk/ontologies/utility/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core> .
+@prefix pbill: <http://parliament.uk/ontologies/bill/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix pdep: <http://parliament.uk/ontologies/depositing/> .
+@prefix pma: <http://parliament.uk/ontologies/making-available/> . 
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# There is an identifier source ...
+<http://id.parliament.uk/identifier-source-1> rdf:type putil:IdentifierSource ;
+
+	# ... with a label.
+	putil:preferredLabel "House of Lords Library"@en .
+
+# There is an identifier ...
+<http://id.parliament.uk/identifier-1> rdf:type putil:Identifier ;
+
+	# ... from a source ...
+	putil:hasIdentifierSource <http://id.parliament.uk/identifier-source-1> ;
+	
+	# ... with a value.
+	putil:identifierValue "2023-0363" .
+
+# There is a House ...
+<http://id.parliament.uk/house-1> rdf:type phm:House ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "House of Commons"@en .
+	
+# There is a public bill work ...
+<http://id.parliament.uk/public-bill-work-1> rdf:type pbill:PublicBillWork ;
+
+	# ... with a title.
+	putil:preferredLabel "Illegal Migration Bill 2022-23"@en .
+	
+# There is a SKOS concept ...
+<http://id.parliament.uk/skos-concept-1> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Children"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-2> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Appeals"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-3> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Asylum"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-4> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Deportation"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-5> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Age"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-6> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "British nationality"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-7> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Families"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-8> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Legal aid scheme"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-9> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Immigration controls"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-10> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Exemptions"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-11> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Foreign nationals"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-12> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Offenders"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-13> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Protection"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-14> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Powers"@en .
+	
+# There is another SKOS concept ...
+<http://id.parliament.uk/skos-concept-15> rdf:type skos:Concept ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Slavery"@en .
+
+# There is a paper work ...
+<http://id.parliament.uk/paper-work-1> rdf:type paper:PaperWork ;
+
+	# ... whose subject is the bill work ...
+	putil:subject <http://id.parliament.uk/public-bill-work-1> ;
+	
+	# ... together with a bunch of SKOS concepts.
+	putil:subject <http://id.parliament.uk/skos-concept-1> ;
+	putil:subject <http://id.parliament.uk/skos-concept-2> ;
+	putil:subject <http://id.parliament.uk/skos-concept-3> ;
+	putil:subject <http://id.parliament.uk/skos-concept-4> ;
+	putil:subject <http://id.parliament.uk/skos-concept-5> ;
+	putil:subject <http://id.parliament.uk/skos-concept-6> ;
+	putil:subject <http://id.parliament.uk/skos-concept-7> ;
+	putil:subject <http://id.parliament.uk/skos-concept-8> ;
+	putil:subject <http://id.parliament.uk/skos-concept-9> ;
+	putil:subject <http://id.parliament.uk/skos-concept-10> ;
+	putil:subject <http://id.parliament.uk/skos-concept-11> ;
+	putil:subject <http://id.parliament.uk/skos-concept-12> ;
+	putil:subject <http://id.parliament.uk/skos-concept-13> ;
+	putil:subject <http://id.parliament.uk/skos-concept-14> ;
+	putil:subject <http://id.parliament.uk/skos-concept-15> .
+	
+# There is a paper series ...
+<http://id.parliament.uk/paper-series-1> rdf:type paper:PaperSeries ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Dep"@en .
+
+# There is a paper series item ...
+<http://id.parliament.uk/paper-series-item-1> rdf:type paper:PaperSeriesItem ;
+
+	# ... which is in a series.
+	paper:inSeries <http://id.parliament.uk/paper-series-1> ;
+	
+	# ... which has an identifier.
+	putil:hasIdentifier <http://id.parliament.uk/identifier-1> .
+
+# There is a paper expression ...
+<http://id.parliament.uk/paper-expression-1> rdf:type paper:PaperExpression ;
+
+	# ... which is an expression of the paper work ...
+	paper:expressionOf <http://id.parliament.uk/paper-work-1> ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Deposited Paper DEP2023-0363"@en ;
+	
+	# ... and an originating date ...
+	paper:originatedOn "2023-04-23"^^xsd:date ; # This might be authored or published. Without looking at types, we don't know.
+
+	# ... and a description ...
+	putil:description "Letter dated 24/04/2023 from Robert Jenrick MP to Stephen Kinnock MP and others regarding the Government amendments tabled for Report stage of the Illegal Migration Bill on 26 April : unaccompanied children, modern slavery, foreign national offenders, ban on re-entry, settlement and citizenship, age assessments, restricting interim relief, 'serious and irreversible harm', legal aid, safe and legal routes for those needing protection, electronic devices and identity documents. Incl. annex. 10p"@en ;
+	
+	# ... which is a series item.
+	paper:asSeriesItem <http://id.parliament.uk/paper-series-item-1> .
+	
+# There is a deposit ...
+<http://id.parliament.uk/deposit-1> rdf:type pdep:Deposit ;
+
+	# ... of the paper expression ...
+	pdep:resultsInDepositedPaper <http://id.parliament.uk/paper-expression-1> ;
+
+	# ... to a House ...
+	pma:toHouse <http://id.parliament.uk/house-1> ;
+	
+	# ... on date ...
+	pma:madeAvailableOn "2023-04-24"^^xsd:date .
+	
