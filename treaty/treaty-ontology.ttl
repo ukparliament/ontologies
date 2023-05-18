@@ -19,6 +19,7 @@
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Jack Dent" ],
 		[ foaf:name "Arabella Lang" ],
+		[ foaf:name "Claire Searle" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ],
 		[ foaf:name "Jane White" ] .
@@ -68,39 +69,37 @@ treaty:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:range treaty:TreatyWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
-# commented to here
-	
-treaty:hasDepartmentalLead rdf:type owl:ObjectProperty ;
-	rdfs:label "Has departmental lead"@en ;
-	rdfs:comment "Relates a treaty work to its leadership by a Government department at a point in time. A treaty bill has one or more departmental leaderships over time."@en ;
-	rdfs:domain treaty:TreatyWork ;
-	rdfs:range treaty:DepartmentalLead ;
+treaty:departmentalLeadOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Departmental lead of"@en ;
+	rdfs:comment "Relates a leadership by a Ministerial Department to a treaty at a point in time. A treaty has one or more departmental leaderships over time."@en ;
+	rdfs:domain treaty:DepartmentalLead ;
+	rdfs:range treaty:TreatyWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 treaty:byMinisterialDepartment rdf:type owl:ObjectProperty ;
 	rdfs:label "By ministerial department"@en ;
-	rdfs:comment "Relates a leadership of a treaty to the Ministerial Department leading that treaty at a point in time. A departmental lead is by one Ministerial Department."@en ;
+	rdfs:comment "Relates a departmental leadership to the Ministerial Department leading a treaty at a point in time. A departmental leadership is by one Ministerial Department."@en ;
 	rdfs:domain treaty:DepartmentalLead ;
 	rdfs:range treaty:MinisterialDepartment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 
-	
+
 ##### Data properties ####
 	
 treaty:ukRatificationDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK ratification date"@en ;
-	rdfs:comment "The date on which the treaty is ratified by the UK."@en ;
+	rdfs:comment "The date on which a treaty is ratified by the UK Government."@en ;
 	rdfs:domain treaty:TreatyWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 	
 treaty:ukComingIntoForceDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK coming into force date"@en ;
-	rdfs:comment "The date on which a treaty is recorded as coming into force. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note."@en ;
+	rdfs:comment "The date on which a treaty is recorded as coming into force in the UK. Parts of a treaty may come into force on different dates and under differing conditions. Where no single coming into force date is given, coming into force details are given in a coming into force note."@en ;
 	rdfs:domain treaty:TreatyWork ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/treaty/> .
 
 treaty:ukComingIntoForceNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "UK coming into force note"@en ;
