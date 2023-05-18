@@ -1,3 +1,10 @@
+# ontology changes
+# make an organisation accountable to parliament model having accountable-org:MinisterialDepartment.
+# paper model: paper work data properties - personal author and corporate author
+
+
+
+
 @prefix paper: <http://parliament.uk/ontologies/paper/> .
 @prefix putil: <http://parliament.uk/ontologies/utility/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core> .
@@ -5,6 +12,7 @@
 @prefix phm: <http://parliament.uk/ontologies/house-membership/> .
 @prefix pdep: <http://parliament.uk/ontologies/depositing/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> . 
+@prefix accountable-org: <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> . 
 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,6 +20,35 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+
+# There is a web link source ...
+<http://id.parliament.uk/web-link-source> rdf:type putil:WebLinkSource ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "data.parliament.uk"@en .
+
+# There is a web link ...
+<http://id.parliament.uk/web-link> rdf:type putil:WebLink ;
+
+	# ... from a source ...
+	putil:hasWebLinkSource <http://id.parliament.uk/web-link-source> ;
+
+	# ... with a url.
+	putil:url "https://data.parliament.uk/DepositedPapers/files/DEP2023-0363/Robert_Jenrick_to_Stephen_Kinnock-Illegal_Migration_Bill.pdf" .
+
+# There is a ministerial department ...
+<http://id.parliament.uk/ministerial-department-1> rdf:type accountable-org:MinisterialDepartment ;
+
+	# ... with a label.
+	putil:preferredLabel "Home Office"@en .
+
+# There is a commitment ...
+<http://id.parliament.uk/commitment-1> rdf:type pdep:Commitment ;
+
+	# ... which was made on ...
+	pdep:madeOn "2023-04-23"^^xsd:date .
 
 # There is an identifier source ...
 <http://id.parliament.uk/identifier-source-1> rdf:type putil:IdentifierSource ;
@@ -133,6 +170,9 @@
 # There is a paper work ...
 <http://id.parliament.uk/paper-work-1> rdf:type paper:PaperWork ;
 
+	# ...with a corporate author ...
+	paper:corporateAuthor <http://id.parliament.uk/ministerial-department-1> ;
+
 	# ... whose subject is the bill work ...
 	putil:subject <http://id.parliament.uk/public-bill-work-1> ;
 	
@@ -183,11 +223,20 @@
 	# ... and a description ...
 	putil:description "Letter dated 24/04/2023 from Robert Jenrick MP to Stephen Kinnock MP and others regarding the Government amendments tabled for Report stage of the Illegal Migration Bill on 26 April : unaccompanied children, modern slavery, foreign national offenders, ban on re-entry, settlement and citizenship, age assessments, restricting interim relief, 'serious and irreversible harm', legal aid, safe and legal routes for those needing protection, electronic devices and identity documents. Incl. annex. 10p"@en ;
 	
-	# ... which is a series item.
-	paper:asSeriesItem <http://id.parliament.uk/paper-series-item-1> .
+	# ... which is a series item ...
+	paper:asSeriesItem <http://id.parliament.uk/paper-series-item-1> ;
+	
+	# ... which does not contain statistics ...
+	paper:containsStatistics false ;
+	
+	# ... which has a web link.
+	putil:hasWebLink <http://id.parliament.uk/web-link> .
 	
 # There is a deposit ...
 <http://id.parliament.uk/deposit-1> rdf:type pdep:Deposit ;
+
+	# ... resulting from a commitment ...
+	pdep:resultsFromCommitment <http://id.parliament.uk/commitment-1> ;
 
 	# ... of the paper expression ...
 	pdep:resultsInDepositedPaper <http://id.parliament.uk/paper-expression-1> ;
@@ -195,6 +244,9 @@
 	# ... to a House ...
 	pma:toHouse <http://id.parliament.uk/house-1> ;
 	
-	# ... on date ...
-	pma:madeAvailableOn "2023-04-24"^^xsd:date .
+	# ... on a date ...
+	pma:madeAvailableOn "2023-04-24"^^xsd:date ;
+	
+	# ... on behalf of a making available body.
+	pma:madeAvailableOnBehalfOf <http://id.parliament.uk/ministerial-department-1> .
 	

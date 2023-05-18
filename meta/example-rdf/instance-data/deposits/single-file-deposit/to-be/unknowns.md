@@ -2,6 +2,8 @@
 
 <http://data.parliament.uk/depositedpapers/2285263> ,skos:prefLabel ,http://data.parliament.uk/depositedpapers/2285263
 
+## Bnodes
+
 _:node1gup7vsc4x359280 ,rdf:object ,<http://data.parliament.uk/depositedpapers/2285263>
 
 _:node1gup7vsc4x359281 ,rdf:object ,<http://data.parliament.uk/depositedpapers/2285263>
@@ -47,3 +49,14 @@ _:node1gup7vsc4x359300 ,rdf:subject ,<http://data.parliament.uk/depositedpapers/
 _:node1gup7vsc4x359301 ,rdf:subject ,<http://data.parliament.uk/depositedpapers/2285263>
 
 _:node1gup7vsc4x359302 ,rdf:subject ,<http://data.parliament.uk/depositedpapers/2285263>
+
+## Assumed harvester inflation
+
+<http://data.parliament.uk/depositedpapers/2285263> ,dc-term:creator ,<http://data.parliament.uk/terms/25060>
+
+<http://data.parliament.uk/depositedpapers/2285263> ,dc-term:publisher ,<http://data.parliament.uk/terms/25259>
+
+## Not needed 
+
+<http://data.parliament.uk/depositedpapers/2285263> ,<http://data.parliament.uk/schema/parl#internalLocation> ,<https://admin.depositedpapers.parliament.uk/depositedpaper/view/2285263>
+
