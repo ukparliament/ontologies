@@ -148,6 +148,13 @@ paper:hasPrivilege rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 	
+paper:orinatedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Originated on"@en ;
+	rdfs:comment "Relates a paper expression to the date of origination of that paper. For a letter, this will be the date it was authored. For other papers, it may be the date of authorship or the date of publication."@en ;
+	rdfs:domain paper:PaperExpression ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+	
 paper:authoredOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Authored on"@en ;
 	rdfs:comment "Relates a paper expression to the date that paper was authored on."@en ;
