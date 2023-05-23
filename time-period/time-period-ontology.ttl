@@ -206,6 +206,13 @@ ptime:groupedAs rdf:type owl:ObjectProperty ;
 	rdfs:domain ptime:AdjournmentDay ;
 	rdfs:range ptime:Recess ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:recessInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Recess in House"@en ;
+	rdfs:comment "Relates a recess to the House that is in recess. A recess is in one House."@en ;
+	rdfs:domain ptime:Recess ;
+	rdfs:range ptime:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 
 
