@@ -60,22 +60,22 @@ del:EnabledThing rdf:type owl:Class ;
 	rdfs:comment "A thing resulting from a Minister exercising or intending to exercise a power conferred by an enabling thing."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
-del:PublishedDraftUnderEUWAWork rdf:type owl:Class ;
+del:PublishedDraftUnderEUWA2018Work rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Published draft under the European Union (Withdrawal) Act 2018 work"@en ;
-	rdfs:comment "A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of any instrument which intends to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives."@en ;
+	rdfs:comment "A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of an instrument intending to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:ProposedDraftRemedialOrderWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Proposed draft remedial order work"@en ;
-	rdfs:comment "A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament 'a document which contains a draft of the proposed order'. This document must sit before Parliament for a period of 60 days, beginning with the day on which it was laid."@en ;
+	rdfs:comment "A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament 'a document which contains a draft of the proposed order'. This document must lay before Parliament for a period of 60 sitting days, beginning with the day on which it was laid."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:ProposedNegativeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:EnabledThing ;
 	rdfs:label "Proposed negative statutory instrument work"@en ;
-	rdfs:comment "A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 or under schedule 5 of the Future Relationship Act 2020 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
+	rdfs:comment "A regulation made under a power or powers set out in clause 7, 8 or 9 of the European Union (Withdrawal) Act 2018, or under schedule 5 of the Future Relationship Act 2020, which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:StatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
@@ -87,14 +87,14 @@ del:StatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
 del:DraftStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:label "Draft statutory instrument work"@en ;
-	rdfs:comment "Draft statutory instruments are laid before Parliament subject to either a negative, affirmative or super affirmative procedure. A draft negative, having not been objected to within the scrutiny period, may be made into law. A draft affirmative or draft super affirmative, having been approved by Parliament within the approval period, may be made into law by a minister."@en ;
+	rdfs:comment "An instrument laid in draft before Parliament subject to either a negative, affirmative or super affirmative procedure. An instrument under the draft negative procedure may be made into law, if not objected to within the scrutiny period. An instrument under the draft affirmative procedure may be made into law, having been approved by Parliament. An instrument under the draft super affirmative procedure may be made into law, having been approved by Parliament within the approval period."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:MadeStatutoryInstrumentWork rdf:type owl:Class ;
 	rdfs:subClassOf del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:subClassOf del:StatutoryThing ;
 	rdfs:label "Made statutory instrument work"@en ;
-	rdfs:comment "Made statutory instruments as signed into legislation. Made statutory instruments may result from a draft laid before Parliament or may be laid as made or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament may be subject to a negative, affirmative or super affirmative procedure, or none. A made negative, having not been objected to within the scrutiny period, remains law. A made affirmative or made super affirmative, having been approved by Parliament within the approval period, remains law."@en ;
+	rdfs:comment "Statutory instruments as signed into law. Made statutory instruments may result from a draft laid before Parliament, or may be laid as made, or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament are subject to a negative, affirmative or super affirmative procedure, or none. An instrument under the made negative procedure remains law, unless objected to within the scrutiny period. An instrument under the made affirmative procedure or made super affirmative procedure remains law, if approved by Parliament within the approval period."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 
