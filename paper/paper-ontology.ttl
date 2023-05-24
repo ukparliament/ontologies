@@ -33,14 +33,9 @@ paper:PaperWork rdf:type owl:Class ;
 	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 
-paper:CorporateAuthor rdf:type owl:Class ;
-	rdfs:label "Corporate author"@en ;
-	rdfs:comment "The author of a paper, being a corporate body."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:PersonalAuthor rdf:type owl:Class ;
-	rdfs:label "Personal author"@en ;
-	rdfs:comment "The author of a paper, being a person."@en ;
+paper:Author rdf:type owl:Class ;
+	rdfs:label "Author"@en ;
+	rdfs:comment "The author of a paper, being either a person or a corporate body."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 	
 paper:PaperExpression rdf:type owl:Class ;
@@ -77,11 +72,11 @@ paper:Session rdf:type owl:Class ;
 
 #######  Object properties #####
 
-paper:hasCorporateAuthor rdf:type owl:ObjectProperty ;
-	rdfs:label "Has corporate author"@en ;
-	rdfs:comment "Relates a paper work to its corporate author. A paper work has one or more corporate authors, or none."@en ;
+paper:author rdf:type owl:ObjectProperty ;
+	rdfs:label "Author"@en ;
+	rdfs:comment "Relates a paper work to its author. A paper work has one or more authors, or none."@en ;
 	rdfs:domain paper:PaperWork ;
-	rdfs:range paper:CorporateAuthor ;
+	rdfs:range paper:Author ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 
 paper:hasPersonalAuthor rdf:type owl:ObjectProperty ;
