@@ -152,6 +152,13 @@ putil:hasConcept rdf:type owl:ObjectProperty ;
 
 #######  Data properties #####
 
+putil:scopeNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Scope note"@en ;
+	rdfs:comment "A note setting out the scope of a thing."@en ;
+	rdfs:domain putil:Thing ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/utility/> .
+
 putil:isOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is on"@en ;
 	rdfs:comment "Relates a temporal thing to its date."@en ;
