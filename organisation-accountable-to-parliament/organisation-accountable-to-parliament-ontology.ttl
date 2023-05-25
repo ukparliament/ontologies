@@ -1,4 +1,4 @@
-@prefix paper: <http://parliament.uk/ontologies/paper/> . 
+@prefix accountable-org: <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -6,21 +6,16 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
-<http://parliament.uk/ontologies/paper/> 
+<http://parliament.uk/ontologies/organisation-accountable-to-parliament/> 
     rdf:type owl:Ontology ;
-    dcterms:title "Paper ontology"@en ;
-    dcterms:created "2022-07-11"^^xsd:date ;
+    dcterms:title "Organisation accountable to Parliament ontology"@en ;
+    dcterms:created "2023-05-25"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing papers, their types and their presence in bundles and in series."@en ;
-	foaf:depiction <https://ukparliament.github.io/ontologies/paper/paper.svg> ;
+    dcterms:description "A model describing organisations accountable to Parliament."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/organisation-accountable-to-parliament/organisation-accountable-to-parliament.svg> ;
 	foaf:maker
 		[ foaf:name "Jayne Bosworth" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
-		[ foaf:name "Corie Chambers" ],
-		[ foaf:name "Helen Creeke" ],
-		[ foaf:name "Kath Kavanagh" ],
-		[ foaf:name "Ned Morrell" ],
-		[ foaf:name "Robi Quigley" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 		[ foaf:name "Anya Somerville" ].
 		
@@ -28,176 +23,43 @@
 		
 #######  Classes #####
 
-paper:PaperWork rdf:type owl:Class ;
-	rdfs:label "Paper work"@en ;
-	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:Group rdf:type owl:Class ;
+	rdfs:label "Group"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 
-paper:Author rdf:type owl:Class ;
-	rdfs:label "Author"@en ;
-	rdfs:comment "The author of a paper, being either a person or a corporate body."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:OrganisationAccountableToParliament rdf:type owl:Class ;
+	rdfs:subClassOf accountable-org:Group ;
+	rdfs:label "Organisation accountable to Parliament"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 	
-paper:PaperExpression rdf:type owl:Class ;
-	rdfs:label "Paper expression"@en ;
-	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:GovernmentBody rdf:type owl:Class ;
+	rdfs:subClassOf accountable-org:OrganisationAccountableToParliament ;
+	rdfs:label "Government body"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 	
-paper:PaperBundle rdf:type owl:Class ;
-	rdfs:label "Paper bundle"@en ;
-	rdfs:comment "A group of related paper expressions, called a bundle, for example: a bundle containing a statutory instrument paper and a related explanatory memorandum."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:PublicBody rdf:type owl:Class ;
+	rdfs:subClassOf accountable-org:GovernmentBody ;
+	rdfs:label "Public body"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 	
-paper:PaperType rdf:type owl:Class ;
-	rdfs:label "Paper type"@en ;
-	rdfs:comment "The type of a paper, for example: bill, statutory instrument, petition or statement of annual accounts."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:GovernmentDepartment rdf:type owl:Class ;
+	rdfs:subClassOf accountable-org:GovernmentBody ;
+	rdfs:label "Government department"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 	
-paper:PaperSeriesItem rdf:type owl:Class ;
-	rdfs:label "Paper series item"@en ;
-	rdfs:comment "A paper expression, as it exists as part of a paper series. A paper expression forming part of a series has an identifying number within that series."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:MinisterialDepartment rdf:type owl:Class ;
+	rdfs:subClassOf accountable-org:GovernmentBody ;
+	rdfs:label "Ministerial department"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 	
-paper:PaperSeries rdf:type owl:Class ;
-	rdfs:label "Paper series"@en ;
-	rdfs:comment "A series of papers, for example: the Treaty Series."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:Session rdf:type owl:Class ;
-	rdfs:label "Session"@en ;
-	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-				
-
-#######  Object properties #####
-
-paper:author rdf:type owl:ObjectProperty ;
-	rdfs:label "Author"@en ;
-	rdfs:comment "Relates a paper work to its author. A paper work has one or more authors, or none."@en ;
-	rdfs:domain paper:PaperWork ;
-	rdfs:range paper:Author ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:hasPersonalAuthor rdf:type owl:ObjectProperty ;
-	rdfs:label "Has personal author"@en ;
-	rdfs:comment "Relates a paper work to its personal author. A paper work has one or more personal authors, or none."@en ;
-	rdfs:domain paper:PaperWork ;
-	rdfs:range paper:PersonalAuthor ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:expressionOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Expression of"@en ;
-	rdfs:comment "Relates a paper expression to the paper work that paper is an expression of. A paper expression is an expression of one paper work. A paper work is expressed as one or more papers."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range paper:PaperWork ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:formsPartOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Forms part of"@en ;
-	rdfs:comment "Relates a paper expression to the paper bundle it forms part of. A paper expression may belong to one or more paper bundles, or none. For example: a single explanatory memorandum may form part of more than one bundle."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range paper:PaperBundle ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:hasType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has type"@en ;
-	rdfs:comment "Relates a paper work to the type of that paper. A paper work may have one or more types, or none."@en ;
-	rdfs:domain paper:PaperWork ;
-	rdfs:range paper:PaperType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:paperTypeParent rdf:type owl:ObjectProperty ;
-	rdfs:label "Paper type parent"@en ;
-	rdfs:comment "Relates one paper type to another in a parent-child relationship. A paper type may have one or more parent paper types, or none. A paper type may have one or more child paper types, or none."@en ;
-	rdfs:domain paper:PaperType ;
-	rdfs:range paper:PaperType ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:asSeriesitem rdf:type owl:ObjectProperty ;
-	rdfs:label "As series item"@en ;
-	rdfs:comment "Relates a paper expression to the existence of that paper in a series. A paper series item refers to one paper expression. A paper expression may exist as an item in one or more series, or none."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range paper:PaperSeriesItem ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:inSeries rdf:type owl:ObjectProperty ;
-	rdfs:label "In series"@en ;
-	rdfs:comment "Relates the existence of a paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series."@en ;
-	rdfs:domain paper:PaperSeriesItem ;
-	rdfs:range paper:PaperSeries ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:paperSeriesParent rdf:type owl:ObjectProperty ;
-	rdfs:label "Paper series parent"@en ;
-	rdfs:comment "Relates a paper series to its parent paper series. A paper series may have one parent paper series, or none. A paper series may have one or more child paper series, or none, for example: the Treaty Series of in force treaties is a child series of the Command Papers series."@en ;
-	rdfs:domain paper:PaperSeries ;
-	rdfs:range paper:PaperSeries ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:paperSeriesFollows rdf:type owl:ObjectProperty ;
-	rdfs:label "Paper series follows"@en ;
-	rdfs:comment "Relates a paper series to its preceding series. A paper series may follow one series, or none. A paper series may be followed by one series, or none, for example: the series of statutory instruments made in 2022 follows the series of statutory instruments made in 2021."@en ;
-	rdfs:domain paper:PaperSeries ;
-	rdfs:range paper:PaperSeries ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:belongsTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Belongs to"@en ;
-	rdfs:comment "Relates a paper series to the session that series belongs to. A paper series may belong to one session, or none, for example: the series of House of Commons papers belonging to the session in which papers in that series are made available."@en ;
-	rdfs:domain paper:PaperSeries ;
-	rdfs:range paper:Session ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-	
-	
-#######  Data properties ##### 
-
-paper:prefix rdf:type owl:DatatypeProperty ;
-	rdfs:label "Prefix"@en ;
-	rdfs:comment "Relates a paper series to the prefix which is combined with a paper series item identifier to form the 'number' of a paper as an item in that series."@en ;
-	rdfs:domain paper:PaperSeries ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:hasPrivilege rdf:type owl:DatatypeProperty ;
-	rdfs:label "Has privilege"@en ;
-	rdfs:comment "Used to record if papers being items in a series indicates that those papers have parliamentary privilege."@en ;
-	rdfs:domain paper:PaperSeries ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:originatedOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "Originated on"@en ;
-	rdfs:comment "Relates a paper expression to the date of origination of that paper. For a letter, this will be the date it was authored. For other papers, it may be the date of authorship or the date of publication."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:copyrightStatement rdf:type owl:DatatypeProperty ;
-	rdfs:label "Copyright statement"@en ;
-	rdfs:comment "Relates a paper expression to the copyright statement for that paper expression."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:pageCount rdf:type owl:DatatypeProperty ;
-	rdfs:label "Page count"@en ;
-	rdfs:comment "Relates a paper expression to its page count."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-	
-paper:containsStatistics rdf:type owl:DatatypeProperty ;
-	rdfs:label "Contains statistics"@en ;
-	rdfs:comment "Used to record if a paper expression contains statistics."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:isbn rdf:type owl:DatatypeProperty ;
-	rdfs:label "ISBN"@en ;
-	rdfs:comment "Relates a paper expression to its identifier, conforming to the ISBN standard."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
+accountable-org:NonMinisterialDepartment rdf:type owl:Class ;
+	rdfs:subClassOf accountable-org:GovernmentBody ;
+	rdfs:label "Non-ministerial department"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
