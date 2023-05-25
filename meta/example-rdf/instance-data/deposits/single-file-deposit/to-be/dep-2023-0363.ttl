@@ -11,7 +11,10 @@
 @prefix phm: <http://parliament.uk/ontologies/house-membership/> .
 @prefix pdep: <http://parliament.uk/ontologies/depositing/> .
 @prefix pma: <http://parliament.uk/ontologies/making-available/> . 
-@prefix accountable-org: <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> . 
+@prefix accountable-org: <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
+@prefix related-item: <http://parliament.uk/ontologies/related-item/> .
+@prefix proceeding: <http://parliament.uk/ontologies/proceeding:/> .
+@prefix pbill: <http://parliament.uk/ontologies/bill/> . 
 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -21,6 +24,32 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
+# There is a relationship type ...
+<http://id.parliament.uk/relationship-type-1> rdf:type related-item:RelationshipType ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Refers to"@en ;
+	
+	# ... which is an inverse of another relationship type.
+	related-item:inverse <http://id.parliament.uk/relationship-type-1> .
+	
+# There is a relationship type ...
+<http://id.parliament.uk/relationship-type-2> rdf:type related-item:RelationshipType ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Referred to in"@en ;
+
+	# ... which is an inverse of another relationship type.
+	related-item:inverse <http://id.parliament.uk/relationship-type-1> .
+	
+# There is a relationship type ...
+<http://id.parliament.uk/relationship-type-3> rdf:type related-item:RelationshipType ;
+
+	# ... with a preferred label ...
+	putil:preferredLabel "Related to"@en ;
+
+	# ... which is the inverse of itself.
+	related-item:inverse <http://id.parliament.uk/relationship-type-3> .
 
 # There is a web link source ...
 <http://id.parliament.uk/web-link-source> rdf:type putil:WebLinkSource ;
@@ -43,10 +72,14 @@
 	# ... with a label.
 	putil:preferredLabel "Home Office"@en .
 
+# Note that we do not have a commitment to link to; only 'metadata' for the commitment.
 # There is a commitment ...
 <http://id.parliament.uk/commitment-1> rdf:type pdep:Commitment ;
 
-	# ... which was made on ...
+	# ... which is not a standing commitment ...
+	pdep:isStanding false ;
+
+	# ... which was made on.
 	pdep:madeOn "2023-04-23"^^xsd:date .
 
 # There is an identifier source ...
@@ -217,7 +250,7 @@
 	putil:preferredLabel "Deposited Paper DEP2023-0363"@en ;
 	
 	# ... and an originating date ...
-	paper:originatedOn "2023-04-23"^^xsd:date ; # This might be authored or published. Without looking at types, we don't know.
+	paper:originatedOn "2023-04-24"^^xsd:date ; # This might be authored or published. Without looking at types, we don't know.
 
 	# ... and a description ...
 	putil:description "Letter dated 24/04/2023 from Robert Jenrick MP to Stephen Kinnock MP and others regarding the Government amendments tabled for Report stage of the Illegal Migration Bill on 26 April : unaccompanied children, modern slavery, foreign national offenders, ban on re-entry, settlement and citizenship, age assessments, restricting interim relief, 'serious and irreversible harm', legal aid, safe and legal routes for those needing protection, electronic devices and identity documents. Incl. annex. 10p"@en ;
@@ -244,8 +277,70 @@
 	pma:toHouse <http://id.parliament.uk/house-1> ;
 	
 	# ... on a date ...
-	pma:madeAvailableOn "2023-04-24"^^xsd:date ;
+	pma:madeAvailableOn "2023-04-25"^^xsd:date ;
 	
 	# ... on behalf of a making available body.
 	pma:madeAvailableOnBehalfOf <http://id.parliament.uk/ministerial-department-1> .
 	
+# Note that the data for this example links to the proceeding, not the contribution, so this transform might not be possible.
+# This is an information management problem not a system problem.
+# Also note that this is a contribution saying a deposit has already been made; it is not a commitment.
+# There is a credited contribution ...
+<http://id.parliament.uk/credited-contribution-1> rdf:type proceeding:CreditedContribution ;
+
+	# ... on a date.
+	putil:isOn "2023-04-26"^^xsd:date .
+	
+# There is a relationship ...
+<http://id.parliament.uk/relationship-1> rdf:type related-item:Relationship ;
+
+	# ... from the credited contribution ...
+	related-item:relationshipFromThing <http://id.parliament.uk/credited-contribution-1> ;
+	
+	# ... to the paper expression ...
+	related-item:relationshipToThing <http://id.parliament.uk/paper-expression-1> ;
+	
+	# ... with a relationship type of refers to.
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type-1> .
+	
+# There is another relationship ...
+<http://id.parliament.uk/relationship-2> rdf:type related-item:Relationship ;
+
+	# ... from the paper expression ...
+	related-item:relationshipFromThing <http://id.parliament.uk/paper-expression-1> ;
+
+	# ... to the credited contribution ...
+	related-item:relationshipToThing <http://id.parliament.uk/credited-contribution-1> ;
+
+	# ... with a relationship type of referred to in.
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type-2> .
+	
+# There is a bill work ...
+<http://id.parliament.uk/bill-work-1> rdf:type pbill:BillWork ;
+
+	# ... with a preferred label.
+	putil:preferredLabel "Illegal Migration Bill" .
+	
+# There is another relationship ...
+<http://id.parliament.uk/relationship-3> rdf:type related-item:Relationship ;
+
+	# ... from the bill work ...
+	related-item:relationshipFromThing <http://id.parliament.uk/bill-work-1> ;
+
+	# ... to the paper expression ...
+	related-item:relationshipToThing <http://id.parliament.uk/paper-expression-1> ;
+
+	# ... with a relationship type of related to.
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type-3> .
+	
+# There is another relationship ...
+<http://id.parliament.uk/relationship-4> rdf:type related-item:Relationship ;
+
+	# ... from the paper expression ...
+	related-item:relationshipFromThing <http://id.parliament.uk/paper-expression-1> ;
+
+	# ... to the bill work ...
+	related-item:relationshipToThing <http://id.parliament.uk/bill-work-1> ;
+
+	# ... with a relationship type of related to.
+	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type-3> .
