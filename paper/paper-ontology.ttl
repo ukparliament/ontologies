@@ -53,9 +53,9 @@ paper:PaperType rdf:type owl:Class ;
 	rdfs:comment "The type of a paper, for example: bill, statutory instrument, petition or statement of annual accounts."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 	
-paper:PaperSeriesItem rdf:type owl:Class ;
-	rdfs:label "Paper series item"@en ;
-	rdfs:comment "A paper expression, as it exists as part of a paper series. A paper expression forming part of a series has an identifying number within that series."@en ;
+paper:PaperSeriesMembership rdf:type owl:Class ;
+	rdfs:label "Paper series membership"@en ;
+	rdfs:comment "The membership of a paper expression in a paper series. A paper expression being a member of a series has an identifying number within that series."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 	
 paper:PaperSeries rdf:type owl:Class ;
@@ -113,18 +113,18 @@ paper:paperTypeParent rdf:type owl:ObjectProperty ;
 	rdfs:domain paper:PaperType ;
 	rdfs:range paper:PaperType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:asSeriesitem rdf:type owl:ObjectProperty ;
-	rdfs:label "As series item"@en ;
-	rdfs:comment "Relates a paper expression to the existence of that paper in a series. A paper series item refers to one paper expression. A paper expression may exist as an item in one or more series, or none."@en ;
-	rdfs:domain paper:PaperExpression ;
-	rdfs:range paper:PaperSeriesItem ;
+	
+paper:membershipOfPaperExpression rdf:type owl:ObjectProperty ;
+	rdfs:label "Membership of paper expression"@en ;
+	rdfs:comment "Relates a paper series membership to the paper expression with that membership. A paper series membership refers to one paper expression. A paper expression may be a member of one or more series, or none."@en ;
+	rdfs:domain paper:PaperSeriesMembership ;
+	rdfs:range paper:PaperExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
-
-paper:inSeries rdf:type owl:ObjectProperty ;
-	rdfs:label "In series"@en ;
-	rdfs:comment "Relates the existence of a paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series."@en ;
-	rdfs:domain paper:PaperSeriesItem ;
+	
+paper:membershipInSeries rdf:type owl:ObjectProperty ;
+	rdfs:label "Membership in series"@en ;
+	rdfs:comment "Relates the membership of a paper expression in a series to the series that membership forms part of. A paper series membership forms part of one paper series."@en ;
+	rdfs:domain paper:PaperSeriesMembership ;
 	rdfs:range paper:PaperSeries ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper/> .
 
