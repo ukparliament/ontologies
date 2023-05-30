@@ -225,15 +225,6 @@
 	# ... with a preferred label ...
 	putil:preferredLabel "Dep"@en .
 
-# There is a paper series item ...
-<http://id.parliament.uk/paper-series-item-1> rdf:type paper:PaperSeriesItem ;
-
-	# ... which is in a series.
-	paper:inSeries <http://id.parliament.uk/paper-series-1> ;
-	
-	# ... which has an identifier.
-	putil:hasIdentifier <http://id.parliament.uk/identifier-1> .
-
 # There is a paper expression ...
 <http://id.parliament.uk/paper-expression-1> rdf:type paper:PaperExpression ;
 
@@ -248,9 +239,6 @@
 
 	# ... and a description ...
 	putil:description "Letter dated 24/04/2023 from Robert Jenrick MP to Stephen Kinnock MP and others regarding the Government amendments tabled for Report stage of the Illegal Migration Bill on 26 April : unaccompanied children, modern slavery, foreign national offenders, ban on re-entry, settlement and citizenship, age assessments, restricting interim relief, 'serious and irreversible harm', legal aid, safe and legal routes for those needing protection, electronic devices and identity documents. Incl. annex. 10p"@en ;
-	
-	# ... which is a series item ...
-	paper:asSeriesItem <http://id.parliament.uk/paper-series-item-1> ;
 	
 	# ... which does not contain statistics ...
 	paper:containsStatistics false ;
@@ -338,3 +326,15 @@
 
 	# ... with a relationship type of related to.
 	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type-3> .
+	
+# There is a paper series membership ...
+<http://id.parliament.uk/paper-series-membership-1> rdf:type paper:PaperSeriesMembership ;
+
+	# ... of the paper expression ...
+	paper:membershipOfPaperExpression <http://id.parliament.uk/paper-expression-1> ;
+
+	# ... in a series ...
+	paper:membershipInSeries <http://id.parliament.uk/paper-series-1> ;
+
+	# ... with an identifier.
+	putil:hasIdentifier <http://id.parliament.uk/identifier-1> .
