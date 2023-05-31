@@ -1,1 +1,0 @@
-https://github.com/oasis-open/legaldocml-akomantoso/blob/master/csprd02-part2-specs/csprd02-part2-specs-examples/ke_Debate_Bungeni_2011-06-10.xml
