@@ -11,12 +11,13 @@
     dcterms:title "Written statement ontology"@en ;
     dcterms:created "2021-12-20"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing written statements made to Parliament as works and expressions of those works."@en ;
+    dcterms:description "A model describing written statements made to a House, being expressions of written statement works."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/written-statement/written-statement.svg> ;
 	foaf:maker
 		[ foaf:name "Emma Bainbridge" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Claire Searle" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ] .
 
@@ -25,14 +26,15 @@
 
 pws:WrittenStatementWork rdf:type owl:Class ;
 	rdfs:label "Written statement work"@en ;
-	rdfs:comment "A written statement made to Parliament as realised in an expression made to a House."@en ;
+	rdfs:comment "A written statement work, realised in an expression made to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
 pws:WrittenStatementExpression rdf:type owl:Class ;
 	rdfs:label "Written statement expression"@en ;
-	rdfs:comment "The expression of a written statement as made to a House."@en ;
+	rdfs:comment "The expression of a written statement work, made to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
 	
+
 				
 
 #######  Object properties ##### 
@@ -43,9 +45,9 @@ pws:expressionOf rdf:type owl:ObjectProperty ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range pws:WrittenStatementWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
-	
 
-					
+
+				
 ##### Data properties ####	
 	
 pws:statementText rdf:type owl:DatatypeProperty ;
@@ -53,11 +55,4 @@ pws:statementText rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Relates a written statement expression to the text of that expression."@en ;
 	rdfs:domain pws:WrittenStatementExpression ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
-	
-pws:uin rdf:type owl:DatatypeProperty ;
-	rdfs:label "UIN"@en ;
-	rdfs:comment "Relates a written statement expression to the UIN of that expression. A UIN is an alphanumeric identifier."@en ;
-	rdfs:domain pws:WrittenStatementExpression ;
-	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/written-statement/> .
