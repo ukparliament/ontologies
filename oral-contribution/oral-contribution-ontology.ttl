@@ -1,0 +1,41 @@
+@prefix oral-contribution: <http://parliament.uk/ontologies/oral-contribution/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/oral-contribution/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Oral contribution ontology"@en ;
+    dcterms:created "2023-05-31"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description ""@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/oral-contribution/oral-contribution.svg> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+	    [ foaf:name "Claire Searle" ],
+	    [ foaf:name "Anya Somerville" ],
+	    [ foaf:name "Jayne Sunley" ].
+
+
+#######  Classes #####
+
+oral-contribution:OralContribution rdf:type owl:Class ;
+	rdfs:label "Oral contribution"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:CreditedOralContribution rdf:type owl:Class ;
+	rdfs:subClassOf oral-contribution:OralContribution ;
+	rdfs:label "Credited oral contribution"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:UncreditedOralContribution rdf:type owl:Class ;
+	rdfs:subClassOf oral-contribution:OralContribution ;
+	rdfs:label "Uncredited oral contribution"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
