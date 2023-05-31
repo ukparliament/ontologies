@@ -39,3 +39,64 @@ oral-contribution:UncreditedOralContribution rdf:type owl:Class ;
 	rdfs:label "Uncredited oral contribution"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:OralContributionType rdf:type owl:Class ;
+	rdfs:label "Oral contribution type"@en ;
+	rdfs:comment "https://github.com/ukparliament/ontologies/blob/master/oral-contribution/contribution-type-taxonomy/contribution-type.pdf"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:ContributorPresence rdf:type owl:Class ;
+	rdfs:label "Contributor presence"@en ;
+	rdfs:comment "Physical / virtual"@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+				
+
+#######  Object properties #####
+	
+oral-contribution:hasOralContributionType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has oral contribution type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oral-contribution:OralContribution ;
+	rdfs:range oral-contribution:OralContributionType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:oralContributionTypeParent rdf:type owl:ObjectProperty ;
+	rdfs:label "Oral contribution type parent"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oral-contribution:OralContributionType ;
+	rdfs:range oral-contribution:OralContributionType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:resumes rdf:type owl:ObjectProperty ;
+	rdfs:label "resumes"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:CreditedOralContribution ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:inReplyTo rdf:type owl:ObjectProperty ;
+	rdfs:label "In reply to"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:CreditedOralContribution ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:contributedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Contributed by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:hasContributorPresence rdf:type owl:ObjectProperty ;
+	rdfs:label "Has contributor presence"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:ContributorPresence ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
