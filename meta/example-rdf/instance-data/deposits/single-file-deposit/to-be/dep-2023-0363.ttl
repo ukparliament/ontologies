@@ -7,8 +7,8 @@
 @prefix pma: <http://parliament.uk/ontologies/making-available/> . 
 @prefix accountable-org: <http://parliament.uk/ontologies/organisation-accountable-to-parliament/> .
 @prefix related-item: <http://parliament.uk/ontologies/related-item/> .
-@prefix proceeding: <http://parliament.uk/ontologies/proceeding:/> .
-@prefix pbill: <http://parliament.uk/ontologies/bill/> . 
+@prefix pbill: <http://parliament.uk/ontologies/bill/> .
+@prefix oral-contribution: <http://parliament.uk/ontologies/oral-contribution/> . 
 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -267,8 +267,8 @@
 # Note that the data for this example links to the proceeding, not the contribution, so this transform might not be possible.
 # This is an information management problem not a system problem.
 # Also note that this is a contribution saying a deposit has already been made; it is not a commitment.
-# There is a credited contribution ...
-<http://id.parliament.uk/credited-contribution-1> rdf:type proceeding:CreditedContribution ;
+# There is a credited oral contribution ...
+<http://id.parliament.uk/credited-oral-contribution-1> rdf:type oral-contribution:CreditedOralContribution ;
 
 	# ... on a date.
 	putil:isOn "2023-04-26"^^xsd:date .
@@ -276,8 +276,8 @@
 # There is a relationship ...
 <http://id.parliament.uk/relationship-1> rdf:type related-item:Relationship ;
 
-	# ... from the credited contribution ...
-	related-item:relationshipFromThing <http://id.parliament.uk/credited-contribution-1> ;
+	# ... from the credited oral contribution ...
+	related-item:relationshipFromThing <http://id.parliament.uk/credited-oral-contribution-1> ;
 	
 	# ... to the paper expression ...
 	related-item:relationshipToThing <http://id.parliament.uk/paper-expression-1> ;
@@ -291,8 +291,8 @@
 	# ... from the paper expression ...
 	related-item:relationshipFromThing <http://id.parliament.uk/paper-expression-1> ;
 
-	# ... to the credited contribution ...
-	related-item:relationshipToThing <http://id.parliament.uk/credited-contribution-1> ;
+	# ... to the credited oral contribution ...
+	related-item:relationshipToThing <http://id.parliament.uk/credited-oral-contribution-1> ;
 
 	# ... with a relationship type of referred to in.
 	related-item:hasRelationshipType <http://id.parliament.uk/relationship-type-2> .
