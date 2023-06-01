@@ -81,7 +81,7 @@
         <article class="class" id="DraftStatutoryInstrumentWork">
           <h3>Class <a href="#DraftStatutoryInstrumentWork">Draft statutory instrument work</a></h3>
 
-          <p>Draft statutory instruments are laid before Parliament subject to either a negative, affirmative or super affirmative procedure. A draft negative, having not been objected to within the scrutiny period, may be made into law. A draft affirmative or draft super affirmative, having been approved by Parliament within the approval period, may be made into law by a minister.</p>
+          <p>An instrument laid in draft before Parliament subject to either a negative, affirmative or super affirmative procedure. An instrument under the draft negative procedure may be made into law, if not objected to within the scrutiny period. An instrument under the draft affirmative procedure may be made into law, having been approved by Parliament. An instrument under the draft super affirmative procedure may be made into law, having been approved by Parliament within the approval period.</p>
            <p>
             Superclasses  &middot; StatutoryInstrumentSubjectToParliamentaryProcedureWork           </p>
         </article>
@@ -100,7 +100,7 @@
         <article class="class" id="MadeStatutoryInstrumentWork">
           <h3>Class <a href="#MadeStatutoryInstrumentWork">Made statutory instrument work</a></h3>
 
-          <p>Made statutory instruments as signed into legislation. Made statutory instruments may result from a draft laid before Parliament or may be laid as made or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament may be subject to a negative, affirmative or super affirmative procedure, or none. A made negative, having not been objected to within the scrutiny period, remains law. A made affirmative or made super affirmative, having been approved by Parliament within the approval period, remains law.</p>
+          <p>Statutory instruments as signed into law. Made statutory instruments may result from a draft laid before Parliament, or may be laid as made, or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament are subject to a negative, affirmative or super affirmative procedure, or none. An instrument under the made negative procedure remains law, unless objected to within the scrutiny period. An instrument under the made affirmative procedure or made super affirmative procedure remains law, if approved by Parliament within the approval period.</p>
            <p>
             Superclasses  &middot; StatutoryInstrumentSubjectToParliamentaryProcedureWork  &middot; StatutoryThing           </p>
         </article>
@@ -112,21 +112,21 @@
         <article class="class" id="ProposedDraftRemedialOrderWork">
           <h3>Class <a href="#ProposedDraftRemedialOrderWork">Proposed draft remedial order work</a></h3>
 
-          <p>A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament &#39;a document which contains a draft of the proposed order&#39;. This document must sit before Parliament for a period of 60 days, beginning with the day on which it was laid.</p>
+          <p>A proposal for a draft remedial order. Under paragraph 3(1) of schedule 2 of the Human Rights Act 1998, the Minister has a duty to lay before Parliament &#39;a document which contains a draft of the proposed order&#39;. This document must lay before Parliament for a period of 60 sitting days, beginning with the day on which it was laid.</p>
            <p>
             Superclasses  &middot; EnabledThing           </p>
         </article>
         <article class="class" id="ProposedNegativeStatutoryInstrumentWork">
           <h3>Class <a href="#ProposedNegativeStatutoryInstrumentWork">Proposed negative statutory instrument work</a></h3>
 
-          <p>A regulation - made under a power or powers set out in clauses 7, 8 or 9 of the European Union (Withdrawal) Act 2018 or under schedule 5 of the Future Relationship Act 2020 - which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure.</p>
+          <p>A regulation made under a power or powers set out in clause 7, 8 or 9 of the European Union (Withdrawal) Act 2018, or under schedule 5 of the Future Relationship Act 2020, which government ministers propose be laid under the negative procedure. Sifting committees of either House may recommend that any subsequent statutory instrument or instruments be laid under the affirmative procedure.</p>
            <p>
             Superclasses  &middot; EnabledThing           </p>
         </article>
-        <article class="class" id="PublishedDraftUnderEUWAWork">
-          <h3>Class <a href="#PublishedDraftUnderEUWAWork">Published draft under the European Union (Withdrawal) Act 2018 work</a></h3>
+        <article class="class" id="PublishedDraftUnderEUWA2018Work">
+          <h3>Class <a href="#PublishedDraftUnderEUWA2018Work">Published draft under the European Union (Withdrawal) Act 2018 work</a></h3>
 
-          <p>A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of any instrument which intends to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives.</p>
+          <p>A draft published under the duties laid out in paragraph 14 of schedule 8 of the European Union (Withdrawal) Act 2018. A Minister has a duty to publish such a draft 28 joint sitting days before the laying of an instrument intending to amend or revoke subordinate legislation under section 2(2) of the European Communities Act 1972, including subordinate legislation implementing EU directives.</p>
            <p>
             Superclasses  &middot; EnabledThing           </p>
         </article>
@@ -148,21 +148,21 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="madeUnder">
+        <article class="objectproperty" id="enabledBy">
           <h3>
             Object property
-            <a href="#madeUnder"
-              >Made under</a
+            <a href="#enabledBy"
+              >Enabled by</a
             >
           </h3>
 
-           <p>Relates an enabled thing to the enabling thing under which it was made. An enabled thing may be made under one or more enabling things. An enabling thing may enable one or more enabled things, or none.</p>
+           <p>Relates an enabled thing to the enabling thing under which it was made or under which it is intended to be made. An enabled thing may be enabled by one or more enabling things. An enabling thing may enable one or more enabled things, or none.</p>
 
           <p>
             <a href="#EnabledThing"
               >EnabledThing</a
             >
-            &mdash; Made under &mdash;
+            &mdash; Enabled by &mdash;
             <a href="#EnablingThing">EnablingThing</a>
           </p>
         </article>
@@ -175,13 +175,32 @@
             >
           </h3>
 
-           <p>Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none.</p>
+           <p>Relates an enabled thing to the enabled thing which preceded it. An enabled thing may be preceded by one or more enabled things, or by none. An enabled thing may precede one or more enabled things, or none. For example: a statutory instrument being preceded by a proposed negative statutory instrument.</p>
 
           <p>
             <a href="#EnabledThing"
               >EnabledThing</a
             >
             &mdash; Preceded by &mdash;
+            <a href="#EnabledThing">EnabledThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="supersedes">
+          <h3>
+            Object property
+            <a href="#supersedes"
+              >Supersedes</a
+            >
+          </h3>
+
+           <p>Relates an enabled thing to the enabled thing which it supersedes. An enabled thing may be superseded by one or more enabled things, or none. An enabled thing may supersede one or more enabled things, or none. For example: a withdrawn statutory instrument being superseded by another statutory instrument.</p>
+
+          <p>
+            <a href="#EnabledThing"
+              >EnabledThing</a
+            >
+            &mdash; Supersedes &mdash;
             <a href="#EnabledThing">EnabledThing</a>
           </p>
         </article>
@@ -210,7 +229,7 @@
             <a href="#chapterNumber">Chapter number</a>
           </h3>
 
-          <p>The identifier in year part of an Act of Parliament number, for example, &#39;12&#39; in &#39;1986 c. 12&#39;.</p>
+          <p>The identifier in a year part of an Act of Parliament number, for example, &#39;12&#39; in &#39;1986 c. 12&#39;.</p>
 
           <p>
             ActOfParliament &mdash; Chapter number &mdash;
@@ -252,7 +271,7 @@
             <a href="#longTitle">Long title</a>
           </h3>
 
-          <p></p>
+          <p>The title of an Act, setting out in general terms its purpose or scope.</p>
 
           <p>
             ActOfParliament &mdash; Long title &mdash;
@@ -266,7 +285,7 @@
             <a href="#madeDate">Made date</a>
           </h3>
 
-          <p>The date on which a statutory instrument is made by a government minister.</p>
+          <p>The date on which a statutory instrument is made by the person having the power to make it.</p>
 
           <p>
             MadeStatutoryInstrumentWork &mdash; Made date &mdash;
@@ -309,7 +328,7 @@
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>PaperWork</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>PublishedDraftUnderEUWAWork</td>
+            <td>/<wbr>ontologies/<wbr>delegation/<wbr>PublishedDraftUnderEUWA2018Work</td>
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>EnabledThing</td>
           </tr>
           <tr>
@@ -414,7 +433,7 @@
 
     <footer>
       <p>
-        Generated 2023-04-24 15:57:04.352737 from a
+        Generated 2023-06-01 10:47:30.535080 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../delegation/delegation-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../delegation/delegation-ontology.ttl"

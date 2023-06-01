@@ -71,6 +71,11 @@
       <section id="classes">
         <h2>Classes</h2>
 
+        <article class="class" id="Author">
+          <h3>Class <a href="#Author">Author</a></h3>
+
+          <p>The author of a paper, being either a person or a corporate body.</p>
+         </article>
         <article class="class" id="PaperBundle">
           <h3>Class <a href="#PaperBundle">Paper bundle</a></h3>
 
@@ -86,10 +91,10 @@
 
           <p>A series of papers, for example: the Treaty Series.</p>
          </article>
-        <article class="class" id="PaperSeriesItem">
-          <h3>Class <a href="#PaperSeriesItem">Paper series item</a></h3>
+        <article class="class" id="PaperSeriesMembership">
+          <h3>Class <a href="#PaperSeriesMembership">Paper series membership</a></h3>
 
-          <p>A paper expression, as it exists as part of a paper series. A paper expression forming part of a series has a number within that series.</p>
+          <p>The membership of a paper expression in a paper series. A paper expression being a member of a series has an identifying number within that series.</p>
          </article>
         <article class="class" id="PaperType">
           <h3>Class <a href="#PaperType">Paper type</a></h3>
@@ -112,22 +117,22 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="asSeriesitem">
+        <article class="objectproperty" id="author">
           <h3>
             Object property
-            <a href="#asSeriesitem"
-              >As series item</a
+            <a href="#author"
+              >Author</a
             >
           </h3>
 
-           <p>Relates a paper expression to the existence of that paper in a series. A paper series item refers to one paper expression. A paper expression may exist as an item in one or more series, or none.</p>
+           <p>Relates a paper work to its author. A paper work has one or more authors, or none.</p>
 
           <p>
-            <a href="#PaperExpression"
-              >PaperExpression</a
+            <a href="#PaperWork"
+              >PaperWork</a
             >
-            &mdash; As series item &mdash;
-            <a href="#PaperSeriesItem">PaperSeriesItem</a>
+            &mdash; Author &mdash;
+            <a href="#Author">Author</a>
           </p>
         </article>
 
@@ -188,6 +193,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="hasPersonalAuthor">
+          <h3>
+            Object property
+            <a href="#hasPersonalAuthor"
+              >Has personal author</a
+            >
+          </h3>
+
+           <p>Relates a paper work to its personal author. A paper work has one or more personal authors, or none.</p>
+
+          <p>
+            <a href="#PaperWork"
+              >PaperWork</a
+            >
+            &mdash; Has personal author &mdash;
+            <a href="#PersonalAuthor">PersonalAuthor</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="hasType">
           <h3>
             Object property
@@ -207,22 +231,41 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="inSeries">
+        <article class="objectproperty" id="membershipInSeries">
           <h3>
             Object property
-            <a href="#inSeries"
-              >In series</a
+            <a href="#membershipInSeries"
+              >Membership in series</a
             >
           </h3>
 
-           <p>Relates the existence of a paper as an item in a series to the series that the item forms part of. A paper series item forms part of one paper series.</p>
+           <p>Relates the membership of a paper expression in a series to the series that membership forms part of. A paper series membership forms part of one paper series.</p>
 
           <p>
-            <a href="#PaperSeriesItem"
-              >PaperSeriesItem</a
+            <a href="#PaperSeriesMembership"
+              >PaperSeriesMembership</a
             >
-            &mdash; In series &mdash;
+            &mdash; Membership in series &mdash;
             <a href="#PaperSeries">PaperSeries</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="membershipOfPaperExpression">
+          <h3>
+            Object property
+            <a href="#membershipOfPaperExpression"
+              >Membership of paper expression</a
+            >
+          </h3>
+
+           <p>Relates a paper series membership to the paper expression with that membership. A paper series membership refers to one paper expression. A paper expression may be a member of one or more series, or none.</p>
+
+          <p>
+            <a href="#PaperSeriesMembership"
+              >PaperSeriesMembership</a
+            >
+            &mdash; Membership of paper expression &mdash;
+            <a href="#PaperExpression">PaperExpression</a>
           </p>
         </article>
 
@@ -287,20 +330,6 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="authoredOn">
-          <h3>
-            Data property
-            <a href="#authoredOn">Authored on</a>
-          </h3>
-
-          <p>Relates a paper expression to the date that paper was authored on.</p>
-
-          <p>
-            PaperExpression &mdash; Authored on &mdash;
-            date
-          </p>
-        </article>
-
         <article class="dataproperty" id="containsStatistics">
           <h3>
             Data property
@@ -354,6 +383,20 @@
           <p>
             PaperExpression &mdash; ISBN &mdash;
             Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="originatedOn">
+          <h3>
+            Data property
+            <a href="#originatedOn">Originated on</a>
+          </h3>
+
+          <p>Relates a paper expression to the date of origination of that paper. For a letter, this will be the date it was authored. For other papers, it may be the date of authorship or the date of publication.</p>
+
+          <p>
+            PaperExpression &mdash; Originated on &mdash;
+            date
           </p>
         </article>
 
@@ -466,7 +509,7 @@
 
     <footer>
       <p>
-        Generated 2023-04-24 15:57:04.352737 from a
+        Generated 2023-06-01 10:47:30.535080 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper/paper-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper/paper-ontology.ttl"

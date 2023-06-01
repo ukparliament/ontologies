@@ -71,37 +71,37 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Availability">
-          <h3>Class <a href="#Availability">Availability</a></h3>
+        <article class="class" id="AvailabilityType">
+          <h3>Class <a href="#AvailabilityType">Availability type</a></h3>
 
-          <p>The type of availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members.</p>
+          <p>The type of the availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members.</p>
          </article>
         <article class="class" id="Commitment">
           <h3>Class <a href="#Commitment">Commitment</a></h3>
 
-          <p>A commitment to make a deposit in a Library of a House.</p>
+          <p>A commitment to make a deposit in the Library of a House.</p>
          </article>
         <article class="class" id="CommittingThing">
           <h3>Class <a href="#CommittingThing">Committing thing</a></h3>
 
-          <p>A thing by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement.</p>
+          <p>The means by which a commitment to deposit is made, for example: a contribution to a parliamentary debate, a letter to a Library or a written statement.</p>
          </article>
         <article class="class" id="CreditedContribution">
           <h3>Class <a href="#CreditedContribution">Credited contribution</a></h3>
 
-          <p>An oral contribution made by a Member during a parliamentary proceeding.</p>
+          <p>An oral contribution made by a known Member during a parliamentary proceeding.</p>
          </article>
         <article class="class" id="DepositedArtefact">
           <h3>Class <a href="#DepositedArtefact">Deposited artefact</a></h3>
 
-          <p>An artefact having been deposited in a Library of a House.</p>
+          <p>An artefact which has been deposited in the Library of a House, for example: a breathalyser.</p>
            <p>
             Superclasses  &middot; DepositedThing           </p>
         </article>
         <article class="class" id="DepositedPaper">
           <h3>Class <a href="#DepositedPaper">Deposited paper</a></h3>
 
-          <p>A paper having been deposited in a Library of a House.</p>
+          <p>A paper which has been deposited in the Library of a House.</p>
            <p>
             Superclasses  &middot; DepositedThing  &middot; PaperExpression           </p>
         </article>
@@ -115,7 +115,7 @@
         <article class="class" id="Depositing">
           <h3>Class <a href="#Depositing">Depositing</a></h3>
 
-          <p>The act of placing information in the Library of either House, resulting from a commitment to make a deposit of that information, by a Member permitted to do so.</p>
+          <p>The act of placing a thing in the Library of either House.</p>
            <p>
             Superclasses  &middot; MakingAvailable           </p>
         </article>
@@ -132,7 +132,7 @@
         <article class="class" id="MadeStatutoryInstrumentWork">
           <h3>Class <a href="#MadeStatutoryInstrumentWork">Made statutory instrument work</a></h3>
 
-          <p>Made statutory instruments may progress from draft, or be laid without draft before Parliament as made. Parliament may consider particular instruments as made with imposing a duty to lay. For example: commencement orders. Made statutory instruments may be objected to within Parliament. A made instrument has been signed into secondary legislation by a government minister. Made statutory instruments are published by The National Archives and classified by them as a FRBR work.</p>
+          <p>Made statutory instruments as signed into legislation. Made statutory instruments may result from a draft laid before Parliament or may be laid as made or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament may be subject to a negative, affirmative or super affirmative procedure, or none. A made negative, having not been objected to within the scrutiny period, remains law. A made affirmative or made super affirmative, having been approved by Parliament within the approval period, remains law.</p>
          </article>
         <article class="class" id="MakingAvailable">
           <h3>Class <a href="#MakingAvailable">Making available</a></h3>
@@ -147,7 +147,7 @@
         <article class="class" id="PaperSeriesItem">
           <h3>Class <a href="#PaperSeriesItem">Paper series item</a></h3>
 
-          <p>A paper expression or artefact, as it exists as part of a paper series. A paper expression or artefact forming part of a series has a number within that series.</p>
+          <p>A paper expression or artefact, as it exists as part of a paper series. A paper expression or artefact forming part of a series has an identifying number within that series.</p>
          </article>
         <article class="class" id="ParliamentaryPeriod">
           <h3>Class <a href="#ParliamentaryPeriod">Parliamentary period</a></h3>
@@ -179,22 +179,41 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasAvailability">
+        <article class="objectproperty" id="containsCommitment">
           <h3>
             Object property
-            <a href="#hasAvailability"
-              >Has availability</a
+            <a href="#containsCommitment"
+              >Contains commitment</a
             >
           </h3>
 
-           <p>Relates a deposited paper to the availability of that deposited paper. A deposited paper has one availability.</p>
+           <p>Relates a committing thing to the commitment made. A committing thing contains one commitment. A commitment is contained by one committing thing.</p>
+
+          <p>
+            <a href="#CommittingThing"
+              >CommittingThing</a
+            >
+            &mdash; Contains commitment &mdash;
+            <a href="#Commitment">Commitment</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasAvailabilityType">
+          <h3>
+            Object property
+            <a href="#hasAvailabilityType"
+              >Has availability type</a
+            >
+          </h3>
+
+           <p>Relates a deposited paper to the availability type of that deposited paper. A deposited paper has one availability type.</p>
 
           <p>
             <a href="#DepositedPaper"
               >DepositedPaper</a
             >
-            &mdash; Has availability &mdash;
-            <a href="#Availability">Availability</a>
+            &mdash; Has availability type &mdash;
+            <a href="#AvailabilityType">AvailabilityType</a>
           </p>
         </article>
 
@@ -244,7 +263,7 @@
             >
           </h3>
 
-           <p>Relates a commitment to the parliamentary period during which the commitment was made. A commitment is made during one parliamentary period.</p>
+           <p>Relates a commitment to the parliamentary period during which the commitment is made. A commitment is made during one parliamentary period.</p>
 
           <p>
             <a href="#Commitment"
@@ -252,25 +271,6 @@
             >
             &mdash; Made during &mdash;
             <a href="#ParliamentaryPeriod">ParliamentaryPeriod</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="makesCommitment">
-          <h3>
-            Object property
-            <a href="#makesCommitment"
-              >Makes commitment</a
-            >
-          </h3>
-
-           <p>Relates a committing thing to the commitment made. A committing thing makes one commitment. A commitment is made in one committing thing.</p>
-
-          <p>
-            <a href="#CommittingThing"
-              >CommittingThing</a
-            >
-            &mdash; Makes commitment &mdash;
-            <a href="#Commitment">Commitment</a>
           </p>
         </article>
 
@@ -282,7 +282,7 @@
             >
           </h3>
 
-           <p>Relates a deposit to the commitment to make that deposit. A deposit results from one commitment, or none. A commitment is made to provide one or more deposits.</p>
+           <p>Relates a deposit to the commitment to make that deposit. A commitment is made to provide one or more deposits. A deposit results from one commitment, or none. Where a deposit does not result from a commitment, it results from a duty set out in legislation.</p>
 
           <p>
             <a href="#Depositing"
@@ -301,7 +301,7 @@
             >
           </h3>
 
-           <p>Relates a deposit to the made statutory instrument setting out the duty under which the deposit is made. Transport and Work Act orders are deposited under a duty set out in Rule 13 of The Transport and Works (Applications and Objections Procedure) (England and Wales) Rules 2006.</p>
+           <p>Relates a deposit to the made statutory instrument setting out the duty under which that deposit is made. Transport and Works Act order applications are deposited under a duty set out in Rule 13 of The Transport and Works (Applications and Objections Procedure) (England and Wales) Rules 2006. Where a deposit does not result from a duty set out in legislation, it results from a commitment to make a deposit.</p>
 
           <p>
             <a href="#Depositing"
@@ -320,7 +320,7 @@
             >
           </h3>
 
-           <p>Relates an act of depositing to the artefact or artefacts having been deposited. An act of depositing results in one or more deposited artefacts, or none. A deposited artefact is the result of one deposit.</p>
+           <p>Relates an act of depositing to the artefact or artefacts which have been deposited. A deposited artefact is the result of one deposit. An act of depositing results in one or more deposited artefacts, or none.  Where an act of depositing does not result in a deposited artefact, it results in a deposited paper or papers.</p>
 
           <p>
             <a href="#Depositing"
@@ -339,7 +339,7 @@
             >
           </h3>
 
-           <p>Relates an act of depositing to the paper or papers having been deposited. An act of depositing results in one or more deposited papers, or none. A deposited paper is the result of one deposit.</p>
+           <p>Relates an act of depositing to the paper or papers which have been deposited. A deposited paper is the result of one deposit. An act of depositing results in one or more deposited papers, or none.  Where an act of depositing does not result in a deposited paper, it results in a deposited artefact or artefacts.</p>
 
           <p>
             <a href="#Depositing"
@@ -360,7 +360,7 @@
             <a href="#isStanding">Is standing</a>
           </h3>
 
-          <p>Used to record whether a commitment is standing. A standing commitment leads to more than one deposit over time.</p>
+          <p>Used to record whether a commitment is a standing commitment. A standing commitment may lead to more than one deposit.</p>
 
           <p>
             Commitment &mdash; Is standing &mdash;
@@ -488,7 +488,7 @@
 
     <footer>
       <p>
-        Generated 2023-04-24 15:57:04.352737 from a
+        Generated 2023-06-01 10:47:30.535080 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl"

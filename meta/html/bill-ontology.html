@@ -100,6 +100,11 @@
 
           <p>A draft form of a Government bill issued before being introduced as a Public Bill to Parliament. A draft bill is available to be examined either by a Commons or Lords select committee, or by a joint committee of both Houses of Parliament created for that purpose.</p>
          </article>
+        <article class="class" id="House">
+          <h3>Class <a href="#House">House</a></h3>
+
+          <p>A parliamentary House, for example: the House of Lords.</p>
+         </article>
         <article class="class" id="HybridBillWork">
           <h3>Class <a href="#HybridBillWork">Hybrid Bill work</a></h3>
 
@@ -157,6 +162,25 @@
         <h2>Object properties</h2>
 
 
+        <article class="objectproperty" id="departmentalSponsorshipOfPublicBill">
+          <h3>
+            Object property
+            <a href="#departmentalSponsorshipOfPublicBill"
+              >Departmental sponsorship of Public Bill</a
+            >
+          </h3>
+
+           <p>Relates a sponsorship by a Ministerial Department to a Public Bill at a point in time. A government bill has one or more departmental sponsorships over time. A Private Members&#39; Bill has no departmental sponsorships.</p>
+
+          <p>
+            <a href="#DepartmentalSponsorship"
+              >DepartmentalSponsorship</a
+            >
+            &mdash; Departmental sponsorship of Public Bill &mdash;
+            <a href="#PublicBillWork">PublicBillWork</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="enactedAs">
           <h3>
             Object property
@@ -176,10 +200,10 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="ExpressionOf">
+        <article class="objectproperty" id="expressionOf">
           <h3>
             Object property
-            <a href="#ExpressionOf"
+            <a href="#expressionOf"
               >Expression of</a
             >
           </h3>
@@ -195,41 +219,41 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasDepartmentalSponsorship">
+        <article class="objectproperty" id="inHouse">
           <h3>
             Object property
-            <a href="#hasDepartmentalSponsorship"
-              >Has departmental sponsorship</a
+            <a href="#inHouse"
+              >In House</a
             >
           </h3>
 
-           <p>Relates a Public Bill to a sponsorship by a Government department at a point in time. A government bill has one or more departmental sponsorships over time. A Private Members&#39; Bill has no departmental sponsorships.</p>
+           <p>Relates a Member sponsorship to the House that sponsorship is in. A Member sponsorship is in one House.</p>
 
           <p>
-            <a href="#PublicBillWork"
-              >PublicBillWork</a
+            <a href="#MemberSponsorship"
+              >MemberSponsorship</a
             >
-            &mdash; Has departmental sponsorship &mdash;
-            <a href="#DepartmentalSponsorship">DepartmentalSponsorship</a>
+            &mdash; In House &mdash;
+            <a href="#House">House</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="hasMemberSponsorship">
+        <article class="objectproperty" id="memberSponsorshipOfPublicBill">
           <h3>
             Object property
-            <a href="#hasMemberSponsorship"
-              >Has Member sponsorship</a
+            <a href="#memberSponsorshipOfPublicBill"
+              >Member sponsorship of Public Bill</a
             >
           </h3>
 
-           <p>Relates a Public Bill to a sponsorship of that bill by a Member at a point in time. A Public Bill may have one or more Member sponsorships over time.</p>
+           <p>Relates a sponsorship of a Public Bill by a Member at a point in time to the bill being sponsored. A Public Bill may have one or more Member sponsorships over time.</p>
 
           <p>
-            <a href="#PublicBillWork"
-              >PublicBillWork</a
+            <a href="#MemberSponsorship"
+              >MemberSponsorship</a
             >
-            &mdash; Has Member sponsorship &mdash;
-            <a href="#MemberSponsorship">MemberSponsorship</a>
+            &mdash; Member sponsorship of Public Bill &mdash;
+            <a href="#PublicBillWork">PublicBillWork</a>
           </p>
         </article>
 
@@ -317,7 +341,7 @@
             >
           </h3>
 
-           <p>Relates a Member sponsorship to the incumbency of a Member sponsoring a Public Bill at a point in time. For a Private Members’ Bill, the incumbency is a seat incumbency. For a Government Bill, the incumbency is an incumbency in a Government position. A sponsorship by incumbency is by one incumbency.</p>
+           <p>Relates a Member sponsorship to the incumbency of a Member sponsoring a Public Bill at a point in time. For a Private Members&#39; Bill, the incumbency is a seat incumbency. For a Government Bill, the incumbency is an incumbency in a Government position. A sponsorship by incumbency is by one incumbency.</p>
 
           <p>
             <a href="#MemberSponsorship"
@@ -452,7 +476,7 @@
 
     <footer>
       <p>
-        Generated 2023-04-24 15:57:04.352737 from a
+        Generated 2023-06-01 10:47:30.535080 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../bill/bill-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../bill/bill-ontology.ttl"

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../oral-contribution/oral-contribution-ontology.html" />
+    <link rel="index" href="https://ukparliament.github.io/ontologies/" />
+    <link
+      rel="alternate"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oral-contribution/oral-contribution-ontology.ttl"
+      type="text/turtle"
+      title="Oral contribution ontology: Turtle source"
+    />
+    <link
+      rel="licence"
+      href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+      lang="en-GB"
+      title="Open Parliament Licence"
+    />
+    <title>Oral contribution ontology</title>
+    <style>
+      body {
+        font-family: system-ui;
+        line-height: 1.4;
+        max-width: 42rem;
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      section {
+        padding-top: 2rem;
+      }
+      article {
+        padding-top: 0.25rem;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="https://ukparliament.github.io/ontologies/"
+          >UK Parliament ontologies</a
+        >
+        &rarr;
+        <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
+          >Ontologies index</a
+        >
+        &rarr; Oral contribution ontology
+      </nav>
+    </header>
+
+    <main>
+      <h1>Oral contribution ontology</h1>
+
+      <p id="description">A model describing the reporting of oral contributions and events taking place during parliamentary proceedings.</p>
+
+      <nav>
+        <a href="#classes">Classes</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
+
+ &middot; <a href="https://ukparliament.github.io/ontologies/oral-contribution/oral-contribution.svg">Depiction</a>
+      </nav>
+
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <article class="class" id="Action">
+          <h3>Class <a href="#Action">Action</a></h3>
+
+          <p>A non-verbal report of actions taking place during parliamentary proceedings, for example: House rises.</p>
+           <p>
+            Superclasses  &middot; Event           </p>
+        </article>
+        <article class="class" id="ContributorPresence">
+          <h3>Class <a href="#ContributorPresence">Contributor presence</a></h3>
+
+          <p>The presence of a contributor during a parliamentary proceeding, being either physically present or virtually present.</p>
+         </article>
+        <article class="class" id="CreditedOralContribution">
+          <h3>Class <a href="#CreditedOralContribution">Credited oral contribution</a></h3>
+
+          <p>A report of a verbal contribution to proceedings in Parliament made by a known person incumbent in a position.</p>
+           <p>
+            Superclasses  &middot; OralContribution           </p>
+        </article>
+        <article class="class" id="Event">
+          <h3>Class <a href="#Event">Event</a></h3>
+
+          <p>An event, taking place in time and space.</p>
+         </article>
+        <article class="class" id="Incumbency">
+          <h3>Class <a href="#Incumbency">Incumbency</a></h3>
+
+          <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
+         </article>
+        <article class="class" id="OralContribution">
+          <h3>Class <a href="#OralContribution">Oral contribution</a></h3>
+
+          <p>A report of a verbal contribution to proceedings in Parliament.</p>
+           <p>
+            Superclasses  &middot; Event           </p>
+        </article>
+        <article class="class" id="OralContributionType">
+          <h3>Class <a href="#OralContributionType">Oral contribution type</a></h3>
+
+          <p>The type of an oral contributions, for example: a maiden speech, a point of order, a Ministerial Statement, an intervention.</p>
+         </article>
+        <article class="class" id="UncreditedOralContribution">
+          <h3>Class <a href="#UncreditedOralContribution">Uncredited oral contribution</a></h3>
+
+          <p>A report of a verbal contribution to proceedings in Parliament made by an unknown person or persons. This may be a single person who the Hansard reporters failed to identifier or a contribution made by more than one person.</p>
+           <p>
+            Superclasses  &middot; OralContribution           </p>
+        </article>
+      </section>
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="contributedBy">
+          <h3>
+            Object property
+            <a href="#contributedBy"
+              >Contributed by</a
+            >
+          </h3>
+
+           <p>Relates a credited oral contribution to the incumbency, in a position, of the person reported as having made that contribution. A credited oral contribution is contributed by one incumbency.</p>
+
+          <p>
+            <a href="#CreditedOralContribution"
+              >CreditedOralContribution</a
+            >
+            &mdash; Contributed by &mdash;
+            <a href="#Incumbency">Incumbency</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasContributorPresence">
+          <h3>
+            Object property
+            <a href="#hasContributorPresence"
+              >Has contributor presence</a
+            >
+          </h3>
+
+           <p>Relates a credited oral contribution to the presence of the person making that contribution. A credited oral contribution has one value for its contributor&#39;s presence.</p>
+
+          <p>
+            <a href="#CreditedOralContribution"
+              >CreditedOralContribution</a
+            >
+            &mdash; Has contributor presence &mdash;
+            <a href="#ContributorPresence">ContributorPresence</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasOralContributionType">
+          <h3>
+            Object property
+            <a href="#hasOralContributionType"
+              >Has oral contribution type</a
+            >
+          </h3>
+
+           <p>Relates an oral contribution to its type. An oral contribution has one type.</p>
+
+          <p>
+            <a href="#OralContribution"
+              >OralContribution</a
+            >
+            &mdash; Has oral contribution type &mdash;
+            <a href="#OralContributionType">OralContributionType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inReplyTo">
+          <h3>
+            Object property
+            <a href="#inReplyTo"
+              >In reply to</a
+            >
+          </h3>
+
+           <p>Relates a credited oral contribution to the credited oral contribution it is in reply to, for example: an answer being in reply to a question. A credited oral contribution may be in reply to one credited oral contribution, or none. A credited oral contribution may be replied to by one credited oral contribution, or none</p>
+
+          <p>
+            <a href="#CreditedOralContribution"
+              >CreditedOralContribution</a
+            >
+            &mdash; In reply to &mdash;
+            <a href="#CreditedOralContribution">CreditedOralContribution</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="oralContributionTypeParent">
+          <h3>
+            Object property
+            <a href="#oralContributionTypeParent"
+              >Oral contribution type parent</a
+            >
+          </h3>
+
+           <p>Relates an oral contribution to its parent, for example: a Ministerial Statement having a parent of Statement. An oral contribution type has one parent, or none. An oral contribution type has one or more children, or none.</p>
+
+          <p>
+            <a href="#OralContributionType"
+              >OralContributionType</a
+            >
+            &mdash; Oral contribution type parent &mdash;
+            <a href="#OralContributionType">OralContributionType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="resumesFrom">
+          <h3>
+            Object property
+            <a href="#resumesFrom"
+              >Resumes from</a
+            >
+          </h3>
+
+           <p>Relates a credited oral contribution to the credited oral contribution it resumes from, for example: an answer resuming following an intervention. A credited oral contribution may resume from one credited oral contribution, or none. A credited oral contribution may be resumed by one credited oral contribution, or none</p>
+
+          <p>
+            <a href="#CreditedOralContribution"
+              >CreditedOralContribution</a
+            >
+            &mdash; Resumes from &mdash;
+            <a href="#CreditedOralContribution">CreditedOralContribution</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="reportedAction">
+          <h3>
+            Data property
+            <a href="#reportedAction">Reported action</a>
+          </h3>
+
+          <p>Relates an action to reported text of that action.</p>
+
+          <p>
+            Action &mdash; Reported action &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="reportedSpeech">
+          <h3>
+            Data property
+            <a href="#reportedSpeech">Reported speech</a>
+          </h3>
+
+          <p>Relates an oral contribution to the reported text of that contribution. The reported text may not be a verbatim transcript.</p>
+
+          <p>
+            OralContribution &mdash; Reported speech &mdash;
+            langString
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>Action</td>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>Event</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>OralContribution</td>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>Event</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>CreditedOralContribution</td>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>OralContribution</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>UncreditedOralContribution</td>
+            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>OralContribution</td>
+          </tr>
+        </table>
+      </section>
+ 
+      <section id="namespaces">
+        <h2>Namespaces</h2>
+        <details>
+          <summary>Namespace list</summary>
+          <dl>
+            <dt>brick</dt>
+            <dd>https://brickschema.org/schema/Brick#</dd>
+            <dt>csvw</dt>
+            <dd>http://www.w3.org/ns/csvw#</dd>
+            <dt>dc</dt>
+            <dd>http://purl.org/dc/elements/1.1/</dd>
+            <dt>dcat</dt>
+            <dd>http://www.w3.org/ns/dcat#</dd>
+            <dt>dcmitype</dt>
+            <dd>http://purl.org/dc/dcmitype/</dd>
+            <dt>dcterms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>dcam</dt>
+            <dd>http://purl.org/dc/dcam/</dd>
+            <dt>doap</dt>
+            <dd>http://usefulinc.com/ns/doap#</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+            <dt>geo</dt>
+            <dd>http://www.opengis.net/ont/geosparql#</dd>
+            <dt>odrl</dt>
+            <dd>http://www.w3.org/ns/odrl/2/</dd>
+            <dt>org</dt>
+            <dd>http://www.w3.org/ns/org#</dd>
+            <dt>prof</dt>
+            <dd>http://www.w3.org/ns/dx/prof/</dd>
+            <dt>prov</dt>
+            <dd>http://www.w3.org/ns/prov#</dd>
+            <dt>qb</dt>
+            <dd>http://purl.org/linked-data/cube#</dd>
+            <dt>schema</dt>
+            <dd>https://schema.org/</dd>
+            <dt>sh</dt>
+            <dd>http://www.w3.org/ns/shacl#</dd>
+            <dt>skos</dt>
+            <dd>http://www.w3.org/2004/02/skos/core#</dd>
+            <dt>sosa</dt>
+            <dd>http://www.w3.org/ns/sosa/</dd>
+            <dt>ssn</dt>
+            <dd>http://www.w3.org/ns/ssn/</dd>
+            <dt>time</dt>
+            <dd>http://www.w3.org/2006/time#</dd>
+            <dt>vann</dt>
+            <dd>http://purl.org/vocab/vann/</dd>
+            <dt>void</dt>
+            <dd>http://rdfs.org/ns/void#</dd>
+            <dt>wgs</dt>
+            <dd>https://www.w3.org/2003/01/geo/wgs84_pos#</dd>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            <dt>xml</dt>
+            <dd>http://www.w3.org/XML/1998/namespace</dd>
+            <dt>oral-contribution</dt>
+            <dd>http://parliament.uk/ontologies/oral-contribution/</dd>
+          </dl>
+        </details>
+      </section>
+
+      <p>Ontology created &middot; <time id="created">2023-05-31</time></p>
+
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Claire Searle    &middot; Anya Somerville    &middot; Jayne Sunley        </p>
+    </main>
+
+    <footer>
+      <p>
+        Generated 2023-06-01 10:47:30.535080 from a
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oral-contribution/oral-contribution-ontology.ttl">Turtle file</a>. Visualization:
+        <a
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../oral-contribution/oral-contribution-ontology.ttl"
+          >api.parliament.uk/webvowl</a
+        >
+      </p>
+
+      <p>
+        Material on the
+        <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> site is made
+        available under the
+        <a
+          href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+          >Open Parliament Licence v3.0</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
