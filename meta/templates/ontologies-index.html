@@ -6,7 +6,7 @@
     <link rel="licence" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" lang="en-GB" title="Open Parliament Licence"> 
     <title>Ontologies index</title>
     <style>
-        body {font-family: sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
+        body {font-family: ui-sans-serif, sans-serif;line-height:1.4;max-width:42rem;padding:1rem;margin:1rem auto;}
         section {padding-top:2rem;} 
         article {padding-top:0.25rem;}
         h1 {font-weight: normal;}
@@ -21,7 +21,7 @@
             <nav>
                 <a href="https://ukparliament.github.io/ontologies/">UK Parliament ontologies</a> 
                 &rarr;
-                Ontologies index
+                Index
             </nav>
 
     </header>
@@ -30,7 +30,7 @@
         <section>
 <ul>
     {% for htmlfile in htmlfiles %}
-    <li><a href="https://ukparliament.github.io/ontologies/meta/{{ htmlfile }}">{{ htmlfile|stemonly }}</a></li>
+    <li><a href="https://ukparliament.github.io/ontologies/meta/{{ htmlfile }}">{{ htmlfile|stemonly|replace("-", " ") }}</a></li>
 {% endfor %}
 
 </ul>
