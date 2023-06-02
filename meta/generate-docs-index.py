@@ -23,7 +23,7 @@ env.filters["stemonly"] = stemonly
 
 template = env.get_template("ontologies-index.html")
 
-htmlfiles = list(Path(".").glob("./html/*ontology.html"))
+htmlfiles = list(Path(".").glob("./html/*ontology.html")).sort()
 
 indexpath = "./html/index.html"
 
