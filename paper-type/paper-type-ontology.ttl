@@ -53,6 +53,11 @@ papertype:BillExpression rdf:type owl:Class ;
 	rdfs:comment "An expression of a bill work at a point in time. A new expression of the bill work is created by any amendment being made to the bill, or when a bill passes from the first House to the second House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
+papertype:BillWork rdf:type owl:Class ;
+	rdfs:label "Bill work"@en ;
+	rdfs:comment "A proposal for a new Act of Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
+	
 papertype:EnabledThing rdf:type owl:Class ;
 	rdfs:subClassOf papertype:PaperExpression ;
 	rdfs:label "Enabled thing"@en ;
@@ -100,6 +105,6 @@ papertype:billHasExplanatoryNote rdf:type owl:ObjectProperty ;
 papertype:billHasImpactAssessment rdf:type owl:ObjectProperty ;
 	rdfs:label "Bill has impact assessment"@en ;
 	rdfs:comment ""@en ;
-	rdfs:domain papertype:BillExpression ;
+	rdfs:domain papertype:BillWork ;
 	rdfs:range papertype:ImpactAssessmentExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
