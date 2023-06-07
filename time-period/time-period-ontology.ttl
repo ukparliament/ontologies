@@ -29,6 +29,23 @@ ptime:TemporalThing rdf:type owl:Class ;
 	rdfs:label "Temporal thing"@en ;
 	rdfs:comment "An interval between two points in time, having a name."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
+ptime:Reign rdf:type owl:Class ;
+	rdfs:subClassOf ptime:TemporalThing ;
+	rdfs:label "Reign"@en ;
+	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+
+ptime:RegnalYear rdf:type owl:Class ;
+	rdfs:subClassOf ptime:TemporalThing ;
+	rdfs:label "Regnal year"@en ;
+	rdfs:comment "A year within a reign, beginning on the accession of the monarch and again on the anniversary of that accession."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:SessionInRegnalYear rdf:type owl:Class ;
+	rdfs:label "Session in regnal year"@en ;
+	rdfs:comment "A mapping between a session and a regnal year, allowing for a session to span more than one regnal year and a regnal year to span more than one session."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 ptime:Kingdom rdf:type owl:Class ;
 	rdfs:subClassOf ptime:TemporalThing ;
@@ -46,12 +63,6 @@ ptime:PremiershipPeriod rdf:type owl:Class ;
 	rdfs:subClassOf ptime:TemporalThing ;
 	rdfs:label "Premiership period"@en ;
 	rdfs:comment "A continuous period of government under a single Prime Minister, spanning general elections, for example: Thatcher administration 1979-1990."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
-
-ptime:Reign rdf:type owl:Class ;
-	rdfs:subClassOf ptime:TemporalThing ;
-	rdfs:label "Reign"@en ;
-	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 ptime:ParliamentPeriod rdf:type owl:Class ;
@@ -213,6 +224,27 @@ ptime:recessInHouse rdf:type owl:ObjectProperty ;
 	rdfs:domain ptime:Recess ;
 	rdfs:range ptime:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:regnalYearInReign rdf:type owl:ObjectProperty ;
+	rdfs:label "Regnal year in reign"@en ;
+	rdfs:comment "Relates a regnal year to the reign in which that regnal year takes place. A regnal year takes place in one reign."@en ;
+	rdfs:domain ptime:RegnalYear ;
+	rdfs:range ptime:Reign ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:belongToRegnalYear rdf:type owl:ObjectProperty ;
+	rdfs:label "Belongs to regnal year"@en ;
+	rdfs:comment "Relates a session in regnal year mapping to its regnal year."@en ;
+	rdfs:domain ptime:SessionInRegnalYear ;
+	rdfs:range ptime:RegnalYear ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:belongToSession rdf:type owl:ObjectProperty ;
+	rdfs:label "Belongs to session"@en ;
+	rdfs:comment "Relates a session in regnal year mapping to its session."@en ;
+	rdfs:domain ptime:SessionInRegnalYear ;
+	rdfs:range ptime:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 
 
@@ -237,4 +269,18 @@ ptime:isPrintingDay rdf:type owl:DatatypeProperty ;
 	rdfs:comment "Used to record if a day is a printing day, being a day in the House of Commons on which notices of questions, motions and amendments to motions received since the most recent sitting day are published. A printing day is the final weekday of a recess, unless that day is a bank holiday."@en ;
 	rdfs:domain ptime:AdjournmentDay ;
 	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:sessionOrderInRegnalYear rdf:type owl:DatatypeProperty ;
+	rdfs:label "Session order in regnal year"@en ;
+	rdfs:comment "The ordinality of a session within a regnal year, for example: the second session of XXXX."@en ;
+	rdfs:domain ptime:SessionInRegnalYear ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:regnalYearOrderInSession rdf:type owl:DatatypeProperty ;
+	rdfs:label "Regnal year order in session"@en ;
+	rdfs:comment "The ordinality of a regnal year within a session, for example: the second regnal year of session XXXX."@en ;
+	rdfs:domain ptime:SessionInRegnalYear ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
