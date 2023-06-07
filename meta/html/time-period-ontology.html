@@ -160,6 +160,13 @@
            <p>
             Superclasses  &middot; TemporalThing           </p>
         </article>
+        <article class="class" id="RegnalYear">
+          <h3>Class <a href="#RegnalYear">Regnal year</a></h3>
+
+          <p>A year within a reign, beginning on the accession of the monarch and again on the anniversary of that accession.</p>
+           <p>
+            Superclasses  &middot; TemporalThing           </p>
+        </article>
         <article class="class" id="Reign">
           <h3>Class <a href="#Reign">Reign</a></h3>
 
@@ -174,6 +181,11 @@
            <p>
             Superclasses  &middot; TemporalThing           </p>
         </article>
+        <article class="class" id="SessionInRegnalYear">
+          <h3>Class <a href="#SessionInRegnalYear">Session in regnal year</a></h3>
+
+          <p>A mapping between a session and a regnal year, allowing for a session to span more than one regnal year and a regnal year to span more than one session.</p>
+         </article>
         <article class="class" id="TemporalThing">
           <h3>Class <a href="#TemporalThing">Temporal thing</a></h3>
 
@@ -219,6 +231,44 @@
               >AdjournmentDay</a
             >
             &mdash; Adjournment day in session &mdash;
+            <a href="#Session">Session</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="belongToRegnalYear">
+          <h3>
+            Object property
+            <a href="#belongToRegnalYear"
+              >Belongs to regnal year</a
+            >
+          </h3>
+
+           <p>Relates a session in regnal year mapping to its regnal year.</p>
+
+          <p>
+            <a href="#SessionInRegnalYear"
+              >SessionInRegnalYear</a
+            >
+            &mdash; Belongs to regnal year &mdash;
+            <a href="#RegnalYear">RegnalYear</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="belongToSession">
+          <h3>
+            Object property
+            <a href="#belongToSession"
+              >Belongs to session</a
+            >
+          </h3>
+
+           <p>Relates a session in regnal year mapping to its session.</p>
+
+          <p>
+            <a href="#SessionInRegnalYear"
+              >SessionInRegnalYear</a
+            >
+            &mdash; Belongs to session &mdash;
             <a href="#Session">Session</a>
           </p>
         </article>
@@ -413,6 +463,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="regnalYearInReign">
+          <h3>
+            Object property
+            <a href="#regnalYearInReign"
+              >Regnal year in reign</a
+            >
+          </h3>
+
+           <p>Relates a regnal year to the reign in which that regnal year takes place. A regnal year takes place in one reign.</p>
+
+          <p>
+            <a href="#RegnalYear"
+              >RegnalYear</a
+            >
+            &mdash; Regnal year in reign &mdash;
+            <a href="#Reign">Reign</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="sessionInParliamentPeriod">
           <h3>
             Object property
@@ -477,11 +546,47 @@
             boolean
           </p>
         </article>
+
+        <article class="dataproperty" id="regnalYearOrderInSession">
+          <h3>
+            Data property
+            <a href="#regnalYearOrderInSession">Regnal year order in session</a>
+          </h3>
+
+          <p>The ordinality of a regnal year within a session, for example: the second regnal year of session XXXX.</p>
+
+          <p>
+            SessionInRegnalYear &mdash; Regnal year order in session &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="sessionOrderInRegnalYear">
+          <h3>
+            Data property
+            <a href="#sessionOrderInRegnalYear">Session order in regnal year</a>
+          </h3>
+
+          <p>The ordinality of a session within a regnal year, for example: the second session of XXXX.</p>
+
+          <p>
+            SessionInRegnalYear &mdash; Session order in regnal year &mdash;
+            integer
+          </p>
+        </article>
       </section>
 
          <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
+            <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>time-period/<wbr>RegnalYear</td>
+            <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
+          </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>time-period/<wbr>Kingdom</td>
             <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
@@ -492,10 +597,6 @@
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>time-period/<wbr>PremiershipPeriod</td>
-            <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
-          </tr>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
             <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
           </tr>
           <tr>
@@ -620,7 +721,7 @@
 
     <footer>
       <p>
-        Generated 2023-06-07 11:08:19.456340 from a
+        Generated 2023-06-07 11:38:49.346881 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../time-period/time-period-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../time-period/time-period-ontology.ttl"
