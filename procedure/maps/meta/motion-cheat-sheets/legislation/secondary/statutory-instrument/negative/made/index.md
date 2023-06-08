@@ -109,11 +109,11 @@ OR (
 
 AND 
 
-if there is NOT one extant
+if there is NOT a motion to refer extant
 
 AND 
 
-if there is NOT one agreed
+if there is NOT a motion to refer agreed
 
 #### Question can be put
 
@@ -146,7 +146,6 @@ AND
 
 if a question has NOT been put on a consideration motion
 
-> MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House) 
@@ -159,7 +158,6 @@ AND
 
 if there has NOT been a debate
 
-> MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -172,7 +170,6 @@ AND
 
 if there's been a debate
 
-> MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -294,26 +291,19 @@ if there has been a debate
 
 #### Can be tabled
 
-(
-	If there's a non-fatal motion extant
-
-	OR
-	
-	If there's a take note motion extant
-)
+If there's a non-fatal motion extant
+		
+AND
+		
+if the instrument has NOT already been rejected (either House)
 
 AND
 
-If there's NOT one extant
+If there's NOT a motion to consider extant
 
 AND
 
 if a question has NOT been put on a consideration motion
-
-> MK: Would Lords debate on a non-fatal if instrument rejected?
-AND
-
-if the instrument has NOT already been rejected (either House)
 
 #### Can be debated
 
@@ -325,7 +315,6 @@ if there has NOT been a debate
 
 AND
 
-> MK: Would Lords debate on a non-fatal if instrument rejected?
 if the instrument has NOT already been rejected (either House)
 
 #### Question can be put
@@ -338,7 +327,6 @@ if there's been a debate
 
 AND
 
-> MK: Would Lords debate on a non-fatal if instrument rejected?
 if the instrument has NOT already been rejected (either House)
 
 ## Cascades

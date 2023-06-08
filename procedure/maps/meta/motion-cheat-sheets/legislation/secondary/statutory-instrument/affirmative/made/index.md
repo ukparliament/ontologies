@@ -50,6 +50,10 @@ If approval motion extant
 
 AND
 
+if there's been a debate
+
+AND
+
 if the clock has NOT run out
 
 AND
@@ -328,11 +332,11 @@ if the clock has NOT run out
 
 #### Can be tabled
 
-If approval motion extant
+If the instrument has been laid
 
 AND
 
-if there's NOT one extant
+if there's NOT a motion to consider extant
 
 AND
 
