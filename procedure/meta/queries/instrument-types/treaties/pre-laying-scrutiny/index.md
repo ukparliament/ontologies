@@ -24,19 +24,40 @@ Currently, this query will provide no results. We're in the process of updating 
 
 Ministers can make many different statements to the House before a treaty is laid. The primary purpose is to keep the House informed about how negotiations are proceeding. Statements are also a useful way of keeping interested committees up to date and to give them an indication on what scrutiny may be required.  
 
-* [All ministerial statements before treaty laid](https://api.parliament.uk/s/00324b20)
+* [All ministerial statements in the House of Commons before treaty laid](https://api.parliament.uk/s/1d6b5f7b)
+
+* [All ministerial statements in the House of Lords before treaty laid](https://api.parliament.uk/s/38be6a8a)
 
 ### Statements about negotiations
+
+This query show the Commons statements
 
 * [Ministerial statements about treaty negotiations](https://api.parliament.uk/s/2eb7fd6c)
 
 ### Statements announcing agreements in principle
 
+This query show the Commons statements
+
 * [Ministerial statements announcing agreements in principle](https://api.parliament.uk/s/737a347f)
 
 ### Statements announcing treaty has been signed
 
+This query show the Commons statements
+
 * [Ministerial statements announcing a treaty has been signed](https://api.parliament.uk/s/2310e2c2)
+
+### Statements calling for input on a treaty
+
+This query show the Commons statements
+
+* [Ministerial statement calling for input on a treaty](https://api.parliament.uk/s/7c61f9cb)
+
+### Statements announcing the government's intention to accede to a treaty
+
+This query show the Commons statements
+
+* [Ministerial statement announcing the government's intention to accede to a treaty](https://api.parliament.uk/s/2b0295ac)
+
 
 ## Government's trade negotiation objectives
 
@@ -50,6 +71,12 @@ The Government can choose to publish a comprehensive set of documents setting ou
 As part of the International Agreements Committee's inquiry into a potential treaty, they may wish to publish a report scrutinising the government's negotiation objectives. The government may then follow up with a response to such a report. The following query shows all scrutiny reports and where the government has responded. 
 
 * [International Agreements Committee scrutiny reports of negotiation objectives](https://api.parliament.uk/s/1db3d17c)
+
+### International Trade Committee scrutiny report of objectives
+
+Before the ITC was dissolved in April 2023, it published two scrutiny reports on the government's negotiation objectives for a free trade agreement with India and the Gulf Cooperation Council. 
+
+* [International Trade Committee sscrutiny report of negotiation objectives](https://api.parliament.uk/s/c7e6550f)
 
 ## Consultation into a future free trade agreements
 
@@ -76,13 +103,8 @@ Under [section 42 of the Agriculture Act 2020](https://www.legislation.gov.uk/uk
 
 * [Reports pursuant to Section 42 of the Agriculture Act 2020](https://api.parliament.uk/s/807624cf)
 
+## Oral questions in the House of Lords
 
+We have seen one oral question in the House of Lords about treaty negotiations as of June 2023. The oral question was asking about the progress of three FTAs. 
 
-
-
-
-
-
-
-
-
+* [Oral question about the negotiation progress of a treaty](https://api.parliament.uk/s/8a4d1f23)
