@@ -39,12 +39,12 @@ ptime:Reign rdf:type owl:Class ;
 ptime:RegnalYear rdf:type owl:Class ;
 	rdfs:subClassOf ptime:TemporalThing ;
 	rdfs:label "Regnal year"@en ;
-	rdfs:comment "A year within a reign, beginning on the accession of the monarch and again on the anniversary of that accession."@en ;
+	rdfs:comment "A year within a reign. The first regnal year of a reign begins on the date of accession of a monarch. Subsequent regnal years begin on the anniversary of accession. Regnal years last for one calendar year, or until the end of the reign, whichever is soonest."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 ptime:SessionInRegnalYear rdf:type owl:Class ;
 	rdfs:label "Session in regnal year"@en ;
-	rdfs:comment "A mapping between a session and a regnal year, allowing for a session to span more than one regnal year and a regnal year to span more than one session."@en ;
+	rdfs:comment "A mapping between a session and a regnal year, allowing for a session to span more than one regnal year and a regnal year to span more than one session. Sessions are named for the regnal year or regnal years in which the session occurs. The session name is formed of: the regnal year or years, the monarch and the session number, if the regnal year spans more than one session. Until the passing of the Acts of Parliament Numbering and Citation Act 1962, Acts of Parliament gaining Royal Assent during a session were cited as a chapter number in a session."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 ptime:Kingdom rdf:type owl:Class ;
@@ -227,21 +227,21 @@ ptime:recessInHouse rdf:type owl:ObjectProperty ;
 	
 ptime:regnalYearInReign rdf:type owl:ObjectProperty ;
 	rdfs:label "Regnal year in reign"@en ;
-	rdfs:comment "Relates a regnal year to the reign in which that regnal year takes place. A regnal year takes place in one reign."@en ;
+	rdfs:comment "Relates a regnal year to the reign in which that regnal year occurs. A regnal year occurs in one reign."@en ;
 	rdfs:domain ptime:RegnalYear ;
 	rdfs:range ptime:Reign ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-ptime:belongToRegnalYear rdf:type owl:ObjectProperty ;
+ptime:belongsToRegnalYear rdf:type owl:ObjectProperty ;
 	rdfs:label "Belongs to regnal year"@en ;
-	rdfs:comment "Relates a session in regnal year mapping to its regnal year."@en ;
+	rdfs:comment "Relates a 'session in regnal year' to its regnal year. A 'session in regnal year' belongs to one regnal year."@en ;
 	rdfs:domain ptime:SessionInRegnalYear ;
 	rdfs:range ptime:RegnalYear ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 ptime:belongToSession rdf:type owl:ObjectProperty ;
 	rdfs:label "Belongs to session"@en ;
-	rdfs:comment "Relates a session in regnal year mapping to its session."@en ;
+	rdfs:comment "Relates a 'session in regnal year' to its session. A 'session in regnal year' belongs to one session."@en ;
 	rdfs:domain ptime:SessionInRegnalYear ;
 	rdfs:range ptime:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
@@ -273,14 +273,14 @@ ptime:isPrintingDay rdf:type owl:DatatypeProperty ;
 	
 ptime:sessionOrderInRegnalYear rdf:type owl:DatatypeProperty ;
 	rdfs:label "Session order in regnal year"@en ;
-	rdfs:comment "The ordinality of a session within a regnal year, for example: the second session of XXXX."@en ;
+	rdfs:comment "The ordinality of a session within a regnal year, for example: the second session of the 24th regnal year in the reign of George III."@en ;
 	rdfs:domain ptime:SessionInRegnalYear ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 ptime:regnalYearOrderInSession rdf:type owl:DatatypeProperty ;
 	rdfs:label "Regnal year order in session"@en ;
-	rdfs:comment "The ordinality of a regnal year within a session, for example: the second regnal year of session XXXX."@en ;
+	rdfs:comment "The ordinality of a regnal year within a session, for example: the session of the United Kingdom Parliament spanning the fifth and sixth regnal years of the reign of William IV."@en ;
 	rdfs:domain ptime:SessionInRegnalYear ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
