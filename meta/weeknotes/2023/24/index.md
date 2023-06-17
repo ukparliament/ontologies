@@ -68,11 +68,3 @@ Anna's first Rush query came as a result of Library enquiry, the details we're p
 ## We did a seminar!
 
 Those that know us, will know we barely have a GCSE to rub together. Not that we've ever let that hold us back. On Friday, Anya, Jayne and Michael were pleased - nay, delighted - to give a seminar to a bunch of history and politics students at the University of Essex. The first seminar Michael ever remembers attending. It seemed to go quite well, though many of the attendees had cameras off so it's hard to know if they were listening or out in the garden soaking up the sun. Thanks for the invite [Theodore](https://twitter.com/konstadinides). We hope we did not bore anyone. Or come across as weird.
-
-
-
-
-
-
-
-
