@@ -1,0 +1,72 @@
+# 2023 - Week 24
+
+## Triaging treaties
+
+Fans of our treaty website - we know of at least one, but suspect the numbers could run into least double figures - will be well aware it's been a little poorly of late. A small tweak to a SPARQL query causing untold calamities in the data bagging error. Sometimes, results were returned, but at some of a snail's pace. On other occasions, the poor server would tire itself out and give, quite exhausted. That is now fixed.
+
+It got fixed because some other work we'd done on step collections had the unexpected side-effect of speeding up our queries dramatically. Look, exaptation in the wild, we shouted at our project managers, pointing furiously at Cynefin. But mostly it got fixed through the diligent efforts of Librarian Jayne. Whilst our Jianhan and Michael like to think they chipped in, Jayne flitted between data modelling - relational and graph, code specs, information management, project management and what people in these parts like to call '[comms](https://trello.com/c/SXcEtlBh/564-pre-laying-of-treaties)'. The number of emails she's fielded being quite ridiculous. Sometimes, we worry young Jayne may be headhunted. Though we suppose, having now done a good half decade at the intersection of the semantic web and delegated legislation, Jayne's as unemployable as the rest of us. Which is a comforting thought.
+
+The good news does not stop here. The treaty website is not only fixed but much improved. Other website tweaks - again managed by Jayne - mean we can now display parliamentary activity well before the actual treaty is [laid under the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/part/2). Whether that be ministerial statements on an agreement in principle, ministerial statements on the progress of negotiations, the announcement of consultations and so on and so forth. Check out our [UK-Maldives Free Trade Agreement page](https://treaties.parliament.uk/treaty/GS1MusJl/UKMaldives-Free-Trade-Agreement-unsigned) and you'll get the idea.
+
+In additional to accidentally fixing our queries, the step collection work also gives our crack team of librarians greater control over which steps appear on the timeline. And which do not. We've had a long-standing problem, whereby procedural steps that were necessary for the machines were not particularly informative for people. Why, for example, say a committee has considered and immediately after show the results of that consideration. The first step does add an awful lot. So now, our more noisy steps are hidden, our timelines are much cleaner and our user hopefully less confused.
+
+All these improvements are also in the pipeline for our statutory instruments website. All the work is done at our end and we only await a deployment gap in the all too busy schedule of our colleagues in Software Engineering. At which point, that site should also see faster queries, greater control and less noisy timelines.
+
+So delighted with all of this was Librarian Jayne, that she finally de-cloaked on Twitter, with an informative thread on the changes we've made an why. If you're interested in all things parliamentary procedure and semantic web - and if you're reading this and aren't, we can only apologise - give Jayne a follow. But do not, under any circumstances, poach her.
+
+## Integrating egg timing
+
+In other procedure model news, our Jianhan continues to make excellent progress on the integration of our beloved egg timer. This to automagically update SI and treaty scrutiny period end dates every time there's an unexpected change to sitting days. It's not a change that will make any visible difference to our user, but librarians are users too. And updating 100 clocks has never been seen as a particularly pleasant task.
+
+When we last spoke, Jianhan had done all the work in the procedure editor database. Since then, he's also done all the work in the procedure editor application code. Which means our team of librarians can now apply calculation styles to procedures and work packages and wrap statute-derived clocks between procedural steps. Next up on the Jianhan backlog is adding clock-related classes and properties to the data platform ontology and adjusting the orchestration to slurp the new data into the triple store. There's no actual reason - we've yet thought of - why it needs to be there, but, if a job's worth doing, it's worth doing proper. And, as step collections have taught us, you don't always know the uses you can put well-modelled, well-managed data to. Past that point, we'll need to test we haven't broken anything in website query world. And past that point, it only remains to stick a small pipe from the egg timer API to the procedure editor database and job's a good un. Top work, as ever, Jianhan.
+
+
+## Facts / figures
+
+Abiding strictly to stereotype, both our librarians and computational "experts" tend to be shy types, more used to the backstage than the footlights. Glamour jobs, like publishing briefings, tend to be left to elders and betters amongst the research community. That changed a little late last year, when responsibility for publishing Parliamentary Facts and Figures was handed over from the Parliament and Constitution Centre to team:Anya. Taking advice from statistician Carl on how best to publish spreadsheets, our crack team of librarians have now churned out three. The first two - on [Parliaments held away from Westminster](https://commonslibrary.parliament.uk/research-briefings/sn06471/) and [Meeting places of Parliament at Westminster](https://commonslibrary.parliament.uk/research-briefings/sn06470/) - were mostly refreshes. The latest effort - [Prayers against Statutory Instruments in the House of Commons since 1997](https://commonslibrary.parliament.uk/research-briefings/sn02569/) - required considerably more reworking. Let's just leave that there. The upshot being, Librarian Jayne has not only gained an advertisable Twitter URL, but also a [Commons' Library author page](https://commonslibrary.parliament.uk/authors/jayne-bosworth/). And no, she doesn't look like that.
+
+## New old search
+
+We are more than aware that our regular reader only really tunes in for the occasional links to our data flow diagrams. And things of beauty they are too. This time out, our data flow diagram for the open data platform - or data platform mk 4 as we like to call it - has gained a brand new grey box. Marked, for clarity, Search MVP. Yes. And sorry. We have started to say MVP now, though - not having MBAs - we can't say we're sure what that means. If we start saying 'lean', please shoot us.
+
+Anyway, if you squint at the little grey box, you'll get a pretty good idea of where our focus has been of late. Young Robert, in particular, is currently juggling four - possibly five - components in some hope of discovering how they fit together. There is the search application code itself - the thing that spits out the pixels our user sees. There is SOLR - our search index and search service. There is SES - an API to our somewhat confusingly named Ontology Manager, used to manage and store the Library Taxonomy. There is Poller - a thing that polls our triple store, spots changes and propagates them to SOLR. There may or may not be a fifth component in the shape of whatever sends MNIS data to SOLR. Though boss 'brarian Anya has some suspicion this all happens as part of Poller. Which does seem to make some sense. Investigations continue. Or will do when Young Robert returns from his Grand Tour.
+
+Anya continues to convene meetings with designer Graham, user researcher Chris and computational all-rounders Young Robert and Michael. Therein to chat page design. We think we have four page types to make: search results, object pages being the thing the search result items link to, the usual collection of 'meta' pages - about, privacy, content scope - and the search form itself. Rather than attempt to design an 'experience' or a full user journey, we've been trying to take a more domain driven design approach, first fleshing out the object pages according to the data attributes available. So what can we show for a research briefing, a written question, a written statement and so on. We hope, that by taking this approach, designing the results pages becomes a simple matter of what to transclude and what to ignore. And that designing the search form will be made much easier when all involved have a better idea of the materials to hand. We design the tree from its leaves to its twigs to its branches to its trunk, states Michael, exuding his usual zen-like tranquility. 
+
+In some attempt to bring design closer to data, Young Robert and Michael have made a first stab at a search interface  prototype. Which, for now, is really more of a prototype of a prototype of a prototype. Because our current version of SOLR is somewhat unstable - and because neither Robert nor Michael want furious librarians on their tails should they bring down the search service - they've knocked up a quick and dirty website to serve example copies of SOLR feeds. A second application takes these feeds and turns them into object and result pages. And a tiny bit of CSS, over on GitHub attempts to make the resulting pages look at least reasonable.
+
+Initial search interface efforts were based on SOLR XML and JSON dumps, but then Young Robert discovered SOLR can also spit out data as a Ruby object serialisation. This has two distinct benefits. First up, all the code they'd written to parse the XML and JSON could be safely binned, because the parsing is done for them. Less code in the world always being 'a good thing'. Especially when it's Michael's code. Second up, page rendering - with Michael's shonky parsing code stripped out - is a good 300ms faster. Not to be sniffed at.
+
+Next steps are getting the prototype of a prototype of a prototype to just be a prototype. Next week, we hope to be joined by a Ruby developer who we're hoping will take the prototype code and finesse it a little. At which point, we'll have a prototype of a prototype. Past that point, we hope to set up a shadow copy of SOLR that we can prod as hard as we like. The mocked up SOLR data website will then be switched off and the search interface code pointed at the shadow SOLR. At which point, we'll finally have an actual prototype. Nice.
+
+## Procedural cartography updates
+
+Not much in the way of map-making this week. We have come to rely on Omnigraffle for capturing clerkly brains as pixels, but, unfortunately, Omnigraffle is only available on a Mac. Given the cost of Apple toys, the Parliamentary Computational Section is - understandably - reluctant to hand out too many. Buying a whole machine to run a single application looks like extravagance and we'd hate to be thought of as extravagant types. Matters came to head late last year, when the Computational Section demanded the return of our librarian's Macs. Since then, options have been explored and Visio has been settled on. Which means poor Jayne is currently neck deep in pixels transferring our old drawings to new software. In the process training Librarians Claire and Ayesha to do likewise.
+
+Administrivia aside, Jayne and her computational helpmate Michael did finally meet up with Matt and Mike to read through and idiot check our motion cheat sheets. With ten stars to distribute, Matt and Mike went for the safe option of handing out nine. Still, Jayne and Michael were grateful. Since the meeting, both Matt and Mike have sent through a tidy or two. Which Jayne and Michael have not yet incorporated. A job for next week.
+
+## Model making
+
+Over in ontological world, our written statement models has finally been commented and joined the done pile alongside it's sibling - the making of a written statement model. The two models should be read in conjunction, or they probably won't much sense. That said, you probably also need a copy of our making available model propped open or they still won't make much sense. Such are the drawbacks of fag-packet sized models we suppose.
+
+The only other model change - at least that we can remember - was the addition to our time period model of a new class of regnal year - and a new class to join said years to sessions. Niche perhaps. But not unimportant.
+
+Since we finally polished off our paper model, assorted librarians have been scratching heads over the exact shape of our paper type taxonomy. In search of inspiration, Anya got in touch with Rik who is tasked with such matters over at the Governmental Computational Section. Unfortunately, it turned out the government's paper taxonomy is equally as messy as our own, if not worse. So it's back to the drawing board on that one. Thanks for your time, Rik.
+
+## Electioneering
+
+Over in team:Phil land, general election preparations continue, recent attention being firmly focussed on Librarian Emily's efforts to tidy House of Commons incumbency end reasons. Our end reason diagram went through yet another edit cycle, when all concerned came to the conclusion that elevation to the Lords is not in fact a reason why someone leaves the Commons, but a step subsequent to resignation. We have now informed Library colleagues of our plans for handling start and end dates, so that's another job ticked off.
+
+On the subject of elevation - or perhaps, more accurately, de-elevation - we know our software systems cope just fine with people moving from the Commons to the Lords. That being a frequently tested use case. We have less of a clue what might happen when the opposite journey is taken. With the prospect of Lord Frost standing in the next general election, we've flagged this as a test case to colleagues in Softare Engineering and 'de-elevation' has now entered the run book. Though we probably need a better name.
+
+## We did a seminar!
+
+Those that know us, will know we barely have a GCSE to rub together. Not that we've ever let that hold us back. On Friday, Anya, Jayne and Michael were pleased - nay, delighted - to give a seminar to a bunch of history and politics students at the University of Essex. The first seminar Michael ever remembers attending. It seemed to go quite well, though many of the attendees had cameras off so it's hard to know if they were listening or out in the garden soaking up the sun. Thanks for the invite Theodore. We hope we did not bore anyone. Or come across as weird.
+
+
+
+
+
+
+
+
