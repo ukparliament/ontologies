@@ -276,11 +276,11 @@ if the instrument has NOT already been rejected (either House)
 
 #### Can be tabled
 
-If approval motion extant
+If an instrument has been laid
 
 AND
 
-if there's NOT one extant
+if there's NOT a consideration motion extant
 
 AND
 
