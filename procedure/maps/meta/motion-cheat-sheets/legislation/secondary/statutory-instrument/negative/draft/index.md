@@ -149,7 +149,7 @@ if a question has NOT been put on a consideration motion
 > MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
-if the instrument has NOT already been rejected (either House) 
+if the instrument has NOT already been rejected (either House)
 
 #### Can be debated
 
@@ -302,6 +302,8 @@ if there has been a debate
 	If there's a take note motion extant
 )
 
+MK: says swap out the above for "If an instrument has been laid"
+
 AND
 
 If there's NOT one extant
@@ -310,7 +312,6 @@ AND
 
 if a question has NOT been put on a consideration motion
 
-> MK: Would Lords debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -325,7 +326,6 @@ if there has NOT been a debate
 
 AND
 
-> MK: Would Lords debate on a non-fatal if instrument rejected?
 if the instrument has NOT already been rejected (either House)
 
 #### Question can be put
@@ -338,7 +338,6 @@ if there's been a debate
 
 AND
 
-> MK: Would Lords debate on a non-fatal if instrument rejected?
 if the instrument has NOT already been rejected (either House)
 
 ## Cascades
