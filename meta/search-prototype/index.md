@@ -8,7 +8,7 @@ There is a [publicly available version of Parliamentary Search](https://search-m
 
 ## Data and content flow 
 
-The bulk of the data and content in Parliamentary Search originates in line of business systems in the procedural offices of the two Houses. Where APIs to these systems have not been built, some data is keyed into a system called <abbr title="Odds and Sods Information System">OASIS by</abbr> staff in IDMS in the Commons Library. Research Briefings from both Libraries are also included.
+The bulk of the data and content in Parliamentary Search originates in line of business systems in the procedural offices of the two Houses. Where APIs to these systems have not been built, some data is keyed into a system called <abbr title="Odds and Sods Information System">OASIS by</abbr> staff in IDMS. Research Briefings from both Libraries are also included.
 
 Where APIs exist, these send out change notifications to a service called Harvester. Harvester takes these notifications, transforms them to RDF and pushes data into the Search and Indexing triple store.
 
