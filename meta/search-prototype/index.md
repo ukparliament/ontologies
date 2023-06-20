@@ -49,7 +49,7 @@ At some point soon, we hope to have a shadow copy of SOLR running, at which poin
 
 CSS is hosted outside of Rails to support collaboration with colleagues in Customer Experience and Design. It’s [hosted on GitHub](https://github.com/ukparliament/design-system/blob/main/trrb.css) and served as GitHub pages. GitHub page build times mean pushed changes take time to propagate. You may wish to build CSS local to the Rails app and push to the external repo when happy.
 
-### Testing and acceptance
+## Testing and acceptance
 
 The search prototype application currently has no tests - sorry. Because the content available to Parliamentary Search is “bumpy” we need to document all the cases where certain data attributes are available and where they are not. Most of the domain knowledge for this lives in IDMS but we anticipate more will drop out as we explore the data and build out the views. We could spend time upfront documenting all these edge cases - many of which are not very “edgy” - but we wouldn’t be able to document everything without data exploration.
 
