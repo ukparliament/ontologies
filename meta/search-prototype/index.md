@@ -2,13 +2,13 @@
 
 ## Background
 
-Parliamentary Search is a service run by <abbr title="Indexing and Data Management Section">IDMS</abbr> in the House of Commons Library. It exists to provide a unified search over parliamentary material originating in line of business systems in the procedural offices of both Houses. It is only available to users on the parliamentary network. The user base are chiefly researchers in the Commons and Lords Libraries responding to enquiries originating from Members of both Houses, or in the course of preparing [research briefings](https://researchbriefings.parliament.uk/). It’s also used by Library front of House staff responding to requests from Members and by the staff of the procedural offices.
+Parliamentary Search is a service run by <abbr title="Indexing and Data Management Section">IDMS</abbr> in the House of Commons Library. It exists to provide a unified search over parliamentary material originating in line of business systems in the procedural offices of both Houses. It is only available to users on the parliamentary network. The user base are chiefly researchers in the Commons and Lords Libraries responding to enquiries originating from Members of both Houses, or preparing [research briefings](https://researchbriefings.parliament.uk/). It’s also used by Library front of House staff responding to requests from Members and by the staff of the procedural offices.
 
 There is a [publicly available version of Parliamentary Search](https://search-material.parliament.uk/), but functionality is limited to the point of being unusable.
 
 ## Data and content flow 
 
-The bulk of the data and content in Parliamentary Search originates in line of business systems in the procedural offices of the two Houses. Where APIs to these systems have not been built, some data is keyed into a system called <abbr title="Odds and Sods Information System">OASIS by</abbr> staff in IDMS. Research Briefings from both Libraries are also included.
+The bulk of the data and content in Parliamentary Search originates in line of business systems in the procedural offices of the two Houses. Where APIs to these systems have not been built, some data is keyed into a system called <abbr title="Odds and Sods Information System">OASIS</abbr> by staff in IDMS. Research briefings from both Libraries are also included.
 
 Where APIs exist, these send out change notifications to a service called Harvester. Harvester takes these notifications, transforms them to RDF and pushes data into the Search and Indexing triple store.
 
