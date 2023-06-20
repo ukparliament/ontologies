@@ -12,7 +12,7 @@ The bulk of the data and content in Parliamentary Search originates in line of b
 
 Where APIs exist, these send out change notifications to a service called Harvester. Harvester takes these notifications, transforms them to RDF and pushes data into the Search and Indexing triple store.
 
-Once the data is in the Search and Indexing triple store, it is subject indexed and procedurally indexed using the [House of Commons Thesaurus](https://explore.data.parliament.uk/?endpoint=terms) by staff in IDMS. Material is also interlinked again by IDMS staff, this being necessary because the source systems are not interlinked and related material is not related as data. For example: a written statement being a correction to an earlier answer where the statement is not linked to the answer and the answer is not linked to the statement.
+Once the data is in the Search and Indexing triple store, it is subject indexed and procedurally indexed using the [House of Commons Thesaurus](https://explore.data.parliament.uk/?endpoint=terms) by staff in IDMS. Material is also interlinked, again by IDMS staff, this being necessary because the source systems are not interlinked and related material is not related as data. For example: a written statement being a correction to an earlier answer where the statement is not linked to the answer and the answer is not linked to the statement.
 
 From the Search and Indexing triple store, changes are propagated by a system called Poller into a [SOLR](https://en.wikipedia.org/wiki/Apache_Solr) search index.
 
