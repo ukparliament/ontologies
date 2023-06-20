@@ -2,7 +2,7 @@
 
 ## Background
 
-Parliamentary Search is a service run by the  <abbr title="Indexing and Data Management Section">IDMS</abbr> in the House of Commons Library. It exists to provide a unified search over parliamentary material originating in line of business systems in the procedural offices of both Houses. It is only available to users on the parliamentary network. The user base are chiefly researchers in the Commons and Lords Libraries responding to enquiries originating from Members of both Houses, or in the course of preparing [research briefings](https://researchbriefings.parliament.uk/). It’s also used by Library front of House staff responding to requests from Members and by the staff of the procedural offices.
+Parliamentary Search is a service run by <abbr title="Indexing and Data Management Section">IDMS</abbr> in the House of Commons Library. It exists to provide a unified search over parliamentary material originating in line of business systems in the procedural offices of both Houses. It is only available to users on the parliamentary network. The user base are chiefly researchers in the Commons and Lords Libraries responding to enquiries originating from Members of both Houses, or in the course of preparing [research briefings](https://researchbriefings.parliament.uk/). It’s also used by Library front of House staff responding to requests from Members and by the staff of the procedural offices.
 
 There is a [publicly available version of Parliamentary Search](https://search-material.parliament.uk/), but functionality is limited to the point of being unusable.
 
