@@ -58,7 +58,7 @@
     <main>
       <h1>Oral contribution ontology</h1>
 
-      <p id="description">A model describing the reporting of oral contributions and events taking place during parliamentary proceedings.</p>
+      <p id="description">A model describing the reporting of oral contributions to a parliamentary proceeding.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -71,25 +71,23 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Action">
-          <h3>Class <a href="#Action">Action</a></h3>
-
-          <p>A non-verbal report of actions taking place during parliamentary proceedings, for example: House rises.</p>
-           <p>
-            Superclasses  &middot; Event           </p>
-        </article>
         <article class="class" id="ContributorPresence">
           <h3>Class <a href="#ContributorPresence">Contributor presence</a></h3>
 
-          <p>The presence of a contributor during a parliamentary proceeding, being either physically present or virtually present.</p>
+          <p>The presence of a contributor at a parliamentary proceeding, being either physically present or virtually present.</p>
          </article>
         <article class="class" id="CreditedOralContribution">
           <h3>Class <a href="#CreditedOralContribution">Credited oral contribution</a></h3>
 
-          <p>A report of a verbal contribution to proceedings in Parliament made by a known person incumbent in a position.</p>
+          <p>A verbal contribution to a parliamentary proceeding made by an identified person, being incumbent in a position.</p>
            <p>
             Superclasses  &middot; OralContribution           </p>
         </article>
+        <article class="class" id="CreditedOralContributionType">
+          <h3>Class <a href="#CreditedOralContributionType">Credited oral contribution type</a></h3>
+
+          <p>The type of a credited oral contribution, for example: an oral question, a maiden speech, a point of order, a Ministerial Statement or an intervention.</p>
+         </article>
         <article class="class" id="Event">
           <h3>Class <a href="#Event">Event</a></h3>
 
@@ -103,19 +101,14 @@
         <article class="class" id="OralContribution">
           <h3>Class <a href="#OralContribution">Oral contribution</a></h3>
 
-          <p>A report of a verbal contribution to proceedings in Parliament.</p>
+          <p>A verbal contribution to a parliamentary proceeding.</p>
            <p>
             Superclasses  &middot; Event           </p>
         </article>
-        <article class="class" id="OralContributionType">
-          <h3>Class <a href="#OralContributionType">Oral contribution type</a></h3>
-
-          <p>The type of an oral contributions, for example: a maiden speech, a point of order, a Ministerial Statement, an intervention.</p>
-         </article>
         <article class="class" id="UncreditedOralContribution">
           <h3>Class <a href="#UncreditedOralContribution">Uncredited oral contribution</a></h3>
 
-          <p>A report of a verbal contribution to proceedings in Parliament made by an unknown person or persons. This may be a single person who the Hansard reporters failed to identifier or a contribution made by more than one person.</p>
+          <p>A verbal contribution to a parliamentary proceeding made by a person or persons who are not identified.</p>
            <p>
             Superclasses  &middot; OralContribution           </p>
         </article>
@@ -133,7 +126,7 @@
             >
           </h3>
 
-           <p>Relates a credited oral contribution to the incumbency, in a position, of the person reported as having made that contribution. A credited oral contribution is contributed by one incumbency.</p>
+           <p>Relates a credited oral contribution to the incumbency - in a position - of the person identified as having made that contribution. A credited oral contribution is made by a person in one incumbency.</p>
 
           <p>
             <a href="#CreditedOralContribution"
@@ -141,6 +134,25 @@
             >
             &mdash; Contributed by &mdash;
             <a href="#Incumbency">Incumbency</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="creditedOralContributionTypeParent">
+          <h3>
+            Object property
+            <a href="#creditedOralContributionTypeParent"
+              >Credited oral contribution type parent</a
+            >
+          </h3>
+
+           <p>Relates a credited oral contribution type to its parent type, for example: Ministerial Statements having a parent type of Oral Statements. A credited oral contribution type has one parent type, or none. A credited oral contribution type has one or more child types, or none.</p>
+
+          <p>
+            <a href="#OralContributionType"
+              >OralContributionType</a
+            >
+            &mdash; Credited oral contribution type parent &mdash;
+            <a href="#OralContributionType">OralContributionType</a>
           </p>
         </article>
 
@@ -152,7 +164,7 @@
             >
           </h3>
 
-           <p>Relates a credited oral contribution to the presence of the person making that contribution. A credited oral contribution has one value for its contributor&#39;s presence.</p>
+           <p>Relates a credited oral contribution to the presence of the person making that contribution. A credited oral contribution has one type of presence for the contributor.</p>
 
           <p>
             <a href="#CreditedOralContribution"
@@ -171,14 +183,14 @@
             >
           </h3>
 
-           <p>Relates an oral contribution to its type. An oral contribution has one type.</p>
+           <p>Relates an oral contribution to its type. An oral contribution has one or more types. For example: an oral contribution being both an intervention and on a point of order.</p>
 
           <p>
-            <a href="#OralContribution"
-              >OralContribution</a
+            <a href="#CreditedOralContribution"
+              >CreditedOralContribution</a
             >
             &mdash; Has oral contribution type &mdash;
-            <a href="#OralContributionType">OralContributionType</a>
+            <a href="#CreditedOralContributionType">CreditedOralContributionType</a>
           </p>
         </article>
 
@@ -198,25 +210,6 @@
             >
             &mdash; In reply to &mdash;
             <a href="#CreditedOralContribution">CreditedOralContribution</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="oralContributionTypeParent">
-          <h3>
-            Object property
-            <a href="#oralContributionTypeParent"
-              >Oral contribution type parent</a
-            >
-          </h3>
-
-           <p>Relates an oral contribution to its parent, for example: a Ministerial Statement having a parent of Statement. An oral contribution type has one parent, or none. An oral contribution type has one or more children, or none.</p>
-
-          <p>
-            <a href="#OralContributionType"
-              >OralContributionType</a
-            >
-            &mdash; Oral contribution type parent &mdash;
-            <a href="#OralContributionType">OralContributionType</a>
           </p>
         </article>
 
@@ -243,20 +236,6 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="reportedAction">
-          <h3>
-            Data property
-            <a href="#reportedAction">Reported action</a>
-          </h3>
-
-          <p>Relates an action to reported text of that action.</p>
-
-          <p>
-            Action &mdash; Reported action &mdash;
-            langString
-          </p>
-        </article>
-
         <article class="dataproperty" id="reportedSpeech">
           <h3>
             Data property
@@ -275,10 +254,6 @@
          <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>Action</td>
-            <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>Event</td>
-          </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>OralContribution</td>
             <td>/<wbr>ontologies/<wbr>oral-contribution/<wbr>Event</td>
@@ -367,13 +342,13 @@
 
       <p id="makers">
         Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-   &middot; Claire Searle    &middot; Anya Somerville    &middot; Jayne Sunley        </p>
+   &middot; Claire Searle           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville    &middot; Jayne Sunley        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2023-06-20 11:52:00.209158 from a
+        Generated 2023-06-28 12:47:36.975838 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oral-contribution/oral-contribution-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../oral-contribution/oral-contribution-ontology.ttl"
