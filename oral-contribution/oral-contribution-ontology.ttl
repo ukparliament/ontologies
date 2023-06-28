@@ -34,16 +34,16 @@ oral-contribution:OralContribution rdf:type owl:Class ;
 	rdfs:comment "A verbal contribution to a parliamentary proceeding."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
-oral-contribution:CreditedOralContribution rdf:type owl:Class ;
-	rdfs:subClassOf oral-contribution:OralContribution ;
-	rdfs:label "Credited oral contribution"@en ;
-	rdfs:comment "A verbal contribution to a parliamentary proceeding made by an identified person, being incumbent in a position."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
-	
 oral-contribution:UncreditedOralContribution rdf:type owl:Class ;
 	rdfs:subClassOf oral-contribution:OralContribution ;
 	rdfs:label "Uncredited oral contribution"@en ;
 	rdfs:comment "A verbal contribution to a parliamentary proceeding made by a person or persons who are not identified."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:CreditedOralContribution rdf:type owl:Class ;
+	rdfs:subClassOf oral-contribution:OralContribution ;
+	rdfs:label "Credited oral contribution"@en ;
+	rdfs:comment "A verbal contribution to a parliamentary proceeding made by an identified person, being incumbent in a position."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 oral-contribution:CreditedOralContributionType rdf:type owl:Class ;
@@ -89,8 +89,8 @@ oral-contribution:hasOralContributionType rdf:type owl:ObjectProperty ;
 oral-contribution:creditedOralContributionTypeParent rdf:type owl:ObjectProperty ;
 	rdfs:label "Credited oral contribution type parent"@en ;
 	rdfs:comment "Relates a credited oral contribution type to its parent type, for example: Ministerial Statements having a parent type of Oral Statements. A credited oral contribution type has one parent type, or none. A credited oral contribution type has one or more child types, or none."@en ;
-	rdfs:domain oral-contribution:OralContributionType ;
-	rdfs:range oral-contribution:OralContributionType ;
+	rdfs:domain oral-contribution:CreditedOralContributionType ;
+	rdfs:range oral-contribution:CreditedOralContributionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 	
