@@ -11,12 +11,12 @@
     dcterms:title "Oral contribution ontology"@en ;
     dcterms:created "2023-05-31"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing the reporting of oral contributions and events taking place during parliamentary proceedings."@en ;
+    dcterms:description "A model describing the reporting of oral contributions to a parliamentary proceeding."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/oral-contribution/oral-contribution.svg> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
-		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Claire Searle" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ],
 	    [ foaf:name "Jayne Sunley" ].
 
@@ -27,34 +27,28 @@ oral-contribution:Event rdf:type owl:Class ;
 	rdfs:label "Event"@en ;
 	rdfs:comment "An event, taking place in time and space."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
-	
-oral-contribution:Action rdf:type owl:Class ;
-	rdfs:subClassOf oral-contribution:Event ;
-	rdfs:label "Action"@en ;
-	rdfs:comment "A non-verbal report of actions taking place during parliamentary proceedings, for example: House rises."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 
 oral-contribution:OralContribution rdf:type owl:Class ;
 	rdfs:subClassOf oral-contribution:Event ;
 	rdfs:label "Oral contribution"@en ;
-	rdfs:comment "A report of a verbal contribution to proceedings in Parliament."@en ;
+	rdfs:comment "A verbal contribution to a parliamentary proceeding."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 oral-contribution:CreditedOralContribution rdf:type owl:Class ;
 	rdfs:subClassOf oral-contribution:OralContribution ;
 	rdfs:label "Credited oral contribution"@en ;
-	rdfs:comment "A report of a verbal contribution to proceedings in Parliament made by a known person incumbent in a position."@en ;
+	rdfs:comment "A verbal contribution to a parliamentary proceeding made by an identified person, being incumbent in a position."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 oral-contribution:UncreditedOralContribution rdf:type owl:Class ;
 	rdfs:subClassOf oral-contribution:OralContribution ;
 	rdfs:label "Uncredited oral contribution"@en ;
-	rdfs:comment "A report of a verbal contribution to proceedings in Parliament made by an unknown person or persons. This may be a single person who the Hansard reporters failed to identifier or a contribution made by more than one person."@en ;
+	rdfs:comment "A verbal contribution to a parliamentary proceeding made by a person or persons who are not identified."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
-oral-contribution:OralContributionType rdf:type owl:Class ;
-	rdfs:label "Oral contribution type"@en ;
-	rdfs:comment "The type of an oral contributions, for example: a maiden speech, a point of order, a Ministerial Statement, an intervention."@en ;
+oral-contribution:CreditedOralContributionType rdf:type owl:Class ;
+	rdfs:label "Credited oral contribution type"@en ;
+	rdfs:comment "The type of a credited oral contribution, for example: an oral question, a maiden speech, a point of order, a Ministerial Statement or an intervention."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 oral-contribution:Incumbency rdf:type owl:Class ;
@@ -64,26 +58,44 @@ oral-contribution:Incumbency rdf:type owl:Class ;
 	
 oral-contribution:ContributorPresence rdf:type owl:Class ;
 	rdfs:label "Contributor presence"@en ;
-	rdfs:comment "The presence of a contributor during a parliamentary proceeding, being either physically present or virtually present."@en ;
+	rdfs:comment "The presence of a contributor at a parliamentary proceeding, being either physically present or virtually present."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
-	
-				
+
+			
 
 #######  Object properties #####
+
+oral-contribution:contributedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Contributed by"@en ;
+	rdfs:comment "Relates a credited oral contribution to the incumbency - in a position - of the person identified as having made that contribution. A credited oral contribution is made by a person in one incumbency."@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:hasContributorPresence rdf:type owl:ObjectProperty ;
+	rdfs:label "Has contributor presence"@en ;
+	rdfs:comment "Relates a credited oral contribution to the presence of the person making that contribution. A credited oral contribution has one type of presence for the contributor."@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:ContributorPresence ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 oral-contribution:hasOralContributionType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has oral contribution type"@en ;
-	rdfs:comment "Relates an oral contribution to its type. An oral contribution has one type."@en ;
-	rdfs:domain oral-contribution:OralContribution ;
-	rdfs:range oral-contribution:OralContributionType ;
+	rdfs:comment "Relates an oral contribution to its type. An oral contribution has one or more types. For example: an oral contribution being both an intervention and on a point of order."@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:CreditedOralContributionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
-oral-contribution:oralContributionTypeParent rdf:type owl:ObjectProperty ;
-	rdfs:label "Oral contribution type parent"@en ;
-	rdfs:comment "Relates an oral contribution to its parent, for example: a Ministerial Statement having a parent of Statement. An oral contribution type has one parent, or none. An oral contribution type has one or more children, or none."@en ;
+oral-contribution:creditedOralContributionTypeParent rdf:type owl:ObjectProperty ;
+	rdfs:label "Credited oral contribution type parent"@en ;
+	rdfs:comment "Relates a credited oral contribution type to its parent type, for example: Ministerial Statements having a parent type of Oral Statements. A credited oral contribution type has one parent type, or none. A credited oral contribution type has one or more child types, or none."@en ;
 	rdfs:domain oral-contribution:OralContributionType ;
 	rdfs:range oral-contribution:OralContributionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+	
+							# edited to here
+	
 	
 oral-contribution:resumesFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Resumes from"@en ;
@@ -99,30 +111,11 @@ oral-contribution:inReplyTo rdf:type owl:ObjectProperty ;
 	rdfs:range oral-contribution:CreditedOralContribution ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
-oral-contribution:contributedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Contributed by"@en ;
-	rdfs:comment "Relates a credited oral contribution to the incumbency, in a position, of the person reported as having made that contribution. A credited oral contribution is contributed by one incumbency."@en ;
-	rdfs:domain oral-contribution:CreditedOralContribution ;
-	rdfs:range oral-contribution:Incumbency ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
-	
-oral-contribution:hasContributorPresence rdf:type owl:ObjectProperty ;
-	rdfs:label "Has contributor presence"@en ;
-	rdfs:comment "Relates a credited oral contribution to the presence of the person making that contribution. A credited oral contribution has one value for its contributor's presence."@en ;
-	rdfs:domain oral-contribution:CreditedOralContribution ;
-	rdfs:range oral-contribution:ContributorPresence ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+
 	
 				
 
 #######  Data properties #####
-
-oral-contribution:reportedAction rdf:type owl:DatatypeProperty ;
-	rdfs:label "Reported action"@en ;
-	rdfs:comment "Relates an action to reported text of that action."@en ;
-	rdfs:domain oral-contribution:Action ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
 oral-contribution:reportedSpeech rdf:type owl:DatatypeProperty ;
 	rdfs:label "Reported speech"@en ;
