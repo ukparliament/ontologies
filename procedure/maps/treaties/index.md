@@ -2,7 +2,7 @@
 
 ## [CRaG treaty procedure [PDF]](crag-treaties/crag-treaties.pdf)
 
-Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-treaties.svg)
+Dot file: [dot](crag-treaties/crag-treaties.dot) 
 
 ### CRaG treaty component procedures
 
