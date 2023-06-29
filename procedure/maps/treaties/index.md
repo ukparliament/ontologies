@@ -8,7 +8,7 @@ Dot file: [dot](crag-treaties/crag-treaties.dot) / [svg](crag-treaties/crag-trea
 
 #### [Pre-laying scrutiny](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny.pdf)
 
-Dot file: [dot](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny.dot) / [svg](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny.svg)
+Dot file: [dot](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny.dot) 
 
 #### Committees
 
