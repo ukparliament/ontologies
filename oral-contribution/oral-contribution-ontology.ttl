@@ -65,6 +65,20 @@ oral-contribution:ContributorPresence rdf:type owl:Class ;
 
 #######  Object properties #####
 
+oral-contribution:resumesFrom rdf:type owl:ObjectProperty ;
+	rdfs:label "Resumes from"@en ;
+	rdfs:comment "Relates a credited oral contribution to the credited oral contribution it resumes from, for example: an answer resuming following an intervention. A credited oral contribution may resume from one credited oral contribution. A credited oral contribution may be resumed by one credited oral contribution."@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:CreditedOralContribution ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+	
+oral-contribution:inReplyTo rdf:type owl:ObjectProperty ;
+	rdfs:label "In reply to"@en ;
+	rdfs:comment "Relates a credited oral contribution to the credited oral contribution it is in reply to, for example: an answer being in reply to a question. A credited oral contribution may be a reply to one credited oral contribution. A credited oral contribution may have one credited oral contribution in reply."@en ;
+	rdfs:domain oral-contribution:CreditedOralContribution ;
+	rdfs:range oral-contribution:CreditedOralContribution ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
+
 oral-contribution:contributedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Contributed by"@en ;
 	rdfs:comment "Relates a credited oral contribution to the incumbency - in a position - of the person identified as having made that contribution. A credited oral contribution is made by a person in one incumbency."@en ;
@@ -93,33 +107,13 @@ oral-contribution:creditedOralContributionTypeParent rdf:type owl:ObjectProperty
 	rdfs:range oral-contribution:CreditedOralContributionType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
 	
-	
-							# edited to here
-	
-	
-oral-contribution:resumesFrom rdf:type owl:ObjectProperty ;
-	rdfs:label "Resumes from"@en ;
-	rdfs:comment "Relates a credited oral contribution to the credited oral contribution it resumes from, for example: an answer resuming following an intervention. A credited oral contribution may resume from one credited oral contribution, or none. A credited oral contribution may be resumed by one credited oral contribution, or none"@en ;
-	rdfs:domain oral-contribution:CreditedOralContribution ;
-	rdfs:range oral-contribution:CreditedOralContribution ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
-	
-oral-contribution:inReplyTo rdf:type owl:ObjectProperty ;
-	rdfs:label "In reply to"@en ;
-	rdfs:comment "Relates a credited oral contribution to the credited oral contribution it is in reply to, for example: an answer being in reply to a question. A credited oral contribution may be in reply to one credited oral contribution, or none. A credited oral contribution may be replied to by one credited oral contribution, or none"@en ;
-	rdfs:domain oral-contribution:CreditedOralContribution ;
-	rdfs:range oral-contribution:CreditedOralContribution ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
-	
 
-	
-				
 
 #######  Data properties #####
 	
 oral-contribution:reportedSpeech rdf:type owl:DatatypeProperty ;
 	rdfs:label "Reported speech"@en ;
-	rdfs:comment "Relates an oral contribution to the reported text of that contribution. The reported text may not be a verbatim transcript."@en ;
+	rdfs:comment "Relates an oral contribution to the reported text of that contribution."@en ;
 	rdfs:domain oral-contribution:OralContribution ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oral-contribution/> .
