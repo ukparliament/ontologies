@@ -146,7 +146,6 @@ AND
 
 if a question has NOT been put on a consideration motion
 
-> MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -159,7 +158,6 @@ AND
 
 if there has NOT been a debate
 
-> MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House)
@@ -172,7 +170,6 @@ AND
 
 if there's been a debate
 
-> MH: Would Commons debate on a non-fatal if instrument rejected?
 AND
 
 if the instrument has NOT already been rejected (either House)
