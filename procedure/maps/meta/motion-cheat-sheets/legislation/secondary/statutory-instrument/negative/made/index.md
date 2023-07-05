@@ -91,25 +91,7 @@ if the clock has NOT run out
 
 #### Can be tabled
 
-If a non-fatal is extant
-
-OR (
-
-	if a fatal is extant
-	
-	AND
-
-	if the clock has NOT run out
-
-	AND
-
-	if the instrument has NOT already been rejected (either House)
-
-)
-
-AND 
-
-if there is NOT a motion to refer extant
+If there is NOT a motion to refer extant
 
 AND 
 
@@ -118,19 +100,6 @@ if there is NOT a motion to refer agreed
 #### Question can be put
 
 If motion to refer extant
-
-AND (
-
-	if fatal extant
-		
-	AND
-		
-	if the instrument has NOT already been rejected (either House)
-
-	AND
-
-	if the clock has NOT run out
-)
 
 ### Motion to consider
 
