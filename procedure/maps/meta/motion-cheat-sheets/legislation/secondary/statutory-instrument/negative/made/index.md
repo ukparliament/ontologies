@@ -256,48 +256,6 @@ AND
 
 if there has been a debate
 
-### Motion to consider
-
-#### Can be tabled
-
-If there's a non-fatal motion extant
-		
-AND
-		
-if the instrument has NOT already been rejected (either House)
-
-AND
-
-If there's NOT a motion to consider extant
-
-AND
-
-if a question has NOT been put on a consideration motion
-
-#### Can be debated
-
-If consideration motion extant
-
-AND
-
-if there has NOT been a debate
-
-AND
-
-if the instrument has NOT already been rejected (either House)
-
-#### Question can be put
-
-If consideration motion extant
-
-AND
-
-if there's been a debate
-
-AND
-
-if the instrument has NOT already been rejected (either House)
-
 ## Cascades
 
 ### Commons

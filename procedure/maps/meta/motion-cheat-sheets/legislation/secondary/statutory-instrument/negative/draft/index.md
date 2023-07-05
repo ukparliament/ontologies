@@ -256,56 +256,6 @@ AND
 
 if there has been a debate
 
-### Motion to consider
-
-#### Can be tabled
-
-(
-	If there's a non-fatal motion extant
-
-	OR
-
-	If there's a take note motion extant
-)
-
-MK: says swap out the above for "If an instrument has been laid"
-
-AND
-
-If there's NOT one extant
-
-AND
-
-if a question has NOT been put on a consideration motion
-
-AND
-
-if the instrument has NOT already been rejected (either House)
-
-#### Can be debated
-
-If consideration motion extant
-
-AND
-
-if there has NOT been a debate
-
-AND
-
-if the instrument has NOT already been rejected (either House)
-
-#### Question can be put
-
-If consideration motion extant
-
-AND
-
-if there's been a debate
-
-AND
-
-if the instrument has NOT already been rejected (either House)
-
 ## Cascades
 
 ### Commons
