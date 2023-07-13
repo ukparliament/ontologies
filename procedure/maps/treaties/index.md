@@ -26,7 +26,7 @@ Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) / [svg](crag-treat
 
 ##### [International Trade Committee procedure [PDF]](crag-treaties/components/itc/itc.pdf)
 
-Dot file: [dot](crag-treaties/components/itc/itc.dot) / [svg](crag-treaties/components/itc/itc.svg)
+Dot file: [dot](crag-treaties/components/itc/itc.dot) 
 
 ##### [Joint Committee on Human Rights procedure [PDF]](crag-treaties/components/jchr/jchr.pdf)
 
