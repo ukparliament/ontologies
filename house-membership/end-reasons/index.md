@@ -1,4 +1,4 @@
-# House of Commons House membership end reasons
+# House membership end reasons
 
 Label | Scope note | Is Commons | Is Lords
 Dissolution | End of a [parliament period](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e177) | True | False
@@ -39,6 +39,6 @@ Resignation (Northstead): Member resigned from the Commons by appointment to the
 
 
 
-## Diagram
+## House of Commons membership end reasons sketch
 
-[![House of Commons House membership end reasons](end-reasons.svg end-reasons.svg)](end-reasons.svg end-reasons.svg)
+[![House of Commons House membership end reasons](end-reasons.svg)](end-reasons.svg)
