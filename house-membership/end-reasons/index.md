@@ -5,6 +5,7 @@ Dissolution | End of a [parliament period](https://ukparliament.github.io/ontolo
 Death | Death in service | True | True
 Elevation without resignation | Where a Member has been made a Peer, and thereby loses their seat in the Commons | True | False
 Expulsion | Determined unfit for Membership by the House | True | True
+Recalled | Member removed before the end of their term following a successful recall petition under [section 15 of the Recall of MPs Act 2015](https://www.legislation.gov.uk/ukpga/2015/25/section/15/enacted) | True | False
 Resignation (Chiltern) | Resignation from the House of Commons by appointment to the Crown Steward and Bailiff of the Chiltern Hundreds under [section 4 of the House of Commons Disqualification Act 1975](https://www.legislation.gov.uk/ukpga/1975/24/section/4) | True | False
 Resignation (Northstead) | Resignation from the House of Commons by appointment to the Crown Steward and Bailiff of the Manor of Northstead under [section 4 of the House of Commons Disqualification Act 1975](https://www.legislation.gov.uk/ukpga/1975/24/section/4) | True | False
 
