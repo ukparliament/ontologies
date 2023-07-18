@@ -1,7 +1,7 @@
 # House of Commons House membership end reasons
 
 Label | Scope note | Is Commons | Is Lords
-Dissolution | End of a parliament period | True | False
+Dissolution | End of a [parliament period](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e177) | True | False
 Death | Death in service | True | True
 Elevation without resignation | Where a Member has been made a Peer, and thereby loses their seat in the Commons | True | False
 Expulsion | Determined unfit for Membership by the House | True | True
