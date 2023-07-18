@@ -41,4 +41,4 @@ Resignation (Northstead): Member resigned from the Commons by appointment to the
 
 ## Diagram
 
-!["House of Commons House membership end reasons"](end-reasons.svg end-reasons.svg)
+[!["House of Commons House membership end reasons"]](end-reasons.svg end-reasons.svg)
