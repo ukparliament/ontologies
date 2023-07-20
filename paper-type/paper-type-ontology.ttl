@@ -11,7 +11,7 @@
     dcterms:title "Paper type ontology"@en ;
     dcterms:created "2023-01-19"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description ""@en ;
+    dcterms:description "A model describing the relationships between types of papers."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/paper-type/paper-type.svg> ;
 	foaf:maker
 		[ foaf:name "Jayne Bosworth" ],
@@ -38,13 +38,13 @@ papertype:TreatyExpression rdf:type owl:Class ;
 papertype:ExplanatoryMemorandumExpression rdf:type owl:Class ;
 	rdfs:subClassOf papertype:PaperExpression ;
 	rdfs:label "Explanatory memorandum expression"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A paper intended to explain the purpose, policy objectives and policy implications of an instrument being subject to parliamentary procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 papertype:ExplanatoryNoteExpression rdf:type owl:Class ;
 	rdfs:subClassOf papertype:PaperExpression ;
 	rdfs:label "Explanatory note expression"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A paper intended to explain the purpose of a bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 papertype:BillExpression rdf:type owl:Class ;
@@ -67,44 +67,44 @@ papertype:EnabledThing rdf:type owl:Class ;
 papertype:ImpactAssessmentExpression rdf:type owl:Class ;
 	rdfs:subClassOf papertype:PaperExpression ;
 	rdfs:label "Impact assessment expression"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A paper, provided by the government, intended to set out the objectives of policy proposals and the costs, benefits and risks of different ways of achieving those objectives."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
-	
-	
-	
+		
+		
+		
 #######  Object properties ##### 
 	
 papertype:enabledThingHasImpactAssessment rdf:type owl:ObjectProperty ;
 	rdfs:label "Enabled thing has impact assessment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an enabled thing to the impact assessment for that thing. An enabled thing has one or more impact assessments, or none."@en ;
 	rdfs:domain papertype:EnabledThing ;
 	rdfs:range papertype:ImpactAssessmentExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 papertype:treatyHasExplanatoryMemorandum rdf:type owl:ObjectProperty ;
 	rdfs:label "Treaty has explanatory memorandum"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a treaty expression to the explanatory memorandum for that treaty expression. A treaty expression has one or more explanatory memoranda, or none."@en ;
 	rdfs:domain papertype:TreatyExpression ;
 	rdfs:range papertype:ExplanatoryMemorandumExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 papertype:enabledThingHasExplanatoryMemorandum rdf:type owl:ObjectProperty ;
 	rdfs:label "Enabled thing has explanatory memorandum"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an enabled thing to the explanatory memorandum for that thing. An enabled thing has one or more explanatory memoranda, or none."@en ;
 	rdfs:domain papertype:EnabledThing ;
 	rdfs:range papertype:ExplanatoryMemorandumExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
-papertype:billHasExplanatoryNote rdf:type owl:ObjectProperty ;
-	rdfs:label "Bill has explanatory note"@en ;
-	rdfs:comment ""@en ;
+papertype:hasExplanatoryNote rdf:type owl:ObjectProperty ;
+	rdfs:label "Has explanatory note"@en ;
+	rdfs:comment "Relates a bill expression to the explanatory note for that expression. A bill expression has one or more explanatory notes, or none."@en ;
 	rdfs:domain papertype:BillExpression ;
 	rdfs:range papertype:ExplanatoryNoteExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
 	
 papertype:billHasImpactAssessment rdf:type owl:ObjectProperty ;
 	rdfs:label "Bill has impact assessment"@en ;
-	rdfs:comment "Bill work can zero, one or many impact assessments over time."@en ;
+	rdfs:comment "Relates a bill work to the impact assessment for that work. A bill work has one or more impact assessments, or none."@en ;
 	rdfs:domain papertype:BillWork ;
 	rdfs:range papertype:ImpactAssessmentExpression ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/paper-type/> .
