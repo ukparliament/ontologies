@@ -58,7 +58,7 @@
     <main>
       <h1>Paper type ontology</h1>
 
-      <p id="description"></p>
+      <p id="description">A model describing the relationships between types of papers.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -92,18 +92,21 @@
         <article class="class" id="ExplanatoryMemorandumExpression">
           <h3>Class <a href="#ExplanatoryMemorandumExpression">Explanatory memorandum expression</a></h3>
 
+          <p>A paper intended to explain the purpose, policy objectives and policy implications of an instrument being subject to parliamentary procedure.</p>
            <p>
             Superclasses  &middot; PaperExpression           </p>
         </article>
         <article class="class" id="ExplanatoryNoteExpression">
           <h3>Class <a href="#ExplanatoryNoteExpression">Explanatory note expression</a></h3>
 
+          <p>A paper intended to explain the purpose of a bill.</p>
            <p>
             Superclasses  &middot; PaperExpression           </p>
         </article>
         <article class="class" id="ImpactAssessmentExpression">
           <h3>Class <a href="#ImpactAssessmentExpression">Impact assessment expression</a></h3>
 
+          <p>A paper, provided by the government, intended to set out the objectives of policy proposals and the costs, benefits and risks of different ways of achieving those objectives.</p>
            <p>
             Superclasses  &middot; PaperExpression           </p>
         </article>
@@ -125,24 +128,6 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="billHasExplanatoryNote">
-          <h3>
-            Object property
-            <a href="#billHasExplanatoryNote"
-              >Bill has explanatory note</a
-            >
-          </h3>
-
- 
-          <p>
-            <a href="#BillExpression"
-              >BillExpression</a
-            >
-            &mdash; Bill has explanatory note &mdash;
-            <a href="#ExplanatoryNoteExpression">ExplanatoryNoteExpression</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="billHasImpactAssessment">
           <h3>
             Object property
@@ -151,7 +136,7 @@
             >
           </h3>
 
-           <p>Bill work can zero, one or many impact assessments over time.</p>
+           <p>Relates a bill work to the impact assessment for that work. A bill work has one or more impact assessments, or none.</p>
 
           <p>
             <a href="#BillWork"
@@ -170,7 +155,8 @@
             >
           </h3>
 
- 
+           <p>Relates an enabled thing to the explanatory memorandum for that thing. An enabled thing has one or more explanatory memoranda, or none.</p>
+
           <p>
             <a href="#EnabledThing"
               >EnabledThing</a
@@ -188,13 +174,33 @@
             >
           </h3>
 
- 
+           <p>Relates an enabled thing to the impact assessment for that thing. An enabled thing has one or more impact assessments, or none.</p>
+
           <p>
             <a href="#EnabledThing"
               >EnabledThing</a
             >
             &mdash; Enabled thing has impact assessment &mdash;
             <a href="#ImpactAssessmentExpression">ImpactAssessmentExpression</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasExplanatoryNote">
+          <h3>
+            Object property
+            <a href="#hasExplanatoryNote"
+              >Has explanatory note</a
+            >
+          </h3>
+
+           <p>Relates a bill expression to the explanatory note for that expression. A bill expression has one or more explanatory notes, or none.</p>
+
+          <p>
+            <a href="#BillExpression"
+              >BillExpression</a
+            >
+            &mdash; Has explanatory note &mdash;
+            <a href="#ExplanatoryNoteExpression">ExplanatoryNoteExpression</a>
           </p>
         </article>
 
@@ -206,7 +212,8 @@
             >
           </h3>
 
- 
+           <p>Relates a treaty expression to the explanatory memorandum for that treaty expression. A treaty expression has one or more explanatory memoranda, or none.</p>
+
           <p>
             <a href="#TreatyExpression"
               >TreatyExpression</a
@@ -325,7 +332,7 @@
 
     <footer>
       <p>
-        Generated 2023-07-20 11:41:08.671916 from a
+        Generated 2023-07-20 16:06:51.558125 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper-type/paper-type-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../paper-type/paper-type-ontology.ttl"
