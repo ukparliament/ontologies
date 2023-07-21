@@ -12,7 +12,7 @@ Susannah's first job is picking up work we attempted to kick off last year - it 
 
 This means that the Library's book catalogue uses a frozen copy of the taxonomy with no attempt to keep the two systems in sync, [the website](https://commonslibrary.parliament.uk/) uses a somewhat baffling list of Wordpress "tags", the enquiry system lacks any subject descriptions whatsoever, the research briefing application has its own set of topics and subject access to the subject specialist directory is managed as a Word document using "some words".
 
-Susannah's first job is picking up the work [Silver](https://twitter.com/silveroliver) and his [Data Language](https://datalanguage.com/) colleagues did last year to rebuild the subject specialist directory on top of our taxonomy, using that work to document patterns for future integrations. But subject access is merely one angle. At some point, we'd like to expand out to a [full redesign of the information architecture of the Library](https://ukparliament.github.io/ontologies/meta/library-information-architecture/). Or a knowledge graph if you will. Very moderne.
+Susannah's first job is picking up the work [Silver](https://twitter.com/silveroliver) and his [Data Language](https://datalanguage.com/) colleagues did last year to rebuild the subject specialist directory on top of our taxonomy, using that work to document patterns for future integrations. But subject access is merely one angle. At some point, we'd like to expand out to a [full redesign of the information architecture of the Library](https://ukparliament.github.io/ontologies/meta/library-information-architecture/). Or a knowledge graph if you will. Very moderné.
 
 ## Egg timing integrated!
 
