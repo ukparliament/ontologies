@@ -86,7 +86,7 @@ This obviously makes analysis and comparison more difficult than one might like.
 
 ## We did an enquiry
 
-Still with Elise, she got in touch recently - well, fairly recently, given current 'cadence' - with an enquiry about the number of Members in the House of Lords. Unfortunately, this coincided with vacation season for Librarian Anna and Librarian Emily. More unfortunately still - for us, at least - it also coincided with Librarian Phil's paternity leave. At which point, we break off to offer congratulations Karunja, Phil and family.
+Still with Elise, she got in touch recently - well, fairly recently, given current 'cadence' - with an enquiry about the number of Members in the House of Lords. Unfortunately, this coincided with vacation season for Librarian Anna and Librarian Emily. More unfortunately still - for us, at least - it also coincided with Librarian Phil's paternity leave. At which point, we break off to offer congratulations to Karunja, Phil and family.
 
 Luckily House of Lords Library Henry was present and correct and more than able to rescue Anya and Michael from the hole they'd managed to dig for themselves. Thanks Henry.
 
