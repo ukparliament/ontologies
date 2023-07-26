@@ -1,6 +1,7 @@
 # House membership end reasons
 
 Label | Scope note | Is Commons | Is Lords
+Bankruptcy | Disqualified following bankruptcy under [section 426A of the Insolvency Act 1986](https://www.legislation.gov.uk/ukpga/1986/45/section/426A) | True | True
 Dissolution | End of a [parliament period](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e177) | True | False
 Death in service | Death whilst incumbent in a House | True | True
 Disqualification by office holding | Member loses seat as a result of taking an office listed in the [House of Commons (Disqualification) Act 1975](https://www.legislation.gov.uk/ukpga/1975/24/contents) | True | False
