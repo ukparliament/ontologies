@@ -16,11 +16,11 @@ Dot file: [dot](proposed-negative-sis/proposed-negative-sis.dot)
 
 #### [Draft negative procedure [PDF]](statutory-instruments/negative-procedures/draft/draft-negative.pdf)
 
-Dot file: [dot](statutory-instruments/negative-procedures/draft/draft-negative.dot) / [svg](statutory-instruments/negative-procedures/draft/draft-negative.svg)
+Dot file: [dot](statutory-instruments/negative-procedures/draft/draft-negative.dot) 
 
 #### [Made negative procedure [PDF]](statutory-instruments/negative-procedures/made/made-negative.pdf)
 
-Dot file: [dot](statutory-instruments/negative-procedures/made/made-negative.dot) / [svg](statutory-instruments/negative-procedures/made/made-negative.svg)
+Dot file: [dot](statutory-instruments/negative-procedures/made/made-negative.dot) 
 
 ### Affirmative procedures
 
@@ -30,7 +30,7 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/draft/draft-affirma
 
 #### [Made affirmative procedure [PDF]](statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
 
-Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmative.dot) / [svg](statutory-instruments/affirmative-procedures/made/made-affirmative.svg)
+Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmative.dot)
 
 ### [Super affirmative procedures](statutory-instruments/super-affirmative-procedures)
 
