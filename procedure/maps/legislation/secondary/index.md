@@ -4,11 +4,11 @@
 
 ## [Published drafts under the European Withdrawal Act procedure [PDF]](published-drafts-under-euwa/published-drafts-under-euwa.pdf)
 
-Dot file: [dot](published-drafts-under-euwa/published-drafts-under-euwa.dot) / [svg](published-drafts-under-euwa/published-drafts-under-euwa.svg)
+Dot file: [dot](published-drafts-under-euwa/published-drafts-under-euwa.dot) 
 
 ## [Proposed negative statutory instrument procedure [PDF]](proposed-negative-sis/proposed-negative-sis.pdf)
 
-Dot file: [dot](proposed-negative-sis/proposed-negative-sis.dot) / [svg](proposed-negative-sis/proposed-negative-sis.svg)
+Dot file: [dot](proposed-negative-sis/proposed-negative-sis.dot) 
 
 ## Statutory instrument procedures
 
@@ -26,7 +26,7 @@ Dot file: [dot](statutory-instruments/negative-procedures/made/made-negative.dot
 
 #### [Draft affirmative procedure [PDF]](statutory-instruments/affirmative-procedures/draft/draft-affirmative.pdf)
 
-Dot file: [dot](statutory-instruments/affirmative-procedures/draft/draft-affirmative.dot) / [svg](statutory-instruments/affirmative-procedures/draft/draft-affirmative.svg)
+Dot file: [dot](statutory-instruments/affirmative-procedures/draft/draft-affirmative.dot) 
 
 #### [Made affirmative procedure [PDF]](statutory-instruments/affirmative-procedures/made/made-affirmative.pdf)
 
