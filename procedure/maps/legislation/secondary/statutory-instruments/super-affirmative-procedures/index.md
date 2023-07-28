@@ -2,7 +2,7 @@
 
 ## [Legislative reform order](legislative-reform-orders/legislative-reform-order.pdf)
 
-Dot file: [dot](legislative-reform-orders/legislative-reform-order.dot) / [svg](legislative-reform-orders/legislative-reform-order.svg)
+Dot file: [dot](legislative-reform-orders/legislative-reform-order.dot) 
 
 ### Legislative reform order component procedures
 
@@ -47,8 +47,8 @@ Dot file: [dot](remedial-orders/proposed-draft-remedial-order/proposed-draft-rem
 
 ### [Draft affirmative remedial order](remedial-orders/draft-affirmative/draft-affirmative.pdf)
 
-Dot file: [dot](remedial-orders/draft-affirmative/draft-affirmative.dot) / [svg](remedial-orders/draft-affirmative/draft-affirmative.svg)
+Dot file: [dot](remedial-orders/draft-affirmative/draft-affirmative.dot) 
 
 ### [Made affirmative remedial order](remedial-orders/made-affirmative/made-affirmative.pdf)
 
-Dot file: [dot](remedial-orders/made-affirmative/made-affirmative.dot) / [svg](remedial-orders/made-affirmative/made-affirmative.svg)
+Dot file: [dot](remedial-orders/made-affirmative/made-affirmative.dot) 
