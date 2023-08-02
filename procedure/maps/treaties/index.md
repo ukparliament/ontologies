@@ -12,7 +12,7 @@ Dot file: [dot](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny
 
 #### Committees
 
-##### [Business and Trade Committee [PDF]](crag-treaties/components/bat/bat.pdf)
+##### [Business and Trade Committee [PDF]](crag-treaties/components/bat/btc.pdf)
 
 Dot file: [dot](crag-treaties/components/bat/bat.dot) 
 
