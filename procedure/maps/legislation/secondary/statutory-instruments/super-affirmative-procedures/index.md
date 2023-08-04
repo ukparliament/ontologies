@@ -33,7 +33,7 @@ Dot file: [dot](legislative-reform-orders/components/lords/debates/debates.dot) 
 
 ##### [Procedure determination](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.pdf)
 
-Dot file: [dot](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.dot) / [svg](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.svg)
+Dot file: [dot](legislative-reform-orders/components/commons/procedure-determination/procedure-determination.dot) 
 
 ##### [Committee consideration](legislative-reform-orders/components/commons/committee-consideration/committee-consideration.pdf)
 
