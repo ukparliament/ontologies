@@ -38,7 +38,7 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 #### [Joint Committee on Statutory Instruments procedure [PDF]](statutory-instruments/components/jcsi/jcsi.pdf)
 
-Dot file: [dot](statutory-instruments/components/jcsi/jcsi.dot) / [svg](statutory-instruments/components/jcsi/jcsi.svg)
+Dot file: [dot](statutory-instruments/components/jcsi/jcsi.dot)
 
 #### [Local government finance report procedure [PDF]](statutory-instruments/components/local-government-finance-report/local-government-finance-report.pdf)
 
@@ -46,10 +46,10 @@ Dot file: [dot](statutory-instruments/components/local-government-finance-report
 
 #### [Select Committee on statutory instruments procedure [PDF]](statutory-instruments/components/scsi/scsi.pdf)
 
-Dot file: [dot](statutory-instruments/components/scsi/scsi.dot) / [svg](statutory-instruments/components/scsi/scsi.svg)
+Dot file: [dot](statutory-instruments/components/scsi/scsi.dot) 
 
 ## Secondary legislation component procedures
 
 ### [Secondary Legislation Scrutiny Committee procedure [PDF]](components/slsc/slsc.pdf)
 
-Dot file: [dot](components/slsc/slsc.dot) / [svg](components/slsc/slsc.svg)
+Dot file: [dot](components/slsc/slsc.dot) 
