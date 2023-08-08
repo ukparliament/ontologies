@@ -22,7 +22,7 @@ Dot file: [dot](crag-treaties/components/efra/efra.dot)
 
 ##### [International Agreements Committee and European Affairs Committee procedure [PDF]](crag-treaties/components/iac+eac/iac+eac.pdf)
 
-Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) / [svg](crag-treaties/components/iac+eac/iac+eac.svg)
+Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) 
 
 ##### [International Trade Committee procedure [PDF]](crag-treaties/components/itc/itc.pdf)
 
@@ -30,7 +30,7 @@ Dot file: [dot](crag-treaties/components/itc/itc.dot)
 
 ##### [Joint Committee on Human Rights procedure [PDF]](crag-treaties/components/jchr/jchr.pdf)
 
-Dot file: [dot](crag-treaties/components/jchr/jchr.dot) / [svg](crag-treaties/components/jchr/jchr.svg)
+Dot file: [dot](crag-treaties/components/jchr/jchr.dot) 
 
 ##### [Lords' Committees procedure [PDF]](crag-treaties/components/lords-committees/lords-committees.pdf)
 
