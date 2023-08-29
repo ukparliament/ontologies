@@ -139,6 +139,13 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/f0f63b9c"> Government responses to Lords reports</a>	
 
+### Correspondence published by Commons committees
+
+* <a href="https://api.parliament.uk/s/88268858"> Correspondence published by Commons committees</a>
+
+* <a href="https://api.parliament.uk/s/33d28019"> Correspondence published by the International Trade Committee</a>
+
+* <a href="https://api.parliament.uk/s/c0c436b0"> Correspondence published by the Business and Trade Committee</a>
 
 ## Prayers against Treaties 
 
