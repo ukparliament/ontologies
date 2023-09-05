@@ -80,6 +80,12 @@ A list of lead organisations can be found [here](https://api.parliament.uk/query
 
 * [Section 22 of the Constitutional Reform and Governance Act 2010 invoked](https://api.parliament.uk/s/25128ba0)
 
+## Ministerial statements extending objection period A
+
+Under [section 21 of Part Two of the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/section/21), a Minister may extend objection period by 21 sitting days or less. They must make a statement to Parliament to do so. 
+
+* [Ministerial statement: objection period A extended](https://api.parliament.uk/s/34405c3c)
+
 ## Business about a (prospective) treaty before it’s signed or before it’s laid before Parliament
 
 In November 2022 we made the decision to add business steps about a treaty that occurred before a treaty is signed or laid before Parliament.
