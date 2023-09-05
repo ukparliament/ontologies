@@ -82,7 +82,7 @@ A list of lead organisations can be found [here](https://api.parliament.uk/query
 
 ## Ministerial statements extending objection period A
 
-Under [section 21 of Part Two of the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/section/21), a Minister may extend objection period by 21 sitting days or less. They must make a statement to Parliament to do so. 
+Under [section 21 of Part Two of the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/section/21), a Minister may extend objection period A by 21 sitting days or less. They must make a statement to Parliament to do so. 
 
 * [Ministerial statement: objection period A extended](https://api.parliament.uk/s/34405c3c)
 
