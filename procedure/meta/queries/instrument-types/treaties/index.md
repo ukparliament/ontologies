@@ -80,6 +80,12 @@ A list of lead organisations can be found [here](https://api.parliament.uk/query
 
 * [Section 22 of the Constitutional Reform and Governance Act 2010 invoked](https://api.parliament.uk/s/25128ba0)
 
+## Ministerial statements extending objection period A
+
+Under [section 21 of Part Two of the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/section/21), a Minister may extend objection period A by 21 sitting days or less. They must make a statement to Parliament to do so. 
+
+* [Ministerial statement: objection period A extended](https://api.parliament.uk/s/34405c3c)
+
 ## Business about a (prospective) treaty before it’s signed or before it’s laid before Parliament
 
 In November 2022 we made the decision to add business steps about a treaty that occurred before a treaty is signed or laid before Parliament.
@@ -141,11 +147,13 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Correspondence published by Commons committees
 
-* <a href="https://api.parliament.uk/s/88268858"> Correspondence published by Commons committees</a>
+* <a href="https://api.parliament.uk/s/3bb71819"> Correspondence published by Commons committees</a>
 
 * <a href="https://api.parliament.uk/s/33d28019"> Correspondence published by the International Trade Committee</a>
 
 * <a href="https://api.parliament.uk/s/c0c436b0"> Correspondence published by the Business and Trade Committee</a>
+
+* <a href="https://api.parliament.uk/s/84fb1a26"> Correspondence published by the Environment, Food and Rural Affairs Committee</a>
 
 ## Prayers against Treaties 
 
