@@ -1,6 +1,6 @@
 # 2023 - Week 36
 
-Dear friends, we have once again let you down, let our crack team of librarians down and let ourselves down. It has been four weeks without notes. For once, we cannot blame our own tardiness. We've actually been quite busy. Partly with play, mostly with work. Let's start with the work.
+Dear reader, we have once again let you down, let our crack team of librarians down and let ourselves down. It has been four weeks without notes. For once, we cannot blame our own tardiness. We've actually been quite busy. Partly with play, mostly with work. Let's start with the work.
 
 ## The work
 
@@ -22,7 +22,7 @@ No librarian is an island, and our librarians have a service agreement with Hans
 
 By some point around midday on Monday, all available hands were indeed on deck. Which only made matters worse. The more people using the system, the slower the system got. "Oh, good lord", wept Anya. "All hands off deck", she cried, face flecked with tears.
 
-On the computational side of the aisle, all the usual fixes were tried, only meeting with very partial success. Things were turned off. And back on again. The web server was upgraded. The memory allocation was upped. The latter course of action appeared to make the most difference, but - as of Friday - we're still seeing response times measured in minutes, not seconds.
+On the computational side of the aisle, all the usual fixes were tried, only meeting with very partial success. Things were turned off. And back on again. The web server was upgraded. The memory allocation was upped. The latter course of action appeared to make the most difference, but - as we scribble these notes - we're still seeing response times measured in minutes, not seconds.
 
 By Thursday lunchtime the situation was still looking less than ideal. We can't go on like this, declared Anya, convening an emergency meeting of technical "experts". Forsaking lunch, even [our Jianhan](https://twitter.com/jianhanzhu) managed to drag himself clear of the triplestore wreckage to join us in pixels. Face only slightly sooty, hair only slightly singed.
 
@@ -38,7 +38,7 @@ Not only this. Given Anya's in an extra generous mood, she's also distributed Li
 
 I get a Librarian of the Week, you get a Librarian of the Week, we all get a Librarian of the Week. And, by heck, do we deserve it. There's only really Young Robert missing from the list. Mostly because he chose this week, of all weeks, to take a vacation. You picked a fine time to leave us, sunshine.
 
-Before our dear reader gets the impression Library life if all just passing buckets down chains for our Jianhan to throw over smouldering bin fires, actual non-firefighting work has also happened. Though it's a bloody miracle we remember what. Here, then, goes.
+Before our dear reader gets the impression that Library life if all just passing buckets down chains for our Jianhan to throw over smouldering bin fires, actual non-firefighting work has also happened. Though it's a bloody miracle we remember what. Here, then, goes.
 
 ### New old search
 
@@ -46,7 +46,7 @@ Whilst the good ship [parliamentary search](https://search.parliament.uk/search)
 
 Elsewhere, designer Graeme continues to churn through object views under the expert tutelage of Librarians Anya and Jayne. At this point, he's probably learned more about parliamentary materials than he ever hoped to know, but he appears to stay cheerful. Frontend developer Jon has also been hard at work turning Graeme's pixels into [functioning code](https://github.com/ukparliament/search-prototype). A process that would be made much easier if Anya had the time to follow up on Raafay's work and fill out our three-dimensional data dictionary. As things stand, fat chance of that.
 
-In more backend news, our Jianhan has made magnificent progress upgrading our antediluvian [Solr](https://en.wikipedia.org/wiki/Apache_Solr) instance to something more modern. We're also delighted to - finally - have access to a development environment, so remain hopeful that - at some point in the not too distant future - we may be able to plug Jon's Rails efforts into Jianhan's new Solr instance and the whole thing will [form like Voltron](https://www.youtube.com/watch?v=Z1IMp9KwNMg&t=96s&ab_channel=WuTangClanVEVO). The sooner we can couple frontend to backend, the sooner we'll be confident we're on the right track. Or aren't. To state the blindingly obvious though, our backend - Solr - is the frontend for the wider search service. So extinguishing the basement fire remains the priority.s
+In more backend news, our Jianhan has made magnificent progress upgrading our antediluvian [Solr](https://en.wikipedia.org/wiki/Apache_Solr) instance to something more modern. We're also delighted to - finally - have access to a development environment, so remain hopeful that - at some point in the not too distant future - we may be able to plug Jon's Rails efforts into Jianhan's new Solr instance and the whole thing will [form like Voltron](https://www.youtube.com/watch?v=Z1IMp9KwNMg&t=96s&ab_channel=WuTangClanVEVO). The sooner we can couple frontend to backend, the sooner we'll be confident we're on the right track. Or aren't. To state the blindingly obvious though, our backend - Solr - is the frontend for the wider search service. So extinguishing the basement fire remains the priority.
 
 ### Procedural cartography updates
 
