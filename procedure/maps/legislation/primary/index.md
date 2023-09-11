@@ -48,6 +48,8 @@ Dot file: [dot](public-bills/components/commons/second-reading/second-reading.do
 
 Dot file: [dot](public-bills/components/prerogative-consent/queens-consent/queens-consent.dot) / [svg](public-bills/components/prerogative-consent/queens-consent/queens-consent.svg)
 
+##### [King's consent](public-bills/components/prerogative-consent/kings-consent/kings-consent.pdf)
+
 ##### [Prince of Wales's consent](public-bills/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.pdf)
 
 Dot file: [dot](public-bills/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.dot) / [svg](public-bills/components/prerogative-consent/prince-of-wales-consent/prince-of-wales-consent.svg)
