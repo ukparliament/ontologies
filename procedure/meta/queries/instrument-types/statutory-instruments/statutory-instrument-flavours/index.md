@@ -42,3 +42,9 @@ If the Minister does not seek consent from one or more of the devolved authoriti
 * [Affirmative instruments laid under section 10 of the United Kingdom Internal Market Act 2020](https://api.parliament.uk/s/28e65418)
 
 * [Written statements explaining why a Minister has not sought legislative consent](https://api.parliament.uk/s/2da139f1)
+
+* ## Made affirmative instruments under Section 25 of the Criminal Procedure and Investigations Act 1996
+
+* Made affirmative instruments laid under [section 25 of the Criminal Procedure and Investigations Act 1996](https://www.legislation.gov.uk/ukpga/1996/25/section/25) allow a Minister to make and lay an instrument, but under [section 77](https://www.legislation.gov.uk/ukpga/1996/25/section/77) of the same Act, the instrument will have effect only after a resolution has been passed by both Houses approving it. The instrument is laid without a number but once approved by both Houses it is reregistered with a number. This results in there being two records for the same instrument on legislation.gov.uk - one with a number, one without. 
+
+* [Made affirmative instruments laid under section 25 of the Criminal Procedure and Investigations Act 1996](https://api.parliament.uk/s/18005939)
