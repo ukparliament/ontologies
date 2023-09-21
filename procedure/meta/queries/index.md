@@ -42,6 +42,8 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 * [Time-bound routes](procedure-map-meta/time-bound-routes)
 
+* [Step collections](procedure-map-meta/step-collections)
+
 ## Queries for a timeline on the [Statutory Instrument Service website](https://statutoryinstruments.parliament.uk/)
 
 * [Timeline trace for a Published draft under EUWA](timeline-queries/published-drafts)
