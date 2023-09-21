@@ -25,6 +25,22 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Female Members of the House of Commons elected at the 2005 General Election](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Cgender=F%7Chouse*commons%7Creturnedatelection=2005%20general%20election&include=)
 
+[Members of the House of Commons returned at the 2019 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=2019 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 2017 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=2017 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 2015 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=2015 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 2010 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=2010 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 2005 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=2005 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 2001 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=2001 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 1997 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=1997 General Election/Constituencies/)
+
+[Members of the House of Commons returned at the 1992 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=1992 General Election/Constituencies/)
+
 ## House of Lords
 
 [Current Members of the House of Lords](https://api.parliament.uk/mnis-prodder/parse?filter=house=lords&include=)
