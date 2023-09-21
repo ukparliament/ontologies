@@ -39,7 +39,7 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Members of the House of Commons returned at the 1997 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=1997 General Election/Constituencies/)
 
-[Members of the House of Commons returned at the 1992 General Election, including constituencies and entry type](https://internalmnis.parliament.uk/services/mnis/members/query/house=Commons|Membership=all|returnedatelection=1992 General Election/Constituencies/)
+[Members of the House of Commons returned at the 1992 General Election, including constituencies and entry type](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/house=Commons%7CMembership=all%7Creturnedatelection=1992%20General%20Election/Constituencies/)
 
 ## House of Lords
 
