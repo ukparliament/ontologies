@@ -2,7 +2,7 @@
 
 A bit of a mixed bag of a fortnight - some good news, some bad. Let's start with the good stuff.
 
-## Some rare good news
+## The good stuff
 
 ### People, places, parties
 
@@ -76,7 +76,7 @@ That said - and we may well have said this before - the only reliable and persis
 
 That, then, is the good news. Let's get on to the bad stuff.
 
-## The bad news
+## The less good stuff
 
 ### Is the triplestore bin fire still alight?
 
