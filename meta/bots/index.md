@@ -59,5 +59,5 @@ Name | Mastodon | Bluesky | Feed
 ## Defunct answering bodies
 
 Name | Feed
-[Department for Digital, Culture, Media and Sport](https://api.parliament.uk/written-answers/answering-bodies/10) || [RSS](https://api.parliament.uk/written-answers/answering-bodies/10.rss)
-[Department for International Trade](https://api.parliament.uk/written-answers/answering-bodies/202) || [RSS](https://api.parliament.uk/written-answers/answering-bodies/202.rss)
+[Department for Digital, Culture, Media and Sport](https://api.parliament.uk/written-answers/answering-bodies/10) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/10.rss)
+[Department for International Trade](https://api.parliament.uk/written-answers/answering-bodies/202) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/202.rss)
