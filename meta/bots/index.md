@@ -2,7 +2,14 @@
 
 ## Update - 18th April 2023
 
-Unfortunately, Twitter's new API strategy means we're no longer able to offer bot accounts on that platform. Updates remain available on Mastodon and via RSS.
+Unfortunately, Twitter's new API strategy means we're no longer able to offer bot accounts on that platform. Updates remain available on Bluesky, Mastodon and via RSS.
+
+## Commons Library
+
+Posts whenever the House of Commons Library publishes new research and analysis.
+
+BlueSky | Mastodon
+[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | 
 
 ## Made-n-laid
 
