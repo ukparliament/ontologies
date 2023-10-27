@@ -4,6 +4,8 @@ After the UK left the European Union, a two-stage affirmative procedure applied 
 
 For more details on published drafts see paragraphs 13 to 15 of Schedule 8 to the [European Union (Withdrawal) Act 2018](https://www.legislation.gov.uk/ukpga/2018/16/schedule/8/enacted). The [procedure map for published drafts](https://ukparliament.github.io/ontologies/procedure/maps/legislation/secondary/published-drafts-under-euwa/published-drafts-under-euwa.pdf) is also available to view. 
 
+The procedure was revoked as part of the [Retained EU Law (Revocation and Reform) Act 2023](https://www.legislation.gov.uk/ukpga/2023/28/contents)
+
 ## All published drafts 
 
 This query will show you all published drafts that Parliament was notified as being published on gov.uk. 
@@ -18,7 +20,7 @@ This query shows all published drafts currently before Parliament:
 
 ## Published drafts by session
 
-* [2022-23](https://api.parliament.uk/s/f87d0353)
+* [2022-23](https://api.parliament.uk/s/34305580)
 
 * [2021-22](https://api.parliament.uk/s/ad8c55b9)
 
