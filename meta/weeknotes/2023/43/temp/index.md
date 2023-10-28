@@ -24,7 +24,7 @@ Back in the backend, our Jianhan has been plugging away at upgrading the bits he
 
 All of which puts us well on the path to upgrading our assorted components. Unfortunately, coupling those components together is not going quite so well. Especially given the complications of our assorted environments. It's a little like having a new washing machine, a new electricity supply and new plumbing, but no pipes or cables. Next Tuesday sees yet another meeting - it may even be a workshop - at which we aim to sketch out where our assorted components live and how they connect together. Wish us luck.
 
-In small item of good plumbing news, Jon and Jianhan have combined efforts and Jon's code is now pointing at Jianhan's upgraded Solr. Have a fiddle with the [query parameter here](https://search-prototype.herokuapp.com/search-prototype/objects?object=http%3A%2F%2Fdata.parliament.uk%2Fresources%2F345469) if you don't believe us. We feel sure you'll be amazed.
+In a small item of good plumbing news, Jon and Jianhan have combined efforts and Jon's code is now pointing at Jianhan's upgraded Solr. Have a fiddle with the [query parameter here](https://search-prototype.herokuapp.com/search-prototype/objects?object=http%3A%2F%2Fdata.parliament.uk%2Fresources%2F345469) if you don't believe us. We feel sure you'll be amazed.
 
 ## People, places, parties - future facing
 
@@ -40,7 +40,7 @@ Over with data scientist Louis, initial tests of the general election data impor
 
 ## People, places, parties - past tense
 
-Some time back, our colleagues in the Parliamentary Computational Section put together an [election results](https://electionresults.parliament.uk/) website covering the general elections of 2010, 2015, 2017 and 2019. Unfortunately - as fans of obfuscated URIs may well have spotted - it was not built with boundary changes in mind. A boundary change being exactly the thing we're expecting. Retrofitting the existing codebase appears too difficult to contemplate, so a decision has been taken to decommission the site forthwith. As we say in these parts.
+Some time back, our colleagues in the [Parliamentary Computational Section](https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/) put together an [election results](https://electionresults.parliament.uk/) website covering the general elections of 2010, 2015, 2017 and 2019. Unfortunately - as fans of obfuscated URIs may well have spotted - it was not built with boundary changes in mind. A boundary change being exactly the thing we're expecting. Retrofitting the existing codebase appears too difficult to contemplate, so a decision has been taken to decommission the site forthwith. As we say in these parts.
 
 Given election result data starts its parliamentary life in the House of Commons Library and given House of Commons Library researchers are the people with the most interest, a decision has also been taken to hand over responsibility for all things election data related to the Library. Which is why data scientist Louie now finds himself building an election data visualisation tool for the Library website and computational trundler Michael finds himself attempting to replace the current web pages with [something not too dissimilar](https://psephology-b3b91d24dfdc.herokuapp.com/) on a budget of fives pounds and a toffee apple.
 
