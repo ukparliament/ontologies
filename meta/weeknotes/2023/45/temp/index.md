@@ -8,7 +8,7 @@ We made lots of things slightly better.
 
 We intend to make things slightly better still.
 
-Being firmly of the [Bazaar](https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar#Lessons_for_creating_good_open_source_software) - and never the Cathedral - grand visions of idealised end states are not for us. Whilst we may occasionally fall victim to precision - some might even say pedantry - we are never less than pragmatic. Many acts of minor maintenance always eating strategy for breakfast. Polemic ends.
+Being firmly of the [Bazaar](https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar#Lessons_for_creating_good_open_source_software) - and never the Cathedral - grand visions of [idealised end states](https://thecynefin.co/start-a-journey-with-a-sense-of-direction/) are not for us. Whilst we may occasionally fall victim to precision - some might even say pedantry - we are never less than pragmatic. Many acts of minor maintenance always eating strategy for breakfast. Polemic ends.
 
 ## Biccie bonus - a belated thank you
 
