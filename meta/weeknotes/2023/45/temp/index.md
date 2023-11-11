@@ -86,4 +86,4 @@ This week we bid a fond farewell to project manager Yomi. We've had our up and d
 
 Luckily, we still manage to cling onto lovely Lydia, who proved her mettle this week by once again prioritising delivery over process. A whole slew of unnecessary meetings got cancelled, designer Graeme and developer Jon finding themselves with the unexpected surprise of getting half their working weeks back. Thanks Lydia. Always a pleasure.
 
-<p><sup id="footnote-1">1</sup>No taxpayer money has been expended on an actual trophy. It is purely notional.</sup></p>
+<p><sup id="footnote-1">1</sup> No taxpayer money has been expended on an actual trophy. It is purely notional.</p>
