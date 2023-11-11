@@ -18,7 +18,7 @@ With that said, thank you JO Jane. Please forgive us. They were delicious biscui
 
 ## Librarians of the Week
 
-Not one, not two, but three librarians of the week this week. The proud winners of our much coveted Librarian of the Week trophy [[<sup>1</sup>](#footnote-1)] being [Anna](https://twitter.com/anna_buck), Emily and [our Jianhan](https://twitter.com/jianhanzhu). Read on if you'd like to [find out why](https://www.youtube.com/watch?v=TK3wzlSaeXE&ab_channel=InspiralCarpets).
+Not one, not two, but three librarians of the week this week. The proud winners of our much coveted Librarian of the Week trophy [<sup>1</sup>](#footnote-1) being [Anna](https://twitter.com/anna_buck), Emily and [our Jianhan](https://twitter.com/jianhanzhu). Read on if you'd like to [find out why](https://www.youtube.com/watch?v=TK3wzlSaeXE&ab_channel=InspiralCarpets).
 
 ## New, old search - backend
 
@@ -86,4 +86,4 @@ This week we bid a fond farewell to project manager Yomi. We've had our up and d
 
 Luckily, we still manage to cling onto lovely Lydia, who proved her mettle this week by once again prioritising delivery over process. A whole slew of unnecessary meetings got cancelled, designer Graeme and developer Jon finding themselves with the unexpected surprise of getting half their working weeks back. Thanks Lydia. Always a pleasure.
 
-<p><sup id="footnote-1">No taxpayer money has been expended on an actual trophy. It is purely notional.</sup></p>
+<p><sup id="footnote-1">1</sup>No taxpayer money has been expended on an actual trophy. It is purely notional.</sup></p>
