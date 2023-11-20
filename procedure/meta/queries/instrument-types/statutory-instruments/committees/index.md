@@ -50,39 +50,39 @@ The following queries separate SIs laid before the House of Commons only and tho
 
 ## JCSI / SCSI reasons for reporting instruments to the House(s)
 
-The following queries show the grounds for drawing attention to an instrument by the JCSI or SCSI. Raised under the committee's terms of reference, instruments can be reported for multiple reasons and for the same reason in multiple respects.
+The following queries show the grounds for drawing attention to an instrument by the JCSI or SCSI. While the reasons the committees may raise concerns are set out in the standing orders of both Houses, the committee generally focuses on the five reasons detailed in the Commons [sessional returns](https://publications.parliament.uk/pa/cm5803/csession/202122/return.html#heading-6).  Instruments can be reported for multiple reasons and for the same reason in multiple respects. In the queries below, we've mentioned the Standing Order in both Houses that the reason applies to. 
 
 ### JCSI
 
 * [Joint Committee on Statutory Instruments (JCSI) grounds for drawing special attention to instruments](https://api.parliament.uk/s/275119da)
 
-* [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it is defectively drafted](https://api.parliament.uk/s/32b3a84e)
-  
-* [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it requires elucidation](https://api.parliament.uk/s/4392e4ce)
-
-* [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that there is doubt as to whether they are intra vires](https://api.parliament.uk/s/42e15675)
-
-* [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it makes unusual or unexpected use of the enabling power](https://api.parliament.uk/s/ed66d31e)
-
 * [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it fails to comply with proper legislative practice](https://api.parliament.uk/s/fe66b542)
 
-* [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on other grounds](https://api.parliament.uk/s/1d9c9774)
+* [Commons SO 151 (1)(B)(vi)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_vi) / [Lords SO 74 (2)(f)](https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/the-standing-orders-of-the-house-of-lords-relating-to-public-business/#joint-committee-SIs) - [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it makes unusual or unexpected use of the enabling power](https://api.parliament.uk/s/ed66d31e)
+
+* [Commons SO 151 (1)(B)(vi)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_vi) / [Lords SO 74 (2)(f)](https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/the-standing-orders-of-the-house-of-lords-relating-to-public-business/#joint-committee-SIs) - [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that there is doubt as to whether they are intra vires](https://api.parliament.uk/s/42e15675)
+
+* [Commons SO 151 (1)(B)(vii)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_vii) / [Lords SO 74 (2)(g)](https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/the-standing-orders-of-the-house-of-lords-relating-to-public-business/#joint-committee-SIs) - [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it requires elucidation](https://api.parliament.uk/s/4392e4ce)
+
+* [Commons SO 151 (1)(B)(viii)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_viii) / [Lords SO 74 (2)(h)](https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/the-standing-orders-of-the-house-of-lords-relating-to-public-business/#joint-committee-SIs) - [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on the grounds that it is defectively drafted](https://api.parliament.uk/s/32b3a84e)
+
+* [Commons SO 151 (1)(B)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B) / [Lords SO 74 (2)](https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/the-standing-orders-of-the-house-of-lords-relating-to-public-business/#joint-committee-SIs) - [Joint Committee on Statutory Instruments (JCSI) draws the special attention of both Houses to this instrument on other grounds](https://api.parliament.uk/s/1d9c9774)
 
 ### SCSI
 
 * [Select Committee on Statutory Instruments (SCSI) grounds for drawing special attention to instruments](https://api.parliament.uk/s/e09dfd8f)
 
-* [Select Committee on Statutory Instruments (SCSI) draws the special attention of both Houses to this instrument on the grounds that it is defectively drafted](https://api.parliament.uk/s/5aaeb855)
+* [Select Committee on Statutory Instruments (SCSI) draws the special attention of the House to this instrument on the grounds that it fails to comply with proper legislative practice](https://api.parliament.uk/s/6145f3b0)
+
+* [Commons SO 151 (1)(B)(vi)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_vi) - [Select Committee on Statutory Instruments (SCSI) draws the special attention of the House to this instrument on the grounds that there is doubt as to whether they are intra vires](https://api.parliament.uk/s/a449adf6)
+
+* [Commons SO 151 (1)(B)(vi)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_vi) - [Select Committee on Statutory Instruments (SCSI) draws the special attention of the House to this instrument on the grounds that it makes unusual or unexpected use of the enabling power](https://api.parliament.uk/s/f807fc5d)
+
+* [Commons SO 151 (1)(B)(vii)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_vii) - [Select Committee on Statutory Instruments (SCSI) draws the special attention of the House to this instrument on the grounds that it requires elucidation](https://api.parliament.uk/s/fce7963a)
+
+* [Commons SO 151 (1)(B)(viii)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B_viii) - [Select Committee on Statutory Instruments (SCSI) draws the special attention of the House to this instrument on the grounds that it is defectively drafted](https://api.parliament.uk/s/5aaeb855)
   
-* [Select Committee on Statutory Instruments (SCSI) draws the special attention of both Houses to this instrument on the grounds that it requires elucidation](https://api.parliament.uk/s/fce7963a)
-
-* [Select Committee on Statutory Instruments (SCSI) draws the special attention of both Houses to this instrument on the grounds that there is doubt as to whether they are intra vires](https://api.parliament.uk/s/a449adf6)
-
-* [Select Committee on Statutory Instruments (SCSI) draws the special attention of both Houses to this instrument on the grounds that it makes unusual or unexpected use of the enabling power](https://api.parliament.uk/s/f807fc5d)
-
-* [Select Committee on Statutory Instruments (SCSI) draws the special attention of both Houses to this instrument on the grounds that it fails to comply with proper legislative practice](https://api.parliament.uk/s/6145f3b0)
-
-* [Select Committee on Statutory Instruments (SCSI) draws the special attention of both Houses to this instrument on other grounds](https://api.parliament.uk/s/651cc7b6)
+* [Commons SO 151 (1)(B)](https://publications.parliament.uk/pa/cm5803/cmstords/so-1932-23102023/so-orders.html#so-151_1_B) - [Select Committee on Statutory Instruments (SCSI) draws the special attention of the House to this instrument on other grounds](https://api.parliament.uk/s/651cc7b6)
 
 ## Scrutiny reserve for JCSI or JCHR suspended
 
