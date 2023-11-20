@@ -2,7 +2,7 @@
 
 ## Librarians of the Week
 
-Librarians of the Week being much like buses, you can wait a wee while, then they all turn up at once. Last time out Librarians [Anna](https://twitter.com/anna_buck), Emily and [Jianhan](https://twitter.com/jianhanzhu) were lucky enough to get their mitts on our much-prized trophy. This week, it's the turn of Librarians [Ayesha](https://twitter.com/askalibrarylady) and [Claire](https://twitter.com/tinysprite) to step up to the podium, Prosecco corks popping.
+Librarians of the Week being much like buses, you can wait a wee while, then they all turn up at once. Last time out Librarians [Anna](https://twitter.com/anna_buck), Emily and [Jianhan](https://twitter.com/jianhanzhu) were lucky enough to get their mitts on our much-prized trophy. This week, it's the turn of Librarians [Ayesha](https://twitter.com/askalibrarylady), [Claire](https://twitter.com/tinysprite) and Deanne to step up to the podium, Prosecco corks popping.
 
 For the last few weeks they've had their heads buried in committee reports and [secondary legislation maps](https://ukparliament.github.io/ontologies/procedure/maps/legislation/secondary/), attempting to capture the assorted ways in which the [Joint Committee on Statutory Instruments](https://committees.parliament.uk/committee/148/statutory-instruments-joint-committee) might report on an instrument. Their fine, fine work is now complete, but may require some explanation. Read on, dear reader.
 
@@ -12,7 +12,7 @@ Instruments reported under one or more of the eight criteria are of interest, bo
 
 All of this changed back in [week 38](https://ukparliament.github.io/ontologies/meta/weeknotes/2023/38/#thrilling-news-for-fans-of-statutory-instruments), when we added [step collections](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#step-collections) to our [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology), placing what does and doe not appear on our website timelines firmly in the hands of our crack team of librarians. Since then, Ayesha and Claire have been slaving away updating our secondary legislation maps to reflect reporting criteria. Not only that, with [thimblettes](https://www.ebay.co.uk/itm/142573344518) on repeat order, they've been leafing through JCSI reports since 2017 - back to day zero of our much-loved statutory instrument service. Particularly fine work Ayesha and Claire and particularly deserving of our much coveted Librarian of the Week award. Or LOTW as our acronym loving colleagues might say.
 
-For reasons aforementioned, you won't find such steps on our website timelines. But, for those interested, Librarian Jayne has added a whole new set of queries to our much celebrated [SPARQL library](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/committees/#jcsi). I mean, would you expect anything less?
+For reasons aforementioned, you won't find such steps on our website timelines. But, for those interested, Librarian Jayne has added a whole new set of queries to our much celebrated [SPARQL library](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/committees/#jcsi). I mean, would you expect anything less? At this point, you may well be asking, why only seven queries when there are eight criteria. Having checked in with Committee Clerk Jonathan, we were informed that two of the categories came up so infrequently, they were hardly worth bothering with. So we collapsed two of the criteria into one overarching 'other reasons' category. Should the committee start reporting under such criteria, then, obviously, we will split the combined query into two.
 
 At this point we know exactly what our dear reader - ever the pedantic proceduralist - is thinking: what about instruments that are laid before the Commons only and are scrutinised by the [Select Committee on Statutory Instruments](https://committees.parliament.uk/committee/149/statutory-instruments-select-committee)? Fear not, dear reader, all that work is done too, as [Jayne's SCSI queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/committees/#jcsis) testify. As if we'd let you down.
 
@@ -43,6 +43,16 @@ To this end, Librarian Claire has taken some unexpected outliers in the data dic
 ## How's poor Robert?
 
 No better if we're perfectly honest. Still, TD MVP HLDs won't write themselves.
+
+## The work of [DECADES](https://www.youtube.com/watch?v=PMAB3r6EjcM&ab_channel=Arnodww)
+
+In yet more Parliament thesaurus news our mammoth Capitalised Organisations data tidying task, on our books for nearly two decades - yes, you read that right, two actual decades - has finally been completed. To provide some context, our crack team of librarian are responsible for Parliament's Thesaurus - the terms used to index Parliamentary business. This thesaurus has been around in some form since 1979.
+
+For reasons pre-dating the working lives of anyone still here, in bygone days organisation terms were capitalised. So, BRITISH GAS, not British Gas. All a little shouty. Work to remediate this defunct data management policy has been sitting on our backlog for almost as long as some of our younger colleagues have been alive. Now normally, backlogs are where work goes to die, but not for our diligent team of crack librarians. They've been doing their best to chip away at the problem during quieter recess moments, but, even with their best efforts, there were still upwards to 2500 CAPITALISED ORGANISATIONS to deal with.
+
+Unfortunately, turning off the CAPS LOCK key was not the kind of job one can automate by throwing a [.titleize](https://api.rubyonrails.org/classes/String.html#method-i-titleize) at the problem. Any organisation term being still capitalised meant it hadn't been used since the turn of the century or was only used in the Library Catalogue. Before amending any term, we needed to check if the term was still in use, whether it had been used appropriately in indexing Parliamentary business, if it was still accurate and whether it was in line with our style guide. We also needed to check whether such organisation terms were missing relationships to other terms in the Thesaurus.
+
+We are delighted to report that - some years on - this mammoth task is now complete. The remaining 2500 terms tidied thanks to a quite magnificent effort from Librarian Deanne who single-handedly reviewed and edited over 1250 terms. Amazing work, quite worthy of our Librarian of the Week award.
 
 ## People, places, parties
 
