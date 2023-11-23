@@ -76,10 +76,10 @@
 
           <p>A parliamentary House, for example: the House of Lords.</p>
          </article>
-        <article class="class" id="SeatIncumbency">
-          <h3>Class <a href="#SeatIncumbency">Seat incumbency</a></h3>
+        <article class="class" id="Incumbency">
+          <h3>Class <a href="#Incumbency">Incumbency</a></h3>
 
-          <p>The occupation of a seat in a House by a person, for a period of time.  A person may have more than one incumbency over time. Only one person can be incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future - or which has no end date - is a current Member. A person having a seat incumbency with an end date in the past - and no current incumbency - is an ex-Member.</p>
+          <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
          </article>
         <article class="class" id="Session">
           <h3>Class <a href="#Session">Session</a></h3>
@@ -95,26 +95,19 @@
           <h3>Class <a href="#Tabling">Tabling</a></h3>
 
           <p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
-           <p>
-            Superclasses  &middot; TablingOrWithdrawal           </p>
-        </article>
-        <article class="class" id="TablingOrWithdrawal">
-          <h3>Class <a href="#TablingOrWithdrawal">Tabling or withdrawal</a></h3>
-
-          <p>The act of tabling into, or withdrawing a tabled thing from, a House.</p>
          </article>
         <article class="class" id="Withdrawal">
           <h3>Class <a href="#Withdrawal">Withdrawal</a></h3>
 
           <p>The act of withdrawing a tabled thing from a House.</p>
-           <p>
-            Superclasses  &middot; TablingOrWithdrawal           </p>
-        </article>
+         </article>
         <article class="class" id="WithdrawnThing">
           <h3>Class <a href="#WithdrawnThing">Withdrawn thing</a></h3>
 
           <p>A tabled thing which has subsequently been withdrawn.</p>
-         </article>
+           <p>
+            Superclasses  &middot; TabledThing           </p>
+        </article>
         <article class="class" id="WrittenNotice">
           <h3>Class <a href="#WrittenNotice">Written notice</a></h3>
 
@@ -125,6 +118,25 @@
       <section id="objectproperties">
         <h2>Object properties</h2>
 
+
+        <article class="objectproperty" id="during">
+          <h3>
+            Object property
+            <a href="#during"
+              >During</a
+            >
+          </h3>
+
+           <p>Relates an act of tabling to the session in which it happens.</p>
+
+          <p>
+            <a href="#Tabling"
+              >Tabling</a
+            >
+            &mdash; During &mdash;
+            <a href="#Session">Session</a>
+          </p>
+        </article>
 
         <article class="objectproperty" id="givesNotice">
           <h3>
@@ -145,41 +157,22 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasHouse">
+        <article class="objectproperty" id="intoHouse">
           <h3>
             Object property
-            <a href="#hasHouse"
-              >Has House</a
+            <a href="#intoHouse"
+              >Into House</a
             >
           </h3>
 
-           <p>Relates an act of tabling or withdrawal to the House in which it happens.</p>
+           <p>Relates an act of tabling to the House in which it happens.</p>
 
           <p>
-            <a href="#TablingOrWithdrawal"
-              >TablingOrWithdrawal</a
+            <a href="#Tabling"
+              >Tabling</a
             >
-            &mdash; Has House &mdash;
+            &mdash; Into House &mdash;
             <a href="#House">House</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="inSession">
-          <h3>
-            Object property
-            <a href="#inSession"
-              >In session</a
-            >
-          </h3>
-
-           <p>Relates an act of tabling or withdrawal to the session in which it happens.</p>
-
-          <p>
-            <a href="#TablingOrWithdrawal"
-              >TablingOrWithdrawal</a
-            >
-            &mdash; In session &mdash;
-            <a href="#Session">Session</a>
           </p>
         </article>
 
@@ -202,6 +195,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="resultsIn">
+          <h3>
+            Object property
+            <a href="#resultsIn"
+              >Results in</a
+            >
+          </h3>
+
+           <p>Relates an act of withdrawal to the resulting withdrawn thing.</p>
+
+          <p>
+            <a href="#Withdrawal"
+              >Withdrawal</a
+            >
+            &mdash; Results in &mdash;
+            <a href="#WithdrawnThing">WithdrawnThing</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="tabledBy">
           <h3>
             Object property
@@ -210,14 +222,14 @@
             >
           </h3>
 
-           <p>Relates a tabling to the seat incumbency of the Member tabling.</p>
+           <p>Relates a tabling to the incumbency of the Member tabling.</p>
 
           <p>
             <a href="#Tabling"
               >Tabling</a
             >
             &mdash; Tabled by &mdash;
-            <a href="#SeatIncumbency">SeatIncumbency</a>
+            <a href="#Incumbency">Incumbency</a>
           </p>
         </article>
 
@@ -248,14 +260,14 @@
             >
           </h3>
 
-           <p>Relates an act of withdrawal to the business item which it withdraws.</p>
+           <p>Relates an act of withdrawal to the tabled thing it withdraws.</p>
 
           <p>
             <a href="#Withdrawal"
               >Withdrawal</a
             >
             &mdash; Withdraws &mdash;
-            <a href="#WithdrawnThing">WithdrawnThing</a>
+            <a href="#TabledThing">TabledThing</a>
           </p>
         </article>
       </section>
@@ -296,12 +308,8 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
-            <td>/<wbr>ontologies/<wbr>tabling/<wbr>Tabling</td>
-            <td>/<wbr>ontologies/<wbr>tabling/<wbr>TablingOrWithdrawal</td>
-          </tr>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>tabling/<wbr>Withdrawal</td>
-            <td>/<wbr>ontologies/<wbr>tabling/<wbr>TablingOrWithdrawal</td>
+            <td>/<wbr>ontologies/<wbr>tabling/<wbr>WithdrawnThing</td>
+            <td>/<wbr>ontologies/<wbr>tabling/<wbr>TabledThing</td>
           </tr>
         </table>
       </section>
@@ -385,7 +393,7 @@
 
     <footer>
       <p>
-        Generated 2023-11-20 14:22:11.914602 from a
+        Generated 2023-11-23 14:05:16.703257 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../tabling/tabling-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../tabling/tabling-ontology.ttl"
