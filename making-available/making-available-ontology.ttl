@@ -141,6 +141,13 @@ pma:withdrawnOnBehalfOf rdf:type owl:ObjectProperty ;
 	rdfs:domain pma:Withdrawal ;
 	rdfs:range pma:MakingAvailableBody ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:replaces rdf:type owl:ObjectProperty ;
+	rdfs:label "Replaces"@en ;
+	rdfs:comment "Relates a made available thing to the withdrawn thing it replaces. A made available thing replaces one or more withdrawn things, or none. A withdrawn thing may be replaced by one or more made available things, or none."@en ;
+	rdfs:domain pma:MadeAvailableThing ;
+	rdfs:range pma:WithdrawnThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 				
 
 
