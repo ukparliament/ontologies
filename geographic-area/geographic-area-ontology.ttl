@@ -75,10 +75,20 @@ parea:BoundarySet rdf:type owl:Class ;
 	rdfs:label "Boundary set"@en ;
 	rdfs:comment "A boundary set for UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commission and established by statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:ConstituencyGroupSet rdf:type owl:Class ;
+	rdfs:label "Constituency group set"@en ;
+	rdfs:comment "A set of constituency groups, established by statute."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
 	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:ConstituencyAreaType rdf:type owl:Class ;
+	rdfs:label "Constituency area type"@en ;
+	rdfs:comment "The type of a constituency area, being either county, borough or burgh."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 	
@@ -101,7 +111,7 @@ parea:partlyContainedBy rdf:type owl:ObjectProperty ;
 
 parea:definedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Defined by"@en ;
-	rdfs:comment "Relates a constituency area to the boundary set it was defined by."@en ;
+	rdfs:comment "Relates a constituency area to the boundary set which defines that area. A constituency area is defined by one boundary set. A boundary set defines one or more constituency areas."@en ;
 	rdfs:domain parea:ConstituencyArea ;
 	rdfs:range parea:BoundarySet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
@@ -115,8 +125,15 @@ parea:establishedBy rdf:type owl:ObjectProperty ;
 	
 parea:boundarySetEstablishedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Boundary set established by"@en ;
-	rdfs:comment "Relates a boundary set to the statutory thing it was established by."@en ;
+	rdfs:comment "Relates a boundary set to the statutory thing, or things, which established that boundary set. A boundary set may be established by one or more statutory things, for example: the 2010 boundary set in Wales being established by a single Order in Council and the 1955 boundary set in Wales being established by three Orders in Council. A statutory thing may establish one or more boundary sets, or none, for example: the Parliamentary Constituencies and Assembly Electoral Regions (Wales) Order 2006 establishing the 2010 boundary set in Wales and the Parliamentary Constituencies Order 2023 establishing boundary sets in England, Wales, Northern Ireland and Scotland."@en ;
 	rdfs:domain parea:BoundarySet ;
+	rdfs:range parea:StatutoryThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:constituencyGroupSetEstablishedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Constituency group set established by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea:ConstituencyGroupSet ;
 	rdfs:range parea:StatutoryThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
@@ -127,27 +144,27 @@ parea:isAlsoUpperTierLocalAuthorityArea rdf:type owl:ObjectProperty ;
 	rdfs:range parea:UpperTierLocalAuthorityArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
+parea:appliesTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Applies to"@en ;
+	rdfs:comment "Relates a boundary set to that country to which the boundary set applies. A boundary set applies to one country. A country may have one or more boundary sets over time."@en ;
+	rdfs:domain parea:BoundarySet ;
+	rdfs:range parea:Country ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
+parea:hasConstituencyAreaType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has constituency area type"@en ;
+	rdfs:comment "Relates a constituency area to the type of that constituency area. A constituency area has one type."@en ;
+	rdfs:domain parea:ConstituencyArea ;
+	rdfs:range parea:ConstituencyAreaType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
+	
 	
 	
 #######  Data properties ##### 
-
-parea:ons_code rdf:type owl:DatatypeProperty ;
-	rdfs:label "ONS code"@en ;
-	rdfs:comment "Relates a geographic area to its code as assigned by the Office of National Statistics."@en ;
-	rdfs:domain parea:GeographicArea ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:geometry rdf:type owl:DatatypeProperty ;
 	rdfs:label "Geometry"@en ;
 	rdfs:comment "Relates a geographic area to the geometry describing the boundaries of that area."@en ;
 	rdfs:domain parea:GeographicArea ;
 	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
-
-parea:appliesFrom rdf:type owl:DatatypeProperty ;
-	rdfs:label "Applies from"@en ;
-	rdfs:comment "Relates a boundary set to the date that boundary set applies from."@en ;
-	rdfs:domain parea:BoundarySet ;
-	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
