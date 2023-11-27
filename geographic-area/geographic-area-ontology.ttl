@@ -75,11 +75,6 @@ parea:BoundarySet rdf:type owl:Class ;
 	rdfs:label "Boundary set"@en ;
 	rdfs:comment "A boundary set for UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commission and established by statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
-	
-parea:ConstituencyGroupSet rdf:type owl:Class ;
-	rdfs:label "Constituency group set"@en ;
-	rdfs:comment "A set of constituency groups, established by statute."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
 parea:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
@@ -127,13 +122,6 @@ parea:boundarySetEstablishedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Boundary set established by"@en ;
 	rdfs:comment "Relates a boundary set to the statutory thing, or things, which established that boundary set. A boundary set may be established by one or more statutory things, for example: the 2010 boundary set in Wales being established by a single Order in Council and the 1955 boundary set in Wales being established by three Orders in Council. A statutory thing may establish one or more boundary sets, or none, for example: the Parliamentary Constituencies and Assembly Electoral Regions (Wales) Order 2006 establishing the 2010 boundary set in Wales and the Parliamentary Constituencies Order 2023 establishing boundary sets in England, Wales, Northern Ireland and Scotland."@en ;
 	rdfs:domain parea:BoundarySet ;
-	rdfs:range parea:StatutoryThing ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
-	
-parea:constituencyGroupSetEstablishedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Constituency group set established by"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain parea:ConstituencyGroupSet ;
 	rdfs:range parea:StatutoryThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 
