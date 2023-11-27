@@ -90,6 +90,16 @@
            <p>
             Superclasses  &middot; GeographicAreaEstablishedByStatute           </p>
         </article>
+        <article class="class" id="ConstituencyAreaType">
+          <h3>Class <a href="#ConstituencyAreaType">Constituency area type</a></h3>
+
+          <p>The type of a constituency area, being either county, borough or burgh.</p>
+         </article>
+        <article class="class" id="ConstituencyGroupSet">
+          <h3>Class <a href="#ConstituencyGroupSet">Constituency group set</a></h3>
+
+          <p>A set of constituency groups, established by statute.</p>
+         </article>
         <article class="class" id="Country">
           <h3>Class <a href="#Country">Country</a></h3>
 
@@ -141,6 +151,25 @@
         <h2>Object properties</h2>
 
 
+        <article class="objectproperty" id="appliesTo">
+          <h3>
+            Object property
+            <a href="#appliesTo"
+              >Applies to</a
+            >
+          </h3>
+
+           <p>Relates a boundary set to that country to which the boundary set applies. A boundary set applies to one country. A country may have one or more boundary sets over time.</p>
+
+          <p>
+            <a href="#BoundarySet"
+              >BoundarySet</a
+            >
+            &mdash; Applies to &mdash;
+            <a href="#Country">Country</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="boundarySetEstablishedBy">
           <h3>
             Object property
@@ -149,13 +178,31 @@
             >
           </h3>
 
-           <p>Relates a boundary set to the statutory thing it was established by.</p>
+           <p>Relates a boundary set to the statutory thing, or things, which established that boundary set. A boundary set may be established by one or more statutory things, for example: the 2010 boundary set in Wales being established by a single Order in Council and the 1955 boundary set in Wales being established by three Orders in Council. A statutory thing may establish one or more boundary sets, or none, for example: the Parliamentary Constituencies and Assembly Electoral Regions (Wales) Order 2006 establishing the 2010 boundary set in Wales and the Parliamentary Constituencies Order 2023 establishing boundary sets in England, Wales, Northern Ireland and Scotland.</p>
 
           <p>
             <a href="#BoundarySet"
               >BoundarySet</a
             >
             &mdash; Boundary set established by &mdash;
+            <a href="#StatutoryThing">StatutoryThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="constituencyGroupSetEstablishedBy">
+          <h3>
+            Object property
+            <a href="#constituencyGroupSetEstablishedBy"
+              >Constituency group set established by</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#ConstituencyGroupSet"
+              >ConstituencyGroupSet</a
+            >
+            &mdash; Constituency group set established by &mdash;
             <a href="#StatutoryThing">StatutoryThing</a>
           </p>
         </article>
@@ -168,7 +215,7 @@
             >
           </h3>
 
-           <p>Relates a constituency area to the boundary set it was defined by.</p>
+           <p>Relates a constituency area to the boundary set which defines that area. A constituency area is defined by one boundary set. A boundary set defines one or more constituency areas.</p>
 
           <p>
             <a href="#ConstituencyArea"
@@ -195,6 +242,25 @@
             >
             &mdash; Established by &mdash;
             <a href="#StatutoryThing">StatutoryThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasConstituencyAreaType">
+          <h3>
+            Object property
+            <a href="#hasConstituencyAreaType"
+              >Has constituency area type</a
+            >
+          </h3>
+
+           <p>Relates a constituency area to the type of that constituency area. A constituency area has one type.</p>
+
+          <p>
+            <a href="#ConstituencyArea"
+              >ConstituencyArea</a
+            >
+            &mdash; Has constituency area type &mdash;
+            <a href="#ConstituencyAreaType">ConstituencyAreaType</a>
           </p>
         </article>
 
@@ -259,20 +325,6 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="appliesFrom">
-          <h3>
-            Data property
-            <a href="#appliesFrom">Applies from</a>
-          </h3>
-
-          <p>Relates a boundary set to the date that boundary set applies from.</p>
-
-          <p>
-            BoundarySet &mdash; Applies from &mdash;
-            date
-          </p>
-        </article>
-
         <article class="dataproperty" id="geometry">
           <h3>
             Data property
@@ -283,20 +335,6 @@
 
           <p>
             GeographicArea &mdash; Geometry &mdash;
-            Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="ons_code">
-          <h3>
-            Data property
-            <a href="#ons_code">ONS code</a>
-          </h3>
-
-          <p>Relates a geographic area to its code as assigned by the Office of National Statistics.</p>
-
-          <p>
-            GeographicArea &mdash; ONS code &mdash;
             Literal
           </p>
         </article>
@@ -415,7 +453,7 @@
 
     <footer>
       <p>
-        Generated 2023-11-23 15:01:24.923768 from a
+        Generated 2023-11-27 14:41:13.672605 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../geographic-area/geographic-area-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../geographic-area/geographic-area-ontology.ttl"
