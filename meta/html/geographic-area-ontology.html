@@ -74,21 +74,21 @@
         <article class="class" id="BoundarySet">
           <h3>Class <a href="#BoundarySet">Boundary set</a></h3>
 
-          <p>A boundary set for UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commission and established by statute.</p>
+          <p>A boundary set defining UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commissions and established by statute.</p>
          </article>
         <article class="class" id="CombinedAuthorityArea">
           <h3>Class <a href="#CombinedAuthorityArea">Combined authority area</a></h3>
 
           <p>The geographic area in which a combined authority may exercise its powers. A combined authority may be created in England under powers set out in the Local Democracy, Economic Development and Construction Act 2009.</p>
            <p>
-            Superclasses  &middot; GeographicAreaEstablishedByStatute           </p>
+            Superclasses  &middot; GeographicAreaDefinedByStatute           </p>
         </article>
         <article class="class" id="ConstituencyArea">
           <h3>Class <a href="#ConstituencyArea">Constituency area</a></h3>
 
           <p>The geographic area of a UK Parliament constituency.</p>
            <p>
-            Superclasses  &middot; GeographicAreaEstablishedByStatute           </p>
+            Superclasses  &middot; GeographicAreaDefinedByStatute           </p>
         </article>
         <article class="class" id="ConstituencyAreaType">
           <h3>Class <a href="#ConstituencyAreaType">Constituency area type</a></h3>
@@ -105,7 +105,7 @@
         <article class="class" id="EnglishRegion">
           <h3>Class <a href="#EnglishRegion">English region</a></h3>
 
-          <p>A statistical region in England being a UK International Territorial Level (ITL).</p>
+          <p>A statistical region in England, formerly known as a government office region, being an International Territorial Level (ITL) 1 unit, formerly known as a NUTS 1 unit.</p>
            <p>
             Superclasses  &middot; GeographicArea           </p>
         </article>
@@ -114,10 +114,10 @@
 
           <p>A named area of geography.</p>
          </article>
-        <article class="class" id="GeographicAreaEstablishedByStatute">
-          <h3>Class <a href="#GeographicAreaEstablishedByStatute">Geographic area established by statute</a></h3>
+        <article class="class" id="GeographicAreaDefinedByStatute">
+          <h3>Class <a href="#GeographicAreaDefinedByStatute">Geographic area defined by statute</a></h3>
 
-          <p>A geographic area established by an Act of Parliament or a made statutory instrument.</p>
+          <p>A geographic area defined by an Act of Parliament or a made statutory instrument.</p>
            <p>
             Superclasses  &middot; GeographicArea           </p>
         </article>
@@ -126,7 +126,7 @@
 
           <p>The geographic area in which a lower tier local authority may exercise its powers.</p>
            <p>
-            Superclasses  &middot; GeographicAreaEstablishedByStatute           </p>
+            Superclasses  &middot; GeographicAreaDefinedByStatute           </p>
         </article>
         <article class="class" id="StatutoryThing">
           <h3>Class <a href="#StatutoryThing">Statutory thing</a></h3>
@@ -138,7 +138,7 @@
 
           <p>The geographic area in which an upper tier local authority may exercise its powers.</p>
            <p>
-            Superclasses  &middot; GeographicAreaEstablishedByStatute           </p>
+            Superclasses  &middot; GeographicAreaDefinedByStatute           </p>
         </article>
       </section>
  
@@ -192,33 +192,33 @@
             >
           </h3>
 
+           <p>Relates a geographic area defined by statute to the statutory thing it was defined by. A geographic area defined by statute is defined by one statutory thing. A statutory thing may define one or more geographic areas, or none.</p>
+
+          <p>
+            <a href="#GeographicAreaDefinedByStatute"
+              >GeographicAreaDefinedByStatute</a
+            >
+            &mdash; Defined by &mdash;
+            <a href="#StatutoryThing">StatutoryThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="definedWithin">
+          <h3>
+            Object property
+            <a href="#definedWithin"
+              >Defined within</a
+            >
+          </h3>
+
            <p>Relates a constituency area to the boundary set which defines that area. A constituency area is defined by one boundary set. A boundary set defines one or more constituency areas.</p>
 
           <p>
             <a href="#ConstituencyArea"
               >ConstituencyArea</a
             >
-            &mdash; Defined by &mdash;
+            &mdash; Defined within &mdash;
             <a href="#BoundarySet">BoundarySet</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="establishedBy">
-          <h3>
-            Object property
-            <a href="#establishedBy"
-              >Established by</a
-            >
-          </h3>
-
-           <p>Relates a geographic area established by statute to the statutory thing it was established by.</p>
-
-          <p>
-            <a href="#GeographicAreaEstablishedByStatute"
-              >GeographicAreaEstablishedByStatute</a
-            >
-            &mdash; Established by &mdash;
-            <a href="#StatutoryThing">StatutoryThing</a>
           </p>
         </article>
 
@@ -287,7 +287,7 @@
             >
           </h3>
 
-           <p>Relates a geographic area to the geographic area it is wholly contained by. A constituency area may be wholly contained by a lower tier local authority area, by an upper tier local authority area, or by neither. A constituency area in England is wholly contained by an English region. A constituency area is wholly contained by a country. A lower tier local authority area may be wholly contained by a constituency area. A lower tier local authority area is wholly contained by an upper tier local authority area, except where the lower tier local authority area is also the upper tier local authority area. An upper tier local authority area may be wholly contained by a constituency area. As at November 2021, an upper tier local authority area is wholly contained by a combined authority area, where a combined authority area exists.An upper tier local authority area in England is wholly contained by an English region. An upper tier local authority area is wholly contained by a country. A combined authority area may be wholly contained by an English region. A combined authority area is wholly contained by the country of England. An English region is wholly contained by the country of England.</p>
+           <p>Relates a geographic area to the geographic area it is wholly contained by. A constituency area may be wholly contained by a lower tier local authority area, by an upper tier local authority area, or by neither. A constituency area in England is wholly contained by an English region. A constituency area is wholly contained by a country. A lower tier local authority area may be wholly contained by a constituency area. A lower tier local authority area is wholly contained by an upper tier local authority area, except where the lower tier local authority area is also the upper tier local authority area. An upper tier local authority area may be wholly contained by a constituency area. As at November 2021, an upper tier local authority area is wholly contained by a combined authority area, where a combined authority area exists. An upper tier local authority area in England is wholly contained by an English region. An upper tier local authority area is wholly contained by a country. A combined authority area may be wholly contained by an English region. A combined authority area is wholly contained by the country of England. An English region is wholly contained by the country of England.</p>
 
           <p>
             <a href="#GeographicArea"
@@ -321,7 +321,7 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
-            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
+            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaDefinedByStatute</td>
             <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicArea</td>
           </tr>
           <tr>
@@ -334,19 +334,19 @@
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>ConstituencyArea</td>
-            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
+            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaDefinedByStatute</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>UpperTierLocalAuthorityArea</td>
-            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
+            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaDefinedByStatute</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>LowerTierLocalAuthorityArea</td>
-            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
+            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaDefinedByStatute</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>CombinedAuthorityArea</td>
-            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaEstablishedByStatute</td>
+            <td>/<wbr>ontologies/<wbr>geographic-area/<wbr>GeographicAreaDefinedByStatute</td>
           </tr>
         </table>
       </section>
@@ -424,13 +424,13 @@
 
       <p id="makers">
         Made by   &middot; Carl Baker           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-   &middot; Ned Morrell    &middot; Mark Sandford           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Neil Johnston    &middot; Ned Morrell    &middot; Mark Sandford           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2023-12-04 13:52:35.648272 from a
+        Generated 2023-12-04 16:28:27.150956 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../geographic-area/geographic-area-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../geographic-area/geographic-area-ontology.ttl"
