@@ -43,6 +43,13 @@ parea-overlap:fromGeographicArea rdf:type owl:ObjectProperty ;
 	rdfs:range parea-overlap:GeographicArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
 	
+parea-overlap:toGeographicArea rdf:type owl:ObjectProperty ;
+	rdfs:label "To geographic area"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range parea-overlap:GeographicArea ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+	
 	
 	
 #######  Data properties ##### 
@@ -52,4 +59,53 @@ parea-overlap:fromGeographicAreaGeographicOverlap rdf:type owl:DatatypeProperty 
 	rdfs:comment ""@en ;
 	rdfs:domain parea-overlap:GeographicAreaOverlap ;
 	rdfs:range xsd:float ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+	
+parea-overlap:fromGeographicAreaResidentialOverlap rdf:type owl:DatatypeProperty ;
+	rdfs:label "From geographic area residential overlap"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:float ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+	
+parea-overlap:fromGeographicAreaPopulationOverlap rdf:type owl:DatatypeProperty ;
+	rdfs:label "From geographic area population overlap"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:float ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+	
+parea-overlap:formedFromWholeOf rdf:type owl:DatatypeProperty ;
+	rdfs:label "Formed from whole of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+	
+parea-overlap:toGeographicAreaGeographicOverlap rdf:type owl:DatatypeProperty ;
+	rdfs:label "To geographic area geographic overlap"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:float ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+
+parea-overlap:toGeographicAreaResidentialOverlap rdf:type owl:DatatypeProperty ;
+	rdfs:label "To geographic area residential overlap"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:float ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+
+parea-overlap:toGeographicAreaPopulationOverlap rdf:type owl:DatatypeProperty ;
+	rdfs:label "To geographic area population overlap"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:float ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
+
+parea-overlap:formsWholeOf rdf:type owl:DatatypeProperty ;
+	rdfs:label "Forms whole of"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain parea-overlap:GeographicAreaOverlap ;
+	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
