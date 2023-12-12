@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2023
 
+* [Week 48](48)
 * [Week 46](46)
 * [Week 45](45)
 * [Week 43](43)

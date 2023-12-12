@@ -94,8 +94,11 @@ Informational copies of treaties made be laid in both Houses at the point the tr
 
 The Trade and Agriculture Commission's purpose is to provide advice under section 42 of the Agriculture Act 2020 (see below). In preparing a report relating to free trade agreements under that section, the Secretary of State must request advice from the Commission and lay before Parliament any such advice received in response to said requests. Generally, the advice should be published before any report but there has been one instance where the report was laid first. The Trade and Agriculture Commission's role is outlined under [Part 3 of the Trade Act 2021](https://www.legislation.gov.uk/ukpga/2021/10/part/3/enacted). 
 
+* [All Trade and Agriculture Commission advice laid before Parliament](https://api.parliament.uk/s/08744d7f)
+
 * [Trade and Agriculture Commission advice to the Secretary of State for International Trade laid before Parliament](https://api.parliament.uk/s/f93cd44c)
 
+* [Trade and Agriculture Commission advice to the Secretary of State for Business and Trade laid before Parliament](https://api.parliament.uk/s/2111596a) 
 
 ## Publication of a report pursuant to Section 42 of the Agriculture Act 2020 on a free trade agreement laid before the House of Commons/House of Lords
 

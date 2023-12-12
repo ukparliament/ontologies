@@ -205,6 +205,12 @@ If an urgent or important matter arises which an MP believes requires an immedia
 
 * <a href="https://api.parliament.uk/s/f30f27d2">Urgent questions on treaties</a>
 
+## Private notice question (PNQ) on a treaty
+
+A private notice question (PNQ) gives a member of the House of Lords the opportunity to ask an urgent and important question to the government on any sitting day. Questions that are selected must be related to a very recent or imminent event or development, or important in terms of public policy, or have more than a local or temporary significance.
+
+* [Private notice question about a treaty](https://api.parliament.uk/s/b5efb3f9)
+
 ## Withdrawn treaties
 
 The following query looks for all treaties withdrawn from the House of Commons and House of Lords:
