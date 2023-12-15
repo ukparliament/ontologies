@@ -113,11 +113,11 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Commons committees
 
-* <a href="https://api.parliament.uk/s/00105f48">Commons committee inquiries</a>
+* <a href="https://api.parliament.uk/s/a8063a8c">Commons committee inquiries</a>
 
 * <a href="https://api.parliament.uk/s/83d0a31e">Commons consideration of treaties</a>  
 
-* <a href="https://api.parliament.uk/s/d1d9f4d4">Commons committee oral evidence sessions</a>
+* <a href="https://api.parliament.uk/s/9b009dd1">Commons committee oral evidence sessions</a>
 
 ### Lords committees
 
@@ -151,15 +151,21 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Correspondence published by committees
 
-* <a href="https://api.parliament.uk/s/5d8b5280"> All committee correspondence</a>
+* <a href="https://api.parliament.uk/s/75bebbaf"> All committee correspondence</a>
 
-* <a href="https://api.parliament.uk/s/3bb71819"> Correspondence published by Commons committees</a>
+* <a href="https://api.parliament.uk/s/e96fae17"> Correspondence published by Commons committees</a>
 
 * <a href="https://api.parliament.uk/s/33d28019"> Correspondence published by the International Trade Committee</a>
 
 * <a href="https://api.parliament.uk/s/c0c436b0"> Correspondence published by the Business and Trade Committee</a>
 
 * <a href="https://api.parliament.uk/s/84fb1a26"> Correspondence published by the Environment, Food and Rural Affairs Committee</a>
+
+* <a href="https://api.parliament.uk/s/9c20e610"> Correspondence published by the Public Accounts Committee</a>
+
+* <a href="https://api.parliament.uk/s/9d0864a6"> Correspondence published by the Women and Equalities Committee</a>
+
+* <a href="https://api.parliament.uk/s/7f4208b5"> Correspondence published by the Home Affairs Committee</a>
 
 * <a href="https://api.parliament.uk/s/e4b80566"> Correspondence published by Lords committees</a>
 
