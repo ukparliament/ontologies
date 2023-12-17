@@ -35,3 +35,11 @@ Dot file: [dot](crag-treaties/components/jchr/jchr.dot)
 ##### [Lords' Committees procedure [PDF]](crag-treaties/components/lords-committees/lords-committees.pdf)
 
 Dot file: [dot](crag-treaties/components/lords-committees/lords-committees.dot) 
+
+##### [Other Commons committees procedure [PDF]](crag-treaties/components/other-commons-committees/other-commons-committees.pdf)
+
+Dot file: [dot](crag-treaties/components/other-commons-committees/other-commons-committees.dot)
+
+##### [Public Accounts Committee procedure [PDF]](crag-treaties/components/pac/pac.pdf)
+
+Dot file: [dot](crag-treaties/components/pac/pac.dot)
