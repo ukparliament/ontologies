@@ -36,6 +36,8 @@ This query will show you all treaties laid before Parliament since the Treaty Tr
 
 ## Treaties by calendar year
 
+* <a href="https://api.parliament.uk/s/3355f1ab">2024</a>
+
 * <a href="https://api.parliament.uk/s/5a9ce63b">2023</a>
 
 * <a href="https://api.parliament.uk/s/ac68683d">2022</a>
