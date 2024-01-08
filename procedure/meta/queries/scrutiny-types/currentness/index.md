@@ -26,6 +26,6 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 	* [Made affirmative remedial order representation period](https://api.parliament.uk/s/893b2d00) (Note that this means that the 60-day representation period has ended - it does not mean the instrument has lapsed if it is not approved by this date)
 	* [Made affirmative remedial order approval period](https://api.parliament.uk/s/9b78e2a0) (If a made affirmative remedial order reaches the end of its 120 clock and has not been approved by both Houses then the whole instrument lapses and stops being law)
 
-* [Treaties - Objection Period A](https://api.parliament.uk/s/37c89edc) 
+* [Treaties - Objection Period A](https://api.parliament.uk/s/7372cf2c) 
 
-* [Treaties - Objection Period B (As of December 2021 this step has not been actualised)](https://api.parliament.uk/s/aa9e7080)
+* [Treaties - Objection Period B (As of December 2021, this step has not been actualised)](https://api.parliament.uk/s/aa9e7080)
