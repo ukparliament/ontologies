@@ -20,6 +20,10 @@ Dot file: [dot](crag-treaties/components/bat/bat.dot)
 
 Dot file: [dot](crag-treaties/components/efra/efra.dot) 
 
+##### [Home Affairs Committee [PDF]](crag-treaties/components/hac/hac.pdf)
+
+Dot file: [dot](crag-treaties/components/hac/hac.dot) 
+
 ##### [International Agreements Committee and European Affairs Committee procedure [PDF]](crag-treaties/components/iac+eac/iac+eac.pdf)
 
 Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) 
