@@ -143,9 +143,9 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Government responses to committee reports
 
-* <a href="https://api.parliament.uk/s/35d9b5bd"> All government responses</a>
+* <a href="https://api.parliament.uk/s/f2d527e7"> All government responses</a>
 
-* <a href="https://api.parliament.uk/s/d753e1fd"> Government responses to Commons reports</a>
+* <a href="https://api.parliament.uk/s/2514f6a0"> Government responses to Commons reports</a>
 
     * <a href="https://api.parliament.uk/s/d0db2900"> Committee replies to a government response</a>
 
