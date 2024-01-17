@@ -58,7 +58,7 @@
     <main>
       <h1>Tabling ontology</h1>
 
-      <p id="description">A model describing the activity of Members tabling parliamentary questions, motions, amendments and nominations.</p>
+      <p id="description">A model describing the activity of tabling by Members.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -84,17 +84,17 @@
         <article class="class" id="Session">
           <h3>Class <a href="#Session">Session</a></h3>
 
-          <p>The period during which Parliament is convened. The first session of a parliament begins on the same day as the parliament period: this date is given in the dissolution proclamation at the end of the previous parliament. The session ends on the day set in a subsequent prorogation proclamation. Subsequent sessions within the parliament period begin and end on dates set in subsequent prorogation proclamations. The last session of a parliament ends with prorogation followed by dissolution. Session periods are the same for both Houses.</p>
+          <p>A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses.</p>
          </article>
         <article class="class" id="TabledThing">
           <h3>Class <a href="#TabledThing">Tabled thing</a></h3>
 
-          <p>Any item of business which has been tabled, for example: a motion, parliamentary question, amendment or committee membership nomination. Note not all things that can be tabled must be tabled, for example: manuscript amendments are amendments which are raised on the day the business occurs. In other words, no notice has been given. For this reason they do not appear on the day&#39;s business papers and are rarely selected for debate. Manuscript amendments do not appear on the marshalled list.</p>
+          <p>Any item of business which has been tabled, for example: a tabled motion, a tabled parliamentary question, a tabled amendment or a tabled committee membership nomination.</p>
          </article>
         <article class="class" id="Tabling">
           <h3>Class <a href="#Tabling">Tabling</a></h3>
 
-          <p>The act of tabling a business item into either the House of Commons or House of Lords. Tabling is the act of formally putting forward a question, a motion, an amendment or a committee membership nomination. Members do this by submitting it to procedural clerks. The item will then appear in the next day&#39;s business papers as a written notice. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
+          <p>The act of tabling a business item - being a question, a motion, an amendment or a committee membership nomination - into either the House of Commons or House of Lords. Members submit business items to the procedural offices. If accepted, the business item is considered to be tabled and will then appear as a written notice in the business papers for the next day. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
          </article>
         <article class="class" id="Withdrawal">
           <h3>Class <a href="#Withdrawal">Withdrawal</a></h3>
@@ -104,14 +104,14 @@
         <article class="class" id="WithdrawnThing">
           <h3>Class <a href="#WithdrawnThing">Withdrawn thing</a></h3>
 
-          <p>A tabled thing which has subsequently been withdrawn.</p>
+          <p>A tabled thing which has been withdrawn.</p>
            <p>
             Superclasses  &middot; TabledThing           </p>
         </article>
         <article class="class" id="WrittenNotice">
           <h3>Class <a href="#WrittenNotice">Written notice</a></h3>
 
-          <p>Official notice of an item of future business.</p>
+          <p>Notice of an item of future business.</p>
          </article>
       </section>
  
@@ -127,7 +127,7 @@
             >
           </h3>
 
-           <p>Relates an act of tabling to the session in which it happens.</p>
+           <p>Relates an act of tabling to the session in which the tabling takes place. An act of tabling is during one session.</p>
 
           <p>
             <a href="#Tabling"
@@ -146,7 +146,7 @@
             >
           </h3>
 
-           <p>Relates an act of tabling to a written notice.</p>
+           <p>Relates an act of tabling to a written notice. An act of tabling results in one written notice.</p>
 
           <p>
             <a href="#Tabling"
@@ -165,7 +165,7 @@
             >
           </h3>
 
-           <p>Relates an act of tabling to the House in which it happens.</p>
+           <p>Relates an act of tabling to the House in which the tabling takes place. An act of tabling is into one House.</p>
 
           <p>
             <a href="#Tabling"
@@ -184,7 +184,7 @@
             >
           </h3>
 
-           <p>Relates a tabled thing to the withdrawn thing it replaces.</p>
+           <p>Relates a tabled thing to the withdrawn thing it replaces. A withdrawn thing is replaced by one tabled thing, or none.</p>
 
           <p>
             <a href="#TabledThing"
@@ -203,7 +203,7 @@
             >
           </h3>
 
-           <p>Relates an act of withdrawal to the resulting withdrawn thing.</p>
+           <p>Relates an act of withdrawal to the resulting withdrawn thing. An act of withdrawal results in one withdrawn thing. A withdrawn thing results from one act of withdrawal.</p>
 
           <p>
             <a href="#Withdrawal"
@@ -222,7 +222,7 @@
             >
           </h3>
 
-           <p>Relates a tabling to the incumbency of the Member tabling.</p>
+           <p>Relates an act of tabling to the incumbency of the Member tabling. An act of tabling is by one incumbent Member.</p>
 
           <p>
             <a href="#Tabling"
@@ -241,7 +241,7 @@
             >
           </h3>
 
-           <p>Relates an act of tabling to the business item which it tables.</p>
+           <p>Relates an act of tabling to the business item which is tabled. An act of tabling tables one tabled thing. A tabled thing is tabled by one act of tabling.</p>
 
           <p>
             <a href="#Tabling"
@@ -260,7 +260,7 @@
             >
           </h3>
 
-           <p>Relates an act of withdrawal to the tabled thing it withdraws.</p>
+           <p>Relates an act of withdrawal to the tabled thing withdrawn by the act of withdrawal. An act of withdrawal withdraws one tabled thing. A tabled thing is withdrawn by one act of tabling, or none.</p>
 
           <p>
             <a href="#Withdrawal"
@@ -281,7 +281,7 @@
             <a href="#tabledOn">Tabled on</a>
           </h3>
 
-          <p>Relates an act of tabling to the date on which it happened.</p>
+          <p>Relates an act of tabling to the date on which that tabling takes place.</p>
 
           <p>
             Tabling &mdash; Tabled on &mdash;
@@ -295,7 +295,7 @@
             <a href="#withdrawnOn">Withdrawn on</a>
           </h3>
 
-          <p>Relates an act of withdrawal to the date on which it happened.</p>
+          <p>Relates an act of withdrawal to the date on which that withdrawal takes place.</p>
 
           <p>
             Withdrawal &mdash; Withdrawn on &mdash;
@@ -393,7 +393,7 @@
 
     <footer>
       <p>
-        Generated 2024-01-12 14:16:05.870241 from a
+        Generated 2024-01-17 11:59:23.495520 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../tabling/tabling-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../tabling/tabling-ontology.ttl"
