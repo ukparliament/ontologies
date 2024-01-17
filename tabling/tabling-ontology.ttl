@@ -134,6 +134,13 @@ ptable:tabledOn rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
+ptable:isInterestDeclared rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is interest declared"@en ;
+	rdfs:comment "Used to record if the tabling Member declared an interest relevant to the act of tabling."@en ;
+	rdfs:domain ptable:Tabling ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+	
 ptable:withdrawnOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Withdrawn on"@en ;
 	rdfs:comment "Relates an act of withdrawal to the date on which that withdrawal takes place."@en ;
