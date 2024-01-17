@@ -95,19 +95,17 @@ parea-overlap:succeedingPopulationOverlap rdf:type owl:DatatypeProperty ;
 	rdfs:domain parea-overlap:GeographicAreaOverlap ;
 	rdfs:range xsd:float ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
-	
-# edited to here
 
 parea-overlap:formedFromWholeOf rdf:type owl:DatatypeProperty ;
 	rdfs:label "Formed from whole of"@en ;
-	rdfs:comment "Used to record whether the whole of the preceding geographic area went to form all or part of the succeeding geographic area, being based on area overlaps."@en ;
+	rdfs:comment "Used to record whether the whole of the preceding geographic area formed all or part of the succeeding geographic area, for example: the proposed constituency area - as of 17th January 2024 - of Bangor Aberconwy being formed from the whole of the preceding constituency area of Aberconwy. The value of 'formed from whole of' is true if the preceding area overlap value is 100%."@en ;
 	rdfs:domain parea-overlap:GeographicAreaOverlap ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
 	
 parea-overlap:formsWholeOf rdf:type owl:DatatypeProperty ;
 	rdfs:label "Forms whole of"@en ;
-	rdfs:comment "Used to record whether the whole of the succeeding geographic area was formed from all or part of the preceding geographic area, being based on area overlaps."@en ;
+	rdfs:comment "Used to record whether the whole of the succeeding geographic area was formed from all or part of the preceding geographic area, for example: the constituency of Bristol West forming the whole of the proposed constituency area - as of 17th January 2024 - of Bristol Central. The value of 'forms whole of' is true if the succeeding area overlap value is 100%."@en ;
 	rdfs:domain parea-overlap:GeographicAreaOverlap ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area-overlap/> .
