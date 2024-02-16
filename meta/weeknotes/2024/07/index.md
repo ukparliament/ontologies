@@ -1,0 +1,70 @@
+# 2024 - Week 7
+
+## Library open day
+
+Thursday saw the return of the ever-popular House of Commons Library Open Day, librarians from all over the country grabbing cardigans, packing lunches and climbing aboard charabancs bound for Westminster. There to be entertained by a series of talks and a tour of the Members' Library - the bit that everyone secretly recognises they've really come for.
+
+On duty from our crack team were librarians Anya, Susannah, Ayesha and Jayne. With her compatriot away on half-term leave, Susannah bravely faced the assembled audience alone, giving a talk on the Library's planning operation for the upcoming general election. Offstage, Anya, Ayesha and Jayne manned the indexing and data management stall, answering questions on the alignment of library and archival metadata modelling. Or at least attempting to. Back in their comfort zone, they also handed out a plethora of badges and stickers to delighted librarians. Well done all.
+
+## Home alone
+
+Across town, computational midfield pivot, Young Robert and Michael were left to mind the good ship IDMS. Fixing printers, measuring the height of monitors - or display screen equipment as Young Robert likes to call them - and cleaning keyboards with cotton buds. Or whatever it is they do. We're never sure.
+
+Being easily distracted when not under supervision, Michael took the opportunity to decorate one of our walls with paper, string and sellotape. This in some attempt to map models for the many and varied types of paper and the many and varied ways in which they're made available to Parliament. Librarians returned from Portcullis House to find him looking absolutely delighted with his efforts. None of them being the type to burst bubbles, they complimented him on his endeavours whilst making mental notes to never leave a toddler alone in a stationery shop.
+
+Still, it wasn't all creative play time back at the House of Commons Library. Papering walls with paper and string turned up a small gap where some string should have been. Which caused us to wonder aloud if the range of a presentation is a bill work whilst the range of an order to print is a bill expression. If you're a clerkly type having opinions on such matters, please send answers on a postcard to 20 Dartmouth Street, Westminster please.
+
+## People, places, parties
+
+It would be quite remiss to skip over by-elections in a week with two by-elections. As Friday morning dawned and most of the team were still mid-yawn and mid-stretch - trying to come to life, [if you will](https://www.youtube.com/watch?v=UbxUSsFXYo4) - Librarians Anna, Emily and Phil had already downed their cups of ambition and were hard at work. Trello cards flying across as details of our two new Members were added to various systems. By now a well-drilled routine, all went well with both ones and zeroes making their way down the computational piping. Welcome [Gen](https://members.parliament.uk/member/5011/career). Welcome [Damien](https://members.parliament.uk/member/5010/career). Top work Anna, Emily and Phil.
+
+## New, old search
+
+It goes without saying that work continues on new, old search. Of course it does. Unfortunately it's not work that's easy to type about, being something of a game of Trello table-tennis - played at a frankly disturbing speed - between librarians Jayne and Ned and developer Jon. Whilst we're always happy to provide a running commentary, given the speed of top-spin shots from the back of the court, we can barely keep our eye on the ball. We can, however, report that six of our object pages - or item pages as we've decided to call them this week - have now been fully checked, amended, checked again and signed off. These being bills, European deposited documents, impact assessments, private Acts, public Acts and - last but by no means least- everybody's favourites, statutory instruments. Excellent work Jayne, Ned and Jon. Only another 29 item types to go.
+
+Whilst we still have a fair bit of quality awaiting assurance, Librarian Anya and her ever present scullery maid Michael have been pressing on, trying to get ahead of the design and development game for search result pages. They now have a first pass description of [all attributes to appear in a search result for all 34 content types](https://docs.google.com/spreadsheets/d/1pHEwWKCojXBXvqD8vZ9VPhyRhtL-37K0j5D8UxAQMMI/edit?usp=sharing), around half of which have had both labels and occurrence counts checked and signed off. The next bit of the plan involves an in-person meeting - or a facilitated workshop, as Young Robert likes to call them - some walls, some more paper and some post-it notes. Though sadly, as far as Michael is concerned, no string or sellotape. We can't risk him immobilising himself. Again. 
+
+## New, older search
+
+Because new, old search still needs a fair bit of work, the team have been busy making contingency plans to ship what we can ship when we can ship it. After all, as Young Robert would no doubt say, one should always be shipping. Excellent product, as he'd probably add. The plan had been to put live our upgraded Solr instance, turn off the completely inadequate search service we offer to external users *and* provide the much better search service - currently requiring parliamentary network access - to anyone who wanted it. Then some words we didn't quite follow were said in a meeting and, as a result, that is no longer the plan. Instead we intend to go live in three stages:
+
+1. the Solr upgrade, ideally by the end of March
+
+2. unified search - or internal search available externally - some time past that
+
+3. new, old search, one would hope this year
+
+Stage 1 not being 'actionable' - as Young Robert might say - until our crack team of librarians are content that the Solr upgrade has had no unforeseen side-effects, Young Robert and Michael appear to have found themselves in the unlikely and slightly uncomfortable position of being sat slap-bang in the middle of the 'critical path'. Not a situation that happens often. One can make out the vague panic on their faces, like a pair of moles in a face of an out of control wheelbarrow. Not that they're shirking their responsibilities. Work on automated testing continues and the basics are now mostly there. More interestingly, Young Robert has been pulling apart assorted emails from Librarian Ned and turning them into Cucumber. Conversion to RSpec to follow shortly. On the subject of which, if anyone knows of any kind of Cucumber plugin that might work for Michael's colour-divergent eyes, please get in touch. Something that substitutes the use of green and red for the words passed and failed would be more than useful. Without that he remains, quite frankly, baffled.
+
+Over in Parliamentary Computational Section Towers, Project Manager Lydia has been busying herself with the form filling required for stage 1 to happen. This alongside corralling a mixed bag of people - or a multidisciplinary team, as Young Robert would no doubt say - into pixel-based meetings to work out a rough plan for stage 2. That last bit being made much smoother by the arrival of Robert, Michael and Jianhan's new boss Diana, who brings a pleasing sense of beginning, middle and end to proceedings.
+
+In preparation for stage 2, our Jianhan has been twiddling with the mini-CMS wrapped around our search service to create [individual accounts](https://trello.com/c/3sp2W9U7/151-set-up-accounts-for-search-cms) for our crack team of librarians. More importantly, Jianhan has also [made a test version of our internal search service, running on top of our upgraded Solr 9 instance](https://trello.com/c/8IjFqW4W/164-solr-9-with-search-material-front-end). Work introduced by the decoupling of the Solr 9 upgrade work from the unified search work. It went, we are told, swimmingly. Elsewhere, Librarian Anya has been [double checking the logic](https://trello.com/c/gVlNSvco/139-confirm-solr-field-linking-to-only-internal-locations) Jianhan added last week to signpost the presence of content that's only available internally. Or URIs that can't be dereferenced over an unauthenticated connection, as Young Robert might put it. Whilst declaring herself happy with the logic, the presentation could still use some work, feels Anya. Librarian Ned also having thoughts here.
+
+And finally, in preparation for stage 3 - or possibly stage 4 - Librarian Anya has been [casting an eye](https://trello.com/c/cQJkQSLB/115-review-indexer-notes) over our indexer notes field, just to check if there's anything in there we'd really rather not expose to the public. These are the equivalent of notes-to-self for our crack team of indexers, pointing out things they're unsure of and things to come back to.Whilst the existing search application does not make use of this text and whilst new, old search won't either, should we ever expose a public API, this field will be available to all and sundry. Our dear reader will be pleased to learn that Anya's fine tooth-comb picked up nothing that any librarian would ever be ashamed of.
+
+
+## Thesaurus fiddling
+
+Our loyal reader will be well aware that we work with a toolset that's barely been updated in the last 13 years. Our current live Solr is six major versions behind the current release, our triplestore is the oldest the vendor has ever seen in the wild and something of an archeological, technical marvel. For the past couple of years we've been attempting to upgrade what we can where we can. To that end, we're also in the midst out updating our thesaurus management software. Or at least attempting, the dependency graph looking like overcooked linguine.
+
+Whilst we're only two versions behind - we're running version 3, the current release is version 5.6 - it's still a big enough gap to make upgrading more difficult than would be ideal. Our current software is based on the Zthes standard, whilst version 4 onwards are based on SKOS-XL. Which means the last time our Jianhan attempted the upgrade, some of the data went missing. This including a good decade's worth of version history. Oops. Luckily there is a workaround which didn't prove too onerous. Our Jianhan has now taken the circular and scenic route to [first upgrade to version four and from there to version five](https://trello.com/c/jE1Spa78/2-re-run-data-migration-from-sempahore-3-version-history). All data appears to be present and correct and awaits testing by keen-eyed librarians.
+
+This leaves open the question of how a SKOS-XL-based system might [handle uncontrolled terms](https://trello.com/c/pjwkt3NB/18-by-eye-comparison-of-new-ses-and-old-ses). Or terms in the taxonomy having no actual identifier. To that end, Librarian Ned has been hard at work attempting to identify identiferless terms, the [results of his hard work being found here](https://trello.com/c/FMFg3Z8i/279-number-of-uncontrolled-terms).
+
+## Return to model mountain
+
+For the past few years - my god, it feels like decades - we've been designing new models for our putative new data platform. Imagine then our surprise, when we took another look and realised we'd forgotten to ever make a motion model. Quite the oversight. Realisation struck outside of work hours, with Anya and Michael ensconced in a house of the public variety. A beer mat was grabbed, a pen purloined and the resulting scribble is now drawn up. The next step is the usual trip to Messrs. Hennessy and Korris for the purposes of idiot checking. At which point, we'll know if it was worth taking the beer mat home or whether we should have left it sitting in a puddle of Guinness.
+
+## People, places, parties (slight return)
+
+In preparation for the upcoming general election, team:Phil have been working with colleagues in the Parliamentary Computational Section on changes to the Members part of the Parliament website. Of particular concern is how we handle boundary changes that will come into effect upon dissolution. Whilst the website does have pages for now extinct constituencies - at least for fairly recent ones - these haven't been linked to from Member pages. A quick visit to Yvette Cooper's page proves the point, her representation of [Pontefract and Castleford](https://members.parliament.uk/constituency/2343/overview) being now derefenceable. So that's one problem solved.
+
+The next problem is harder to pick apart, representation cards on the Members website smushing together constituencies with the same name but different boundaries. Check [Theresa May](https://members.parliament.uk/member/8/career)'s page and you'll see what we mean. She's listed as representing Maidenhead from the 1st May 1997 to the present date, despite the boundary change in 2010 meaning we're dealing with two different Maidenheads here. In the future, we plan to unsmush constituencies and list each unique constituency representation separately. Lovely stuff.
+
+## Niche? What? Us?
+
+At some point late last year we put our regnal year calculator website live. Being both finishers and completers with an unhealthy obsession with symmetry, we're pleased to announce that our beloved egg timer now also comes complete with regnal year session citations. For which Jayne would like to thank Michael and Michael would like to thank Jayne. Let's face it, no one else is gonna thank them.
+
+## Bots to blue skies
+
+Shortly before Christmas, a reader got in touch - we've counted at least two now - congratulating us on our written answer bots and asking if we could do the same for written statements. Some weeks later we can finally reveal our written statement bots on both Mastodon and Bluesky. We'd like to do the same for Twitter but API access has been heavily locked-down by the current owner in some attempt to crack down on porn bots and bitcoin scammers. A crackdown that does not appear to be bearing fruit. At least anecdotally speaking.
