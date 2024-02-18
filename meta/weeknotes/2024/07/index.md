@@ -2,9 +2,9 @@
 
 ## Library open day
 
-Thursday saw the return of the ever-popular [House of Commons Library Open Day](https://www.parliament.uk/business/news/2023/december-2023/house-of-commons-library-open-day/), librarians from all over the country grabbing cardigans, packing lunches and climbing aboard charabancs bound for Westminster. There to be entertained by a series of talks and a tour of the Members' Library - the bit that everyone secretly recognises they've really come for.
+Thursday saw the return of the ever-popular [House of Commons Library Open Day](https://www.parliament.uk/business/news/2023/december-2023/house-of-commons-library-open-day/), with librarians from all over the country grabbing cardigans, polishing their cateye specs, wrapping ham sandwiches (cut diagonally naturally) in tinfoil, and climbing aboard charabancs bound for Westminster. There to be entertained by a morning of talks and an afternoon tour of the Members' Library - the bit that we suspect they really signed up for.
 
-On duty from our crack team were librarians [Anya](https://bsky.app/profile/anyaso.bsky.social), [Ayesha](https://twitter.com/askalibrarylady), Jayne and Susannah. Susannah gave a talk on the Library's planning operation for the upcoming general election. Offstage, all four of them manned the Indexing and Data Management stall, handing out a plethora of flyers and stickers to delighted librarians and answering questions on the alignment of library and archival metadata modelling. Or at least attempting to. Well done all.
+On duty from our crack team were librarians [Anya](https://bsky.app/profile/anyaso.bsky.social), [Ayesha](https://twitter.com/askalibrarylady), Jayne and Susannah. Susannah gave a talk on the Library's planning operation for the upcoming general election. After which all four of them staffed the Indexing and Data Management stall, handing out a plethora of flyers and stickers to delighted librarians and answering questions on subject indexing, vocabulary management and the alignment of library and archival metadata modelling. Or at least attempting to. Well done all.
 
 ## Home alone
 
