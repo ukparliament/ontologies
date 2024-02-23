@@ -6,13 +6,11 @@ The government has precedent for engaging with Parliament via ministerial statem
 
 The following queries detail all pre-laying business on treaties since June 2017.
 
-## Treaties with scrutiny ongoing yet to be laid before Parliament
-
-Currently, this query will provide no results. We're in the process of updating Parliament's [Treaty Tracker](https://treaties.parliament.uk/) to allow us to add treaties that have said to be laid. Once this work has been completed we will add all treaties currenty being negotiated before being laid under the CRaG procedure. 
+## Potential agreements with scrutiny ongoing yet to be laid before Parliament
 
 * [Treaties yet to be laid before Parliament](https://api.parliament.uk/s/1d94b67b)
 
-## Treaties brought to the attention of Parliament before they were signed
+## Potential agrrements brought to the attention of Parliament before being signed
 
 * [Treaty scrutiny pre-signing](https://api.parliament.uk/s/ede69724)
 
