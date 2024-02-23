@@ -1,4 +1,4 @@
-# Business about a (prospective) treaty before it’s signed or before it’s laid before Parliament
+# Business about a (prospective) agreement before it’s signed or before it’s laid before Parliament
 
 In November 2022 we made the decision to add business steps about a treaty that occurred before a treaty is signed or laid before Parliament.
 
