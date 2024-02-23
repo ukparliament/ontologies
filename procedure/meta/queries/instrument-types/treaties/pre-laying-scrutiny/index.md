@@ -10,7 +10,7 @@ The following queries detail all pre-laying business on treaties since June 2017
 
 * [Treaties yet to be laid before Parliament](https://api.parliament.uk/s/1d94b67b)
 
-## Potential agrrements brought to the attention of Parliament before being signed
+## Potential agreements brought to the attention of Parliament before being signed
 
 * [Treaty scrutiny pre-signing](https://api.parliament.uk/s/ede69724)
 
