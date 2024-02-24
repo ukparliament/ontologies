@@ -11,4 +11,9 @@ Reports of the Procedure and Privileges Committee | Lords | https://committees.p
 Reports of the Procedure Committee | Commons | https://committees.parliament.uk/committee/126/procedure-committee/publications/ | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> |
 Hansard | Both | https://hansard.parliament.uk/ | Yes | Yes | <abbr title="Open Parliament Licence">OPL</abbr> | Available as XML / JSON from They Work for You
 Historic Hansard | Both | https://api.parliament.uk/historic-hansard/index.html | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | 
-
+MPs' Guide to Procedure | Commons | https://guidetoprocedure.parliament.uk/mps-guide-to-procedure | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | Latest version PDF only
+MPs' Guide to Procedure | Commons | https://guidetoprocedure.parliament.uk/mps-guide-to-procedure | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | Latest version PDF only
+Commons Library briefings on Parliament | Commons | https://commonslibrary.parliament.uk/topic/parliament-and-elections/parliament/ | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | Main content as PDF
+Parliament Glossary | Both | https://www.parliament.uk/site-information/glossary/ | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | Main content as PDF
+Government guide to Parliament | Both | https://www.gov.uk/government/publications/guide-to-parliamentary-work/guide-to-parliamentary-work-html | Yes | No | <abbr title="Open Government Licence">OGL</abbr> |
+Guide to laying papers | Commons | https://www.parliament.uk/globalassets/documents/upload/laying-papers.pdf | No | No | <abbr title="Open Parliament Licence">OPL</abbr> | PDF only
