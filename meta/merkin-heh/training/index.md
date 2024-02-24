@@ -9,5 +9,6 @@ Erskine May | Commons | https://erskinemay.parliament.uk/ | Yes | No | Copyright
 Companion to Standing Orders | Lords | https://www.parliament.uk/business/publications/house-of-lords-publications/rules-and-guides-for-business/companion-to-the-standing-orders/ | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | 
 Reports of the Procedure and Privileges Committee | Lords | https://committees.parliament.uk/committee/191/procedure-and-privileges-committee/publications/ | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> |
 Reports of the Procedure Committee | Commons | https://committees.parliament.uk/committee/126/procedure-committee/publications/ | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> |
-
+Hansard | Both | https://hansard.parliament.uk/ | Yes | Yes | <abbr title="Open Parliament Licence">OPL</abbr> | Available as XML / JSON from They Work for You
+Historic Hansard | Both | https://api.parliament.uk/historic-hansard/index.html | Yes | No | <abbr title="Open Parliament Licence">OPL</abbr> | 
 
