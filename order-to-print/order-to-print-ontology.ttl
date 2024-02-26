@@ -1,0 +1,63 @@
+@prefix ppresent: <http://parliament.uk/ontologies/presentation/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/presentation/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "Presentation ontology"@en ;
+    dcterms:created "2022-08-03"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "A model describing the presentation of papers into a House."@en;
+	foaf:depiction <https://ukparliament.github.io/ontologies/presentation/presentation.svg> ;
+	foaf:maker 
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Claire Searle" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ] .
+
+
+#######  Classes #####
+	
+ppresent:MakingAvailable rdf:type owl:Class ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
+	
+ppresent:OrderToPrint rdf:type owl:Class ;
+	rdfs:subClassOf ppresent:MakingAvailable ;
+	rdfs:label "Order to print"@en ;
+	rdfs:comment "The ordering, by a House, of a paper to be printed."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
+
+ppresent:MadeAvailableThing rdf:type owl:Class ;
+	rdfs:label "Made available thing"@en ;
+	rdfs:comment "A thing made available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
+
+ppresent:PaperExpression rdf:type owl:Class ;
+	rdfs:label "Paper expression"@en ;
+	rdfs:comment "A paper made available to a House, being an expression of a paper work."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
+	
+ppresent:PrintedPaper rdf:type owl:Class ;
+	rdfs:subClassOf ppresent:MadeAvailableThing ;
+	rdfs:subClassOf ppresent:PaperExpression ;
+	rdfs:label "Printed paper"@en ;
+	rdfs:comment "A paper printed by order of a House."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
+	
+	
+#######  Object properties ##### 
+	
+ppresent:resultsIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Results in"@en ;
+	rdfs:comment "Relates an act of ordering to print to the paper which has been printed. An act of ordering to print results one printed paper. A printed paper is the result of one act of ordering to print."@en ;
+	rdfs:domain ppresent:OrderToPrint ;
+	rdfs:range ppresent:PrintedPaper ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/presentation/> .
