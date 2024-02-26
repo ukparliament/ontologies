@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../presentation/presentation-ontology.html" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../order-to-print/order-to-print-ontology.html" />
     <link rel="index" href="https://ukparliament.github.io/ontologies/" />
     <link
       rel="alternate"
-      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../presentation/presentation-ontology.ttl"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../order-to-print/order-to-print-ontology.ttl"
       type="text/turtle"
       title="Presentation ontology: Turtle source"
     />
@@ -58,7 +58,7 @@
     <main>
       <h1>Presentation ontology</h1>
 
-      <p id="description">A model describing the presentation of papers into a House.</p>
+      <p id="description">A model describing an order to print by a House.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -80,24 +80,24 @@
 
           <p>The act of making a thing available to a House or to a House by means of its Library.</p>
          </article>
-        <article class="class" id="PaperWork">
-          <h3>Class <a href="#PaperWork">Paper work</a></h3>
+        <article class="class" id="OrderToPrint">
+          <h3>Class <a href="#OrderToPrint">Order to print</a></h3>
 
-          <p>A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
-         </article>
-        <article class="class" id="Presentation">
-          <h3>Class <a href="#Presentation">Presentation</a></h3>
-
-          <p>The act of presenting a paper to a House.</p>
+          <p>The ordering, by a House, of a paper to be printed.</p>
            <p>
             Superclasses  &middot; MakingAvailable           </p>
         </article>
-        <article class="class" id="PresentedPaper">
-          <h3>Class <a href="#PresentedPaper">Presented paper</a></h3>
+        <article class="class" id="PaperExpression">
+          <h3>Class <a href="#PaperExpression">Paper expression</a></h3>
 
-          <p>A paper which has been presented to a House, for example: a bill or a paper petition.</p>
+          <p>A paper made available to a House, being an expression of a paper work.</p>
+         </article>
+        <article class="class" id="PrintedPaper">
+          <h3>Class <a href="#PrintedPaper">Printed paper</a></h3>
+
+          <p>A paper printed by order of a House.</p>
            <p>
-            Superclasses  &middot; MadeAvailableThing  &middot; PaperWork           </p>
+            Superclasses  &middot; MadeAvailableThing  &middot; PaperExpression           </p>
         </article>
       </section>
  
@@ -113,14 +113,14 @@
             >
           </h3>
 
-           <p>Relates an act of presenting a paper to that paper which has been presented. An act of presenting results in one or more presented papers. A presented paper is the result of one act of presentation.</p>
+           <p>Relates an act of ordering to print to the paper which has been printed. An act of ordering to print results one printed paper. A printed paper is the result of one act of ordering to print.</p>
 
           <p>
-            <a href="#Presentation"
-              >Presentation</a
+            <a href="#OrderToPrint"
+              >OrderToPrint</a
             >
             &mdash; Results in &mdash;
-            <a href="#PresentedPaper">PresentedPaper</a>
+            <a href="#PrintedPaper">PrintedPaper</a>
           </p>
         </article>
       </section>
@@ -128,16 +128,16 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
-            <td>/<wbr>ontologies/<wbr>presentation/<wbr>Presentation</td>
+            <td>/<wbr>ontologies/<wbr>presentation/<wbr>OrderToPrint</td>
             <td>/<wbr>ontologies/<wbr>presentation/<wbr>MakingAvailable</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>presentation/<wbr>PresentedPaper</td>
+            <td>/<wbr>ontologies/<wbr>presentation/<wbr>PrintedPaper</td>
             <td>/<wbr>ontologies/<wbr>presentation/<wbr>MadeAvailableThing</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>presentation/<wbr>PresentedPaper</td>
-            <td>/<wbr>ontologies/<wbr>presentation/<wbr>PaperWork</td>
+            <td>/<wbr>ontologies/<wbr>presentation/<wbr>PrintedPaper</td>
+            <td>/<wbr>ontologies/<wbr>presentation/<wbr>PaperExpression</td>
           </tr>
         </table>
       </section>
@@ -222,9 +222,9 @@
     <footer>
       <p>
         Generated 2024-02-26 13:29:20.248491 from a
-        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../presentation/presentation-ontology.ttl">Turtle file</a>. Visualization:
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../order-to-print/order-to-print-ontology.ttl">Turtle file</a>. Visualization:
         <a
-          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../presentation/presentation-ontology.ttl"
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../order-to-print/order-to-print-ontology.ttl"
           >api.parliament.uk/webvowl</a
         >
       </p>
