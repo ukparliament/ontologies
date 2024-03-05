@@ -40,16 +40,17 @@ Still with the subject of international agreement semantics, a wee while back we
 
 In our final piece of [procedure mapping](https://ukparliament.github.io/ontologies/procedure/maps/) news, way back in the [midst of time](https://ukparliament.github.io/ontologies/meta/weeknotes/2023/29/#egg-timing-integrated) we added steps describing [scrutiny clocks](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e322), as set out in legislation. Until this week, those steps were present in data, but never quite made it to pixels. Thanks to the diligence of Librarian Jayne, that gap is now closed, and you don't have to be a computer to clock our clocks. Splendid finishing Librarian Jayne, excellent completing.
 
-
-
-
-
-
 ## Return to model mountain
 
-A couple of weeks back, Michael was left home alone with some paper, some string and some sticky tape. He proceeded to make a right mess of everything. His efforts were not entirely unrewarded when a string shaped gap popped up in what he likes to call his 'meta-model'. Whilst it would be hard to deny that an order to print results in some form of visible printed paper at some point, it's less clear what the subject of presentation might be. Our clerkly colleagues have been known to refer to the concept of a 'dummy bill' but we suspect that's because they're not librarians and not FRBR compliant. For that reason, our order to print model now makes a printed paper a type of paper expression and our presentation model now makes a presented paper a type of paper work. All very neat. At least on paper.
+A couple of weeks back, Michael was left home alone with some paper, some string and some sticky tape. He proceeded to make a [right mess of everything](https://twitter.com/fantasticlife/status/1757793883600179640). His efforts were not entirely unrewarded when a string shaped gap popped up in what he likes to call his 'meta-model'. Whilst it would be hard to deny that an [order to print](https://ukparliament.github.io/ontologies/order-to-print/order-to-print-ontology#d4e90) results in some form of visible printed paper - at least eventually - it's less clear what the subject of [presentation](https://ukparliament.github.io/ontologies/presentation/presentation-ontology#d4e90) might be. Our clerkly colleagues have been known to refer to the concept of a 'dummy bill', but we suspect that's because they're not librarians and not [FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) compliant. For that reason, our [order to print model](https://ukparliament.github.io/ontologies/order-to-print/order-to-print-ontology) now makes a [printed paper](https://ukparliament.github.io/ontologies/order-to-print/order-to-print-ontology#d4e126) a type of [paper expression](https://ukparliament.github.io/ontologies/order-to-print/order-to-print-ontology#d4e114) and our [presentation model](https://ukparliament.github.io/ontologies/presentation/presentation-ontology) now makes a [presented paper](https://ukparliament.github.io/ontologies/presentation/presentation-ontology#d4e126) a type of [paper work](https://ukparliament.github.io/ontologies/presentation/presentation-ontology#d4e114). All very neat. At least on paper.
 
-Our only other change has been the addition of yet another model specialising making available, this one describing papers being reported to a House by a committee. Or a formal body, as Michael likes to call them.
+Our only other change has been the addition of [yet another model](https://ukparliament.github.io/ontologies/reporting/reporting-ontology) specialising [making available](https://ukparliament.github.io/ontologies/making-available/making-available-ontology#d4e109), this one describing papers being [reported](https://ukparliament.github.io/ontologies/reporting/reporting-ontology#d4e101) to a House by a committee. Or a [formal body](https://ukparliament.github.io/ontologies/formal-body/formal-body-ontology#d4e89), as Michael likes to call them.
+
+
+
+
+
+
 
 ## People, places, parties (slight return)
 
