@@ -26,12 +26,6 @@ On the subject of checking the results, if you tuned in [last week](https://ukpa
 
 If, like us, you're a fan of development that's behaviour-driven and, like Michael, find yourself confused by the red-green spectrum, please do grab a copy of [Odin](https://github.com/ukparliament/solr-specs/blob/main/features/support/odin.rb). We hope it improves your life as much as it's improved Michael's. We did ask Young Robert why he chose the name Odin and, apparently, it's because he didn't go to comprehensive school and knows all about Germanic pagan people with wonky eyes. No way his parents wasted their money there.
 
-
-
-
-
-
-
 ## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
 
 In correspondence with the Clerk and Policy Analyst from the [International Agreements Committee](https://committees.parliament.uk/committee/448/international-agreements-committee/), it was brought to our attention that not all treaty like things are signed. Some are in fact adopted. This went against earlier assurances from different folks that the word 'signed' could be substituted any time we saw the word 'done' in a treaty title. 'Done' never feeling like a particularly well-chosen word. We are, as ever, pleased to be corrected. Librarian Jayne has taken time out from quality assuring our search object - sorry, item - pages and amended our [treaty procedure map](https://ukparliament.github.io/ontologies/procedure/maps/treaties/crag-treaties/crag-treaties.pdf) to allow for some agreements being signed and some being adopted. An example of the latter being the [Convention, adopted at Paris on 17 October 2003, for the Safeguarding of the Intangible Cultural Heritage](https://treaties.parliament.uk/treaty/zw7npBgB/CP-1006). You have to love treaty titles.
@@ -46,12 +40,6 @@ A couple of weeks back, Michael was left home alone with some paper, some string
 
 Our only other change has been the addition of [yet another model](https://ukparliament.github.io/ontologies/reporting/reporting-ontology) specialising [making available](https://ukparliament.github.io/ontologies/making-available/making-available-ontology#d4e109), this one describing papers being [reported](https://ukparliament.github.io/ontologies/reporting/reporting-ontology#d4e101) to a House by a committee. Or a [formal body](https://ukparliament.github.io/ontologies/formal-body/formal-body-ontology#d4e89), as Michael likes to call them.
 
-
-
-
-
-
-
 ## People, places, parties (slight return)
 
 Efforts to load [notional results data](https://docs.google.com/spreadsheets/d/10vz_XCjqjZSgGqEMzHmHJTb-NUFyAi4-7v5j0L_8_N4/edit?usp=sharing) into our [psephology explorations](https://api.parliament.uk/psephology) came to a painful and grinding halt when Michael (re)realised that - in an [Electoral Commission registration identifier](https://search.electoralcommission.org.uk/Search/Registrations?currentPage=1&rows=10&sort=RegulatedEntityName&order=asc&et=pp&et=ppm&register=gb&register=ni&register=none&regStatus=registered&optCols=EntityStatusName&optCols=ReferendumName&optCols=DesignationStatusName&optCols=CompanyRegistrationNumber&optCols=FieldingCandidatesInEngland&optCols=FieldingCandidatesInScotland&optCols=FieldingCandidatesInWales&optCols=FieldingCandidatesMinorParty&optCols=ReferendumOutcome&optCols=IsLowerTier) sense - the Brexit Party and Reform UK are [the same thing](https://search.electoralcommission.org.uk/Registrations/PP7931). In some quantum superposition sense. It's more than probable that several people had already pointed this out to the lad, but his memory is not what it once was.
@@ -62,15 +50,10 @@ In some work that did actually happen, we've now identified a reliable source of
 
 A wee while back, [Statistician Carl](https://bsky.app/profile/carlbaker.bsky.social) asked for general election result listings by countries, English regions and some superset of Great Britain. We can't actually say we've done that yet, but the preparatory work is ticked off. As in, we now at least [acknowledge the concept of Great Britain](https://api.parliament.uk/psephology/countries/1). Not as easy a task as one might expect and one that led to some [pretty horrendous SQL contortions](https://github.com/ukparliament/psephology/blob/main/app/models/general_election.rb#L215). For a short while, Michael managed to put Northern Ireland in Great Britain. Not an outcome that would have pleased anyone, least of all Anya. That situation is now rescued and it only remains to write yet more SQL. Onwards.
 
-
-
-
-
-
 ## Bug squashing
 
-Sometime late last year we put live our committee feeds application. Should you be in the market for oral evidence and committee publications direct to your inbox, we still recommend it. Except. Except, shortly after Christmas Librarian Jayne reported an error when a handful of publications from the International Agreements Committee failed to turn up. Investigations commenced and uncovered Heroku flagging some pretty horrendous errors. Errors which we believe are now fixed. Whilst HTML views still list everything that can be listed, RSS views are capped to the 20 latest items. We're not quite sure how Roy Fielding might feel about this, but we do our best with the tools we have at our disposal. Michael would like to add that he continues to "tail and grep logs", we suspect in some effort to sound vaguely computational.
+Sometime late last year we put live our [committee feeds application](https://api.parliament.uk/committees). Should you be in the market for [oral evidence transcripts](https://api.parliament.uk/committees/oral-evidence-transcripts) and [committee publications](https://api.parliament.uk/committees/publications) direct to your inbox, we still recommend it. Except. Well. Except, shortly after Christmas Librarian Jayne reported an error when a handful of [publications](https://api.parliament.uk/committees/committees/448/publications) from the [International Agreements Committee](https://api.parliament.uk/committees/committees/448) failed to turn up. Investigations commenced and uncovered Heroku flagging some [pretty horrendous errors](https://devcenter.heroku.com/articles/ruby-memory-use). Errors which we believe are now fixed. Whilst HTML views still list everything that can be listed, RSS views are capped to the 20 latest items. We're not quite sure how [Roy Fielding](https://en.wikipedia.org/wiki/Roy_Fielding) might feel about this, but we do our best with the tools we have at our disposal. Michael would like to add that he continues to "tail and grep logs", we suspect in some effort to sound vaguely computational.
 
 ## Turtles all the way down
 
-Back on Thursday - we forget quite which Thursday - Michael had the good fortune to sit through a talk on the subject of "agile comms". A subject we've always had some interest in. Being a shy lad, it found it impossible to dive into chat and point out that - if anyone needed tips on such matters - these very weeknotes have been described as a "work of genius" by the bloke that wrote the book. In the more rarefied atmosphere of these notes, with but a single reader reading, his shyness has dissipated somewhat. We must apologise on his behalf. When he's not feeling shy, his arrogance can be quite overwhelming.
+Back on Thursday - we forget quite which Thursday - Michael had the good fortune to sit through a talk on the subject of 'agile comms'. A subject we've always had some interest in. Being a shy lad, he found it impossible to dive into chat and point out that - if anyone needed tips on such matters - these very weeknotes have been described as a "[work of genius](https://howteamsremember.com/#rememberingatthehouseofcommons)" by the bloke that [wrote the book](https://agilecommshandbook.com/). In the more rarefied atmosphere of these notes - with but a single reader reading - his shyness has dissipated somewhat. We must apologise on his behalf. When he's not feeling shy, his arrogance can be quite overwhelming.
