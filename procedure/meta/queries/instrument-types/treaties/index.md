@@ -153,7 +153,9 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Correspondence published by committees
 
-* <a href="https://api.parliament.uk/s/75bebbaf"> All committee correspondence</a>
+* <a href="https://api.parliament.uk/s/bc5ceace"> All committee correspondence</a>
+
+* <a href="https://api.parliament.uk/s/c7360b15"> Correspondence published by the Joint Committee on Human Rights</a>
 
 * <a href="https://api.parliament.uk/s/e96fae17"> Correspondence published by Commons committees</a>
 
