@@ -74,7 +74,7 @@ With Hansard planning to start [publishing written corrections from Members-who-
 
 Being a diligent chap, our Jianhan is clearly concerned about deploying patched-up old code to even older servers, and has suggested we should probably upgrade the boxes before we do anything else. Clipboard in Hand, Delivery Manager Lydia headed back to the Change Advisory Board with not one, but two, Requests for Change. Requests for Change that were, happily, acceded to. Another blocker unblocked. Let's see what the next one is.
 
-It is, once supposes, a little like having the plumber round to put in new taps, only to return home and find they've had to rip out your bathroom. No doubt an experience we've all had. So far, Jianhan has resisted the temptation to whistle through his teeth and ask 'what cowboy put that in' but we suspect that moment will come. It is at this point that our knowledge of plumbing runs clean out and our tortured metaphor exhausts itself. We put our trust in Jianhan. After all, what other choice is there?
+It is, one supposes, a little like having the plumber round to put in new taps, only to return home and find they've had to rip out your bathroom. No doubt an experience we've all had. So far, Jianhan has resisted the temptation to whistle through his teeth and ask 'what cowboy put that in' but we suspect that moment will come. It is at this point that our knowledge of plumbing runs clean out and our tortured metaphor exhausts itself. We put our trust in Jianhan. After all, what other choice is there?
 
 ## Subject specialists and how one finds one
 
