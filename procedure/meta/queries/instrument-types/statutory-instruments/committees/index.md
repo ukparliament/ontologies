@@ -88,7 +88,9 @@ The following queries show the grounds for drawing attention to an instrument by
 
 The following query looks for all the occasions that House of Lords Standing Order No 72 was dispensed with. This allows a motion to approve an affirmative instrument laid before the House to be moved on that day whether or not the Joint Commmittee on Statutory Instruments or, if a remedial order, the Joint Committee on Human Rights has reported on it. As of March 2022 the JCHR reserve had not been dispensed with. 
 
-* <a href="https://api.parliament.uk/s/ab0b6a3d">Scrutiny reserve suspended</a>
+* <a href="https://api.parliament.uk/s/1153f832">Scrutiny reserve suspended</a>
+
+    * <a href="https://api.parliament.uk/s/a8824738">Scrutiny reserve motion debated</a>
 
 ## Committee consideration by time period
 
