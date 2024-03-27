@@ -40,6 +40,10 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 Dot file: [dot](statutory-instruments/components/jcsi/jcsi.dot)
 
+#### [Joint Committee on Statutory Instruments scrutiny reserve [PDF]](statutory-instruments/components/jcsi-scrutiny-reserve/jcsi-scrutiny-reserve.pdf)
+
+Dot file: [dot](statutory-instruments/components/jcsi-scrutiny-reserve/jcsi-scrutiny-reserve.dot)
+
 #### [Local government finance report procedure [PDF]](statutory-instruments/components/local-government-finance-report/local-government-finance-report.pdf)
 
 Dot file: [dot](statutory-instruments/components/local-government-finance-report/local-government-finance-report.dot) / [svg](statutory-instruments/components/local-government-finance-report/local-government-finance-report.svg)
