@@ -462,9 +462,12 @@ Step collections are used to group business steps, for example:
 
 Capturing step collection membership reduces the hardcoding of step IDs across applications.
 
-## Business steps as part of a procedure
+## Steps as part of a procedure
 
-A business step forms part of a procedure if that step is set out in legislation or standing orders.
+A step forms part of a procedure if that step is set out in legislation or standing orders.
+Where a step is specified in legislation, procedure maps carry a citation showing the section of the Act setting out the procedural requirement. A step may be set out in more than one piece of legislation. In such cases, all citations are shown.
+
+Where a step is specified in the Standing Orders - or in a temporary Standing Order - of a House, procedure maps carry a citation displaying the current number of the Standing Order. Some steps describing activity around joint committees, are set out in the Standing Orders of both Houses. In such cases, both citations are shown. Standing Order numbers may change over time. Should Standing Orders be renumbered, we’ll make best efforts to update the maps. A separate project, looking to provide persistent citation of Standing Orders, is currently in progress.
 
 A step may also form part of a procedure if there is precedence for that step occurring in work packages subject to that procedure, for example: the debate of a take note motion in the made negative procedure.
 
