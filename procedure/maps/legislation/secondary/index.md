@@ -36,6 +36,16 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 ### Statutory instrument component procedures
 
+#### Motions 
+
+##### [Affirmative procedure - Commons motions [PDF]](statutory-instruments/affirmative-procedures/components/commons-motions/commons-motions.pdf)
+
+Dot file: [dot](statutory-instruments/affirmative-procedures/components/commons-motions/commons-motions.dot)
+
+##### [Affirmative procedure - Lords motions [PDF]](statutory-instruments/affirmative-procedures/components/lords-motions/lords-motions.pdf)
+
+Dot file: [dot](statutory-instruments/affirmative-procedures/components/lords-motions/lords-motions.dot)
+
 #### [Joint Committee on Statutory Instruments procedure [PDF]](statutory-instruments/components/jcsi/jcsi.pdf)
 
 Dot file: [dot](statutory-instruments/components/jcsi/jcsi.dot)
