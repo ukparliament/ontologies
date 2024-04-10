@@ -58,10 +58,6 @@ Unfortunately, we were unable to comply with the first request, because, whilst 
 
 Happily we were able to comply with the second request, only the minor matter of adding a new calculation style to [our arsenal](https://api.parliament.uk/egg-timer/meta/comments) standing in the way. That [new calculation style](https://api.parliament.uk/egg-timer/commons_only_sitting_days.rb.html) is now added, National Policy Statements are in the database, [calculations](https://api.parliament.uk/egg-timer/calculator/calculate?start-date=2024-04-10&procedure=20&day-count=21) have been tested and one more small bit of confusion has been moved to the fixed pile.
 
-## Outreach / engagement
-
-A wee while back, friend of the family [Alex](https://bsky.app/profile/blangry.bsky.social) introduced us to his colleague [Owen](https://twitter.com/oroberson). Owen has been tasked with writing a 'data strategy' for the University of Cambridge - not an easy job - and Alex is always one to encourage a chat. Back in week 13, Anya and Michael joined Owen in pixels for a good long rant about strategy and [idealised future states](https://thecynefin.co/start-a-journey-with-a-sense-of-direction/) and knowing we're you're starting being more important than dreaming of where you'll end up. [Cynefin](https://en.wikipedia.org/wiki/Cynefin_framework) may have been mentioned. It usually is. A pleasure to meet you, Owen. Do stay in touch.
-
 ## On orders being standing
 
 Under the watchful eye of Librarian Claire, [Shedcode](https://shedcode.co.uk/) James has finished up the latest bit of work on our [standing orders website](https://api.parliament.uk/standing-orders). The admin side of the application has [gained more in the way of crumb trails](https://trello.com/c/aOFnFWxW/16-when-viewing-a-revision-set-you-want-a-link-back-to-the-revision-sets-in-context-ie-with-the-same-house-leg-be) and a bug with the listing of published and unpublished [revision sets](https://ukparliament.github.io/ontologies/standing-order/standing-order-ontology.html#d4e137) has been [cleared up](https://trello.com/c/qjoVNOPp/21-current-number-should-just-be-the-fragment-index-numeric-and-displayed-on-read-only-pages-in-brackets). More visible progress can be seen on our standing order fragment pages, where [text changes between major revisions are now highlighted](https://api.parliament.uk/standing-orders/fragments/3/versions/revisions/major) in a fashion that even works for Michael's colour divergent eyes. Lovely stuff.
@@ -79,6 +75,10 @@ Jayne would also like it to be known that she has amended her [SPARQL query libr
 ## Facts / figures
 
 Back in 2023, our crack team of librarians took over data wrangling duties for the [Commons Library's Facts and Figures publications](https://commonslibrary.parliament.uk/tag/parliament-facts-and-figures/). All 58 of them. Assorted spreadsheets in assorted shapes were handed over and the slow but steady process of redesigning and refactoring them began. This week Librarian Anya moved the [Attendance of the Prime Minister at Prime Minister’s Questions since 1979 publication](https://commonslibrary.parliament.uk/research-briefings/sn04401/) across to the happily refactored pile, meaning we've now ticked off a grand total of 11. Only another 47 to go. Godspeed Librarians.
+
+## Outreach / engagement
+
+A wee while back, friend of the family [Alex](https://bsky.app/profile/blangry.bsky.social) introduced us to his colleague [Owen](https://twitter.com/oroberson). Owen has been tasked with writing a 'data strategy' for the University of Cambridge - not an easy job - and Alex is always one to encourage a chat. Back in week 13, Anya and Michael joined Owen in pixels for a good long rant about strategy and [idealised future states](https://thecynefin.co/start-a-journey-with-a-sense-of-direction/) and knowing we're you're starting being more important than dreaming of where you'll end up. [Cynefin](https://en.wikipedia.org/wiki/Cynefin_framework) may have been mentioned. It usually is. A pleasure to meet you, Owen. Do stay in touch.
 
 ## Farewell and good luck ...
 
