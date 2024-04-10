@@ -78,7 +78,7 @@ Back in 2023, our crack team of librarians took over data wrangling duties for t
 
 ## Outreach / engagement
 
-A wee while back, friend of the family [Alex](https://bsky.app/profile/blangry.bsky.social) introduced us to his colleague [Owen](https://twitter.com/oroberson). Owen has been tasked with writing a 'data strategy' for the University of Cambridge - not an easy job - and Alex is always one to encourage a chat. Back in week 13, Anya and Michael joined Owen in pixels for a good long rant about strategy and [idealised future states](https://thecynefin.co/start-a-journey-with-a-sense-of-direction/) and knowing we're you're starting being more important than dreaming of where you'll end up. [Cynefin](https://en.wikipedia.org/wiki/Cynefin_framework) may have been mentioned. It usually is. A pleasure to meet you, Owen. Do stay in touch.
+A wee while back, friend of the family [Alex](https://bsky.app/profile/blangry.bsky.social) introduced us to his colleague [Owen](https://twitter.com/oroberson). Owen has been tasked with writing a 'data strategy' for the University of Cambridge - not an easy job - and Alex is always one to encourage a chat. Back in week 13, Anya and Michael joined Owen in pixels for a good long rant about strategy and [idealised future states](https://thecynefin.co/start-a-journey-with-a-sense-of-direction/) and knowing where you're starting being more important than dreaming of where you'll end up. [Cynefin](https://en.wikipedia.org/wiki/Cynefin_framework) may have been mentioned. It usually is. A pleasure to meet you, Owen. Do stay in touch.
 
 ## Farewell and good luck ...
 
