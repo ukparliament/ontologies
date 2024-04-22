@@ -46,6 +46,22 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/components/commons-
 
 Dot file: [dot](statutory-instruments/affirmative-procedures/components/lords-motions/lords-motions.dot)
 
+##### [Negative procedure - Commons motions [PDF]](statutory-instruments/negative-procedures/components/motions/commons-motions/commons-motions.pdf)
+
+Dot file: [dot](statutory-instruments/negative-procedures/components/motions/commons-motions/commons-motions.dot)
+
+##### [Negative procedure - Lords motions [PDF]](statutory-instruments/negative-procedures/components/motions/lords-motions/lords-motions.pdf)
+
+Dot file: [dot](statutory-instruments/negative-procedures/components/motions/lords-motions/lords-motions.dot)
+
+##### [Negative procedure - Commons motion to consider [PDF]](statutory-instruments/negative-procedures/components/motions/commons-motion-to-consider/commons-motion-to-consider.pdf)
+
+Dot file: [dot](statutory-instruments/negative-procedures/components/motions/commons-motion-to-consider/commons-motion-to-consider.dot)
+
+##### [Negative procedure - Motion to refer to DLC [PDF]](statutory-instruments/negative-procedures/components/delegated-legislation-committee-referral/delegated-legislation-committee-referral.pdf)
+
+Dot file: [dot](statutory-instruments/negative-procedures/components/delegated-legislation-committee-referral/delegated-legislation-committee-referral.dot)
+
 #### [Joint Committee on Statutory Instruments procedure [PDF]](statutory-instruments/components/jcsi/jcsi.pdf)
 
 Dot file: [dot](statutory-instruments/components/jcsi/jcsi.dot)
