@@ -82,7 +82,7 @@ Filtering
 
 Pivoting tables
 
-Using formulas to look up values from a sheet / column
+Using formulas to look up values from a sheet / column < construct url
 
 # Website made of spreadsheets
 
