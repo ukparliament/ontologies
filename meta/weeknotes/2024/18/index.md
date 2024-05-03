@@ -20,107 +20,76 @@ Quite clearly, this does not count as job done. How many contribution-less contr
 
 Jianhan's work continues, ably assisted by Librarians Ned and Steve. There's some hope that at least some of the 235,000 contribution-less contributions are contributions we wouldn't expect to have contribution text. That said, both Ned and Steve share a strong reckon that at least some of what's now missing was present back in the early months of 2023. Which is less reassuring. We can only suppose that an earlier attempt at a fix inadvertently removed contribution text. All of which goes to show the dangers inherent in trying to fix things. Ever. Best of luck Jianhan. Best of luck Librarian Ned. Best of luck Librarian Steve.
 
-
-
-
-
-
-## ## Panic stations: on written corrections, ministerial and otherwise
-
-https://trello.com/c/8OuMHOWu/53-check-non-ministerial-written-correction-once-indexed
-
-https://trello.com/c/WrEPTbFR/51-monitor-and-raise-any-issues-for-new-harvester-switch-jobs-on-new-vm
-
-https://trello.com/c/k8yKGaBB/56-make-a-list-of-things-we-never-wanted-to-see-in-indexing
-
-https://trello.com/c/WGW0Ohbt/54-update-harvester-code-to-ensure-the-wc-reference-that-comes-through-from-hansard-arrives-to-us-as-wc-and-doesnt-flip-to-mc
-
 ## New, old search
 
-https://trello.com/c/sATRa1Ys/256-error-page-for-when-ses-is-not-working-done-when-ses-stopped-working
+To our deep dismay, contribution-less contributions were not the only fire being fought this week. As librarians gulped down coffee, tamped out cigarettes and clocked on for the day, they found themselves face-to-face with a taxonomy tool that had just stopped working. Rendering both tools and output impotent. Rather happily, it turned out that someone - well, everyone really - had forgotten to renew the software licence. We cannot pretend this is the first time this has happened. Nor can we realistically claim it will be the last. But we do hold out some hope now we have listing-loving delivery manager Lydia aboard ship.
 
-https://trello.com/c/N1GiLWP0/257-confirm-how-content-type-hierarchy-is-built
+In happier news, the licence is now renewed. In even happier news, Developer Jon took the opportunity to more elegantly [handle errors thrown by the non-existence of our taxonomy service](https://github.com/ukparliament/search-prototype/commit/8e1aa3b6969cfe3a3bba3be0b4dec4d6fe7acc7e). Next time someone forgets to renew the licence, one more thing should not break. Or at least it should break more elegantly. So that counts as a small win.
 
-https://trello.com/c/CNJm0Sjp/184-research-java-script-solr-interface-that-can-work-on-the-results-design
+In other new, old search news, things continue to go swimmingly. Developer Jon has been ploughing through search result specifications with barely the need for a draw stroke to keep the good ship search on track. Most of the result item snippets now appear to be complete - at least to our eyes - and Jon has moved on to exploring the implementation of facetted navigation. To that end, he's been researching how best to build a JavaScript interface to our backend Solr service and confirming with Jianhan how the current application manages to build the content type hierarchy navigation. As a result of which, [new, old search is finally starting to look like a search application](https://search-prototype.herokuapp.com/search-prototype/search?query=dog&filter%5Btype_ses%5D%5B%5D=356750&number_of_results=30&sort_by=Date). Lovely stuff.
 
-## Taxonomy
-https://trello.com/c/LhMXTK48/73-managing-staff-names-for-research-briefings-in-om
+## Stand down / panic over
 
+If you've been following along for the last few weeks, you'll know we went into panic mode when work to handle non-Ministerial written corrections - which we had assumed had been mostly complete - turned out to not, in fact, be complete. Not nearly complete. Our Jianhan once more pulled out all the stops - winning his second ever Librarian of the Week Trophy on route - and both Ministerial and non-Ministerial corrections appear to be flowing through the pipes without interruption.
 
+Librarians Claire, Jayne and Ned have checked, double checked and triple checked our internal search application, our external search application and Jon's new, old search, everything turning up as expected. The only thing that didn't quite work was the assignment of a reference number somewhere in the propagation pipes, which continued to come though as MC - Ministerial Correction - when it should have been the more generic WC - written correction, actually. Initially, this was fixed by raising daily calls to the Parliamentary Computational Section requesting manual intervention. Our Jianhan has since tinkered with the piping to apply a temporary fix until the more permanent fix happens in the Hansard application. Which should save a telephone call or two.
 
-https://trello.com/c/LhMXTK48/73-managing-staff-names-for-research-briefings-in-om
-
-https://trello.com/c/o9rzmPqQ/24-what-should-call-our-model
+In the course of tidying up after himself, Jianhan also set about removing the now defunct Ministerial correction category from the indexing application. Before he got round to that, Librarian Anya jumped in, pointing out there were a whole host of content types in the indexing application that have never been used and never will be used. "Hang on," said Anya, "can't we kill all the birds and have rid of all the stuff we never click and will never click?" "Sure," replied Jianhan. Which is why our indexing application is now [stripped of a whole host of cruft](https://trello.com/c/k8yKGaBB/56-make-a-list-of-things-we-never-wanted-to-see-in-indexing) that's been there for 13 years and never served any useful purpose. Good call, Anya. Top work Jianhan.
 
 ## Taxonomic liberation
-https://trello.com/c/VbceNgK0/48-load-thesaurus-data-into-dg-before-we-test-adding-changes
 
-https://trello.com/c/XrNvYq8L/58-test-with-example-changes
+Friend of the family Silver and his Data Language colleagues continue to chip away at liberating our taxonomy from its software constraints, allowing for both interoperability and reuse. Progress this week includes a [complete re-load](https://trello.com/c/VbceNgK0/48-load-thesaurus-data-into-dg-before-we-test-adding-changes) of all concepts from the 'Concept' scheme - subjects, if you will - and [end-to-end testing of example changes](https://trello.com/c/XrNvYq8L/58-test-with-example-changes). The first change made being the addition of everyone's favourite family-friendly dog, the Bully XL. This being a narrower concept than dog and related in some unspecified way to dogs of a dangerous nature.
+
+The contentious issue of personal data in the taxonomy service has moved one step closer to being solved. For reasons lost in the mists, our internal taxonomy contains not only the names of research briefing authors, but also their telephone numbers. And not just of authors. For other reasons, also lost in the mists, the details of other Library staff - some now departed from the building - are also in there. Names of authors, we always understood. Without them, finding briefings by author would be impossible. But why the other people? And why the telephone numbers?
+
+The presence of this data leads to additional complications that we'd really rather not have to deal with. It means, for instance, we need two versions of the taxonomy API: a standard one for internal use and a redacted one for external users. Silver being just one example of the latter. In turn, the need for a redacted taxonomy necessitates the existence of some software to perform the redaction. As we're sure our dear reader will appreciate, the less software there is in the world, the fewer things are likely to catch fire.
+
+For a wee while we were given to understand that authentication to the research briefing authoring application had some built-in dependency on the taxonomy. Which felt somewhat ungainly, but not unlikely. Librarian Phil has carried out a preliminary investigation and, most unfortunately, this does appear to be the case. Contact details, on the other hand, are only used to display alongside research briefings published on the intranet. Librarian Phil is currently chatting to the Library comms folks to see if these are still considered necessary. If not, we hope to strip out all contact details and remove any non-authoring staff who have either since left the Library or no longer require access to the briefings application. At which point, we may finally converge on a single taxonomy API. And everyone will be happy. Some hope.
 
 ## People, places, parties
 
-https://trello.com/c/AC8q6jjp/143-test-addition-of-650-new-constituencies-to-mnis
+Not a week goes by when our attentions aren't firmly focussed on the upcoming general election. It can sometimes feel like we've spent the last five years wrangling data in preparation. This week, we took another stride forward when the 650 'new' constituencies that will be in place for the next general election were added to MNIS. Librarians Anna and Emily have since added the 'new' constituency MNIS identifiers to our mapping spreadsheet, which means that - once all general election candidates are confirmed - Data Scientist Louie will have a handy triangulation point on the journey from Democracy Club to parliamentary systems. Splendid.
 
-https://trello.com/c/WeF6WcA5/240-chase-se-on-when-hard-coding-in-dissolution-stored-procedure-gets-fixed
+Anna and Emily have also been hard on the heels of Computational Section colleagues, menaing we can now happily confirm that the software's insistence that House of Commons Members leave because of a general election and not because of dissolution has now been put firmly to bed. All of which means Librarian Emily can now apply everything she's learned about why a Member might leave the House of Commons to our actual database, without the software trying to second guess her.
 
-https://trello.com/c/ZAbxQY94/221-amended-constituency-start-and-end-dates
+On the subject of computers trying to second guess their elders and betters, there is a small piece of good news. The code that runs when the 'dissolve Parliament' button gets pressed, does appear to [apply the date of dissolution to the Members' representations and their party affiliations](https://trello.com/c/G30Rqc8r/156-parties-investigate-end-reason-the-ending-wizard-applies-if-any). So that's good.
 
-https://trello.com/c/G30Rqc8r/156-parties-investigate-end-reason-the-ending-wizard-applies-if-any
+In further dissolution related news, Librarian Anna - in association with Computational Section colleagues - has reset start and end dates for constituencies to align with dissolutions and not with general elections, which they had been. An easy mistake to make, but not if one reads the legislation.
 
-https://trello.com/c/wSh3y5M8/239-is-there-any-call-for-geographies-in-mnis-beyond-constituencies-nuts-1-and-countries
+Finally, Librarian Emily was sent on a mission to explore UK geographies as captured in MNIS and UK geographies as geographic experts Carl and Neil would like to see captured in MNIS. The latter turning out to be all pretty similar to our geographic area model. Thankfully. Top work Emily. UK geographic areas being something akin to a poorly constructed Russian doll, we do feel for you.
 
-## Psephologising
+## Psephologising profusely
 
-https://trello.com/c/ip52leIr/128-block-access-to-heroku-app
+A few, fairly minor tweaks to our psephology website, not all of which are quite live yet. First off, in order to sidestep denial of service attacks on our Heroku hosted backend, access to those URLs is now forbidden to any IP address that doesn't belong to Cloudflare. If, for any reason, you'd bookmarked https://psephology-b3b91d24dfdc.herokuapp.com/, you'll now find what you're looking for at https://electionresults.parliament.uk/, all courtesy of Cloudflare's reverse proxy. And all considerably faster as a result. Young Robert and Michael would like to thank Shedcode James for pointing them in the general direction of Rack Attack. Cheers James.
 
-https://trello.com/c/j4Mm2Epo/124-set-up-separate-test-site-on-heroku
+Second off, we now - finally - have a test website. Though we won't point to it here for fear of Google gobbling it all up. Using the Cloudflare cache on the live site definitely brings advantages. But it doesn't really lend itself to rapid development. Pushing a new feature live and having to wait 24 hours for the cache to clear makes the feedback cycle from valued colleagues clumsy and cumbersome. The test site fixes this, at least.
 
-https://trello.com/c/7ewOxTLu/182-check-and-confirm-fix-for-mobile-tables
+In search of further feedback - and showing off slightly, if we're gonna be honest - Michael posted a link to our shiny new website on the Democracy Club Slack channel. Feedback didn't exactly pour in but Jonathan F did get in touch with a number of pertinent points. As a result of which, we now have considerably nicer headings on our Parliament period pages, Member listings split by A to Z by family name and a whole slew of new cards on Trello. We've also made a small start on adding CSV downloads. So far covering Acts of Parliament, Orders in Council, Members, Parliament periods and boundary sets in effect during a Parliament period. More to follow. Much more to follow.
 
-https://trello.com/c/LSwgNJdq/154-bundle-in-bootstrap
+Whilst Michael took off on a well deserved vacation, Robert has been attending to much needed pixel-polishing. All kinds of changes have been pushed to live, not least of which are:
 
-https://trello.com/c/LUheg873/186-general-election-header-on-parliament-page
+* We're now running on Bootstrap rather than some hand-rolled CSS that Michael cobbled together whilst tipsy.
 
-https://trello.com/c/DabQXg0m/187-split-member-listing-by-family-name-a-z
+* The data tables that had been sticking out like sore thumbs on mobile telephones now scroll rather nicely.
 
-https://trello.com/c/TkiyU7tb/183-ensure-favicon-appears-on-all-pages
+* We actually have a favicon. Yeah!
 
-https://trello.com/c/32MhUi4W/209-csv-for-act-of-parliament-list
-
-https://trello.com/c/N53OgYwN/210-csv-for-order-in-council-list
-
-https://trello.com/c/sHW3ikD7/211-csv-for-member-lists
-
-https://trello.com/c/aBnapvSF/232-csv-for-parliament-periods
-
-https://trello.com/c/gEb4IZNG/233-csv-for-boundary-sets-in-a-parliament-period
-
-
+All progress, as we're sure our dear reader will appreciate.
 
 ## Egg timing - slight return
 
-https://trello.com/c/1imZafPa/419-egg-timer-prorogation-of-less-than-one-day
+In the course of conducting some research, Librarian Claire noticed that our beloved egg timer was listing some prorogations that ended before they began. This because we took the start date as the day following the last date of the preceding session and took the end date as the day preceding the first date of the following session. All well and good, except it turns out that some prorogations lasted less than a day. I mean, how on earth were we supposed to know that? Quite ridiculous.
 
+Taking great care that any changes wouldn't affect scrutiny period calculations, Librarian Jayne and her computational helpmate Michael have now solved that problem by making the start date of a prorogation the end date of the preceding session and the end date of a prorogation the start date of the following session. Which means some dates are now in a session *and* in a prorogation. All less than ideal, but, until Parliament gets better at reporting times and not just dates, about the best we can do.
 
+## What's a procedure? (Eat y'self fitter)
 
-## On orders being standing
+Not only are our procedural maps the first - and indeed only - example of machine parseable parliamentary procedure in the world - at least that we know of - they - like their creators - always cite sources. Gaze at any of our lovingly drawn maps and you'll spot a dash of diamonds and smattering of circles. The diamonds point to sections of legislation where procedural rules are set out; the circles do the same job, but for standing orders. This posed a particular problem for our proposed negative statutory instrument map. A particular problem because the PNSI procedure has been set out in three Acts. It first popped up in [Schedule 7 of the European Union (Withdrawal) Act 2018](https://www.legislation.gov.uk/ukpga/2018/16/schedule/7), again in [Schedule 5 of the European Union (Future Relationship) Act 2020](https://www.legislation.gov.uk/ukpga/2020/29/schedule/5) and latterly in [Schedule 5 of the Retained EU Law (Revocation and Reform) Act 2023](https://www.legislation.gov.uk/ukpga/2023/28/schedule/5/enacted). Who knows when it might pop up again.
 
+At this point, we started to question what a procedure is. Are we really dealing with three procedures that happen to be grouped under a common heading? Or is it one procedure that just happens to invoked three times? Maybe legislation needs to embrace transclusion? Perhaps? Anyway, we found ourselves quite stuck, not knowing if we needed three maps or one map with three lots of citations. A meeting with Mr Korris put us back on the right track, when he asked, "but do you not know which Act an instrument was laid under? Could you not time-bound the citations in the same way you time-bound the routes?" He was of course correct on both counts. An extremely long-winded way to confirm that our PNSI map is now appropriately decorated with three lots of Act citations and that 'problem' is considered solved. Thanks Mr Korris.
 
+## A Rush and a push
 
-## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
+With Librarian Anna - perhaps temporarily - relieved of general election data wrangling duties and Shedcode James - perhaps temporarily - relieved of standing order application duties, they've finally found the time to get stuck back into tidying our Rush database. First up, they've tidied and normalised a bunch of strings that were used to describe a constituency's relationship to its containing country, which means we now have a listing of [UK constituent countries](https://membersafter1832.historyofparliamentonline.org/constituent_countries). They've also tidied and normalised [nature of service](https://membersafter1832.historyofparliamentonline.org/nature_of_services) information into a new, tidy table.
 
-https://trello.com/c/uShHPtCb/417-pnsi-map-adding-reul-citations
-
-
-
-## Facts / figures
-
-
-
-## Outreach / engagement
-
-
-
-## Farewell and good luck ...
-
-
+Prompted by Librarian Phil, Librarian Anna has [added end dates](https://trello.com/c/aGHCDRyd/232-end-dates-for-recent-members) for a number of recently departed Members, added a number of missing Members after cross-tabulating with Wikidata and even found the time to add [the Speaker's dad](https://membersafter1832.historyofparliamentonline.org/members/8504). Lovely stuff.
