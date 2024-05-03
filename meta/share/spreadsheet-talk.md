@@ -14,7 +14,7 @@
 
 * colour coding
 
-* columns split by / or ; or ,
+* columns split by / or ; or , < start date and end date
 
 * merged cells (colpan, rowspan) < header rows
 
@@ -27,6 +27,8 @@
 * unnecessary multiple sheets
 
 * hidden cells
+
+* link text < include urls
 
 # Things to bear in mind
 
@@ -75,6 +77,8 @@ Notional of cardinality
 Example election schema
 
 # Interoperability
+
+Filtering
 
 Pivoting tables
 
