@@ -74,6 +74,12 @@ Notional of cardinality
 
 Example election schema
 
+# Interoperability
+
+Pivoting tables
+
+Using formulas to look up values from a sheet / column
+
 # Website made of spreadsheets
 
 
