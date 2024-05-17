@@ -2,7 +2,7 @@
 
 ## Frequently asked questions
 
-Let's kick off by addressing a question that's been on the tip of many a tongue. "Are all your librarians called Librarian," we are frequently asked. Yes. It is a condition of employment, continuing a tradition that's been in place since the Normans invaded and messed up a perfectly good country. We hope that clears that up.
+Let's kick off by addressing a question that's been on the tip of many a tongue. "Are all your librarians called Librarian?" we are frequently asked. Yes. It is a condition of employment, continuing a tradition that's been in place since the Normans invaded and messed up a perfectly good country. We hope that clears that up.
 
 ## Outreach / engagement
 
