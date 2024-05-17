@@ -51,8 +51,8 @@ Made affirmative instruments laid under [section 25 of the Criminal Procedure an
 
 ## Instruments referred to the Social Security Advisory Committee
 
-The [Social Security Advisory Committee](https://www.gov.uk/government/organisations/social-security-advisory-committee) is an independent statutory body that provides impartial advice on social security and related matters. Under Section 172 of the [Social Security Administration Act 1992](https://www.legislation.gov.uk/id/ukpga/1992/5), where the Secretary of State proposes to make regulations under any of the relevant enactments of the Act, they shall refer the proposals to the Committee. Under section 174 of the Act, he Committee shall make a report containing recommendations with regard to the proposals. The report will be laid before Parliament alongside any regulations. 
+The [Social Security Advisory Committee](https://www.gov.uk/government/organisations/social-security-advisory-committee) is an independent statutory body that provides impartial advice on social security and related matters. Under Section 172 of the [Social Security Administration Act 1992](https://www.legislation.gov.uk/id/ukpga/1992/5), where the Secretary of State proposes to make regulations under any of the relevant enactments of the Act, they shall refer the proposals to the Committee. Under section 174 of the Act, the Committee shall make a report containing recommendations with regard to the proposals. The Secretary of State will also make a statement in response to the Committee's report. The report and statement are laid as one paper before Parliament alongside any regulations. 
 
 * [Instruments referred to the Social Security Advisory Committee](https://api.parliament.uk/s/bf6b7a8a)
 
-* [Reports by the Social Security Advisory Committee laid before Parliament](https://api.parliament.uk/s/91e2bac8)
+* [Reports by the Social Security Advisory Committee and SoS statements laid before Parliament](https://api.parliament.uk/s/91e2bac8)
