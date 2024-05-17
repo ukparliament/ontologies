@@ -52,11 +52,17 @@ Still on the subject of testing, Young Robert and Michael have now handed over t
 
 We feel we must apologise for the lack of procedure mapping news in recent outings. We recognise that's what our dear reader comes here for. Librarian Jayne - like most of the rest of our crack team of librarians - has found herself dragged ever searchwards. Nevertheless, in a small piece of news this week, JO Jane got in touch to ask for the inclusion of a new step in our statutory instrument maps.
 
-For instruments laid under Sections 172(1) and Section 174(1) of the Social Security Administration Act 1992 there is a requirement for a report by the Social Security Advisory Committee to also be laid before each House. The Social Security Advisory Committee being an independent statutory body that provides impartial advice on social security and related matters. For instruments laid under Section 174(2), there is also a requirement for a statement to be laid by the Secretary of State for Work and Pensions. The report and the statement usually being bundled into one document.
+For instruments laid by the Department for Work and Pensions, there is sometimes a requirement under sections 172(1) and Section 174(1) of the Social Security Administration Act 1992 for a report by the Social Security Advisory Committee to also be laid before each House. The Social Security Advisory Committee being an independent statutory body that provides impartial advice on social security and related matters. For instruments laid under Section 174(2), there is also a requirement for a statement to be laid by the Secretary of State for Work and Pensions. The report and the statement usually being bundled into one document.
 
 In theory, this is possible for any of the four SI procedures. In practice, it's only ever happened for made negatives and draft affirmatives. Not being one to leave knots untied, Jayne has, of course added to all four procedures, both maps and data. She's also actualised any instances of this having happened since the birth of the SI service, sometime in 2017. The [Universal Credit (Administrative Earnings Threshold) (Amendment) (No. 2) Regulations 2024](https://statutoryinstruments.parliament.uk/instrument/ttMue47M/timeline/aaxQ1DdZ) being just one example where you can see her work in action. 
 
 Never being one to side-step best practice, she's also added [a couple of new SPARQL queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/instrument-types/statutory-instruments/statutory-instrument-flavours/#instruments-referred-to-the-social-security-advisory-committee). Lovely stuff.
+
+## Facts / figures
+
+This week also saw Librarian Jayne's latest attempt to shoehorn some spreadsheet sense into the House of Commons Library's Parliamentary Facts and Figures series. The latest, newly tidied publication taking on the subject of [opposition day debates in the House of Commons since 1992](https://commonslibrary.parliament.uk/research-briefings/sn06315/). Quite the topic and one that caused Jayne's head to spin a little. She even roped in Michael and his superlative whiteboard skills in some attempt to process map the whole thing. That done, we were finally starting to feel comfortable with what Young Robert would doubtless call the "problem space" and even had a first draft of a spreadsheet model mapped out.
+
+Returning to our earlier theme, that is exactly the point at which reality changed, Mr Speaker bringing a whole new interpretation of procedural rules into play. Back to the drawing board we went, a new model was sketched and finally, it is published. Top work, Jayne.
 
 ## Psephologising profusely
 
