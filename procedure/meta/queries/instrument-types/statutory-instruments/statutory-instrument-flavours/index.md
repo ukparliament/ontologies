@@ -39,7 +39,7 @@ Affirmative instruments laid under various sections of the [United Kingdom Inter
 
 If the Minister does not seek consent from one or more of the devolved authorities they must make a statement to Parliament explaining why consent was not sought. 
 
-* [Affirmative instruments laid the United Kingdom Internal Market Act 2020](https://api.parliament.uk/s/28e65418)
+* [Affirmative instruments laid under the United Kingdom Internal Market Act 2020](https://api.parliament.uk/s/28e65418)
 
 * [Written statements explaining why a Minister has not sought legislative consent](https://api.parliament.uk/s/2da139f1)
 
@@ -48,3 +48,11 @@ If the Minister does not seek consent from one or more of the devolved authoriti
 Made affirmative instruments laid under [section 25 of the Criminal Procedure and Investigations Act 1996](https://www.legislation.gov.uk/ukpga/1996/25/section/25) allow a Minister to make and lay an instrument, but under [section 77](https://www.legislation.gov.uk/ukpga/1996/25/section/77) of the same Act, the instrument will have effect only after a resolution has been passed by both Houses approving it. The instrument is laid without a number but once approved by both Houses it is reregistered with a number. This results in there being two records for the same instrument on legislation.gov.uk - one with a number, one without. 
 
 * [Made affirmative instruments laid under section 25 of the Criminal Procedure and Investigations Act 1996](https://api.parliament.uk/s/18005939)
+
+## Instruments referred to the Social Security Advisory Committee
+
+The [Social Security Advisory Committee](https://www.gov.uk/government/organisations/social-security-advisory-committee) is an independent statutory body that provides impartial advice on social security and related matters. Under Section 172 of the [Social Security Administration Act 1992](https://www.legislation.gov.uk/id/ukpga/1992/5), where the Secretary of State proposes to make regulations under any of the relevant enactments of the Act, they shall refer the proposals to the Committee. Under section 174 of the Act, he Committee shall make a report containing recommendations with regard to the proposals. The report will be laid before Parliament alongside any regulations. 
+
+* [Instruments referred to the Social Security Advisory Committee](https://api.parliament.uk/s/bf6b7a8a)
+
+* [Reports by the Social Security Advisory Committee laid before Parliament](https://api.parliament.uk/s/91e2bac8)
