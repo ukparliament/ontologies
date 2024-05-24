@@ -11,9 +11,15 @@ The following queries provide data for Public General Acts that currently have a
 
 ## Public General Acts given Royal Assent in this Parliament
 
-The 58th Parliament [opened](https://publications.parliament.uk/pa/cm5801/cmvote/191217v02.html) on 17 December 2019 following the General Election. The following query shows all Public General Acts given Royal Assent since then. 
+The 59th Parliament will open on 9 July 2024 following the General Election. The following query shows all Public General Acts given Royal Assent since then. 
 
-* [Public Acts in this Parliament](https://api.parliament.uk/s/5953abf2) 
+* [Public Acts in this Parliament (2024-)](https://api.parliament.uk/s/d416d387)
+
+## Public General Acts given Royal Assent in previous Parliaments
+
+* [Public Acts in the 58th Parliament (2019-2024)](https://api.parliament.uk/s/0158151c)
+
+* [Public Acts in the 57th Parliament (2017-2019)](https://api.parliament.uk/s/3d1570ca)
 
 
 ## Filtering by time period
