@@ -98,9 +98,9 @@ The following queries look at all instruments considered by committees in given 
 
 ### Session
 
-* <a href="https://api.parliament.uk/s/770131cf">2024-25</a>
+* <a href="https://api.parliament.uk/s/9c5affed">2024-25</a>
 
-* <a href="https://api.parliament.uk/s/9c5a6d0d">2023-24</a>
+* <a href="https://api.parliament.uk/s/83bb55d4">2023-24</a>
 
 * <a href="https://api.parliament.uk/s/c18bf424">2022-23</a>
 
