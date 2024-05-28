@@ -17,9 +17,9 @@ The following query will show all PNSIs currently before Parliament which are wa
 
 ## Proposed negative statutory instruments by session
 
-* <a href="https://api.parliament.uk/s/45797fed">2024-25</a>
+* <a href="https://api.parliament.uk/s/64cb1189">2024-25</a>
 
-* <a href="https://api.parliament.uk/s/08970a3b">2023-24</a>
+* <a href="https://api.parliament.uk/s/b81c8207">2023-24</a>
 
 * <a href="https://api.parliament.uk/s/371e087c">2022-23</a>
 
