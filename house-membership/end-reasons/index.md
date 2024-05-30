@@ -4,7 +4,7 @@ Label | Scope note | Is Commons | Is Lords
 Bankruptcy | Disqualified following bankruptcy in England, Wales and Northern Ireland under [section 426A of the Insolvency Act 1986](https://www.legislation.gov.uk/ukpga/1986/45/section/426A) | True | False
 Convicted of a serious offence |  [section 3 of the House of Lords Reform Act 2014](https://www.legislation.gov.uk/ukpga/2014/24/section/3/enacted) | False | True
 Dissolution | End of a [parliament period](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e177) | True | False
-Death in service | Death whilst incumbent in a House | True | True
+Death | Death whilst incumbent in a House | True | True
 Disqualification by office holding | Member loses seat as a result of taking an office listed in the [House of Commons (Disqualification) Act 1975](https://www.legislation.gov.uk/ukpga/1975/24/contents) | True | False
 Disqualification following a verdict of corrupt or illegal practices by the criminal courts  |  Member found guilty of corrupt or illegal practices under provisions in the [Representation of the People Act 1983](https://www.legislation.gov.uk/ukpga/1983/2) or under a disqualification order imposed under [part 5 of the Elections Act 2022](https://www.legislation.gov.uk/ukpga/2022/37/part/5/enacted), outside of the election petition process | True | False
 Disqualification following imprisonment for more than a year | Disqualification following imprisonment for more than a year under [section 1 of the Respresentation of the People Act 1981](https://www.legislation.gov.uk/ukpga/1981/34/section/1) | True | False
