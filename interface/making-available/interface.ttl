@@ -1,0 +1,164 @@
+@prefix pint: <http://parliament.uk/ontologies/interface/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+
+@prefix ptime: <http://parliament.uk/ontologies/time-period/> . 
+@prefix pma: <http://parliament.uk/ontologies/making-available/> .
+@prefix phm: <http://parliament.uk/ontologies/house-membership/> .
+@prefix pdep: <http://parliament.uk/ontologies/depositing/> . 
+@prefix pl: <http://parliament.uk/ontologies/laying/> .
+@prefix pordertoprint: <http://parliament.uk/ontologies/order-to-print/> . 
+@prefix ppresent: <http://parliament.uk/ontologies/presentation/> .
+@prefix report: <http://parliament.uk/ontologies/reporting/> .
+@prefix ws-making: <http://parliament.uk/ontologies/written-statement-making/> .
+@prefix pws: <http://parliament.uk/ontologies/written-statement/> .
+@prefix paper: <http://parliament.uk/ontologies/paper/> .
+@prefix delleg: <http://parliament.uk/ontologies/delegated-legislation/> .
+@prefix del: <http://parliament.uk/ontologies/delegation/> .
+@prefix pbill: <http://parliament.uk/ontologies/bill/> . 
+@prefix ptr: <http://parliament.uk/ontologies/treaty/> .
+@prefix papertype: <http://parliament.uk/ontologies/paper-type/> . 
+
+
+
+<http://parliament.uk/ontologies/interface/>
+	owl:imports <https://ukparliament.github.io/ontologies/time-period/time-period-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/making-available/making-available-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/house-membership/house-membership-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/depositing/depositing-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/laying/laying-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/order-to-print/order-to-print-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/presentation/presentation-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/reporting/reporting-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/written-statement-making/written-statement-making-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/written-statement/written-statement-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/paper/paper-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/delegated-legislation/delegated-legislation-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/bill/bill-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/treaty/treaty-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/paper-type/paper-type-ontology.ttl> ;
+	owl:imports <http://www.w3.org/2004/02/skos/core#> ;
+    rdf:type owl:Ontology ;
+    dcterms:title "Making available interface ontology"@en ;
+    dcterms:created "2024-05-30"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology to link together making available models for UK Parliament."@en ;
+	foaf:maker
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Ayesha Khan" ],
+		[ foaf:name "Claire Searle" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ] .
+
+
+
+#######  Equivalent classes #####
+
+# Session
+pma:Session
+	owl:equivalentClass
+	ptime:Session .
+	
+# House
+phm:House
+	owl:equivalentClass
+	phm:House .
+	
+# Making available
+pma:MakingAvailable
+	owl:equivalentClass
+	pdep:MakingAvailable .
+pma:MakingAvailable
+	owl:equivalentClass
+	pl:MakingAvailable .
+pma:MakingAvailable
+	owl:equivalentClass
+	pordertoprint:MakingAvailable .
+pma:MakingAvailable
+	owl:equivalentClass
+	ppresent:MakingAvailable .
+pma:MakingAvailable
+	owl:equivalentClass
+	report:MakingAvailable .
+pma:MakingAvailable
+	owl:equivalentClass
+	ws-making:MakingAvailable .
+	
+# Written statement expression
+ws-making:WrittenStatementExpression
+	owl:equivalentClass
+	pws:WrittenStatementExpression .
+	
+# Made available thing
+pma:MadeAvailableThing
+	owl:equivalentClass
+	pdep:MadeAvailableThing .
+pma:MadeAvailableThing
+	owl:equivalentClass
+	pl:MadeAvailableThing .
+pma:MadeAvailableThing
+	owl:equivalentClass
+	pordertoprint:MadeAvailableThing .
+pma:MadeAvailableThing
+	owl:equivalentClass
+	ppresent:MadeAvailableThing .
+pma:MadeAvailableThing
+	owl:equivalentClass
+	report:MadeAvailableThing .
+pma:MadeAvailableThing
+	owl:equivalentClass
+	ws-making:MadeAvailableThing .
+	
+# Paper work
+ppresent:PaperWork
+	owl:equivalentClass
+	paper:PaperWork .
+ppresent:PaperWork
+	owl:equivalentClass
+	del:PaperWork .
+paper:PaperWork 
+	owl:equivalentClass
+	ptr:PaperWork .
+paper:PaperWork 
+	owl:equivalentClass
+	pbill:PaperWork .
+	
+# Treaty expression
+papertype:TreatyExpression
+	owl:equivalentClass
+	ptr:TreatyExpression .
+	
+# Bill work
+papertype:BillWork
+	owl:equivalentClass
+	pbill:BillWork .
+	
+# Paper expression
+paper:PaperExpression
+	owl:equivalentClass
+	pordertoprint:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	pl:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	pdep:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	ptr:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	pbill:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	papertype:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	delleg:PaperExpression .
+paper:PaperExpression
+	owl:equivalentClass
+	report:PaperExpression .
