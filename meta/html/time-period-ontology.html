@@ -106,6 +106,13 @@
            <p>
             Superclasses  &middot; TemporalThing           </p>
         </article>
+        <article class="class" id="Monarch">
+          <h3>Class <a href="#Monarch">Monarch</a></h3>
+
+          <p>A person reigning within a kingdom.</p>
+           <p>
+            Superclasses  &middot; TemporalThing           </p>
+        </article>
         <article class="class" id="ParliamentPeriod">
           <h3>Class <a href="#ParliamentPeriod">Parliament period</a></h3>
 
@@ -463,22 +470,59 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="regnalYearInReign">
+        <article class="objectproperty" id="regnalYearOfMonarch">
           <h3>
             Object property
-            <a href="#regnalYearInReign"
-              >Regnal year in reign</a
+            <a href="#regnalYearOfMonarch"
+              >Regnal year of monarch</a
             >
           </h3>
 
-           <p>Relates a regnal year to the reign in which that regnal year occurs. A regnal year occurs in one reign.</p>
-
+ 
           <p>
             <a href="#RegnalYear"
               >RegnalYear</a
             >
-            &mdash; Regnal year in reign &mdash;
+            &mdash; Regnal year of monarch &mdash;
             <a href="#Reign">Reign</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="reignIn">
+          <h3>
+            Object property
+            <a href="#reignIn"
+              >Reign in</a
+            >
+          </h3>
+
+           <p>Relates a reign to a kingdom the reign is in. A reign has one kingdom. A kingdom may have more than one reign over time, but only one reign at one time.</p>
+
+          <p>
+            <a href="#Reign"
+              >Reign</a
+            >
+            &mdash; Reign in &mdash;
+            <a href="#Kingdom">Kingdom</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="reignOf">
+          <h3>
+            Object property
+            <a href="#reignOf"
+              >Reign of</a
+            >
+          </h3>
+
+           <p>Relates a reign to a monarch during that reign. The reign of William and Mary is considered as a joint reign. A monarch may have more than one reign in more than one kingdom, for example: the reigns of George III in Great Britain, in Ireland and later in the United Kingdom.</p>
+
+          <p>
+            <a href="#Reign"
+              >Reign</a
+            >
+            &mdash; Reign of &mdash;
+            <a href="#Monarch">Monarch</a>
           </p>
         </article>
 
@@ -581,6 +625,10 @@
         <table>
           <tr>
             <td>/<wbr>ontologies/<wbr>time-period/<wbr>Reign</td>
+            <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>time-period/<wbr>Monarch</td>
             <td>/<wbr>ontologies/<wbr>time-period/<wbr>TemporalThing</td>
           </tr>
           <tr>
@@ -721,7 +769,7 @@
 
     <footer>
       <p>
-        Generated 2024-06-03 14:03:16.480746 from a
+        Generated 2024-06-05 08:06:32.093480 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../time-period/time-period-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../time-period/time-period-ontology.ttl"
