@@ -35,6 +35,12 @@ ptime:Reign rdf:type owl:Class ;
 	rdfs:label "Reign"@en ;
 	rdfs:comment "A period of time during which a monarch has a reign in a kingdom."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:Monarch rdf:type owl:Class ;
+	rdfs:subClassOf ptime:TemporalThing ;
+	rdfs:label "Monarch"@en ;
+	rdfs:comment "A person reigning within a kingdom."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 ptime:RegnalYear rdf:type owl:Class ;
 	rdfs:subClassOf ptime:TemporalThing ;
@@ -225,9 +231,9 @@ ptime:recessInHouse rdf:type owl:ObjectProperty ;
 	rdfs:range ptime:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
-ptime:regnalYearInReign rdf:type owl:ObjectProperty ;
-	rdfs:label "Regnal year in reign"@en ;
-	rdfs:comment "Relates a regnal year to the reign in which that regnal year occurs. A regnal year occurs in one reign."@en ;
+ptime:regnalYearOfMonarch rdf:type owl:ObjectProperty ;
+	rdfs:label "Regnal year of monarch"@en ;
+	rdfs:comment ""@en ;
 	rdfs:domain ptime:RegnalYear ;
 	rdfs:range ptime:Reign ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
@@ -244,6 +250,20 @@ ptime:belongToSession rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a 'session in regnal year' to its session. A 'session in regnal year' belongs to one session."@en ;
 	rdfs:domain ptime:SessionInRegnalYear ;
 	rdfs:range ptime:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:reignOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Reign of"@en ;
+	rdfs:comment "Relates a reign to a monarch during that reign. The reign of William and Mary is considered as a joint reign. A monarch may have more than one reign in more than one kingdom, for example: the reigns of George III in Great Britain, in Ireland and later in the United Kingdom."@en ;
+	rdfs:domain ptime:Reign ;
+	rdfs:range ptime:Monarch ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
+	
+ptime:reignIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Reign in"@en ;
+	rdfs:comment "Relates a reign to a kingdom the reign is in. A reign has one kingdom. A kingdom may have more than one reign over time, but only one reign at one time."@en ;
+	rdfs:domain ptime:Reign ;
+	rdfs:range ptime:Kingdom ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 
 
