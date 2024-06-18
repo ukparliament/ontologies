@@ -9,7 +9,7 @@ The following queries are separated by where affirmative instruments were laid, 
 
 * [Instruments laid before the House of Commons only](https://api.parliament.uk/sparql#query=%23+This+query+uses+classes+from+UK+Parliament's+procedure+ontology%3A+https%3A%2F%2Fukparliament.github.io%2Fontologies%2Fprocedure%2Fprocedure-ontology.html.%0A%0A%23+All+affirmative+instruments%2C+unless+withdrawn+or+lapsed%2C+will+be+debated+in+the+House+of+Commons+and%2C+if+laid%2C+in+the+House+of+Lords.+Negative+instruments+can+also+be+debated+in+either+House+if+a+prayer+has+been+tabled+against+the+instrument+and+time+has+been+allocated.+This+query+looks+for+all+instruments+laid+before+the+House+of+Commons+only+and+debated+either+in+a+Delegated+Legislation+Committee+or+on+the+floor+of+the+House.+%0A%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0A%23+The+above+rows+describe+where+the+datasets+that+this+query+is+built+on+come+from.+%0A%0Aselect+distinct+%3FSI+%3FSIname+%3FLaidDate+%3FlayingBodyName+%3Fproc+%3FworkPackage+%3FCommonsDebate+%3Fdate+%3FLink++where+%7B+%0A+%23+The+select+row+is+identifying+what+information+to+return+from+the+query.+These+are+all+variables+from+the+query+below.%0A++%0A%23+SPARQL+variables+start+with+a+%3F+and+can+match+any+node+(resource+or+literal)+in+the+RDF+dataset.+%0A%0A+%3FSI+a+%3AStatutoryInstrumentPaper+.++%0A+++++++%23+An+SI+is+considered+a+workpackageable+thing+which+is+the+focus+of+a+workpackage%0A+++++%3FSI+rdfs%3Alabel+%3FSIname+%3B+%0A+++++%3AlaidThingHasLaying%2F%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+%3B%0A+++++%3AlaidThingHasLaying%2F%3AlayingDate+%3FLaidDate.%0A+++%3FSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A+++%23+A+workpackage+is+a+group+of+business+items+under+a+procedure+or+as+determined+by+a+committee%2C+for+example%3A+business+items+considered+during+the+passage+of+a+particular+Statutory+Instrument.%0A%0A++%09%3FworkPackage+%3AworkPackageHasProcedure%2Frdfs%3Alabel+%3Fproc.%0AFILTER(%3Fproc+IN+(%22Draft+affirmative%22%2C+%22Made+affirmative%22))%0A+++%23+Statutory+instruments+can+be+laid+under+a+number+of+procedures+with+all+having+different+routes+through+Parliament.+This+filter+will+show+the+procedure+the+SI+was+laid+under.+%0A%0A%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A+++%23+A+business+item+is+an+item+of+business+conducted+either+within+or+outside+Parliament.+For+example%3A+the+tabling+of+an+early+day+motion%2C+a+laying+of+a+paper%2C+the+making+of+a+statutory+instrument+by+a+government+minister.%0A%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FDebateId%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3Fbi+%3AbusinessItemHasBusinessItemWebLink+%3FLink.%0A++%3FDebateId+%3AprocedureStepName+%3FCommonsDebate.%0A++++FILTER+(%3FDebateId+in+(id%3AADYK7qyp%2C+id%3AFLHAXypO))%0A+++%23+All+business+items+will+have+one+or+more+procedure+steps+attached.+All+procedure+steps+will+have+a+name+and+ID%2C+we+use+the+ID+to+search+for+the+step+as+it+is+constant+whereas+the+name+could+change.+The+IDs+above+are+for+the+two+House+of+Commons+debate+steps+-+Chamber+debate+and+Delegated+Legislation+Committee+debate.++The+other+aspects+of+the+query+are+the+attributes+of+the+business+item+including+the+date+and+link+the+step+was+actualised+with.+%0A%0A%0AMINUS+%7B%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi3.%0A++%3Fbi3+%3AbusinessItemHasProcedureStep+%3FwithdrawnId%3B%0A+++++++%3AbusinessItemDate+%3Fdate3.%0A++%3FwithdrawnId+%3AprocedureStepName+%3Fwithdrawn.%0A++FILTER+(%3FwithdrawnId+in+(id%3ApuVMaN7t))%7D%0A%23+This+aspect+of+the+query+limits+the+results+to+only+look+for+instruments+where+the+procedrual+step+'Laid+before+the+House+of+Lords'+has+not+been+actualised.+%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table) 
 
-* [Instruments laid before both Houses](https://api.parliament.uk/s/8c941131)
+* [Instruments laid before both Houses](https://api.parliament.uk/s/dfda7008)
 
 ### Affirmative instruments not debated before being approved
 
@@ -33,13 +33,13 @@ As agreed with the Clerk of Legislation, we did not reflect this DLC as a debate
 
 The following queries break the above queries down further into type of debate so whether they took place in the chamber or in committee. 
 
-* [House of Commons chamber](https://api.parliament.uk/s/80077d1b) 
+* [House of Commons chamber](https://api.parliament.uk/s/0976c5dc) 
 
-* [House of Commons Delegated Legislation Committee](https://api.parliament.uk/s/9284cc7c) 
+* [House of Commons Delegated Legislation Committee](https://api.parliament.uk/s/28d31819) 
 
-* [House of Lords chamber](https://api.parliament.uk/s/ea457f1c) 
+* [House of Lords chamber](https://api.parliament.uk/s/bf7fc5a1) 
 
-* [House of Lords Grand Committee](https://api.parliament.uk/s/2af52bbb) 
+* [House of Lords Grand Committee](https://api.parliament.uk/s/d5b8d809) 
 
 ## Negative instruments
 
