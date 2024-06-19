@@ -16,6 +16,8 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 ## Queries by instrument type
 
+* [Enhanced affirmatives under Investigatory Powers Act 2016](instrument-types/enhanced-affirmatives-under-ipa16)
+
 * [Legislative reform orders](instrument-types/legislative-reform-orders)
 
 * [Proposed Negative Statutory Instruments](instrument-types/proposed-negative-statutory-instruments)
