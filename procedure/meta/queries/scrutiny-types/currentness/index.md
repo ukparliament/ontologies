@@ -14,6 +14,11 @@ FILTER ( str(?itemDate) <= '2020-02-06')
 
 * [Published drafts under Paragraph 14 of Schedule 8 to the European Union (Withdrawal) Act 2018](https://api.parliament.uk/s/fbb2a382)
 
+* Enhanced affirmatives under the Investigatory Powers Act 2016
+    * [Enhanced affirmatives under IPA16 recommendation period](https://api.parliament.uk/s/5d60fcdd)
+    * [Enhanced affirmatives under IPA16 pre-approval period (40 days)](https://api.parliament.uk/s/0da3099c)
+    * [Enhanced affirmatives under IPA16 pre-approval period (60 days)](https://api.parliament.uk/s/458b856e)
+
 * Legislative reform orders
 	* [Legislative reform order procedure determination](https://api.parliament.uk/s/9b8368ca)	
     * [Legislative reform orders under the negative procedure objection period](https://api.parliament.uk/s/32d5796e)
