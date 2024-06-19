@@ -1,5 +1,7 @@
 # Queries by instrument type
 
+* [Enhanced affirmative instruments under the Investigatory Powers Act 2016](enhanced-affirmatives-under-ipa16)
+
 * [Legislative reform orders](legislative-reform-orders)
 
 * [Proposed Negative Statutory Instruments](proposed-negative-statutory-instruments)
