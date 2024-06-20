@@ -56,3 +56,11 @@ The [Social Security Advisory Committee](https://www.gov.uk/government/organisat
 * [Instruments referred to the Social Security Advisory Committee](https://api.parliament.uk/s/bf6b7a8a)
 
 * [Reports by the Social Security Advisory Committee and SoS statements laid before Parliament](https://api.parliament.uk/s/91e2bac8)
+
+## Instruments that require a Government Actuary report
+
+The [Government's Actuary](https://www.gov.uk/government/organisations/government-actuarys-department) provides actuarial advice and support to the government and public sector. Under sections 142, 150(8), 150A(5) and 151A(6) of the [Social Security Administration Act 1992](https://www.legislation.gov.uk/id/ukpga/1992/5), the Government Actuary will provide a report that sets out their opinion on the effect on the National Insurance Fund of the proposed uprating of contributory benefits as set out in draft orders laid before Parliament by the Department of Work and Pensions. These orders are usually laid on an annual basis alongside draft Social Security Benefits Up-rating Orders and draft Social Security (Contributions) (Rates, Limits and Thresholds Amendments and National Insurance Funds Payments) Regulations. Though, sometimes the report will explain the determination by the Government not to lay the latter order. More information on the National Insurance Fund can be found [here](https://commonslibrary.parliament.uk/research-briefings/sn00797/). [National Insurance Fund accounts](https://www.gov.uk/government/publications/national-insurance-fund-accounts) can be found on gov.uk.
+
+* [Government Actuary reports laid before Parliament](https://api.parliament.uk/s/74d60ada)
+
+* [Government Actuary reports withdrawn from Parliament](https://api.parliament.uk/s/a96ec9b4)
