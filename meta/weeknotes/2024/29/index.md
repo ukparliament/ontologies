@@ -58,7 +58,23 @@ Moving on to week 29, Jon made a whole host of changes, not least the tidying of
 
 Work continues on attempts to liberate our taxonomy from the constraints of its software bondage. Week 23 saw a meeting with family friend Silver. Librarians Anya and Susannah and computational makeweights Robert and Michael all in attendance. Plans around which of our very many identifiers we hang the data off and how we're going to handle deletes - hard right now but softly in the future - were agreed. Business done, hands shook, we moved on.
 
+SILVER AND I SPOKE AT A CONFERENCE
+
 Meanwhile, slightly offstage, Librarian Claire and computational reserve goalie Michael have continued to chip away at OaSIS - the Odds and Sods Information System - in an attempt to capture the data model as something roughly resembling an ontology. OaSIS being a system built to provide data for parliamentary business where source systems were commissioned and built with change event APIs so far down the backlog, they never made it to production. With a helping hand from Silver, they've now taken that work and plugged it into Data Graphs. Progress we all most pleased with.
+
+## INDEXING AND TAXONOMY
+Dissolution sees librarian eyes turn to the long list of things filed under "for when we have time". Open calls are chased, stones are lifted and new calls are logged. A by no means complete list of the things the team managed to move from the To do to the Done list: 
+
+- Public Accounts Committee responses to NAO reports now linked to the NAO reports 1992 to 2024
+- Coming into force dates and notes for treaties reviewed and updated back to 1992
+- 16,000 SIs back to the 1980s reviewed and 15,500 updated with URLs
+- Prompted by an [equality of votes](https://erskinemay.parliament.uk/section/5190/equality-of-votes) situation in the Lords back in [March](https://hansard.parliament.uk/Lords/2021-03-24/debates/13FBDABA-525C-48CA-92B6-A21B017E1DC3/FinancialServicesBill#contribution-074831FA-EBB3-4F1E-A09A-331C7FDDA278), we have a new term and [earlier instances](https://search-material.parliament.uk/search?Parameters.Fields.all=&Parameters.Fields.all-target=&Parameters.Fields.phrase=procedural_ses%3A479740&Parameters.Fields.phrase-target=&Parameters.Fields.any=&Parameters.Fields.any-target=&Parameters.Fields.exclude=&Parameters.Fields.exclude-target=&Parameters.Fields.type=Parliamentary+proceedings&Parameters.Fields.member=&Parameters.Fields.subject=&Parameters.Fields.reference=&Parameters.Fields.date=&Parameters.Fields.date=&Parameters.PageSize=20) have been winkled out and indexed
+- Emergency debate applications and maiden speeches added to our list of content types, making them easier to find
+- Closed the gap in cross linking [thesaurus term IDs with wikidata](https://trello.com/c/yNAtpZFI)
+- [Untangled a tangle](https://trello.com/c/SwYZYwn7) in the [Drugs](https://lda.data.parliament.uk/terms/90985) and [Names of drugs](https://lda.data.parliament.uk/terms/397111) branches of the 
+- Two more briefings in the [Parliament Facts and Figures](commonslibrary.parliament.uk/tag/parliament-facts-and-figures/) series polished and published:
+    - [Emergency debates in the House of Commons since 1979](https://commonslibrary.parliament.uk/research-briefings/sn04569/)
+    - [Maiden Speeches in the House of Commons since 1918](https://commonslibrary.parliament.uk/research-briefings/sn04588/)
 
 ## A Rush and a Push
 
