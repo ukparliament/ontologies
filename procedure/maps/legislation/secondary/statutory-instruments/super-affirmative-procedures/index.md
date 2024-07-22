@@ -53,6 +53,6 @@ Dot file: [dot](remedial-orders/draft-affirmative/draft-affirmative.dot)
 
 Dot file: [dot](remedial-orders/made-affirmative/made-affirmative.dot) 
 
-## [Enhanced affirmative: Investigatory Powers Act 2016](enhanced-affirmatives-under-ipa16/enhanced-affirmative-under-IPA16.pdf)
+## [Enhanced affirmative: Investigatory Powers Act 2016](enhanced-affirmative-under-ipa16/enhanced-affirmative-under-IPA16.pdf)
 
 Dot file: [dot](enhanced-affirmatives-under-ipa16/enhanced-affirmative-under-IPA16.dot)
