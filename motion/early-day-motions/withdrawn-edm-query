@@ -1,0 +1,12 @@
+PREFIX  xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX  rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  dc-term:<http://purl.org/dc/terms/>
+PREFIX  parl:<http://data.parliament.uk/schema/parl#>
+select distinct ?edm ?title ?date ?session ?status where {?edm a <http://data.parliament.uk/schema/parl#EarlyDayMotion>; 
+<http://data.parliament.uk/schema/parl#searchDate> ?date; 
+<http://data.parliament.uk/schema/parl#session> ?session;
+<http://data.parliament.uk/schema/parl#edmStatus> ?status;
+dc-term:title ?title.
+ 
+FILTER (?status IN ("Withdrawn"))
+  FILTER (str(?date) > '2023-11-07')}
