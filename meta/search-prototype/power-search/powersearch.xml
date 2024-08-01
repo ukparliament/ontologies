@@ -1,0 +1,632 @@
+<powersearch>
+		<alias name="">
+			<fields>
+				<field name="all_ses" expansionoption="SesId"/>
+				<field name="" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+			</fields>
+		</alias>
+		<alias name="title">
+			<fields>
+				<field name="title_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+			</fields>
+		</alias>
+		<alias name="summary">
+			<fields>
+				<field name="abstract_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+			</fields>
+		</alias>
+		<alias name="typeexact" sesfacetid="346696" facetcountmergeoption="Max">
+			<fields>
+				<field name="type_sesrollup" boost="0" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="type">
+			<fields>
+				<field name="type_sesrollup" boost="0" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="section">
+			<fields>
+				<field name="section_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="publisherexact">
+			<fields>
+				<field name="publisher_ses" expansionoption="SesId"/>
+				<field name="publisher_s" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="publishercont">
+			<fields>
+				<field name="publisher_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="publisher">
+			<fields>
+				<field name="publisher_ses" expansionoption="SesId"/>
+				<field name="publisher_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<!-- about alias now deprecated in favour of subject - however we'll keep it here for now in case anyone's still using it in powersearches -->
+		<alias name="about">
+			<fields>
+				<field name="subject_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+				<field name="subject_ses" expansionoption="SesId" sesclasspattern="^(?!TPG)"/>
+				<field name="topic_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="subject">
+			<fields>
+				<field name="subject_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+				<field name="subject_ses" expansionoption="SesId" sesclasspattern="^(?!TPG)"/>
+				<field name="topic_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="subjectexact">
+			<fields>
+				<field name="subject_s" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+				<field name="subject_ses" expansionoption="SesId" sesclasspattern="^(?!TPG)"/>
+				<field name="topic_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="topic" sesfacetid="95475">
+			<fields>
+				<field name="topic_sesrollup" expansionoption="SesId" sesclasspattern="^TPG$"/>
+			</fields>
+		</alias>
+		<alias name="timestamp">
+			<fields>
+				<field name="timestamp" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="date">
+			<fields>
+				<field name="date_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="from">
+			<fields>
+				<field name="date_dt" expansionoption="DateRangeOpenEnd"/>
+			</fields>
+		</alias>
+		<alias name="to">
+			<fields>
+				<field name="date_dt" expansionoption="DateRangeOpenStart"/>
+			</fields>
+		</alias>
+		<alias name="ref">
+			<fields>
+				<field name="identifier_t" expansionoption="None"/>
+				<field name="uin_t" expansionoption="None"/>
+				<field name="reference_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="uin">
+			<fields>
+				<field name="uin_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="epcommittee">
+			<fields>
+				<field name="epCommittee_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="libraryloc">
+			<fields>
+				<field name="lordsLibraryLocation_t" expansionoption="None"/>
+				<field name="commonsLibraryLocation_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="mep">
+			<fields>
+				<field name="mep_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="leadmember">
+			<fields>
+				<field name="leadMember_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="member">
+			<fields>
+				<field name="member_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="memberexact">
+			<fields>
+				<field name="member_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="memberparty">
+			<fields>
+				<field name="memberParty_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="constituencyexact">
+			<fields>
+				<field name="constituency_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="notes">
+			<fields>
+				<field name="searcherNote_t" expansionoption="None"/>
+				<field name="comingIntoForceNotes_t" expansionoption="None"/>
+				<field name="relatedNote_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="correspondingminister">
+			<fields>
+				<field name="correspondingMinister_ses" expansionoption="SesId"/>
+				<field name="correspondingMinister_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="datedeposited">
+			<fields>
+				<field name="dateDeposited_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="datemade">
+			<fields>
+				<field name="dateMade_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="commonsapproved">
+			<fields>
+				<field name="dateApproved_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="lordssapproved">
+			<fields>
+				<field name="lordsApprovedDate_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="comingintoforce">
+			<fields>
+				<field name="comingIntoForce_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="datereceived">
+			<fields>
+				<field name="dateReceived_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="dateoriginated">
+			<fields>
+				<field name="dateOriginated_dt" expansionoption="DateRange"/>
+				<field name="dateOfOrigin_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="reportdate">
+			<fields>
+				<field name="reportDate_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="commissionno">
+			<fields>
+				<field name="commissionNumber_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="councilno">
+			<fields>
+				<field name="councilNumber_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="elcno">
+			<fields>
+				<field name="elcNumber_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="reportno">
+			<fields>
+				<field name="reportNumber_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="ecno">
+			<fields>
+				<field name="ecDocumentNumber_t" expansionoption="None"/>
+				<field name="eCDocument_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="reporttitle">
+			<fields>
+				<field name="reportTitle_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="dept">
+			<fields>
+				<field name="department_ses" expansionoption="SesId"/>
+				<field name="department_t" expansionoption="SesTextAll"/>
+				<field name="answeringDept_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="department">
+			<fields>
+				<field name="department_ses" expansionoption="SesId"/>
+				<field name="department_t" expansionoption="SesTextAll"/>
+			</fields>
+		</alias>
+		<alias name="departmentexact">
+			<fields>
+				<field name="department_ses" expansionoption="SesId"/>
+				<field name="department_s" expansionoption="None"/>
+				<field name="answeringDept_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="corporateauthorexact">
+			<fields>
+				<field name="corporateAuthor_ses" expansionoption="SesId"/>
+				<field name="corporateAuthor_s" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="author">
+			<fields>
+				<field name="creator_t" expansionoption="SesTextAll"/>
+				<field name="contributor_t" expansionoption="SesTextAll"/>
+				<field name="creator_ses" expansionoption="SesId"/>
+				<field name="contributor_ses" expansionoption="SesId"/>
+				<field name="corporateAuthor_t" expansionoption="SesTextAll"/>
+				<field name="corporateAuthor_ses" expansionoption="SesId"/>
+				<field name="mep_ses" expansionoption="SesId"/>
+				<field name="section_ses" expansionoption="SesId"/>
+				<field name="epCommittee_t" expansionoption="None"/>
+				<field name="tablingMember_ses" expansionoption="SesId"/>
+				<field name="askingMember_ses" expansionoption="SesId"/>
+				<field name="answeringMember_ses" expansionoption="SesId"/>
+				<field name="department_ses" expansionoption="SesId"/>
+				<field name="department_t" expansionoption="None"/>
+				<field name="member_ses" expansionoption="SesId"/>
+				<field name="leadMember_ses" expansionoption="SesId"/>
+				<field name="correspondingMinister_ses" expansionoption="SesId"/>
+				<field name="correspondingMinister_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="cleared">
+			<fields>
+				<field name="cleared_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="groupedanswer">
+			<fields>
+				<field name="groupedAnswer_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="chair">
+			<transformations>
+				<transformation regexpattern="(/[A-Z]/g)" regexreplace="20$0"/>
+			</transformations>
+			<fixedvalues>
+				<item value="member_ses:303704">true</item>
+				<item value="member_ses:303704">yes</item>
+				<item value="-member_ses:303704">false</item>
+				<item value="-member_ses:303704">no</item>
+			</fixedvalues>
+		</alias>
+		<alias name="session">
+			<transformations>
+				<transformation regexpattern="^([0-2]\d)(?!\d)" regexreplace="20$0"/>
+				<transformation regexpattern="^([3-9]\d)(?!\d)" regexreplace="19$0"/>
+				<transformation regexpattern="^(\d{2})(\d{2})$" regexreplace="$1$2-$2"/>
+				<transformation regexpattern="^(\d{4})[^\d](\d{2})$" regexreplace="$1-$2"/>
+				<transformation regexpattern="^(\d{2})(\d)(\d)[^\d](\d)$" regexreplace="$1$2$3-$2$4"/>
+				<transformation regexpattern="^(\d{4})[^\d](\d{2})(\d{2})$" regexreplace="$1-$3"/>
+			</transformations>
+			<fixedvalues>
+				<item value="(session_s:2024-25 OR date_dt:[2024-05-25T00:00:00Z TO *])">2024-25</item>
+				<item value="(session_s:2023-24 OR date_dt:[2023-10-27T00:00:00Z TO  2024-05-24T23:59:00Z])">2023-24</item>
+				<item value="(session_s:2022-23 OR date_dt:[2022-04-29T00:00:00Z TO 2023-10-26T23:59:59Z])">2022-23</item>
+				<item value="(session_s:2021-22 OR date_dt:[2021-05-11T00:00:00Z TO 2022-04-28T23:59:59Z])">2021-22</item>
+				<item value="(session_s:2019-21 OR date_dt:[2019-12-17T00:00:00Z TO 2021-05-10T23:59:59Z])">2019-21</item>
+				<item value="(session_s:2019-19 OR date_dt:[2019-10-14T01:00:00Z TO 2019-11-06T00:01:00Z])">2019-19</item>
+				<item value="(session_s:2017-19 OR date_dt:[2017-05-03T00:00:00Z TO 2019-10-13T23:59:59Z])">2017-19</item>
+				<item value="(session_s:2016-17 OR date_dt:[2016-05-13T00:00:00Z TO 2017-05-02T23:59:59Z])">2016-17</item>
+				<item value="(session_s:2015-16 OR date_dt:[2015-04-01T00:00:00Z TO 2016-05-12T23:59:59Z])">2015-16</item>
+				<item value="(session_s:2014-15 OR date_dt:[2014-05-14T23:00:00Z TO 2015-03-30T23:59:59Z])">2014-15</item>
+				<item value="(session_s:2013-14 OR date_dt:[2013-04-25T23:00:00Z TO 2014-06-03T22:59:59Z])">2013-14</item>
+				<item value="(session_s:2012-13 OR date_dt:[2012-05-08T23:00:00Z TO 2013-04-25T22:59:59Z])">2012-13</item>
+				<item value="(session_s:2010-12 OR date_dt:[2010-05-17T23:00:00Z TO 2012-05-08T22:59:59Z])">2010-12</item>
+				<item value="(session_s:2009-10 OR date_dt:[2009-11-18T00:00:00Z TO 2010-05-17T22:59:59Z])">2009-10</item>
+				<item value="(session_s:2008-09 OR date_dt:[2008-12-03T00:00:00Z TO 2009-11-17T23:59:59Z])">2008-09</item>
+				<item value="(session_s:2007-08 OR date_dt:[2007-11-06T00:00:00Z TO 2008-12-02T23:59:59Z])">2007-08</item>
+				<item value="(session_s:2006-07 OR date_dt:[2006-11-15T00:00:00Z TO 2007-11-05T23:59:59Z])">2006-07</item>
+				<item value="(session_s:2005-06 OR date_dt:[2005-05-10T23:00:00Z TO 2006-11-14T23:59:59Z])">2005-06</item>
+				<item value="(session_s:2004-05 OR date_dt:[2004-11-23T00:00:00Z TO 2005-05-10T22:59:59Z])">2004-05</item>
+				<item value="(session_s:2003-04 OR date_dt:[2003-11-26T00:00:00Z TO 2004-11-22T23:59:59Z])">2003-04</item>
+				<item value="(session_s:2002-03 OR date_dt:[2002-11-10T00:00:00Z TO 2003-11-25T23:59:59Z])">2002-03</item>
+				<item value="(session_s:2001-02 OR date_dt:[2001-06-12T23:00:00Z TO 2002-11-09T23:59:59Z])">2001-02</item>
+				<item value="(session_s:2000-01 OR date_dt:[2000-12-06T00:00:00Z TO 2001-06-12T22:59:59Z])">2000-01</item>
+				<item value="(session_s:1999-00 OR date_dt:[1999-11-17T00:00:00Z TO 2000-12-05T23:59:59Z])">1999-00</item>
+				<item value="(session_s:1998-99 OR date_dt:[1998-11-24T00:00:00Z TO 1999-11-16T23:59:59Z])">1998-99</item>
+				<item value="(session_s:1997-98 OR date_dt:[1997-05-06T23:00:00Z TO 1998-11-23T23:59:59Z])">1997-98</item>
+				<item value="(session_s:1996-97 OR date_dt:[1996-10-22T23:00:00Z TO 1997-05-06T22:59:59Z])">1996-97</item>
+				<item value="(session_s:1995-96 OR date_dt:[1995-11-15T00:00:00Z TO 1996-10-22T22:59:59Z])">1995-96</item>
+				<item value="(session_s:1994-95 OR date_dt:[1994-11-16T00:00:00Z TO 1995-11-14T23:59:59Z])">1994-95</item>
+				<item value="(session_s:1993-94 OR date_dt:[1993-11-18T00:00:00Z TO 1994-11-15T23:59:59Z])">1993-94</item>
+				<item value="(session_s:1992-93 OR date_dt:[1992-04-26T23:00:00Z TO 1993-11-17T23:59:59Z])">1992-93</item>
+				<item value="(session_s:1991-92 OR date_dt:[1991-10-31T00:00:00Z TO 1992-04-26T22:59:59Z])">1991-92</item>
+				<item value="(session_s:1990-91 OR date_dt:[1990-11-07T00:00:00Z TO 1991-10-30T23:59:59Z])">1990-91</item>
+				<item value="(session_s:1989-90 OR date_dt:[1989-11-21T00:00:00Z TO 1990-11-06T23:59:59Z])">1989-90</item>
+				<item value="(session_s:1988-89 OR date_dt:[1988-11-22T00:00:00Z TO 1989-11-20T23:59:59Z])">1988-89</item>
+				<item value="(session_s:1987-88 OR date_dt:[1987-06-16T23:00:00Z TO 1988-11-21T23:59:59Z])">1987-88</item>
+				<item value="(session_s:1986-87 OR date_dt:[1986-11-12T00:00:00Z TO 1987-06-16T22:59:59Z])">1986-87</item>
+				<item value="(session_s:1985-86 OR date_dt:[1985-11-05T00:00:00Z TO 1986-11-11T23:59:59Z])">1985-86</item>
+				<item value="(session_s:1984-85 OR date_dt:[1984-11-06T00:00:00Z TO 1985-11-04T23:59:59Z])">1984-85</item>
+				<item value="(session_s:1983-84 OR date_dt:[1983-06-14T23:00:00Z TO 1984-11-05T23:59:59Z])">1983-84</item>
+				<item value="(session_s:1982-83 OR date_dt:[1982-11-03T00:00:00Z TO 1983-06-14T22:59:59Z])">1982-83</item>
+				<item value="(session_s:1981-82 OR date_dt:[1981-11-04T00:00:00Z TO 1982-11-02T23:59:59Z])">1981-82</item>
+				<item value="(session_s:1980-81 OR date_dt:[1980-11-20T00:00:00Z TO 1981-11-03T23:59:59Z])">1980-81</item>
+				<item value="(session_s:1979-80 OR date_dt:[1979-05-08T23:00:00Z TO 1980-11-19T23:59:59Z])">1979-80</item>
+			</fixedvalues>
+			<fields>
+				<field name="session_s" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="status">
+			<transformations>
+				<transformation type="sentencecase"/>
+			</transformations>
+			<fields>
+				<field name="edmStatus_s" expansionoption="None"/>
+				<field name="pqStatus_s" expansionoption="None"/>
+				<field name="status_s" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="reginterest">
+			<fields>
+				<field name="registeredInterest_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="legislature">
+			<fields>
+				<field name="legislature_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="primarysponsor">
+			<fields>
+				<field name="tablingMember_ses" expansionoption="SesId"/>
+				<field name="primarySponsor_ses" expansionoption="SesId"/>
+				<field name="amendment_tablingMember_ses" expansionoption="SesId"/>
+				<field name="amendment_primarySponsor_ses" expansionoption="SesId"/>
+				<field name="tablingMemberPrinted_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="othersponsor">
+			<fields>
+				<field name="sponsor_ses" expansionoption="SesId"/>
+				<field name="amendment_sponsor_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="signedby">
+			<fields>
+				<field name="signedMember_ses" expansionoption="SesId"/>
+				<field name="amendment_signedMember_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="datetabled">
+			<fields>
+				<field name="dateTabled_dt" expansionoption="DateRange"/>
+				<field name="amendment_dateTabled_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="dateforanswer">
+			<fields>
+				<field name="dateForAnswer_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="dateanswered">
+			<fields>
+				<field name="dateOfAnswer_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="datesponsored">
+			<fields>
+				<field name="dateSponsored_dt" expansionoption="DateRange"/>
+				<field name="amendment_dateSponsored_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="datesigned">
+			<fields>
+				<field name="dateSigned_dt" expansionoption="DateRange"/>
+				<field name="amendment_dateSigned_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="Constituency">
+			<fields>
+				<field name="constituency_t" expansionoption="SesTextAll" sesclasspattern="^(?ID)"/>
+			</fields>
+		</alias>
+		<alias name="answeredby">
+			<fields>
+				<field name="answeringMember_ses" expansionoption="SesId"/>
+				<field name="answeringDept_ses" expansionoption="SesId"/>
+				<field name="askedToReplyAuthor_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="askedby">
+			<fields>
+				<field name="tablingMember_ses" expansionoption="SesId"/>
+				<field name="tablingMemberPrinted_t" expansionoption="None"/>
+				<field name="askingMember_ses" expansionoption="SesId"/>
+				<field name="askingMemberPrinted_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="tabledby">
+			<fields>
+				<field name="tablingMember_ses" expansionoption="SesId"/>
+				<field name="tablingMemberPrinted_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="correctedanswer">
+			<fields>
+				<field name="tablingMember_ses" expansionoption="SesId"/>
+				<field name="tablingMemberPrinted_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="tabledbyexact">
+			<fields>
+				<field name="tablingMember_ses" expansionoption="SesId"/>
+				<!--<field name="tablingMemberPrinted_s" expansionoption="None" />-->
+			</fields>
+		</alias>
+		<alias name="askedbyexact">
+			<fields>
+				<field name="askingMember_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="transferred">
+			<fields>
+				<field name="transferredQuestion_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="legtitle">
+			<fields>
+				<field name="legislationTitle_ses" expansionoption="SesId"/>
+				<field name="legislationTitle_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
+			</fields>
+		</alias>
+		<alias name="legtitleexact">
+			<fields>
+				<field name="legislationTitle_ses" expansionoption="SesId"/>
+				<field name="legislationTitle_s" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="legstage">
+			<fields>
+				<field name="legislativeStage_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="prorogationanswer">
+			<fields>
+				<field name="prorogationAnswer_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="holdinganswer">
+			<fields>
+				<field name="holdingAnswer_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="procedural">
+			<fields>
+				<field name="procedural_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="resolutionprocedure">
+			<fields>
+				<field name="procedure_s" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="certifiedcategory">
+			<fields>
+				<field name="certifiedCategory_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="category">
+			<fields>
+				<field name="category_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="contributor">
+			<fields>
+				<field name="contributor_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="datecertified">
+			<fields>
+				<field name="dateCertified_dt" expansionoption="DateRange"/>
+				<field name="certifiedDate_dt" expansionoption="DateRange"/>
+			</fields>
+		</alias>
+		<alias name="corrected">
+			<fields>
+				<field name="correctedWmsMc_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="questiontext">
+			<fields>
+				<field name="questionText_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="answertext">
+			<fields>
+				<field name="answerText_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="place">
+			<fields>
+				<field name="place_ses" expansionoption="SesId"/>
+				<field name="place_t" expansionoption="SesTextAll"/>
+			</fields>
+		</alias>
+		<alias name="stats">
+			<fields>
+				<field name="containsStatistics_b" expansionoption="Boolean"/>
+				<field name="statisticsIndicated_b" expansionoption="Boolean"/>
+				<field name="hasTable_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="failedoral">
+			<fields>
+				<field name="failedOral_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="unstarred">
+			<fields>
+				<field name="unstarredQuestion_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="explanatorymemorandum">
+			<fields>
+				<field name="containsEM_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="impactassessment">
+			<fields>
+				<field name="containsIA_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="opqtype">
+			<fixedvalues>
+				<item value="contributionType_s:&quot;Lead&quot;">lead</item>
+				<item value="contributionType_s:&quot;1st Supplementary&quot;">firstsupp</item>
+				<item value="contributionType_s:&quot;Supplementary&quot;">othersupp</item>
+				<item value="contributionType_t:supplementary">supp</item>
+			</fixedvalues>
+		</alias>
+		<alias name="wpqtype">
+			<fixedvalues>
+				<item value="wpqType_s:&quot;Ordinary&quot;">ordinary</item>
+				<item value="wpqType_s:&quot;Named Day&quot;">namedday</item>
+				<item value="wpqType_s:&quot;Daily&quot;">nextday</item>
+			</fixedvalues>
+		</alias>
+		<alias name="curator">
+			<fields>
+				<field name="curator_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="hardcopy">
+			<fields>
+				<field name="isHardCopy_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+		<alias name="witness">
+			<fields>
+				<field name="witness_ses" expansionoption="SesId"/>
+				<field name="witness_t" expansionoption="None"/>
+			</fields>
+		</alias>
+		<alias name="leadmemberparty">
+			<fields>
+				<field name="leadMemberParty_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="respondingmemberparty">
+			<fields>
+				<field name="answeringMemberParty_ses" expansionoption="SesId"/>
+			</fields>
+		</alias>
+		<alias name="unprintedlead">
+			<fields>
+				<field name="unprintedLead_b" expansionoption="Boolean"/>
+			</fields>
+		</alias>
+	</powersearch>
