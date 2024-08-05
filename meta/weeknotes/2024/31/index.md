@@ -12,7 +12,7 @@ Over in the world of parties - sadly, not those kind of parties - Librarian Anna
 
 Still with parties, the Green Party of England and Wales has now parted company from the Green Party of Scotland, computer bits once more reorganised to better reflect reality. Top work Librarian Phil.
 
-On on the subject of excellent work by Phil, he's also made a start [compiling MNIS-shaped queries](https://trello.com/c/IRYte6X6/283-potential-queries-that-mnis-could-answer-following-the-election) that we suspect will help to answer some fairly common questions in the not too distant. Looking at the list, your regular correspondents are half wondering why this list has been left in Sharepointland, rather than made public. Once Phil returns from his well-earned vacation, we shall endeavour to make that so.
+On the subject of excellent work by Phil, he's also made a start [compiling MNIS-shaped queries](https://trello.com/c/IRYte6X6/283-potential-queries-that-mnis-could-answer-following-the-election) that we suspect will help to answer some fairly common questions in the not too distant. Looking at the list, your regular correspondents are half wondering why this list has been left in Sharepointland, rather than made public. Once Phil returns from his well-earned vacation, we shall endeavour to make that so.
 
 ## Psephologising profusely
 
