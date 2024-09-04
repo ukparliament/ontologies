@@ -698,22 +698,20 @@
 		</fixedvalues>
 	</alias>
 	
+	<!-- Maps publisher_ses and publisher_t to publisher. -->
+	<!-- Used in publisher facet which we're not planning to implement. -->
+	<alias name="publisher">
+		<fields>
+			<field name="publisher_ses" expansionoption="SesId"/>
+			<field name="publisher_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
 	<!-- /REQUIRED -->
 	
 	
 	
-	<!-- UNKNOWN -->
-	<!-- Aliases we don't understand. -->
 	
-	<!-- Maps timestamp to timestamp. -->
-	<!-- AS: might be used by claw? -->
-	<alias name="timestamp">
-		<fields>
-			<field name="timestamp" expansionoption="DateRange"/>
-		</fields>
-	</alias>
-	
-	<!-- /UNKNOWN -->
 	
 	
 	
@@ -745,15 +743,6 @@
 	<alias name="publishercont">
 		<fields>
 			<field name="publisher_ses" expansionoption="SesId"/>
-		</fields>
-	</alias>
-	
-	<!-- Maps publisher_ses and publisher_t to publisher. -->
-	<!-- Used in publisher facet which we're not planning to implement. -->
-	<alias name="publisher">
-		<fields>
-			<field name="publisher_ses" expansionoption="SesId"/>
-			<field name="publisher_t" expansionoption="None"/>
 		</fields>
 	</alias>
 	
@@ -967,6 +956,8 @@
 	
 	
 	
+	
+	
 	<!-- TO CHECK WITH IDMS -->
 	
 	<!-- Maps unprintedLead_b to unprintedlead. -->
@@ -975,6 +966,14 @@
 	<alias name="unprintedlead">
 		<fields>
 			<field name="unprintedLead_b" expansionoption="Boolean"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps timestamp to timestamp. -->
+	<!-- AS: might be used by claw? -->
+	<alias name="timestamp">
+		<fields>
+			<field name="timestamp" expansionoption="DateRange"/>
 		</fields>
 	</alias>
 	
