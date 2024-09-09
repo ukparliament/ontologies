@@ -42,6 +42,10 @@ House of Commons Librarians are in the process of adding links between instrumen
 
 * [Statutory instruments enabled by Public Act with a link to the Act at the time of making](https://api.parliament.uk/s/99a4b370)
 
+For users with a more niche interest, the following query will show you a list of SIs laid under a specific Act within the last month. The query will always update no matter which month you might be in so no need to deal with date ranges. The Act used in this query is the Energy Act 2023 but it can easily be changed by replacing the id in line 19 of the query with another from the list of [Acts](https://api.parliament.uk/s/b63e538f).
+
+* [Statutory instruments enabled by the Energy Act 2023 laid in the last month](https://shortener120181217063232.azurewebsites.net/s/17368b5c) 
+
 ## Proposed negative statutory instruments enabled by Public General Acts
 
 Proposed negative statutory instruments were introduced in [Schedule 7 of the European Union (Withdrawal) Act 2018](https://www.legislation.gov.uk/ukpga/2018/16/schedule/7/enacted). Until 2020 all proposed negative statutory instruments were enabled by that Act. Since the UK left the European Union at the end of 2020 proposed negative statutory instruments can also be enabled under [Schedule 5 of the European Union (Future Relationship) Act 2020](https://www.legislation.gov.uk/ukpga/2020/29/schedule/5).
