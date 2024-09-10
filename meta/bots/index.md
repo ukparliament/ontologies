@@ -65,7 +65,7 @@ Name | Mastodon | Bluesky | Feed
 
 ## Defunct answering bodies
 
-Name | Feed
-[Department for Digital, Culture, Media and Sport](https://api.parliament.uk/written-answers/answering-bodies/10) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/10.rss)
-[Department for International Trade](https://api.parliament.uk/written-answers/answering-bodies/202) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/202.rss)
+Name | Mastodon | Bluesky | Feed
+[Department for Digital, Culture, Media and Sport](https://api.parliament.uk/written-answers/answering-bodies/10) | | | [RSS](https://api.parliament.uk/written-answers/answering-bodies/10.rss)
+[Department for International Trade](https://api.parliament.uk/written-answers/answering-bodies/202) | | | [RSS](https://api.parliament.uk/written-answers/answering-bodies/202.rss)
 [Department for Levelling Up, Housing and Communities](https://api.parliament.uk/written-answers/answering-bodies/211) | [@LUHCAnswers](https://botsin.space/@LUHCAnswers) | [@dluhc-answers](https://bsky.app/profile/dluhc-answers.bsky.social) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/211.rss)
