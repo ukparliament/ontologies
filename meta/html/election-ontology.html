@@ -286,25 +286,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasPoliticalParty">
-          <h3>
-            Object property
-            <a href="#hasPoliticalParty"
-              >Has political party</a
-            >
-          </h3>
-
-           <p>Relates a candidacy to a political party.</p>
-
-          <p>
-            <a href="#Candidacy"
-              >Candidacy</a
-            >
-            &mdash; Has political party &mdash;
-            <a href="#PoliticalParty">PoliticalParty</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="inElection">
           <h3>
             Object property
@@ -404,6 +385,34 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
+        <article class="dataproperty" id="asCommonsSpeaker">
+          <h3>
+            Data property
+            <a href="#asCommonsSpeaker">As Commons Speaker</a>
+          </h3>
+
+          <p>Used to record if the candidate is the House of Commons Speaker standing for re-election to the House of Commons.</p>
+
+          <p>
+            Candidacy &mdash; As Commons Speaker &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="asIndependent">
+          <h3>
+            Data property
+            <a href="#asIndependent">As independent</a>
+          </h3>
+
+          <p>Used to record if the candidate is standing as an independent, not being certified by any political party.</p>
+
+          <p>
+            Candidacy &mdash; As independent &mdash;
+            boolean
+          </p>
+        </article>
+
         <article class="dataproperty" id="ballotsSpoiled">
           <h3>
             Data property
@@ -418,16 +427,30 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="candidateName">
+        <article class="dataproperty" id="candidateFamilyName">
           <h3>
             Data property
-            <a href="#candidateName">Candidate name</a>
+            <a href="#candidateFamilyName">Candidate family name</a>
           </h3>
 
-          <p>The name of the candidate as it appears on the ballot.</p>
+          <p>The family name of the candidate as it appears on the ballot, for example: &#39;Smith&#39; in &#39;John Smith&#39;.</p>
 
           <p>
-            Candidacy &mdash; Candidate name &mdash;
+            Candidacy &mdash; Candidate family name &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="candidateGivenName">
+          <h3>
+            Data property
+            <a href="#candidateGivenName">Candidate given name</a>
+          </h3>
+
+          <p>The given name of the candidate as it appears on the ballot, for example: &#39;John&#39; in &#39;John Smith&#39;.</p>
+
+          <p>
+            Candidacy &mdash; Candidate given name &mdash;
             langString
           </p>
         </article>
@@ -527,6 +550,20 @@
           <p>
             Election &mdash; Total votes cast &mdash;
             integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="voteChange">
+          <h3>
+            Data property
+            <a href="#voteChange">Vote change</a>
+          </h3>
+
+          <p>The change in the vote share recorded for a candidacy in an election compared to the vote share for a candidacy certified by the same party in the previous general election. The calculation of vote change does not take account of intervening by-elections. Where a constituency&#39;s boundary has changed since the last general election, the vote change figure is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries.</p>
+
+          <p>
+            CandidacyResult &mdash; Vote change &mdash;
+            decimal
           </p>
         </article>
 
@@ -658,7 +695,7 @@
 
     <footer>
       <p>
-        Generated 2024-09-16 12:22:09.959350 from a
+        Generated 2024-09-16 14:04:22.725168 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
