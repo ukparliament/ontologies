@@ -25,6 +25,13 @@ Tweaty twacker posts whenever a treaty subject to the [procedure set out in the 
 Mastodon | Feed
 [@TweatyTwacker](https://botsin.space/@TweatyTwacker) | [RSS](https://api.parliament.uk/tweatytwacker/rss)
 
+## Written statements bot
+
+The written statements bot posts whenever a written statment is made to the House of Commons or the House of Lords.
+
+Mastodon | BlueSky
+[@WrittenStatements](https://botsin.space/@WrittenStatements) | [@written-statements](https://bsky.app/profile/written-statements.bsky.social)
+
 ## Written answer bots
 
 The written answer bots post whenever an answering body provides a written answer - or a correction to a written answer - to a parliamentary question.
