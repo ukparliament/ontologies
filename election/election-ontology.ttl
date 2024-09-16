@@ -165,13 +165,6 @@ pe:issuedBy rdf:type owl:ObjectProperty ;
 	rdfs:range pe:PoliticalParty  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:hasPoliticalParty rdf:type owl:ObjectProperty ;
-	rdfs:label "Has political party"@en ;
-	rdfs:comment "Relates a candidacy to a political party."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:PoliticalParty  ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
 pe:hasCandidate rdf:type owl:ObjectProperty ;
 	rdfs:label "Has candidate"@en ;
 	rdfs:comment "Relates a candidacy to a person being a candidate. A candidacy is of one person."@en ;
@@ -197,13 +190,34 @@ pe:ofPopulation rdf:type owl:ObjectProperty ;
 
 #######  Data properties #####
 
-pe:candidateName rdf:type owl:DatatypeProperty ;
-	rdfs:label "Candidate name"@en ;
-	rdfs:comment "The name of the candidate as it appears on the ballot."@en ;
+pe:candidateGivenName rdf:type owl:DatatypeProperty ;
+	rdfs:label "Candidate given name"@en ;
+	rdfs:comment "The given name of the candidate as it appears on the ballot, for example: 'John' in 'John Smith'."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
+pe:candidateFamilyName rdf:type owl:DatatypeProperty ;
+	rdfs:label "Candidate family name"@en ;
+	rdfs:comment "The family name of the candidate as it appears on the ballot, for example: 'Smith' in 'John Smith'."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:asCommonsSpeaker rdf:type owl:DatatypeProperty ;
+	rdfs:label "As Commons Speaker"@en ;
+	rdfs:comment "Used to record if the candidate is the House of Commons Speaker standing for re-election to the House of Commons."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:asIndependent rdf:type owl:DatatypeProperty ;
+	rdfs:label "As independent"@en ;
+	rdfs:comment "Used to record if the candidate is standing as an independent, not being certified by any political party."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
 pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote count"@en ;
 	rdfs:comment "The number of accepted votes recorded for a candidacy."@en ;
@@ -217,7 +231,14 @@ pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
+pe:voteChange rdf:type owl:DatatypeProperty ;
+	rdfs:label "Vote change"@en ;
+	rdfs:comment "The change in the vote share recorded for a candidacy in an election compared to the vote share for a candidacy certified by the same party in the previous general election. The calculation of vote change does not take account of intervening by-elections. Where a constituency's boundary has changed since the last general election, the vote change figure is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
+	rdfs:domain pe:CandidacyResult ;
+	rdfs:range xsd:decimal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
 pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "Result position"@en ;
 	rdfs:comment "The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2."@en ;
