@@ -2,7 +2,7 @@
 	
 	<!-- REQUIRED -->
 	
-	<!-- Unamed alias. Run when the request contains no alias. -->
+	<!-- Unnamed alias. Run when the request contains no alias. -->
 	<!-- Used in advanced search. -->
 	<alias name="">
 		<fields>
@@ -31,6 +31,7 @@
 	</alias>
 	<!-- QUESTION: Are there other things with summaries that aren't populating abstract_t? -->
 	<!-- QUESTION: Is this used for an exclude full text search? -->
+	<!-- QUESTION: Do users understand what summary is? -->
 	
 	<!-- Maps type_sesrollup to typeexact. -->
 	<!-- Used in content type facet. -->
@@ -53,7 +54,6 @@
 	<!-- Used in advanced search. -->
 	<alias name="subject">
 		<fields>
-			<!-- To include everything except topics. -->
 			<field name="subject_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
 			<field name="subject_ses" expansionoption="SesId" sesclasspattern="^(?!TPG)"/>
 			<field name="topic_ses" expansionoption="SesId"/>
@@ -64,7 +64,6 @@
 	<!-- Used in the subject facet. -->
 	<alias name="subjectexact">
 		<fields>
-			<!-- To include everything except topics. -->
 			<field name="subject_s" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
 			<field name="subject_ses" expansionoption="SesId" sesclasspattern="^(?!TPG)"/>
 			<field name="topic_ses" expansionoption="SesId"/>
@@ -176,9 +175,20 @@
 	
 	<!-- Maps dateApproved_dt to commonsapproved. -->
 	<!-- Used by advanced search. -->
+	<!-- Papers laid does include the facility to add a date for Lords approved but no one in the Journal Office fills this in. It's possible IDMS may take this on, at which point we may need to make changes. -->
 	<alias name="commonsapproved">
 		<fields>
 			<field name="dateApproved_dt" expansionoption="DateRange"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps lordsApprovedDate_dt to lordssapproved. -->
+	<!-- Not currently populated in Solr. -->
+	<!-- Papers laid does include the facility to add a date for Lords approved but no one in the Journal Office fills this in. It's possible IDMS may take this on, at which point we may need to make changes. -->
+	<!-- Typo in alias name. -->
+	<alias name="lordssapproved">
+		<fields>
+			<field name="lordsApprovedDate_dt" expansionoption="DateRange"/>
 		</fields>
 	</alias>
 	
@@ -219,12 +229,13 @@
 		</fields>
 	</alias>
 	
-	<!-- Used to map department_ses, department_t and answeringDept_ses to dept. -->
+	<!-- Used to map department_ses and department_t to dept. -->
 	<!-- Used by facet navigation. -->
 	<alias name="department">
 		<fields>
 			<field name="department_ses" expansionoption="SesId"/>
 			<field name="department_t" expansionoption="SesTextAll"/>
+			<!-- QUESTION: is Solr already copying answeringDept_ses to department_ses? -->
 		</fields>
 	</alias>
 	
@@ -255,7 +266,7 @@
 	</alias>
 	
 	<!-- Maps groupedAnswer_b to groupedanswer. -->
-	<!-- Used by librarians but not currently explosed in the application. Maybe it should be? -->
+	<!-- Used by librarians but not currently exposed in the application. IDMS would like to include in advanced search. -->
 	<alias name="groupedanswer">
 		<fields>
 			<field name="groupedAnswer_b" expansionoption="Boolean"/>
@@ -263,7 +274,7 @@
 	</alias>
 	
 	<!-- Maps a set of member_ses IDs to chair. -->
-	<!-- Used by librarians but not exposed in application. -->
+	<!-- Used by librarians but not exposed in application. IDMS would like to include in advanced search. -->
 	<alias name="chair">
 		<transformations>
 			<!-- QUESTION: What is this operating on and why? -->
@@ -346,7 +357,7 @@
 	
 	<!-- Maps edmStatus_s, pqStatus_s and status_s to status. -->
 	<!-- Used in advanced search, but we think we'd want to implement differently. -->
-	<!-- The statuses of an EDMs and PQs are orthogonal. -->
+	<!-- The statuses of an EDMs and PQs are orthogonal but distinct. -->
 	<!-- Combining these fields makes the query baggy. -->
 	<!-- Possible need for separate aliases for edmStatus_s and pqStatus_s. -->
 	<alias name="status">
@@ -358,6 +369,7 @@
 			<field name="edmStatus_s" expansionoption="None"/>
 			<field name="pqStatus_s" expansionoption="None"/>
 			<!-- AS: need to check if this belongs here. -->
+			<!-- status_s appears on briefing papers and papers but IDMS are not sure how useful it is. -->
 			<field name="status_s" expansionoption="None"/>
 		</fields>
 	</alias>
@@ -372,6 +384,7 @@
 	
 	<!-- Maps legislature_ses to legislature. -->
 	<!-- Used by advanced search. -->
+	<!-- We'd like to preserve this because people may have bookmarked queries, but we'd also like an additional alias with the same behaviour mapped to 'house' for use in advanced search -->
 	<alias name="legislature">
 		<fields>
 			<field name="legislature_ses" expansionoption="SesId"/>
@@ -430,6 +443,8 @@
 	
 	<!-- Maps procedural_ses to procedural. -->
 	<!-- Used by advanced search. -->
+	<!-- We'd like to preserve this in case a query has been bookmarked but we'd also like a new alias with the same behaviour mapped to 'procedure'. -->
+	<!-- Slightly complicated by the existence of the 'resolutionprocedure' alias. -->
 	<alias name="procedural">
 		<fields>
 			<field name="procedural_ses" expansionoption="SesId"/>
@@ -533,6 +548,8 @@
 	
 	<!-- Maps answeringMemberParty_ses to respondingmemberparty. -->
 	<!-- Used by advanced search. -->
+	<!-- Preserve in case a query has been bookmarked but we'd also like a new alias with the same behaviour but a more precise label tbc. -->
+	<!-- This is the only place we're using responding. Why are we not using answering? -->
 	<alias name="respondingmemberparty">
 		<fields>
 			<field name="answeringMemberParty_ses" expansionoption="SesId"/>
@@ -620,11 +637,16 @@
 			<field name="witness_ses" expansionoption="SesId"/>
 			<field name="witness_t" expansionoption="None"/>
 		</fields>
-	</alias><!-- Maps place_ses and place_t to place. -->
+	</alias>
+	
+	<!-- Maps place_ses and place_t to place. -->
 	<!-- Used by advanced search. -->
+	<!-- This has been renamed to Chamber / committee in the search application UI. -->
+	<!-- We'd like to preserve this in case a query has been bookmarked, but probably want a new alias with the same behaviour that fits with the interface language. -->
 	<alias name="place">
 		<fields>
 			<field name="place_ses" expansionoption="SesId"/>
+			<!-- Data for place_t doesn't exist in Solr. -->
 			<field name="place_t" expansionoption="SesTextAll"/>
 		</fields>
 	</alias>
@@ -699,11 +721,109 @@
 	</alias>
 	
 	<!-- Maps publisher_ses and publisher_t to publisher. -->
-	<!-- Used in publisher facet which we're not planning to implement. -->
 	<alias name="publisher">
 		<fields>
 			<field name="publisher_ses" expansionoption="SesId"/>
 			<field name="publisher_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps section_ses to section. -->
+	<!-- A section being a section of the House of Commons Library publishing research briefings. -->
+	<!-- We're not planning to implement anything in the search application using this alias but it may prove helpful to colleagues so we'd like to retain. -->
+	<alias name="section">
+		<fields>
+			<field name="section_ses" expansionoption="SesId"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps publisher_ses and publisher_s to publisherexact. -->
+	<!-- Publishers being the two Houses and the three libraries. -->
+	<!-- Used in publisher facet in the 'European Scrutiny' tab. -->
+	<alias name="publisherexact">
+		<fields>
+			<field name="publisher_ses" expansionoption="SesId"/>
+			<field name="publisher_s" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps topic_sesrollup to topic. -->
+	<!-- 95475 being the SES ID for the term 'taxonomy'. -->
+	<!-- Used in the topic facet in the research briefings tab which we're not planning to implement. -->
+	<alias name="topic" sesfacetid="95475">
+		<fields>
+			<!-- To include only 'TPG'. -->
+			<field name="topic_sesrollup" expansionoption="SesId" sesclasspattern="^TPG$"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps correspondingMinister_ses and correspondingMinister_t to correspondingminister. -->
+	<!-- Populated for ESID material, which we plan to deprecate. -->
+	<alias name="correspondingminister">
+		<fields>
+			<field name="correspondingMinister_ses" expansionoption="SesId"/>
+			<field name="correspondingMinister_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps reportDate_dt to reportdate. -->
+	<alias name="reportdate">
+		<fields>
+			<field name="reportDate_dt" expansionoption="DateRange"/>
+		</fields>
+	</alias>
+	
+	<!-- Used to map commissionNumber_t to commissionno. -->
+	<alias name="commissionno">
+		<fields>
+			<field name="commissionNumber_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Used to map councilNumber_t to councilno. -->
+	<alias name="councilno">
+		<fields>
+			<field name="councilNumber_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Used to map elcNumber_t to elcno. -->
+	<alias name="elcno">
+		<fields>
+			<field name="elcNumber_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Used to map ecDocumentNumber_t and eCDocument_t to ecno. -->
+	<alias name="ecno">
+		<fields>
+			<field name="ecDocumentNumber_t" expansionoption="None"/>
+			<field name="eCDocument_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Used to map reportTitle_t and reporttitle to ecno. -->
+	<!-- Label doesn't correspond to usage - report number gets entered into title. -->
+	<!-- Shown in search application, labelled report number. -->
+	<alias name="reporttitle">
+		<fields>
+			<field name="reportTitle_t" expansionoption="None"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps cleared_b to cleared. -->
+	<!-- Used by ESID, which we plan to deprecate. -->
+	<alias name="cleared">
+		<fields>
+			<field name="cleared_b" expansionoption="Boolean"/>
+		</fields>
+	</alias>
+	
+	<!-- Maps contributor_ses to contributor. -->
+	<!-- Not used by application. -->
+	<alias name="contributor">
+		<fields>
+			<field name="contributor_ses" expansionoption="SesId"/>
 		</fields>
 	</alias>
 	
@@ -717,29 +837,9 @@
 	
 	<!-- DEPRECATED -->
 	
-	<!-- Maps section_ses to section. -->
-	<!-- A section being a section of the House of Commons Library publishing research briefings. -->
-	<!-- Used in section facet which we're not planning to implement. -->
-	<alias name="section">
-		<fields>
-			<field name="section_ses" expansionoption="SesId"/>
-		</fields>
-	</alias>
-	
-	<!-- Maps publisher_ses and publisher_s to publisherexact. -->
-	<!-- Publishers being the two Houses and the three libraries. -->
-	<!-- Used in publisher facet in the 'European Scrutiny' tab. -->
-	<!-- We're not planning to implement a publisher facet. -->
-	<alias name="publisherexact">
-		<fields>
-			<field name="publisher_ses" expansionoption="SesId"/>
-			<field name="publisher_s" expansionoption="None"/>
-		</fields>
-	</alias>
-	
 	<!-- Maps published_ses to publishercont. -->
 	<!-- Used in publisher facet in the 'everything' and 'research briefing' tabs'. -->
-	<!-- We're not planning to implement a publisher facet. -->
+	<!-- This duplicates the publisher and publisherexact aliases. -->
 	<alias name="publishercont">
 		<fields>
 			<field name="publisher_ses" expansionoption="SesId"/>
@@ -754,16 +854,6 @@
 			<field name="subject_t" expansionoption="SesTextAll" sesclasspattern="^(?!TPG)"/>
 			<field name="subject_ses" expansionoption="SesId" sesclasspattern="^(?!TPG)"/>
 			<field name="topic_ses" expansionoption="SesId"/>
-		</fields>
-	</alias>
-	
-	<!-- Maps topic_sesrollup to topic. -->
-	<!-- 95475 being the SES ID for the term 'taxonomy'. -->
-	<!-- Used in the topic facet in the research briefings tab which we're not planning to implement. -->
-	<alias name="topic" sesfacetid="95475">
-		<fields>
-			<!-- To include only 'TPG'. -->
-			<field name="topic_sesrollup" expansionoption="SesId" sesclasspattern="^TPG$"/>
 		</fields>
 	</alias>
 	
@@ -790,77 +880,11 @@
 		</fields>
 	</alias>
 	
-	<!-- Maps correspondingMinister_ses and correspondingMinister_t to correspondingminister. -->
-	<!-- Populated for ESID material, which we plan to deprecate. -->
-	<alias name="correspondingminister">
-		<fields>
-			<field name="correspondingMinister_ses" expansionoption="SesId"/>
-			<field name="correspondingMinister_t" expansionoption="None"/>
-		</fields>
-	</alias>
-	
-	<!-- Maps lordsApprovedDate_dt to lordssapproved. -->
-	<!-- Not populated in Solr. -->
-	<alias name="lordssapproved">
-		<fields>
-			<field name="lordsApprovedDate_dt" expansionoption="DateRange"/>
-		</fields>
-	</alias>
-	
-	<!-- Maps reportDate_dt to reportdate. -->
-	<!-- Used by ESID, which we plan to deprecate. -->
-	<alias name="reportdate">
-		<fields>
-			<field name="reportDate_dt" expansionoption="DateRange"/>
-		</fields>
-	</alias>
-	
-	<!-- Used to map commissionNumber_t to commissionno. -->
-	<!-- Populated for ESID, which we plan to deprecate. -->
-	<alias name="commissionno">
-		<fields>
-			<field name="commissionNumber_t" expansionoption="None"/>
-		</fields>
-	</alias>
-	
-	<!-- Used to map councilNumber_t to councilno. -->
-	<!-- Populated for ESID, which we plan to deprecate. -->
-	<alias name="councilno">
-		<fields>
-			<field name="councilNumber_t" expansionoption="None"/>
-		</fields>
-	</alias>
-	
-	<!-- Used to map elcNumber_t to elcno. -->
-	<!-- Populated for ESID, which we plan to deprecate. -->
-	<alias name="elcno">
-		<fields>
-			<field name="elcNumber_t" expansionoption="None"/>
-		</fields>
-	</alias>
-	
 	<!-- Used to map reportNumber_t to reportno. -->
-	<!-- Populated for ESID, which we plan to deprecate. -->
+	<!-- Populated for ESID, but not shown in search application and covered by identifier. -->
 	<alias name="reportno">
 		<fields>
 			<field name="reportNumber_t" expansionoption="None"/>
-		</fields>
-	</alias>
-	
-	<!-- Used to map ecDocumentNumber_t and eCDocument_t to ecno. -->
-	<!-- Populated for ESID, which we plan to deprecate. -->
-	<alias name="ecno">
-		<fields>
-			<field name="ecDocumentNumber_t" expansionoption="None"/>
-			<field name="eCDocument_t" expansionoption="None"/>
-		</fields>
-	</alias>
-	
-	<!-- Used to map reportTitle_t and reporttitle to ecno. -->
-	<!-- Populated for ESID, which we plan to deprecate. -->
-	<alias name="reporttitle">
-		<fields>
-			<field name="reportTitle_t" expansionoption="None"/>
 		</fields>
 	</alias>
 	
@@ -884,14 +908,6 @@
 		</fields>
 	</alias>
 	
-	<!-- Maps cleared_b to cleared. -->
-	<!-- Used by ESID, which we plan to deprecate. -->
-	<alias name="cleared">
-		<fields>
-			<field name="cleared_b" expansionoption="Boolean"/>
-		</fields>
-	</alias>
-	
 	<!-- Maps constituency_t to Constituency. -->
 	<!-- Solr has no constituency data. -->
 	<alias name="Constituency">
@@ -902,17 +918,10 @@
 	
 	<!-- Maps category_ses to category. -->
 	<!-- Not used by the application. -->
+	<!-- Already covered by ses type inside Solr indexing. -->
 	<alias name="category">
 		<fields>
 			<field name="category_ses" expansionoption="SesId"/>
-		</fields>
-	</alias>
-	
-	<!-- Maps contributor_ses to contributor. -->
-	<!-- Not used by application. -->
-	<alias name="contributor">
-		<fields>
-			<field name="contributor_ses" expansionoption="SesId"/>
 		</fields>
 	</alias>
 	
