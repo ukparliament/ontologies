@@ -9,7 +9,7 @@ Unfortunately, Twitter's new API strategy means we're no longer able to offer bo
 Posts whenever the House of Commons Library publishes new research and analysis.
 
 Bluesky
-[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | 
+[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social)
 
 ## Made-n-laid
 
