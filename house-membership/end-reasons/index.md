@@ -23,6 +23,6 @@ Sequestration | Disqualified following sequestration in Scotland under [section 
 Retirement of bishops | Under [section 3 of the Ecclesiastical Offices (Terms of Service) Measure 2009](https://www.legislation.gov.uk/ukcm/2009/1/section/3). | False | True
 Translation of bishops | Under [section 5 of the Bishoprics Act 1878](https://www.legislation.gov.uk/ukpga/Vict/41-42/68/section/5). | False | True
 
-## House of Commons membership end reasons sketch
+## House membership end reasons sketch
 
 [![House of Commons House membership end reasons](end-reasons.svg)](end-reasons.svg)
