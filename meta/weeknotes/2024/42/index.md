@@ -56,6 +56,10 @@ Thanks to the stirling efforts of Librarian Anna, our written answer bots are, o
 
 Young Robert and Michael attempted an upgrade of the environment our bot code runs in, but met with very little in the way of success. For an application written entirely in Ruby, one has to wonder why Node JS kicks up such a fuss. Like, what? Anyway, Shedcode James offered a helping hand and all is now resolved. Which hopefully means boss boss 'brarian Bryn should be getting far fewer nagging emails from our platform-as-a-service platform of choice.
 
+## Mythological Members
+
+Amongst things noticed this "week", Librarian Phil found himself on the receiving end of a Library enquiry and went looking round Librarian Andrew's handy little list of British Politician Wikidata queries, only to stumble across [this beauty](https://w.wiki/BVhe). If you've ever wondered which members of the current parliament Wikidata believes might have mythical ancestors, click the link.
+
 ## Double pack, with a photograph, extra track (and a tacky badge)
 
 Never ones to disappoint our reader, this "week's" notes come with a hidden bonus track. If you've ever wondered what a triplestore is, philosophically speaking - the question on everyone's lips back in 1995 - Michael has put together some slides. Or a comms and engagement deck, as Young Robert might say. May all your questions be answered.
