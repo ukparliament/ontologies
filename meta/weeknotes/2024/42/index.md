@@ -46,7 +46,7 @@ The only notable thing that has changed is the removal of the ghost scrollbar th
 
 ## Taxonomic updates
 
-In taxonomic update news, we can only ask, why is English so hard? There have, apparently, been several recent instances of surveys used for questions about surveying agricultural land. For this reason, questionnaires have now acquired a scope note to differentiate them from surveys, And the difference between surveys and surveying has been hammered home.
+In taxonomic update news, we can only ask, why is English so hard? There have, apparently, been several recent instances of surveys used for questions about surveying agricultural land. For this reason, questionnaires have now acquired a scope note to differentiate them from surveys. And the difference between surveys and surveying has been hammered home.
 
 With housing high on the political agenda and the [Renters' Rights Bill](https://bills.parliament.uk/bills/3764) making its way through the House of Commmons, attentions have also turned to unmuddying the waters between 'Landlord and tenant' and other, more specific, instances of 'Rented housing'. Note has also been taken that some usages of 'Evictions', 'Landlord and tenant' and 'Rents' have been applied to commercial property, not housing. The [taxonomic tree](https://explore.data.parliament.uk/index.html?endpoint=terms) continues to flex.
 
