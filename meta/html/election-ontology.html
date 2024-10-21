@@ -100,9 +100,12 @@
           <h3>Class <a href="#ConstituencyGroup">Constituency group</a></h3>
 
           <p>A group of people represented by an election winner.</p>
-           <p>
-            Superclasses  &middot; Population           </p>
-        </article>
+         </article>
+        <article class="class" id="ConstituencyGroupSet">
+          <h3>Class <a href="#ConstituencyGroupSet">Constituency group set</a></h3>
+
+          <p>A set of constituency groups, established by statute.</p>
+         </article>
         <article class="class" id="Country">
           <h3>Class <a href="#Country">Country</a></h3>
 
@@ -117,9 +120,7 @@
           <h3>Class <a href="#Electorate">Electorate</a></h3>
 
           <p>A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker.</p>
-           <p>
-            Superclasses  &middot; Population           </p>
-        </article>
+         </article>
         <article class="class" id="GeneralElection">
           <h3>Class <a href="#GeneralElection">General election</a></h3>
 
@@ -149,15 +150,10 @@
 
           <p>The registration of a political party in a country by the Electoral Commission.</p>
          </article>
-        <article class="class" id="Population">
-          <h3>Class <a href="#Population">Population</a></h3>
+        <article class="class" id="StatutoryThing">
+          <h3>Class <a href="#StatutoryThing">StatutoryThing</a></h3>
 
-          <p>A set of people.</p>
-         </article>
-        <article class="class" id="PopulationSize">
-          <h3>Class <a href="#PopulationSize">Population size</a></h3>
-
-          <p>The recording of the size of a population on a date.</p>
+          <p>A statutory thing, for example: an Act of Parliament or a made statutory instrument.</p>
          </article>
         <article class="class" id="WinningCandidacyResult">
           <h3>Class <a href="#WinningCandidacyResult">Winning candidacy result</a></h3>
@@ -229,22 +225,79 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="eligibleToVoteIn">
+        <article class="objectproperty" id="constituencyGroupSetInCountry">
           <h3>
             Object property
-            <a href="#eligibleToVoteIn"
-              >Eligible to vote in</a
+            <a href="#constituencyGroupSetInCountry"
+              >Constituency group set in country</a
             >
           </h3>
 
-           <p>Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections.</p>
+           <p>Relates a constituency group set to its country. A constituency group set is in one country. A country may have one or more constituency group sets over time.</p>
 
           <p>
-            <a href="#Electorate"
-              >Electorate</a
+            <a href="#ConstituencyGroupSet"
+              >ConstituencyGroupSet</a
             >
-            &mdash; Eligible to vote in &mdash;
-            <a href="#Election">Election</a>
+            &mdash; Constituency group set in country &mdash;
+            <a href="#Country">Country</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="definedIn">
+          <h3>
+            Object property
+            <a href="#definedIn"
+              >Defined in</a
+            >
+          </h3>
+
+           <p>Relates a constituency group to the constituency group set of which it forms part.</p>
+
+          <p>
+            <a href="#ConstituencyGroup"
+              >ConstituencyGroup</a
+            >
+            &mdash; Defined in &mdash;
+            <a href="#ConstituencyGroupSet">ConstituencyGroupSet</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="establishedBy">
+          <h3>
+            Object property
+            <a href="#establishedBy"
+              >Established by</a
+            >
+          </h3>
+
+           <p>Relates a constituency group set to the statutory thing establishing that set. A constituency group set is established by one or more statutory things.</p>
+
+          <p>
+            <a href="#ConstituencyGroupSet"
+              >ConstituencyGroupSet</a
+            >
+            &mdash; Established by &mdash;
+            <a href="#StatutoryThing">StatutoryThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="forConstituencyGroup">
+          <h3>
+            Object property
+            <a href="#forConstituencyGroup"
+              >For constituency group</a
+            >
+          </h3>
+
+           <p>Relates an election to the constituency group who are represented by the winner of that election. An election is always for one constituency group.</p>
+
+          <p>
+            <a href="#Election"
+              >Election</a
+            >
+            &mdash; For constituency group &mdash;
+            <a href="#ConstituencyGroup">ConstituencyGroup</a>
           </p>
         </article>
 
@@ -350,11 +403,11 @@
             >
           </h3>
 
-           <p>Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group.</p>
+           <p>Relates an election to the group of people eligible to vote in that election. An election has one electorate. An electorate may be eligible to vote in one or more elections over time.</p>
 
           <p>
-            <a href="#ConstituencyGroup"
-              >ConstituencyGroup</a
+            <a href="#Election"
+              >Election</a
             >
             &mdash; Has electorate &mdash;
             <a href="#Electorate">Electorate</a>
@@ -398,6 +451,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="includedIn">
+          <h3>
+            Object property
+            <a href="#includedIn"
+              >Included in</a
+            >
+          </h3>
+
+           <p>Relates an electorate to the constituency group they are included in. An electorate is included in one constituency group.</p>
+
+          <p>
+            <a href="#Electorate"
+              >Electorate</a
+            >
+            &mdash; Included in &mdash;
+            <a href="#ConstituencyGroup">ConstituencyGroup</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="intoParliamentPeriod">
           <h3>
             Object property
@@ -433,25 +505,6 @@
             >
             &mdash; Issued by &mdash;
             <a href="#PoliticalParty">PoliticalParty</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="ofPopulation">
-          <h3>
-            Object property
-            <a href="#ofPopulation"
-              >Of population</a
-            >
-          </h3>
-
-           <p>Relates a population size as recorded on a date to that population. A population size is related to one population.</p>
-
-          <p>
-            <a href="#PopulationSize"
-              >PopulationSize</a
-            >
-            &mdash; Of population &mdash;
-            <a href="#Population">Population</a>
           </p>
         </article>
 
@@ -657,10 +710,10 @@
             <a href="#recordedDate">Recorded date</a>
           </h3>
 
-          <p>The date on which a population size was recorded.</p>
+          <p>The date on which the size of an electorate was recorded.</p>
 
           <p>
-            PopulationSize &mdash; Recorded date &mdash;
+            Electorate &mdash; Recorded date &mdash;
             date
           </p>
         </article>
@@ -671,10 +724,10 @@
             <a href="#recordedSize">Recorded size</a>
           </h3>
 
-          <p>The size of a population, for example: the size of an electorate or of a constituency group.</p>
+          <p>The number of people making up an electorate.</p>
 
           <p>
-            PopulationSize &mdash; Recorded size &mdash;
+            Electorate &mdash; Recorded size &mdash;
             integer
           </p>
         </article>
@@ -813,14 +866,6 @@
             <td>/<wbr>ontologies/<wbr>election/<wbr>WinningCandidacyResult</td>
             <td>/<wbr>ontologies/<wbr>election/<wbr>CandidacyResult</td>
           </tr>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>election/<wbr>Electorate</td>
-            <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
-          </tr>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
-            <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
-          </tr>
         </table>
       </section>
  
@@ -905,7 +950,7 @@
 
     <footer>
       <p>
-        Generated 2024-10-21 13:43:46.445871 from a
+        Generated 2024-10-21 14:10:57.751083 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
