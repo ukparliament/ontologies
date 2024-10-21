@@ -71,6 +71,11 @@
       <section id="classes">
         <h2>Classes</h2>
 
+        <article class="class" id="BoundarySet">
+          <h3>Class <a href="#BoundarySet">Boundary set</a></h3>
+
+          <p>A boundary set defining UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commissions and established by statute.</p>
+         </article>
         <article class="class" id="Candidacy">
           <h3>Class <a href="#Candidacy">Candidacy</a></h3>
 
@@ -84,7 +89,7 @@
         <article class="class" id="Certification">
           <h3>Class <a href="#Certification">Certification</a></h3>
 
-          <p>A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party.</p>
+          <p>A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both the Labour party and the Co-operative Party.</p>
          </article>
         <article class="class" id="ConstituencyArea">
           <h3>Class <a href="#ConstituencyArea">Constituency area</a></h3>
@@ -98,6 +103,11 @@
            <p>
             Superclasses  &middot; Population           </p>
         </article>
+        <article class="class" id="Country">
+          <h3>Class <a href="#Country">Country</a></h3>
+
+          <p>A country, being either Great Britain or Northern Ireland for the purposes of the election model.</p>
+         </article>
         <article class="class" id="Election">
           <h3>Class <a href="#Election">Election</a></h3>
 
@@ -115,6 +125,10 @@
 
           <p>A set of elections to seats in the House of Commons held in all constituencies concurrently.</p>
          </article>
+        <article class="class" id="GeneralElectionInBoundarySet">
+          <h3>Class <a href="#GeneralElectionInBoundarySet">General election in boundary set</a></h3>
+
+         </article>
         <article class="class" id="ParliamentPeriod">
           <h3>Class <a href="#ParliamentPeriod">Parliament period</a></h3>
 
@@ -129,6 +143,11 @@
           <h3>Class <a href="#PoliticalParty">Political party</a></h3>
 
           <p>An organisation registered with the Electoral Commission as a political party.</p>
+         </article>
+        <article class="class" id="PoliticalPartyRegistration">
+          <h3>Class <a href="#PoliticalPartyRegistration">Political party registration</a></h3>
+
+          <p>The registration of a political party in a country by the Electoral Commission.</p>
          </article>
         <article class="class" id="Population">
           <h3>Class <a href="#Population">Population</a></h3>
@@ -161,7 +180,7 @@
             >
           </h3>
 
-           <p>Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a Labour Party certification.</p>
+           <p>Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a certification by the Labour party.</p>
 
           <p>
             <a href="#Certification"
@@ -191,6 +210,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="certificationOf">
+          <h3>
+            Object property
+            <a href="#certificationOf"
+              >Certification of</a
+            >
+          </h3>
+
+           <p>Relates a certification by a political party to the candidacy being certified. A certification is of one candidacy. A candidacy has one or more certifications, or none.</p>
+
+          <p>
+            <a href="#Certification"
+              >Certification</a
+            >
+            &mdash; Certification of &mdash;
+            <a href="#Candidacy">Candidacy</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="eligibleToVoteIn">
           <h3>
             Object property
@@ -207,6 +245,62 @@
             >
             &mdash; Eligible to vote in &mdash;
             <a href="#Election">Election</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="forGeneralElection">
+          <h3>
+            Object property
+            <a href="#forGeneralElection"
+              >For general election</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#GeneralElectionInBoundarySet"
+              >GeneralElectionInBoundarySet</a
+            >
+            &mdash; For general election &mdash;
+            <a href="#GeneralElection">GeneralElection</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="forParliamentPeriod">
+          <h3>
+            Object property
+            <a href="#forParliamentPeriod"
+              >For Parliament period</a
+            >
+          </h3>
+
+           <p>Relates a general election to the subsequent Parliament period for which the general election is called. A general election is related to one Parliament period.</p>
+
+          <p>
+            <a href="#GeneralElection"
+              >GeneralElection</a
+            >
+            &mdash; For Parliament period &mdash;
+            <a href="#ParliamentPeriod">ParliamentPeriod</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="formsPartOfGeneralElection">
+          <h3>
+            Object property
+            <a href="#formsPartOfGeneralElection"
+              >Forms part of general election</a
+            >
+          </h3>
+
+           <p>Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none in the case of a by-election.</p>
+
+          <p>
+            <a href="#Election"
+              >Election</a
+            >
+            &mdash; Forms part of general election &mdash;
+            <a href="#GeneralElection">GeneralElection</a>
           </p>
         </article>
 
@@ -248,25 +342,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasCertification">
-          <h3>
-            Object property
-            <a href="#hasCertification"
-              >Has certification</a
-            >
-          </h3>
-
-           <p>Relates a candidacy to a certification by a political party of that candidacy. A candidacy has one or more certifications, or none. A certification is of one candidacy.</p>
-
-          <p>
-            <a href="#Candidacy"
-              >Candidacy</a
-            >
-            &mdash; Has certification &mdash;
-            <a href="#Certification">Certification</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="hasElectorate">
           <h3>
             Object property
@@ -283,6 +358,24 @@
             >
             &mdash; Has electorate &mdash;
             <a href="#Electorate">Electorate</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inBoundarySet">
+          <h3>
+            Object property
+            <a href="#inBoundarySet"
+              >In boundary set</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#GeneralElectionInBoundarySet"
+              >GeneralElectionInBoundarySet</a
+            >
+            &mdash; In boundary set &mdash;
+            <a href="#BoundarySet">BoundarySet</a>
           </p>
         </article>
 
@@ -324,25 +417,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="isPartOfGeneralElection">
-          <h3>
-            Object property
-            <a href="#isPartOfGeneralElection"
-              >Is part of general election</a
-            >
-          </h3>
-
-           <p>Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none.</p>
-
-          <p>
-            <a href="#Election"
-              >Election</a
-            >
-            &mdash; Is part of general election &mdash;
-            <a href="#GeneralElection">GeneralElection</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="issuedBy">
           <h3>
             Object property
@@ -380,6 +454,44 @@
             <a href="#Population">Population</a>
           </p>
         </article>
+
+        <article class="objectproperty" id="registrationIn">
+          <h3>
+            Object property
+            <a href="#registrationIn"
+              >Registration in</a
+            >
+          </h3>
+
+           <p>Relates a political party registration to the country the registration is in. A political party registration is in one country.</p>
+
+          <p>
+            <a href="#PoliticalPartyRegistration"
+              >PoliticalPartyRegistration</a
+            >
+            &mdash; Registration in &mdash;
+            <a href="#Country">Country</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="registrationOf">
+          <h3>
+            Object property
+            <a href="#registrationOf"
+              >Registration of</a
+            >
+          </h3>
+
+           <p>Relates a political party registration to the political party being registered. A political party registration is of one political party. A political party may have one or more political party registrations over time and in different countries.</p>
+
+          <p>
+            <a href="#PoliticalPartyRegistration"
+              >PoliticalPartyRegistration</a
+            >
+            &mdash; Registration of &mdash;
+            <a href="#PoliticalParty">PoliticalParty</a>
+          </p>
+        </article>
       </section>
  
       <section id="dataproperties">
@@ -410,20 +522,6 @@
           <p>
             Candidacy &mdash; As independent &mdash;
             boolean
-          </p>
-        </article>
-
-        <article class="dataproperty" id="ballotsSpoiled">
-          <h3>
-            Data property
-            <a href="#ballotsSpoiled">Ballots spoiled</a>
-          </h3>
-
-          <p>The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or where a mark does not sufficiently identify the vote. The number of spoiled ballots may be included in a calculation of turnout. Turnout as calculated by the House of Commons Library - and generally in academic usage - is the total number of votes cast and not spoiled, divided by the size of the electorate. Turnout as calculated by Returning Officers is the total number of votes cast, divided by the size of the electorate.</p>
-
-          <p>
-            Election &mdash; Ballots spoiled &mdash;
-            integer
           </p>
         </article>
 
@@ -469,17 +567,87 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="partyGained">
+        <article class="dataproperty" id="electionPollingOn">
           <h3>
             Data property
-            <a href="#partyGained">Party gained</a>
+            <a href="#electionPollingOn">Election polling on</a>
           </h3>
 
-          <p>Used to record whether the party of the winning candidate at an election differs from the party of the winning candidate at the preceding election.</p>
+          <p>The date on which polling took place for an election.</p>
 
           <p>
-            WinningCandidacyResult &mdash; Party gained &mdash;
+            Election &mdash; Election polling on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="generalElectionPollingOn">
+          <h3>
+            Data property
+            <a href="#generalElectionPollingOn">General election polling on</a>
+          </h3>
+
+          <p>The date on which polling took place for all elections in a general election.</p>
+
+          <p>
+            GeneralElection &mdash; General election polling on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="invalidVoteCount">
+          <h3>
+            Data property
+            <a href="#invalidVoteCount">Invalid vote count</a>
+          </h3>
+
+          <p>The number of invalid votes - also called spoiled ballots - cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or where a mark does not sufficiently identify the vote. The number of invalid votes may be included in a calculation of turnout. Turnout as calculated by the House of Commons Library - and generally in academic usage - is the total number of valid votes cast, divided by the size of the electorate. Turnout as calculated by a Returning Officer is the total number of votes cast, divided by the size of the electorate.</p>
+
+          <p>
+            Election &mdash; Invalid vote count &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="isNotional">
+          <h3>
+            Data property
+            <a href="#isNotional">Is notional</a>
+          </h3>
+
+          <p>Used to record if the results of a general election are notional. When a general election is contested on a new boundary set or boundary sets, notional results are calculated for the changed constituencies. Notional results are calculated as if the previous general election had been contested on the new boundaries. Notional winner and notional vote share are used to derive the party gain / hold and change in vote share information, respectively, at the subsequent general election.</p>
+
+          <p>
+            GeneralElection &mdash; Is notional &mdash;
             boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="majority">
+          <h3>
+            Data property
+            <a href="#majority">Majority</a>
+          </h3>
+
+          <p>The difference between the number of valid votes cast for the winning candidate and the number of valid votes cast for the second-placed candidate.</p>
+
+          <p>
+            Election &mdash; Majority &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="ordinality">
+          <h3>
+            Data property
+            <a href="#ordinality">Ordinality</a>
+          </h3>
+
+          <p>The ordinality of a general election in a boundary set. For example: the 2010 general election is the first general election in the England boundary set established in April 2010, and the second general election in the Scotland boundary set established in April 2005.</p>
+
+          <p>
+            GeneralElectionInBoundarySet &mdash; Ordinality &mdash;
+            integer
           </p>
         </article>
 
@@ -511,6 +679,34 @@
           </p>
         </article>
 
+        <article class="dataproperty" id="registeredPrimaryNameLastUpdatedOn">
+          <h3>
+            Data property
+            <a href="#registeredPrimaryNameLastUpdatedOn">Registered primary name last updated on</a>
+          </h3>
+
+          <p>The date on which the registered primary name of the political party was last updated.</p>
+
+          <p>
+            PoliticalPartyRegistration &mdash; Registered primary name last updated on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="registrationID">
+          <h3>
+            Data property
+            <a href="#registrationID">Registration ID</a>
+          </h3>
+
+          <p>The ID of a political party registration. For example: &#39;PP103&#39; being the registration ID of the Alliance party in Northern Ireland starting on 25 February 1999.</p>
+
+          <p>
+            PoliticalPartyRegistration &mdash; Registration ID &mdash;
+            Literal
+          </p>
+        </article>
+
         <article class="dataproperty" id="resultPosition">
           <h3>
             Data property
@@ -522,6 +718,20 @@
           <p>
             CandidacyResult &mdash; Result position &mdash;
             integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="resultSummary">
+          <h3>
+            Data property
+            <a href="#resultSummary">Result summary</a>
+          </h3>
+
+          <p>Text summarising the result of an election in terms of a political party gaining or holding a constituency relative to the previous general election, for example: Conservative gain from Labour Co-operative. The result summary does not take account of intervening by-elections. Where a constituency&#39;s boundary has changed since the last general election, the result summary is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries.</p>
+
+          <p>
+            Election &mdash; Result summary &mdash;
+            langString
           </p>
         </article>
 
@@ -539,16 +749,16 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="totalVotesCast">
+        <article class="dataproperty" id="validVoteCount">
           <h3>
             Data property
-            <a href="#totalVotesCast">Total votes cast</a>
+            <a href="#validVoteCount">Valid vote count</a>
           </h3>
 
-          <p>The total number of votes cast across all candidacies in an election, including spoiled ballots.</p>
+          <p>The number of votes cast in an election excluding any declared invalid by the Returning Officer.</p>
 
           <p>
-            Election &mdash; Total votes cast &mdash;
+            Election &mdash; Valid vote count &mdash;
             integer
           </p>
         </article>
@@ -600,16 +810,16 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>WinningCandidacyResult</td>
+            <td>/<wbr>ontologies/<wbr>election/<wbr>CandidacyResult</td>
+          </tr>
+          <tr>
             <td>/<wbr>ontologies/<wbr>election/<wbr>Electorate</td>
             <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>election/<wbr>ConstituencyGroup</td>
             <td>/<wbr>ontologies/<wbr>election/<wbr>Population</td>
-          </tr>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>election/<wbr>WinningCandidacyResult</td>
-            <td>/<wbr>ontologies/<wbr>election/<wbr>CandidacyResult</td>
           </tr>
         </table>
       </section>
@@ -687,15 +897,15 @@
 
       <p id="makers">
         Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-          &middot; <a href="https://olihawkins.com/">Oli Hawkins</a>
-   &middot; Ned Morrell           &middot; <a href="http://symroe.co.uk/">Sym Roe</a>
+   &middot; Carl Baker           &middot; <a href="https://olihawkins.com/">Oli Hawkins</a>
+   &middot; Neil Johnston    &middot; Ned Morrell           &middot; <a href="http://symroe.co.uk/">Sym Roe</a>
           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2024-10-20 15:20:41.751001 from a
+        Generated 2024-10-21 12:13:10.601648 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
