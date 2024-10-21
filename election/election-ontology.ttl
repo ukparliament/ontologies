@@ -15,7 +15,9 @@
 	foaf:depiction  <https://ukparliament.github.io/ontologies/election/election.svg> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Carl Baker" ],
 		[ foaf:name "Oli Hawkins"; foaf:homepage <https://olihawkins.com/> ],
+		[ foaf:name "Neil Johnston" ],
 		[ foaf:name "Ned Morrell" ],
 		[ foaf:name "Sym Roe"; foaf:homepage <http://symroe.co.uk/> ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
@@ -25,11 +27,52 @@
 
 #######  Classes #####
 
+pe:Country rdf:type owl:Class ;
+	rdfs:label "Country"@en ;
+	rdfs:comment "A country, being either Great Britain or Northern Ireland for the purposes of the election model."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:PoliticalPartyRegistration rdf:type owl:Class ;
+	rdfs:label "Political party registration"@en ;
+	rdfs:comment "The registration of a political party in a country by the Electoral Commission."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:PoliticalParty rdf:type owl:Class ;
+	rdfs:label "Political party"@en ;
+	rdfs:comment "An organisation registered with the Electoral Commission as a political party."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:Certification rdf:type owl:Class ;
+	rdfs:label "Certification"@en ;
+	rdfs:comment "A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both the Labour party and the Co-operative Party."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:Candidacy rdf:type owl:Class ;
+	rdfs:label "Candidacy"@en ;
+	rdfs:comment "A candidacy of a person standing in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:Person rdf:type owl:Class ;
+	rdfs:label "Person"@en ;
+	rdfs:comment "A person."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:CandidacyResult rdf:type owl:Class ;
+	rdfs:label "Candidacy result"@en ;
+	rdfs:comment "The result of a candidacy in an election, for example: Phillip Hammond's win as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:WinningCandidacyResult rdf:type owl:Class ;
+	rdfs:subClassOf pe:CandidacyResult ;
+	rdfs:label "Winning candidacy result"@en ;
+	rdfs:comment "Used to record the winning candidacy in an election."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
 pe:Election rdf:type owl:Class ;
 	rdfs:label "Election"@en ;
 	rdfs:comment "An election to elect a candidate or candidates to a seat or position."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
+
 pe:ParliamentPeriod rdf:type owl:Class ;
 	rdfs:label "Parliament period"@en ;
 	rdfs:comment "The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801."@en ;
@@ -39,17 +82,22 @@ pe:GeneralElection rdf:type owl:Class ;
 	rdfs:label "General election"@en ;
 	rdfs:comment "A set of elections to seats in the House of Commons held in all constituencies concurrently."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
+pe:GeneralElectionInBoundarySet rdf:type owl:Class ;
+	rdfs:label "General election in boundary set"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:BoundarySet rdf:type owl:Class ;
+	rdfs:label "Boundary set"@en ;
+	rdfs:comment "A boundary set defining UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commissions and established by statute."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
 pe:Population rdf:type owl:Class ;
 	rdfs:label "Population"@en ;
 	rdfs:comment "A set of people."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:PopulationSize rdf:type owl:Class ;
-	rdfs:label "Population size"@en ;
-	rdfs:comment "The recording of the size of a population on a date."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
 pe:Electorate rdf:type owl:Class ;
 	rdfs:subClassOf pe:Population ;
 	rdfs:label "Electorate"@en ;
@@ -61,101 +109,33 @@ pe:ConstituencyGroup rdf:type owl:Class ;
 	rdfs:label "Constituency group"@en ;
 	rdfs:comment "A group of people represented by an election winner."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:ConstituencyArea rdf:type owl:Class ;
 	rdfs:label "Constituency area"@en ;
 	rdfs:comment "An area within which members of a constituency group reside. Constituency areas bounding constituency groups represented in the House of Commons are set out by the Boundary Commissions and approved by Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:Candidacy rdf:type owl:Class ;
-	rdfs:label "Candidacy"@en ;
-	rdfs:comment "A candidacy of a person standing in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
-pe:CandidacyResult rdf:type owl:Class ;
-	rdfs:label "Candidacy result"@en ;
-	rdfs:comment "The result of a candidacy in an election, for example: Phillip Hammond's win as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:WinningCandidacyResult rdf:type owl:Class ;
-	rdfs:subClassOf pe:CandidacyResult ;
-	rdfs:label "Winning candidacy result"@en ;
-	rdfs:comment "Used to record the winning candidacy in an election."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
-pe:Certification rdf:type owl:Class ;
-	rdfs:label "Certification"@en ;
-	rdfs:comment "A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both The Labour Party and The Co-operative Party."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
-pe:PoliticalParty rdf:type owl:Class ;
-	rdfs:label "Political party"@en ;
-	rdfs:comment "An organisation registered with the Electoral Commission as a political party."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:Person rdf:type owl:Class ;
-	rdfs:label "Person"@en ;
-	rdfs:comment "A person."@en ;
+pe:PopulationSize rdf:type owl:Class ;
+	rdfs:label "Population size"@en ;
+	rdfs:comment "The recording of the size of a population on a date."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 		
 			
 
-#######  Object properties ##### 
+#######  Object properties #####
 
-pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
-	rdfs:label "Into Parliament period"@en ;
-	rdfs:comment "Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place. An election to the House of Commons is related to one Parliament period."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range pe:ParliamentPeriod ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
-pe:isPartOfGeneralElection rdf:type owl:ObjectProperty ;
-	rdfs:label "Is part of general election"@en ;
-	rdfs:comment "Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range pe:GeneralElection ;
+pe:registrationIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Registration in"@en ;
+	rdfs:comment "Relates a political party registration to the country the registration is in. A political party registration is in one country."@en ;
+	rdfs:domain pe:PoliticalPartyRegistration ;
+	rdfs:range pe:Country  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:eligibleToVoteIn rdf:type owl:ObjectProperty ;
-	rdfs:label "Eligible to vote in"@en ;
-	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections."@en ;
-	rdfs:domain pe:Electorate ;
-	rdfs:range pe:Election ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:hasElectorate rdf:type owl:ObjectProperty ;
-	rdfs:label "Has electorate"@en ;
-	rdfs:comment "Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group."@en ;
-	rdfs:domain pe:ConstituencyGroup ;
-	rdfs:range pe:Electorate  ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:boundedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Bounded by"@en ;
-	rdfs:comment "Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group."@en ;
-	rdfs:domain pe:ConstituencyGroup ;
-	rdfs:range pe:ConstituencyArea ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:inElection rdf:type owl:ObjectProperty ;
-	rdfs:label "In election"@en ;
-	rdfs:comment "Relates a candidacy to the election that candidacy is in. A candidacy is in one election."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:Election  ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:hasCertification rdf:type owl:ObjectProperty ;
-	rdfs:label "Has certification"@en ;
-	rdfs:comment "Relates a candidacy to a certification by a political party of that candidacy. A candidacy has one or more certifications, or none. A certification is of one candidacy."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:Certification  ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:adjunctTo rdf:type owl:ObjectProperty ;
-	rdfs:label "Adjunct to"@en ;
-	rdfs:comment "Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a Labour Party certification."@en ;
-	rdfs:domain pe:Certification ;
-	rdfs:range pe:Certification  ;
+pe:registrationOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Registration of"@en ;
+	rdfs:comment "Relates a political party registration to the political party being registered. A political party registration is of one political party. A political party may have one or more political party registrations over time and in different countries."@en ;
+	rdfs:domain pe:PoliticalPartyRegistration ;
+	rdfs:range pe:PoliticalParty  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:issuedBy rdf:type owl:ObjectProperty ;
@@ -163,6 +143,20 @@ pe:issuedBy rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a certification of a candidacy to the party issuing that certification. A certification is issued by one political party."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:PoliticalParty  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:adjunctTo rdf:type owl:ObjectProperty ;
+	rdfs:label "Adjunct to"@en ;
+	rdfs:comment "Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a certification by the Labour party."@en ;
+	rdfs:domain pe:Certification ;
+	rdfs:range pe:Certification  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:certificationOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Certification of"@en ;
+	rdfs:comment "Relates a certification by a political party to the candidacy being certified. A certification is of one candidacy. A candidacy has one or more certifications, or none."@en ;
+	rdfs:domain pe:Certification ;
+	rdfs:range pe:Candidacy ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidate rdf:type owl:ObjectProperty ;
@@ -179,45 +173,101 @@ pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
 	rdfs:range pe:CandidacyResult  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
+pe:inElection rdf:type owl:ObjectProperty ;
+	rdfs:label "In election"@en ;
+	rdfs:comment "Relates a candidacy to the election that candidacy is in. A candidacy is in one election."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range pe:Election  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "Into Parliament period"@en ;
+	rdfs:comment "Relates an election to the House of Commons to the Parliament period within which any resulting incumbency takes place. An election to the House of Commons is related to one Parliament period."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range pe:ParliamentPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:forParliamentPeriod rdf:type owl:ObjectProperty ;
+	rdfs:label "For Parliament period"@en ;
+	rdfs:comment "Relates a general election to the subsequent Parliament period for which the general election is called. A general election is related to one Parliament period."@en ;
+	rdfs:domain pe:GeneralElection ;
+	rdfs:range pe:ParliamentPeriod ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:formsPartOfGeneralElection rdf:type owl:ObjectProperty ;
+	rdfs:label "Forms part of general election"@en ;
+	rdfs:comment "Relates a constituency election held as part of a general election to that general election. A constituency election is related to one general election, or none in the case of a by-election."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range pe:GeneralElection ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:forGeneralElection rdf:type owl:ObjectProperty ;
+	rdfs:label "For general election"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pe:GeneralElectionInBoundarySet ;
+	rdfs:range pe:GeneralElection  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:inBoundarySet rdf:type owl:ObjectProperty ;
+	rdfs:label "In boundary set"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pe:GeneralElectionInBoundarySet ;
+	rdfs:range pe:BoundarySet  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:eligibleToVoteIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Eligible to vote in"@en ;
+	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections."@en ;
+	rdfs:domain pe:Electorate ;
+	rdfs:range pe:Election ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:hasElectorate rdf:type owl:ObjectProperty ;
+	rdfs:label "Has electorate"@en ;
+	rdfs:comment "Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group."@en ;
+	rdfs:domain pe:ConstituencyGroup ;
+	rdfs:range pe:Electorate  ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:boundedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Bounded by"@en ;
+	rdfs:comment "Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group."@en ;
+	rdfs:domain pe:ConstituencyGroup ;
+	rdfs:range pe:ConstituencyArea ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
 pe:ofPopulation rdf:type owl:ObjectProperty ;
 	rdfs:label "Of population"@en ;
 	rdfs:comment "Relates a population size as recorded on a date to that population. A population size is related to one population."@en ;
 	rdfs:domain pe:PopulationSize ;
 	rdfs:range pe:Population  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-	
+
+
 
 #######  Data properties #####
 
-pe:candidateGivenName rdf:type owl:DatatypeProperty ;
-	rdfs:label "Candidate given name"@en ;
-	rdfs:comment "The given name of the candidate as it appears on the ballot, for example: 'John' in 'John Smith'."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range rdf:langString ;
+pe:registrationID rdf:type owl:DatatypeProperty ;
+	rdfs:label "Registration ID"@en ;
+	rdfs:comment "The ID of a political party registration. For example: 'PP103' being the registration ID of the Alliance party in Northern Ireland starting on 25 February 1999."@en ;
+	rdfs:domain pe:PoliticalPartyRegistration ;
+	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:candidateFamilyName rdf:type owl:DatatypeProperty ;
-	rdfs:label "Candidate family name"@en ;
-	rdfs:comment "The family name of the candidate as it appears on the ballot, for example: 'Smith' in 'John Smith'."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range rdf:langString ;
+pe:registeredPrimaryNameLastUpdatedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Registered primary name last updated on"@en ;
+	rdfs:comment "The date on which the registered primary name of the political party was last updated."@en ;
+	rdfs:domain pe:PoliticalPartyRegistration ;
+	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:asCommonsSpeaker rdf:type owl:DatatypeProperty ;
-	rdfs:label "As Commons Speaker"@en ;
-	rdfs:comment "Used to record if the candidate is the House of Commons Speaker standing for re-election to the House of Commons."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range xsd:boolean ;
+
+pe:resultPosition rdf:type owl:DatatypeProperty ;
+	rdfs:label "Result position"@en ;
+	rdfs:comment "The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2."@en ;
+	rdfs:domain pe:CandidacyResult ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:asIndependent rdf:type owl:DatatypeProperty ;
-	rdfs:label "As independent"@en ;
-	rdfs:comment "Used to record if the candidate is standing as an independent, not being certified by any political party."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
+
 pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote count"@en ;
 	rdfs:comment "The number of accepted votes recorded for a candidacy."@en ;
@@ -231,7 +281,7 @@ pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
+
 pe:voteChange rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote change"@en ;
 	rdfs:comment "The change in the vote share recorded for a candidacy in an election compared to the vote share for a candidacy certified by the same party in the previous general election. The calculation of vote change does not take account of intervening by-elections. Where a constituency's boundary has changed since the last general election, the vote change figure is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
@@ -239,11 +289,102 @@ pe:voteChange rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:resultPosition rdf:type owl:DatatypeProperty ;
-	rdfs:label "Result position"@en ;
-	rdfs:comment "The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2."@en ;
-	rdfs:domain pe:CandidacyResult ;
+pe:candidateGivenName rdf:type owl:DatatypeProperty ;
+	rdfs:label "Candidate given name"@en ;
+	rdfs:comment "The given name of the candidate as it appears on the ballot, for example: 'John' in 'John Smith'."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:candidateFamilyName rdf:type owl:DatatypeProperty ;
+	rdfs:label "Candidate family name"@en ;
+	rdfs:comment "The family name of the candidate as it appears on the ballot, for example: 'Smith' in 'John Smith'."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:asCommonsSpeaker rdf:type owl:DatatypeProperty ;
+	rdfs:label "As Commons Speaker"@en ;
+	rdfs:comment "Used to record if the candidate is the House of Commons Speaker standing for re-election to the House of Commons."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:asIndependent rdf:type owl:DatatypeProperty ;
+	rdfs:label "As independent"@en ;
+	rdfs:comment "Used to record if the candidate is standing as an independent, not being certified by any political party."@en ;
+	rdfs:domain pe:Candidacy ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:isNotional rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is notional"@en ;
+	rdfs:comment "Used to record if the results of a general election are notional. When a general election is contested on a new boundary set or boundary sets, notional results are calculated for the changed constituencies. Notional results are calculated as if the previous general election had been contested on the new boundaries. Notional winner and notional vote share are used to derive the party gain / hold and change in vote share information, respectively, at the subsequent general election."@en ;
+	rdfs:domain pe:GeneralElection ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:generalElectionPollingOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "General election polling on"@en ;
+	rdfs:comment "The date on which polling took place for all elections in a general election."@en ;
+	rdfs:domain pe:GeneralElection ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:ordinality rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordinality"@en ;
+	rdfs:comment "The ordinality of a general election in a boundary set. For example: the 2010 general election is the first general election in the England boundary set established in April 2010, and the second general election in the Scotland boundary set established in April 2005."@en ;
+	rdfs:domain pe:GeneralElectionInBoundarySet ;
 	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:electionPollingOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Election polling on"@en ;
+	rdfs:comment "The date on which polling took place for an election."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:resultSummary rdf:type owl:DatatypeProperty ;
+	rdfs:label "Result summary"@en ;
+	rdfs:comment "Text summarising the result of an election in terms of a political party gaining or holding a constituency relative to the previous general election, for example: Conservative gain from Labour Co-operative. The result summary does not take account of intervening by-elections. Where a constituency's boundary has changed since the last general election, the result summary is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:majority rdf:type owl:DatatypeProperty ;
+	rdfs:label "Majority"@en ;
+	rdfs:comment "The difference between the number of valid votes cast for the winning candidate and the number of valid votes cast for the second-placed candidate."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:validVoteCount rdf:type owl:DatatypeProperty ;
+	rdfs:label "Valid vote count"@en ;
+	rdfs:comment "The number of votes cast in an election excluding any declared invalid by the Returning Officer."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:invalidVoteCount rdf:type owl:DatatypeProperty ;
+	rdfs:label "Invalid vote count"@en ;
+	rdfs:comment "The number of invalid votes - also called spoiled ballots - cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or where a mark does not sufficiently identify the vote. The number of invalid votes may be included in a calculation of turnout. Turnout as calculated by the House of Commons Library - and generally in academic usage - is the total number of valid votes cast, divided by the size of the electorate. Turnout as calculated by a Returning Officer is the total number of votes cast, divided by the size of the electorate."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:round rdf:type owl:DatatypeProperty ;
+	rdfs:label "Round"@en ;
+	rdfs:comment "The ordinal position of the round in an election having more than one round of voting, for example: 1st or 2nd, recorded as 1 or 2."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:declarationTime rdf:type owl:DatatypeProperty ;
+	rdfs:label "Declaration time"@en ;
+	rdfs:comment "The date and time at which results were declared for an election, for example: the date and time of the declaration of the results in a constituency election, by the Returning Officer."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:recordedSize rdf:type owl:DatatypeProperty ;
@@ -252,45 +393,10 @@ pe:recordedSize rdf:type owl:DatatypeProperty ;
 	rdfs:domain pe:PopulationSize ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
+
 pe:recordedDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded date"@en ;
 	rdfs:comment "The date on which a population size was recorded."@en ;
 	rdfs:domain pe:PopulationSize ;
 	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:partyGained rdf:type owl:DatatypeProperty ;
-	rdfs:label "Party gained"@en ;
-	rdfs:comment "Used to record whether the party of the winning candidate at an election differs from the party of the winning candidate at the preceding election."@en ;
-	rdfs:domain pe:WinningCandidacyResult ;
-	rdfs:range xsd:boolean ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:totalVotesCast rdf:type owl:DatatypeProperty ;
-	rdfs:label "Total votes cast"@en ;
-	rdfs:comment "The total number of votes cast across all candidacies in an election, including spoiled ballots."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-		
-pe:ballotsSpoiled rdf:type owl:DatatypeProperty ;
-	rdfs:label "Ballots spoiled"@en ;
-	rdfs:comment "The number of spoiled ballots cast by an electorate in an election, for example: ballots on which votes are given for more candidates than the voter is entitled to vote for, ballots on which anything is written or marked by which the voter can be identified, or ballots which are unmarked or where a mark does not sufficiently identify the vote. The number of spoiled ballots may be included in a calculation of turnout. Turnout as calculated by the House of Commons Library - and generally in academic usage - is the total number of votes cast and not spoiled, divided by the size of the electorate. Turnout as calculated by Returning Officers is the total number of votes cast, divided by the size of the electorate."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:round rdf:type owl:DatatypeProperty ;
-	rdfs:label "Round"@en ;
-	rdfs:comment "The ordinal position of the round in an election having more than one round of voting, for example: 1st or 2nd, recorded as 1 or 2."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:declarationTime rdf:type owl:DatatypeProperty ;
-	rdfs:label "Declaration time"@en ;
-	rdfs:comment "The date and time at which results were declared for an election, for example: the date and time of the declaration of the results in a constituency election, by the Returning Officer."@en ;
-	rdfs:domain pe:Election ;
-	rdfs:range xsd:dateTime ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
