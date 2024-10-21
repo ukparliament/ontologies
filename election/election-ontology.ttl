@@ -93,19 +93,12 @@ pe:BoundarySet rdf:type owl:Class ;
 	rdfs:comment "A boundary set defining UK Parliament constituency areas, as proposed in a boundary review by the Boundary Commissions and established by statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:Population rdf:type owl:Class ;
-	rdfs:label "Population"@en ;
-	rdfs:comment "A set of people."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
 pe:Electorate rdf:type owl:Class ;
-	rdfs:subClassOf pe:Population ;
 	rdfs:label "Electorate"@en ;
 	rdfs:comment "A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:ConstituencyGroup rdf:type owl:Class ;
-	rdfs:subClassOf pe:Population ;
 	rdfs:label "Constituency group"@en ;
 	rdfs:comment "A group of people represented by an election winner."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -114,10 +107,15 @@ pe:ConstituencyArea rdf:type owl:Class ;
 	rdfs:label "Constituency area"@en ;
 	rdfs:comment "An area within which members of a constituency group reside. Constituency areas bounding constituency groups represented in the House of Commons are set out by the Boundary Commissions and approved by Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-pe:PopulationSize rdf:type owl:Class ;
-	rdfs:label "Population size"@en ;
-	rdfs:comment "The recording of the size of a population on a date."@en ;
+
+pe:ConstituencyGroupSet rdf:type owl:Class ;
+	rdfs:label "Constituency group set"@en ;
+	rdfs:comment "A set of constituency groups, established by statute."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+
+pe:StatutoryThing rdf:type owl:Class ;
+	rdfs:label "StatutoryThing"@en ;
+	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 		
 			
@@ -215,18 +213,25 @@ pe:inBoundarySet rdf:type owl:ObjectProperty ;
 	rdfs:range pe:BoundarySet  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
-pe:eligibleToVoteIn rdf:type owl:ObjectProperty ;
-	rdfs:label "Eligible to vote in"@en ;
-	rdfs:comment "Relates a group of people - who at the time of an election are eligible to vote in that election - to that election. An election has one electorate. An electorate is eligible to take part in one or more elections."@en ;
-	rdfs:domain pe:Electorate ;
-	rdfs:range pe:Election ;
+pe:forConstituencyGroup rdf:type owl:ObjectProperty ;
+	rdfs:label "For constituency group"@en ;
+	rdfs:comment "Relates an election to the constituency group who are represented by the winner of that election. An election is always for one constituency group."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range pe:ConstituencyGroup ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:hasElectorate rdf:type owl:ObjectProperty ;
 	rdfs:label "Has electorate"@en ;
-	rdfs:comment "Relates a constituency group to a group of people who at the time of an election to the House of Commons are eligible to vote in the election for that constituency. Electorates in an election to the House of Commons are related to a constituency group; electorates for excepted hereditary peerage seats and for positions within Parliament are not. A constituency group has one electorate. An electorate forms part or all of one constituency group."@en ;
-	rdfs:domain pe:ConstituencyGroup ;
-	rdfs:range pe:Electorate  ;
+	rdfs:comment "Relates an election to the group of people eligible to vote in that election. An election has one electorate. An electorate may be eligible to vote in one or more elections over time."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range pe:Electorate ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:includedIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Included in"@en ;
+	rdfs:comment "Relates an electorate to the constituency group they are included in. An electorate is included in one constituency group."@en ;
+	rdfs:domain pe:Electorate ;
+	rdfs:range pe:ConstituencyGroup ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:boundedBy rdf:type owl:ObjectProperty ;
@@ -236,11 +241,25 @@ pe:boundedBy rdf:type owl:ObjectProperty ;
 	rdfs:range pe:ConstituencyArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:ofPopulation rdf:type owl:ObjectProperty ;
-	rdfs:label "Of population"@en ;
-	rdfs:comment "Relates a population size as recorded on a date to that population. A population size is related to one population."@en ;
-	rdfs:domain pe:PopulationSize ;
-	rdfs:range pe:Population  ;
+pe:definedIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Defined in"@en ;
+	rdfs:comment "Relates a constituency group to the constituency group set of which it forms part."@en ;
+	rdfs:domain pe:ConstituencyGroup ;
+	rdfs:range pe:ConstituencyGroupSet ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:constituencyGroupSetInCountry rdf:type owl:ObjectProperty ;
+	rdfs:label "Constituency group set in country"@en ;
+	rdfs:comment "Relates a constituency group set to its country. A constituency group set is in one country. A country may have one or more constituency group sets over time."@en ;
+	rdfs:domain pe:ConstituencyGroupSet ;
+	rdfs:range pe:Country ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:establishedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Established by"@en ;
+	rdfs:comment "Relates a constituency group set to the statutory thing establishing that set. A constituency group set is established by one or more statutory things."@en ;
+	rdfs:domain pe:ConstituencyGroupSet ;
+	rdfs:range pe:StatutoryThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 
@@ -389,14 +408,14 @@ pe:declarationTime rdf:type owl:DatatypeProperty ;
 	
 pe:recordedSize rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded size"@en ;
-	rdfs:comment "The size of a population, for example: the size of an electorate or of a constituency group."@en ;
-	rdfs:domain pe:PopulationSize ;
+	rdfs:comment "The number of people making up an electorate."@en ;
+	rdfs:domain pe:Electorate ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:recordedDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded date"@en ;
-	rdfs:comment "The date on which a population size was recorded."@en ;
-	rdfs:domain pe:PopulationSize ;
+	rdfs:comment "The date on which the size of an electorate was recorded."@en ;
+	rdfs:domain pe:Electorate ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
