@@ -11,9 +11,10 @@
     dcterms:title "Procedure step ontology"@en ;
     dcterms:created "2019-04-16"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing annotations added to procedure steps by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a procedure step is actualised."@en ;
-	foaf:depiction <https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png> ;
+    dcterms:description "A model describing annotations added to event steps in the procedure model by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how an event step is actualised."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.svg> ;
 	foaf:maker
+	    [ foaf:name "Jayne Bosworth" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 	    [ foaf:name "Anya Somerville" ] .
@@ -21,9 +22,9 @@
 
 #######  Classes ##### 	
 
-ppsa:Step rdf:type owl:Class ;
+ppsa:EventStep rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
-	rdfs:comment "A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step."@en ;
+	rdfs:comment "A procedural step of type event, being the notion of a event happening in the House of Commons, the House of Lords, bicamerally, in a devolved legislature or external to Parliament and the devolved legislatures."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 ppsa:Publication rdf:type owl:Class ;
@@ -31,43 +32,39 @@ ppsa:Publication rdf:type owl:Class ;
 	rdfs:comment "A publication."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
-
 	
-
 	
 ##### Object properties ####
 
-
 ppsa:actualiseWith rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualise with"@en ;
-	rdfs:comment "Relates a step to a step where steps may be actualised together."@en ;
-	rdfs:domain ppsa:Step ;
-	rdfs:range ppsa:Step ;
+	rdfs:comment "Relates an event step to an event step where steps may be actualised together."@en ;
+	rdfs:domain ppsa:EventStep ;
+	rdfs:range ppsa:EventStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 
 ppsa:source rdf:type owl:ObjectProperty ;
 	rdfs:label "Source"@en ;
-	rdfs:comment "Relates a step to the publication which is the source of information for that step."@en ;
-	rdfs:domain ppsa:Step ;
+	rdfs:comment "Relates an event step to the publication which is the source of information for that event actualising the event step."@en ;
+	rdfs:domain ppsa:EventStep ;
 	rdfs:range ppsa:Publication ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
-
-				
+	
 	
 ##### Data properties ####	
 	
 ppsa:linkNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Link note"@en ;
-	rdfs:comment "A note that describes where a business item, actualising a step, should link to in a publication."@en ;
-	rdfs:domain ppsa:Step ;
+	rdfs:comment "A note that describes where an event, actualising an event step, should link to in a publication."@en ;
+	rdfs:domain ppsa:EventStep ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 ppsa:dateNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date note"@en ;
-	rdfs:comment "A note that describes the date to use when actualising a step."@en ;
-	rdfs:domain ppsa:Step ;
+	rdfs:comment "A note that describes the date to use when actualising an event step."@en ;
+	rdfs:domain ppsa:EventStep ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 						
