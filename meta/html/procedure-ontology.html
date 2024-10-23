@@ -75,7 +75,9 @@
           <h3>Class <a href="#Availability">Availability</a></h3>
 
           <p>The availability of a path or procedure over time. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
-         </article>
+           <p>
+            Superclasses  &middot; CitingThing           </p>
+        </article>
         <article class="class" id="AvailabilityStatus">
           <h3>Class <a href="#AvailabilityStatus">Availability status</a></h3>
 
@@ -85,11 +87,25 @@
           <h3>Class <a href="#AvailableThing">Available thing</a></h3>
 
           <p>A thing having periods of availability and unavailability.</p>
-         </article>
+           <p>
+            Superclasses  &middot; CitingThing           </p>
+        </article>
         <article class="class" id="CalculationStyle">
           <h3>Class <a href="#CalculationStyle">Calculation style</a></h3>
 
           <p>A calculation style is used to record the form of a calculation based on the sitting days counted by a clock, for example: either House being sitting or adjourned for less than four days, both Houses sitting or being adjourned for less than four days, or the House of Commons sitting or being adjourned for less than four days. A calculation style may set out the definition of the first day to be counted.</p>
+         </article>
+        <article class="class" id="Citation">
+          <h3>Class <a href="#Citation">Citation</a></h3>
+
+         </article>
+        <article class="class" id="CitationType">
+          <h3>Class <a href="#CitationType">Citation type</a></h3>
+
+         </article>
+        <article class="class" id="CitingThing">
+          <h3>Class <a href="#CitingThing">Citing thing</a></h3>
+
          </article>
         <article class="class" id="Clock">
           <h3>Class <a href="#Clock">Clock</a></h3>
@@ -103,6 +119,12 @@
 
           <p>An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
          </article>
+        <article class="class" id="EventStep">
+          <h3>Class <a href="#EventStep">Event step</a></h3>
+
+           <p>
+            Superclasses  &middot; Step  &middot; CitingThing           </p>
+        </article>
         <article class="class" id="House">
           <h3>Class <a href="#House">House</a></h3>
 
@@ -149,7 +171,7 @@
         <article class="class" id="Step">
           <h3>Class <a href="#Step">Step</a></h3>
 
-          <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
+          <p>A step is either an event step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
          </article>
         <article class="class" id="StepCollection">
           <h3>Class <a href="#StepCollection">Step collection</a></h3>
@@ -192,7 +214,44 @@
               >Event</a
             >
             &mdash; Actualises &mdash;
-            <a href="#Step">Step</a>
+            <a href="#EventStep">EventStep</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="availabilityOf">
+          <h3>
+            Object property
+            <a href="#availabilityOf"
+              >Availability of</a
+            >
+          </h3>
+
+           <p>Relates a path to its availability over a period of time. A path may have a different availability at different times, but only one availability at any one time. Path with no defined availability are taken to be open.</p>
+
+          <p>
+            <a href="#Availability"
+              >Availability</a
+            >
+            &mdash; Availability of &mdash;
+            <a href="#AvailableThing">AvailableThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="cites">
+          <h3>
+            Object property
+            <a href="#cites"
+              >Cites</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#CitingThing"
+              >CitingThing</a
+            >
+            &mdash; Cites &mdash;
+            <a href="#Citation">Citation</a>
           </p>
         </article>
 
@@ -268,7 +327,7 @@
               >StepDisplayDepthInProcedure</a
             >
             &mdash; For step &mdash;
-            <a href="#Step">Step</a>
+            <a href="#EventStep">EventStep</a>
           </p>
         </article>
 
@@ -310,25 +369,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasAvailability">
-          <h3>
-            Object property
-            <a href="#hasAvailability"
-              >Has availability</a
-            >
-          </h3>
-
-           <p>Relates a path to its availability over a period of time. A path may have a different availability at different times, but only one availability at any one time. Path with no defined availability are taken to be open.</p>
-
-          <p>
-            <a href="#Path"
-              >Path</a
-            >
-            &mdash; Has availability &mdash;
-            <a href="#Availability">Availability</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="hasAvailabilityStatus">
           <h3>
             Object property
@@ -345,6 +385,24 @@
             >
             &mdash; Has availability status &mdash;
             <a href="#AvailabilityStatus">AvailabilityStatus</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasCitationType">
+          <h3>
+            Object property
+            <a href="#hasCitationType"
+              >Has citation type</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#Citation"
+              >Citation</a
+            >
+            &mdash; Has citation type &mdash;
+            <a href="#CitationType">CitationType</a>
           </p>
         </article>
 
@@ -416,11 +474,48 @@
            <p>Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none.</p>
 
           <p>
-            <a href="#Step"
-              >Step</a
+            <a href="#EventStep"
+              >EventStep</a
             >
             &mdash; Member of &mdash;
             <a href="#StepCollection">StepCollection</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="parentCitationType">
+          <h3>
+            Object property
+            <a href="#parentCitationType"
+              >Parent citation type</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#CitationType"
+              >CitationType</a
+            >
+            &mdash; Parent citation type &mdash;
+            <a href="#CitationType">CitationType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="proceduralWorkPackageHasCalculationStyle">
+          <h3>
+            Object property
+            <a href="#proceduralWorkPackageHasCalculationStyle"
+              >Procedural work package has calculation style</a
+            >
+          </h3>
+
+           <p>Relates a procedural work package to the calculation style used by that work package. A procedural work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to.</p>
+
+          <p>
+            <a href="#ProceduralWorkPackage"
+              >ProceduralWorkPackage</a
+            >
+            &mdash; Procedural work package has calculation style &mdash;
+            <a href="#CalculationStyle">CalculationStyle</a>
           </p>
         </article>
 
@@ -492,8 +587,8 @@
            <p>Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament.</p>
 
           <p>
-            <a href="#Step"
-              >Step</a
+            <a href="#EventStep"
+              >EventStep</a
             >
             &mdash; Step in House &mdash;
             <a href="#House">House</a>
@@ -511,8 +606,8 @@
            <p>Relates a step to the devolved legislature in which that step takes place, for example: a legislative consent motion being tabled in the Scottish Parliament.</p>
 
           <p>
-            <a href="#Step"
-              >Step</a
+            <a href="#EventStep"
+              >EventStep</a
             >
             &mdash; Step in legislature &mdash;
             <a href="#Legislature">Legislature</a>
@@ -530,8 +625,8 @@
            <p>Relates a work package to the procedure it is subject to. A work package is only subject to one procedure.</p>
 
           <p>
-            <a href="#WorkPackage"
-              >WorkPackage</a
+            <a href="#ProceduralWorkPackage"
+              >ProceduralWorkPackage</a
             >
             &mdash; Subject to &mdash;
             <a href="#Procedure">Procedure</a>
@@ -556,54 +651,35 @@
             <a href="#Step">Step</a>
           </p>
         </article>
-
-        <article class="objectproperty" id="workPackageHasCalculationStyle">
-          <h3>
-            Object property
-            <a href="#workPackageHasCalculationStyle"
-              >Work package has calculation style</a
-            >
-          </h3>
-
-           <p>Relates a work package to the calculation style used by that work package. A work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to.</p>
-
-          <p>
-            <a href="#WorkPackage"
-              >WorkPackage</a
-            >
-            &mdash; Work package has calculation style &mdash;
-            <a href="#CalculationStyle">CalculationStyle</a>
-          </p>
-        </article>
       </section>
  
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="clockDayCount">
+        <article class="dataproperty" id="dayCount">
           <h3>
             Data property
-            <a href="#clockDayCount">Clock day count</a>
+            <a href="#dayCount">Day count</a>
           </h3>
 
           <p>Relates a clock to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by that clock. The day count of a clock may be overridden by the day count set on a work package. Clock day counts in the made affirmative procedure are not set, day counts being set on the work package.</p>
 
           <p>
-            Clock &mdash; Clock day count &mdash;
+            Clock &mdash; Day count &mdash;
             integer
           </p>
         </article>
 
-        <article class="dataproperty" id="displayDepthValue">
+        <article class="dataproperty" id="displayDepth">
           <h3>
             Data property
-            <a href="#displayDepthValue">Display depth value</a>
+            <a href="#displayDepth">Display depth</a>
           </h3>
 
           <p>Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3.</p>
 
           <p>
-            StepDisplayDepthInProcedure &mdash; Display depth value &mdash;
+            StepDisplayDepthInProcedure &mdash; Display depth &mdash;
             float
           </p>
         </article>
@@ -643,6 +719,22 @@
           <tr>
             <td>/<wbr>ontologies/<wbr>procedure/<wbr>ProceduralWorkPackage</td>
             <td>/<wbr>ontologies/<wbr>procedure/<wbr>WorkPackage</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>EventStep</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Step</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>EventStep</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>CitingThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>AvailableThing</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>CitingThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Availability</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>CitingThing</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>procedure/<wbr>Path</td>
@@ -742,7 +834,7 @@
 
     <footer>
       <p>
-        Generated 2024-10-23 07:39:48.184975 from a
+        Generated 2024-10-23 13:21:28.657162 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"
