@@ -58,14 +58,14 @@
     <main>
       <h1>Procedure step ontology</h1>
 
-      <p id="description">A model describing annotations added to procedure steps by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a procedure step is actualised.</p>
+      <p id="description">A model describing annotations added to event steps in the procedure model by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how an event step is actualised.</p>
 
       <nav>
         <a href="#classes">Classes</a>
         &middot; <a href="#objectproperties">Object properties</a>  &middot;
         <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
 
- &middot; <a href="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.png">Depiction</a>
+ &middot; <a href="https://ukparliament.github.io/ontologies/procedure-step-annotation/procedure-step-annotation.svg">Depiction</a>
       </nav>
 
       <section id="classes">
@@ -76,10 +76,10 @@
 
           <p>A publication.</p>
          </article>
-        <article class="class" id="Step">
-          <h3>Class <a href="#Step">Step</a></h3>
+        <article class="class" id="EventStep">
+          <h3>Class <a href="#EventStep">Step</a></h3>
 
-          <p>A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
+          <p>A procedural step of type event, being the notion of a event happening in the House of Commons, the House of Lords, bicamerally, in a devolved legislature or external to Parliament and the devolved legislatures.</p>
          </article>
       </section>
  
@@ -95,14 +95,14 @@
             >
           </h3>
 
-           <p>Relates a step to a step where steps may be actualised together.</p>
+           <p>Relates an event step to an event step where steps may be actualised together.</p>
 
           <p>
-            <a href="#Step"
-              >Step</a
+            <a href="#EventStep"
+              >EventStep</a
             >
             &mdash; Actualise with &mdash;
-            <a href="#Step">Step</a>
+            <a href="#EventStep">EventStep</a>
           </p>
         </article>
 
@@ -114,11 +114,11 @@
             >
           </h3>
 
-           <p>Relates a step to the publication which is the source of information for that step.</p>
+           <p>Relates an event step to the publication which is the source of information for that event actualising the event step.</p>
 
           <p>
-            <a href="#Step"
-              >Step</a
+            <a href="#EventStep"
+              >EventStep</a
             >
             &mdash; Source &mdash;
             <a href="#Publication">Publication</a>
@@ -135,10 +135,10 @@
             <a href="#dateNote">Date note</a>
           </h3>
 
-          <p>A note that describes the date to use when actualising a step.</p>
+          <p>A note that describes the date to use when actualising an event step.</p>
 
           <p>
-            Step &mdash; Date note &mdash;
+            EventStep &mdash; Date note &mdash;
             langString
           </p>
         </article>
@@ -149,10 +149,10 @@
             <a href="#linkNote">Link note</a>
           </h3>
 
-          <p>A note that describes where a business item, actualising a step, should link to in a publication.</p>
+          <p>A note that describes where an event, actualising an event step, should link to in a publication.</p>
 
           <p>
-            Step &mdash; Link note &mdash;
+            EventStep &mdash; Link note &mdash;
             langString
           </p>
         </article>
@@ -231,14 +231,14 @@
       <p>Ontology created &middot; <time id="created">2019-04-16</time></p>
 
       <p id="makers">
-        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+        Made by   &middot; Jayne Bosworth           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2024-10-23 16:30:38.221748 from a
+        Generated 2024-10-23 16:32:01.546748 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl"
