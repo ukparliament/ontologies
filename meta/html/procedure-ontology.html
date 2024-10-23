@@ -63,7 +63,7 @@
       <nav>
         <a href="#classes">Classes</a>
         &middot; <a href="#objectproperties">Object properties</a>  &middot;
-        <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
 
  &middot; <a href="https://ukparliament.github.io/ontologies/procedure/procedure.svg">Depiction</a>
       </nav>
@@ -71,15 +71,20 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Actualisation">
-          <h3>Class <a href="#Actualisation">Actualisation</a></h3>
+        <article class="class" id="Availability">
+          <h3>Class <a href="#Availability">Availability</a></h3>
 
-          <p>An actualisation, being the act of relating a business item to a procedural step.</p>
+          <p>The availability of a path or procedure over time. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
          </article>
-        <article class="class" id="BusinessItem">
-          <h3>Class <a href="#BusinessItem">Business item</a></h3>
+        <article class="class" id="AvailabilityStatus">
+          <h3>Class <a href="#AvailabilityStatus">Availability status</a></h3>
 
-          <p>An item of business conducted either within or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
+          <p>The status of a route&#39;s availability, being either open or closed.</p>
+         </article>
+        <article class="class" id="AvailableThing">
+          <h3>Class <a href="#AvailableThing">Available thing</a></h3>
+
+          <p>A thing having periods of availability and unavailability.</p>
          </article>
         <article class="class" id="CalculationStyle">
           <h3>Class <a href="#CalculationStyle">Calculation style</a></h3>
@@ -89,7 +94,14 @@
         <article class="class" id="Clock">
           <h3>Class <a href="#Clock">Clock</a></h3>
 
-          <p>A clock sets out a number of days to be counted between a start step and an end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the business item actualising a start step and the date of the business item actualising an end step. The start date of a clock is the date of the business item which actualises the start step of that clock. The end date of a clock is the date of the business item which actualises the end step of that clock. In a work package, the period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. Calculation styles are dependent on sitting days in one or both Houses. End dates of clocks in work packages currently before Parliament may change if sitting days change.</p>
+          <p>A clock sets out a number of days to be counted between a start step and an end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the event actualising a start step and the date of the event actualising an end step. The start date of a clock is the date of the event which actualises the start step of that clock. The end date of a clock is the date of the event which actualises the end step of that clock. In a work package, the period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. Calculation styles are dependent on sitting days in one or both Houses. End dates of clocks in work packages currently before Parliament may change if sitting days change.</p>
+           <p>
+            Superclasses  &middot; Path           </p>
+        </article>
+        <article class="class" id="Event">
+          <h3>Class <a href="#Event">Event</a></h3>
+
+          <p>An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
          </article>
         <article class="class" id="House">
           <h3>Class <a href="#House">House</a></h3>
@@ -101,26 +113,39 @@
 
           <p>A legislature, being either the UK Parliament or a devolved legislature.</p>
          </article>
+        <article class="class" id="PaperWork">
+          <h3>Class <a href="#PaperWork">Paper work</a></h3>
+
+          <p>A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
+         </article>
+        <article class="class" id="Path">
+          <h3>Class <a href="#Path">Path</a></h3>
+
+          <p>A path is a link from one step to another in a procedure.</p>
+           <p>
+            Superclasses  &middot; AvailableThing           </p>
+        </article>
+        <article class="class" id="ProceduralWorkPackage">
+          <h3>Class <a href="#ProceduralWorkPackage">Procedural work package</a></h3>
+
+          <p>A group of events occurring as part of a procedure, for example: business items considered during the passage of a Statutory Instrument or Public Bill.</p>
+           <p>
+            Superclasses  &middot; WorkPackage           </p>
+        </article>
         <article class="class" id="Procedure">
           <h3>Class <a href="#Procedure">Procedure</a></h3>
 
           <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
-         </article>
+           <p>
+            Superclasses  &middot; AvailableThing           </p>
+        </article>
         <article class="class" id="Route">
           <h3>Class <a href="#Route">Route</a></h3>
 
-          <p>A route is a link from one step to another. The source of a route may also be its destination. A route is available when the from step is True, actualised by a business item having a date in the past, or by the input from a logic gate step being True. The validity period of a route may be indicated by its start or end date. A route linking a business step actualised by a business item with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
-         </article>
-        <article class="class" id="RouteAvailability">
-          <h3>Class <a href="#RouteAvailability">Route availability</a></h3>
-
-          <p>The availability of a route over time. A route may be open or closed. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
-         </article>
-        <article class="class" id="RouteAvailabilityStatus">
-          <h3>Class <a href="#RouteAvailabilityStatus">Route availability status</a></h3>
-
-          <p>The status of a route&#39;s availability, being either open or closed.</p>
-         </article>
+          <p>A route is a link from one step to another. A route is available when the from step is True, actualised by an event having a date in the past, or by the input from a logic gate step being True. A route directly linking a business step actualised by an event with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
+           <p>
+            Superclasses  &middot; Path           </p>
+        </article>
         <article class="class" id="Step">
           <h3>Class <a href="#Step">Step</a></h3>
 
@@ -144,12 +169,7 @@
         <article class="class" id="WorkPackage">
           <h3>Class <a href="#WorkPackage">Work package</a></h3>
 
-          <p>A group of business items under a procedure or as determined by a committee, for example: business items considered during the passage of a particular Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
-         </article>
-        <article class="class" id="WorkPackageableThing">
-          <h3>Class <a href="#WorkPackageableThing">Work packageable thing</a></h3>
-
-          <p>A thing which is the focus of a work package. For example a statutory instrument paper or the work of a government department.</p>
+          <p>A group of events occurring as part of a procedure or as determined by a committee, for example: business items considered during the passage of a Statutory Instrument or Public Bill, or during an inquiry by a Select Committee.</p>
          </article>
       </section>
  
@@ -165,33 +185,14 @@
             >
           </h3>
 
-           <p>Relates an actualisation to the procedural step being actualised. An actualisation may be of more than one step, for example: the step for the putting of a question and the step for the outcome may be actualised together. A step may be actualised one or more times by business items in separate work packages.</p>
+           <p>Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events in separate work packages.</p>
 
           <p>
-            <a href="#Actualisation"
-              >Actualisation</a
+            <a href="#Event"
+              >Event</a
             >
             &mdash; Actualises &mdash;
             <a href="#Step">Step</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="appearsInProcedure">
-          <h3>
-            Object property
-            <a href="#appearsInProcedure"
-              >Appears in procedure</a
-            >
-          </h3>
-
-           <p>Relates a route to the procedure that route appears in. A route appears in one procedure. A procedure may have one or more routes, or none. A procedure having a component procedure allows the routes in the &#39;child&#39; procedure to be shared with the &#39;parent&#39; procedure.</p>
-
-          <p>
-            <a href="#Route"
-              >Route</a
-            >
-            &mdash; Appears in procedure &mdash;
-            <a href="#Procedure">Procedure</a>
           </p>
         </article>
 
@@ -233,25 +234,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="endStep">
-          <h3>
-            Object property
-            <a href="#endStep"
-              >End step</a
-            >
-          </h3>
-
-           <p>Relates a clock to the business step whose actualisation ends that clock. For example: the business step &#39;Approval period ends&#39; is the end step for the approval period clock in the made affirmative procedure. A clock has one end step. A step may be the end step for one clock, or none.</p>
-
-          <p>
-            <a href="#Clock"
-              >Clock</a
-            >
-            &mdash; End step &mdash;
-            <a href="#Step">Step</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="focus">
           <h3>
             Object property
@@ -260,14 +242,14 @@
             >
           </h3>
 
-           <p>Relates a work package to its focus, this being a work packageable thing.</p>
+           <p>Relates a procedural work package to the focus of that work package, being a paper work. A procedural work package has focus on one paper work. A paper work may be the focus of one or more procedural work packages, or none.</p>
 
           <p>
-            <a href="#WorkPackage"
-              >WorkPackage</a
+            <a href="#ProceduralWorkPackage"
+              >ProceduralWorkPackage</a
             >
             &mdash; Focus &mdash;
-            <a href="#WorkPackageableThing">WorkPackageableThing</a>
+            <a href="#PaperWork">PaperWork</a>
           </p>
         </article>
 
@@ -298,33 +280,14 @@
             >
           </h3>
 
-           <p>Relates a business item to a work package it forms part of. One or more business items may form part of a work package. A business item may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
+           <p>Relates an event to the work package or work packages it forms part of. One or more events may form part of a work package. An event may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
 
           <p>
-            <a href="#BusinessItem"
-              >BusinessItem</a
+            <a href="#Event"
+              >Event</a
             >
             &mdash; Forms part of &mdash;
             <a href="#WorkPackage">WorkPackage</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="formsPartOfProcedure">
-          <h3>
-            Object property
-            <a href="#formsPartOfProcedure"
-              >Forms part of procedure</a
-            >
-          </h3>
-
-           <p>Relates a clock to the procedure the clock forms part of. For example: the clock with the start step &#39;Instrument made&#39; and the end step &#39;Approval period ends&#39; forms part of the made affirmative procedure. A clock forms part of one procedure. A procedure may have one or more clocks, or none.</p>
-
-          <p>
-            <a href="#Clock"
-              >Clock</a
-            >
-            &mdash; Forms part of procedure &mdash;
-            <a href="#Procedure">Procedure</a>
           </p>
         </article>
 
@@ -336,11 +299,11 @@
             >
           </h3>
 
-           <p>Relates a route to its input step.</p>
+           <p>Relates a path to its input step. A path is related to one input step.</p>
 
           <p>
-            <a href="#Route"
-              >Route</a
+            <a href="#Path"
+              >Path</a
             >
             &mdash; From step &mdash;
             <a href="#Step">Step</a>
@@ -355,14 +318,14 @@
             >
           </h3>
 
-           <p>Relates a route to its availability over a period of time. A route may have a different availability at different times, but only one availability at any one time. Routes with no defined availability are taken to be open.</p>
+           <p>Relates a path to its availability over a period of time. A path may have a different availability at different times, but only one availability at any one time. Path with no defined availability are taken to be open.</p>
 
           <p>
-            <a href="#Route"
-              >Route</a
+            <a href="#Path"
+              >Path</a
             >
             &mdash; Has availability &mdash;
-            <a href="#RouteAvailability">RouteAvailability</a>
+            <a href="#Availability">Availability</a>
           </p>
         </article>
 
@@ -377,30 +340,11 @@
            <p>Relates a route availability over a period of time to the status of that availability. A route availability has one route availability status.</p>
 
           <p>
-            <a href="#RouteAvailability"
-              >RouteAvailability</a
+            <a href="#Availability"
+              >Availability</a
             >
             &mdash; Has availability status &mdash;
-            <a href="#RouteAvailabilityStatus">RouteAvailabilityStatus</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="hasBusinessItem">
-          <h3>
-            Object property
-            <a href="#hasBusinessItem"
-              >Has business item</a
-            >
-          </h3>
-
-           <p>Relates an actualisation of a step or steps to a business item. An actualisation has one business item. A business item is actualised only once.</p>
-
-          <p>
-            <a href="#Actualisation"
-              >Actualisation</a
-            >
-            &mdash; Has business item &mdash;
-            <a href="#BusinessItem">BusinessItem</a>
+            <a href="#AvailabilityStatus">AvailabilityStatus</a>
           </p>
         </article>
 
@@ -442,6 +386,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="inProcedure">
+          <h3>
+            Object property
+            <a href="#inProcedure"
+              >In procedure</a
+            >
+          </h3>
+
+           <p>Relates a path to the procedure that path appears in. A path appears in one procedure. A procedure may have one or more paths, or none. A procedure having a component procedure allows the paths in the &#39;child&#39; procedure to be shared with the &#39;parent&#39; procedure.</p>
+
+          <p>
+            <a href="#Path"
+              >Path</a
+            >
+            &mdash; In procedure &mdash;
+            <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="memberOf">
           <h3>
             Object property
@@ -477,25 +440,6 @@
             >
             &mdash; Procedure has calculation style &mdash;
             <a href="#CalculationStyle">CalculationStyle</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="startStep">
-          <h3>
-            Object property
-            <a href="#startStep"
-              >Start step</a
-            >
-          </h3>
-
-           <p>Relates a clock to the business step whose actualisation starts that clock. For example: the business step &#39;Instrument made&#39; is the start step for the approval period clock in the made affirmative procedure. A clock has one start step. A step may be the start step for one or more clocks, or none.</p>
-
-          <p>
-            <a href="#Clock"
-              >Clock</a
-            >
-            &mdash; Start step &mdash;
-            <a href="#Step">Step</a>
           </p>
         </article>
 
@@ -602,11 +546,11 @@
             >
           </h3>
 
-           <p>Relates a route to its output step.</p>
+           <p>Relates a path to its output step. A path is related to one output step.</p>
 
           <p>
-            <a href="#Route"
-              >Route</a
+            <a href="#Path"
+              >Path</a
             >
             &mdash; To step &mdash;
             <a href="#Step">Step</a>
@@ -673,7 +617,7 @@
           <p>Used to record whether the clocks in the procedure a work package is subject to are frozen. A work package marked as frozen will not have the dates of business items actualising clock end steps automatically updated when sitting days change. For example: the treaty procedure set out in the Constitutional Reform and Governance Act 2010 specifies no limitation on the length of any extension to objection period A. Should a Government minister choose to extend period A, dates on any business items actualising clock end steps cannot be automatically updated. The work package is marked as frozen and any changes to dates are manually updated.</p>
 
           <p>
-            WorkPackage &mdash; Is clock frozen &mdash;
+            ProceduralWorkPackage &mdash; Is clock frozen &mdash;
             boolean
           </p>
         </article>
@@ -687,13 +631,38 @@
           <p>Relates a work package to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by any clock in the procedure the work package is subject to. Where a work package day count is set, its value overrides the day counts set on clocks in the procedure that work package is subject to.</p>
 
           <p>
-            WorkPackage &mdash; Work package day count &mdash;
+            ProceduralWorkPackage &mdash; Work package day count &mdash;
             integer
           </p>
         </article>
       </section>
 
-    
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>ProceduralWorkPackage</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>WorkPackage</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Path</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>AvailableThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Procedure</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>AvailableThing</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Route</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Path</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Clock</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>Path</td>
+          </tr>
+        </table>
+      </section>
+ 
       <section id="namespaces">
         <h2>Namespaces</h2>
         <details>
@@ -767,13 +736,13 @@
 
       <p id="makers">
         Made by   &middot; Chris Alcock    &middot; David Beamish           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-   &middot; Gordon Clarke    &middot; Jack Dent    &middot; Samu Lang    &middot; Silver Oliver           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-   &middot; Anya Somerville    &middot; Dominic Stockbridge    &middot; Jayne Sunley    &middot; James Vinter    &middot; Jane White    &middot; Ben Woodhams        </p>
+   &middot; Gordon Clarke    &middot; Jack Dent    &middot; Samu Lang    &middot; Ned Morrell    &middot; Silver Oliver           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville    &middot; Dominic Stockbridge    &middot; Jayne Bosworth    &middot; James Vinter    &middot; Jane White    &middot; Ben Woodhams        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2024-10-22 12:42:53.412580 from a
+        Generated 2024-10-23 07:36:51.848967 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"
