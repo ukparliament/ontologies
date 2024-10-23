@@ -62,15 +62,39 @@ ppr:StepType rdf:type owl:Class ;
 	
 ppr:Step rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
-	rdfs:comment "A step is either a business step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step."@en ;
+	rdfs:comment "A step is either an event step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:CitingThing rdf:type owl:Class ;
+	rdfs:label "Citing thing"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:Citation rdf:type owl:Class ;
+	rdfs:label "Citation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:CitationType rdf:type owl:Class ;
+	rdfs:label "Citation type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:EventStep rdf:type owl:Class ;
+	rdfs:subClassOf ppr:Step ;
+	rdfs:subClassOf ppr:CitingThing ;
+	rdfs:label "Event step"@en ;
+	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:AvailableThing rdf:type owl:Class ;
+	rdfs:subClassOf ppr:CitingThing ;
 	rdfs:label "Available thing"@en ;
 	rdfs:comment "A thing having periods of availability and unavailability."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Availability rdf:type owl:Class ;
+	rdfs:subClassOf ppr:CitingThing ;
 	rdfs:label "Availability"@en ;
 	rdfs:comment "The availability of a path or procedure over time. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -151,7 +175,7 @@ ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
 	rdfs:comment "Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events in separate work packages."@en ;
 	rdfs:domain ppr:Event ;
-	rdfs:range ppr:Step ;
+	rdfs:range ppr:EventStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:hasStepType rdf:type owl:ObjectProperty ;
@@ -174,12 +198,33 @@ ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:domain ppr:Path ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:cites rdf:type owl:ObjectProperty ;
+	rdfs:label "Cites"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:CitingThing ;
+	rdfs:range ppr:Citation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:hasCitationType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has citation type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:Citation ;
+	rdfs:range ppr:CitationType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:parentCitationType rdf:type owl:ObjectProperty ;
+	rdfs:label "Parent citation type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppr:CitationType ;
+	rdfs:range ppr:CitationType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
-ppr:hasAvailability rdf:type owl:ObjectProperty ;
-	rdfs:label "Has availability"@en ;
+ppr:availabilityOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Availability of"@en ;
 	rdfs:comment "Relates a path to its availability over a period of time. A path may have a different availability at different times, but only one availability at any one time. Path with no defined availability are taken to be open."@en ;
-	rdfs:domain ppr:Path ;
-	rdfs:range ppr:Availability ;
+	rdfs:domain ppr:Availability ;
+	rdfs:range ppr:AvailableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasAvailabilityStatus rdf:type owl:ObjectProperty ;
@@ -199,14 +244,14 @@ ppr:inProcedure rdf:type owl:ObjectProperty ;
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Subject to"@en ;
 	rdfs:comment "Relates a work package to the procedure it is subject to. A work package is only subject to one procedure."@en ;
-	rdfs:domain ppr:WorkPackage ;
+	rdfs:domain ppr:ProceduralWorkPackage ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
-ppr:workPackageHasCalculationStyle rdf:type owl:ObjectProperty ;
-	rdfs:label "Work package has calculation style"@en ;
-	rdfs:comment "Relates a work package to the calculation style used by that work package. A work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to."@en ;
-	rdfs:domain ppr:WorkPackage ;
+ppr:proceduralWorkPackageHasCalculationStyle rdf:type owl:ObjectProperty ;
+	rdfs:label "Procedural work package has calculation style"@en ;
+	rdfs:comment "Relates a procedural work package to the calculation style used by that work package. A procedural work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to."@en ;
+	rdfs:domain ppr:ProceduralWorkPackage ;
 	rdfs:range ppr:CalculationStyle ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
@@ -228,7 +273,7 @@ ppr:forStep rdf:type owl:ObjectProperty ;
 	rdfs:label "For step"@en ;
 	rdfs:comment "Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
-	rdfs:range ppr:Step ;
+	rdfs:range ppr:EventStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:depthInProcedure rdf:type owl:ObjectProperty ;
@@ -241,14 +286,14 @@ ppr:depthInProcedure rdf:type owl:ObjectProperty ;
 ppr:stepInLegislature rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in legislature"@en ;
 	rdfs:comment "Relates a step to the devolved legislature in which that step takes place, for example: a legislative consent motion being tabled in the Scottish Parliament."@en ;
-	rdfs:domain ppr:Step ;
+	rdfs:domain ppr:EventStep ;
 	rdfs:range ppr:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in House"@en ;
 	rdfs:comment "Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament."@en ;
-	rdfs:domain ppr:Step ;
+	rdfs:domain ppr:EventStep ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
@@ -262,7 +307,7 @@ ppr:inLegislature rdf:type owl:ObjectProperty ;
 ppr:memberOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Member of"@en ;
 	rdfs:comment "Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none."@en ;
-	rdfs:domain ppr:Step ;
+	rdfs:domain ppr:EventStep ;
 	rdfs:range ppr:StepCollection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
@@ -298,15 +343,15 @@ ppr:workPackageDayCount rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:clockDayCount rdf:type owl:DatatypeProperty ;
-	rdfs:label "Clock day count"@en ;
+ppr:dayCount rdf:type owl:DatatypeProperty ;
+	rdfs:label "Day count"@en ;
 	rdfs:comment "Relates a clock to the number of days of a type - as defined by the calculation style applied to the work package - to be counted by that clock. The day count of a clock may be overridden by the day count set on a work package. Clock day counts in the made affirmative procedure are not set, day counts being set on the work package."@en ;
 	rdfs:domain ppr:Clock ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:displayDepthValue rdf:type owl:DatatypeProperty ;
-	rdfs:label "Display depth value"@en ;
+ppr:displayDepth rdf:type owl:DatatypeProperty ;
+	rdfs:label "Display depth"@en ;
 	rdfs:comment "Relates a step display depth in a procedure to the depth value of the step in that procedure. The depth value is stored as a float in order to allow for the insertion of new steps into a procedure without having to renumber existing steps, for example: 1, 1.12, 2, 3."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range xsd:float ;
