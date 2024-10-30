@@ -5,9 +5,7 @@ Work in progress to design data models for UK Parliament.
 
 Easier to read versions at: https://ukparliament.github.io/ontologies/
 
-Authors: [Christopher Alcock](https://twitter.com/chrisalcockdev), [Silver Oliver](https://twitter.com/silveroliver), [Michael Smethurst](https://twitter.com/fantasticlife), [Anya Somerville](https://twitter.com/bitten_), [Ben Woodhams](https://twitter.com/benwoodhams)
-
-Twitter: [@UKParliData](https://twitter.com/ukparlidata)
+Authors: [Christopher Alcock](https://twitter.com/chrisalcockdev), Jayne Bosworth, [Robert Brook](https://bsky.app/profile/robertbrook.bsky.social), Ned Morrell, [Silver Oliver](https://twitter.com/silveroliver), [Michael Smethurst](https://bsky.app/profile/fantasticlife.bsky.social), [Anya Somerville](https://bsky.app/profile/anyaso.bsky.social), [Ben Woodhams](https://twitter.com/benwoodhams)
 
 GitHub: [ukparliament](https://github.com/ukparliament)
 
