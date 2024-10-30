@@ -161,6 +161,11 @@
            <p>
             Superclasses  &middot; AvailableThing           </p>
         </article>
+        <article class="class" id="ProcedureCollection">
+          <h3>Class <a href="#ProcedureCollection">Procedure collection</a></h3>
+
+          <p>A collection of procedures, for example: the collection containing the Made Affirmative Remedial Order and Draft Affirmative Remedial Order procedures.</p>
+         </article>
         <article class="class" id="Route">
           <h3>Class <a href="#Route">Route</a></h3>
 
@@ -500,6 +505,63 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="parentProcedureCollection">
+          <h3>
+            Object property
+            <a href="#parentProcedureCollection"
+              >Parent procedure collection</a
+            >
+          </h3>
+
+           <p>Relates a procedure collection to its parent procedure collection. A procedure collection has one parent procedure collection, or none.</p>
+
+          <p>
+            <a href="#ProcedureCollection"
+              >ProcedureCollection</a
+            >
+            &mdash; Parent procedure collection &mdash;
+            <a href="#ProcedureCollection">ProcedureCollection</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="parentStepCollection">
+          <h3>
+            Object property
+            <a href="#parentStepCollection"
+              >Parent step collection</a
+            >
+          </h3>
+
+           <p>Relates a step collection to its parent step collection. A step collection may have one parent step collection, or none.</p>
+
+          <p>
+            <a href="#StepCollection"
+              >StepCollection</a
+            >
+            &mdash; Parent step collection &mdash;
+            <a href="#StepCollection">StepCollection</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="partOf">
+          <h3>
+            Object property
+            <a href="#partOf"
+              >Part of</a
+            >
+          </h3>
+
+           <p>Relates a procedure to the procedure collection of which it forms part. For example: the Made Affirmative Remedial Order procedure forming part of the Remedial Order procedure collection. A procedure forms part of one or more collections, or none.</p>
+
+          <p>
+            <a href="#Procedure"
+              >Procedure</a
+            >
+            &mdash; Part of &mdash;
+            <a href="#ProcedureCollection">ProcedureCollection</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="proceduralWorkPackageHasCalculationStyle">
           <h3>
             Object property
@@ -834,7 +896,7 @@
 
     <footer>
       <p>
-        Generated 2024-10-29 09:58:22.104864 from a
+        Generated 2024-10-30 20:38:11.533708 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"
