@@ -129,6 +129,11 @@ ppr:Procedure rdf:type owl:Class ;
 	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:ProcedureCollection rdf:type owl:Class ;
+	rdfs:label "Procedure collection"@en ;
+	rdfs:comment "A collection of procedures, for example: the collection containing the Made Affirmative Remedial Order and Draft Affirmative Remedial Order procedures."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:CalculationStyle rdf:type owl:Class ;
 	rdfs:label "Calculation style"@en ;
 	rdfs:comment "A calculation style is used to record the form of a calculation based on the sitting days counted by a clock, for example: either House being sitting or adjourned for less than four days, both Houses sitting or being adjourned for less than four days, or the House of Commons sitting or being adjourned for less than four days. A calculation style may set out the definition of the first day to be counted."@en ;
@@ -270,6 +275,20 @@ ppr:componentOf rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+ppr:partOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Part of"@en ;
+	rdfs:comment "Relates a procedure to the procedure collection of which it forms part. For example: the Made Affirmative Remedial Order procedure forming part of the Remedial Order procedure collection. A procedure forms part of one or more collections, or none."@en ;
+	rdfs:domain ppr:Procedure ;
+	rdfs:range ppr:ProcedureCollection ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:parentProcedureCollection rdf:type owl:ObjectProperty ;
+	rdfs:label "Parent procedure collection"@en ;
+	rdfs:comment "Relates a procedure collection to its parent procedure collection. A procedure collection has one parent procedure collection, or none."@en ;
+	rdfs:domain ppr:ProcedureCollection ;
+	rdfs:range ppr:ProcedureCollection ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:forStep rdf:type owl:ObjectProperty ;
 	rdfs:label "For step"@en ;
 	rdfs:comment "Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures."@en ;
@@ -309,6 +328,13 @@ ppr:memberOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Member of"@en ;
 	rdfs:comment "Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none."@en ;
 	rdfs:domain ppr:EventStep ;
+	rdfs:range ppr:StepCollection ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:parentStepCollection rdf:type owl:ObjectProperty ;
+	rdfs:label "Parent step collection"@en ;
+	rdfs:comment "Relates a step collection to its parent step collection. A step collection may have one parent step collection, or none."@en ;
+	rdfs:domain ppr:StepCollection ;
 	rdfs:range ppr:StepCollection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
