@@ -6,10 +6,10 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
-@prefix election: <http://parliament.uk/ontologies/election/> .
-@prefix geographic-area: <http://parliament.uk/ontologies/geographic-area/> .
-@prefix geographic-area-overlap: <http://parliament.uk/ontologies/geographic-area-overlap/> .
-@prefix delegation: <http://parliament.uk/ontologies/geographic-area-overlap/> .
+@prefix pe: <http://parliament.uk/ontologies/election/> .
+@prefix parea: <http://parliament.uk/ontologies/geographic-area/> .
+@prefix parea-overlap: <http://parliament.uk/ontologies/geographic-area-overlap/> .
+@prefix del: <http://parliament.uk/ontologies/delegation/> .
 
 
 <http://parliament.uk/ontologies/interface/election> 
@@ -32,6 +32,6 @@
 #######  Equivalent classes #####
 
 # Business item
-delegation:StatutoryThing
+parea:StatutoryThing
 	owl:equivalentClass
-	geographic-area:StatutoryThing .
+	del:StatutoryThing .
