@@ -1,0 +1,37 @@
+@prefix election-interface: <http://parliament.uk/ontologies/interface/election> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+@prefix election: <http://parliament.uk/ontologies/election/> .
+@prefix geographic-area: <http://parliament.uk/ontologies/geographic-area/> .
+@prefix geographic-area-overlap: <http://parliament.uk/ontologies/geographic-area-overlap/> .
+@prefix delegation: <http://parliament.uk/ontologies/geographic-area-overlap/> .
+
+
+<http://parliament.uk/ontologies/interface/election> 
+	owl:imports <https://ukparliament.github.io/ontologies/election/election.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/geographic-area/geographic-area-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/geographic-area-overlap/geographic-area-overlap-ontology.ttl> ;
+	owl:imports <https://ukparliament.github.io/ontologies/delegation/delegation-ontology.ttl> ;
+	rdf:type owl:Ontology ;
+    dcterms:title "Election interface ontology"@en ;
+    dcterms:created "2024-10-31"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "An ontology to combine election-related models for UK Parliament."@en ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned  Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ] .
+		
+
+
+#######  Equivalent classes #####
+
+# Business item
+delegation:StatutoryThing
+	owl:equivalentClass
+	geographic-area:StatutoryThing .
