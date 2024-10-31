@@ -58,7 +58,7 @@
     <main>
       <h1>Election ontology</h1>
 
-      <p id="description">A model describing incumbencies resulting from general elections, by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election regardless of the process by which that election has been conducted, and covers election returns by the 'first past the post' system and those which follow other methods. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.</p>
+      <p id="description">A model describing elections, for example: general elections, by-elections to the House of Commons, by-elections of excepted hereditary peers in the House of Lords and elections to positions including that of the Speaker of the House of Commons. The model describes the result of an election regardless of the process by which that election has been conducted, and covers election returns by the 'first past the post' system and those which follow other methods. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -79,22 +79,22 @@
         <article class="class" id="Candidacy">
           <h3>Class <a href="#Candidacy">Candidacy</a></h3>
 
-          <p>A candidacy of a person standing in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
+          <p>A candidacy of a person standing in an election, for example: the candidacy of Philip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
          </article>
         <article class="class" id="CandidacyResult">
           <h3>Class <a href="#CandidacyResult">Candidacy result</a></h3>
 
-          <p>The result of a candidacy in an election, for example: Phillip Hammond&#39;s win as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
+          <p>The result of a candidacy in an election, for example: the winning candidacy of Philip Hammond as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election.</p>
          </article>
         <article class="class" id="Certification">
           <h3>Class <a href="#Certification">Certification</a></h3>
 
-          <p>A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both the Labour party and the Co-operative Party.</p>
+          <p>A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party at one time, for example: by both the Labour party and the Co-operative Party.</p>
          </article>
         <article class="class" id="ConstituencyArea">
           <h3>Class <a href="#ConstituencyArea">Constituency area</a></h3>
 
-          <p>An area within which members of a constituency group reside. Constituency areas bounding constituency groups represented in the House of Commons are set out by the Boundary Commissions and approved by Parliament.</p>
+          <p>An area within which members of a constituency group are registered to vote. Constituency areas bounding constituency groups represented in the House of Commons are proposed in a boundary review by the Boundary Commissions and established by statute.</p>
          </article>
         <article class="class" id="ConstituencyGroup">
           <h3>Class <a href="#ConstituencyGroup">Constituency group</a></h3>
@@ -109,26 +109,27 @@
         <article class="class" id="Country">
           <h3>Class <a href="#Country">Country</a></h3>
 
-          <p>A country, being either Great Britain or Northern Ireland for the purposes of the election model.</p>
+          <p>A country, for example: Great Britain, England and Wales, Scotland, Ireland and Northern Ireland.</p>
          </article>
         <article class="class" id="Election">
           <h3>Class <a href="#Election">Election</a></h3>
 
-          <p>An election to elect a candidate or candidates to a seat or position.</p>
+          <p>An election to elect a person or persons to a seat or position.</p>
          </article>
         <article class="class" id="Electorate">
           <h3>Class <a href="#Electorate">Electorate</a></h3>
 
-          <p>A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker.</p>
+          <p>A group of people eligible to vote in an election called at a particular time, for example: the group of people eligible to vote in an election to the House of Commons, or members of the House of Commons voting for their Speaker.</p>
          </article>
         <article class="class" id="GeneralElection">
           <h3>Class <a href="#GeneralElection">General election</a></h3>
 
-          <p>A set of elections to seats in the House of Commons held in all constituencies concurrently.</p>
+          <p>A set of elections to the House of Commons, held concurrently in all constituencies.</p>
          </article>
         <article class="class" id="GeneralElectionInBoundarySet">
           <h3>Class <a href="#GeneralElectionInBoundarySet">General election in boundary set</a></h3>
 
+          <p>Provides a means to describe the ordinality of a general election in a boundary set, for example: the 2010 general election being the first general election to take place in the England boundary set established in April 2010 and the second general election to take place in the Scotland boundary set established in April 2005.</p>
          </article>
         <article class="class" id="ParliamentPeriod">
           <h3>Class <a href="#ParliamentPeriod">Parliament period</a></h3>
@@ -143,7 +144,7 @@
         <article class="class" id="PoliticalParty">
           <h3>Class <a href="#PoliticalParty">Political party</a></h3>
 
-          <p>An organisation registered with the Electoral Commission as a political party.</p>
+          <p>An organisation registered by the Electoral Commission as a political party.</p>
          </article>
         <article class="class" id="PoliticalPartyRegistration">
           <h3>Class <a href="#PoliticalPartyRegistration">Political party registration</a></h3>
@@ -309,7 +310,8 @@
             >
           </h3>
 
- 
+           <p>Relates a general election having ordinality in a boundary set to the general election having that ordinality.</p>
+
           <p>
             <a href="#GeneralElectionInBoundarySet"
               >GeneralElectionInBoundarySet</a
@@ -422,7 +424,8 @@
             >
           </h3>
 
- 
+           <p>Relates a boundary set having general election ordinality to the boundary set.</p>
+
           <p>
             <a href="#GeneralElectionInBoundarySet"
               >GeneralElectionInBoundarySet</a
@@ -941,8 +944,8 @@
       <p>Ontology created &middot; <time id="created">2016-10-06</time></p>
 
       <p id="makers">
-        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-   &middot; Carl Baker           &middot; <a href="https://olihawkins.com/">Oli Hawkins</a>
+        Made by   &middot; Anna Buck           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Carl Baker    &middot; Emily Davis           &middot; <a href="https://olihawkins.com/">Oli Hawkins</a>
    &middot; Neil Johnston    &middot; Ned Morrell           &middot; <a href="http://symroe.co.uk/">Sym Roe</a>
           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville        </p>
@@ -950,7 +953,7 @@
 
     <footer>
       <p>
-        Generated 2024-10-31 09:46:11.603586 from a
+        Generated 2024-10-31 09:50:41.122617 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
