@@ -1,21 +1,23 @@
-@prefix pe: <http://parliament.uk/ontologies/election/> . 
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix pe: <http://parliament.uk/ontologies/election/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
-<http://parliament.uk/ontologies/election/> 
+<http://parliament.uk/ontologies/election/>
     rdf:type owl:Ontology ;
     dcterms:title "Election ontology"@en ;
     dcterms:created "2016-10-06"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing incumbencies resulting from general elections, by-elections for seats in the House of Commons, by-elections for excepted hereditary peers in the House of Lords and elections for positions including that of the Speaker of the House of Commons. The model describes the result of an election regardless of the process by which that election has been conducted, and covers election returns by the 'first past the post' system and those which follow other methods. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard."@en ;
+    dcterms:description "A model describing elections, for example: general elections, by-elections to the House of Commons, by-elections of excepted hereditary peers in the House of Lords and elections to positions including that of the Speaker of the House of Commons. The model describes the result of an election regardless of the process by which that election has been conducted, and covers election returns by the 'first past the post' system and those which follow other methods. Where applicable, the model is aligned with the Cabinet Office Election Result Data Standard."@en ;
 	foaf:depiction  <https://ukparliament.github.io/ontologies/election/election.svg> ;
 	foaf:maker
+		[ foaf:name "Anna Buck" ],
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
 		[ foaf:name "Carl Baker" ],
+		[ foaf:name "Emily Davis" ],
 		[ foaf:name "Oli Hawkins"; foaf:homepage <https://olihawkins.com/> ],
 		[ foaf:name "Neil Johnston" ],
 		[ foaf:name "Ned Morrell" ],
@@ -29,7 +31,7 @@
 
 pe:Country rdf:type owl:Class ;
 	rdfs:label "Country"@en ;
-	rdfs:comment "A country, being either Great Britain or Northern Ireland for the purposes of the election model."@en ;
+	rdfs:comment "A country, for example: Great Britain, England and Wales, Scotland, Ireland and Northern Ireland."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:PoliticalPartyRegistration rdf:type owl:Class ;
@@ -39,17 +41,17 @@ pe:PoliticalPartyRegistration rdf:type owl:Class ;
 	
 pe:PoliticalParty rdf:type owl:Class ;
 	rdfs:label "Political party"@en ;
-	rdfs:comment "An organisation registered with the Electoral Commission as a political party."@en ;
+	rdfs:comment "An organisation registered by the Electoral Commission as a political party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:Certification rdf:type owl:Class ;
 	rdfs:label "Certification"@en ;
-	rdfs:comment "A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party, for example: by both the Labour party and the Co-operative Party."@en ;
+	rdfs:comment "A certification of a candidate by a political party to stand in an election on behalf of that party. A candidate may be certified by more than one party at one time, for example: by both the Labour party and the Co-operative Party."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:Candidacy rdf:type owl:Class ;
 	rdfs:label "Candidacy"@en ;
-	rdfs:comment "A candidacy of a person standing in an election, for example: Phillip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
+	rdfs:comment "A candidacy of a person standing in an election, for example: the candidacy of Philip Hammond standing as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:Person rdf:type owl:Class ;
@@ -59,7 +61,7 @@ pe:Person rdf:type owl:Class ;
 	
 pe:CandidacyResult rdf:type owl:Class ;
 	rdfs:label "Candidacy result"@en ;
-	rdfs:comment "The result of a candidacy in an election, for example: Phillip Hammond's win as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
+	rdfs:comment "The result of a candidacy in an election, for example: the winning candidacy of Philip Hammond as the Conservative Party candidate in Runnymede and Weybridge, at the 2015 General Election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:WinningCandidacyResult rdf:type owl:Class ;
@@ -70,7 +72,7 @@ pe:WinningCandidacyResult rdf:type owl:Class ;
 	
 pe:Election rdf:type owl:Class ;
 	rdfs:label "Election"@en ;
-	rdfs:comment "An election to elect a candidate or candidates to a seat or position."@en ;
+	rdfs:comment "An election to elect a person or persons to a seat or position."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:ParliamentPeriod rdf:type owl:Class ;
@@ -80,12 +82,12 @@ pe:ParliamentPeriod rdf:type owl:Class ;
 	
 pe:GeneralElection rdf:type owl:Class ;
 	rdfs:label "General election"@en ;
-	rdfs:comment "A set of elections to seats in the House of Commons held in all constituencies concurrently."@en ;
+	rdfs:comment "A set of elections to the House of Commons, held concurrently in all constituencies."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:GeneralElectionInBoundarySet rdf:type owl:Class ;
 	rdfs:label "General election in boundary set"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Provides a means to describe the ordinality of a general election in a boundary set, for example: the 2010 general election being the first general election to take place in the England boundary set established in April 2010 and the second general election to take place in the Scotland boundary set established in April 2005."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:BoundarySet rdf:type owl:Class ;
@@ -95,7 +97,7 @@ pe:BoundarySet rdf:type owl:Class ;
 	
 pe:Electorate rdf:type owl:Class ;
 	rdfs:label "Electorate"@en ;
-	rdfs:comment "A group of people who are eligible to vote in an election called at a particular time, for example: the group of people entitled to vote in a constituency election, or members of the House of Commons voting for their Speaker."@en ;
+	rdfs:comment "A group of people eligible to vote in an election called at a particular time, for example: the group of people eligible to vote in an election to the House of Commons, or members of the House of Commons voting for their Speaker."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:ConstituencyGroup rdf:type owl:Class ;
@@ -105,9 +107,9 @@ pe:ConstituencyGroup rdf:type owl:Class ;
 	
 pe:ConstituencyArea rdf:type owl:Class ;
 	rdfs:label "Constituency area"@en ;
-	rdfs:comment "An area within which members of a constituency group reside. Constituency areas bounding constituency groups represented in the House of Commons are set out by the Boundary Commissions and approved by Parliament."@en ;
+	rdfs:comment "An area within which members of a constituency group are registered to vote. Constituency areas bounding constituency groups represented in the House of Commons are proposed in a boundary review by the Boundary Commissions and established by statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:ConstituencyGroupSet rdf:type owl:Class ;
 	rdfs:label "Constituency group set"@en ;
 	rdfs:comment "A set of constituency groups, established by statute."@en ;
@@ -117,6 +119,10 @@ pe:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
 	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+	
+	
+																		# edited to here
 		
 			
 
@@ -201,14 +207,14 @@ pe:formsPartOfGeneralElection rdf:type owl:ObjectProperty ;
 	
 pe:forGeneralElection rdf:type owl:ObjectProperty ;
 	rdfs:label "For general election"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a general election having ordinality in a boundary set to the general election having that ordinality."@en ;
 	rdfs:domain pe:GeneralElectionInBoundarySet ;
 	rdfs:range pe:GeneralElection  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:inBoundarySet rdf:type owl:ObjectProperty ;
 	rdfs:label "In boundary set"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a boundary set having general election ordinality to the boundary set."@en ;
 	rdfs:domain pe:GeneralElectionInBoundarySet ;
 	rdfs:range pe:BoundarySet  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
