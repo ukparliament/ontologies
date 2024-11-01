@@ -1,4 +1,4 @@
-# 2024 - Week 43
+# 2024 - Week 44
 
 As the clocks slip back and the nights lengthen, everything is running a little backwards. Both in terms of week and notes. For once we start at the end, with an update on our outreach and engagement strategy.
 
