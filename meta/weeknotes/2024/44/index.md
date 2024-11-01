@@ -40,7 +40,7 @@ Our new annotated MNIS schema picture can be found as a [PDF](https://github.com
 
 ## On indexing and the reviewing of indexing
 
-Two pieces of late breaking news over in indexing land, the first concerning a mammoth effort to check 748 draft statutory instruments laid prior to the 57th Parliament. Or 2017 in old money. Some going back as far as 1984. All [748 have been checked](https://trello.com/c/IQuDjxRW/313-old-draft-sis-that-need-updating-have-they-been-made), with those found to be have departed Parliament and subsequently made gaining a made date and a reclassification. Links to pertinent proceedings also being added. Top work from Librarian Emma there.
+Two pieces of late breaking news over in indexing land, the first concerning a mammoth effort to check roughly 1,500 draft statutory instruments laid prior to the 57th Parliament. Or 2017 in old money. Some going back as far as 1984. All [1,500 have been checked](https://trello.com/c/IQuDjxRW/313-old-draft-sis-that-need-updating-have-they-been-made), around 880 being found to have departed Parliament and subsequently been made. The 880 have gained a made date and a reclassification, links to pertinent proceedings also being added. Top work from Librarian Emma there.
 
 Work over in new, old search-land turned up 22 records having no assigned type. Most appeared to be ministerial corrections but checking was required. So check Librarian Jayne did. Checking complete, a call went in to colleagues in the [Computational Section](https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/) and [that call has now been answered](https://trello.com/c/DFBsYI1e/342-records-without-type), all 22 records finding new homes on correct shelves.
 
