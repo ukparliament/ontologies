@@ -38,6 +38,12 @@ Luckily, before doing that, we'd managed to find the time to sit down with the [
 
 Our new annotated MNIS schema picture can be found as a [PDF](https://github.com/ukparliament/ontologies/blob/master/meta/relational/mnis/idms-concerns/schema.pdf) or an [SVG](https://github.com/ukparliament/ontologies/blob/master/meta/relational/mnis/idms-concerns/schema.svg) in everyone's favourite GitHub repo. Why not print one out and pin it to your bedroom wall? Should your bedroom wall be large enough.
 
+## On indexing and the reviewing of indexing
+
+Two pieces of late breaking news over in indexing land, the first concerning a mammoth effort to check 748 draft statutory instruments laid prior to the 57th Parliament. Or 2017 in old money. Some going back as far as 1984. All [748 have been checked](https://trello.com/c/IQuDjxRW/313-old-draft-sis-that-need-updating-have-they-been-made), with those found to be have departed Parliament and subsequently made gaining a made date and a reclassification. Links to pertinent proceedings also being added. Top work from Librarian Emma there.
+
+Work over in new, old search-land turned up 22 records having no assigned type. Most appeared to be ministerial corrections but checking was required. So check Librarian Jayne did. Checking complete, a call went in to colleagues in the [Computational Section](https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/) and [that call has now been answered](https://trello.com/c/DFBsYI1e/342-records-without-type), all 22 records finding new homes on correct shelves.
+
 ## Farewell - for now? - Mastodon
 
 Our regular reader will be well aware of the time and effort Librarian Anna - in particular - has put into our [army of Mastodon and Bluesky bot accounts](https://ukparliament.github.io/ontologies/meta/bots/). Imagine then our disappointment when [Shedcode](https://shedcode.co.uk/) [James](https://mastodon.me.uk/@jamesjefferies) got in touch to pass on the message that [botsinspace](https://botsin.space/about) - our chosen provider for Mastodon bottery - had [announced its imminent closure](https://muffinlabs.com/posts/2024/10/29/10-29-rip-botsin-space/). Or sunsetting, as Young Robert might say. Brilliant. Just brilliant.
