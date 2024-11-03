@@ -1,6 +1,6 @@
 # 2024 - Week 44
 
-As the clocks slip back and the nights lengthen, everything is running a little backwards in terms of both the week and the notes. For once, we start at the end with an update on our outreach and engagement strategy.
+As the clocks slip back and the nights lengthen, everything is running a little backwards in terms of both the week and the notes. For once we start at the end, with an update on our outreach and engagement strategy.
 
 ## Outreach and engagement
 
