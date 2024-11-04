@@ -177,7 +177,7 @@
             >
           </h3>
 
-           <p>Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a certification by the Labour party.</p>
+           <p>Relates a certification of a candidacy to another certification of the same candidacy to which the first certification is adjunct, for example: relating a Co-operative Party certification to a certification by the Labour party.</p>
 
           <p>
             <a href="#Certification"
@@ -196,7 +196,7 @@
             >
           </h3>
 
-           <p>Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group.</p>
+           <p>Relates a constituency group to a geographic area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. Since 1950, constituency groups represented in the House of Commons are within a constituency area. A new boundary set results in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group.</p>
 
           <p>
             <a href="#ConstituencyGroup"
@@ -245,25 +245,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="definedIn">
-          <h3>
-            Object property
-            <a href="#definedIn"
-              >Defined in</a
-            >
-          </h3>
-
-           <p>Relates a constituency group to the constituency group set of which it forms part.</p>
-
-          <p>
-            <a href="#ConstituencyGroup"
-              >ConstituencyGroup</a
-            >
-            &mdash; Defined in &mdash;
-            <a href="#ConstituencyGroupSet">ConstituencyGroupSet</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="establishedBy">
           <h3>
             Object property
@@ -291,7 +272,7 @@
             >
           </h3>
 
-           <p>Relates an election to the constituency group who are represented by the winner of that election. An election is always for one constituency group.</p>
+           <p>Relates an election to the constituency group represented by the winner of that election. An election is always for one constituency group.</p>
 
           <p>
             <a href="#Election"
@@ -329,7 +310,7 @@
             >
           </h3>
 
-           <p>Relates a general election to the subsequent Parliament period for which the general election is called. A general election is related to one Parliament period.</p>
+           <p>Relates a general election to the Parliament period for which the general election is called. A general election is related to one Parliament period.</p>
 
           <p>
             <a href="#GeneralElection"
@@ -337,6 +318,25 @@
             >
             &mdash; For Parliament period &mdash;
             <a href="#ParliamentPeriod">ParliamentPeriod</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="formsPartOfConstituencyGroupSet">
+          <h3>
+            Object property
+            <a href="#formsPartOfConstituencyGroupSet"
+              >Forms part of constituency group set</a
+            >
+          </h3>
+
+           <p>Relates a constituency group to the constituency group set of which it forms part. A constituency group forms part of one constituency group set.</p>
+
+          <p>
+            <a href="#ConstituencyGroup"
+              >ConstituencyGroup</a
+            >
+            &mdash; Forms part of constituency group set &mdash;
+            <a href="#ConstituencyGroupSet">ConstituencyGroupSet</a>
           </p>
         </article>
 
@@ -378,25 +378,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasCandidate">
-          <h3>
-            Object property
-            <a href="#hasCandidate"
-              >Has candidate</a
-            >
-          </h3>
-
-           <p>Relates a candidacy to a person being a candidate. A candidacy is of one person.</p>
-
-          <p>
-            <a href="#Candidacy"
-              >Candidacy</a
-            >
-            &mdash; Has candidate &mdash;
-            <a href="#Person">Person</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="hasElectorate">
           <h3>
             Object property
@@ -405,7 +386,7 @@
             >
           </h3>
 
-           <p>Relates an election to the group of people eligible to vote in that election. An election has one electorate. An electorate may be eligible to vote in one or more elections over time.</p>
+           <p>Relates an election to the group of people eligible to vote in that election. An election has one electorate. The same group of people forming an electorate may be eligible to vote in one or more elections over time, or none.</p>
 
           <p>
             <a href="#Election"
@@ -454,25 +435,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="includedIn">
-          <h3>
-            Object property
-            <a href="#includedIn"
-              >Included in</a
-            >
-          </h3>
-
-           <p>Relates an electorate to the constituency group they are included in. An electorate is included in one constituency group.</p>
-
-          <p>
-            <a href="#Electorate"
-              >Electorate</a
-            >
-            &mdash; Included in &mdash;
-            <a href="#ConstituencyGroup">ConstituencyGroup</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="intoParliamentPeriod">
           <h3>
             Object property
@@ -492,6 +454,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="isOfPerson">
+          <h3>
+            Object property
+            <a href="#isOfPerson"
+              >Is of person</a
+            >
+          </h3>
+
+           <p>Relates a candidacy to a person being a candidate. A candidacy is of one recorded person, or none.</p>
+
+          <p>
+            <a href="#Candidacy"
+              >Candidacy</a
+            >
+            &mdash; Is of person &mdash;
+            <a href="#Person">Person</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="issuedBy">
           <h3>
             Object property
@@ -500,7 +481,7 @@
             >
           </h3>
 
-           <p>Relates a certification of a candidacy to the party issuing that certification. A certification is issued by one political party.</p>
+           <p>Relates a certification of a candidacy to the political party issuing that certification. A certification is issued by one political party.</p>
 
           <p>
             <a href="#Certification"
@@ -953,7 +934,7 @@
 
     <footer>
       <p>
-        Generated 2024-11-03 18:46:43.217829 from a
+        Generated 2024-11-04 16:39:53.381695 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
