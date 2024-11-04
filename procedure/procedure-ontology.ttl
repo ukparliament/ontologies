@@ -11,7 +11,7 @@
     dcterms:title "Procedure ontology"@en ;
     dcterms:created "2018-02-20"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure."@en ;
+    dcterms:description "A process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work resulting from a bill or an instrument subject to a procedure."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/procedure/procedure.svg> ;
 	foaf:maker
 		[ foaf:name "Chris Alcock" ],
@@ -36,7 +36,7 @@
 
 ppr:Event rdf:type owl:Class ;
 	rdfs:label "Event"@en ;
-	rdfs:comment "An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister."@en ;
+	rdfs:comment "An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:WorkPackage rdf:type owl:Class ;
@@ -57,35 +57,35 @@ ppr:PaperWork rdf:type owl:Class ;
 	
 ppr:StepType rdf:type owl:Class ;
 	rdfs:label "Step type"@en ;
-	rdfs:comment "A step has one type. The type of a step is a business step, decision step, logical NOT step, logical AND step, logical OR step, arithmetic SUM step, arithmetic INCREMENT step, arithmetic EQUALS step, or summation step."@en ;
-	rdfs:seeAlso <https://ukparliament.github.io/ontologies/procedure/flowcharts/meta/design-notes/> ;
+	rdfs:comment "The type of a step being an event step, decision step, logical NOT step, logical AND step, logical OR step, arithmetic SUM step, arithmetic INCREMENT step, arithmetic EQUALS step, or summation step."@en ;
+	rdfs:seeAlso <https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/> ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Step rdf:type owl:Class ;
 	rdfs:label "Step"@en ;
-	rdfs:comment "A step is either an event step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:CitingThing rdf:type owl:Class ;
-	rdfs:label "Citing thing"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
-ppr:Citation rdf:type owl:Class ;
-	rdfs:label "Citation"@en ;
-	rdfs:comment ""@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-ppr:CitationType rdf:type owl:Class ;
-	rdfs:label "Citation type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A step having a type. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step by means of routes."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:EventStep rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Step ;
 	rdfs:subClassOf ppr:CitingThing ;
 	rdfs:label "Event step"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A step of type event, being the abstract notion of an event happening inside or outside Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:CitingThing rdf:type owl:Class ;
+	rdfs:label "Citing thing"@en ;
+	rdfs:comment "A thing which may have a citation."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
+ppr:Citation rdf:type owl:Class ;
+	rdfs:label "Citation"@en ;
+	rdfs:comment "A citation."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+ppr:CitedThingType rdf:type owl:Class ;
+	rdfs:label "Cited thing type"@en ;
+	rdfs:comment "The type of the thing being cited, for example: an Act of Parliament, a House of Commons public standing order or a Speaker's ruling."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:AvailableThing rdf:type owl:Class ;
@@ -97,36 +97,36 @@ ppr:AvailableThing rdf:type owl:Class ;
 ppr:Availability rdf:type owl:Class ;
 	rdfs:subClassOf ppr:CitingThing ;
 	rdfs:label "Availability"@en ;
-	rdfs:comment "The availability of a path or procedure over time. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee."@en ;
+	rdfs:comment "The availability of a path - being a route or a clock - or a procedure over time. Availability may change as a result of a change to legislation, for example: the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will remain open - as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee. A thing, having been closed, may reopen."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:AvailabilityStatus rdf:type owl:Class ;
 	rdfs:label "Availability status"@en ;
-	rdfs:comment "The status of a route's availability, being either open or closed."@en ;
+	rdfs:comment "The status of an availability, being either open or closed."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Path rdf:type owl:Class ;
 	rdfs:subClassOf ppr:AvailableThing ;
 	rdfs:label "Path"@en ;
-	rdfs:comment "A path is a link from one step to another in a procedure."@en ;
+	rdfs:comment "A path is a link from one step to another step in a procedure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Route rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Path ;
 	rdfs:label "Route"@en ;
-	rdfs:comment "A route is a link from one step to another. A route is available when the from step is True, actualised by an event having a date in the past, or by the input from a logic gate step being True. A route directly linking a business step actualised by an event with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship."@en ;
+	rdfs:comment "A path which may be traversed, taking inputs from event steps actualised by events in a work package, being processed by logical, arithmetic and decision steps, in order to determine the potential future states of all event steps in the procedure the work package is subject to."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:Clock rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Path ;
 	rdfs:label "Clock"@en ;
-	rdfs:comment "A clock sets out a number of days to be counted between a start step and an end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the event actualising a start step and the date of the event actualising an end step. The start date of a clock is the date of the event which actualises the start step of that clock. The end date of a clock is the date of the event which actualises the end step of that clock. In a work package, the period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. Calculation styles are dependent on sitting days in one or both Houses. End dates of clocks in work packages currently before Parliament may change if sitting days change."@en ;
+	rdfs:comment "A clock sets out a number of days to be counted between a clock start step and a clock end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the event actualising a clock start step and the date of the event actualising a clock end step. The period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. End dates of clocks in work packages currently before Parliament may change."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
 ppr:Procedure rdf:type owl:Class ;
 	rdfs:subClassOf ppr:AvailableThing ;
 	rdfs:label "Procedure"@en ;
-	rdfs:comment "A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification."@en ;
+	rdfs:comment "A procedure in a legislature. For example, the passage of a made affirmative statutory instrument in both Houses. This procedure consists of business in a House, such as a division; business undertaken by both Houses jointly, such as consideration by a joint committee; processes applying to either House, such as a clock; and activities outside Parliament, such as the making of the statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:ProcedureCollection rdf:type owl:Class ;
@@ -137,12 +137,30 @@ ppr:ProcedureCollection rdf:type owl:Class ;
 ppr:CalculationStyle rdf:type owl:Class ;
 	rdfs:label "Calculation style"@en ;
 	rdfs:comment "A calculation style is used to record the form of a calculation based on the sitting days counted by a clock, for example: either House being sitting or adjourned for less than four days, both Houses sitting or being adjourned for less than four days, or the House of Commons sitting or being adjourned for less than four days. A calculation style may set out the definition of the first day to be counted."@en ;
+	rdfs:seeAlso <https://api.parliament.uk/egg-timer/calculator/styles> ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+	
+							# edited to here
+							
+							
+							
 ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:label "Step display depth in procedure"@en ;
-	rdfs:comment "The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes 'procedural sense', for example: we may show 'procedure concluded' before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening."@en ;
+	rdfs:comment "The display depth of an event step in a procedure. An event or events may actualise two different steps in the same work package on the same day.
+	
+	
+	
+	Because we capture dates rather than times of events it is not possible to order events in a way that makes 'procedural sense', for example: we may show 'procedure concluded' before 'instrument approved'.
+	
+	
+	
+	
+	This class records the display depth of each of those event steps, associating a number with each step in the procedure in order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening. A step with depth 8 may happen before a step with depth 7."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+	
+
 	
 ppr:Legislature rdf:type owl:Class ;
 	rdfs:label "Legislature"@en ;
@@ -212,15 +230,15 @@ ppr:cites rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Citation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:hasCitationType rdf:type owl:ObjectProperty ;
-	rdfs:label "Has citation type"@en ;
+ppr:hasCitedThingType rdf:type owl:ObjectProperty ;
+	rdfs:label "Has cited thing type"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppr:Citation ;
-	rdfs:range ppr:CitationType ;
+	rdfs:range ppr:CitedThingType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:parentCitationType rdf:type owl:ObjectProperty ;
-	rdfs:label "Parent citation type"@en ;
+ppr:parentCitedThingType rdf:type owl:ObjectProperty ;
+	rdfs:label "Parent cited thing type"@en ;
 	rdfs:comment ""@en ;
 	rdfs:domain ppr:CitationType ;
 	rdfs:range ppr:CitationType ;
