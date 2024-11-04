@@ -119,12 +119,8 @@ pe:StatutoryThing rdf:type owl:Class ;
 	rdfs:label "Statutory thing"@en ;
 	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-	
-	
-																		# edited to here
-		
-			
+
+
 
 #######  Object properties #####
 
@@ -139,19 +135,19 @@ pe:registrationOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Registration of"@en ;
 	rdfs:comment "Relates a political party registration to the political party being registered. A political party registration is of one political party. A political party may have one or more political party registrations over time and in different countries."@en ;
 	rdfs:domain pe:PoliticalPartyRegistration ;
-	rdfs:range pe:PoliticalParty  ;
+	rdfs:range pe:PoliticalParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:issuedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Issued by"@en ;
-	rdfs:comment "Relates a certification of a candidacy to the party issuing that certification. A certification is issued by one political party."@en ;
+	rdfs:comment "Relates a certification of a candidacy to the political party issuing that certification. A certification is issued by one political party."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:PoliticalParty  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:adjunctTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Adjunct to"@en ;
-	rdfs:comment "Relates a certification to another certification to which it is adjunct, for example: relating a Co-operative Party certification to a certification by the Labour party."@en ;
+	rdfs:comment "Relates a certification of a candidacy to another certification of the same candidacy to which the first certification is adjunct, for example: relating a Co-operative Party certification to a certification by the Labour party."@en ;
 	rdfs:domain pe:Certification ;
 	rdfs:range pe:Certification  ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -163,25 +159,25 @@ pe:certificationOf rdf:type owl:ObjectProperty ;
 	rdfs:range pe:Candidacy ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:hasCandidate rdf:type owl:ObjectProperty ;
-	rdfs:label "Has candidate"@en ;
-	rdfs:comment "Relates a candidacy to a person being a candidate. A candidacy is of one person."@en ;
+pe:isOfPerson rdf:type owl:ObjectProperty ;
+	rdfs:label "Is of person"@en ;
+	rdfs:comment "Relates a candidacy to a person being a candidate. A candidacy is of one recorded person, or none."@en ;
 	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:Person  ;
+	rdfs:range pe:Person ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
 	rdfs:label "Has candidacy result"@en ;
 	rdfs:comment "Relates a candidacy in an election to the result of that candidacy. A candidacy has one candidacy result. A candidacy result is for one candidacy."@en ;
 	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:CandidacyResult  ;
+	rdfs:range pe:CandidacyResult ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:inElection rdf:type owl:ObjectProperty ;
 	rdfs:label "In election"@en ;
 	rdfs:comment "Relates a candidacy to the election that candidacy is in. A candidacy is in one election."@en ;
 	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:Election  ;
+	rdfs:range pe:Election ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
@@ -193,7 +189,7 @@ pe:intoParliamentPeriod rdf:type owl:ObjectProperty ;
 	
 pe:forParliamentPeriod rdf:type owl:ObjectProperty ;
 	rdfs:label "For Parliament period"@en ;
-	rdfs:comment "Relates a general election to the subsequent Parliament period for which the general election is called. A general election is related to one Parliament period."@en ;
+	rdfs:comment "Relates a general election to the Parliament period for which the general election is called. A general election is related to one Parliament period."@en ;
 	rdfs:domain pe:GeneralElection ;
 	rdfs:range pe:ParliamentPeriod ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -221,35 +217,28 @@ pe:inBoundarySet rdf:type owl:ObjectProperty ;
 
 pe:forConstituencyGroup rdf:type owl:ObjectProperty ;
 	rdfs:label "For constituency group"@en ;
-	rdfs:comment "Relates an election to the constituency group who are represented by the winner of that election. An election is always for one constituency group."@en ;
+	rdfs:comment "Relates an election to the constituency group represented by the winner of that election. An election is always for one constituency group."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:ConstituencyGroup ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:hasElectorate rdf:type owl:ObjectProperty ;
 	rdfs:label "Has electorate"@en ;
-	rdfs:comment "Relates an election to the group of people eligible to vote in that election. An election has one electorate. An electorate may be eligible to vote in one or more elections over time."@en ;
+	rdfs:comment "Relates an election to the group of people eligible to vote in that election. An election has one electorate. The same group of people forming an electorate may be eligible to vote in one or more elections over time, or none."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range pe:Electorate ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:includedIn rdf:type owl:ObjectProperty ;
-	rdfs:label "Included in"@en ;
-	rdfs:comment "Relates an electorate to the constituency group they are included in. An electorate is included in one constituency group."@en ;
-	rdfs:domain pe:Electorate ;
-	rdfs:range pe:ConstituencyGroup ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
 pe:boundedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Bounded by"@en ;
-	rdfs:comment "Relates a constituency group to a geographic area. Constituency groups represented in the House of Commons are within a constituency area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. A boundary set change will result in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group."@en ;
+	rdfs:comment "Relates a constituency group to a geographic area. Some historical constituency groups had no defined geographical extent, for example: Oxford University. Since 1950, constituency groups represented in the House of Commons are within a constituency area. A new boundary set results in the creation of both a new constituency area and a new constituency group. A constituency group is bounded by one constituency area, or none. A constituency area bounds one constituency group."@en ;
 	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:ConstituencyArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:definedIn rdf:type owl:ObjectProperty ;
-	rdfs:label "Defined in"@en ;
-	rdfs:comment "Relates a constituency group to the constituency group set of which it forms part."@en ;
+pe:formsPartOfConstituencyGroupSet rdf:type owl:ObjectProperty ;
+	rdfs:label "Forms part of constituency group set"@en ;
+	rdfs:comment "Relates a constituency group to the constituency group set of which it forms part. A constituency group forms part of one constituency group set."@en ;
 	rdfs:domain pe:ConstituencyGroup ;
 	rdfs:range pe:ConstituencyGroupSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -267,6 +256,9 @@ pe:establishedBy rdf:type owl:ObjectProperty ;
 	rdfs:domain pe:ConstituencyGroupSet ;
 	rdfs:range pe:StatutoryThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+	
+					# edited to here
 
 
 
