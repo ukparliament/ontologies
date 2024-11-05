@@ -102,6 +102,13 @@ ptable:tabledBy rdf:type owl:ObjectProperty ;
 	rdfs:range ptable:Incumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 
+ptable:withdrawnBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Withdrawn by"@en ;
+	rdfs:comment "Relates an act of withdrawal to the incumbency of the Member withdrawing. An act of withdrawal is by one incumbent Member."@en ;
+	rdfs:domain ptable:Withdrawal ;
+	rdfs:range ptable:Incumbency ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
 ptable:withdraws rdf:type owl:ObjectProperty ;
 	rdfs:label "Withdraws"@en ;
 	rdfs:comment "Relates an act of withdrawal to the tabled thing withdrawn by the act of withdrawal. An act of withdrawal withdraws one tabled thing. A tabled thing is withdrawn by one act of tabling, or none."@en ;
