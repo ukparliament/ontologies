@@ -22,7 +22,13 @@
 
 #######  Classes #####
 
+ptable:Event rdf:type owl:Class ;
+	rdfs:label "Event"@en ;
+	rdfs:comment "An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
+
 ptable:Tabling rdf:type owl:Class ;
+	rdfs:subClassOf ptable:Event ;
 	rdfs:label "Tabling"@en ;
 	rdfs:comment "The act of tabling a business item - being a question, a motion, an amendment or a committee membership nomination - into either the House of Commons or House of Lords. Members submit business items to the procedural offices. If accepted, the business item is considered to be tabled and will then appear as a written notice in the business papers for the next day. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
@@ -48,6 +54,7 @@ ptable:Incumbency rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
 	
 ptable:Withdrawal rdf:type owl:Class ;
+	rdfs:subClassOf ptable:Event ;
 	rdfs:label "Withdrawal"@en ;
 	rdfs:comment "The act of withdrawing a tabled thing from a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/tabling/> .
