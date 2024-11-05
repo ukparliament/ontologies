@@ -140,27 +140,10 @@ ppr:CalculationStyle rdf:type owl:Class ;
 	rdfs:seeAlso <https://api.parliament.uk/egg-timer/calculator/styles> ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-	
-							# edited to here
-							
-							
-							
 ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:label "Step display depth in procedure"@en ;
-	rdfs:comment "The display depth of an event step in a procedure. An event or events may actualise two different steps in the same work package on the same day.
-	
-	
-	
-	Because we capture dates rather than times of events it is not possible to order events in a way that makes 'procedural sense', for example: we may show 'procedure concluded' before 'instrument approved'.
-	
-	
-	
-	
-	This class records the display depth of each of those event steps, associating a number with each step in the procedure in order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening. A step with depth 8 may happen before a step with depth 7."@en ;
+	rdfs:comment "The display depth of an event step in a procedure. An event or events may actualise two different steps in the same work package on the same day. Because we capture dates rather than times of events it was not possible to order events in a way that made 'procedural sense', for example: we may have shown 'Procedure concluded' before 'Instrument approved'. This class records the display depth of an event step forming part of the procedure, associating a display depth number with each step. For example: the 'Instrument created' event step in the draft affirmative procedure has a display depth of 1.0, whereas the 'Laid before the House of Commons' event step in the same procedure has a display depth of 3.1. These numbers are used to order events in a work package sharing the same date. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening. An event step with depth 8 may happen before an event step with depth 7, if those two event steps are on different branches of the procedure map."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-	
-
 	
 ppr:Legislature rdf:type owl:Class ;
 	rdfs:label "Legislature"@en ;
@@ -174,9 +157,10 @@ ppr:House rdf:type owl:Class ;
 	
 ppr:StepCollection rdf:type owl:Class ;
 	rdfs:label "Step collection"@en ;
-	rdfs:comment "A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps. A step collection named 'Starting steps' collects steps which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named 'Concluding steps' collects steps which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named 'Website visible steps' collects steps which are intended to be visible on a website work package page once actualised by a business item in that work package. A procedure may have one or more steps described as website visible. A step collection named 'Second reading', within the House of Commons, collects steps forming that stage in that House. A step collection named 'Member action steps' collects steps which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps."@en ;
+	rdfs:comment "A collection of steps. Step collections collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps."@en ;
+	rdfs:seeAlso <https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#step-collections> ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
+
 
 
 #######  Object properties #####
@@ -195,12 +179,26 @@ ppr:focus rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:PaperWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
+	
+		# edited to here
+		
+		
+		
+		
+		
+		
+	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
-	rdfs:comment "Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events in separate work packages."@en ;
+	rdfs:comment "Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events."@en ;
 	rdfs:domain ppr:Event ;
 	rdfs:range ppr:EventStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+
+	
+	
+	
 
 ppr:hasStepType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has step type"@en ;
