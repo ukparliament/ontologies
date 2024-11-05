@@ -58,7 +58,7 @@
     <main>
       <h1>Procedure ontology</h1>
 
-      <p id="description">A general purpose process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work in Parliament resulting from a bill or an instrument subject to a procedure.</p>
+      <p id="description">A process flow model used to describe parliamentary procedure as a set of steps connected by routes. A step is a waypoint in a process, a route is a direction between steps and a procedure is analogous to a map of all possible routes. The model also describes the package of work resulting from a bill or an instrument subject to a procedure.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -74,14 +74,14 @@
         <article class="class" id="Availability">
           <h3>Class <a href="#Availability">Availability</a></h3>
 
-          <p>The availability of a path or procedure over time. A route may reopen after being closed. The availability of a route may change as a result of a change to legislation, for example: routes in the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will only remain open- as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee.</p>
+          <p>The availability of a path - being a route or a clock - or a procedure over time. Availability may change as a result of a change to legislation, for example: the procedure for proposed negative statutory instruments laid under Section 8 of the European Union (Withdrawal) Act 2018 will remain open - as set out under the Act - until two years after completion day. The availability of a route may change as a result of a standing order being introduced, suspended or rescinded, for example: the standing orders setting out rules for English Votes for English Laws were first suspended, then rescinded. The availability of a route may change as a result of an order of a House in Parliament, for example: a formal proceeding may establish a new committee, creating a new route to a step for consideration by that committee. A thing, having been closed, may reopen.</p>
            <p>
             Superclasses  &middot; CitingThing           </p>
         </article>
         <article class="class" id="AvailabilityStatus">
           <h3>Class <a href="#AvailabilityStatus">Availability status</a></h3>
 
-          <p>The status of a route&#39;s availability, being either open or closed.</p>
+          <p>The status of an availability, being either open or closed.</p>
          </article>
         <article class="class" id="AvailableThing">
           <h3>Class <a href="#AvailableThing">Available thing</a></h3>
@@ -98,30 +98,34 @@
         <article class="class" id="Citation">
           <h3>Class <a href="#Citation">Citation</a></h3>
 
+          <p>A citation.</p>
          </article>
-        <article class="class" id="CitationType">
-          <h3>Class <a href="#CitationType">Citation type</a></h3>
+        <article class="class" id="CitedThingType">
+          <h3>Class <a href="#CitedThingType">Cited thing type</a></h3>
 
+          <p>The type of the thing being cited, for example: an Act of Parliament, a House of Commons public standing order or a Speaker&#39;s ruling.</p>
          </article>
         <article class="class" id="CitingThing">
           <h3>Class <a href="#CitingThing">Citing thing</a></h3>
 
+          <p>A thing which may have a citation.</p>
          </article>
         <article class="class" id="Clock">
           <h3>Class <a href="#Clock">Clock</a></h3>
 
-          <p>A clock sets out a number of days to be counted between a start step and an end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the event actualising a start step and the date of the event actualising an end step. The start date of a clock is the date of the event which actualises the start step of that clock. The end date of a clock is the date of the event which actualises the end step of that clock. In a work package, the period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. Calculation styles are dependent on sitting days in one or both Houses. End dates of clocks in work packages currently before Parliament may change if sitting days change.</p>
+          <p>A clock sets out a number of days to be counted between a clock start step and a clock end step in a procedure. Within a work package, a clock is used to record the period of time between the date of the event actualising a clock start step and the date of the event actualising a clock end step. The period of time resulting from a clock is dependent on the start date of the clock, the day count of the clock and the calculation style. End dates of clocks in work packages currently before Parliament may change.</p>
            <p>
             Superclasses  &middot; Path           </p>
         </article>
         <article class="class" id="Event">
           <h3>Class <a href="#Event">Event</a></h3>
 
-          <p>An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper, the making of a statutory instrument by a government minister.</p>
+          <p>An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
          </article>
         <article class="class" id="EventStep">
           <h3>Class <a href="#EventStep">Event step</a></h3>
 
+          <p>A step of type event, being the abstract notion of an event happening inside or outside Parliament.</p>
            <p>
             Superclasses  &middot; Step  &middot; CitingThing           </p>
         </article>
@@ -143,7 +147,7 @@
         <article class="class" id="Path">
           <h3>Class <a href="#Path">Path</a></h3>
 
-          <p>A path is a link from one step to another in a procedure.</p>
+          <p>A path is a link from one step to another step in a procedure.</p>
            <p>
             Superclasses  &middot; AvailableThing           </p>
         </article>
@@ -157,7 +161,7 @@
         <article class="class" id="Procedure">
           <h3>Class <a href="#Procedure">Procedure</a></h3>
 
-          <p>A procedure in a House or Houses. For example, the passage of a made affirmative statutory instrument in both Houses. A procedure may consist of business in a particular House, such as a division; business undertaken by both Houses jointly, such as a joint committee; processes applying to either House, such as a time period; and activities outside Parliament, such as the making of a statutory instrument. In this model a procedure that consists of business in both Houses is considered as a single procedure. Procedures may be constructed from commonly occurring sets of routes. For example, the set of routes involved in EVEL certification.</p>
+          <p>A procedure in a legislature. For example, the passage of a made affirmative statutory instrument in both Houses. This procedure consists of business in a House, such as a division; business undertaken by both Houses jointly, such as consideration by a joint committee; processes applying to either House, such as a clock; and activities outside Parliament, such as the making of the statutory instrument.</p>
            <p>
             Superclasses  &middot; AvailableThing           </p>
         </article>
@@ -169,29 +173,29 @@
         <article class="class" id="Route">
           <h3>Class <a href="#Route">Route</a></h3>
 
-          <p>A route is a link from one step to another. A route is available when the from step is True, actualised by an event having a date in the past, or by the input from a logic gate step being True. A route directly linking a business step actualised by an event with a date in the past to a business step which has not been actualised indicates that actualisation of the step will happen in the future, being a causal relationship.</p>
+          <p>A path which may be traversed, taking inputs from event steps actualised by events in a work package, being processed by logical, arithmetic and decision steps, in order to determine the potential future states of all event steps in the procedure the work package is subject to.</p>
            <p>
             Superclasses  &middot; Path           </p>
         </article>
         <article class="class" id="Step">
           <h3>Class <a href="#Step">Step</a></h3>
 
-          <p>A step is either an event step, a logic gate step or a decision step. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step.</p>
+          <p>A step having a type. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named &#39;English Votes for English Laws (EVEL) consideration&#39;. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step by means of routes.</p>
          </article>
         <article class="class" id="StepCollection">
           <h3>Class <a href="#StepCollection">Step collection</a></h3>
 
-          <p>A collection of steps. Step collections are used to collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps. A step collection named &#39;Starting steps&#39; collects steps which, when actualised in a work package, denote that that work package is considered to be started. A procedure may have one or more starting steps. A step collection named &#39;Concluding steps&#39; collects steps which, when actualised in a work package, denote that that work package is considered to be concluded. A procedure may have one or more concluding steps. A step collection named &#39;Website visible steps&#39; collects steps which are intended to be visible on a website work package page once actualised by a business item in that work package. A procedure may have one or more steps described as website visible. A step collection named &#39;Second reading&#39;, within the House of Commons, collects steps forming that stage in that House. A step collection named &#39;Member action steps&#39; collects steps which are considered to be steps at which a Member is able to take an action. A procedure may have one or more steps considered to be Member action steps.</p>
+          <p>A collection of steps. Step collections collect steps of one type, for example: starting steps, concluding steps, website display steps, bill stage steps, or Member action steps.</p>
          </article>
         <article class="class" id="StepDisplayDepthInProcedure">
           <h3>Class <a href="#StepDisplayDepthInProcedure">Step display depth in procedure</a></h3>
 
-          <p>The display depth of a business step in a procedure. There are occasions on which two business items actualising two different steps happen in the same work package on the same day: this class determines the display depth of those two business items. Because we capture dates rather than times of business items it is not possible to order business items in a way that makes &#39;procedural sense&#39;, for example: we may show &#39;procedure concluded&#39; before an instrument has been approved. Step display depth exists in order to allow a number to be associated with a step in a procedure allowing us to order by the date of the business item, then by the display depth of the step in the procedure. Display depth in this context is not absolute across the procedure. A step with depth 8 may happen before a step with depth 7. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening.</p>
+          <p>The display depth of an event step in a procedure. An event or events may actualise two different steps in the same work package on the same day. Because we capture dates rather than times of events it was not possible to order events in a way that made &#39;procedural sense&#39;, for example: we may have shown &#39;Procedure concluded&#39; before &#39;Instrument approved&#39;. This class records the display depth of an event step forming part of the procedure, associating a display depth number with each step. For example: the &#39;Instrument created&#39; event step in the draft affirmative procedure has a display depth of 1.0, whereas the &#39;Laid before the House of Commons&#39; event step in the same procedure has a display depth of 3.1. These numbers are used to order events in a work package sharing the same date. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening. An event step with depth 8 may happen before an event step with depth 7, if those two event steps are on different branches of the procedure map.</p>
          </article>
         <article class="class" id="StepType">
           <h3>Class <a href="#StepType">Step type</a></h3>
 
-          <p>A step has one type. The type of a step is a business step, decision step, logical NOT step, logical AND step, logical OR step, arithmetic SUM step, arithmetic INCREMENT step, arithmetic EQUALS step, or summation step.</p>
+          <p>The type of a step being an event step, decision step, logical NOT step, logical AND step, logical OR step, arithmetic SUM step, arithmetic INCREMENT step, arithmetic EQUALS step, or summation step.</p>
          </article>
         <article class="class" id="WorkPackage">
           <h3>Class <a href="#WorkPackage">Work package</a></h3>
@@ -212,7 +216,7 @@
             >
           </h3>
 
-           <p>Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events in separate work packages.</p>
+           <p>Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events.</p>
 
           <p>
             <a href="#Event"
@@ -393,11 +397,11 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasCitationType">
+        <article class="objectproperty" id="hasCitedThingType">
           <h3>
             Object property
-            <a href="#hasCitationType"
-              >Has citation type</a
+            <a href="#hasCitedThingType"
+              >Has cited thing type</a
             >
           </h3>
 
@@ -406,8 +410,8 @@
             <a href="#Citation"
               >Citation</a
             >
-            &mdash; Has citation type &mdash;
-            <a href="#CitationType">CitationType</a>
+            &mdash; Has cited thing type &mdash;
+            <a href="#CitedThingType">CitedThingType</a>
           </p>
         </article>
 
@@ -487,21 +491,21 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="parentCitationType">
+        <article class="objectproperty" id="parentCitedThingType">
           <h3>
             Object property
-            <a href="#parentCitationType"
-              >Parent citation type</a
+            <a href="#parentCitedThingType"
+              >Parent cited thing type</a
             >
           </h3>
 
  
           <p>
-            <a href="#CitationType"
-              >CitationType</a
+            <a href="#CitedThingType"
+              >CitedThingType</a
             >
-            &mdash; Parent citation type &mdash;
-            <a href="#CitationType">CitationType</a>
+            &mdash; Parent cited thing type &mdash;
+            <a href="#CitedThingType">CitedThingType</a>
           </p>
         </article>
 
@@ -896,7 +900,7 @@
 
     <footer>
       <p>
-        Generated 2024-11-04 16:43:13.230494 from a
+        Generated 2024-11-05 16:42:49.173569 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"

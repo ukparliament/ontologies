@@ -71,6 +71,11 @@
       <section id="classes">
         <h2>Classes</h2>
 
+        <article class="class" id="Event">
+          <h3>Class <a href="#Event">Event</a></h3>
+
+          <p>An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
+         </article>
         <article class="class" id="House">
           <h3>Class <a href="#House">House</a></h3>
 
@@ -95,12 +100,16 @@
           <h3>Class <a href="#Tabling">Tabling</a></h3>
 
           <p>The act of tabling a business item - being a question, a motion, an amendment or a committee membership nomination - into either the House of Commons or House of Lords. Members submit business items to the procedural offices. If accepted, the business item is considered to be tabled and will then appear as a written notice in the business papers for the next day. Each House has a Table Office where parliamentary questions, motions for debate and, in the Commons, early day motions are tabled. Amendments to bills are always tabled in the Public Bill Offices of each House.</p>
-         </article>
+           <p>
+            Superclasses  &middot; Event           </p>
+        </article>
         <article class="class" id="Withdrawal">
           <h3>Class <a href="#Withdrawal">Withdrawal</a></h3>
 
           <p>The act of withdrawing a tabled thing from a House.</p>
-         </article>
+           <p>
+            Superclasses  &middot; Event           </p>
+        </article>
         <article class="class" id="WithdrawnThing">
           <h3>Class <a href="#WithdrawnThing">Withdrawn thing</a></h3>
 
@@ -252,6 +261,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="withdrawnBy">
+          <h3>
+            Object property
+            <a href="#withdrawnBy"
+              >Withdrawn by</a
+            >
+          </h3>
+
+           <p>Relates an act of withdrawal to the incumbency of the Member withdrawing. An act of withdrawal is by one incumbent Member.</p>
+
+          <p>
+            <a href="#Withdrawal"
+              >Withdrawal</a
+            >
+            &mdash; Withdrawn by &mdash;
+            <a href="#Incumbency">Incumbency</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="withdraws">
           <h3>
             Object property
@@ -321,6 +349,14 @@
          <section id="subclasses">
         <h2>Subclasses</h2>
         <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>tabling/<wbr>Tabling</td>
+            <td>/<wbr>ontologies/<wbr>tabling/<wbr>Event</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>tabling/<wbr>Withdrawal</td>
+            <td>/<wbr>ontologies/<wbr>tabling/<wbr>Event</td>
+          </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>tabling/<wbr>WithdrawnThing</td>
             <td>/<wbr>ontologies/<wbr>tabling/<wbr>TabledThing</td>
@@ -407,7 +443,7 @@
 
     <footer>
       <p>
-        Generated 2024-11-04 16:43:13.230494 from a
+        Generated 2024-11-05 16:42:49.173569 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../tabling/tabling-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../tabling/tabling-ontology.ttl"
