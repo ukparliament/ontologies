@@ -25,15 +25,21 @@
 
 
 #######  Classes #####
+
+pma:Event rdf:type owl:Class ;
+	rdfs:label "Event"@en ;
+	rdfs:comment "An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
+pma:MakingAvailable rdf:type owl:Class ;
+	rdfs:subClassOf pma:Event ;
+	rdfs:label "Making available"@en ;
+	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
 	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
-	
-pma:MakingAvailable rdf:type owl:Class ;
-	rdfs:label "Making available"@en ;
-	rdfs:comment "The act of making a thing available to a House or to a House by means of its Library."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
 pma:Incumbency rdf:type owl:Class ;
