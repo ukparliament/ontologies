@@ -70,7 +70,7 @@ ppr:EventStep rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Step ;
 	rdfs:subClassOf ppr:CitingThing ;
 	rdfs:label "Event step"@en ;
-	rdfs:comment "A step of type event, being the abstract notion of an event happening inside or outside Parliament."@en ;
+	rdfs:comment "A step of type event. An event step describes a set of potential events, for example: the potential for papers to be laid before the House of Commons. Potential events described by an event step may take place inside or outside Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:CitingThing rdf:type owl:Class ;
@@ -142,7 +142,7 @@ ppr:CalculationStyle rdf:type owl:Class ;
 	
 ppr:StepDisplayDepthInProcedure rdf:type owl:Class ;
 	rdfs:label "Step display depth in procedure"@en ;
-	rdfs:comment "The display depth of an event step in a procedure. An event or events may actualise two different steps in the same work package on the same day. Because we capture dates rather than times of events it was not possible to order events in a way that made 'procedural sense', for example: we may have shown 'Procedure concluded' before 'Instrument approved'. This class records the display depth of an event step forming part of the procedure, associating a display depth number with each step. For example: the 'Instrument created' event step in the draft affirmative procedure has a display depth of 1.0, whereas the 'Laid before the House of Commons' event step in the same procedure has a display depth of 3.1. These numbers are used to order events in a work package sharing the same date. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening. An event step with depth 8 may happen before an event step with depth 7, if those two event steps are on different branches of the procedure map."@en ;
+	rdfs:comment "The display depth of an event step in a procedure. An event or events may actualise two different steps in the same work package on the same day. Because we capture dates rather than times of events it was not possible to order events in a way that made 'procedural sense', for example: we may have shown 'Procedure concluded' before 'Instrument approved'. This class records the display depth of an event step forming part of the procedure, associating a display depth number with each step. For example: the 'Instrument created' event step in the draft affirmative procedure has a display depth of 1.0, whereas the 'Laid before the House of Commons' event step in the same procedure has a display depth of 3.1. These numbers are used to order events in a work package sharing the same date. The context of display depth is constrained to parts of a procedure map where procedure specifies that if X happens it must happen before Y but that Y may happen without X happening. An event step with depth 8 may happen before an event step with depth 7, if those two event steps are on different branches of the procedure map. An event step may have different step display depths in different procedures."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:Legislature rdf:type owl:Class ;
@@ -179,100 +179,86 @@ ppr:focus rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:PaperWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-	
-		# edited to here
-		
-		
-		
-		
-		
-		
-	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
-	rdfs:comment "Relates an event to the procedural step or steps being actualised. An event may actualise one or more steps, for example: the step for the putting of a question and the step for the outcome may be actualised by one event. A step may be actualised one or more times by events."@en ;
+	rdfs:comment "Relates an event to the event step or steps being actualised. A record of an actual event forming part of a work package actualises the potential event described by the event step, procedurally indexing the event with the concept embodied by the event step. For example: an event recording the laying of a paper before the House of Commons in a work package actualises the event step 'Laid before the House of Commons', making that potential step actual. An event may actualise one or more event steps, for example: the event step for the putting of a question and the event step for the outcome may be actualised by one event. An event step may be actualised one or more times."@en ;
 	rdfs:domain ppr:Event ;
 	rdfs:range ppr:EventStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-
-	
-	
-	
-
 ppr:hasStepType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has step type"@en ;
 	rdfs:comment "Relates a step to its type. A step may only be of one type. A step type may be related to one or more steps, or none."@en ;
 	rdfs:domain ppr:Step ;
 	rdfs:range ppr:StepType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
 ppr:fromStep rdf:type owl:ObjectProperty ;
 	rdfs:label "From step"@en ;
-	rdfs:comment "Relates a path to its input step. A path is related to one input step."@en ;
+	rdfs:comment "Relates a path to the step that path comes from. A path comes from one input step."@en ;
 	rdfs:domain ppr:Path ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
 ppr:toStep rdf:type owl:ObjectProperty ;
 	rdfs:label "To step"@en ;
-	rdfs:comment "Relates a path to its output step. A path is related to one output step."@en ;
+	rdfs:comment "Relates a path to the step that path goes to. A path goes to one input step."@en ;
 	rdfs:domain ppr:Path ;
 	rdfs:range ppr:Step ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:cites rdf:type owl:ObjectProperty ;
 	rdfs:label "Cites"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a citing thing to its citation. A thing having a citation may have one or more citations, or none. A citation is always from one citing thing."@en ;
 	rdfs:domain ppr:CitingThing ;
 	rdfs:range ppr:Citation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasCitedThingType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has cited thing type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a citation to the type of the thing being cited, for example: a citation of a section of an Act of Parliament having cited thing type 'Act of Parliament'. A citation has one cited thing type."@en ;
 	rdfs:domain ppr:Citation ;
 	rdfs:range ppr:CitedThingType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:parentCitedThingType rdf:type owl:ObjectProperty ;
 	rdfs:label "Parent cited thing type"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a cited thing type to its parent cited thing type, for example: the cited thing type 'Act of Parliament' having parent cited thing type 'Primary legislation'. A cited thing type may have one or more parent cited thing types, or none."@en ;
 	rdfs:domain ppr:CitedThingType ;
 	rdfs:range ppr:CitedThingType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
 ppr:availabilityOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Availability of"@en ;
-	rdfs:comment "Relates a path to its availability over a period of time. A path may have a different availability at different times, but only one availability at any one time. Path with no defined availability are taken to be open."@en ;
+	rdfs:comment "Relates an availability to the thing having that availability. A thing may have different availabilities at different times, but only one availability at any one time. An availability is always of one thing."@en ;
 	rdfs:domain ppr:Availability ;
 	rdfs:range ppr:AvailableThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasAvailabilityStatus rdf:type owl:ObjectProperty ;
 	rdfs:label "Has availability status"@en ;
-	rdfs:comment "Relates a route availability over a period of time to the status of that availability. A route availability has one route availability status."@en ;
+	rdfs:comment "Relates an availability to its status. An availability has one type, being open or closed."@en ;
 	rdfs:domain ppr:Availability ;
 	rdfs:range ppr:AvailabilityStatus ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:inProcedure rdf:type owl:ObjectProperty ;
 	rdfs:label "In procedure"@en ;
-	rdfs:comment "Relates a path to the procedure that path appears in. A path appears in one procedure. A procedure may have one or more paths, or none. A procedure having a component procedure allows the paths in the 'child' procedure to be shared with the 'parent' procedure."@en ;
+	rdfs:comment "Relates a path to the procedure that path appears in. A path appears in one procedure. A procedure may have one or more paths, or none. A procedure having a component procedure allows the paths in that component procedure to be shared with the 'parent' procedure."@en ;
 	rdfs:domain ppr:Path ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
 ppr:subjectTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Subject to"@en ;
-	rdfs:comment "Relates a work package to the procedure it is subject to. A work package is only subject to one procedure."@en ;
+	rdfs:comment "Relates a procedural work package to the procedure it is subject to. A procedural work package is subject to one procedure."@en ;
 	rdfs:domain ppr:ProceduralWorkPackage ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
 ppr:proceduralWorkPackageHasCalculationStyle rdf:type owl:ObjectProperty ;
 	rdfs:label "Procedural work package has calculation style"@en ;
-	rdfs:comment "Relates a procedural work package to the calculation style used by that work package. A procedural work package has one calculation style, or none. Where a work package has a calculation style, that style is one of the calculation styles applied to the procedure that the work package is subject to."@en ;
+	rdfs:comment "Relates a procedural work package to the calculation style used by that work package. A procedural work package has one calculation style, or none. Where a procedural work package has a calculation style, that style is one of the calculation styles applied to the procedure that the procedural work package is subject to."@en ;
 	rdfs:domain ppr:ProceduralWorkPackage ;
 	rdfs:range ppr:CalculationStyle ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -286,7 +272,7 @@ ppr:procedureHasCalculationStyle rdf:type owl:ObjectProperty ;
 	
 ppr:componentOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Component of"@en ;
-	rdfs:comment "Relates a procedure to another procedure. A procedure forming a component of another procedure has all the routes in the 'child' procedure appearing as routes in the 'parent' procedure. A procedure may be composed of one or more other procedures, or none. A procedure may be a component of one or more other procedures, or none. A procedure cannot be a component of itself."@en ;
+	rdfs:comment "Relates a procedure to its 'parent' procedure. A procedure forming a component of another procedure has all the routes in the component procedure appearing as routes in the 'parent' procedure. A procedure may be composed of one or more component procedures, or none. A procedure may be a component of one or more other procedures, or none. A procedure cannot be a component of itself."@en ;
 	rdfs:domain ppr:Procedure ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
@@ -307,31 +293,38 @@ ppr:parentProcedureCollection rdf:type owl:ObjectProperty ;
 	
 ppr:forStep rdf:type owl:ObjectProperty ;
 	rdfs:label "For step"@en ;
-	rdfs:comment "Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one step. A step may have different step display depths in different procedures."@en ;
+	rdfs:comment "Relates a step display depth in a procedure to an event step. A step display depth in a procedure is always related to one event step. An event step in a procedure has one step display depth, or none. An event step may have different step display depths in different procedures."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range ppr:EventStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:depthInProcedure rdf:type owl:ObjectProperty ;
 	rdfs:label "Depth In procedure"@en ;
-	rdfs:comment "Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have more than one step display depth for individual steps."@en ;
+	rdfs:comment "Relates a step display depth in a procedure to that procedure. A step display depth in a procedure is always related to one procedure. A procedure may have one or more step display depths, or none."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepInLegislature rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in legislature"@en ;
-	rdfs:comment "Relates a step to the devolved legislature in which that step takes place, for example: a legislative consent motion being tabled in the Scottish Parliament."@en ;
+	rdfs:comment "Relates an event step to the legislature in which that event step would take place, for example: a legislative consent motion being tabled in the Scottish Parliament. An event step may take place in one legislature, or none."@en ;
 	rdfs:domain ppr:EventStep ;
 	rdfs:range ppr:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:stepInHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Step in House"@en ;
-	rdfs:comment "Relates a step to one or both Houses where such a relationship exists. A step may exist with no relationship to a House. For example, the making of a statutory instrument takes place outside of Parliament."@en ;
+	rdfs:comment "Relates an event step to the House in which that event step would take place. An event step may take place in one or both Houses, or none."@en ;
 	rdfs:domain ppr:EventStep ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
+	
+	
+	
+																				# edited to here
+	
+	
 	
 ppr:inLegislature rdf:type owl:ObjectProperty ;
 	rdfs:label "In legislature"@en ;
