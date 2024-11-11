@@ -256,9 +256,6 @@ pe:establishedBy rdf:type owl:ObjectProperty ;
 	rdfs:domain pe:ConstituencyGroupSet ;
 	rdfs:range pe:StatutoryThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-	
-	
-					# edited to here
 
 
 
@@ -273,11 +270,11 @@ pe:registrationID rdf:type owl:DatatypeProperty ;
 	
 pe:registeredPrimaryNameLastUpdatedOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Registered primary name last updated on"@en ;
-	rdfs:comment "The date on which the registered primary name of the political party was last updated."@en ;
+	rdfs:comment "The date on which the primary name of the political party as registered with the Electoral Commission was last updated."@en ;
 	rdfs:domain pe:PoliticalPartyRegistration ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:resultPosition rdf:type owl:DatatypeProperty ;
 	rdfs:label "Result position"@en ;
 	rdfs:comment "The ordinal position of the result of a candidacy in an election, for example: 1st or 2nd, recorded as 1 or 2."@en ;
@@ -287,21 +284,21 @@ pe:resultPosition rdf:type owl:DatatypeProperty ;
 
 pe:voteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote count"@en ;
-	rdfs:comment "The number of accepted votes recorded for a candidacy."@en ;
+	rdfs:comment "The number of valid votes recorded for a candidacy."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:voteShare rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote share"@en ;
-	rdfs:comment "The share of a vote won in an election by a candidate as a fraction of the total accepted votes."@en ;
+	rdfs:comment "The calculated share of a vote won in an election by a candidacy as a percentage of the total valid votes. For example: Alex Baker receiving approximately 40.7% of the vote in the constituency of Aldershot in the 2019 general election."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:voteChange rdf:type owl:DatatypeProperty ;
 	rdfs:label "Vote change"@en ;
-	rdfs:comment "The change in the vote share recorded for a candidacy in an election compared to the vote share for a candidacy certified by the same party in the previous general election. The calculation of vote change does not take account of intervening by-elections. Where a constituency's boundary has changed since the last general election, the vote change figure is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
+	rdfs:comment "The change in the vote share recorded for a candidacy in an election compared to the vote share for a candidacy in the same constituency at the previous general election, the previous candidacy either being certified by the same party - discounting any adjunct certification - or being of a candidate standing for re-election as the House of Commons Speaker, or being of the same person standing for re-election as an independent. The calculation of vote change does not take account of intervening by-elections. Where a constituency's boundary has changed since the last general election, the vote change figure is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
 	rdfs:domain pe:CandidacyResult ;
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -319,21 +316,21 @@ pe:candidateFamilyName rdf:type owl:DatatypeProperty ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:asCommonsSpeaker rdf:type owl:DatatypeProperty ;
 	rdfs:label "As Commons Speaker"@en ;
-	rdfs:comment "Used to record if the candidate is the House of Commons Speaker standing for re-election to the House of Commons."@en ;
+	rdfs:comment "Used to record if the candidacy is of the House of Commons Speaker standing for re-election to the House of Commons."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:asIndependent rdf:type owl:DatatypeProperty ;
 	rdfs:label "As independent"@en ;
-	rdfs:comment "Used to record if the candidate is standing as an independent, not being certified by any political party."@en ;
+	rdfs:comment "Used to record if the candidacy is of a person standing as an independent, not being certified by any political party."@en ;
 	rdfs:domain pe:Candidacy ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:isNotional rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is notional"@en ;
 	rdfs:comment "Used to record if the results of a general election are notional. When a general election is contested on a new boundary set or boundary sets, notional results are calculated for the changed constituencies. Notional results are calculated as if the previous general election had been contested on the new boundaries. Notional winner and notional vote share are used to derive the party gain / hold and change in vote share information, respectively, at the subsequent general election."@en ;
@@ -343,7 +340,7 @@ pe:isNotional rdf:type owl:DatatypeProperty ;
 
 pe:generalElectionPollingOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "General election polling on"@en ;
-	rdfs:comment "The date on which polling took place for all elections in a general election."@en ;
+	rdfs:comment "The date on which polling takes place for all elections forming part of a general election."@en ;
 	rdfs:domain pe:GeneralElection ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
@@ -357,18 +354,18 @@ pe:ordinality rdf:type owl:DatatypeProperty ;
 
 pe:electionPollingOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Election polling on"@en ;
-	rdfs:comment "The date on which polling took place for an election."@en ;
+	rdfs:comment "The date on which polling takes place for an election."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:resultSummary rdf:type owl:DatatypeProperty ;
 	rdfs:label "Result summary"@en ;
-	rdfs:comment "Text summarising the result of an election in terms of a political party gaining or holding a constituency relative to the previous general election, for example: Conservative gain from Labour Co-operative. The result summary does not take account of intervening by-elections. Where a constituency's boundary has changed since the last general election, the result summary is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
+	rdfs:comment "Text summarising the result of an election in terms of a candidacy gaining or holding a constituency relative to a candidacy at the previous general election, the previous candidacy either being certified by the same party - discounting any adjunct certification, for example: 'Conservative gain from Labour Co-operative'; or being of a candidate standing for re-election as the House of Commons Speaker, for example: 'Speaker hold'; or being of a candidate standing for election as an independent and gaining the seat, for example: 'Independent gain from Labour'; or being of a candidate being re-elected as an independent having won the constituency as an independent at the previous general election, for example: 'Independent hold'. The result summary does not take account of intervening by-elections. Where a constituency's boundary has changed since the most recent general election, the result summary is based on notional results, being projected results of the previous general election if that election had taken place according to new boundaries."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
-
+	
 pe:majority rdf:type owl:DatatypeProperty ;
 	rdfs:label "Majority"@en ;
 	rdfs:comment "The difference between the number of valid votes cast for the winning candidate and the number of valid votes cast for the second-placed candidate."@en ;
@@ -406,13 +403,13 @@ pe:declarationTime rdf:type owl:DatatypeProperty ;
 	
 pe:recordedSize rdf:type owl:DatatypeProperty ;
 	rdfs:label "Recorded size"@en ;
-	rdfs:comment "The number of people making up an electorate."@en ;
+	rdfs:comment "The number of people forming an electorate."@en ;
 	rdfs:domain pe:Electorate ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
-pe:recordedDate rdf:type owl:DatatypeProperty ;
-	rdfs:label "Recorded date"@en ;
+pe:recordedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Recorded on"@en ;
 	rdfs:comment "The date on which the size of an electorate was recorded."@en ;
 	rdfs:domain pe:Electorate ;
 	rdfs:range xsd:date ;
