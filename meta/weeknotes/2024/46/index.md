@@ -1,0 +1,68 @@
+# 2024 - Week 46
+
+Dear reader, no sooner did we promise to bring these notes up to a weekly cadence, than we promptly fell off the wagon. Please rest assured, no hangovers were involved this time round. To be honest, you haven't missed much. Lead Librarian Anya chose week 45 to take a trip to the old country, productivity taking an understandable tumble. Losing one's Lead Librarian would knock productivity in any organisation. How organisations lacking librarians - and, unbelievable though it may seem, we are assured such organisations exist - manage to cope, we will never know. Let's get stuck into the few things that have happened.
+
+## New, old search
+
+Over in the front end of new, old search, Developer Jon has been busying himself tidying pixels. Quite why our project was assigned a designer when all we had was a scattering of spreadsheets and some scraps of paper, then lost our designer when actual pixels started to emerge, we will never know. It's best not to question such matters. As ever we make do with what we've got and having Young Robert on hand never hurts. He's an actual trained printing lad, you know?
+
+Spring cleaning of object pages is well underway, bold styling in introductory sentences has been removed, h3s in the main content block have been 'dialed back', the about section has lost its heading, and content sections have been 'boxed out'. Last, but not least, the weightings of labels and actual content in the about section have been reversed, all concerned feeling the content was probably more important here. Take a look at [this written answer](https://parliamentary-search-265cced0397e.herokuapp.com/search-prototype/objects?object=http%3A%2F%2Fdata.parliament.uk%2Fwrittenparliamentaryquestion%2Fcommons%2F2015-16%2F28407) if you won't believe us. Much neater. That said, the overall effect is best experienced when navigating from a set of search results to an object page. An experience that no longer feels like you've tripped over a novel and ended up face first in a picture book. 
+
+Jon has also been applying his feather duster over in result listing land where line heights are now consistently set out. Facet panes have also been tidied - the three way split between asking members, lead members and tabling members all now replaced with a single primary member facet box. Weeknotes passim, with more thanks to our Jianhan. For reasons we don't quite understand, an old bug crept back in, whereby facet filters got shown even where they filtered down to zero results. A feature perhaps, but not a useful one. This has also been fixed.
+
+In our final bit of search front end news, we're happy to announce that Jon's code is now running in Heroku in the EU. This because computational 'expert' Michael accidentally set up the old one in the US. In fairness, that was many moons ago, and took place over a pint in the Strangers' Bar. Given there is no data of a personal nature involved it didn't seem too big a deal. At least until one considers the architecture here. If you've been following along from home, you'll know that Jon's code hits two APIs - one to get a list of search results, one to resolve identifiers from our taxonomy. Now a single set of search results may contain a great many such identifiers, resulting in a fair few calls to our taxonomy API. The search code living in California and the APIs it depends on being closer to home did not do much to help with performance. Jon running a search in Sheffield would see his request travel across the Atlantic, the search code request to Solr travel back across the Atlantic, the Solr response make another trans-Atlantic trip, one or more taxonomy requests and responses making the same journey, before the response was finally sent back to Jon in Sheffield. Truly we have accidentally circumnavigated the globe. Only slightly shamefaced, Michael took to a whiteboard to explain this slight snafu to assembled librarians. To the sound of much merriment. Still, one pays peanuts etc.
+
+## Odds and indeed sods
+
+Elsewhere, efforts continue to both liberate our taxonomy and replace our Odds and Sods Information System. Or OaSIS to its many friends. Our Silver reports that he's managed to wrangle [a worked example of a committee report](https://trello.com/c/q8I2ys9x/109-worked-example) into our putative replacement, Data Graphs. He's also been [investigating the message format](https://trello.com/c/iMzig8q7/79-look-at-message-format-for-harvester-for-oasis-to-harvester) output by the current OaSIS application, in the hope we can emulate it from Data Graphs in the not too distant. If that proves possible, it should not - in theory - be beyond the wit of man to point the emulated feed at our ETL Harvester code, from where newly authored data will flow to our triplestore. Which brings us neatly on to ...
+
+## Triplestore tribulations
+
+Like much of our software, our production triplestore is some version numbers behind what's considered current. Or "the oldest known example operating in the wild," so the vendor tells us. Age may bring wisdom, but such wisdom is all too often accompanied by creaking bones and generalised lethargy. Feeling its age it now takes several seconds to read a record and several more seconds to save one. Time being money and librarians not being cheap - well, not free - this is a source of some frustration.
+
+At this point, our Jianhan enters the picture resplendent with plan. Having identified all the dependencies - everything that writes to the triplestore and everything that reads from it - he seems pretty confident that we can take a staged approach to rewriting and replacing. And that waiting times of up to a minute will come down to a second or so. Music to librarian ears.
+
+## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
+
+This week brought a small but welcome change to our treaty tracking website. The problem being, said website deals not only with treaty procedures in progress, but also with treaties yet to be. Or not be. Unfortunately, the word 'treaty' has been hardcoded in templates, appearing for things that were not yet treaties and may very well never become treaties. This [hardcoding has now been removed](https://treaties.parliament.uk/?SearchTerm=Negotiations+for+a+potential+agreement+between+the+UK&ParliamentaryProcess=&LeadGovernmentOrganisationId=&SeriesFilter=&House=&MotionsTabledAboutATreaty=&CommitteeRaisedConcerns=&DebateScheduled=&ShowAdvanced=False), much to the relief of international lawyers everywhere.
+
+Jayne and Michael have also been chipping away at what they lovingly call their 'procedure browsable space', which this week gained new pages - and a dash of RSS - listing procedures, showing procedures, listing work packages and listing events in a work package. Event pages still requiring some work, that work requiring a conversation. It means you can now follow your nose from a step page like [Government response to the decision made by the International Trade Committee (ITC)](https://procedure-browser-159b715822a4.herokuapp.com/steps/8FDE1V0L), to all the [events where that step is actualised](https://procedure-browser-159b715822a4.herokuapp.com/steps/8FDE1V0L/events), to the [timeline of a work package](https://procedure-browser-159b715822a4.herokuapp.com/work-packages/6uj4zhJl#event-FEBF6VMq-actualising-8FDE1V0L), to [the pertinent event](https://procedure-browser-159b715822a4.herokuapp.com/events/FEBF6VMq), to [the report itself](https://publications.parliament.uk/pa/cm5803/cmselect/cmbeis/1614/report.html). Lovely stuff.
+
+There's nothing quite like pinning data out like a museum butterfly to spot errors and inconsistencies. And we cannot pretend that errors and inconsistencies have not come to light. A set of links to internal-only data.parliament.uk pages being top of the list. All now fixed. Obviously.
+
+## Psephologising wildly
+
+In preparation for the inclusion of by-election data, our election results website has seen one tiny change, elections in a general election now carrying dates for the issuing of their writs. The date of the preceding dissolution, for anyone that wants to know. Data Scientist Louie has sent through by-election data for Parliament 58, which your regular correspondent should probably be uploading around now. Unfortunately, your regular correspondent has copped a pretty nasty bout of man-flu and is incapable of doing anything requiring thought. Hence typing this nonsense.
+
+## Facts / figures
+
+Yet another in our seemingly endless series of [Facts and Figures publications](https://commonslibrary.parliament.uk/tag/parliament-facts-and-figures/) has made its way back to the shelves and is now available in all good libraries and newsagents. This one dealing with [Mr Speaker making statements taking the government to task over policy announcements made outside of Parliament](https://commonslibrary.parliament.uk/research-briefings/sn05647/). More excelent work from Librarian Jayne. Dip in. Enjoy.
+
+In the slightly longer term, Anya and Michael have a half-hatched plan to investigate similarities across PFF publications and see if anything resembling a common domain model emerges. If that does prove to be the case, loading the spreadsheets into a common system and semantically linking them - the definition of a session in this spreadsheet matching the definition of a session in this other spreadsheet - remains an option. And should that be possible, placing the whole lot inside a Datasette and allowing users free-range to query certainly has its attractions. Replacing a whole set of spreadsheets with some queries over a database describing most of what we do. To that end, Anya and Michael met with Silver on Friday to check if Data Graphs might play a role in consolidation and amalgamation. We remain ever hopeful.
+
+## Print and publications
+
+It's been a busy week for the Library's printers, the ever-obliging Mr Tetteh seeing fit to print not one but two absolutely humongous posters. The first - a billboard version of the Members' Names Information System database schema - has gone up on our print room wall, the better for tracking progress on tidying and docunenting. The second - an equally gigantic print of our made affirmative procedure map - has been donated to Jayne. Take it home, we suggested. Pop it above your mantlepiece, we encouraged. It's lovely, replied Jayne, but also no.
+
+Librarian Anya has also been busy printing - albeit at a slightly smaller scale - churning out new stickers to [celebrate 45 years of Parliament's controlled vocabulary](https://trello.com/1/cards/66978d8421e8f2cb4365beae/attachments/66bdf0c7b52a9ec843a390ea/previews/66bdf0c8b52a9ec843a390f6/download/4eaa22bc-3ec2-492b-9030-052fed50795c.jpg). If you're a practicing Librarian, will space on your laptop, please do get in touch and we'll see what we can do.
+
+## Mitigating Mastodon
+
+If you tuned in last week, you'll be all too aware that our lovingly created Mastodon bots are reaching end-of-life. This occasioned by the unexpected closure of bots-in-space. The unhappy news was broken to us by James the First, though mitigated somewhat by James the Second announcing he's happy to give current residents of his instance bot-making permissions. Anya and Michael both being amongst those residents helping matters here. Friday of this week saw Michael fighting off the man-flu to join Librarian Anna, Young Robert, James the First and James the Second in pixels. We now have half a plan to migrate our current bots to mastodon.me.uk before the mid-December cut off point. Hosting our own instance for the purpose of federating and indeed syndicating remains on the table. Though may prove hard to justify to elders and betters. Stay tuned.
+
+## Outreach and engagement
+
+Wednesday of week 45 saw the inaugural House of Commons Library 'Working with Procedure' day. Masterminded and expertly curated by Researcher Graeme. Very enjoyable it was too, our very own Librarian Jayne making a guest appearance mid-afternoon for a panel session on delegated legislation. Well, what else would she be talking about? Thank you Jayne. And thank you Graeme.
+
+Still with Graeme, the following Wednesday he was kind enough to let us borrow his brains for a whiteboard sketching session covering all things shaped roughly like organisations accountable to Parliament. There has been an OATP shaped hole in our models for quite some time. A hole we've never quite worked up the enthusiasm to fill. This changed when Cabinet Office Kelcey got in touch to say he was paddling in very similar waters. It will probably not come as a surprise to learn that the whole business of when and how a government organisation came into being, what positions were in that organisation and who held those positions over time is something of a spreadsheet jungle. Such matters often are. What Kelcey would like is a linked data system to describe it all. Which, by some coincidence, is also something we'd rather like. A Cavalier / Roundhead pact has been made and we've pledged to work together where possible, organisational boundaries being easier to overcome than Sharepoint perhaps. The meeting with Graeme's brains was the first step on a long and possibly hazardous journey. Godspeed young hobbits.
+
+
+
+
+
+
+
+
+
+
+
