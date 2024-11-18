@@ -39,7 +39,7 @@ parea:GeographicAreaDefinedByStatute rdf:type owl:Class ;
 parea:ConstituencyArea rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicAreaDefinedByStatute ;
 	rdfs:label "Constituency area"@en ;
-	rdfs:comment "The geographic area of a UK Parliament constituency."@en ;
+	rdfs:comment "An area within which members of a constituency group are registered to vote. Constituency areas bounding constituency groups represented in the House of Commons are proposed in a boundary review by the Boundary Commissions and established by statute."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:UpperTierLocalAuthorityArea rdf:type owl:Class ;
@@ -57,7 +57,7 @@ parea:LowerTierLocalAuthorityArea rdf:type owl:Class ;
 parea:CombinedAuthorityArea rdf:type owl:Class ;
 	rdfs:subClassOf parea:GeographicAreaDefinedByStatute ;
 	rdfs:label "Combined authority area"@en ;
-	rdfs:comment "The geographic area in which a combined authority may exercise its powers. A combined authority may be created in England under powers set out in the Local Democracy, Economic Development and Construction Act 2009."@en ;
+	rdfs:comment "The geographic area in which a combined authority or combined county authority may exercise its powers. A combined authority may be created in England under powers set out in the Local Democracy, Economic Development and Construction Act 2009. A combined county authority may be created in England under powers set out in the Levelling-up and Regeneration Act 2023."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
 	
 parea:EnglishRegion rdf:type owl:Class ;
@@ -100,7 +100,7 @@ parea:whollyContainedBy rdf:type owl:ObjectProperty ;
 
 parea:partlyContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Partly contained by"@en ;
-	rdfs:comment "Relates a geographic area to a geographic area it is partly contained by. A constituency area may be partly contained by a lower tier local authority area, by an upper tier local authority area, or by neither. A lower tier local authority area or an upper tier local authority area may be partly contained by a constituency area. The Local Democracy, Economic Development and Construction Act 2009 does not preclude an upper tier local authority area being partly contained by a combined authority area. As at November 2021, no upper tier local authority area is partly contained by a combined authority area."@en ;
+	rdfs:comment "Relates a geographic area to a geographic area it is partly contained by. A constituency area may be partly contained by a lower tier local authority area, by an upper tier local authority area, or by neither. A lower tier local authority area or an upper tier local authority area may be partly contained by a constituency area. The Local Democracy, Economic Development and Construction Act 2009 does not preclude an upper tier local authority area being partly contained by a combined authority area. As at November 2024, no upper tier local authority area is partly contained by a combined authority area."@en ;
 	rdfs:domain parea:GeographicArea ;
 	rdfs:range parea:GeographicArea ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
@@ -135,7 +135,7 @@ parea:isAlsoUpperTierLocalAuthorityArea rdf:type owl:ObjectProperty ;
 	
 parea:appliesTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Applies to"@en ;
-	rdfs:comment "Relates a boundary set to that country to which the boundary set applies. A boundary set applies to one country. A country may have one or more boundary sets over time."@en ;
+	rdfs:comment "Relates a boundary set to the country to which that boundary set applies. A boundary set applies to one country. A country may have one or more boundary sets over time. A country has one boundary set at any one time."@en ;
 	rdfs:domain parea:BoundarySet ;
 	rdfs:range parea:Country ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/geographic-area/> .
