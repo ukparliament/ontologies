@@ -181,6 +181,10 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/b3d8d9b8"> Correspondence published by the International Agreements Committee (incuding when it was a sub-committee ot the Lords EU Select Committee)</a>
 
+### Committee requests for extension to objection period A
+
+* <a href="https://api.parliament.uk/s/b348d7a4"> Extension of objection period A requested by the International Agreements Committee (IAC)</a> 
+
 ## Prayers against Treaties 
 
 In both Houses there is the potential for a Member to table a motion against a treaty. In the Commons there are two types of prayers that can be tabled. In the Lords there are, currently, four types of motions including the equivalent to the Commons motion. As of December 2020 there have been no motions tabled in the Commons. 
