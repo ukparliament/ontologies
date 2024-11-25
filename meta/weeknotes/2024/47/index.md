@@ -1,6 +1,6 @@
 # 2024 - Week 47
 
-As we sit down at our writing desk before another blank sheet of paper, there doesn't look to be much in the way of new news this week. Which means less for us to write and less for you - dear reader - to pretend to read. A win-win, as Young Robert might say. Still, we've promised brevity before. And failed. Let's just try and get through this together.
+As we sit down at our writing desk before another blank sheet of paper, there doesn't look to be much in the way of new news this week. Which means less for us to write and less for you - dear reader - to pretend to read. A win-win, as [Young Robert](https://bsky.app/profile/robert-brook.com) might say. Still, we've promised brevity before. And failed. Let's just try and get through this together.
 
 ## The man is a monster - aka Librarian of the Week
 
