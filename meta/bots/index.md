@@ -8,8 +8,8 @@ Unfortunately, Twitter's new API strategy means we're no longer able to offer bo
 
 Posts whenever the House of Commons Library publishes new research and analysis.
 
-Bluesky | 
-[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) |
+Bluesky | Mastodon
+[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | [@commonslibrary](https://mastodon.me.uk/@commonslibrary)
 
 ## Made-n-laid
 
@@ -30,7 +30,7 @@ Mastodon | Feed
 The written statements bot posts whenever a written statment is made to the House of Commons or the House of Lords.
 
 BlueSky | Mastodon
-[@written-statements](https://bsky.app/profile/written-statements.bsky.social) | [@WrittenStatements](https://botsin.space/@WrittenStatements)
+[@written-statements](https://bsky.app/profile/written-statements.bsky.social) | [@WrittenStatements](https://mastodon.me.uk/@WrittenStatements)
 
 ## Written answer bots
 
