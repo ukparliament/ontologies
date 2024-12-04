@@ -90,6 +90,18 @@
            <p>
             Superclasses  &middot; CitingThing           </p>
         </article>
+        <article class="class" id="BusinessItem">
+          <h3>Class <a href="#BusinessItem">Business item</a></h3>
+
+          <p>An item of business forming part of a work package, for example: the consideration of an instrument by a Delegated Legislation Committee taking place as part of a meeting of that committee.</p>
+         </article>
+        <article class="class" id="BusinessStep">
+          <h3>Class <a href="#BusinessStep">Business step</a></h3>
+
+          <p>A step of type business. A business step describes a set of potential business items, for example: the potential for papers to be laid before the House of Commons. Potential business items described by a business step may take place inside or outside Parliament.</p>
+           <p>
+            Superclasses  &middot; Step  &middot; CitingThing           </p>
+        </article>
         <article class="class" id="CalculationStyle">
           <h3>Class <a href="#CalculationStyle">Calculation style</a></h3>
 
@@ -122,13 +134,6 @@
 
           <p>An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister.</p>
          </article>
-        <article class="class" id="EventStep">
-          <h3>Class <a href="#EventStep">Event step</a></h3>
-
-          <p>A step of type event. An event step describes a set of potential events, for example: the potential for papers to be laid before the House of Commons. Potential events described by an event step may take place inside or outside Parliament.</p>
-           <p>
-            Superclasses  &middot; Step  &middot; CitingThing           </p>
-        </article>
         <article class="class" id="House">
           <h3>Class <a href="#House">House</a></h3>
 
@@ -216,14 +221,14 @@
             >
           </h3>
 
-           <p>Relates an event to the event step or steps being actualised. A record of an actual event forming part of a work package actualises the potential event described by the event step, procedurally indexing the event with the concept embodied by the event step. For example: an event recording the laying of a paper before the House of Commons in a work package actualises the event step &#39;Laid before the House of Commons&#39;, making that potential step actual. An event may actualise one or more event steps, for example: the event step for the putting of a question and the event step for the outcome may be actualised by one event. An event step may be actualised one or more times.</p>
+           <p>Relates a business item to the business step or steps being actualised by that business item. A record of a business item forming part of a work package actualises the potential step described by the business step, procedurally indexing the business item with the concept embodied by the business step. For example: a business item recording the laying of a paper before the House of Commons in a work package actualises the business step &#39;Laid before the House of Commons&#39;, making that potential step actual. A business item may actualise one or more business steps, for example: the business step for the putting of a question and the business step for the outcome may be actualised by one business item. A business step may be actualised one or more times, or none.</p>
 
           <p>
-            <a href="#Event"
-              >Event</a
+            <a href="#BusinessItem"
+              >BusinessItem</a
             >
             &mdash; Actualises &mdash;
-            <a href="#EventStep">EventStep</a>
+            <a href="#BusinessStep">BusinessStep</a>
           </p>
         </article>
 
@@ -243,6 +248,44 @@
             >
             &mdash; Availability of &mdash;
             <a href="#AvailableThing">AvailableThing</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="businessStepInHouse">
+          <h3>
+            Object property
+            <a href="#businessStepInHouse"
+              >Business step in House</a
+            >
+          </h3>
+
+           <p>Relates a business step to the House in which it is possible for that business step to take place, for example: a motion to refer to a Delegated Legislation Committee which may be tabled in the House of Commons. A business step may take place in one or more Houses, or none.</p>
+
+          <p>
+            <a href="#BusinessStep"
+              >BusinessStep</a
+            >
+            &mdash; Business step in House &mdash;
+            <a href="#House">House</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="businessStepInLegislature">
+          <h3>
+            Object property
+            <a href="#businessStepInLegislature"
+              >Business step in legislature</a
+            >
+          </h3>
+
+           <p>Relates a business step to the legislature in which it is possible for that business step to take place, for example: a Scottish Parliament legislative consent motion which may be tabled in the Scottish Parliament. A business step may take place in one legislature, or none.</p>
+
+          <p>
+            <a href="#BusinessStep"
+              >BusinessStep</a
+            >
+            &mdash; Business step in legislature &mdash;
+            <a href="#Legislature">Legislature</a>
           </p>
         </article>
 
@@ -322,22 +365,22 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="forStep">
+        <article class="objectproperty" id="forBusinessStep">
           <h3>
             Object property
-            <a href="#forStep"
-              >For step</a
+            <a href="#forBusinessStep"
+              >For business step</a
             >
           </h3>
 
-           <p>Relates a step display depth in a procedure to an event step. A step display depth in a procedure is always related to one event step. An event step in a procedure has one step display depth, or none. An event step may have different step display depths in different procedures.</p>
+           <p>Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one business step. A business step in a procedure has one step display depth, or none. A busines step may have different step display depths in different procedures.</p>
 
           <p>
             <a href="#StepDisplayDepthInProcedure"
               >StepDisplayDepthInProcedure</a
             >
-            &mdash; For step &mdash;
-            <a href="#EventStep">EventStep</a>
+            &mdash; For business step &mdash;
+            <a href="#BusinessStep">BusinessStep</a>
           </p>
         </article>
 
@@ -349,11 +392,11 @@
             >
           </h3>
 
-           <p>Relates an event to the work package or work packages it forms part of. One or more events may form part of a work package. An event may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package.</p>
+           <p>Relates a business item to the work package it forms part of. One or more business items may form part of a work package. A business item forms part of one work package.</p>
 
           <p>
-            <a href="#Event"
-              >Event</a
+            <a href="#BusinessItem"
+              >BusinessItem</a
             >
             &mdash; Forms part of &mdash;
             <a href="#WorkPackage">WorkPackage</a>
@@ -482,11 +525,11 @@
             >
           </h3>
 
-           <p>Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none.</p>
+           <p>Relates a business step to the step collection that business step is a member of. A business step may belong to one or more step collections, or none.</p>
 
           <p>
-            <a href="#EventStep"
-              >EventStep</a
+            <a href="#BusinessStep"
+              >BusinessStep</a
             >
             &mdash; Member of &mdash;
             <a href="#StepCollection">StepCollection</a>
@@ -645,44 +688,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="stepInHouse">
-          <h3>
-            Object property
-            <a href="#stepInHouse"
-              >Step in House</a
-            >
-          </h3>
-
-           <p>Relates an event step to the House in which that event step would take place. An event step may take place in one or both Houses, or none.</p>
-
-          <p>
-            <a href="#EventStep"
-              >EventStep</a
-            >
-            &mdash; Step in House &mdash;
-            <a href="#House">House</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="stepInLegislature">
-          <h3>
-            Object property
-            <a href="#stepInLegislature"
-              >Step in legislature</a
-            >
-          </h3>
-
-           <p>Relates an event step to the legislature in which that event step would take place, for example: a legislative consent motion being tabled in the Scottish Parliament. An event step may take place in one legislature, or none.</p>
-
-          <p>
-            <a href="#EventStep"
-              >EventStep</a
-            >
-            &mdash; Step in legislature &mdash;
-            <a href="#Legislature">Legislature</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="subjectTo">
           <h3>
             Object property
@@ -699,6 +704,25 @@
             >
             &mdash; Subject to &mdash;
             <a href="#Procedure">Procedure</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="takesPlaceDuring">
+          <h3>
+            Object property
+            <a href="#takesPlaceDuring"
+              >Takes place during</a
+            >
+          </h3>
+
+           <p>Relates a business item to the event during which that business item takes place. A business item takes place during one event. An event may include one or more business items, or none. For example: a meeting of the Joint Committee on Statutory Instruments being one event during which the committee may consider one or more instruments, the consideration of each instrument being a business item in a work package.</p>
+
+          <p>
+            <a href="#BusinessItem"
+              >BusinessItem</a
+            >
+            &mdash; Takes place during &mdash;
+            <a href="#Event">Event</a>
           </p>
         </article>
 
@@ -790,11 +814,11 @@
             <td>/<wbr>ontologies/<wbr>procedure/<wbr>WorkPackage</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>procedure/<wbr>EventStep</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>BusinessStep</td>
             <td>/<wbr>ontologies/<wbr>procedure/<wbr>Step</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>procedure/<wbr>EventStep</td>
+            <td>/<wbr>ontologies/<wbr>procedure/<wbr>BusinessStep</td>
             <td>/<wbr>ontologies/<wbr>procedure/<wbr>CitingThing</td>
           </tr>
           <tr>
@@ -903,7 +927,7 @@
 
     <footer>
       <p>
-        Generated 2024-11-26 10:36:00.892716 from a
+        Generated 2024-12-04 12:28:17.805643 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure/procedure-ontology.ttl"
