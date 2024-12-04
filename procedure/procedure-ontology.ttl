@@ -38,7 +38,12 @@ ppr:Event rdf:type owl:Class ;
 	rdfs:label "Event"@en ;
 	rdfs:comment "An event taking place inside or outside Parliament. For example: a second reading debate, the tabling of an early day motion, a laying of a paper or the making of a statutory instrument by a government minister."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-
+	
+ppr:BusinessItem rdf:type owl:Class ;
+	rdfs:label "Business item"@en ;
+	rdfs:comment "An item of business forming part of a work package, for example: the consideration of an instrument by a Delegated Legislation Committee taking place as part of a meeting of that committee."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+	
 ppr:WorkPackage rdf:type owl:Class ;
 	rdfs:label "Work package"@en ;
 	rdfs:comment "A group of events occurring as part of a procedure or as determined by a committee, for example: business items considered during the passage of a Statutory Instrument or Public Bill, or during an inquiry by a Select Committee."@en ;
@@ -66,11 +71,11 @@ ppr:Step rdf:type owl:Class ;
 	rdfs:comment "A step having a type. Steps are joined by routes to form procedures. For example, within the SI procedures there exists a step named 'English Votes for English Laws (EVEL) consideration'. Steps may occur in more than one procedure. For example, all statutory instrument procedures include the EVEL consideration step by means of routes."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:EventStep rdf:type owl:Class ;
+ppr:BusinessStep rdf:type owl:Class ;
 	rdfs:subClassOf ppr:Step ;
 	rdfs:subClassOf ppr:CitingThing ;
-	rdfs:label "Event step"@en ;
-	rdfs:comment "A step of type event. An event step describes a set of potential events, for example: the potential for papers to be laid before the House of Commons. Potential events described by an event step may take place inside or outside Parliament."@en ;
+	rdfs:label "Business step"@en ;
+	rdfs:comment "A step of type business. A business step describes a set of potential business items, for example: the potential for papers to be laid before the House of Commons. Potential business items described by a business step may take place inside or outside Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:CitingThing rdf:type owl:Class ;
@@ -165,10 +170,17 @@ ppr:StepCollection rdf:type owl:Class ;
 
 #######  Object properties #####
 
+ppr:takesPlaceDuring rdf:type owl:ObjectProperty ;
+	rdfs:label "Takes place during"@en ;
+	rdfs:comment "Relates a business item to the event during which that business item takes place. A business item takes place during one event. An event may include one or more business items, or none. For example: a meeting of the Joint Committee on Statutory Instruments being one event during which the committee may consider one or more instruments, the consideration of each instrument being a business item in a work package."@en ;
+	rdfs:domain ppr:BusinessItem ;
+	rdfs:range ppr:Event ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
+
 ppr:formsPartOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Forms part of"@en ;
-	rdfs:comment "Relates an event to the work package or work packages it forms part of. One or more events may form part of a work package. An event may form part of one or more work packages, for example: a meeting of the Joint Committee on Statutory Instruments may consider one or more SIs, each SI being the focus of a separate work package."@en ;
-	rdfs:domain ppr:Event ;
+	rdfs:comment "Relates a business item to the work package it forms part of. One or more business items may form part of a work package. A business item forms part of one work package."@en ;
+	rdfs:domain ppr:BusinessItem ;
 	rdfs:range ppr:WorkPackage ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
@@ -181,9 +193,9 @@ ppr:focus rdf:type owl:ObjectProperty ;
 	
 ppr:actualises rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualises"@en ;
-	rdfs:comment "Relates an event to the event step or steps being actualised. A record of an actual event forming part of a work package actualises the potential event described by the event step, procedurally indexing the event with the concept embodied by the event step. For example: an event recording the laying of a paper before the House of Commons in a work package actualises the event step 'Laid before the House of Commons', making that potential step actual. An event may actualise one or more event steps, for example: the event step for the putting of a question and the event step for the outcome may be actualised by one event. An event step may be actualised one or more times."@en ;
-	rdfs:domain ppr:Event ;
-	rdfs:range ppr:EventStep ;
+	rdfs:comment "Relates a business item to the business step or steps being actualised by that business item. A record of a business item forming part of a work package actualises the potential step described by the business step, procedurally indexing the business item with the concept embodied by the business step. For example: a business item recording the laying of a paper before the House of Commons in a work package actualises the business step 'Laid before the House of Commons', making that potential step actual. A business item may actualise one or more business steps, for example: the business step for the putting of a question and the business step for the outcome may be actualised by one business item. A business step may be actualised one or more times, or none."@en ;
+	rdfs:domain ppr:BusinessItem ;
+	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
 ppr:hasStepType rdf:type owl:ObjectProperty ;
@@ -291,11 +303,11 @@ ppr:parentProcedureCollection rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:ProcedureCollection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:forStep rdf:type owl:ObjectProperty ;
-	rdfs:label "For step"@en ;
-	rdfs:comment "Relates a step display depth in a procedure to an event step. A step display depth in a procedure is always related to one event step. An event step in a procedure has one step display depth, or none. An event step may have different step display depths in different procedures."@en ;
+ppr:forBusinessStep rdf:type owl:ObjectProperty ;
+	rdfs:label "For business step"@en ;
+	rdfs:comment "Relates a step display depth in a procedure to a business step. A step display depth in a procedure is always related to one business step. A business step in a procedure has one step display depth, or none. A busines step may have different step display depths in different procedures."@en ;
 	rdfs:domain ppr:StepDisplayDepthInProcedure ;
-	rdfs:range ppr:EventStep ;
+	rdfs:range ppr:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 
 ppr:depthInProcedure rdf:type owl:ObjectProperty ;
@@ -305,26 +317,19 @@ ppr:depthInProcedure rdf:type owl:ObjectProperty ;
 	rdfs:range ppr:Procedure ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:stepInLegislature rdf:type owl:ObjectProperty ;
-	rdfs:label "Step in legislature"@en ;
-	rdfs:comment "Relates an event step to the legislature in which that event step would take place, for example: a legislative consent motion being tabled in the Scottish Parliament. An event step may take place in one legislature, or none."@en ;
-	rdfs:domain ppr:EventStep ;
+ppr:businessStepInLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "Business step in legislature"@en ;
+	rdfs:comment "Relates a business step to the legislature in which it is possible for that business step to take place, for example: a Scottish Parliament legislative consent motion which may be tabled in the Scottish Parliament. A business step may take place in one legislature, or none."@en ;
+	rdfs:domain ppr:BusinessStep ;
 	rdfs:range ppr:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
-ppr:stepInHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "Step in House"@en ;
-	rdfs:comment "Relates an event step to the House in which that event step would take place. An event step may take place in one or both Houses, or none."@en ;
-	rdfs:domain ppr:EventStep ;
+ppr:businessStepInHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Business step in House"@en ;
+	rdfs:comment "Relates a business step to the House in which it is possible for that business step to take place, for example: a motion to refer to a Delegated Legislation Committee which may be tabled in the House of Commons. A business step may take place in one or more Houses, or none."@en ;
+	rdfs:domain ppr:BusinessStep ;
 	rdfs:range ppr:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
-	
-	
-	
-	
-																				# edited to here
-	
-	
 	
 ppr:inLegislature rdf:type owl:ObjectProperty ;
 	rdfs:label "In legislature"@en ;
@@ -335,8 +340,8 @@ ppr:inLegislature rdf:type owl:ObjectProperty ;
 	
 ppr:memberOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Member of"@en ;
-	rdfs:comment "Relates a step to the step collection that step is a member of. A step may belong to one or more step collections, or none."@en ;
-	rdfs:domain ppr:EventStep ;
+	rdfs:comment "Relates a business step to the step collection that business step is a member of. A business step may belong to one or more step collections, or none."@en ;
+	rdfs:domain ppr:BusinessStep ;
 	rdfs:range ppr:StepCollection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure/> .
 	
