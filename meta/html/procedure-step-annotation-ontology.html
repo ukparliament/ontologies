@@ -58,7 +58,7 @@
     <main>
       <h1>Procedure step ontology</h1>
 
-      <p id="description">A model describing annotations added to event steps in the procedure model by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how an event step is actualised.</p>
+      <p id="description">A model describing annotations added to business steps in the procedure model by the Indexing and Data Management Section of the House of Commons Library. Annotations are used to describe how a business step is actualised.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -71,10 +71,10 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="EventStep">
-          <h3>Class <a href="#EventStep">Event step</a></h3>
+        <article class="class" id="BusinessStep">
+          <h3>Class <a href="#BusinessStep">Business step</a></h3>
 
-          <p>A procedural step of type event, being the notion of a event happening in the House of Commons, the House of Lords, bicamerally, in a devolved legislature or external to Parliament and the devolved legislatures.</p>
+          <p>A step of type business. A business step describes a set of potential business items, for example: the potential for papers to be laid before the House of Commons. Potential business items described by a business step may take place inside or outside Parliament.</p>
          </article>
         <article class="class" id="Publication">
           <h3>Class <a href="#Publication">Publication</a></h3>
@@ -87,22 +87,22 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="actualiseWith">
+        <article class="objectproperty" id="actualisesAlongside">
           <h3>
             Object property
-            <a href="#actualiseWith"
-              >Actualise with</a
+            <a href="#actualisesAlongside"
+              >Actualised alongside</a
             >
           </h3>
 
-           <p>Relates an event step to an event step where steps may be actualised together.</p>
+           <p>Relates a business step to another business step where the two steps may be actualised alongside each other.</p>
 
           <p>
-            <a href="#EventStep"
-              >EventStep</a
+            <a href="#BusinessStep"
+              >BusinessStep</a
             >
-            &mdash; Actualise with &mdash;
-            <a href="#EventStep">EventStep</a>
+            &mdash; Actualised alongside &mdash;
+            <a href="#BusinessStep">BusinessStep</a>
           </p>
         </article>
 
@@ -114,11 +114,11 @@
             >
           </h3>
 
-           <p>Relates an event step to the publication which is the source of information for that event actualising the event step.</p>
+           <p>Relates a business step to the publication which is the source of information for the business item actualising that business step.</p>
 
           <p>
-            <a href="#EventStep"
-              >EventStep</a
+            <a href="#BusinessStep"
+              >BusinessStep</a
             >
             &mdash; Source &mdash;
             <a href="#Publication">Publication</a>
@@ -135,10 +135,10 @@
             <a href="#dateNote">Date note</a>
           </h3>
 
-          <p>A note that describes the date to use when actualising an event step.</p>
+          <p>A note describing the nature of the date that should be added to a business item actualising a business step. For example: a business item actualising a business step describing committee consideration should use the date that the committee met, rather than the date on which the committee report was published.</p>
 
           <p>
-            EventStep &mdash; Date note &mdash;
+            BusinessStep &mdash; Date note &mdash;
             langString
           </p>
         </article>
@@ -149,10 +149,10 @@
             <a href="#linkNote">Link note</a>
           </h3>
 
-          <p>A note that describes where an event, actualising an event step, should link to in a publication.</p>
+          <p>A note describing the nature of the link that should be added to a business item actualising a business step. For example: a business item actualising a business step describing the putting of a question in the House of Commons should link to the corresponding business item recorded in Votes and Proceedings.</p>
 
           <p>
-            EventStep &mdash; Link note &mdash;
+            BusinessStep &mdash; Link note &mdash;
             langString
           </p>
         </article>
@@ -238,7 +238,7 @@
 
     <footer>
       <p>
-        Generated 2024-12-04 12:31:39.077323 from a
+        Generated 2024-12-04 12:37:54.471569 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../procedure-step-annotation/procedure-step-annotation-ontology.ttl"
