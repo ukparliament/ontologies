@@ -215,44 +215,39 @@ pso:revisionSetOrdinality rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:sectionTitle rdf:type owl:DatatypeProperty ;
-	rdfs:label "Section title"@en ;
-	rdfs:comment "Relates a revision set section to its title."@en ;
-	rdfs:domain pso:RevisionSetSection ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
-pso:orderTitle rdf:type owl:DatatypeProperty ;
-	rdfs:label "Order title"@en ;
-	rdfs:comment "Relates an order version to its title."@en ;
-	rdfs:domain pso:OrderVersion ;
-	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
 pso:text rdf:type owl:DatatypeProperty ;
 	rdfs:label "Text"@en ;
 	rdfs:comment "Relates a fragment version to the text content of that fragment version."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
-pso:number rdf:type owl:DatatypeProperty ;
-	rdfs:label "Number"@en ;
-	rdfs:comment "Relates a fragment version to its number as it appears, within a revision set."@en ;
-	rdfs:domain pso:FragmentVersion ;
+	
+pso:paragraphNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Paragraph number"@en ;
+	rdfs:comment "Relates an order version to the paragraph number for that order version, for example: '7' in 'The Member presiding may not vote in any ballot'. An order version has one paragraph number, or none."@en ;
+	rdfs:domain pso:OrderVersion ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:orderVersionOrdinality rdf:type owl:DatatypeProperty ;
-	rdfs:label "Order version ordinality"@en ;
-	rdfs:comment "Relates an order version to its position in the list of order versions contained by a revision set."@en ;
+pso:subParagraphNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Sub-paragraph number"@en ;
+	rdfs:comment "Relates an order version to the sub-paragraph number for that order version, for example: 'c' in '(c)		
+on Thursdays beginning at 1.30 pm and continuing for up to three hours'. An order version has one sub-paragraph number, or none."@en ;
 	rdfs:domain pso:OrderVersion ;
-	rdfs:range xsd:integer ;
+	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
+	
+pso:subSubParagraphNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Sub-sub-paragraph number"@en ;
+	rdfs:comment "Relates an order version to the sub-sub-paragraph number for that order version, for example: 'ii' in '(ii)	
+in Westminster Hall, at the commencement of proceedings'. An order version has one sub-sub-paragraph number, or none."@en ;
+	rdfs:domain pso:OrderVersion ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
+	
 pso:fragmentVersionOrdinality rdf:type owl:DatatypeProperty ;
 	rdfs:label "Fragment version ordinality"@en ;
-	rdfs:comment "Relates a fragment version to its position in the list of fragment versions contained by a revision set."@en ;
+	rdfs:comment "Relates a fragment version to the position of that fragment version in the list of fragment versions contained by a revision set."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
