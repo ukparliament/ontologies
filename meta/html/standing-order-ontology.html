@@ -446,7 +446,7 @@
             <a href="#fragmentVersionOrdinality">Fragment version ordinality</a>
           </h3>
 
-          <p>Relates a fragment version to its position in the list of fragment versions contained by a revision set.</p>
+          <p>Relates a fragment version to the position of that fragment version in the list of fragment versions contained by a revision set.</p>
 
           <p>
             FragmentVersion &mdash; Fragment version ordinality &mdash;
@@ -468,45 +468,17 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="number">
+        <article class="dataproperty" id="paragraphNumber">
           <h3>
             Data property
-            <a href="#number">Number</a>
+            <a href="#paragraphNumber">Paragraph number</a>
           </h3>
 
-          <p>Relates a fragment version to its number as it appears, within a revision set.</p>
+          <p>Relates an order version to the paragraph number for that order version, for example: &#39;7&#39; in &#39;The Member presiding may not vote in any ballot&#39;. An order version has one paragraph number, or none.</p>
 
           <p>
-            FragmentVersion &mdash; Number &mdash;
+            OrderVersion &mdash; Paragraph number &mdash;
             Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="orderTitle">
-          <h3>
-            Data property
-            <a href="#orderTitle">Order title</a>
-          </h3>
-
-          <p>Relates an order version to its title.</p>
-
-          <p>
-            OrderVersion &mdash; Order title &mdash;
-            langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="orderVersionOrdinality">
-          <h3>
-            Data property
-            <a href="#orderVersionOrdinality">Order version ordinality</a>
-          </h3>
-
-          <p>Relates an order version to its position in the list of order versions contained by a revision set.</p>
-
-          <p>
-            OrderVersion &mdash; Order version ordinality &mdash;
-            integer
           </p>
         </article>
 
@@ -538,17 +510,31 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="sectionTitle">
+        <article class="dataproperty" id="subParagraphNumber">
           <h3>
             Data property
-            <a href="#sectionTitle">Section title</a>
+            <a href="#subParagraphNumber">Sub-paragraph number</a>
           </h3>
 
-          <p>Relates a revision set section to its title.</p>
+          <p>Relates an order version to the sub-paragraph number for that order version, for example: &#39;c&#39; in &#39;(c) on Thursdays beginning at 1.30 pm and continuing for up to three hours&#39;. An order version has one sub-paragraph number, or none.</p>
 
           <p>
-            RevisionSetSection &mdash; Section title &mdash;
-            langString
+            OrderVersion &mdash; Sub-paragraph number &mdash;
+            Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="subSubParagraphNumber">
+          <h3>
+            Data property
+            <a href="#subSubParagraphNumber">Sub-sub-paragraph number</a>
+          </h3>
+
+          <p>Relates an order version to the sub-sub-paragraph number for that order version, for example: &#39;ii&#39; in &#39;(ii) in Westminster Hall, at the commencement of proceedings&#39;. An order version has one sub-sub-paragraph number, or none.</p>
+
+          <p>
+            OrderVersion &mdash; Sub-sub-paragraph number &mdash;
+            Literal
           </p>
         </article>
 
@@ -650,7 +636,7 @@
 
     <footer>
       <p>
-        Generated 2024-12-09 14:17:04.294198 from a
+        Generated 2024-12-09 14:50:38.718822 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../standing-order/standing-order-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../standing-order/standing-order-ontology.ttl"
