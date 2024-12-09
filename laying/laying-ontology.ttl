@@ -55,9 +55,9 @@ pl:LaidPaper rdf:type owl:Class ;
 	rdfs:comment "A paper having been laid before a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
-pl:LayingAuthority rdf:type owl:Class ;
-	rdfs:label "Laying authority"@en ;
-	rdfs:comment "The authority under which a paper is laid. The authority for laying may cite a section of legislation, standing order or resolution giving authorisation for that laying."@en ;
+pl:LayingAuthorityCitation rdf:type owl:Class ;
+	rdfs:label "Laying authority citation"@en ;
+	rdfs:comment "A citation of the authority under which a paper is laid, for example: a section of legislation, a standing order or a resolution giving authorisation for that laying."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 
 pl:LayingAuthorityType rdf:type owl:Class ;
@@ -69,17 +69,17 @@ pl:LayingAuthorityType rdf:type owl:Class ;
 
 #######  Object properties ##### 
 	
-pl:hasLayingAuthority rdf:type owl:ObjectProperty ;
-	rdfs:label "Has laying authority"@en ;
-	rdfs:comment "Relates an act of laying a paper to the authority under which that paper is laid. A paper is laid under one authority."@en ;
+pl:hasLayingAuthorityCitation rdf:type owl:ObjectProperty ;
+	rdfs:label "Has laying authority citation"@en ;
+	rdfs:comment "Relates an act of laying a paper to the citation of the authority under which that paper is laid. The laying of a paper has one authority citation, or none."@en ;
 	rdfs:domain pl:Laying ;
-	rdfs:range pl:LayingAuthority ;
+	rdfs:range pl:LayingAuthorityCitation ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
 pl:hasLayingAuthorityType rdf:type owl:ObjectProperty ;
 	rdfs:label "Has laying authority type"@en ;
-	rdfs:comment "Relates a laying authority to the type of that laying authority. A laying authority is of one type."@en ;
-	rdfs:domain pl:LayingAuthority ;
+	rdfs:comment "Relates a laying to the type of the authority under which that laying is made. A laying has one laying authority type."@en ;
+	rdfs:domain pl:Laying ;
 	rdfs:range pl:LayingAuthorityType ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/laying/> .
 	
