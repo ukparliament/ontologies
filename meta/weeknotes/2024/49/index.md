@@ -50,7 +50,7 @@ Glancing at [Trello](https://trello.com/b/cl93yHIS/general-election-website), ve
 
 ## A Rush and a push
 
-James has also been busy helping Librarian Anna to [normalise](https://en.wikipedia.org/wiki/Database_normalization) the [Rush data]()https://membersafter1832.historyofparliamentonline.org/ she's been so diligently tidying. In the hope it never gets into the same mess again. This week saw the unveiling of yet another normalised database table, this one describing the [nature of an election](https://membersafter1832.historyofparliamentonline.org/nature_of_elections) and seeing use across both successful and unsuccessful candidacies. Lovely.
+James has also been busy helping Librarian Anna to [normalise](https://en.wikipedia.org/wiki/Database_normalization) the [Rush data](https://membersafter1832.historyofparliamentonline.org/) she's been so diligently tidying. In the hope it never gets into the same mess again. This week saw the unveiling of yet another normalised database table, this one describing the [nature of an election](https://membersafter1832.historyofparliamentonline.org/nature_of_elections) and seeing use across both successful and unsuccessful candidacies. Lovely.
 
 ## Managing Members
 
