@@ -58,7 +58,7 @@
     <main>
       <h1>Standing order ontology</h1>
 
-      <p id="description">A model describing standing orders for both Houses of Parliament, establishing persistent identification of orders and fragments of orders.</p>
+      <p id="description">A model describing standing orders of legislatures and changes to standing orders over time.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -74,12 +74,12 @@
         <article class="class" id="BusinessExtent">
           <h3>Class <a href="#BusinessExtent">Business extent</a></h3>
 
-          <p>Sets out the extent of business covered by a standing order as public business or private business.</p>
+          <p>The extent of business covered by a set of standing orders being, for example: public business or private business.</p>
          </article>
         <article class="class" id="Fragment">
           <h3>Class <a href="#Fragment">Fragment</a></h3>
 
-          <p>A fragment is an FRBR-style work level item, wrapping different manifestations - described as fragment versions - over time. It represents a platonic entity and associated intent.</p>
+          <p>A fragment of a standing order with its associated intent, as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
          </article>
         <article class="class" id="FragmentVersion">
           <h3>Class <a href="#FragmentVersion">Fragment version</a></h3>
@@ -99,32 +99,32 @@
         <article class="class" id="Order">
           <h3>Class <a href="#Order">Order</a></h3>
 
-          <p>An order is an FRBR-style work level item, wrapping different manifestations - described as versions - over time. It represents a platonic entity and associated intent.</p>
+          <p>A standing order with its associated intent, as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification.</p>
          </article>
         <article class="class" id="OrderVersion">
           <h3>Class <a href="#OrderVersion">Order version</a></h3>
 
-          <p>A version of an order contained by a section of a revision set.</p>
+          <p>A version of a standing order contained by a section of a revision set.</p>
          </article>
         <article class="class" id="Revision">
           <h3>Class <a href="#Revision">Revision</a></h3>
 
-          <p>A revision is a change to the text of a standing order fragment.</p>
+          <p>A change to the text of a standing order fragment.</p>
          </article>
         <article class="class" id="RevisionSet">
           <h3>Class <a href="#RevisionSet">Revision set</a></h3>
 
-          <p>A set of sections, containing orders, as they exist at the time of revision of one or more orders.</p>
+          <p>A set of standing orders, as they exist at the time of revision of one or more of those orders.</p>
          </article>
         <article class="class" id="RevisionSetSection">
           <h3>Class <a href="#RevisionSetSection">Revision set section</a></h3>
 
-          <p>A grouping of orders in a revision set.</p>
+          <p>A grouping of orders under the same title in a revision set.</p>
          </article>
         <article class="class" id="SuspensionPeriod">
           <h3>Class <a href="#SuspensionPeriod">Suspension period</a></h3>
 
-          <p>A suspension period is the time during which one or more standing orders, or fragments of standing orders, are suspended. A suspension period has a start date and, where specified, an end date. These dates are set out in the utility model. Some suspensions do not specify an end date, for example: the suspension of House of Lords Standing Order 10(6) (Hereditary peers: by-elections) pending a further report from the Procedure and Privileges Committee. An order or fragment may be &#39;suspended, for a period&#39; or &#39;dispensed with, for a purpose&#39;. Orders and fragments may be dispensed with on a case by case basis: in the House of Commons this is usually indicated by the presence of &#39;notwithstanding&#39; in the text of the motion. The suspension period class only covers suspensions and does not cover cases where standing orders are dispensed with. The procedure maps have steps which express the dispensing of standing orders.</p>
+          <p>A suspension period is the time during which one or more standing orders are suspended. A suspension period has a start date and, where specified, an end date. Some suspensions do not specify an end date, for example: the suspension of House of Lords Standing Order 10(6) (Hereditary peers: by-elections) pending a further report from the Procedure and Privileges Committee. An order may be &#39;suspended, for a period&#39; or &#39;dispensed with, for a purpose&#39;. The suspension period class covers suspensions, not dispensations.</p>
          </article>
       </section>
  
@@ -132,21 +132,21 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="containedBy">
+        <article class="objectproperty" id="formsPartOf">
           <h3>
             Object property
-            <a href="#containedBy"
-              >Contained by</a
+            <a href="#formsPartOf"
+              >Forms part of</a
             >
           </h3>
 
-           <p>Relates a fragment version to the order version it is contained by.</p>
+           <p>Relates a fragment version to the order version it forms part of. A fragment version forms part of one order version.</p>
 
           <p>
             <a href="#FragmentVersion"
               >FragmentVersion</a
             >
-            &mdash; Contained by &mdash;
+            &mdash; Forms part of &mdash;
             <a href="#OrderVersion">OrderVersion</a>
           </p>
         </article>
@@ -159,7 +159,7 @@
             >
           </h3>
 
-           <p>Relates a fragment version to the revision set it is contained by.</p>
+           <p>Relates a fragment version to the revision set it is contained by. A fragment version is contained by one revision set.</p>
 
           <p>
             <a href="#FragmentVersion"
@@ -178,7 +178,7 @@
             >
           </h3>
 
-           <p>Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral.</p>
+           <p>Relates a House to the legislature it forms part of, for example: the House of Commons forming part of the UK Parliament. A House forms part of one legislature.</p>
 
           <p>
             <a href="#House"
@@ -197,7 +197,7 @@
             >
           </h3>
 
-           <p>Relates a revision set to the House it is issued by. A revision set may be issued by one House, or none.</p>
+           <p>Relates a revision set to the House that revision set is issued by. A revision set may be issued by one House, or none.</p>
 
           <p>
             <a href="#RevisionSet"
@@ -216,13 +216,51 @@
             >
           </h3>
 
-           <p>Relates a revision set to the legislature it is issued by. A revision set may be issued by one legislature, or none.</p>
+           <p>Relates a revision set to the legislature that revision set is issued by. A revision set may be issued by one legislature, or none.</p>
 
           <p>
             <a href="#RevisionSet"
               >RevisionSet</a
             >
             &mdash; Issued by legislature &mdash;
+            <a href="#Legislature">Legislature</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="orderOfHouse">
+          <h3>
+            Object property
+            <a href="#orderOfHouse"
+              >Order of House</a
+            >
+          </h3>
+
+           <p>Relates an order to the House of which it is an order. An order is of one House, or none.</p>
+
+          <p>
+            <a href="#Order"
+              >Order</a
+            >
+            &mdash; Order of House &mdash;
+            <a href="#House">House</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="orderOfLegislature">
+          <h3>
+            Object property
+            <a href="#orderOfLegislature"
+              >Order of legislature</a
+            >
+          </h3>
+
+           <p>Relates an order to the legislature of which it is an order. An order is of one legislature, or none.</p>
+
+          <p>
+            <a href="#Order"
+              >Order</a
+            >
+            &mdash; Order of legislature &mdash;
             <a href="#Legislature">Legislature</a>
           </p>
         </article>
@@ -235,7 +273,7 @@
             >
           </h3>
 
-           <p>Relates an order version to the section of a revision set it is contained by.</p>
+           <p>Relates an order version to the section of a revision set it is contained by. An order version is contained by one revision set section.</p>
 
           <p>
             <a href="#OrderVersion"
@@ -243,44 +281,6 @@
             >
             &mdash; Order version contained by &mdash;
             <a href="#RevisionSetSection">RevisionSetSection</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="orderedByHouse">
-          <h3>
-            Object property
-            <a href="#orderedByHouse"
-              >Ordered by House</a
-            >
-          </h3>
-
-           <p>Relates an order to the House by which it was ordered.</p>
-
-          <p>
-            <a href="#Order"
-              >Order</a
-            >
-            &mdash; Ordered by House &mdash;
-            <a href="#House">House</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="orderedByLegislature">
-          <h3>
-            Object property
-            <a href="#orderedByLegislature"
-              >Ordered by legislature</a
-            >
-          </h3>
-
-           <p>Relates an order to the legislature by which it was ordered.</p>
-
-          <p>
-            <a href="#Order"
-              >Order</a
-            >
-            &mdash; Ordered by legislature &mdash;
-            <a href="#Legislature">Legislature</a>
           </p>
         </article>
 
@@ -292,7 +292,7 @@
             >
           </h3>
 
-           <p>Relates a revision to the fragment version being revised.</p>
+           <p>Relates a revision to the fragment version being revised. A revision is from one fragment version.</p>
 
           <p>
             <a href="#Revision"
@@ -311,7 +311,7 @@
             >
           </h3>
 
-           <p>Relates a revision set to the business extent which that set covers.</p>
+           <p>Relates a revision set to the business extent which that revision set covers. A revision set covers one business extent.</p>
 
           <p>
             <a href="#RevisionSet"
@@ -330,7 +330,7 @@
             >
           </h3>
 
-           <p>Relates a revision set section to the revision set it is contained by.</p>
+           <p>Relates a revision set section to the revision set it is contained by. A revision set section is contained by one revision set.</p>
 
           <p>
             <a href="#RevisionSetSection"
@@ -349,7 +349,7 @@
             >
           </h3>
 
-           <p>Relates a revision to the fragment version resulting from the revision.</p>
+           <p>Relates a revision to the fragment version resulting from the revision. A revision is to one fragment version.</p>
 
           <p>
             <a href="#Revision"
@@ -357,25 +357,6 @@
             >
             &mdash; Revision to &mdash;
             <a href="#FragmentVersion">FragmentVersion</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="suspensionPeriodOfFragment">
-          <h3>
-            Object property
-            <a href="#suspensionPeriodOfFragment"
-              >Suspension period of fragment</a
-            >
-          </h3>
-
-           <p>Relates a suspension period to the fragment that is suspended for that period.</p>
-
-          <p>
-            <a href="#SuspensionPeriod"
-              >SuspensionPeriod</a
-            >
-            &mdash; Suspension period of fragment &mdash;
-            <a href="#Fragment">Fragment</a>
           </p>
         </article>
 
@@ -387,7 +368,7 @@
             >
           </h3>
 
-           <p>Relates a suspension period to the order that is suspended for that period.</p>
+           <p>Relates a suspension period to the order or orders that are suspended for that period. A suspension period applies to one or more orders.</p>
 
           <p>
             <a href="#SuspensionPeriod"
@@ -406,7 +387,7 @@
             >
           </h3>
 
-           <p>Relates a fragment version to the fragment it is a version of.</p>
+           <p>Relates a fragment version to the fragment it is a version of. A fragment version is a version of one fragment.</p>
 
           <p>
             <a href="#FragmentVersion"
@@ -425,7 +406,7 @@
             >
           </h3>
 
-           <p>Relates an order version to the order it is a version of.</p>
+           <p>Relates an order version to the order it is a version of. An order version is a version of one order.</p>
 
           <p>
             <a href="#OrderVersion"
@@ -440,27 +421,13 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="fragmentVersionOrdinality">
-          <h3>
-            Data property
-            <a href="#fragmentVersionOrdinality">Fragment version ordinality</a>
-          </h3>
-
-          <p>Relates a fragment version to the position of that fragment version in the list of fragment versions contained by a revision set.</p>
-
-          <p>
-            FragmentVersion &mdash; Fragment version ordinality &mdash;
-            integer
-          </p>
-        </article>
-
         <article class="dataproperty" id="isMajorRevision">
           <h3>
             Data property
             <a href="#isMajorRevision">Is major revision</a>
           </h3>
 
-          <p>Relates a revision to boolean describing if the revision is major: a FALSE value indicates only a change of case to the text content, a TRUE value indicates a major revision involving a change of wording to the text content.</p>
+          <p>Records if the revision is considered to be major: a TRUE value indicates a change of wording to the text content, a FALSE value indicates a change in casing with no change of wording.</p>
 
           <p>
             Revision &mdash; Is major revision &mdash;
@@ -474,39 +441,11 @@
             <a href="#paragraphNumber">Paragraph number</a>
           </h3>
 
-          <p>Relates an order version to the paragraph number for that order version, for example: &#39;7&#39; in &#39;The Member presiding may not vote in any ballot&#39;. An order version has one paragraph number, or none.</p>
+          <p>Relates an order version to the paragraph number for that order version, for example: &#39;7&#39; in &#39;(7) The Member presiding may not vote in any ballot&#39;. An order version has one paragraph number, or none.</p>
 
           <p>
             OrderVersion &mdash; Paragraph number &mdash;
             Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="revisedOn">
-          <h3>
-            Data property
-            <a href="#revisedOn">Revised on</a>
-          </h3>
-
-          <p>Relates a revision set to the date on which one or more orders contained by the revision set were revised.</p>
-
-          <p>
-            RevisionSet &mdash; Revised on &mdash;
-            date
-          </p>
-        </article>
-
-        <article class="dataproperty" id="revisionSetOrdinality">
-          <h3>
-            Data property
-            <a href="#revisionSetOrdinality">Revision set ordinality</a>
-          </h3>
-
-          <p>Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day.</p>
-
-          <p>
-            RevisionSet &mdash; Revision set ordinality &mdash;
-            integer
           </p>
         </article>
 
@@ -629,14 +568,15 @@
         Made by   &middot; David Beamish           &middot; <a href="https://robert-brook.com/">Robert Brook</a>
    &middot; Paul Evans           &middot; <a href="https://tgfleming.wordpress.com/">Thomas Fleming</a>
           &middot; <a href="https://ngoet.com/">Niels D. Goet</a>
-          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+          &middot; <a href="https://jamesjefferies.com/">James Jefferies</a>
+   &middot; Ned Morrell           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville           &middot; <a href="https://radoslawzubek.com/">Radoslaw Zubek</a>
        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2024-12-13 15:39:43.461789 from a
+        Generated 2024-12-16 15:20:57.257742 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../standing-order/standing-order-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../standing-order/standing-order-ontology.ttl"
