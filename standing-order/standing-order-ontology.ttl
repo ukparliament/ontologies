@@ -11,7 +11,7 @@
     dcterms:title "Standing order ontology"@en ;
     dcterms:created "2020-12-07"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing standing orders for both Houses of Parliament, establishing persistent identification of orders and fragments of orders."@en;
+    dcterms:description "A model describing standing orders of legislatures and changes to standing orders over time."@en;
 	foaf:depiction <https://ukparliament.github.io/ontologies/standing-order/standing-order.svg> ;
 	foaf:maker
 		[ foaf:name "David Beamish" ],
@@ -19,6 +19,8 @@
 		[ foaf:name "Paul Evans" ],
 		[ foaf:name "Thomas Fleming"; foaf:homepage <https://tgfleming.wordpress.com/> ],
 		[ foaf:name "Niels D. Goet"; foaf:homepage <https://ngoet.com/> ],
+		[ foaf:name "James Jefferies"; foaf:homepage <https://jamesjefferies.com/> ],
+		[ foaf:name "Ned Morrell" ],
 		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
 		[ foaf:name "Anya Somerville" ],
 	    [ foaf:name "Radoslaw Zubek"; foaf:homepage <https://radoslawzubek.com/> ].
@@ -38,29 +40,29 @@ pso:House rdf:type owl:Class ;
 
 pso:BusinessExtent rdf:type owl:Class ;
 	rdfs:label "Business extent"@en ;
-	rdfs:comment "Sets out the extent of business covered by a standing order as public business or private business."@en ;
+	rdfs:comment "The extent of business covered by a set of standing orders being, for example: public business or private business."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:RevisionSet rdf:type owl:Class ;
 	rdfs:label "Revision set"@en ;
-	rdfs:comment "A set of sections, containing orders, as they exist at the time of revision of one or more orders."@en ;
+	rdfs:comment "A set of standing orders, as they exist at the time of revision of one or more of those orders."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:RevisionSetSection rdf:type owl:Class ;
 	rdfs:label "Revision set section"@en ;
-	rdfs:comment "A grouping of orders in a revision set."@en ;
+	rdfs:comment "A grouping of orders under the same title in a revision set."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:OrderVersion rdf:type owl:Class ;
 	rdfs:label "Order version"@en ;
-	rdfs:comment "A version of an order contained by a section of a revision set."@en ;
+	rdfs:comment "A version of a standing order contained by a section of a revision set."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:Order rdf:type owl:Class ;
 	rdfs:label "Order"@en ;
-	rdfs:comment "An order is an FRBR-style work level item, wrapping different manifestations - described as versions - over time. It represents a platonic entity and associated intent."@en ;
+	rdfs:comment "A standing order with its associated intent, as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
+	
 pso:FragmentVersion rdf:type owl:Class ;
 	rdfs:label "Fragment version"@en ;
 	rdfs:comment "A version of a fragment of a standing order, contained by a revision set."@en ;
@@ -68,17 +70,17 @@ pso:FragmentVersion rdf:type owl:Class ;
 
 pso:Fragment rdf:type owl:Class ;
 	rdfs:label "Fragment"@en ;
-	rdfs:comment "A fragment is an FRBR-style work level item, wrapping different manifestations - described as fragment versions - over time. It represents a platonic entity and associated intent."@en ;
+	rdfs:comment "A fragment of a standing order with its associated intent, as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
+	
 pso:Revision rdf:type owl:Class ;
 	rdfs:label "Revision"@en ;
-	rdfs:comment "A revision is a change to the text of a standing order fragment."@en ;
+	rdfs:comment "A change to the text of a standing order fragment."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:SuspensionPeriod rdf:type owl:Class ;
 	rdfs:label "Suspension period"@en ;
-	rdfs:comment "A suspension period is the time during which one or more standing orders, or fragments of standing orders, are suspended. A suspension period has a start date and, where specified, an end date. These dates are set out in the utility model. Some suspensions do not specify an end date, for example: the suspension of House of Lords Standing Order 10(6) (Hereditary peers: by-elections) pending a further report from the Procedure and Privileges Committee. An order or fragment may be 'suspended, for a period' or 'dispensed with, for a purpose'. Orders and fragments may be dispensed with on a case by case basis: in the House of Commons this is usually indicated by the presence of 'notwithstanding' in the text of the motion. The suspension period class only covers suspensions and does not cover cases where standing orders are dispensed with. The procedure maps have steps which express the dispensing of standing orders."@en ;
+	rdfs:comment "A suspension period is the time during which one or more standing orders are suspended. A suspension period has a start date and, where specified, an end date. Some suspensions do not specify an end date, for example: the suspension of House of Lords Standing Order 10(6) (Hereditary peers: by-elections) pending a further report from the Procedure and Privileges Committee. An order may be 'suspended, for a period' or 'dispensed with, for a purpose'. The suspension period class covers suspensions, not dispensations."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 
@@ -87,134 +89,113 @@ pso:SuspensionPeriod rdf:type owl:Class ;
 
 pso:inLegislature rdf:type owl:ObjectProperty ;
 	rdfs:label "In legislature"@en ;
-	rdfs:comment "Relates a House to the Legislature it forms part of. This is only used to relate the House of Commons and the House of Lords to the UK Parliament, devolved legislatures being unicameral."@en ;
+	rdfs:comment "Relates a House to the legislature it forms part of, for example: the House of Commons forming part of the UK Parliament. A House forms part of one legislature."@en ;
 	rdfs:domain pso:House ;
 	rdfs:range pso:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
+	
 pso:issuedByHouse rdf:type owl:ObjectProperty ;
 	rdfs:label "Issued by House"@en ;
-	rdfs:comment "Relates a revision set to the House it is issued by. A revision set may be issued by one House, or none."@en ;
+	rdfs:comment "Relates a revision set to the House that revision set is issued by. A revision set may be issued by one House, or none."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range pso:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:issuedByLegislature rdf:type owl:ObjectProperty ;
 	rdfs:label "Issued by legislature"@en ;
-	rdfs:comment "Relates a revision set to the legislature it is issued by. A revision set may be issued by one legislature, or none."@en ;
+	rdfs:comment "Relates a revision set to the legislature that revision set is issued by. A revision set may be issued by one legislature, or none."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range pso:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:revisionSetCoversBusinessExtent rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision set covers business extent"@en ;
-	rdfs:comment "Relates a revision set to the business extent which that set covers."@en ;
+	rdfs:comment "Relates a revision set to the business extent which that revision set covers. A revision set covers one business extent."@en ;
 	rdfs:domain pso:RevisionSet ;
 	rdfs:range pso:BusinessExtent ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:revisionSetSectionContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision set section contained by"@en ;
-	rdfs:comment "Relates a revision set section to the revision set it is contained by."@en ;
+	rdfs:comment "Relates a revision set section to the revision set it is contained by. A revision set section is contained by one revision set."@en ;
 	rdfs:domain pso:RevisionSetSection ;
 	rdfs:range pso:RevisionSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:orderVersionContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Order version contained by"@en ;
-	rdfs:comment "Relates an order version to the section of a revision set it is contained by."@en ;
+	rdfs:comment "Relates an order version to the section of a revision set it is contained by. An order version is contained by one revision set section."@en ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range pso:RevisionSetSection ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:fragmentVersionContainedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Fragment version contained by"@en ;
-	rdfs:comment "Relates a fragment version to the revision set it is contained by."@en ;
+	rdfs:comment "Relates a fragment version to the revision set it is contained by. A fragment version is contained by one revision set."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range pso:RevisionSet ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:containedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Contained by"@en ;
-	rdfs:comment "Relates a fragment version to the order version it is contained by."@en ;
+pso:formsPartOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Forms part of"@en ;
+	rdfs:comment "Relates a fragment version to the order version it forms part of. A fragment version forms part of one order version."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range pso:OrderVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
+	
 pso:revisionFrom rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision from"@en ;
-	rdfs:comment "Relates a revision to the fragment version being revised."@en ;
+	rdfs:comment "Relates a revision to the fragment version being revised. A revision is from one fragment version."@en ;
 	rdfs:domain pso:Revision ;
 	rdfs:range pso:FragmentVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:revisionTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Revision to"@en ;
-	rdfs:comment "Relates a revision to the fragment version resulting from the revision."@en ;
+	rdfs:comment "Relates a revision to the fragment version resulting from the revision. A revision is to one fragment version."@en ;
 	rdfs:domain pso:Revision ;
 	rdfs:range pso:FragmentVersion ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-
-pso:orderedByHouse rdf:type owl:ObjectProperty ;
-	rdfs:label "Ordered by House"@en ;
-	rdfs:comment "Relates an order to the House by which it was ordered."@en ;
+	
+pso:orderOfHouse rdf:type owl:ObjectProperty ;
+	rdfs:label "Order of House"@en ;
+	rdfs:comment "Relates an order to the House of which it is an order. An order is of one House, or none."@en ;
 	rdfs:domain pso:Order ;
 	rdfs:range pso:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:orderedByLegislature rdf:type owl:ObjectProperty ;
-	rdfs:label "Ordered by legislature"@en ;
-	rdfs:comment "Relates an order to the legislature by which it was ordered."@en ;
+pso:orderOfLegislature rdf:type owl:ObjectProperty ;
+	rdfs:label "Order of legislature"@en ;
+	rdfs:comment "Relates an order to the legislature of which it is an order. An order is of one legislature, or none."@en ;
 	rdfs:domain pso:Order ;
 	rdfs:range pso:Legislature ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
 pso:versionOfOrder rdf:type owl:ObjectProperty ;
 	rdfs:label "Version of order"@en ;
-	rdfs:comment "Relates an order version to the order it is a version of."@en ;
+	rdfs:comment "Relates an order version to the order it is a version of. An order version is a version of one order."@en ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range pso:Order ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:versionOfFragment rdf:type owl:ObjectProperty ;
 	rdfs:label "Version of fragment"@en ;
-	rdfs:comment "Relates a fragment version to the fragment it is a version of."@en ;
+	rdfs:comment "Relates a fragment version to the fragment it is a version of. A fragment version is a version of one fragment."@en ;
 	rdfs:domain pso:FragmentVersion ;
 	rdfs:range pso:Fragment ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:suspensionPeriodOfOrder rdf:type owl:ObjectProperty ;
 	rdfs:label "Suspension period of order"@en ;
-	rdfs:comment "Relates a suspension period to the order that is suspended for that period."@en ;
+	rdfs:comment "Relates a suspension period to the order or orders that are suspended for that period. A suspension period applies to one or more orders."@en ;
 	rdfs:domain pso:SuspensionPeriod ;
 	rdfs:range pso:Order ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-pso:suspensionPeriodOfFragment rdf:type owl:ObjectProperty ;
-	rdfs:label "Suspension period of fragment"@en ;
-	rdfs:comment "Relates a suspension period to the fragment that is suspended for that period."@en ;
-	rdfs:domain pso:SuspensionPeriod ;
-	rdfs:range pso:Fragment ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 	
-				
-
+	
 #######  Data properties ##### 
 
-pso:revisedOn rdf:type owl:DatatypeProperty ;
-	rdfs:label "Revised on"@en ;
-	rdfs:comment "Relates a revision set to the date on which one or more orders contained by the revision set were revised."@en ;
-	rdfs:domain pso:RevisionSet ;
-	rdfs:range xsd:date ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
-pso:revisionSetOrdinality rdf:type owl:DatatypeProperty ;
-	rdfs:label "Revision set ordinality"@en ;
-	rdfs:comment "Relates a revision set to its position in the list of revision sets. Allows more than one revision set to occur on the same calendar day."@en ;
-	rdfs:domain pso:RevisionSet ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
 pso:text rdf:type owl:DatatypeProperty ;
 	rdfs:label "Text"@en ;
 	rdfs:comment "Relates a fragment version to the text content of that fragment version."@en ;
@@ -224,7 +205,7 @@ pso:text rdf:type owl:DatatypeProperty ;
 	
 pso:paragraphNumber rdf:type owl:DatatypeProperty ;
 	rdfs:label "Paragraph number"@en ;
-	rdfs:comment "Relates an order version to the paragraph number for that order version, for example: '7' in 'The Member presiding may not vote in any ballot'. An order version has one paragraph number, or none."@en ;
+	rdfs:comment "Relates an order version to the paragraph number for that order version, for example: '7' in '(7) The Member presiding may not vote in any ballot'. An order version has one paragraph number, or none."@en ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
@@ -242,17 +223,10 @@ pso:subSubParagraphNumber rdf:type owl:DatatypeProperty ;
 	rdfs:domain pso:OrderVersion ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
-	
-pso:fragmentVersionOrdinality rdf:type owl:DatatypeProperty ;
-	rdfs:label "Fragment version ordinality"@en ;
-	rdfs:comment "Relates a fragment version to the position of that fragment version in the list of fragment versions contained by a revision set."@en ;
-	rdfs:domain pso:FragmentVersion ;
-	rdfs:range xsd:integer ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
 
 pso:isMajorRevision rdf:type owl:DatatypeProperty ;
 	rdfs:label "Is major revision"@en ;
-	rdfs:comment "Relates a revision to boolean describing if the revision is major: a FALSE value indicates only a change of case to the text content, a TRUE value indicates a major revision involving a change of wording to the text content."@en ;
+	rdfs:comment "Records if the revision is considered to be major: a TRUE value indicates a change of wording to the text content, a FALSE value indicates a change in casing with no change of wording."@en ;
 	rdfs:domain pso:Revision ;
 	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/standing-order/> .
