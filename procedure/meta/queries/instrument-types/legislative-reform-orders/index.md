@@ -42,6 +42,8 @@ A revised draft legislative reform order can be laid following the original vers
 
 ## Legislative reform orders by calendar year
 
+* [2025](https://api.parliament.uk/s/abb17d06)
+
 * [2024](https://api.parliament.uk/s/720b76e5)
 
 * [2023](https://api.parliament.uk/s/b34c705b)
