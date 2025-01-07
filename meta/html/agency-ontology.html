@@ -58,14 +58,14 @@
     <main>
       <h1>Agency ontology</h1>
 
-      <p id="description">A model describing people and groups of people with agency. The model also describes a person’s membership of and positions in groups.</p>
+      <p id="description">A model describing people and groups of people having agency. The model also describes membership of and positions in groups.</p>
 
       <nav>
         <a href="#classes">Classes</a>
         &middot; <a href="#objectproperties">Object properties</a>  &middot;
         <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
 
- &middot; <a href="https://ukparliament.github.io/ontologies/agency/agency.png">Depiction</a>
+ &middot; <a href="https://ukparliament.github.io/ontologies/agency/agency.svg">Depiction</a>
       </nav>
 
       <section id="classes">
@@ -74,28 +74,24 @@
         <article class="class" id="Agent">
           <h3>Class <a href="#Agent">Agent</a></h3>
 
-          <p>Agents include people and groups, including those outside the Parliamentary Service, participating in parliamentary procedure and contributing to the wider work of Parliament.</p>
-         </article>
-        <article class="class" id="core#Concept">
-          <h3>Class <a href="#core#Concept">Concept</a></h3>
-
+          <p>Agents being people and groups of people.</p>
          </article>
         <article class="class" id="Group">
           <h3>Class <a href="#Group">Group</a></h3>
 
-          <p>A group of people. Groups may contain other groups or be empty.</p>
+          <p>A group of people. A group may have no members at a point in time.</p>
            <p>
             Superclasses  &middot; Agent           </p>
         </article>
         <article class="class" id="GroupInclusion">
           <h3>Class <a href="#GroupInclusion">Group inclusion</a></h3>
 
-          <p>The inclusion of a person or group in another group over a period of time, for example: a membership of a committee or a whipping to a party.</p>
+          <p>The inclusion of a person or group in another group over a period of time, for example: a person being a member of a committee or a subcommittee being part of a committee.</p>
          </article>
         <article class="class" id="Incumbency">
           <h3>Class <a href="#Incumbency">Incumbency</a></h3>
 
-          <p>The holding of a position by a person, including the time period for which this was the case. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
+          <p>The holding of a position by a person over a period of time. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
          </article>
         <article class="class" id="Person">
           <h3>Class <a href="#Person">Person</a></h3>
@@ -104,78 +100,21 @@
            <p>
             Superclasses  &middot; Agent           </p>
         </article>
-        <article class="class" id="Place">
-          <h3>Class <a href="#Place">Place</a></h3>
-
-          <p>A place named in a geography.</p>
-         </article>
         <article class="class" id="Position">
           <h3>Class <a href="#Position">Position</a></h3>
 
           <p>A named post within a group. A position may be held by one or more people over time or at the same time, or have no holder at a particular time: for example, the post of Minister of Food, having existed in the past and having had eight successive incumbents; or a Member of the House of Commons and a Member of the House of Lords both serving as Co-Chairs of the Joint Committee on the Palace of Westminster.</p>
+         </article>
+        <article class="class" id="PositionInGroup">
+          <h3>Class <a href="#PositionInGroup">Position in group</a></h3>
+
+          <p>The association between a position and the group that position is part of for a period of time. For example: the position of &#39;Minister for Women and Equalities&#39; being part of the Department for International Trade from October 2022 to July 2024, then being part of the Department for Education from July 2024.</p>
          </article>
       </section>
  
       <section id="objectproperties">
         <h2>Object properties</h2>
 
-
-        <article class="objectproperty" id="hasExpertiseIn">
-          <h3>
-            Object property
-            <a href="#hasExpertiseIn"
-              >Has expertise in</a
-            >
-          </h3>
-
-           <p>Relates an agent to a concept to express an area of expertise. An agent may have one or more areas of expertise, or none.</p>
-
-          <p>
-            <a href="#Agent"
-              >Agent</a
-            >
-            &mdash; Has expertise in &mdash;
-            <a href="#core#Concept">core#Concept</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="hasGroupInclusion">
-          <h3>
-            Object property
-            <a href="#hasGroupInclusion"
-              >Has group inclusion</a
-            >
-          </h3>
-
-           <p>Relates an agent to a group inclusion. An agent may have one or more group inclusions, or none. A group inclusion is to a single agent.</p>
-
-          <p>
-            <a href="#Agent"
-              >Agent</a
-            >
-            &mdash; Has group inclusion &mdash;
-            <a href="#GroupInclusion">GroupInclusion</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="hasInterestIn">
-          <h3>
-            Object property
-            <a href="#hasInterestIn"
-              >Has interest in</a
-            >
-          </h3>
-
-           <p>Relates an agent to a concept to express an area of interest. An agent may have one or more areas of interest, or none.</p>
-
-          <p>
-            <a href="#Agent"
-              >Agent</a
-            >
-            &mdash; Has interest in &mdash;
-            <a href="#core#Concept">core#Concept</a>
-          </p>
-        </article>
 
         <article class="objectproperty" id="inGroup">
           <h3>
@@ -185,11 +124,11 @@
             >
           </h3>
 
-           <p>Relates a group inclusion to a group. A group inclusion is in a single group. A group may have one or more group inclusions, or none.</p>
+           <p>Relates a &#39;position in a group&#39; to the group. A &#39;position in a group&#39; is in one group. A group may have one or more &#39;positions in groups&#39; over time, or none.</p>
 
           <p>
-            <a href="#GroupInclusion"
-              >GroupInclusion</a
+            <a href="#PositionInGroup"
+              >PositionInGroup</a
             >
             &mdash; In group &mdash;
             <a href="#Group">Group</a>
@@ -204,7 +143,7 @@
             >
           </h3>
 
-           <p>Relates an incumbency to a position. An incumbency is to a single position. A position may have one or more incumbencies, or none.</p>
+           <p>Relates an incumbency to a position. An incumbency is to a single position. A position may have one or more incumbencies, or none over time. A position may have more than one incumbency at a given time, for example: a committee chair position having two incumbents at the same time in the case of Co-Chairs.</p>
 
           <p>
             <a href="#Incumbency"
@@ -212,6 +151,44 @@
             >
             &mdash; In position &mdash;
             <a href="#Position">Position</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inclusionInGroup">
+          <h3>
+            Object property
+            <a href="#inclusionInGroup"
+              >Inclusion in group</a
+            >
+          </h3>
+
+           <p>Relates a group inclusion to a group. A group inclusion is in a single group. A group may have one or more group inclusions, or none.</p>
+
+          <p>
+            <a href="#GroupInclusion"
+              >GroupInclusion</a
+            >
+            &mdash; Inclusion in group &mdash;
+            <a href="#Group">Group</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="inclusionOfAgent">
+          <h3>
+            Object property
+            <a href="#inclusionOfAgent"
+              >Inclusion of agent</a
+            >
+          </h3>
+
+           <p>Relates a group inclusion to an agent. A group inclusion is of a single agent. An agent may have one or more group inclusions, or none.</p>
+
+          <p>
+            <a href="#GroupInclusion"
+              >GroupInclusion</a
+            >
+            &mdash; Inclusion of agent &mdash;
+            <a href="#Agent">Agent</a>
           </p>
         </article>
 
@@ -223,7 +200,7 @@
             >
           </h3>
 
-           <p>Relates a an incumbency to the person occupying that incumbency. A person may have one or more incumbencies, or none. An incumbency is of one person.</p>
+           <p>Relates an incumbency to the person occupying that incumbency. A person may have one or more incumbencies, or none. An incumbency is of one person.</p>
 
           <p>
             <a href="#Incumbency"
@@ -234,41 +211,22 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="placeOfBirth">
+        <article class="objectproperty" id="ofPosition">
           <h3>
             Object property
-            <a href="#placeOfBirth"
-              >Place of birth</a
+            <a href="#ofPosition"
+              >Of position</a
             >
           </h3>
 
-           <p>Relates a person to their place of birth.</p>
+           <p>Relates a &#39;position in a group&#39; to the position. A &#39;position in a group&#39; is of one position. A position may have one or more &#39;positions in groups&#39; over time.</p>
 
           <p>
-            <a href="#Person"
-              >Person</a
+            <a href="#PositionInGroup"
+              >PositionInGroup</a
             >
-            &mdash; Place of birth &mdash;
-            <a href="#Place">Place</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="positionIn">
-          <h3>
-            Object property
-            <a href="#positionIn"
-              >Position in</a
-            >
-          </h3>
-
-           <p>Relates a position to a group. A position is in a single group. A group may have one or more positions, or none.</p>
-
-          <p>
-            <a href="#Position"
-              >Position</a
-            >
-            &mdash; Position in &mdash;
-            <a href="#Group">Group</a>
+            &mdash; Of position &mdash;
+            <a href="#Position">Position</a>
           </p>
         </article>
       </section>
@@ -276,41 +234,13 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="dateOfBirth">
-          <h3>
-            Data property
-            <a href="#dateOfBirth">Date of birth</a>
-          </h3>
-
-          <p>A person&#39;s date of birth.</p>
-
-          <p>
-            Person &mdash; Date of birth &mdash;
-            date
-          </p>
-        </article>
-
-        <article class="dataproperty" id="dateOfDeath">
-          <h3>
-            Data property
-            <a href="#dateOfDeath">Date of death</a>
-          </h3>
-
-          <p>A person&#39;s date of death.</p>
-
-          <p>
-            Person &mdash; Date of death &mdash;
-            date
-          </p>
-        </article>
-
         <article class="dataproperty" id="familyName">
           <h3>
             Data property
             <a href="#familyName">Family name</a>
           </h3>
 
-          <p>A person&#39;s inherited name, commonly known in the west as surname.</p>
+          <p>A person&#39;s inherited name, also known as a surname.</p>
 
           <p>
             Person &mdash; Family name &mdash;
@@ -324,7 +254,7 @@
             <a href="#givenName">Given name</a>
           </h3>
 
-          <p>A person&#39;s personal name, commonly known in the west as first or forename.</p>
+          <p>A person&#39;s given name, also known as a first or forename.</p>
 
           <p>
             Person &mdash; Given name &mdash;
@@ -342,20 +272,6 @@
 
           <p>
             Person &mdash; Other names &mdash;
-            langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="title">
-          <h3>
-            Data property
-            <a href="#title">Title</a>
-          </h3>
-
-          <p>A person&#39;s title. For example, Mr., Ms. or Dr.</p>
-
-          <p>
-            Person &mdash; Title &mdash;
             langString
           </p>
         </article>
@@ -448,13 +364,13 @@
 
       <p id="makers">
         Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-   &middot; Silver Oliver           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Ned Morrell    &middot; Silver Oliver           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
    &middot; Anya Somerville        </p>
     </main>
 
     <footer>
       <p>
-        Generated 2025-01-07 10:42:22.860986 from a
+        Generated 2025-01-07 10:45:29.530838 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../agency/agency-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../agency/agency-ontology.ttl"
