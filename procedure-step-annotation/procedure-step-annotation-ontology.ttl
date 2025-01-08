@@ -29,7 +29,7 @@ ppsa:BusinessStep rdf:type owl:Class ;
 	
 ppsa:Publication rdf:type owl:Class ;
 	rdfs:label "Publication"@en ;
-	rdfs:comment "A publication."@en ;
+	rdfs:comment "A publication, for example: UK Parliament Hansard."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 	
 	
@@ -38,14 +38,14 @@ ppsa:Publication rdf:type owl:Class ;
 
 ppsa:actualisesAlongside rdf:type owl:ObjectProperty ;
 	rdfs:label "Actualised alongside"@en ;
-	rdfs:comment "Relates a business step to another business step where the two steps may be actualised alongside each other as a single business item."@en ;
+	rdfs:comment "Relates a business step to another business step where the two steps may be actualised alongside each other as a single business item. A business step may be actualised alongside one or more business steps, or none."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range ppsa:BusinessStep ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
 
 ppsa:source rdf:type owl:ObjectProperty ;
 	rdfs:label "Source"@en ;
-	rdfs:comment "Relates a business step to the publication which is the source of information for the business item actualising that business step."@en ;
+	rdfs:comment "Relates a business step to the publication which is the source of information for the business item actualising that business step. A business step is sourced from one publication, or none."@en ;
 	rdfs:domain ppsa:BusinessStep ;
 	rdfs:range ppsa:Publication ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
