@@ -114,13 +114,25 @@ del:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
-
-del:supersedes rdf:type owl:ObjectProperty ;
-	rdfs:label "Supersedes"@en ;
-	rdfs:comment "Relates an enabled thing to the enabled thing which it supersedes. An enabled thing may be superseded by one or more enabled things, or none. An enabled thing may supersede one or more enabled things, or none. For example: a withdrawn statutory instrument being superseded by another statutory instrument."@en ;
+	
+	
+	# COMMENT
+	
+del:replacedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Replaced by"@en ;
+	rdfs:comment ""@en ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
+	
+del:revokedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Revoked by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain del:EnabledThing ;
+	rdfs:range del:EnabledThing ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
+	
+	# /COMMENT
 	
 					
 	
