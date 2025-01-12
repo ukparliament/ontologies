@@ -46,32 +46,18 @@ Librarian Ned has also been busy, updating attributes in the taxonomy to [reflec
 
 Slightly offstage, [Developer Jon](https://github.com/j-corry) appears to have spent at least part of his holiday looking into ways and means by which some of our performance issues might be rectified. Week 2 of 2025 saw Jon pop up on camera - as bright eyed and bushy tailed as ever - with a list of suggestions for improvements. Stay tuned and we'll see where we get to.
 
+## Psephologising profusely
+
+Over in [psephologyland](https://electionresults.parliament.uk/), efforts have also been concentrated on backend information management tasks. At some point in the past - seemingly ignoring [Sym](https://bsky.app/profile/symroe.bsky.social)'s wise counsel - we added Electoral Commission identifiers to our parties table and to the spreadsheets used to populate said table. This to allow both easier integration with [Democracy Club](https://democracyclub.org.uk/) and the uploading of the [2019 notional results](https://electionresults.parliament.uk/general-elections/5). Unfortunately, a 'political party' - in the sense we mean 'political party' - can have more than one Electoral Commission identifier over both time and space. For example: the National Front having [two registrations in Great Britain and two in Northern Ireland](https://electionresults.parliament.uk/political-parties/10/registrations). For that reason, Librarian Anna put together [a spreadsheet mapping our party identifiers to Electoral Commission registration identifiers](https://docs.google.com/spreadsheets/d/1ozIMZw2opyklwSOGtFblL8aY7r-ZSqZROrms1tPXtko/edit?usp=sharing) and we [split out registrations from parties](https://electionresults.parliament.uk/political-party-registrations).
+
+All well and good, though we still had cause to wonder whether any of the Electoral Commission identifiers published in spreadsheets published alongside research briefings were matched to the right party at the wrong time or in the wrong country. [Librarian Emily](https://bsky.app/profile/emilyjdavi.bsky.social) has now taken a look and found a couple of misalignments in the 2010 and 2024 spreadsheets. These are now fixed and the revised spreadsheets have been sent off to [Statistician Carl](https://bsky.app/profile/carlbaker.bsky.social) for republication. Marvellous.
+
+If our plans come to fruition, the next major change to the election results website should finally see by-election results poking their heads above ground. Operating under instructions from Carl, we've decided to start with by-elections held during [Parliament 58](https://electionresults.parliament.uk/parliament-periods/58). To that end, Librarians Anna and Emily have been tag-teaming the information management duties, meaning we now have spreadsheets at both constituency and candidate level. The next step being importing them and deciding how to expose by-elections in the navigation. If you tune in next week, we may finally have something to show. Or may not, depending on Michael's aptitude.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Psephologising
-
-https://trello.com/c/xmGFD1m2/98-by-election-data-for-parliament-58
-
-https://trello.com/c/FjjmbdLg/235-confirm-that-main-party-electoral-commission-ids-in-briefing-spreadsheets-are-appropriate-to-time-and-place
 
 
 
