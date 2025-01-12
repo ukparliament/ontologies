@@ -30,6 +30,8 @@ In less good news, a quick glance at the Heroku logs revealed the application wa
 
 In procedure adjacent news, James has also started work on modernising - or hardening, as [Young Robert](https://bsky.app/profile/robert-brook.com) might say - our [beloved egg timer](https://api.parliament.uk/egg-timer) code. Before cracking on with improvements, he's been concentrating on documenting what's there now. Which means the dear old egg timer finally come with [a rather handy readme](https://github.com/ukparliament/egg-timer/blob/main/README.md). Most useful for all those considering creating an egg timer of their own. Thanks James.
 
+In support of our procedure mapping work, we're pleased - nae delighted - to report a couple of models fresh from the paint shop. The first is a heavily revised and hopefully improved version of our [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology), the second describing [all things standing order related](https://ukparliament.github.io/ontologies/standing-order/standing-order-ontology). Clerkly eyes are more than welcome, though the procedure model in particular comes with the caveat that it's all rather abstract.
+
 ## New, old search
 
 It's been a quiet few weeks for search-based pixel punching. Which is not to say that nothing's happened. After all, the [search application](https://parliamentary-search-265cced0397e.herokuapp.com/search-prototype) is a [very thin layer](https://github.com/ukparliament/search-prototype) atop a mountain of information and information always needs managing. [Code being to fish as data is to wine](https://redmonk.com/jgovernor/2007/04/05/why-applications-are-like-fish-and-data-is-like-wine/), being a term of art in these parts. Back in April, Librarian Anya noticed that our content type hierarchy was a little lopsided, a couple of parents having only one viable offspring.
@@ -54,99 +56,23 @@ All well and good, though we still had cause to wonder whether any of the Electo
 
 If our plans come to fruition, the next major change to the election results website should finally see by-election results poking their heads above ground. Operating under instructions from Carl, we've decided to start with by-elections held during [Parliament 58](https://electionresults.parliament.uk/parliament-periods/58). To that end, Librarians Anna and Emily have been tag-teaming the information management duties, meaning we now have [spreadsheets at both constituency and candidate level](https://github.com/ukparliament/psephology/tree/main/db/data/results-by-parliament/58/by-elections). The next step being importing them and deciding how to expose by-elections in the navigation. If you tune in next week, we may finally have something to show. Or may not, depending on Michael's aptitude.
 
-
-
-
-
-
-
-
-
-
-
-
 ## Bots to Bluesky
 
-https://trello.com/c/3dpVH7u5/49-add-a-procfile
-
-
-https://trello.com/c/lJLq74cP/47-add-log-rage-to-reduce-the-size-of-the-logs
-
-https://trello.com/c/T0oankMx/46-update-ruby-to-336-at-least
-
-https://trello.com/c/qhgEhi5d/50-update-rails-to-latest-7-release
-
-https://trello.com/c/NRxxDKpy/81-write-up-notes-on-ruby-336-upgrade-and-add-to-readme-for-prs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Return to model mountain
-
-It's been a while since we reported on our model making exploits. This week our standing orders model finally rolled out off the produection line and into the paint shop. A fresh splash of pixels later and it's ready for your delectation.
-
-https://trello.com/c/N1PXBF2S/49-standing-order
-
-
-https://trello.com/c/u2aDawun/16-procedure
-
-https://trello.com/c/NjtSZK42/44-procedure-step-annotation
-
-https://trello.com/c/N1PXBF2S/49-standing-order
-
+Our [written answer](https://ukparliament.github.io/ontologies/meta/bots/#written-answer-bots) - and [statement](https://ukparliament.github.io/ontologies/meta/bots/#written-statements-bot) - bots continue to churn out excellent content to both Bluesky and Mastodon. That said, coding efforts kicked off quite a while ago and we haven't had the maintenance opportunities we'd have hoped for. With Shedcode James on hand, that is no longer a problem. At some point around Christmas, he took out his computational spanner and applied a veneer of professionalism to our efforts. The [Ruby version has been bumped to 3.3.6](https://github.com/ukparliament/written-answer-bots/blob/main/.ruby-version), [Rails has been bumped to 7.2](https://github.com/ukparliament/written-answer-bots/blob/main/Gemfile#L7), [log rage has been introduced to reduce the size of the logs](https://github.com/ukparliament/written-answer-bots/blob/main/Gemfile#L22), a [Procfile has been added](https://github.com/ukparliament/written-answer-bots/blob/main/Procfile) so Heroku doesn't panic, and the whole thing has [finally gained a readme](https://github.com/ukparliament/written-answer-bots/blob/main/README.md). Thanks again, James.
 
 ## On orders being standing
 
-If you've been waiting on tenterhooks for our standing order application to finally go live, we fear you'll have to wait a little longer. Trust us, we're getting there, inching ever closer to the finish line. The meat of the matter originated with the Parlrules project, who kindly donated the data they'd 
+If you've been waiting on tenterhooks for our [standing order application](https://api.parliament.uk/standing-orders/) to finally go live, we fear you'll have to wait a little longer. Trust us, we're getting there, inching ever closer to the finish line. The meat of the matter originated with the [Parlrules project](https://parlrulesdata.org/), who kindly donated [the data they'd compiled in the course of their research](https://parlrulesdata.org/versions_ukhoc.html). We came close to turning this data into a website when Librarian Claire noticed that paragraph numbers, styled tables and hyperlinks were all missing. James fixed up that stuff before Christmas, at which point Librarian Anya noticed a difference in paragraph indentation between the logged in the view and the non-logged in view.
 
-
-https://trello.com/c/ZNBBJX1z/88-update-standing-order-indentation-https-trellocom-c-02zrgke0
-
-https://trello.com/c/NZzUu7m7/90-re-publish-standing-orders
-
-
-
-
-
-
-
-
-
-
-
-
-
+James once more came to the rescue and both versions are now consistent, and - dare we say - [quite pretty](https://api.parliament.uk/standing-orders/revision-sets/271). It only remains to continue the work the Parlrules people started and bring the House of Commons standing orders up to date. Once that's done, all eyes turn to the House of Lords. So not much work then.
 
 ## A Rush and a push
 
-This week saw three more normalisations hit the Rush database happy pile. Though these three were not exactly normalisations as such. When inherited, the database had three columns describing years - one being the year a member stood unsuccessfully for election, one being the year a member stood successfully for election and one being the year of their departure from both their seat and the House of Commons. Because all three fields had been created as text fields - and because being a top quality academic does not necessarily translate into excellent information management skills - all three had managed to accumulate all kinds of cruft in the form of asterisks and footnotes. Librarian Anna took her dustpan and brush to the data, which is now considered tidy. At which point Shedcode James stepped in to translate text fields into integers. Just in case someone feels tempted to add more cruft in the future.
-
-
-
-
-
-
-
-
-
-
-https://trello.com/c/PlOnilac/4-preferred-names-for-laying-ministers
-
-
-
-
+The pre-Christmas week saw three more normalisations hit the Rush database happy pile. Though these three were not exactly normalisations as such. When inherited, the database had three columns describing years - one being the year a member stood unsuccessfully for election, one being the year a member stood successfully for election and one being the year of their departure from both their seat and the House of Commons. Because all three fields had been created as text fields - and because being a top quality academic does not necessarily translate into excellent information management skills - all three had managed to accumulate all kinds of cruft in the form of asterisks and footnotes. Librarian Anna took her dustpan and brush to the data, which is now considered tidy. At which point Shedcode James stepped in to translate text fields into integers. Just in case someone feels tempted to add more cruft in the future.
 
 ## Outreach and engagement
+
+The long Christmas holiday put paid to much in the way of outreach and engagement. And indeed fun and frivolity. Imagine then their relief, when Librarians Anya and Jayne and computational odd-job man Michael, stacked the dishwasher one last time and headed up to [Oxford Town](https://www.youtube.com/watch?v=sb4PsXncNV8&ab_channel=BobDylanVEVO) to hobnob with the great and the good at the [Study of Parliament Group annual conference](https://studyofparliamentgroup.org/programme/). Talks were digested - who knew the history of the National Audit Office could be so interesting? - and [pubs visited](https://craftybelle.uk/oldbookbinders/), as is the custom on such occasions. You've never seen a happy face until you've seen a librarian who's been stuck at home for a week light a cigarette and take her first sip of Guinness. Sláinte Anya.
 
 
 
