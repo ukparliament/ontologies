@@ -30,47 +30,42 @@ In less good news, a quick glance at the Heroku logs revealed the application wa
 
 In procedure adjacent news, James has also started work on modernising - or hardening, as [Young Robert](https://bsky.app/profile/robert-brook.com) might say - our [beloved egg timer](https://api.parliament.uk/egg-timer) code. Before cracking on with improvements, he's been concentrating on documenting what's there now. Which means the dear old egg timer finally come with [a rather handy readme](https://github.com/ukparliament/egg-timer/blob/main/README.md). Most useful for all those considering creating an egg timer of their own. Thanks James.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## New, old search
 
-It's been a quiet few weeks for search-based pixel punching. Which is not to say that nothing's happened. After all, the search application is a very thin layer atop a mountain of information and information always needs managing. Back in April, Librarian Anya noticed that our content type hierarchy was a little lopsided, a couple of parents having only one viable offspring.
+It's been a quiet few weeks for search-based pixel punching. Which is not to say that nothing's happened. After all, the [search application](https://parliamentary-search-265cced0397e.herokuapp.com/search-prototype) is a [very thin layer](https://github.com/ukparliament/search-prototype) atop a mountain of information and information always needs managing. [Code being to fish as data is to wine](https://redmonk.com/jgovernor/2007/04/05/why-applications-are-like-fish-and-data-is-like-wine/), being a term of art in these parts. Back in April, Librarian Anya noticed that our content type hierarchy was a little lopsided, a couple of parents having only one viable offspring.
 
-Both 'European scrutiny ministerial correspondence' and 'European scrutiny recommendations' contained a populated bucket for House of Commons material and an empty bucket from the House of Lords. This because, back in 2012, there'd been an assumption that the House of Lords tap would be turned on in the not too distant. 12 years later, and the tap remains firmly off.
+Both [European scrutiny ministerial correspondence](https://parliamentary-search-265cced0397e.herokuapp.com/search-prototype/search?commit=Search&filter%5Btype_sesrollup%5D%5B%5D=347040&query=horse&expanded_types=347008%2C347026) and European scrutiny recommendations [CAN'T FIND THIS] contained a populated bucket for House of Commons material and an empty bucket for the House of Lords. This because, back in 2012, there'd been an assumption that the House of Lords tap would be turned on in the not too distant. 12 years later, and the tap remains firmly off.
 
-For that reason, our content hierarchy has now been rejigged. Librarian Ned also raised a call with the Parliamentary Computational Section to reindex all content falling under this branch in the taxonomy. A call that has now been actioned and marked as complete. A much neater taxonomy, as we're sure you'll agree.
+For that reason, our content hierarchy has now been rejigged. Librarian Ned also raised a call with the [Parliamentary Computational Section](https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/) to reindex all content falling under this branch of the taxonomy. A call that has now been actioned and marked as complete. A much neater taxonomy, as we're sure you'll agree.
 
-Slightly offstage, Developer Jon appears to have spent at least part of his holiday looking into ways and means by which some of our performance issues might be rectified. Week 2 of 2025 saw Jon pop up on camera - as bright eyed and bushy tailed as ever - with a list of suggestions for improvements. Stay tuned and we'll see where we get to.
+The small slice of the taxonomy dealing with Library researchers has also had a bit of a spring clean. It's a branch that hasn't had that much attention in quite a while, marking some researchers who walked out the door many moons ago as being still employed and mapped to Library sections no longer extant. Investigations concluded that neither the 'current employee' flag nor the researcher to section mappings are in use in any external applications, so both have now [been](https://trello.com/c/nc4YdjQ3/347-investigate-current-attribute) [removed](https://trello.com/c/7c2kSwYW/276-remove-rts-to-teams-and-sections-for-staff-names). Clean and indeed tidy.
 
-Whilst optimising code is all well and all good, if there's "code is to fish as data is to wine" merchandises up for grabs, we'd be first in the queue. 
+Some spring cleaning has always proved difficult due to a lack of integration between Library systems. In theory, the hardcopy catalogue also uses our taxonomy, but no piping was ever put in place between the two systems, making forking inevitable. Efforts to remove unused terms from the taxonomy have been hampered by the lack of visibility of usage in the hardcopy catalogue. The first part of the problem is [now solved](https://trello.com/c/uhNC5m8h/351-terms-no-longer-in-use-in-the-catalogue), with a Workbench report configured to report on usage in parliamentary search and a similar report in place to report on usage in the catalogue. Knowing what's not used being the first step toward removing it.
 
+Librarian Ned has also been busy, updating attributes in the taxonomy to [reflect the current list of answering bodies](https://trello.com/c/mYvD84bC/352-update-pq-answering-department-attribute-to-correctly-populate-popular-searches-dropdown). This to support a particular 'popular search' which we can't link to here, because it's only available on the parliamentary network. At least until new, old search goes live. To avoid falling into the same trap with the next machinery of government change, Ned's also updated our 'what to do when' guide to cover all subsequent such changes.
 
-
-
-https://trello.com/c/nc4YdjQ3/347-investigate-current-attribute
-
-https://trello.com/c/uhNC5m8h/351-terms-no-longer-in-use-in-the-catalogue
+Slightly offstage, [Developer Jon](https://github.com/j-corry) appears to have spent at least part of his holiday looking into ways and means by which some of our performance issues might be rectified. Week 2 of 2025 saw Jon pop up on camera - as bright eyed and bushy tailed as ever - with a list of suggestions for improvements. Stay tuned and we'll see where we get to.
 
 
 
 
-https://trello.com/c/mYvD84bC/352-update-pq-answering-department-attribute-to-correctly-populate-popular-searches-dropdown
 
-https://trello.com/c/7c2kSwYW/276-remove-rts-to-teams-and-sections-for-staff-names
 
-https://trello.com/b/8qsPNpVy/controlled-vocabularies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Psephologising
 
