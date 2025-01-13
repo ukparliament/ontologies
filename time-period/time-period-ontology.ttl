@@ -233,9 +233,9 @@ ptime:recessInHouse rdf:type owl:ObjectProperty ;
 	
 ptime:regnalYearOfMonarch rdf:type owl:ObjectProperty ;
 	rdfs:label "Regnal year of monarch"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates a regnal year to the monarch for which that regnal year is named. A monarch may have more than one reign. Regnal years are reckoned from the start date of the earliest reign of that monarch. Regnal years are reckoned up to the end date of the final reign of that monarch, or up to today for a current monarch. For example: George III having three reigns - Ireland (25 October 1760 - 1 January 1801), Great Britain (25 October 1760 - 1 January 1801) and United Kingdom (1 January 1801 - 29 January 1820) - his regnal years start with year 1 on 25 October 1760 and increment each year on 25 October, and end with year 60 at his death on 29 January 1820."@en ;
 	rdfs:domain ptime:RegnalYear ;
-	rdfs:range ptime:Reign ;
+	rdfs:range ptime:Monarch ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/time-period/> .
 	
 ptime:belongsToRegnalYear rdf:type owl:ObjectProperty ;
