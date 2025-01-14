@@ -115,24 +115,19 @@ del:precededBy rdf:type owl:ObjectProperty ;
 	rdfs:range del:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
-	
-	# COMMENT
-	
 del:replacedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Replaced by"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Relates an enabled thing to the enabled thing it is replaced by. An enabled thing can be replaced by one enabled thing, or none. An enabled thing can replace one enabled thing, or none. For example: a draft statutory instrument replacing another draft statutory instrument, or a proposed negative statutory instrument replacing another proposed negative statutory instrument. Made instruments should be revoked, rather than replaced."@en ;
 	rdfs:domain del:EnabledThing ;
 	rdfs:range del:EnabledThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
-del:revokedBy rdf:type owl:ObjectProperty ;
-	rdfs:label "Revoked by"@en ;
-	rdfs:comment ""@en ;
-	rdfs:domain del:EnabledThing ;
-	rdfs:range del:EnabledThing ;
+del:whollyRevokedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Wholly revoked by"@en ;
+	rdfs:comment "Relates a made statutory instrument to the made statutory instrument it is wholly revoked by. A made statutory instrument can be wholly revoked by one made statutory instrument, or none. A made statutory instrument can wholly revoke one or more made statutory instruments, or none. 'Wholly revoked by' is populated for made statutory instruments revoked whilst still before Parliament. Revoking secondary legislation has an effect similar to repealing primary legislation. Wholly revoking a made statutory instrument removes that made statutory instrument from the statute book on the date it is revoked."@en ;
+	rdfs:domain del:MadeStatutoryInstrumentWork ;
+	rdfs:range del:MadeStatutoryInstrumentWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
-	
-	# /COMMENT
 	
 					
 	
