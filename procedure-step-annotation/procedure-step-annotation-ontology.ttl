@@ -54,6 +54,13 @@ ppsa:source rdf:type owl:ObjectProperty ;
 	
 ##### Data properties ####	
 	
+ppsa:scopeNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Scope note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain ppsa:BusinessStep ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/procedure-step-annotation/> .
+	
 ppsa:linkNote rdf:type owl:DatatypeProperty ;
 	rdfs:label "Link note"@en ;
 	rdfs:comment "A note describing the nature of the link that should be added to a business item actualising a business step. For example: a business item actualising a business step describing the putting of a question in the House of Commons should link to the corresponding business item recorded in Votes and Proceedings."@en ;
