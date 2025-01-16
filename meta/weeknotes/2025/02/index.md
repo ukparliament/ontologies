@@ -1,6 +1,6 @@
 # 2025 - Week 2
 
-We started typing these notes shortly before the break with every intention of wishing our reader a very happy Christmas. But shortly before Christmas is not a good time to concentrate on anything and we promptly ran quite out of steam. For that reason we kick things off with a hearty and belated cry of 'Happy New Year' together with a set of notes best described as a cut and shut of 2024 weeks 50 and 51 and 2025 week two. Or, all the joys of the run up to Christmas and all the lows of the inevitable return to work. We're skipping over 2024 week 52 and 2025 week 1; famously dedicated to the cause, even we need the occasional period of rest and relaxation.
+We started typing these notes shortly before the break with every intention of wishing our reader a very happy Christmas. But shortly before Christmas is not a good time to concentrate on anything and we promptly ran quite out of steam. For that reason we kick things off with a hearty and belated cry of 'Happy New Year' together with a set of notes best described as a cut and shut of 2024 weeks 50 and 51 and 2025 week two. Or, all the joys of the run up to Christmas and all the lows of the inevitable return to work. We're skipping over 2024 week 52 and 2025 week one; famously dedicated to the cause, even we need the occasional period of rest and relaxation.
 
 ## Things we learned last year
 
