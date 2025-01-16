@@ -5,6 +5,9 @@
 * [Models and maps](https://ukparliament.github.io/ontologies/)
 * [RSS](feed.rss)
 
+## 2025
+* [Week 02](2025/02)
+
 ## 2024
 
 * [Week 49](2024/49)
