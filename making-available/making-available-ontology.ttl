@@ -52,7 +52,13 @@ pma:House rdf:type owl:Class ;
 	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
 	
+pma:OrganisationAccountableToParliament rdf:type owl:Class ;
+	rdfs:label "Organisation accountable to Parliament"@en ;
+	rdfs:comment "An organisation accountable to Parliament: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions or an organisation with a duty to lay papers."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
+	
 pma:MakingAvailableBody rdf:type owl:Class ;
+    rdfs:subClassOf pma:OrganisationAccountableToParliament ;
 	rdfs:label "Making available body"@en ;
 	rdfs:comment "A body empowered to make materials available to a House: being a Government department, a Government organisation, a non-governmental organisation with a duty to answer questions, an organisation with a duty to lay papers or a committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/making-available/> .
