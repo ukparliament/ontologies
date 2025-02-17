@@ -166,11 +166,11 @@ pe:isOfPerson rdf:type owl:ObjectProperty ;
 	rdfs:range pe:Person ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
-pe:hasCandidacyResult rdf:type owl:ObjectProperty ;
-	rdfs:label "Has candidacy result"@en ;
-	rdfs:comment "Relates a candidacy in an election to the result of that candidacy. A candidacy has one candidacy result. A candidacy result is for one candidacy."@en ;
-	rdfs:domain pe:Candidacy ;
-	rdfs:range pe:CandidacyResult ;
+pe:resultOfCandidacy rdf:type owl:ObjectProperty ;
+	rdfs:label "Result of candidacy"@en ;
+	rdfs:comment "Relates a candidacy result to its candidacy. A candidacy result is for one candidacy. A candidacy has one candidacy result. "@en ;
+	rdfs:domain pe:CandidacyResult ;
+	rdfs:range pe:Candidacy ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 	
 pe:inElection rdf:type owl:ObjectProperty ;
@@ -352,6 +352,14 @@ pe:ordinality rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
+pe:writIssuedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Writ issued on"@en ;
+	rdfs:comment "The date on which the writ was issued for an election. For an election held as part of a general election, this is the date of dissolution of the preceding Parliament."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+	
 pe:electionPollingOn rdf:type owl:DatatypeProperty ;
 	rdfs:label "Election polling on"@en ;
 	rdfs:comment "The date on which polling takes place for an election."@en ;
