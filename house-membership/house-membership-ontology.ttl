@@ -21,19 +21,37 @@
 	    [ foaf:name "Anya Somerville" ].
 
 
-#######  Classes ##### 	
+#######  Classes #####
+
+phm:Group rdf:type owl:Class ;
+	rdfs:label "Group"@en ;
+	rdfs:comment "A group of people. A group may have no members at a point in time."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
 phm:House rdf:type owl:Class ;
+	rdfs:subClassOf phm:Group ;
 	rdfs:label "House"@en ;
 	rdfs:comment "A parliamentary House, for example: the House of Lords."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+
+phm:Position rdf:type owl:Class ;
+	rdfs:label "Position"@en ;
+	rdfs:comment "A named post within a group. A position may be held by one or more people over time or at the same time, or have no holder at a particular time: for example, the post of Minister of Food, having existed in the past and having had eight successive incumbents; or a Member of the House of Commons and a Member of the House of Lords both serving as Co-Chairs of the Joint Committee on the Palace of Westminster."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:HouseSeat rdf:type owl:Class ;
+	rdfs:subClassOf phm:Position ;
 	rdfs:label "House seat"@en ;
 	rdfs:comment "A seat as a position in a House, rather than as a physical seat or constituency."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
+phm:Incumbency rdf:type owl:Class ;
+	rdfs:label "Incumbency"@en ;
+	rdfs:comment "The holding of a position by a person over a period of time. For example, Philip Hammond holding the position of Foreign Secretary between two dates."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
+	
 phm:SeatIncumbency rdf:type owl:Class ;
+	rdfs:subClassOf phm:Incumbency ;
 	rdfs:label "Seat incumbency"@en ;
 	rdfs:comment "The occupation of a seat in a House by a person, for a period of time. A person may have only one seat incumbency at any one time, or none.  A person may have more than one seat incumbency over time. A seat incumbency is of one person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
@@ -203,13 +221,11 @@ phm:forSeatIncumbency rdf:type owl:ObjectProperty ;
 	rdfs:range phm:SeatIncumbency ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
-	### edited to here 
-
 ##### Data properties ####
 			
 phm:swearingInOrder rdf:type owl:DatatypeProperty ;
 	rdfs:label "Swearing in order"@en ;
-	rdfs:comment "Relates a seat incumbency to its ordinality in the sequence of Members taking an oath or making an affirmation at the beginning of a new Parliament or when entering a House."@en ;
-	rdfs:domain phm:SeatIncumbency ;
+	rdfs:comment "Relates an act of swearing in to the ordinality in the sequence of Members swearing in at the beginning of a new Parliament or when entering a House."@en ;
+	rdfs:domain phm:SwearingIn ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
