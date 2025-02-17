@@ -67,7 +67,7 @@ phm:HouseSeatType rdf:type owl:Class ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:HouseSeatEndReason rdf:type owl:Class ;
-	rdfs:label "House Seat End reason"@en ;
+	rdfs:label "House seat end reason"@en ;
 	rdfs:comment "A reason for the ending of a House seat, for example: in the House of Commons, a seat may end by means of a constituency boundary change; in the House of Lords the passing of the House of Lords Act 1999 led to the expulsion of hereditary peers and the ending of their seats."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 
@@ -148,7 +148,7 @@ phm:houseSeatEndReason rdf:type owl:ObjectProperty ;
 	rdfs:label "House seat end reason"@en ;
 	rdfs:comment "Relates a House seat to the reason for that seat ending. A House seat may have one end reason, or none."@en ;
 	rdfs:domain phm:HouseSeat ;
-	rdfs:range phm:EndReason ;
+	rdfs:range phm:HouseSeatEndReason ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/house-membership/> .
 	
 phm:houseSeatEnabledBy rdf:type owl:ObjectProperty ;
