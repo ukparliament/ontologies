@@ -33,12 +33,12 @@ ppb:PoliticalParty rdf:type owl:Class ;
 	
 ppb:Sistership rdf:type owl:Class ;
 	rdfs:label "Sistership"@en ;
-	rdfs:comment "xxxx - A relationship between political parties who have agreed to co-operate."@en ;
+	rdfs:comment "A relationship between political parties which have agreed to co-operate, for example: Labour and the SDLP being sister parties."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 
-ppb:Pact rdf:type owl:Class ;
-	rdfs:label "Pact"@en ;
-	rdfs:comment "xxxx - An agreement between two or more political parties."@en ;
+ppb:ElectoralPact rdf:type owl:Class ;
+	rdfs:label "Electoral pact"@en ;
+	rdfs:comment "A relationship between two or more political parties which have agreed that only one party forming part of that agreement will field a candidate in a given constituency, for example: the Unite to Remain electoral pact between the Liberal Democrats, the Green Party of England and Wales, and Plaid Cymru in the 2019 general election."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:ParliamentaryBloc rdf:type owl:Class ;
@@ -54,7 +54,7 @@ ppb:ParliamentaryParty rdf:type owl:Class ;
 	
 ppb:ParliamentaryAgreement rdf:type owl:Class ;
 	rdfs:label "Parliamentary agreement"@en ;
-	rdfs:comment "xxxxx - An agreement between two or more parliamentary parties to cooperate within Parliament, for example: a confidence and supply or coalition agreement."@en ;
+	rdfs:comment "An agreement between two or more parliamentary parties to cooperate within Parliament, for example: a confidence and supply or coalition agreement."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:Affiliation rdf:type owl:Class ;
@@ -79,49 +79,49 @@ ppb:Person rdf:type owl:Class ;
 
 ppb:sistershipOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Sistership of"@en ;
-	rdfs:comment "xxxx - The relationship between a political party and the participation of that party within a sistership."@en ;
+	rdfs:comment "Relates a sistership to a political party forming part of that sistership, for example: the sistership of Labour and the SDLP relating to the SDLP. A sistership of is to one political party."@en ;
 	rdfs:domain ppb:Sistership ;
 	rdfs:range ppb:PoliticalParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
-
-ppb:pactHasParty rdf:type owl:ObjectProperty ;
-	rdfs:label "Pact has party"@en ;
-	rdfs:comment "xxxx - The relationship between a political party and the inclusion of that party within a pact."@en ;
-	rdfs:domain ppb:Pact ;
+	
+ppb:electoralPactOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Electoral pact of"@en ;
+	rdfs:comment "Relates an electoral pact to a political party forming part of that pact, for example: the Unite to Remain pact relating to Plaid Cymru. An electoral pact of is to one political party."@en ;
+	rdfs:domain ppb:ElectoralPact ;
 	rdfs:range ppb:PoliticalParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:isParliamentaryPartyOf rdf:type owl:ObjectProperty ;
 	rdfs:label "Is parliamentary party of"@en ;
-	rdfs:comment "The relationship between a party within Parliament and that party as registered with the Electoral Commission."@en ;
+	rdfs:comment "Relates a parliamentary party to that political party as registered with the Electoral Commission. A parliamentary party is related to one political party."@en ;
 	rdfs:domain ppb:ParliamentaryParty ;
 	rdfs:range ppb:PoliticalParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
-ppb:agreementOf rdf:type owl:ObjectProperty ;
-	rdfs:label "Agreement of"@en ;
-	rdfs:comment "xxxxx - The relationship between a parliamentary party and the participation of that party in an agreement."@en ;
+ppb:parliamentaryAgreementOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Parliamentary agreement of"@en ;
+	rdfs:comment "Relates a parliamentary agreement to a parliamentary party being part of that agreement, for example: the coalition agreement between the Conservatives and the Liberal Democrats relating to the Liberal Democrats. A parliamentary agreement of is to one parliamentary party."@en ;
 	rdfs:domain ppb:ParliamentaryAgreement ;
 	rdfs:range ppb:ParliamentaryParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:toParliamentaryBloc rdf:type owl:ObjectProperty ;
 	rdfs:label "To parliamentary bloc"@en ;
-	rdfs:comment "The relationship between an affiliation of a Member to a parliamentary bloc and that parliamentary bloc, for example: from an affiliation of a Crossbencher to the Crossbenchers in the House of Lords. An affiliation is to one parliamentary bloc."@en ;
+	rdfs:comment "Relates an affiliation of a Member to a parliamentary bloc to that parliamentary bloc, for example: from an affiliation of a Crossbencher to the Crossbenchers in the House of Lords. An affiliation is to one parliamentary bloc."@en ;
 	rdfs:domain ppb:Affiliation ;
 	rdfs:range ppb:ParliamentaryBloc ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:whippedTo rdf:type owl:ObjectProperty ;
 	rdfs:label "Whipped to"@en ;
-	rdfs:comment "The relationship between a whipping of a Member to a parliamentary party and that parliamentary party, for example: between the whipping of a Liberal Member and the parliamentary Liberal Party. A whipping is to one parliamentary party."@en ;
+	rdfs:comment "Relates a whipping of a Member to a parliamentary party to that parliamentary party, for example: between the whipping of a Liberal Member and the parliamentary Liberal Party. A whipping is to one parliamentary party."@en ;
 	rdfs:domain ppb:MemberWhipping ;
 	rdfs:range ppb:ParliamentaryParty ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
 	
 ppb:acceptedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Accepted by"@en ;
-	rdfs:comment "The relationship between a whipping of a person and that person: the acceptance of a whip by a Member. A whipping is of one person."@en ;
+	rdfs:comment "Relates a whipping of a person to that person: the acceptance of a whip by a Member. A whipping is of one person."@en ;
 	rdfs:domain ppb:MemberWhipping ;
 	rdfs:range ppb:Person ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/parliamentary-bloc/> .
