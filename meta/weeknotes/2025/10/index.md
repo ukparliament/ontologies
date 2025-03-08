@@ -1,6 +1,6 @@
 # 2025 - Week 10
 
-We are conscious that these notes are usually written, top-to-toe in one sitting. Usually over the weekend. Often with a mild to middling hangover. Because neither of us are quite as young as we used to be, we often find ourselves setting out with little to no memory of what's actually happened. This, in turn, leads to promises of brevity that we rarely manage to attain. Several hours later, we find ourselves mired in a browser bar of Trello boards and the inevitable wall of text that accompanies them. For that reason, this week's outpourings come with no such promise. Let's just get stuck in and see where we end up.
+We are conscious that these notes are usually written, top-to-toe in a single sitting. Usually over the weekend. Often with a mild to middling hangover. Because neither of us are quite as young as we used to be, we often find ourselves setting out with little to no memory of what's actually happened. This, in turn, leads to promises of brevity that we rarely manage to attain. Several hours later, we find ourselves mired in a browser bar of Trello boards and the inevitable wall of text that accompanies them. For that reason, this week's outpourings come with no such promise. Let's just get stuck in and see where we end up.
 
 ## New, old search
 
