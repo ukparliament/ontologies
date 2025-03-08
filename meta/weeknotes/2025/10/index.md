@@ -62,7 +62,7 @@ Those of an ontological bent will be delighted to hear that Librarian Ned and hi
 
 Shedcode James having quite a lot on his plate at the moment hasn't stopped him from lending a helping hand with our [Rush database](https://membersafter1832.historyofparliamentonline.org/). That application has also been subjected to an upgrade, though - being better maintained in general - that was confined to bumping it to Rails 8.
 
-Librarian Anna had also spotted a couple of places where our date of birth redaction had gone awry. Not because of any fault in the redaction code, but rather that assorted strings describing name changes also came complete with dates, some of those dates birth event related. That has also now been fixed. Thanks James.
+Librarian Anna had also spotted a couple of places where our date of birth redaction had gone awry. Not because of any fault in the redaction code, but rather that assorted strings describing name changes also came complete with dates, some of those dates being birth event related. That has also now been fixed. Thanks James.
 
 ## Facts and indeed figures
 
