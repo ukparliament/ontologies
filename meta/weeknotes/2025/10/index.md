@@ -1,6 +1,6 @@
 # 2025 - Week 10
 
-These notes tend to be written top-to-toe in a single sitting. Usually over the weekend. Often with a mild to middling hangover. As neither of us are quite as young as we used to be, we generally find ourselves beginnning with little to no memory of what's actually happened. Which leads to opening with empty promises of brevity. Several hours later, we're up to our [oxters](https://stancarey.wordpress.com/2016/06/04/up-to-your-oxters-in-gaelic-expressions/) - as Anya's dad would say - in open tabs of Trello boards and the inevitable wall of text follows. For that reason, this week's outpourings come with no such promise. Let's just get stuck in and see where we end up.
+These notes tend to be written top-to-toe in a single sitting. Usually over the weekend. Often with a mild to middling hangover. As neither of us are quite as young as we used to be, we generally find ourselves beginnning with little to no memory of what's actually happened. Which leads to opening with promises of brevity. Several hours later, we're up to our [oxters](https://stancarey.wordpress.com/2016/06/04/up-to-your-oxters-in-gaelic-expressions/) - as Anya's dad would say - in open tabs of Trello boards and the inevitable wall of text follows. For that reason, this week's outpourings come with no such promise. Let's just get stuck in and see where we end up.
 
 ## New, old search
 
