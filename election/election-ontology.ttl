@@ -380,10 +380,17 @@ pe:majority rdf:type owl:DatatypeProperty ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
+	
+pe:ballotsIssued rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ballots issued"@en ;
+	rdfs:comment "The total number of ballots issued for an election. This number includes all the valid votes cast for all candidates in the election, the number of invalid - or spoiled - ballots, and the number of  ballots issued and abandoned without being cast."@en ;
+	rdfs:domain pe:Election ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
 
 pe:validVoteCount rdf:type owl:DatatypeProperty ;
 	rdfs:label "Valid vote count"@en ;
-	rdfs:comment "The number of votes cast in an election excluding any declared invalid by the Returning Officer."@en ;
+	rdfs:comment "The total number of votes cast for all candidates in an election, excluding any votes declared invalid by the Returning Officer. Ballots issued and abandoned without being cast are not counted as votes cast. As of 2025, the Electoral Commission has published figures for the total number of votes cast calculated from the number of ballots issued, minus the number of invalid or spoiled ballots. The figures for the total number of votes cast published by the Electoral Commission includes any ballots issued and abandoned without being cast."@en ;
 	rdfs:domain pe:Election ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/election/> .
