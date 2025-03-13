@@ -1,7 +1,7 @@
 import rdflib
 import os
+import datetime
 
-from datetime import datetime
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from rdflib.namespace import RDF, FOAF, OWL, RDFS, DCTERMS
@@ -45,8 +45,7 @@ env.filters["ttlpath2ontologyname"] = ttlpath2ontologyname
 
 env.filters["ttlpath2htmlpath"] = ttlpath2htmlpath
 
-# env.globals["now"] = datetime.utcnow().strftime("%Y-%m-%d")
-env.globals["now"] = datetime.utcnow()
+env.globals["now"] = datetime.datetime.now(datetime.UTC)
 
 template = env.get_template("ontology.html")
 
@@ -56,12 +55,11 @@ ttlfiles = list(Path("..").glob("**/*.ttl"))
 
 
 for ttlpath in ttlfiles:
-    print(str(ttlpath))
+    print("LOOKING\t\t" + str(ttlpath))
     if "odds-and-sods" in str(ttlpath):
-        # print("skipping " + str(ttlpath))
-        print()
+        print("SKIPPING\t" + str(ttlpath))
     else:
-        print("Considering " + str(ttlpath))
+        print("CHECKING\t" + str(ttlpath))
 
         g = rdflib.Graph()
 
@@ -75,7 +73,7 @@ for ttlpath in ttlfiles:
 
         if (None, RDF.type, OWL.Ontology) in g:
 
-            print("Found an ontology: " + str(ttlpath))
+            print("\t\t-----------------------------\nFOUND\t\t" + str(ttlpath))
 
             classes = []
 
@@ -190,7 +188,7 @@ for ttlpath in ttlfiles:
                 namespaces.append(namespaceObject)
 
             htmlpath = htmldir + ttlpath.stem + ".html"
-            print(htmlpath)
+            print("GENERATE\t" + htmlpath)
             rel_canonical = (
                 "https://ukparliament.github.io/ontologies/meta/html/"
                 + str(ttlpath.parent)
@@ -200,7 +198,7 @@ for ttlpath in ttlfiles:
             )
 
             with open(htmlpath, "w") as htmlfile:
-                print("  Writing " + htmlpath)
+                print("WRITING\t\t" + htmlpath)
                 htmlfile.write(
                     template.render(
                         relcanonical=rel_canonical,
@@ -225,4 +223,4 @@ for ttlpath in ttlfiles:
                     )
                 )
         else:
-            print("Not an ontology: " + str(ttlpath))
+            print("SKIPPING\t" + str(ttlpath))

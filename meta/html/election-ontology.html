@@ -359,25 +359,6 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasCandidacyResult">
-          <h3>
-            Object property
-            <a href="#hasCandidacyResult"
-              >Has candidacy result</a
-            >
-          </h3>
-
-           <p>Relates a candidacy in an election to the result of that candidacy. A candidacy has one candidacy result. A candidacy result is for one candidacy.</p>
-
-          <p>
-            <a href="#Candidacy"
-              >Candidacy</a
-            >
-            &mdash; Has candidacy result &mdash;
-            <a href="#CandidacyResult">CandidacyResult</a>
-          </p>
-        </article>
-
         <article class="objectproperty" id="hasElectorate">
           <h3>
             Object property
@@ -529,6 +510,25 @@
             <a href="#PoliticalParty">PoliticalParty</a>
           </p>
         </article>
+
+        <article class="objectproperty" id="resultOfCandidacy">
+          <h3>
+            Object property
+            <a href="#resultOfCandidacy"
+              >Result of candidacy</a
+            >
+          </h3>
+
+           <p>Relates a candidacy result to its candidacy. A candidacy result is for one candidacy. A candidacy has one candidacy result. </p>
+
+          <p>
+            <a href="#CandidacyResult"
+              >CandidacyResult</a
+            >
+            &mdash; Result of candidacy &mdash;
+            <a href="#Candidacy">Candidacy</a>
+          </p>
+        </article>
       </section>
  
       <section id="dataproperties">
@@ -559,6 +559,20 @@
           <p>
             Candidacy &mdash; As independent &mdash;
             boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="ballotsIssued">
+          <h3>
+            Data property
+            <a href="#ballotsIssued">Ballots issued</a>
+          </h3>
+
+          <p>The total number of ballots issued for an election. This number includes all the valid votes cast for all candidates in the election, the number of invalid - or spoiled - ballots, and the number of  ballots issued and abandoned without being cast.</p>
+
+          <p>
+            Election &mdash; Ballots issued &mdash;
+            integer
           </p>
         </article>
 
@@ -792,7 +806,7 @@
             <a href="#validVoteCount">Valid vote count</a>
           </h3>
 
-          <p>The number of votes cast in an election excluding any declared invalid by the Returning Officer.</p>
+          <p>The total number of votes cast for all candidates in an election, excluding any votes declared invalid by the Returning Officer. Ballots issued and abandoned without being cast are not counted as votes cast. As of 2025, the Electoral Commission has published figures for the total number of votes cast calculated from the number of ballots issued, minus the number of invalid or spoiled ballots. The figures for the total number of votes cast published by the Electoral Commission includes any ballots issued and abandoned without being cast.</p>
 
           <p>
             Election &mdash; Valid vote count &mdash;
@@ -839,6 +853,20 @@
           <p>
             CandidacyResult &mdash; Vote share &mdash;
             decimal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="writIssuedOn">
+          <h3>
+            Data property
+            <a href="#writIssuedOn">Writ issued on</a>
+          </h3>
+
+          <p>The date on which the writ was issued for an election. For an election held as part of a general election, this is the date of dissolution of the preceding Parliament.</p>
+
+          <p>
+            Election &mdash; Writ issued on &mdash;
+            date
           </p>
         </article>
       </section>
@@ -934,7 +962,7 @@
 
     <footer>
       <p>
-        Generated 2025-02-03 15:37:38.826429 from a
+        Generated 2025-03-13 12:11:36.712602+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../election/election-ontology.ttl"
