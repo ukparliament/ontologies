@@ -71,49 +71,63 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Disqualification">
-          <h3>Class <a href="#Disqualification">Disqualification</a></h3>
+        <article class="class" id="Group">
+          <h3>Class <a href="#Group">Group</a></h3>
 
-          <p>A period of time during which a Member is disqualified from sitting or voting in a House.</p>
-           <p>
-            Superclasses  &middot; SeatIncumbencyInterruption           </p>
-        </article>
-        <article class="class" id="DisqualificationType">
-          <h3>Class <a href="#DisqualificationType">Disqualification type</a></h3>
-
-          <p>The type of disqualification of a disqualified Member, for example: in the House of Commons, on the grounds of being a Peer or Lord Spiritual in the House of Lords, or being convicted of treason under the Forfeiture Act 1870 - in the House of Lords, on the grounds of holding judicial office, being a Member of the European Parliament, or being bankrupt.</p>
-         </article>
-        <article class="class" id="EndReason">
-          <h3>Class <a href="#EndReason">End reason</a></h3>
-
-          <p>A reason for the ending of a seat incumbency, or of a House seat. The incumbency of a Member may end following an election loss, by standing down, on retirement, on death - or due to changes in the makeup of a House, for example: the expulsion of hereditary peers following the passage of the House of Lords Act 1999. Two hereditary seats remain after the passage of the House of Lords Act 1999. In the House of Lords, hereditary peerage seats ended with the extinction of the associated peerages. In the House of Commons, a seat may end by means of a constituency boundary change.</p>
+          <p>A group of people. A group may have no members at a point in time.</p>
          </article>
         <article class="class" id="House">
           <h3>Class <a href="#House">House</a></h3>
 
           <p>A parliamentary House, for example: the House of Lords.</p>
+           <p>
+            Superclasses  &middot; Group           </p>
+        </article>
+        <article class="class" id="HouseOfLordsDisqualification">
+          <h3>Class <a href="#HouseOfLordsDisqualification">House of Lords disqualification</a></h3>
+
+          <p>A period of time during which a Member of a House of Lords is disqualified from taking part in the business of that House.</p>
+           <p>
+            Superclasses  &middot; SeatIncumbencyInterruptionPeriod           </p>
+        </article>
+        <article class="class" id="HouseOfLordsDisqualificationType">
+          <h3>Class <a href="#HouseOfLordsDisqualificationType">House of Lords disqualification type</a></h3>
+
+          <p>The type of disqualification of a disqualified Member of the House of Lords, for example: on the grounds of holding judicial office or being bankrupt.</p>
          </article>
         <article class="class" id="HouseSeat">
           <h3>Class <a href="#HouseSeat">House seat</a></h3>
 
-          <p>A seat as a position in a House, rather than a physical seat or constituency.  A seat in the House of Commons is allocated to a Member and has an associated constituency. A seat in the House of Lords is allocated to a Member of the House of Lords, for example: allocated to the Archbishop of Canterbury, inherited by a hereditary peer or granted to a life peer.</p>
-         </article>
+          <p>A seat as a position in a House, rather than as a physical seat or constituency.</p>
+           <p>
+            Superclasses  &middot; Position           </p>
+        </article>
         <article class="class" id="HouseSeatEnablingThing">
           <h3>Class <a href="#HouseSeatEnablingThing">House seat enabling thing</a></h3>
 
-          <p>A thing, the existence of which enables a House seat to exist.</p>
+          <p>The existence of a thing which enables a House seat to exist, for example: the existence of a constituency enabling a House seat to exist in the House of Commons; the existence of a life peerage enabling a House seat to exist in the House of Lords.</p>
+         </article>
+        <article class="class" id="HouseSeatEndReason">
+          <h3>Class <a href="#HouseSeatEndReason">House seat end reason</a></h3>
+
+          <p>A reason for the ending of a House seat, for example: in the House of Commons, a seat may end by means of a constituency boundary change; in the House of Lords the passing of the House of Lords Act 1999 led to the expulsion of hereditary peers and the ending of their seats.</p>
          </article>
         <article class="class" id="HouseSeatType">
           <h3>Class <a href="#HouseSeatType">House seat type</a></h3>
 
           <p>The type of a House seat, for example: seats in the House of Commons allocated by means of the first past the post electoral system, seats in the House of Lords allocated to hereditary peers, life peers, excepted hereditary peers or Lords Spiritual.</p>
          </article>
+        <article class="class" id="Incumbency">
+          <h3>Class <a href="#Incumbency">Incumbency</a></h3>
+
+          <p>The holding of a position by a person over a period of time. For example, Philip Hammond holding the position of Foreign Secretary between two dates.</p>
+         </article>
         <article class="class" id="LeaveOfAbsence">
           <h3>Class <a href="#LeaveOfAbsence">Leave of absence</a></h3>
 
-          <p>A period during which a Member of the House of Lords is authorised to not attend sittings.</p>
+          <p>A period of absence from a House notified in advance by the Member, during which the Member does not take part in the business of the House.</p>
            <p>
-            Superclasses  &middot; SeatIncumbencyInterruption           </p>
+            Superclasses  &middot; SeatIncumbencyInterruptionPeriod           </p>
         </article>
         <article class="class" id="ParliamentPeriod">
           <h3>Class <a href="#ParliamentPeriod">Parliament period</a></h3>
@@ -125,50 +139,105 @@
 
           <p>A person.</p>
          </article>
+        <article class="class" id="Position">
+          <h3>Class <a href="#Position">Position</a></h3>
+
+          <p>A named post within a group. A position may be held by one or more people over time or at the same time, or have no holder at a particular time: for example, the post of Minister of Food, having existed in the past and having had eight successive incumbents; or a Member of the House of Commons and a Member of the House of Lords both serving as Co-Chairs of the Joint Committee on the Palace of Westminster.</p>
+         </article>
         <article class="class" id="SeatIncumbency">
           <h3>Class <a href="#SeatIncumbency">Seat incumbency</a></h3>
 
-          <p>The occupation of a seat in a House by a person, for a period of time. A person may have more than one incumbency over time. Only one person can be an incumbent in a house seat at one time. A person having a seat incumbency which has a start date in the past and an end date in the future, or which has no end date, is a current Member. A person having a seat incumbency with an end date in the past and no current incumbency is an ex-Member.</p>
-         </article>
+          <p>The occupation of a seat in a House by a person, for a period of time. A person may have only one seat incumbency at any one time, or none.  A person may have more than one seat incumbency over time. A seat incumbency is of one person.</p>
+           <p>
+            Superclasses  &middot; Incumbency           </p>
+        </article>
         <article class="class" id="SeatIncumbencyEnablingThing">
           <h3>Class <a href="#SeatIncumbencyEnablingThing">Seat incumbency enabling thing</a></h3>
 
-          <p>A thing, the existence of which enables a person to be incumbent in a House seat.</p>
+          <p>The existence of a thing which enables a person to be incumbent in a House seat, for example: the winning of an election in a constituency represented in the House of Commons enabling a seat incumbency to exist in the House of Commons, or the holding of a life peerage enabling a seat incumbency to exist in the House of Lords.</p>
          </article>
-        <article class="class" id="SeatIncumbencyInterruption">
-          <h3>Class <a href="#SeatIncumbencyInterruption">Seat incumbency interruption</a></h3>
+        <article class="class" id="SeatIncumbencyEndReason">
+          <h3>Class <a href="#SeatIncumbencyEndReason">Seat incumbency end reason</a></h3>
 
-          <p>A period of interruption to a seat incumbency, for example: by suspension, leave of absence or disqualification.</p>
+          <p>A reason for the ending of a seat incumbency, for example: the death of the Member holding that seat incumbency, the Member holding that seat incumbency no longer having membership of the House of Commons by means of appointment to a Crown Office, or the expulsion of the Member holding that seat incumbency from the House of Lords.</p>
+         </article>
+        <article class="class" id="SeatIncumbencyInterruptionPeriod">
+          <h3>Class <a href="#SeatIncumbencyInterruptionPeriod">Seat incumbency interruption period</a></h3>
+
+          <p>A period of interruption to a seat incumbency.</p>
          </article>
         <article class="class" id="Suspension">
           <h3>Class <a href="#Suspension">Suspension</a></h3>
 
-          <p>A period of exclusion of a Member during which the Member is not authorised to sit in a House.</p>
+          <p>A period of time during which a Member of a House is suspended from taking part in the business of that House.</p>
            <p>
-            Superclasses  &middot; SeatIncumbencyInterruption           </p>
+            Superclasses  &middot; SeatIncumbencyInterruptionPeriod           </p>
         </article>
+        <article class="class" id="SwearingIn">
+          <h3>Class <a href="#SwearingIn">Swearing in</a></h3>
+
+          <p>The act of taking an oath, or making a solemn affirmation, of allegiance to the Crown by a Member of either House.</p>
+         </article>
       </section>
  
       <section id="objectproperties">
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="hasDisqualificationType">
+        <article class="objectproperty" id="forParliamentPeriod">
           <h3>
             Object property
-            <a href="#hasDisqualificationType"
-              >Has disqualification type</a
+            <a href="#forParliamentPeriod"
+              >For Parliament period</a
             >
           </h3>
 
-           <p>Relates a disqualification to the type of that disqualification. A disqualification is of one type.</p>
+           <p>Relates an act of swearing in to the Parliament period that swearing in is for. A swearing in is for one Parliament period.</p>
 
           <p>
-            <a href="#Disqualification"
-              >Disqualification</a
+            <a href="#SwearingIn"
+              >SwearingIn</a
             >
-            &mdash; Has disqualification type &mdash;
-            <a href="#DisqualificationType">DisqualificationType</a>
+            &mdash; For Parliament period &mdash;
+            <a href="#ParliamentPeriod">ParliamentPeriod</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="forSeatIncumbency">
+          <h3>
+            Object property
+            <a href="#forSeatIncumbency"
+              >For seat incumbency</a
+            >
+          </h3>
+
+           <p>Relates an act of swearing in to the seat incumbency that swearing in is for. A swearing in is related to one seat incumbency. A seat incumbency has one swearing in for each Parliament in each reign, or none.</p>
+
+          <p>
+            <a href="#SwearingIn"
+              >SwearingIn</a
+            >
+            &mdash; For seat incumbency &mdash;
+            <a href="#SeatIncumbency">SeatIncumbency</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasHouseOfLordsDisqualificationType">
+          <h3>
+            Object property
+            <a href="#hasHouseOfLordsDisqualificationType"
+              >Has House of Lords disqualification type</a
+            >
+          </h3>
+
+           <p>Relates a House of Lords disqualification to the type of that disqualification. A disqualification is of one type.</p>
+
+          <p>
+            <a href="#HouseOfLordsDisqualification"
+              >HouseOfLordsDisqualification</a
+            >
+            &mdash; Has House of Lords disqualification type &mdash;
+            <a href="#HouseOfLordsDisqualificationType">HouseOfLordsDisqualificationType</a>
           </p>
         </article>
 
@@ -199,7 +268,7 @@
             >
           </h3>
 
-           <p>Relates a seat incumbency to a person. A seat incumbency is held by one person.  At any one time, a person may be incumbent in one seat, or none. A person may have many incumbencies in the same or different seats over time.</p>
+           <p>Relates a seat incumbency to a person. A seat incumbency is held by one person.  At any one time, a person may be incumbent in one seat, or none. A person may have more than one incumbency in the same or different seats over time.</p>
 
           <p>
             <a href="#SeatIncumbency"
@@ -210,10 +279,10 @@
           </p>
         </article>
 
-        <article class="objectproperty" id="hasSeatIncumbencyInterruption">
+        <article class="objectproperty" id="hasSeatIncumbencyInterruptionPeriod">
           <h3>
             Object property
-            <a href="#hasSeatIncumbencyInterruption"
+            <a href="#hasSeatIncumbencyInterruptionPeriod"
               >Has seat incumbency interruption</a
             >
           </h3>
@@ -225,7 +294,7 @@
               >SeatIncumbency</a
             >
             &mdash; Has seat incumbency interruption &mdash;
-            <a href="#SeatIncumbencyInterruption">SeatIncumbencyInterruption</a>
+            <a href="#SeatIncumbencyInterruptionPeriod">SeatIncumbencyInterruptionPeriod</a>
           </p>
         </article>
 
@@ -237,7 +306,7 @@
             >
           </h3>
 
-           <p>Relates a House seat to the thing enabling the existence of that seat, for example: a peerage, a constituency or a named bishopric.</p>
+           <p>Relates a House seat to the thing enabling the existence of that seat, for example: a peerage, a constituency or a named bishopric. A House seat is enabled by the existence of one thing.</p>
 
           <p>
             <a href="#HouseSeat"
@@ -263,7 +332,7 @@
               >HouseSeat</a
             >
             &mdash; House seat end reason &mdash;
-            <a href="#EndReason">EndReason</a>
+            <a href="#HouseSeatEndReason">HouseSeatEndReason</a>
           </p>
         </article>
 
@@ -275,7 +344,7 @@
             >
           </h3>
 
-           <p>Relates a seat in a House to the House that the seat is in. A seat is in one House. </p>
+           <p>Relates a seat in a House to the House that the seat is in. A seat is in one House.</p>
 
           <p>
             <a href="#HouseSeat"
@@ -294,7 +363,7 @@
             >
           </h3>
 
-           <p>Relates a seat incumbency to the House seat that the incumbency is in. A seat incumbency is in one seat. At any one time, a House seat has one incumbency or is unoccupied. A House seat may have more than one incumbency over time.</p>
+           <p>Relates a seat incumbency to the House seat that the incumbency is in. A seat incumbency is in one seat. At any one time, a House seat has one incumbency, or none. A House seat may have more than one incumbency over time.</p>
 
           <p>
             <a href="#SeatIncumbency"
@@ -358,7 +427,7 @@
               >SeatIncumbency</a
             >
             &mdash; Seat incumbency end reason &mdash;
-            <a href="#EndReason">EndReason</a>
+            <a href="#SeatIncumbencyEndReason">SeatIncumbencyEndReason</a>
           </p>
         </article>
       </section>
@@ -366,30 +435,16 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="intendsToStandDown">
-          <h3>
-            Data property
-            <a href="#intendsToStandDown">Intends to stand down</a>
-          </h3>
-
-          <p>Used to record if a Member of the House of Commons has announced that they intend to stand down at the next election.</p>
-
-          <p>
-            SeatIncumbency &mdash; Intends to stand down &mdash;
-            boolean
-          </p>
-        </article>
-
         <article class="dataproperty" id="swearingInOrder">
           <h3>
             Data property
             <a href="#swearingInOrder">Swearing in order</a>
           </h3>
 
-          <p>Used to record the place in the order in which Members take an oath or make an affirmation at the beginning of a new Parliament or following a by-election. Swearing in order may be used in determining the longest serving member of a House, known as the Father or Mother of the House.</p>
+          <p>Relates an act of swearing in to the ordinality in the sequence of Members swearing in at the beginning of a new Parliament or when entering a House.</p>
 
           <p>
-            SeatIncumbency &mdash; Swearing in order &mdash;
+            SwearingIn &mdash; Swearing in order &mdash;
             integer
           </p>
         </article>
@@ -399,16 +454,28 @@
         <h2>Subclasses</h2>
         <table>
           <tr>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>House</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Group</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>HouseSeat</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Position</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbency</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Incumbency</td>
+          </tr>
+          <tr>
             <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Suspension</td>
-            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruption</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruptionPeriod</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>house-membership/<wbr>LeaveOfAbsence</td>
-            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruption</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruptionPeriod</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>Disqualification</td>
-            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruption</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>HouseOfLordsDisqualification</td>
+            <td>/<wbr>ontologies/<wbr>house-membership/<wbr>SeatIncumbencyInterruptionPeriod</td>
           </tr>
         </table>
       </section>
@@ -492,7 +559,7 @@
 
     <footer>
       <p>
-        Generated 2025-02-03 15:37:38.826429 from a
+        Generated 2025-03-13 11:28:08.012566 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../house-membership/house-membership-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../house-membership/house-membership-ontology.ttl"
