@@ -21,6 +21,7 @@ task :generate_docs do
   require 'erb'
   require 'time'
   require 'fileutils'
+  require 'set'
 
   # Create HTML output directory if it doesn't exist
   html_dir = './html'
@@ -258,10 +259,20 @@ def generate_html_for_ttl_file(file_path)
     data_properties = []
     annotation_properties = []
     individuals = []
+    
+    # Track which statements are processed
+    processed_statements = Set.new
+    
+    # Track all statements for comparison
+    all_statements = Set.new
+    graph.each_statement { |stmt| all_statements.add(stmt) }
 
     graph.query([nil, RDF.type, nil]).each do |statement|
       subject = statement.subject
       type = statement.object
+      
+      # Mark this type statement as processed
+      processed_statements.add(statement)
 
       case type
       when RDF::Vocab::OWL.Class, RDF::RDFS.Class
@@ -277,21 +288,24 @@ def generate_html_for_ttl_file(file_path)
       end
     end
 
-    # Remove duplicates
-    classes.uniq!
-    object_properties.uniq!
-    data_properties.uniq!
-    annotation_properties.uniq!
-    individuals.uniq!
-
     # Process classes, properties, and individuals
-    class_details = process_classes(classes, graph)
+    class_details = process_classes(classes, graph, processed_statements)
     class_ids = class_details.map { |cls| [cls[:uri], cls[:id]] }.to_h
     
-    object_property_details = process_object_properties(object_properties, graph, class_ids)
-    data_property_details = process_data_properties(data_properties, graph, class_ids)
-    annotation_property_details = process_annotation_properties(annotation_properties, graph)
-    individual_details = process_individuals(individuals, graph)
+    object_property_details = process_object_properties(object_properties, graph, class_ids, processed_statements)
+    data_property_details = process_data_properties(data_properties, graph, class_ids, processed_statements)
+    annotation_property_details = process_annotation_properties(annotation_properties, graph, processed_statements)
+    individual_details = process_individuals(individuals, graph, processed_statements)
+
+    # After all processing, log unprocessed statements
+    unprocessed_statements = all_statements - processed_statements
+    
+    if unprocessed_statements.any?
+      puts "  Found #{unprocessed_statements.size} unprocessed statements"
+      log_unprocessed_statements(file_path, unprocessed_statements)
+    else
+      puts "  All statements processed"
+    end
 
     # Generate HTML
     html_output = generate_html(
@@ -316,6 +330,45 @@ def generate_html_for_ttl_file(file_path)
   end
 end
 
+# Function to log unprocessed statements
+def log_unprocessed_statements(file_path, statements)
+  # Create a logs directory if it doesn't exist
+  log_dir = './logs'
+  FileUtils.mkdir_p(log_dir)
+  
+  # Generate a log filename based on the input file
+  log_filename = File.basename(file_path, '.ttl') + '-unprocessed.log'
+  log_file = File.join(log_dir, log_filename)
+  
+  # Write to log file
+  File.open(log_file, 'w') do |f|
+    f.puts "Unprocessed statements from #{file_path} at #{Time.now}"
+    f.puts "=" * 80
+    f.puts "Total unprocessed statements: #{statements.size}"
+    f.puts "-" * 80
+    
+    # Group statements by subject for easier reading
+    by_subject = {}
+    
+    statements.each do |stmt|
+      by_subject[stmt.subject] ||= []
+      by_subject[stmt.subject] << stmt
+    end
+    
+    by_subject.each do |subject, stmts|
+      f.puts "Subject: #{subject}"
+      
+      stmts.each do |stmt|
+        f.puts "  #{stmt.predicate} => #{stmt.object}"
+      end
+      
+      f.puts
+    end
+  end
+  
+  puts "  Unprocessed statements logged to: #{log_file}"
+end
+
 # Function to get label for a resource, using only rdfs:label
 def get_label(resource, graph, preferred_language = :en)
   labels = graph.query([resource, RDF::RDFS.label, nil]).map(&:object)
@@ -335,7 +388,7 @@ def generate_id(label)
 end
 
 # Process class information
-def process_classes(classes, graph)
+def process_classes(classes, graph, processed_statements = nil)
   # Sort classes alphabetically by label
   classes.sort_by! { |cls| get_label(cls, graph)&.downcase || '' }
 
@@ -351,6 +404,10 @@ def process_classes(classes, graph)
 
     # Get subclasses
     subclasses = graph.query([nil, RDF::RDFS.subClassOf, cls]).map(&:subject).uniq
+    subclasses.each do |subclass|
+      # Mark subclass statements as processed
+      processed_statements&.add(RDF::Statement.new(subclass, RDF::RDFS.subClassOf, cls))
+    end
     subclass_details = subclasses.map do |sub|
       label = get_label(sub, graph)
       next unless label
@@ -361,6 +418,10 @@ def process_classes(classes, graph)
 
     # Get properties with this class as domain
     properties_with_domain = graph.query([nil, RDF::RDFS.domain, cls]).map(&:subject).uniq
+    properties_with_domain.each do |prop|
+      # Mark domain statements as processed
+      processed_statements&.add(RDF::Statement.new(prop, RDF::RDFS.domain, cls))
+    end
     properties_details = properties_with_domain.map do |prop|
       label = get_label(prop, graph)
       next unless label
@@ -371,6 +432,10 @@ def process_classes(classes, graph)
 
     # Get properties with this class as range
     properties_with_range = graph.query([nil, RDF::RDFS.range, cls]).map(&:subject).uniq
+    properties_with_range.each do |prop|
+      # Mark range statements as processed
+      processed_statements&.add(RDF::Statement.new(prop, RDF::RDFS.range, cls))
+    end
     properties_in_range_details = properties_with_range.map do |prop|
       label = get_label(prop, graph)
       next unless label
@@ -378,6 +443,15 @@ def process_classes(classes, graph)
       { id: id, label: label }
     end.compact
     properties_in_range_details.sort_by! { |prop| prop[:label].downcase }
+
+    # Mark label and comment statements as processed
+    graph.query([cls, RDF::RDFS.label, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
+    
+    graph.query([cls, RDF::RDFS.comment, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
 
     {
       uri: cls,
@@ -392,7 +466,7 @@ def process_classes(classes, graph)
 end
 
 # Process object properties
-def process_object_properties(object_properties, graph, class_ids)
+def process_object_properties(object_properties, graph, class_ids, processed_statements = nil)
   object_properties.sort_by! { |prop| get_label(prop, graph)&.downcase || '' }
 
   object_properties.map do |prop|
@@ -406,9 +480,12 @@ def process_object_properties(object_properties, graph, class_ids)
 
     # Get domains and ranges
     domains = graph.query([prop, RDF::RDFS.domain, nil]).map(&:object).uniq
-    ranges = graph.query([prop, RDF::RDFS.range, nil]).map(&:object).uniq
-
-    # Process domain information
+    domains.each do |domain|
+      # Mark domain statements as processed 
+      processed_statements&.add(RDF::Statement.new(prop, RDF::RDFS.domain, domain))
+    end
+    
+    # Fixed bug: Changed 'range_details' to 'domain_details'
     domain_details = domains.map do |domain|
       label = get_label(domain, graph)
       next unless label
@@ -416,13 +493,26 @@ def process_object_properties(object_properties, graph, class_ids)
       { id: id, label: label }
     end.compact
 
-    # Process range information
+    ranges = graph.query([prop, RDF::RDFS.range, nil]).map(&:object).uniq
+    ranges.each do |range|
+      # Mark range statements as processed
+      processed_statements&.add(RDF::Statement.new(prop, RDF::RDFS.range, range))
+    end
     range_details = ranges.map do |range|
       label = get_label(range, graph)
       next unless label
       id = class_ids[range] || generate_id(label)
       { id: id, label: label }
     end.compact
+
+    # Mark label and comment statements as processed
+    graph.query([prop, RDF::RDFS.label, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
+    
+    graph.query([prop, RDF::RDFS.comment, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
 
     {
       uri: prop,
@@ -436,7 +526,7 @@ def process_object_properties(object_properties, graph, class_ids)
 end
 
 # Process data properties
-def process_data_properties(data_properties, graph, class_ids)
+def process_data_properties(data_properties, graph, class_ids, processed_statements = nil)
   data_properties.sort_by! { |prop| get_label(prop, graph)&.downcase || '' }
 
   data_properties.map do |prop|
@@ -450,9 +540,9 @@ def process_data_properties(data_properties, graph, class_ids)
 
     # Get domains and ranges
     domains = graph.query([prop, RDF::RDFS.domain, nil]).map(&:object).uniq
-    ranges = graph.query([prop, RDF::RDFS.range, nil]).map(&:object).uniq
-
-    # Process domain information
+    domains.each do |domain|
+      processed_statements&.add(RDF::Statement.new(prop, RDF::RDFS.domain, domain))
+    end
     domain_details = domains.map do |domain|
       label = get_label(domain, graph)
       next unless label
@@ -460,13 +550,25 @@ def process_data_properties(data_properties, graph, class_ids)
       { id: id, label: label }
     end.compact
 
-    # Process range information
+    ranges = graph.query([prop, RDF::RDFS.range, nil]).map(&:object).uniq
+    ranges.each do |range|
+      processed_statements&.add(RDF::Statement.new(prop, RDF::RDFS.range, range))
+    end
     range_details = ranges.map do |range|
       label = get_label(range, graph)
       next unless label
       id = class_ids[range] || generate_id(label)
       { id: id, label: label }
     end.compact
+
+    # Mark label and comment statements as processed
+    graph.query([prop, RDF::RDFS.label, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
+    
+    graph.query([prop, RDF::RDFS.comment, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
 
     {
       uri: prop,
@@ -480,7 +582,7 @@ def process_data_properties(data_properties, graph, class_ids)
 end
 
 # Process annotation properties
-def process_annotation_properties(annotation_properties, graph)
+def process_annotation_properties(annotation_properties, graph, processed_statements = nil)
   annotation_properties.sort_by! { |prop| get_label(prop, graph)&.downcase || '' }
 
   annotation_properties.map do |prop|
@@ -492,6 +594,15 @@ def process_annotation_properties(annotation_properties, graph)
                     graph.query([prop, RDF::RDFS.comment, nil]).map(&:object).find { |l| l.language.nil? }
     comment = comment_literal ? comment_literal.to_s : ""
 
+    # Mark label and comment statements as processed
+    graph.query([prop, RDF::RDFS.label, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
+    
+    graph.query([prop, RDF::RDFS.comment, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
+
     {
       uri: prop,
       label: label,
@@ -502,7 +613,7 @@ def process_annotation_properties(annotation_properties, graph)
 end
 
 # Process individuals
-def process_individuals(individuals, graph)
+def process_individuals(individuals, graph, processed_statements = nil)
   individuals.sort_by! { |ind| get_label(ind, graph)&.downcase || '' }
 
   individuals.map do |ind|
@@ -513,6 +624,15 @@ def process_individuals(individuals, graph)
     comment_literal = graph.query([ind, RDF::RDFS.comment, nil]).map(&:object).find { |l| l.language == :en } ||
                     graph.query([ind, RDF::RDFS.comment, nil]).map(&:object).find { |l| l.language.nil? }
     comment = comment_literal ? comment_literal.to_s : ""
+
+    # Mark label and comment statements as processed
+    graph.query([ind, RDF::RDFS.label, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
+    
+    graph.query([ind, RDF::RDFS.comment, nil]).each do |stmt|
+      processed_statements&.add(stmt)
+    end
 
     {
       uri: ind,
