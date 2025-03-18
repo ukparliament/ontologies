@@ -10,9 +10,9 @@ Dot file: [dot](published-drafts-under-euwa/published-drafts-under-euwa.dot)
 
 Dot file: [dot](proposed-negative-sis/proposed-negative-sis.dot) 
 
-#### [PNSIs - Commons committees [PDF]](proposed-negative-sis/commons-committees/commons-committee.pdf)
+#### [PNSIs - Commons committees [PDF]](proposed-negative-sis/commons-committees/commons-committees.pdf)
 
-Dot file: [dot](proposed-negative-sis/commons-committees/commons-committee.dot)
+Dot file: [dot](proposed-negative-sis/commons-committees/commons-committees.dot)
 
 ## Statutory instrument procedures
 
