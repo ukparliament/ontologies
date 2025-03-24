@@ -40,9 +40,9 @@ task :generate_docs do
   ttl_files = Dir.glob('**/*.ttl')
   
   if ttl_files.empty?
-    puts "No TTL files found in the project."
+    puts "No TTL files found."
   else
-    puts "Found #{ttl_files.length} TTL files to process."
+    puts "Found #{ttl_files.length} TTL files."
     
     processed_count = 0
     skipped_count = 0
@@ -50,6 +50,10 @@ task :generate_docs do
     
     # Track files with syntax errors
     syntax_errors = []
+    
+    # Track file with highest statement count
+    max_statements = 0
+    max_statements_file = nil
     
     # Process each TTL file
     ttl_files.each do |ttl_file|
@@ -66,8 +70,15 @@ task :generate_docs do
       
       # Check if file contains an OWL ontology before processing
       if contains_owl_ontology?(ttl_file)
-        generate_html_for_ttl_file(ttl_file)
+        # Generate HTML and get the statement count
+        statement_count = generate_html_for_ttl_file(ttl_file)
         processed_count += 1
+        
+        # Update max statements if this file has more
+        if statement_count > max_statements
+          max_statements = statement_count
+          max_statements_file = ttl_file
+        end
       else
         puts "  Skipping: File does not contain an OWL ontology"
         skipped_count += 1
@@ -76,6 +87,11 @@ task :generate_docs do
     
     puts "Documentation generation complete."
     puts "Processed: #{processed_count}, Skipped: #{skipped_count}, Invalid syntax: #{invalid_syntax_count}"
+    
+    # Print the file with the highest number of statements
+    if max_statements_file
+      puts "\nFile with the most statements: #{max_statements_file} (#{max_statements} statements)"
+    end
     
     # Display summary of files with syntax errors
     if syntax_errors.any?
@@ -297,12 +313,12 @@ def generate_html_for_ttl_file(file_path)
     annotation_property_details = process_annotation_properties(annotation_properties, graph, processed_statements)
     individual_details = process_individuals(individuals, graph, processed_statements)
 
-    # After all processing, log unprocessed statements
+    # After all processing, print unprocessed statements to console
     unprocessed_statements = all_statements - processed_statements
     
     if unprocessed_statements.any?
-      puts "  Found #{unprocessed_statements.size} unprocessed statements"
-      log_unprocessed_statements(file_path, unprocessed_statements)
+      puts "  Found #{unprocessed_statements.size} unprocessed statements in #{file_path}"
+      print_unprocessed_statements(unprocessed_statements)
     else
       puts "  All statements processed"
     end
@@ -324,10 +340,40 @@ def generate_html_for_ttl_file(file_path)
     end
 
     puts "  Documentation saved to: #{output_file}"
+    
+    # Return the total number of statements in this file
+    return all_statements.size
   rescue StandardError => e
     puts "  Error processing #{file_path}: #{e.message}"
     puts e.backtrace.join("\n  ")
+    return 0
   end
+end
+
+# Function to print unprocessed statements to console
+def print_unprocessed_statements(statements)
+  puts "  " + "=" * 40
+  puts "  Unprocessed statements: #{statements.size}"
+  puts "  " + "-" * 40
+  
+  # Group statements by subject for easier reading
+  by_subject = {}
+  
+  statements.each do |stmt|
+    by_subject[stmt.subject] ||= []
+    by_subject[stmt.subject] << stmt
+  end
+  
+  by_subject.each do |subject, stmts|
+    puts "  Subject: #{subject}"
+    
+    stmts.each do |stmt|
+      puts "    #{stmt.predicate} => #{stmt.object}"
+    end
+    
+    puts ""
+  end
+  puts "  " + "=" * 40
 end
 
 # Function to log unprocessed statements
