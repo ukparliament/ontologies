@@ -62,11 +62,11 @@ Ayesha and Michael were back on duty when a request came in from the [Secondary 
 
 Unable to call on Librarian Jayne's [SPARQL](https://en.wikipedia.org/wiki/SPARQL)ing excellence, they at least had our shiny, new Procedure Browsable Space&trade; and its rather nifty 'business items actualising a step' aggregations to rely on. Once they'd remembered to remember that [the SLSC also considers PNSIs](https://api.parliament.uk/procedure-browser/procedures/iCdMN1MW/steps/JcCYkCt7), they managed to grab all the data they needed and [pop it in a spreadsheet](https://docs.google.com/spreadsheets/d/18r8fU9jdjDGjvcST47jNNnBIqnFF6oO-lCv8wSN-WA0/edit?usp=sharing). Only to be faced with numbers that didn't quite add up. This at least gave Michael the opportunity to tell his one and only computer joke:
 
-"There are only two problems in computer science," he explained, before pausing to allow anticpation build. "Naming things, cache invalidation, and off-by-one errors." How we laughed.
+"There are only two problems in computer science," he explained, before pausing to allow anticipation to build. "Naming things, cache invalidation, and off-by-one errors." How we laughed.
 
 Anyway, data assembled, Ayesha and Michael also realised they lacked the kind of spreadsheet skills that people who *really* know how to wield a spreadsheet possess. Luckily [Librarian Emily](https://bsky.app/profile/emilyjdavi.bsky.social) stepped in and managed to weed her way though everything that appeared on one sheet that also appeared on another, whittling the whole thing down to one stray actualisation. Which has now been fixed. Data improved *and* and an enquiry successfully answered. Quite the adventure.
 
-In the course of that work, Michael also added CSV downloads for [business items actualising a given step](https://api.parliament.uk/procedure-browser/steps/JpQ96n8T/business-items) to our Procedure Browsable Space. Which should make similar enquiries in the future easier still. We hope.
+In the course of that work, Michael also added CSV downloads for [business items actualising a given step](https://api.parliament.uk/procedure-browser/steps/JpQ96n8T/business-items) to our Procedure Browsable Space&trade;. Which should make similar enquiries in the future easier still. We hope.
 
 ## Psephologising wildly
 
