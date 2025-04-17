@@ -58,7 +58,7 @@
     <main>
       <h1>Parliamentary bloc ontology</h1>
 
-      <p id="description">A model describing the whipping of a Member to a parliamentary party or the affiliation of a Member with a parliamentary bloc. A parliamentary bloc may be a parliamentary party, or may be a non-political group, for example: the Crossbenchers in the House of Lords.</p>
+      <p id="description">A model describing the whipping of a Member to a parliamentary party or the affiliation of a Member with a parliamentary bloc. A parliamentary bloc may be a parliamentary party, or may be a non-party group, for example: the Crossbenchers in the House of Lords.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -73,7 +73,7 @@
         <article class="class" id="Affiliation">
           <h3>Class <a href="#Affiliation">Affiliation</a></h3>
 
-          <p>An affiliation to a parliamentary bloc held by a Member between two dates, for example: a peer being affiliated to the Crossbenchers, or an affiliation to the Co-operative Party whilst accepting the whip of the Labour Party.</p>
+          <p>An association with a parliamentary bloc held by a Member between two dates, for example: a peer being affiliated to the Crossbenchers, or an affiliation to the Co-operative Party whilst accepting the whip of the Labour Party.</p>
          </article>
         <article class="class" id="ElectoralPact">
           <h3>Class <a href="#ElectoralPact">Electoral pact</a></h3>
@@ -83,7 +83,7 @@
         <article class="class" id="MemberWhipping">
           <h3>Class <a href="#MemberWhipping">Member whipping</a></h3>
 
-          <p>The acceptance of a whip to a parliamentary party by a Member between two dates.</p>
+          <p>The acceptance of the whip of a parliamentary party by a Member between two dates.</p>
            <p>
             Superclasses  &middot; Affiliation           </p>
         </article>
@@ -95,7 +95,7 @@
         <article class="class" id="ParliamentaryBloc">
           <h3>Class <a href="#ParliamentaryBloc">Parliamentary bloc</a></h3>
 
-          <p>A group of Members of Parliament sharing the same affiliation, for example: a parliamentary party, the bishops or Crossbenchers in the House of Lords.</p>
+          <p>A group of affiliated Members of Parliament, for example: a parliamentary party, the bishops or Crossbenchers in the House of Lords.</p>
          </article>
         <article class="class" id="ParliamentaryParty">
           <h3>Class <a href="#ParliamentaryParty">Parliamentary party</a></h3>
@@ -112,7 +112,7 @@
         <article class="class" id="PoliticalParty">
           <h3>Class <a href="#PoliticalParty">Political party</a></h3>
 
-          <p>An organisation registered by the Electoral Commission as a political party.</p>
+          <p>An organisation registered with the Electoral Commission as a political party.</p>
          </article>
         <article class="class" id="Sistership">
           <h3>Class <a href="#Sistership">Sistership</a></h3>
@@ -125,49 +125,30 @@
         <h2>Object properties</h2>
 
 
-        <article class="objectproperty" id="acceptedBy">
+        <article class="objectproperty" id="affiliationOf">
           <h3>
             Object property
-            <a href="#acceptedBy"
-              >Accepted by</a
+            <a href="#affiliationOf"
+              >Affiliation of</a
             >
           </h3>
 
-           <p>Relates a whipping of a person to that person: the acceptance of a whip by a Member. A whipping is of one person.</p>
+           <p>Relates an affiliation of a person to that person. An affiliation is of one person.</p>
 
           <p>
-            <a href="#MemberWhipping"
-              >MemberWhipping</a
+            <a href="#Affiliation"
+              >Affiliation</a
             >
-            &mdash; Accepted by &mdash;
+            &mdash; Affiliation of &mdash;
             <a href="#Person">Person</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="electoralPactOf">
+        <article class="objectproperty" id="hasAssociation">
           <h3>
             Object property
-            <a href="#electoralPactOf"
-              >Electoral pact of</a
-            >
-          </h3>
-
-           <p>Relates an electoral pact to a political party forming part of that pact, for example: the Unite to Remain pact relating to Plaid Cymru. An electoral pact of is to one political party.</p>
-
-          <p>
-            <a href="#ElectoralPact"
-              >ElectoralPact</a
-            >
-            &mdash; Electoral pact of &mdash;
-            <a href="#PoliticalParty">PoliticalParty</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="isParliamentaryPartyOf">
-          <h3>
-            Object property
-            <a href="#isParliamentaryPartyOf"
-              >Is parliamentary party of</a
+            <a href="#hasAssociation"
+              >Has association</a
             >
           </h3>
 
@@ -177,46 +158,65 @@
             <a href="#ParliamentaryParty"
               >ParliamentaryParty</a
             >
-            &mdash; Is parliamentary party of &mdash;
+            &mdash; Has association &mdash;
             <a href="#PoliticalParty">PoliticalParty</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="parliamentaryAgreementOf">
+        <article class="objectproperty" id="hasSistership">
           <h3>
             Object property
-            <a href="#parliamentaryAgreementOf"
-              >Parliamentary agreement of</a
+            <a href="#hasSistership"
+              >Has sistership</a
             >
           </h3>
 
-           <p>Relates a parliamentary agreement to a parliamentary party being part of that agreement, for example: the coalition agreement between the Conservatives and the Liberal Democrats relating to the Liberal Democrats. A parliamentary agreement of is to one parliamentary party.</p>
+           <p>Relates a political party forming part of a sistership to that sistership, for example: the SDLP relating to the sistership of Labour and the SDLP. A political party has one or more sisterships, or none. A sistership is of two political parties.</p>
 
           <p>
-            <a href="#ParliamentaryAgreement"
-              >ParliamentaryAgreement</a
+            <a href="#PoliticalParty"
+              >PoliticalParty</a
             >
-            &mdash; Parliamentary agreement of &mdash;
-            <a href="#ParliamentaryParty">ParliamentaryParty</a>
+            &mdash; Has sistership &mdash;
+            <a href="#Sistership">Sistership</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="sistershipOf">
+        <article class="objectproperty" id="partyToElectoralPact">
           <h3>
             Object property
-            <a href="#sistershipOf"
-              >Sistership of</a
+            <a href="#partyToElectoralPact"
+              >Party to electoral pact</a
             >
           </h3>
 
-           <p>Relates a sistership to a political party forming part of that sistership, for example: the sistership of Labour and the SDLP relating to the SDLP. A sistership of is to one political party.</p>
+           <p>Relates a political party forming part of an electoral pact to that pact, for example: Plaid Cymru relating to the Unite to Remain pact. A political party is party to one or more electoral pacts, or none. An electoral pacts is of two or more political parties.</p>
 
           <p>
-            <a href="#Sistership"
-              >Sistership</a
+            <a href="#PoliticalParty"
+              >PoliticalParty</a
             >
-            &mdash; Sistership of &mdash;
-            <a href="#PoliticalParty">PoliticalParty</a>
+            &mdash; Party to electoral pact &mdash;
+            <a href="#ElectoralPact">ElectoralPact</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="partyToParliamentaryAgreement">
+          <h3>
+            Object property
+            <a href="#partyToParliamentaryAgreement"
+              >Party to parliamentary agreement</a
+            >
+          </h3>
+
+           <p>Relates a parliamentary party being party to a parliamentary agreement to that parliamentary agreement, for example: the Liberal Democrats being party to the coalition agreement between the Conservatives and the Liberal Democrats. A political party is party to one or more parliamentary agreements, or none. A parliamentary agreement is between two or more parliamentary parties.</p>
+
+          <p>
+            <a href="#ParliamentaryParty"
+              >ParliamentaryParty</a
+            >
+            &mdash; Party to parliamentary agreement &mdash;
+            <a href="#ParliamentaryAgreement">ParliamentaryAgreement</a>
           </p>
         </article>
 
@@ -228,7 +228,7 @@
             >
           </h3>
 
-           <p>Relates an affiliation of a Member to a parliamentary bloc to that parliamentary bloc, for example: from an affiliation of a Crossbencher to the Crossbenchers in the House of Lords. An affiliation is to one parliamentary bloc.</p>
+           <p>Relates an affiliation to a parliamentary bloc to that parliamentary bloc, for example: from an affiliation of a Crossbencher to the Crossbenchers in the House of Lords. An affiliation is to one parliamentary bloc.</p>
 
           <p>
             <a href="#Affiliation"
@@ -247,7 +247,7 @@
             >
           </h3>
 
-           <p>Relates a whipping of a Member to a parliamentary party to that parliamentary party, for example: between the whipping of a Liberal Member and the parliamentary Liberal Party. A whipping is to one parliamentary party.</p>
+           <p>Relates a whipping to a parliamentary party to that parliamentary party, for example: between the whipping of a Liberal Member and the parliamentary Liberal Party. A whipping is to one parliamentary party.</p>
 
           <p>
             <a href="#MemberWhipping"
@@ -352,7 +352,7 @@
 
     <footer>
       <p>
-        Generated 2025-04-14 07:49:06.283053+00:00 from a
+        Generated 2025-04-17 13:59:27.515417+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../parliamentary-bloc/parliamentary-bloc-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../parliamentary-bloc/parliamentary-bloc-ontology.ttl"
