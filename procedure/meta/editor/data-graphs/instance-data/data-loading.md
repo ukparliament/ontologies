@@ -48,10 +48,6 @@ Populated by hand (open / closed).
 
 <code>select * from procedure.procedurecalculationstyle;</code>
 
-### StepCollection
-
-<code>select * from procedure.procedurestepcollection;</code>
-
 ### Step (non-business)
 
 <code>select * from procedure.procedurestep where proceduresteptypeid != 1;</code>
@@ -70,6 +66,10 @@ AND pcsa.procedurecalculationstyleid = cs.id
 ### componentOf
 
 Populated by hand.
+
+### StepCollection, stepCollectionInHouse and stepCollectionInProcedure
+
+<code>select * from procedure.procedurestepcollection;</code>
 
 
 
