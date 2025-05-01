@@ -92,6 +92,24 @@ The following query looks for all the occasions that House of Lords Standing Ord
 
     * <a href="https://api.parliament.uk/s/a8824738">Scrutiny reserve motion debated</a>
 
+## SLSC reasons for drawing instruments to the special attention to the House 
+
+The following queries show the grounds for drawing attention to an instrument by the SLSC.  Instruments can be reported for multiple reasons and for the same reason in multiple respects. 
+
+* [Secondary Legislation Scrutiny Committee (SLSC) grounds for drawing special attention to instruments](https://api.parliament.uk/s/e395a7f7)
+
+* [Secondary Legislation Scrutiny Committee draws the special attention of the House to this instrument on the grounds that it is politically or legally important or gives rise to issues of public policy likely to be of interest to the House](https://api.parliament.uk/s/2dbc39d1)
+
+* [Secondary Legislation Scrutiny Committee draws the special attention of the House to this instrument on the grounds that it may be inappropriate in view of changed circumstances since the enactment of the parent Act](https://api.parliament.uk/s/efc93ef9)
+
+* [Secondary Legislation Scrutiny Committee draws the special attention of the House to this instrument on the grounds that it may imperfectly achieve its policy objectives](https://api.parliament.uk/s/d3264069)
+
+* [Secondary Legislation Scrutiny Committee draws the special attention of the House to this instrument on the grounds that the explanatory material laid in support provides insufficient information to gain a clear understanding about the instrument’s policy objective and intended implementation](https://api.parliament.uk/s/7dfbcec5)
+
+* [Secondary Legislation Scrutiny Committee draws the special attention of the House to this instrument on the grounds that there appear to be inadequacies in the consultation process which relates to the instrument](https://api.parliament.uk/s/b4baf720)
+
+* [Secondary Legislation Scrutiny Committee draws the special attention of the House to this instrument on other grounds](https://api.parliament.uk/s/5279667a)
+
 ## Committee consideration by time period
 
 The following queries look at all instruments considered by committees in given time frames for example by session or year:
