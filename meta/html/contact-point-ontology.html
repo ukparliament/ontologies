@@ -58,30 +58,39 @@
     <main>
       <h1>Contact point ontology</h1>
 
-      <p id="description">Contact point ontology for UK Parliament</p>
+      <p id="description"></p>
 
       <nav>
         <a href="#classes">Classes</a>
         &middot; <a href="#objectproperties">Object properties</a>  &middot;
         <a href="#dataproperties">Data properties</a>           &middot; <a href="#namespaces">Namespaces</a>
 
+ &middot; <a href="https://ukparliament.github.io/ontologies/contact-point/contact-point.svg">Depiction</a>
       </nav>
 
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="ContactableThing">
-          <h3>Class <a href="#ContactableThing">ContactableThing</a></h3>
-
-          <p>A thing that can be contacted. Might be a person or a person in the context of a role or a group.</p>
-         </article>
         <article class="class" id="ContactPoint">
-          <h3>Class <a href="#ContactPoint">ContactPoint</a></h3>
+          <h3>Class <a href="#ContactPoint">Contact point</a></h3>
 
           <p>A postal address or other contact details.</p>
          </article>
+        <article class="class" id="ContactableThing">
+          <h3>Class <a href="#ContactableThing">Contactable thing</a></h3>
+
+          <p>A thing that can be contacted. Might be a person or a person in the context of a role or a group.</p>
+         </article>
+        <article class="class" id="OnlineAccount">
+          <h3>Class <a href="#OnlineAccount">Online account</a></h3>
+
+         </article>
+        <article class="class" id="OnlineAccountProvider">
+          <h3>Class <a href="#OnlineAccountProvider">Online account provider</a></h3>
+
+         </article>
         <article class="class" id="PostalAddress">
-          <h3>Class <a href="#PostalAddress">PostalAddress</a></h3>
+          <h3>Class <a href="#PostalAddress">Postal address</a></h3>
 
           <p>A postal address.</p>
          </article>
@@ -95,7 +104,7 @@
           <h3>
             Object property
             <a href="#hasContactPoint"
-              >hasContactPoint</a
+              >Has contact point</a
             >
           </h3>
 
@@ -105,8 +114,26 @@
             <a href="#ContactableThing"
               >ContactableThing</a
             >
-            &mdash; hasContactPoint &mdash;
+            &mdash; Has contact point &mdash;
             <a href="#ContactPoint">ContactPoint</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasOnlineAccount">
+          <h3>
+            Object property
+            <a href="#hasOnlineAccount"
+              >Has online account</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#ContactPoint"
+              >ContactPoint</a
+            >
+            &mdash; Has online account &mdash;
+            <a href="#OnlineAccount">OnlineAccount</a>
           </p>
         </article>
 
@@ -114,7 +141,7 @@
           <h3>
             Object property
             <a href="#hasPostalAddress"
-              >hasPostalAddress</a
+              >Has postal address</a
             >
           </h3>
 
@@ -124,8 +151,26 @@
             <a href="#ContactPoint"
               >ContactPoint</a
             >
-            &mdash; hasPostalAddress &mdash;
+            &mdash; Has postal address &mdash;
             <a href="#PostalAddress">PostalAddress</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasProvider">
+          <h3>
+            Object property
+            <a href="#hasProvider"
+              >Has provider</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#OnlineAccount"
+              >OnlineAccount</a
+            >
+            &mdash; Has provider &mdash;
+            <a href="#OnlineAccountProvider">OnlineAccountProvider</a>
           </p>
         </article>
       </section>
@@ -133,16 +178,30 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
+        <article class="dataproperty" id="accountURL">
+          <h3>
+            Data property
+            <a href="#accountURL">accountURL</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            OnlineAccount &mdash; accountURL &mdash;
+            Literal
+          </p>
+        </article>
+
         <article class="dataproperty" id="addressLine1">
           <h3>
             Data property
-            <a href="#addressLine1">addressLine1</a>
+            <a href="#addressLine1">Address line 1</a>
           </h3>
 
           <p>The first line of a postal address.</p>
 
           <p>
-            PostalAddress &mdash; addressLine1 &mdash;
+            PostalAddress &mdash; Address line 1 &mdash;
             langString
           </p>
         </article>
@@ -150,13 +209,13 @@
         <article class="dataproperty" id="addressLine2">
           <h3>
             Data property
-            <a href="#addressLine2">addressLine2</a>
+            <a href="#addressLine2">Address line 2</a>
           </h3>
 
           <p>The second line of a postal address.</p>
 
           <p>
-            PostalAddress &mdash; addressLine2 &mdash;
+            PostalAddress &mdash; Address line 2 &mdash;
             langString
           </p>
         </article>
@@ -164,13 +223,13 @@
         <article class="dataproperty" id="addressLine3">
           <h3>
             Data property
-            <a href="#addressLine3">addressLine3</a>
+            <a href="#addressLine3">Address line 3</a>
           </h3>
 
           <p>The third line of a postal address.</p>
 
           <p>
-            PostalAddress &mdash; addressLine3 &mdash;
+            PostalAddress &mdash; Address line 3 &mdash;
             langString
           </p>
         </article>
@@ -178,13 +237,13 @@
         <article class="dataproperty" id="addressLine4">
           <h3>
             Data property
-            <a href="#addressLine4">addressLine4</a>
+            <a href="#addressLine4">Address line 4</a>
           </h3>
 
           <p>The fourth line of a postal address.</p>
 
           <p>
-            PostalAddress &mdash; addressLine4 &mdash;
+            PostalAddress &mdash; Address line 4 &mdash;
             langString
           </p>
         </article>
@@ -192,13 +251,13 @@
         <article class="dataproperty" id="addressLine5">
           <h3>
             Data property
-            <a href="#addressLine5">addressLine5</a>
+            <a href="#addressLine5">Address line 5</a>
           </h3>
 
           <p>The fifth line of a postal address.</p>
 
           <p>
-            PostalAddress &mdash; addressLine5 &mdash;
+            PostalAddress &mdash; Address line 5 &mdash;
             langString
           </p>
         </article>
@@ -206,27 +265,27 @@
         <article class="dataproperty" id="availabilityNote">
           <h3>
             Data property
-            <a href="#availabilityNote">availabilityNote</a>
+            <a href="#availabilityNote">Availability note</a>
           </h3>
 
           <p>Temporal availability note for a contact point. Used for constituency office opening days and hours.</p>
 
           <p>
-            ContactPoint &mdash; availabilityNote &mdash;
+            ContactPoint &mdash; Availability note &mdash;
             langString
           </p>
         </article>
 
-        <article class="dataproperty" id="contactForm">
+        <article class="dataproperty" id="contactFormURL">
           <h3>
             Data property
-            <a href="#contactForm">contactForm</a>
+            <a href="#contactFormURL">Contact form URL</a>
           </h3>
 
           <p>URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses.</p>
 
           <p>
-            ContactPoint &mdash; contactForm &mdash;
+            ContactPoint &mdash; Contact form URL &mdash;
             Literal
           </p>
         </article>
@@ -234,13 +293,13 @@
         <article class="dataproperty" id="email">
           <h3>
             Data property
-            <a href="#email">email</a>
+            <a href="#email">Email</a>
           </h3>
 
           <p>Contact point has an email address.</p>
 
           <p>
-            ContactPoint &mdash; email &mdash;
+            ContactPoint &mdash; Email &mdash;
             Literal
           </p>
         </article>
@@ -248,27 +307,55 @@
         <article class="dataproperty" id="faxNumber">
           <h3>
             Data property
-            <a href="#faxNumber">faxNumber</a>
+            <a href="#faxNumber">Fax number</a>
           </h3>
 
           <p>Contact point has a fax number.</p>
 
           <p>
-            ContactPoint &mdash; faxNumber &mdash;
+            ContactPoint &mdash; Fax number &mdash;
             Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="homepageURL">
+          <h3>
+            Data property
+            <a href="#homepageURL">Homepage URL</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            ContactPoint &mdash; Homepage URL &mdash;
+            Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="note">
+          <h3>
+            Data property
+            <a href="#note">Note</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            ContactPoint &mdash; Note &mdash;
+            langString
           </p>
         </article>
 
         <article class="dataproperty" id="phoneNumber">
           <h3>
             Data property
-            <a href="#phoneNumber">phoneNumber</a>
+            <a href="#phoneNumber">Phone number</a>
           </h3>
 
           <p>Contact point has a phone number.</p>
 
           <p>
-            ContactPoint &mdash; phoneNumber &mdash;
+            ContactPoint &mdash; Phone number &mdash;
             Literal
           </p>
         </article>
@@ -276,13 +363,13 @@
         <article class="dataproperty" id="postcode">
           <h3>
             Data property
-            <a href="#postcode">postcode</a>
+            <a href="#postcode">Postcode</a>
           </h3>
 
           <p>Postal address has a postcode.</p>
 
           <p>
-            PostalAddress &mdash; postcode &mdash;
+            PostalAddress &mdash; Postcode &mdash;
             Literal
           </p>
         </article>
@@ -360,11 +447,15 @@
 
       <p>Ontology created &middot; <time id="created">2017-01-27</time></p>
 
+      <p id="makers">
+        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
+   &middot; Ned Morrell           &middot; <a href="https://smethur.st/">Michael Smethurst</a>
+       </p>
     </main>
 
     <footer>
       <p>
-        Generated 2025-05-01 13:16:14.782548+00:00 from a
+        Generated 2025-05-01 13:43:21.699923+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../contact-point/contact-point-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../contact-point/contact-point-ontology.ttl"
