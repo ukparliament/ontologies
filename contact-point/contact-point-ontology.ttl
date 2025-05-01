@@ -10,123 +10,170 @@
     dcterms:title "Contact point ontology"@en ;
     dcterms:created "2017-01-27"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "Contact point ontology for UK Parliament"@en .
+    dcterms:description ""@en .
+	foaf:depiction <https://ukparliament.github.io/ontologies/contact-point/contact-point.svg> ;
+	foaf:maker
+		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
+		[ foaf:name "Ned Morrell" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <https://smethur.st/> ].
 
 
 #######  Classes #####
 
 pcp:ContactableThing rdf:type owl:Class ;
-	rdfs:label "ContactableThing"@en ;
+	rdfs:label "Contactable thing"@en ;
 	rdfs:comment "A thing that can be contacted. Might be a person or a person in the context of a role or a group."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
 pcp:ContactPoint rdf:type owl:Class ;
-	rdfs:label "ContactPoint"@en ;
+	rdfs:label "Contact point"@en ;
 	rdfs:comment "A postal address or other contact details."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
+pcp:OnlineAccount rdf:type owl:Class ;
+	rdfs:label "Online account"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
+pcp:OnlineAccountProvider rdf:type owl:Class ;
+	rdfs:label "Online account provider"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
 pcp:PostalAddress rdf:type owl:Class ;
-	rdfs:label "PostalAddress"@en ;
+	rdfs:label "Postal address"@en ;
 	rdfs:comment "A postal address."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
-				
-
+	
+	
 #######  Object properties ##### 
 
 pcp:hasContactPoint rdf:type owl:ObjectProperty ;
-	rdfs:label "hasContactPoint"@en ;
+	rdfs:label "Has contact point"@en ;
 	rdfs:comment "Relates a contactable thing (a person, group or position etc) to a contact point."@en ;
 	rdfs:domain pcp:ContactableThing ;
 	rdfs:range pcp:ContactPoint ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
+pcp:hasOnlineAccount rdf:type owl:ObjectProperty ;
+	rdfs:label "Has online account"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcp:ContactPoint ;
+	rdfs:range pcp:OnlineAccount ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 
+pcp:hasProvider rdf:type owl:ObjectProperty ;
+	rdfs:label "Has provider"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcp:OnlineAccount ;
+	rdfs:range pcp:OnlineAccountProvider ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
 pcp:hasPostalAddress rdf:type owl:ObjectProperty ;
-	rdfs:label "hasPostalAddress"@en ;
+	rdfs:label "Has postal address"@en ;
 	rdfs:comment "Relates a contact point to its postal address."@en ;
 	rdfs:domain pcp:ContactPoint ;
 	rdfs:range pcp:PostalAddress ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 				
 
-#######  Data properties ##### 
+#######  Data properties #####
 
-pcp:phoneNumber rdf:type owl:DatatypeProperty ;
-	rdfs:label "phoneNumber"@en ;
-	rdfs:comment "Contact point has a phone number."@en ;
-	rdfs:domain pcp:ContactPoint ;
+pcp:accountURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "accountURL"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcp:OnlineAccount ;
 	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
-pcp:faxNumber rdf:type owl:DatatypeProperty ;
-	rdfs:label "faxNumber"@en ;
-	rdfs:comment "Contact point has a fax number."@en ;
-	rdfs:domain pcp:ContactPoint ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
-	
-pcp:email rdf:type owl:DatatypeProperty ;
-	rdfs:label "email"@en ;
-	rdfs:comment "Contact point has an email address."@en ;
-	rdfs:domain pcp:ContactPoint ;
-	rdfs:range rdfs:Literal ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
-
 pcp:addressLine1 rdf:type owl:DatatypeProperty ;
-	rdfs:label "addressLine1"@en ;
+	rdfs:label "Address line 1"@en ;
 	rdfs:comment "The first line of a postal address."@en ;
 	rdfs:domain pcp:PostalAddress ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
-	
+
 pcp:addressLine2 rdf:type owl:DatatypeProperty ;
-	rdfs:label "addressLine2"@en ;
+	rdfs:label "Address line 2"@en ;
 	rdfs:comment "The second line of a postal address."@en ;
 	rdfs:domain pcp:PostalAddress ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
-	
+
 pcp:addressLine3 rdf:type owl:DatatypeProperty ;
-	rdfs:label "addressLine3"@en ;
+	rdfs:label "Address line 3"@en ;
 	rdfs:comment "The third line of a postal address."@en ;
 	rdfs:domain pcp:PostalAddress ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .			
 
 pcp:addressLine4 rdf:type owl:DatatypeProperty ;
-	rdfs:label "addressLine4"@en ;
+	rdfs:label "Address line 4"@en ;
 	rdfs:comment "The fourth line of a postal address."@en ;
 	rdfs:domain pcp:PostalAddress ;
 	rdfs:range rdf:langString ;	
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
-	
+
 pcp:addressLine5 rdf:type owl:DatatypeProperty ;
-	rdfs:label "addressLine5"@en ;
+	rdfs:label "Address line 5"@en ;
 	rdfs:comment "The fifth line of a postal address."@en ;
 	rdfs:domain pcp:PostalAddress ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/>.
-	
+
 pcp:postcode rdf:type owl:DatatypeProperty ;
-	rdfs:label "postcode"@en ;
+	rdfs:label "Postcode"@en ;
 	rdfs:comment "Postal address has a postcode."@en ;
 	rdfs:domain pcp:PostalAddress ;
 	rdfs:range rdfs:Literal ;	
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+
+pcp:faxNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Fax number"@en ;
+	rdfs:comment "Contact point has a fax number."@en ;
+	rdfs:domain pcp:ContactPoint ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
-pcp:contactForm rdf:type owl:DatatypeProperty ;
-	rdfs:label "contactForm"@en ;
+pcp:phoneNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Phone number"@en ;
+	rdfs:comment "Contact point has a phone number."@en ;
+	rdfs:domain pcp:ContactPoint ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
+pcp:email rdf:type owl:DatatypeProperty ;
+	rdfs:label "Email"@en ;
+	rdfs:comment "Contact point has an email address."@en ;
+	rdfs:domain pcp:ContactPoint ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
+pcp:homepageURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "Homepage URL"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcp:ContactPoint ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+
+pcp:contactFormURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "Contact form URL"@en ;
 	rdfs:comment "URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses."@en ;
 	rdfs:domain pcp:ContactPoint ;
-	rdfs:range rdfs:Literal ;	
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .	
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
+	
+pcp:note rdf:type owl:DatatypeProperty ;
+	rdfs:label "Note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain pcp:ContactPoint ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
 	
 pcp:availabilityNote rdf:type owl:DatatypeProperty ;
-	rdfs:label "availabilityNote"@en ;
+	rdfs:label "Availability note"@en ;
 	rdfs:comment "Temporal availability note for a contact point. Used for constituency office opening days and hours."@en ;
 	rdfs:domain pcp:ContactPoint ;
 	rdfs:range rdf:langString ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/>.
-	
-			
-	
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/contact-point/> .
