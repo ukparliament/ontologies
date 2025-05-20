@@ -64,3 +64,9 @@ The [Government's Actuary](https://www.gov.uk/government/organisations/governmen
 * [Government Actuary reports laid before Parliament](https://api.parliament.uk/s/74d60ada)
 
 * [Government Actuary reports withdrawn from Parliament](https://api.parliament.uk/s/a96ec9b4)
+
+## Made negative instruments laid under Section 22(2)(b) of the Public Service Pensions Act 2013
+
+As set out under Section [22(2)(b) of the Public Service Pensions Act 2013](https://www.legislation.gov.uk/ukpga/2013/25/section/22), the Department of Health and Social Care will provide a report that set out the reasons for changing the amount that members contribute to the NHS Pension Scheme or the desirability of not making any changes at this point in time.
+
+* [Reports laid before the House of Commons under section 22(2)(b) of the Public Service Pensions Act 2013](https://api.parliament.uk/s/844f79bd)
