@@ -97,9 +97,7 @@ SELECT
 	collection_memberships.step_id AS step_collections_string,
 	step_houses.step_houses_string AS step_houses_string,
 	actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
-
 FROM procedure.procedurestep s
-
 LEFT JOIN
 	(
 		SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_string
@@ -108,7 +106,6 @@ LEFT JOIN
 		GROUP BY step_id
 	) collection_memberships
 ON collection_memberships.step_id = s.id
-
 LEFT JOIN
 	(
 		SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string, STRING_AGG(h.housename::text, ' and ') AS houses_string
@@ -117,7 +114,6 @@ LEFT JOIN
 		GROUP BY step_id
 	) step_houses
 ON step_houses.step_id = s.id
-
 LEFT JOIN
 	(
 		SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
@@ -127,14 +123,12 @@ LEFT JOIN
 		GROUP BY from_step_id
 	) actualised_alongsides
 ON actualised_alongsides.from_step_id = s.id
-
 LEFT JOIN
 	(
 		SELECT l.id, l.legislaturename AS name
 		FROM procedure.legislature l
 	) legislature
 ON legislature.id = s.legislatureid
-
 WHERE s.proceduresteptypeid = 1;
 </code>
 
