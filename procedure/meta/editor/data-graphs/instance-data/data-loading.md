@@ -4,6 +4,12 @@ The procedure editor database is [SQL Server](https://en.wikipedia.org/wiki/Micr
 
 This page lists the Postgres queries necessary to produce CSV files to populate Data Graphs.
 
+<p>
+	<a href="data.svg">
+		<img src="data.svg" alt="Data loading progress diagram" title="Data loading progress diagram" />
+	</a>
+</p>
+
 ## Done
 
 ### ParliamentPeriod
@@ -80,15 +86,20 @@ Populated by hand.
 ### BusinessStep, Step, actualisedAlongside, source, hasStepType, businessStepInLegislature, businessStepInHouse and memberOf
 
 <code>
-SELECT 
-	CONCAT( 'beep', s.procedurestepname AS label ),
-	
-	
-	
+SELECT
+	s.*,
+	CASE 
+		WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
+		THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, legislature.name, ')'  )
+	ELSE
+		s.procedurestepname
+	END,
 	collection_memberships.step_id AS step_collections_string,
 	step_houses.step_houses_string AS step_houses_string,
 	actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
+
 FROM procedure.procedurestep s
+
 LEFT JOIN
 	(
 		SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_string
@@ -97,14 +108,16 @@ LEFT JOIN
 		GROUP BY step_id
 	) collection_memberships
 ON collection_memberships.step_id = s.id
+
 LEFT JOIN
 	(
-		SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string
+		SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string, STRING_AGG(h.housename::text, ' and ') AS houses_string
 		FROM procedure.procedurestephouse sh, procedure.house h
 		WHERE sh.houseid = h.id
 		GROUP BY step_id
 	) step_houses
 ON step_houses.step_id = s.id
+
 LEFT JOIN
 	(
 		SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
@@ -114,6 +127,14 @@ LEFT JOIN
 		GROUP BY from_step_id
 	) actualised_alongsides
 ON actualised_alongsides.from_step_id = s.id
+
+LEFT JOIN
+	(
+		SELECT l.id, l.legislaturename AS name
+		FROM procedure.legislature l
+	) legislature
+ON legislature.id = s.legislatureid
+
 WHERE s.proceduresteptypeid = 1;
 </code>
 
