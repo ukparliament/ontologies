@@ -90,10 +90,12 @@ SELECT
 	s.*,
 	CASE 
 		WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
-		THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, legislature.name, ')'  )
-	ELSE
-		s.procedurestepname
-	END,
+			THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, ')'  )
+		WHEN legislature.name = 'Scottish Parliament' OR legislature.name = 'Senedd Cymru' OR legislature.name = 'Northern Ireland Assembly'
+			THEN CONCAT( s.procedurestepname, ' (', legislature.name, ')'  )
+		ELSE
+			s.procedurestepname
+		END AS label,
 	collection_memberships.step_id AS step_collections_string,
 	step_houses.step_houses_string AS step_houses_string,
 	actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
