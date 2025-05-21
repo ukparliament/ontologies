@@ -52,24 +52,77 @@ Populated by hand (open / closed).
 
 <code>select * from procedure.procedurestep where proceduresteptypeid != 1;</code>
 
-## Doing
-
 ### Procedure and procedureHasCalculationStyle
 
 <code>
-SELECT p.*
-FROM procedure.procedure p, procedure.procedurecalculationstyleapplicability pcsa,procedure.procedurecalculationstyle cs
-WHERE pcsa.procedureid = p.id
-AND pcsa.procedurecalculationstyleid = cs.id
+SELECT p.*, calculation_styles.calculation_styles__string
+FROM procedure.procedure p
+LEFT JOIN
+	(
+		SELECT pcsa.procedureid AS procedure_id, STRING_AGG(pcs.id::text, ', ') AS calculation_styles_string
+		FROM procedure.procedurecalculationstyleapplicability pcsa, procedure.procedurecalculationstyle pcs
+		WHERE pcsa.procedurecalculationstyleid = pcs.id
+		GROUP BY procedure_id
+	) calculation_styles
+ON calculation_styles.procedure_id = p.id
 </code>
+
+### StepCollection, stepCollectionInHouse and stepCollectionInProcedure
+
+<code>select * from procedure.procedurestepcollection;</code>
 
 ### componentOf
 
 Populated by hand.
 
-### StepCollection, stepCollectionInHouse and stepCollectionInProcedure
+## Doing
 
-<code>select * from procedure.procedurestepcollection;</code>
+### BusinessStep, Step, actualisedAlongside, source, hasStepType, businessStepInLegislature, businessStepInHouse and memberOf
+
+<code>
+SELECT 
+	CONCAT( 'beep', s.procedurestepname AS label ),
+	
+	
+	
+	collection_memberships.step_id AS step_collections_string,
+	step_houses.step_houses_string AS step_houses_string,
+	actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
+FROM procedure.procedurestep s
+LEFT JOIN
+	(
+		SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_string
+		FROM procedure.procedurestepcollectionmembership scm, procedure.procedurestepcollection sc
+		WHERE scm.procedurestepcollectionid = sc.id
+		GROUP BY step_id
+	) collection_memberships
+ON collection_memberships.step_id = s.id
+LEFT JOIN
+	(
+		SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string
+		FROM procedure.procedurestephouse sh, procedure.house h
+		WHERE sh.houseid = h.id
+		GROUP BY step_id
+	) step_houses
+ON step_houses.step_id = s.id
+LEFT JOIN
+	(
+		SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
+		
+		
+		FROM procedure.procedurestepalongsidestep sas
+		GROUP BY from_step_id
+	) actualised_alongsides
+ON actualised_alongsides.from_step_id = s.id
+WHERE s.proceduresteptypeid = 1;
+</code>
+
+
+
+
+
+
+
 
 
 
