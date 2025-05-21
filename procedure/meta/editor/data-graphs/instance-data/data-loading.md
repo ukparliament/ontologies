@@ -117,8 +117,6 @@ ON step_houses.step_id = s.id
 LEFT JOIN
 	(
 		SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
-		
-		
 		FROM procedure.procedurestepalongsidestep sas
 		GROUP BY from_step_id
 	) actualised_alongsides
