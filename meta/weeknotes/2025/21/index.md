@@ -18,20 +18,7 @@ In the meantime, it remains safe to say that there is no shortage of work here. 
 
 ## New, old search
 
-Having made it this far, we fear we have skipped over the question that is obviously on our dear reader's lips: have you found a developer for your search application yet? Dear reader, we have not. Nor does any such thing look imminently likely. Never ones to sit idle, your regular correspondents, [Anya](https://bsky.app/profile/anyaso.bsky.social) and [Michael](https://bsky.app/profile/fantasticlife.bsky.social) have volunteered their time to domain model the library publication process. So far, they've covered off bits of [POST](https://post.parliament.uk/), and a couple of bits of the [Commons Library](https://commonslibrary.parliament.uk/), namely the good folks from the Parliament and Constitution Centre, and Economic Policy and Statistics Section. So far, we haven't quite got as far as anyone actually publishing anything, concentrating instead on the '[commissioning process](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication/domain-models)'. But it's all been quite fun. Our thanks to Lorna, Chris, David, Matt and Oli(ver). At some point, somehow or other, we think this all stitches into our Single Subject View of the Librar(y|ies) work. Or at least, we hope so. More of which [later]().
-
-
-
-
-
-
-
-
-
-
-
-
-
+Having made it this far, we fear we have skipped over the question that is obviously on our dear reader's lips: have you found a developer for your search application yet? Dear reader, we have not. Nor does any such thing look imminently likely. Never ones to sit idle, your regular correspondents, [Anya](https://bsky.app/profile/anyaso.bsky.social) and [Michael](https://bsky.app/profile/fantasticlife.bsky.social) have volunteered their time to domain model the library publication process. So far, they've covered off bits of [POST](https://post.parliament.uk/), and a couple of bits of the [Commons Library](https://commonslibrary.parliament.uk/), namely the good folks from the Parliament and Constitution Centre, and the Economic Policy and Statistics Section. So far, we haven't quite got as far as anyone actually publishing anything, concentrating instead on the '[commissioning process](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication/domain-models)'. But it's all been quite fun. Our thanks to [Lorna](https://bsky.app/profile/lornabooth.bsky.social), Chris, David, Matt and Oli(ver). At some point, somehow or other, we think this all stitches into our Single Subject View of the Librar(y|ies) work. Or at least, we hope so. More of which, almost inevitably, [later](#toward-a-single-subject-view-of-the-library).
 
 ## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
 
