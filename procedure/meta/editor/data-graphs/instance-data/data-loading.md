@@ -210,3 +210,17 @@ This flags routes forming part of a non-component procedure as not included in a
 		AND procedure.procedurerouteprocedure.procedureid != 11;
 	</code>
 </pre>
+
+A query for Jayne to check that routes flagged as not included for export look correct.
+
+<pre>
+	<code>
+		SELECT p.procedurename AS procedure, from_s.procedurestepname AS from_step, to_s.procedurestepname AS to_step
+		FROM procedure.procedurerouteprocedure pr, procedure.procedure p, procedure.procedureroute r, procedure.procedurestep from_s, procedure.procedurestep to_s
+		WHERE pr.is_included_in_export is FALSE
+		AND pr.procedureid = p.id
+		AND pr.procedurerouteid = r.id
+		AND r.fromprocedurestepid = from_s.id
+		AND r.toprocedurestepid = to_s.id;
+	</code>
+</pre>
