@@ -184,7 +184,7 @@ Populated by hand.
 
 ### Route, Path, AvailableThing, availabilityOf, Availability, hasAvailabilityStatus, fromStep, toStep and inProcedure
 
-We need to flag routes forming part of a non-component procedure as being not necessary for export, where those routes also form part of a component procedure.
+We need to flag routes forming part of a non-component procedure as being not required for export, where those routes also form part of a component procedure.
 
 We add a <code>is_included_in_export</code> boolean to the procedurerouteprocedure join table.
 
@@ -195,7 +195,7 @@ We add a <code>is_included_in_export</code> boolean to the procedurerouteprocedu
 	</code>
 </pre>
 
-We set the <code>is_included_in_export</code> boolean to false for any route forming part of a non-component procedure, where that routes also form part of a component procedure.
+We set the <code>is_included_in_export</code> boolean to false for any route forming part of a non-component procedure, where that route also forms part of a component procedure.
 
 This flags routes forming part of a non-component procedure as not included in any export where those routes form part of the EVEL component.
 
