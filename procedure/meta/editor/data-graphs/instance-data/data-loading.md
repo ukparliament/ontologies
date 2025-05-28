@@ -181,3 +181,30 @@ Populated by hand.
 		WHERE s.proceduresteptypeid = 1;
 	</code>
 </pre>
+
+### Route, Path, AvailableThing, availabilityOf, Availability, hasAvailabilityStatus, fromStep, toStep and inProcedure
+
+We need to flag routes forming part of a non-component procedure as being not necessary for export, where those routes also form part of a component procedure.
+
+We add a <code>is_included_in_export</code> boolean to the procedurerouteprocedure join table.
+
+<pre>
+	<code>
+		ALTER TABLE procedure.procedurerouteprocedure
+		ADD is_included_in_export BOOLEAN DEFAULT TRUE;
+	</code>
+</pre>
+
+We set the <code>is_included_in_export</code> boolean to false for any route forming part of a non-component procedure, where that routes also form part of a component procedure.
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 11
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 11;
+	</code>
+</pre>
