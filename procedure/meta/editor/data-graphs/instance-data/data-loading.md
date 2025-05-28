@@ -197,6 +197,8 @@ We add a <code>is_included_in_export</code> boolean to the procedurerouteprocedu
 
 We set the <code>is_included_in_export</code> boolean to false for any route forming part of a non-component procedure, where that routes also form part of a component procedure.
 
+This flags routes forming part of a non-component procedure as not included in any export where those routes form part of the EVEL component.
+
 <pre>
 	<code>
 		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
