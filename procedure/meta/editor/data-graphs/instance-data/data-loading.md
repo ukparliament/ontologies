@@ -224,3 +224,53 @@ A query for Jayne to check that routes flagged as not included for export look c
 		AND r.toprocedurestepid = to_s.id;
 	</code>
 </pre>
+
+A query for Jayne to check which routes are in more than procedure.
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				r.id AS route_id,
+				r.triplestoreid AS route_triplestore_id,
+				from_step.name AS from_step_name,
+				to_step.name AS to_step_name,
+				procedure_routes.procedure_count AS procedure_count,
+				STRING_AGG(procedure.name::text, ' | ') AS procedures
+			FROM procedure.procedureroute r
+			LEFT JOIN
+				(
+					SELECT pr.procedurerouteid, p.procedurename AS name
+					FROM procedure.procedurerouteprocedure pr, procedure.procedure p
+					WHERE pr.procedureid = p.id
+				) procedure
+			ON procedure.procedurerouteid = r.id
+
+			INNER JOIN (
+				SELECT s.id, s.procedurestepname AS name
+				FROM procedure.procedurestep s
+	
+			) from_step
+			ON from_step.id = r.fromprocedurestepid
+
+			INNER JOIN (
+				SELECT s.id, s.procedurestepname AS name
+				FROM procedure.procedurestep s
+	
+			) to_step
+			ON to_step.id = r.toprocedurestepid
+
+			INNER JOIN (
+				SELECT pr.procedurerouteid, count(pr.id) AS procedure_count
+				FROM procedure.procedurerouteprocedure pr
+				GROUP BY pr.procedurerouteid
+	
+			) procedure_routes
+			ON procedure_routes.procedurerouteid = r.id
+			WHERE procedure_count > 1
+			GROUP BY r.id, from_step.name, to_step.name, procedure_count
+			ORDER BY procedure_count DESC
+		)
+		TO '/Users/smethurstm/Documents/route_profileration.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>	
