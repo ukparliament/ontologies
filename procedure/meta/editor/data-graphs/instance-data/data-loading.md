@@ -217,13 +217,16 @@ A query for Jayne to check that routes flagged as not included for export look c
 
 <pre>
 	<code>
-		SELECT p.procedurename AS procedure, from_s.procedurestepname AS from_step, to_s.procedurestepname AS to_step
-		FROM procedure.procedurerouteprocedure pr, procedure.procedure p, procedure.procedureroute r, procedure.procedurestep from_s, procedure.procedurestep to_s
-		WHERE pr.is_included_in_export is FALSE
-		AND pr.procedureid = p.id
-		AND pr.procedurerouteid = r.id
-		AND r.fromprocedurestepid = from_s.id
-		AND r.toprocedurestepid = to_s.id;
+		COPY (
+			SELECT p.procedurename AS procedure, from_s.procedurestepname AS from_step, to_s.procedurestepname AS to_step
+			FROM procedure.procedurerouteprocedure pr, procedure.procedure p, procedure.procedureroute r, procedure.procedurestep from_s, procedure.procedurestep to_s
+			WHERE pr.is_included_in_export is FALSE
+			AND pr.procedureid = p.id
+			AND pr.procedurerouteid = r.id
+			AND r.fromprocedurestepid = from_s.id
+			AND r.toprocedurestepid = to_s.id
+		)
+		TO '/Users/smethurstm/Documents/ignored_routes.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
