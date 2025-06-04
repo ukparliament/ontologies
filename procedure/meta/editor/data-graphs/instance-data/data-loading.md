@@ -135,50 +135,52 @@ Populated by hand.
 
 <pre>
 	<code>
-		SELECT
-			s.*,
-			CASE 
-				WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
-					THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, ')'  )
-				WHEN legislature.name = 'Scottish Parliament' OR legislature.name = 'Senedd Cymru' OR legislature.name = 'Northern Ireland Assembly'
-					THEN CONCAT( s.procedurestepname, ' (', legislature.name, ')'  )
-				ELSE
-					s.procedurestepname
-				END AS label,
-			collection_memberships.step_id AS step_collections_string,
-			step_houses.step_houses_string AS step_houses_string,
-			actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
-		FROM procedure.procedurestep s
-		LEFT JOIN
-			(
-				SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_string
-				FROM procedure.procedurestepcollectionmembership scm, procedure.procedurestepcollection sc
-				WHERE scm.procedurestepcollectionid = sc.id
-				GROUP BY step_id
-			) collection_memberships
-		ON collection_memberships.step_id = s.id
-		LEFT JOIN
-			(
-				SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string, STRING_AGG(h.housename::text, ' and ') AS houses_string
-				FROM procedure.procedurestephouse sh, procedure.house h
-				WHERE sh.houseid = h.id
-				GROUP BY step_id
-			) step_houses
-		ON step_houses.step_id = s.id
-		LEFT JOIN
-			(
-				SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
-				FROM procedure.procedurestepalongsidestep sas
-				GROUP BY from_step_id
-			) actualised_alongsides
-		ON actualised_alongsides.from_step_id = s.id
-		LEFT JOIN
-			(
-				SELECT l.id, l.legislaturename AS name
-				FROM procedure.legislature l
-			) legislature
-		ON legislature.id = s.legislatureid
-		WHERE s.proceduresteptypeid = 1;
+		COPY (
+			SELECT
+				s.*,
+				CASE 
+					WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
+						THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, ')'  )
+					WHEN legislature.name = 'Scottish Parliament' OR legislature.name = 'Senedd Cymru' OR legislature.name = 'Northern Ireland Assembly'
+						THEN CONCAT( s.procedurestepname, ' (', legislature.name, ')'  )
+					ELSE
+						s.procedurestepname
+					END AS label,
+				collection_memberships.step_id AS step_collections_string,
+				step_houses.step_houses_string AS step_houses_string,
+				actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
+			FROM procedure.procedurestep s
+			LEFT JOIN
+				(
+					SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_string
+					FROM procedure.procedurestepcollectionmembership scm, procedure.procedurestepcollection sc
+					WHERE scm.procedurestepcollectionid = sc.id
+					GROUP BY step_id
+				) collection_memberships
+			ON collection_memberships.step_id = s.id
+			LEFT JOIN
+				(
+					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string, STRING_AGG(h.housename::text, ' and ') AS houses_string
+					FROM procedure.procedurestephouse sh, procedure.house h
+					WHERE sh.houseid = h.id
+					GROUP BY step_id
+				) step_houses
+			ON step_houses.step_id = s.id
+			LEFT JOIN
+				(
+					SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
+					FROM procedure.procedurestepalongsidestep sas
+					GROUP BY from_step_id
+				) actualised_alongsides
+			ON actualised_alongsides.from_step_id = s.id
+			LEFT JOIN
+				(
+					SELECT l.id, l.legislaturename AS name
+					FROM procedure.legislature l
+				) legislature
+			ON legislature.id = s.legislatureid
+			WHERE s.proceduresteptypeid = 1
+			TO '/Users/smethurstm/Documents/business_steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -225,7 +227,7 @@ A query for Jayne to check that routes flagged as not included for export look c
 	</code>
 </pre>
 
-A query for Jayne to check which routes are in more than procedure.
+A query for Jayne to check which routes are in more than one procedure. Includes only routes flagged as being included for export.
 
 <pre>
 	<code>
@@ -243,6 +245,7 @@ A query for Jayne to check which routes are in more than procedure.
 					SELECT pr.procedurerouteid, p.procedurename AS name
 					FROM procedure.procedurerouteprocedure pr, procedure.procedure p
 					WHERE pr.procedureid = p.id
+					AND pr.is_included_in_export is TRUE
 				) procedure
 			ON procedure.procedurerouteid = r.id
 
@@ -263,6 +266,7 @@ A query for Jayne to check which routes are in more than procedure.
 			INNER JOIN (
 				SELECT pr.procedurerouteid, count(pr.id) AS procedure_count
 				FROM procedure.procedurerouteprocedure pr
+				WHERE pr.is_included_in_export is TRUE
 				GROUP BY pr.procedurerouteid
 	
 			) procedure_routes
