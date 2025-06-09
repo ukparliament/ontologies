@@ -146,7 +146,7 @@ Populated by hand.
 					ELSE
 						s.procedurestepname
 					END AS label,
-				collection_memberships.step_id AS step_collections_string,
+				collection_memberships.step_collections_string AS step_collections_string,
 				step_houses.step_houses_string AS step_houses_string,
 				actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
 			FROM procedure.procedurestep s
@@ -180,7 +180,8 @@ Populated by hand.
 				) legislature
 			ON legislature.id = s.legislatureid
 			WHERE s.proceduresteptypeid = 1
-			TO '/Users/smethurstm/Documents/business_steps.csv' DELIMITER ',' CSV HEADER;
+		)
+		TO '/Users/smethurstm/Documents/business_steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
