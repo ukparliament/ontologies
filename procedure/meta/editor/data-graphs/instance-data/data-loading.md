@@ -26,8 +26,11 @@ Sourced from:
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.layingbody;
+		COPY (
+			SELECT *
+			FROM procedure.layingbody
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/organisations-accountable-parliament.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -39,8 +42,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.proceduresteppublication;
+		COPY (
+			SELECT *
+			FROM procedure.proceduresteppublication
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/publications.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -48,8 +54,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.legislature;
+		COPY (
+			SELECT *
+			FROM procedure.legislature
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/legislatures.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -57,8 +66,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.house;
+		COPY (
+			SELECT *
+			FROM procedure.house
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/houses.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -66,8 +78,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.proceduresteptype;
+		COPY (
+			SELECT *
+			FROM procedure.proceduresteptype
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/step-types.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -75,8 +90,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.solractofparliamentdata;
+		COPY (
+			SELECT *
+			FROM procedure.solractofparliamentdata
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -84,8 +102,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.procedurecalculationstyle;
+		COPY (
+			SELECT *
+			FROM procedure.procedurecalculationstyle
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/calculation-styles.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -93,9 +114,12 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT * 
-		FROM procedure.procedurestep
-		WHERE proceduresteptypeid != 1;
+		COPY (
+			SELECT * 
+			FROM procedure.procedurestep
+			WHERE proceduresteptypeid != 1
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/non-business-steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -103,16 +127,19 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT p.*, calculation_styles.calculation_styles__string
-		FROM procedure.procedure p
-		LEFT JOIN
-			(
-				SELECT pcsa.procedureid AS procedure_id, STRING_AGG(pcs.id::text, ', ') AS calculation_styles_string
-				FROM procedure.procedurecalculationstyleapplicability pcsa, procedure.procedurecalculationstyle pcs
-				WHERE pcsa.procedurecalculationstyleid = pcs.id
-				GROUP BY procedure_id
-			) calculation_styles
-		ON calculation_styles.procedure_id = p.id;
+		COPY (
+			SELECT p.*, calculation_styles.calculation_styles_string
+			FROM procedure.procedure p
+			LEFT JOIN
+				(
+					SELECT pcsa.procedureid AS procedure_id, STRING_AGG(pcs.id::text, ', ') AS calculation_styles_string
+					FROM procedure.procedurecalculationstyleapplicability pcsa, procedure.procedurecalculationstyle pcs
+					WHERE pcsa.procedurecalculationstyleid = pcs.id
+					GROUP BY procedure_id
+				) calculation_styles
+			ON calculation_styles.procedure_id = p.id
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/procedures.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -120,8 +147,11 @@ Populated by hand (open / closed).
 
 <pre>
 	<code>
-		SELECT *
-		FROM procedure.procedurestepcollection;
+		COPY (
+			SELECT *
+			FROM procedure.procedurestepcollection
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/step-collections.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -146,13 +176,13 @@ Populated by hand.
 					ELSE
 						s.procedurestepname
 					END AS label,
-				collection_memberships.step_collections_string AS step_collections_string,
-				step_houses.step_houses_string AS step_houses_string,
-				actualised_alongsides.actualised_alongside_text AS actualised_alongside_text
+				collection_memberships.step_collections_concatenated AS step_collections_concatenated,
+				step_houses.step_houses_concatenated AS step_houses_concatenated,
+				actualised_alongsides.actualised_alongside_concatenated AS actualised_alongside_concatenated
 			FROM procedure.procedurestep s
 			LEFT JOIN
 				(
-					SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_string
+					SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_concatenated
 					FROM procedure.procedurestepcollectionmembership scm, procedure.procedurestepcollection sc
 					WHERE scm.procedurestepcollectionid = sc.id
 					GROUP BY step_id
@@ -160,7 +190,7 @@ Populated by hand.
 			ON collection_memberships.step_id = s.id
 			LEFT JOIN
 				(
-					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_string, STRING_AGG(h.housename::text, ' and ') AS houses_string
+					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_concatenated, STRING_AGG(h.housename::text, ' and ') AS houses_string
 					FROM procedure.procedurestephouse sh, procedure.house h
 					WHERE sh.houseid = h.id
 					GROUP BY step_id
@@ -168,7 +198,7 @@ Populated by hand.
 			ON step_houses.step_id = s.id
 			LEFT JOIN
 				(
-					SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_text
+					SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_concatenated
 					FROM procedure.procedurestepalongsidestep sas
 					GROUP BY from_step_id
 				) actualised_alongsides
@@ -181,7 +211,7 @@ Populated by hand.
 			ON legislature.id = s.legislatureid
 			WHERE s.proceduresteptypeid = 1
 		)
-		TO '/Users/smethurstm/Documents/business_steps.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/procedure-editor/business_steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -227,7 +257,7 @@ A query for Jayne to check that routes flagged as not included for export look c
 			AND r.fromprocedurestepid = from_s.id
 			AND r.toprocedurestepid = to_s.id
 		)
-		TO '/Users/smethurstm/Documents/ignored_routes.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/procedure-editor/reporting/ignored-routes.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
