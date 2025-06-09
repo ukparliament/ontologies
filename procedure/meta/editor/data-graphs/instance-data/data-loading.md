@@ -230,7 +230,9 @@ We add a <code>is_included_in_export</code> boolean to the procedurerouteprocedu
 
 We set the <code>is_included_in_export</code> boolean to false for any route forming part of a non-component procedure, where that route also forms part of a component procedure.
 
-This flags routes forming part of a non-component procedure as not included in any export where those routes form part of the EVEL component.
+#### Flag duplicate EVEL routes
+
+This update flags routes forming part of the EVEL component procedure, where those routes form part of a different procedure:
 
 <pre>
 	<code>
@@ -309,6 +311,6 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 			GROUP BY r.id, from_step.name, to_step.name, procedure_count
 			ORDER BY procedure_count DESC
 		)
-		TO '/Users/smethurstm/Documents/route_profileration.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/procedure-editor/reporting/route-profileration.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>	
