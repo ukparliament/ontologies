@@ -159,8 +159,6 @@ Populated by hand (open / closed).
 
 Populated by hand.
 
-## Doing
-
 ### BusinessStep, Step, actualisedAlongside, source, hasStepType, businessStepInLegislature, businessStepInHouse and memberOf
 
 <pre>
@@ -214,6 +212,37 @@ Populated by hand.
 		TO '/Users/smethurstm/Documents/procedure-editor/business_steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+### StepDisplayDepthInProcedure, forBusinessStep, depthInProcedure and displayDepth
+
+<pre>
+	<code>
+		COPY (
+			SELECT *
+			FROM procedure.procedurestepdisplaydepth
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/step-display-depths.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### Clock, Path, fromStep, toStep, inProcedure and dayCount
+
+<pre>
+	<code>
+		COPY (
+			SELECT *
+			FROM procedure.procedureclock
+		)
+		TO '/Users/smethurstm/Documents/procedure-editor/clocks.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+
+
+
+
+## Doing
 
 ### Route, Path, AvailableThing, availabilityOf, Availability, hasAvailabilityStatus, fromStep, toStep and inProcedure
 
