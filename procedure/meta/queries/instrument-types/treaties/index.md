@@ -179,7 +179,7 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/212d4603"> Correspondence published by the Environmental Audit Committee</a>
 
-* <a href="https://api.parliament.uk/s/773f0230"> Correspondence published by the International Trade Committee</a>
+* <a href="https://api.parliament.uk/s/773f0230"> Correspondence published by the International Development Committee</a>
 
 * <a href="https://api.parliament.uk/s/e4b80566"> Correspondence published by Lords committees</a>
 
