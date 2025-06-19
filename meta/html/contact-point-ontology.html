@@ -74,20 +74,22 @@
         <article class="class" id="ContactPoint">
           <h3>Class <a href="#ContactPoint">Contact point</a></h3>
 
-          <p>A postal address or other contact details.</p>
+          <p>One or more means of contact for a contactable thing, for example: a contact point having a postal address.</p>
          </article>
         <article class="class" id="ContactableThing">
           <h3>Class <a href="#ContactableThing">Contactable thing</a></h3>
 
-          <p>A thing that can be contacted. Might be a person or a person in the context of a role or a group.</p>
+          <p>A thing that can be contacted. This is a group or a person in the context of their role in or their membership of a group.</p>
          </article>
         <article class="class" id="OnlineAccount">
           <h3>Class <a href="#OnlineAccount">Online account</a></h3>
 
+          <p>A online account, for example: an online account for the UK Parliament on X.</p>
          </article>
         <article class="class" id="OnlineAccountProvider">
           <h3>Class <a href="#OnlineAccountProvider">Online account provider</a></h3>
 
+          <p>A provider of online accounts, for example: X.</p>
          </article>
         <article class="class" id="PostalAddress">
           <h3>Class <a href="#PostalAddress">Postal address</a></h3>
@@ -108,7 +110,7 @@
             >
           </h3>
 
-           <p>Relates a contactable thing (a person, group or position etc) to a contact point.</p>
+           <p>Relates a contactable thing to a contact point. A contactable thing may have one or more contact points. A contact point is for one contactable thing.</p>
 
           <p>
             <a href="#ContactableThing"
@@ -127,7 +129,8 @@
             >
           </h3>
 
- 
+           <p>Relates a contact point to an online account. A contact point may have one or more online accounts, or none.</p>
+
           <p>
             <a href="#ContactPoint"
               >ContactPoint</a
@@ -145,7 +148,7 @@
             >
           </h3>
 
-           <p>Relates a contact point to its postal address.</p>
+           <p>Relates a contact point to its postal address. A contact point has one or more postal addresses or none.</p>
 
           <p>
             <a href="#ContactPoint"
@@ -164,7 +167,8 @@
             >
           </h3>
 
- 
+           <p>Relates an online account to the provider of that account. An online account has one provider.</p>
+
           <p>
             <a href="#OnlineAccount"
               >OnlineAccount</a
@@ -178,13 +182,27 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
+        <article class="dataproperty" id="accountName">
+          <h3>
+            Data property
+            <a href="#accountName">Account name</a>
+          </h3>
+
+          <p>Relates an online account to the name of that account. For example: UK Parliament having an account on X with the name @ukparliament.</p>
+
+          <p>
+            OnlineAccount &mdash; Account name &mdash;
+            Literal
+          </p>
+        </article>
+
         <article class="dataproperty" id="accountURL">
           <h3>
             Data property
             <a href="#accountURL">Account URL</a>
           </h3>
 
-          <p></p>
+          <p>Relates an online account to the URL of that account. For example: UK Parliament having an account on X with the URL https://x.com/ukparliament.</p>
 
           <p>
             OnlineAccount &mdash; Account URL &mdash;
@@ -192,72 +210,16 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="addressLine1">
+        <article class="dataproperty" id="address">
           <h3>
             Data property
-            <a href="#addressLine1">Address line 1</a>
+            <a href="#address">Address</a>
           </h3>
 
-          <p>The first line of a postal address.</p>
+          <p>Relates a postal address to the part of its address before its postcode. For example: &#39;35-39 Market Street, Chorley&#39;.</p>
 
           <p>
-            PostalAddress &mdash; Address line 1 &mdash;
-            langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="addressLine2">
-          <h3>
-            Data property
-            <a href="#addressLine2">Address line 2</a>
-          </h3>
-
-          <p>The second line of a postal address.</p>
-
-          <p>
-            PostalAddress &mdash; Address line 2 &mdash;
-            langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="addressLine3">
-          <h3>
-            Data property
-            <a href="#addressLine3">Address line 3</a>
-          </h3>
-
-          <p>The third line of a postal address.</p>
-
-          <p>
-            PostalAddress &mdash; Address line 3 &mdash;
-            langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="addressLine4">
-          <h3>
-            Data property
-            <a href="#addressLine4">Address line 4</a>
-          </h3>
-
-          <p>The fourth line of a postal address.</p>
-
-          <p>
-            PostalAddress &mdash; Address line 4 &mdash;
-            langString
-          </p>
-        </article>
-
-        <article class="dataproperty" id="addressLine5">
-          <h3>
-            Data property
-            <a href="#addressLine5">Address line 5</a>
-          </h3>
-
-          <p>The fifth line of a postal address.</p>
-
-          <p>
-            PostalAddress &mdash; Address line 5 &mdash;
+            PostalAddress &mdash; Address &mdash;
             langString
           </p>
         </article>
@@ -268,7 +230,7 @@
             <a href="#availabilityNote">Availability note</a>
           </h3>
 
-          <p>Temporal availability note for a contact point. Used for constituency office opening days and hours.</p>
+          <p>Relates a contact point to a note describing the availability of the contactable thing at that contact point. For example: a constituency office being contactable in working hours only.</p>
 
           <p>
             ContactPoint &mdash; Availability note &mdash;
@@ -282,7 +244,7 @@
             <a href="#contactFormURL">Contact form URL</a>
           </h3>
 
-          <p>URL for a contact form for contacting a contact point. Instead of an email address e.g. some government departments publish a contact form rather than exposing email addresses.</p>
+          <p>Relates a contact point to the URL of a contact form.</p>
 
           <p>
             ContactPoint &mdash; Contact form URL &mdash;
@@ -290,16 +252,16 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="email">
+        <article class="dataproperty" id="emailAddress">
           <h3>
             Data property
-            <a href="#email">Email</a>
+            <a href="#emailAddress">Email address</a>
           </h3>
 
-          <p>Contact point has an email address.</p>
+          <p>Relates a contact point to its email address, for example: &#39;lindsay.hoyle.mp@parliament.uk&#39;.</p>
 
           <p>
-            ContactPoint &mdash; Email &mdash;
+            ContactPoint &mdash; Email address &mdash;
             Literal
           </p>
         </article>
@@ -310,7 +272,7 @@
             <a href="#faxNumber">Fax number</a>
           </h3>
 
-          <p>Contact point has a fax number.</p>
+          <p>Relates a contact point to its fax number.</p>
 
           <p>
             ContactPoint &mdash; Fax number &mdash;
@@ -324,25 +286,11 @@
             <a href="#homepageURL">Homepage URL</a>
           </h3>
 
-          <p></p>
+          <p>Relates a contact point to an online homepage.</p>
 
           <p>
             ContactPoint &mdash; Homepage URL &mdash;
             Literal
-          </p>
-        </article>
-
-        <article class="dataproperty" id="note">
-          <h3>
-            Data property
-            <a href="#note">Note</a>
-          </h3>
-
-          <p></p>
-
-          <p>
-            ContactPoint &mdash; Note &mdash;
-            langString
           </p>
         </article>
 
@@ -352,7 +300,7 @@
             <a href="#phoneNumber">Phone number</a>
           </h3>
 
-          <p>Contact point has a phone number.</p>
+          <p>Relates a contact point to its phone number, for example: &#39;01257 271555&#39;.</p>
 
           <p>
             ContactPoint &mdash; Phone number &mdash;
@@ -366,7 +314,7 @@
             <a href="#postcode">Postcode</a>
           </h3>
 
-          <p>Postal address has a postcode.</p>
+          <p>Relates a postal address to its postcode, for example: &#39;PR7 2SW&#39;.</p>
 
           <p>
             PostalAddress &mdash; Postcode &mdash;
@@ -455,7 +403,7 @@
 
     <footer>
       <p>
-        Generated 2025-06-11 07:40:49.557396+00:00 from a
+        Generated 2025-06-19 15:30:21.326955+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../contact-point/contact-point-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../contact-point/contact-point-ontology.ttl"
