@@ -1,0 +1,99 @@
+# 2025 - Week 25
+
+## Egg timer reborn
+
+Kicking off with the good stuff, we're quite sure that fans of computational calculations of parliamentary scrutiny periods will be delighted to learn that our beloved egg timer has has a bit of a respray, leaving Robert and Michael's CSS paint shop with a fresh coat of the firm's corporate colours. More importantly, it's also had a top to toe refresh of its information architecture. Meaning you can now find things there.
+
+By this point, the egg timer has had quite a long and complicated history. It started life as a place to publish lists of parliamentary time periods, be that Parliaments, dissolutions, sessions, prorogations, sitting days, adjournment days, recesses and all the rest. Which is why its still known to Heroku as parliament-calendar. Sometime during lockdown, Librarian Jayne and her computational helpmate Michael thought they'd take a punt on turning JO Jane's scrutiny period abacus into something a little more computational. After all, it was merely a matter of paging through calendar days, checking which type of day it was in each House and incrementing a counter accordingly. How hard could it be. Quite hard it turned out, their "timebox" for delivery slipping out into weeks, and eventually months.
+
+The egg timer's remit expanded once more, when Librarian Anya and Michael bumped into Legislation Office Liam at the Study of Parliament Group annual conference. Liam had found himself mid-chapter in a book on parliamentary scrutiny, and was wondering if there some way to automatically calculate sitting days in both Houses between two dates. This for the purposes of plotting how long -in parliamentary time, which is quite different from your time - assorted bills took from first reading to Royal Assent. A couple of hours later, Anya and Michael found themselves with an hour to kill, and what better way to kill hours than in a pub with a Guiness. A couple of pints later - maybe three - and the beloved egg timer had gained a whole new sitting day interval calculator. Agile you might be thinking, if you've never seen Anya and Michael after a pint or four.
+
+All of this is our excuse for why the egg timer - beloved though it always has been - grew into something of a mess, information architecturely speaking. The whole thing grew somewhat organically, new bits being tacked on the side, only serving to obscure what was already there. For that reason, a couple of months back, we took the decision to refactor the front end bit, in some attempt to pop everything back in its right place. The results of which have proved rather pleasing to all concerned.
+
+Slightly less pleasing, to at least one of your correspondents, was the decision to repaint the dear old egg timer in corporate colours and rename it to Parliamentary Time. That said, Michael has always been a sentimental sucker with a penchant for hypertext whimsy. We feel sure he'll get over it eventually. And it will always be the egg timer in our hearts.
+
+Thanks are due, as they so often are, to Shedcode James for chipping in at the last moment, digging Young Robert and Michael out of a Bootstrap / Chrome rendering engine incompatibility shaped hole. The final fix happening being phoned in from a train bound for the People's Republic of Sheffield. Thanks James.
+
+## The work just never stops
+
+Deep in the midst of the egg timer refactor, Michael happened to notice that the controller handling the calculation code was not, perhaps, his finest work. There being no validation of parameters passed, the application being on the receiving end of a date that was not a real date, would fall over in a most inelegant fashion. Something that had been [spotted by Young Robert](https://trello.com/c/aFOSsR74/21-check-for-invalid-date-entries-in-egg-timer) quite some time back, but never acted upon. Happily this is now fixed.
+
+In the course of improving our error handling, Michael also had cause to notice that -1 is a valid integer, but not a particularly useful one, when the intended direction of travel is forward in time. On the plus side, it did give him cause to ponder whether a backwards facing calculator might actually be useful. So, given a date by which a minster wishes to make a statutory instrument or a ratify a treaty, what date would such an instrument need to be laid on to accomodate Parliament's scrutiny period. This thought, in turn, spun his mind back to the days when his favourite tabloid newspaper was running stories on the Chagos island treaty and the incoming presidency of Mr Trump. One of the only times Michael's twin loves of the Daily Express and [part 2, section 20(2) of the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/part/2#section-20-2) have ever been seen intimately intertwined.
+
+Testing out this theory, he took to Bluesky - wondering if he knew anyone - or knew anyone who knew - a UK SI drafter. At which point, Andrew poked Iona, who, it turns out not only drafts SIs, but drafts SIs on the general subject of railways. A match made in heaven for Shedcode's southern office. Iona was kind enough to confirm that, yes, a backwards scrutiny period would be most useful for those on the far side of the Roundhead and Cavalier divide. So that's that decided then. The next job is for Jayne, Robert and Michael to splay brains over whiteboards and work out how best to make that happen. Stay tuned.
+
+## Beautifully managed information in, beautifully interwingled hypertext out
+
+Still with Jayne, Robert and Michael, they've been hard at work at both ends of our procedure tracking pipes. On the backend of the backend, exposing our list of organisations accountable to Parliament also exposed [a problem or two with our organisational data](https://trello.com/c/nmlt73Kc/503-government-organisation-issues). Some organisations that should have been there were not, some were there twice and a handful had incorrect end dates. All those problems are now fixed, though it looks like we still have problems with some of the start dates. The real life version of the Home Office arriving 119 years before its digital twin. More work for next week.
+
+On the input end, efforts to replace our aging procedure editor application with a Data Graphs implementation continue. Ably assisted by our Silver. We had been working in a slightly ad-hoc fashion, importing CSVs, exporting CSVs, annotating said CSVs, re-importing CSVs and etc. An approach that proved both time consuming and head mangling.
+
+We've now hit upon a new approach, grabbing a copy of the SQL Server database from our Jianhan, porting it to a slightly more interoperable - and considerably cheaper - instance of Postgres and writing a set of queries to both reshape the data to our new and improved model and better handle the very, very many many-to-many joins. If you're interested in seeing progress or indeed SQL queries, all is documented here.
+
+On the output end, our Procedure Browsable Space&trade; also continues to take shape. The Data Graphs work pointed to an error in our list of routes, each route being listed as belonging to a single procedure. A problem when our current implementation has routes belonging to one or more procedures. This has now been rectified, the rectification calling for a new view listing all the procedures a route may belong to. So that's that fixed.
+
+We've also started work on adding a little currency to our listings, what had been a list of all work packageable things - don't ask -  since 2017, now being accompanied by a considerably shorter list of work packageable things currently before Parliament. And our list of all organisations accountable to Parliament now being accompanied by a list of only the current ones. More views scoped to what's currently current to follow shortly.
+
+Once that bit's out of the way, phase one of our endeavours hopefully comes to an end. Phase one being the whole business of taking what's in the triplestore, giving everything a URL and a bare bones bit of HTML, making a list or ten, checking what the data tells us and fixing up what can be fixed up. If everything goes to plan, phase two will be looking at the results of that, taking out our tiny hypertext chisel and chipping away to make the thing more usable and more useful. We remain hopeful that some of the more obtuse wording - work packageable things being one example, organisations accountable to Parliament being another - might shift to become more amenable to people who don't naturally speak ontology. To that end, we've assembled a small panel of legal and procedural experts to help us determine which bits to keep and which bits belong in the offcuts bin. Thanks are due to House of Lords Matt, House of Commons Kenneth and legislative drafter Matthew.
+
+## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
+
+If you've come away from all this thinking we've been concentrating on the model to the exclusion of the maps, well, you would be partly right. This outing sees but a single change to the [correspondence-related component](https://ukparliament.github.io/ontologies/procedure/maps/treaties/crag-treaties/components/other-commons-committees/other-commons-committees.pdf) of our CRaG-based treaty map, Librarian Jayne scrambling to react to the Environmental Audit Committee and the International Development Committee [publishing joint correspondence relating to the Agreement, done at New York on 20 September 2023, under the United Nations Convention on the Law of the Sea on the Conservation and Sustainable use of Marine Biological Diversity of Areas Beyond National Jurisdiction](https://api.parliament.uk/procedure-browser/work-packages/3lBGslCN#business-item-RdRq5DMq). Or the sea treaty as we took to calling it, its real name being slightly too long to keep typing into Slack. By this point, it should go without saying that the newly added correspondence steps for the [two](https://api.parliament.uk/procedure-browser/steps/p4uKJssC/business-items) [committees](https://api.parliament.uk/procedure-browser/steps/Rx4DUeDr/business-items) also appear in our Procedure Browsable Space&trade;, as ever accompanied by an RSS feed of every business item in every work package actualising them. So if you'd like to be notified the next time either committee publishes SI or treaty related correspondence, why not subscribe?
+
+In our only other piece of treaty-related news, colleagues from the Parliamentary Computational Section have been good enough to update the default view of a treaty to its work package timeline, rather than it's details tab. Bringing it one step closer to consistency with our statutory instrument website.
+
+## Applying a sink plunger to our research briefing publication pipes
+
+If you tuned in last time out, you'll know that we've been experiencing something of an issue with our data.parliament pipes. This came to a bit of a head a couple of weeks back, when an unexpectedly large Hansard file got stuck in the U-bend and refused to flush. Thereby blocking the publishing of all other material.
+
+Now it turns out that data from the research briefings authoring application makes its way to Parliamentary Search down an entirely different set of pipes. A set of pipes that does not get blocked on so regular a basis, if at all. Which means our Jianhan has been able to build a brand new API atop our Solr instance that should, in theory, be able to support all our library website needs. Not only that, he's also built a monitoring application atop data.parliament giving publishers real-time information on how many publications are making their way down the pipes and early warning should anything get stuck again. Excellent telemetry, we can almost hear Samu say.
+
+## Psephologising wildly
+
+Psephologically speaking, most of the recent work has been firmly in the backend of things, Shedcode James rolling out an improved version of our Cloudflare integration whilst also taking the time to [upgrade our database](https://trello.com/c/2sGETzGk/155-upgrade-psephology-heroku-db-to-17-but-do-a-copy-and-then-switch-rather-than-causing-downtime-with-pgupgrade) to Postgres 17. The latter taking place with not a second of downtime. Applause Shedcode James.
+
+The only changes most eyeballs might notice are a couple more tables being added to the sortable pile. Those covering listings of majorities and non-party candidates. Sortability being rolled out across both lists at United Kingdom, Great Britain, country and English region levels. Hardly ground breaking, but not nothing.
+
+## On orders being standing
+
+Elsewhere, Librarian Claire has been busy adding links to our standing orders application. Or at least she was busy until she stumbled into a couple of bugs. The first bug concerned the ordering of fragment versions, where shifting the position gave it a new position relative to its containing order version, rather than its position in the revision set. Following an intervention by Shedcode James, that is [now fixed](https://trello.com/c/X51wWWbT/59-bug-fix-position-of-fragment-versions-within-an-order). The second bug involved links to fragments in a list, which mostly worked fine, but occasionally took you close to the link target without quite landing in quite the right place. That is also [now fixed](https://trello.com/c/oMaOJIFu/60-hyperlinks-fix-links-werent-always-sending-you-smartly-to-the-right-place). Thanks James.
+
+## Toward a Single Subject view of the Library
+
+Librarians Susannah, Anna, Emily, Ned and Phil are still coping with the fallout from demoing our Subject Specialist Finder to the specialists concerned. This week saw team:thesaurus sit through three one hour meetings categorising feedback into things that could be solved by rejigging our taxonomic hierarchy and things that may need a note of explanation. Librarian Ned has been particularly busy [untangling concepts](https://trello.com/c/MmA26NOL/376-sits-that-are-topic-page-terms) that were never intended for subject indexing - or scaffolding terms, as we say in the trade - from the vast majority that are. We're told that all of the former now sit under broader terms that aren't mapped to any of our specialists' specialisms. All of which means, they should no longer pollute our hierarchical transitivity. Top work team:thesaurus.
+
+Elsewhere, in thesaurusland other changes are also underway. A decision to separate the Attorney General from the Office of the Attorney General taken some time back has now [been actioned](https://trello.com/c/YZCLC97K/359-attorney-generals-office-ab-name). A [similar split](https://trello.com/c/4g0QAbha/363-indexing-policy-changes-around-points-of-order-new-amended-terms-needed) has taken place on points of order, what was one taxonomic concept, now finding itself split into two: 'Points of order proceedings' and 'Points of order'. The latter intended to be used on contributions from Members deemed to be points of order by the Speaker.
+
+Also now tidied - or at least tidier - are our links from departments and other answering bodies to the identifiers of their MNIS equivalents. This being a trickier matter than our dear reader might suspect. The problem stems from MNIS having separate tables - and therefore separate identifiers - for government departments and answering bodies. To some extent, this makes sense, some answering bodies not being departments. For answering bodies that are departments, on the other hand, we end up with two identifiers for the exact same thing. Less than ideal for those of us in the URI is the thing camp and less than ideal from an information management point of view. Librarian Phil has now combed through the list of rdfs:seeAlsos to [fix links](https://trello.com/c/LPtUMJLp/203-mnis-dept-and-mnis-ab-ids-in-om) from everything at our thesaurus end to everything at the MNIS end. Top tidying, Phil.
+
+## Managing Members
+
+Still with Phil, it was noticed that the SNP website was failing to list all of that party's current UK Parliament spokespeople. Meaning we had nothing to reference when entering roles into MNIS. Librarian Emily contacted the SNP, who have now supplied a list of their spokespeople, and MNIS is [once more up to date](https://trello.com/c/U0kCQYYb/403-snp-spokespersons).
+
+## Facts and indeed figures
+
+Fans of spreadsheets will no doubt be delighted to learn that yet another of our Parliamentary Facts and Figures publications has undergone a librarian respray. This time around, Librarian Ayesha was the one wielding the masking tape and the spray cans. As one might expect, placing such matters in the hands of a trained librarian has once again borne fruit, old columns being split apart in something a little more semantic and new columns introduced adding identifiers from MNIS and Wikidata. What was 'Queen's Speech: Proposers and seconders of the Loyal Address since 1872' has now been retitled to '[Debate on the Address: movers and seconders since 1900](https://commonslibrary.parliament.uk/research-briefings/sn04064/)', making a little more gender neutral on the monarch front.
+
+## Late breaking news
+
+Even as we type this, Wikidata once more raises its head, Wikipedian Andy getting to in touch to let us know he's added a [new property intended to capture UK Parliament identifiers for bills](https://www.wikidata.org/wiki/Property:P13617).
+yet anaother stitch in the web of data, and one we have no doubt will come in handy. Thanks Andy.
+
+## Outreach / engagement
+
+Way back in March, Anya and Silver conquered their stage fright, heading over to GDS HQ to tread the boards at the World IA Day London event. The subject of the talk was our Subject Specialist Finder in particular, and our Single Subject View of the Library&trade; project in general. Obviously touching on both the history and shape of the Parliament Thesaurus, that being rather central to all the rest.
+
+Later that evening, as drinks were taken, the GDS folks approached, wondering if it might be worth everyone's while to meet again and chat taxonomies. Which is how Wednesday of week 25 found Librarians Anya and Susannah and computational 'experts' Young Robert and Michael holed up in a room on Tothill Street with a small contingent of GDS's finest. The conversation kicked off as we expected it might, with questions around how openly our taxonomy is published and whether it might be suitable for use by other organisations in general and government organisations in particular. Anya went on to explain that concepts only make the thesaurus cut if they concern subjects that Parliament's concerned with. That being our literary warrant, as we say in the trade. Wikidata was, of course, referenced, as an alternative source for identifying and describing things.
+
+All that said, choosing how one identifies concepts is only part of the problem. The other half being having descriptions of things to annotate with said concepts. And that was sort of where the conversation broke down a little. It turned out that if you lift the bonnet on gov.uk, there's not much in the way of an engine there. There are some documents in some content stores, but no real entities. No real entities meaning no real links between entities. Obviously. We'd be the last people to claim that Parliament's data was perfect, but, well, at least we have some. Finding yourself in the position of being asked to add structure and meaning , there being nothing to add structure and meaning to, must surely fit the definition of 'wicked problem'. It's certainly not a position we'd like to find ourselves in. Good luck GDS friends.
+
+
+
+
+
+
+
+
+
+
+
