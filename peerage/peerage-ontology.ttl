@@ -39,7 +39,13 @@ ppeer:SpecialRemainder rdf:type owl:Class ;
 	rdfs:comment "A hereditary peerage is created with rules governing who might inherit, known as a remainder. In the United Kingdom the default remainder allows inheritance by direct male descendants only, whereas in the Kingdom of Scotland both male and female direct descendants may inherit. Peerages are created with special remainders wherever default rules do not apply."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
 	
+ppeer:SeatIncumbencyEnablingThing rdf:type owl:Class ;
+	rdfs:label "Seat incumbency enabling thing"@en ;
+	rdfs:comment "The existence of a thing which enables a person to be incumbent in a House seat, for example: the holding of a life peerage enabling a seat incumbency in the House of Lords. The start date of the incumbency of the House seat is the date on which the Member first took that seat in right of that peerage. For a life peer, or for the first holder of a hereditary peerage, the start date of the incumbency is the date of introduction."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
+
 ppeer:PeerageHolding rdf:type owl:Class ;
+	rdfs:subClassOf ppeer:SeatIncumbencyEnablingThing ;
 	rdfs:label "Peerage holding"@en ;
 	rdfs:comment "The holding of a peerage by a person between two dates. A life peerage will have a single peerage holding. A hereditary peerage may have more than one peerage holding over time."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/peerage/> .
