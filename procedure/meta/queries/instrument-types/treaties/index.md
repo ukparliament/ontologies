@@ -111,7 +111,7 @@ As of April 2020, the International Agreements Sub-Committee (IAC) or the whole 
 
 As of January 2021 this changed again when the [International Agreements Committee](https://committees.parliament.uk/committee/448/eu-international-agreements-subcommittee/) became a fully-fledged committee on its own and will have sole responsibility for all CRaG treaties laid before the House. 
 
-Later in 2021 it changed again with treaty consideration being shared between the International Agreements Committee and the Lords [European Affairs Committee](https://committees.parliament.uk/committee/516/european-affairs-committee/). 
+Later in 2021 it changed again with treaty consideration being shared between the International Agreements Committee and the Lords [European Affairs Committee](https://committees.parliament.uk/committee/516/european-affairs-committee/). In 2025, the Lords [International Relations and Defence Committee](https://committees.parliament.uk/committee/360/international-relations-and-defence-committee) also took interest in a treaty. 
 
 In the Commons any select committee can open an inquiry into a treaty and report on it if they feel it fits into their remit. As of January 2024, treaties have been scrutinised in some way by the [International Trade Committee](https://committees.parliament.uk/committee/367/international-trade-committee/), the [Environment, Food and Rural Affairs Committee](https://committees.parliament.uk/committee/52/environment-food-and-rural-affairs-committee), the [Home Affairs Committee](https://committees.parliament.uk/committee/83/home-affairs-committee), the [Public Accounts Committee](https://committees.parliament.uk/committee/127/public-accounts-committee/), the [Women and Equalities Committee](https://committees.parliament.uk/committee/328/women-and-equalities-committee/) and the [Northern Ireland Affairs Committee](https://committees.parliament.uk/committee/120/northern-ireland-affairs-committee). 
 
@@ -129,7 +129,7 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/f1f0e4ea">Lords consideration of treaties</a>
 
-* <a href="https://api.parliament.uk/s/2ebaa799">Lords inquiries and calls for evidence</a> (None as of Sept 2021)
+* <a href="https://api.parliament.uk/s/9c4e8003">Lords inquiries and calls for evidence</a> (None as of Sept 2021)
 
 * <a href="https://api.parliament.uk/s/dd20a09a">Consideration by the full International Agreements Committee (IAC)</a>
 
@@ -138,6 +138,8 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 * <a href="https://api.parliament.uk/s/d571ec26">International Agreements Committee (IAC) oral evidence sessions </a>
 
 * <a href="https://api.parliament.uk/s/1f1bfcbc">Consideration by the European Affairs Committee (EAC)</a>
+
+* <a href="https://api.parliament.uk/s/50e463b2">International Relations and Defence Committee oral evidence sessions </a>
 
 * <a href="https://api.parliament.uk/s/8f309f6f">Consideration by the SLSC</a>
 
@@ -157,7 +159,7 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Correspondence published by committees
 
-* <a href="[https://api.parliament.uk/s/bc5ceace](https://api.parliament.uk/s/5e8b1d58)"> All committee correspondence</a>
+* <a href="[https://api.parliament.uk/s/bc5ceace](https://api.parliament.uk/s/ff7c5eac)"> All committee correspondence</a>
 
 * <a href="https://api.parliament.uk/s/c7360b15"> Correspondence published by the Joint Committee on Human Rights</a>
 
@@ -181,11 +183,13 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/773f0230"> Correspondence published by the International Development Committee</a>
 
-* <a href="https://api.parliament.uk/s/e4b80566"> Correspondence published by Lords committees</a>
+* <a href="https://api.parliament.uk/s/2ef6f372"> Correspondence published by Lords committees</a>
 
 * <a href="https://api.parliament.uk/s/bcbf473b"> Correspondence published by the European Affairs Committee</a>
 
 * <a href="https://api.parliament.uk/s/b3d8d9b8"> Correspondence published by the International Agreements Committee (incuding when it was a sub-committee ot the Lords EU Select Committee)</a>
+
+* <a href="https://api.parliament.uk/s/924906dc"> Correspondence published by the International Relations and Defence Committee</a>
 
 ### Committee requests for extension to objection period A
 
