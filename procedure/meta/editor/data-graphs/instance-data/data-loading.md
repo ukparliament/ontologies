@@ -30,7 +30,7 @@ Sourced from:
 			SELECT *
 			FROM procedure.layingbody
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/organisations-accountable-parliament.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/organisations-accountable-parliament.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -46,7 +46,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.proceduresteppublication
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/publications.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/publications.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -58,7 +58,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.legislature
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/legislatures.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/legislatures.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -70,7 +70,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.house
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/houses.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/houses.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -82,7 +82,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.proceduresteptype
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/step-types.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-types.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -94,7 +94,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.solractofparliamentdata
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -106,7 +106,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.procedurecalculationstyle
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/calculation-styles.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/calculation-styles.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -119,7 +119,7 @@ Populated by hand (open / closed).
 			FROM procedure.procedurestep
 			WHERE proceduresteptypeid != 1
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/non-business-steps.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/non-business-steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -139,7 +139,7 @@ Populated by hand (open / closed).
 				) calculation_styles
 			ON calculation_styles.procedure_id = p.id
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/procedures.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/procedures.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -151,7 +151,7 @@ Populated by hand (open / closed).
 			SELECT *
 			FROM procedure.procedurestepcollection
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/step-collections.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-collections.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -209,7 +209,7 @@ Populated by hand.
 			ON legislature.id = s.legislatureid
 			WHERE s.proceduresteptypeid = 1
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/business_steps.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/business_steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -221,7 +221,7 @@ Populated by hand.
 			SELECT *
 			FROM procedure.procedurestepdisplaydepth
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/step-display-depths.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-display-depths.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -233,7 +233,7 @@ Populated by hand.
 			SELECT *
 			FROM procedure.procedureclock
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/clocks.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/clocks.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -802,7 +802,7 @@ A query for Jayne to check that routes flagged as not included for export look c
 			AND r.fromprocedurestepid = from_s.id
 			AND r.toprocedurestepid = to_s.id
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/reporting/ignored-routes.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/reporting/ignored-routes.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -854,6 +854,6 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 			GROUP BY r.id, from_step.name, to_step.name, procedure_count
 			ORDER BY procedure_count DESC
 		)
-		TO '/Users/smethurstm/Documents/procedure-editor/reporting/route-profileration.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/reporting/route-profileration.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>	
