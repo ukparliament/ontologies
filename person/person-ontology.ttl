@@ -11,7 +11,7 @@
     dcterms:title "Person ontology"@en ;
     dcterms:created "2025-07-04"^^xsd:date ;
 	dcterms:rights "Open Parliament Licence v3.0"@en ;
-    dcterms:description "A model describing people."@en ;
+    dcterms:description "A model describing a person."@en ;
 	foaf:depiction <https://ukparliament.github.io/ontologies/paper-type/person.svg> ;
 	foaf:maker
 		[ foaf:name "Robert Brook"; foaf:homepage <https://robert-brook.com/> ],
@@ -45,65 +45,65 @@ pperson:familyName rdf:type owl:DatatypeProperty ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
-pperson:knownAS rdf:type owl:DatatypeProperty ;
-	rdfs:label "Known as"@en ;
-	rdfs:comment "Relates a person to the name they are known by, for example: 'Boris' in 'Alexander Boris de Pfeffel Johnson'."@en ;
+pperson:knownBy rdf:type owl:DatatypeProperty ;
+	rdfs:label "Known by"@en ;
+	rdfs:comment "Relates a person to the name they are known by, for example: 'Boris' for 'Alexander Boris de Pfeffel Johnson'."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range rdf:langString ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
 pperson:dateOfBirth rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date of birth"@en ;
-	rdfs:comment "Relates a person to their full date of birth."@en ;
+	rdfs:comment "Relates a person to their date of birth."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
 pperson:yearOfBirth rdf:type owl:DatatypeProperty ;
 	rdfs:label "Year of birth"@en ;
-	rdfs:comment "Relates a person to their year of birth. Used when a full date of birth is not known."@en ;
+	rdfs:comment "Relates a person to their year of birth. Used when an exact date of birth is not known."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
 pperson:monthOfBirth rdf:type owl:DatatypeProperty ;
 	rdfs:label "Month of birth"@en ;
-	rdfs:comment "Relates a person to their month of birth. Used when a full date of birth is not known."@en ;
+	rdfs:comment "Relates a person to their month of birth. Used when an exact date of birth is not known."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
-pperson:isDateOfBirthExact rdf:type owl:DatatypeProperty ;
-	rdfs:label "Is date of birth exact"@en ;
-	rdfs:comment "Used to record if a person's date, year or month of birth is exact. Intended to be used as a modifier for display, for example: 'Date of birth: circa 1872'."@en ;
+pperson:dayOfBirth rdf:type owl:DatatypeProperty ;
+	rdfs:label "Day of birth"@en ;
+	rdfs:comment "Relates a person to the day of their birth. Used when an exact date of birth is not known."@en ;
 	rdfs:domain pperson:Person ;
-	rdfs:range xsd:boolean ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 	
 pperson:dateOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:label "Date of death"@en ;
-	rdfs:comment "Relates a person to their full date of death."@en ;
+	rdfs:comment "Relates a person to their date of death."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
 pperson:yearOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:label "Year of death"@en ;
-	rdfs:comment "Relates a person to their year of death. Used when a full date of death is not known."@en ;
+	rdfs:comment "Relates a person to their year of death. Used when an exact date of death is not known."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
 pperson:monthOfDeath rdf:type owl:DatatypeProperty ;
 	rdfs:label "Month of death"@en ;
-	rdfs:comment "Relates a person to their month of death. Used when a full date of death is not known."@en ;
+	rdfs:comment "Relates a person to their month of death. Used when an exact date of death is not known."@en ;
 	rdfs:domain pperson:Person ;
 	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
 
-pperson:isDateOfDeathExact rdf:type owl:DatatypeProperty ;
-	rdfs:label "Is date of death exact"@en ;
-	rdfs:comment "Used to record if a person's date, year or month of death is exact. Intended to be used as a modifier for display, for example: 'Date of death: circa March 1917'."@en ;
+pperson:dayOfDeath rdf:type owl:DatatypeProperty ;
+	rdfs:label "Day of death"@en ;
+	rdfs:comment "Relates a person to the day of their death. Used when an exact date of death is not known."@en ;
 	rdfs:domain pperson:Person ;
-	rdfs:range xsd:boolean ;
+	rdfs:range xsd:integer ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/person/> .
