@@ -50,6 +50,8 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 ###### [Referral to a delegated legislation committee (DLC) [PDF]]( statutory-instruments/negative-procedures/draft/components/referral-to-delegated-legislation-committee/delegated-legislation-referral.pdf)
 
+###### [Lords motions [PDF]](statutory-instruments/negative-procedures/draft/components/motions/lords-motions/lords-motions-draft-negative.pdf)
+
 ##### Made negative components
 
 ###### [Commons motions [PDF]](statutory-instruments/negative-procedures/made/components/motions/commons-motions/commons-motions.pdf)
@@ -58,27 +60,30 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 ###### [Referral to a delegated legislation committee (DLC) [PDF]]( statutory-instruments/negative-procedures/made/components/referral-to-delegated-legislation-committee/delegated-legislation-referral.pdf)
 
-#### Motions 
+###### [Lords motions [PDF]](statutory-instruments/negative-procedures/made/components/motions/lords-motions/lords-motions-made-negative.pdf)
 
-##### [Affirmative procedure - Commons motions [PDF]](statutory-instruments/affirmative-procedures/components/commons-motions/commons-motions.pdf)
+#### Affirmative procedures
 
-Dot file: [dot](statutory-instruments/affirmative-procedures/components/commons-motions/commons-motions.dot)
+##### Draft affirmative components
 
-##### [Affirmative procedure - Lords motions [PDF]](statutory-instruments/affirmative-procedures/components/lords-motions/lords-motions.pdf)
+###### [Commons motions [PDF]](statutory-instruments/affirmative-procedures/draft/components/motions/commons-motions/commons-motions-draft-affirmative.pdf)
 
-Dot file: [dot](statutory-instruments/affirmative-procedures/components/lords-motions/lords-motions.dot)
+###### [Lords motions [PDF]](statutory-instruments/affirmative-procedures/draft/components/motions/lords-motions/lords-motions-draft-affirmative.pdf)
 
-##### [Negative procedure - Lords motions [PDF]](statutory-instruments/negative-procedures/components/motions/lords-motions/lords-motions.pdf)
+###### [JCSI scrutiny reserve [PDF]](statutory-instruments/affirmative-procedures/draft/components/jcsi-scrutiny-reserve/jcsi-scrutiny-reserve-draft-affirmative.pdf)
 
-Dot file: [dot](statutory-instruments/negative-procedures/components/motions/lords-motions/lords-motions.dot)
+##### Made affirmative components
+
+###### [Commons motions [PDF]](statutory-instruments/affirmative-procedures/made/components/motions/commons-motions/commons-motions-made-affirmative.pdf)
+
+###### [Lords motions [PDF]](statutory-instruments/affirmative-procedures/made/components/motions/lords-motions/lords-motions-made-affirmative.pdf)
+
+###### [JCSI scrutiny reserve [PDF]](statutory-instruments/affirmative-procedures/made/components/jcsi-scrutiny-reserve/jcsi-scrutiny-reserve-made-affirmative.pdf)
+
 
 #### [Joint Committee on Statutory Instruments procedure [PDF]](statutory-instruments/components/jcsi/jcsi.pdf)
 
 Dot file: [dot](statutory-instruments/components/jcsi/jcsi.dot)
-
-#### [Joint Committee on Statutory Instruments scrutiny reserve [PDF]](statutory-instruments/components/jcsi-scrutiny-reserve/jcsi-scrutiny-reserve.pdf)
-
-Dot file: [dot](statutory-instruments/components/jcsi-scrutiny-reserve/jcsi-scrutiny-reserve.dot)
 
 #### [Local government finance report procedure [PDF]](statutory-instruments/components/local-government-finance-report/local-government-finance-report.pdf)
 
