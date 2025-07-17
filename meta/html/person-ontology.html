@@ -58,7 +58,7 @@
     <main>
       <h1>Person ontology</h1>
 
-      <p id="description">A model describing people.</p>
+      <p id="description">A model describing a person.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -87,7 +87,7 @@
             <a href="#dateOfBirth">Date of birth</a>
           </h3>
 
-          <p>Relates a person to their full date of birth.</p>
+          <p>Relates a person to their date of birth.</p>
 
           <p>
             Person &mdash; Date of birth &mdash;
@@ -101,11 +101,39 @@
             <a href="#dateOfDeath">Date of death</a>
           </h3>
 
-          <p>Relates a person to their full date of death.</p>
+          <p>Relates a person to their date of death.</p>
 
           <p>
             Person &mdash; Date of death &mdash;
             date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="dayOfBirth">
+          <h3>
+            Data property
+            <a href="#dayOfBirth">Day of birth</a>
+          </h3>
+
+          <p>Relates a person to the day of their birth. Used when an exact date of birth is not known.</p>
+
+          <p>
+            Person &mdash; Day of birth &mdash;
+            integer
+          </p>
+        </article>
+
+        <article class="dataproperty" id="dayOfDeath">
+          <h3>
+            Data property
+            <a href="#dayOfDeath">Day of death</a>
+          </h3>
+
+          <p>Relates a person to the day of their death. Used when an exact date of death is not known.</p>
+
+          <p>
+            Person &mdash; Day of death &mdash;
+            integer
           </p>
         </article>
 
@@ -137,44 +165,16 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="isDateOfBirthExact">
+        <article class="dataproperty" id="knownBy">
           <h3>
             Data property
-            <a href="#isDateOfBirthExact">Is date of birth exact</a>
+            <a href="#knownBy">Known by</a>
           </h3>
 
-          <p>Used to record if a person&#39;s date, year or month of birth is exact. Intended to be used as a modifier for display, for example: &#39;Date of birth: circa 1872&#39;.</p>
+          <p>Relates a person to the name they are known by, for example: &#39;Boris&#39; for &#39;Alexander Boris de Pfeffel Johnson&#39;.</p>
 
           <p>
-            Person &mdash; Is date of birth exact &mdash;
-            boolean
-          </p>
-        </article>
-
-        <article class="dataproperty" id="isDateOfDeathExact">
-          <h3>
-            Data property
-            <a href="#isDateOfDeathExact">Is date of death exact</a>
-          </h3>
-
-          <p>Used to record if a person&#39;s date, year or month of death is exact. Intended to be used as a modifier for display, for example: &#39;Date of death: circa March 1917&#39;.</p>
-
-          <p>
-            Person &mdash; Is date of death exact &mdash;
-            boolean
-          </p>
-        </article>
-
-        <article class="dataproperty" id="knownAS">
-          <h3>
-            Data property
-            <a href="#knownAS">Known as</a>
-          </h3>
-
-          <p>Relates a person to the name they are known by, for example: &#39;Boris&#39; in &#39;Alexander Boris de Pfeffel Johnson&#39;.</p>
-
-          <p>
-            Person &mdash; Known as &mdash;
+            Person &mdash; Known by &mdash;
             langString
           </p>
         </article>
@@ -185,7 +185,7 @@
             <a href="#monthOfBirth">Month of birth</a>
           </h3>
 
-          <p>Relates a person to their month of birth. Used when a full date of birth is not known.</p>
+          <p>Relates a person to their month of birth. Used when an exact date of birth is not known.</p>
 
           <p>
             Person &mdash; Month of birth &mdash;
@@ -199,7 +199,7 @@
             <a href="#monthOfDeath">Month of death</a>
           </h3>
 
-          <p>Relates a person to their month of death. Used when a full date of death is not known.</p>
+          <p>Relates a person to their month of death. Used when an exact date of death is not known.</p>
 
           <p>
             Person &mdash; Month of death &mdash;
@@ -213,7 +213,7 @@
             <a href="#yearOfBirth">Year of birth</a>
           </h3>
 
-          <p>Relates a person to their year of birth. Used when a full date of birth is not known.</p>
+          <p>Relates a person to their year of birth. Used when an exact date of birth is not known.</p>
 
           <p>
             Person &mdash; Year of birth &mdash;
@@ -227,7 +227,7 @@
             <a href="#yearOfDeath">Year of death</a>
           </h3>
 
-          <p>Relates a person to their year of death. Used when a full date of death is not known.</p>
+          <p>Relates a person to their year of death. Used when an exact date of death is not known.</p>
 
           <p>
             Person &mdash; Year of death &mdash;
@@ -316,7 +316,7 @@
 
     <footer>
       <p>
-        Generated 2025-07-16 14:33:58.580027+00:00 from a
+        Generated 2025-07-17 14:34:29.300062+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../person/person-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../person/person-ontology.ttl"
