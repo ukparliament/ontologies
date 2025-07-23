@@ -98,6 +98,8 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Domain modeling [the Librar(y/ies) publication processes](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication), in the hope of one day improving both inputs and outputs.
 
+* Continuing to [churn out ontologies](https://ukparliament.github.io/ontologies/) for the data platform we hope one day to own.
+
 * Coping with our own personal crises.
 
 ## Outreach / engagement
