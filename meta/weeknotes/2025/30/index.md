@@ -96,7 +96,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Applying legalistic footers to everything we've ever made. Ditto.
 
-* Domain modeling [the Librar(y|ies) publication processes](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication), in the hope of one day improving both inputs and outputs.
+* Domain modeling [the Librar(y/ies) publication processes](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication), in the hope of one day improving both inputs and outputs.
 
 * Coping with our own personal crises.
 
