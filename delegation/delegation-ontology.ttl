@@ -37,19 +37,13 @@ del:PaperWork rdf:type owl:Class ;
 	rdfs:comment "A paper as a single intellectual work, as defined in the Functional Requirements for Bibliographic Records specification."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
-del:StatutoryThing rdf:type owl:Class ;
-	rdfs:label "Statutory thing"@en ;
-	rdfs:comment "A statutory thing, for example: an Act of Parliament or a made statutory instrument."@en ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
-
-del:EnablingThing rdf:type owl:Class ;
-	rdfs:label "Enabling thing"@en ;
-	rdfs:comment "A thing that enables the exercise of a statutory power."@en ;
+del:LegislativeThing rdf:type owl:Class ;
+	rdfs:label "Legislative thing"@en ;
+	rdfs:comment "A legislative thing, for example: an Act of Parliament or a made statutory instrument."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:ActOfParliament rdf:type owl:Class ;
-	rdfs:subClassOf del:StatutoryThing ;
-	rdfs:subClassOf del:EnablingThing ;
+	rdfs:subClassOf del:LegislativeThing ;
 	rdfs:label "Act of Parliament"@en ;
 	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
@@ -57,7 +51,7 @@ del:ActOfParliament rdf:type owl:Class ;
 del:EnabledThing rdf:type owl:Class ;
 	rdfs:subClassOf del:PaperWork ;
 	rdfs:label "Enabled thing"@en ;
-	rdfs:comment "A thing resulting from a Minister exercising or intending to exercise a power conferred by an enabling thing."@en ;
+	rdfs:comment "A thing resulting from a Minister exercising or intending to exercise a power conferred by an legislative thing."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 del:PublishedDraftUnderEUWA2018Work rdf:type owl:Class ;
@@ -84,17 +78,17 @@ del:StatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
 	rdfs:comment "Statutory instruments subject to parliamentary procedure according to duties set out in legislation."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
-del:DraftStatutoryInstrumentWork rdf:type owl:Class ;
+del:DraftStatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
 	rdfs:subClassOf del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
-	rdfs:label "Draft statutory instrument work"@en ;
+	rdfs:label "Draft statutory instrument subject to parliamentary procedure work"@en ;
 	rdfs:comment "An instrument laid in draft before Parliament subject to either a negative, affirmative or super affirmative procedure. An instrument under the draft negative procedure may be made into law, if not objected to within the scrutiny period. An instrument under the draft affirmative procedure may be made into law, having been approved by Parliament. An instrument under the draft super affirmative procedure may be made into law, having been approved by Parliament within the approval period."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
-del:MadeStatutoryInstrumentWork rdf:type owl:Class ;
+del:MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork rdf:type owl:Class ;
 	rdfs:subClassOf del:StatutoryInstrumentSubjectToParliamentaryProcedureWork ;
-	rdfs:subClassOf del:StatutoryThing ;
-	rdfs:label "Made statutory instrument work"@en ;
-	rdfs:comment "Statutory instruments as signed into law. Made statutory instruments may result from a draft laid before Parliament, or may be laid as made, or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament are subject to a negative, affirmative or super affirmative procedure, or none. An instrument under the made negative procedure remains law, unless objected to within the scrutiny period. An instrument under the made affirmative procedure or made super affirmative procedure remains law, if approved by Parliament within the approval period."@en ;
+	rdfs:subClassOf del:LegislativeThing ;
+	rdfs:label "Made statutory instrument subject to parliamentary procedure work"@en ;
+	rdfs:comment "Statutory instruments as signed into law before being laid into Parliament. Made statutory instruments laid before Parliament are subject to a negative, affirmative or super affirmative procedure, or none. An instrument under the made negative procedure remains law unless objected to within the scrutiny period. An instrument under the made affirmative procedure or made super affirmative procedure remains law if approved by Parliament within the approval period."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 
 
@@ -103,9 +97,9 @@ del:MadeStatutoryInstrumentWork rdf:type owl:Class ;
 
 del:enabledBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Enabled by"@en ;
-	rdfs:comment "Relates an enabled thing to the enabling thing under which it was made or under which it is intended to be made. An enabled thing may be enabled by one or more enabling things. An enabling thing may enable one or more enabled things, or none."@en ;
+	rdfs:comment "Relates an enabled thing to the legislative thing under which it was made or under which it is intended to be made. An enabled thing may be enabled by one or more legislative things. A legislative thing may enable one or more enabled things, or none."@en ;
 	rdfs:domain del:EnabledThing ;
-	rdfs:range del:EnablingThing ;
+	rdfs:range del:LegislativeThing ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 del:precededBy rdf:type owl:ObjectProperty ;
@@ -124,9 +118,9 @@ del:replacedBy rdf:type owl:ObjectProperty ;
 	
 del:whollyRevokedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Wholly revoked by"@en ;
-	rdfs:comment "Relates a made statutory instrument to the made statutory instrument it is wholly revoked by. A made statutory instrument can be wholly revoked by one made statutory instrument, or none. A made statutory instrument can wholly revoke one or more made statutory instruments, or none. 'Wholly revoked by' is populated for made statutory instruments revoked whilst still before Parliament. Revoking secondary legislation has an effect similar to repealing primary legislation. Wholly revoking a made statutory instrument removes that made statutory instrument from the statute book on the date it is revoked."@en ;
-	rdfs:domain del:MadeStatutoryInstrumentWork ;
-	rdfs:range del:MadeStatutoryInstrumentWork ;
+	rdfs:comment "Relates a made statutory instrument subject to parliamentary procedure to the made statutory instrument it is wholly revoked by. A made statutory instrument can be wholly revoked by one made statutory instrument, or none. A made statutory instrument can wholly revoke one or more made statutory instruments, or none. 'Wholly revoked by' is populated for made statutory instruments revoked whilst still before Parliament. Revoking secondary legislation has an effect similar to repealing primary legislation. Wholly revoking a made statutory instrument removes that made statutory instrument from the statute book on the date it is revoked."@en ;
+	rdfs:domain del:MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
+	rdfs:range del:MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
 					
@@ -136,7 +130,7 @@ del:whollyRevokedBy rdf:type owl:ObjectProperty ;
 del:madeDate rdf:type owl:DatatypeProperty ;
 	rdfs:label "Made date"@en ;
 	rdfs:comment "The date on which a statutory instrument is made by the person having the power to make it."@en ;
-	rdfs:domain del:MadeStatutoryInstrumentWork ;
+	rdfs:domain del:MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork ;
 	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
 	
