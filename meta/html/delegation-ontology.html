@@ -76,10 +76,10 @@
 
           <p>An Act of Parliament creates, amends or repeals legislation. An Act is a Bill having been passed by Parliament and been given Royal Assent. Acts of Parliament which are in force comprise statute law.</p>
            <p>
-            Superclasses  &middot; StatutoryThing  &middot; EnablingThing           </p>
+            Superclasses  &middot; LegislativeThing           </p>
         </article>
-        <article class="class" id="DraftStatutoryInstrumentWork">
-          <h3>Class <a href="#DraftStatutoryInstrumentWork">Draft statutory instrument work</a></h3>
+        <article class="class" id="DraftStatutoryInstrumentSubjectToParliamentaryProcedureWork">
+          <h3>Class <a href="#DraftStatutoryInstrumentSubjectToParliamentaryProcedureWork">Draft statutory instrument subject to parliamentary procedure work</a></h3>
 
           <p>An instrument laid in draft before Parliament subject to either a negative, affirmative or super affirmative procedure. An instrument under the draft negative procedure may be made into law, if not objected to within the scrutiny period. An instrument under the draft affirmative procedure may be made into law, having been approved by Parliament. An instrument under the draft super affirmative procedure may be made into law, having been approved by Parliament within the approval period.</p>
            <p>
@@ -88,21 +88,21 @@
         <article class="class" id="EnabledThing">
           <h3>Class <a href="#EnabledThing">Enabled thing</a></h3>
 
-          <p>A thing resulting from a Minister exercising or intending to exercise a power conferred by an enabling thing.</p>
+          <p>A thing resulting from a Minister exercising or intending to exercise a power conferred by an legislative thing.</p>
            <p>
             Superclasses  &middot; PaperWork           </p>
         </article>
-        <article class="class" id="EnablingThing">
-          <h3>Class <a href="#EnablingThing">Enabling thing</a></h3>
+        <article class="class" id="LegislativeThing">
+          <h3>Class <a href="#LegislativeThing">Legislative thing</a></h3>
 
-          <p>A thing that enables the exercise of a statutory power.</p>
+          <p>A legislative thing, for example: an Act of Parliament or a made statutory instrument.</p>
          </article>
-        <article class="class" id="MadeStatutoryInstrumentWork">
-          <h3>Class <a href="#MadeStatutoryInstrumentWork">Made statutory instrument work</a></h3>
+        <article class="class" id="MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork">
+          <h3>Class <a href="#MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork">Made statutory instrument subject to parliamentary procedure work</a></h3>
 
-          <p>Statutory instruments as signed into law. Made statutory instruments may result from a draft laid before Parliament, or may be laid as made, or may not be laid if the enabling legislation does not set out a duty to lay. Made statutory instruments laid before Parliament are subject to a negative, affirmative or super affirmative procedure, or none. An instrument under the made negative procedure remains law, unless objected to within the scrutiny period. An instrument under the made affirmative procedure or made super affirmative procedure remains law, if approved by Parliament within the approval period.</p>
+          <p>Statutory instruments as signed into law before being laid into Parliament. Made statutory instruments laid before Parliament are subject to a negative, affirmative or super affirmative procedure, or none. An instrument under the made negative procedure remains law unless objected to within the scrutiny period. An instrument under the made affirmative procedure or made super affirmative procedure remains law if approved by Parliament within the approval period.</p>
            <p>
-            Superclasses  &middot; StatutoryInstrumentSubjectToParliamentaryProcedureWork  &middot; StatutoryThing           </p>
+            Superclasses  &middot; StatutoryInstrumentSubjectToParliamentaryProcedureWork  &middot; LegislativeThing           </p>
         </article>
         <article class="class" id="PaperWork">
           <h3>Class <a href="#PaperWork">Paper work</a></h3>
@@ -137,11 +137,6 @@
            <p>
             Superclasses  &middot; EnabledThing           </p>
         </article>
-        <article class="class" id="StatutoryThing">
-          <h3>Class <a href="#StatutoryThing">Statutory thing</a></h3>
-
-          <p>A statutory thing, for example: an Act of Parliament or a made statutory instrument.</p>
-         </article>
       </section>
  
       <section id="objectproperties">
@@ -156,14 +151,14 @@
             >
           </h3>
 
-           <p>Relates an enabled thing to the enabling thing under which it was made or under which it is intended to be made. An enabled thing may be enabled by one or more enabling things. An enabling thing may enable one or more enabled things, or none.</p>
+           <p>Relates an enabled thing to the legislative thing under which it was made or under which it is intended to be made. An enabled thing may be enabled by one or more legislative things. A legislative thing may enable one or more enabled things, or none.</p>
 
           <p>
             <a href="#EnabledThing"
               >EnabledThing</a
             >
             &mdash; Enabled by &mdash;
-            <a href="#EnablingThing">EnablingThing</a>
+            <a href="#LegislativeThing">LegislativeThing</a>
           </p>
         </article>
 
@@ -213,14 +208,14 @@
             >
           </h3>
 
-           <p>Relates a made statutory instrument to the made statutory instrument it is wholly revoked by. A made statutory instrument can be wholly revoked by one made statutory instrument, or none. A made statutory instrument can wholly revoke one or more made statutory instruments, or none. &#39;Wholly revoked by&#39; is populated for made statutory instruments revoked whilst still before Parliament. Revoking secondary legislation has an effect similar to repealing primary legislation. Wholly revoking a made statutory instrument removes that made statutory instrument from the statute book on the date it is revoked.</p>
+           <p>Relates a made statutory instrument subject to parliamentary procedure to the made statutory instrument it is wholly revoked by. A made statutory instrument can be wholly revoked by one made statutory instrument, or none. A made statutory instrument can wholly revoke one or more made statutory instruments, or none. &#39;Wholly revoked by&#39; is populated for made statutory instruments revoked whilst still before Parliament. Revoking secondary legislation has an effect similar to repealing primary legislation. Wholly revoking a made statutory instrument removes that made statutory instrument from the statute book on the date it is revoked.</p>
 
           <p>
-            <a href="#MadeStatutoryInstrumentWork"
-              >MadeStatutoryInstrumentWork</a
+            <a href="#MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork"
+              >MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork</a
             >
             &mdash; Wholly revoked by &mdash;
-            <a href="#MadeStatutoryInstrumentWork">MadeStatutoryInstrumentWork</a>
+            <a href="#MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork">MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork</a>
           </p>
         </article>
       </section>
@@ -307,7 +302,7 @@
           <p>The date on which a statutory instrument is made by the person having the power to make it.</p>
 
           <p>
-            MadeStatutoryInstrumentWork &mdash; Made date &mdash;
+            MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork &mdash; Made date &mdash;
             date
           </p>
         </article>
@@ -332,15 +327,11 @@
         <table>
           <tr>
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>ActOfParliament</td>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>StatutoryThing</td>
+            <td>/<wbr>ontologies/<wbr>delegation/<wbr>LegislativeThing</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>MadeStatutoryInstrumentWork</td>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>StatutoryThing</td>
-          </tr>
-          <tr>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>ActOfParliament</td>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>EnablingThing</td>
+            <td>/<wbr>ontologies/<wbr>delegation/<wbr>MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork</td>
+            <td>/<wbr>ontologies/<wbr>delegation/<wbr>LegislativeThing</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>EnabledThing</td>
@@ -363,11 +354,11 @@
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>EnabledThing</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>DraftStatutoryInstrumentWork</td>
+            <td>/<wbr>ontologies/<wbr>delegation/<wbr>DraftStatutoryInstrumentSubjectToParliamentaryProcedureWork</td>
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>StatutoryInstrumentSubjectToParliamentaryProcedureWork</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>delegation/<wbr>MadeStatutoryInstrumentWork</td>
+            <td>/<wbr>ontologies/<wbr>delegation/<wbr>MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork</td>
             <td>/<wbr>ontologies/<wbr>delegation/<wbr>StatutoryInstrumentSubjectToParliamentaryProcedureWork</td>
           </tr>
         </table>
@@ -452,7 +443,7 @@
 
     <footer>
       <p>
-        Generated 2025-07-23 12:11:53.495779+00:00 from a
+        Generated 2025-07-23 13:44:35.930778+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../delegation/delegation-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../delegation/delegation-ontology.ttl"
