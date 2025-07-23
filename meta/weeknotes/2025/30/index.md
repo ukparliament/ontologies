@@ -12,17 +12,17 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Being the first port of call for research colleagues with any kind of enquiry involving Parliament's Members and its procedures. Or at least those that may involve a database query or two.
 
-* Attempting to replace Librarian Claire who has, very sadly left the building. Goodbye Librarian Claire. All the very best.
+* Attempting to replace Librarian Claire who has, very sadly, left the building. Goodbye Librarian Claire. All the very best.
 
 * Attempting to replace Developer Jon who left the building some months back, his [best efforts largely untouched since March](https://github.com/ukparliament/search-prototype). Not great, when we all know [how software ages](https://redmonk.com/jgovernor/2007/04/05/why-applications-are-like-fish-and-data-is-like-wine/).
 
-* Attempting to deploy our new, though somewhat neglected, [search application](https://parliamentary-search-265cced0397e.herokuapp.com/) on Azure. A process akin to painting your hallway by sticking a brush through your letterbox.
+* Attempting to deploy our new, though somewhat neglected, [search application](https://parliamentary-search-265cced0397e.herokuapp.com/) on Azure. A process akin to painting your hallway by sticking a brush through your letterbox. Or so we're told.
 
 * Keeping the good ship Parliamentary Search afloat by subject indexing, procedurally indexing and interlinking all the material that should - in theory - flow down the data pipes.
 
-* Raising a metric ton of tickets covering any occasion on which said material does not flow throw the pipes but gets blocked for some unexpected - and occasionally half-expected - reason. Pipe blockages happening more frequently than one might expect - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/25/#applying-a-sink-plunger-to-our-research-briefing-publication-pipes).
+* Raising a metric ton of tickets covering any occasion on which said material does not flow through the pipes but gets blocked for some unexpected - and occasionally half-expected - reason. Pipe blockages happening more frequently than one might expect - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/25/#applying-a-sink-plunger-to-our-research-briefing-publication-pipes).
 
-* Adding a dash of observability to our pipes, so at least we know when something has broke, even though we don't quite know why.
+* Adding a dash of observability to our pipes, so at least we know when some process has fallen over, even if we don't quite know why.
 
 * Building [new software](https://question-checker-27df5d070358.herokuapp.com/) to support our crack team of librarians, who are frequently left wondering if the answer to a written question has not yet turned up because the pipes have blocked, or because it's not yet been answered. Even though [convention suggests it should have been](https://www.parliament.uk/about/how/business/written-answers/).
 
@@ -30,7 +30,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Simultaneously, attempting to replace our Odds and Sods Information System with a [Data Graphs](https://datagraphs.com/) implementation.
 
-* More generally - though still via the medium of Data Graphs - attempting to move to a position where our crack team of librarians exercise control not only over what they type into the boxes provided by software weilding colleagues, but also over the nature of said boxes and the data structures they form part of.
+* More generally - though still via the medium of Data Graphs - attempting to move to a position where our crack team of librarians exercise control not only over what they type into the boxes provided by software weilding colleagues, but also over the nature of said boxes and the data structures they form part of. Quite the change.
 
 * Supporting the indexing of parliamentary material with frequent changes to our beloved taxonomy of terms.
 
@@ -42,7 +42,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Responding to feedback from research colleagues with a whole slew of changes to both the Subject Specialist Finder data model and website.
 
-* Changing workflows and job descriptions to ensure that Research Briefings are subjected indexed in a timely fashion, so our research colleagues don't wonder which hole their publications have disappeared into.
+* Changing workflows to ensure that Research Briefings are subjected indexed in a timely fashion, so our research colleagues don't wonder which hole their publications have disappeared into.
 
 * Making good on a semi-regretted promise to [produce a print version](https://trello.com/c/yCybS5Wc/86-csv-output-for-testing-with-research-short-list) of said Subject Specialist Finder. How hard could it be?
 
@@ -70,7 +70,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Attempting to build our very own [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;, the bone structure of which now resembles that of Audrey Hepburn. If we do say ourselves.
 
-* Recognising that bone structure is not everything - and a dash of slap never going amiss - roping in the aforementioned Iona, [Mr Korris](https://bsky.app/profile/mattkorris.bsky.social). the fantastic Mr Fox, and [Mr Waddington](https://bsky.app/profile/mattwadd.bsky.social) to make the damned thing usable to semi-normal people. 
+* Recognising that bone structure is not everything - a dash of slap never going amiss - and roping in the aforementioned Iona, [Mr Korris](https://bsky.app/profile/mattkorris.bsky.social). the fantastic Mr Fox, and [Mr Waddington](https://bsky.app/profile/mattwadd.bsky.social) to make the damned thing usable to semi-normal people. 
 
 * Lovingly tending the Commons half of the [Members' Names Information System](https://data.parliament.uk/membersdataplatform/#), applying some much needed data cleansing and *documenting* what we've done and why. Which is a first.
 
@@ -94,7 +94,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Taking tentative steps into applying [Parliament's design system](https://designsystem.parliament.uk/) to everything we've ever made. Whether by accident or design. Our lovely little [MNIS Prodder](https://api.parliament.uk/mnis-prodder)&trade; being the first recipient of that treatment. Though not quite yet a resounding success.
 
-* Applying legalistic footers to everything we've ever made. Ditto.
+* Applying legalistic footers to everything we've ever made.
 
 * Domain modeling [the Librar(y/ies) publication processes](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication), in the hope of one day improving both inputs and outputs.
 
