@@ -20,7 +20,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Keeping the good ship Parliamentary Search afloat by subject indexing, procedurally indexing and interlinking all the material that should - in theory - flow down the data pipes.
 
-* Plugging away at our Indexing Review board, improving both our indexing practice and our taxonomy in the process.
+* Plugging away at our [Indexing Review board](https://trello.com/b/OYlqcQiB/indexing-review), improving both our indexing practice and our taxonomy in the process.
 
 * Coping with the written question deluge which is keeping our crack team of indexers particularly busy this session.
 
