@@ -20,13 +20,17 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Keeping the good ship Parliamentary Search afloat by subject indexing, procedurally indexing and interlinking all the material that should - in theory - flow down the data pipes.
 
+* Plugging away at our Indexing Review board, improving both our indexing practice and our taxonomy in the process.
+
+* Coping with the written question deluge which is keeping our crack team of indexers particularly busy this session.
+
 * Raising a metric ton of tickets covering any occasion on which said material does not flow through the pipes but gets blocked for some unexpected - and occasionally half-expected - reason. Pipe blockages happening more frequently than one might expect - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/25/#applying-a-sink-plunger-to-our-research-briefing-publication-pipes).
 
 * Adding a dash of observability to our pipes, so at least we know when some process has fallen over, even if we don't quite know why.
 
 * Building [new software](https://question-checker-27df5d070358.herokuapp.com/) to support our crack team of librarians, who are frequently left wondering if the answer to a written question has not yet turned up because the pipes have blocked, or because it's not yet been answered. Even though [convention suggests it should have been](https://www.parliament.uk/about/how/business/written-answers/).
 
-* Hand typing records for things like bills and committees, which should, in theory, come fully equipped with feeds but in practice don't. This necessitating the existence of our Odds and Sods Information System.
+* Hand typing records for things like committees, bills and the documents associated with bills - [impact assessments](https://api.parliament.uk/bill-papers/publication-types/36) spring to mind - which should, in theory, come fully equipped with feeds but in practice don't. This necessitating the existence of our Odds and Sods Information System.
 
 * Simultaneously, attempting to replace our Odds and Sods Information System with a [Data Graphs](https://datagraphs.com/) implementation.
 
@@ -99,6 +103,8 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 * Domain modeling [the Librar(y/ies) publication processes](https://github.com/ukparliament/ontologies/tree/master/meta/library-information-architecture/publication), in the hope of one day improving both inputs and outputs.
 
 * Continuing to [churn out ontologies](https://ukparliament.github.io/ontologies/) for the data platform we hope one day to own.
+
+* Attempting to arrange our grand summer away day in some attempt to *get away from all this*.
 
 * Coping with our own personal crises.
 
