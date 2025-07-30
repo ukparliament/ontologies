@@ -56,7 +56,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Generally compensating for a software commissioning model that tends toward systems, rather than, say, a system of systems.
 
-* Attending to our [procedure maps](https://ukparliament.github.io/ontologies/procedure/maps/) as and when procedural "innovations" happen. [Almost](https://trello.com/c/1KGQPvpM/489-draft-affirmative-lords-question-not-decided) [daily](https://trello.com/c/CQnOLdQZ/488-treaties-business-by-the-international-relations-and-defence-committee) it would seem.
+* Attending to our [procedure maps](https://ukparliament.github.io/ontologies/procedure/maps/) as and when procedural innovations happen. [Almost](https://trello.com/c/1KGQPvpM/489-draft-affirmative-lords-question-not-decided) [daily](https://trello.com/c/CQnOLdQZ/488-treaties-business-by-the-international-relations-and-defence-committee) it would seem.
 
 * Simultaneously, attempting to replace the software those maps are made in by writing [a whole slew of SQL](https://ukparliament.github.io/ontologies/procedure/meta/editor/data-graphs/instance-data/data-loading) to transform what was to what should be. Model changes happening in flight.
 
@@ -66,7 +66,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Patching and upgrading our [beloved egg timer](https://api.parliament.uk/egg-timer)&trade;, so the next time the calendars fail to sync, things will take care of themselves. Or so we hope.
 
-* Making our [beloved egg timer backwards compatible](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/25/#the-work-it-just-never-stops). So that next time "your minister" says they want something done by a certain date, you can say either "certainly ma'am" or "not procedurally possible given your statutory duties, ma'am". Depending on both the facts at hand and your mood.
+* Making our [beloved egg timer backwards compatible](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/25/#the-work-it-just-never-stops). So that next time your minister says they want something done by a certain date, you can say either "certainly ma'am" or "not procedurally possible given your statutory duties, ma'am". Depending on both the facts at hand and your mood.
 
 * Roping in [Arabella](https://bsky.app/profile/arabellalaw.bsky.social), [Iona](https://bsky.app/profile/singlecrow.bsky.social) and Cabinet Office Ben to test aforesaid reverse calculations. For which we would like to offer our gratitude.
 
@@ -74,7 +74,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Attempting to build our very own [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;, the bone structure of which now resembles that of Audrey Hepburn. If we do say ourselves.
 
-* Recognising that bone structure is not everything - a dash of slap never going amiss - and roping in the aforementioned Iona, [Mr Korris](https://bsky.app/profile/mattkorris.bsky.social). the fantastic Mr Fox, and [Mr Waddington](https://bsky.app/profile/mattwadd.bsky.social) to make the damned thing usable to semi-normal people. 
+* Recognising that bone structure is not everything - a dash of slap never going amiss - and roping in the aforementioned Iona, [Mr Korris](https://bsky.app/profile/mattkorris.bsky.social). the fantastic Mr Fox, and [Mr Waddington](https://bsky.app/profile/mattwadd.bsky.social) to make the thing usable to semi-normal people. 
 
 * Lovingly tending the Commons half of the [Members' Names Information System](https://data.parliament.uk/membersdataplatform/#), applying some much needed data cleansing and *documenting* what we've done and why. Which is a first.
 
@@ -110,7 +110,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 ## Outreach / engagement
 
-Are you kidding? You think we have time to socialise with all this going on? Dear reader, we barely have time to brush our teeth, let alone practice our conversational gambits. [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social), currently sunning herself in the south of France, being the exception to this rule. Well, she is the boss so plays by different rules.
+Are you kidding? You think we have time to socialise with all this going on? Dear reader, we barely have time to brush our teeth, let alone practice our conversational gambits. [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social), at time of writing sunning herself in the south of France, being the exception to this rule. Well, she is the boss so plays by different rules.
 
 Until next time.
 
