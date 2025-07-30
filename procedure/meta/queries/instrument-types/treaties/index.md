@@ -191,6 +191,8 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/924906dc"> Correspondence published by the International Relations and Defence Committee</a>
 
+* <a href="https://api.parliament.uk/s/1c35bcfd"> Correspondence published by the Foreign Affairs Committee</a>
+
 ### Committee requests for extension to objection period A
 
 * <a href="https://api.parliament.uk/s/b348d7a4"> Extension of objection period A requested by the International Agreements Committee (IAC)</a> 
