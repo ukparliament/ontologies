@@ -113,7 +113,7 @@ As of January 2021 this changed again when the [International Agreements Committ
 
 Later in 2021 it changed again with treaty consideration being shared between the International Agreements Committee and the Lords [European Affairs Committee](https://committees.parliament.uk/committee/516/european-affairs-committee/). In 2025, the Lords [International Relations and Defence Committee](https://committees.parliament.uk/committee/360/international-relations-and-defence-committee) also took interest in a treaty. 
 
-In the Commons any select committee can open an inquiry into a treaty and report on it if they feel it fits into their remit. As of January 2024, treaties have been scrutinised in some way by the [International Trade Committee](https://committees.parliament.uk/committee/367/international-trade-committee/), the [Environment, Food and Rural Affairs Committee](https://committees.parliament.uk/committee/52/environment-food-and-rural-affairs-committee), the [Home Affairs Committee](https://committees.parliament.uk/committee/83/home-affairs-committee), the [Public Accounts Committee](https://committees.parliament.uk/committee/127/public-accounts-committee/), the [Women and Equalities Committee](https://committees.parliament.uk/committee/328/women-and-equalities-committee/) and the [Northern Ireland Affairs Committee](https://committees.parliament.uk/committee/120/northern-ireland-affairs-committee). 
+In the Commons any select committee can open an inquiry into a treaty and report on it if they feel it fits into their remit. As of January 2024, treaties have been scrutinised in some way by the [International Trade Committee](https://committees.parliament.uk/committee/367/international-trade-committee/), the [Environment, Food and Rural Affairs Committee](https://committees.parliament.uk/committee/52/environment-food-and-rural-affairs-committee), the [Home Affairs Committee](https://committees.parliament.uk/committee/83/home-affairs-committee), the [Public Accounts Committee](https://committees.parliament.uk/committee/127/public-accounts-committee/), the [Women and Equalities Committee](https://committees.parliament.uk/committee/328/women-and-equalities-committee/), the [Northern Ireland Affairs Committee](https://committees.parliament.uk/committee/120/northern-ireland-affairs-committee) and the [Foreign Affairs Committee](https://committees.parliament.uk/committee/78/foreign-affairs-committee/).
 
 The Joint Committee on Human Rights can also consider treaties but as of 2021 there have been no inquiries/reports. 
 
@@ -159,11 +159,11 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 ### Correspondence published by committees
 
-* <a href="https://api.parliament.uk/s/ff7c5eac"> All committee correspondence</a>
+* <a href="https://api.parliament.uk/s/0da0ed53"> All committee correspondence</a>
 
 * <a href="https://api.parliament.uk/s/c7360b15"> Correspondence published by the Joint Committee on Human Rights</a>
 
-* <a href="https://api.parliament.uk/s/6dfa4a14"> Correspondence published by Commons committees</a>
+* <a href="https://api.parliament.uk/s/a1874fc1"> Correspondence published by Commons committees</a>
 
 * <a href="https://api.parliament.uk/s/33d28019"> Correspondence published by the International Trade Committee</a>
 
