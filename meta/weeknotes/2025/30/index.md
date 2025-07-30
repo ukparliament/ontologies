@@ -48,7 +48,7 @@ Cutting to the chase, it's quite possible we're over-committed here. A list of t
 
 * Changing workflows to ensure that Research Briefings are subjected indexed in a timely fashion, so our research colleagues don't wonder which hole their publications have disappeared into.
 
-* Making good on a semi-regretted promise to [produce a print version](https://trello.com/c/yCybS5Wc/86-csv-output-for-testing-with-research-short-list) of said Subject Specialist Finder. How hard could it be?
+* Making good on a promise to [produce a print version](https://trello.com/c/yCybS5Wc/86-csv-output-for-testing-with-research-short-list) of said Subject Specialist Finder. How hard could it be?
 
 * Attempting to leapfrog whatever computational process and permission hurdles might prevent us from taking the Single Subject View&trade; / Subject Specialist Finder into production.
 
