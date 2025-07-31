@@ -115,6 +115,12 @@ When a proposed draft remedial order is laid before Parliament it can occasional
 
 ## Joint Committee on Human Rights (JCHR) 
 
+### Correspondence published by the Joint Committee on Human Rights (JCHR)
+
+Correspondence relating to a proposed draft remedial order and remedial orders may be published by the JCHR at the point of laying in Parliament through to after the procedure has concluded.
+
+* [Correspondence published by the Joint Committee on Human Rights (JCHR)](https://api.parliament.uk/s/0b71a527)
+  
 ### Joint Committee on Human Rights (JCHR) inquiries and calls for evidence
 
 As part of the Joint Committee on Human Rights scrutiny of proposed remedial orders and remedial orders they may decide to open an inquiry into the instruments as well as call for evidence. Inquiries may be opened at any time during an instrument's time before Parliament. Calls for evidence are usually made when an inquiry is opened but they can happen independently. Evidences will be sought from a wide range of groups and individuals with relevant experience and interest. 
@@ -122,7 +128,6 @@ As part of the Joint Committee on Human Rights scrutiny of proposed remedial ord
 * [Inquiries opened](https://api.parliament.uk/s/ff81950d)
 
 * [Call for evidence](https://api.parliament.uk/s/be567dd0)
-
 
 ### Joint Committee on Human Rights (JCHR) consideration
 
