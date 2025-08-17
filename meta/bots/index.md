@@ -9,7 +9,7 @@ Unfortunately, Twitter's new API strategy means we're no longer able to offer bo
 Posts whenever the House of Commons Library publishes new research and analysis.
 
 Bluesky | Mastodon | Feed
-[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | [@commonslibrary](https://mastodon.me.uk/@commonslibrary) | [RSS](https://api.parliament.uk/library-feeds/publishers/1)
+[@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | [@commonslibrary](https://mastodon.me.uk/@commonslibrary) | [RSS](https://api.parliament.uk/library-feeds/publishers/1.rss)
 
 ## Made-n-laid
 
