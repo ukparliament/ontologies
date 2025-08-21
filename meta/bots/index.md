@@ -1,16 +1,9 @@
 # Bot accounts from the House of Commons Library
 
-## Update - 21st August 2023
-
-Unfortunately, Twitter's new API strategy means we're no longer able to offer bot accounts on that platform. Updates remain available on Bluesky, Mastodon and via RSS.
-
-## Commons Library
-
-Posts whenever the House of Commons Library publishes new research and analysis.
+## Research services
 
 Bluesky | Mastodon | Feed
 [@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | [@commonslibrary](https://mastodon.me.uk/@commonslibrary) | [RSS](https://api.parliament.uk/library-feeds/publishers/1.rss)
-
 [@post-parliament](https://bsky.app/profile/post-parliament.bsky.social) |  | [RSS](https://api.parliament.uk/library-feeds/publishers/3.rss)
 
 ## Made-n-laid
