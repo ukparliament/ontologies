@@ -1,6 +1,6 @@
 # Bot accounts from the House of Commons Library
 
-## Update - 18th April 2023
+## Update - 21st August 2023
 
 Unfortunately, Twitter's new API strategy means we're no longer able to offer bot accounts on that platform. Updates remain available on Bluesky, Mastodon and via RSS.
 
