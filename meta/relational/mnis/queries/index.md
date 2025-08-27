@@ -23,6 +23,8 @@ Build your own queries using our [MNIS Prodder](https://mnis-prodder.herokuapp.c
 
 [Current eligible Members of the House of Commons whipped to the Conservative Party with no current incumbency in a Government position](https://api.parliament.uk/mnis-prodder/parse?filter=house=commons%7Ciseligible=true%7Cpartyid=4%7Choldsgovernmentpost=false&include=)
 
+[Current eligible Members of the House of Commons yet to make a maiden speech (Odata API call)](https://data.parliament.uk/membersdataplatform/open/OData.svc/Members?$filter=not%20MemberMaidenSpeeches/any()%20and%20House_Id%20eq%201%20and%20EndDate%20eq%20null%20and%20StartDate%20ge%20datetime%272024-07-04T00:00:00%27&$expand=MemberMaidenSpeeches&$select=NameDisplayAs)
+
 [Female Members of the House of Commons elected at the 2005 General Election](https://api.parliament.uk/mnis-prodder/parse?filter=membership=all%7Cgender=F%7Chouse*commons%7Creturnedatelection=2005%20general%20election&include=)
 
 [Members of the House of Commons returned at the 2019 General Election, including constituencies and entry type](http://data.parliament.uk/membersdataplatform/services/mnis/members/query/house=Commons%7CMembership=all%7Creturnedatelection=2019%20General%20Election/Constituencies/)
