@@ -32,9 +32,7 @@ In our first - and possibly only - piece of good news, we're delighted to announ
 
 <code>
 	As a <em>person working for a Minster</em>
-
 	I would like <em>the ability to calculate when parliamentary scrutiny should start</em>
-
 	So that <em>I am able to lay an instrument in a timely enough fashion to allow my Minister to exercise the powers delegated to them by primary legislation by the date on which they wish to do this</em>
 </code>
 
