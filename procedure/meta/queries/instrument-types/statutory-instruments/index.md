@@ -30,7 +30,7 @@ The [Non-contentious Probate (Fees) Order 2018](https://statutoryinstruments.par
 
 ## Statutory instruments by session
 
-* [2024-25](https://api.parliament.uk/s/8636be28)
+* [2024-26](https://shortener120181217063232.azurewebsites.net/s/ab543bc8)
 
 * [2023-24](https://api.parliament.uk/s/bb23e133)
 
