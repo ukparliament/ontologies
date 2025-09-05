@@ -13,7 +13,7 @@ There have been two instruments laid under the procedure since 2016.
   
 ## Enhanced affirmatives under Investigatory Powers Act 2016 by session
 
-* [2024-25](https://api.parliament.uk/s/c7573e46)
+* [2024-26](https://api.parliament.uk/s/c7573e46)
   
 * [2023-24](https://api.parliament.uk/s/7e3278e2)
   
