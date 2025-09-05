@@ -26,7 +26,7 @@ A revised draft legislative reform order can be laid following the original vers
 
 ## Legislative reform orders by session
 
-* [2024-26](https://api.parliament.uk/s/9125d667)
+* [2024-26](https://shortener120181217063232.azurewebsites.net/s/ad08e18a)
 
 * [2023-24](https://api.parliament.uk/s/959d6b16)
 
