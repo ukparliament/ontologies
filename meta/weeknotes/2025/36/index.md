@@ -31,9 +31,11 @@ Still, we should not complain. Back in the day, sessions were named and identifi
 In our first - and possibly only - piece of good news, we're delighted to announce that our beloved Egg Timer&trade; now comes complete with a scrutiny start date calculator, the user story being:
 
 <code>
-	As a <em>person working for a Minster</em>
-	I would like <em>the ability to calculate when parliamentary scrutiny should start</em>
-	So that <em>I am able to lay an instrument in a timely enough fashion to allow my Minister to exercise the powers delegated to them by primary legislation by the date on which they wish to do this</em>
+	<pre>
+		As a <em>person working for a Minster</em>
+		I would like <em>the ability to calculate when parliamentary scrutiny should start</em>
+		So that <em>I am able to lay an instrument in a timely enough fashion to allow my Minister to exercise the powers delegated to them by primary legislation by the date on which they wish to do this</em>
+	</pre>
 </code>
 
 Not perhaps the snappiest user story, but you know us. Again we'd like to thank Arabella, Iona and Ben for the time they put into testing our efforts and the feedback they gave. All of which improved matters enormously.
