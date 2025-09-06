@@ -1,7 +1,5 @@
 # 2025 - Week 36
 
-This being the first week for a good long while in which we've actually managed to ship some software to our paying customers, we had hoped to kick off these notes with a cheerful tone. It was not to be. Let's get the sad and bad news out of the way.
-
 ## Farewell Professor Rush
 
 The week kicked off with the saddest of news, the sons of [Michael Rush](https://psaparliaments.org/2021/02/24/professor-michael-rush/) getting in touch to let us know that their father had passed away. If you've ever clicked around the [Rush Database](https://membersafter1832.historyofparliamentonline.org/), you'll have some idea not only of the breadth of his research, but also his generosity. When we met him, Michael was long retired but unstinting in his academic output. By that point he was Emeritus Professor of Politics at the University of Exeter, specialising in - amongst a great many other things - the social and educational background of Members of the House of Commons. To that end, he had compiled a dataset covering every MP since 1832. Being a generous type, he shared that database with a whole host of other academics and academic institutions. Amongst them, the House of Commons Library and the [History of Parliament Trust](https://www.historyofparliamentonline.org/).
@@ -30,7 +28,9 @@ Still, we should not complain. Back in the day, sessions were named and identifi
 
 ## Unboiling scrutiny eggs
 
-In our first - and possibly only - piece of good news, we're delighted to announce that our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade; now comes complete with a [scrutiny start date calculator](https://api.parliament.uk/egg-timer/reverse-calculator), the user story being:
+This being the first week for a good long while in which we've actually managed to ship some software to our paying customers, we had hoped to kick off these notes with a cheerful tone. Quite clearly, that was not to be. Let's get back to tales of shipping [excellent product](https://bsky.app/search?q=%23excellentproduct).
+
+Fans of our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade; will be please to learn it now comes complete with a [scrutiny start date calculator](https://api.parliament.uk/egg-timer/reverse-calculator), the user story being:
 
 <pre>
 	<code>
@@ -40,7 +40,7 @@ In our first - and possibly only - piece of good news, we're delighted to announ
 	</code>
 </pre>
 
-Not perhaps the snappiest user story, but you know us. Hardly snappy. In truth, our shiny new calculator did not meet with the acclaim we had daydreamed of, offers of funding to take our [excellent product](https://bsky.app/search?q=%23excellentproduct) to a global market not exactly flooding in. That said, our social media manager managed to eek out retweets from both Arabella and [John](https://bsky.app/profile/johnlsheridan.bsky.social). Which is not be sniffed at.
+Not perhaps the snappiest user story, but you know us. Hardly snappy. In truth, our shiny new calculator did not meet with the acclaim we had daydreamed of, offers of funding to take it to a global market not exactly flooding in. That said, our, erm, 'social media and customer engagement manager' managed to eek out retweets from both Arabella and [John](https://bsky.app/profile/johnlsheridan.bsky.social). Which is not be sniffed at.
 
 In other pleasing - if slightly embarrassing news, our beloved Egg Timer&trade; was also in receipt of its first ever [pull request](https://github.com/ukparliament/egg-timer/pull/60). At least its first ever pull request that wasn't from us. Embarrassing because Michael had failed to link our day count to the correct user guides. Pleasing because [Matthew](https://dracos.co.uk/about/) was quick to spot and equally quick to issue a fix. Thanks Matthew.
 
