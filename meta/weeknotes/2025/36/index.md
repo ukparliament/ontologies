@@ -32,13 +32,13 @@ Still, we should not complain. Back in the day, sessions were named and identifi
 
 In our first - and possibly only - piece of good news, we're delighted to announce that our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade; now comes complete with a [scrutiny start date calculator](https://api.parliament.uk/egg-timer/reverse-calculator), the user story being:
 
-<code>
-	<pre>
+<pre>
+	<code>
 		As a <em>person working for a Minster</em>
 		I would like <em>the ability to calculate when parliamentary scrutiny should start</em>
 		So that <em>I am able to lay an instrument in a timely enough fashion to allow my Minister to exercise the powers delegated to them by primary legislation by the date on which they wish to do this</em>
-	</pre>
-</code>
+	</code>
+</pre>
 
 Not perhaps the snappiest user story, but you know us. Hardly snappy. In truth, our shiny new calculator did not meet with the acclaim we had daydreamed of, offers of funding to take our [excellent product](https://bsky.app/search?q=%23excellentproduct) to a global market not exactly flooding in. That said, our social media manager managed to eek out retweets from both Arabella and [John](https://bsky.app/profile/johnlsheridan.bsky.social). Which is not be sniffed at.
 
