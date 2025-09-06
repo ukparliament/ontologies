@@ -42,7 +42,7 @@ Fans of our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade; will
 
 Not perhaps the snappiest user story, but you know us. Hardly snappy. In truth, our shiny new calculator did not meet with the acclaim we had daydreamed of, offers of funding to take it to a global market not exactly flooding in. That said, our, erm, 'social media and customer engagement manager' managed to eek out retweets from both Arabella and [John](https://bsky.app/profile/johnlsheridan.bsky.social). Which is not be sniffed at.
 
-In other pleasing - if slightly embarrassing news, our beloved Egg Timer&trade; was also in receipt of its first ever [pull request](https://github.com/ukparliament/egg-timer/pull/60). At least its first ever pull request that wasn't from us. Embarrassing because Michael had failed to link our day count to the correct user guides. Pleasing because [Matthew](https://dracos.co.uk/about/) was quick to spot and equally quick to issue a fix. Thanks Matthew.
+In other pleasing - if slightly embarrassing - news, our beloved Egg Timer&trade; was also in receipt of its first ever [pull request](https://github.com/ukparliament/egg-timer/pull/60). At least its first ever pull request that wasn't from us. Embarrassing because Michael had failed to link our day count form to the correct user guides. Pleasing because [Matthew](https://dracos.co.uk/about/) was quick to spot and equally quick to issue a fix. Thanks Matthew.
 
 Again we'd like to thank [Arabella](https://bsky.app/profile/arabellalaw.bsky.social), [Iona](https://bsky.app/profile/singlecrow.bsky.social) and Ben for the time they put into testing our efforts and the feedback they gave. All of which improved matters enormously.
 
