@@ -14,7 +14,7 @@ Moving on from the sad news to the merely bad, the long hot summer over, Sunday 
 
 The trials and indeed tribulations did not stop there, Monday also seeing an unexpected, albeit small, cabinet reshuffle. Brilliant timing. All her hands being on deck, there was only Anya left to take up the strain. Popping open the manual and firing up [MNIS](https://data.parliament.uk/membersdataplatform/), she went to work, only occasionally lifting her head to curse said manual. We are told the manual needs work. Everything always does.
 
-And reshuffle repercussions continued to, erm, percuss? As we type these words, it is well past tea time on a Friday night and [Librarian Phil](https://bsky.app/profile/philbgorman.bsky.social) has just created yet another 'Government reshuffle' [Trello](https://trello.com/c/zU3Dsnbj) card. Quite the week.
+And reshuffle repercussions continued to, erm, percuss? As we type these words, it is well past tea time on a Friday night and [Librarian Phil](https://bsky.app/profile/philbgorman.bsky.social) has just created yet another 'Government reshuffle' [Trello](https://trello.com/c/zU3Dsnbj) card. 
 
 ## Bad to possibly badder
 
@@ -24,7 +24,7 @@ For reasons lost in the mists, the clerkly naming scheme found its way into our 
 
 For more understandable reasons, tabled written questions are sourced from one systen and their corresponding answers from a different system. Answers being matched to their initiating questions by means of their 'unique' 'identifiers'. Dear reader, we believe you may spot the problem here. Anya and Conker being off on their holidays, Librarian Jayne took hold of the reins, yet another Trello board was created and [Delivery Manager Lydia](https://bsky.app/profile/lydiakeegal.bsky.social) marshalled the troops. Even as we type, data engineers Victoria, Sadia and Jianhan are hard at work turning Jayne's cards into actionable [SPARQL](https://en.wikipedia.org/wiki/SPARQL) queries.
 
-Still, we should not complain. Back in the day, sessions were named and identified according to the [regnal years](https://api.parliament.uk/regnal-years/regnal-years) they spanned. Only Westminster's finest believing it best to identify concepts by two unknowable things. In this case the end date of the session and demise of the monarch. At least these days our naming schema only relies on one unknowable thing. Who are we to question progress?
+Still, we should not complain. Back in the day, sessions were named and identified according to the [regnal years](https://api.parliament.uk/regnal-years/regnal-years) they spanned. In this case the end date of the session and the demise of the monarch. At least these days our naming schema relies on only one unknowable thing. 
 
 ## Unboiling scrutiny eggs
 
@@ -40,7 +40,7 @@ Fans of our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade; will
 	</code>
 </pre>
 
-Not perhaps the snappiest user story, but you know us. Hardly snappy. In truth, our shiny new calculator did not meet with the acclaim we had daydreamed of, offers of funding to take it to a global market not exactly flooding in. That said, our, erm, 'social media and customer engagement manager' managed to eke out retweets from both [Arabella](https://bsky.app/profile/arabellalaw.bsky.social) and [John](https://bsky.app/profile/johnlsheridan.bsky.social). Which is not be sniffed at.
+Not perhaps the snappiest user story, but you know us. Hardly snappy. In truth, our shiny new calculator did not meet with the acclaim we had dreamed of, offers of funding to take it to a global market not exactly flooding in. That said, our, erm, 'social media and customer engagement manager' managed to eke out retweets from both [Arabella](https://bsky.app/profile/arabellalaw.bsky.social) and [John](https://bsky.app/profile/johnlsheridan.bsky.social). Which is not be sniffed at.
 
 In other pleasing - if slightly embarrassing - news, our beloved Egg Timer&trade; was also in receipt of its first ever [pull request](https://github.com/ukparliament/egg-timer/pull/60). At least, its first ever pull request that wasn't from us. Somewhat embarrassing as Michael had failed to link our day count form to the correct user guides. Pleasing because [Matthew](https://dracos.co.uk/about/) was quick to spot the problem and equally quick to issue a fix. Thanks Matthew.
 
