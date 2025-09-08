@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2025
 
+* [Week 36](36)
 * [Week 34](34)
 * [Week 32](32)
 * [Week 30](30)
