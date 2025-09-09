@@ -93,10 +93,13 @@ Populated by hand (open / closed).
 		COPY (
 			SELECT *
 			FROM procedure.solractofparliamentdata
+			WHERE isdeleted IS FALSE
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table, of which 1 has an isdeleted flag set to FALSE. Of the remaining 17,576, 11,048 are reporting validation errors in Data Graphs. This appears to be because we've created ActOfParliament > chapterNumber > Integer and these records have 'c.{chapter_number}'.
 
 ### CalculationStyle
 
@@ -115,9 +118,10 @@ Populated by hand (open / closed).
 <pre>
 	<code>
 		COPY (
-			SELECT * 
-			FROM procedure.procedurestep
-			WHERE proceduresteptypeid != 1
+			SELECT s.*, concat( s.procedurestepname, ' - ', st.proceduresteptypename ) AS label
+			FROM procedure.procedurestep s, procedure.proceduresteptype st
+			WHERE s.proceduresteptypeid != 1
+			AND s.proceduresteptypeid = st.id
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/non-business-steps.csv' DELIMITER ',' CSV HEADER;
 	</code>
@@ -148,12 +152,14 @@ Populated by hand (open / closed).
 <pre>
 	<code>
 		COPY (
-			SELECT *
+			SELECT *, 'FALSE' AS is_mechanical
 			FROM procedure.procedurestepcollection
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-collections.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+Update step collections 'Start steps', 'End steps', 'Bicameral end steps' and 'Website visible steps' to have isMechanical set to TRUE.
 
 ### componentOf
 
@@ -218,8 +224,10 @@ Populated by hand.
 <pre>
 	<code>
 		COPY (
-			SELECT *
-			FROM procedure.procedurestepdisplaydepth
+			SELECT sd.*, CONCAT( s.procedurestepname, ' step depth in the ', p.procedurename, ' procedure' ) AS label
+			FROM procedure.procedurestepdisplaydepth sd, procedure.procedurestep s, procedure.procedure p
+			WHERE sd.procedurestepid = s.id
+			AND sd.procedureid = p.id
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-display-depths.csv' DELIMITER ',' CSV HEADER;
 	</code>
@@ -230,17 +238,14 @@ Populated by hand.
 <pre>
 	<code>
 		COPY (
-			SELECT *
+			SELECT *,
+			CONCAT('urn:procedure-editor:BusinessStep:',fromstepid) AS from_business_step,
+			CONCAT('urn:procedure-editor:BusinessStep:',tostepid) AS to_business_step
 			FROM procedure.procedureclock
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/clocks.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
-
-
-
-
-
 
 ## Doing
 
