@@ -4,7 +4,7 @@
 
 Bluesky | Mastodon | Feed
 [@commonslibrary](https://bsky.app/profile/commonslibrary.bsky.social) | [@commonslibrary](https://mastodon.me.uk/@commonslibrary) | [RSS](https://api.parliament.uk/library-feeds/publishers/1.rss)
-[@post-parliament](https://bsky.app/profile/post-parliament.bsky.social) |  | [RSS](https://api.parliament.uk/library-feeds/publishers/3.rss)
+[@post-parliament](https://bsky.app/profile/post-parliament.bsky.social) | [@PostParliament](https://mastodon.me.uk/@PostParliament) | [RSS](https://api.parliament.uk/library-feeds/publishers/3.rss)
 
 ## Made-n-laid
 
