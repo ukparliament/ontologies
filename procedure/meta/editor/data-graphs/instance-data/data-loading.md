@@ -86,21 +86,6 @@ Populated by hand (open / closed).
 	</code>
 </pre>
 
-### ActOfParliament and EnablingThing
-
-<pre>
-	<code>
-		COPY (
-			SELECT *
-			FROM procedure.solractofparliamentdata
-			WHERE isdeleted IS FALSE
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table, of which 1 has an isdeleted flag set to FALSE. Of the remaining 17,576, 11,048 are reporting validation errors in Data Graphs. This appears to be because we've created ActOfParliament > chapterNumber > Integer and these records have 'c.{chapter_number}'.
-
 ### CalculationStyle
 
 <pre>
@@ -160,6 +145,8 @@ As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table,
 </pre>
 
 Update step collections 'Start steps', 'End steps', 'Bicameral end steps' and 'Website visible steps' to have isMechanical set to TRUE.
+
+Update step collections 'Committee concerns steps', 'Commons First Reading' 'Debate dteps' 'Motion tabled steps', 'Proposed negative statutory instruments upgraded to affirmative' to have isMechanical set to False.
 
 ### componentOf
 
@@ -247,7 +234,58 @@ Populated by hand.
 	</code>
 </pre>
 
-## Doing
+### Availability (procedure only)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				id,
+				CONCAT( 'Availability for ', procedurename, ' procedure' ) AS availabilityLabel,
+				CONCAT('urn:procedure-editor:Procedure:',id) AS Procedure,
+				startdate AS startOn,
+				enddate AS endOn,
+				'urn:procedure-editor:AvailabilityStatus:1' AS AvailabilityStatus
+			FROM procedure.procedure
+			WHERE (
+				startdate IS NOT NULL
+				AND
+				startdate IS NOT NULL
+			)
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/procedure-availability.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+Start and end dates are modelled in procedure editor as datetimes. They need to be converted to dates for import to Data Graphs. Data Graphs needs to be told the format in which to expect the dates: dd/mm/yyyy.
+
+### ActOfParliament and EnablingThing
+
+<pre>
+	<code>
+		COPY (
+			SELECT *
+			FROM procedure.solractofparliamentdata
+			WHERE isdeleted IS FALSE
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table, of which 1 has an isdeleted flag set to FALSE. Of the remaining 17,576, 11,048 are reporting validation errors in Data Graphs. This appears to be because we've created ActOfParliament > chapterNumber > Integer and these records have 'c.{chapter_number}'.
+
+As of 23/09/2025, Royal Assent dates are timestamps. Data Graphs won't import without first turning them into dates. Because dates are a mix of pre-1900 and post-1900, the Data Graphs import format should be set to automatic.
+
+
+
+
+
+
+# ======== Done to here =========
+
+
+
+
 
 ### Route, Path, AvailableThing, availabilityOf, Availability, hasAvailabilityStatus, fromStep, toStep and inProcedure
 
@@ -862,3 +900,29 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/reporting/route-profileration.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>	
+
+
+### Business items
+
+<pre>
+	<code>
+		COPY (
+			SELECT 
+				bi.id,
+				bi.triple_store_id,
+				bi.web_link,
+				bi.procedure_work_package_id,
+				bi.business_item_date,
+				actualisations.step_ids AS concatenated_step_ids
+			FROM procedure.procedurebusinessitem bi
+			LEFT JOIN
+				(
+					SELECT act.procedure_business_item_id AS business_item_id, STRING_AGG(act.procedure_step_id::text, ', ') AS step_ids
+					FROM procedure.procedurebusinessitemprocedurestep act
+					GROUP BY business_item_id
+				) actualisations
+			ON actualisations.business_item_id = bi.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/business-items.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
