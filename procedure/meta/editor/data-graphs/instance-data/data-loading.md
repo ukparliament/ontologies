@@ -276,17 +276,6 @@ As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table,
 
 As of 23/09/2025, Royal Assent dates are timestamps. Data Graphs won't import without first turning them into dates. Because dates are a mix of pre-1900 and post-1900, the Data Graphs import format should be set to automatic.
 
-
-
-
-
-
-# ======== Done to here =========
-
-
-
-
-
 ### Route, Path, AvailableThing, availabilityOf, Availability, hasAvailabilityStatus, fromStep, toStep and inProcedure
 
 We need to flag routes forming part of a non-component procedure as being not required for export, where those routes also form part of a component procedure.
@@ -829,6 +818,17 @@ This update flags routes forming part of the scrutiny reserve JCHR component pro
 		AND procedure.procedurerouteprocedure.procedureid != 76;
 	</code>
 </pre>
+
+
+
+
+
+
+# ======== Done to here =========
+
+
+
+
 
 #### Route proliferation checking queries
 
