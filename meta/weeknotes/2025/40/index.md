@@ -2,7 +2,7 @@
 
 ## A possible misnomer / starting from first principles
 
-Our dear reader will be well aware that, for the past several years, we have been attempting to build an open data platform. Please believe us when we add, it's felt longer on the inside. A series of meetings this week caused us to question not only how we were going about that but also to what to what purpose. These then, are some notes on that.
+Our dear reader will be well aware that, for the past several years, we have been attempting to build an open data platform. Please believe us when we add, it's felt longer on the inside. A series of meetings this week caused us to question not only how we were going about that but also to what purpose. These then, are some notes on that.
 
 Unlike many organisations, the open part of the equation has never been a difficulty. Parliament, like everywhere else, does have non-open data in the form of HR and finance and facilities, but that's not the flavour of data we're talking about. All our concerns relate to the procedural and the procedurally adjacent. Openness is helped of course, by the existence of the [Open Parliament Licence](https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/), for which think the [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) with the addition of a portcullis or two. Which is, in turn, not so different from the [Creative Commons Attribution licence](https://creativecommons.org/licenses/by/4.0/). So procedural openness is a solved problem.
 
