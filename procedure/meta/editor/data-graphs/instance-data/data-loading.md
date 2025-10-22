@@ -819,12 +819,202 @@ This update flags routes forming part of the scrutiny reserve JCHR component pro
 	</code>
 </pre>
 
+#### Flag duplicate draft affirmative Lords motions routes
+
+This update flags routes forming part of the draft affirmative Lords motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 70
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 70;
+	</code>
+</pre>
+
+#### Flag duplicate draft affirmative Commons motions routes
+
+This update flags routes forming part of the draft affirmative Commons motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 83
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 83;
+	</code>
+</pre>
+
+#### Flag duplicate Draft affirmative: Joint Committee on Statutory Instruments (JCSI) Scrutiny Reserve routes
+
+This update flags routes forming part of the Draft affirmative: Joint Committee on Statutory Instruments (JCSI) Scrutiny Reserve component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 67
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 67;
+	</code>
+</pre>
+
+#### Flag duplicate Made affirmative: Commons motions routes
+
+This update flags routes forming part of the Made affirmative: Commons motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 69
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 69;
+	</code>
+</pre>
+
+#### Flag duplicate Made affirmative: Lords motions routes
+
+This update flags routes forming part of the Made affirmative: Lords motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 84
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 84;
+	</code>
+</pre>
+
+#### Flag duplicate Made negative: Lords motions routes
+
+This update flags routes forming part of the Made negative: Lords motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 74
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 74;
+	</code>
+</pre>
+
+#### Flag duplicate CRAG Treaty PAC routes
+
+This update flags routes forming part of the CRAG Treaty PAC component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 64
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 64;
+	</code>
+</pre>
+
+#### Flag duplicate Made negative: Referral to a Delegated Legislation Committee (DLC) routes
+
+This update flags routes forming part of the Made negative: Referral to a Delegated Legislation Committee (DLC) component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 71
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 71;
+	</code>
+</pre>
+
+#### Flag duplicate Made negative: Commons motions routes
+
+This update flags routes forming part of the Made negative: Commons motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 72
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 72;
+	</code>
+</pre>
+
+#### Flag duplicate Made negative - Commons motion to consider routes
+
+This update flags routes forming part of the Made negative - Commons motion to consider component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 73
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 73;
+	</code>
+</pre>
+
+#### Flag duplicate Draft negative: Lords motions routes
+
+This update flags routes forming part of the Draft negative: Lords motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 81
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 81;
+	</code>
+</pre>
+
+
+
 
 
 
 
 
 # ======== Done to here =========
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
