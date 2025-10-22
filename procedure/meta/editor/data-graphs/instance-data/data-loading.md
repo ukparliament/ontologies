@@ -995,6 +995,54 @@ This update flags routes forming part of the Draft negative: Lords motions compo
 	</code>
 </pre>
 
+#### Flag duplicate Draft negative - Commons motion to consider routes
+
+This update flags routes forming part of the Draft negative - Commons motion to consider component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 80
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 80;
+	</code>
+</pre>
+
+#### Flag duplicate Draft negative: Commons motions routes
+
+This update flags routes forming part of the Draft negative: Commons motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 78
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 78;
+	</code>
+</pre>
+
+#### Flag duplicate Draft negative: Referral to a Delegated Legislation Committee (DLC) routes
+
+This update flags routes forming part of the Draft negative: Referral to a Delegated Legislation Committee (DLC) component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 79
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 79;
+	</code>
+</pre>
+
 
 
 
