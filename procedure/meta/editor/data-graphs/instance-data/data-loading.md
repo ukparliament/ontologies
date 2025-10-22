@@ -1043,6 +1043,22 @@ This update flags routes forming part of the Draft negative: Referral to a Deleg
 	</code>
 </pre>
 
+#### Flag duplicate Made affirmative: Joint Committee on Statutory Instruments (JCSI) Scrutiny Reserve routes
+
+This update flags routes forming part of the Made affirmative: Joint Committee on Statutory Instruments (JCSI) Scrutiny Reserve component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM procedure.procedurerouteprocedure rp
+			WHERE rp.procedureid = 82
+		)
+		AND procedure.procedurerouteprocedure.procedureid != 82;
+	</code>
+</pre>
+
 
 
 
