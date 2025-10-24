@@ -10,15 +10,15 @@ Bluesky | Mastodon | Feed
 
 Made-n-laid posts whenever a made [statutory instrument](https://en.wikipedia.org/wiki/Statutory_instrument_(UK)) is laid before Parliament.
 
-Bluesky | Mastodon | Feed
-[@madenlaid](https://bsky.app/profile/madenlaid.bsky.social) | [@madenlaid](https://mastodon.me.uk/@madenlaid) | [RSS](https://api.parliament.uk/made-n-laid/rss)
+Bluesky | Mastodon
+[@madenlaid](https://bsky.app/profile/madenlaid.bsky.social) | [@madenlaid](https://mastodon.me.uk/@madenlaid)
 
 ## Tweaty twacker
 
 Tweaty twacker posts whenever a treaty subject to the [procedure set out in the Constitutional Reform and Governance Act 2010](https://www.legislation.gov.uk/ukpga/2010/25/part/2) is laid before Parliament.
 
-Mastodon | Feed
-[@TweatyTwacker](https://mastodon.me.uk/@TweatyTwacker) | [RSS](https://api.parliament.uk/tweatytwacker/rss)
+Bluesky | Mastodon
+[@tweaty-twacker](https://bsky.app/profile/tweaty-twacker.bsky.social) | [@TweatyTwacker](https://mastodon.me.uk/@TweatyTwacker)
 
 ## Written statements bot
 
