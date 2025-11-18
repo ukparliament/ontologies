@@ -249,8 +249,8 @@ Populated by hand.
 			FROM procedure.procedure
 			WHERE (
 				startdate IS NOT NULL
-				AND
-				startdate IS NOT NULL
+				OR
+				enddate IS NOT NULL
 			)
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/procedure-availability.csv' DELIMITER ',' CSV HEADER;
@@ -276,7 +276,7 @@ As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table,
 
 As of 23/09/2025, Royal Assent dates are timestamps. Data Graphs won't import without first turning them into dates. Because dates are a mix of pre-1900 and post-1900, the Data Graphs import format should be set to automatic.
 
-### Route, Path, AvailableThing, availabilityOf, Availability, hasAvailabilityStatus, fromStep, toStep and inProcedure
+### Route, Path, fromStep, toStep and inProcedure
 
 We need to flag routes forming part of a non-component procedure as being not required for export, where those routes also form part of a component procedure.
 
@@ -1059,30 +1059,16 @@ This update flags routes forming part of the Made affirmative: Joint Committee o
 	</code>
 </pre>
 
+#### TEMPORARY FIX - flag mistaken duplicate route
 
+This update flags a route forming part of two procedures that needs to be split into separate routes. Do not run this on live data:
 
-
-
-
-
-
-# ======== Done to here =========
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<pre>
+	<code>
+		UPDATE procedure.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE procedure.procedurerouteprocedure.procedurerouteid = 10682;
+	</code>
+</pre>
 
 #### Route proliferation checking queries
 
@@ -1153,7 +1139,102 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/reporting/route-profileration.csv' DELIMITER ',' CSV HEADER;
 	</code>
-</pre>	
+</pre>
+
+
+#### Export routes flagged as exportable.
+
+<pre>
+	<code>
+		COPY (
+			SELECT 
+				r.id,
+				r.triplestoreid,
+				pr.procedureid,
+				r.startdate AS startOn,
+				r.enddate AS endOn,
+				CONCAT( from_step.procedurestepname, ' to ', to_step.procedurestepname ) AS label,
+
+				CASE
+				  WHEN from_step.proceduresteptypeid = 1
+				  THEN CONCAT( 'urn:procedure-editor:BusinessStep:', from_step.id )
+				ELSE
+				  CONCAT( 'urn:procedure-editor:Step:', from_step.id )
+				END AS fromStepId,
+
+				CASE
+				  WHEN to_step.proceduresteptypeid = 1
+				  THEN CONCAT( 'urn:procedure-editor:BusinessStep:', to_step.id )
+				ELSE
+				  CONCAT( 'urn:procedure-editor:Step:', to_step.id )
+				END AS toStepId
+
+			FROM procedure.procedureroute AS r, procedure.procedurerouteprocedure AS pr, procedure.procedurestep AS from_step, procedure.procedurestep AS to_step
+			WHERE r.id = pr.procedurerouteid
+			AND from_step.id = r.fromprocedurestepid
+			AND to_step.id = r.toprocedurestepid
+			AND pr.is_included_in_export IS TRUE
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/routes.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+### AvailableThing, availabilityOf, Availability and hasAvailabilityStatus (routes)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				r.id AS id,
+				CONCAT('urn:procedure-editor:Route:',r.id) AS Route,
+				r.startdate AS startOn,
+				r.enddate AS endOn,
+				'urn:procedure-editor:AvailabilityStatus:1' AS AvailabilityStatus,
+				CONCAT( 'Availability for route from ', from_step.procedurestepname, ' to ', to_step.procedurestepname) AS label
+
+
+			FROM procedure.procedureroute r, procedure.procedurerouteprocedure AS pr, procedure.procedurestep AS from_step, procedure.procedurestep AS to_step
+
+			WHERE r.id = pr.procedurerouteid
+			AND from_step.id = r.fromprocedurestepid
+			AND to_step.id = r.toprocedurestepid
+			AND pr.is_included_in_export IS TRUE
+			AND (
+				r.startdate IS NOT NULL
+				OR
+				r.enddate IS NOT NULL
+			)
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/route-availability.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+Start and end dates are modelled in procedure editor as datetimes. They need to be converted to dates for import to Data Graphs. Data Graphs needs to be told the format in which to expect the dates: dd/mm/yyyy.
+
+# ======== Done to here =========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Business items
