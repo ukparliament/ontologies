@@ -64,3 +64,20 @@ Whilst managing the data describing current Members is quite hard, doing that in
 
 Last time out, we reported that our new [tweaty twacking](https://procedure-bots-4f425a627a21.herokuapp.com/tweaty-twacker) code was considered complete, only waiting for the government to lay a treaty for final testing. Since then, not one, not two, not three, but five treaties have been laid. All finding their way unimpeded to both [Bluesky](https://bsky.app/profile/tweaty-twacker.bsky.social) and [Mastodon](https://mastodon.me.uk/@TweatyTwacker). Jianhan's old code is now switched off, Michael's code having taken over the task.
 
+## Hands across oceans
+
+If you tuned in back in [week 40](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/40/), you'll know we've made some stumbling attempts to establish [a small community of linked data system thinking types](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/40/#wandering-stars). With apologies for the words 'systems thinking'. Amongst the cast of the stars involved with [TNA](https://www.nationalarchives.gov.uk/)'s very own [Jenny Bunn](https://www.nationalarchives.gov.uk/people/jenny-bunn/). In conversations with our Anya, it turned out [John](https://bsky.app/profile/johnlsheridan.bsky.social) has tasked Jenny with shifting the archives toward a more domain modelled approach. How, Jenny asked Anya, did you transition a team of librarians more used to bibliographic records toward a more graph-like approach to description.
+
+Which is how Wednesday found Jenny, Jayne, Anya and Michael occupying a room in Tothill Street and going into a great deal of depth on our procedure model, procedure maps, [procedure queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/) and Procedure Browsable Space&trade;. We hope it was not too much depth, Jenny. But then, you know us. Monomanical, even on our best days.
+
+
+
+
+
+
+
+
+
+
+
+
