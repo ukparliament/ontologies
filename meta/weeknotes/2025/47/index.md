@@ -36,7 +36,7 @@ Finally, [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social) stumbled 
 
 ## Taxonomic tinkerings
 
-Further back, in the backend of indexing, changes have also been happening in our taxonomy of terms. In the first place, a number of names which had been used by our crack team of indexers but never controlled as concepts, have been checked, doubled checked and [turned into controlled concepts as appropriate](https://trello.com/c/ErctUdh9/80-uncontrolled-names). Any affected indexings also being updated. Fine work from Librarians Ned and Phil.
+Further back, in the backend of indexing, changes have also been happening in our taxonomy of terms. In the first place, a number of names which had been used by our crack team of indexers but not controlled as concepts, have been checked, doubled checked and [turned into controlled concepts as appropriate](https://trello.com/c/ErctUdh9/80-uncontrolled-names). Any affected indexings also being updated. Fine work from Librarian Ned.
 
 In the second place, team:taxonomy have also been pondering the preponderance of Member identifiers being present in the taxonomy, picked up by the <abbr title="Ontology Refresh Service">ORefIS</abbr> service and inserted into the Search and Indexing triplestore. For reasons that should be obvious, [some taxonomic terms are in use for more than one Member](https://trello.com/c/MBLRREbI/379-orefis-fix-inc0210788-reducing-the-number-of-note-fields). This being true for both bishops and hereditary peers. In such cases, our taxonomy might carry up to four MNIS IDs on one concept. The next Bishop of Durham bringing that up to a round five. Following investigations by our Jianhan, it turns out that ORefIS only wrote the value in the first MNIS field. Should it find a different value in this field, the old code would delete from the triplestore and replace with the new value. Jianhan has now adapted this code to make the process additive, rather than a like-for-like replacement. Thanks Jianhan.
 
@@ -44,32 +44,32 @@ In the second place, team:taxonomy have also been pondering the preponderance of
 
 Behind the scenes, a fair bit of work has been happening on our [psephological efforts](https://electionresults.parliament.uk/), all in preparation for the next general election. [Last time out](https://electionresults.parliament.uk/general-elections/6) we only published when all the results in all the constituencies had been verified by our crack team of researchers. The next time out, we're aiming for a four state solution:
 
-* Placeholder pages for every election in every constituency, with some kind of 'coming soon' message to appear at dissolution.
+* At dissolution, placeholder pages for every election in every constituency, with some kind of 'coming soon' message.
 
-* The same pages, additionally listing candidates, once nominations close and all the candidates are gathered.
+* Once nominations close and all candiadtes are gathered, the same pages, additionally listing candidates.
 
-* The same pages listing winners as soon as possible following the election.
+* As soon as possible following the election, the same pages listing winners.
 
-* All the vote numbers for all the candidates in all the elections in all the constituencies once all those numbers have been verified. At this point, the many and varied aggregations will also be made available.
+* Once all the results in all of the constituencies are verified, vote numbers for all of the candidates in each of the constituencies. At this point, the many and varied aggregations will also be made available.
 
 To that end - ably assisted by Data Analyst Rachel - Michael has been [modifying the psephology code](https://github.com/ukparliament/psephology/pull/102) and [generating four different databases](https://github.com/ukparliament/psephology/pull/102/files#diff-e650351f668b1cae649c1b985105f2f4ff2e3cdb9ddf89331a9349d0ca2ebab1) to reflect the four different states. These efforts are currently with [Statistician Carl](https://bsky.app/profile/carlbaker.bsky.social) for final signoff.
 
-With an optimistic hat on, we're half aiming for a 4.5 state solution, whereby the full results for a given election in a given constituency are published as soon as those particular results are verified. Though between now and then, we need to replace the application used to gather election results. Whether or not the part verified state might be possible, depends on how well that goes.
+With an optimistic hat on, we're half aiming for a 4.5 state solution, whereby the full results for a given election in a given constituency are published as soon as those particular results are verified. Between now and then though, we need to replace the application used to gather election results. Whether or not the partially verified state is possible depends on how well that goes.
 
 ## Managing Members
 
-Whilst managing the data describing current Members is quite hard, doing that in real time in response to breaking news is harder still. There are some events - be that defections, deaths, resignations or removals - that we really can't afford to miss. Given team:[Phil](https://bsky.app/profile/philbgorman.bsky.social) is one whole librarian down at the moment, he's taken the time to set up a suite of [Factiva](https://www.dowjones.com/business-intelligence/factiva/) alerts, in the hope we'll never be caught on the hop again.
+Whilst managing the data describing current Members is quite hard, doing that in real time in response to breaking news is harder still. There are some events - be that defections, deaths, resignations or suspensions - that we really can't afford to miss. Given team:[Phil](https://bsky.app/profile/philbgorman.bsky.social) is one whole librarian down at the moment, he's taken the time to set up a suite of [Factiva](https://www.dowjones.com/business-intelligence/factiva/) alerts, in the hope we'll never be caught on the hop again.
 
 ## Bots to Bluesky (and beyond)
 
-Last time out, we reported that our new [tweaty twacking](https://procedure-bots-4f425a627a21.herokuapp.com/tweaty-twacker) code was considered complete, only waiting for the government to lay a treaty for final testing. Since then, not one, not two, not three, but five treaties have been laid. All finding their way unimpeded to both [Bluesky](https://bsky.app/profile/tweaty-twacker.bsky.social) and [Mastodon](https://mastodon.me.uk/@TweatyTwacker). Jianhan's old code is now switched off, Michael's code having taken over the task.
+Last time out, we reported that our new [tweaty twacking](https://procedure-bots-4f425a627a21.herokuapp.com/tweaty-twacker) code was considered complete, awaiting the laying of a treaty for final testing. Since then, not one, not two, not three, but five treaties have been laid. All finding their way unimpeded to both [Bluesky](https://bsky.app/profile/tweaty-twacker.bsky.social) and [Mastodon](https://mastodon.me.uk/@TweatyTwacker). Jianhan's old code is now switched off, Michael's code having taken over the task.
 
 ## Hands across oceans
 
-If you tuned in back in [week 40](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/40/), you'll know we've made some stumbling attempts to establish [a small community of linked data system thinking types](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/40/#wandering-stars). With apologies for the words 'systems thinking'. Amongst the cast of stars involved was [TNA](https://www.nationalarchives.gov.uk/)'s very own [Jenny Bunn](https://www.nationalarchives.gov.uk/people/jenny-bunn/). In conversations with our Anya, it turned out [John](https://bsky.app/profile/johnlsheridan.bsky.social) has tasked Jenny with shifting the archives toward a more domain modelled approach. How, Jenny asked Anya, did you transition a team of librarians more used to bibliographic records toward a more graph-like approach to description?
+If you tuned in back in [week 40](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/40/), you'll know we've made some stumbling attempts to establish [a small community of linked data system thinking types](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/40/#wandering-stars). With apologies for the words 'systems thinking'. Amongst the cast of stars involved was [TNA](https://www.nationalarchives.gov.uk/)'s very own [Jenny Bunn](https://www.nationalarchives.gov.uk/people/jenny-bunn/). Jenny is thinking about the path to turning their catalogue into a knowledge graph. How, Jenny asked Anya, did you transition a team of librarians more used to bibliographic records toward a more graph-like approach to description?
 
-Which is how Wednesday found Jenny, Jayne, Anya and Michael occupying a room in Tothill Street and going into a great deal of depth on our procedure model, procedure maps, [procedure queries](https://ukparliament.github.io/ontologies/procedure/meta/queries/) and Procedure Browsable Space&trade;. We hope it was not too much depth, Jenny. But then, you know us. Monomanical, even on our best days.
+Which is how Wednesday found Jenny, Jayne, Anya and Michael occupying a meeting room in Tothill Street and going into some depth on making and maintaining models, maps and databases with conversation, collaboration, documentation and software. We hope it was not too much depth, Jenny. But then, you know us. Monomanical, even on our best days.
 
 ## We miss you man
 
-Thursday of this week saw a [pub](https://www.thecrownandcushion-london.foodanddrinksites.co.uk/)-based meeting with [Samu](https://uk.linkedin.com/in/langsamu), ex of this parish. Guiness was drunk, Baby Guiness was drunk. Rachel came away with new ideas for new things. Anya came away with new ideas for new things. Like him or loathe him - and if you loathe him, you're pretty much dead to us - Samu does tend to have that effect. We miss you man.
+Thursday of this week saw a [pub](https://www.thecrownandcushion-london.foodanddrinksites.co.uk/)-based meeting with [Samu](https://uk.linkedin.com/in/langsamu), ex of this parish. Guinness was drunk, Baby Guinness was drunk. Rachel came away with new ideas for new things. Anya came away with new ideas for new things. We miss you man.
