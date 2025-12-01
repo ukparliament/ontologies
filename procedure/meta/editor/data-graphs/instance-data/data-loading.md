@@ -1212,14 +1212,129 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 
 Start and end dates are modelled in procedure editor as datetimes. They need to be converted to dates for import to Data Graphs. Data Graphs needs to be told the format in which to expect the dates: dd/mm/yyyy.
 
+
+### PublicBillWork
+
+<pre>
+	<code>
+		COPY (
+			SELECT bill.*,
+			wpt.web_link,
+			wpt.triple_store_id
+			FROM procedure.procedurebillwork bill, procedure.procedureworkpackagedthing wpt
+			WHERE bill.id = wpt.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/public-bill-works.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
 # ======== Done to here =========
 
 
 
 
 
+### ProposedNegativeStatutoryInstrumentWork
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				pnsi.*,
+				work_packaged_thing.web_link,
+				work_packaged_thing.triple_store_id,
+				enabling_act.acts_string,
+				preceding.preceding_work_packaged_thing_string
+	
+			FROM procedure.procedureproposednegativestatutoryinstrument pnsi
+
+			INNER JOIN (
+				SELECT *
+				FROM procedure.procedureworkpackagedthing
+			) AS work_packaged_thing
+			ON work_packaged_thing.id = pnsi.id
+
+			LEFT JOIN (
+				SELECT
+					ea.procedure_workpackaged_thing_id,
+					STRING_AGG( CONCAT( 'urn:procedure-editor:ActOfParliament:', act.id::text ), ', ') AS acts_string
+				FROM procedure.enablingact ea, procedure.solractofparliamentdata act
+				WHERE ea.act_of_parliament_id = act.id
+				GROUP BY ea.procedure_workpackaged_thing_id
+	
+			) AS enabling_act
+			ON enabling_act.procedure_workpackaged_thing_id = work_packaged_thing.id
+			
+			LEFT JOIN (
+				SELECT
+					work_packaged_is_followed_by_id AS work_packaged_thing_id,
+					STRING_AGG( work_packaged_is_preceded_by_id::text, ', ') AS preceding_work_packaged_thing_string
+				FROM procedure.ProcedureWorkPackagedThingPreceding
+				GROUP BY work_packaged_thing_id
+			) AS preceding
+			ON preceding.work_packaged_thing_id = work_packaged_thing.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/pnsis.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### DraftStatutoryInstrumentWork
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				si.*,
+				work_packaged_thing.web_link,
+				work_packaged_thing.triple_store_id,
+				enabling_act.acts_string,
+				preceding.preceding_work_packaged_thing_string
+	
+			FROM procedure.ProcedureStatutoryInstrument si
+
+			INNER JOIN (
+				SELECT *
+				FROM procedure.procedureworkpackagedthing
+			) AS work_packaged_thing
+			ON work_packaged_thing.id = si.id
+
+			LEFT JOIN (
+				SELECT
+					ea.procedure_workpackaged_thing_id,
+					STRING_AGG( act.id::text, ', ') AS acts_string
+				FROM procedure.enablingact ea, procedure.solractofparliamentdata act
+				WHERE ea.act_of_parliament_id = act.id
+				GROUP BY ea.procedure_workpackaged_thing_id
+	
+			) AS enabling_act
+			ON enabling_act.procedure_workpackaged_thing_id = work_packaged_thing.id
+			
+			LEFT JOIN (
+				SELECT
+					work_packaged_is_followed_by_id AS work_packaged_thing_id,
+					STRING_AGG( work_packaged_is_preceded_by_id::text, ', ') AS preceding_work_packaged_thing_string
+				FROM procedure.ProcedureWorkPackagedThingPreceding
+				GROUP BY work_packaged_thing_id
+			) AS preceding
+			ON preceding.work_packaged_thing_id = work_packaged_thing.id
+			
+			WHERE si.made_date IS NULL
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/draft-sis.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
 
 
+
+
+
+
+
+
+
+
+SELECT * FROM procedure.ProcedureStatutoryInstrument where made_date IS NULL;
 
 
 
