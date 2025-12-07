@@ -57,3 +57,16 @@ For those more familiar with taxonomies represented in [SKOS](https://en.wikiped
 Unlike SKOS, non-preferred terms in Zthes are identified things. And, over the years, some of those identifiers have made their way into our triplestore as subject indexings. Now the plan, as our dear reader will well know, is to upgrade our taxonomy management software - two major versions behind what is current and no longer supported by the vendor - and the upgraded version will be SKOS-based. Which left us with a problem whereby some parliamentary material would be subject indexed with identifiers for things that no longer exist. Or do exist, but only as strings, not identified things.
 
 Taking the bit between his teeth, Librarian Ned roped in Data Engineer Victoria and our Jianhan and set off on [a tidying mission](https://trello.com/c/hh4UL5Z5/395-non-preferred-terms-used-in-triplestore). As of this week, Ned reported we now have exactly zero uses of SES IDs corresponding to a non-preferred term. Excellent work all round.
+
+## Outreach / engagment
+
+Finding themselves with an hour to spare, Anya, Jayne and Michael popped online to watch a short seminar on the subject of [Principles for a Digital Legislative Process: Translating Procedure into Digital](https://events.bussola-tech.co/translating-procedure-digital). A subject rather close to their hearts. The seminar was hosted by [Bússola Tech](https://www.bussola-tech.co/), and, what could have been some god-awful vendor-centric horrorshow, was instead a thoughtful tour of the current state of the art. If someone male dominated. The [video of the session is now online](https://video.bussola-tech.co/p/principles-for-a-digital-legislative-process-translating-procedure-into-digital). If you're at all involved with parliamentary procedure refracted through the prism of computers, it's well worth your time.
+
+
+, 
+
+
+
+
+
+
