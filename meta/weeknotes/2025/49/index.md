@@ -18,31 +18,25 @@ For the past few years, officials in all four legislatures - and indeed all four
 
 Librarian Jayne and computational midfield journeyman Michael were both in attendance, being called to the stage late afternoon to give a quick run through of the [statutory instrument service](https://statutoryinstruments.parliament.uk/), the [treaty tracker](https://treaties.parliament.uk/), the [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology) that sits behind them, and the [procedural maps](https://ukparliament.github.io/ontologies/procedure/maps/) that underpin them. Maps we've made with colleagues from the devolved legislatures setting out [their](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf) [LCM](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf) [procedures](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.pdf) in a [computable fashion](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#parsing-work-packages-subject-to-a-procedure) were shown. Always a treat when a parliamentary clerk sees one of their procedures as a computer might see it. Finally, Librarian Jayne demoed her first stumbling attempts at LCM data collection via the medium of our new-ish and still somewhat shiny [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;. The collection of such data not helped by the four legislatures involved being in possession of a set of websites that are fragmented at best. And all fragmented in a slightly different fashion. It wasn't like their were gasps, or even applause, but those assembled did seem suitable impressed. Why not [take a look](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation). Let us know which bits you find useful. And which bits less useful. Given just a little more librarian time and a little more developer time, it's something we'd live to continue working on. Thanks for the invite [Graeme](https://bsky.app/profile/woodstockjag.bsky.social).
 
-
-
-
-
-
-
-
-
-
 ## You wait all year ...
-https://trello.com/b/PEA0Njb0/single-triplestore-solution
 
-## More trouble int' data mill
+... for a means to populate a triplestore, then two come along at once.
 
+For the past few months, developers in the wider Data and Search team have been struggling over how one might populate a [triplestore](https://en.wikipedia.org/wiki/Triplestore) sitting on an external Azure subscription with data from a different triplestore running inside the parliamentary network. The first attempt at synching the two stores was not as successful as we'd hoped it might have been, our motto of 'no triple left behind' falling slightly short. Tech Lead Andrew has taken a slightly different approach, writing new code in the shape of the Replicator. Whether this route is any more successful remains a matter for conjecture. 
 
+Meanwhile, our Jianhan is taking a different approach, coming to the conclusion that two triplestores is one two many and instead updating all the things that currently [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) to the internal triplestore to POST to the external triplestore instead. As of this week, he's [created a new resource group](https://trello.com/c/LVUi4WNS/1-create-a-new-resource-group) in the external subscription and [installed a new triplestore](https://trello.com/c/xsb938lA/5-install-new-triplestore-in-new-resource-group) in that resource group. He's also pointed the [software responsible for ingesting material from line of business systems](https://trello.com/c/4NhaZQWj/10-point-thresher-at-new-triplestore-via-cloudflare-etc), the [indexing application used by our crack team of librarians to subject index that material](https://trello.com/c/4KNRI5rT/12-point-indexing-application-at-new-triplestore-via-cloudflare-etc), the [indexing service](https://trello.com/c/JuWJKxiq/36-point-indexing-service-at-new-triplestore-via-cloudflare-etc), and the [software responsible for keeping our taxonomy in sync](https://trello.com/c/8h8GBfKp/11-point-orefis-at-new-triplestore-via-cloudflare-etc) at that new triplestore. All of this behind Azure Application Gateway and Azure API Management, with Cloudflare protection to follow shortly. Jianhan has even managed to [expose a SPARQL endpoint for the new triplestore](https://trello.com/c/u7yQyx7E/20-set-up-new-sparql-endpoint-in-new-resource-group), [create Workbench accounts](https://trello.com/c/35EcdWnB/43-workbench-accounts-for-anya-and-rachel) for both Anya and Rachel, and write up a [roll out and roll back plan](https://trello.com/c/d4TVusZW/45-go-live-and-rollback-plan). A frankly amazing amount of work, in little over a week. There's a reason we keep paying the lad.
 
-
-
-
+Given we now have two potential solutions to the triplestore replication problem, the next job is to work out which one's best. Data Analyst Rachel is currently working with Librarian Anya and computational super-sub [Young Robert](https://bsky.app/profile/robert-brook.com) to put together a test plan for the two options. We're told Westminster bookies are now placing bets.
 
 ## Psephologising wildly
 
-https://trello.com/c/8XuIhEY6/571-remove-boundary-set-aggregate-table
+In news [psephological](https://electionresults.parliament.uk/), the final table of denormalised data - [depicting party performances in a boundary set across general elections](https://electionresults.parliament.uk/boundary-sets/6/parties) - has now been removed. Albeit in a non too elegant fashion. Michael continues to work with ['SQL neurotic' Rachel](https://electionresults.parliament.uk/humans.txt) to add a layer of professionalism over the top of his [ham-fisted efforts](https://github.com/ukparliament/psephology/blob/main/app/controllers/boundary_set_general_election_party_controller.rb). As with previous denormalised data removal - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/43/) - this means that, when the next general election rolls round, we'll be able to load data in a much more timely fashion. Which we're hoping will please both elders and betters.
 
-https://trello.com/c/JCUZENjE/584-45-state-solution
+Last out, we reported [a new approach to the general election publication cycle](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/47/#psephologising-wildly), the data building over time, instead of landing in one big dump at the exact moment the rest of the world has lost interest. As a half-formed part of the plan, we're hoping to expand our proposed four-stage solution, to a 4.5 stage solution, whereby constituency elections with verified results show the full suite of numbers, whilst those awaiting verification continue to show winners only. A new database has now been compiled, the code adapted slightly and the final .5 stage is now available on a test server. Which we can't point you at for fear of confusing Google et al. So you'll just have to [take our word for it](https://trello.com/c/JCUZENjE/584-45-state-solution).
+
+
+
+
 
 
 
