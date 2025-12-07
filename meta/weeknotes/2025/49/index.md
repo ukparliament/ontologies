@@ -6,7 +6,7 @@ As the factory whistle blew and the weekend kicked in, everybody's favourite tea
 
 The first such workshop was a sparsely attended affair, only Data Analyst Rachel, Data Scientist Louie and mid-table computational 'expert' [Michael](https://bsky.app/profile/fantasticlife.bsky.social) deigning to attend. In fairness, they were the only people invited. If we're forced to be honest, it was really more of a meeting than a workshop. Still, options were discussed and drawn up, so let's try to agree it was a workshop. That works better for narrative consistency.
 
-At this point, our dear reader is probably wondering why they met and what problem they were 'workshopping'. Well, there is a certain bit of software left over from the reign of [Data Scientist Oli](https://bsky.app/profile/olihawkins.com) used to manage information on and around a general election. It will probably come as little surprise to our dear reader that, by the time of the [last general election](https://electionresults.parliament.uk/general-elections/6), that application had already left the home for aged software and entered the palliative care stage, poor Louie having to nurse it through its final moments. Clearly the software needs replacing, or future general elections will prove tricky. Now we already have a candidate - excuse the pun - data model for all things election related in our [election results schema](https://electionresults.parliament.uk/meta/schema). What we did not have was a data model describing the workflow in the lead up to a general election, on election night itself, and during the days and weeks that follow. As a result of that meeting / workshop, [we do now](https://github.com/ukparliament/ontologies/blob/master/election/meta/candidates/admin.svg). For now, it's all a bit fag-packety, but, come the new year, we hope to decorate a whiteboard or two, set up a test instance of [Data Graphs](https://datagraphs.com/), throw some data at it, and see what breaks. Fun.
+At this point, our dear reader is probably wondering why they met and what problem they were 'workshopping'. Well, there is a certain bit of software left over from the reign of [Data Scientist Oli](https://bsky.app/profile/olihawkins.com) used to manage information on and around a general election. It will probably come as little surprise to our dear reader that, by the time of the [last general election](https://electionresults.parliament.uk/general-elections/6), that application had already left the home for aged software and entered the palliative care stage, poor Louie having to nurse it through its final moments. Clearly the software needs replacing, or future general elections will prove tricky. Now we already have a candidate - excuse the pun - data model for all things election related in our [election results schema](https://electionresults.parliament.uk/meta/schema). What we did not have was a data model describing the workflow in the lead up to a general election, on election night itself, and during the days and weeks that follow. As a result of that meeting / workshop, [we do now](https://github.com/ukparliament/ontologies/blob/master/election/meta/candidates/admin.svg). In the first instance, it's all a bit fag-packety, but, come the new year, we hope to decorate a whiteboard or two, set up a test instance of [Data Graphs](https://datagraphs.com/), throw some data at it, and see what breaks. Fun.
 
 The second workshop of the week was also general election preparation related, assorted colleagues from the Library and the [Parliamentary Computational Section](https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/) meeting to discuss a way forward. From the Library side, [Anya](https://bsky.app/profile/anyaso.bsky.social) was there, Louie was there, [Bryn](https://bsky.app/profile/brynmrgn.com) was there. From the Computational Section, Natalie was in attendance, Tom was in attendance, [Mr Korris](https://bsky.app/profile/mattkorris.bsky.social) was in attendance. From the liminal zone between Library and computers, Rachel and Michael also showed their faces. And Ben was there. Though why general elections should be of interest to the red carpet contingent remains a mystery. The whole event was powered by a Tupperware full of '[tablet](https://en.wikipedia.org/wiki/Tablet_(confectionery))' that had turned up courtesy of a kindly librarian in Edinburgh and somehow found its way through parliamentary postal security without being exploded. Thanks [Librarian Jaf](https://bsky.app/profile/jaffne.bsky.social). Lovely stuff. It certainly added a dash of sugar to proceedings.
 
@@ -16,7 +16,9 @@ Whenever the UK Government presents a public bill to the UK Parliament, it comes
 
 For the past few years, officials in all four legislatures - and indeed all four executives - have been attempting to keep track of where and when consent has been given or witheld. This job made more difficult by the four legislatures sharing [collaboration tools](https://en.wikipedia.org/wiki/Microsoft_365) whose definition of the c-word stops at the boundaries of an organisation. Collaborative working not made any easier when you're forced to email round copies of spreadsheets. Thanks Microsoft.
 
-Librarian Jayne and computational midfield journeyman Michael were both in attendance, being called to the stage late afternoon to give a quick run through of the [statutory instrument service](https://statutoryinstruments.parliament.uk/), the [treaty tracker](https://treaties.parliament.uk/), the [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology) that sits behind them, and the [procedural maps](https://ukparliament.github.io/ontologies/procedure/maps/) that underpin them. Maps we've made with colleagues from the devolved legislatures setting out [their](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf) [LCM](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf) [procedures](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.pdf) in a [computable fashion](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#parsing-work-packages-subject-to-a-procedure) were shown. Always a treat when a parliamentary clerk sees one of their procedures as a computer might see it. Finally, Librarian Jayne demoed her first stumbling attempts at LCM data collection via the medium of our new-ish and still somewhat shiny [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;. The collection of such data not helped by the four legislatures involved being in possession of a set of websites that are fragmented at best. And all fragmented in a slightly different fashion. It wasn't like their were gasps, or even applause, but those assembled did seem suitable impressed. Why not [take a look](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation). Let us know which bits you find useful. And which bits less useful. Given just a little more librarian time and a little more developer time, it's something we'd live to continue working on. Thanks for the invite [Graeme](https://bsky.app/profile/woodstockjag.bsky.social).
+Librarian Jayne and computational midfield journeyman Michael were both in attendance, being called to the stage late afternoon to give a quick run through of the [statutory instrument service](https://statutoryinstruments.parliament.uk/), the [treaty tracker](https://treaties.parliament.uk/), the [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology) that sits behind them, and the [procedural maps](https://ukparliament.github.io/ontologies/procedure/maps/) that underpin them. Maps we've made with colleagues from the devolved legislatures setting out [their](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf) [LCM](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf) [procedures](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.pdf) in a [computable fashion](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#parsing-work-packages-subject-to-a-procedure) were shown. Always a treat when a parliamentary clerk sees one of their procedures as a computer might see it.
+
+Finally, Librarian Jayne demoed her first stumbling attempts at LCM data collection via the medium of our new-ish and still somewhat shiny [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;. The collection of such data not helped by the four legislatures involved being in possession of a set of websites that are fragmented at best. And all fragmented in a slightly different fashion. It wasn't like their were gasps, or even applause, but those assembled did seem suitable impressed. Why not [take a look](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation). Let us know which bits you find useful. And which bits less useful. Given just a little more librarian time and a little more developer time, it's something we'd love to continue working on. Thanks for the invite [Graeme](https://bsky.app/profile/woodstockjag.bsky.social).
 
 ## You wait all year ...
 
@@ -34,15 +36,18 @@ In news [psephological](https://electionresults.parliament.uk/), the final table
 
 Last out, we reported [a new approach to the general election publication cycle](https://ukparliament.github.io/ontologies/meta/weeknotes/2025/47/#psephologising-wildly), the data building over time, instead of landing in one big dump at the exact moment the rest of the world has lost interest. As a half-formed part of the plan, we're hoping to expand our proposed four-stage solution, to a 4.5 stage solution, whereby constituency elections with verified results show the full suite of numbers, whilst those awaiting verification continue to show winners only. A new database has now been compiled, the code adapted slightly and the final .5 stage is now available on a test server. Which we can't point you at for fear of confusing Google et al. So you'll just have to [take our word for it](https://trello.com/c/JCUZENjE/584-45-state-solution).
 
-
-
-
-
-
-
 ## Managing Members
 
-https://trello.com/c/1gT4Bh1k/463-shunt-uk-births-into-england-wales-scotland-and-northern-ireland
+Our slightly depleted Member information management team have managed to [tick off one more task](https://trello.com/c/1gT4Bh1k/463-shunt-uk-births-into-england-wales-scotland-and-northern-ireland), all Members - current and past - of the House of Commons who had had their place of birth marked as UK, have now been informationally shunted into England, Wales, Scotland or Northern Ireland buckets as appropriate. There remain a handful of 'ghost profiles' still assigned to the UK, but that is more a problem with ghost profiles than their place of birth.
+
+In even better news, team:[MNIS](https://data.parliament.uk/membersdataplatform/#) will not be depleted for too much longer, recent recruitment concluding successfully. Better still, Both Librarians Anna and [Phil](https://bsky.app/profile/philbgorman.bsky.social) looking somewhat less-frazzled as a result.
+
+
+
+
+
+
+
 
 
 
@@ -56,17 +61,5 @@ https://trello.com/c/4bRX60dF/389-esid-in-the-ctp-hierarchy
 
 https://trello.com/c/hh4UL5Z5/395-non-preferred-terms-used-in-triplestore
 
-
-
-
-
-
-
-
-## Hands across oceans
-
-
-
-## We miss you man
 
 
