@@ -18,7 +18,7 @@ For the past few years, officials in all four legislatures - and indeed all four
 
 Librarian Jayne and computational midfield journeyman Michael were both in attendance, being called to the stage late afternoon to give a quick run through of the [statutory instrument service](https://statutoryinstruments.parliament.uk/), the [treaty tracker](https://treaties.parliament.uk/), the [procedure model](https://ukparliament.github.io/ontologies/procedure/procedure-ontology) that sits behind them, and the [procedural maps](https://ukparliament.github.io/ontologies/procedure/maps/) that underpin them. Maps we've made with colleagues from the devolved legislatures setting out [their](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/northern-ireland-assembly/northern-ireland-assembly-consent.pdf) [LCM](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/scottish-parliament/scottish-parliament-consent.pdf) [procedures](https://ukparliament.github.io/ontologies/procedure/maps/legislation/primary/public-bills/components/devolved-legislature-consent/senedd-cymru/senedd-cymru-consent.pdf) in a [computable fashion](https://ukparliament.github.io/ontologies/procedure/maps/meta/design-notes/#parsing-work-packages-subject-to-a-procedure) were shown. Always a treat when a parliamentary clerk sees one of their procedures as a computer might see it.
 
-Finally, Librarian Jayne demoed her first stumbling attempts at LCM data collection via the medium of our new-ish and still somewhat shiny [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;. The collection of such data not helped by the four legislatures involved being in possession of a set of websites that are fragmented at best. And all fragmented in a slightly different fashion. It wasn't like their were gasps, or even applause, but those assembled did seem suitable impressed. Why not [take a look](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation). Let us know which bits you find useful. And which bits less useful. Given just a little more librarian time and a little more developer time, it's something we'd love to continue working on. Thanks for the invite [Graeme](https://bsky.app/profile/woodstockjag.bsky.social).
+Finally, Librarian Jayne demoed her first stumbling attempts at LCM data collection via the medium of our new-ish and still somewhat shiny [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade;. The collection of such data not helped by the four legislatures involved being in possession of a set of websites that are fragmented at best. And all fragmented in a slightly different fashion. It wasn't like their were gasps, or even applause, but those assembled did seem suitably impressed. Why not [take a look](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation). Let us know which bits you find useful. And which bits less useful. Given just a little more librarian time and a little more developer time, it's something we'd love to continue working on. Thanks for the invite [Graeme](https://bsky.app/profile/woodstockjag.bsky.social).
 
 ## You wait all year ...
 
@@ -40,7 +40,7 @@ Last out, we reported [a new approach to the general election publication cycle]
 
 Our slightly depleted Member information management team have managed to [tick off one more task](https://trello.com/c/1gT4Bh1k/463-shunt-uk-births-into-england-wales-scotland-and-northern-ireland), all Members - current and past - of the House of Commons who had had their place of birth marked as UK, have now been informationally shunted into England, Wales, Scotland or Northern Ireland buckets as appropriate. There remain a handful of 'ghost profiles' still assigned to the UK, but that is more a problem with ghost profiles than their place of birth.
 
-In even better news, team:[MNIS](https://data.parliament.uk/membersdataplatform/#) will not be depleted for too much longer, recent recruitment concluding successfully. Better still, it turns out our new recruit was coming to the end of his contract elsewhere in the Library, meaning he'll be able to join us on the far side of Christmas. Both Librarians Anna and [Phil](https://bsky.app/profile/philbgorman.bsky.social) looking somewhat less-frazzled as a result.
+In even better news, team:[MNIS](https://data.parliament.uk/membersdataplatform/#) will not be depleted for too much longer, recent recruitment concluding successfully. Better still, it turns out our new recruit was coming to the end of his contract elsewhere in the Library, meaning he'll be able to join us on the far side of Christmas. Both Librarians Anna and [Phil](https://bsky.app/profile/philbgorman.bsky.social) looking somewhat less frazzled as a result.
 
 ## On the timing of procedural eggs
 
@@ -48,18 +48,23 @@ A minor update to our [beloved Egg Timer](https://api.parliament.uk/egg-timer)&t
 
 Now if we had our way, we'd say four days off is little more than a long weekend, and that the word recess should only come into play when we're talking five days or more. But it is not our job to tell the House of Lords what is a recess and what is not. Anyway, that wee foobar is now considered fixed.
 
-
-
-
-
-
-https://trello.com/c/P0yLx0Qj/137-lords-recess-not-showing-in-calendar-less-than-five-days
-
 ## Taxonomic tinkering
+
+When parliamentary material arrives on the desks of our crack team of librarians, it is neither interlinked nor fully described. A second reading reported in Hansard, for example, does not know it was a second reading, which bill it was a second reading on, or what subjects were discussed. The job of a librarian is to take this rough hewn stone and polish it to a diamond-like gleam. Subject indexing is applied by means of a spot of subject analysis and annotation with terms from our taxonomy.
+
+For those more familiar with taxonomies represented in [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System), the next bit may prove surprising. Our taxonomic tooling does not - yet - use SKOS, but rather a system called [Zthes](https://zthes.z3950.org/). In all major senses, the two systems are similar, but subtle differences exist. And we all know what happens when subtle differences meet computers.
+
+Unlike SKOS, non-preferred terms in Zthes are identified things. And, over the years, some of those identifiers have made their way into our triplestore as subject indexings. Now the plan, as our dear reader will well know, is to upgrade our taxonomy management software - two major versions behind what is current and no longer supported by the vendor - and the upgraded version will be SKOS-based. Which left us with a problem whereby some parliamentary material would be subject indexed with identifiers for things that no longer exist. Or do exist, but only as strings, not identified things.
+
+Taking the bit between his teeth, Librarian Ned roped in Data Engineer Victoria and our Jianhan and set off on [a tidying mission](https://trello.com/c/hh4UL5Z5/395-non-preferred-terms-used-in-triplestore). As of this week, Ned reported we now have exactly zero uses of SES IDs corresponding to a non-preferred term. Excellent work all round.
+
+
+
+
 
 https://trello.com/c/4bRX60dF/389-esid-in-the-ctp-hierarchy
 
-https://trello.com/c/hh4UL5Z5/395-non-preferred-terms-used-in-triplestore
+
 
 
 
