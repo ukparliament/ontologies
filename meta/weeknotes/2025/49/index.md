@@ -40,18 +40,18 @@ Last out, we reported [a new approach to the general election publication cycle]
 
 Our slightly depleted Member information management team have managed to [tick off one more task](https://trello.com/c/1gT4Bh1k/463-shunt-uk-births-into-england-wales-scotland-and-northern-ireland), all Members - current and past - of the House of Commons who had had their place of birth marked as UK, have now been informationally shunted into England, Wales, Scotland or Northern Ireland buckets as appropriate. There remain a handful of 'ghost profiles' still assigned to the UK, but that is more a problem with ghost profiles than their place of birth.
 
-In even better news, team:[MNIS](https://data.parliament.uk/membersdataplatform/#) will not be depleted for too much longer, recent recruitment concluding successfully. Better still, Both Librarians Anna and [Phil](https://bsky.app/profile/philbgorman.bsky.social) looking somewhat less-frazzled as a result.
-
-
-
-
-
-
-
-
-
+In even better news, team:[MNIS](https://data.parliament.uk/membersdataplatform/#) will not be depleted for too much longer, recent recruitment concluding successfully. Better still, it turns out our new recruit was coming to the end of his contract elsewhere in the Library, meaning he'll be able to join us on the far side of Christmas. Both Librarians Anna and [Phil](https://bsky.app/profile/philbgorman.bsky.social) looking somewhat less-frazzled as a result.
 
 ## On the timing of procedural eggs
+
+A minor update to our [beloved Egg Timer](https://api.parliament.uk/egg-timer)&trade; came about off the back of a degree of confusion on the part of Librarian Ned. Why, asked Librarian Ned, did the November recesses show up in [calendar views](https://api.parliament.uk/egg-timer/calendar/2025/11) as a recess in the House of Commons, but not in the House of Lords? The full explanation is really rather long, so we shan't bore you with it here. Needless to say, it all came back - as so many Egg Timer&trade; related matters do - to the usual chestnut of "no account [being] taken of any time during which [both / either] Houses are adjourned for more than four days".
+
+Now if we had our way, we'd say four days off is little more than a long weekend, and that the word recess should only come into play when we're talking five days or more. But it is not our job to tell the House of Lords what is a recess and what is not. Anyway, that wee foobar is now considered fixed.
+
+
+
+
+
 
 https://trello.com/c/P0yLx0Qj/137-lords-recess-not-showing-in-calendar-less-than-five-days
 
