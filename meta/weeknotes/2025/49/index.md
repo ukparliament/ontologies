@@ -48,7 +48,7 @@ A minor update to our [beloved Egg Timer](https://api.parliament.uk/egg-timer)&t
 
 Now if we had our way, we'd say four days off is little more than a long weekend, and that the word recess should only come into play when we're talking five days or more. But it is not our job to tell the House of Lords what is a recess and what is not. Anyway, that wee foobar is now considered fixed.
 
-## Taxonomic tinkering
+## Taxonomic tidying
 
 When parliamentary material arrives on the desks of our crack team of librarians, it is neither interlinked nor fully described. A second reading reported in Hansard, for example, does not know it was a second reading, which bill it was a second reading on, or what subjects were discussed. The job of a librarian is to take this rough hewn stone and polish it to a diamond-like gleam. Subject indexing is applied by means of a spot of subject analysis and annotation with terms from our taxonomy.
 
@@ -57,14 +57,3 @@ For those more familiar with taxonomies represented in [SKOS](https://en.wikiped
 Unlike SKOS, non-preferred terms in Zthes are identified things. And, over the years, some of those identifiers have made their way into our triplestore as subject indexings. Now the plan, as our dear reader will well know, is to upgrade our taxonomy management software - two major versions behind what is current and no longer supported by the vendor - and the upgraded version will be SKOS-based. Which left us with a problem whereby some parliamentary material would be subject indexed with identifiers for things that no longer exist. Or do exist, but only as strings, not identified things.
 
 Taking the bit between his teeth, Librarian Ned roped in Data Engineer Victoria and our Jianhan and set off on [a tidying mission](https://trello.com/c/hh4UL5Z5/395-non-preferred-terms-used-in-triplestore). As of this week, Ned reported we now have exactly zero uses of SES IDs corresponding to a non-preferred term. Excellent work all round.
-
-
-
-
-
-https://trello.com/c/4bRX60dF/389-esid-in-the-ctp-hierarchy
-
-
-
-
-
