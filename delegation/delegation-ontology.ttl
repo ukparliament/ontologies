@@ -111,10 +111,10 @@ del:precededBy rdf:type owl:ObjectProperty ;
 	
 del:replacedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Replaced by"@en ;
-	rdfs:comment "Relates an enabled thing to the enabled thing it is replaced by. An enabled thing can be replaced by one enabled thing, or none. An enabled thing can replace one enabled thing, or none. For example: a draft statutory instrument replacing another draft statutory instrument, or a proposed negative statutory instrument replacing another proposed negative statutory instrument. Made instruments should be revoked, rather than replaced."@en ;
-	rdfs:domain del:EnabledThing ;
-	rdfs:range del:EnabledThing ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> .
+	rdfs:comment "Relates a paper work to the paper work it is replaced by. A paper work may be replaced by one paper work, or none. A paper work being replaced is always replaced by a paper work of the same type. A paper work may replace one paper work, or none. For example: a draft statutory instrument replacing another draft statutory instrument, a proposed negative statutory instrument replacing another proposed negative statutory instrument or a treaty replacing another treaty. Made instruments cannot be replaced, only revoked."@en ;
+	rdfs:domain del:PaperWork ;
+	rdfs:range del:PaperWork ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/delegation/> ."
 	
 del:whollyRevokedBy rdf:type owl:ObjectProperty ;
 	rdfs:label "Wholly revoked by"@en ;
