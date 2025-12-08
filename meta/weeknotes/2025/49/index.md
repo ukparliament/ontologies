@@ -44,7 +44,7 @@ In even better news, team:[MNIS](https://data.parliament.uk/membersdataplatform/
 
 ## On the timing of procedural eggs
 
-A minor update to our [beloved Egg Timer](https://api.parliament.uk/egg-timer)&trade; came about off the back of a degree of confusion on the part of Librarian Ned. Why, asked Librarian Ned, did the November recesses show up in [calendar views](https://api.parliament.uk/egg-timer/calendar/2025/11) as a recess in the House of Commons, but not in the House of Lords? The full explanation is really rather long, so we shan't bore you with it here. Needless to say, it all came back - as so many Egg Timer&trade; related matters do - to the usual chestnut of "no account [being] taken of any time during which [both / either] Houses are adjourned for more than four days".
+A minor update to our [beloved Egg Timer](https://api.parliament.uk/egg-timer)&trade; came about off the back of a degree of confusion on the part of Librarian Ned. Why, asked Librarian Ned, did the November recesses show up in [calendar views](https://api.parliament.uk/egg-timer/calendar/2025/11) as a recess in the House of Commons, but not in the House of Lords? The full explanation is really rather long, so we shan't bore you with it here. Needless to say, it all came back - as so many Egg Timer&trade; related matters do - to the usual chestnut of "no account [being] taken of any time during which [both / either] House[s] are adjourned for more than four days".
 
 Now if we had our way, we'd say four days off is little more than a long weekend, and that the word recess should only come into play when we're talking five days or more. But it is not our job to tell the House of Lords what is a recess and what is not. Anyway, that wee foobar is now considered fixed.
 
