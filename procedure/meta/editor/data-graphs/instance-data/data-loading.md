@@ -1387,11 +1387,11 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 				work_packaged_thing.web_link,
 				work_packaged_thing.triple_store_id,
 				enabling_act.acts_string,
-				preceding_remedial_order.prec_ppdro_string,
-				preceding_ppdue.prec_ppdue_string
-				
-				# pnsi string also
-				# concatenate ppdro, ppdue and pnsi somehow
+				CONCAT( 
+					preceding_remedial_order.prec_ppdro_string,
+					preceding_ppdue.prec_ppdue_string,
+					preceding_pnsi.prec_pnsi_string
+				) AS preceding_instruments_string
 	
 			FROM procedure.ProcedureStatutoryInstrument si
 
@@ -1442,14 +1442,110 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 			) AS preceding_ppdue
 			ON preceding_ppdue.follower_id = work_packaged_thing.id
 			
+			LEFT JOIN (
+				SELECT
+					prec.work_packaged_is_followed_by_id AS follower_id,
+					STRING_AGG( CONCAT( 'urn:procedure-editor:ProposedNegativeStatutoryInstrumentWork:', pnsi.id::text ), ',') AS prec_pnsi_string
+				FROM
+					procedure.ProcedureWorkPackagedThingPreceding prec,
+					procedure.procedureworkpackagedthing preceding_wpt,
+					procedure.ProcedureProposedNegativeStatutoryInstrument pnsi
+				WHERE prec.work_packaged_is_preceded_by_id = preceding_wpt.id
+				AND preceding_wpt.id = pnsi.id
+				GROUP BY prec.work_packaged_is_followed_by_id
 			
-			# same again but for pnis
 			
+			) AS preceding_pnsi
+			ON preceding_pnsi.follower_id = work_packaged_thing.id
 			
-			
-			WHERE si.made_date IS NULL;
+			WHERE si.made_date IS NULL
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/draft-sis.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### MadeStatutoryInstrumentWork
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				si.*,
+				work_packaged_thing.web_link,
+				work_packaged_thing.triple_store_id,
+				enabling_act.acts_string,
+				CONCAT( 
+					preceding_remedial_order.prec_ppdro_string,
+					preceding_ppdue.prec_ppdue_string,
+					preceding_pnsi.prec_pnsi_string
+				) AS preceding_instruments_string
+	
+			FROM procedure.ProcedureStatutoryInstrument si
+
+			INNER JOIN (
+				SELECT *
+				FROM procedure.procedureworkpackagedthing
+			) AS work_packaged_thing
+			ON work_packaged_thing.id = si.id
+
+			LEFT JOIN (
+				SELECT
+					ea.procedure_workpackaged_thing_id,
+					STRING_AGG( CONCAT( 'urn:procedure-editor:ActOfParliament:', act.id::text ), ',') AS acts_string
+				FROM procedure.enablingact ea, procedure.solractofparliamentdata act
+				WHERE ea.act_of_parliament_id = act.id
+				GROUP BY ea.procedure_workpackaged_thing_id
+	
+			) AS enabling_act
+			ON enabling_act.procedure_workpackaged_thing_id = work_packaged_thing.id
+			
+			LEFT JOIN (
+				SELECT
+					prec.work_packaged_is_followed_by_id AS follower_id,
+					STRING_AGG( CONCAT( 'urn:procedure-editor:ProposedDraftRemedialOrderWork:', ppdro.id::text ), ',') AS prec_ppdro_string
+				FROM
+					procedure.ProcedureWorkPackagedThingPreceding prec,
+					procedure.procedureworkpackagedthing preceding_wpt,
+					procedure.ProcedureProposedDraftRemedialOrder ppdro
+				WHERE prec.work_packaged_is_preceded_by_id = preceding_wpt.id
+				AND preceding_wpt.id = ppdro.id
+				GROUP BY prec.work_packaged_is_followed_by_id
+			) AS preceding_remedial_order
+			ON preceding_remedial_order.follower_id = work_packaged_thing.id
+			
+			LEFT JOIN (
+				SELECT
+					prec.work_packaged_is_followed_by_id AS follower_id,
+					STRING_AGG( CONCAT( 'urn:procedure-editor:PublishedDraftUnderTheEuropeanUnionWithdrawalAct2018Work:', ppdue.id::text ), ',') AS prec_ppdue_string
+				FROM
+					procedure.ProcedureWorkPackagedThingPreceding prec,
+					procedure.procedureworkpackagedthing preceding_wpt,
+					procedure.ProcedurePublishedDraftUnderEUWA ppdue
+				WHERE prec.work_packaged_is_preceded_by_id = preceding_wpt.id
+				AND preceding_wpt.id = ppdue.id
+				GROUP BY prec.work_packaged_is_followed_by_id
+			
+			
+			) AS preceding_ppdue
+			ON preceding_ppdue.follower_id = work_packaged_thing.id
+			
+			LEFT JOIN (
+				SELECT
+					prec.work_packaged_is_followed_by_id AS follower_id,
+					STRING_AGG( CONCAT( 'urn:procedure-editor:ProposedNegativeStatutoryInstrumentWork:', pnsi.id::text ), ',') AS prec_pnsi_string
+				FROM
+					procedure.ProcedureWorkPackagedThingPreceding prec,
+					procedure.procedureworkpackagedthing preceding_wpt,
+					procedure.ProcedureProposedNegativeStatutoryInstrument pnsi
+				WHERE prec.work_packaged_is_preceded_by_id = preceding_wpt.id
+				AND preceding_wpt.id = pnsi.id
+				GROUP BY prec.work_packaged_is_followed_by_id
+			
+			
+			) AS preceding_pnsi
+			ON preceding_pnsi.follower_id = work_packaged_thing.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/made-sis.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
