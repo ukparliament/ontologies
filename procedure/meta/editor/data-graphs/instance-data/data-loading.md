@@ -1363,19 +1363,6 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 	</code>
 </pre>
 
-# ======== Done to here =========
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### DraftStatutoryInstrumentWork
 
@@ -1464,6 +1451,7 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 	</code>
 </pre>
 
+
 ### MadeStatutoryInstrumentWork
 
 <pre>
@@ -1544,11 +1532,19 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 			
 			) AS preceding_pnsi
 			ON preceding_pnsi.follower_id = work_packaged_thing.id
+			
+			WHERE si.made_date IS NOT NULL
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/made-sis.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
+# ======== Done to here =========
+
+
+### MinisterialDepartment
+
+Not present in the procedure editor database. Taken from the triplestore.
 
 
 
@@ -1557,8 +1553,6 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 
 
 
-
-SELECT * FROM procedure.ProcedureStatutoryInstrument where made_date IS NULL;
 
 
 
