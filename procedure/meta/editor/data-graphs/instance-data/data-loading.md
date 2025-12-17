@@ -24,15 +24,9 @@ Sourced from:
 
 ### OrganisationAccountableToParliament and MakingAvailableBody
 
-<pre>
-	<code>
-		COPY (
-			SELECT *
-			FROM procedure.layingbody
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/organisations-accountable-parliament.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
+[CSV file from SPARQL query](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/editor/data-graphs/instance-data/dumps/loaded/organisations-accountable-parliament.csv)
+
+There are no IDs, so we use the triplestore ID as the Data Graphs ID.
 
 ### AvailabilityStatus
 
@@ -1539,12 +1533,168 @@ Start and end dates are modelled in procedure editor as datetimes. They need to 
 	</code>
 </pre>
 
+
+### TreatyWork
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				t.id,
+				t.procedure_treaty_name,
+				t.treaty_number,
+				t.treaty_prefix,
+
+				work_packaged_thing.triple_store_id,
+				work_packaged_thing.web_link
+			FROM
+				procedure.proceduretreaty t
+	
+			INNER JOIN (
+				SELECT *
+				FROM procedure.ProcedureWorkPackagedThing
+			) AS work_packaged_thing
+			ON work_packaged_thing.id = t.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/treaties.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### TreatySeries
+
+Populated by hand: Country Series, European Union Series, Miscellaneous Series.
+
+
+# SeriesMembership (European Union)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				sm.id,
+				sm.triplestoreid,
+				sm.citation,
+				2 AS membershipIn,
+				eu.ProcedureTreatyId AS membershipOf
+			FROM
+				procedure.ProcedureSeriesMembership AS sm,
+				procedure.ProcerdureEuropeanUnionSeriesMembership AS eu
+			WHERE sm.id = eu.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/eu-series-memberships.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+# SeriesMembership (Miscellaneous)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				sm.id,
+				sm.triplestoreid,
+				sm.citation,
+				3 AS membershipIn,
+				misc.ProcedureTreatyId AS membershipOf
+			FROM
+				procedure.ProcedureSeriesMembership AS sm,
+				procedure.ProcerdureMiscellaneousSeriesMembership AS misc
+			WHERE sm.id = misc.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/misc-series-memberships.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+# SeriesMembership (Country)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				sm.id,
+				sm.triplestoreid,
+				sm.citation,
+				1 AS membershipIn,
+				c.ProcedureTreatyId AS membershipOf
+			FROM
+				procedure.ProcedureSeriesMembership AS sm,
+				procedure.ProcerdureCountrySeriesMembership AS c
+			WHERE sm.id = c.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/country-series-memberships.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
 # ======== Done to here =========
 
 
-### MinisterialDepartment
 
-Not present in the procedure editor database. Taken from the triplestore.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### DepartmentalLead
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				t.id,
+				CONCAT( 'Departmental lead for ', t.procedure_treaty_name ) AS label,
+				CONCAT( 'urn:procedure-editor:OrganisationAccountableToParliament:',t.lead_government_organisation_triple_store_id) AS byMinisterialDepartment
+			FROM
+				procedure.proceduretreaty t
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/departmental-leads.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                 
+
+
+
+
 
 
 
