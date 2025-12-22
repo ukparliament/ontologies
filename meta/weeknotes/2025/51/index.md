@@ -12,7 +12,7 @@ In better news, our production Search and Indexing [triplestore](https://en.wiki
 
 Also on the upgrade pile is our taxonomy management system, which sits at the centre of a truly tangled web of applications and application piping. Once again, Jianhan was making magnificent progress, [five of the thirteen applications that sit atop that system being reconfigured to play nicely with its reshaped APIs](https://trello.com/b/R7GDcGou/semaphore-56). That was until [data.parliament.uk](https://explore.data.parliament.uk/) developed a fire in the hold and Jianhan was sent in with a fire bucket and our very best wishes.
 
-We should probably do a section on a data.parliament.uk, though it remains, in a very real sense, something of a mystery to us. Least said, soonest mended, as it were.
+We should probably do a section on data.parliament.uk, though it remains, in a very real sense, something of a mystery to us. Least said, soonest mended, as it were.
 
 Getting back to our taxonomy, it's finally had the opportunity to stretch its legs a little and now provides the backbone for our Single Subject View of the Library project and Library Knowledge Base application. Librarians Anna, Susannah, Silver, [Phil](https://bsky.app/profile/philbgorman.bsky.social) and Ned combining like Voltron into a truly terrific little team.
 
@@ -38,7 +38,7 @@ In personnel if not personal news, Librarian Claire sadly left us, [Librarian Em
 
 * [Shedcode](https://shedcode.co.uk/) [James](https://mastodon.me.uk/deck/@jamesjefferies) leant a helping hand with our Procedure Browsable Space&trade;, meaning it no longer explodes when ["smart" quotes](https://en.wikipedia.org/wiki/Quotation_marks_in_English#Smart_quotes) make their way down Whitehall, into Westminster, travelling through assorted computational pipes before meeting a web browser that's been told - quite reasonably - to expect [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
-* Our Procedure Browsable Space has also gained a whole host of CSV download options, all of which await sign off - or indeed rejection - from Librarian Jayne. Do get in touch if you think we've missed some. Not content with that, Michael has also applied [rel-canonicals](https://en.wikipedia.org/wiki/Canonical_link_element) from resources that transclude to the resources being transcluded from. Well, it seems to make him happy, and we don't like to ask.
+* Our Procedure Browsable Space has also gained a whole host of CSV download options, all of which await sign off - or indeed rejection - from Librarian Jayne. Do get in touch if you think we've missed any. Not content with that, Michael has also applied [rel-canonicals](https://en.wikipedia.org/wiki/Canonical_link_element) from resources that transclude to the resources being transcluded from. Well, it seems to make him happy, and we don't like to ask.
 
 * Shedcode James has also applied the wisdom of Solomon to our standing orders application, which is now cleaved in two. One for our crack team of librarians to edit things in, [one for more general consumption](https://api.parliament.uk/standing-orders/). Not that Solomon cleaved anything in two of course. We [Scripture-knowledge sharks](https://www.pagebypagebooks.com/P_G_Wodehouse/Right_Ho_Jeeves/Chapter_17_p10.html) stick together.
 
