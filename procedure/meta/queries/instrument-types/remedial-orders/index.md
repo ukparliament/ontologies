@@ -41,6 +41,8 @@ The following query will show all proposed draft remedial orders and remedial or
 
 ## Proposed draft remedial orders and remedial orders by calendar year
 
+* <a href="https://api.parliament.uk/s/e877f03c">2026</a>
+
 * <a href="https://api.parliament.uk/s/46a9d8ac">2025</a>
 
 * <a href="https://api.parliament.uk/s/5fa4ee74">2024</a>
