@@ -48,7 +48,8 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 <pre>
 	<code>
 		COPY (
-			SELECT *
+			SELECT 
+				*
 			FROM countries
 		)
 		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/countries.csv' DELIMITER ',' CSV HEADER;
@@ -167,6 +168,82 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 </pre>
 
 
+## Gender
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				*
+				
+			FROM genders
+		)
+		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/genders.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+## Member
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				*,
+				CONCAT( family_name, ', ', given_name ) AS label
+				
+			FROM members
+		)
+		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/members.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+## PoliticalParty
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				*
+				
+			FROM political_parties
+		)
+		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/political-parties.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+## PoliticalPartyRegistration
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				ppr.*,
+				CONCAT( 'Registration of ', political_party.name, ' in ', country.name, ' (', ppr.start_on, ' - ', ppr.end_on, ')' ) AS label
+				
+			FROM political_party_registrations AS ppr
+			INNER JOIN (
+				SELECT *
+				FROM political_parties
+			) AS political_party
+			ON political_party.id = ppr.political_party_id
+			
+			INNER JOIN (
+				SELECT *
+				FROM countries
+			) AS country
+			ON country.id = ppr.country_id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/political-party-registrations.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+
+
+
 #### DONE TO HERE
 
 
@@ -181,6 +258,26 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 			FROM constituency_areas
 		)
 		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/constituency-areas.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+## GeneralElection, hasPublicationState and forParliamentPeriod
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				*,
+				CASE
+				  WHEN is_notional IS TRUE THEN CONCAT( 'Notional election results for ', polling_on )
+				ELSE
+				  CONCAT( 'General election results for ', polling_on )
+				END AS label
+				
+			FROM general_elections
+		)
+		TO '/Users/smethurstm/Documents/ontologies/election/meta/candidates/data-graphs/instance-data/general-elections.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
