@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.parliament.uk/commons/hansard/print" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.parliament.uk/commons/hansard/print" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.34">
+  <xs:annotation>
+    <xs:documentation>
+      Version:
+      0.34
+      Description:
+      This document defines the structure of the XML output from
+      the reporting application of Commons Hansard into the page makeup unit.
+      The output from the page makeup unit will also conform to this schema
+      hence the presence of quite a lot in this schema that will not be
+      present in the input to the page makeup unit.
+      Some known limitations:
+      - Much of the structure is loosely defined.  This is because
+      the initial draft was intentionally loose to force the print related
+      aspect of the schema to remain the required structure to the document.
+      This will gradually be tightened with individual definitions of the
+      data reuse elements as they are required and can be incorporated
+      transparently to the Hansard users.
+      Changes from last version:
+      - 	Added pbc attribute to Cover element
+      0.35 (25/05/2010)
+      - Allow hs_TimeCode element within hs_Para, Body, B tags, etc.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
+  <xs:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="http://www.w3.org/Math/XMLSchema/mathml2/mathml2.xsd" />
+  <!-- The only globally defined elements hence the only valid root elements. -->
+  <xs:element name="HansardDoc" type="HOCDocumentStructure" />
+  <xs:element name="Fragment" type="FragmentStructure" />
+  <!-- Top level structures and types -->
+  <xs:complexType name="HOCDocumentStructure">
+    <xs:annotation>
+      <xs:documentation>
+			The top level element of Commons Hansard documents.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="House" type="HOCHouseStructure" />
+    </xs:sequence>
+    <xs:attribute name="type" type="HOCSystemType" />
+  </xs:complexType>
+  <xs:complexType name="HOCHouseStructure">
+    <xs:annotation>
+      <xs:documentation>
+			The structure of a top level house element for HOC Hansard.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="System" type="HOCSystemStructure" />
+    </xs:sequence>
+    <xs:attribute name="name" type="HOCHouseType" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="HOCHouseType">
+    <xs:annotation>
+      <xs:documentation>The posible house types for a HOC document.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Commons" />
+      <xs:enumeration value="CommonsCommittees" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="HOCSystemStructure">
+    <xs:annotation>
+      <xs:documentation>
+			The wrapper element for the system that a document belongs to.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element ref="Fragment" />
+    </xs:sequence>
+    <xs:attribute name="type" type="HOCSystemType" use="required" />
+    <xs:attribute name="ColStart" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="HOCSystemType">
+    <xs:annotation>
+      <xs:documentation>The possible system types for HOC document.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Debate" />
+      <xs:enumeration value="WestHall" />
+      <xs:enumeration value="Writtens" />
+      <xs:enumeration value="Committee" />
+      <xs:enumeration value="WMS" />
+      <xs:enumeration value="Correction" />
+      <xs:enumeration value="Petitions" />
+      <xs:enumeration value="Cover" />
+      <xs:enumeration value="Index" />
+      <xs:enumeration value="Government" />
+      <xs:enumeration value="Back_Cover" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="FragmentStructure">
+    <xs:annotation>
+      <xs:documentation>The structure of a fragment.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Header" type="HeaderStructure" minOccurs="0" />
+      <xs:element name="Body" type="BodyStructure" minOccurs="0" />
+      <xs:element name="Index" minOccurs="0">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="IndexStructure" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Contents" minOccurs="0">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="ContentsStructure" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Cover-wrapper" minOccurs="0">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="CoverStructure" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute ref="xml:space" />
+    <xs:attribute name="__uri__" />
+    <xs:attribute name="__lock__" />
+    <xs:attribute name="__shareable__" />
+    <xs:attribute name="__version__" />
+  </xs:complexType>
+  <!--	UNUSED HOL EQUIVALENTS	-->
+  <!--
+	<xs:complexType name="HOLHouseStructure">
+		<xs:annotation>
+			<xs:documentation>
+			The structure of a top level house element for HoL Hansard.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="System" type="HOLSystemStructure"/>
+		</xs:sequence>
+		<xs:attribute name="Name" type="HOLHouseType" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="HOLHouseType">
+		<xs:annotation>
+			<xs:documentation>The posible house types for a HOL document.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Lords"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="HOLSystemStructure">
+		<xs:annotation>
+			<xs:documentation>
+			The wrapper element for the system that a document belongs to.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Header" type="HeaderStructure"/>
+			<xs:element name="Body" type="BodyStructure"/>
+		</xs:sequence>
+		<xs:attribute name="Type" type="HOLSystemType" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="HOLSystemType">
+		<xs:annotation>
+			<xs:documentation>The possible system types for HOL document.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Debate"/>
+			<xs:enumeration value="GrandCommittee"/>
+			<xs:enumeration value="Writtens"/>
+			<xs:enumeration value="WMS"/>
+		</xs:restriction>
+	</xs:simpleType>
+-->
+  <!-- Content structures and types -->
+  <xs:attributeGroup name="HRSContentId">
+    <xs:attribute name="HRSContentId" type="xs:string" use="required"/>
+  </xs:attributeGroup>
+  <xs:complexType name="HeaderStructure">
+    <xs:annotation>
+      <xs:documentation>
+			Simple file header type definition.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="House" type="xs:string" minOccurs="0" />
+      <xs:element name="System" type="xs:string" minOccurs="0" />
+      <xs:element name="Sitting" type="SittingStructure" minOccurs="0" />
+      <xs:element name="Section" type="xs:string" />
+      <xs:element name="Committee" type="xs:string" minOccurs="0" />
+      <xs:element name="Title" type="xs:string" minOccurs="0" />
+      <xs:element name="SittingTime" type="xs:string" minOccurs="0" />
+      <xs:element name="SystemDataId" type="xs:string" />
+      <xs:element name="TransformationVersion" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BodyStructure" mixed="false">
+    <xs:annotation>
+      <xs:documentation>
+			The definition of the body element.
+			
+			This is explicitly not mixed content since it is important
+			that all text belongs to a defined paragraph style.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="TableWrapper" type="TableStructure" />
+      <xs:element name="hs_TimeCode" type="TimeCodeStructure"/>
+      <xs:group ref="PrintParagraphElements" />
+      <xs:group ref="OtherParagraphElements" />
+    </xs:choice>
+    <xs:attribute ref="xml:space" />
+  </xs:complexType>
+  <xs:complexType name="SittingStructure">
+    <xs:annotation>
+      <xs:documentation>
+			The definition for Sitting elements in the header.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="short-date" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!-- Paragraph section -->
+  <!-- Paragraph groups -->
+  <xs:group name="PrintParagraphElements">
+    <xs:annotation>
+      <xs:documentation>
+			Choice of all of the paragraph level elements.
+			These are the core set that map to the currently used print
+			paragraph styles.
+			
+			NOTE: The "hs_" prefix indicates that these are house
+			styles in current use.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <!--Old Schema Styles-->
+      <xs:element name="hs_2DebBill" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cDebHdgTC" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cCorrection" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cPetition" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cOrdersoftheDay" type="PrintParagraphStructure" />
+      <xs:element name="hs_3OrdersoftheDay" type="PrintParagraphStructure" />
+      <xs:element name="hs_7f" type="PrintParagraphStructure" />
+      <xs:element name="hs_8ClauseQn" type="PrintParagraphStructure" />
+      <xs:element name="hs_8Correction" type="PrintParagraphStructure" />
+      <!---New Schema Styles-->
+      <xs:element name="hs_2cGenericHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cStatement" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cSO24Application" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cUrgentQuestion" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cDeferredDiv" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cDebatedMotion" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cBillTitle" type="PrintParagraphStructure" />
+      <xs:element name="hs_2cWestHallDebate" type="PrintParagraphStructure" />
+      <xs:element name="hs_2GenericHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_2BusinessWODebate" type="PrintParagraphStructure" />
+      <xs:element name="hs_2DebatedMotion" type="PrintParagraphStructure" />
+      <xs:element name="hs_2BillTitle" type="PrintParagraphStructure" />
+      <xs:element name="hs_2Petitions" type="PrintParagraphStructure" />
+      <xs:element name="hs_2WestHallDebate" type="PrintParagraphStructure" />
+      <xs:element name="hs_3MainHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_3OralAnswers" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cMainHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cOppositionDay" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cWestHall" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cWAs" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cWMSs" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cPetitions" type="PrintParagraphStructure" />
+      <xs:element name="hs_3cMinisterialCorrections" type="PrintParagraphStructure" />
+      <xs:element name="hs_6CntrCapsHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_6fDate" type="PrintParagraphStructure" />
+      <xs:element name="hs_6fCntrItalHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bcBigBoldHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bBigBoldHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bCorrection" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bDepartment" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bFormalmotion" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bBillsPresented" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bBillTitle" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bPetitions" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bPrivateBusiness" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bBusinessB4Questions" type="PrintParagraphStructure" />
+      <xs:element name="hs_6bRoyalAssent" type="PrintParagraphStructure" />
+      <xs:element name="hs_7SmCapsHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_7PrivateBusinessHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_7Bill" type="PrintParagraphStructure" />
+      <xs:element name="hs_76fChair" type="PrintParagraphStructure" />
+      <xs:element name="hs_8Question" type="PrintParagraphStructure" />
+      <xs:element name="hs_8Statement" type="PrintParagraphStructure" />
+      <xs:element name="hs_8Clause" type="PrintParagraphStructure" />
+      <xs:element name="hs_8GenericHdg" type="PrintParagraphStructure" />
+      <xs:element name="hs_8Petition" type="PrintParagraphStructure" />
+      <xs:element name="hs_Para" type="ParaParagraphStructure" />
+      <xs:element name="hs_ParaIndent" type="ParaParagraphStructure" />
+      <xs:element name="hs_brev" type="ParaParagraphStructure" />
+      <xs:element name="hs_brevIndent" type="PrintParagraphStructure" />
+      <xs:element name="hs_Timeline" type="PrintParagraphStructure" />
+      <xs:element name="hs_Verse" type="PrintParagraphStructure" />
+      <xs:element name="hs_VerseSpace" type="PrintParagraphStructure" />
+      <xs:element name="hs_DivListHeader" type="PrintParagraphStructure" />
+      <xs:element name="hs_TableTitle" type="ParaParagraphStructure" />
+      <xs:element name="hs_TableHeading" type="ParaParagraphStructure" />
+      <xs:element name="hs_TableFooter" type="ParaParagraphStructure" />
+      <xs:element name="hs_AmendmentHeading" type="PrintParagraphStructure" />
+      <xs:element name="hs_AmendmentLevel0" type="PrintParagraphStructure" />
+      <xs:element name="hs_AmendmentLevel1" type="PrintParagraphStructure" />
+      <xs:element name="hs_AmendmentLevel2" type="PrintParagraphStructure" />
+      <xs:element name="hs_AmendmentLevel3" type="PrintParagraphStructure" />
+      <xs:element name="hs_AmendmentLevel4" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPCommittee" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPSubject" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPSitting" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPDate" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPTime" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPContents" type="PrintParagraphStructure" />
+      <xs:element name="hs_CFPPara" type="PrintParagraphStructure" />
+      <xs:element name="hs_CLChairman" type="PrintParagraphStructure" />
+      <xs:element name="hs_CLClerks" type="PrintParagraphStructure" />
+      <xs:element name="hs_CLHeading" type="PrintParagraphStructure" />
+      <xs:element name="hs_CLMember" type="PrintParagraphStructure" />
+      <xs:element name="hs_CLPara" type="PrintParagraphStructure" />
+      <xs:element name="hs_CLAttended" type="PrintParagraphStructure" />
+      <!-- TODO: Prefix these gov list doc styles? -->
+      <xs:element name="hs_MainHeading" type="PrintParagraphStructure" />
+      <xs:element name="hs_SectionHeading" type="PrintParagraphStructure" />
+      <xs:element name="hs_InfoHeading" type="PrintParagraphStructure" />
+      <xs:element name="hs_DepartmentHeading" type="PrintParagraphStructure" />
+      <xs:element name="hs_NormalPara" type="PrintParagraphStructure" />
+      <xs:element name="hs_NormalParaIndent" type="PrintParagraphStructure" />
+      <xs:element name="hs_Procedure" type="PrintParagraphStructure"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="OtherParagraphElements">
+    <xs:annotation>
+      <xs:documentation>
+			All of the top level elements that are not print paragraph styles.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="Division">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="DivisionStructure">
+              <xs:attribute name="UID" type="xs:string" />
+              <xs:attribute name="url" type="xs:string" />
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Question" type="QuestionStructure" />
+      <xs:element name="StartProcedure" type="ProcedureStructure" />
+      <xs:element name="EndProcedure" type="ProcedureStructure" />
+      <xs:element name="DebateHeading" type="DebateHeadingStructure"/>
+    </xs:choice>
+  </xs:group>
+  <!-- Paragraph types -->
+  <xs:complexType name="DivisionStructure" mixed="false">
+    <xs:annotation>
+      <xs:documentation>The type definition for divisions.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group ref="PrintParagraphElements" />
+      <xs:element name="England" type="EnglandStructure" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="EnglandWales" type="EnglandWalesStructure" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="EnglandWalesNI" type="EnglandWalesNIStructure" minOccurs="0" maxOccurs="unbounded" />
+      <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="TwoColumn" type="TwoColumnStructure" />
+      <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="TwoColumn" type="TwoColumnStructure" />
+      <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="TwoColumnStructure">
+    <xs:sequence>
+      <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0">
+        <xs:group ref="DivisionAyesTwoColumnStructure" />
+        <xs:group ref="DivisionNoesTwoColumnStructure" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="EnglandStructure">
+    <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="EnglandWalesStructure">
+    <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="EnglandWalesNIStructure">
+    <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:group name="DivisionAyesTwoColumnStructure">
+    <xs:sequence>
+      <xs:element name="NamesAyes">
+        <xs:complexType>
+          <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+          <xs:attribute name="IsDone" type="TrueFalseType" use="required" />
+          <xs:attributeGroup ref="HRSContentId"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      <xs:sequence minOccurs="0">
+        <xs:element name="TellerNamesAyes">
+          <xs:complexType>
+            <xs:group ref="PrintParagraphElements" maxOccurs="unbounded" />
+            <xs:attributeGroup ref="HRSContentId"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="DivisionNoesTwoColumnStructure">
+    <xs:sequence>
+      <xs:element name="NamesNoes">
+        <xs:complexType>
+          <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+          <xs:attribute name="IsDone" type="TrueFalseType" use="required" />
+          <xs:attributeGroup ref="HRSContentId"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      <xs:sequence minOccurs="0">
+        <xs:element name="TellerNamesNoes">
+          <xs:complexType>
+            <xs:group ref="PrintParagraphElements" maxOccurs="unbounded" />
+            <xs:attributeGroup ref="HRSContentId"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="QuestionStructure" mixed="false">
+    <xs:annotation>
+      <xs:documentation>
+			The type definition for question elements.
+			</xs:documentation> 
+    </xs:annotation>
+    <xs:group ref="PrintParagraphElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="CrossReferenceStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        The type definition for Cross Reference elements.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:group ref="PrintRangeElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attribute name="Date" type="xs:string" />
+    <xs:attribute name="Volume" type="xs:string" />
+    <xs:attribute name="Column" type="xs:string" />
+    <xs:attribute name="xid" type="xs:string" />
+    <xs:attribute name="type" type="xs:string" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="PrintParagraphStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The type definition for all print paragraph level elements.
+			
+			This is a simple definition that just ensures that you
+			can't nest paragraph elements.
+			
+			Any print paragraph element can have a UID attribute attached.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="MarkerElements" />
+      <xs:group ref="OtherRangeElements" />
+      <xs:group ref="PrintRangeElements" />
+    </xs:choice>
+    <xs:attribute name="UID" type="xs:NMTOKEN" />
+    <xs:attribute name="Justify" type="xs:string" />
+    <xs:attribute name="alt" type="xs:string" />
+    <xs:attribute name="url" type="xs:string" />
+    <xs:attribute name="subject" type="xs:string" use="optional"/>
+    <xs:attribute name="type" type="xs:string" use="optional"/>
+	<xs:attribute name="HRSContentId" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="ParaParagraphStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The type definition for hs_Para print paragraph level elements.
+			
+			This is a simple definition that just ensures that you
+			can't nest paragraph elements.  It is identical to the
+			PrintParagraphStructure structure but has the added attribute
+			of "tab".
+			
+			Any print paragraph element can have a UID attribute attached.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="MarkerElements" />
+      <xs:group ref="OtherRangeElements" />
+      <xs:group ref="PrintRangeElements" />
+    </xs:choice>
+    <xs:attribute name="UID" type="xs:NMTOKEN" />
+    <xs:attribute name="Justify" type="xs:string" />
+    <xs:attribute name="tab" type="xs:string" />
+    <xs:attribute name="alt" type="xs:string" />
+    <xs:attribute name="url" type="xs:string" />
+    <xs:attribute name="type" type="xs:string" />
+    <xs:attribute name="HRSContentId" type="xs:string" />
+  </xs:complexType>
+  <!-- Range section -->
+  <!-- Range groups -->
+  <xs:group name="OtherRangeElements">
+    <xs:annotation>
+      <xs:documentation>
+			The list of all character level elements that do not relate to
+			print appearance but are included for semantic markup purposes.
+			
+			TODO: Add elements here as and when we develop the application to
+			allow the users to use them transparently.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="Member" type="MemberStructure" />
+      <xs:element name="Witness" type="OtherRangeStructure" />
+      <xs:element name="Stickup" type="StickupStructure" />
+      <xs:element name="Image" type="ImageStructure" />
+      <xs:element name="Right" type="RightStructure" />
+      <xs:element name="DepartmentName" type="DepartmentStructure" />
+      <xs:element name="CrossReference" type="CrossReferenceStructure" />
+      <xs:element name="Uin" type="OtherRangeStructure" />
+      <xs:element name="QuestionText" type="QuestionTextStructure" />
+      <xs:element name="Number" type="OtherRangeStructure" />
+      <xs:element name="AyesNumber" type="OtherRangeStructure" />
+      <xs:element name="NoesNumber" type="OtherRangeStructure" />
+      <xs:element name="TellerAyes1" type="OtherRangeStructure" />
+      <xs:element name="TellerAyes2" type="OtherRangeStructure" />
+      <xs:element name="TellerNoes1" type="OtherRangeStructure" />
+      <xs:element name="TellerNoes2" type="OtherRangeStructure" />
+      <xs:element name="Decision" type="OtherRangeStructure" />
+      <xs:element name="Time" type="OtherRangeStructure" />
+      <xs:element name="QNum" type="OtherRangeStructure" />
+      <xs:element name="hs_TimeCode" type="TimeCodeStructure"/>
+      <xs:any namespace="http://www.w3.org/1998/Math/MathML" processContents="strict" />
+    </xs:choice>
+  </xs:group>
+  <xs:group name="PrintRangeElements">
+    <xs:annotation>
+      <xs:documentation>
+			The list of all possible print appearance character level elements.
+			Some of these, e.g. "U" and "Hidden",  are included for completeness
+			but should never find their way into the output since we don't permit
+			this character level formatting in the printed book.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="B" type="PrintRangeStructure" />
+      <xs:element name="I" type="PrintRangeStructure" />
+      <xs:element name="U" type="PrintRangeStructure" />
+      <xs:element name="Sub" type="PrintRangeStructure" />
+      <xs:element name="Sup" type="PrintRangeStructure" />
+      <xs:element name="SmallCaps" type="PrintRangeStructure" />
+      <xs:element name="Hidden" type="PrintRangeStructure" />
+    </xs:choice>
+  </xs:group>
+  <xs:group name="MarkerElements">
+    <xs:annotation>
+      <xs:documentation>
+			These elements have no content and are used as markers in the
+			document to facilitate restructuring later.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="StartOfOrals" type="MarkerType" />
+      <xs:element name="StartOfDepartment" type="MarkerType" />
+      <xs:element name="StartOfQuestionGroup" type="MarkerType" />
+    </xs:choice>
+  </xs:group>
+  <!-- Range types -->
+  <xs:complexType name="TimeCodeStructure">
+    <xs:annotation>
+      <xs:documentation>
+        The definition for a hs_TimeCode element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="time" type="xs:dateTime"/>
+  </xs:complexType>
+  <xs:complexType name="MemberStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The definition for a member element.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="PrintRangeElements"/>
+      <xs:element name="hs_TimeCode" type="TimeCodeStructure"/>
+    </xs:choice>
+    <xs:attribute name="xid" type="xs:string" />
+    <xs:attribute name="title" type="xs:string" />
+    <xs:attribute name="firstname" type="xs:string" />
+    <xs:attribute name="lastname" type="xs:string" />
+    <xs:attribute name="middlenames" type="xs:string" />
+    <xs:attribute name="ContinuationText" type="xs:string" />
+    <xs:attribute name="UID" type="xs:string" />
+    <xs:attribute name="PimsId" type="xs:string" />
+	<xs:attribute name="MnisId" type="xs:string" />
+    <xs:attribute name="url" type="xs:string" />
+    <xs:attribute name="InTheChair" type="xs:string" />
+    <xs:attribute name="ContributionType" type="xs:string" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="ProcedureStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        The definition for a member element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:group ref="PrintRangeElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="OtherRangeStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The type definition for all possible non-print range level elements.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="PrintRangeElements"/>
+      <xs:element name="hs_TimeCode" type="TimeCodeStructure"/>
+    </xs:choice>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="QuestionTextStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        The type definition for all possible non-print range level elements.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="OtherRangeElements" />
+      <xs:group ref="PrintRangeElements" />
+    </xs:choice>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="DebateHeadingStructure">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="hs_DebateHeading" type="PrintParagraphStructure"/>
+        <xs:group ref="PrintParagraphElements"/>
+        <xs:element name="TableWrapper" type="TableStructure"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="RightStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The type definition for the right alignment range level element.
+			This can contain any other range level elements.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="OtherRangeElements" />
+      <xs:group ref="PrintRangeElements" />
+    </xs:choice>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="PrintRangeStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The type definition for all possible print range level elements.
+			
+			Note that the definition of range elements is not just simple
+			textual content but is complex mixed and also recursive since any
+			of them can contain any of the other range elements.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="OtherRangeElements" />
+      <xs:group ref="PrintRangeElements" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="MarkerType">
+    <xs:annotation>
+      <xs:documentation>
+			These are empty elements i.e. have no content and no attributes.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <xs:complexType name="StickupStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			This structure should not appear in the final output of the pagination
+			system but is included to validate the input to the pagination system,
+			which can include this structure.
+			This structure will be removed and replaced by some text/markup during
+			pagination.  The contents of this structure indicate what it should
+			be replaced with i.e. they are for information only and will not form
+			part of the paginated product.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:any processContents="skip" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="ImageStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			Represents an image to appear in the product.  This structure
+			will probably not appear in the input into the pagination system
+			but be inserted as part of pagination in place of a Stickup element.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="src" type="xs:string" use="required" />
+    <xs:attribute name="width" type="xs:integer" />
+    <xs:attribute name="height" type="xs:integer" />
+  </xs:complexType>
+  <xs:complexType name="DepartmentStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			The definition for all department name range elements.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="PrintRangeElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attribute name="xid" type="xs:string" />
+    <xs:attributeGroup ref="HRSContentId"/>
+  </xs:complexType>
+  <!-- TYPES -->
+  <xs:simpleType name="TrueFalseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="True" />
+      <xs:enumeration value="False" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Table section -->
+  <xs:complexType name="TableStructure">
+    <xs:annotation>
+      <xs:documentation>
+			Definition of XPP-style table markup.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="table" type="CALSTableStructure" />
+    </xs:sequence>
+    <xs:attribute name="Columns" type="xs:integer" />
+    <xs:attribute name="Size" type="xs:string" />
+    <xs:attribute name="Landscape" type="xs:string" />
+    <xs:attribute name="Pickup" type="xs:string" />
+  </xs:complexType>
+  <!--
+		The table model used is actually a slightly adjusted version of the
+		Exchange tabel model, which is itself a cut down version of the CALS
+		table model.
+		
+		A good place to find the CALS and Exchange table models as DTDs is:
+			http://www.docbook.org
+		At the time of writing this is the latest version:
+			http://www.docbook.org/xml/4.5b1
+		
+		A textual description of the full CALS DTD can be found here:
+			http://www.oasis-open.org/specs/a502.htm
+
+		The following type definitions are copied almost directly from a W3C
+		XML schema version of the Exchange DTD.
+		
+		Changes made to the Exchange schema:
+			1. Remove all top level element definitions and replace them with
+		a named copy of their interal type definitions.
+			2. Change the row type structure (tbl.row.mdl) to use a restricted
+		version of the entry structure limited to the desired paragraph level
+		elements from this schema.
+			3. Reorder the definitions so that they are grouped under the
+		name of the element that they are used in the definition of.
+			4. Add an optional tfoot element as a copy of the thead element.
+	-->
+  <!-- EXCHANGE Tables -->
+  <!-- Table -->
+  <xs:complexType name="CALSTableStructure">
+    <xs:annotation>
+      <xs:documentation>CALS table.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tbl.table.mdl">
+        <xs:attributeGroup ref="attlist.table" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tbl.table.mdl">
+    <xs:sequence>
+      <xs:element name="tgroup" type="CALSTableGroupStructure" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.table">
+    <xs:attribute name="frame">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="top" />
+          <xs:enumeration value="bottom" />
+          <xs:enumeration value="topbot" />
+          <xs:enumeration value="all" />
+          <xs:enumeration value="sides" />
+          <xs:enumeration value="none" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="colsep" type="yesorno" />
+    <xs:attribute name="rowsep" type="yesorno" />
+    <xs:attribute name="align" default="left">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="left" />
+          <xs:enumeration value="center" />
+          <xs:enumeration value="right" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="tabstyle" type="xs:NMTOKEN" />
+    <xs:attributeGroup ref="tbl.table.att" />
+    <xs:attribute name="id" type="xs:ID" />
+  </xs:attributeGroup>
+  <xs:attributeGroup name="tbl.table.att">
+    <xs:attribute name="pgwide" type="yesorno" />
+  </xs:attributeGroup>
+  <!-- TGroup -->
+  <xs:complexType name="CALSTableGroupStructure">
+    <xs:annotation>
+      <xs:documentation>CALS table group element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tbl.tgroup.mdl">
+        <xs:attributeGroup ref="attlist.tgroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tbl.tgroup.mdl">
+    <xs:sequence>
+      <xs:element name="colspec" type="CALSColspecStructure" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="thead" type="CALSTableHeadStructure" minOccurs="0" />
+      <xs:element name="tbody" type="CALSTableBodyStructure" />
+      <xs:element name="tfoot" type="CALSTableHeadStructure" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.tgroup">
+    <xs:attribute name="cols" type="xs:NMTOKEN" use="required" />
+    <xs:attribute name="colsep" type="yesorno" />
+    <xs:attribute name="rowsep" type="yesorno" />
+    <xs:attribute name="align">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="left" />
+          <xs:enumeration value="right" />
+          <xs:enumeration value="center" />
+          <xs:enumeration value="justify" />
+          <xs:enumeration value="char" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- Colspec -->
+  <xs:complexType name="CALSColspecStructure">
+    <xs:annotation>
+      <xs:documentation>CALS colspec element.</xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="attlist.colspec" />
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.colspec">
+    <xs:attribute name="colnum" type="xs:NMTOKEN" />
+    <xs:attribute name="colname" type="xs:NMTOKEN" />
+    <xs:attribute name="colwidth" />
+    <xs:attribute name="colsep" type="yesorno" />
+    <xs:attribute name="rowsep" type="yesorno" />
+    <xs:attribute name="align">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="left" />
+          <xs:enumeration value="right" />
+          <xs:enumeration value="center" />
+          <xs:enumeration value="justify" />
+          <xs:enumeration value="char" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="char" />
+    <xs:attribute name="charoff" type="xs:NMTOKEN" />
+  </xs:attributeGroup>
+  <!-- THead -->
+  <xs:complexType name="CALSTableHeadStructure">
+    <xs:sequence>
+      <xs:element name="row" type="CALSRowStructure" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attributeGroup ref="attlist.thead" />
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.thead">
+    <xs:attribute name="valign">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="top" />
+          <xs:enumeration value="middle" />
+          <xs:enumeration value="bottom" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- TBody -->
+  <xs:complexType name="CALSTableBodyStructure">
+    <xs:sequence>
+      <xs:element name="row" type="CALSRowStructure" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attributeGroup ref="attlist.tbody" />
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.tbody">
+    <xs:attribute name="valign">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="top" />
+          <xs:enumeration value="middle" />
+          <xs:enumeration value="bottom" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- Row -->
+  <xs:complexType name="CALSRowStructure">
+    <xs:annotation>
+      <xs:documentation>CALS row element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tbl.row.mdl">
+        <xs:attributeGroup ref="attlist.row" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tbl.row.mdl">
+    <xs:sequence>
+      <xs:element name="entry" type="CustomCALSEntryStructure" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.row">
+    <xs:attribute name="rowsep" type="yesorno" />
+    <xs:attribute name="valign">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="top" />
+          <xs:enumeration value="middle" />
+          <xs:enumeration value="bottom" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- Entry -->
+  <xs:complexType name="CustomCALSEntryStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+			Altered CALS entry element to restrict content.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="OtherParagraphElements" />
+      <xs:group ref="PrintParagraphElements" />
+    </xs:choice>
+    <xs:attributeGroup ref="attlist.entry" />
+  </xs:complexType>
+  <!--
+		NOTE: This structure is not reference anywhere in this schema.
+		It is left in for comparison with the CustomCALSEntryStructure
+		complex type.
+	-->
+  <xs:complexType name="CALSEntryStructure" mixed="true">
+    <xs:annotation>
+      <xs:documentation>CALS entry element.</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:any processContents="lax" />
+    </xs:choice>
+    <xs:attributeGroup ref="attlist.entry" />
+  </xs:complexType>
+  <xs:attributeGroup name="attlist.entry">
+    <xs:attribute name="colname" type="xs:NMTOKEN" />
+    <xs:attribute name="namest" type="xs:NMTOKEN" />
+    <xs:attribute name="nameend" type="xs:NMTOKEN" />
+    <xs:attribute name="morerows" type="xs:NMTOKEN" />
+    <xs:attribute name="colsep" type="yesorno" />
+    <xs:attribute name="rowsep" type="yesorno" />
+    <xs:attribute name="align">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="left" />
+          <xs:enumeration value="right" />
+          <xs:enumeration value="center" />
+          <xs:enumeration value="justify" />
+          <xs:enumeration value="char" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="char" />
+    <xs:attribute name="charoff" type="xs:NMTOKEN" />
+    <xs:attribute name="valign">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="top" />
+          <xs:enumeration value="middle" />
+          <xs:enumeration value="bottom" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- no if zero(s), yes if any other value -->
+  <xs:simpleType name="yesorno">
+    <xs:restriction base="xs:NMTOKEN" />
+  </xs:simpleType>
+  <!-- END OF EXCHANGE Tables -->
+  <!-- HTML Tables -->
+  <!--
+		This table model is no longer used in this schema
+		so is left in this schema purely for reference purposes.
+	-->
+  <xs:complexType name="HTMLTableStructure">
+    <xs:annotation>
+      <xs:documentation>
+			Definition of permitted HTML style table markup.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="Tr">
+        <xs:complexType>
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="Td">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:documentation>
+									Table cells allow all paragraph elements to appear.
+									</xs:documentation>
+                </xs:annotation>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:group ref="OtherParagraphElements" />
+                  <xs:group ref="PrintParagraphElements" />
+                </xs:choice>
+                <xs:attribute name="Colspan" type="xs:integer" use="optional" />
+                <xs:attribute name="Rowspan" type="xs:integer" use="optional" />
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+    <xs:attribute name="border" type="xs:positiveInteger" use="optional" />
+  </xs:complexType>
+  <!-- mekon added content structure -->
+  <xs:complexType name="CoverStructure" mixed="false">
+    <xs:annotation>
+      <xs:documentation>
+			The definition of the content element.
+			
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="CoverElements" />
+    </xs:choice>
+  </xs:complexType>
+  <!-- mekon attributes for cover and contents -->
+  <xs:attributeGroup name="MekonAttributes">
+    <!-- Attributes for the bound volumn cover -->
+    <xs:attribute name="number" type="xs:integer" />
+    <xs:attribute name="parliament" type="xs:string" />
+    <xs:attribute name="part" type="xs:string" />
+    <xs:attribute name="periodstart" type="xs:string" />
+    <xs:attribute name="periodend" type="xs:string" />
+    <xs:attribute name="price" type="xs:string" />
+    <xs:attribute name="series" type="xs:string" />
+    <xs:attribute name="session" type="xs:string" />
+    <xs:attribute name="sessiontitle" type="xs:string" />
+    <xs:attribute name="year" type="xs:string" />
+    <!-- Attributes for the daily part cover -->
+    <xs:attribute name="maxparts" type="xs:integer" />
+    <!--Committee attribs -->
+    <xs:attribute name="cdate" type="xs:integer" />
+    <xs:attribute name="cday" type="xs:string" />
+    <xs:attribute name="cmonth" type="xs:string" />
+    <xs:attribute name="committee" type="xs:string" />
+    <xs:attribute name="cyear" type="xs:string" />
+    <xs:attribute name="date" type="xs:integer" />
+    <xs:attribute name="day" type="xs:string" />
+    <xs:attribute name="debate" type="xs:string" />
+    <xs:attribute name="month" type="xs:string" />
+    <xs:attribute name="printing" type="xs:string" />
+    <xs:attribute name="sitting" type="xs:string" />
+    <xs:attribute name="sittingtime" type="xs:string" />
+    <xs:attribute name="subtitle" type="xs:string" />
+    <xs:attribute name="type" type="xs:string" />
+    <xs:attribute name="bcoveruri" type="xs:string" />
+    <xs:attribute name="indexuri" type="xs:string" />
+    <xs:attribute name="issue" type="xs:string" />
+    <xs:attribute name="volume" type="xs:string" />
+    <xs:attribute name="htmlBackCoverUri" type="xs:string" />
+    <xs:attribute name="htmlIndexUri" type="xs:string" />
+    <xs:attribute name="pbc" type="xs:integer" />
+  </xs:attributeGroup>
+  <xs:group name="CoverElements">
+    <xs:annotation>
+      <xs:documentation>
+			The wrapper for the cover
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Cover">
+        <xs:complexType>
+          <xs:sequence minOccurs="0">
+            <xs:element name="Contents" type="ContentsStructure" />
+          </xs:sequence>
+          <xs:attributeGroup ref="MekonAttributes" />
+          <!-- Optionally include the Contents element (for committee). -->
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="ContentsStructure" mixed="false">
+    <xs:annotation>
+      <xs:documentation>
+			The definition of the content element.
+			
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="ContentsElements" />
+    </xs:choice>
+    <xs:attributeGroup ref="MekonAttributes" />
+  </xs:complexType>
+  <xs:group name="ContentsElements">
+    <xs:annotation>
+      <xs:documentation>
+			Choice of all of the citi generated content lines
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="citicont1">
+        <xs:complexType mixed="true">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="PrintRangeElements" minOccurs="0" maxOccurs="unbounded" />
+          </xs:choice>
+          <xs:attribute name="col" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="citicont2">
+        <xs:complexType mixed="true">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="PrintRangeElements" />
+          </xs:choice>
+          <xs:attribute name="col" />
+        </xs:complexType>
+      </xs:element>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hs_Para" type="ParaParagraphStructure" />
+        <xs:element name="hs_CFPCommittee" type="PrintParagraphStructure" />
+        <xs:element name="hs_CFPSubject" type="PrintParagraphStructure" />
+        <xs:element name="hs_CFPDate" type="PrintParagraphStructure" />
+        <xs:element name="hs_CFPPara" type="PrintParagraphStructure" />
+      </xs:choice>
+    </xs:choice>
+  </xs:group>
+  <xs:complexType name="IndexStructure" mixed="false">
+    <xs:annotation>
+      <xs:documentation>
+			The definition of the index element.
+			
+			</xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="IndexElements" />
+    </xs:choice>
+    <xs:attributeGroup ref="MekonAttributes" />
+  </xs:complexType>
+  <xs:group name="IndexElements">
+    <xs:annotation>
+      <xs:documentation>
+			Choice of all of the citi generated content lines
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tocdate">
+          <xs:complexType mixed="true">
+            <xs:attribute name="col" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="title">
+          <xs:complexType mixed="true">
+            <xs:attribute name="col" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="level1">
+          <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="level2">
+                <xs:complexType mixed="true">
+                  <xs:attribute name="col" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tocdate">
+                <xs:complexType mixed="true">
+                  <xs:attribute name="col" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="I" type="PrintRangeStructure" />
+            </xs:choice>
+            <xs:attribute name="col" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>
