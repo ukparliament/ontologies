@@ -71,6 +71,16 @@
       <section id="classes">
         <h2>Classes</h2>
 
+        <article class="class" id="Agent">
+          <h3>Class <a href="#Agent">Agent</a></h3>
+
+          <p>An agent, being a body responsible for preparing and depositing a Transport and Works Act order application on behalf of an applicant.</p>
+         </article>
+        <article class="class" id="Applicant">
+          <h3>Class <a href="#Applicant">Applicant</a></h3>
+
+          <p>An applicant for a Transport and Works order, for example: Network Rail applying for an order to authorise the construction, maintenance and operation by Network Rail of works on the Transpennine Line between Stalybridge and Diggle (Saddleworth).</p>
+         </article>
         <article class="class" id="AvailabilityType">
           <h3>Class <a href="#AvailabilityType">Availability type</a></h3>
 
@@ -154,6 +164,13 @@
 
           <p>The time period of a single Parliament between the date of its first assembly after a general election and its dissolution. A Parliament period contains contiguous session and prorogation periods. During a parliament period Parliament is either in session or prorogued. The start date of a Parliament may be changed by subsequent proclamations. A Parliament ends at the next dissolution. While the Fixed-term Parliaments Act 2011 was in force, the date of dissolution was determined by that Act or was named in a proclamation following a vote in Parliament for an early general election. The next Parliament began on the date named in the proclamation issued following a dissolution. Before the Fixed-term Parliaments Act 2011 came into force and after that Act was repealed by the Dissolution and Calling of Parliament Act 2022, the date of dissolution is fixed by proclamation. The dissolution proclamation also names the date for Parliament to reassemble. Parliament periods are the same across both Houses. Parliaments are numbered ordinally from the first Parliament of the United Kingdom, sitting in 1801.</p>
          </article>
+        <article class="class" id="TransportAndWorksActOrderApplication">
+          <h3>Class <a href="#TransportAndWorksActOrderApplication">Transport and Works Act order application</a></h3>
+
+          <p>An application for an order under the Transport and Works Act 1992. An order made under the Transport and Works Act 1992 is the usual way of authorising schemes for new railways or tramways in England and Wales. To apply for an order, an agent acting on behalf of an applicant must deposit an application into Parliament.</p>
+           <p>
+            Superclasses  &middot; DepositedPaper           </p>
+        </article>
       </section>
  
       <section id="objectproperties">
@@ -195,6 +212,44 @@
             >
             &mdash; Contains commitment &mdash;
             <a href="#Commitment">Commitment</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasAgent">
+          <h3>
+            Object property
+            <a href="#hasAgent"
+              >Has agent</a
+            >
+          </h3>
+
+           <p>Relates a Transport and Works Act order application to the agent responsible for preparing and depositing that application. A Transport and Works Act order application has one agent.</p>
+
+          <p>
+            <a href="#TransportAndWorkActOrderApplication"
+              >TransportAndWorkActOrderApplication</a
+            >
+            &mdash; Has agent &mdash;
+            <a href="#Agent">Agent</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasApplicant">
+          <h3>
+            Object property
+            <a href="#hasApplicant"
+              >Has applicant</a
+            >
+          </h3>
+
+           <p>Relates a Transport and Works Act order application to the body applying for an order. A Transport and Works Act order application has one applicant.</p>
+
+          <p>
+            <a href="#TransportAndWorkActOrderApplication"
+              >TransportAndWorkActOrderApplication</a
+            >
+            &mdash; Has applicant &mdash;
+            <a href="#Applicant">Applicant</a>
           </p>
         </article>
 
@@ -406,6 +461,10 @@
             <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedPaper</td>
             <td>/<wbr>ontologies/<wbr>depositing/<wbr>PaperExpression</td>
           </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>TransportAndWorksActOrderApplication</td>
+            <td>/<wbr>ontologies/<wbr>depositing/<wbr>DepositedPaper</td>
+          </tr>
         </table>
       </section>
  
@@ -488,7 +547,7 @@
 
     <footer>
       <p>
-        Generated 2026-01-19 16:37:47.116497+00:00 from a
+        Generated 2026-01-20 11:57:41.808946+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../depositing/depositing-ontology.ttl"
