@@ -60,7 +60,23 @@ pdep:DepositedPaper rdf:type owl:Class ;
 	rdfs:label "Deposited paper"@en ;
 	rdfs:comment "A paper which has been deposited in the Library of a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
-
+	
+pdep:TransportAndWorksActOrderApplication rdf:type owl:Class ;
+	rdfs:subClassOf pdep:DepositedPaper ;
+	rdfs:label "Transport and Works Act order application"@en ;
+	rdfs:comment "An application for an order under the Transport and Works Act 1992. An order made under the Transport and Works Act 1992 is the usual way of authorising schemes for new railways or tramways in England and Wales. To apply for an order, an agent acting on behalf of an applicant must deposit an application into Parliament."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:Agent rdf:type owl:Class ;
+	rdfs:label "Agent"@en ;
+	rdfs:comment "An agent, being a body responsible for preparing and depositing a Transport and Works Act order application on behalf of an applicant."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:Applicant rdf:type owl:Class ;
+	rdfs:label "Applicant"@en ;
+	rdfs:comment "An applicant for a Transport and Works order, for example: Network Rail applying for an order to authorise the construction, maintenance and operation by Network Rail of works on the Transpennine Line between Stalybridge and Diggle (Saddleworth)."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
 pdep:AvailabilityType rdf:type owl:Class ;
 	rdfs:label "Availability type"@en ;
 	rdfs:comment "The type of the availability of a deposited paper, being: available to the public, available to the public in a redacted form, or available only to Members."@en ;
@@ -179,6 +195,20 @@ pdep:hasAvailabilityType rdf:type owl:ObjectProperty ;
 	rdfs:comment "Relates a deposited paper to the availability type of that deposited paper. A deposited paper has one availability type."@en ;
 	rdfs:domain pdep:DepositedPaper ;
 	rdfs:range pdep:AvailabilityType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:hasAgent rdf:type owl:ObjectProperty ;
+	rdfs:label "Has agent"@en ;
+	rdfs:comment "Relates a Transport and Works Act order application to the agent responsible for preparing and depositing that application. A Transport and Works Act order application has one agent."@en ;
+	rdfs:domain pdep:TransportAndWorkActOrderApplication ;
+	rdfs:range pdep:Agent ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
+	
+pdep:hasApplicant rdf:type owl:ObjectProperty ;
+	rdfs:label "Has applicant"@en ;
+	rdfs:comment "Relates a Transport and Works Act order application to the body applying for an order. A Transport and Works Act order application has one applicant."@en ;
+	rdfs:domain pdep:TransportAndWorkActOrderApplication ;
+	rdfs:range pdep:Applicant ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/depositing/> .
 
 				
