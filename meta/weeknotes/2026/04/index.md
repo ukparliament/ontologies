@@ -59,94 +59,40 @@ Sticking with our shiny new Procedure Browsable Space&trade;, Michael's also bee
 The only new feature addition to our shiny new Procedure Browsable Space&trade; came in the form of a new legislation lookup. This entirely enabled by Librarian Jayne's herculean efforts some months back to tidy all of our Act of Parliament data. As part of that work, she ensured that every Act with a legislation.gov.uk URI had that URI stored in our store. Which means, one SPARQL query later, we're now able to look for an Act by its legislation.gov.uk URI and, if we find such an Act, respond with a redirect to a list of instruments enabled by that Act that are currently before Parliament. An announcement applauded by both Alice and John. Let's be honest here, in our line of work praise does not come much higher. For the non-information resource URI initiated, the lookup pattern looks like:
 
 <pre>
-[https://api.parliament.uk/procedure-browser/enabling-legislation/lookup?legislation-gov-uk-uri=https://www.legislation.gov.uk/id/ukpga/2011/20](https://api.parliament.uk/procedure-browser/enabling-legislation/lookup?legislation-gov-uk-uri=https://www.legislation.gov.uk/id/ukpga/2011/20)
+https://api.parliament.uk/procedure-browser/enabling-legislation/lookup?legislation-gov-uk-uri=https://www.legislation.gov.uk/id/ukpga/2011/20
 </pre>
 
-For those less comfortable tinkering about with URL bars and trying to determine the difference between an information resource URI and a non-information resource URI, there's also [a handy bookmarklet](https://api.parliament.uk/procedure-browser/meta/bookmarklets). Just drag it to your browser toolbar, browse to any page under any Act on legislation.gov.uk, click the bookmarklet and you'll get taken post haste to a list of instruments currently before Parliament enabled by that Act.
+That as a link to click [here](https://api.parliament.uk/procedure-browser/enabling-legislation/lookup?legislation-gov-uk-uri=https://www.legislation.gov.uk/id/ukpga/2011/20). For those less comfortable tinkering about with URL bars and trying to determine the difference between an information resource URI and a non-information resource URI, there's also [a handy bookmarklet](https://api.parliament.uk/procedure-browser/meta/bookmarklets). Just drag it to your browser toolbar, browse to any page under any Act on legislation.gov.uk, click the bookmarklet and you'll get taken post haste to a list of instruments currently before Parliament enabled by that Act.
 
+In procedure adjacent news, Shedcode James has been head down in our beloved Egg Timer&trade; code adding a full suite of tests for both scrutiny end date calculations and scrutiny start date calculations. So the next time we tinker with it, Librarian Jayne won't need to waste half an afternoon on testing duties. Given a fairly comprehensive refactor of our beloved Egg Timer&trade;'s calculation code lurks just over the horizon, the presence of tests is a  relief to all of us. But mostly to Jayne.
 
+## Toward a single subject view of the Librar(y/ies)
 
-
-
-
-
-
-
-
-
-
+Team Anna, Susannah, Ned, Phil and Silver continue to make excellent progress on our Library Knowledge Base&trade; application / Single Subject View of the Library&trade; project. Which, as our dear reader will well know, is the first application to make use of the hierarchical organisation of our taxonomy. All other applications treating it more like a bag of words. A bag of beautifully planted, well-weeded words, but a bag of words nonetheless. Now it's finally found the opportunity to stretch its gazelle-like legs, Librarian Ned has been out with his hoe and hand-trowel, ripping out more plants in wrong places. In this case, what have come be known as 'scaffolding terms' - 'concepts' in the taxonomic hierarchy intended more for librarian organisation than for subject indexing. For fairly obvious reasons, just removing the scaffolding would have brought about disaster. Prematurely removing scaffolding does tend to do that. So Ned's been more than busy, digging up concepts which were under scaffolding terms and [replanting them in the shade of more appropriate conceptual homes](https://trello.com/c/Olqe77g6/386-rescue-ids-from-scaffolding), reindexing content as appropriate. Proper bit of librarianship that is.
 
 ## Psephologising wildly
 
-https://trello.com/c/m7KnLo91/583-remove-aggregate-values-on-general-election-and-replace-with-query
+Our regular reader will be well aware that the Library's senior management have upped expectations for the publishing of result data come the next general election. Last time out, nothing was published until all the results had been verified. About two weeks after polling closed and most of the world had lost interest. Come the next general election, we're aiming for a more staged approach to publishing. In order to do that, we first need to ensure that loading the data is faster than it was. And in order to do that, we need to strip out some of the denormalised data, which made election result pages easier to build but the database harder to populate. To that end, SQL Neurotic has been stripping out columns and whole tables to be replaced by SQL queries way beyond the abilities of Michael. 
 
-https://trello.com/c/b3TToUCF/483-changing-the-lib-dem-party-colour
+That work was going well until, shortly before Christmas, Rachel slammed shut her laptop, packed her holiday bags and took a well-deserved trip to Japan. It had been agreed with Michael that he wouldn't attempt to do the work in her absense. But then Michael got bored, as Michael so often does. And made a ham-fisted attempt to remove cumulative counts from the general elections table. Pleased with his work, he informed both team and product manager, confidently stating there was no real need to test. At which point a not unimportant section of the website exploded for about 30 minutes.
 
-https://trello.com/c/a1kn98L0/589-lib-dem-colour-change
+Since then, Michael has wiped most of the egg off his first and Rachel has returned. Happily, she's also now done the same work, except this time properly. Thanks Rachel. Never have a whiteboard monkey do a data engineer's work might be one lesson here.
 
-## Publications project 
+Still, if we never make mistakes, we never learn. Points out Michael. And learned Michael has. Never wishing to hot fix a website at a quarter to five on a Friday afternoon - all whilst bravely battling a crippling bout of man-flu, he adds - he chatted to James about how best to add automated tests to our election results website. James spent a wee while pondering before settling on the best option and adding a tiny smattering of tests to the repository. Tests that our Rachel is currently expanding to cover every 'page' type across the application. We can only assume she's planning another holiday and doesn't want Michael to break everything in her absense. Again.
 
-https://trello.com/c/7JwPxQn6/19-add-users-to-data-graphs
-https://trello.com/c/YhvfdEPx/18-introduction-to-data-graphs
-https://trello.com/c/AK5Belw3/17-create-data-graphs-project-set-up
-https://trello.com/c/8RO3XNpJ/4-set-up-basic-rails-project-with-design-system
+The only visible change to election results - and indeed Member pages - resulted from a Liberal Democrat rebrand, their particularly flavour of orange taking a slight turn for the darker. Statistician Carl provided the Library's interpretation of their new colour, tweaked slightly so it's distinguishable in a list of all the other parties. Which Librarian Phil has now updated on the members website and computational 'expert' Michael has updated on election results. Not the easiest task for a colour-blind lad, but one he pulled off with applomb.
 
+## Publications prodding
 
+In the nine month gap between Developer Jon departing and Developer Jon returning, Anya and Michael found themselves with no search meetings to attend and time on their hands. Being generous souls, they offered to lend their whiteboarding skills to the Commons Library team charged with looking at how research material is published now and how we might want to publish it in the future. The result of all those chats being a straw man model and nothing more than a straw man model. Now we all know that no straw man model survives contact with real data and real workflows without picking up the odd bump and bruise. For that reason, a tyre kicking exercise was proposed. We'd take the model, tweak the model, add some data, make some web pages, add more data, tweak the model, adjust the web pages and so on and so forth. This week, this second phase of the project kicked off.
 
-
+For model making, model tweaking and instance data management, we've gone with the familiar option of a Data Graphs project. For turning that data into clickable pixels, we've gone with the equally familiar option of Shedcode James. As of this week, the Data Graphs project has been created, accounts have been set up, a Slack instance established, and an introduction to Data Graphs session ran with the project team. Meanwhile, up in Sheffield, James has been attempting to wrap his head around the Data Graphs API and pop the results into HTML. There's nothing to show quite yet, but do stay tuned.
 
 ## Model's own
 
-https://trello.com/c/iLYMdnAZ/131-depositing
-
-
-## Shedcode south
-
-https://trello.com/c/XLYsJRTe/204-consolidate-egg-timer-tests-to-all-use-the-db-dump-rather-than-seeds
-
-https://trello.com/c/VJEpMjyN/200-tests-for-election-results
+A single model shunted its way out of the respray shed, as our [depositing model](https://ukparliament.github.io/ontologies/depositing/depositing-ontology) expanded to include [applications for orders under the Transport and Works Act 1992](https://ukparliament.github.io/ontologies/depositing/depositing-ontology#d4e164) together with associated [applicants](https://ukparliament.github.io/ontologies/depositing/depositing-ontology#d4e188) and [agents](https://ukparliament.github.io/ontologies/depositing/depositing-ontology#d4e177). If nothing more, an opportunity for Michael to sneak in a reference to the 'Transpennine Line between Stalybridge and Diggle (Saddleworth)', an opportunity he'd have struggled to pass up.
 
 
 ## Spring cleaning
 
-
-https://trello.com/c/dKCPWLEM/402-data-task-committee-of-public-accounts-public-accounts-committee
-
-https://trello.com/c/0ANFwX8o/398-manual-change-bills-receiving-royal-assent
-
-https://trello.com/c/mNdUIbmP/367-hl-bills-with-commons-as-legislature
-
-## Taxonomic tinkering
-
-https://trello.com/c/3we817Ju/401-can-we-maintain-a-list-of-ses-ids-assigned-to-specialisms-in-lkb
-
-https://trello.com/c/QEdsIxrv/400-ctp-post-reports
-
-https://trello.com/c/Olqe77g6/386-rescue-ids-from-scaffolding
-
-https://trello.com/c/JoLg1SPs/337-new-procedure-term-for-fatal-motions
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Over on data tidying duties, Librarian Emma has trawled through four sessions worth of committee reports [correcting any attributed to the mis-titled Public Accounts Committee to the more appropriate Committee of Public Accounts](https://trello.com/c/dKCPWLEM/402-data-task-committee-of-public-accounts-public-accounts-committee). Emma's also been spring cleaning our bill data, which had been displaying a noticeable discrepancy between the House mentioned in the reference field and the House to which the bill had been assigned. That's another [nine sessions' worth of data](https://trello.com/c/mNdUIbmP/367-hl-bills-with-commons-as-legislature) now considered both spick and indeed span. Thankless tasks, thanked here.
