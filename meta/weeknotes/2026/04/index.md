@@ -98,7 +98,6 @@ Over on data tidying duties, Librarian Emma has trawled through four sessions wo
 
 ## Outreach / engagement
 
+We would not wish our dear reader to depart thinking it's all work and no play. Christmas trees chopped and composted, Anya and Michael made their usual trek to [Oxford town](https://www.youtube.com/watch?v=sb4PsXncNV8) for the [Study of Parliament Group annual weekend](https://studyofparliamentgroup.org/spg-annual-weekend-3/). Librarian Jayne had also intended to attend, but then it snowed. So that put paid to that plan. Well, it would be unrealistic to expect to be able to travel 59 miles when there's half an inch of snow on the platform. Anyway, the conference sessions were enjoyed, old faces acknowledged and intelligent sounding conversations shyly avoided by judicious application of cigarette breaks. Then [Edward](https://bsky.app/profile/edwardwood.bsky.social) turned up. Drink was taken. We've never been ones to sneer at tradition.
 
-
-
-
+The only other trip to report happily coincided with Shedcode James being down from Sheffield for the day. Following a morning of yet more planning, we boarded the Circle Line to the [History of Parliament Trust](https://www.historyofparliamentonline.org/)'s new gaff by the Barbican. Over tea and biscuits we chatted through all the usual topics from election results to constituency data to the [Rush database](https://membersafter1832.historyofparliamentonline.org/) to the [Beamish database](https://peerages.historyofparliamentonline.org/) to [standing orders](https://api.parliament.uk/standing-orders) to parliamentary time and historic sitting day data. Thanks for hosting [Jennie](https://bsky.app/profile/jhdavey.bsky.social) and [Martin](https://bsky.app/profile/martinspychal.bsky.social). Pleasant as ever.
