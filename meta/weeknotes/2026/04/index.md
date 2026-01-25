@@ -1,6 +1,6 @@
 # 2026 - Week 4
 
-We've reached the end of the fourth week of the Year of our Lord 2026. Or the third working week of Q4, if that's how you choose to mark time. Week one passed in the fug of a mince-pies-comedown, our crack team of librarians wiping the sleep from their eyes to deal with the inevitable post-recess deluge of tabled written questions. Week two whipped by in a blur of days long planning sessions and conference attendances. By week three, our librarians were fully back at the wheel, purr of an Italian V12, whilst our 'expert' - if slightly aged - computational crew dusted off their crank handles, engines reluctantly producing notes more reminiscent of a misfiring Massey Ferguson. Normal working life resumed them.
+We reached the end of the fourth week of the Year of our Lord 2026. Or the third working week of Q4, if that's how you choose to mark time. Week one passed in the fug of a mince-pies-comedown, our crack team of librarians wiping the sleep from their eyes to deal with the inevitable post-recess deluge of tabled written questions. Week two whipped by in a blur of days long planning sessions and conference attendances. By week three, our librarians were fully back at their wheels, purring along like a fleet of Italian V12s, whilst our 'expert' - if slightly aged - computational crew dusted off their crank handles, engines reluctantly producing notes more reminiscent of a misfiring Massey Ferguson. Normal working life resumed them.
 
 ## Welcome back
 
