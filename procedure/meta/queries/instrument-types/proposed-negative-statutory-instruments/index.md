@@ -85,24 +85,24 @@ A list of laying bodies can be found [here](https://api.parliament.uk/query/reso
 
 All proposed negatives are required to be considered by a Commons committee and SLSC within 10 days of being laid before Parliament. The committees will either agree to the instrument being laid under the negative procedure or they will recommend the instrument be upgraded to the affirmative procedure. The following queries break down committee consideration:
 
-* [Commons Committee](https://api.parliament.uk/s/4abb151b)
+* [Commons Committee](https://api.parliament.uk/s/8f05b7be)
 
 
 * [Secondary Legislation Scrutiny Committee](https://api.parliament.uk/sparql#query=%23+This+query+uses+classes+from+UK+Parliament's+procedure+ontology%3A+https%3A%2F%2Fukparliament.github.io%2Fontologies%2Fprocedure%2Fprocedure-ontology.html.%0A%0A%23+This+query+looks+for+all+proposed+negative+statutory+instruments+considered+by+the+Secondary+Legislation+Scrutiny+Committee.+The+Committee+has+ten+days+from+the+point+of+laying+to+recommend+whether+the+instrument+should+proceed+under+the+negative+procedure+or+the+affirmative+procedure.++%0A%0APREFIX+%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2Fschema%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+id%3A+%3Chttps%3A%2F%2Fid.parliament.uk%2F%3E%0A%23+The+above+rows+describe+where+the+datasets+that+this+query+is+built+on+come+from.+%0A%0Aselect+distinct+%3FPNSI+%3FPNSIname+%3FlayingBodyName+%3FLaidDate+%3FLink+%3FworkPackage+%3FSLSCoutcome+%3Fdate+%3FSLSCLink+where+%7B+%0A%23+The+select+row+is+identifying+what+information+to+return+from+the+query.+These+are+all+variables+from+the+query+below.+%0A%0A%23+SPARQL+variables+start+with+a+%3F+and+can+match+any+node+(resource+or+literal)+in+the+RDF+dataset.++%0A++%0A+%3FPNSI+a+%3AProposedNegativeStatutoryInstrumentPaper+.+++%0A+++%23+A+PNSI+is+considered+a+workpackageable+thing+which+is+the+focus+of+a+workpackage%0A+++++%3FPNSI+rdfs%3Alabel+%3FPNSIname+%3B+%0A+++++++++++%0A+++++%3AlaidThingHasLaying%2F%3AlayingHasLayingBody%2F%3Aname+%3FlayingBodyName+.+%0A+++++%23+A+PNSI+is+a+laid+thing+so+will+always+have+a+laying+body.+In+order+to+narrow+this+down+you+can+add+the+following+filter+-+FILTER+regex+(%3FlayingBodyName%2C+%22Department+for+Environment%2C+Food+and+Rural+Affairs%22)+-+and+change+the+name+of+the+laying+body+to+suit+your+need.+%0A++%0A++%3FPNSI+%3AlaidThingHasLaying%2F%3AlayingDate+%3FLaidDate.%0A++%23+The+layingDate+is+the+date+the+proposed+negative+statutory+instrument+was+laid+before+Parliament.+PNSIs+are+always+laid+before+both+Houses.%0A++%0A++OPTIONAL+%7B++%3FPNSI+%3AworkPackagedThingHasWorkPackagedThingWebLink+%3FLink.+%7D%0A++%23+The+workpackageable+thing%2C+in+this+case+the+PNSI%2C+should+always+be+linked+to+the+instrument+on+gov.uk.+It+is+useful+to+be+able+to+have+queries+that+allow+information+to+be+added+to+the+solution+where+the+information+is+available%2C+but+do+not+reject+the+solution+because+some+part+of+the+query+pattern+does+not+match.+The+use+of+OPTIONAL+below+allows+this%2C+if+the+data+does+not+exist+then+it+will+still+include+the+PNSI+in+the+results.%0A%0A++%3FPNSI+%3AworkPackagedThingHasWorkPackage+%3FworkPackage+.+%0A+++++++++++%23+A+workpackage+is+a+group+of+business+items+under+a+procedure+or+as+determined+by+a+committee%2C+for+example%3A+business+items+considered+during+the+passage+of+a+particular+Statutory+Instrument.%0A%0A++%3FworkPackage+%3AworkPackageHasBusinessItem+%3Fbi.%0A+++++++++++%23+A+business+item+is+an+item+of+business+conducted+either+within+or+outside+Parliament.+For+example%3A+the+tabling+of+an+early+day+motion%2C+a+laying+of+a+paper%2C+the+making+of+a+statutory+instrument+by+a+government+minister.%0A%0A++%3Fbi+%3AbusinessItemHasProcedureStep+%3FSLSC+%3B+%0A++++++%3AbusinessItemDate+%3Fdate.%0A++%3Fbi+%3AbusinessItemHasBusinessItemWebLink+%3FSLSCLink.%0A++%3FSLSC+%3AprocedureStepName+%3FSLSCoutcome.%0A++FILTER+(%3FSLSC+in+(id%3AGAGqPaSf%2C+id%3At8ZjDv8Y))%0A+++++++++++++++++++++++%23+This+filter+looks+for+the+outcome+steps+of+SLSC's+consideration%2C+whether+they+agree+with+the+negative+procedure+or+if+they+recommend+the+instrument+should+be+laid+under+the+affirmative+procedure.+We've+searching+for+the+procedureStepIDs+instead+of+the+procedureStepName+because+these+are+liable+to+change+whereas+the+IDs+are+fixed.++%0A%0A%0A++++++%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fapi.parliament.uk%2Fsparql&requestMethod=POST&tabTitle=SLSC+consideration&headers=%7B%7D&outputFormat=table)
 
     * [Further information published by the Secondary Legislation Scrutiny Committee](https://api.parliament.uk/s/a2e983df)     
 
-* [Both committees](https://api.parliament.uk/s/877fc57c)
+* [Both committees](https://api.parliament.uk/s/f0c6dc77)
 
 ### Committee differences
 
 There are occasions when the committees make different decisions on PNSIs with one agreeing to the negative procedure and the other recommending the instrument be upgraded. The following queries highlight the differences:
 
-* [SLSC agrees negative, Commons recommends affirmative](https://api.parliament.uk/s/ee99d954)
+* [SLSC agrees negative, Commons recommends affirmative](https://api.parliament.uk/s/437dfc1f)
 
-* [Commons agrees negative, SLSC recommends affirmative](https://api.parliament.uk/s/9d1b5d2d)
+* [Commons agrees negative, SLSC recommends affirmative](https://api.parliament.uk/s/319dcbdf)
 
-* [Both committees recommend affirmative](https://api.parliament.uk/s/c9048b4e) 
+* [Both committees recommend affirmative](https://api.parliament.uk/s/e18c6137) 
 
 ## Proposed negative instruments and their following Statutory Instruments
 
