@@ -24,8 +24,8 @@ Bluesky | Mastodon
 
 The written statements bot posts whenever a written statment is made to the House of Commons or the House of Lords.
 
-BlueSky | Mastodon
-[@written-statements](https://bsky.app/profile/written-statements.bsky.social) | [@WrittenStatements](https://mastodon.me.uk/@WrittenStatements)
+BlueSky | Mastodon | Feed
+[@written-statements](https://bsky.app/profile/written-statements.bsky.social) | [@WrittenStatements](https://mastodon.me.uk/@WrittenStatements) | [RSS](https://api.parliament.uk/written-answers/written-statements.rss)
 
 ## Written answer bots
 
