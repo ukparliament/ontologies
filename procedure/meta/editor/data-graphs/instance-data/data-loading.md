@@ -2048,11 +2048,6 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 	</code>
 </pre>
 
-# ======== Done to here =========
-
-
-
-
 ### Export the laying business items.
 <pre>
 	<code>
