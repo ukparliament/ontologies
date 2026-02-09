@@ -95,7 +95,7 @@ Populated by hand (open / closed).
 
 ### Add full label to Step.
 
-### Add the new full label column
+#### Add the new full label column
 
 <pre>
 	<code>
@@ -117,7 +117,7 @@ Populated by hand (open / closed).
         )
 		WHERE procedure.ProcedureStep.proceduresteptypeid != 1;
 	</code>
-<pre>
+</pre>
 
 ### Populate the new full label column for business_steps
 
@@ -2065,44 +2065,44 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 						CASE
 							WHEN ppdro.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', ppdro.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', ppdro.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
 							WHEN si.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', si.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', si.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
 							WHEN pnsi.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', pnsi.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', pnsi.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
 							WHEN pd.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', pd.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', pd.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
 							WHEN bill.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', bill.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', bill.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
 							WHEN treaty.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', treaty.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', treaty.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
 					END
 					WHEN bi.business_item_date IS NULL
 					THEN
 						CASE
 							WHEN ppdro.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', ppdro.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', ppdro.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
 							WHEN si.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', si.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', si.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
 							WHEN pnsi.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', pnsi.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', pnsi.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
 							WHEN pd.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', pd.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', pd.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
 							WHEN bill.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', bill.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', bill.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
 							WHEN treaty.name IS NOT NULL
 							THEN
-								CONCAT( 'Business item forming part of the ', treaty.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+								CONCAT( 'Laying forming part of the ', treaty.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
 							
 						END
 					
@@ -2143,6 +2143,7 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 				FROM
 					procedure.ProcedureLaying AS laying,
 					procedure.LayingBody AS body
+				WHERE laying.laying_body_id = body.id
 			) laying
 			ON laying.procedure_business_item_id = bi.id
 			
@@ -2182,7 +2183,7 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 			) AS treaty
 			ON treaty.id = work_package.id
 			
-			GROUP BY bi.id, actualisation.step_ids_concatenated, actualisation.step_labels_concatenated, ppdro.name, si.name, pnsi.name, pd.name, bill.name, treaty.name
+			GROUP BY bi.id, actualisation.step_ids_concatenated, actualisation.step_labels_concatenated, ppdro.name, si.name, pnsi.name, pd.name, bill.name, treaty.name, laying.body_triplestore_id
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/laying-business-items.csv' DELIMITER ',' CSV HEADER;
 	</code>
