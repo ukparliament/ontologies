@@ -92,12 +92,81 @@ Populated by hand (open / closed).
 	</code>
 </pre>
 
+
+### Add full label to Step.
+
+### Add the new full label column
+
+<pre>
+	<code>
+		ALTER TABLE procedure.procedurestep
+		ADD COLUMN full_label varchar(1000);
+	</code>
+</pre>
+
+### Populate the new full label column for non-business_steps
+
+<pre>
+	<code>
+		UPDATE procedure.ProcedureStep SET full_label = 
+        (
+          SELECT
+		  	CONCAT ( procedure.ProcedureStep.ProcedureStepName, ' ', st.proceduresteptypename)
+          FROM procedure.ProcedureStepType st 
+          WHERE procedure.ProcedureStep.proceduresteptypeid = st.id
+        )
+		WHERE procedure.ProcedureStep.proceduresteptypeid != 1;
+	</code>
+<pre>
+
+### Populate the new full label column for business_steps
+
+<pre>
+	<code>
+		UPDATE procedure.ProcedureStep SET full_label =
+	    (
+			SELECT
+				CASE 
+					WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
+						THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, ')'  )
+					WHEN legislature.name = 'Scottish Parliament' OR legislature.name = 'Senedd Cymru' OR legislature.name = 'Northern Ireland Assembly'
+						THEN CONCAT( s.procedurestepname, ' (', legislature.name, ')'  )
+					ELSE
+						s.procedurestepname
+				END
+			FROM procedure.procedurestep s
+			
+			LEFT JOIN
+				(
+					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_concatenated, STRING_AGG(h.housename::text, ' and ') AS houses_string
+					FROM procedure.procedurestephouse sh, procedure.house h
+					WHERE sh.houseid = h.id
+					GROUP BY step_id
+				) step_houses
+			ON step_houses.step_id = s.id
+			
+			LEFT JOIN
+				(
+					SELECT l.id, l.legislaturename AS name
+					FROM procedure.legislature l
+				) legislature
+			ON legislature.id = s.legislatureid
+			
+			WHERE procedure.ProcedureStep.id = s.id
+			
+		)
+		WHERE procedure.ProcedureStep.proceduresteptypeid = 1;
+	</code>
+<pre>
+
 ### Step (non-business)
+
+This should be adapted to use the new full label.
 
 <pre>
 	<code>
 		COPY (
-			SELECT s.*, concat( s.procedurestepname, ' - ', st.proceduresteptypename ) AS label
+			SELECT s.*, CONCAT( s.procedurestepname, ' - ', st.proceduresteptypename ) AS label
 			FROM procedure.procedurestep s, procedure.proceduresteptype st
 			WHERE s.proceduresteptypeid != 1
 			AND s.proceduresteptypeid = st.id
@@ -147,6 +216,8 @@ Update step collections 'Committee concerns steps', 'Commons First Reading' 'Deb
 Populated by hand.
 
 ### BusinessStep, Step, actualisedAlongside, source, hasStepType, businessStepInLegislature, businessStepInHouse and memberOf
+
+This should be adapted to use the new full label.
 
 <pre>
 	<code>
@@ -1627,41 +1698,336 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 	</code>
 </pre>
 
-# ======== Done to here =========
+
+
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for PublicBillWork)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', bill.procedure_bill_work_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:PublicBillWork:', bill.id ) AS proceduralWorkPackageFocus
+			FROM procedure.procedurebillwork bill, procedure.procedureworkpackagedthing wpt
+			WHERE bill.id = wpt.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/public-bill-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for ProposedNegativeStatutoryInstrumentWork)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', pnsi.procedure_proposed_negative_statutory_instrument_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:ProposedNegativeStatutoryInstrumentWork:', pnsi.id ) AS proceduralWorkPackageFocus
+			FROM procedure.ProcedureProposedNegativeStatutoryInstrument pnsi, procedure.procedureworkpackagedthing wpt
+			WHERE pnsi.id = wpt.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/pnsi-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for ProposedDraftRemedialOrderWork)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', pdro.procedure_proposed_draft_remedial_order_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:ProposedDraftRemedialOrderWork:', pdro.id ) AS proceduralWorkPackageFocus
+			FROM procedure.ProcedureProposedDraftRemedialOrder pdro, procedure.procedureworkpackagedthing wpt
+			WHERE pdro.id = wpt.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/proposed-draft-remedial-order-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for PublishedDraftUnderEUWA2018Work)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', pd.procedure_published_draft_under_euwa_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:PublishedDraftUnderTheEuropeanUnionWithdrawalAct2018Work:', pd.id ) AS proceduralWorkPackageFocus
+			FROM procedure.ProcedurePublishedDraftUnderEUWA pd, procedure.procedureworkpackagedthing wpt
+			WHERE pd.id = wpt.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/published-draft-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for DraftStatutoryInstrumentWork)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', dsi.procedure_statutory_instrument_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:DraftStatutoryInstrumentSubjectToParliamentaryProcedureWork:', dsi.id ) AS proceduralWorkPackageFocus
+			FROM procedure.ProcedureStatutoryInstrument dsi, procedure.procedureworkpackagedthing wpt
+			WHERE dsi.id = wpt.id
+			AND dsi.made_date IS NULL
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/draft-si-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
 
 
 
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for MadeStatutoryInstrumentWork)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', dsi.procedure_statutory_instrument_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:MadeStatutoryInstrumentSubjectToParliamentaryProcedureWork:', dsi.id ) AS proceduralWorkPackageFocus
+			FROM procedure.ProcedureStatutoryInstrument dsi, procedure.procedureworkpackagedthing wpt
+			WHERE dsi.id = wpt.id
+			AND dsi.made_date IS NOT NULL
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/made-si-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus (for TreatyWork)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				wpt.id,
+				CONCAT( 'Work package for ', t.procedure_treaty_name ) AS label,
+				wpt.Day_Count AS workPackageDayCount,
+				
+				CASE
+					WHEN wpt.Is_Clock_Frozen IS TRUE THEN 'true'
+				ELSE
+					'false'
+				END AS areClocksInWorkPackageFrozen,
+				wpt.procedure_work_package_triple_store_id AS triplestoreId,
+				wpt.Procedure_Id as subjectTo,
+				wpt.Procedure_Calculation_Style_Id AS proceduralWorkPackageHasCalculationStyle,
+				CONCAT( 'urn:procedure-editor:TreatyWork:', t.id ) AS proceduralWorkPackageFocus
+			FROM procedure.ProcedureTreaty t, procedure.procedureworkpackagedthing wpt
+			WHERE t.id = wpt.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/treaty-work-packages.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
 
 
+### Non-making available business items
 
+#### Remove business item URLs that are not URLs.
 
+<pre>
+	<code>
+		UPDATE procedure.ProcedureBusinessItem SET web_link = NULL WHERE id=68388;
+		UPDATE procedure.ProcedureBusinessItem SET web_link = 'https://www.parliament.uk/globalassets/documents/commons-committees/international-trade/correspondence/190125-SoS-to-Chair-UK-Switzerland-Trade-Agreement.pdf' WHERE id=70174;
+	</code>
+</pre>
 
-
-
-
-
-
-
-
-
-
-
- ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Export the non-laying business items.
+<pre>
+	<code>
+		COPY (
+			SELECT
+				bi.id AS id,
+				CASE
+					WHEN bi.business_item_date IS NOT NULL
+					THEN
+						CASE
+							WHEN ppdro.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', ppdro.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN si.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', si.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pnsi.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pnsi.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pd.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pd.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN bill.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', bill.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN treaty.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', treaty.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+					END
+					WHEN bi.business_item_date IS NULL
+					THEN
+						CASE
+							WHEN ppdro.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', ppdro.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN si.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', si.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pnsi.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pnsi.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pd.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pd.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN bill.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', bill.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN treaty.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', treaty.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							
+						END
+					
+				END AS label,
+				bi.triple_store_id AS triplestoreId,
+				bi.web_link AS url,
+				bi.business_item_date::date AS occursOn,
+				CONCAT( 'urn:procedure-editor:ProceduralWorkPackage:', procedure_work_package_id ) AS formsPartOf,
+				actualisation.step_ids_concatenated AS actualises
+			FROM procedure.ProcedureBusinessItem bi
+			
+			LEFT JOIN (
+				SELECT
+					a.procedure_business_item_id,
+					STRING_AGG(s.id::text, ', ') AS step_ids_concatenated,
+					STRING_AGG(s.full_label::text, ', ') AS step_labels_concatenated
+				FROM
+					procedure.ProcedureBusinessItemProcedureStep a,
+					procedure.ProcedureStep s
+				WHERE a.procedure_step_id = s.id
+				
+				GROUP BY a.procedure_business_item_id
+			) AS actualisation
+			ON actualisation.procedure_business_item_id = bi.id
+			
+			INNER JOIN (
+				SELECT *
+				FROM
+					procedure.ProcedureWorkPackagedThing
+			) work_package
+			ON work_package.id = bi.procedure_work_package_id
+			
+			LEFT JOIN (
+				SELECT ppdro.id, ppdro.procedure_proposed_draft_remedial_order_name AS name
+				FROM procedure.ProcedureProposedDraftRemedialOrder ppdro
+			) AS ppdro
+			ON ppdro.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT si.id, si.procedure_statutory_instrument_name AS name
+				FROM procedure.ProcedureStatutoryInstrument si
+			) AS si
+			ON si.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT pnsi.id, pnsi.procedure_proposed_negative_statutory_instrument_name AS name
+				FROM procedure.ProcedureProposedNegativeStatutoryInstrument pnsi
+			) AS pnsi
+			ON pnsi.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT pd.id, pd.procedure_published_draft_under_euwa_name AS name
+				FROM procedure.ProcedurePublishedDraftUnderEUWA pd
+			) AS pd
+			ON pd.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT bill.id, bill.procedure_bill_work_name AS name
+				FROM procedure.ProcedureBillWork bill
+			) AS bill
+			ON bill.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT t.id, t.procedure_treaty_name AS name
+				FROM procedure.ProcedureTreaty t
+			) AS treaty
+			ON treaty.id = work_package.id
+			
+			
+			WHERE bi.id NOT IN (
+				SELECT procedure_business_item_id
+				FROM procedure.ProcedureLaying
+			)
+			
+			GROUP BY bi.id, actualisation.step_ids_concatenated, actualisation.step_labels_concatenated, ppdro.name, si.name, pnsi.name, pd.name, bill.name, treaty.name
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/non-laying-business-items.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
 
 ### DepartmentalLead
 
@@ -1671,7 +2037,10 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 			SELECT
 				t.id,
 				CONCAT( 'Departmental lead for ', t.procedure_treaty_name ) AS label,
-				CONCAT( 'urn:procedure-editor:OrganisationAccountableToParliament:',t.lead_government_organisation_triple_store_id) AS byMinisterialDepartment
+				NULL AS startOn,
+				NULL AS endON,
+				t.id AS departmentalLeadOf,
+				CONCAT( 'urn:procedure-editor:MakingAvailableBody:',t.lead_government_organisation_triple_store_id) AS byMinisterialDepartment
 			FROM
 				procedure.proceduretreaty t
 		)
@@ -1679,68 +2048,143 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 	</code>
 </pre>
 
+# ======== Done to here =========
 
 
 
 
-
-
-
-
-
-
-
-                                                                                                                                                                                                                                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Business items
-
+### Export the laying business items.
 <pre>
 	<code>
 		COPY (
-			SELECT 
-				bi.id,
-				bi.triple_store_id,
-				bi.web_link,
-				bi.procedure_work_package_id,
-				bi.business_item_date,
-				actualisations.step_ids AS concatenated_step_ids
-			FROM procedure.procedurebusinessitem bi
-			LEFT JOIN
-				(
-					SELECT act.procedure_business_item_id AS business_item_id, STRING_AGG(act.procedure_step_id::text, ', ') AS step_ids
-					FROM procedure.procedurebusinessitemprocedurestep act
-					GROUP BY business_item_id
-				) actualisations
-			ON actualisations.business_item_id = bi.id
+			SELECT
+				bi.id AS id,
+				CASE
+					WHEN bi.business_item_date IS NOT NULL
+					THEN
+						CASE
+							WHEN ppdro.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', ppdro.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN si.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', si.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pnsi.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pnsi.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pd.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pd.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN bill.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', bill.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+							WHEN treaty.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', treaty.name, ' work package, on ', bi.business_item_date::date, ', actualising ', actualisation.step_labels_concatenated )
+					END
+					WHEN bi.business_item_date IS NULL
+					THEN
+						CASE
+							WHEN ppdro.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', ppdro.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN si.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', si.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pnsi.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pnsi.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN pd.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', pd.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN bill.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', bill.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							WHEN treaty.name IS NOT NULL
+							THEN
+								CONCAT( 'Business item forming part of the ', treaty.name, ' work package ', ', actualising ', actualisation.step_labels_concatenated )
+							
+						END
+					
+				END AS label,
+				bi.triple_store_id AS triplestoreId,
+				bi.web_link AS url,
+				bi.business_item_date::date AS occursOn,
+				CONCAT( 'urn:procedure-editor:ProceduralWorkPackage:', procedure_work_package_id ) AS formsPartOf,
+				actualisation.step_ids_concatenated AS actualises,
+				CONCAT( 'urn:procedure-editor:MakingAvailableBody:', laying.body_triplestore_id ) AS madeAvailableOnBehalfOf
+			FROM procedure.ProcedureBusinessItem bi
+			
+			LEFT JOIN (
+				SELECT
+					a.procedure_business_item_id,
+					STRING_AGG(s.id::text, ', ') AS step_ids_concatenated,
+					STRING_AGG(s.full_label::text, ', ') AS step_labels_concatenated
+				FROM
+					procedure.ProcedureBusinessItemProcedureStep a,
+					procedure.ProcedureStep s
+				WHERE a.procedure_step_id = s.id
+				
+				GROUP BY a.procedure_business_item_id
+			) AS actualisation
+			ON actualisation.procedure_business_item_id = bi.id
+			
+			INNER JOIN (
+				SELECT *
+				FROM
+					procedure.ProcedureWorkPackagedThing
+			) work_package
+			ON work_package.id = bi.procedure_work_package_id
+			
+			INNER JOIN (
+				SELECT
+					laying.procedure_business_item_id,
+					body.triple_store_id AS body_triplestore_id
+				FROM
+					procedure.ProcedureLaying AS laying,
+					procedure.LayingBody AS body
+			) laying
+			ON laying.procedure_business_item_id = bi.id
+			
+			LEFT JOIN (
+				SELECT ppdro.id, ppdro.procedure_proposed_draft_remedial_order_name AS name
+				FROM procedure.ProcedureProposedDraftRemedialOrder ppdro
+			) AS ppdro
+			ON ppdro.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT si.id, si.procedure_statutory_instrument_name AS name
+				FROM procedure.ProcedureStatutoryInstrument si
+			) AS si
+			ON si.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT pnsi.id, pnsi.procedure_proposed_negative_statutory_instrument_name AS name
+				FROM procedure.ProcedureProposedNegativeStatutoryInstrument pnsi
+			) AS pnsi
+			ON pnsi.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT pd.id, pd.procedure_published_draft_under_euwa_name AS name
+				FROM procedure.ProcedurePublishedDraftUnderEUWA pd
+			) AS pd
+			ON pd.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT bill.id, bill.procedure_bill_work_name AS name
+				FROM procedure.ProcedureBillWork bill
+			) AS bill
+			ON bill.id = work_package.id
+			
+			LEFT JOIN (
+				SELECT t.id, t.procedure_treaty_name AS name
+				FROM procedure.ProcedureTreaty t
+			) AS treaty
+			ON treaty.id = work_package.id
+			
+			GROUP BY bi.id, actualisation.step_ids_concatenated, actualisation.step_labels_concatenated, ppdro.name, si.name, pnsi.name, pd.name, bill.name, treaty.name
 		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/business-items.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/laying-business-items.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
