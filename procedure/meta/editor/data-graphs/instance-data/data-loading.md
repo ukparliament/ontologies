@@ -157,7 +157,7 @@ Populated by hand (open / closed).
 		)
 		WHERE procedure.ProcedureStep.proceduresteptypeid = 1;
 	</code>
-<pre>
+</pre>
 
 ### Step (non-business)
 
