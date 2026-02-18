@@ -149,6 +149,10 @@ The Joint Committee on Human Rights can also consider treaties but as of 2021 th
 
 * <a href="https://api.parliament.uk/s/53e68777">Consideration by the International Agreements Sub-Committee (IAC)</a>
 
+### Joint committees
+
+* <a href="https://api.parliament.uk/s/99586595">Joint Committee on Human Rights (JCHR) oral evidence sessions</a>
+
 ### Government responses to committee reports
 
 * <a href="https://api.parliament.uk/s/f2d527e7"> All government responses</a>
