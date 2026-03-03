@@ -56,24 +56,6 @@ This week marked yet another librarian powered re-launch of one of the datasets 
 
 Perhaps unsurprisingly, a good deal of data tidying has also taken place. The first instance being occasioned by a record deep within the Search and Indexing triplestore suggesting that [Baroness Lloyd of Effra](https://members.parliament.uk/member/5414/career) was the lead sponsor of the [Employment Rights Act 2025](https://bills.parliament.uk/bills/3737) on the 16th September 2025. It was drawn to the attention of the House of Librarians that, whilst the Baroness was indeed appointed to the government on the 11th September of that year, she did not actually take her seat in the Lords until the 13th of October. So could not, in fact, have been a sponsor of any bill 27 days before she arrived. That matter has now been corrected and the [manual updated accordingly](https://trello.com/c/RLeppSXi/400-bill-sponsored-by-a-member-before-theyre-a-member).
 
-Tidying has also taken place in the lead Member field for second reading debate. Which had, on occasion, featured both the Member opening the debate *and* the Member responding to the debate. This has also [now been fixed](https://trello.com/c/Dpj4Kel7/401-data-task-lead-member-field-second-reading), only the opening Member now being recorded and the manual, once more, updated to embrace this new policy. We hope that clears that up.
-
-
-
-
-
-
-
-
-
-
-
+Tidying has also taken place in the lead Member field of second reading debate records. Which had, on occasion, featured both the Member opening the debate *and* the Member responding to the debate. This has also [now been fixed](https://trello.com/c/Dpj4Kel7/401-data-task-lead-member-field-second-reading), only the opening Member now being recorded and the manual, once more, updated to embrace this new policy. We hope that clears that up.
 
 <p id="footnote-1">[1] Well, he is in Sheffield. They do things differently there.</p>
-
-
-
-
-
-
-
