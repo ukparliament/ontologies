@@ -1,6 +1,6 @@
 # Importing procedure editor data to Data Graphs
 
-The procedure editor database is [SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server). Jianhan provides a dump of this data, which is converted to [Postgres](https://en.wikipedia.org/wiki/PostgreSQL) using [DBBeaver](https://en.wikipedia.org/wiki/DBeaver).
+The procedure editor database is [SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server). Jianhan provides a dump of this data, which is converted to [Postgres](https://en.wikipedia.org/wiki/PostgreSQL) by James.
 
 This page lists the Postgres queries necessary to produce CSV files to populate Data Graphs.
 
@@ -8,138 +8,154 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 	<img src="data.svg" alt="Data loading progress diagram" title="Data loading progress diagram" />
 </a>
 
-## Done
-
-### ParliamentPeriod
+## ParliamentPeriod
 
 Sourced from:
 
 [https://docs.google.com/spreadsheets/d/1e3AnQebAO5ug-Pc_0qDq9KkyZiy0dRhJMvm0lRRJOXk/](https://docs.google.com/spreadsheets/d/1e3AnQebAO5ug-Pc_0qDq9KkyZiy0dRhJMvm0lRRJOXk/edit?usp=sharing)
 
-### Session and sessionInParliamentPeriod
+## Session inParliamentPeriod and hasSession
 
 Sourced from:
 
 [https://docs.google.com/spreadsheets/d/1e3AnQebAO5ug-Pc_0qDq9KkyZiy0dRhJMvm0lRRJOXk/](https://docs.google.com/spreadsheets/d/1e3AnQebAO5ug-Pc_0qDq9KkyZiy0dRhJMvm0lRRJOXk/edit?usp=sharing)
 
-### OrganisationAccountableToParliament and MakingAvailableBody
-
-[CSV file from SPARQL query](https://github.com/ukparliament/ontologies/blob/master/procedure/meta/editor/data-graphs/instance-data/dumps/loaded/organisations-accountable-parliament.csv)
-
-There are no IDs, so we use the triplestore ID as the Data Graphs ID.
-
-### AvailabilityStatus
+## AvailabilityStatus
 
 Populated by hand (open / closed).
 
-### Publication
+## Legislature
 
 <pre>
 	<code>
 		COPY (
-			SELECT *
-			FROM procedure.proceduresteppublication
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/publications.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-### Legislature
-
-<pre>
-	<code>
-		COPY (
-			SELECT *
-			FROM procedure.legislature
+			SELECT
+				id,
+				legislaturename AS name,
+				triplestoreid AS triplestoreId
+			FROM dbo.legislature
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/legislatures.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
-### House and inLegislature
+## House and inLegislature
 
 <pre>
 	<code>
 		COPY (
-			SELECT *
-			FROM procedure.house
+			SELECT
+				id,
+				housename AS name,
+				legislatureid AS inLegislature,
+				triplestoreid AS triplestoreId
+			FROM dbo.house
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/houses.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
-### StepType
+## Source
 
 <pre>
 	<code>
 		COPY (
-			SELECT *
-			FROM procedure.proceduresteptype
+			SELECT
+				id,
+				publicationname AS title,
+				publicationurl AS url,
+				triplestoreid AS triplestoreId
+			FROM dbo.proceduresteppublication
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/sources.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## StepType
+
+<pre>
+	<code>
+		COPY (
+			SELECT 
+				id,
+				proceduresteptypename AS label,
+				proceduresteptypedescription AS description,
+				triplestoreid AS triplestoreId
+			FROM dbo.proceduresteptype
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-types.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
-### CalculationStyle
+## CalculationStyle
 
 <pre>
 	<code>
 		COPY (
-			SELECT *
-			FROM procedure.procedurecalculationstyle
+			SELECT
+				id,
+				label,
+				eggtimerid AS parliamentaryTimeIdentifier,
+				triplestoreid AS triplestoreId
+			FROM dbo.procedurecalculationstyle
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/calculation-styles.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
+## MakingAvailableBody
 
-### Add full label to Step.
+[CSV file from SPARQL query](https://api.parliament.uk/s/6cf146cf)
 
-#### Add the new full label column
+Remember to set date format to dd/mm/yyyy on import.
+
+## Prepare steps for export
+
+### Add the new full label column to steps
 
 <pre>
 	<code>
-		ALTER TABLE procedure.procedurestep
+		ALTER TABLE dbo.procedurestep
 		ADD COLUMN full_label varchar(1000);
 	</code>
 </pre>
 
-### Populate the new full label column for non-business_steps
+### Populate the new full label column for non-business steps
 
 <pre>
 	<code>
-		UPDATE procedure.ProcedureStep SET full_label = 
+		UPDATE dbo.ProcedureStep SET full_label = 
         (
           SELECT
-		  	CONCAT ( procedure.ProcedureStep.ProcedureStepName, ' ', st.proceduresteptypename)
-          FROM procedure.ProcedureStepType st 
-          WHERE procedure.ProcedureStep.proceduresteptypeid = st.id
+		  	CONCAT ( dbo.ProcedureStep.ProcedureStepName, ' ', st.proceduresteptypename)
+          FROM dbo.ProcedureStepType st 
+          WHERE dbo.ProcedureStep.proceduresteptypeid = st.id
         )
-		WHERE procedure.ProcedureStep.proceduresteptypeid != 1;
+		WHERE dbo.ProcedureStep.proceduresteptypeid != 1;
 	</code>
 </pre>
 
-### Populate the new full label column for business_steps
+### Populate the new full label column for business steps
 
 <pre>
 	<code>
-		UPDATE procedure.ProcedureStep SET full_label =
+		UPDATE dbo.ProcedureStep SET full_label =
 	    (
 			SELECT
 				CASE 
-					WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
+					WHEN step_houses.houses_string IS NOT NULL
 						THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, ')'  )
-					WHEN legislature.name = 'Scottish Parliament' OR legislature.name = 'Senedd Cymru' OR legislature.name = 'Northern Ireland Assembly'
+					WHEN legislature.name IS NOT NULL
 						THEN CONCAT( s.procedurestepname, ' (', legislature.name, ')'  )
 					ELSE
 						s.procedurestepname
 				END
-			FROM procedure.procedurestep s
+			FROM dbo.procedurestep s
 			
 			LEFT JOIN
 				(
-					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_concatenated, STRING_AGG(h.housename::text, ' and ') AS houses_string
-					FROM procedure.procedurestephouse sh, procedure.house h
+					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_concatenated, STRING_AGG(h.housename::text, ', ') AS houses_string
+					FROM dbo.procedurestephouse sh, dbo.house h
 					WHERE sh.houseid = h.id
 					GROUP BY step_id
 				) step_houses
@@ -148,26 +164,29 @@ Populated by hand (open / closed).
 			LEFT JOIN
 				(
 					SELECT l.id, l.legislaturename AS name
-					FROM procedure.legislature l
+					FROM dbo.legislature l
 				) legislature
 			ON legislature.id = s.legislatureid
 			
-			WHERE procedure.ProcedureStep.id = s.id
-			
+			WHERE dbo.ProcedureStep.id = s.id
 		)
-		WHERE procedure.ProcedureStep.proceduresteptypeid = 1;
+		WHERE dbo.ProcedureStep.proceduresteptypeid = 1;
 	</code>
 </pre>
 
-### Step (non-business)
-
-This should be adapted to use the new full label.
+## Step (non-business)
 
 <pre>
 	<code>
 		COPY (
-			SELECT s.*, CONCAT( s.procedurestepname, ' - ', st.proceduresteptypename ) AS label
-			FROM procedure.procedurestep s, procedure.proceduresteptype st
+			SELECT
+				s.id,
+				s.full_label AS label,
+				s.procedurestepname AS name,
+				s.proceduresteptypeid AS hasStepType,
+				s.procedurestepdescription AS description,
+				s.triplestoreid AS triplestoreId
+			FROM dbo.procedurestep s, dbo.proceduresteptype st
 			WHERE s.proceduresteptypeid != 1
 			AND s.proceduresteptypeid = st.id
 		)
@@ -175,17 +194,75 @@ This should be adapted to use the new full label.
 	</code>
 </pre>
 
-### Procedure and procedureHasCalculationStyle
+## BusinessStep, Step, actualisedAlongside, source, hasStepType, businessStepInLegislature, businessStepInHouse and memberOf
+
+This should be adapted to use the new full label.
 
 <pre>
 	<code>
 		COPY (
-			SELECT p.*, calculation_styles.calculation_styles_string
-			FROM procedure.procedure p
+			SELECT
+				s.id,
+				s.full_label AS label,
+				s.procedurestepname AS name,
+				s.procedurestepdescription AS description,
+				proceduresteptypeid AS hasStepType,
+				step_houses.step_houses_concatenated AS businessStepInHouse,
+				s.legislatureid AS businessStepInLegislature,
+				collection_memberships.step_collections_concatenated AS memberOf,
+				s.procedurestepscopenote AS actualisationNote,
+				s.proceduresteplinknote AS linkNote,
+				s.procedurestepdatenote AS dateNote,
+				actualised_alongsides.actualised_alongside_concatenated AS actualisedAlongside,
+				s.proceduresteppublicationid AS source,
+				s.triplestoreid AS triplestoreId
+			FROM dbo.procedurestep s
+			LEFT JOIN
+				(
+					SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_concatenated
+					FROM dbo.procedurestepcollectionmembership scm, dbo.procedurestepcollection sc
+					WHERE scm.procedurestepcollectionid = sc.id
+					GROUP BY step_id
+				) collection_memberships
+			ON collection_memberships.step_id = s.id
+			LEFT JOIN
+				(
+					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_concatenated, STRING_AGG(h.housename::text, ' and ') AS houses_string
+					FROM dbo.procedurestephouse sh, dbo.house h
+					WHERE sh.houseid = h.id
+					GROUP BY step_id
+				) step_houses
+			ON step_houses.step_id = s.id
+			LEFT JOIN
+				(
+					SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_concatenated
+					FROM dbo.procedurestepalongsidestep sas
+					GROUP BY from_step_id
+				) actualised_alongsides
+			ON actualised_alongsides.from_step_id = s.id
+			WHERE s.proceduresteptypeid = 1
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/business_steps.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## Procedure and procedureHasCalculationStyle
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				p.id,
+				p.procedurename AS name,
+				p.proceduredescription AS description,
+				p.displayorder AS displayOrder,
+				calculation_styles.calculation_styles_string AS procedureHasCalculationStyle,
+				p.triplestoreid AS triplestoreId
+			FROM dbo.procedure p
 			LEFT JOIN
 				(
 					SELECT pcsa.procedureid AS procedure_id, STRING_AGG(pcs.id::text, ', ') AS calculation_styles_string
-					FROM procedure.procedurecalculationstyleapplicability pcsa, procedure.procedurecalculationstyle pcs
+					FROM dbo.procedurecalculationstyleapplicability pcsa, dbo.procedurecalculationstyle pcs
 					WHERE pcsa.procedurecalculationstyleid = pcs.id
 					GROUP BY procedure_id
 				) calculation_styles
@@ -195,13 +272,45 @@ This should be adapted to use the new full label.
 	</code>
 </pre>
 
-### StepCollection, stepCollectionInHouse and stepCollectionInProcedure
+## componentOf
+
+Populated by hand.
+
+## Availability (procedure only)
+<pre>
+	<code>
+		COPY (
+			SELECT
+				id,
+				CONCAT( 'Availability of ', procedurename, ' (', startdate::date, ' - ', enddate::date, ')' ) AS label,
+				CONCAT('urn:procedure-editor:Procedure:',id) AS availabilityOf,
+				startdate::date AS startOn,
+				enddate::date AS endOn,
+				'urn:procedure-editor:AvailabilityStatus:4sGJ6xVObCL4KQiPfQ2b6s' AS hasAvailabilityStatus
+			FROM dbo.procedure
+			WHERE (
+				startdate IS NOT NULL
+				OR
+				enddate IS NOT NULL
+			)
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/procedure-availability.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## StepCollection, stepCollectionInHouse and stepCollectionInProcedure
 
 <pre>
 	<code>
 		COPY (
-			SELECT *, 'FALSE' AS is_mechanical
-			FROM procedure.procedurestepcollection
+			SELECT
+				id,
+				stepcollectionname AS name,
+				houseid AS stepCollectionInHouse,
+				procedureid AS stepCollectionInProcedure,
+				'FALSE' AS isMechanical,
+				triplestoreid
+			FROM dbo.procedurestepcollection
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/step-collections.csv' DELIMITER ',' CSV HEADER;
 	</code>
@@ -209,67 +318,104 @@ This should be adapted to use the new full label.
 
 Update step collections 'Start steps', 'End steps', 'Bicameral end steps' and 'Website visible steps' to have isMechanical set to TRUE.
 
-Update step collections 'Committee concerns steps', 'Commons First Reading' 'Debate dteps' 'Motion tabled steps', 'Proposed negative statutory instruments upgraded to affirmative' to have isMechanical set to False.
 
-### componentOf
 
-Populated by hand.
+=============== done to here
 
-### BusinessStep, Step, actualisedAlongside, source, hasStepType, businessStepInLegislature, businessStepInHouse and memberOf
 
-This should be adapted to use the new full label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ActOfParliament and EnablingThing
 
 <pre>
 	<code>
 		COPY (
-			SELECT
-				s.*,
-				CASE 
-					WHEN step_houses.houses_string = 'House of Commons' OR step_houses.houses_string = 'House of Lords' OR step_houses.houses_string = 'House of Commons and House of Lords'
-						THEN CONCAT( s.procedurestepname, ' (', step_houses.houses_string, ')'  )
-					WHEN legislature.name = 'Scottish Parliament' OR legislature.name = 'Senedd Cymru' OR legislature.name = 'Northern Ireland Assembly'
-						THEN CONCAT( s.procedurestepname, ' (', legislature.name, ')'  )
-					ELSE
-						s.procedurestepname
-					END AS label,
-				collection_memberships.step_collections_concatenated AS step_collections_concatenated,
-				step_houses.step_houses_concatenated AS step_houses_concatenated,
-				actualised_alongsides.actualised_alongside_concatenated AS actualised_alongside_concatenated
-			FROM procedure.procedurestep s
-			LEFT JOIN
-				(
-					SELECT scm.procedurestepid AS step_id, STRING_AGG(sc.id::text, ', ') AS step_collections_concatenated
-					FROM procedure.procedurestepcollectionmembership scm, procedure.procedurestepcollection sc
-					WHERE scm.procedurestepcollectionid = sc.id
-					GROUP BY step_id
-				) collection_memberships
-			ON collection_memberships.step_id = s.id
-			LEFT JOIN
-				(
-					SELECT sh.procedurestepid AS step_id, STRING_AGG(h.id::text, ', ') AS step_houses_concatenated, STRING_AGG(h.housename::text, ' and ') AS houses_string
-					FROM procedure.procedurestephouse sh, procedure.house h
-					WHERE sh.houseid = h.id
-					GROUP BY step_id
-				) step_houses
-			ON step_houses.step_id = s.id
-			LEFT JOIN
-				(
-					SELECT sas.procedurestepid AS from_step_id, STRING_AGG(sas.commonlyactualisedalongsideprocedurestepid::text, ', ') AS actualised_alongside_concatenated
-					FROM procedure.procedurestepalongsidestep sas
-					GROUP BY from_step_id
-				) actualised_alongsides
-			ON actualised_alongsides.from_step_id = s.id
-			LEFT JOIN
-				(
-					SELECT l.id, l.legislaturename AS name
-					FROM procedure.legislature l
-				) legislature
-			ON legislature.id = s.legislatureid
-			WHERE s.proceduresteptypeid = 1
+			SELECT *
+			FROM procedure.solractofparliamentdata
+			WHERE isdeleted IS FALSE
 		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/business_steps.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### StepDisplayDepthInProcedure, forBusinessStep, depthInProcedure and displayDepth
 
@@ -299,43 +445,9 @@ This should be adapted to use the new full label.
 	</code>
 </pre>
 
-### Availability (procedure only)
 
-<pre>
-	<code>
-		COPY (
-			SELECT
-				id,
-				CONCAT( 'Availability for ', procedurename, ' procedure' ) AS availabilityLabel,
-				CONCAT('urn:procedure-editor:Procedure:',id) AS Procedure,
-				startdate AS startOn,
-				enddate AS endOn,
-				'urn:procedure-editor:AvailabilityStatus:1' AS AvailabilityStatus
-			FROM procedure.procedure
-			WHERE (
-				startdate IS NOT NULL
-				OR
-				enddate IS NOT NULL
-			)
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/procedure-availability.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
 
-Start and end dates are modelled in procedure editor as datetimes. They need to be converted to dates for import to Data Graphs. Data Graphs needs to be told the format in which to expect the dates: dd/mm/yyyy.
 
-### ActOfParliament and EnablingThing
-
-<pre>
-	<code>
-		COPY (
-			SELECT *
-			FROM procedure.solractofparliamentdata
-			WHERE isdeleted IS FALSE
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/acts-of-parliament.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
 
 As of 03/09/2025, there are 17,577 records in the solractofparliamentdata table, of which 1 has an isdeleted flag set to FALSE. Of the remaining 17,576, 11,048 are reporting validation errors in Data Graphs. This appears to be because we've created ActOfParliament > chapterNumber > Integer and these records have 'c.{chapter_number}'.
 
@@ -1891,6 +2003,8 @@ Populated by hand: Country Series, European Union Series, Miscellaneous Series.
 ### Non-making available business items
 
 #### Remove business item URLs that are not URLs.
+
+Remove this for new data dump.
 
 <pre>
 	<code>
