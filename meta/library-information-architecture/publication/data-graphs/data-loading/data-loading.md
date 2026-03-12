@@ -334,13 +334,6 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 	</code>
 </pre>
 
-
-
-
-====== DONE TO HERE
-
-
-
 ## Subjects
 
 <pre>
@@ -355,39 +348,21 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 	</code>
 </pre>
 
-https://researchbriefingsapp.parliament.uk/resourcefile/get/639a9ed9-c114-488e-b4f8-600f717ff9bf/RP96-106_25.pdf
+## Other categories (of expressions)
 
-
-
-
-
-
-
-
-
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-   416505	Lords Briefing packs - House of Lords
-   416509	Lords In Focus - Debates
-   346719	Lords Library Briefings - House of Lords
-   416503	Lords Briefing packs - Bills
-   346715	Lords Library Briefings - Bills
-   416511	Lords In Focus - Bills
-   416515	Lords In Focus - Topical
-   346717	Lords Library Briefings - Debates
-   416501	Lords Briefing packs - Debates
-   416507	Lords Briefing packs - Topical
-   346711	Briefing papers on bills
-   414951	Lords Library Briefings - Topical
-   416513	Lords In Focus - House of Lords
+416505	Lords Briefing packs - House of Lords
+416509	Lords In Focus - Debates
+346719	Lords Library Briefings - House of Lords
+416503	Lords Briefing packs - Bills
+346715	Lords Library Briefings - Bills
+416511	Lords In Focus - Bills
+416515	Lords In Focus - Topical
+346717	Lords Library Briefings - Debates
+416501	Lords Briefing packs - Debates
+416507	Lords Briefing packs - Topical
+346711	Briefing papers on bills
+414951	Lords Library Briefings - Topical
+416513	Lords In Focus - House of Lords
    	
 		
 		
