@@ -8,6 +8,33 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 	<img src="schema.svg" alt="Data loading progress diagram" title="Data loading progress diagram" />
 </a>
 
+## Explorations
+
+### ContentTypeId
+
+We work on the assumption that every Briefing has a ContentTypeId which is not NULL.
+
+<pre>
+	<code>
+		SELECT DISTINCT("ContentTypeId")
+		FROM "Briefing";
+	</code>
+</pre>
+
+### Status
+
+We also work on the assumption that every Briefing has one and only one Version with Status 1. We assume that Statuses are 0 for draft, 1 for published, 2 for superseded and 3 for withdrawn.
+
+<pre>
+	<code>
+		SELECT b."Id", count(v."Id") AS count
+		FROM "Briefing" b, "Version" v
+		WHERE b."Id" = v."BriefingId"
+		AND v."Status" = 1
+		GROUP BY b."Id"
+		ORDER BY count DESC;
+	</code>
+</pre>
 
 ## PublicationWork and publishedBy
 
@@ -26,6 +53,7 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 			INNER JOIN (
 				SELECT *
 				FROM "Version"
+				WHERE "Status" = 1 /* Published */
 			) AS version
 			ON version."BriefingId" = b."Id"
 			WHERE (
@@ -38,8 +66,6 @@ This page lists the Postgres queries necessary to produce CSV files to populate 
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/commons-publication-works.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
-
-This query exports 17,716 publications. Data Graphs only loads 15,011. Why?
 
 ### Lords publications
 
@@ -56,6 +82,7 @@ This query exports 17,716 publications. Data Graphs only loads 15,011. Why?
 			INNER JOIN (
 				SELECT *
 				FROM "Version"
+				WHERE "Status" = 1 /* Published */
 			) AS version
 			ON version."BriefingId" = b."Id"
 			WHERE (
@@ -86,6 +113,7 @@ This query exports 17,716 publications. Data Graphs only loads 15,011. Why?
 			INNER JOIN (
 				SELECT *
 				FROM "Version"
+				WHERE "Status" = 1 /* Published */
 			) AS version
 			ON version."BriefingId" = b."Id"
 			WHERE (
@@ -98,24 +126,6 @@ This query exports 17,716 publications. Data Graphs only loads 15,011. Why?
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/post-publication-works.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
-
-## Person
-
-<pre>
-	<code>
-		COPY (
-			SELECT
-				a."SesId" AS id,
-				'' AS name
-			FROM "VersionAuthor" a
-			WHERE a."SesId" IS NOT NULL
-		)
-		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/people.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-Taking just the people with SES IDs, it's possible for Phil to look up the SES ID to get a label (name) for the person. These then need to be deduped and SES IDs that do not resolve removed. As of 2026-03-04, 10 SES IDs did not resolve.
-
 
 ## PublicationExpression, expressionOf and hasPublicationExpressionStatus
 
@@ -143,7 +153,26 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 	</code>
 </pre>
 
+## Person
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				a."SesId" AS id,
+				'' AS name
+			FROM "VersionAuthor" a
+			WHERE a."SesId" IS NOT NULL
+		)
+		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/people.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+Taking just the people with SES IDs, it's possible for Phil to look up the SES ID to get a label (name) for the person. These then need to be deduped and SES IDs that do not resolve removed. As of 2026-03-04, 10 SES IDs did not resolve.
+
 ## Contribution, contributionTo, hasContributionType and contributionBy
+
+Contribution records have a field for AuthorType, though this is not defined in the database. We work on the assumption that type 0 is owner, type 1 is author and type 2 is contributor.
 
 <pre>
 	<code>
@@ -151,7 +180,7 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 			SELECT
 				va."Id" AS id,
 				CONCAT( 'Contribution to ', v."Title", ' by ', va."SesId" ) AS label,
-				va."BriefingId" AS contributionTo,
+				va."BriefingId" AS contributionTo, /* Given as BriefingId but points to a Version */
 				va."AuthorType" AS hasContributionType,
 				va."DisplayOrder" AS ordinality,
 				va."SesId" AS contributionBy,
@@ -210,7 +239,7 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 			
 			WHERE s."BriefingId" = v."Id"
 			
-			/* Don't include POST or Lords Library */
+			/* Include only Commons Library sections. Don't include POST or Lords Library */
 			AND (
 				s."SesId" = 25036
 				OR s."SesId" = 70459
@@ -233,26 +262,6 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 
 ## Collection and hasMember
 
-### Parliament facts and figures
-
-<pre>
-	<code>
-		COPY (
-			SELECT
-				1 AS id,
-				'Parliamentary facts and figures' as name,
-				STRING_AGG( b."Id"::text, ', ') AS hasMember
-			FROM
-				"Briefing" b,
-				"Version" v
-			WHERE b."Id" = v."BriefingId"
-			AND v."Status" = 1
-			AND v."CategoryId" = 346703
-		)
-		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/facts-and-figures-collection.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
 ### Economic indicators
 
 <pre>
@@ -266,14 +275,54 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 				"Briefing" b,
 				"Version" v
 			WHERE b."Id" = v."BriefingId"
-			AND v."Status" = 1
+			AND v."Status" = 1  /* Published */
 			AND v."CategoryId" = 346705
 		)
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/economic-indicators-collection.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
+### Parliament facts and figures
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				1 AS id,
+				'Parliamentary facts and figures' as name,
+				STRING_AGG( b."Id"::text, ', ') AS hasMember
+			FROM
+				"Briefing" b,
+				"Version" v
+			WHERE b."Id" = v."BriefingId"
+			AND v."Status" = 1  /* Published */
+			AND v."CategoryId" = 346703
+		)
+		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/facts-and-figures-collection.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## Other categories (of expressions)
+
+416505	Lords Briefing packs - House of Lords
+416509	Lords In Focus - Debates
+346719	Lords Library Briefings - House of Lords
+416503	Lords Briefing packs - Bills
+346715	Lords Library Briefings - Bills
+416511	Lords In Focus - Bills
+416515	Lords In Focus - Topical
+346717	Lords Library Briefings - Debates
+416501	Lords Briefing packs - Debates
+416507	Lords Briefing packs - Topical
+346711	Briefing papers on bills
+414951	Lords Library Briefings - Topical
+416513	Lords In Focus - House of Lords
+
 ## RelatedLink
+
+There are 79 validation errors when importing to Data Graphs. All of these appear to be cases where the title has been placed in the URL field and vice versa.
+
+13,340 URLs start with http://, whereas 13,760 start https://.
 
 <pre>
 	<code>
@@ -290,6 +339,17 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 </pre>
 
 ## ResourceFile
+
+Resource files have a Type which may be 0, 1, or 2. This is not enumerated in the database.
+
+Resource files with Type 0 appear to be mainly PDFS, but also: image/png, application/vnd.ms-excel, application/vnd.ms-excel.sheet.macroEnabled.12, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf.
+
+
+Resource files with Type 2 appear to be images having mime types: image/png, image/gif, image/jpeg, image/tiff, image/bmp.
+
+Resource files with Type 1 are a hodgepodge of application/pdf, application/vnd.ms-excel, text/csv, image/gif, application/octet-stream, application/vnd.ms-excel.sheet.macroEnabled.12, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/msword, text/html, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/x-zip-compressed.
+
+All resource files relate to at least one version. Some are reused across up to 15 versions.
 
 <pre>
 	<code>
@@ -321,18 +381,28 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 			SELECT
 				CONCAT( "VersionId", '-', "ResourceFileId" )  As id,
 				CASE
-					WHEN "Title" IS NOT NULL
-					THEN "Title"
+					WHEN resource_file."FileName" IS NOT NULL
+					THEN resource_file."FileName"
 					ELSE
 						'fake title'
-				END  AS title,
+				END AS title,
 				"VersionId" AS forPublicationExpression,
 				"ResourceFileId" AS forResourceFile
 			FROM "VersionResourceFile"
+			INNER JOIN (
+				SELECT *
+				FROM "ResourceFile"
+			) AS resource_file
+			ON resource_file."Id" = "ResourceFileId"
 		)
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/resource-file-links.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+21421
+
+
+=============== DONE TO HERE ===============
 
 ## Subjects
 
@@ -347,48 +417,3 @@ Taking just the people with SES IDs, it's possible for Phil to look up the SES I
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/briefings.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
-
-## Other categories (of expressions)
-
-416505	Lords Briefing packs - House of Lords
-416509	Lords In Focus - Debates
-346719	Lords Library Briefings - House of Lords
-416503	Lords Briefing packs - Bills
-346715	Lords Library Briefings - Bills
-416511	Lords In Focus - Bills
-416515	Lords In Focus - Topical
-346717	Lords Library Briefings - Debates
-416501	Lords Briefing packs - Debates
-416507	Lords Briefing packs - Topical
-346711	Briefing papers on bills
-414951	Lords Library Briefings - Topical
-416513	Lords In Focus - House of Lords
-   	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	    
-	     
-	     
-	     
-	    
-	     
-	     
