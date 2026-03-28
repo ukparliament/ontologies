@@ -8,7 +8,7 @@ From his perch high above the rooftops of South Yorkshire - like some Sheffield-
 
 Starting with the slightly more functional, our [examples page](https://beta-search.parliament.uk/meta/examples) has moved to a new home to keep it consistent with the other applications from [our 'stable'](https://docs.google.com/spreadsheets/d/1PoPVTDi8vTzXTaCWLgaz3Axg92derrM0lM0AqZDazaI/edit?usp=sharing). And the all-important [search term input box now has spellcheck enabled](https://trello.com/c/2NR75aQJ/661-search-input-typing). That, alongside assorted text changes and the removal of a stray character that had somehow found its way into a page template make the whole thing much more presentable. Why those stray characters *always* find their way into page templates remains a mystery. Has anyone ever tested a website and not found a stray angle-bracket assaulting the user's eyes? We suspect not.
 
-Still, as Young Robert likes to say, making a web-based service is a lot like making a trifle. Leaving out the cream and the sprinkles tends to offend even the most mild-mannered stakeholder. Whilst we true trifle aficionado knows its all about the fruit and the custard. Let's grab a spoon, dive in and see what lies beneath the Hundreds and Thousands.
+Still, as Young Robert likes to say, making a web-based service is a lot like making a trifle. Leaving out the cream and the sprinkles tends to offend even the most mild-mannered stakeholder. Whilst we true trifle aficionado knows its all about the fruit and the custard. Let's grab a spoon, dive in and see what lies beneath the [Hundreds and Thousands](https://en.wikipedia.org/wiki/Sprinkles).
 
 ## Sweating the taxonomy part I - aliases on Parliamentary Search
 
@@ -52,32 +52,50 @@ One starts to get the feeling that, if we were ever to value-chain map *all of t
 
 On the subject of value-chain mapping ...
 
-
-
-
-
-
-
 ## Value chain mapping *all of this*
 
+Back at our last quarterly planning meeting, Business Analyst Koye, Delivery Manager Lydia, SQL Neurotic Rachel, Developer Jon and computational 'experts' Young Robert and Michael promised to spend some time investigating whether it might be possible to map out [value chains](https://en.wikipedia.org/wiki/Value_chain) for our assorted services. Borrowing some much needed domain expertise from our crack team of librarians and grabbing a [Wardley map](https://en.wikipedia.org/wiki/Wardley_map) stencil that someone had kindly made in [Omnigraffle](https://en.wikipedia.org/wiki/OmniGraffle), we now have maps for Parliamentary Search, our procedural mapping explorations, all things election related and the good old Library Knowledge Base. 
 
+Quite amazing the amount of fruit and custards one needs to make a decent trifle, when all the customer sees is some cream and some sprinkles.
 
-
-
+Not only have our value chain mappers made some value chain pixels, they've also made a first draft of a Google sheet to capture assorted [nodes and indeed edges](https://en.wikipedia.org/wiki/Graph_theory) describing those chains. A spreadsheet that Data Scientist Louie has taken and plugged into [Power BI](https://en.wikipedia.org/wiki/Microsoft_Power_BI). Something that looks much like a Wardley map being the result of those efforts. How well that responds once *all the nodes* and *all the edges* have been captured remains a matter of conjecture. Hopefully, when we're done, Koye will end up with a fairly simple spreadsheet to maintain, tweaking to reflect progress, and management-appropriate visualisations will pop out of the other side. Hopefully.
 
 ## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
 
-https://trello.com/c/bQ99nVWW/326-procedure-browser-work-packages-primary-legislation-flags
-https://trello.com/c/U2h3yorf/329-procedure-browser-work-packages-treaties-flags
-https://trello.com/c/e43BXaoP/317-stepcollections-stepcollection-steps-with-actualisation-count
-https://trello.com/c/Fmp8kyLf/316-legislature-legislature-steps-with-actualisation-count
+Sticking with this weeks trifle metaphor, in the case of our procedure tracking experiments, our [map making exploits](https://ukparliament.github.io/ontologies/procedure/maps/) clearly cover off the fruit and the custard. Unfortunately, Librarian Jayne has not been with us for a wee while, so procedural cartography has taken something of a back seat.
 
+That said, some progress has been made at the cream and sprinkles end of the pipes, our [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade; gaining a couple of new features. The first new feature covers the inclusion of [actualisation](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e508) counts across our step listings. Or how many times has this procedural step actually happened? If indeed it has happened. Such counts are now present on both [step lists for legislatures](https://api.parliament.uk/procedure-browser/legislatures/FDzhB2sJ) and [step lists for a step collection](https://api.parliament.uk/procedure-browser/step-collections/7CBVQcZF), providing at least a hint of precedence.
 
+Elsewhere, a handful of work package listings have also gained flags where either a committee has raised concerns and / or a Member has tabled a motion. Such flags now appear on work package listings for [primary legislation](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation) (at least in theory), [secondary legislation](https://api.parliament.uk/procedure-browser/work-packages/secondary-legislation) and [treaties](https://api.parliament.uk/procedure-browser/work-packages/treaties). Or they would do if our procedural [triplestore](https://en.wikipedia.org/wiki/Triplestore) wasn't limping a little. Should you click on the secondary legislation listing, you may see a listing featuring said flags. Or you may not. This is entirely dependent on whether the triplestore gets tired or not. If the triplestore has had a late night, it tends to time out and the blasted [SPARQL](https://en.wikipedia.org/wiki/SPARQL) query returns nothing. Less than ideal.
 
+In better news, our Jianhan has promised to look into upgrading our procedural triplestore - currently running two major versions behind what is considered current - in the not too distant. At which point, we're hoping that the secondary legislation query and other similar queries work more predictably, without the triplestore needing to take an afternoon nap. Always, we live in hope. What we do in the meantime, remains [a matter for short debate](https://trello.com/c/gjn7pJyK/328-procedure-browser-work-packages-secondary-legislation-flags).
 
 ## Psephologising wildly
 
-https://trello.com/c/E0b3O9iD/468-naming-by-elections
+In exciting psephology news, our [election results website](https://electionresults.parliament.uk/) now comes complete with [by-election results for Parliament 55](https://electionresults.parliament.uk/parliament-periods/55#by-elections). All 21 of them. This thanks to more sterling work by Librarian Anna, who's had her head buried in semi-ancient spreadsheets, attempting to make them amenable to machine consumption. It is, in all honesty, possibly more thrilling news for us, than for anyone else.
+
+Prior to this release, we've had general election coverage for parliaments 55 to 59. Whereas our by-election coverage was restricted to parliaments 56 to 59. Now our regular reader may well be under the impression that we're not entirely immune from Obsessive-Compulsive Disorder, and our dear reader would not be wrong. Such a dog-legged offering felt intrinsically iffy, [coverage page](https://electionresults.parliament.uk/meta/coverage) caveats being stretched to breaking point. Now, if there's been an election to the House of Commons - be that as part of a general election or a by-election - at any point since the general election of 2010 it's [in our database](https://lite.datasette.io/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fukparliament%2Fpsephology-datasette%2Fmain%2Fpsephology.db%3Fraw%3Dtrue#psephology) and [on our website](https://electionresults.parliament.uk/elections). Satisfying.
+
+Should you be a consumer of our election data, it might be worth mentioning one small snaggle. For all other elections we've ingested, [invalid vote counts](https://ukparliament.github.io/ontologies/election/election-ontology#d4e899) have been available. For two of the 21 by-elections taking place during Parliament 55, despite repeated requests to local authorities, no such data was forthcoming. Presumably because it had never been recorded. Or if it had, that bit of paper went missing somewhere. To cope with that, we've had to add a new column to the elections table in our psephology database, recording whether the invalid vote count is available, or not. Both [ERD](https://electionresults.parliament.uk/meta/schema) and [data dictionary](https://electionresults.parliament.uk/meta/data-dictionary) have been updated accordingly.
+
+Going forward - as Young Robert might say - we intend to move backwards, keeping general elections and by-elections in Parliament period lockstep. Unsurprisingly, [efforts are currently focussed on Parliament 54](https://trello.com/c/koVm24bJ/446-parliament-54-2005-general-election-by-elections), which we hope to have live sometime in late April or early May. Whichever comes later.
+
+Sticking with the election results website, [Librarian Emily](https://bsky.app/profile/emilyjdavi.bsky.social) has been busy keeping our [Maiden speeches in the House of Commons since 1918](https://commonslibrary.parliament.uk/research-briefings/sn04588/) [Parliamentary Facts and Figures](https://commonslibrary.parliament.uk/tag/parliament-facts-and-figures/) publication up to date. That has also been reimported, meaning [Hannah Spencer is now reunited with her maiden speech](https://electionresults.parliament.uk/members/5447). Thanks Emily.
+
+Stepping behind the scenes, Librarian Phil has also been on by-election duty, this time over in the Members' Names Information Service, where all by-elections [now adhere to a consistent and coherent naming structure](https://trello.com/c/E0b3O9iD/468-naming-by-elections). Top work Librarian Phil.
+
+Turning our gaze away from the past and into the future, Developer Sri, Developer Gabriel, Data Scientist Louie and computational 'expert' Michael consider their [first pass at a data model for the replacement Candidates Database Tool](https://github.com/ukparliament/ontologies/blob/master/election/meta/candidates/election-results-redux.svg) kinda complete. The Candidates Database Tool being, at least in our opinion, a very odd name for a system that manages the whole general election process from candidate gathering to result verification. And a system we'd also like to handle by-elections and notional general elections. The campaign to call it the Election Tool starts here.
+
+As part of that work, Michael has also taken a spreadsheet of constituency to election reporting authority mappings and imported it to a slightly simplified version of our psephology database. Which has now been sent across to colleagues in Software Engineering and [is available here](https://github.com/ukparliament/ontologies/tree/master/election/meta/candidates), should you wish to roll your own.
+
+
+
+
+
+
+
+
+
 
 
 candidates 
@@ -92,9 +110,3 @@ https://trello.com/c/HezpmmHQ/610-regenerate-redux-database-for-gabrial-and-sri
 ## On orders being standing
 
 https://trello.com/c/PAXcnnuy/46-add-new-revision-set-for-house-of-lords-public-business
-
-## Managing Members
-
-https://trello.com/c/CSO8V52P/457-updates-for-mnis-parlinet-page
-
-
