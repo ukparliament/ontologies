@@ -88,25 +88,12 @@ Turning our gaze away from the past and into the future, Developer Sri, Develope
 
 As part of that work, Michael has also taken a spreadsheet of constituency to election reporting authority mappings and imported it to a slightly simplified version of our psephology database. Which has now been sent across to colleagues in Software Engineering and [is available here](https://github.com/ukparliament/ontologies/tree/master/election/meta/candidates), should you wish to roll your own.
 
-
-
-
-
-
-
-
-
-
-
-candidates 
-https://trello.com/c/7ecMPMb4/611-populate-constituencies-local-authorities
-https://trello.com/c/HezpmmHQ/610-regenerate-redux-database-for-gabrial-and-sri
-
-
-
-
-
+Finally, imagine our delight when our election results website [made an appearance](https://www.data.gov.uk/collections/government/election-results) on the revised and reworked [data.gov.uk](https://www.data.gov.uk/). Delight only slightly tempered by seeing it filed under 'Government'. Still, it's always nice to included.
 
 ## On orders being standing
 
-https://trello.com/c/PAXcnnuy/46-add-new-revision-set-for-house-of-lords-public-business
+And finally, and finally, and finally, our dear reader will be well aware that we've spent an inordinate amount of blood and treasure exploring [new ways to publish old standing orders](https://api.parliament.uk/standing-orders/). This based on the fine work of the [people](https://parlrulesdata.org/about.html) at the [Parlrules project](https://parlrulesdata.org/). Unfortunately, the data they kindly donated only covered [House of Commons public standing orders](https://api.parliament.uk/standing-orders/houses/1/business-extents/1). And we'd rather like to add standing order coverage for the upper House. Not to mention those of the devolved legislatures. Never quite able to resist lending a helping hand, Shedcode James set to work screen-scraping and the results were not too shabby. James' fine work has now been tidied by more fine work from Librarian Emily and [the current set of House of Lords public standing orders](https://api.parliament.uk/standing-orders/revision-sets/305) are now published.
+
+This breakthrough opens a new dilema, as breakthroughs often do. The website has been built on the assumption that the full genealogy of [every order](https://ukparliament.github.io/ontologies/standing-order/standing-order-ontology#d4e191) and [every fragment of every order](https://ukparliament.github.io/ontologies/standing-order/standing-order-ontology#d4e213) has been captured. In this case it hasn't. 
+
+Should you click on an order, such as [this one covering any differences in form or style of writs](https://api.parliament.uk/standing-orders/orders/328), it is suggested that it made its first appearance on the 23rd October 2025, when, as any fool kno, it actually first left the printing press on the 27th March 1621. So that needs more work. But first, more thought. It usually being better to do the thinking before the working, except in cases where the working is the thinking, of course.
