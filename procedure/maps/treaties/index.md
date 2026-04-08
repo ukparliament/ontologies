@@ -10,40 +10,44 @@ Dot file: [dot](crag-treaties/crag-treaties.dot)
 
 Dot file: [dot](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny.dot) 
 
+#### Motions
+
+##### [Commons [PDF]](crag-treaties/components/commons/motions/commons-motions.pdf)
+
 #### Committees
 
-##### [Business and Trade Committee [PDF]](crag-treaties/components/bat/btc.pdf)
+##### [Business and Trade Committee [PDF]](crag-treaties/components/commons/bat/btc.pdf)
 
-Dot file: [dot](crag-treaties/components/bat/bat.dot) 
+Dot file: [dot](crag-treaties/components/commons/bat/bat.dot) 
 
-##### [Environment, Food and Rural Affairs Committee procedure [PDF]](crag-treaties/components/efra/efra.pdf)
+##### [Environment, Food and Rural Affairs Committee procedure [PDF]](crag-treaties/components/commons/efra/efra.pdf)
 
-Dot file: [dot](crag-treaties/components/efra/efra.dot) 
+Dot file: [dot](crag-treaties/components/commons/efra/efra.dot) 
 
-##### [Home Affairs Committee [PDF]](crag-treaties/components/hac/hac.pdf)
+##### [Home Affairs Committee [PDF]](crag-treaties/components/commons/hac/hac.pdf)
 
-Dot file: [dot](crag-treaties/components/hac/hac.dot) 
+Dot file: [dot](crag-treaties/components/commons/hac/hac.dot) 
 
-##### [International Agreements Committee and European Affairs Committee procedure [PDF]](crag-treaties/components/iac+eac/iac+eac.pdf)
+##### [International Agreements Committee and European Affairs Committee procedure [PDF]](crag-treaties/components/lords/iac+eac/iac+eac.pdf)
 
-Dot file: [dot](crag-treaties/components/iac+eac/iac+eac.dot) 
+Dot file: [dot](crag-treaties/components/lords/iac+eac/iac+eac.dot) 
 
-##### [International Trade Committee procedure [PDF]](crag-treaties/components/itc/itc.pdf)
+##### [International Trade Committee procedure [PDF]](crag-treaties/components/commons/itc/itc.pdf)
 
-Dot file: [dot](crag-treaties/components/itc/itc.dot) 
+Dot file: [dot](crag-treaties/components/commons/itc/itc.dot) 
 
 ##### [Joint Committee on Human Rights procedure [PDF]](crag-treaties/components/jchr/jchr.pdf)
 
 Dot file: [dot](crag-treaties/components/jchr/jchr.dot) 
 
-##### [Lords' Committees procedure [PDF]](crag-treaties/components/lords-committees/lords-committees.pdf)
+##### [Lords' Committees procedure [PDF]](crag-treaties/components/lords/lords-committees/lords-committees.pdf)
 
-Dot file: [dot](crag-treaties/components/lords-committees/lords-committees.dot) 
+Dot file: [dot](crag-treaties/components/lords/lords-committees/lords-committees.dot) 
 
-##### [Other Commons committees procedure [PDF]](crag-treaties/components/other-commons-committees/other-commons-committees.pdf)
+##### [Other Commons committees procedure [PDF]](crag-treaties/components/commons/other-commons-committees/other-commons-committees.pdf)
 
-Dot file: [dot](crag-treaties/components/other-commons-committees/other-commons-committees.dot)
+Dot file: [dot](crag-treaties/components/commons/other-commons-committees/other-commons-committees.dot)
 
-##### [Public Accounts Committee procedure [PDF]](crag-treaties/components/pac/pac.pdf)
+##### [Public Accounts Committee procedure [PDF]](crag-treaties/components/commons/pac/pac.pdf)
 
-Dot file: [dot](crag-treaties/components/pac/pac.dot)
+Dot file: [dot](crag-treaties/components/commons/pac/pac.dot)
