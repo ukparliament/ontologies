@@ -14,6 +14,8 @@ Dot file: [dot](crag-treaties/components/pre-laying-scrutiny/pre-laying-scrutiny
 
 ##### [Commons [PDF]](crag-treaties/components/commons/motions/commons-motions.pdf)
 
+##### [Lords [PDF]]((crag-treaties/components/lords/motions/lords-motions.pdf)
+
 #### Committees
 
 ##### [Business and Trade Committee [PDF]](crag-treaties/components/commons/bat/btc.pdf)
