@@ -75,6 +75,8 @@ Any motions that have yet to have an outcome (agreed, disagreed or withdrawn) at
 
 * [All motions lapsed at the end of all sessions](https://api.parliament.uk/s/873feb0b)
 
+* [Motions lapsed at the end of the 2024-26 session](https://api.parliament.uk/s/f66e34e4)
+
 * [Motions lapsed at the end of the 2023-24 session](https://api.parliament.uk/s/c1799477)
 
 * [Motions lapsed at the end of the 2022-23 session](https://api.parliament.uk/s/18b918cf)
