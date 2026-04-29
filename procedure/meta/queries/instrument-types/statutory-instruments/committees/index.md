@@ -116,7 +116,7 @@ The following queries look at all instruments considered by committees in given 
 
 ### Session
 
-*<a href="https://api.parliament.uk/s/bcd025be">2026-</a>
+* <a href="https://api.parliament.uk/s/bcd025be">2026-</a>
 
 * <a href="https://api.parliament.uk/s/0e970a12">2024-26</a>
 
