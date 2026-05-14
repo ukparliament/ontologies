@@ -24,7 +24,7 @@ What to do then? Paying for Data Language to integrate with Parliament's Single-
 
 Up in Sheffield, the second problem is also getting solved. James has been wrapping his head around the [Cypher query language](https://neo4j.com/docs/cypher-manual/current/introduction/) and churning out production-ready pixels. A couple of Service Now tickets later, and the rebuilt website was sitting on the Parliament domain, tucked up behind Cloudflare for protection and adapted to work with Parliament's Single Sign-On solution.
 
-Thank you for all your efforts Shedcode James. We'd be lost with you.
+Thank you for all your efforts Shedcode James. We'd be lost without you.
 
 ## New, old Parliamentary Search
 
