@@ -1,0 +1,101 @@
+# 2026 - Week 21
+
+## The best laid plans (of mouses and men)
+
+Dear reader, welcome back. If you tuned in last time out - and of course you did, of course you did - you'll know we were [fresh off the back of another round of 'Agile Quarterly Planning'](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/19/#getting-our-excuses-in-early). Perhaps the most important line item - if not the most visible - was a renewed commitment to upgrading our taxonomy management software, which is running two major versions behind what is considered current. That work had been put on hold whilst our Jianhan took the single [triplestore](https://en.wikipedia.org/wiki/Triplestore) bull by its proverbial horns - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/15/#an-inflection-point-long-overdue).
+
+This time out we had hoped to get a test environment in place so Jianhan could continue the long slog of updates to downstream systems, mandated by a switch from a taxonomy based on [Zthes](https://zthes.z3950.org/) to a something more modern and [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System)-shaped. So then what happened?
+
+Events, dear boy. Always with the events. First off, Parliament was [prorogued](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e256). Never an unexpected event, but one that always seems to catch us by surprise. The problem is less to do with prorogation and more to do with the change of [session](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e243). Which often leads to written answers - arriving in the new session - to written questions - tabled in the previous session - failing to find the question they are in answer to. Or worse still, finding the wrong question. Second off, something went awry in the upstream Hansard pipes meaning we not only failed to receive the Commons debates on the King's Speech, but Lords' Hansard went missing in totality. All less than ideal.
+
+For that reason, our Jianhan has been paddling like heck to get our basic content ingest working again. Which has been quite a palaver. Understandably impacting upon his ability to set up a test environment for taxonomy upgrades. Even our Jianhan only has 24 hours in his working day.
+
+In better news, he does tell us he's yoked himself back to the taxonomy machine and progress is being made. Godspeed, Jianhan.
+
+## New, old Parliamentary Search
+
+Back at the [top end of the old value chain](https://beta-search.parliament.uk/), Developer Jon has also been busy, though with considerably more to show for his efforts. A small [tweak to the search results page](https://beta-search.parliament.uk/search?query=canada) means the session facet is now ordered reverse chronologically, rather than by the number of results found in a given session. Which makes much more sense.
+
+Over on the object pages, we had hit a slight snaggle with a [private notice question](https://www.parliament.uk/site-information/glossary/private-notice-question/). It turned out that [one of the 22 contributions had two contribution types](https://trello.com/c/f0CT4NXN/820-private-notice-question-error) when any fule kno they should only ever have one. This caused confusion in the pipes between triplestore and [Solr](https://en.wikipedia.org/wiki/Apache_Solr), the wonky contribution never making it as far as our search index. Quite understandably, Jon had been working on the assumption that, if a private notice question declared itself to have 22 contributions, all 22 would be available to link to. He has now been disabused of that notion and adapted his code to be a tad more defensive. Meaning [that private notice question](https://parliamentary-search-staging-0c47cd314439.herokuapp.com/objects?object=http://hansard.intranet.data.parliament.uk/Lords/2026-04-13/26041314000041) is now [fit and working again](https://www.youtube.com/watch?v=PGDKh-QayBk). The wonky data has also now been fixed. Because of course it has.
+
+Pluralisation and singularisation is never a trivial matter in an "organisation as complex as Parliament", many of our terms of art not following common conventions. The language can be quite confusing enough without accidentally printing 'Order in Councils' or some such abomination. The longer Jon spends on the company books, the more singularisation issues he seems to hit. Our dear reader will, therefore, be delighted to learn that ['Lords in Focus' is now back to being 'Lords in Focus'](https://beta-search.parliament.uk/objects?object=http%3A%2F%2Fdata.parliament.uk%2Fresources%2F681451), and not, as it were last week, 'Lords in Focu'. So that's good.
+
+A whole host of other singularised forms had also gained an unwanted 's', from 'questions for short debate' to 'debates on treaty' to 'debates on select committee report' to 'instruments coming into operation before being laid' to 'Legislative Grand Committee proceedings' to 'points of order'. All of these are [also now fixed](https://trello.com/c/yTCdyfHy/829-singularisation-of-types-edge-cases).
+
+Singularisation also reared its ugly head when our crack team of librarians came to test links from the summary sentences on object pages back to the search results. In this case, some of the links were returning a taxonomic identifier rather than its label, so the search worked but the search box ended up populated with the identifier rather than a more friendly string. In other cases, the label was being used but in its newly singularised form. Which meant the search box looked fine, but the search didn't work. Both of those issues are now [considered](https://trello.com/c/6eqwU1V8/805-embedded-search-link-on-type-in-sentence-issue) [fixed](https://trello.com/c/YpCLf3eb/824-singularisation-issues-on-embedded-links).
+
+Finally, for reasons lost in the mists, there was, at some point, a split in the taxonomy whereby a small number of concepts were duplicated as 'topics' and managed in a whole new hierarchy. This for the purposes of providing high-level browse of research publications. This fork was not something our crack team of librarians have never been particularly happy about, work on the Library Knowledge Base&trade; and Publications Explorer&trade; hopefully pointing to a brighter future where taxonomic transitivity takes over the heavy-lifting. For some reason, when Jon started work we asked him to include topics. Quite why we asked for this, when we intend to have rid of them, we have no idea. On the positive side, Jon showed not a hint of churlishness when we asked him to remove them again. Which he has [now done](https://trello.com/c/2Qhh9gwp/792-topics-on-research-briefings-object-page-and-detailed-result-view). Thanks Jon. And sorry.
+
+Once Jon gets himself clear of tidying up our mistakes, it's back on with the real work of fully implementing query expansion - more [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/13/#sweating-the-taxonomy-part-i---query-expansion-on-parliamentary-search). Happily, [Librarian Phil](https://bsky.app/profile/philbgorman.bsky.social) has been kind enough to pop together a document setting out a whole host of query expansion permutations that our search application needs to handle. Which Jon has now turned into [a set of automated tests](https://github.com/ukparliament/search-prototype/pull/257/commits). It only remains to write the code to pass the tests and that bit of our journey should be firmly behind us.
+
+## I am a procedural cartographer - to [the tune of the Palace Brothers](https://www.youtube.com/watch?v=owvF3Vb0JhA&ab_channel=tomkat69pc)
+
+It's a rare week that sees no actual [procedural map making](https://ukparliament.github.io/ontologies/procedure/maps/). Sadly, this is one of those weeks. Glancing at Trello, it would appear that [Librarian Ayesha](https://bsky.app/profile/askalibrarylady.bsky.social) has picked up the task of [removing motion not called steps from all of our procedures](https://trello.com/c/KLPFpOPs/477-removal-of-motion-not-called-steps). So far, the poor lass appears to have removed 9 of the buggers. Only another 31 to go. Grim determination and endless tea making on the immediate horizon. Which doesn't hold much promise of more map making news in the short to medium term. Slow and steady, Librarian Ayesha.
+
+In better news, our Jianhan managed to [fix the integration](https://trello.com/c/wjHcqxcp/519-egg-timer-integration-with-procedure-editor-not-working) between our Procedure Editing application and our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade;. This particular little look up grabs all the instruments currently before Parliament, checks whether their procedure involves a [clock](https://api.parliament.uk/procedure-browser/clocks), gets the date the clock kicked off and asks the Egg Timer to provide a new estimate of when the clock should end. Which saves an inordinate amount of time for our crack team of librarians every time expected future sitting dates change. Which they do. Quite a lot. Without that integration, they'd be stuck updating a hundred and odd instruments every few weeks. A mind-numbing task they're far better off without. Much appreciated Jianhan.
+
+## Procedures, but browsable
+
+Zooming up to the top of the procedural value chain, we've spent the last few weeks polishing our nifty little [Procedure Browsable Space](https://api.parliament.uk/procedure-browser)&trade; to add new CSV views, [actualisation](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e508) counts to [business step](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e253) lists and flags for committee concerns and motions tabled to [work package](https://ukparliament.github.io/ontologies/procedure/procedure-ontology#d4e193) lists. At least where possible.
+
+On the former, we're chuffed to announce that we now offer CSV views for [primary legislation work packages](https://api.parliament.uk/procedure-browser/work-packages/primary-legislation), [secondary legislation work packages](https://api.parliament.uk/procedure-browser/work-packages/secondary-legislation), and [treaty work packages](https://api.parliament.uk/procedure-browser/work-packages/treaties). So that's nice.
+
+On the latter, we've also added flags to listings of [all work packages enabled by a given piece of legislation](https://api.parliament.uk/procedure-browser/enabling-legislation/OzD21LYf/work-packages), [work packages that happen to be before Parliament enabled by a given piece of legislation](https://api.parliament.uk/procedure-browser/enabling-legislation/OzD21LYf), [all work packages engaging a given calculation style](https://api.parliament.uk/procedure-browser/calculation-styles/GKxRUUgK/work-packages), and [all work packages that happen to be before Parliament engaging a given calculation style](https://api.parliament.uk/procedure-browser/calculation-styles/GKxRUUgK). Neat and indeed tidy.
+
+In less good news, there are a handful of queries we'd like to run, but our aged triplestore runs out of puff before returning results. Which means we cannot yet apply flags to either the [full listing of all work packages](https://api.parliament.uk/procedure-browser/work-packages) or the [listing of secondary legislation work packages](https://api.parliament.uk/procedure-browser/work-packages/secondary-legislation). And we can't apply actualisation counts to [lists of business steps in a given procedure](https://api.parliament.uk/procedure-browser/procedures/D00dsjR2/step-types/Jwc6nqJi). Which means those bits of our code now have two lots of queries in place: [those that work and are being run](https://github.com/ukparliament/procedure-browser/blob/main/lib/sparql/queries/work_packages.rb#L4), and [those labelled 'with flags' that don't work and are not currently called](https://github.com/ukparliament/procedure-browser/blob/main/lib/sparql/queries/work_packages.rb#L34). We live in hope we can swap these two things around if and when our triplestore ever gets the upgrade it so richly deserves.
+
+In purely cosmetic news, Young Robert's attention to detail means the navigation strip for [an organisation accountable to Parliament](https://api.parliament.uk/procedure-browser/organisations-accountable-to-parliament/iOu7GKad) is much less busy. And [links to both our beloved Egg Timer](https://api.parliament.uk/procedure-browser/calculation-styles/GKxRUUgK)&trade; and [legislation.gov.uk a little more prominent](https://api.parliament.uk/procedure-browser/enabling-legislation/h5WZvRPP). It's the pixels that count.
+
+In preparation for the next steps of our Procedure Browsable Steps&trade;, Librarian Jayne and her computational helpmates Young Robert and Michael have been taking another look at [the work package parsing code](https://github.com/ukparliament/procedure-parsing/blob/master/app/controllers/work_package_controller.rb) that was last touched back in lockdown. They're now fairly certain they have a rough idea of the [SPARQL](https://en.wikipedia.org/wiki/SPARQL) queries we need to write to return the data to allow the parsing. Once the data's assembled, it only remains to rewrite the parsing code. Which may well occupy the next several months. Do stay tuned. It's going to be incredibly boring, we promise.
+
+## Filling in the odds and the sods
+
+Work continues apace on replacing our aging Odds and Sods Information System - yet more weeknotes passim. As of this week, Librarian Emily has double checked the existing [Data Graphs](https://datagraphs.com/https://bsky.app/profile/emilyjdavi.bsky.social) implementation and made notes of where she's found it wanting. She's also done a full tour of the old application, mapping data attributes to content types. And, because the underlying database cannot be guaranteed to reflect what's on the actual forms - please don't ask, we get cross - Emily, Jayne and Michael have done [the same work at the database level](https://trello.com/c/NKZOc0dd/56-queries-to-get-all-populated-and-unpopulated-attributes-per-content-type).
+
+With those [three pieces of information](https://trello.com/c/NnasBbKi/57-compare-populated-and-unpopulated-attributes-per-content-type-in-database-with-emily-spreadsheet) at our fingertips, we've taken a second pass at a domain model, nuked most of what was in Data Graphs and started to replace it with the new model. It is now possible to create Acts of Parliament, Church of England Measures, Transport and Works Act order applications and impact assessments. Other content types to follow in short order. Emily continues to test.
+
+## Psephologising wildly
+
+Aside from a couple of new links to Commons Library dashboards from our English constituency pages - Free school meals and School staff, should you be interested - all other psephological work has been very much under the waterline.
+
+Our second - possibly third - attempt at staged publishing for the next general election has been signed off by Statistician - and Product Manager - Carl, so that code is now live. And should make no visible difference. If you do spot a visible difference, something has gone very wrong. Do please get in touch.
+
+Sticking with the next general election, there is also a small - but not insignificant - Rake task to be run at dissolution. This will, in theory, close the current Parliament, open the next Parliament, create the general election, and create all the elections in the general election. It has, of course, been tested, but is obviously difficult to test in anger. If you're a Rubyist - or even if you're not, it's hopefully quite well commented - why not put Michael's mind at rest and take a read?
+
+
+
+
+
+
+
+## Toward a single subject view etc
+
+
+
+## Facts and indeed figures
+
+## Spring cleaning
+
+https://trello.com/c/QTOg7WCq/447-bills-with-more-than-one-member
+
+https://trello.com/c/0tiQMvnf/445-sis-with-more-than-one-identifier
+
+https://trello.com/c/Nk3IYdhT/380-commons-oral-corrections
+
+https://trello.com/c/kaphKiu6/414-small-clean-up-task-bills-and-corporate-authors
+
+https://trello.com/c/Zayf46Hv/439-check-lords-proceeding-urls-are-correct
+
+https://trello.com/c/7TqjjNA7/413-2019-19-bills
+
+
+
+
+
+
+
+
+
+
+
+
