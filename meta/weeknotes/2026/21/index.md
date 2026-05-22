@@ -52,41 +52,52 @@ In preparation for the next steps of our Procedure Browsable Steps&trade;, Libra
 
 Work continues apace on replacing our aging Odds and Sods Information System - yet more weeknotes passim. As of this week, Librarian Emily has double checked the existing [Data Graphs](https://datagraphs.com/https://bsky.app/profile/emilyjdavi.bsky.social) implementation and made notes of where she's found it wanting. She's also done a full tour of the old application, mapping data attributes to content types. And, because the underlying database cannot be guaranteed to reflect what's on the actual forms - please don't ask, we get cross - Emily, Jayne and Michael have done [the same work at the database level](https://trello.com/c/NKZOc0dd/56-queries-to-get-all-populated-and-unpopulated-attributes-per-content-type).
 
-With those [three pieces of information](https://trello.com/c/NnasBbKi/57-compare-populated-and-unpopulated-attributes-per-content-type-in-database-with-emily-spreadsheet) at our fingertips, we've taken a second pass at a domain model, nuked most of what was in Data Graphs and started to replace it with the new model. It is now possible to create Acts of Parliament, Church of England Measures, Transport and Works Act order applications and impact assessments. Other content types to follow in short order. Emily continues to test.
+With those [three pieces of information](https://trello.com/c/NnasBbKi/57-compare-populated-and-unpopulated-attributes-per-content-type-in-database-with-emily-spreadsheet) at our fingertips, we've taken [a second pass at a domain model](https://github.com/ukparliament/ontologies/blob/master/oasis/oasis.svg), nuked most of what was in Data Graphs and started to replace it with the new model. It is now possible to create Acts of Parliament, Church of England Measures, Transport and Works Act order applications and impact assessments. Other content types to follow in short order. Emily continues to test.
 
 ## Psephologising wildly
 
-Aside from a couple of new links to Commons Library dashboards from our English constituency pages - Free school meals and School staff, should you be interested - all other psephological work has been very much under the waterline.
+Aside from [a couple of new links to Commons Library dashboards from our English constituency pages](https://electionresults.parliament.uk/constituency-areas/1090#constituency-statistics) - [Free school meals](https://commonslibrary.parliament.uk/constituency-data-free-school-meals/?conSelect=%22Oldham%20East%20and%20Saddleworth%22) and [School workforce](https://commonslibrary.parliament.uk/constituency-data-school-workforce/?conSelect=%22Oldham%20East%20and%20Saddleworth%22), should you be interested - all other psephological work has been very much under the waterline.
 
-Our second - possibly third - attempt at staged publishing for the next general election has been signed off by Statistician - and Product Manager - Carl, so that code is now live. And should make no visible difference. If you do spot a visible difference, something has gone very wrong. Do please get in touch.
+Our second - possibly third - attempt at staged publishing for the next general election has been signed off by [Statistician - and Product Manager - Carl](https://bsky.app/profile/carlbaker.bsky.social), so [that code](https://github.com/ukparliament/psephology/pull/169) is now live. And should make no visible difference. If you do spot a visible difference, something has gone very wrong. You know where we are. Do please get in touch.
 
-Sticking with the next general election, there is also a small - but not insignificant - Rake task to be run at dissolution. This will, in theory, close the current Parliament, open the next Parliament, create the general election, and create all the elections in the general election. It has, of course, been tested, but is obviously difficult to test in anger. If you're a Rubyist - or even if you're not, it's hopefully quite well commented - why not put Michael's mind at rest and take a read?
-
-
-
-
-
-
-
-## Toward a single subject view etc
-
-
-
-## Facts and indeed figures
+Sticking with the next general election, there is also a new, quite small - but not insignificant - [Rake task to be run at dissolution](https://github.com/ukparliament/psephology/blob/main/lib/tasks/parliament-60-general-election/parliament-59-dissolution.rake). This will, in theory, close the current Parliament, open the next Parliament, create the general election, and create all the elections in the general election. It has, of course, been tested, but is obviously difficult to test in anger. If you're a Rubyist - or even if you're not, it's hopefully quite well commented - why not put Michael's mind at rest and take a read?
 
 ## Spring cleaning
 
-https://trello.com/c/QTOg7WCq/447-bills-with-more-than-one-member
+Would it really be weeknotes if Librarian Emma had not taken a feather duster to a couple of the corners of our 'information space'? No, it would not. This time out, Emma has:
 
-https://trello.com/c/0tiQMvnf/445-sis-with-more-than-one-identifier
+* [tidied all bills with more than one associated Member](https://trello.com/c/QTOg7WCq/447-bills-with-more-than-one-member)
 
-https://trello.com/c/Nk3IYdhT/380-commons-oral-corrections
+* [cleaned up all statutory instruments with more than one identifier](https://trello.com/c/0tiQMvnf/445-sis-with-more-than-one-identifier)
 
-https://trello.com/c/kaphKiu6/414-small-clean-up-task-bills-and-corporate-authors
+* [combed through 30 - yes, 30 - sessions worth of points of order, identified the ones where a Member was correcting the record and indexing them appropriately](https://trello.com/c/Nk3IYdhT/380-commons-oral-corrections)
 
-https://trello.com/c/Zayf46Hv/439-check-lords-proceeding-urls-are-correct
+* [cleaned out the back of the bill cupboard, removing any incorrect corporate authors and correcting accordingly](https://trello.com/c/kaphKiu6/414-small-clean-up-task-bills-and-corporate-authors)
 
-https://trello.com/c/7TqjjNA7/413-2019-19-bills
+* [dusted down a bunch of proceeding record where links had somehow gone awry - for reasons the card does not explain - and fixed the lot](https://trello.com/c/Zayf46Hv/439-check-lords-proceeding-urls-are-correct)
+
+* [applied much spit and polish to the blasted session citations for bills in what was supposed to be the 2019-20 session and instead turned into the 2019-19 session](https://trello.com/c/7TqjjNA7/413-2019-19-bills)
+
+If you're a clerk, and absolutely no offence, we really do need to have word about [session citations](https://regnal-years-46ac7da1fe8b.herokuapp.com/regnal-years) at some point. Even Erskine May would be appalled.
+
+## Farewell, dear Martyn
+
+This Wednesday, [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social) and her computational whiz kid colleague Michael, ventured south of the river to bid what they hope is not a final farewell to [House of Commons clerk Martyn](https://bsky.app/profile/martynpatrick.bsky.social). A splendid man who, when faced with our endless requests for information, has been nothing but patient and kind.
+
+
+The next time someone ill-educated in such matters suggests parliamentary procedure is somehow 'arcane', there is an answer to your problem. Simply contact Martyn, maybe take him down the pub, maybe buy him a Guiness, and maybe ask him some questions. We guarantee he'll be delighted to answer. People that know stuff often are. And a thing cannot possibly be 'arcane' if you can simply sit down with a nice chap over a pint of Dublin's finest and have it all explained. Best of luck, Martyn. We hope to see you at the [Study of Parliament](https://studyofparliamentgroup.org/) conference in January. Between now and then, you will be much missed.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
