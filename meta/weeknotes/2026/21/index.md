@@ -6,7 +6,7 @@ Dear reader, welcome back. If you tuned in last time out - and of course you did
 
 This time out we had hoped to get a test environment in place so Jianhan could continue the long slog of updates to downstream systems, mandated by a switch from a taxonomy based on [Zthes](https://zthes.z3950.org/) to a something more modern and [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System)-shaped. So then what happened?
 
-Events, dear boy. Always with the events. First off, Parliament was [prorogued](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e256). Never an unexpected event, but one that always seems to catch us by surprise. The problem is less to do with prorogation and more to do with the change of [session](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e243). Which often leads to written answers - arriving in the new session - to written questions - tabled in the previous session - failing to find the question they are in answer to. Or worse still, finding the wrong question. Second off, something went awry in the upstream Hansard pipes meaning we not only failed to receive the Commons debates on the King's Speech, but Lords' Hansard went missing in totality. All less than ideal.
+Events, dear boy. Always with the events. First off, Parliament was [prorogued](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e256). Never an unexpected event, but one that always seems to catch us by surprise. The problem is less to do with prorogation and more to do with the change of [session](https://ukparliament.github.io/ontologies/time-period/time-period-ontology#d4e243). Which often leads to written answers - arriving in the new session - to written questions - tabled in the previous session - failing to find the question they are in answer to. Or worse still, finding the wrong question. Second off, something went awry in the upstream Hansard pipes meaning we not only failed to receive the Commons debate on the King's Speech, but Lords' Hansard went missing in totality. All less than ideal.
 
 For that reason, our Jianhan has been paddling like heck to get our basic content ingest working again. Which has been quite a palaver. Understandably impacting upon his ability to set up a test environment for taxonomy upgrades. Even our Jianhan only has 24 hours in his working day.
 
@@ -32,7 +32,7 @@ Once Jon gets himself clear of tidying up our mistakes, it's back on with the re
 
 It's a rare week that sees no actual [procedural map making](https://ukparliament.github.io/ontologies/procedure/maps/). Sadly, this is one of those weeks. Glancing at Trello, it would appear that [Librarian Ayesha](https://bsky.app/profile/askalibrarylady.bsky.social) has picked up the task of [removing motion not called steps from all of our procedures](https://trello.com/c/KLPFpOPs/477-removal-of-motion-not-called-steps). So far, the poor lass appears to have removed 9 of the buggers. Only another 31 to go. Grim determination and endless tea making on the immediate horizon. Which doesn't hold much promise of more map making news in the short to medium term. Slow and steady, Librarian Ayesha.
 
-In better news, our Jianhan managed to [fix the integration](https://trello.com/c/wjHcqxcp/519-egg-timer-integration-with-procedure-editor-not-working) between our Procedure Editing application and our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade;. This particular little look up grabs all the instruments currently before Parliament, checks whether their procedure involves a [clock](https://api.parliament.uk/procedure-browser/clocks), gets the date the clock kicked off and asks the Egg Timer to provide a new estimate of when the clock should end. Which saves an inordinate amount of time for our crack team of librarians every time expected future sitting dates change. Which they do. Quite a lot. Without that integration, they'd be stuck updating a hundred and odd instruments every few weeks. A mind-numbing task they're far better off without. Much appreciated Jianhan.
+In better news, our Jianhan managed to [fix the integration](https://trello.com/c/wjHcqxcp/519-egg-timer-integration-with-procedure-editor-not-working) between our Procedure Editing application and our beloved [Egg Timer](https://api.parliament.uk/egg-timer)&trade;. This particular little lookup grabs all the instruments currently before Parliament, checks whether their procedure involves a [clock](https://api.parliament.uk/procedure-browser/clocks), gets the date the clock kicked off and asks the Egg Timer to provide a new estimate of when the clock should end. Which saves an inordinate amount of time for our crack team of librarians whenever expected future sitting dates change. Which they do. Quite a lot. Without that integration, they'd be stuck updating a hundred and odd instruments every few weeks. A mind-numbing task they're far better off without. Much appreciated Jianhan.
 
 ## Procedures, but browsable
 
@@ -44,13 +44,13 @@ On the latter, we've also added flags to listings of [all work packages enabled 
 
 In less good news, there are a handful of queries we'd like to run, but our aged triplestore runs out of puff before returning results. Which means we cannot yet apply flags to either the [full listing of all work packages](https://api.parliament.uk/procedure-browser/work-packages) or the [listing of secondary legislation work packages](https://api.parliament.uk/procedure-browser/work-packages/secondary-legislation). And we can't apply actualisation counts to [lists of business steps in a given procedure](https://api.parliament.uk/procedure-browser/procedures/D00dsjR2/step-types/Jwc6nqJi). For those reasons, bits of our code now have two lots of queries in place: [those that work and are being run](https://github.com/ukparliament/procedure-browser/blob/main/lib/sparql/queries/work_packages.rb#L4), and [those labelled 'with flags' that don't work and are not currently called](https://github.com/ukparliament/procedure-browser/blob/main/lib/sparql/queries/work_packages.rb#L34). We live in hope we can swap these two things around if and when our triplestore ever gets the upgrade it so richly deserves.
 
-In purely cosmetic news, Young Robert's attention to detail means the navigation strip for [an organisation accountable to Parliament](https://api.parliament.uk/procedure-browser/organisations-accountable-to-parliament/iOu7GKad) is much less busy. And [links to both our beloved Egg Timer](https://api.parliament.uk/procedure-browser/calculation-styles/GKxRUUgK)&trade; and [legislation.gov.uk a little more prominent](https://api.parliament.uk/procedure-browser/enabling-legislation/h5WZvRPP). It's the pixels that count.
+In purely cosmetic news, Young Robert's attention to detail means the navigation strip for [an organisation accountable to Parliament](https://api.parliament.uk/procedure-browser/organisations-accountable-to-parliament/iOu7GKad) is much less busy. And [links to both our beloved Egg Timer](https://api.parliament.uk/procedure-browser/calculation-styles/GKxRUUgK)&trade; and [legislation.gov.uk a little more prominent](https://api.parliament.uk/procedure-browser/enabling-legislation/h5WZvRPP). Which should please [John](https://bsky.app/profile/johnlsheridan.bsky.social) if no one else. It's the pixels that count.
 
-In preparation for the next steps of our Procedure Browsable Steps&trade;, Librarian Jayne and her computational helpmates Young Robert and Michael have been taking another look at [the work package parsing code](https://github.com/ukparliament/procedure-parsing/blob/master/app/controllers/work_package_controller.rb) that was last touched back in lockdown. They're now fairly certain they have a rough idea of the [SPARQL](https://en.wikipedia.org/wiki/SPARQL) queries we need to write to return the data to allow the parsing. Once the data's assembled, it only remains to rewrite the parsing code. Which may well occupy the next several months. Do stay tuned. It's going to be incredibly boring, we promise.
+In preparation for the next steps of our Procedure Browsable Space&trade;, Librarian Jayne and her computational helpmates Young Robert and Michael have been taking another look at [the work package parsing code](https://github.com/ukparliament/procedure-parsing/blob/master/app/controllers/work_package_controller.rb), last touched back in lockdown. They're now fairly certain they have a rough idea of the [SPARQL](https://en.wikipedia.org/wiki/SPARQL) queries we need to write to return the data to allow the parsing. Once the data's assembled, it only remains to rewrite the parsing code. Which may well occupy the next several months. If you remember with fondness the days when [these notes were all about ternary logic gates](https://ukparliament.github.io/ontologies/meta/weeknotes/2020/46/#logicifying-the-procedure-model), you're in for a treat. It's going to be incredibly boring, we promise.
 
 ## Filling in the odds and the sods
 
-Work continues apace on replacing our aging Odds and Sods Information System - yet more [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/15/#filling-in-the-odds-and-the-sods). As of this week, Librarian Emily has double checked the existing [Data Graphs](https://datagraphs.com/https://bsky.app/profile/emilyjdavi.bsky.social) implementation and made notes of where she's found it wanting. She's also done a full tour of the old application, mapping data attributes to content types. And, because the underlying database cannot be guaranteed to reflect what's on the actual forms - please don't ask, we get cross - Emily, Jayne and Michael have done [the same work at the database level](https://trello.com/c/NKZOc0dd/56-queries-to-get-all-populated-and-unpopulated-attributes-per-content-type).
+Work continues apace on replacing our aging Odds and Sods Information System - yet more [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/15/#filling-in-the-odds-and-the-sods). As of this week, [Librarian Emily](https://bsky.app/profile/emilyjdavi.bsky.social) has double checked the existing [Data Graphs](https://datagraphs.com/https://bsky.app/profile/emilyjdavi.bsky.social) implementation and made notes of where she's found it wanting. She's also done a full tour of the old application, mapping data attributes to content types. And, because the underlying database cannot be guaranteed to reflect what's on the actual forms - please don't ask, we get cross - Emily, Jayne and Michael have done [the same work at the database level](https://trello.com/c/NKZOc0dd/56-queries-to-get-all-populated-and-unpopulated-attributes-per-content-type).
 
 With those [three pieces of information](https://trello.com/c/NnasBbKi/57-compare-populated-and-unpopulated-attributes-per-content-type-in-database-with-emily-spreadsheet) at our fingertips, we've taken [a second pass at a domain model](https://github.com/ukparliament/ontologies/blob/master/oasis/oasis.svg), nuked most of what was in Data Graphs and started to replace it with something hopefully better. It is now possible to create Acts of Parliament, Church of England Measures, Transport and Works Act order applications and impact assessments. Other content types to follow in short order. Emily continues to test.
 
@@ -84,29 +84,6 @@ If you're a clerk, and absolutely no offence, we really do need to have word abo
 
 This Wednesday, [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social) and her computational whiz kid colleague Michael, ventured south of the river to bid what they hope is not a final farewell to [House of Commons clerk Martyn](https://bsky.app/profile/martynpatrick.bsky.social). A splendid man who, when faced with our endless requests for information, has been nothing but patient and kind.
 
+The next time someone ill-educated in such matters suggests parliamentary procedure is somehow 'arcane', there is an answer to your problem. Simply contact Martyn, maybe take him down the pub, maybe buy him a Guiness, and maybe ask him some questions. We guarantee he'll be delighted to answer. People that know stuff often are. And a thing cannot possibly be 'arcane' if you can simply sit down with a nice chap over a pint of Dublin's finest and have it all explained. Parliamentary procedure is complicated admittedly and complex on occasion, but *never* arcane.
 
-The next time someone ill-educated in such matters suggests parliamentary procedure is somehow 'arcane', there is an answer to your problem. Simply contact Martyn, maybe take him down the pub, maybe buy him a Guiness, and maybe ask him some questions. We guarantee he'll be delighted to answer. People that know stuff often are. And a thing cannot possibly be 'arcane' if you can simply sit down with a nice chap over a pint of Dublin's finest and have it all explained. Best of luck, Martyn. We hope to see you at the [Study of Parliament](https://studyofparliamentgroup.org/) conference in January. Between now and then, you will be much missed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Best of luck, Martyn. We hope to see you at the [Study of Parliament](https://studyofparliamentgroup.org/) conference in January. Between now and then, you will be much missed.
