@@ -82,8 +82,8 @@ If you're a clerk, and absolutely no offence, we really do need to have word abo
 
 ## Farewell, dear Martyn
 
-This Wednesday, [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social) and her computational whiz kid colleague Michael, ventured south of the river to bid what they hope is not a final farewell to [House of Commons clerk Martyn](https://bsky.app/profile/martynpatrick.bsky.social). A splendid man who, when faced with our endless requests for information, has been nothing but patient and kind.
+This Wednesday, [Librarian Anya](https://bsky.app/profile/anyaso.bsky.social) and her computational whiz kid colleague Michael, ventured south of the river to bid what they hope is not a final farewell to [House of Commons clerk Martyn](https://bsky.app/profile/martynpatrick.bsky.social). A splendid man who, when faced with our endless requests for information, has been nothing but patient and kind. Martyn is one of what we like to call those old-school *proper proceduralist* we value so dearly. With a firm emphasis on the *is*, because you never lose that level of knowledge.
 
 The next time someone ill-educated in such matters suggests parliamentary procedure is somehow 'arcane', there is an answer to your problem. Simply contact Martyn, maybe take him down the pub, maybe buy him a Guiness, and maybe ask him some questions. We guarantee he'll be delighted to answer. People that know stuff often are. And a thing cannot possibly be 'arcane' if you can simply sit down with a nice chap over a pint of Dublin's finest and have it all explained. Parliamentary procedure is complicated admittedly and complex on occasion, but *never* arcane.
 
-Best of luck, Martyn. We hope to see you at the [Study of Parliament](https://studyofparliamentgroup.org/) conference in January. Between now and then, you will be much missed.
+Best of luck, Martyn. We hope to see you at the next [Study of Parliament](https://studyofparliamentgroup.org/) conference in January. Between now and then, you will be much missed.
