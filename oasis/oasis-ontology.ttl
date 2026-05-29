@@ -1,0 +1,70 @@
+@prefix oasis: <http://parliament.uk/ontologies/oasis/> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+<http://parliament.uk/ontologies/oasis/> 
+    rdf:type owl:Ontology ;
+    dcterms:title "OaSIS ontology"@en ;
+    dcterms:created "2026-05-29"^^xsd:date ;
+	dcterms:rights "Open Parliament Licence v3.0"@en ;
+    dcterms:description "A model for the Odds and Sods Information System, used by the Indexing and Data Management Section in the House of Commons Library."@en ;
+	foaf:depiction <https://ukparliament.github.io/ontologies/oasis/oasis.svg> ;
+	foaf:maker 
+		[ foaf:name "Jayne Bosworth" ],
+		[ foaf:name "Emily Davis" ],
+		[ foaf:name "Michael Smethurst"; foaf:homepage <http://smethur.st/> ],
+		[ foaf:name "Anya Somerville" ].
+
+
+#######  Classes #####
+	
+oasis:Record rdf:type owl:Class ;
+	rdfs:label "Record"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:HouseRecord rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Record ;
+	rdfs:label "House record"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:HouseTerm rdf:type owl:Class ;
+	rdfs:label "House term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+	
+
+#######  Object properties ##### 
+	
+oasis:house rdf:type owl:ObjectProperty ;
+	rdfs:label "House"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:HouseRecord ;
+	rdfs:range oasis:House ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+
+
+				
+
+#######  Data properties #####
+
+oasis:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "Title"@en ;
+	rdfs:comment "The title of an OaSIS record."@en ;
+	rdfs:domain oasis:Record ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:webLocation rdf:type owl:DatatypeProperty ;
+	rdfs:label "Web location"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:Record ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
