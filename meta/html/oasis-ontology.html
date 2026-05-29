@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../proceeding/proceeding-ontology.html" />
+    <link rel="canonical" href="https://ukparliament.github.io/ontologies/meta/html/../oasis/oasis-ontology.html" />
     <link rel="index" href="https://ukparliament.github.io/ontologies/" />
     <link
       rel="alternate"
-      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../proceeding/proceeding-ontology.ttl"
+      href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl"
       type="text/turtle"
-      title="Proceeding ontology: Turtle source"
+      title="OaSIS ontology: Turtle source"
     />
     <link
       rel="licence"
@@ -17,7 +17,7 @@
       lang="en-GB"
       title="Open Parliament Licence"
     />
-    <title>Proceeding ontology</title>
+    <title>OaSIS ontology</title>
     <style>
       body {
         font-family: system-ui;
@@ -51,31 +51,108 @@
         <a href="https://ukparliament.github.io/ontologies/meta/html/index.html"
           >Ontologies index</a
         >
-        &rarr; Proceeding ontology
+        &rarr; OaSIS ontology
       </nav>
     </header>
 
     <main>
-      <h1>Proceeding ontology</h1>
+      <h1>OaSIS ontology</h1>
 
-      <p id="description"></p>
+      <p id="description">A model for the Odds and Sods Information System, used by the Indexing and Data Management Section in the House of Commons Library.</p>
 
       <nav>
         <a href="#classes">Classes</a>
-        &middot; <a href="#objectproperties">Object properties</a>            &middot; <a href="#namespaces">Namespaces</a>
+        &middot; <a href="#objectproperties">Object properties</a>  &middot;
+        <a href="#dataproperties">Data properties</a>    &middot; <a href="#subclasses">Subclasses</a>        &middot; <a href="#namespaces">Namespaces</a>
 
- &middot; <a href="https://ukparliament.github.io/ontologies/proceeding/proceeding.svg">Depiction</a>
+ &middot; <a href="https://ukparliament.github.io/ontologies/oasis/oasis.svg">Depiction</a>
       </nav>
 
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Proceeding">
-          <h3>Class <a href="#Proceeding">Proceeding</a></h3>
+        <article class="class" id="HouseRecord">
+          <h3>Class <a href="#HouseRecord">House record</a></h3>
+
+           <p>
+            Superclasses  &middot; Record           </p>
+        </article>
+        <article class="class" id="HouseTerm">
+          <h3>Class <a href="#HouseTerm">House term</a></h3>
+
+         </article>
+        <article class="class" id="Record">
+          <h3>Class <a href="#Record">Record</a></h3>
 
          </article>
       </section>
-      
+ 
+      <section id="objectproperties">
+        <h2>Object properties</h2>
+
+
+        <article class="objectproperty" id="house">
+          <h3>
+            Object property
+            <a href="#house"
+              >House</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#HouseRecord"
+              >HouseRecord</a
+            >
+            &mdash; House &mdash;
+            <a href="#House">House</a>
+          </p>
+        </article>
+      </section>
+ 
+      <section id="dataproperties">
+        <h2>Data properties</h2>
+
+        <article class="dataproperty" id="title">
+          <h3>
+            Data property
+            <a href="#title">Title</a>
+          </h3>
+
+          <p>The title of an OaSIS record.</p>
+
+          <p>
+            Record &mdash; Title &mdash;
+            langString
+          </p>
+        </article>
+
+        <article class="dataproperty" id="webLocation">
+          <h3>
+            Data property
+            <a href="#webLocation">Web location</a>
+          </h3>
+
+          <p>.</p>
+
+          <p>
+            Record &mdash; Web location &mdash;
+            Literal
+          </p>
+        </article>
+      </section>
+
+         <section id="subclasses">
+        <h2>Subclasses</h2>
+        <table>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>HouseRecord</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>Record</td>
+          </tr>
+        </table>
+      </section>
+ 
       <section id="namespaces">
         <h2>Namespaces</h2>
         <details>
@@ -139,26 +216,25 @@
             <dd>http://www.w3.org/2001/XMLSchema#</dd>
             <dt>xml</dt>
             <dd>http://www.w3.org/XML/1998/namespace</dd>
-            <dt>proceeding</dt>
-            <dd>http://parliament.uk/ontologies/proceeding:/</dd>
+            <dt>oasis</dt>
+            <dd>http://parliament.uk/ontologies/oasis/</dd>
           </dl>
         </details>
       </section>
 
-      <p>Ontology created &middot; <time id="created">2023-05-03</time></p>
+      <p>Ontology created &middot; <time id="created">2026-05-29</time></p>
 
       <p id="makers">
-        Made by          &middot; <a href="https://robert-brook.com/">Robert Brook</a>
-          &middot; <a href="http://smethur.st/">Michael Smethurst</a>
-   &middot; Claire Searle    &middot; Anya Somerville    &middot; Jayne Sunley        </p>
+        Made by   &middot; Jayne Bosworth    &middot; Emily Davis           &middot; <a href="http://smethur.st/">Michael Smethurst</a>
+   &middot; Anya Somerville        </p>
     </main>
 
     <footer>
       <p>
         Generated 2026-05-29 09:51:40.632431+00:00 from a
-        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../proceeding/proceeding-ontology.ttl">Turtle file</a>. Visualization:
+        <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl">Turtle file</a>. Visualization:
         <a
-          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../proceeding/proceeding-ontology.ttl"
+          href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl"
           >api.parliament.uk/webvowl</a
         >
       </p>
