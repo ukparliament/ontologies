@@ -33,8 +33,90 @@ oasis:HouseRecord rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:SessionalRecord rdf:type owl:Class ;
+	rdfs:subClassOf oasis:HouseRecord ;
+	rdfs:label "Sessional record"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:PrimaryLegislationRecord rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Record ;
+	rdfs:label "Primary legislation record"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:ActOfParliament rdf:type owl:Class ;
+	rdfs:subClassOf oasis:PrimaryLegislationRecord ;
+	rdfs:label "Act of Parliament"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:PublicAct rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ActOfParliament ;
+	rdfs:label "Public Act"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:PrivateAct rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ActOfParliament ;
+	rdfs:label "Private Act"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+oasis:Term rdf:type owl:Class ;
+	rdfs:label "Term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:PersonTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Term ;
+	rdfs:label "Person term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:memberTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:PersonTerm ;
+	rdfs:label "Member term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:OrganisationTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Term ;
+	rdfs:label "Organisation term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
 oasis:HouseTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:OrganisationTerm ;
 	rdfs:label "House term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:GovernmentDepartmentTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:OrganisationTerm ;
+	rdfs:label "Government department term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:ConceptTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Term ;
+	rdfs:label "Concept term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:ParliamentaryCertificationTerm rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ConceptTerm ;
+	rdfs:label "Parliamentary certification term"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
