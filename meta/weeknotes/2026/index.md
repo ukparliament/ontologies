@@ -1,5 +1,6 @@
 # Procedure modelling weeknotes 2026
 
+* [Week 21](21)
 * [Week 19](19)
 * [Week 15](15)
 * [Week 13](13)
