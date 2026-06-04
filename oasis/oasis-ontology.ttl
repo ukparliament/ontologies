@@ -63,6 +63,24 @@ oasis:PrivateAct rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:ChurchOfEnglandMeasure rdf:type owl:Class ;
+	rdfs:subClassOf oasis:PrimaryLegislationRecord ;
+	rdfs:label "Church of England measure"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:TransportAndWorksActOrderApplication rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Record ;
+	rdfs:label "Transport and Works Act order application"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:ImpactAssessment rdf:type owl:Class ;
+	rdfs:subClassOf oasis:HouseRecord ;
+	rdfs:label "Impact assessment"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
 	
 	
 	
@@ -131,6 +149,34 @@ oasis:house rdf:type owl:ObjectProperty ;
 	rdfs:range oasis:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:applicationAgent rdf:type owl:ObjectProperty ;
+	rdfs:label "Application agent"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:applicationApplicant rdf:type owl:ObjectProperty ;
+	rdfs:label "Application applicant"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:impactAssessmentHasCorporateAuthor rdf:type owl:ObjectProperty ;
+	rdfs:label "Impact assessment has corporate author"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:ImpactAssessment ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:impactAssessmentHasGovernmentDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Impact assessment has government department"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:ImpactAssessment ;
+	rdfs:range oasis:GovernmentDepartmentTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
 
 
 				
@@ -146,7 +192,77 @@ oasis:title rdf:type owl:DatatypeProperty ;
 	
 oasis:webLocation rdf:type owl:DatatypeProperty ;
 	rdfs:label "Web location"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment ""@en ;
 	rdfs:domain oasis:Record ;
 	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:royalAssentOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Royal Assent on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:PrimaryLegislationRecord ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:year rdf:type owl:DatatypeProperty ;
+	rdfs:label "Year"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:PrimaryLegislationRecord ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:longTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "Long title"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:PrimaryLegislationRecord ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:chapterNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Chapter number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ActOfParliament ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:number rdf:type owl:DatatypeProperty ;
+	rdfs:label "Number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ChurchOfEnglandMeasure ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:referenceNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reference number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:description rdf:type owl:DatatypeProperty ;
+	rdfs:label "Description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:dateOfOrigin rdf:type owl:DatatypeProperty ;
+	rdfs:label "Date of origin"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:impactAssessmentNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Impact assessment number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ImpactAssessment ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:publishedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Published on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ImpactAssessment ;
+	rdfs:range xsd:date ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
