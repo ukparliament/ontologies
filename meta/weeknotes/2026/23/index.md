@@ -79,4 +79,4 @@ So that's that then. We hope to continue to engage with the AI-BRIDGES folks, we
 
 ## Etcetera
 
-Etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, [in the midst of life we are in debt](https://www.youtube.com/watch?v=C6TbGPvqKM8&t=121s), etcetera
+Etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, etcetera, [in the midst of life we are in debt](https://www.youtube.com/watch?v=C6TbGPvqKM8&t=121s), etcetera
