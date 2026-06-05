@@ -77,6 +77,12 @@
            <p>
             Superclasses  &middot; PrimaryLegislationRecord           </p>
         </article>
+        <article class="class" id="Bill">
+          <h3>Class <a href="#Bill">Bill</a></h3>
+
+           <p>
+            Superclasses  &middot; SessionalRecord           </p>
+        </article>
         <article class="class" id="ChurchOfEnglandMeasure">
           <h3>Class <a href="#ChurchOfEnglandMeasure">Church of England measure</a></h3>
 
@@ -125,11 +131,23 @@
            <p>
             Superclasses  &middot; Term           </p>
         </article>
+        <article class="class" id="OtherParliamentaryPaper">
+          <h3>Class <a href="#OtherParliamentaryPaper">Other parliamentary paper</a></h3>
+
+           <p>
+            Superclasses  &middot; ParliamentaryPaper           </p>
+        </article>
         <article class="class" id="ParliamentaryCertificationTerm">
           <h3>Class <a href="#ParliamentaryCertificationTerm">Parliamentary certification term</a></h3>
 
            <p>
             Superclasses  &middot; ConceptTerm           </p>
+        </article>
+        <article class="class" id="ParliamentaryPaper">
+          <h3>Class <a href="#ParliamentaryPaper">Parliamentary paper</a></h3>
+
+           <p>
+            Superclasses  &middot; SessionalRecord           </p>
         </article>
         <article class="class" id="PersonTerm">
           <h3>Class <a href="#PersonTerm">Person term</a></h3>
@@ -149,14 +167,40 @@
            <p>
             Superclasses  &middot; ActOfParliament           </p>
         </article>
+        <article class="class" id="PrivateBill">
+          <h3>Class <a href="#PrivateBill">Private bill</a></h3>
+
+           <p>
+            Superclasses  &middot; Bill           </p>
+        </article>
         <article class="class" id="PublicAct">
           <h3>Class <a href="#PublicAct">Public Act</a></h3>
 
            <p>
             Superclasses  &middot; ActOfParliament           </p>
         </article>
+        <article class="class" id="PublicBill">
+          <h3>Class <a href="#PublicBill">Public bill</a></h3>
+
+           <p>
+            Superclasses  &middot; Bill           </p>
+        </article>
+        <article class="class" id="PublicBillCertification">
+          <h3>Class <a href="#PublicBillCertification">Public bill certification</a></h3>
+
+         </article>
         <article class="class" id="Record">
           <h3>Class <a href="#Record">Record</a></h3>
+
+         </article>
+        <article class="class" id="SelectCommitteePaper">
+          <h3>Class <a href="#SelectCommitteePaper">Select committee paper</a></h3>
+
+           <p>
+            Superclasses  &middot; ParliamentaryPaper           </p>
+        </article>
+        <article class="class" id="Session">
+          <h3>Class <a href="#Session">Session</a></h3>
 
          </article>
         <article class="class" id="SessionalRecord">
@@ -219,6 +263,63 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="certifiedAs">
+          <h3>
+            Object property
+            <a href="#certifiedAs"
+              >Certified as</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#PublicBillCertification"
+              >PublicBillCertification</a
+            >
+            &mdash; Certified as &mdash;
+            <a href="#ParliamentaryCertificationTerm">ParliamentaryCertificationTerm</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="corporateAuthor">
+          <h3>
+            Object property
+            <a href="#corporateAuthor"
+              >Corporate author</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#SelectCommitteePaper"
+              >SelectCommitteePaper</a
+            >
+            &mdash; Corporate author &mdash;
+            <a href="#OrganisationTerm">OrganisationTerm</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="during">
+          <h3>
+            Object property
+            <a href="#during"
+              >During</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#SessionalRecord"
+              >SessionalRecord</a
+            >
+            &mdash; During &mdash;
+            <a href="#Session">Session</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="house">
           <h3>
             Object property
@@ -275,10 +376,152 @@
             <a href="#GovernmentDepartmentTerm">GovernmentDepartmentTerm</a>
           </p>
         </article>
+
+        <article class="objectproperty" id="ofPublicBill">
+          <h3>
+            Object property
+            <a href="#ofPublicBill"
+              >Of public bill</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#PublicBillCertification"
+              >PublicBillCertification</a
+            >
+            &mdash; Of public bill &mdash;
+            <a href="#PublicBill">PublicBill</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="parliamentaryAgent">
+          <h3>
+            Object property
+            <a href="#parliamentaryAgent"
+              >Parliamentary agent</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#PrivateBill"
+              >PrivateBill</a
+            >
+            &mdash; Parliamentary agent &mdash;
+            <a href="#OrganisationTerm">OrganisationTerm</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="promoter">
+          <h3>
+            Object property
+            <a href="#promoter"
+              >Promoter</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#PrivateBill"
+              >PrivateBill</a
+            >
+            &mdash; Promoter &mdash;
+            <a href="#OrganisationTerm">OrganisationTerm</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="reportedIn">
+          <h3>
+            Object property
+            <a href="#reportedIn"
+              >Report in</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#SessionalRecord"
+              >SessionalRecord</a
+            >
+            &mdash; Report in &mdash;
+            <a href="#Session">Session</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="sponsoringDepartment">
+          <h3>
+            Object property
+            <a href="#sponsoringDepartment"
+              >Sponsoring department</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#PublicBill"
+              >PublicBill</a
+            >
+            &mdash; Sponsoring department &mdash;
+            <a href="#GovernmentDepartmentTerm">GovernmentDepartmentTerm</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="sponsoringMember">
+          <h3>
+            Object property
+            <a href="#sponsoringMember"
+              >Sponsoring Member</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#PublicBill"
+              >PublicBill</a
+            >
+            &mdash; Sponsoring Member &mdash;
+            <a href="#MemberTerm">MemberTerm</a>
+          </p>
+        </article>
       </section>
  
       <section id="dataproperties">
         <h2>Data properties</h2>
+
+        <article class="dataproperty" id="billNumber">
+          <h3>
+            Data property
+            <a href="#billNumber">Bill number</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            PublicBill &mdash; Bill number &mdash;
+            Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="certifiedOn">
+          <h3>
+            Data property
+            <a href="#certifiedOn">Certified on</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            PublicBillCertification &mdash; Certified on &mdash;
+            date
+          </p>
+        </article>
 
         <article class="dataproperty" id="chapterNumber">
           <h3>
@@ -291,6 +534,34 @@
           <p>
             ActOfParliament &mdash; Chapter number &mdash;
             Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="containsExplanatoryNote">
+          <h3>
+            Data property
+            <a href="#containsExplanatoryNote">Contains explanatory note</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            Bill &mdash; Contains explanatory note &mdash;
+            boolean
+          </p>
+        </article>
+
+        <article class="dataproperty" id="containsImpactAssessment">
+          <h3>
+            Data property
+            <a href="#containsImpactAssessment">Contains impact assessment</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            OtherParliamentaryPaper &mdash; Contains impact assessment &mdash;
+            boolean
           </p>
         </article>
 
@@ -350,6 +621,20 @@
           </p>
         </article>
 
+        <article class="dataproperty" id="billLongTitle">
+          <h3>
+            Data property
+            <a href="#billLongTitle">Long title</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            Bill &mdash; Long title &mdash;
+            langString
+          </p>
+        </article>
+
         <article class="dataproperty" id="number">
           <h3>
             Data property
@@ -360,6 +645,48 @@
 
           <p>
             ChurchOfEnglandMeasure &mdash; Number &mdash;
+            Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="orderedToBePrintedOn">
+          <h3>
+            Data property
+            <a href="#orderedToBePrintedOn">Ordered to be printed on</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            Bill &mdash; Ordered to be printed on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="paperOrderedToBePrintedOn">
+          <h3>
+            Data property
+            <a href="#paperOrderedToBePrintedOn">Ordered to be printed on</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            OtherParliamentaryPaper &mdash; Ordered to be printed on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="paperNumber">
+          <h3>
+            Data property
+            <a href="#paperNumber">Paper number</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            ParliamentaryPaper &mdash; Paper number &mdash;
             Literal
           </p>
         </article>
@@ -389,6 +716,20 @@
           <p>
             TransportAndWorksActOrderApplication &mdash; Reference number &mdash;
             Literal
+          </p>
+        </article>
+
+        <article class="dataproperty" id="reportedToHouseOn">
+          <h3>
+            Data property
+            <a href="#reportedToHouseOn">Reported to House on</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            SelectCommitteePaper &mdash; Reported to House on &mdash;
+            date
           </p>
         </article>
 
@@ -487,6 +828,30 @@
           <tr>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>PrivateAct</td>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>ActOfParliament</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>Bill</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>SessionalRecord</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>ParliamentaryPaper</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>SessionalRecord</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>PrivateBill</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>Bill</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>PublicBill</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>Bill</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>SelectCommitteePaper</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>ParliamentaryPaper</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>OtherParliamentaryPaper</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>ParliamentaryPaper</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>PersonTerm</td>
@@ -597,7 +962,7 @@
 
     <footer>
       <p>
-        Generated 2026-06-05 09:14:38.578752+00:00 from a
+        Generated 2026-06-05 14:14:47.062391+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl"
