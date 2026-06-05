@@ -39,6 +39,11 @@ oasis:SessionalRecord rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:Session rdf:type owl:Class ;
+	rdfs:label "Session"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
 oasis:PrimaryLegislationRecord rdf:type owl:Class ;
 	rdfs:subClassOf oasis:Record ;
 	rdfs:label "Primary legislation record"@en ;
@@ -81,8 +86,49 @@ oasis:ImpactAssessment rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:Bill rdf:type owl:Class ;
+	rdfs:subClassOf oasis:SessionalRecord ;
+	rdfs:label "Bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:PrivateBill rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Bill ;
+	rdfs:label "Private bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:PublicBill rdf:type owl:Class ;
+	rdfs:subClassOf oasis:Bill ;
+	rdfs:label "Public bill"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:PublicBillCertification rdf:type owl:Class ;
+	rdfs:label "Public bill certification"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:ParliamentaryPaper rdf:type owl:Class ;
+	rdfs:subClassOf oasis:SessionalRecord ;
+	rdfs:label "Parliamentary paper"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:SelectCommitteePaper rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ParliamentaryPaper ;
+	rdfs:label "Select committee paper"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:OtherParliamentaryPaper rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ParliamentaryPaper ;
+	rdfs:label "Other parliamentary paper"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+
+
 	
 	
 	
@@ -177,6 +223,69 @@ oasis:impactAssessmentHasGovernmentDepartment rdf:type owl:ObjectProperty ;
 	rdfs:range oasis:GovernmentDepartmentTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:during rdf:type owl:ObjectProperty ;
+	rdfs:label "During"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:SessionalRecord ;
+	rdfs:range oasis:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:reportedIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Report in"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:SessionalRecord ;
+	rdfs:range oasis:Session ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:promoter rdf:type owl:ObjectProperty ;
+	rdfs:label "Promoter"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:PrivateBill ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:parliamentaryAgent rdf:type owl:ObjectProperty ;
+	rdfs:label "Parliamentary agent"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:PrivateBill ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:sponsoringDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Sponsoring department"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:PublicBill ;
+	rdfs:range oasis:GovernmentDepartmentTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:sponsoringMember rdf:type owl:ObjectProperty ;
+	rdfs:label "Sponsoring Member"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:PublicBill ;
+	rdfs:range oasis:MemberTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:ofPublicBill rdf:type owl:ObjectProperty ;
+	rdfs:label "Of public bill"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:PublicBillCertification ;
+	rdfs:range oasis:PublicBill ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:certifiedAs rdf:type owl:ObjectProperty ;
+	rdfs:label "Certified as"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:PublicBillCertification ;
+	rdfs:range oasis:ParliamentaryCertificationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:corporateAuthor rdf:type owl:ObjectProperty ;
+	rdfs:label "Corporate author"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:SelectCommitteePaper ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
 
 
 				
@@ -265,4 +374,76 @@ oasis:publishedOn rdf:type owl:DatatypeProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain oasis:ImpactAssessment ;
 	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+		
+# NOTE: Duplicate property name!!!!
+oasis:billLongTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "Long title"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:Bill ;
+	rdfs:range rdf:langString ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:orderedToBePrintedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordered to be printed on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:Bill ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:containsExplanatoryNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Contains explanatory note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:Bill ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:billNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Bill number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:PublicBill ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:certifiedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Certified on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:PublicBillCertification ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:paperNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Paper number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ParliamentaryPaper ;
+	rdfs:range rdfs:Literal ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:reportedToHouseOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reported to House on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:SelectCommitteePaper ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:publishedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Published on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:SelectCommitteePaper ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+# NOTE: duplicate property name
+oasis:paperOrderedToBePrintedOn rdf:type owl:DatatypeProperty ;
+	rdfs:label "Ordered to be printed on"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:OtherParliamentaryPaper ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:containsImpactAssessment rdf:type owl:DatatypeProperty ;
+	rdfs:label "Contains impact assessment"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:OtherParliamentaryPaper ;
+	rdfs:range xsd:boolean ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
