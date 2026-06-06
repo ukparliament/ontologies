@@ -2,7 +2,7 @@
 
 ## Avatars of aheadness
 
-Your regular correspondents - never being ones to cower in the face of modernity and being quite keen to get their weekends back - have decided upon a new approach to these notes. In the past, we're forced to admit, there has been no intermediation between shower thoughts and keyboard clacking fingers. Instead, we've hand-craft every pixel. Like primitive monkeys. But not anymore.
+Your regular correspondents - never being ones to cower in the face of modernity and being quite keen to get their weekends back - have decided upon a new approach to these notes. In the past, we're forced to admit, there has been no intermediation between shower thoughts and keyboard clacking fingers. Instead, we'd hand-craft every pixel. Like primitive monkeys. But not anymore.
 
 [Anya](https://bsky.app/profile/anyaso.bsky.social) and [Michael](https://bsky.app/profile/fantasticlife.bsky.social) now employ a whole swarm of AI agents. Said agents being sat down and force-fed [The Cluetrain Manifesto](https://www.cluetrain.com/#manifesto), before being sent out to scour GitHub, Slack, Bluesky and Trello and told to keep things chippy but chirpy. These then our our first ever Agentic AI Powered Weeklyish Notes&trade;. Do let us know if you spot any improvements.
 
