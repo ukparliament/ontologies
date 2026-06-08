@@ -26,7 +26,7 @@ Staying firmly behind the gates of Sheffield city, [Shedcode](https://shedcode.c
 
 James' work to date can be roughly divided into two: writing the queries to build the pages to satisfy Michael's URL structure fever dreams, and the slightly less interesting challenge of setting up the infrastructure so that our [esteemed stakeholder](https://bsky.app/profile/lornabooth.bsky.social)(s) can actually see the results. On the latter, the application is now sat behind Cloudflare and served from the Parliament domain. It only remains to replace the token-based authentication system with Parliament's single sign on solution of choice, and we're good to share more widely. If not much more widely.
 
-On the slightly more interesting - at least to your regular correspondents - pixel-pushing front, James has churned out a whole host of views over the data. It is at this point that Michael feels he should apologise, for not yet spending the time he'd like to checking what's been built and suggesting new and improbable views of the data. A situation he hopes to remedy shortly. Probably dragging Young Robert along for the ride. Sorry Robert.
+On the slightly more interesting - at least to your regular correspondents - pixel-pushing front, James has churned out a whole host of views over the data. It is at this point that Michael feels he should apologise for not yet spending the time he'd like to checking what's been built and suggesting new and improbable views of the data. A situation he hopes to remedy shortly. Probably dragging Young Robert along for the ride. Sorry Robert.
 
 ## In the midst of life, we are in debt, etcetera
 
