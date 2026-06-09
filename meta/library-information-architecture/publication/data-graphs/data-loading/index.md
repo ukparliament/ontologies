@@ -47,21 +47,35 @@ We also work on the assumption that every Briefing has one and only one Version 
 				b."Id",
 				b."Reference",
 				b."Created"::Date AS createdAt,
-				1 AS publishedBy,
-				TRIM( BOTH ' ' FROM version."Title") AS title
+				1 AS publishedBy, /* Commons Library */
+				CASE
+					WHEN published_version."Title" IS NOT NULL
+						THEN TRIM( BOTH ' ' FROM published_version."Title")
+					WHEN latest_version."Title" IS NOT NULL
+						THEN TRIM( BOTH ' ' FROM latest_version."Title")
+					ELSE
+						'Untitled'
+				END AS title
 			FROM "Briefing" AS b
-			INNER JOIN (
+			LEFT JOIN (
 				SELECT *
 				FROM "Version"
 				WHERE "Status" = 1 /* Published */
-			) AS version
-			ON version."BriefingId" = b."Id"
+			) AS published_version
+			ON published_version."BriefingId" = b."Id"
+			LEFT JOIN (
+				SELECT *
+				FROM "Version"
+				ORDER BY "LastUpdated" DESC
+				LIMIT 1
+			) AS latest_version
+			ON latest_version."BriefingId" = b."Id"
 			WHERE (
 				b."ContentTypeId" = 414033 /* Commons Briefing papers */
 				OR
 				b."ContentTypeId" = 414037 /* Commons Debate packs */
 			)
-			GROUP BY b."Id", version."Title"
+			GROUP BY b."Id", published_version."Title", latest_version."Title"
 		)
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/commons-publication-works.csv' DELIMITER ',' CSV HEADER;
 	</code>
@@ -76,15 +90,29 @@ We also work on the assumption that every Briefing has one and only one Version 
 				b."Id",
 				b."Reference",
 				b."Created"::Date AS createdAt,
-				2 AS publishedBy,
-				TRIM( BOTH ' ' FROM version."Title") AS title
+				2 AS publishedBy, /* Lords Library */
+				CASE
+					WHEN published_version."Title" IS NOT NULL
+						THEN TRIM( BOTH ' ' FROM published_version."Title")
+					WHEN latest_version."Title" IS NOT NULL
+						THEN TRIM( BOTH ' ' FROM latest_version."Title")
+					ELSE
+						'Untitled'
+				END AS title
 			FROM "Briefing" AS b
-			INNER JOIN (
+			LEFT JOIN (
 				SELECT *
 				FROM "Version"
 				WHERE "Status" = 1 /* Published */
-			) AS version
-			ON version."BriefingId" = b."Id"
+			) AS published_version
+			ON published_version."BriefingId" = b."Id"
+			LEFT JOIN (
+				SELECT *
+				FROM "Version"
+				ORDER BY "LastUpdated" DESC
+				LIMIT 1
+			) AS latest_version
+			ON latest_version."BriefingId" = b."Id"
 			WHERE (
 				b."ContentTypeId" = 414039 /* Lords Briefing packs */
 				OR
@@ -92,7 +120,7 @@ We also work on the assumption that every Briefing has one and only one Version 
 				OR
 				b."ContentTypeId" = 346713 /* Lords Library Briefings */
 			)
-			GROUP BY b."Id", version."Title"
+			GROUP BY b."Id", published_version."Title", latest_version."Title"
 		)
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/lords-publication-works.csv' DELIMITER ',' CSV HEADER;
 	</code>
@@ -107,25 +135,48 @@ We also work on the assumption that every Briefing has one and only one Version 
 				b."Id",
 				b."Reference",
 				b."Created"::Date AS createdAt,
-				3 AS publishedBy,
-				TRIM( BOTH ' ' FROM version."Title") AS title
+				3 AS publishedBy, /* POST */
+				CASE
+					WHEN published_version."Title" IS NOT NULL
+						THEN TRIM( BOTH ' ' FROM published_version."Title")
+					WHEN latest_version."Title" IS NOT NULL
+						THEN TRIM( BOTH ' ' FROM latest_version."Title")
+					ELSE
+						'Untitled'
+				END AS title
 			FROM "Briefing" AS b
-			INNER JOIN (
+			LEFT JOIN (
 				SELECT *
 				FROM "Version"
 				WHERE "Status" = 1 /* Published */
-			) AS version
-			ON version."BriefingId" = b."Id"
+			) AS published_version
+			ON published_version."BriefingId" = b."Id"
+			LEFT JOIN (
+				SELECT *
+				FROM "Version"
+				ORDER BY "LastUpdated" DESC
+				LIMIT 1
+			) AS latest_version
+			ON latest_version."BriefingId" = b."Id"
 			WHERE (
 				b."ContentTypeId" = 346721 /* POSTnotes */
 				OR
 				b."ContentTypeId" = 414035 /* POSTbriefs */
 			)
-			GROUP BY b."Id", version."Title"
+			GROUP BY b."Id", published_version."Title", latest_version."Title"
 		)
 		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/post-publication-works.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+
+
+
+
+
+
+
+
 
 ## PublicationExpression, expressionOf and hasPublicationExpressionStatus
 
