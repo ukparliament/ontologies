@@ -86,6 +86,12 @@ oasis:ImpactAssessment rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
+oasis:SpeakerCertificate rdf:type owl:Class ;
+	rdfs:subClassOf oasis:SessionalRecord ;
+	rdfs:label "Speaker certificate"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
 oasis:Bill rdf:type owl:Class ;
 	rdfs:subClassOf oasis:SessionalRecord ;
 	rdfs:label "Bill"@en ;
@@ -126,8 +132,36 @@ oasis:OtherParliamentaryPaper rdf:type owl:Class ;
 	rdfs:label "Other parliamentary paper"@en ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:ProceedingRecord rdf:type owl:Class ;
+	rdfs:subClassOf oasis:SessionalRecord ;
+	rdfs:label "Proceeding record"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:CommitteeProceeding rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ProceedingRecord ;
+	rdfs:label "Committee proceeding"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:GeneralCommitteeProceeding rdf:type owl:Class ;
+	rdfs:subClassOf oasis:CommitteeProceeding ;
+	rdfs:label "General Committee proceeding"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+oasis:CommonsGrandCommitteeProceeding rdf:type owl:Class ;
+	rdfs:subClassOf oasis:CommitteeProceeding ;
+	rdfs:label "Commons Grand Committee proceeding"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
-
+oasis:FormalProceeding rdf:type owl:Class ;
+	rdfs:subClassOf oasis:ProceedingRecord ;
+	rdfs:label "Formal proceeding"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 	
 	
@@ -285,7 +319,20 @@ oasis:corporateAuthor rdf:type owl:ObjectProperty ;
 	rdfs:domain oasis:SelectCommitteePaper ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+oasis:hasCommittee rdf:type owl:ObjectProperty ;
+	rdfs:label "Has committee"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:CommitteeProceeding ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .	
 	
+oasis:proceedingCorporateAuthor rdf:type owl:ObjectProperty ;
+	rdfs:label "Proceeding corporate author"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:FormalProceeding ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .	
 
 
 				
@@ -446,4 +493,28 @@ oasis:containsImpactAssessment rdf:type owl:DatatypeProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain oasis:OtherParliamentaryPaper ;
 	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+# NOTE: duplicate property name
+oasis:speakerCertificateSittingDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Speaker certificate sitting date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:SpeakerCertificate ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+# NOTE: duplicate property name
+oasis:proceedingRecordSittingDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Proceeding record sitting date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ProceedingRecord ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+
+# NOTE: duplicate property name
+oasis:proceeedingRecordReferenceNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Proceeeding record reference number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain oasis:ProceedingRecord ;
+	rdfs:range rdfs:Literal ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
