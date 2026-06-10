@@ -89,11 +89,35 @@
            <p>
             Superclasses  &middot; PrimaryLegislationRecord           </p>
         </article>
+        <article class="class" id="CommitteeProceeding">
+          <h3>Class <a href="#CommitteeProceeding">Committee proceeding</a></h3>
+
+           <p>
+            Superclasses  &middot; ProceedingRecord           </p>
+        </article>
+        <article class="class" id="CommonsGrandCommitteeProceeding">
+          <h3>Class <a href="#CommonsGrandCommitteeProceeding">Commons Grand Committee proceeding</a></h3>
+
+           <p>
+            Superclasses  &middot; CommitteeProceeding           </p>
+        </article>
         <article class="class" id="ConceptTerm">
           <h3>Class <a href="#ConceptTerm">Concept term</a></h3>
 
            <p>
             Superclasses  &middot; Term           </p>
+        </article>
+        <article class="class" id="FormalProceeding">
+          <h3>Class <a href="#FormalProceeding">Formal proceeding</a></h3>
+
+           <p>
+            Superclasses  &middot; ProceedingRecord           </p>
+        </article>
+        <article class="class" id="GeneralCommitteeProceeding">
+          <h3>Class <a href="#GeneralCommitteeProceeding">General Committee proceeding</a></h3>
+
+           <p>
+            Superclasses  &middot; CommitteeProceeding           </p>
         </article>
         <article class="class" id="GovernmentDepartmentTerm">
           <h3>Class <a href="#GovernmentDepartmentTerm">Government department term</a></h3>
@@ -173,6 +197,12 @@
            <p>
             Superclasses  &middot; Bill           </p>
         </article>
+        <article class="class" id="ProceedingRecord">
+          <h3>Class <a href="#ProceedingRecord">Proceeding record</a></h3>
+
+           <p>
+            Superclasses  &middot; SessionalRecord           </p>
+        </article>
         <article class="class" id="PublicAct">
           <h3>Class <a href="#PublicAct">Public Act</a></h3>
 
@@ -208,6 +238,12 @@
 
            <p>
             Superclasses  &middot; HouseRecord           </p>
+        </article>
+        <article class="class" id="SpeakerCertificate">
+          <h3>Class <a href="#SpeakerCertificate">Speaker certificate</a></h3>
+
+           <p>
+            Superclasses  &middot; SessionalRecord           </p>
         </article>
         <article class="class" id="Term">
           <h3>Class <a href="#Term">Term</a></h3>
@@ -320,6 +356,25 @@
           </p>
         </article>
 
+        <article class="objectproperty" id="hasCommittee">
+          <h3>
+            Object property
+            <a href="#hasCommittee"
+              >Has committee</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#CommitteeProceeding"
+              >CommitteeProceeding</a
+            >
+            &mdash; Has committee &mdash;
+            <a href="#OrganisationTerm">OrganisationTerm</a>
+          </p>
+        </article>
+
         <article class="objectproperty" id="house">
           <h3>
             Object property
@@ -411,6 +466,25 @@
               >PrivateBill</a
             >
             &mdash; Parliamentary agent &mdash;
+            <a href="#OrganisationTerm">OrganisationTerm</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="proceedingCorporateAuthor">
+          <h3>
+            Object property
+            <a href="#proceedingCorporateAuthor"
+              >Proceeding corporate author</a
+            >
+          </h3>
+
+           <p>.</p>
+
+          <p>
+            <a href="#FormalProceeding"
+              >FormalProceeding</a
+            >
+            &mdash; Proceeding corporate author &mdash;
             <a href="#OrganisationTerm">OrganisationTerm</a>
           </p>
         </article>
@@ -691,6 +765,34 @@
           </p>
         </article>
 
+        <article class="dataproperty" id="proceedingRecordSittingDate">
+          <h3>
+            Data property
+            <a href="#proceedingRecordSittingDate">Proceeding record sitting date</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            ProceedingRecord &mdash; Proceeding record sitting date &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="proceeedingRecordReferenceNumber">
+          <h3>
+            Data property
+            <a href="#proceeedingRecordReferenceNumber">Proceeeding record reference number</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            ProceedingRecord &mdash; Proceeeding record reference number &mdash;
+            Literal
+          </p>
+        </article>
+
         <article class="dataproperty" id="publishedOn">
           <h3>
             Data property
@@ -743,6 +845,20 @@
 
           <p>
             PrimaryLegislationRecord &mdash; Royal Assent on &mdash;
+            date
+          </p>
+        </article>
+
+        <article class="dataproperty" id="speakerCertificateSittingDate">
+          <h3>
+            Data property
+            <a href="#speakerCertificateSittingDate">Speaker certificate sitting date</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            SpeakerCertificate &mdash; Speaker certificate sitting date &mdash;
             date
           </p>
         </article>
@@ -830,11 +946,19 @@
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>ActOfParliament</td>
           </tr>
           <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>SpeakerCertificate</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>SessionalRecord</td>
+          </tr>
+          <tr>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>Bill</td>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>SessionalRecord</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>ParliamentaryPaper</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>SessionalRecord</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>ProceedingRecord</td>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>SessionalRecord</td>
           </tr>
           <tr>
@@ -852,6 +976,22 @@
           <tr>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>OtherParliamentaryPaper</td>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>ParliamentaryPaper</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>CommitteeProceeding</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>ProceedingRecord</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>FormalProceeding</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>ProceedingRecord</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>GeneralCommitteeProceeding</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>CommitteeProceeding</td>
+          </tr>
+          <tr>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>CommonsGrandCommitteeProceeding</td>
+            <td>/<wbr>ontologies/<wbr>oasis/<wbr>CommitteeProceeding</td>
           </tr>
           <tr>
             <td>/<wbr>ontologies/<wbr>oasis/<wbr>PersonTerm</td>
@@ -962,7 +1102,7 @@
 
     <footer>
       <p>
-        Generated 2026-06-09 20:59:16.225248+00:00 from a
+        Generated 2026-06-10 10:57:33.112517+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../oasis/oasis-ontology.ttl"
