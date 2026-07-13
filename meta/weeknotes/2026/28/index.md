@@ -56,7 +56,7 @@ Finally, Alan Strickland got in touch to ask for his unsuccessful candidacy in t
 
 ## Spring cleaning
 
-If you've plucked up the courage to cross your doorstep recently, you'll know the fresh, revitalising days of spring are well behind us. At some point in June we entered that most glorious of British seasons, otherwise known as the heat death of the universe. But does heat exhaustion stop our crack team of librarians from taking a feather duster to a corner or two? No, it does not.
+If you've plucked up the courage to cross your doorstep recently, you'll know that the fresh, revitalising days of spring are well behind us. At some point in June we entered that most glorious of British seasons, as strawberries were picked, sparkling wines cracked open and the sun appeared to prematurely enter its red giant phase. But does heat exhaustion stop our crack team of librarians from taking a feather duster to a corner or two? No, it does not.
 
 In the first instance, Librarian Jayne stumbled across a bunch of records calling themselves House of Commons papers but with no House of Commons paper number. Which is not a combination that should be possible. No sooner had she spotted them than Librarian Emma stepped in, cross-checking every paper to determine if it was indeed a House of Commons paper, and, if it was, applying its number. And, where it wasn't, determining what it actually was and re-filing it appropriately.
 
