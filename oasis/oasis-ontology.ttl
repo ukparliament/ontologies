@@ -24,153 +24,147 @@
 	
 oasis:Record rdf:type owl:Class ;
 	rdfs:label "Record"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of an event or publication."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:HouseRecord rdf:type owl:Class ;
 	rdfs:subClassOf oasis:Record ;
 	rdfs:label "House record"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of an event or publication related to a House, or Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:SessionalRecord rdf:type owl:Class ;
 	rdfs:subClassOf oasis:HouseRecord ;
 	rdfs:label "Sessional record"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of an event or publication taking place during a session."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:Session rdf:type owl:Class ;
 	rdfs:label "Session"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A period during which Parliament is able to conduct business on days of its choosing. A session is within a Parliament period. The first session of a Parliament begins on the same day as the Parliament period and ends on a day named in a subsequent prorogation proclamation. Subsequent sessions within the Parliament period begin and end on dates named in subsequent prorogation proclamations. The final session of a Parliament ends either with prorogation followed by dissolution or with dissolution. Session periods are the same for both Houses."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:PrimaryLegislationRecord rdf:type owl:Class ;
 	rdfs:subClassOf oasis:Record ;
 	rdfs:label "Primary legislation record"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a publication of a Public Act, a Private Act or a Church of England measure."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:ActOfParliament rdf:type owl:Class ;
 	rdfs:subClassOf oasis:PrimaryLegislationRecord ;
 	rdfs:label "Act of Parliament"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An Act of Parliament creates, amends or repeals legislation. An Act is a Bill which has been passed by Parliament and given Royal Assent."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:PublicAct rdf:type owl:Class ;
 	rdfs:subClassOf oasis:ActOfParliament ;
 	rdfs:label "Public Act"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An Act of Parliament creating, amending or repealing legislation with general application across the whole population, without that application being limited to particular groups, people or places."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:PrivateAct rdf:type owl:Class ;
 	rdfs:subClassOf oasis:ActOfParliament ;
 	rdfs:label "Private Act"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An Act of Parliament creating, amending or repealing legislation affecting the interests of particular groups, people or places"@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:ChurchOfEnglandMeasure rdf:type owl:Class ;
 	rdfs:subClassOf oasis:PrimaryLegislationRecord ;
 	rdfs:label "Church of England measure"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A law with the same force and effect as Acts of Parliament, relating to the administration and organisation of the Church of England."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:TransportAndWorksActOrderApplication rdf:type owl:Class ;
 	rdfs:subClassOf oasis:Record ;
 	rdfs:label "Transport and Works Act order application"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An application for an order under the Transport and Works Act 1992. An order made under the Transport and Works Act 1992 is the usual way of authorising schemes for new railways or tramways in England and Wales. To apply for an order, an agent acting on behalf of an applicant must deposit an application into Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:ImpactAssessment rdf:type owl:Class ;
 	rdfs:subClassOf oasis:HouseRecord ;
 	rdfs:label "Impact assessment"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A publication providing an analysis of proposed laws. Impact assessments evaluate potential economic, environmental, or social consequences before legislation is enacted."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:SpeakerCertificate rdf:type owl:Class ;
 	rdfs:subClassOf oasis:SessionalRecord ;
 	rdfs:label "Speaker certificate"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A certification by the Speaker of the House of Commons, for example: the certification of a bill as a money bill. "@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:Bill rdf:type owl:Class ;
 	rdfs:subClassOf oasis:SessionalRecord ;
 	rdfs:label "Bill"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An expression of a bill work at a point in time. A new expression of the bill work is created by any amendment being made to the bill, or when a bill passes from the first House to the second House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
-
+	
 oasis:PrivateBill rdf:type owl:Class ;
 	rdfs:subClassOf oasis:Bill ;
 	rdfs:label "Private bill"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An expression of a private bill work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:PublicBill rdf:type owl:Class ;
 	rdfs:subClassOf oasis:Bill ;
 	rdfs:label "Public bill"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An expression of a public bill work."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:PublicBillCertification rdf:type owl:Class ;
 	rdfs:label "Public bill certification"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The certification of a public bill by the Speaker of the House of Commons, for example: a public bill being certified as a money bill."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:ParliamentaryPaper rdf:type owl:Class ;
 	rdfs:subClassOf oasis:SessionalRecord ;
 	rdfs:label "Parliamentary paper"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a paper made available to a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:SelectCommitteePaper rdf:type owl:Class ;
 	rdfs:subClassOf oasis:ParliamentaryPaper ;
 	rdfs:label "Select committee paper"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a publication of a paper reported to a House, or Houses, by a select committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:OtherParliamentaryPaper rdf:type owl:Class ;
 	rdfs:subClassOf oasis:ParliamentaryPaper ;
 	rdfs:label "Other parliamentary paper"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a publication of a paper ordered to be printed by a House."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:ProceedingRecord rdf:type owl:Class ;
 	rdfs:subClassOf oasis:SessionalRecord ;
 	rdfs:label "Proceeding record"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a proceeding in Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:CommitteeProceeding rdf:type owl:Class ;
 	rdfs:subClassOf oasis:ProceedingRecord ;
 	rdfs:label "Committee proceeding"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a committee proceeding in Parliament."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:GeneralCommitteeProceeding rdf:type owl:Class ;
 	rdfs:subClassOf oasis:CommitteeProceeding ;
 	rdfs:label "General Committee proceeding"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a General Committee proceeding. A General Committee may be a public bill committee or a delegated legislation committee."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:CommonsGrandCommitteeProceeding rdf:type owl:Class ;
 	rdfs:subClassOf oasis:CommitteeProceeding ;
 	rdfs:label "Commons Grand Committee proceeding"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a House of Commons Grand Committee proceeding."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:FormalProceeding rdf:type owl:Class ;
 	rdfs:subClassOf oasis:ProceedingRecord ;
 	rdfs:label "Formal proceeding"@en ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A record of a formal proceeding in a House, being a proceeding on a motion taken without debate."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+####### Thesaurus Classes #####
 
-	
-	
-	
-	
-
-
-	
-	
 oasis:Term rdf:type owl:Class ;
 	rdfs:label "Term"@en ;
 	rdfs:comment ""@en ;
@@ -182,7 +176,7 @@ oasis:PersonTerm rdf:type owl:Class ;
 	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
-oasis:memberTerm rdf:type owl:Class ;
+oasis:MemberTerm rdf:type owl:Class ;
 	rdfs:subClassOf oasis:PersonTerm ;
 	rdfs:label "Member term"@en ;
 	rdfs:comment ""@en ;
@@ -224,94 +218,91 @@ oasis:ParliamentaryCertificationTerm rdf:type owl:Class ;
 	
 oasis:house rdf:type owl:ObjectProperty ;
 	rdfs:label "House"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a House record to a House, or Houses. A House record relates to one or both Houses."@en ;
 	rdfs:domain oasis:HouseRecord ;
 	rdfs:range oasis:House ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:applicationAgent rdf:type owl:ObjectProperty ;
 	rdfs:label "Application agent"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a Transport and Works Act order application to the agent responsible for preparing and depositing that application."@en ;
 	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:applicationApplicant rdf:type owl:ObjectProperty ;
 	rdfs:label "Application applicant"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a Transport and Works Act order application to the body applying for an order."@en ;
 	rdfs:domain oasis:TransportAndWorksActOrderApplication ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:impactAssessmentHasCorporateAuthor rdf:type owl:ObjectProperty ;
 	rdfs:label "Impact assessment has corporate author"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates an impact assessment to the corporate author of that impact assessment. An impact assessment has one or more corporate authors."@en ;
 	rdfs:domain oasis:ImpactAssessment ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
-	
+
 oasis:impactAssessmentHasGovernmentDepartment rdf:type owl:ObjectProperty ;
 	rdfs:label "Impact assessment has government department"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates an impact assessment to the government department making that impact assessment available to Parliament. An impact assessment is made available by one or more government departments."@en ;
 	rdfs:domain oasis:ImpactAssessment ;
 	rdfs:range oasis:GovernmentDepartmentTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
-	
+
 oasis:during rdf:type owl:ObjectProperty ;
 	rdfs:label "During"@en ;
-	rdfs:comment "."@en ;
-	rdfs:domain oasis:SessionalRecord ;
-	rdfs:range oasis:Session ;
-	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
-	
-oasis:reportedIn rdf:type owl:ObjectProperty ;
-	rdfs:label "Report in"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a sessional record to the session it takes place in. A sessional record takes place in one session."@en ;
 	rdfs:domain oasis:SessionalRecord ;
 	rdfs:range oasis:Session ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:promoter rdf:type owl:ObjectProperty ;
 	rdfs:label "Promoter"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a private bill to the body promoting that bill. A private bill has one or more promoters."@en ;
 	rdfs:domain oasis:PrivateBill ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
-
+	
 oasis:parliamentaryAgent rdf:type owl:ObjectProperty ;
 	rdfs:label "Parliamentary agent"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a private bill to the parliamentary agent responsible for negotiating with objectors to that bill. A private bill has one agent."@en ;
 	rdfs:domain oasis:PrivateBill ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:sponsoringDepartment rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsoring department"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a public bill expression to the government department sponsoring that public bill at the time of publication."@en ;
 	rdfs:domain oasis:PublicBill ;
 	rdfs:range oasis:GovernmentDepartmentTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:sponsoringMember rdf:type owl:ObjectProperty ;
 	rdfs:label "Sponsoring Member"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a public bill expression to the Member sponsoring that public bill at the time of publication."@en ;
 	rdfs:domain oasis:PublicBill ;
 	rdfs:range oasis:MemberTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 
 oasis:ofPublicBill rdf:type owl:ObjectProperty ;
 	rdfs:label "Of public bill"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a public bill certification to the public bill being certified. A public bill certification is of one bill."@en ;
 	rdfs:domain oasis:PublicBillCertification ;
 	rdfs:range oasis:PublicBill ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
 	
 oasis:certifiedAs rdf:type owl:ObjectProperty ;
 	rdfs:label "Certified as"@en ;
-	rdfs:comment "."@en ;
+	rdfs:comment "Relates a public bill certification to its certificate. A public bill certification is to one certificate."@en ;
 	rdfs:domain oasis:PublicBillCertification ;
 	rdfs:range oasis:ParliamentaryCertificationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .
+	
+	
+	
+	###### DONE TO HERE
 
 oasis:corporateAuthor rdf:type owl:ObjectProperty ;
 	rdfs:label "Corporate author"@en ;
@@ -327,11 +318,25 @@ oasis:hasCommittee rdf:type owl:ObjectProperty ;
 	rdfs:range oasis:OrganisationTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .	
 	
-oasis:proceedingCorporateAuthor rdf:type owl:ObjectProperty ;
-	rdfs:label "Proceeding corporate author"@en ;
+oasis:formalProceedingHasCommittee rdf:type owl:ObjectProperty ;
+	rdfs:label "Formal proceeding has committee"@en ;
 	rdfs:comment "."@en ;
 	rdfs:domain oasis:FormalProceeding ;
 	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .	
+	
+oasis:formalProceedingHasSpeaker rdf:type owl:ObjectProperty ;
+	rdfs:label "Formal proceeding has Speaker"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:FormalProceeding ;
+	rdfs:range oasis:OrganisationTerm ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .	
+	
+oasis:formalProceedingHasGovernmentDepartment rdf:type owl:ObjectProperty ;
+	rdfs:label "Formal proceeding has government department"@en ;
+	rdfs:comment "."@en ;
+	rdfs:domain oasis:FormalProceeding ;
+	rdfs:range oasis:GovernmentDepartmentTerm ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/oasis/> .	
 
 
