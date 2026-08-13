@@ -403,8 +403,6 @@ The chapter property has been temporarily changed from integer to text because s
 	</code>
 </pre>
 
-### DONE TO HERE
-
 ## TreatyWork
 
 <pre>
@@ -427,93 +425,6 @@ The chapter property has been temporarily changed from integer to text because s
 			ON work_packaged_thing.id = t.id
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/treaties.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-## TreatySeries
-
-Populated by hand: Country Series (1), European Union Series (2), Miscellaneous Series (3)
-
-## SeriesMembership (Country)
-
-<pre>
-	<code>
-		COPY (
-			SELECT
-				sm.id,
-				sm.citation AS label,
-				sm.triplestoreid AS triplestoreId,
-				sm.citation AS treatySeriesCitation,
-				1 AS treatySeries,
-				c.ProcedureTreatyId AS treaty
-			FROM
-				dbo.ProcedureSeriesMembership AS sm,
-				dbo.ProcerdureCountrySeriesMembership AS c
-			WHERE sm.id = c.id
-			AND sm.citation IS NOT NULL /* required because negotiations toward a treaty are placed in the country series membership table with no citation */
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/country-series-memberships.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-## SeriesMembership (European Union)
-
-<pre>
-	<code>
-		COPY (
-			SELECT
-				sm.id,
-				sm.citation AS label,
-				sm.triplestoreid AS triplestoreId,
-				sm.citation AS treatySeriesCitation,
-				2 AS treatySeries,
-				eu.ProcedureTreatyId AS treaty
-			FROM
-				dbo.ProcedureSeriesMembership AS sm,
-				dbo.ProcerdureEuropeanUnionSeriesMembership AS eu
-			WHERE sm.id = eu.id
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/eu-series-memberships.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-## SeriesMembership (Miscellaneous)
-
-<pre>
-	<code>
-		COPY (
-			SELECT
-				sm.id,
-				sm.citation AS label,
-				sm.triplestoreid AS triplestoreId,
-				sm.citation AS treatySeriesCitation,
-				3 AS treatySeries,
-				misc.ProcedureTreatyId AS treaty
-			FROM
-				dbo.ProcedureSeriesMembership AS sm,
-				dbo.ProcerdureMiscellaneousSeriesMembership AS misc
-			WHERE sm.id = misc.id
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/misc-series-memberships.csv' DELIMITER ',' CSV HEADER;
-	</code>
-</pre>
-
-## DepartmentalLead
-
-<pre>
-	<code>
-		COPY (
-			SELECT
-				t.id,
-				CONCAT( 'Departmental lead for ', t.proceduretreatyname, ' from to' ) AS label,
-				NULL AS startOn,
-				NULL AS endON,
-				t.id AS departmentalLeadOfTreaty,
-				t.leadgovernmentorganisationtriplestoreid AS byMinisterialDepartment
-			FROM
-				dbo.proceduretreaty t
-		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/departmental-leads.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -825,6 +736,93 @@ Populated by hand: Country Series (1), European Union Series (2), Miscellaneous 
 	</code>
 </pre>
 
+## TreatySeries
+
+Populated by hand: Country Series (1), European Union Series (2), Miscellaneous Series (3)
+
+## DepartmentalLead
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				t.id,
+				CONCAT( 'Departmental lead for ', t.proceduretreatyname, ' from to' ) AS label,
+				NULL AS startOn,
+				NULL AS endON,
+				t.id AS departmentalLeadOfTreaty,
+				t.leadgovernmentorganisationtriplestoreid AS byMinisterialDepartment
+			FROM
+				dbo.proceduretreaty t
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/departmental-leads.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## SeriesMembership (Country)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				sm.id,
+				sm.citation AS label,
+				sm.triplestoreid AS triplestoreId,
+				sm.citation AS treatySeriesCitation,
+				1 AS treatySeries,
+				c.ProcedureTreatyId AS treaty
+			FROM
+				dbo.ProcedureSeriesMembership AS sm,
+				dbo.ProcerdureCountrySeriesMembership AS c
+			WHERE sm.id = c.id
+			AND sm.citation IS NOT NULL /* required because negotiations toward a treaty are placed in the country series membership table with no citation */
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/country-series-memberships.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## SeriesMembership (European Union)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				sm.id,
+				sm.citation AS label,
+				sm.triplestoreid AS triplestoreId,
+				sm.citation AS treatySeriesCitation,
+				2 AS treatySeries,
+				eu.ProcedureTreatyId AS treaty
+			FROM
+				dbo.ProcedureSeriesMembership AS sm,
+				dbo.ProcerdureEuropeanUnionSeriesMembership AS eu
+			WHERE sm.id = eu.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/eu-series-memberships.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+## SeriesMembership (Miscellaneous)
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				sm.id,
+				sm.citation AS label,
+				sm.triplestoreid AS triplestoreId,
+				sm.citation AS treatySeriesCitation,
+				3 AS treatySeries,
+				misc.ProcedureTreatyId AS treaty
+			FROM
+				dbo.ProcedureSeriesMembership AS sm,
+				dbo.ProcerdureMiscellaneousSeriesMembership AS misc
+			WHERE sm.id = misc.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/misc-series-memberships.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
 ## ProceduralWorkPackage, WorkPackage, subjectTo, workPackageHasCalculationStyle and focus
 
 ### For PublicBill
@@ -854,7 +852,7 @@ Populated by hand: Country Series (1), European Union Series (2), Miscellaneous 
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/public-bill-work-packages.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
-                                                                                                                           
+
 ### For Treaty
 <pre>
 	<code>
@@ -880,7 +878,8 @@ Populated by hand: Country Series (1), European Union Series (2), Miscellaneous 
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/treaty-work-packages.csv' DELIMITER ',' CSV HEADER;
 	</code>
-</pre>																																		   
+</pre>
+																															   
 ### For ProposedNegativeStatutoryInstrument
 
 <pre>
@@ -907,7 +906,7 @@ Populated by hand: Country Series (1), European Union Series (2), Miscellaneous 
 		)
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/pnsi-work-packages.csv' DELIMITER ',' CSV HEADER;
 	</code>
-</pre>		
+</pre>
 
 ### For ProposedDraftRemedialOrder
 
@@ -1028,6 +1027,31 @@ Populated by hand: Country Series (1), European Union Series (2), Miscellaneous 
 		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/made-si-work-packages.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
+
+
+
+
+
+
+
+
+### DONE TO HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Non-making available business items
 
