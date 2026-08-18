@@ -35,7 +35,6 @@ The written answer bots post whenever an answering body provides a written answe
 
 Name | Bluesky | Mastodon | Feed
 [Attorney General](https://api.parliament.uk/written-answers/answering-bodies/88) | [@ag-answers](https://bsky.app/profile/ag-answers.bsky.social) | [@AGAnswers](https://mastodon.me.uk/@AGAnswers) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/88.rss)
-[Attorney General](https://api.parliament.uk/written-answers/answering-bodies/88) | [@ag-answers](https://bsky.app/profile/ag-answers.bsky.social) | [@AGAnswers](https://mastodon.me.uk/@AGAnswers) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/88.rss)
 [Department for Business, Innovation, Science and Trade](https://api.parliament.uk/written-answers/answering-bodies/220) | [@dbist-answers](https://bsky.app/profile/dbist-answers.bsky.social) | [@DBISTAnswers](https://mastodon.me.uk/@DBISTAnswers) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/220/answers.rss)
 [Cabinet Office]( https://api.parliament.uk/written-answers/answering-bodies/53 ) | [@co-answers](https://bsky.app/profile/co-answers.bsky.social) | [@COAnswers](https://mastodon.me.uk/@COAnswers) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/53.rss)
 [Church Commissioners](https://api.parliament.uk/written-answers/answering-bodies/9) | [@cc-answers](https://bsky.app/profile/cc-answers.bsky.social) | [@CCAnswers](https://mastodon.me.uk/@CCAnswers) | [RSS](https://api.parliament.uk/written-answers/answering-bodies/9.rss)
