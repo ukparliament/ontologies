@@ -4,8 +4,16 @@ This process relies on getting hold of a dump of the SQLServer database, which i
 
 This page lists the Postgres queries necessary to produce CSV files to populate Data Graphs.
 
+## Source data
+
 <a href="schema.svg">
-	<img src="schema.svg" alt="Data loading progress diagram" title="Data loading progress diagram" />
+	<img src="schema.svg" alt="Source system ER" title="Source system ER" />
+</a>
+
+## Target data
+
+<a href="domain-model.svg">
+	<img src="domain-model.svg" alt="Target domain model" title="Target domain model" />
 </a>
 
 ## Explorations
@@ -509,17 +517,21 @@ Contribution records have a field for AuthorType, though this is not defined in 
 		COPY (
 			SELECT
 				6 AS id,
-				'Lords In Focus' as name,
+				'Research on the House of Lords' as name,
 				STRING_AGG( b.id::text, ', ') AS hasMember,
 				'false' AS isPromoted
 			FROM
 				briefing b,
 				version v
 			WHERE b.id = v.briefingid
-			AND b.contenttypeid = 414041
+			AND (
+				v.categoryid = 346719
+				OR
+				v.categoryid = 416513
+			)
 			AND v.status = 1  /* Published */
 		)
-		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/lords-in-focus-collection.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/meta/library-information-architecture/publication/data-graphs/data-loading/dumps/research-on-the-house-of-lords-collection.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
@@ -602,23 +614,8 @@ All resource files relate to at least one version. Some are reused across up to 
 
 
 
+## ToDo: new data dump required.
 
+Constituency Casework collection
 
-=============== DONE TO HERE ===============
-
-## Other categories (of expressions)
-
-416505	Lords Briefing packs - House of Lords
-416509	Lords In Focus - Debates
-346719	Lords Library Briefings - House of Lords
-416503	Lords Briefing packs - Bills
-346715	Lords Library Briefings - Bills
-416511	Lords In Focus - Bills
-416515	Lords In Focus - Topical
-346717	Lords Library Briefings - Debates
-416501	Lords Briefing packs - Debates
-416507	Lords Briefing packs - Topical
-346711	Briefing papers on bills
-414951	Lords Library Briefings - Topical
-416513	Lords In Focus - House of Lords
-346707
+Typing of data dashboards
