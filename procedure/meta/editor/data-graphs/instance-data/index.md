@@ -1028,36 +1028,7 @@ Populated by hand: Country Series (1), European Union Series (2), Miscellaneous 
 	</code>
 </pre>
 
-
-
-
-
-
-
-
-### DONE TO HERE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Non-making available business items
-
-### Remove business item URLs that are not URLs.
-
-Remove this for new data dump.
 
 <pre>
 	<code>
