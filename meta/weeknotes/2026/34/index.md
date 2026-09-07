@@ -48,7 +48,7 @@ The problem stems not, for once, from a change in the model - which our Jianhan 
 
 The computational conundrum of adding one to a number aside, Librarian Anna has confirmed that the Indexing Service component is [happily conversing with the new thesaurus API](https://trello.com/c/bi4IPioZ/46-indexing-service-talking-to-ses-wrapper). She's also been working with Developer Jon and Librarian Jayne to ensure that changes to the content type part of the thesaurus propagate to [new, old Parliamentary Search](https://beta-search.parliament.uk/) as expected. Which they do. Which is nice.
 
-One unexpected and somewhat unwelcome change did emerge from testing, whereby concepts intended to be used as part of the intranet taxonomy only found themselves instead put to use as part of Jon's query expansion code - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/13/#sweating-the-taxonomy-part-i---query-expansion-on-parliamentary-search). The pipes causing that pollution have been snapped shut, Librarian Phil has tested, and everything is back to working as expected.
+One unexpected and somewhat unwelcome change did emerge from testing, whereby concepts intended for the parliamentary intranet only, turned up in Jon's query expansion code - [weeknotes passim](https://ukparliament.github.io/ontologies/meta/weeknotes/2026/13/#sweating-the-taxonomy-part-i---query-expansion-on-parliamentary-search). The pipes causing that pollution have been snapped shut, Librarian Phil has tested, and everything is back to working as expected.
 
 ## New, old Parliamentary Search
 
