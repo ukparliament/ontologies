@@ -1,6 +1,6 @@
 # 2026 - Week 34
 
-As weeknotes open, we find ourselves, once again, in the unfortunate position of stumbling into the classroom, staring at our shoes, and mumbling yet another excuse for the tardiness of our homework. Lots of things have been going on in our lives. Very few of them good. Let's try to brighten the day with some of the better stuff.
+As weeknotes open, we find ourselves, once again, in the unfortunate position of stumbling into the classroom, staring at our shoes, and mumbling yet another excuse for the tardiness of our homework. 
 
 ## General election ready (as we will ever be)
 
