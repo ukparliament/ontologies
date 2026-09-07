@@ -29,7 +29,7 @@ By way of comparison, the 2025 summer recess saw the tabling of what was then a 
 | 2018 | 1031 | 
 | 2019 | 1292 | 
 | 2020 | 1215 | 
-| 2021 | 630 | 930 questions tabled during the summer recall 930 on 18/08 |
+| 2021 | 630 | 930 questions tabled during the summer recall, on 18/08 |
 | 2022 | 1281 | 
 | 2023 | 1718 | 
 | 2024 | 976 | New government elected July 2024 |
