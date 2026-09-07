@@ -21,7 +21,6 @@ Holidays over, homework complete, lunch boxes packed, our crack team of libraria
 By way of comparison, the 2025 summer recess saw the tabling of what was then a record breaking 3,363 Commons written questions. And that felt like an awful lot. Quite why the numbers keep growing at such incredible rates remains a mystery for conjecture, but it's hard not to think the old LLMs might be playing some part here. At this point, we await the outcome of the [Procedure Committee's inquiry](https://committees.parliament.uk/work/9454/written-parliamentary-questions/publications/) with interest, and leave you with a table of figures for first day back after summer recess, kindly compiled by Librarian Steve which may be of interest. Possibly.
 
 | Year | Number of questions       | Notes |
-|      | tabled for written answer |       |
 |------|---------------------------|-------|
 | 2014 | 474 | 
 | 2015 | 707 | 
