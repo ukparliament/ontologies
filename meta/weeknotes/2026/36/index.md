@@ -18,19 +18,20 @@ In the world of Member management, Young Librarian Harry applied the finishing t
 
 Holidays over, homework complete, lunch boxes packed, our crack team of librarians waved farewell to long summer holidays and boarded the Hogwarts Express back to Westminster. Only to be confronted by a record breaking 6,162 Commons questions for written answer tabled over the summer recess. All of which required indexing before tea time. 
 
-By way of comparison, the 2025 summer recess saw the tabling of what was then a record breaking 3,363 Commons written questions. And that felt like an awful lot. Quite why the numbers keep growing at such incredible rates remains a mystery for conjecture, but it's hard not to think the old LLMs might be playing some part here. At this point, we await the outcome of the [Procedure Committee's inquiry[(https://committees.parliament.uk/work/9454/written-parliamentary-questions/publications/) with interest, and leave you with a table of figures for first day back after summer recess, kindly compiled by Librarian Steve which may be of interest. Possibly.
+By way of comparison, the 2025 summer recess saw the tabling of what was then a record breaking 3,363 Commons written questions. And that felt like an awful lot. Quite why the numbers keep growing at such incredible rates remains a mystery for conjecture, but it's hard not to think the old LLMs might be playing some part here. At this point, we await the outcome of the [Procedure Committee's inquiry](https://committees.parliament.uk/work/9454/written-parliamentary-questions/publications/) with interest, and leave you with a table of figures for first day back after summer recess, kindly compiled by Librarian Steve which may be of interest. Possibly.
 
-Year | Number of questions tabled for written answer | Notes
-2014 | 474 | 
-2015 | 707 | 
-2016 | 867 | 
-2017 | 1609 | 
-2018 | 1031 | 
-2019 | 1292 | 
-2020 | 1215 | 
-2021 | 630 | 930 questions tabled during the summer recall 930 on 18/08
-2022 | 1281 | 
-2023 | 1718 | 
-2024 | 976 | New government elected July 2024
+| Year | Number of questions tabled for written answer | Notes|
+|------|-----------------------------------------------|------|
+| 2014 | 474 | 
+| 2015 | 707 | 
+| 2016 | 867 | 
+| 2017 | 1609 | 
+| 2018 | 1031 | 
+| 2019 | 1292 | 
+| 2020 | 1215 | 
+| 2021 | 630 | 930 questions tabled during the summer recall 930 on 18/08 |
+| 2022 | 1281 | 
+| 2023 | 1718 | 
+| 2024 | 976 | New government elected July 2024 |
 2025 | 3363 | 
 2026 | 6162 | 
