@@ -785,6 +785,38 @@ This update flags routes forming part of the Made affirmative: Joint Committee o
 	</code>
 </pre>
 
+### Flag duplicate CRaG treaties Commons motions routes
+
+This update flags routes forming part of the CRaG treaties Commons motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE dbo.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE dbo.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM dbo.procedurerouteprocedure rp
+			WHERE rp.procedureid = 85
+		)
+		AND dbo.procedurerouteprocedure.procedureid != 85;
+	</code>
+</pre>
+
+### Flag duplicate CRaG treaties Lords motions routes
+
+This update flags routes forming part of the CRaG treaties Lords motions component procedure, where those routes form part of a different procedure:
+
+<pre>
+	<code>
+		UPDATE dbo.procedurerouteprocedure SET is_included_in_export = FALSE
+		WHERE dbo.procedurerouteprocedure.procedurerouteid IN (
+			SELECT rp.procedurerouteid
+			FROM dbo.procedurerouteprocedure rp
+			WHERE rp.procedureid = 86
+		)
+		AND dbo.procedurerouteprocedure.procedureid != 86;
+	</code>
+</pre>
+
 ### Route proliferation checking queries
 
 A query for Jayne to check that routes flagged as not included for export look correct.
@@ -894,6 +926,8 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 
 ## AvailableThing, availabilityOf, Availability and hasAvailabilityStatus (for routes)
 
+### Open routes
+
 <pre>
 	<code>
 		COPY (
@@ -902,8 +936,8 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 				CONCAT('urn:procedure-editor:Route:',r.id) AS availabilityOf,
 				r.startdate::Date AS startOn,
 				r.enddate::Date AS endOn,
-				'urn:procedure-editor:AvailabilityStatus:4sGJ6xVObCL4KQiPfQ2b6s' AS hasAvailabilityStatus,
-				CONCAT( 'Availability of route from ', from_step.full_label, ' to ', to_step.full_label, ' in the ', p.procedurename, ' procedure' ) AS label
+				'urn:procedure-editor:AvailabilityStatus:44ZFHpC3QzK6OnM1JNtysj' AS hasAvailabilityStatus,
+				CONCAT( 'Open availability of route from ', from_step.full_label, ' to ', to_step.full_label, ' in the ', p.procedurename, ' procedure' ) AS label
 			
 			FROM dbo.procedureroute r, dbo.procedurerouteprocedure AS pr, dbo.procedurestep AS from_step, dbo.procedurestep AS to_step, dbo.procedure p
 
@@ -918,6 +952,31 @@ A query for Jayne to check which routes are in more than one procedure. Includes
 			)
 			AND pr.procedureid = p.id
 		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/route-availability.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/open-route-availability.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### Closed routes
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				r.id AS id,
+				CONCAT('urn:procedure-editor:Route:',r.id) AS availabilityOf,
+				(r.enddate + INTERVAL '1 day')::timestamp::date AS startOn,
+				'urn:procedure-editor:AvailabilityStatus:4dKp0Pbhmws2okyMx6gXLt' AS hasAvailabilityStatus,
+				CONCAT( 'Closed availability of route from ', from_step.full_label, ' to ', to_step.full_label, ' in the ', p.procedurename, ' procedure' ) AS label
+			
+			FROM dbo.procedureroute r, dbo.procedurerouteprocedure AS pr, dbo.procedurestep AS from_step, dbo.procedurestep AS to_step, dbo.procedure p
+
+			WHERE r.id = pr.procedurerouteid
+			AND from_step.id = r.fromprocedurestepid
+			AND to_step.id = r.toprocedurestepid
+			AND pr.is_included_in_export IS TRUE
+			AND r.enddate IS NOT NULL
+			AND pr.procedureid = p.id
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/open-route-availability.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>

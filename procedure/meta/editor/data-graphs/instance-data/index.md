@@ -225,12 +225,14 @@ Populated by hand.
 </pre>
 
 ## Availability (procedure only)
+
+### Open procedures
+
 <pre>
 	<code>
 		COPY (
 			SELECT
-				id,
-				CONCAT( 'Availability of ', procedurename, ' (', startdate::date, ' - ', enddate::date, ')' ) AS label,
+				CONCAT( 'Open availability of ', procedurename, ' (', startdate::date, ' - ', enddate::date, ')' ) AS label,
 				CONCAT('urn:procedure-editor:Procedure:',id) AS availabilityOf,
 				startdate::date AS startOn,
 				enddate::date AS endOn,
@@ -242,7 +244,24 @@ Populated by hand.
 				enddate IS NOT NULL
 			)
 		)
-		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/procedure-availability.csv' DELIMITER ',' CSV HEADER;
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/open-procedure-availability.csv' DELIMITER ',' CSV HEADER;
+	</code>
+</pre>
+
+### Closed procedures
+
+<pre>
+	<code>
+		COPY (
+			SELECT
+				CONCAT( 'Closed availability of ', procedurename, ' (', startdate::date, ' - ', enddate::date, ')' ) AS label,
+				CONCAT('urn:procedure-editor:Procedure:',id) AS availabilityOf,
+				(enddate + INTERVAL '1 day')::timestamp::date AS startOn,
+				'urn:procedure-editor:AvailabilityStatus:4dKp0Pbhmws2okyMx6gXLt' AS hasAvailabilityStatus
+			FROM dbo.procedure
+			WHERE enddate IS NOT NULL
+		)
+		TO '/Users/smethurstm/Documents/ontologies/procedure/meta/editor/data-graphs/instance-data/dumps/closed-procedure-availability.csv' DELIMITER ',' CSV HEADER;
 	</code>
 </pre>
 
