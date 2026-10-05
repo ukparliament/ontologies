@@ -58,7 +58,3 @@ If you've been following along from the comfort of your sofa, you'll be well awa
 Librarian Martin has also been busy, [linking all statutory instruments to any ensuing debate](https://trello.com/c/rSdbFaTm/452-adding-debates-as-related-items-to-sis-1998-2006), this work covering off 1998 to 2006.
 
 And finally, [Librarian Ayesha](https://bsky.app/profile/askalibrarylady.bsky.social) has lent her hand to the tidying of 10 written statements, all of which had somehow found themselves untouched by caring librarian hands. One of those turned out to be a duplicate, which has now been deleted. The rest have all been [indexed as appropriate](https://trello.com/c/qo8Dx0jW/471-unindexed-written-statements).
-
-
-
-
