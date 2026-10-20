@@ -34,6 +34,8 @@ This is a list of SPARQL queries used by the House of Commons Library to check a
 
 * [Instruments currently before Parliament](scrutiny-types/currentness)
 
+* [Queries for motions that need checking at the end of a session](scrutiny-types/lapseable-motions)
+
 ## Making available bodies
 
 * [Making available bodies](making-available-bodies)
