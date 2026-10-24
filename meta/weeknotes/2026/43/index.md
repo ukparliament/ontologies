@@ -74,7 +74,7 @@ Back on data tidying duties, we are pleased to report that all records that shou
 
 Martin meanwhile has been exercising his librarian chops on affirmative instruments approved by the House of Commons. When this happens, the Journal Office should add the date of approval to their systems, which then flows throw the pipes and into our systems. But for reasons unknown, 140 had slipped through the net with no approval date applied. Martin hooked some bait to his rod and went off on a fishing trip. 140 affirmative instruments were landed, all of which [now have their House of Commons approval date in place](https://trello.com/c/KfQnVwOW/464-commons-approved-date-on-affirmative-papers). Excellent catch, Librarian Martin.
 
-Librarian Emily has been concentrating her tidying efforts on all of the places we'd somehow used Henry VIII clauses as a procedural term, despite Henry VIII clauses not being a procedure. These have also [now been tidied](https://trello.com/c/oRESXeJb/100-henry-viii-clauses).
+Librarian Emily has been concentrating her tidying efforts on all of the places where we'd somehow used Henry VIII clauses as a procedural term, despite Henry VIII clauses not being a procedure. These have also [now been tidied](https://trello.com/c/oRESXeJb/100-henry-viii-clauses).
 
 Not to be left out, Librarian Ayesha has been [decluttering our motion records](https://trello.com/c/onzgu1jg/474-check-to-see-if-motion-lapsed-needs-to-be-added-to-summary), sorting those that lapsed from those approved. Neat.
 
