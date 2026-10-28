@@ -30,293 +30,391 @@ lkb:Person rdf:type owl:Class ;
 	rdfs:comment "A person."@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:Concept rdf:type owl:Class .
-lkb:Concept rdfs:label "Concept"@en .
+lkb:Concept rdf:type owl:Class ;
+	rdfs:label "Concept"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:ConceptType rdf:type owl:Class .
-lkb:ConceptType rdfs:label "ConceptType"@en .
+lkb:ConceptType rdf:type owl:Class ;
+	rdfs:label "Concept type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:Organisation rdf:type owl:Class ;
+	rdfs:label "Organisation"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:Specialism rdf:type owl:Class ;
+	rdfs:label "Specialism"@en ;
+	rdfs:comment "A person's currently assigned area of expertise used to determine which inquiries should be sent to them."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:Organisation rdf:type owl:Class .
-lkb:Organisation rdfs:label "Organisation"@en .
+lkb:SpecialismType rdf:type owl:Class ;
+	rdfs:label "Specialism type"@en ;
+	rdfs:comment "A person's currently assigned area of expertise used to determine which inquiries should be sent to them."@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:Person rdf:type owl:Class ;
-	rdfs:label "Person"@en ;
-	rdfs:comment "A person."@en ;
+lkb:Work rdf:type owl:Class ;
+	rdfs:label "Work"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:WorkType rdf:type owl:Class ;
+	rdfs:label "Work type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:ResearchService rdf:type owl:Class ;
+	rdfs:subClassOf lkb:Organisation ;
+	rdfs:label "Research service"@en ;
+	rdfs:comment ""@en ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:Section rdf:type owl:Class ;
+	rdfs:subClassOf lkb:Organisation ;
+	rdfs:label "Section"@en ;
+	rdfs:comment ""@en ;
 	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 	
 	
-
-lkb:Specialism rdf:type owl:Class .
-lkb:Specialism rdfs:label "Specialism"@en .
-lkb:Specialism rdfs:comment "A person's currently assigned area of expertise used to determine which inquiries should be sent to them."@en .
-
-lkb:SpecialismType rdf:type owl:Class .
-lkb:SpecialismType rdfs:label "SpecialismType"@en .
-
-lkb:Work rdf:type owl:Class .
-lkb:Work rdfs:label "Work"@en .
-
-lkb:WorkType rdf:type owl:Class .
-lkb:WorkType rdfs:label "WorkType"@en .
-
-lkb:ResearchService rdf:type owl:Class .
-lkb:ResearchService rdfs:subClassOf lkb:Organisation .
-lkb:ResearchService rdfs:label "ResearchService"@en .
-
-lkb:Section rdf:type owl:Class .
-lkb:Section rdfs:subClassOf lkb:Organisation .
-lkb:Section rdfs:label "Section"@en .
-
-
 # Object Properties
 
-lkb:author rdf:type owl:ObjectProperty .
-lkb:author rdfs:domain lkb:Work .
-lkb:author rdfs:range lkb:Person .
-lkb:author rdfs:label "author"@en .
+lkb:author rdf:type owl:ObjectProperty ;
+	rdfs:label "Author"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range lkb:Person ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:broaderTerm rdf:type owl:ObjectProperty ;
+	rdfs:label "Broader term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range lkb:Concept ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:conceptType rdf:type owl:ObjectProperty ;
+	rdfs:label "Concept type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range lkb:ConceptType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:broaderTerm rdf:type owl:ObjectProperty .
-lkb:broaderTerm rdfs:domain lkb:Concept .
-lkb:broaderTerm rdfs:range lkb:Concept .
-lkb:broaderTerm rdfs:label "broaderTerm"@en .
+lkb:contributor rdf:type owl:ObjectProperty ;
+	rdfs:label "Contributor"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range lkb:Person ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:inSection rdf:type owl:ObjectProperty ;
+	rdfs:label "In section"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range lkb:Section ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:isHeadOfSection rdf:type owl:ObjectProperty ;
+	rdfs:label "Is head of section"@en ;
+	rdfs:comment "Relates a person to the section they are head of."@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range lkb:Section ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:isSpecialismOf rdf:type owl:ObjectProperty ;
+	rdfs:label "Is specialism of"@en ;
+	rdfs:comment "The person who is currently assigned the specialism for the purposes of routing inquiries."@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range lkb:Person ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
+	
+lkb:ownedBySection rdf:type owl:ObjectProperty ;
+	rdfs:label "Owned by section"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range lkb:Section ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:conceptType rdf:type owl:ObjectProperty .
-lkb:conceptType rdfs:domain lkb:Concept .
-lkb:conceptType rdfs:range lkb:ConceptType .
-lkb:conceptType rdfs:label "conceptType"@en .
+lkb:publishedBy rdf:type owl:ObjectProperty ;
+	rdfs:label "Published by"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range lkb:Organisation ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:contributor rdf:type owl:ObjectProperty .
-lkb:contributor rdfs:domain lkb:Work .
-lkb:contributor rdfs:range lkb:Person .
-lkb:contributor rdfs:label "contributor"@en .
+lkb:sectionIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Section in"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Section ;
+	rdfs:range lkb:ResearchService ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:inSection rdf:type owl:ObjectProperty .
-lkb:inSection rdfs:domain lkb:Person .
-lkb:inSection rdfs:range lkb:Section .
-lkb:inSection rdfs:label "inSection"@en .
+lkb:specialismIn rdf:type owl:ObjectProperty ;
+	rdfs:label "Specialism in"@en ;
+	rdfs:comment "The subject with which the assigned specialism is in."@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range lkb:Concept ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:isHeadOfSection rdf:type owl:ObjectProperty .
-lkb:isHeadOfSection rdfs:domain lkb:Person .
-lkb:isHeadOfSection rdfs:range lkb:Section .
-lkb:isHeadOfSection rdfs:label "isHeadOfSection"@en .
-lkb:isHeadOfSection rdfs:comment "Relates a person to the section they are head of."@en .
+lkb:subject rdf:type owl:ObjectProperty ;
+	rdfs:label "Subject"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range lkb:Concept ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:isSpecialismOf rdf:type owl:ObjectProperty .
-lkb:isSpecialismOf rdfs:domain lkb:Specialism .
-lkb:isSpecialismOf rdfs:range lkb:Person .
-lkb:isSpecialismOf rdfs:label "isSpecialismOf"@en .
-lkb:isSpecialismOf rdfs:comment "The person who is currently assigned the specialism for the purposes of routing inquiries."@en .
+lkb:typeOfSpecialism rdf:type owl:ObjectProperty ;
+	rdfs:label "Type of specialism"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range lkb:SpecialismType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:ownedBySection rdf:type owl:ObjectProperty .
-lkb:ownedBySection rdfs:domain lkb:Work .
-lkb:ownedBySection rdfs:range lkb:Section .
-lkb:ownedBySection rdfs:label "ownedBySection"@en .
-
-lkb:publishedBy rdf:type owl:ObjectProperty .
-lkb:publishedBy rdfs:domain lkb:Work .
-lkb:publishedBy rdfs:range lkb:Organisation .
-lkb:publishedBy rdfs:label "publishedBy"@en .
-
-lkb:sectionIn rdf:type owl:ObjectProperty .
-lkb:sectionIn rdfs:domain lkb:Section .
-lkb:sectionIn rdfs:range lkb:ResearchService .
-lkb:sectionIn rdfs:label "sectionIn"@en .
-
-lkb:specialismIn rdf:type owl:ObjectProperty .
-lkb:specialismIn rdfs:domain lkb:Specialism .
-lkb:specialismIn rdfs:range lkb:Concept .
-lkb:specialismIn rdfs:label "specialismIn"@en .
-lkb:specialismIn rdfs:comment "The subject with which the assigned specialism is in."@en .
-
-lkb:subject rdf:type owl:ObjectProperty .
-lkb:subject rdfs:domain lkb:Work .
-lkb:subject rdfs:range lkb:Concept .
-lkb:subject rdfs:label "subject"@en .
-
-lkb:typeOfSpecialism rdf:type owl:ObjectProperty .
-lkb:typeOfSpecialism rdfs:domain lkb:Specialism .
-lkb:typeOfSpecialism rdfs:range lkb:SpecialismType .
-lkb:typeOfSpecialism rdfs:label "typeOfSpecialism"@en .
-
-lkb:workType rdf:type owl:ObjectProperty .
-lkb:workType rdfs:domain lkb:Work .
-lkb:workType rdfs:range lkb:WorkType .
-lkb:workType rdfs:label "workType"@en .
+lkb:workType rdf:type owl:ObjectProperty ;
+	rdfs:label "Work type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range lkb:WorkType ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
 
 # Datatype Properties
 
-lkb:acronym rdf:type owl:DatatypeProperty .
-lkb:acronym rdfs:domain lkb:Section .
-lkb:acronym rdfs:range xsd:string .
-lkb:acronym rdfs:label "acronym"@en .
+lkb:acronym rdf:type owl:DatatypeProperty ;
+	rdfs:label "Acronym type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Section ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:alphabetisationLetter rdf:type owl:DatatypeProperty .
-lkb:alphabetisationLetter rdfs:domain lkb:Concept .
-lkb:alphabetisationLetter rdfs:range xsd:string .
-lkb:alphabetisationLetter rdfs:label "alphabetisationLetter"@en .
+lkb:alphabetisationLetter rdf:type owl:DatatypeProperty ;
+	rdfs:label "Alphabetisation letter"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:alphabetisationLetter rdf:type owl:DatatypeProperty .
-lkb:alphabetisationLetter rdfs:domain lkb:Person .
-lkb:alphabetisationLetter rdfs:range xsd:string .
-lkb:alphabetisationLetter rdfs:label "alphabetisationLetter"@en .
+lkb:alphabetisationLetter rdf:type owl:DatatypeProperty ;
+	rdfs:label "Alphabetisation letter"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:alternativeName rdf:type owl:DatatypeProperty .
-lkb:alternativeName rdfs:domain lkb:Person .
-lkb:alternativeName rdfs:range xsd:string .
-lkb:alternativeName rdfs:label "alternativeName"@en .
+lkb:alternativeName rdf:type owl:DatatypeProperty ;
+	rdfs:label "Alternative name"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:availabilityNote rdf:type owl:DatatypeProperty .
-lkb:availabilityNote rdfs:domain lkb:Person .
-lkb:availabilityNote rdfs:range xsd:string .
-lkb:availabilityNote rdfs:label "availabilityNote"@en .
-lkb:availabilityNote rdfs:comment "A note used to record if a specialist is temporarily unavailable or as part of the soft delete process when a specialist has left the Library. This note does not appear in the Library Knowledge Base."@en .
+lkb:availabilityNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Availability note"@en ;
+	rdfs:comment "A note used to record if a specialist is temporarily unavailable or as part of the soft delete process when a specialist has left the Library. This note does not appear in the Library Knowledge Base."@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:brandColour rdf:type owl:DatatypeProperty .
-lkb:brandColour rdfs:domain lkb:ResearchService .
-lkb:brandColour rdfs:range xsd:string .
-lkb:brandColour rdfs:label "brandColour"@en .
+lkb:brandColour rdf:type owl:DatatypeProperty ;
+	rdfs:label "Brand colour"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:ResearchService ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:classType rdf:type owl:DatatypeProperty .
-lkb:classType rdfs:domain lkb:Concept .
-lkb:classType rdfs:range xsd:string .
-lkb:classType rdfs:label "classType"@en .
+lkb:classType rdf:type owl:DatatypeProperty ;
+	rdfs:label "Class type"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:description rdf:type owl:DatatypeProperty .
-lkb:description rdfs:domain lkb:Organisation .
-lkb:description rdfs:range xsd:string .
-lkb:description rdfs:label "description"@en .
+lkb:description rdf:type owl:DatatypeProperty ;
+	rdfs:label "Description"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Organisation ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:email rdf:type owl:DatatypeProperty .
-lkb:email rdfs:domain lkb:Person .
-lkb:email rdfs:range xsd:string .
-lkb:email rdfs:label "email"@en .
+lkb:email rdf:type owl:DatatypeProperty ;
+	rdfs:label "Email"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:email rdf:type owl:DatatypeProperty .
-lkb:email rdfs:domain lkb:Section .
-lkb:email rdfs:range xsd:string .
-lkb:email rdfs:label "email"@en .
+lkb:email rdf:type owl:DatatypeProperty ;
+	rdfs:label "Email"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Section ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:indexerNote rdf:type owl:DatatypeProperty .
-lkb:indexerNote rdfs:domain lkb:Concept .
-lkb:indexerNote rdfs:range xsd:string .
-lkb:indexerNote rdfs:label "indexerNote"@en .
+lkb:indexerNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Indexer note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:isCurrentlyAvailable rdf:type owl:DatatypeProperty .
-lkb:isCurrentlyAvailable rdfs:domain lkb:Person .
-lkb:isCurrentlyAvailable rdfs:range xsd:boolean .
-lkb:isCurrentlyAvailable rdfs:label "isCurrentlyAvailable"@en .
+lkb:isCurrentlyAvailable rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is currently available"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:isTopicTerm rdf:type owl:DatatypeProperty .
-lkb:isTopicTerm rdfs:domain lkb:Concept .
-lkb:isTopicTerm rdfs:range xsd:boolean .
-lkb:isTopicTerm rdfs:label "isTopicTerm"@en .
+lkb:isTopicTerm rdf:type owl:DatatypeProperty ;
+	rdfs:label "Is topic term"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:label rdf:type owl:DatatypeProperty .
-lkb:label rdfs:domain lkb:Concept .
-lkb:label rdfs:range xsd:string .
-lkb:label rdfs:label "label"@en .
+lkb:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:label rdf:type owl:DatatypeProperty .
-lkb:label rdfs:domain lkb:ConceptType .
-lkb:label rdfs:range xsd:string .
-lkb:label rdfs:label "label"@en .
+lkb:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:ConceptType ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:label rdf:type owl:DatatypeProperty .
-lkb:label rdfs:domain lkb:Organisation .
-lkb:label rdfs:range xsd:string .
-lkb:label rdfs:label "label"@en .
+lkb:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Organisation ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:label rdf:type owl:DatatypeProperty .
-lkb:label rdfs:domain lkb:Specialism .
-lkb:label rdfs:range xsd:string .
-lkb:label rdfs:label "label"@en .
+lkb:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:label rdf:type owl:DatatypeProperty .
-lkb:label rdfs:domain lkb:SpecialismType .
-lkb:label rdfs:range xsd:string .
-lkb:label rdfs:label "label"@en .
+lkb:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:SpecialismType ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:label rdf:type owl:DatatypeProperty .
-lkb:label rdfs:domain lkb:WorkType .
-lkb:label rdfs:range xsd:string .
-lkb:label rdfs:label "label"@en .
+lkb:label rdf:type owl:DatatypeProperty ;
+	rdfs:label "Label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:WorkType ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:name rdf:type owl:DatatypeProperty .
-lkb:name rdfs:domain lkb:Person .
-lkb:name rdfs:range xsd:string .
-lkb:name rdfs:label "name"@en .
+lkb:name rdf:type owl:DatatypeProperty ;
+	rdfs:label "Name"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:phoneNumber rdf:type owl:DatatypeProperty .
-lkb:phoneNumber rdfs:domain lkb:Person .
-lkb:phoneNumber rdfs:range xsd:string .
-lkb:phoneNumber rdfs:label "phoneNumber"@en .
+lkb:phoneNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Phone number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Person ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:phoneNumber rdf:type owl:DatatypeProperty .
-lkb:phoneNumber rdfs:domain lkb:Section .
-lkb:phoneNumber rdfs:range xsd:string .
-lkb:phoneNumber rdfs:label "phoneNumber"@en .
+lkb:phoneNumber rdf:type owl:DatatypeProperty ;
+	rdfs:label "Phone number"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Section ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:publicationDate rdf:type owl:DatatypeProperty .
-lkb:publicationDate rdfs:domain lkb:Work .
-lkb:publicationDate rdfs:range xsd:dateTime .
-lkb:publicationDate rdfs:label "publicationDate"@en .
+lkb:publicationDate rdf:type owl:DatatypeProperty ;
+	rdfs:label "Publication date"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range xsd:dateTime ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:publishedURL rdf:type owl:DatatypeProperty .
-lkb:publishedURL rdfs:domain lkb:Work .
-lkb:publishedURL rdfs:range xsd:string .
-lkb:publishedURL rdfs:label "publishedURL"@en .
+lkb:publishedURL rdf:type owl:DatatypeProperty ;
+	rdfs:label "Published URL"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:reference rdf:type owl:DatatypeProperty .
-lkb:reference rdfs:domain lkb:Work .
-lkb:reference rdfs:range xsd:string .
-lkb:reference rdfs:label "reference"@en .
-lkb:reference rdfs:comment "The bibliographic reference of a work, for example: 'SN00195' as the bibliographic reference for '1999 benefit uprating'."@en .
+lkb:reference rdf:type owl:DatatypeProperty ;
+	rdfs:label "Reference"@en ;
+	rdfs:comment "The bibliographic reference of a work, for example: 'SN00195' as the bibliographic reference for '1999 benefit uprating'."@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:scopeNote rdf:type owl:DatatypeProperty .
-lkb:scopeNote rdfs:domain lkb:Concept .
-lkb:scopeNote rdfs:range xsd:string .
-lkb:scopeNote rdfs:label "scopeNote"@en .
+lkb:scopeNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Scope note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:shortLabel rdf:type owl:DatatypeProperty .
-lkb:shortLabel rdfs:domain lkb:Organisation .
-lkb:shortLabel rdfs:range xsd:string .
-lkb:shortLabel rdfs:label "shortLabel"@en .
+lkb:shortLabel rdf:type owl:DatatypeProperty ;
+	rdfs:label "Short label"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Organisation ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:specialismNote rdf:type owl:DatatypeProperty .
-lkb:specialismNote rdfs:domain lkb:Specialism .
-lkb:specialismNote rdfs:range xsd:string .
-lkb:specialismNote rdfs:label "specialismNote"@en .
+lkb:specialismNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Specialism note"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:summary rdf:type owl:DatatypeProperty .
-lkb:summary rdfs:domain lkb:Work .
-lkb:summary rdfs:range xsd:string .
-lkb:summary rdfs:label "summary"@en .
+lkb:summary rdf:type owl:DatatypeProperty ;
+	rdfs:label "Summary"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:synonym rdf:type owl:DatatypeProperty .
-lkb:synonym rdfs:domain lkb:Concept .
-lkb:synonym rdfs:range xsd:string .
-lkb:synonym rdfs:label "synonym"@en .
+lkb:synonym rdf:type owl:DatatypeProperty ;
+	rdfs:label "Synonym"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Concept ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:teaserSummary rdf:type owl:DatatypeProperty .
-lkb:teaserSummary rdfs:domain lkb:Work .
-lkb:teaserSummary rdfs:range xsd:string .
-lkb:teaserSummary rdfs:label "teaserSummary"@en .
+lkb:teaserSummary rdf:type owl:DatatypeProperty ;
+	rdfs:label "Teaser summary"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:title rdf:type owl:DatatypeProperty .
-lkb:title rdfs:domain lkb:Work .
-lkb:title rdfs:range xsd:string .
-lkb:title rdfs:label "title"@en .
+lkb:title rdf:type owl:DatatypeProperty ;
+	rdfs:label "Title"@en ;
+	rdfs:comment ""@en ;
+	rdfs:domain lkb:Work ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:triageOrder rdf:type owl:DatatypeProperty .
-lkb:triageOrder rdfs:domain lkb:Specialism .
-lkb:triageOrder rdfs:range xsd:integer .
-lkb:triageOrder rdfs:label "triageOrder"@en .
-lkb:triageOrder rdfs:comment "The order determined by heads of section to manage request allocation."@en .
+lkb:triageOrder rdf:type owl:DatatypeProperty ;
+	rdfs:label "Triage order"@en ;
+	rdfs:comment "The order determined by heads of section to manage request allocation."@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
 
-lkb:workingPatternNote rdf:type owl:DatatypeProperty .
-lkb:workingPatternNote rdfs:domain lkb:Person .
-lkb:workingPatternNote rdfs:range xsd:string .
-lkb:workingPatternNote rdfs:label "workingPatternNote"@en .
-lkb:workingPatternNote rdfs:comment "A note used to describe the working pattern of a subject specialist in terms of daily and hourly working patterns."@en .
-
+lkb:workingPatternNote rdf:type owl:DatatypeProperty ;
+	rdfs:label "Working pattern note"@en ;
+	rdfs:comment "A note used to describe the working pattern of a subject specialist in terms of daily and hourly working patterns."@en ;
+	rdfs:domain lkb:Specialism ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <http://parliament.uk/ontologies/library-knowledge-base/> .
