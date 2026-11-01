@@ -62,7 +62,7 @@ Team:thesaurus continue to deal with feedback from Commons Library researchers, 
 
 Given that the Library Knowledge Base is the first service that's ever exposed the taxonomic structure of the thesaurus to end users, Librarian Ned has also proposed [a new policy](https://trello.com/c/S1KsGrN8/480-controlling-the-kind-of-ids-we-used-to-put-under-scaffolding-terms) on what our crack team of librarians refer to as 'scaffolding terms'. Or concepts in the thesaurus that are not intended for use by indexers, but exist purely as managerial holding pens for related concepts that are. That policy proposal being met by applause from across our librarian community.
 
-Outside of Library Knowledge Base&trade; usage, there has also been an update to [the planning concept](https://trello.com/c/HiNl0b3j/437-planning) and - where disambiguation is required - entities associated with the devolved legislatures and governments [now use the full name of the legislature or government](https://trello.com/c/P25TdalU/365-jp-and-eb-unpicking-topics-and-subjects-in-search-24-25-session) and not the rather confusing acronyms we had been using.
+Outside of Library Knowledge Base&trade; usage, there has also been an update to [the planning concept](https://trello.com/c/HiNl0b3j/437-planning) and - where disambiguation is required - entities associated with the devolved legislatures and governments [now use the full name of the legislature or government](https://trello.com/c/LOByXgaU) and not the rather confusing acronyms we had been using.
 
 ## Facts and indeed figures
 
