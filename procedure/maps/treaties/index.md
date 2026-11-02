@@ -46,6 +46,10 @@ Dot file: [dot](crag-treaties/components/jchr/jchr.dot)
 
 Dot file: [dot](crag-treaties/components/lords/lords-committees/lords-committees.dot) 
 
+##### [Northern Ireland Affairs Committee (NIAC)](crag-treaties/components/commons/niac/niac.pdf)
+
+Dot file: [dot](crag-treaties/components/commons/niac/niac.dot)
+
 ##### [Other Commons committees procedure [PDF]](crag-treaties/components/commons/other-commons-committees/other-commons-committees.pdf)
 
 Dot file: [dot](crag-treaties/components/commons/other-commons-committees/other-commons-committees.dot)
