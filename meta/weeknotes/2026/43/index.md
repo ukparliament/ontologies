@@ -66,10 +66,6 @@ Emma and Jayshree have completed the herculean task of revisiting the indexing o
 
 Outside of Library Knowledge Base&trade; usage, there has also been an update to [the planning concept](https://trello.com/c/HiNl0b3j/437-planning) and - where disambiguation is required - entities associated with the devolved legislatures and governments [now use the full name of the legislature or government](https://trello.com/c/LOByXgaU) and not the rather confusing acronyms we had been using. 
 
-## Facts and indeed figures
-
-A new publication in our series of [Parliamentary Facts and Figures](https://commonslibrary.parliament.uk/tag/parliament-facts-and-figures/) - this one focussed on [government bills introduced in a session, broken down by department](https://commonslibrary.parliament.uk/research-briefings/sn02276/) - has found itself on the receiving end of the full librarian treatment, thereby bringing it into line with some of our earlier efforts. More top work from Librarians Ayesha and Emily.
-
 ## Dusting the corners
 
 Back on data tidying duties, we are pleased to report that all records that should be indexed with the closure motion concept [have been freshly indexed with the closure motion concept](https://trello.com/c/p4ddid9k/470-closure-motions-procedural-term). Librarian Emma picking up that task. Not content with tidying our own data, Emma has also been on Wikidata duty, ensuring that [all Acts of Parliament in that world come complete with their UK Parliament identifiers](https://trello.com/c/GwUd1TA8/468-adding-uk-parliament-ids-to-acts-on-wikidata). If there's one thing you can say about our librarians, they truly are native to the web of data. As [some chap once said](https://archive.dconstruct.org/2007/webofdata).
