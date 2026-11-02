@@ -48,7 +48,7 @@ Dot file: [dot](statutory-instruments/affirmative-procedures/made/made-affirmati
 
 ###### [Commons motion to consider [PDF]](statutory-instruments/negative-procedures/draft/components/motions/commons-motions/motions-to-consider/commons-motion-to-consider.pdf)
 
-###### [Referral to a delegated legislation committee (DLC) [PDF]](statutory-instruments/negative-procedures/draft/components/referral-to-delegated-legislation-committee/delegated-legislation-referral.pdf)
+###### [Referral to a delegated legislation committee (DLC) [PDF]](statutory-instruments/negative-procedures/draft/components/referral-to-delegated-legislation-committee/draft-negative-delegated-legislation-committee-referral.pdf)
 
 ###### [Lords motions [PDF]](statutory-instruments/negative-procedures/draft/components/motions/lords-motions/lords-motions-draft-negative.pdf)
 
