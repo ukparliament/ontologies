@@ -24,6 +24,10 @@ Dot file: [dot](legislative-reform-orders/components/lords/procedure-determinati
 
 Dot file: [dot](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.dot) / [svg](legislative-reform-orders/components/lords/committee-consideration/committee-consideration.svg)
 
+##### [Delegated Powers and Regulatory Reform Committee scrutiny reserve](legislative-reform-orders/components/lords/dprrc-scrutiny-reserve/dprrc-scrutiny-reserve.pdf)
+
+Dot file: [dot](legislative-reform-orders/components/lords/dprrc-scrutiny-reserve/dprrc-scrutiny-reserve.dot)
+
 ##### [Lords debates](legislative-reform-orders/components/lords/debates/debates.pdf)
 
 Dot file: [dot](legislative-reform-orders/components/lords/debates/debates.dot) / [svg](legislative-reform-orders/components/lords/debates/debates.svg)
@@ -52,6 +56,10 @@ Dot file: [dot](remedial-orders/draft-affirmative/draft-affirmative.dot)
 ### [Made affirmative remedial order](remedial-orders/made-affirmative/made-affirmative.pdf)
 
 Dot file: [dot](remedial-orders/made-affirmative/made-affirmative.dot) 
+
+#### [Made affirmative remedial order - Joint Committee on Human Rights scrutiny reserve](remedial-orders/made-affirmative/components/jchr-scrutiny-reserve/jchr-scrutiny-reserve.pdf) 
+
+Dot file: [dot](remedial-orders/made-affirmative/components/jchr-scrutiny-reserve/jchr-scrutiny-reserve.dot)
 
 ## [Enhanced affirmative: Investigatory Powers Act 2016](enhanced-affirmative-under-ipa16/enhanced-affirmative-under-IPA16.pdf)
 
