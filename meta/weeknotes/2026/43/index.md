@@ -22,7 +22,7 @@ It should be pointed out that [these very notes also come with their own RSS fee
 
 Our dear reader - being, we believe, of a similar age demographic and sharing similar predilections to Robert and Michael - will, by this point, have popped open their feed reader, plugged in the RSS, and wondered what on earth we're blabbing on about. This isn't RSS, you're probably thinking. It doesn't work, you'd probably add. Dear reader, it works perfectly. Just not for you. Yet.
 
-It turned out that Jon's RSS feeds worked fine on his machine. They also worked fine on our staging server. They would, in theory, work fine on live, safely served from the Parliament domain. That is if the [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) settings on that particular sub-domain allowed for such fancy, new-fangled technologies as RSS. Which it turns out they don't. It's now seven days since these notes made it to draft status. Requests have been made. Tickets filed. But I think we'd all recognise that process gestures can a lot longer than work.
+It turned out that Jon's RSS feeds worked fine on his machine. They also worked fine on our staging server. They would, in theory, work fine on live, safely served from the Parliament domain. That is if the [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) settings on that particular sub-domain allowed for RSS. Which it turns out they don't. It's now seven days since these notes made it to draft status. Requests have been made. Tickets filed. But I think we’d all recognise that the processes somehow take longer than the work.
 
 ## All the other new, old Parliamentary Search news direct to your reading application
 
