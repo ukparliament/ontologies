@@ -58,7 +58,7 @@
     <main>
       <h1>Library Knowledge Base ontology</h1>
 
-      <p id="description">A model describing a knowledge base of the House of Commons Library.</p>
+      <p id="description">A model describing a knowledge base from the House of Commons Library.</p>
 
       <nav>
         <a href="#classes">Classes</a>
@@ -71,12 +71,8 @@
       <section id="classes">
         <h2>Classes</h2>
 
-        <article class="class" id="Concept">
-          <h3>Class <a href="#Concept">Concept</a></h3>
-
-         </article>
-        <article class="class" id="ConceptType">
-          <h3>Class <a href="#ConceptType">Concept type</a></h3>
+        <article class="class" id="ConceptScheme">
+          <h3>Class <a href="#ConceptScheme">Concept scheme</a></h3>
 
          </article>
         <article class="class" id="Organisation">
@@ -88,14 +84,22 @@
 
           <p>A person.</p>
          </article>
+        <article class="class" id="PublicationWork">
+          <h3>Class <a href="#PublicationWork">Publication work</a></h3>
+
+         </article>
+        <article class="class" id="PublicationWorkType">
+          <h3>Class <a href="#PublicationWorkType">Publication work type</a></h3>
+
+         </article>
         <article class="class" id="ResearchService">
           <h3>Class <a href="#ResearchService">Research service</a></h3>
 
            <p>
             Superclasses  &middot; Organisation           </p>
         </article>
-        <article class="class" id="Section">
-          <h3>Class <a href="#Section">Section</a></h3>
+        <article class="class" id="ResearchTeam">
+          <h3>Class <a href="#ResearchTeam">Research team</a></h3>
 
            <p>
             Superclasses  &middot; Organisation           </p>
@@ -110,12 +114,8 @@
 
           <p>A person&#39;s currently assigned area of expertise used to determine which inquiries should be sent to them.</p>
          </article>
-        <article class="class" id="Work">
-          <h3>Class <a href="#Work">Work</a></h3>
-
-         </article>
-        <article class="class" id="WorkType">
-          <h3>Class <a href="#WorkType">Work type</a></h3>
+        <article class="class" id="Subject">
+          <h3>Class <a href="#Subject">Subject</a></h3>
 
          </article>
       </section>
@@ -134,47 +134,29 @@
 
  
           <p>
-            <a href="#Work"
-              >Work</a
+            <a href="#PublicationWork"
+              >PublicationWork</a
             >
             &mdash; Author &mdash;
             <a href="#Person">Person</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="broaderTerm">
+        <article class="objectproperty" id="broader">
           <h3>
             Object property
-            <a href="#broaderTerm"
-              >Broader term</a
+            <a href="#broader"
+              >Broader</a
             >
           </h3>
 
  
           <p>
-            <a href="#Concept"
-              >Concept</a
+            <a href="#Subject"
+              >Subject</a
             >
-            &mdash; Broader term &mdash;
-            <a href="#Concept">Concept</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="conceptType">
-          <h3>
-            Object property
-            <a href="#conceptType"
-              >Concept type</a
-            >
-          </h3>
-
- 
-          <p>
-            <a href="#Concept"
-              >Concept</a
-            >
-            &mdash; Concept type &mdash;
-            <a href="#ConceptType">ConceptType</a>
+            &mdash; Broader &mdash;
+            <a href="#Subject">Subject</a>
           </p>
         </article>
 
@@ -192,33 +174,69 @@
               >Work</a
             >
             &mdash; Contributor &mdash;
-            <a href="#Person">Person</a>
+            <a href="#PublicationWork">PublicationWork</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="inSection">
+        <article class="objectproperty" id="formsPartOf">
           <h3>
             Object property
-            <a href="#inSection"
-              >In section</a
+            <a href="#formsPartOf"
+              >Forms part of</a
             >
           </h3>
 
  
           <p>
-            <a href="#Person"
-              >Person</a
+            <a href="#ResearchTeam"
+              >ResearchTeam</a
             >
-            &mdash; In section &mdash;
-            <a href="#Section">Section</a>
+            &mdash; Forms part of &mdash;
+            <a href="#ResearchService">ResearchService</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="isHeadOfSection">
+        <article class="objectproperty" id="hasPublicationWorkType">
           <h3>
             Object property
-            <a href="#isHeadOfSection"
-              >Is head of section</a
+            <a href="#hasPublicationWorkType"
+              >Has publication work type</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#PublicationWork"
+              >PublicationWork</a
+            >
+            &mdash; Has publication work type &mdash;
+            <a href="#PublicationWorkType">PublicationWorkType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="hasSpecialismType">
+          <h3>
+            Object property
+            <a href="#hasSpecialismType"
+              >Has specialism type</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#Specialism"
+              >Specialism</a
+            >
+            &mdash; Has specialism type &mdash;
+            <a href="#SpecialismType">SpecialismType</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="headOf">
+          <h3>
+            Object property
+            <a href="#headOf"
+              >Head of</a
             >
           </h3>
 
@@ -228,45 +246,62 @@
             <a href="#Person"
               >Person</a
             >
-            &mdash; Is head of section &mdash;
-            <a href="#Section">Section</a>
+            &mdash; Head of &mdash;
+            <a href="#ResearchTeam">ResearchTeam</a>
           </p>
         </article>
 
-        <article class="objectproperty" id="isSpecialismOf">
+        <article class="objectproperty" id="inScheme">
           <h3>
             Object property
-            <a href="#isSpecialismOf"
-              >Is specialism of</a
-            >
-          </h3>
-
-           <p>The person who is currently assigned the specialism for the purposes of routing inquiries.</p>
-
-          <p>
-            <a href="#Specialism"
-              >Specialism</a
-            >
-            &mdash; Is specialism of &mdash;
-            <a href="#Person">Person</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="ownedBySection">
-          <h3>
-            Object property
-            <a href="#ownedBySection"
-              >Owned by section</a
+            <a href="#inScheme"
+              >In scheme</a
             >
           </h3>
 
  
           <p>
-            <a href="#Work"
-              >Work</a
+            <a href="#Subject"
+              >Subject</a
             >
-            &mdash; Owned by section &mdash;
-            <a href="#Section">Section</a>
+            &mdash; In scheme &mdash;
+            <a href="#ConceptScheme">ConceptScheme</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="memberOf">
+          <h3>
+            Object property
+            <a href="#memberOf"
+              >Member of</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#Person"
+              >Person</a
+            >
+            &mdash; Member of &mdash;
+            <a href="#ResearchTeam">ResearchTeam</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="ownedByResearchTeam">
+          <h3>
+            Object property
+            <a href="#ownedByResearchTeam"
+              >Owned by research team</a
+            >
+          </h3>
+
+ 
+          <p>
+            <a href="#PublicationWork"
+              >PublicationWork</a
+            >
+            &mdash; Owned by research team &mdash;
+            <a href="#ResearchTeam">ResearchTeam</a>
           </p>
         </article>
 
@@ -280,28 +315,10 @@
 
  
           <p>
-            <a href="#Work"
-              >Work</a
+            <a href="#PublicationWork"
+              >PublicationWork</a
             >
             &mdash; Published by &mdash;
-            <a href="#Organisation">Organisation</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="sectionIn">
-          <h3>
-            Object property
-            <a href="#sectionIn"
-              >Section in</a
-            >
-          </h3>
-
- 
-          <p>
-            <a href="#Section"
-              >Section</a
-            >
-            &mdash; Section in &mdash;
             <a href="#ResearchService">ResearchService</a>
           </p>
         </article>
@@ -321,7 +338,26 @@
               >Specialism</a
             >
             &mdash; Specialism in &mdash;
-            <a href="#Concept">Concept</a>
+            <a href="#Subject">Subject</a>
+          </p>
+        </article>
+
+        <article class="objectproperty" id="specialismOf">
+          <h3>
+            Object property
+            <a href="#specialismOf"
+              >Specialism of</a
+            >
+          </h3>
+
+           <p>The person who is currently assigned the specialism for the purposes of routing inquiries.</p>
+
+          <p>
+            <a href="#Specialism"
+              >Specialism</a
+            >
+            &mdash; Specialism of &mdash;
+            <a href="#Person">Person</a>
           </p>
         </article>
 
@@ -335,47 +371,11 @@
 
  
           <p>
-            <a href="#Work"
-              >Work</a
+            <a href="#PublicationWork"
+              >PublicationWork</a
             >
             &mdash; Subject &mdash;
-            <a href="#Concept">Concept</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="typeOfSpecialism">
-          <h3>
-            Object property
-            <a href="#typeOfSpecialism"
-              >Type of specialism</a
-            >
-          </h3>
-
- 
-          <p>
-            <a href="#Specialism"
-              >Specialism</a
-            >
-            &mdash; Type of specialism &mdash;
-            <a href="#SpecialismType">SpecialismType</a>
-          </p>
-        </article>
-
-        <article class="objectproperty" id="workType">
-          <h3>
-            Object property
-            <a href="#workType"
-              >Work type</a
-            >
-          </h3>
-
- 
-          <p>
-            <a href="#Work"
-              >Work</a
-            >
-            &mdash; Work type &mdash;
-            <a href="#WorkType">WorkType</a>
+            <a href="#Subject">Subject</a>
           </p>
         </article>
       </section>
@@ -383,16 +383,16 @@
       <section id="dataproperties">
         <h2>Data properties</h2>
 
-        <article class="dataproperty" id="acronym">
+        <article class="dataproperty" id="abbreviation">
           <h3>
             Data property
-            <a href="#acronym">Acronym type</a>
+            <a href="#abbreviation">Abbreviation</a>
           </h3>
 
           <p></p>
 
           <p>
-            Section &mdash; Acronym type &mdash;
+            ResearchTeam &mdash; Abbreviation &mdash;
             string
           </p>
         </article>
@@ -406,35 +406,21 @@
           <p></p>
 
           <p>
-            Concept &mdash; Alphabetisation letter &mdash;
+            Subject &mdash; Alphabetisation letter &mdash;
             string
           </p>
         </article>
 
-        <article class="dataproperty" id="alternativeName">
+        <article class="dataproperty" id="availabilityNoteInternal">
           <h3>
             Data property
-            <a href="#alternativeName">Alternative name</a>
-          </h3>
-
-          <p></p>
-
-          <p>
-            Person &mdash; Alternative name &mdash;
-            string
-          </p>
-        </article>
-
-        <article class="dataproperty" id="availabilityNote">
-          <h3>
-            Data property
-            <a href="#availabilityNote">Availability note</a>
+            <a href="#availabilityNoteInternal">Availability note internal</a>
           </h3>
 
           <p>A note used to record if a specialist is temporarily unavailable or as part of the soft delete process when a specialist has left the Library. This note does not appear in the Library Knowledge Base.</p>
 
           <p>
-            Person &mdash; Availability note &mdash;
+            Person &mdash; Availability note internal &mdash;
             string
           </p>
         </article>
@@ -453,16 +439,16 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="classType">
+        <article class="dataproperty" id="conceptType">
           <h3>
             Data property
-            <a href="#classType">Class type</a>
+            <a href="#conceptType">Concept type</a>
           </h3>
 
           <p></p>
 
           <p>
-            Concept &mdash; Class type &mdash;
+            Subject &mdash; Concept type &mdash;
             string
           </p>
         </article>
@@ -504,7 +490,7 @@
           <p></p>
 
           <p>
-            Concept &mdash; Indexer note &mdash;
+            Subject &mdash; Indexer note &mdash;
             string
           </p>
         </article>
@@ -532,7 +518,7 @@
           <p></p>
 
           <p>
-            Concept &mdash; Is topic term &mdash;
+            Subject &mdash; Is topic term &mdash;
             boolean
           </p>
         </article>
@@ -546,7 +532,7 @@
           <p></p>
 
           <p>
-            Concept &mdash; Label &mdash;
+            Subject &mdash; Label &mdash;
             string
           </p>
         </article>
@@ -579,31 +565,31 @@
           </p>
         </article>
 
-        <article class="dataproperty" id="publicationDate">
+        <article class="dataproperty" id="publicationWorkURL">
           <h3>
             Data property
-            <a href="#publicationDate">Publication date</a>
+            <a href="#publicationWorkURL">Publication work URL</a>
           </h3>
 
           <p></p>
 
           <p>
-            Work &mdash; Publication date &mdash;
-            dateTime
+            PublicationWork &mdash; Publication work URL &mdash;
+            string
           </p>
         </article>
 
-        <article class="dataproperty" id="publishedURL">
+        <article class="dataproperty" id="publishedOn">
           <h3>
             Data property
-            <a href="#publishedURL">Published URL</a>
+            <a href="#publishedOn">Published on</a>
           </h3>
 
           <p></p>
 
           <p>
-            Work &mdash; Published URL &mdash;
-            string
+            PublicationWork &mdash; Published on &mdash;
+            dateTime
           </p>
         </article>
 
@@ -616,7 +602,7 @@
           <p>The bibliographic reference of a work, for example: &#39;SN00195&#39; as the bibliographic reference for &#39;1999 benefit uprating&#39;.</p>
 
           <p>
-            Work &mdash; Reference &mdash;
+            PublicationWork &mdash; Reference &mdash;
             string
           </p>
         </article>
@@ -630,7 +616,7 @@
           <p></p>
 
           <p>
-            Concept &mdash; Scope note &mdash;
+            Subject &mdash; Scope note &mdash;
             string
           </p>
         </article>
@@ -645,6 +631,20 @@
 
           <p>
             Organisation &mdash; Short label &mdash;
+            string
+          </p>
+        </article>
+
+        <article class="dataproperty" id="sortName">
+          <h3>
+            Data property
+            <a href="#sortName">Sort name</a>
+          </h3>
+
+          <p></p>
+
+          <p>
+            Person &mdash; Sort name &mdash;
             string
           </p>
         </article>
@@ -672,7 +672,7 @@
           <p></p>
 
           <p>
-            Work &mdash; Summary &mdash;
+            PublicationWork &mdash; Summary &mdash;
             string
           </p>
         </article>
@@ -686,21 +686,21 @@
           <p></p>
 
           <p>
-            Concept &mdash; Synonym &mdash;
+            Subject &mdash; Synonym &mdash;
             string
           </p>
         </article>
 
-        <article class="dataproperty" id="teaserSummary">
+        <article class="dataproperty" id="teaserText">
           <h3>
             Data property
-            <a href="#teaserSummary">Teaser summary</a>
+            <a href="#teaserText">Teaser text</a>
           </h3>
 
           <p></p>
 
           <p>
-            Work &mdash; Teaser summary &mdash;
+            PublicationWork &mdash; Teaser text &mdash;
             string
           </p>
         </article>
@@ -714,7 +714,7 @@
           <p></p>
 
           <p>
-            Work &mdash; Title &mdash;
+            PublicationWork &mdash; Title &mdash;
             string
           </p>
         </article>
@@ -756,7 +756,7 @@
             <td>/<wbr>ontologies/<wbr>library-knowledge-base/<wbr>Organisation</td>
           </tr>
           <tr>
-            <td>/<wbr>ontologies/<wbr>library-knowledge-base/<wbr>Section</td>
+            <td>/<wbr>ontologies/<wbr>library-knowledge-base/<wbr>ResearchTeam</td>
             <td>/<wbr>ontologies/<wbr>library-knowledge-base/<wbr>Organisation</td>
           </tr>
         </table>
@@ -841,7 +841,7 @@
 
     <footer>
       <p>
-        Generated 2026-11-17 16:23:10.454849+00:00 from a
+        Generated 2026-11-19 13:17:19.900778+00:00 from a
         <a href="https://raw.githubusercontent.com/ukparliament/ontologies/master/../library-knowledge-base/library-knowledge-base-ontology.ttl">Turtle file</a>. Visualization:
         <a
           href="https://api.parliament.uk/webvowl/#iri=https://raw.githubusercontent.com/ukparliament/ontologies/master/../library-knowledge-base/library-knowledge-base-ontology.ttl"
