@@ -145,89 +145,68 @@
 					WHEN doc.session = '1992-93'
 						THEN '3xj5EbuF2Omb6Kew54qnMp'
 					WHEN doc.session = '1993-94'
-						THEN ''
+						THEN '3xj5E9PCAwcGNkGAtWuKtn'
 					WHEN doc.session = '1994-95'
-						THEN ''
+						THEN '3xj5E8aA8e3ctV8ESOz7al'
 					WHEN doc.session = '1995-96'
 						THEN '3xj5E6vxFVTIavAJhGDtRj'
 					WHEN doc.session = '1996-97'
-						THEN ''
+						THEN '3xj5E4QvdDKdR62NGyHQyh'
 					WHEN doc.session = '1997-98'
-						THEN ''
+						THEN '3xj5E3bsLlAJxGuS5qMdff'
 					WHEN doc.session = '1998-99'
-						THEN ''
+						THEN '3xj5E1wqj3rfegWWuiQzWd'
 					WHEN doc.session = '1999-00'
-						THEN ''
+						THEN '3xj1kdbB3Mlr4ssavuprYV'
 					WHEN doc.session = '2000-01'
-						THEN ''
+						THEN '3xj1kbwyBubWL2UeUmtOFT'
 					WHEN doc.session = '2001-02'
-						THEN ''
+						THEN '3xj1k9Rw9c2srDmjjeybmR'
 					WHEN doc.session = '2002-03'
-						THEN ''
+						THEN '3xj1k8ctGTSY8dOnI6Cy3P'
 					WHEN doc.session = '2003-04'
-						THEN ''
+						THEN '3xj1k6xreBJtOOgs6YGUKN'
 					WHEN doc.session = '2004-05'
-						THEN ''
+						THEN '3xj1k4SoMjzZvoIwvQLhrL'
 					WHEN doc.session = '2005-06'
-						THEN ''
+						THEN '3xj1k3dmk1qvbZaAUIPE8J'
 					WHEN doc.session = '2006-07'
-						THEN ''
+						THEN '3xj1k1yjRJh0SzCFjAU0PH'
 					WHEN doc.session = '2007-08'
-						THEN ''
+						THEN '3xj1jZThpr7wza4JIsYnwF'
 					WHEN doc.session = '2008-09'
-						THEN ''
+						THEN '3xj1jYeeX8Y2fKwO7l2KdD'
 					WHEN doc.session = '2009-10'
-						THEN ''
-						
-						
-						
-						
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    
-					    2010-12
-					    2012-13
-					    2013-14
-					    2014-15
-					    2015-16
-					    2016-17
-					    2017-19
-					    2019-19
-					    2019-21
-					    2021-22
-					    2022-23
-					    2023-24
-						
-						
-						
-						
-						
-						
-						
+						THEN '3xiX08enfzIJMwu6xoFYXj'
+					WHEN doc.session = '2010-12'
+						THEN '3xiX06zkNhzft6WaWgKlEh'
+					WHEN doc.session = '2012-13'
+						THEN '3xiX04UikZpL9Hofl8OIlf'
+					WHEN doc.session = '2013-14'
+						THEN '3xiX03ffSHggQhQjK0T52d'
+					WHEN doc.session = '2014-15'
+						THEN '3xiX01Adqp6MwSio8SXrJb'
+					WHEN doc.session = '2015-16'
+						THEN '3xiWZZVaY6XidsKsxL1Oq9'
+					WHEN doc.session = '2016-17'
+						THEN '3xiWZYg8vONNU3cwWD6b77'
+					WHEN doc.session = '2017-19'
+						THEN '3xiWZWB63wEjADEBlvaxO5'
+					WHEN doc.session = '2019-19'
+						THEN '3xiWZUW3BeuPhe6FKneUv3'
+					WHEN doc.session = '2019-21'
+						THEN '3xiSFYi24uDzylSfLV9C0B'
+					WHEN doc.session = '2021-22'
+						THEN '3xiSFWCZCcu5eWkkaNdYHz'
+					WHEN doc.session = '2022-23'
+						THEN '3xiSFUXX9UkAVwMozFilox'
+					WHEN doc.session = '2023-24'
+						THEN '3xiSFTiUHCb6C7esYxmI5v'
 					WHEN doc.session = '2024-26'
 						THEN '3xiSFRDSfk1CiHGxnpr4Mt'
-						
-						
-						
-						
-						
-						
+					WHEN doc.session = '2026-27'
+						THEN '3I66dCxnWhLupWkN5E9AxG'
 				END AS during,
-				
-				
-				
-				
 				corporateauthor.corporate_authors_concatenated AS formalProceedingHasCommittee,
 				CASE
 					WHEN SUBSTRING( doc.weblocation, 1, 15 ) = 'http://https://'
